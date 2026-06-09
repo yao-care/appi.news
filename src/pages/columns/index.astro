@@ -22,10 +22,18 @@ const authorNames = new Map(
 const cat = getCategory('columns')!;
 const columnArticles = byCategory(all, 'columns');
 
+function columnCount(c: (typeof columns)[number]): number {
+  const tagged = byColumn(all, c.id);
+  const owner =
+    c.data.type === 'personal'
+      ? all.filter((a) => a.data.author === c.data.ownerAuthor)
+      : [];
+  return new Set([...tagged, ...owner].map((a) => a.id)).size;
+}
 const cards = columns.map((c) => ({
   column: c,
   ownerName: authorMap.get(c.data.ownerAuthor)?.data.name,
-  count: byColumn(all, c.id).length,
+  count: columnCount(c),
 }));
 ---
 <BaseLayout

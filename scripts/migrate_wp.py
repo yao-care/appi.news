@@ -46,9 +46,23 @@ DISCLAIMER_BY_CAT = {
     'finance': 'financial',
 }
 
-# 所有 WordPress 作者一律歸 appi-editorial（避免無意義帳號），
-# 原始作者保留在 legacyAuthor 供日後校對。
+# WordPress 帳號 → 真實作者 slug（依 old/personas/appi.news 的 publish.json 對應）
+AUTHOR_MAP = {
+    'appieditor': 'appi-editorial',
+    'asignbio': 'huang-ziyan',     # 黃子彥（草本上膳醫廚 / GCM 總編輯）
+    'vegeta': 'luo-yang',          # 羅揚（健康教育內容創作者）
+    'chou': 'chou-jingyan',        # 周敬彥（Winsame 數位行銷）
+    'light': 'lightman',           # CΛ / Lightman（AI 數位健康設計者）
+    'youxiang': 'xie-youxiang',    # 謝佑祥（室內設計師）
+    'pharmacistlo': 'luo-wenyou',  # 羅文佑（生活駭客藥師）
+}
 AUTHOR_DEFAULT = 'appi-editorial'
+
+# 依標籤自動歸入專題（tag 命中即加入該 topic）
+TOPIC_RULES = {
+    'drug-repurposing': {'老藥新用', '藥物再利用', 'AI醫療', 'TxGNN', '二甲雙胍'},
+    'healthy-aging': {'高齡者骨骼健康', '肌少症', '骨質疏鬆', '高齡運動', '預防醫學'},
+}
 
 STATUS_MAP = {
     'publish': 'published',
@@ -258,6 +272,11 @@ def main():
 
         disclaimer = DISCLAIMER_BY_CAT.get(cat, 'general')
         legacy_author = g(p, 'dc:creator') or ''
+        author_slug = AUTHOR_MAP.get(legacy_author, AUTHOR_DEFAULT)
+
+        # 依標籤自動歸入專題
+        tagset = set(tags)
+        article_topics = [t for t, keys in TOPIC_RULES.items() if tagset & keys]
 
         body = clean_html(body_raw)
         if not body.strip():
@@ -274,7 +293,9 @@ def main():
         if sub:
             fm.append(f'subcategory: {yaml_str(sub)}')
         fm.append(f'tags: {yaml_list(tags)}')
-        fm.append(f'author: {yaml_str(AUTHOR_DEFAULT)}')
+        fm.append(f'author: {yaml_str(author_slug)}')
+        if article_topics:
+            fm.append(f'topics: {yaml_list(article_topics)}')
         fm.append(f'status: {yaml_str(status)}')
         fm.append(f'sourceType: {yaml_str("ai-assisted")}')
         fm.append(f'disclaimerType: {yaml_str(disclaimer)}')

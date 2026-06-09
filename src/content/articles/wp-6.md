@@ -7,7 +7,7 @@ publishDate: "2026-02-21T23:10:32+08:00"
 category: "health"
 subcategory: "preventive"
 tags: ["中藥", "食療"]
-author: "appi-editorial"
+author: "huang-ziyan"
 status: "published"
 sourceType: "ai-assisted"
 disclaimerType: "medical"

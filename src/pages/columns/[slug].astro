@@ -30,7 +30,18 @@ const authorMap = await getAuthorMap();
 const authorNames = new Map(
   [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
 );
-const articles = byColumn(all, column.id);
+// 顯式標記 column 的文章；個人專欄則涵蓋擁有者的所有文章
+const tagged = byColumn(all, column.id);
+const ownerArticles =
+  column.data.type === 'personal'
+    ? all.filter((a) => a.data.author === column.data.ownerAuthor)
+    : [];
+const seenCol = new Set<string>();
+const articles = [...tagged, ...ownerArticles].filter((a) => {
+  if (seenCol.has(a.id)) return false;
+  seenCol.add(a.id);
+  return true;
+});
 const owner = authorMap.get(column.data.ownerAuthor);
 const path = `/columns/${column.id}/`;
 const cover = column.data.coverImage

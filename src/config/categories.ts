@@ -29,7 +29,7 @@ export const CATEGORIES: Category[] = [
     name: '焦點',
     nameEn: 'Focus',
     description: 'APPI 編輯部精選的重要議題、跨領域趨勢與深度分析。',
-    color: '#1f6feb',
+    color: 'oklch(0.55 0.20 255)',
     subcategories: [
       { slug: 'today', name: '今日焦點' },
       { slug: 'trends', name: '重大趨勢' },
@@ -44,7 +44,7 @@ export const CATEGORIES: Category[] = [
     channelName: 'APPI Health｜亞太醫頭條',
     description:
       '承接亞太醫頭條的健康醫療內容，聚焦醫療、預防醫學、中醫、營養與醫療科技。',
-    color: '#11a884',
+    color: 'oklch(0.58 0.11 170)',
     subcategories: [
       { slug: 'medical', name: '醫療' },
       { slug: 'preventive', name: '預防醫學' },
@@ -60,7 +60,7 @@ export const CATEGORIES: Category[] = [
     name: '科技',
     nameEn: 'Tech',
     description: '追蹤 AI、數位工具、資安、新創與產業科技應用。',
-    color: '#6e40c9',
+    color: 'oklch(0.50 0.20 295)',
     subcategories: [
       { slug: 'ai', name: 'AI' },
       { slug: 'digital-tools', name: '數位工具' },
@@ -75,7 +75,7 @@ export const CATEGORIES: Category[] = [
     name: '財經',
     nameEn: 'Finance',
     description: '整理產業、投資觀念、企業經營、金融科技與商業模式觀察。',
-    color: '#b08800',
+    color: 'oklch(0.58 0.12 85)',
     subcategories: [
       { slug: 'industry', name: '產業' },
       { slug: 'investing', name: '投資觀念' },
@@ -90,7 +90,7 @@ export const CATEGORIES: Category[] = [
     name: '時事',
     nameEn: 'Society',
     description: '從政策、社會趨勢、公共議題與國際觀察，拆解正在發生的變化。',
-    color: '#cf4a2d',
+    color: 'oklch(0.57 0.18 35)',
     subcategories: [
       { slug: 'public-issues', name: '公共議題' },
       { slug: 'policy', name: '政策觀察' },
@@ -104,7 +104,7 @@ export const CATEGORIES: Category[] = [
     name: '運動',
     nameEn: 'Sports',
     description: '關注運動科學、賽事觀察、運動產業與健康訓練。',
-    color: '#1a7f6b',
+    color: 'oklch(0.52 0.10 175)',
     subcategories: [
       { slug: 'sports-science', name: '運動科學' },
       { slug: 'events', name: '賽事觀察' },
@@ -118,7 +118,7 @@ export const CATEGORIES: Category[] = [
     name: '生活',
     nameEn: 'Lifestyle',
     description: '從教育、職場、消費、家庭與文化角度，整理生活中的重要變化。',
-    color: '#bf5b9b',
+    color: 'oklch(0.58 0.15 345)',
     subcategories: [
       { slug: 'education', name: '教育' },
       { slug: 'workplace', name: '職場' },
@@ -133,7 +133,7 @@ export const CATEGORIES: Category[] = [
     name: '專欄',
     nameEn: 'Columns',
     description: '收錄 APPI 作者群、專家觀點、特約專欄與品牌專欄。',
-    color: '#57606a',
+    color: 'oklch(0.48 0.01 250)',
     subcategories: [
       { slug: 'author-column', name: '作者專欄' },
       { slug: 'expert-view', name: '專家觀點' },

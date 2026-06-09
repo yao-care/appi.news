@@ -71,7 +71,7 @@ const desc = article.data.excerpt ?? article.data.description;
   .acard {
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: var(--white);
   }
   .acard-media {
     display: block;
@@ -110,7 +110,7 @@ const desc = article.data.excerpt ?? article.data.description;
   .acard-desc {
     margin: 0;
     color: var(--ink-3);
-    font-size: 0.92rem;
+    font-size: var(--text-sm);
     line-height: 1.6;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -122,7 +122,7 @@ const desc = article.data.excerpt ?? article.data.description;
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-    font-size: 0.8rem;
+    font-size: var(--text-xs);
     color: var(--ink-3);
     font-family: var(--font-sans);
   }
@@ -147,16 +147,16 @@ const desc = article.data.excerpt ?? article.data.description;
 
   /* hero / large */
   .acard--hero .acard-title {
-    font-size: 1.85rem;
+    font-size: var(--text-xl);
   }
   .acard--large .acard-title {
-    font-size: 1.35rem;
+    font-size: var(--text-lg);
   }
   .acard--medium .acard-title {
-    font-size: 1.1rem;
+    font-size: var(--text-base);
   }
   .acard--small .acard-title {
-    font-size: 0.98rem;
+    font-size: var(--text-sm);
   }
 
   /* horizontal */
@@ -174,7 +174,7 @@ const desc = article.data.excerpt ?? article.data.description;
     flex: 1;
   }
   .acard--horizontal .acard-title {
-    font-size: 1rem;
+    font-size: var(--text-sm);
   }
 
   /* small：無圖選項由呼叫端控制，預設仍有圖 */
@@ -184,7 +184,7 @@ const desc = article.data.excerpt ?? article.data.description;
 
   @media (max-width: 520px) {
     .acard--hero .acard-title {
-      font-size: 1.45rem;
+      font-size: var(--text-lg);
     }
   }
 </style>

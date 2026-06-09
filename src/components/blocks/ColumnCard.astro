@@ -38,7 +38,7 @@ const cat = getCategory(column.data.category);
     border: 1px solid var(--line);
     border-radius: var(--radius);
     overflow: hidden;
-    background: #fff;
+    background: var(--white);
     transition: box-shadow 0.2s;
   }
   .column-card:hover {
@@ -58,13 +58,13 @@ const cat = getCategory(column.data.category);
     padding: 16px 18px 20px;
   }
   .column-cat {
-    font-size: 0.78rem;
+    font-size: var(--text-xs);
     font-weight: 600;
     font-family: var(--font-sans);
   }
   .column-title {
     margin: 6px 0 8px;
-    font-size: 1.15rem;
+    font-size: var(--text-base);
   }
   .column-title a {
     color: var(--ink);
@@ -75,7 +75,7 @@ const cat = getCategory(column.data.category);
   }
   .column-desc {
     margin: 0 0 12px;
-    font-size: 0.9rem;
+    font-size: var(--text-xs);
     color: var(--ink-3);
     line-height: 1.6;
     display: -webkit-box;
@@ -86,7 +86,7 @@ const cat = getCategory(column.data.category);
   .column-meta {
     display: flex;
     gap: 12px;
-    font-size: 0.82rem;
+    font-size: var(--text-xs);
     color: var(--ink-3);
     font-family: var(--font-sans);
   }

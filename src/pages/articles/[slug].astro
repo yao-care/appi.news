@@ -230,12 +230,12 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
     margin-bottom: 14px;
   }
   .article-head h1 {
-    font-size: 2.3rem;
+    font-size: var(--text-2xl);
     line-height: 1.3;
     margin: 0 0 16px;
   }
   .article-desc {
-    font-size: 1.15rem;
+    font-size: var(--text-base);
     color: var(--ink-2);
     line-height: 1.7;
     margin: 0 0 20px;
@@ -245,7 +245,7 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
     flex-wrap: wrap;
     align-items: center;
     gap: 8px;
-    font-size: 0.9rem;
+    font-size: var(--text-xs);
     color: var(--ink-3);
     font-family: var(--font-sans);
     padding-bottom: 24px;
@@ -291,7 +291,7 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
     margin-block: 28px;
   }
   .highlights h2 {
-    font-size: 1.1rem;
+    font-size: var(--text-base);
     margin: 0 0 10px;
     color: var(--appi-brand);
   }
@@ -316,11 +316,11 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
   }
   .risks {
     border-left: 4px solid var(--appi-accent);
-    background: #fcf6f5;
+    background: var(--appi-accent-soft);
   }
   .expert-note h2,
   .risks h2 {
-    font-size: 1.1rem;
+    font-size: var(--text-base);
     margin: 0 0 10px;
   }
   .risks ul {
@@ -349,12 +349,12 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
     text-align: right;
   }
   .pn-label {
-    font-size: 0.78rem;
+    font-size: var(--text-xs);
     color: var(--ink-3);
     font-family: var(--font-sans);
   }
   .pn-title {
-    font-size: 0.95rem;
+    font-size: var(--text-sm);
     color: var(--ink);
     font-weight: 600;
     line-height: 1.4;
@@ -362,7 +362,7 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
 
   @media (max-width: 600px) {
     .article-head h1 {
-      font-size: 1.7rem;
+      font-size: var(--text-xl);
     }
     .prevnext {
       grid-template-columns: 1fr;

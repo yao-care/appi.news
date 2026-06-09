@@ -38,7 +38,7 @@ const { references } = Astro.props;
     border-top: 1px solid var(--line);
   }
   .references h2 {
-    font-size: 1.2rem;
+    font-size: var(--text-base);
     margin-bottom: 14px;
   }
   .references ol {
@@ -47,7 +47,7 @@ const { references } = Astro.props;
   }
   .references li {
     margin-bottom: 10px;
-    font-size: 0.9rem;
+    font-size: var(--text-xs);
     line-height: 1.6;
     color: var(--ink-2);
   }
@@ -63,6 +63,6 @@ const { references } = Astro.props;
   .ref-note {
     display: block;
     color: var(--ink-3);
-    font-size: 0.85rem;
+    font-size: var(--text-xs);
   }
 </style>

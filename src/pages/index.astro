@@ -199,7 +199,7 @@ const heroCat = hero ? getCategory(hero.data.category) : undefined;
     padding-top: 16px;
   }
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: var(--text-xl);
     line-height: 1.3;
     margin: 12px 0;
     color: var(--ink);
@@ -209,12 +209,12 @@ const heroCat = hero ? getCategory(hero.data.category) : undefined;
   }
   .hero-text p {
     color: var(--ink-2);
-    font-size: 1.02rem;
+    font-size: var(--text-sm);
     line-height: 1.7;
     margin: 0 0 12px;
   }
   .hero-meta {
-    font-size: 0.85rem;
+    font-size: var(--text-xs);
     color: var(--ink-3);
     font-family: var(--font-sans);
   }
@@ -238,7 +238,7 @@ const heroCat = hero ? getCategory(hero.data.category) : undefined;
       padding-top: 24px;
     }
     .hero-text h1 {
-      font-size: 1.6rem;
+      font-size: var(--text-xl);
     }
   }
 </style>

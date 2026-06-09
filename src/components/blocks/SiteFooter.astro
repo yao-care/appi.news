@@ -45,7 +45,7 @@ const year = SITE.org.foundingYear;
 <style>
   .site-footer {
     background: var(--appi-brand);
-    color: #d7e0ec;
+    color: var(--on-brand);
     margin-top: 80px;
   }
   .footer-inner {
@@ -58,8 +58,8 @@ const year = SITE.org.foundingYear;
     font-family: var(--font-sans);
     font-weight: 700;
     letter-spacing: 0.04em;
-    font-size: 1.4rem;
-    color: #fff;
+    font-size: var(--text-lg);
+    color: var(--white);
     background: rgba(255, 255, 255, 0.12);
     padding: 4px 10px;
     border-radius: var(--radius-sm);
@@ -68,19 +68,19 @@ const year = SITE.org.foundingYear;
   .footer-tag {
     margin: 14px 0 2px;
     font-weight: 600;
-    color: #fff;
+    color: var(--white);
   }
   .footer-tag-en {
     margin: 0;
-    font-size: 0.8rem;
-    color: #9fb2cc;
+    font-size: var(--text-xs);
+    color: var(--on-brand-dim);
     letter-spacing: 0.03em;
   }
   .footer-desc {
     margin-top: 14px;
-    font-size: 0.88rem;
+    font-size: var(--text-xs);
     line-height: 1.7;
-    color: #b8c6dc;
+    color: var(--on-brand);
     max-width: 280px;
   }
   .footer-cols {
@@ -89,9 +89,9 @@ const year = SITE.org.foundingYear;
     gap: 28px;
   }
   .footer-col h3 {
-    color: #fff;
+    color: var(--white);
     font-family: var(--font-sans);
-    font-size: 0.92rem;
+    font-size: var(--text-sm);
     margin: 0 0 14px;
   }
   .footer-col ul {
@@ -103,25 +103,25 @@ const year = SITE.org.foundingYear;
     margin-bottom: 9px;
   }
   .footer-col a {
-    color: #c3d0e2;
-    font-size: 0.88rem;
+    color: var(--on-brand);
+    font-size: var(--text-xs);
     text-decoration: none;
   }
   .footer-col a:hover {
-    color: #fff;
+    color: var(--white);
     text-decoration: underline;
   }
   .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding-block: 20px;
-    font-size: 0.8rem;
-    color: #9fb2cc;
+    font-size: var(--text-xs);
+    color: var(--on-brand-dim);
   }
   .footer-bottom p {
     margin: 4px 0;
   }
   .footer-note {
-    color: #8499b8;
+    color: var(--on-brand-dim);
   }
 
   @media (max-width: 860px) {

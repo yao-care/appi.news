@@ -20,7 +20,7 @@ import { url } from '@/utils/url';
 <style>
   .cta-join {
     background: var(--appi-brand);
-    color: #fff;
+    color: var(--white);
     border-radius: var(--radius);
     margin-block: 64px;
     overflow: hidden;
@@ -38,13 +38,13 @@ import { url } from '@/utils/url';
     min-width: 280px;
   }
   .cta-text h2 {
-    color: #fff;
+    color: var(--white);
     margin: 0 0 10px;
-    font-size: 1.5rem;
+    font-size: var(--text-lg);
   }
   .cta-text p {
     margin: 0;
-    color: #cdd9ee;
+    color: var(--on-brand);
     max-width: 620px;
     line-height: 1.7;
   }
@@ -54,14 +54,14 @@ import { url } from '@/utils/url';
     flex-wrap: wrap;
   }
   .cta-join :global(.btn--primary) {
-    background: #fff;
+    background: var(--white);
     color: var(--appi-brand);
   }
   .cta-join :global(.btn--primary:hover) {
-    background: #eef2f8;
+    background: var(--bg-tint);
   }
   .cta-join :global(.cta-ghost) {
-    color: #fff;
+    color: var(--white);
     border-color: rgba(255, 255, 255, 0.5);
   }
   .cta-join :global(.cta-ghost:hover) {

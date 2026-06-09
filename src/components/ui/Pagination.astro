@@ -63,7 +63,7 @@ const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
     border-radius: var(--radius-sm);
     color: var(--ink-2);
     font-family: var(--font-sans);
-    font-size: 0.9rem;
+    font-size: var(--text-xs);
     text-decoration: none;
   }
   .page:hover,
@@ -74,6 +74,6 @@ const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
   .page.current {
     background: var(--appi-brand);
     border-color: var(--appi-brand);
-    color: #fff;
+    color: var(--white);
   }
 </style>

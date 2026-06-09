@@ -73,20 +73,20 @@ const steps = [
 
 <style>
   .join-hero {
-    background: linear-gradient(135deg, #16263d, var(--appi-brand));
-    color: #fff;
+    background: linear-gradient(135deg, var(--appi-brand-dark), var(--appi-brand));
+    color: var(--white);
     padding-block: 64px;
     margin-bottom: 16px;
   }
   .join-hero h1 {
-    color: #fff;
-    font-size: 2.4rem;
+    color: var(--white);
+    font-size: var(--text-2xl);
     max-width: 820px;
     line-height: 1.3;
   }
   .join-hero p {
-    color: #cdd9ee;
-    font-size: 1.1rem;
+    color: var(--on-brand);
+    font-size: var(--text-base);
     max-width: 680px;
     line-height: 1.7;
     margin: 16px 0 28px;
@@ -97,11 +97,11 @@ const steps = [
     flex-wrap: wrap;
   }
   .join-hero :global(.btn--primary) {
-    background: #fff;
+    background: var(--white);
     color: var(--appi-brand);
   }
   .join-hero :global(.btn--ghost) {
-    color: #fff;
+    color: var(--white);
     border-color: rgba(255, 255, 255, 0.5);
   }
   .chips {
@@ -114,7 +114,7 @@ const steps = [
     color: var(--ink-2);
     padding: 8px 16px;
     border-radius: 24px;
-    font-size: 0.92rem;
+    font-size: var(--text-sm);
     font-family: var(--font-sans);
   }
   .offer-grid {
@@ -154,7 +154,7 @@ const steps = [
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #fff;
+    background: var(--white);
     border: 1px solid var(--line);
     border-radius: var(--radius);
     padding: 16px;
@@ -167,12 +167,12 @@ const steps = [
     flex-shrink: 0;
     border-radius: 50%;
     background: var(--appi-brand);
-    color: #fff;
+    color: var(--white);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-sans);
-    font-size: 0.9rem;
+    font-size: var(--text-xs);
   }
   .join-footer-cta {
     text-align: center;
@@ -200,7 +200,7 @@ const steps = [
       grid-template-columns: repeat(2, 1fr);
     }
     .join-hero h1 {
-      font-size: 1.8rem;
+      font-size: var(--text-xl);
     }
   }
   @media (max-width: 480px) {

@@ -1,6 +1,7 @@
 /* ============================================================
-   APPI News — 全站基礎樣式
-   專業媒體感：白底、深色文字、低飽和品牌色、舒服行距
+   APPI News — 全站設計 token 與基礎樣式（單一設定來源）
+   規範：design-tokens（OKLCH + hex fallback、最小字級 18px）
+   所有顏色、字級、間距 token 集中於此；元件僅引用 var(--*)。
    ============================================================ */
 
 @import '@fontsource/noto-sans-tc/400.css';
@@ -11,31 +12,76 @@
 @import '@fontsource/inter/400.css';
 @import '@fontsource/inter/600.css';
 
+/* ---------- Hex fallback（舊瀏覽器 / 不支援 oklch） ---------- */
 :root {
-  /* 品牌色 */
-  --appi-brand: #1f3a5f; /* 深藍：信任、專業媒體 */
+  /* 品牌 */
+  --appi-brand: #1f3a5f;
   --appi-brand-light: #2d5286;
-  --appi-accent: #c0392b; /* 低飽和紅：重點、CTA */
-  --appi-accent-soft: #e8d5d2;
+  --appi-brand-dark: #16263d;
+  --appi-accent: #c0392b;
+  --appi-accent-soft: #fceeea;
+  /* 深色底（品牌底）上的文字 */
+  --on-brand: #d7e0ec;
+  --on-brand-dim: #9fb2cc;
 
-  /* 中性色 */
-  --ink: #1a1d21;
-  --ink-2: #41464d;
-  --ink-3: #6b7280;
-  --line: #e6e8eb;
-  --line-2: #f0f2f4;
+  /* 中性 */
+  --ink: #1e2030;
+  --ink-2: #5e6070;
+  --ink-3: #8a8c98;
+  --line: #d5d6da;
+  --line-2: #e8e9ed;
   --bg: #ffffff;
-  --bg-soft: #f7f8fa;
-  --bg-tint: #f0f4f9;
+  --bg-soft: #f5f6f8;
+  --bg-tint: #eaf0f8;
+  --white: #ffffff;
 
-  /* 字體 */
-  --font-sans: 'Inter', 'Noto Sans TC', system-ui, -apple-system, 'PingFang TC',
-    'Microsoft JhengHei', sans-serif;
+  /* 連結 */
+  --color-link: #1e5ab8;
+}
+
+/* ---------- OKLCH（主要） ---------- */
+@supports (color: oklch(0.5 0.1 250)) {
+  :root {
+    --appi-brand: oklch(0.34 0.06 252);
+    --appi-brand-light: oklch(0.43 0.08 255);
+    --appi-brand-dark: oklch(0.26 0.05 252);
+    --appi-accent: oklch(0.55 0.18 28);
+    --appi-accent-soft: oklch(0.94 0.04 28);
+    --on-brand: oklch(0.88 0.02 252);
+    --on-brand-dim: oklch(0.74 0.03 252);
+
+    --ink: oklch(0.20 0.01 250);
+    --ink-2: oklch(0.45 0.01 250);
+    --ink-3: oklch(0.60 0.008 250);
+    --line: oklch(0.85 0.005 250);
+    --line-2: oklch(0.92 0.005 250);
+    --bg: oklch(1 0 0);
+    --bg-soft: oklch(0.97 0.005 250);
+    --bg-tint: oklch(0.95 0.02 252);
+    --white: oklch(1 0 0);
+
+    --color-link: oklch(0.48 0.15 250);
+  }
+}
+
+:root {
+  /* ---------- 字級量表（最小 18px，無例外） ---------- */
+  --text-xs: 1.125rem; /* 18px — 徽章、標籤、meta、最小字 */
+  --text-sm: 1.25rem; /* 20px — 次要說明、卡片副標 */
+  --text-base: 1.5rem; /* 24px — 正文預設 */
+  --text-lg: 1.75rem; /* 28px — 強調、卡片標題 */
+  --text-xl: 2rem; /* 32px — 區段標題 */
+  --text-2xl: 3rem; /* 48px — 頁面大標 */
+  --text-3xl: 3.5rem; /* 56px — Hero / 報告標題 */
+
+  /* ---------- 字型 ---------- */
+  --font-sans: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
   --font-serif: 'Noto Serif TC', Georgia, 'Times New Roman', serif;
 
-  /* 排版 */
+  /* ---------- 排版 ---------- */
   --maxw: 1180px;
-  --maxw-prose: 720px;
+  --maxw-prose: 760px;
   --radius: 10px;
   --radius-sm: 6px;
   --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.05);
@@ -51,6 +97,8 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* 16px 基準 → token 以 rem 表示，根字級設 16px 維持換算 */
+  font-size: 100%;
 }
 
 body {
@@ -58,8 +106,8 @@ body {
   font-family: var(--font-sans);
   color: var(--ink);
   background: var(--bg);
-  line-height: 1.7;
-  font-size: 16px;
+  line-height: 1.6;
+  font-size: var(--text-base);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -71,7 +119,7 @@ img {
 }
 
 a {
-  color: var(--appi-brand-light);
+  color: var(--color-link);
   text-decoration: none;
 }
 a:hover {
@@ -84,10 +132,19 @@ h3,
 h4 {
   font-family: var(--font-serif);
   color: var(--ink);
-  line-height: 1.35;
+  line-height: 1.3;
   font-weight: 700;
-  margin: 0 0 0.6em;
+  margin: 0 0 0.5em;
 }
+
+/* ---------- 字級 utility ---------- */
+.fs-xs { font-size: var(--text-xs); }
+.fs-sm { font-size: var(--text-sm); }
+.fs-base { font-size: var(--text-base); }
+.fs-lg { font-size: var(--text-lg); }
+.fs-xl { font-size: var(--text-xl); }
+.fs-2xl { font-size: var(--text-2xl); }
+.fs-3xl { font-size: var(--text-3xl); }
 
 /* ---------- layout helpers ---------- */
 .container {
@@ -128,10 +185,10 @@ h4 {
 }
 .section-head h2 {
   margin: 0;
-  font-size: 1.45rem;
+  font-size: var(--text-xl);
 }
 .section-head .more-link {
-  font-size: 0.9rem;
+  font-size: var(--text-xs);
   color: var(--ink-3);
   white-space: nowrap;
   font-family: var(--font-sans);
@@ -139,21 +196,21 @@ h4 {
 
 /* ---------- 文章排版（內文） ---------- */
 .article-body {
-  font-size: 1.075rem;
-  line-height: 1.9;
+  font-size: var(--text-base);
+  line-height: 1.85;
   color: var(--ink-2);
 }
 .article-body > * {
   margin-block: 1.1em;
 }
 .article-body h2 {
-  font-size: 1.5rem;
-  margin-top: 1.8em;
+  font-size: var(--text-xl);
+  margin-top: 1.6em;
   padding-top: 0.3em;
 }
 .article-body h3 {
-  font-size: 1.2rem;
-  margin-top: 1.4em;
+  font-size: var(--text-lg);
+  margin-top: 1.3em;
 }
 .article-body p {
   margin-block: 1.1em;
@@ -193,7 +250,7 @@ h4 {
 .article-body table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
+  font-size: var(--text-sm);
 }
 .article-body th,
 .article-body td {
@@ -210,7 +267,7 @@ h4 {
 .card-grid {
   display: grid;
   gap: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 .card-grid--3 {
   grid-template-columns: repeat(3, 1fr);
@@ -240,7 +297,7 @@ h4 {
   gap: 8px;
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: var(--text-xs);
   padding: 11px 22px;
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
@@ -253,7 +310,7 @@ h4 {
 }
 .btn--primary {
   background: var(--appi-brand);
-  color: #fff;
+  color: var(--white);
 }
 .btn--primary:hover {
   background: var(--appi-brand-light);

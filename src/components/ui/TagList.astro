@@ -31,7 +31,7 @@ const { tags, title } = Astro.props;
     gap: 8px;
   }
   .tag-list-title {
-    font-size: 0.85rem;
+    font-size: var(--text-xs);
     color: var(--ink-3);
     font-weight: 600;
     margin-right: 4px;
@@ -46,7 +46,7 @@ const { tags, title } = Astro.props;
   }
   .tag-list a {
     display: inline-block;
-    font-size: 0.82rem;
+    font-size: var(--text-xs);
     color: var(--ink-2);
     background: var(--bg-soft);
     padding: 4px 11px;

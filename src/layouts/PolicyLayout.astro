@@ -35,18 +35,18 @@ const { title, description, path, updated, lead } = Astro.props;
     border-bottom: 1px solid var(--line);
   }
   .policy-head h1 {
-    font-size: 2rem;
+    font-size: var(--text-xl);
     margin: 0 0 10px;
   }
   .policy-lead {
-    font-size: 1.05rem;
+    font-size: var(--text-sm);
     color: var(--ink-2);
     line-height: 1.7;
     margin: 0;
   }
   .policy-updated {
     margin: 12px 0 0;
-    font-size: 0.82rem;
+    font-size: var(--text-xs);
     color: var(--ink-3);
   }
   .policy-body {

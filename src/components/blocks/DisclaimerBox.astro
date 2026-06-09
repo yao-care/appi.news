@@ -24,11 +24,11 @@ const isHighRisk = type === 'medical' || type === 'financial' || type === 'legal
   }
   .disclaimer--risk {
     border-left-color: var(--appi-accent);
-    background: #fcf6f5;
+    background: var(--appi-accent-soft);
   }
   .disclaimer-label {
     display: block;
-    font-size: 0.78rem;
+    font-size: var(--text-xs);
     font-weight: 700;
     color: var(--ink-2);
     font-family: var(--font-sans);
@@ -39,7 +39,7 @@ const isHighRisk = type === 'medical' || type === 'financial' || type === 'legal
   }
   .disclaimer p {
     margin: 0;
-    font-size: 0.88rem;
+    font-size: var(--text-xs);
     line-height: 1.7;
     color: var(--ink-2);
   }

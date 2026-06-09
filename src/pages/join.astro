@@ -1,0 +1,211 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { url } from '@/utils/url';
+
+const audiences = [
+  '醫師', '藥師', '營養師', '物理治療師', '心理師', '中醫師',
+  '工程師', '科技顧問', '財經研究者', '企業顧問', '講師', '教練',
+  '品牌主', '診所與機構',
+];
+const offers = [
+  'AI 輔助初稿', '封面圖產生', '基本 SEO', '文章排版', '媒體刊登',
+  '作者署名', '作者頁或專欄頁（依方案）', '數據報告（依方案）', '內容檢核流程',
+];
+const steps = [
+  '申請', '選擇方案', '建立作者資料', '使用系統產生文章',
+  '作者審稿', '平台檢核', '排程發布', '追蹤數據',
+];
+---
+<BaseLayout
+  title="成為 APPI 作者"
+  description="透過 AI 輔助寫作、SEO 架構與媒體刊登流程，讓你的專業變成可累積的內容資產。"
+  path="/join/"
+  ogImage="og/default.png"
+>
+  <section class="join-hero">
+    <div class="container">
+      <h1>成為 APPI 作者，讓你的專業變成可累積的內容資產</h1>
+      <p>
+        透過 AI 輔助寫作、基礎排版、SEO 架構與媒體刊登流程，協助專業者更快產出文章，
+        建立長期搜尋曝光與專業形象。
+      </p>
+      <div class="join-cta">
+        <a class="btn btn--primary" href={url('/contact/')}>申請成為作者</a>
+        <a class="btn btn--ghost" href={url('/pricing/')}>查看方案</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="section">
+      <div class="section-head"><h2>適合誰加入</h2></div>
+      <div class="chips">
+        {audiences.map((a) => <span class="chip">{a}</span>)}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>APPI 提供什麼</h2></div>
+      <ul class="offer-grid">
+        {offers.map((o) => <li>{o}</li>)}
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>加入流程</h2></div>
+      <ol class="steps">
+        {steps.map((s, i) => (
+          <li><span class="step-num">{i + 1}</span>{s}</li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="join-footer-cta">
+      <h2>準備好了嗎？</h2>
+      <p>從單篇體驗開始，或直接選擇適合長期經營的方案。</p>
+      <div class="join-cta">
+        <a class="btn btn--primary" href={url('/contact/')}>申請成為作者</a>
+        <a class="btn btn--ghost" href={url('/pricing/')}>查看方案</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .join-hero {
+    background: linear-gradient(135deg, #16263d, var(--appi-brand));
+    color: #fff;
+    padding-block: 64px;
+    margin-bottom: 16px;
+  }
+  .join-hero h1 {
+    color: #fff;
+    font-size: 2.4rem;
+    max-width: 820px;
+    line-height: 1.3;
+  }
+  .join-hero p {
+    color: #cdd9ee;
+    font-size: 1.1rem;
+    max-width: 680px;
+    line-height: 1.7;
+    margin: 16px 0 28px;
+  }
+  .join-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .join-hero :global(.btn--primary) {
+    background: #fff;
+    color: var(--appi-brand);
+  }
+  .join-hero :global(.btn--ghost) {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .chip {
+    background: var(--bg-soft);
+    color: var(--ink-2);
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-size: 0.92rem;
+    font-family: var(--font-sans);
+  }
+  .offer-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .offer-grid li {
+    background: var(--bg-soft);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    font-weight: 500;
+    color: var(--ink-2);
+    position: relative;
+    padding-left: 40px;
+  }
+  .offer-grid li::before {
+    content: '✓';
+    position: absolute;
+    left: 16px;
+    color: var(--appi-brand);
+    font-weight: 700;
+  }
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    counter-reset: step;
+  }
+  .steps li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px;
+    font-weight: 600;
+    color: var(--ink-2);
+  }
+  .step-num {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--appi-brand);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+  }
+  .join-footer-cta {
+    text-align: center;
+    background: var(--bg-tint);
+    border-radius: var(--radius);
+    padding: 48px 24px;
+    margin-block: 56px;
+  }
+  .join-footer-cta h2 {
+    margin: 0 0 8px;
+  }
+  .join-footer-cta p {
+    color: var(--ink-2);
+    margin: 0 0 20px;
+  }
+  .join-footer-cta .join-cta {
+    justify-content: center;
+  }
+
+  @media (max-width: 760px) {
+    .offer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .join-hero h1 {
+      font-size: 1.8rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .offer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

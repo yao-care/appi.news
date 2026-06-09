@@ -1,0 +1,113 @@
+---
+import type { Author } from '@/utils/content';
+import { authorHasPage, authorAvatar } from '@/utils/content';
+import { url } from '@/utils/url';
+import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
+
+interface Props {
+  author: Author;
+  /** 找不到作者時用的署名文字 */
+  fallbackName?: string;
+}
+const { author, fallbackName } = Astro.props;
+const hasPage = authorHasPage(author);
+const href = hasPage ? url(`/authors/${author.id}/`) : undefined;
+const avatar = authorAvatar(author);
+---
+<aside class="bio-box">
+  <ImageWithFallback
+    src={avatar}
+    alt={author.data.name}
+    fallback="og/author.png"
+    class="bio-avatar"
+    width={64}
+    height={64}
+  />
+  <div class="bio-content">
+    <div class="bio-head">
+      <h3>
+        {href ? <a href={href}>{author.data.name}</a> : author.data.name}
+      </h3>
+      {author.data.displayTitle && <span class="bio-title">{author.data.displayTitle}</span>}
+    </div>
+    {author.data.bioShort && <p class="bio-text">{author.data.bioShort}</p>}
+    {
+      author.data.credentials.length > 0 && (
+        <ul class="bio-credentials">
+          {author.data.credentials.map((c) => <li>{c}</li>)}
+        </ul>
+      )
+    }
+    {
+      author.data.disclaimer && (
+        <p class="bio-disclaimer">{author.data.disclaimer}</p>
+      )
+    }
+    {hasPage && <a class="bio-more" href={href}>查看作者所有文章 →</a>}
+  </div>
+</aside>
+
+<style>
+  .bio-box {
+    display: flex;
+    gap: 18px;
+    padding: 22px;
+    margin-top: 40px;
+    background: var(--bg-soft);
+    border-radius: var(--radius);
+  }
+  :global(.bio-avatar) {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .bio-content {
+    flex: 1;
+    min-width: 0;
+  }
+  .bio-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .bio-head h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  .bio-head a {
+    color: var(--ink);
+  }
+  .bio-title {
+    font-size: 0.82rem;
+    color: var(--appi-brand);
+    font-weight: 600;
+    font-family: var(--font-sans);
+  }
+  .bio-text {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    color: var(--ink-2);
+    line-height: 1.7;
+  }
+  .bio-credentials {
+    margin: 8px 0;
+    padding-left: 1.2em;
+    font-size: 0.82rem;
+    color: var(--ink-3);
+  }
+  .bio-disclaimer {
+    font-size: 0.78rem;
+    color: var(--ink-3);
+    font-style: italic;
+    margin: 8px 0;
+  }
+  .bio-more {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--appi-brand);
+    font-family: var(--font-sans);
+  }
+</style>

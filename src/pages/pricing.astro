@@ -1,0 +1,133 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PricingCard from '@/components/blocks/PricingCard.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+
+const plans = [
+  {
+    name: '單篇體驗', price: '1,800', unit: '元 / 篇',
+    summary: '適合初次體驗者',
+    features: ['1 篇文章額度', 'AI 輔助初稿', '基本排版', '基本 SEO', '封面圖', '文章署名', '不含作者頁', '不含專欄頁'],
+  },
+  {
+    name: '創站季繳', price: '4,800', unit: '元 / 季',
+    summary: '適合想測試內容經營的專業者',
+    features: ['12 篇文章額度', '可一次使用並排程', '簡版作者頁', '基本排版與 SEO', '封面圖', '基礎內容檢核', '季末數據摘要'],
+  },
+  {
+    name: '創站年繳', price: '15,000', unit: '元 / 年',
+    summary: '限前 20 位或前期名額',
+    features: ['60 篇文章額度', '可一次使用並排程', '完整作者頁', '專欄頁', '基本排版與 SEO', '封面圖', '每季數據報告', '創站作者標籤'],
+    featured: true,
+    note: '前期限量名額',
+  },
+  {
+    name: '正式年繳', price: '19,800', unit: '元 / 年',
+    summary: '適合長期經營個人品牌者',
+    features: ['48 篇文章額度', '完整作者頁', '專欄頁', '每季數據報告', '優質文章可首頁推薦'],
+  },
+  {
+    name: '高產專欄', price: '29,800', unit: '元 / 年',
+    summary: '適合積極經營者',
+    features: ['96 篇文章額度', '完整作者頁', '專欄頁', '優先排程', '數據報告'],
+  },
+  {
+    name: '品牌專欄', price: '48,000', unit: '元起 / 年',
+    summary: '適合企業、診所與機構',
+    features: ['品牌專欄頁', '多人作者', '客製文章額度', '企業或診所介紹', '數據報告', '可加購新聞稿、專題合作、社群圖卡'],
+  },
+];
+
+const faqs = [
+  { q: '文章可以一次用完嗎？', a: '年繳額度可一次使用並排程，但發布仍需符合平台規範。' },
+  { q: '文章是否保證流量？', a: '不保證。APPI 提供 SEO 架構、媒體呈現與內容累積，但流量取決於主題、品質、搜尋需求與外部分享。' },
+  { q: '是否一定會通過上刊？', a: '文章需符合平台內容規範。醫療、財經、法律、保健食品等高風險內容需更嚴謹檢核。' },
+  { q: '作者頁何時開啟？', a: '依方案或文章累積條件開啟。單篇體驗不含完整作者頁。' },
+  { q: 'AI 會直接替我發布文章嗎？', a: '不會。AI 協助產生初稿，作者需自行審閱，平台依規範進行檢核。' },
+];
+---
+<BaseLayout
+  title="作者方案與服務"
+  description="從單篇體驗到品牌專欄，APPI 提供不同規模的作者方案，協助你建立內容資產。"
+  path="/pricing/"
+>
+  <div class="container" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '作者方案' }]} />
+    <header class="pricing-head">
+      <h1>作者方案與服務</h1>
+      <p>用 AI 節省寫作時間，用專業建立內容資產。以下方案皆為單純的內容服務，不保證流量或上刊。</p>
+    </header>
+
+    <div class="pricing-grid">
+      {plans.map((p) => <PricingCard {...p} />)}
+    </div>
+
+    <section class="section faq-section">
+      <div class="section-head"><h2>常見問題</h2></div>
+      <div class="faqs">
+        {faqs.map((f) => (
+          <details class="faq">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .pricing-head {
+    margin: 18px 0 36px;
+  }
+  .pricing-head h1 {
+    font-size: 2.2rem;
+    margin: 0 0 10px;
+  }
+  .pricing-head p {
+    color: var(--ink-2);
+    max-width: 680px;
+    line-height: 1.7;
+    margin: 0;
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .faq-section {
+    max-width: 800px;
+  }
+  .faqs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .faq {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+  }
+  .faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--ink);
+    font-family: var(--font-sans);
+  }
+  .faq p {
+    margin: 10px 0 0;
+    color: var(--ink-2);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 860px) {
+    .pricing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 560px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

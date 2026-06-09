@@ -1,0 +1,73 @@
+---
+import { SITE } from '@/config/site';
+import { absoluteUrl, asset } from '@/utils/url';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** 站內路徑（不含 base），用於 canonical */
+  path: string;
+  /** OG 圖：相對 BASE 的路徑或絕對網址 */
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+}
+
+const {
+  title,
+  description = SITE.description,
+  path,
+  ogImage,
+  ogType = 'website',
+  noindex = false,
+  publishedTime,
+  modifiedTime,
+} = Astro.props;
+
+const fullTitle =
+  path === '/' ? `${SITE.name}｜${SITE.tagline}` : `${title}｜${SITE.name}`;
+
+const canonical = absoluteUrl(path, Astro.site);
+
+// OG 圖：絕對網址直接用，否則視為相對 BASE 的資產 → 補成絕對
+const ogImagePath = ogImage ?? SITE.defaultOgImage;
+const ogImageAbs = /^https?:\/\//.test(ogImagePath)
+  ? ogImagePath
+  : new URL(asset(ogImagePath), Astro.site).toString();
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Open Graph -->
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:locale" content={SITE.locale} />
+<meta property="og:type" content={ogType} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImageAbs} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+{publishedTime && <meta property="article:published_time" content={publishedTime} />}
+{modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageAbs} />
+
+<!-- RSS -->
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={`${SITE.name} RSS`}
+  href={absoluteUrl('/rss.xml', Astro.site)}
+/>

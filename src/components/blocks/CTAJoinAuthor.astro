@@ -1,0 +1,70 @@
+---
+import { url } from '@/utils/url';
+---
+<section class="cta-join">
+  <div class="container cta-inner">
+    <div class="cta-text">
+      <h2>用 AI 節省寫作時間，用專業建立內容資產</h2>
+      <p>
+        APPI 提供 AI 輔助初稿、封面圖、基本 SEO、文章排版與媒體刊登流程，
+        協助專業者更快產出文章，建立長期搜尋曝光與專業形象。
+      </p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn--primary" href={url('/pricing/')}>了解作者方案</a>
+      <a class="btn btn--ghost cta-ghost" href={url('/join/')}>申請成為作者</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-join {
+    background: var(--appi-brand);
+    color: #fff;
+    border-radius: var(--radius);
+    margin-block: 64px;
+    overflow: hidden;
+  }
+  .cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding-block: 44px;
+    flex-wrap: wrap;
+  }
+  .cta-text {
+    flex: 1;
+    min-width: 280px;
+  }
+  .cta-text h2 {
+    color: #fff;
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+  }
+  .cta-text p {
+    margin: 0;
+    color: #cdd9ee;
+    max-width: 620px;
+    line-height: 1.7;
+  }
+  .cta-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .cta-join :global(.btn--primary) {
+    background: #fff;
+    color: var(--appi-brand);
+  }
+  .cta-join :global(.btn--primary:hover) {
+    background: #eef2f8;
+  }
+  .cta-join :global(.cta-ghost) {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  .cta-join :global(.cta-ghost:hover) {
+    background: rgba(255, 255, 255, 0.12);
+  }
+</style>

@@ -1,0 +1,29 @@
+---
+import PolicyLayout from '@/layouts/PolicyLayout.astro';
+import { DISCLAIMERS } from '@/config/disclaimers';
+---
+<PolicyLayout
+  title="免責聲明"
+  path="/disclaimer/"
+  lead="APPI News 各類內容的免責說明。"
+>
+  <p>APPI News 致力於提供正確、可查證的內容，但所有內容僅供參考，不構成個人化的專業建議。以下為各類內容的免責說明。</p>
+
+  <h2>一般資訊</h2>
+  <p>{DISCLAIMERS.general.text}</p>
+
+  <h2>健康醫療內容</h2>
+  <p>{DISCLAIMERS.medical.text}</p>
+
+  <h2>財經內容</h2>
+  <p>{DISCLAIMERS.financial.text}</p>
+
+  <h2>法律與政策內容</h2>
+  <p>{DISCLAIMERS.legal.text}</p>
+
+  <h2>合作與贊助內容</h2>
+  <p>{DISCLAIMERS.sponsored.text}</p>
+
+  <h2>AI 輔助內容</h2>
+  <p>部分內容使用 AI 輔助整理初稿，並由作者或 APPI 編輯部進行內容檢核與修訂。AI 輔助不代表內容未經人工把關。</p>
+</PolicyLayout>

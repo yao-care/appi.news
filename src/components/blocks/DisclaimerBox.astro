@@ -1,0 +1,46 @@
+---
+import { DISCLAIMERS, type DisclaimerType } from '@/config/disclaimers';
+
+interface Props {
+  type?: DisclaimerType;
+}
+const { type = 'general' } = Astro.props;
+const d = DISCLAIMERS[type] ?? DISCLAIMERS.general;
+const isHighRisk = type === 'medical' || type === 'financial' || type === 'legal';
+---
+<aside class:list={['disclaimer', isHighRisk && 'disclaimer--risk']} role="note">
+  <span class="disclaimer-label">免責聲明・{d.label}</span>
+  <p>{d.text}</p>
+</aside>
+
+<style>
+  .disclaimer {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--ink-3);
+    background: var(--bg-soft);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 14px 18px;
+    margin-block: 24px;
+  }
+  .disclaimer--risk {
+    border-left-color: var(--appi-accent);
+    background: #fcf6f5;
+  }
+  .disclaimer-label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--ink-2);
+    font-family: var(--font-sans);
+    margin-bottom: 4px;
+  }
+  .disclaimer--risk .disclaimer-label {
+    color: var(--appi-accent);
+  }
+  .disclaimer p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--ink-2);
+  }
+</style>

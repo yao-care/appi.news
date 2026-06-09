@@ -1,0 +1,57 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import { asset } from '@/utils/url';
+
+const pagefindUiJs = asset('pagefind/pagefind-ui.js');
+const pagefindUiCss = asset('pagefind/pagefind-ui.css');
+const pagefindBundle = asset('pagefind/');
+---
+<BaseLayout
+  title="搜尋"
+  description="搜尋 APPI News 的文章內容。"
+  path="/search/"
+  noindex={true}
+>
+  <div class="container" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '搜尋' }]} />
+    <header class="section-head" style="margin-top:18px;"><h2>搜尋</h2></header>
+    <div id="search"></div>
+    <noscript><p>搜尋功能需要啟用 JavaScript。</p></noscript>
+  </div>
+
+  <link rel="stylesheet" href={pagefindUiCss} />
+  <script define:vars={{ pagefindUiJs, pagefindBundle }} type="module">
+    async function init() {
+      try {
+        await import(pagefindUiJs);
+        // eslint-disable-next-line no-undef
+        new PagefindUI({
+          element: '#search',
+          bundlePath: pagefindBundle,
+          showSubResults: true,
+          translations: {
+            placeholder: '搜尋文章…',
+            zero_results: '找不到「[SEARCH_TERM]」相關結果',
+          },
+        });
+      } catch (e) {
+        document.getElementById('search').innerHTML =
+          '<p style="color:var(--ink-3)">搜尋索引尚未建立，請在正式部署後使用。</p>';
+      }
+    }
+    init();
+  </script>
+
+  <style is:global>
+    :root {
+      --pagefind-ui-primary: #1f3a5f;
+      --pagefind-ui-font: var(--font-sans);
+      --pagefind-ui-border-radius: 8px;
+    }
+    #search {
+      max-width: 720px;
+      margin-top: 8px;
+    }
+  </style>
+</BaseLayout>

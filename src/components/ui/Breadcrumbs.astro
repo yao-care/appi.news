@@ -1,0 +1,58 @@
+---
+import { url } from '@/utils/url';
+
+interface Props {
+  items: { name: string; path?: string }[];
+}
+const { items } = Astro.props;
+const full = [{ name: '首頁', path: '/' }, ...items];
+---
+<nav class="breadcrumbs" aria-label="麵包屑">
+  <ol>
+    {
+      full.map((it, i) => (
+        <li>
+          {it.path && i < full.length - 1 ? (
+            <a href={url(it.path)}>{it.name}</a>
+          ) : (
+            <span aria-current="page">{it.name}</span>
+          )}
+          {i < full.length - 1 && <span class="sep" aria-hidden="true">›</span>}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<style>
+  .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    color: var(--ink-3);
+  }
+  .breadcrumbs li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .breadcrumbs a {
+    color: var(--ink-3);
+    text-decoration: none;
+  }
+  .breadcrumbs a:hover {
+    color: var(--appi-brand);
+    text-decoration: underline;
+  }
+  .breadcrumbs span[aria-current] {
+    color: var(--ink-2);
+  }
+  .sep {
+    color: var(--line);
+  }
+</style>

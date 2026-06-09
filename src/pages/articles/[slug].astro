@@ -1,0 +1,374 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import CategoryTag from '@/components/ui/CategoryTag.astro';
+import TagList from '@/components/ui/TagList.astro';
+import DisclosureBox from '@/components/blocks/DisclosureBox.astro';
+import DisclaimerBox from '@/components/blocks/DisclaimerBox.astro';
+import ReferenceList from '@/components/blocks/ReferenceList.astro';
+import AuthorBioBox from '@/components/blocks/AuthorBioBox.astro';
+import ShareButtons from '@/components/blocks/ShareButtons.astro';
+import RelatedArticles from '@/components/blocks/RelatedArticles.astro';
+import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
+import {
+  getPublishedArticles,
+  getAuthorMap,
+  articleSlug,
+  coverImageFor,
+  coverAltFor,
+  readingTime,
+  relatedArticles,
+  adjacent,
+  authorHasPage,
+} from '@/utils/content';
+import { getCategory, getSubcategoryName } from '@/config/categories';
+import { formatDate, isoDate } from '@/utils/date';
+import { absoluteUrl, url } from '@/utils/url';
+import { articleLd, breadcrumbLd } from '@/utils/jsonld';
+
+export async function getStaticPaths() {
+  const articles = await getPublishedArticles();
+  return articles.map((article) => ({
+    params: { slug: articleSlug(article) },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+
+const cat = getCategory(article.data.category);
+const subName = getSubcategoryName(article.data.category, article.data.subcategory);
+const author = authorMap.get(article.data.author);
+const authorName = author?.data.name ?? 'APPI 編輯部';
+const rt = readingTime(article);
+const cover = coverImageFor(article);
+const path = `/articles/${articleSlug(article)}/`;
+
+const related = relatedArticles(all, article, 3);
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+const { newer, older } = adjacent(all, article);
+
+const { Content } = await render(article);
+
+const isMedicalOrNews =
+  article.data.category === 'health' || article.data.category === 'focus';
+
+// structured data
+const crumbItems = [
+  { name: cat?.name ?? '文章', path: `/${article.data.category}/` },
+  { name: article.data.title, path },
+];
+const ld = [
+  articleLd(Astro.site, {
+    headline: article.data.title,
+    description: article.data.description,
+    path,
+    image: new URL(cover, Astro.site).toString(),
+    datePublished: isoDate(article.data.publishDate),
+    dateModified: isoDate(article.data.updatedDate ?? article.data.publishDate),
+    authorName,
+    authorPath: authorHasPage(author) ? `/authors/${author!.id}/` : undefined,
+    section: cat?.name,
+    isNews: isMedicalOrNews,
+  }),
+  breadcrumbLd(Astro.site, [{ name: '首頁', path: '/' }, ...crumbItems]),
+];
+
+const shareUrl = absoluteUrl(path, Astro.site);
+const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
+---
+
+<BaseLayout
+  title={article.data.title}
+  description={article.data.description}
+  path={path}
+  ogType="article"
+  ogImage={ogImg}
+  publishedTime={isoDate(article.data.publishDate)}
+  modifiedTime={isoDate(article.data.updatedDate ?? article.data.publishDate)}
+  jsonld={ld}
+>
+  <article class="article">
+    <div class="container article-head-wrap">
+      <Breadcrumbs items={crumbItems} />
+
+      <div class="article-head">
+        <div class="article-cat">
+          <CategoryTag
+            category={article.data.category}
+            subcategory={article.data.subcategory}
+          />
+        </div>
+        <h1>{article.data.title}</h1>
+        <p class="article-desc">{article.data.description}</p>
+
+        <div class="article-byline">
+          {
+            authorHasPage(author) ? (
+              <a class="byline-author" href={url(`/authors/${author!.id}/`)}>{authorName}</a>
+            ) : (
+              <span class="byline-author">{authorName}</span>
+            )
+          }
+          {author?.data.displayTitle && <span class="byline-title">{author.data.displayTitle}</span>}
+          <span class="byline-sep">·</span>
+          <time datetime={isoDate(article.data.publishDate)}>
+            {formatDate(article.data.publishDate)}
+          </time>
+          {
+            article.data.updatedDate &&
+              article.data.updatedDate.getTime() !== article.data.publishDate.getTime() && (
+                <span class="byline-updated">（更新於 {formatDate(article.data.updatedDate)}）</span>
+              )
+          }
+          <span class="byline-sep">·</span>
+          <span>{rt} 分鐘閱讀</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container article-cover-wrap">
+      <ImageWithFallback
+        src={cover}
+        alt={coverAltFor(article)}
+        fallback={`og/${article.data.category}.png`}
+        class="article-cover"
+        loading="eager"
+      />
+    </div>
+
+    <div class="container article-main">
+      <div class="article-content">
+        <DisclosureBox sourceType={article.data.sourceType} custom={article.data.disclosure} />
+
+        {
+          article.data.highlights.length > 0 && (
+            <aside class="highlights">
+              <h2>本文重點</h2>
+              <ul>
+                {article.data.highlights.map((h) => <li>{h}</li>)}
+              </ul>
+            </aside>
+          )
+        }
+
+        <div class="article-body">
+          <Content />
+        </div>
+
+        {
+          article.data.expertNote && (
+            <aside class="expert-note">
+              <h2>主編判讀</h2>
+              <p>{article.data.expertNote}</p>
+            </aside>
+          )
+        }
+
+        {
+          article.data.risksAndLimits.length > 0 && (
+            <aside class="risks">
+              <h2>風險與限制</h2>
+              <ul>
+                {article.data.risksAndLimits.map((r) => <li>{r}</li>)}
+              </ul>
+            </aside>
+          )
+        }
+
+        <ReferenceList references={article.data.references} />
+
+        <DisclaimerBox type={article.data.disclaimerType} />
+
+        <TagList tags={article.data.tags} title="標籤" />
+
+        <ShareButtons url={shareUrl} title={article.data.title} />
+
+        {author && <AuthorBioBox author={author} />}
+
+        <nav class="prevnext" aria-label="上一篇下一篇">
+          {
+            older && (
+              <a class="prevnext-item" href={url(`/articles/${articleSlug(older)}/`)}>
+                <span class="pn-label">← 較舊文章</span>
+                <span class="pn-title">{older.data.title}</span>
+              </a>
+            )
+          }
+          {
+            newer && (
+              <a class="prevnext-item prevnext-next" href={url(`/articles/${articleSlug(newer)}/`)}>
+                <span class="pn-label">較新文章 →</span>
+                <span class="pn-title">{newer.data.title}</span>
+              </a>
+            )
+          }
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <RelatedArticles articles={related} authorNames={authorNames} title="延伸閱讀" />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-head-wrap {
+    padding-top: 28px;
+  }
+  .article-head {
+    max-width: var(--maxw-prose);
+    margin: 18px auto 0;
+  }
+  .article-cat {
+    margin-bottom: 14px;
+  }
+  .article-head h1 {
+    font-size: 2.3rem;
+    line-height: 1.3;
+    margin: 0 0 16px;
+  }
+  .article-desc {
+    font-size: 1.15rem;
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin: 0 0 20px;
+  }
+  .article-byline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--ink-3);
+    font-family: var(--font-sans);
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .byline-author {
+    font-weight: 700;
+    color: var(--ink);
+  }
+  a.byline-author:hover {
+    color: var(--appi-brand);
+  }
+  .byline-title {
+    color: var(--appi-brand);
+    font-weight: 500;
+  }
+  .byline-sep {
+    color: var(--line);
+  }
+  .article-cover-wrap {
+    margin-top: 28px;
+  }
+  :global(.article-cover) {
+    width: 100%;
+    max-width: var(--maxw-prose);
+    margin-inline: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+  .article-main {
+    margin-top: 8px;
+  }
+  .article-content {
+    max-width: var(--maxw-prose);
+    margin-inline: auto;
+    padding-top: 8px;
+  }
+  .highlights {
+    background: var(--bg-tint);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-block: 28px;
+  }
+  .highlights h2 {
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+    color: var(--appi-brand);
+  }
+  .highlights ul {
+    margin: 0;
+    padding-left: 1.2em;
+  }
+  .highlights li {
+    margin-bottom: 6px;
+    color: var(--ink-2);
+  }
+  .expert-note,
+  .risks {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-block: 28px;
+  }
+  .expert-note {
+    border-left: 4px solid var(--appi-brand);
+    background: var(--bg-soft);
+  }
+  .risks {
+    border-left: 4px solid var(--appi-accent);
+    background: #fcf6f5;
+  }
+  .expert-note h2,
+  .risks h2 {
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+  }
+  .risks ul {
+    margin: 0;
+    padding-left: 1.2em;
+  }
+  .prevnext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 36px;
+  }
+  .prevnext-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 18px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-decoration: none;
+  }
+  .prevnext-item:hover {
+    border-color: var(--appi-brand);
+  }
+  .prevnext-next {
+    text-align: right;
+  }
+  .pn-label {
+    font-size: 0.78rem;
+    color: var(--ink-3);
+    font-family: var(--font-sans);
+  }
+  .pn-title {
+    font-size: 0.95rem;
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 600px) {
+    .article-head h1 {
+      font-size: 1.7rem;
+    }
+    .prevnext {
+      grid-template-columns: 1fr;
+    }
+    .prevnext-next {
+      text-align: left;
+    }
+  }
+</style>

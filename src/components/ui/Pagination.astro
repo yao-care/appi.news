@@ -1,0 +1,79 @@
+---
+import { url } from '@/utils/url';
+
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  /** 基底路徑，例如 /focus/ ；第一頁為 base，其餘為 base + 'page/N/' */
+  base: string;
+}
+const { currentPage, totalPages, base } = Astro.props;
+
+function pageHref(p: number): string {
+  if (p <= 1) return url(base);
+  return url(`${base}page/${p}/`);
+}
+const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+---
+{
+  totalPages > 1 && (
+    <nav class="pagination" aria-label="分頁">
+      {currentPage > 1 && <a href={pageHref(currentPage - 1)} class="page-nav">‹ 上一頁</a>}
+      <ul>
+        {pages.map((p) => (
+          <li>
+            {p === currentPage ? (
+              <span class="page current" aria-current="page">{p}</span>
+            ) : (
+              <a class="page" href={pageHref(p)}>{p}</a>
+            )}
+          </li>
+        ))}
+      </ul>
+      {currentPage < totalPages && <a href={pageHref(currentPage + 1)} class="page-nav">下一頁 ›</a>}
+    </nav>
+  )
+}
+
+<style>
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-block: 48px;
+    flex-wrap: wrap;
+  }
+  .pagination ul {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .page,
+  .page-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    color: var(--ink-2);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  .page:hover,
+  .page-nav:hover {
+    border-color: var(--appi-brand);
+    color: var(--appi-brand);
+  }
+  .page.current {
+    background: var(--appi-brand);
+    border-color: var(--appi-brand);
+    color: #fff;
+  }
+</style>

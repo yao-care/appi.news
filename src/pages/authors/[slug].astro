@@ -1,0 +1,228 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
+import EmptyState from '@/components/ui/EmptyState.astro';
+import {
+  getAuthors,
+  getPublishedArticles,
+  getAuthorMap,
+  byAuthor,
+  authorHasPage,
+  authorHasColumnPage,
+  authorAvatar,
+} from '@/utils/content';
+import { getColumns } from '@/utils/content';
+import { url } from '@/utils/url';
+import { personLd, breadcrumbLd } from '@/utils/jsonld';
+
+export async function getStaticPaths() {
+  const authors = await getAuthors();
+  return authors
+    .filter((a) => authorHasPage(a))
+    .map((author) => ({ params: { slug: author.id }, props: { author } }));
+}
+
+const { author } = Astro.props;
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+const articles = byAuthor(all, author.id);
+const path = `/authors/${author.id}/`;
+const avatar = authorAvatar(author);
+
+const allColumns = await getColumns();
+const myColumns = allColumns.filter(
+  (c) => c.data.ownerAuthor === author.id || c.data.coAuthors.includes(author.id),
+);
+
+const { Content } = await render(author);
+
+const LEVEL_LABELS: Record<string, string> = {
+  contributor: '來稿作者',
+  verified: '認證作者',
+  columnist: '專欄作者',
+  featured: '特約專欄',
+  brand: '品牌作者',
+};
+
+const ld = [
+  personLd(Astro.site, {
+    name: author.data.name,
+    path,
+    jobTitle: author.data.displayTitle,
+    description: author.data.bioShort,
+    image: new URL(avatar, Astro.site).toString(),
+    sameAs: author.data.socialLinks.map((s) => s.url),
+  }),
+  breadcrumbLd(Astro.site, [
+    { name: '首頁', path: '/' },
+    { name: '作者群', path: '/authors/' },
+    { name: author.data.name, path },
+  ]),
+];
+---
+<BaseLayout
+  title={author.data.name}
+  description={author.data.bioShort || `${author.data.name} 在 APPI News 的文章與專欄。`}
+  path={path}
+  ogImage={author.data.avatar ?? 'og/author.png'}
+  jsonld={ld}
+>
+  <div class="container author-page">
+    <Breadcrumbs items={[{ name: '作者群', path: '/authors/' }, { name: author.data.name }]} />
+
+    <header class="author-hero">
+      <ImageWithFallback src={avatar} alt={author.data.name} fallback="og/author.png" class="author-hero-avatar" width={96} height={96} />
+      <div class="author-hero-info">
+        <span class="author-hero-level">{LEVEL_LABELS[author.data.authorLevel]}</span>
+        <h1>{author.data.name}</h1>
+        {author.data.displayTitle && <p class="author-hero-title">{author.data.displayTitle}</p>}
+        {
+          author.data.specialties.length > 0 && (
+            <div class="author-specialties">
+              {author.data.specialties.map((s) => <span>{s}</span>)}
+            </div>
+          )
+        }
+      </div>
+    </header>
+
+    <div class="author-bio prose article-body">
+      <Content />
+      {
+        author.data.credentials.length > 0 && (
+          <>
+            <h2>專業資格</h2>
+            <ul>{author.data.credentials.map((c) => <li>{c}</li>)}</ul>
+          </>
+        )
+      }
+    </div>
+
+    {
+      myColumns.length > 0 && authorHasColumnPage(author) && (
+        <section class="section">
+          <div class="section-head"><h2>專欄</h2></div>
+          <ul class="author-columns">
+            {myColumns.map((c) => (
+              <li>
+                <a href={url(`/columns/${c.id}/`)}>{c.data.title}</a>
+                <span>{c.data.description}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <section class="section">
+      <div class="section-head"><h2>文章（{articles.length}）</h2></div>
+      {
+        articles.length > 0 ? (
+          <div class="card-grid card-grid--3">
+            {articles.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
+          </div>
+        ) : (
+          <EmptyState title="尚無文章" message="這位作者的文章即將上線。" />
+        )
+      }
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .author-page {
+    padding-top: 28px;
+  }
+  .author-hero {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin: 18px 0 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  :global(.author-hero-avatar) {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: var(--bg-soft);
+  }
+  .author-hero-level {
+    display: inline-block;
+    font-size: 0.78rem;
+    color: var(--appi-brand);
+    background: var(--bg-tint);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+  }
+  .author-hero h1 {
+    font-size: 2rem;
+    margin: 8px 0 4px;
+  }
+  .author-hero-title {
+    margin: 0 0 8px;
+    color: var(--appi-brand);
+    font-weight: 600;
+    font-family: var(--font-sans);
+  }
+  .author-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .author-specialties span {
+    font-size: 0.8rem;
+    background: var(--bg-soft);
+    color: var(--ink-2);
+    padding: 3px 11px;
+    border-radius: 20px;
+    font-family: var(--font-sans);
+  }
+  .author-bio {
+    max-width: var(--maxw-prose);
+  }
+  .author-columns {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 14px;
+  }
+  .author-columns li {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+  }
+  .author-columns a {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+  .author-columns span {
+    display: block;
+    color: var(--ink-3);
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 560px) {
+    .author-hero {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+    .author-specialties {
+      justify-content: center;
+    }
+  }
+</style>

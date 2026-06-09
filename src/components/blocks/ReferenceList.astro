@@ -1,0 +1,68 @@
+---
+interface Ref {
+  title: string;
+  url?: string;
+  publisher?: string;
+  note?: string;
+}
+interface Props {
+  references: Ref[];
+}
+const { references } = Astro.props;
+---
+{
+  references.length > 0 && (
+    <section class="references">
+      <h2>參考來源</h2>
+      <ol>
+        {references.map((r) => (
+          <li>
+            {r.url ? (
+              <a href={r.url} target="_blank" rel="noopener noreferrer">{r.title}</a>
+            ) : (
+              <span>{r.title}</span>
+            )}
+            {r.publisher && <span class="ref-pub">（{r.publisher}）</span>}
+            {r.note && <span class="ref-note">{r.note}</span>}
+          </li>
+        ))}
+      </ol>
+    </section>
+  )
+}
+
+<style>
+  .references {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .references h2 {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+  }
+  .references ol {
+    padding-left: 1.4em;
+    margin: 0;
+  }
+  .references li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+  .references a {
+    color: var(--appi-brand-light);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-word;
+  }
+  .ref-pub {
+    color: var(--ink-3);
+  }
+  .ref-note {
+    display: block;
+    color: var(--ink-3);
+    font-size: 0.85rem;
+  }
+</style>

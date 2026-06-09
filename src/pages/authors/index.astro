@@ -1,0 +1,32 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import AuthorCard from '@/components/blocks/AuthorCard.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import CTAJoinAuthor from '@/components/blocks/CTAJoinAuthor.astro';
+import { getAuthors, getPublishedArticles, byAuthor } from '@/utils/content';
+
+const authors = (await getAuthors()).filter((a) => a.data.active);
+const all = await getPublishedArticles();
+const cards = authors
+  .map((a) => ({ author: a, count: byAuthor(all, a.id).length }))
+  .sort((x, y) => y.count - x.count);
+---
+<BaseLayout
+  title="作者群"
+  description="APPI News 的作者群：醫師、藥師、營養師、科技顧問、財經研究者等各領域專業者。"
+  path="/authors/"
+>
+  <div class="container" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '作者群' }]} />
+    <header class="section-head" style="margin-top:18px;">
+      <h2>作者群</h2>
+    </header>
+    <p style="color:var(--ink-2);max-width:680px;margin-bottom:28px;line-height:1.7;">
+      APPI 匯聚各領域專業作者，從醫療、科技到財經，以專業身份署名、清楚揭露立場，建立可被信任的內容。
+    </p>
+    <div class="card-grid card-grid--3">
+      {cards.map((c) => <AuthorCard author={c.author} articleCount={c.count} />)}
+    </div>
+    <CTAJoinAuthor />
+  </div>
+</BaseLayout>

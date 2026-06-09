@@ -1,0 +1,55 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  path: string;
+  updated?: string;
+  lead?: string;
+}
+const { title, description, path, updated, lead } = Astro.props;
+---
+<BaseLayout title={title} description={description ?? lead} path={path}>
+  <div class="container policy-wrap">
+    <Breadcrumbs items={[{ name: title }]} />
+    <header class="policy-head">
+      <h1>{title}</h1>
+      {lead && <p class="policy-lead">{lead}</p>}
+      {updated && <p class="policy-updated">最後更新：{updated}</p>}
+    </header>
+    <div class="prose article-body policy-body">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .policy-wrap {
+    padding-block: 32px 24px;
+  }
+  .policy-head {
+    margin-block: 16px 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  .policy-head h1 {
+    font-size: 2rem;
+    margin: 0 0 10px;
+  }
+  .policy-lead {
+    font-size: 1.05rem;
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .policy-updated {
+    margin: 12px 0 0;
+    font-size: 0.82rem;
+    color: var(--ink-3);
+  }
+  .policy-body {
+    margin-inline: auto;
+  }
+</style>

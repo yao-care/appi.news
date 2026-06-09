@@ -1,0 +1,45 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import {
+  getPublishedArticles,
+  getAuthorMap,
+  byTag,
+  tagStats,
+  slugify,
+} from '@/utils/content';
+
+export async function getStaticPaths() {
+  const all = await getPublishedArticles();
+  const tags = tagStats(all);
+  return tags.map((t) => ({
+    params: { slug: slugify(t.tag) },
+    props: { tag: t.tag, count: t.count },
+  }));
+}
+
+const { tag, count } = Astro.props;
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+const articles = byTag(all, tag);
+---
+<BaseLayout
+  title={`#${tag}`}
+  description={`所有標記「${tag}」的 APPI News 文章，共 ${count} 篇。`}
+  path={`/tags/${slugify(tag)}/`}
+>
+  <div class="container" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '標籤' }, { name: `#${tag}` }]} />
+    <header class="section-head" style="margin-top:18px;">
+      <h2>#{tag}</h2>
+      <span class="more-link">{count} 篇文章</span>
+    </header>
+    <div class="card-grid card-grid--4">
+      {articles.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
+    </div>
+  </div>
+</BaseLayout>

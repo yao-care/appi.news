@@ -1,0 +1,27 @@
+---
+import type { Article } from '@/utils/content';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+
+interface Props {
+  articles: Article[];
+  authorNames?: Map<string, string>;
+  title?: string;
+}
+const { articles, authorNames, title = '相關文章' } = Astro.props;
+---
+{
+  articles.length > 0 && (
+    <section class="related section">
+      <div class="section-head"><h2>{title}</h2></div>
+      <div class="card-grid card-grid--3">
+        {articles.map((a) => (
+          <ArticleCard
+            article={a}
+            variant="medium"
+            authorName={authorNames?.get(a.data.author)}
+          />
+        ))}
+      </div>
+    </section>
+  )
+}

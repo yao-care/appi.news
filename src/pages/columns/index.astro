@@ -1,0 +1,65 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ColumnCard from '@/components/blocks/ColumnCard.astro';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import EmptyState from '@/components/ui/EmptyState.astro';
+import {
+  getColumns,
+  getPublishedArticles,
+  getAuthorMap,
+  byColumn,
+  byCategory,
+} from '@/utils/content';
+import { getCategory } from '@/config/categories';
+
+const columns = await getColumns();
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+const cat = getCategory('columns')!;
+const columnArticles = byCategory(all, 'columns');
+
+const cards = columns.map((c) => ({
+  column: c,
+  ownerName: authorMap.get(c.data.ownerAuthor)?.data.name,
+  count: byColumn(all, c.id).length,
+}));
+---
+<BaseLayout
+  title="專欄｜Columns"
+  description={cat.description}
+  path="/columns/"
+  ogImage="og/columns.png"
+>
+  <div class="container" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '專欄' }]} />
+    <header class="channel-head" style="margin:18px 0 32px;padding-bottom:24px;border-bottom:3px solid #57606a;">
+      <h1 style="font-size:2.2rem;margin:0;color:#57606a;">專欄 <span style="font-family:var(--font-sans);font-size:1rem;color:var(--ink-3);letter-spacing:.05em;">COLUMNS</span></h1>
+      <p style="margin:12px 0 0;font-size:1.05rem;color:var(--ink-2);max-width:760px;line-height:1.7;">{cat.description}</p>
+    </header>
+
+    {
+      cards.length > 0 ? (
+        <div class="card-grid card-grid--3">
+          {cards.map((c) => <ColumnCard column={c.column} ownerName={c.ownerName} articleCount={c.count} />)}
+        </div>
+      ) : (
+        <EmptyState title="專欄即將上線" message="APPI 專欄作者的內容正在準備中。" />
+      )
+    }
+
+    {
+      columnArticles.length > 0 && (
+        <section class="section">
+          <div class="section-head"><h2>專欄文章</h2></div>
+          <div class="card-grid card-grid--4">
+            {columnArticles.slice(0, 8).map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
+          </div>
+        </section>
+      )
+    }
+  </div>
+</BaseLayout>

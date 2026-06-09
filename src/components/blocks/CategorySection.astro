@@ -1,0 +1,89 @@
+---
+import type { Article } from '@/utils/content';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import { url } from '@/utils/url';
+
+interface Props {
+  title: string;
+  /** 區塊強調色 */
+  color?: string;
+  moreHref?: string;
+  moreLabel?: string;
+  articles: Article[];
+  authorNames?: Map<string, string>;
+  /** 第一篇是否以 large 變體強調 */
+  leadFirst?: boolean;
+}
+const {
+  title,
+  color = 'var(--ink)',
+  moreHref,
+  moreLabel = '看更多',
+  articles,
+  authorNames,
+  leadFirst = false,
+} = Astro.props;
+
+const [first, ...rest] = articles;
+---
+{
+  articles.length > 0 && (
+    <section class="cat-section section">
+      <div class="section-head" style={`border-color:${color}`}>
+        <h2 style={`color:${color}`}>{title}</h2>
+        {moreHref && <a class="more-link" href={url(moreHref)}>{moreLabel} →</a>}
+      </div>
+
+      {leadFirst && first ? (
+        <div class="cat-layout">
+          <div class="cat-lead">
+            <ArticleCard
+              article={first}
+              variant="large"
+              authorName={authorNames?.get(first.data.author)}
+            />
+          </div>
+          <div class="cat-rest">
+            {rest.slice(0, 4).map((a) => (
+              <ArticleCard
+                article={a}
+                variant="horizontal"
+                showExcerpt={false}
+                authorName={authorNames?.get(a.data.author)}
+              />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div class="card-grid card-grid--4">
+          {articles.map((a) => (
+            <ArticleCard
+              article={a}
+              variant="medium"
+              authorName={authorNames?.get(a.data.author)}
+            />
+          ))}
+        </div>
+      )}
+    </section>
+  )
+}
+
+<style>
+  .cat-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+  }
+  .cat-rest {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  @media (max-width: 860px) {
+    .cat-layout {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+</style>

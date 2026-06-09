@@ -1,0 +1,35 @@
+---
+import { asset } from '@/utils/url';
+
+interface Props {
+  src: string;
+  alt: string;
+  /** 載入失敗時的 fallback（相對 BASE 路徑或絕對網址） */
+  fallback?: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  width?: number;
+  height?: number;
+}
+const {
+  src,
+  alt,
+  fallback = 'og/default.png',
+  class: className,
+  loading = 'lazy',
+  width,
+  height,
+} = Astro.props;
+
+const fallbackSrc = /^https?:\/\//.test(fallback) ? fallback : asset(fallback);
+---
+<img
+  src={src}
+  alt={alt}
+  class={className}
+  loading={loading}
+  width={width}
+  height={height}
+  data-fallback={fallbackSrc}
+  onerror="if(this.src!==this.dataset.fallback){this.src=this.dataset.fallback;}"
+/>

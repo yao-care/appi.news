@@ -1,0 +1,228 @@
+---
+import { SITE } from '@/config/site';
+import { MAIN_NAV } from '@/config/nav';
+import { url } from '@/utils/url';
+
+const navUrl = (p: string) => url(p);
+const current = Astro.url.pathname;
+function isActive(href: string): boolean {
+  const target = url(href);
+  if (target === url('/')) return current === target;
+  return current.startsWith(target);
+}
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={navUrl('/')}>
+      <span class="brand-mark">APPI</span>
+      <span class="brand-text">
+        <span class="brand-name">News</span>
+        <span class="brand-tag">亞太專業觀點</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="主選單">
+      <ul>
+        {
+          MAIN_NAV.map((item) => (
+            <li>
+              <a href={navUrl(item.href)} class={isActive(item.href) ? 'active' : ''}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="search-link" href={navUrl('/search/')} aria-label="搜尋">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      </a>
+      <a class="join-btn" href={navUrl('/join/')}>成為作者</a>
+      <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false" id="navToggle">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- 行動版選單 -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="行動版選單" hidden>
+    <ul>
+      {
+        MAIN_NAV.map((item) => (
+          <li><a href={navUrl(item.href)}>{item.label}</a></li>
+        ))
+      }
+      <li><a href={navUrl('/columns/')}>專欄</a></li>
+      <li><a href={navUrl('/pricing/')}>作者方案</a></li>
+      <li><a href={navUrl('/search/')}>搜尋</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('mobileNav');
+  toggle?.addEventListener('click', () => {
+    const open = menu?.hasAttribute('hidden');
+    if (open) {
+      menu?.removeAttribute('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+    } else {
+      menu?.setAttribute('hidden', '');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    height: 64px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .brand-mark {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    font-size: 1.35rem;
+    color: var(--appi-brand);
+    background: var(--bg-tint);
+    padding: 3px 9px;
+    border-radius: var(--radius-sm);
+  }
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+  .brand-name {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+  .brand-tag {
+    font-size: 0.68rem;
+    color: var(--ink-3);
+    letter-spacing: 0.02em;
+  }
+  .main-nav {
+    flex: 1;
+  }
+  .main-nav ul {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .main-nav a {
+    display: block;
+    padding: 8px 11px;
+    color: var(--ink-2);
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+  }
+  .main-nav a:hover {
+    background: var(--bg-soft);
+    color: var(--ink);
+  }
+  .main-nav a.active {
+    color: var(--appi-brand);
+    font-weight: 700;
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  .search-link {
+    color: var(--ink-2);
+    display: inline-flex;
+  }
+  .search-link:hover {
+    color: var(--appi-brand);
+  }
+  .join-btn {
+    background: var(--appi-brand);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .join-btn:hover {
+    background: var(--appi-brand-light);
+  }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--ink);
+    cursor: pointer;
+    padding: 4px;
+  }
+  .mobile-nav {
+    border-top: 1px solid var(--line);
+    background: #fff;
+  }
+  .mobile-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+  }
+  .mobile-nav a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--ink-2);
+    font-weight: 500;
+    border-bottom: 1px solid var(--line-2);
+  }
+
+  @media (max-width: 1000px) {
+    .main-nav {
+      display: none;
+    }
+    .nav-toggle {
+      display: inline-flex;
+    }
+  }
+  @media (min-width: 1001px) {
+    .mobile-nav {
+      display: none;
+    }
+  }
+  @media (max-width: 480px) {
+    .join-btn {
+      display: none;
+    }
+    .header-inner {
+      gap: 14px;
+    }
+  }
+</style>

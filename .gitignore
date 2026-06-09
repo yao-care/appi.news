@@ -1,0 +1,28 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# env
+.env
+.env.production
+
+# macOS
+.DS_Store
+
+# editor / temp
+.tmp-shots/
+*.tmp
+
+# 本地工具 log（非專案內容）
+asvs-server.log
+
+# 原始 WordPress 匯出檔（6MB，含選單/附件雜訊；遷移後的 md 已 commit）
+old/

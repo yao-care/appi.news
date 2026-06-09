@@ -1,0 +1,47 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CategoryChannel from '@/components/blocks/CategoryChannel.astro';
+import { CATEGORIES } from '@/config/categories';
+import {
+  getPublishedArticles,
+  getAuthorMap,
+  byCategory,
+} from '@/utils/content';
+
+const PAGE_SIZE = 18;
+
+export async function getStaticPaths() {
+  // 'columns' 由 /columns/ 專屬頁處理，這裡排除避免路由衝突
+  return CATEGORIES.filter((c) => c.slug !== 'columns').map((c) => ({
+    params: { category: c.slug },
+    props: { category: c },
+  }));
+}
+
+const { category } = Astro.props;
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+
+const inCat = byCategory(all, category.slug);
+const totalPages = Math.max(1, Math.ceil(inCat.length / PAGE_SIZE));
+const pageArticles = inCat.slice(0, PAGE_SIZE);
+---
+<BaseLayout
+  title={`${category.name}｜${category.nameEn}`}
+  description={category.description}
+  path={`/${category.slug}/`}
+  ogImage={`og/${category.slug}.png`}
+>
+  <CategoryChannel
+    category={category}
+    pageArticles={pageArticles}
+    allInCategory={inCat}
+    authorNames={authorNames}
+    currentPage={1}
+    totalPages={totalPages}
+    showHero={true}
+  />
+</BaseLayout>

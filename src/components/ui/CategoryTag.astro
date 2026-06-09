@@ -1,0 +1,50 @@
+---
+import { getCategory } from '@/config/categories';
+import { url } from '@/utils/url';
+
+interface Props {
+  category: string;
+  subcategory?: string;
+  size?: 'sm' | 'md';
+  link?: boolean;
+}
+const { category, subcategory, size = 'md', link = true } = Astro.props;
+const cat = getCategory(category);
+const sub = cat?.subcategories.find((s) => s.slug === subcategory);
+const color = cat?.color ?? 'var(--appi-brand)';
+const label = cat?.name ?? category;
+const Tag = link ? 'a' : 'span';
+const href = link ? url(`/${category}/`) : undefined;
+---
+<Tag
+  class:list={['cat-tag', `cat-tag--${size}`]}
+  href={href}
+  style={`--tag-color:${color}`}
+>
+  {label}{sub ? `・${sub.name}` : ''}
+</Tag>
+
+<style>
+  .cat-tag {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--tag-color);
+    background: color-mix(in srgb, var(--tag-color) 10%, white);
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 1.4;
+  }
+  a.cat-tag:hover {
+    background: color-mix(in srgb, var(--tag-color) 18%, white);
+  }
+  .cat-tag--md {
+    font-size: 0.78rem;
+    padding: 3px 9px;
+  }
+  .cat-tag--sm {
+    font-size: 0.7rem;
+    padding: 2px 7px;
+  }
+</style>

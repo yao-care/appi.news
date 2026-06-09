@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import { getPublishedArticles, getAuthorMap } from '@/utils/content';
+
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+---
+<BaseLayout
+  title="所有文章"
+  description="APPI News 所有已發佈文章，依時間排序。"
+  path="/articles/"
+>
+  <div class="container" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '所有文章' }]} />
+    <div class="section-head" style="margin-top:18px;">
+      <h2>所有文章（{all.length}）</h2>
+    </div>
+    <div class="card-grid card-grid--4">
+      {all.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
+    </div>
+  </div>
+</BaseLayout>

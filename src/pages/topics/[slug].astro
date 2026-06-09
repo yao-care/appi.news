@@ -1,0 +1,147 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import EmptyState from '@/components/ui/EmptyState.astro';
+import TagList from '@/components/ui/TagList.astro';
+import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
+import {
+  getPublishedArticles,
+  getAuthorMap,
+  byTopic,
+  articleSlug,
+} from '@/utils/content';
+import { getCategory } from '@/config/categories';
+import { asset } from '@/utils/url';
+import { breadcrumbLd } from '@/utils/jsonld';
+
+export async function getStaticPaths() {
+  const topics = (await getCollection('topics')).filter(
+    (t) => t.data.status === 'active',
+  );
+  return topics.map((topic) => ({ params: { slug: topic.id }, props: { topic } }));
+}
+
+const { topic } = Astro.props;
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+
+// 文章來源：article.topics 反向關聯 + frontmatter 手動指定的 articles
+const byRelation = byTopic(all, topic.id);
+const manual = all.filter(
+  (a) => topic.data.articles.includes(articleSlug(a)) || topic.data.articles.includes(a.id),
+);
+const seen = new Set<string>();
+const articles = [...manual, ...byRelation].filter((a) => {
+  const k = articleSlug(a);
+  if (seen.has(k)) return false;
+  seen.add(k);
+  return true;
+});
+
+const path = `/topics/${topic.id}/`;
+const cover = topic.data.coverImage
+  ? asset(topic.data.coverImage)
+  : asset(`og/${topic.data.category ?? 'focus'}.png`);
+const cat = getCategory(topic.data.category);
+const lead = articles[0];
+const rest = articles.slice(1);
+
+const { Content } = await render(topic);
+
+const ld = breadcrumbLd(Astro.site, [
+  { name: '首頁', path: '/' },
+  { name: '專題', path: '/topics/' },
+  { name: topic.data.title, path },
+]);
+---
+<BaseLayout
+  title={topic.data.title}
+  description={topic.data.description}
+  path={path}
+  ogImage={topic.data.coverImage ?? `og/${topic.data.category ?? 'focus'}.png`}
+  jsonld={ld}
+>
+  <div class="container topic-page" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '專題', path: '/topics/' }, { name: topic.data.title }]} />
+
+    <header class="topic-hero">
+      <ImageWithFallback src={cover} alt={topic.data.title} fallback="og/focus.png" class="topic-hero-cover" />
+      <div class="topic-hero-info">
+        {cat && <span class="topic-hero-cat" style={`color:${cat.color}`}>{cat.name}・專題</span>}
+        <h1>{topic.data.title}</h1>
+        <p>{topic.data.description}</p>
+      </div>
+    </header>
+
+    <div class="prose article-body topic-intro"><Content /></div>
+
+    {
+      articles.length > 0 ? (
+        <>
+          {lead && (
+            <div class="topic-lead">
+              <ArticleCard article={lead} variant="large" authorName={authorNames.get(lead.data.author)} />
+            </div>
+          )}
+          {
+            rest.length > 0 && (
+              <section class="section">
+                <div class="section-head"><h2>全部文章</h2></div>
+                <div class="card-grid card-grid--3">
+                  {rest.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
+                </div>
+              </section>
+            )
+          }
+        </>
+      ) : (
+        <EmptyState title="文章整理中" message="這個專題的文章正在彙整。" />
+      )
+    }
+
+    {topic.data.tags.length > 0 && <TagList tags={topic.data.tags} title="相關標籤" />}
+  </div>
+</BaseLayout>
+
+<style>
+  .topic-hero {
+    margin: 18px 0 28px;
+  }
+  :global(.topic-hero-cover) {
+    width: 100%;
+    aspect-ratio: 3 / 1;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+  .topic-hero-info {
+    padding-top: 20px;
+  }
+  .topic-hero-cat {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  .topic-hero-info h1 {
+    font-size: 2.1rem;
+    margin: 6px 0 10px;
+  }
+  .topic-hero-info p {
+    color: var(--ink-2);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 760px;
+  }
+  .topic-intro {
+    max-width: var(--maxw-prose);
+    margin-bottom: 32px;
+  }
+  .topic-lead {
+    margin-bottom: 16px;
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+interface Props {
+  url: string; // 絕對網址
+  title: string;
+}
+const { url, title } = Astro.props;
+const enc = encodeURIComponent;
+const fb = `https://www.facebook.com/sharer/sharer.php?u=${enc(url)}`;
+const x = `https://twitter.com/intent/tweet?url=${enc(url)}&text=${enc(title)}`;
+const line = `https://social-plugins.line.me/lineit/share?url=${enc(url)}`;
+---
+<div class="share" data-url={url}>
+  <span class="share-label">分享</span>
+  <a class="share-btn" href={line} target="_blank" rel="noopener" aria-label="分享到 LINE">LINE</a>
+  <a class="share-btn" href={fb} target="_blank" rel="noopener" aria-label="分享到 Facebook">Facebook</a>
+  <a class="share-btn" href={x} target="_blank" rel="noopener" aria-label="分享到 X">X</a>
+  <button class="share-btn share-copy" type="button">複製連結</button>
+</div>
+
+<script>
+  document.querySelectorAll('.share').forEach((el) => {
+    const btn = el.querySelector('.share-copy');
+    const url = (el as HTMLElement).dataset.url ?? location.href;
+    btn?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(url);
+        const orig = btn.textContent;
+        btn.textContent = '已複製 ✓';
+        setTimeout(() => (btn.textContent = orig), 1600);
+      } catch {
+        /* clipboard 不可用時忽略 */
+      }
+    });
+  });
+</script>
+
+<style>
+  .share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-block: 28px;
+  }
+  .share-label {
+    font-size: 0.85rem;
+    color: var(--ink-3);
+    font-weight: 600;
+    margin-right: 4px;
+  }
+  .share-btn {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--ink-2);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .share-btn:hover {
+    border-color: var(--appi-brand);
+    color: var(--appi-brand);
+  }
+</style>

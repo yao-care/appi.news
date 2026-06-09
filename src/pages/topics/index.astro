@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import TopicCard from '@/components/blocks/TopicCard.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import EmptyState from '@/components/ui/EmptyState.astro';
+import { getTopics, getPublishedArticles, byTopic } from '@/utils/content';
+
+const topics = await getTopics();
+const all = await getPublishedArticles();
+const cards = topics.map((t) => ({
+  topic: t,
+  count: byTopic(all, t.id).length + t.data.articles.length,
+}));
+---
+<BaseLayout
+  title="專題"
+  description="APPI News 專題：整理系列文章，深入特定議題。"
+  path="/topics/"
+>
+  <div class="container" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '專題' }]} />
+    <header class="section-head" style="margin-top:18px;"><h2>專題</h2></header>
+    {
+      cards.length > 0 ? (
+        <div class="card-grid card-grid--3">
+          {cards.map((c) => <TopicCard topic={c.topic} articleCount={c.count} />)}
+        </div>
+      ) : (
+        <EmptyState title="專題即將上線" />
+      )
+    }
+  </div>
+</BaseLayout>

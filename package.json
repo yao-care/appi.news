@@ -1,0 +1,29 @@
+{
+  "name": "appi-news",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "postbuild": "pagefind --site dist",
+    "preview": "astro preview",
+    "generate:og": "node scripts/generate-og.mjs",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.14",
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/noto-sans-tc": "^5.2.9",
+    "@fontsource/noto-serif-tc": "^5.2.10",
+    "astro": "^5.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "pagefind": "^1.5.2",
+    "sharp": "^0.34.5",
+    "typescript": "^5.9.3"
+  }
+}

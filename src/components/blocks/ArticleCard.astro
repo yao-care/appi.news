@@ -1,0 +1,190 @@
+---
+import type { Article } from '@/utils/content';
+import {
+  articleSlug,
+  coverImageFor,
+  coverAltFor,
+  readingTime,
+} from '@/utils/content';
+import { url } from '@/utils/url';
+import { formatDate } from '@/utils/date';
+import CategoryTag from '@/components/ui/CategoryTag.astro';
+import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
+
+interface Props {
+  article: Article;
+  variant?: 'hero' | 'large' | 'medium' | 'small' | 'horizontal';
+  authorName?: string;
+  showExcerpt?: boolean;
+}
+const {
+  article,
+  variant = 'medium',
+  authorName,
+  showExcerpt = true,
+} = Astro.props;
+
+const slug = articleSlug(article);
+const href = url(`/articles/${slug}/`);
+const cover = coverImageFor(article);
+const alt = coverAltFor(article);
+const rt = readingTime(article);
+const desc = article.data.excerpt ?? article.data.description;
+---
+<article class:list={['acard', `acard--${variant}`]}>
+  <a class="acard-media" href={href} tabindex="-1" aria-hidden="true">
+    <ImageWithFallback
+      src={cover}
+      alt={alt}
+      fallback={`og/${article.data.category}.png`}
+      class="acard-img"
+      loading={variant === 'hero' ? 'eager' : 'lazy'}
+    />
+  </a>
+  <div class="acard-body">
+    <div class="acard-meta-top">
+      <CategoryTag
+        category={article.data.category}
+        subcategory={article.data.subcategory}
+        size="sm"
+      />
+    </div>
+    <h3 class="acard-title">
+      <a href={href}>{article.data.title}</a>
+    </h3>
+    {
+      showExcerpt && variant !== 'small' && (
+        <p class="acard-desc">{desc}</p>
+      )
+    }
+    <div class="acard-meta">
+      {authorName && <span class="acard-author">{authorName}</span>}
+      <time datetime={article.data.publishDate.toISOString()}>
+        {formatDate(article.data.publishDate)}
+      </time>
+      <span class="acard-rt">{rt} 分鐘</span>
+    </div>
+  </div>
+</article>
+
+<style>
+  .acard {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+  }
+  .acard-media {
+    display: block;
+    overflow: hidden;
+    border-radius: var(--radius);
+    aspect-ratio: 16 / 9;
+    background: var(--bg-soft);
+  }
+  .acard-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .acard:hover .acard-img {
+    transform: scale(1.04);
+  }
+  .acard-body {
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .acard-title {
+    font-family: var(--font-serif);
+    margin: 0;
+    line-height: 1.4;
+  }
+  .acard-title a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .acard-title a:hover {
+    color: var(--appi-brand);
+  }
+  .acard-desc {
+    margin: 0;
+    color: var(--ink-3);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .acard-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--ink-3);
+    font-family: var(--font-sans);
+  }
+  .acard-author {
+    color: var(--ink-2);
+    font-weight: 600;
+  }
+  .acard-rt::before {
+    content: '·';
+    margin-right: 10px;
+    color: var(--line);
+  }
+  time::before {
+    content: '·';
+    margin-right: 10px;
+    color: var(--line);
+  }
+  .acard-author + time::before {
+    content: '';
+    margin: 0;
+  }
+
+  /* hero / large */
+  .acard--hero .acard-title {
+    font-size: 1.85rem;
+  }
+  .acard--large .acard-title {
+    font-size: 1.35rem;
+  }
+  .acard--medium .acard-title {
+    font-size: 1.1rem;
+  }
+  .acard--small .acard-title {
+    font-size: 0.98rem;
+  }
+
+  /* horizontal */
+  .acard--horizontal {
+    flex-direction: row;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .acard--horizontal .acard-media {
+    flex: 0 0 132px;
+    aspect-ratio: 4 / 3;
+  }
+  .acard--horizontal .acard-body {
+    padding-top: 0;
+    flex: 1;
+  }
+  .acard--horizontal .acard-title {
+    font-size: 1rem;
+  }
+
+  /* small：無圖選項由呼叫端控制，預設仍有圖 */
+  .acard--small .acard-media {
+    aspect-ratio: 16 / 9;
+  }
+
+  @media (max-width: 520px) {
+    .acard--hero .acard-title {
+      font-size: 1.45rem;
+    }
+  }
+</style>

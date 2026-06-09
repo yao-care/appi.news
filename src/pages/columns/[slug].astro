@@ -1,0 +1,164 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import AuthorCard from '@/components/blocks/AuthorCard.astro';
+import EmptyState from '@/components/ui/EmptyState.astro';
+import TagList from '@/components/ui/TagList.astro';
+import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
+import {
+  getPublishedArticles,
+  getAuthorMap,
+  byColumn,
+  tagStats,
+} from '@/utils/content';
+import { getCategory } from '@/config/categories';
+import { asset } from '@/utils/url';
+import { breadcrumbLd } from '@/utils/jsonld';
+
+export async function getStaticPaths() {
+  const columns = (await getCollection('columns')).filter(
+    (c) => c.data.status === 'active',
+  );
+  return columns.map((column) => ({ params: { slug: column.id }, props: { column } }));
+}
+
+const { column } = Astro.props;
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+const articles = byColumn(all, column.id);
+const owner = authorMap.get(column.data.ownerAuthor);
+const path = `/columns/${column.id}/`;
+const cover = column.data.coverImage
+  ? asset(column.data.coverImage)
+  : asset(`og/${column.data.category ?? 'columns'}.png`);
+const cat = getCategory(column.data.category);
+const tags = tagStats(articles).slice(0, 12).map((t) => t.tag);
+
+const { Content } = await render(column);
+
+const ld = breadcrumbLd(Astro.site, [
+  { name: '首頁', path: '/' },
+  { name: '專欄', path: '/columns/' },
+  { name: column.data.title, path },
+]);
+---
+<BaseLayout
+  title={column.data.title}
+  description={column.data.description}
+  path={path}
+  ogImage={column.data.coverImage ?? `og/${column.data.category ?? 'columns'}.png`}
+  jsonld={ld}
+>
+  <div class="container column-page" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '專欄', path: '/columns/' }, { name: column.data.title }]} />
+
+    <header class="column-hero">
+      <ImageWithFallback src={cover} alt={column.data.title} fallback="og/columns.png" class="column-hero-cover" />
+      <div class="column-hero-info">
+        {cat && <span class="column-hero-cat" style={`color:${cat.color}`}>{cat.name}</span>}
+        <h1>{column.data.title}</h1>
+        <p>{column.data.description}</p>
+      </div>
+    </header>
+
+    <div class="column-layout">
+      <div class="column-main">
+        <div class="prose article-body"><Content /></div>
+
+        <section class="section">
+          <div class="section-head"><h2>最新文章（{articles.length}）</h2></div>
+          {
+            articles.length > 0 ? (
+              <div class="card-grid card-grid--2col">
+                {articles.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
+              </div>
+            ) : (
+              <EmptyState title="尚無文章" message="本專欄文章即將上線。" />
+            )
+          }
+        </section>
+
+        {tags.length > 0 && <TagList tags={tags} title="專欄標籤" />}
+      </div>
+
+      <aside class="column-side">
+        {owner && <AuthorCard author={owner} articleCount={articles.length} />}
+        <div class="column-cta">
+          <p>想關注這個專欄？</p>
+          <a class="btn btn--ghost" href={`/contact/`}>聯絡 APPI</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .column-hero {
+    margin: 18px 0 32px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+  }
+  :global(.column-hero-cover) {
+    width: 100%;
+    aspect-ratio: 3 / 1;
+    object-fit: cover;
+  }
+  .column-hero-info {
+    padding: 22px 0 0;
+  }
+  .column-hero-cat {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  .column-hero-info h1 {
+    font-size: 2rem;
+    margin: 6px 0 10px;
+  }
+  .column-hero-info p {
+    color: var(--ink-2);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 720px;
+  }
+  .column-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+  }
+  .card-grid--2col {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .column-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .column-cta {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+  }
+  .column-cta p {
+    margin: 0 0 12px;
+    color: var(--ink-2);
+  }
+  @media (max-width: 860px) {
+    .column-layout {
+      grid-template-columns: 1fr;
+    }
+    .card-grid--2col {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

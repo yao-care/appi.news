@@ -1,0 +1,153 @@
+---
+import type { Article } from '@/utils/content';
+import type { Category } from '@/config/categories';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import TagList from '@/components/ui/TagList.astro';
+import Pagination from '@/components/ui/Pagination.astro';
+import EmptyState from '@/components/ui/EmptyState.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import { url } from '@/utils/url';
+import { tagStats } from '@/utils/content';
+
+interface Props {
+  category: Category;
+  /** 本頁要顯示的文章 */
+  pageArticles: Article[];
+  /** 整個分類的文章（用於熱門標籤、Hero 判斷） */
+  allInCategory: Article[];
+  authorNames: Map<string, string>;
+  currentPage: number;
+  totalPages: number;
+  showHero: boolean;
+}
+const {
+  category,
+  pageArticles,
+  allInCategory,
+  authorNames,
+  currentPage,
+  totalPages,
+  showHero,
+} = Astro.props;
+
+const heroArticle = showHero ? pageArticles[0] : undefined;
+const rest = showHero ? pageArticles.slice(1) : pageArticles;
+const tags = tagStats(allInCategory).slice(0, 16).map((t) => t.tag);
+---
+<div class="container channel">
+  <Breadcrumbs items={[{ name: category.name }]} />
+
+  <header class="channel-head" style={`--cat-color:${category.color}`}>
+    <div class="channel-titles">
+      <h1>{category.channelName ?? category.name}</h1>
+      <span class="channel-en">{category.nameEn}</span>
+    </div>
+    <p class="channel-desc">{category.description}</p>
+    {
+      category.subcategories.length > 0 && (
+        <nav class="subcats" aria-label="子分類">
+          {category.subcategories.map((s) => (
+            <span class="subcat">{s.name}</span>
+          ))}
+        </nav>
+      )
+    }
+  </header>
+
+  {
+    pageArticles.length === 0 ? (
+      <EmptyState />
+    ) : (
+      <>
+        {
+          heroArticle && (
+            <div class="channel-hero">
+              <ArticleCard article={heroArticle} variant="hero" authorName={authorNames.get(heroArticle.data.author)} />
+            </div>
+          )
+        }
+        <div class="card-grid card-grid--3 channel-grid">
+          {rest.map((a) => (
+            <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />
+          ))}
+        </div>
+        <Pagination currentPage={currentPage} totalPages={totalPages} base={`/${category.slug}/`} />
+      </>
+    )
+  }
+
+  {
+    tags.length > 0 && (
+      <section class="channel-tags section">
+        <div class="section-head"><h2>熱門標籤</h2></div>
+        <TagList tags={tags} />
+      </section>
+    )
+  }
+</div>
+
+<style>
+  .channel {
+    padding-top: 28px;
+  }
+  .channel-head {
+    margin: 18px 0 32px;
+    padding-bottom: 24px;
+    border-bottom: 3px solid var(--cat-color);
+  }
+  .channel-titles {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .channel-head h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    color: var(--cat-color);
+  }
+  .channel-en {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--ink-3);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .channel-desc {
+    margin: 12px 0 16px;
+    font-size: 1.05rem;
+    color: var(--ink-2);
+    line-height: 1.7;
+    max-width: 760px;
+  }
+  .subcats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .subcat {
+    font-size: 0.82rem;
+    color: var(--ink-2);
+    background: var(--bg-soft);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: var(--font-sans);
+  }
+  .channel-hero {
+    margin-bottom: 32px;
+  }
+  .channel-hero :global(.acard--hero) {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 28px;
+    align-items: center;
+  }
+  .channel-hero :global(.acard--hero .acard-media) {
+    aspect-ratio: 16 / 10;
+  }
+  @media (max-width: 760px) {
+    .channel-hero :global(.acard--hero) {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

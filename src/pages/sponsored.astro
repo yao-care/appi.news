@@ -1,0 +1,99 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import { url } from '@/utils/url';
+
+const formats = [
+  '新聞稿刊登', '專題合作', '品牌專欄', '企業專訪',
+  '活動報導', '產業白皮書', '社群圖卡', '內容策略顧問',
+];
+---
+<BaseLayout
+  title="新聞稿與商業合作"
+  description="APPI 提供新聞稿刊登、品牌專欄、專題合作等商業合作形式，所有商業內容均依規範揭露。"
+  path="/sponsored/"
+>
+  <div class="container" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '新聞稿與商業合作' }]} />
+    <header class="sponsored-head">
+      <h1>新聞稿與商業合作</h1>
+      <p>APPI 與品牌、企業、機構合作，將專業資訊以媒體規格呈現。所有商業內容均依揭露規範清楚標示。</p>
+    </header>
+
+    <section class="section">
+      <div class="section-head"><h2>合作形式</h2></div>
+      <div class="format-grid">
+        {formats.map((f) => <div class="format-card">{f}</div>)}
+      </div>
+    </section>
+
+    <section class="section disclosure-rules">
+      <div class="section-head"><h2>商業內容揭露原則</h2></div>
+      <ul>
+        <li>所有商業合作內容必須標示「合作」「贊助」「新聞稿」或「品牌專欄」。</li>
+        <li>不得偽裝成中立新聞。</li>
+        <li>醫療、保健食品、財經、法律相關內容需遵守更嚴格的規範。</li>
+      </ul>
+    </section>
+
+    <section class="sponsored-cta">
+      <h2>洽談合作</h2>
+      <p>請來信說明你的需求與目標，我們會提供合適的合作建議。</p>
+      <a class="btn btn--primary" href={url('/contact/')}>聯絡 APPI 商業合作</a>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .sponsored-head {
+    margin: 18px 0 36px;
+  }
+  .sponsored-head h1 {
+    font-size: 2.2rem;
+    margin: 0 0 10px;
+  }
+  .sponsored-head p {
+    color: var(--ink-2);
+    max-width: 680px;
+    line-height: 1.7;
+    margin: 0;
+  }
+  .format-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .format-card {
+    background: var(--bg-soft);
+    border-radius: var(--radius);
+    padding: 24px 18px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--ink-2);
+  }
+  .disclosure-rules ul {
+    line-height: 1.9;
+    color: var(--ink-2);
+    max-width: 720px;
+  }
+  .sponsored-cta {
+    text-align: center;
+    background: var(--bg-tint);
+    border-radius: var(--radius);
+    padding: 48px 24px;
+    margin-block: 56px;
+  }
+  .sponsored-cta h2 {
+    margin: 0 0 8px;
+  }
+  .sponsored-cta p {
+    color: var(--ink-2);
+    margin: 0 0 20px;
+  }
+
+  @media (max-width: 860px) {
+    .format-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

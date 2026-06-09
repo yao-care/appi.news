@@ -1,0 +1,17 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { url } from '@/utils/url';
+---
+<BaseLayout title="找不到頁面" path="/404/" noindex={true}>
+  <div class="container" style="padding:80px 20px;text-align:center;">
+    <p style="font-size:4rem;font-weight:700;color:var(--appi-brand);font-family:var(--font-sans);margin:0;">404</p>
+    <h1 style="margin:8px 0 12px;">找不到這個頁面</h1>
+    <p style="color:var(--ink-3);max-width:480px;margin:0 auto 28px;">
+      你要找的頁面可能已移除、改名，或從未存在。
+    </p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn--primary" href={url('/')}>回首頁</a>
+      <a class="btn btn--ghost" href={url('/articles/')}>瀏覽所有文章</a>
+    </div>
+  </div>
+</BaseLayout>

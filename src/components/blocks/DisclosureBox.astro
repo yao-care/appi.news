@@ -1,0 +1,47 @@
+---
+import { DISCLOSURES, type SourceType } from '@/config/disclaimers';
+
+interface Props {
+  sourceType?: SourceType;
+  /** frontmatter 自訂 disclosure 文字，優先於預設 */
+  custom?: string;
+}
+const { sourceType = 'editorial', custom } = Astro.props;
+const preset = DISCLOSURES[sourceType];
+const text = custom ?? preset?.text;
+const label = preset?.label ?? '揭露';
+---
+{
+  text && (
+    <aside class="disclosure" role="note">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12.01" y2="8" /></svg>
+      <p><strong>{label}：</strong>{text}</p>
+    </aside>
+  )
+}
+
+<style>
+  .disclosure {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: var(--bg-tint);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    margin-block: 20px;
+    color: var(--appi-brand);
+  }
+  .disclosure svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .disclosure p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+  .disclosure strong {
+    color: var(--appi-brand);
+  }
+</style>

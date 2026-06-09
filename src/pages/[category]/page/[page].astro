@@ -1,0 +1,58 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CategoryChannel from '@/components/blocks/CategoryChannel.astro';
+import { CATEGORIES } from '@/config/categories';
+import {
+  getPublishedArticles,
+  getAuthorMap,
+  byCategory,
+} from '@/utils/content';
+
+const PAGE_SIZE = 18;
+
+export async function getStaticPaths() {
+  const PAGE_SIZE = 18;
+  const all = await getPublishedArticles();
+  const paths: any[] = [];
+  for (const c of CATEGORIES) {
+    if (c.slug === 'columns') continue;
+    const inCat = byCategory(all, c.slug);
+    const totalPages = Math.max(1, Math.ceil(inCat.length / PAGE_SIZE));
+    // 第 1 頁由 index.astro 處理，這裡產生 2..totalPages
+    for (let p = 2; p <= totalPages; p++) {
+      paths.push({
+        params: { category: c.slug, page: String(p) },
+        props: { category: c, page: p, totalPages },
+      });
+    }
+  }
+  return paths;
+}
+
+const { category, page, totalPages } = Astro.props;
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+
+const inCat = byCategory(all, category.slug);
+const start = (page - 1) * PAGE_SIZE;
+const pageArticles = inCat.slice(start, start + PAGE_SIZE);
+---
+<BaseLayout
+  title={`${category.name}（第 ${page} 頁）`}
+  description={category.description}
+  path={`/${category.slug}/page/${page}/`}
+  ogImage={`og/${category.slug}.png`}
+>
+  <CategoryChannel
+    category={category}
+    pageArticles={pageArticles}
+    allInCategory={inCat}
+    authorNames={authorNames}
+    currentPage={page}
+    totalPages={totalPages}
+    showHero={false}
+  />
+</BaseLayout>

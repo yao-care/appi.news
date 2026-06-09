@@ -1,0 +1,76 @@
+---
+import '@/styles/global.css';
+import { SITE } from '@/config/site';
+import SEOHead from '@/components/seo/SEOHead.astro';
+import JsonLd from '@/components/seo/JsonLd.astro';
+import SiteHeader from '@/components/blocks/SiteHeader.astro';
+import SiteFooter from '@/components/blocks/SiteFooter.astro';
+import { orgLd, websiteLd } from '@/utils/jsonld';
+
+interface Props {
+  title: string;
+  description?: string;
+  path: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  /** 額外的 structured data（文章頁、作者頁等） */
+  jsonld?: Record<string, any> | Record<string, any>[];
+}
+
+const {
+  title,
+  description,
+  path,
+  ogImage,
+  ogType,
+  noindex,
+  publishedTime,
+  modifiedTime,
+  jsonld,
+} = Astro.props;
+
+const baseLd = [websiteLd(Astro.site), orgLd(Astro.site)];
+---
+
+<!doctype html>
+<html lang={SITE.lang}>
+  <head>
+    <SEOHead
+      title={title}
+      description={description}
+      path={path}
+      ogImage={ogImage}
+      ogType={ogType}
+      noindex={noindex}
+      publishedTime={publishedTime}
+      modifiedTime={modifiedTime}
+    />
+    <JsonLd data={baseLd} />
+    {jsonld && <JsonLd data={jsonld} />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要內容</a>
+    <SiteHeader />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        background: var(--appi-brand);
+        color: #fff;
+        padding: 10px 16px;
+        z-index: 100;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+    </style>
+  </body>
+</html>

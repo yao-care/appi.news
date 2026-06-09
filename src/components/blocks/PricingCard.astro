@@ -1,0 +1,114 @@
+---
+import { url } from '@/utils/url';
+
+interface Props {
+  name: string;
+  price: string;
+  unit: string;
+  summary: string;
+  features: string[];
+  featured?: boolean;
+  note?: string;
+}
+const { name, price, unit, summary, features, featured = false, note } = Astro.props;
+---
+<article class:list={['pricing-card', featured && 'pricing-card--featured']}>
+  {featured && <span class="pricing-badge">熱門</span>}
+  <h3 class="pricing-name">{name}</h3>
+  <div class="pricing-price">
+    <span class="price-num">{price}</span>
+    <span class="price-unit">{unit}</span>
+  </div>
+  <p class="pricing-summary">{summary}</p>
+  <ul class="pricing-features">
+    {features.map((f) => <li>{f}</li>)}
+  </ul>
+  {note && <p class="pricing-note">{note}</p>}
+  <a class:list={['btn', featured ? 'btn--primary' : 'btn--ghost', 'pricing-btn']} href={url('/join/')}>
+    申請此方案
+  </a>
+</article>
+
+<style>
+  .pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px 24px;
+    background: #fff;
+  }
+  .pricing-card--featured {
+    border-color: var(--appi-brand);
+    box-shadow: var(--shadow-md);
+  }
+  .pricing-badge {
+    position: absolute;
+    top: -11px;
+    left: 24px;
+    background: var(--appi-brand);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-family: var(--font-sans);
+  }
+  .pricing-name {
+    font-size: 1.2rem;
+    margin: 0 0 12px;
+  }
+  .pricing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .price-num {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--appi-brand);
+    font-family: var(--font-sans);
+  }
+  .price-unit {
+    font-size: 0.85rem;
+    color: var(--ink-3);
+  }
+  .pricing-summary {
+    margin: 0 0 16px;
+    font-size: 0.88rem;
+    color: var(--ink-3);
+    line-height: 1.6;
+  }
+  .pricing-features {
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+    flex: 1;
+  }
+  .pricing-features li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+    font-size: 0.88rem;
+    color: var(--ink-2);
+    line-height: 1.5;
+  }
+  .pricing-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--appi-brand);
+    font-weight: 700;
+  }
+  .pricing-note {
+    font-size: 0.8rem;
+    color: var(--ink-3);
+    font-style: italic;
+    margin: 0 0 14px;
+  }
+  .pricing-btn {
+    justify-content: center;
+  }
+</style>

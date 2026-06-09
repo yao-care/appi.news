@@ -1,0 +1,244 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import CategorySection from '@/components/blocks/CategorySection.astro';
+import AuthorCard from '@/components/blocks/AuthorCard.astro';
+import CTAJoinAuthor from '@/components/blocks/CTAJoinAuthor.astro';
+import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
+import CategoryTag from '@/components/ui/CategoryTag.astro';
+import {
+  getPublishedArticles,
+  getAuthors,
+  getAuthorMap,
+  byCategory,
+  featuredArticles,
+  makeDeduper,
+  articleSlug,
+  coverImageFor,
+  coverAltFor,
+  byAuthor,
+} from '@/utils/content';
+import { getCategory } from '@/config/categories';
+import { url } from '@/utils/url';
+import { formatDate } from '@/utils/date';
+
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+
+const dedupe = makeDeduper();
+
+// Hero：hero=true 優先，否則最新 featured，否則最新
+const hero =
+  all.find((a) => a.data.hero) ??
+  all.find((a) => a.data.featured) ??
+  all[0];
+if (hero) dedupe.take([hero], 1);
+
+// Hero 右側 3 篇次要焦點
+const secondary = dedupe.take(
+  [...featuredArticles(all), ...all],
+  3,
+);
+
+// 各分類區塊
+const sections = [
+  { slug: 'focus', title: '今日焦點', lead: false },
+  { slug: 'health', title: 'APPI Health｜亞太醫頭條', lead: true },
+  { slug: 'tech', title: '科技與 AI', lead: false },
+  { slug: 'finance', title: '財經與商業', lead: false },
+  { slug: 'society', title: '時事觀察', lead: false },
+] as const;
+
+const sectionData = sections.map((s) => {
+  const pool = byCategory(all, s.slug);
+  const picked = dedupe.take(pool, s.lead ? 5 : 4, false);
+  // 不足時放寬重複（仍維持卡片不破）
+  const filled = picked.length > 0 ? picked : pool.slice(0, 4);
+  return { ...s, articles: filled };
+});
+
+// 作者卡（active）
+const authors = (await getAuthors()).filter((a) => a.data.active);
+const authorCards = authors
+  .map((a) => ({ author: a, count: byAuthor(all, a.id).length }))
+  .sort((x, y) => y.count - x.count)
+  .slice(0, 8);
+
+// 編輯精選
+const picks = dedupe.take(featuredArticles(all), 4, true);
+
+// 最新文章
+const latest = all.slice(0, 12);
+
+const heroCover = hero ? coverImageFor(hero) : '';
+const heroCat = hero ? getCategory(hero.data.category) : undefined;
+---
+
+<BaseLayout title="首頁" path="/" ogImage="og/home.png">
+  {
+    hero && (
+      <section class="hero container">
+        <a class="hero-main" href={url(`/articles/${articleSlug(hero)}/`)}>
+          <div class="hero-media">
+            <ImageWithFallback
+              src={heroCover}
+              alt={coverAltFor(hero)}
+              fallback={`og/${hero.data.category}.png`}
+              loading="eager"
+              class="hero-img"
+            />
+          </div>
+          <div class="hero-text">
+            <CategoryTag category={hero.data.category} subcategory={hero.data.subcategory} />
+            <h1>{hero.data.title}</h1>
+            <p>{hero.data.excerpt ?? hero.data.description}</p>
+            <span class="hero-meta">
+              {authorNames.get(hero.data.author) ?? 'APPI 編輯部'} · {formatDate(hero.data.publishDate)}
+            </span>
+          </div>
+        </a>
+
+        <div class="hero-side">
+          {
+            secondary.map((a) => (
+              <ArticleCard article={a} variant="horizontal" showExcerpt={false} authorName={authorNames.get(a.data.author)} />
+            ))
+          }
+        </div>
+      </section>
+    )
+  }
+
+  <div class="container">
+    {
+      sectionData.map((s) => (
+        <CategorySection
+          title={s.title}
+          color={getCategory(s.slug)?.color}
+          moreHref={`/${s.slug}/`}
+          articles={s.articles}
+          authorNames={authorNames}
+          leadFirst={s.lead}
+        />
+      ))
+    }
+
+    <!-- 專欄作者 -->
+    {
+      authorCards.length > 0 && (
+        <section class="section">
+          <div class="section-head">
+            <h2>專欄作者</h2>
+            <a class="more-link" href={url('/authors/')}>看全部作者 →</a>
+          </div>
+          <div class="card-grid card-grid--3">
+            {authorCards.map((c) => <AuthorCard author={c.author} articleCount={c.count} />)}
+          </div>
+        </section>
+      )
+    }
+
+    <!-- 編輯精選 -->
+    {
+      picks.length > 0 && (
+        <section class="section">
+          <div class="section-head"><h2>編輯精選</h2></div>
+          <div class="card-grid card-grid--4">
+            {picks.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
+          </div>
+        </section>
+      )
+    }
+
+    <CTAJoinAuthor />
+
+    <!-- 最新文章 -->
+    <section class="section">
+      <div class="section-head">
+        <h2>最新文章</h2>
+        <a class="more-link" href={url('/articles/')}>所有文章 →</a>
+      </div>
+      <div class="card-grid card-grid--4">
+        {latest.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 36px;
+    padding-top: 36px;
+    margin-bottom: 24px;
+  }
+  .hero-main {
+    text-decoration: none;
+    display: block;
+  }
+  .hero-media {
+    overflow: hidden;
+    border-radius: var(--radius);
+    aspect-ratio: 16 / 9;
+    background: var(--bg-soft);
+  }
+  :global(.hero-img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .hero-main:hover :global(.hero-img) {
+    transform: scale(1.03);
+  }
+  .hero-text {
+    padding-top: 16px;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  .hero-main:hover .hero-text h1 {
+    color: var(--appi-brand);
+  }
+  .hero-text p {
+    color: var(--ink-2);
+    font-size: 1.02rem;
+    line-height: 1.7;
+    margin: 0 0 12px;
+  }
+  .hero-meta {
+    font-size: 0.85rem;
+    color: var(--ink-3);
+    font-family: var(--font-sans);
+  }
+  .hero-side {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-left: 1px solid var(--line);
+    padding-left: 32px;
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .hero-side {
+      border-left: none;
+      padding-left: 0;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+    .hero-text h1 {
+      font-size: 1.6rem;
+    }
+  }
+</style>

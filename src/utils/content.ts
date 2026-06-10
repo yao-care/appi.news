@@ -194,9 +194,20 @@ export function tagStats(articles: Article[]): TagStat[] {
     .sort((a, b) => b.count - a.count);
 }
 
-/** 簡易 slugify（標籤 / 專題網址用） */
+/**
+ * 簡易 slugify（標籤 / 專題網址用）。
+ * 保留 CJK 原字（與文章 slug 一致，交給瀏覽器/伺服器自然編碼），
+ * 僅移除 URL/檔名不安全字元 —— 切勿在此 encodeURIComponent，
+ * 否則 href 與輸出資料夾名會雙重編碼而 404。
+ */
 export function slugify(s: string): string {
-  return encodeURIComponent(s.trim().toLowerCase().replace(/\s+/g, '-'));
+  return s
+    .trim()
+    .toLowerCase()
+    .replace(/[\\/:*?"<>#%|]+/g, '-')
+    .replace(/\s+/g, '-')
+    .replace(/-{2,}/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
 /* ----------------------------- columns / topics ----------------------------- */

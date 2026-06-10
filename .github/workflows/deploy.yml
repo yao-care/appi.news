@@ -46,6 +46,27 @@ jobs:
       - name: Build
         run: pnpm build
 
+      # ── 上線 gate：內部壞連結即讓部署失敗、退回，不上線 ──
+      # 比照 evidencetoday 的「Check internal links（fail: true）」，
+      # 改用 base-path（/appi.news）感知的檢查（lychee 預設不認 base）。
+      - name: Check internal links (hard gate)
+        run: pnpm check:links
+
+      # 將 dist 暫存到 base path 下，供 Lighthouse 以正確路徑稽核
+      - name: Stage site for Lighthouse
+        run: |
+          mkdir -p _site/appi.news
+          cp -r dist/. _site/appi.news/
+
+      # 軟性稽核（不擋部署），比照 evidencetoday 的 Lighthouse 設定
+      - name: Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./lighthouserc.json
+          uploadArtifacts: true
+          staticDistDir: ./_site
+        continue-on-error: true
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

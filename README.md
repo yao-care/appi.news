@@ -23,6 +23,20 @@ pnpm preview      # 預覽 build 結果
 pnpm generate:og  # 重新產生 OG fallback 圖（需要時才跑，產物已 commit）
 ```
 
+## 上線準則（CI gate）
+
+部署 workflow（`.github/workflows/deploy.yml`）在 build 後設有 gate：
+
+- **內部壞連結（硬性，會擋部署）**：`pnpm check:links` 掃描 `dist/` 所有站內連結，
+  有任何壞連結即 build 失敗、部署退回、不上線。此檢查為 base-path（`/appi.news`）感知。
+- **Lighthouse（軟性，不擋部署）**：效能 / SEO / 無障礙 / 最佳實務分數，未達門檻僅警告。
+
+本地上線前自檢：
+
+```bash
+pnpm build && pnpm check:links
+```
+
 ## 換網域（GitHub 專案頁 → 自訂網域）
 
 目前部署在 `https://yao-care.github.io/appi.news/`。要換成自訂網域 `appi.news`：

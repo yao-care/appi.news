@@ -101,7 +101,7 @@ const heroCat = hero ? getCategory(hero.data.category) : undefined;
           </div>
         </a>
 
-        <div class="hero-side">
+        <div class="hero-side divided-list">
           {
             secondary.map((a) => (
               <ArticleCard article={a} variant="horizontal" showExcerpt={false} authorName={authorNames.get(a.data.author)} />
@@ -219,9 +219,7 @@ const heroCat = hero ? getCategory(hero.data.category) : undefined;
     font-family: var(--font-sans);
   }
   .hero-side {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+    /* 縱向分隔由 global 的 .divided-list utility 統一控制；此處僅保留側欄左線與內距 */
     border-left: 1px solid var(--line);
     padding-left: 32px;
   }

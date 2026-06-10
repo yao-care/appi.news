@@ -43,7 +43,7 @@ const [first, ...rest] = articles;
               authorName={authorNames?.get(first.data.author)}
             />
           </div>
-          <div class="cat-rest">
+          <div class="cat-rest divided-list">
             {rest.slice(0, 4).map((a) => (
               <ArticleCard
                 article={a}
@@ -75,11 +75,7 @@ const [first, ...rest] = articles;
     grid-template-columns: 1.4fr 1fr;
     gap: 32px;
   }
-  .cat-rest {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
+  /* .cat-rest 的縱向分隔由 global 的 .divided-list utility 統一控制 */
   @media (max-width: 860px) {
     .cat-layout {
       grid-template-columns: 1fr;

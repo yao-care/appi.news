@@ -18,8 +18,8 @@
   --appi-brand: #1f3a5f;
   --appi-brand-light: #2d5286;
   --appi-brand-dark: #16263d;
-  --appi-accent: #c0392b;
-  --appi-accent-soft: #fceeea;
+  --appi-accent: #a87515;
+  --appi-accent-soft: #f7efdd;
   /* 深色底（品牌底）上的文字 */
   --on-brand: #d7e0ec;
   --on-brand-dim: #9fb2cc;
@@ -45,8 +45,8 @@
     --appi-brand: oklch(0.34 0.06 252);
     --appi-brand-light: oklch(0.43 0.08 255);
     --appi-brand-dark: oklch(0.26 0.05 252);
-    --appi-accent: oklch(0.55 0.18 28);
-    --appi-accent-soft: oklch(0.94 0.04 28);
+    --appi-accent: oklch(0.60 0.10 75);
+    --appi-accent-soft: oklch(0.95 0.03 80);
     --on-brand: oklch(0.88 0.02 252);
     --on-brand-dim: oklch(0.74 0.03 252);
 
@@ -161,6 +161,18 @@ h4 {
   margin-block: 56px;
 }
 
+/* E 式分隔列表：項目間一條「隱形」淡線 + 留白，取代單純 gap，
+   避免縱向文章列表擠在一起（首頁 hero 側欄、分類區側欄共用）。 */
+.divided-list {
+  display: flex;
+  flex-direction: column;
+}
+.divided-list > :not(:last-child) {
+  border-bottom: 1px solid var(--line-2);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -181,7 +193,9 @@ h4 {
   gap: 16px;
   margin-bottom: 22px;
   padding-bottom: 12px;
-  border-bottom: 2px solid var(--ink);
+  /* 通用區段標題底線用 K 的金色（取代原深灰，非新增線）。
+     首頁分類區以 inline 分類色覆寫此線，不受影響。 */
+  border-bottom: 2px solid var(--appi-accent);
 }
 .section-head h2 {
   margin: 0;

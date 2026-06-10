@@ -37,7 +37,7 @@ const tags = tagStats(allInCategory).slice(0, 16).map((t) => t.tag);
 <div class="container channel">
   <Breadcrumbs items={[{ name: category.name }]} />
 
-  <header class="page-head page-head--cat channel-head" style={`--cat-color:${category.color}`}>
+  <header class="page-head channel-head">
     <div class="channel-titles">
       <h1>{category.channelName ?? category.name}</h1>
       <span class="channel-en">{category.nameEn}</span>

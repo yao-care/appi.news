@@ -37,24 +37,84 @@ const VARIANTS = [
     <title>APPI 風格預覽 — {page} / {variant.toUpperCase()}</title>
   </head>
   <body>
-    <nav class="ch-switcher">
-      <div class="ch-switcher-inner">
-        <b>APPI 風格預覽</b>
-        <div class="ch-switch-group">
-          <span>頁型</span>
-          {PAGES.map((p) => (
-            <a href={url(`/choice/${p.id}/${variant}/`)} class={p.id === page ? 'on' : ''}>{p.label}</a>
-          ))}
+    <div class="ch-fp" id="chFp">
+      <div class="ch-fp-head" id="chFpHead">
+        <span class="ch-fp-grip" aria-hidden="true">⠿</span>
+        <span class="ch-fp-title">APPI 風格預覽</span>
+        <div class="ch-fp-actions">
+          <a class="ch-fp-icon" href={url('/choice/')} title="全部總覽">⤢</a>
+          <button class="ch-fp-icon" id="chFpMin" type="button" aria-label="收合 / 展開">–</button>
         </div>
-        <div class="ch-switch-group">
-          <span>風格</span>
-          {VARIANTS.map((v) => (
-            <a href={url(`/choice/${page}/${v.id}/`)} class={v.id === variant ? 'on-v' : ''}>{v.label}</a>
-          ))}
-        </div>
-        <a href={url('/choice/')} style="margin-left:auto;color:#8b949e;">全部總覽 ↗</a>
       </div>
-    </nav>
+      <div class="ch-fp-body" id="chFpBody">
+        <div class="ch-fp-row">
+          <span class="ch-fp-label">頁型</span>
+          <div class="ch-fp-btns">
+            {PAGES.map((p) => (
+              <a href={url(`/choice/${p.id}/${variant}/`)} class={p.id === page ? 'on' : ''}>{p.label}</a>
+            ))}
+          </div>
+        </div>
+        <div class="ch-fp-row">
+          <span class="ch-fp-label">風格</span>
+          <div class="ch-fp-btns ch-fp-variants">
+            {VARIANTS.map((v) => (
+              <a href={url(`/choice/${page}/${v.id}/`)} class={v.id === variant ? 'on-v' : ''} title={v.label}>
+                <b>{v.id.toUpperCase()}</b><span>{v.label.replace(/^[A-Z]\s/, '')}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
     <slot />
+
+    <script>
+      const fp = document.getElementById('chFp');
+      const head = document.getElementById('chFpHead');
+      const minBtn = document.getElementById('chFpMin');
+      // 收合 / 展開
+      function applyCollapsed(c) {
+        fp.classList.toggle('collapsed', c);
+        minBtn.textContent = c ? '+' : '–';
+        try { localStorage.setItem('chFpCollapsed', c ? '1' : '0'); } catch {}
+      }
+      minBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        applyCollapsed(!fp.classList.contains('collapsed'));
+      });
+      try { if (localStorage.getItem('chFpCollapsed') === '1') applyCollapsed(true); } catch {}
+
+      // 拖曳（以 head 為把手）
+      let drag = null;
+      function restorePos() {
+        try {
+          const p = JSON.parse(localStorage.getItem('chFpPos') || 'null');
+          if (p) { fp.style.left = p.x + 'px'; fp.style.top = p.y + 'px'; fp.style.right = 'auto'; fp.style.bottom = 'auto'; }
+        } catch {}
+      }
+      restorePos();
+      head.addEventListener('pointerdown', (e) => {
+        if (e.target.closest('.ch-fp-icon')) return;
+        const r = fp.getBoundingClientRect();
+        drag = { dx: e.clientX - r.left, dy: e.clientY - r.top };
+        fp.style.right = 'auto'; fp.style.bottom = 'auto';
+        head.setPointerCapture(e.pointerId);
+        fp.classList.add('dragging');
+      });
+      head.addEventListener('pointermove', (e) => {
+        if (!drag) return;
+        const w = fp.offsetWidth, h = fp.offsetHeight;
+        let x = Math.min(Math.max(8, e.clientX - drag.dx), window.innerWidth - w - 8);
+        let y = Math.min(Math.max(8, e.clientY - drag.dy), window.innerHeight - h - 8);
+        fp.style.left = x + 'px'; fp.style.top = y + 'px';
+      });
+      head.addEventListener('pointerup', (e) => {
+        if (!drag) return;
+        drag = null; fp.classList.remove('dragging');
+        try { localStorage.setItem('chFpPos', JSON.stringify({ x: fp.offsetLeft, y: fp.offsetTop })); } catch {}
+      });
+    </script>
   </body>
 </html>

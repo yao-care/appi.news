@@ -128,17 +128,49 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* ============================================================
-   切換列（風格中立，固定頂部）
+   浮動預覽視窗（可拖曳、可收合，不卡在頂部影響閱讀）
    ============================================================ */
-.ch-switcher { position: sticky; top: 0; z-index: 100; background: #0d1117; color: #e6edf3; font-family: var(--ch-sans); font-size: 16px; border-bottom: 1px solid #30363d; }
-.ch-switcher-inner { max-width: 1280px; margin: 0 auto; padding: 8px 16px; display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }
-.ch-switcher b { color: #fff; font-size: 15px; }
-.ch-switch-group { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
-.ch-switch-group span { color: #8b949e; font-size: 13px; margin-right: 2px; }
-.ch-switcher a { color: #c9d1d9; text-decoration: none; padding: 4px 9px; border-radius: 6px; font-size: 13.5px; border: 1px solid transparent; }
-.ch-switcher a:hover { background: #21262d; }
-.ch-switcher a.on { background: #1f6feb; color: #fff; }
-.ch-switcher a.on-v { background: #fff; color: #0d1117; font-weight: 700; }
+.ch-fp {
+  position: fixed; right: 20px; bottom: 20px; z-index: 1000;
+  width: 280px; max-width: calc(100vw - 32px);
+  background: #0d1117; color: #e6edf3;
+  font-family: var(--ch-sans); border: 1px solid #30363d; border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4); overflow: hidden; user-select: none;
+}
+.ch-fp.dragging { opacity: 0.92; }
+.ch-fp-head {
+  display: flex; align-items: center; gap: 8px; padding: 9px 10px 9px 12px;
+  background: #161b22; cursor: grab; border-bottom: 1px solid #30363d; touch-action: none;
+}
+.ch-fp.dragging .ch-fp-head { cursor: grabbing; }
+.ch-fp-grip { color: #6e7681; font-size: 14px; }
+.ch-fp-title { color: #fff; font-size: 14px; font-weight: 700; flex: 1; }
+.ch-fp-actions { display: flex; gap: 4px; }
+.ch-fp-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 6px; border: 1px solid #30363d;
+  background: #21262d; color: #c9d1d9; font-size: 15px; line-height: 1;
+  cursor: pointer; text-decoration: none;
+}
+.ch-fp-icon:hover { background: #30363d; color: #fff; }
+.ch-fp-body { padding: 12px; display: flex; flex-direction: column; gap: 12px; max-height: min(70vh, 520px); overflow-y: auto; }
+.ch-fp.collapsed .ch-fp-body { display: none; }
+.ch-fp-row { display: flex; flex-direction: column; gap: 7px; }
+.ch-fp-label { color: #8b949e; font-size: 12px; font-weight: 600; }
+.ch-fp-btns { display: flex; flex-wrap: wrap; gap: 6px; }
+.ch-fp-btns a { color: #c9d1d9; text-decoration: none; padding: 5px 11px; border-radius: 7px; font-size: 13.5px; border: 1px solid #30363d; background: #161b22; }
+.ch-fp-btns a:hover { background: #21262d; color: #fff; }
+.ch-fp-btns a.on { background: #1f6feb; color: #fff; border-color: #1f6feb; }
+/* 風格清單：縱向、字母 chip + 名稱 */
+.ch-fp-variants { flex-direction: column; gap: 3px; }
+.ch-fp-variants a { display: flex; align-items: center; gap: 9px; padding: 6px 8px; width: 100%; }
+.ch-fp-variants a b { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 5px; background: #30363d; color: #fff; font-size: 12px; flex-shrink: 0; }
+.ch-fp-variants a span { font-size: 13px; }
+.ch-fp-variants a.on-v { background: #fff; color: #0d1117; border-color: #fff; }
+.ch-fp-variants a.on-v b { background: #1f6feb; color: #fff; }
+@media (max-width: 520px) {
+  .ch-fp { right: 12px; bottom: 12px; width: calc(100vw - 24px); }
+}
 
 /* ============================================================
    共用版型（吃 variant token；結構性差異在各風格區段覆寫）
@@ -211,7 +243,7 @@ img { max-width: 100%; height: auto; display: block; }
 .ch-article .hl ul { margin: 0; padding-left: 1.2em; color: var(--ink2); }
 
 /* join：預設 primary 漸層深底白字；編輯型(b,j)用淺底深字 */
-.ch-join-hero { background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 60%, #000)); color: #fff; --hink:#fff; padding: 60px 0; }
+.ch-join-hero { background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 82%, #000), color-mix(in srgb, var(--primary) 52%, #000)); color: #fff; --hink:#fff; padding: 60px 0; }
 .ch-join-hero h1 { color: #fff; font-size: 38px; max-width: 760px; }
 .ch-join-hero p { color: #fff; font-size: 19px; max-width: 640px; margin: 14px 0 26px; }
 [data-variant='b'] .ch-join-hero, [data-variant='j'] .ch-join-hero { background: var(--surface); color: var(--ink); }
@@ -432,3 +464,85 @@ footer.ch-foot { background: var(--ink); color: #fff; margin-top: 56px; padding:
   [data-variant='e'] .ch-card { flex-direction: column; }
   [data-variant='e'] .ch-card .cover { width: 100%; }
 }
+
+/* ============================================================
+   各風格：文章內頁（.ch-article）版型差異化
+   ============================================================ */
+/* 編輯/襯線型：首字放大（drop cap） */
+[data-variant='b'] .ch-article .prose p:first-of-type::first-letter,
+[data-variant='k'] .ch-article .prose p:first-of-type::first-letter {
+  font-family: var(--ch-serif); font-size: 3.3em; float: left; line-height: 0.78; padding: 8px 12px 0 0; color: var(--accent); font-weight: 700;
+}
+[data-variant='j'] .ch-article .prose p:first-of-type::first-letter {
+  font-size: 3.6em; float: left; line-height: 0.78; padding: 6px 12px 0 0; font-weight: 800;
+}
+
+[data-variant='a'] .ch-article { max-width: 720px; }
+[data-variant='a'] .ch-article h1 { font-size: 34px; }
+[data-variant='a'] .ch-article .prose { font-size: 18px; }
+
+[data-variant='b'] .ch-article { max-width: 720px; }
+[data-variant='b'] .ch-article h1 { font-size: 46px; }
+[data-variant='b'] .ch-article .lede { font-size: 23px; }
+[data-variant='b'] .ch-article .prose { font-size: 20px; line-height: 2; }
+
+[data-variant='c'] .ch-article h1 { font-size: 38px; }
+[data-variant='c'] .ch-article .hl { border-left-width: 6px; border-radius: 6px; }
+[data-variant='c'] .ch-article .byline b { color: var(--primary); }
+
+[data-variant='d'] .ch-article h1 { font-size: 36px; }
+[data-variant='d'] .ch-article .byline { border-top: 2px solid var(--primary); border-bottom: 2px solid var(--primary); padding: 12px 0; }
+
+[data-variant='e'] .ch-article { max-width: 700px; }
+[data-variant='e'] .ch-article h1 { font-size: 32px; }
+[data-variant='e'] .ch-article .prose { font-size: 18px; }
+[data-variant='e'] .ch-article .hl { border-radius: 0; }
+
+[data-variant='f'] .ch-article h1 { font-size: 34px; }
+[data-variant='f'] .ch-article .hl { border-radius: 10px; border-left-width: 5px; }
+
+[data-variant='g'] .ch-article h1 { font-size: 34px; }
+
+[data-variant='h'] .ch-article { max-width: 740px; }
+[data-variant='h'] .ch-article h1 { font-size: 36px; }
+[data-variant='h'] .ch-article .hl { border-radius: 10px; }
+
+[data-variant='i'] .ch-article h1 { font-size: 42px; font-weight: 800; letter-spacing: -0.01em; }
+[data-variant='i'] .ch-article .lede { font-weight: 600; color: var(--ink); }
+[data-variant='i'] .ch-article .hl { border-left-width: 6px; border-radius: 4px; }
+
+[data-variant='j'] .ch-article { max-width: 820px; }
+[data-variant='j'] .ch-article h1 { font-size: 52px; text-align: center; }
+[data-variant='j'] .ch-article .lede { text-align: center; font-size: 22px; max-width: 640px; margin-inline: auto; }
+[data-variant='j'] .ch-article .byline { justify-content: center; }
+[data-variant='j'] .ch-article .hl { border-radius: 0; }
+
+[data-variant='k'] .ch-article h1 { font-size: 42px; }
+[data-variant='k'] .ch-article .hl { border-left-color: var(--accent); }
+
+/* ============================================================
+   各風格：成為作者（.ch-join-*）版型差異化
+   ============================================================ */
+/* 置中編輯型 hero */
+[data-variant='b'] .ch-join-hero, [data-variant='j'] .ch-join-hero, [data-variant='k'] .ch-join-hero { text-align: center; }
+[data-variant='b'] .ch-join-hero h1, [data-variant='j'] .ch-join-hero h1, [data-variant='k'] .ch-join-hero h1 { margin-inline: auto; }
+[data-variant='b'] .ch-join-hero p, [data-variant='j'] .ch-join-hero p, [data-variant='k'] .ch-join-hero p { margin-inline: auto; }
+
+/* 流程：縱向編號清單（編輯/機構/雜誌型） */
+[data-variant='b'] .ch-steps, [data-variant='d'] .ch-steps, [data-variant='e'] .ch-steps,
+[data-variant='j'] .ch-steps, [data-variant='k'] .ch-steps { grid-template-columns: 1fr; gap: 0; }
+[data-variant='b'] .ch-step, [data-variant='d'] .ch-step, [data-variant='e'] .ch-step,
+[data-variant='j'] .ch-step, [data-variant='k'] .ch-step { border: none; border-bottom: 1px solid var(--line); border-radius: 0; padding: 16px 4px; font-size: 19px; }
+[data-variant='j'] .ch-step .n { border-radius: 0; }
+
+/* 流程：緊湊（密集平台型） */
+[data-variant='a'] .ch-steps, [data-variant='i'] .ch-steps { gap: 10px; }
+[data-variant='a'] .ch-step, [data-variant='i'] .ch-step { padding: 12px; font-size: 15px; }
+[data-variant='i'] .ch-step { border: 2px solid var(--ink); }
+[data-variant='i'] .ch-step .n { font-weight: 800; }
+
+/* chips 樣式差異 */
+[data-variant='a'] .ch-chip, [data-variant='i'] .ch-chip { border-radius: 4px; }
+[data-variant='j'] .ch-chip { background: transparent; border: 1px solid var(--ink); border-radius: 0; text-transform: uppercase; font-size: 14px; letter-spacing: 0.04em; }
+[data-variant='b'] .ch-chip, [data-variant='k'] .ch-chip { background: transparent; border: 1px solid var(--line); }
+[data-variant='d'] .ch-chip, [data-variant='e'] .ch-chip { background: var(--tint); color: var(--on-light); }

@@ -21,7 +21,7 @@ const cat = getCategory(column.data.category);
     <ImageWithFallback src={cover} alt={column.data.title} fallback="og/columns.png" />
   </a>
   <div class="column-body">
-    {cat && <span class="column-cat" style={`color:${cat.color}`}>{cat.name}</span>}
+    {cat && <span class="column-cat">{cat.name}</span>}
     <h3 class="column-title"><a href={href}>{column.data.title}</a></h3>
     <p class="column-desc">{column.data.description}</p>
     <div class="column-meta">
@@ -59,6 +59,7 @@ const cat = getCategory(column.data.category);
     font-size: var(--text-xs);
     font-weight: 600;
     font-family: var(--font-sans);
+    color: var(--ink-3);
   }
   .column-title {
     margin: 6px 0 8px;

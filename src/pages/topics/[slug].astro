@@ -72,7 +72,7 @@ const ld = breadcrumbLd(Astro.site, [
     <header class="topic-hero">
       <ImageWithFallback src={cover} alt={topic.data.title} fallback="og/focus.png" class="topic-hero-cover" />
       <div class="topic-hero-info">
-        {cat && <span class="topic-hero-cat" style={`color:${cat.color}`}>{cat.name}・專題</span>}
+        {cat && <span class="topic-hero-cat">{cat.name}・專題</span>}
         <h1>{topic.data.title}</h1>
         <p>{topic.data.description}</p>
       </div>

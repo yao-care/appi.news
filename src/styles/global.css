@@ -242,12 +242,6 @@ h4 {
   max-width: 760px;
   line-height: 1.7;
 }
-.page-head--cat {
-  border-bottom-color: var(--cat-color);
-}
-.page-head--cat h1 {
-  color: var(--cat-color);
-}
 
 /* ---------- 文章排版（內文） ---------- */
 .article-body {

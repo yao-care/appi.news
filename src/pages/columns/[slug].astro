@@ -71,7 +71,7 @@ const ld = breadcrumbLd(Astro.site, [
     <header class="column-hero">
       <ImageWithFallback src={cover} alt={column.data.title} fallback="og/columns.png" class="column-hero-cover" />
       <div class="column-hero-info">
-        {cat && <span class="column-hero-cat" style={`color:${cat.color}`}>{cat.name}</span>}
+        {cat && <span class="column-hero-cat">{cat.name}</span>}
         <h1>{column.data.title}</h1>
         <p>{column.data.description}</p>
       </div>

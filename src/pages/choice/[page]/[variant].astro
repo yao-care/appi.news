@@ -1,0 +1,183 @@
+---
+import ChoiceLayout from '@/layouts/ChoiceLayout.astro';
+import {
+  getPublishedArticles,
+  getAuthors,
+  getAuthorMap,
+  articleSlug,
+  readingTime,
+} from '@/utils/content';
+import { getCategory } from '@/config/categories';
+import { formatDate } from '@/utils/date';
+
+const PAGES = ['index', 'articles', 'authors', 'join'];
+const VARIANTS = ['a', 'b', 'c', 'd', 'e'];
+
+export async function getStaticPaths() {
+  const pages = ['index', 'articles', 'authors', 'join'];
+  const variants = ['a', 'b', 'c', 'd', 'e'];
+  return pages.flatMap((page) =>
+    variants.map((variant) => ({ params: { page, variant }, props: { page, variant } })),
+  );
+}
+
+const { page, variant } = Astro.props;
+
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authors = (await getAuthors()).filter((a) => a.data.active);
+
+const hero = all[0];
+const list = all.slice(1, 9);
+const article = all[0];
+
+function plain(s: string): string {
+  return (s ?? '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&[a-z]+;/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+const bodyText = plain(article?.body ?? '');
+const paras = [bodyText.slice(0, 220), bodyText.slice(220, 520)].filter(Boolean);
+
+const NAV = ['焦點', '健康', '科技', '財經', '時事'];
+const catName = (slug: string) => getCategory(slug)?.name ?? slug;
+const authorName = (id: string) => authorMap.get(id)?.data.name ?? 'APPI 編輯部';
+
+const AUDIENCES = ['醫師', '藥師', '營養師', '科技顧問', '財經研究者', '企業顧問', '講師', '教練'];
+const STEPS = ['申請', '選擇方案', '建立作者資料', '產生文章', '作者審稿', '平台檢核', '排程發布', '追蹤數據'];
+---
+<ChoiceLayout page={page} variant={variant}>
+  <div class="ch" data-variant={variant}>
+    <!-- 共用 header -->
+    <header class="ch-header">
+      <div class="ch-header-inner">
+        <div class="ch-brand">
+          {variant === 'b' && <span class="ch-sun"></span>}
+          <span class="mark">APPI</span> News
+        </div>
+        <nav class="ch-nav">{NAV.map((n) => <a href="#">{n}</a>)}</nav>
+        <a class="ch-cta" href="#">成為作者</a>
+      </div>
+    </header>
+
+    {/* ============ 首頁 ============ */}
+    {page === 'index' && (
+      <div class="ch-container">
+        {hero && (
+          <section class="ch-hero">
+            <div class="lead">
+              <div class="cover" style="display:grid;place-items:center;color:var(--primary);font-weight:800;font-size:22px;background:var(--tint);">{catName(hero.data.category)}</div>
+              <span class="ch-pill" style="margin-top:14px;display:inline-block;">{catName(hero.data.category)}</span>
+              <h1>{hero.data.title}</h1>
+              <p>{hero.data.excerpt ?? hero.data.description}</p>
+            </div>
+            <div class="side">
+              {list.slice(0, 4).map((a) => (
+                <div class="item">
+                  <span class="t">{a.data.title}</span>
+                  <span class="m">{authorName(a.data.author)}・{formatDate(a.data.publishDate)}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section class="ch-sec">
+          <div class="ch-sec-head"><h2>最新文章</h2><span class="ch-pill">APPI News</span></div>
+          <div class="ch-grid ch-grid--4">
+            {list.slice(0, 8).map((a) => (
+              <article class="ch-card">
+                <div class="cover" style="display:grid;place-items:center;color:var(--primary);font-weight:800;background:var(--tint);">{catName(a.data.category)}</div>
+                <div class="body">
+                  <span class="ch-tag">{catName(a.data.category)}</span>
+                  <h3>{a.data.title}</h3>
+                  <span class="meta">{authorName(a.data.author)}・{readingTime(a)} 分鐘</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
+    )}
+
+    {/* ============ 文章內頁 ============ */}
+    {page === 'articles' && article && (
+      <article class="ch-article">
+        <div class="crumb">首頁 › {catName(article.data.category)} › 文章</div>
+        <span class="ch-pill">{catName(article.data.category)}</span>
+        <h1>{article.data.title}</h1>
+        <p class="lede">{article.data.description}</p>
+        <div class="byline">
+          <b>{authorName(article.data.author)}</b>
+          <span>{formatDate(article.data.publishDate)}</span>
+          <span>· {readingTime(article)} 分鐘閱讀</span>
+        </div>
+        <div class="cover" style="display:grid;place-items:center;color:var(--primary);font-weight:800;font-size:24px;background:var(--tint);">{catName(article.data.category)}</div>
+        <div class="hl">
+          <h3>本文重點</h3>
+          <ul><li>{article.data.description}</li></ul>
+        </div>
+        <div class="prose">
+          <h2>前言</h2>
+          {paras.map((p) => <p>{p}…</p>)}
+          <h2>重點分析</h2>
+          <p>{bodyText.slice(520, 820)}…</p>
+        </div>
+      </article>
+    )}
+
+    {/* ============ 作者群 ============ */}
+    {page === 'authors' && (
+      <div class="ch-container">
+        <section class="ch-sec">
+          <div class="ch-sec-head"><h2>作者群</h2><span class="ch-pill">Authors</span></div>
+          <div class="ch-grid ch-grid--3">
+            {authors.map((au) => (
+              <div class="ch-author">
+                <div class="av">{au.data.name.slice(0, 1)}</div>
+                <div>
+                  <div class="name">{au.data.name}</div>
+                  <div class="title">{au.data.displayTitle}</div>
+                  <div class="bio">{au.data.bioShort}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    )}
+
+    {/* ============ 成為作者 ============ */}
+    {page === 'join' && (
+      <>
+        <section class="ch-join-hero">
+          <div class="ch-container">
+            <h1>成為 APPI 作者，讓你的專業變成可累積的內容資產</h1>
+            <p>透過 AI 輔助寫作、SEO 架構與媒體刊登流程，協助專業者更快產出文章。</p>
+            <a class="ch-btn" href="#" style="background:var(--primary-ink);color:var(--primary);">申請成為作者</a>
+          </div>
+        </section>
+        <div class="ch-container">
+          <section class="ch-sec">
+            <div class="ch-sec-head"><h2>適合誰加入</h2></div>
+            <div class="ch-chips">{AUDIENCES.map((a) => <span class="ch-chip">{a}</span>)}</div>
+          </section>
+          <section class="ch-sec">
+            <div class="ch-sec-head"><h2>加入流程</h2></div>
+            <div class="ch-steps">
+              {STEPS.map((s, i) => (
+                <div class="ch-step"><span class="n">{i + 1}</span>{s}</div>
+              ))}
+            </div>
+          </section>
+        </div>
+      </>
+    )}
+
+    <footer class="ch-foot">
+      <div class="ch-container">APPI News｜亞太專業觀點 — 風格預覽（{variant.toUpperCase()}）・此為選色用 mockup，非正式頁面</div>
+    </footer>
+  </div>
+</ChoiceLayout>

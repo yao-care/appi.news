@@ -1,0 +1,54 @@
+---
+import '@/styles/choice.css';
+import { url } from '@/utils/url';
+
+interface Props {
+  page: string;
+  variant: string;
+}
+const { page, variant } = Astro.props;
+
+const PAGES = [
+  { id: 'index', label: '首頁' },
+  { id: 'articles', label: '文章內頁' },
+  { id: 'authors', label: '作者群' },
+  { id: 'join', label: '成為作者' },
+];
+const VARIANTS = [
+  { id: 'a', label: 'A 民眾黨' },
+  { id: 'b', label: 'B 國旗' },
+  { id: 'c', label: 'C 華人健康網' },
+  { id: 'd', label: 'D 泛科學' },
+  { id: 'e', label: 'E 哈佛商業評論' },
+];
+---
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>APPI 風格預覽 — {page} / {variant.toUpperCase()}</title>
+  </head>
+  <body>
+    <nav class="ch-switcher">
+      <div class="ch-switcher-inner">
+        <b>APPI 風格預覽</b>
+        <div class="ch-switch-group">
+          <span>頁型</span>
+          {PAGES.map((p) => (
+            <a href={url(`/choice/${p.id}/${variant}/`)} class={p.id === page ? 'on' : ''}>{p.label}</a>
+          ))}
+        </div>
+        <div class="ch-switch-group">
+          <span>風格</span>
+          {VARIANTS.map((v) => (
+            <a href={url(`/choice/${page}/${v.id}/`)} class={v.id === variant ? 'on-v' : ''}>{v.label}</a>
+          ))}
+        </div>
+        <a href={url('/choice/')} style="margin-left:auto;color:#8b949e;">全部總覽 ↗</a>
+      </div>
+    </nav>
+    <slot />
+  </body>
+</html>

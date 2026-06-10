@@ -1,6 +1,6 @@
 /* ============================================================
    APPI News — 風格選擇（/choice）預覽用樣式
-   5 套風格 token（a–e）＋共用版型；僅供客戶挑色挑版，非正式站。
+   7 套風格 token（a–g，對應參考站）＋各自版型；僅供客戶挑色挑版，非正式站。
    顏色一律 OKLCH（@supports）+ hex fallback。
    ============================================================ */
 
@@ -21,92 +21,98 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* ---------- 風格 token（hex fallback） ---------- */
-[data-variant='a'] { /* 民眾黨 TPP：青綠 */
-  --bg:#ffffff; --surface:#f2fbfb; --ink:#143b39; --ink2:#4a6562; --line:#d3eae8;
-  --primary:#0d8a8c; --primary-ink:#ffffff; --accent:#0c7e80; --tint:#e3f7f6; --on-light:#0a6a6c;
-  --hbg:#ffffff; --hink:#0a6a6c; --radius:12px; --fhead:var(--ch-sans); --fbody:var(--ch-sans);
+[data-variant='a'] { /* 關鍵評論網 TNL：青綠＋橘，多分類密集平台 */
+  --bg:#ffffff; --surface:#f3f7f6; --ink:#1c2b29; --ink2:#4f615f; --line:#dde8e6;
+  --primary:#0b8075; --primary-ink:#ffffff; --accent:#e0701a; --tint:#e0f0ed; --on-light:#0b6e66;
+  --hbg:#ffffff; --hink:#0c7068; --radius:6px; --fhead:var(--ch-sans); --fbody:var(--ch-sans);
   --hweight:700;
 }
-[data-variant='b'] { /* 青天白日滿地紅 */
-  --bg:#ffffff; --surface:#f3f4fb; --ink:#0a0a2e; --ink2:#43466e; --line:#d6d9ee;
-  --primary:#000095; --primary-ink:#ffffff; --accent:#fe0000; --tint:#e7e9f6; --on-light:#000095;
-  --hbg:#000095; --hink:#ffffff; --radius:3px; --fhead:var(--ch-sans); --fbody:var(--ch-sans);
+[data-variant='b'] { /* 報導者 The Reporter：黑白＋深teal，襯線深度閱讀、大留白 */
+  --bg:#ffffff; --surface:#f5f4f2; --ink:#161514; --ink2:#57534e; --line:#e3e0db;
+  --primary:#1f6f6b; --primary-ink:#ffffff; --accent:#1f6f6b; --tint:#e6efee; --on-light:#195a57;
+  --hbg:#ffffff; --hink:#161514; --radius:2px; --fhead:var(--ch-serif); --fbody:var(--ch-sans);
   --hweight:700;
 }
-[data-variant='c'] { /* 華人健康網：綠橘 */
-  --bg:#ffffff; --surface:#f6faef; --ink:#2b3320; --ink2:#586247; --line:#e3ecd4;
-  --primary:#4f9a2a; --primary-ink:#ffffff; --accent:#c25e00; --tint:#eef6df; --on-light:#3c7a1f;
-  --hbg:#4f9a2a; --hink:#ffffff; --radius:8px; --fhead:var(--ch-sans); --fbody:var(--ch-sans);
+[data-variant='c'] { /* PanSci 泛科學：cyan＋琥珀，知識標籤導向 */
+  --bg:#ffffff; --surface:#f1f7fa; --ink:#152530; --ink2:#4a5d66; --line:#dce8ee;
+  --primary:#0e7fa6; --primary-ink:#ffffff; --accent:#d68a10; --tint:#e1f0f6; --on-light:#0b6182;
+  --hbg:#ffffff; --hink:#0e7fa6; --radius:8px; --fhead:var(--ch-sans); --fbody:var(--ch-sans);
   --hweight:700;
 }
-[data-variant='d'] { /* 泛科學：黑黃 */
-  --bg:#ffffff; --surface:#f5f5f3; --ink:#161619; --ink2:#50505a; --line:#e3e3e0;
-  --primary:#18181c; --primary-ink:#ffd400; --accent:#8a6d00; --tint:#fbf6d8; --on-light:#18181c;
-  --hbg:#18181c; --hink:#ffffff; --radius:5px; --fhead:var(--ch-sans); --fbody:var(--ch-sans);
+[data-variant='d'] { /* 食力 foodNEXT：深色 header＋暖番茄紅，密集＋側欄 */
+  --bg:#ffffff; --surface:#faf6f3; --ink:#2a2320; --ink2:#6a5d56; --line:#ece3dd;
+  --primary:#c0492a; --primary-ink:#ffffff; --accent:#c0492a; --tint:#f6e7e1; --on-light:#9f3a1f;
+  --hbg:#2a2320; --hink:#ffffff; --radius:4px; --fhead:var(--ch-sans); --fbody:var(--ch-sans);
   --hweight:700;
 }
-[data-variant='e'] { /* 哈佛商業評論：紅黑襯線 */
-  --bg:#ffffff; --surface:#f7f5f2; --ink:#1a1a1a; --ink2:#565350; --line:#e4e0da;
-  --primary:#c8102e; --primary-ink:#ffffff; --accent:#a50d26; --tint:#f6e9ea; --on-light:#a50d26;
-  --hbg:#ffffff; --hink:#1a1a1a; --radius:0px; --fhead:var(--ch-serif); --fbody:var(--ch-sans);
+[data-variant='e'] { /* VERSE：純黑白，極簡編輯、大圖大留白 */
+  --bg:#ffffff; --surface:#f4f4f2; --ink:#0d0d0d; --ink2:#565656; --line:#e2e2df;
+  --primary:#111111; --primary-ink:#ffffff; --accent:#111111; --tint:#ededea; --on-light:#111111;
+  --hbg:#ffffff; --hink:#0d0d0d; --radius:0px; --fhead:var(--ch-sans); --fbody:var(--ch-sans);
   --hweight:700;
 }
-[data-variant='f'] { /* 上一生醫 Asignbio：鼠尾草綠＋暖白＋大地色，極簡植物感 */
-  --bg:#fbfaf7; --surface:#f2f0e9; --ink:#2d332b; --ink2:#5c6356; --line:#e2dfd5;
-  --primary:#5a7a55; --primary-ink:#ffffff; --accent:#8a6243; --tint:#ebf0e6; --on-light:#47603f;
-  --hbg:#fbfaf7; --hink:#47603f; --radius:16px; --fhead:var(--ch-sans); --fbody:var(--ch-sans);
-  --hweight:600;
+[data-variant='f'] { /* INSIDE：乾淨白＋藍，快節奏科技 */
+  --bg:#ffffff; --surface:#f4f6fb; --ink:#1a1f2e; --ink2:#515a6e; --line:#e1e6f0;
+  --primary:#2456d6; --primary-ink:#ffffff; --accent:#2456d6; --tint:#e6ecfb; --on-light:#1f47ad;
+  --hbg:#ffffff; --hink:#2456d6; --radius:8px; --fhead:var(--ch-sans); --fbody:var(--ch-sans);
+  --hweight:700;
+}
+[data-variant='g'] { /* APPI 推薦混合：藏青＋金，襯線、結構化、信任質感 */
+  --bg:#ffffff; --surface:#f5f7fa; --ink:#16273d; --ink2:#4c5a6e; --line:#e0e6ee;
+  --primary:#1f3a5f; --primary-ink:#ffffff; --accent:#a87515; --tint:#e9eef5; --on-light:#1a3552;
+  --hbg:#ffffff; --hink:#16273d; --radius:5px; --fhead:var(--ch-serif); --fbody:var(--ch-sans);
+  --hweight:700;
 }
 
 /* ---------- 風格 token（OKLCH 主層） ---------- */
 @supports (color: oklch(0.5 0.1 250)) {
-  [data-variant='a'] {
-    --bg:oklch(1 0 0); --surface:oklch(0.98 0.01 195); --ink:oklch(0.30 0.04 190);
-    --ink2:oklch(0.48 0.03 190); --line:oklch(0.91 0.02 190);
-    --primary:oklch(0.54 0.09 195); --accent:oklch(0.46 0.08 195); --tint:oklch(0.95 0.03 190);
-    --on-light:oklch(0.46 0.08 195); --hink:oklch(0.46 0.08 195);
+  [data-variant='a'] { /* TNL 青綠＋橘 */
+    --bg:oklch(1 0 0); --surface:oklch(0.97 0.01 190); --ink:oklch(0.28 0.03 188);
+    --ink2:oklch(0.47 0.025 188); --line:oklch(0.91 0.015 188);
+    --primary:oklch(0.54 0.09 192); --accent:oklch(0.62 0.14 55); --tint:oklch(0.94 0.03 188);
+    --on-light:oklch(0.47 0.08 192); --hink:oklch(0.47 0.08 192);
   }
-  [data-variant='b'] {
-    --bg:oklch(1 0 0); --surface:oklch(0.97 0.01 270); --ink:oklch(0.18 0.08 282);
-    --ink2:oklch(0.42 0.06 282); --line:oklch(0.89 0.02 282);
-    --primary:oklch(0.30 0.20 268); --accent:oklch(0.50 0.22 27); --tint:oklch(0.94 0.02 282);
-    --on-light:oklch(0.30 0.20 268); --hbg:oklch(0.30 0.20 268);
+  [data-variant='b'] { /* 報導者 黑白＋深teal */
+    --bg:oklch(1 0 0); --surface:oklch(0.96 0.006 70); --ink:oklch(0.16 0.004 60);
+    --ink2:oklch(0.45 0.008 60); --line:oklch(0.90 0.006 70);
+    --primary:oklch(0.48 0.06 190); --accent:oklch(0.48 0.06 190); --tint:oklch(0.93 0.02 188);
+    --on-light:oklch(0.43 0.06 190);
   }
-  [data-variant='c'] {
-    --bg:oklch(1 0 0); --surface:oklch(0.98 0.02 125); --ink:oklch(0.30 0.04 120);
-    --ink2:oklch(0.48 0.04 120); --line:oklch(0.92 0.03 125);
-    --primary:oklch(0.54 0.13 140); --accent:oklch(0.52 0.13 62); --tint:oklch(0.96 0.04 125);
-    --on-light:oklch(0.45 0.12 140); --hbg:oklch(0.54 0.13 140);
+  [data-variant='c'] { /* PanSci cyan＋琥珀 */
+    --bg:oklch(1 0 0); --surface:oklch(0.97 0.012 230); --ink:oklch(0.27 0.03 235);
+    --ink2:oklch(0.46 0.025 235); --line:oklch(0.91 0.015 230);
+    --primary:oklch(0.55 0.10 230); --accent:oklch(0.72 0.13 75); --tint:oklch(0.94 0.03 230);
+    --on-light:oklch(0.46 0.09 230); --hink:oklch(0.52 0.10 230);
   }
-  [data-variant='d'] {
-    --bg:oklch(1 0 0); --surface:oklch(0.97 0.003 270); --ink:oklch(0.20 0.005 285);
-    --ink2:oklch(0.45 0.01 285); --line:oklch(0.91 0.003 285);
-    --primary:oklch(0.24 0.01 285); --primary-ink:oklch(0.90 0.17 100); --accent:oklch(0.88 0.17 100);
-    --tint:oklch(0.95 0.08 100); --on-light:oklch(0.24 0.01 285); --hbg:oklch(0.24 0.01 285);
+  [data-variant='d'] { /* 食力 深底＋番茄紅 */
+    --bg:oklch(1 0 0); --surface:oklch(0.97 0.008 45); --ink:oklch(0.26 0.015 45);
+    --ink2:oklch(0.47 0.018 45); --line:oklch(0.91 0.01 45);
+    --primary:oklch(0.52 0.15 35); --accent:oklch(0.52 0.15 35); --tint:oklch(0.93 0.04 40);
+    --on-light:oklch(0.45 0.15 35); --hbg:oklch(0.26 0.012 60);
   }
-  [data-variant='e'] {
-    --bg:oklch(1 0 0); --surface:oklch(0.97 0.008 60); --ink:oklch(0.22 0.005 30);
-    --ink2:oklch(0.48 0.01 40); --line:oklch(0.90 0.008 50);
-    --primary:oklch(0.52 0.20 25); --accent:oklch(0.47 0.20 25); --tint:oklch(0.93 0.05 25);
-    --on-light:oklch(0.47 0.20 25);
+  [data-variant='e'] { /* VERSE 純黑白 */
+    --bg:oklch(1 0 0); --surface:oklch(0.96 0 0); --ink:oklch(0.16 0 0);
+    --ink2:oklch(0.42 0 0); --line:oklch(0.90 0 0);
+    --primary:oklch(0.18 0 0); --accent:oklch(0.18 0 0); --tint:oklch(0.93 0 0);
+    --on-light:oklch(0.18 0 0); --hink:oklch(0.16 0 0);
   }
-  [data-variant='f'] {
-    --bg:oklch(0.985 0.006 95); --surface:oklch(0.95 0.012 100); --ink:oklch(0.32 0.02 140);
-    --ink2:oklch(0.49 0.02 135); --line:oklch(0.90 0.012 100);
-    --primary:oklch(0.52 0.055 145); --accent:oklch(0.50 0.06 62); --tint:oklch(0.94 0.03 140);
-    --on-light:oklch(0.43 0.055 145); --hink:oklch(0.43 0.055 145);
+  [data-variant='f'] { /* INSIDE 藍 */
+    --bg:oklch(1 0 0); --surface:oklch(0.97 0.012 265); --ink:oklch(0.26 0.03 265);
+    --ink2:oklch(0.46 0.025 265); --line:oklch(0.91 0.015 265);
+    --primary:oklch(0.52 0.17 265); --accent:oklch(0.52 0.17 265); --tint:oklch(0.94 0.03 265);
+    --on-light:oklch(0.45 0.16 265); --hink:oklch(0.50 0.17 265);
+  }
+  [data-variant='g'] { /* APPI 藏青＋金 */
+    --bg:oklch(1 0 0); --surface:oklch(0.97 0.008 250); --ink:oklch(0.28 0.04 252);
+    --ink2:oklch(0.46 0.03 252); --line:oklch(0.91 0.012 250);
+    --primary:oklch(0.34 0.06 252); --accent:oklch(0.60 0.10 75); --tint:oklch(0.93 0.02 250);
+    --on-light:oklch(0.33 0.06 252); --hink:oklch(0.28 0.05 252);
   }
 }
 
-/* 上一生醫：植物感柔和裝飾 */
-[data-variant='f'] .ch-hero .lead .cover,
-[data-variant='f'] .ch-join-hero {
-  background-image: radial-gradient(circle at 85% 20%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 40%),
-    radial-gradient(circle at 15% 90%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 45%);
-}
-[data-variant='f'] .ch-join-hero { background-color: var(--surface); --hink: #3f5a3c; }
-[data-variant='f'] .ch-card,
-[data-variant='f'] .ch-author { box-shadow: 0 2px 10px rgba(80, 90, 70, 0.06); }
+/* d 食力：深色 header 的 join hero 用主色；e VERSE join hero 用淺底深字 */
+[data-variant='e'] .ch-join-hero { background: var(--surface); --hink: var(--ink); }
+[data-variant='b'] .ch-join-hero { background: var(--surface); --hink: var(--ink); }
 
 /* ============================================================
    切換列（風格中立，固定頂部）
@@ -152,7 +158,7 @@ img { max-width: 100%; height: auto; display: block; }
 .ch-cta { background: var(--primary); color: var(--primary-ink); padding: 9px 18px; border-radius: var(--radius); font-weight: 700; text-decoration: none; font-size: 16px; }
 [data-variant='e'] .ch-header { border-top: 5px solid var(--primary); border-bottom: 1px solid var(--line); }
 /* 深色 header（hbg=primary）時 CTA 反白，避免按鈕與底色同色融掉 */
-[data-variant='b'] .ch-cta, [data-variant='c'] .ch-cta, [data-variant='d'] .ch-cta { background: var(--primary-ink); color: var(--primary); }
+[data-variant='d'] .ch-cta { background: var(--primary-ink); color: var(--primary); }
 
 /* section heads */
 .ch-sec { margin: 48px 0; }
@@ -251,128 +257,125 @@ footer.ch-foot { background: var(--hbg); color: var(--hink); margin-top: 56px; p
 }
 
 /* ============================================================
-   各風格「整套版型」差異化（不只換色）
+   各風格整套版型（對應參考站；不只換色）
    ============================================================ */
 
-/* ---------- A 民眾黨：大膽現代、活動感（堆疊大 hero＋3 大卡） ---------- */
-[data-variant='a'] .ch-header-inner { padding-block: 22px; }
-[data-variant='a'] .ch-brand { font-size: 26px; }
-[data-variant='a'] .ch-nav { gap: 26px; }
-[data-variant='a'] .ch-cta { padding: 12px 26px; font-size: 17px; }
-[data-variant='a'] .ch-hero { grid-template-columns: 1fr; gap: 22px; padding: 44px 0 12px; }
-[data-variant='a'] .ch-hero .lead .cover { aspect-ratio: 21 / 8; border-radius: 18px; }
-[data-variant='a'] .ch-hero .lead h1 { font-size: 52px; letter-spacing: -0.01em; }
-[data-variant='a'] .ch-hero .lead p { font-size: 21px; max-width: 760px; }
-[data-variant='a'] .ch-hero .side { flex-direction: row; border: none; padding: 0; gap: 20px; }
-[data-variant='a'] .ch-hero .side .item { flex: 1; background: var(--surface); border-radius: 16px; padding: 18px 20px; }
-[data-variant='a'] .ch-grid--4 { grid-template-columns: repeat(3, 1fr); gap: 28px; }
-[data-variant='a'] .ch-card { border: none; box-shadow: 0 6px 22px rgba(15, 60, 60, 0.10); border-radius: 18px; }
-[data-variant='a'] .ch-card .cover { aspect-ratio: 3 / 2; }
-[data-variant='a'] .ch-card h3 { font-size: 21px; }
-[data-variant='a'] .ch-sec-head h2 { font-size: 30px; }
+/* ---------- a 關鍵評論網 TNL：多分類密集平台 ---------- */
+[data-variant='a'] .ch-nav { gap: 16px; font-size: 16px; }
+[data-variant='a'] .ch-hero { grid-template-columns: 1.5fr 1fr; gap: 26px; padding: 26px 0; }
+[data-variant='a'] .ch-hero .lead h1 { font-size: 32px; }
+[data-variant='a'] .ch-hero .side { counter-reset: rk; border-left: 1px solid var(--line); padding-left: 22px; gap: 0; }
+[data-variant='a'] .ch-hero .side .item { counter-increment: rk; position: relative; padding: 11px 0 11px 30px; border-bottom: 1px solid var(--line); }
+[data-variant='a'] .ch-hero .side .item::before { content: counter(rk); position: absolute; left: 0; top: 10px; color: var(--ink); font-weight: 800; font-size: 18px; }
+[data-variant='a'] .ch-hero .side .item .t { font-size: 16px; }
+[data-variant='a'] .ch-sec-head h2 { font-size: 22px; }
+[data-variant='a'] .ch-grid--4 { grid-template-columns: repeat(5, 1fr); gap: 14px; }
+[data-variant='a'] .ch-card .cover { aspect-ratio: 4 / 3; }
+[data-variant='a'] .ch-card .body { padding: 11px 12px; gap: 6px; }
+[data-variant='a'] .ch-card h3 { font-size: 15px; line-height: 1.45; }
+[data-variant='a'] .ch-card .meta { font-size: 12.5px; }
+[data-variant='a'] .ch-tag { font-size: 12px; padding: 2px 7px; }
 
-/* ---------- B 青天白日：官方正式、結構化（banner＋boxed＋2 欄） ---------- */
-[data-variant='b'] .ch-header { border-bottom: 4px solid var(--accent); }
-[data-variant='b'] .ch-header-inner { border-bottom: none; }
-[data-variant='b'] .ch-hero { grid-template-columns: 1.3fr 1fr; gap: 28px; padding: 32px 0; }
-[data-variant='b'] .ch-hero .lead { border: 2px solid var(--line); padding: 18px; background: var(--bg); }
-[data-variant='b'] .ch-hero .lead .cover { border-radius: 0; }
-[data-variant='b'] .ch-hero .lead h1 { font-size: 32px; }
-[data-variant='b'] .ch-hero .side { border-left: none; padding-left: 0; gap: 0; }
-[data-variant='b'] .ch-hero .side .item { border: 2px solid var(--line); border-bottom: none; padding: 14px 16px; }
-[data-variant='b'] .ch-hero .side .item:last-child { border-bottom: 2px solid var(--line); }
-[data-variant='b'] .ch-sec-head { border-bottom: none; background: var(--primary); padding: 10px 16px; }
-[data-variant='b'] .ch-sec-head h2 { color: #fff; font-size: 22px; }
-[data-variant='b'] .ch-sec-head .ch-pill { background: var(--accent); }
-[data-variant='b'] .ch-grid--4 { grid-template-columns: repeat(2, 1fr); gap: 0; border: 2px solid var(--line); }
-[data-variant='b'] .ch-card { border: none; border-right: 2px solid var(--line); border-bottom: 2px solid var(--line); border-radius: 0; flex-direction: row; gap: 14px; padding: 14px; }
-[data-variant='b'] .ch-card .cover { width: 120px; flex: 0 0 120px; aspect-ratio: 1; }
-[data-variant='b'] .ch-card .body { padding: 0; }
-[data-variant='b'] .ch-card h3 { font-size: 17px; }
+/* ---------- b 報導者：深度閱讀、襯線、大留白 ---------- */
+[data-variant='b'] .ch-header-inner { padding-block: 22px; }
+[data-variant='b'] .ch-nav { font-size: 16px; }
+[data-variant='b'] .ch-hero { grid-template-columns: 1fr; gap: 22px; padding: 52px 0 20px; }
+[data-variant='b'] .ch-hero .lead { max-width: 900px; margin: 0 auto; }
+[data-variant='b'] .ch-hero .lead .cover { aspect-ratio: 16 / 8; }
+[data-variant='b'] .ch-hero .lead h1 { font-size: 46px; line-height: 1.25; margin-top: 22px; }
+[data-variant='b'] .ch-hero .lead p { font-size: 21px; line-height: 1.7; }
+[data-variant='b'] .ch-hero .side { display: none; }
+[data-variant='b'] .ch-sec { margin: 72px 0; }
+[data-variant='b'] .ch-sec-head { border-bottom: 1px solid var(--ink); }
+[data-variant='b'] .ch-sec-head h2 { font-size: 22px; }
+[data-variant='b'] .ch-grid--4 { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+[data-variant='b'] .ch-card { border: none; }
+[data-variant='b'] .ch-card .cover { aspect-ratio: 16 / 9; border-radius: 2px; }
+[data-variant='b'] .ch-card .body { padding-top: 14px; }
+[data-variant='b'] .ch-card h3 { font-size: 25px; font-family: var(--ch-serif); margin-top: 6px; }
 
-/* ---------- C 華人健康網：密集入口網（小卡密集＋編號排行） ---------- */
-[data-variant='c'] .ch-hero { grid-template-columns: 1.2fr 1fr; gap: 24px; padding: 24px 0; }
+/* ---------- c PanSci：知識標籤導向 ---------- */
+[data-variant='c'] .ch-hero { grid-template-columns: 1.4fr 1fr; gap: 26px; padding: 28px 0; }
 [data-variant='c'] .ch-hero .lead h1 { font-size: 30px; }
-[data-variant='c'] .ch-hero .lead p { font-size: 16px; }
-[data-variant='c'] .ch-hero .side { counter-reset: rk; gap: 0; border-left: none; padding-left: 18px; }
-[data-variant='c'] .ch-hero .side .item { counter-increment: rk; border-bottom: 1px dashed var(--line); padding: 9px 0 9px 34px; position: relative; }
-[data-variant='c'] .ch-hero .side .item::before { content: counter(rk); position: absolute; left: 0; top: 8px; width: 24px; height: 24px; background: var(--primary); color: #fff; border-radius: 4px; display: grid; place-items: center; font-weight: 700; font-size: 14px; }
-[data-variant='c'] .ch-hero .side .item .t { font-size: 16px; }
-[data-variant='c'] .ch-sec { margin: 30px 0; }
-[data-variant='c'] .ch-sec-head { border-bottom: 2px solid var(--primary); padding-bottom: 6px; }
-[data-variant='c'] .ch-sec-head h2 { font-size: 22px; border-left: 6px solid var(--primary); padding-left: 10px; }
-[data-variant='c'] .ch-grid--4 { grid-template-columns: repeat(5, 1fr); gap: 12px; }
-[data-variant='c'] .ch-card { border: 1px solid var(--line); border-radius: 6px; }
-[data-variant='c'] .ch-card .cover { aspect-ratio: 4 / 3; }
-[data-variant='c'] .ch-card .body { padding: 10px 11px; gap: 5px; }
-[data-variant='c'] .ch-card h3 { font-size: 15px; line-height: 1.45; }
-[data-variant='c'] .ch-card .meta { font-size: 12.5px; }
-[data-variant='c'] .ch-tag { font-size: 12px; padding: 2px 7px; }
+[data-variant='c'] .ch-hero .side { gap: 14px; }
+[data-variant='c'] .ch-grid--4 { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+[data-variant='c'] .ch-card .cover { aspect-ratio: 16 / 10; }
+[data-variant='c'] .ch-card .body { padding: 14px 15px; }
+[data-variant='c'] .ch-tag { background: var(--primary); color: var(--primary-ink); font-size: 13px; }
+[data-variant='c'] .ch-card h3 { font-size: 17px; }
 
-/* ---------- D 泛科學：文字導向科普長欄（隱藏圖、編號左線） ---------- */
-[data-variant='d'] .ch-container { max-width: 900px; }
-[data-variant='d'] .ch-hero { grid-template-columns: 1fr; gap: 18px; padding: 36px 0 8px; }
-[data-variant='d'] .ch-hero .lead .cover { display: none !important }
-[data-variant='d'] .ch-hero .lead h1 { font-size: 40px; border-left: 8px solid var(--accent); padding-left: 18px; }
-[data-variant='d'] .ch-hero .lead p { font-size: 19px; padding-left: 26px; }
-[data-variant='d'] .ch-hero .side { flex-direction: column; border-left: none; padding-left: 0; gap: 0; }
-[data-variant='d'] .ch-hero .side .item { border-top: 1px solid var(--line); padding: 12px 0; }
-[data-variant='d'] .ch-sec-head { border-bottom: 3px solid var(--ink); }
-[data-variant='d'] .ch-sec-head h2 { box-shadow: inset 0 -10px 0 var(--accent); }
-[data-variant='d'] .ch-grid--4 { grid-template-columns: 1fr; gap: 0; counter-reset: dn; }
-[data-variant='d'] .ch-card { flex-direction: row; align-items: flex-start; gap: 20px; border: none; border-top: 1px solid var(--line); border-radius: 0; padding: 20px 0; counter-increment: dn; }
-[data-variant='d'] .ch-card .cover { display: none !important }
-[data-variant='d'] .ch-card::before { content: counter(dn, decimal-leading-zero); font-weight: 800; font-size: 30px; color: var(--ink); min-width: 56px; line-height: 1.1; }
-[data-variant='d'] .ch-card .body { padding: 0; }
-[data-variant='d'] .ch-card h3 { font-size: 23px; }
-[data-variant='d'] .ch-card .meta { font-size: 14px; }
+/* ---------- d 食力：密集＋側欄熱門（深色 header） ---------- */
+[data-variant='d'] .ch-hero { grid-template-columns: 2fr 1fr; gap: 28px; padding: 28px 0; }
+[data-variant='d'] .ch-hero .lead h1 { font-size: 32px; }
+[data-variant='d'] .ch-hero .side { counter-reset: tr; background: var(--surface); border-radius: 8px; padding: 16px 18px; gap: 0; border-left: none; }
+[data-variant='d'] .ch-hero .side::before { content: '熱門文章'; display: block; font-weight: 800; color: var(--primary); margin-bottom: 8px; font-size: 16px; }
+[data-variant='d'] .ch-hero .side .item { counter-increment: tr; position: relative; padding: 10px 0 10px 32px; border-bottom: 1px solid var(--line); }
+[data-variant='d'] .ch-hero .side .item:last-child { border-bottom: none; }
+[data-variant='d'] .ch-hero .side .item::before { content: counter(tr); position: absolute; left: 0; top: 9px; width: 22px; height: 22px; background: var(--primary); color: #fff; border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: 700; }
+[data-variant='d'] .ch-hero .side .item .t { font-size: 15px; }
+[data-variant='d'] .ch-grid--4 { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+[data-variant='d'] .ch-card h3 { font-size: 18px; }
 
-/* ---------- E 哈佛商業評論：大留白襯線雜誌（巨幅 hero＋編號文字清單） ---------- */
-[data-variant='e'] .ch-header-inner { justify-content: center; gap: 40px; position: relative; }
-[data-variant='e'] .ch-brand { position: absolute; left: 24px; }
+/* ---------- e VERSE：純黑白、極簡編輯、大圖 ---------- */
+[data-variant='e'] .ch-header-inner { justify-content: center; position: relative; padding-block: 22px; }
+[data-variant='e'] .ch-brand { position: absolute; left: 24px; letter-spacing: 0.04em; }
 [data-variant='e'] .ch-cta { position: absolute; right: 24px; }
-[data-variant='e'] .ch-nav { gap: 28px; text-transform: uppercase; letter-spacing: 0.05em; font-size: 15px; }
-[data-variant='e'] .ch-container { max-width: 1080px; }
-[data-variant='e'] .ch-hero { grid-template-columns: 1fr; gap: 14px; padding: 56px 0 24px; }
-[data-variant='e'] .ch-hero .lead { max-width: 880px; margin: 0 auto; text-align: center; }
-[data-variant='e'] .ch-hero .lead .cover { aspect-ratio: 2 / 1; margin-bottom: 28px; }
-[data-variant='e'] .ch-hero .lead h1 { font-size: 60px; line-height: 1.12; }
-[data-variant='e'] .ch-hero .lead p { font-size: 22px; max-width: 680px; margin: 16px auto 0; }
+[data-variant='e'] .ch-nav { gap: 30px; text-transform: uppercase; letter-spacing: 0.08em; font-size: 14px; }
+[data-variant='e'] .ch-hero { grid-template-columns: 1fr; gap: 0; padding: 0 0 24px; }
+[data-variant='e'] .ch-hero .lead .cover { aspect-ratio: 21 / 9; border-radius: 0; }
+[data-variant='e'] .ch-hero .lead h1 { font-size: 56px; line-height: 1.1; margin-top: 26px; max-width: 1000px; }
+[data-variant='e'] .ch-hero .lead p { font-size: 20px; max-width: 720px; }
 [data-variant='e'] .ch-hero .side { display: none; }
-[data-variant='e'] .ch-sec { margin: 72px 0; }
-[data-variant='e'] .ch-sec-head { justify-content: center; border-bottom: none; }
-[data-variant='e'] .ch-sec-head h2 { font-size: 20px; text-transform: uppercase; letter-spacing: 0.12em; border-bottom: 2px solid var(--ink); padding-bottom: 8px; }
-[data-variant='e'] .ch-sec-head .ch-pill { display: none; }
-[data-variant='e'] .ch-grid--4 { grid-template-columns: 1fr; gap: 0; counter-reset: en; max-width: 820px; margin: 0 auto; }
-[data-variant='e'] .ch-card { flex-direction: row; align-items: baseline; gap: 28px; border: none; border-top: 1px solid var(--line); border-radius: 0; padding: 26px 0; counter-increment: en; }
-[data-variant='e'] .ch-card .cover { display: none !important }
-[data-variant='e'] .ch-card::before { content: counter(en); font-family: var(--ch-serif); font-size: 30px; color: var(--primary); min-width: 48px; }
-[data-variant='e'] .ch-card .body { padding: 0; }
-[data-variant='e'] .ch-card h3 { font-size: 28px; font-family: var(--ch-serif); line-height: 1.25; }
+[data-variant='e'] .ch-sec { margin: 64px 0; }
+[data-variant='e'] .ch-sec-head { border-bottom: 2px solid var(--ink); }
+[data-variant='e'] .ch-sec-head h2 { font-size: 20px; text-transform: uppercase; letter-spacing: 0.1em; }
+[data-variant='e'] .ch-sec-head .ch-pill { background: var(--ink); }
+[data-variant='e'] .ch-grid--4 { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+[data-variant='e'] .ch-card { border: none; border-radius: 0; }
+[data-variant='e'] .ch-card .cover { aspect-ratio: 4 / 3; border-radius: 0; }
+[data-variant='e'] .ch-card h3 { font-size: 26px; margin-top: 8px; }
+[data-variant='e'] .ch-tag { background: transparent; color: var(--ink); padding: 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+[data-variant='e'] .ch-grid--4 .ch-card:first-child { grid-column: 1 / -1; }
+[data-variant='e'] .ch-grid--4 .ch-card:first-child .cover { aspect-ratio: 21 / 8; }
+[data-variant='e'] .ch-grid--4 .ch-card:first-child h3 { font-size: 38px; }
 
-/* ---------- F 上一生醫：極簡留白、大圖、植物感（2 大卡＋寬鬆） ---------- */
-[data-variant='f'] .ch-header-inner { padding-block: 24px; }
-[data-variant='f'] .ch-nav { gap: 30px; font-weight: 400; }
-[data-variant='f'] .ch-hero { grid-template-columns: 1fr; gap: 24px; padding: 72px 0 32px; text-align: center; }
-[data-variant='f'] .ch-hero .lead { max-width: 820px; margin: 0 auto; }
-[data-variant='f'] .ch-hero .lead .cover { aspect-ratio: 5 / 2; border-radius: 24px; }
-[data-variant='f'] .ch-hero .lead h1 { font-size: 46px; font-weight: 600; letter-spacing: 0.01em; margin-top: 26px; }
-[data-variant='f'] .ch-hero .lead p { font-size: 20px; max-width: 620px; margin: 14px auto 0; }
-[data-variant='f'] .ch-hero .side { display: none; }
-[data-variant='f'] .ch-sec { margin: 84px 0; }
-[data-variant='f'] .ch-sec-head { justify-content: center; border-bottom: none; flex-direction: column; align-items: center; gap: 8px; }
-[data-variant='f'] .ch-sec-head h2 { font-size: 30px; font-weight: 600; }
-[data-variant='f'] .ch-sec-head::after { content: ''; width: 48px; height: 3px; background: var(--primary); border-radius: 2px; }
-[data-variant='f'] .ch-grid--4 { grid-template-columns: repeat(2, 1fr); gap: 36px; max-width: 920px; margin: 0 auto; }
-[data-variant='f'] .ch-card { border: none; box-shadow: 0 4px 20px rgba(80, 90, 70, 0.08); border-radius: 20px; }
-[data-variant='f'] .ch-card .cover { aspect-ratio: 16 / 10; }
-[data-variant='f'] .ch-card .body { padding: 22px 24px 26px; gap: 10px; }
-[data-variant='f'] .ch-card h3 { font-size: 22px; font-weight: 600; }
+/* ---------- f INSIDE：乾淨快節奏科技 ---------- */
+[data-variant='f'] .ch-hero { grid-template-columns: 1.5fr 1fr; gap: 24px; padding: 28px 0; }
+[data-variant='f'] .ch-hero .lead h1 { font-size: 32px; }
+[data-variant='f'] .ch-hero .side { gap: 14px; }
+[data-variant='f'] .ch-grid--4 { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+[data-variant='f'] .ch-card { box-shadow: 0 2px 10px rgba(36, 86, 214, 0.07); border: 1px solid var(--line); }
+[data-variant='f'] .ch-card .cover { aspect-ratio: 16 / 9; }
+[data-variant='f'] .ch-card h3 { font-size: 17px; }
 
-@media (max-width: 860px) {
-  [data-variant='a'] .ch-hero .side { flex-direction: column; }
-  [data-variant='a'] .ch-grid--4, [data-variant='c'] .ch-grid--4 { grid-template-columns: repeat(2, 1fr); }
-  [data-variant='b'] .ch-grid--4, [data-variant='f'] .ch-grid--4 { grid-template-columns: 1fr; }
-  [data-variant='e'] .ch-hero .lead h1 { font-size: 40px; }
-  [data-variant='b'] .ch-hero, [data-variant='c'] .ch-hero { grid-template-columns: 1fr; }
+/* ---------- g APPI 推薦混合：襯線、結構化、藏青＋金、信任質感 ---------- */
+[data-variant='g'] .ch-header { border-bottom: 1px solid var(--line); }
+[data-variant='g'] .ch-header-inner { padding-block: 20px; }
+[data-variant='g'] .ch-nav { font-size: 17px; }
+[data-variant='g'] .ch-hero { grid-template-columns: 1.6fr 1fr; gap: 36px; padding: 40px 0; }
+[data-variant='g'] .ch-hero .lead h1 { font-size: 40px; line-height: 1.25; margin-top: 16px; }
+[data-variant='g'] .ch-hero .lead p { font-size: 19px; }
+[data-variant='g'] .ch-hero .side { border-left: 3px solid var(--accent); padding-left: 24px; gap: 18px; }
+[data-variant='g'] .ch-hero .side .item .t { font-family: var(--ch-serif); font-size: 18px; }
+[data-variant='g'] .ch-sec-head { border-bottom: 2px solid var(--primary); }
+[data-variant='g'] .ch-sec-head h2 { font-size: 26px; }
+[data-variant='g'] .ch-grid--4 { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+[data-variant='g'] .ch-card { border: none; border-top: 3px solid var(--accent); border-radius: 0; padding-top: 4px; }
+[data-variant='g'] .ch-card .cover { aspect-ratio: 16 / 9; border-radius: 4px; }
+[data-variant='g'] .ch-card h3 { font-family: var(--ch-serif); font-size: 21px; }
+
+/* ---------- 響應式 ---------- */
+@media (max-width: 900px) {
+  .ch-hero { grid-template-columns: 1fr !important; }
+  [data-variant='a'] .ch-grid--4 { grid-template-columns: repeat(3, 1fr); }
+  [data-variant='c'] .ch-grid--4, [data-variant='f'] .ch-grid--4,
+  [data-variant='d'] .ch-grid--4, [data-variant='g'] .ch-grid--4 { grid-template-columns: repeat(2, 1fr); }
+  [data-variant='a'] .ch-hero .side { border-left: none; padding-left: 0; }
+  [data-variant='g'] .ch-hero .side { border-left: none; padding-left: 0; }
+}
+@media (max-width: 560px) {
+  [data-variant='a'] .ch-grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .ch-grid--4 { grid-template-columns: 1fr !important; }
+  [data-variant='b'] .ch-hero .lead h1, [data-variant='e'] .ch-hero .lead h1 { font-size: 32px; }
+  [data-variant='e'] .ch-grid--4 .ch-card:first-child h3 { font-size: 28px; }
 }

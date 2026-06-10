@@ -15,7 +15,7 @@ const VARIANTS = ['a', 'b', 'c', 'd', 'e'];
 
 export async function getStaticPaths() {
   const pages = ['index', 'articles', 'authors', 'join'];
-  const variants = ['a', 'b', 'c', 'd', 'e', 'f'];
+  const variants = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
   return pages.flatMap((page) =>
     variants.map((variant) => ({ params: { page, variant }, props: { page, variant } })),
   );
@@ -54,7 +54,6 @@ const STEPS = ['申請', '選擇方案', '建立作者資料', '產生文章', '
     <header class="ch-header">
       <div class="ch-header-inner">
         <div class="ch-brand">
-          {variant === 'b' && <span class="ch-sun"></span>}
           <span class="mark">APPI</span> News
         </div>
         <nav class="ch-nav">{NAV.map((n) => <a href="#">{n}</a>)}</nav>

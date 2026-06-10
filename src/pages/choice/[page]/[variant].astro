@@ -15,7 +15,7 @@ const VARIANTS = ['a', 'b', 'c', 'd', 'e'];
 
 export async function getStaticPaths() {
   const pages = ['index', 'articles', 'authors', 'join'];
-  const variants = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+  const variants = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'];
   return pages.flatMap((page) =>
     variants.map((variant) => ({ params: { page, variant }, props: { page, variant } })),
   );

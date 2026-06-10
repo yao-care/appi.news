@@ -546,3 +546,94 @@ footer.ch-foot { background: var(--ink); color: #fff; margin-top: 56px; padding:
 [data-variant='j'] .ch-chip { background: transparent; border: 1px solid var(--ink); border-radius: 0; text-transform: uppercase; font-size: 14px; letter-spacing: 0.04em; }
 [data-variant='b'] .ch-chip, [data-variant='k'] .ch-chip { background: transparent; border: 1px solid var(--line); }
 [data-variant='d'] .ch-chip, [data-variant='e'] .ch-chip { background: var(--tint); color: var(--on-light); }
+
+/* ============================================================
+   創新結構版型（首頁／文章內頁）—— 改的是「排版範式」不只主題
+   後出，覆寫前面同優先級規則
+   ============================================================ */
+
+/* ---- A 關鍵評論網：新聞牆 Bento 馬賽克 ---- */
+[data-variant='a'] .ch-grid--4 { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 178px; gap: 12px; }
+[data-variant='a'] .ch-card { border: 1px solid var(--line); border-radius: 6px; }
+[data-variant='a'] .ch-card .cover { aspect-ratio: auto; flex: 1; min-height: 0; }
+[data-variant='a'] .ch-card .body { padding: 9px 11px; gap: 4px; }
+[data-variant='a'] .ch-card:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+[data-variant='a'] .ch-card:nth-child(1) h3 { font-size: 24px; }
+[data-variant='a'] .ch-card:nth-child(6) { grid-column: span 2; }
+[data-variant='a'] .ch-card:nth-child(8) { grid-row: span 2; }
+
+/* ---- B 報導者：滿版封面 + 大標疊圖（cover story） ---- */
+[data-variant='b'] .ch-hero { grid-template-columns: 1fr; padding: 0; }
+[data-variant='b'] .ch-hero .lead { position: relative; min-height: 66vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 48px; max-width: none; margin: 0; overflow: hidden; }
+[data-variant='b'] .ch-hero .lead .cover { position: absolute; inset: 0; aspect-ratio: auto; height: 100%; border-radius: 0; color: transparent !important; background: linear-gradient(160deg, #234b48, #122b29) !important; }
+[data-variant='b'] .ch-hero .lead .ch-pill { position: relative; z-index: 1; align-self: flex-start; background: rgba(255,255,255,0.16); color: #fff; }
+[data-variant='b'] .ch-hero .lead h1 { position: relative; z-index: 1; color: #fff; font-size: 52px; max-width: 800px; }
+[data-variant='b'] .ch-hero .lead p { position: relative; z-index: 1; color: #eef2f1; max-width: 640px; }
+[data-variant='b'] .ch-sec { max-width: 1100px; margin-inline: auto; }
+
+/* ---- C READr：資料儀表板（卡片左色條 + 模組格） ---- */
+[data-variant='c'] .ch-grid--4 { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+[data-variant='c'] .ch-card { border: 1px solid var(--line); border-left: 5px solid var(--primary); border-radius: 8px; box-shadow: none; }
+[data-variant='c'] .ch-hero .side { background: var(--surface); border-radius: 10px; padding: 16px; border-left: none; }
+[data-variant='c'] .ch-hero .side .item { border-left: none; padding: 8px 0; border-bottom: 1px solid var(--line); }
+
+/* ---- E 環境資訊中心：純文字索引（無圖、報紙條目） ---- */
+[data-variant='e'] .ch-hero { grid-template-columns: 1.3fr 1fr; padding: 22px 0; }
+[data-variant='e'] .ch-hero .lead .cover { display: none !important; }
+[data-variant='e'] .ch-hero .lead { border-top: 4px solid var(--primary); padding-top: 14px; }
+[data-variant='e'] .ch-hero .lead h1 { font-size: 30px; margin-top: 0; }
+[data-variant='e'] .ch-grid--4 { display: block; columns: 2; column-gap: 48px; }
+[data-variant='e'] .ch-card { display: block; break-inside: avoid; border: none; border-bottom: 1px solid var(--line); border-radius: 0; padding: 12px 0; margin: 0; }
+[data-variant='e'] .ch-card .cover { display: none !important; }
+[data-variant='e'] .ch-card .body { padding: 0; gap: 3px; }
+[data-variant='e'] .ch-card h3 { font-size: 18px; }
+
+/* ---- H INSIDE：橫向串流 Feed（單欄、縮圖左字右） ---- */
+[data-variant='h'] .ch-hero { grid-template-columns: 1fr; padding: 24px 0 8px; }
+[data-variant='h'] .ch-hero .lead { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: center; }
+[data-variant='h'] .ch-hero .lead .cover { aspect-ratio: 16/9; }
+[data-variant='h'] .ch-hero .side { display: none; }
+[data-variant='h'] .ch-grid--4 { grid-template-columns: 1fr; gap: 0; max-width: 760px; }
+[data-variant='h'] .ch-card { flex-direction: row; align-items: stretch; gap: 16px; border: none; border-bottom: 1px solid var(--line); border-radius: 0; box-shadow: none; padding: 16px 0; }
+[data-variant='h'] .ch-card .cover { width: 200px; flex: 0 0 200px; aspect-ratio: 16/10; border-radius: 8px; }
+[data-variant='h'] .ch-card .body { padding: 2px 0; justify-content: center; }
+[data-variant='h'] .ch-card h3 { font-size: 20px; }
+
+/* ---- I TechOrange：海報式（無 hero 圖、巨幅標、粗方塊） ---- */
+[data-variant='i'] .ch-hero { grid-template-columns: 1fr; padding: 40px 0 20px; }
+[data-variant='i'] .ch-hero .lead { order: 2; }
+[data-variant='i'] .ch-hero .lead .cover { display: none !important; }
+[data-variant='i'] .ch-hero .lead h1 { font-size: 64px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; max-width: 14ch; }
+[data-variant='i'] .ch-hero .lead p { font-size: 22px; max-width: 640px; }
+[data-variant='i'] .ch-hero .side { display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; border-left: none; padding-left: 0; margin-bottom: 20px; }
+[data-variant='i'] .ch-hero .side .item { background: var(--tint); border-radius: 4px; padding: 8px 12px; }
+[data-variant='i'] .ch-hero .side .item .m { display: none; }
+[data-variant='i'] .ch-grid--4 { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+/* ---- J VERSE：滿版封面置中疊字 ---- */
+[data-variant='j'] .ch-hero { padding: 0; }
+[data-variant='j'] .ch-hero .lead { position: relative; min-height: 78vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px; overflow: hidden; }
+[data-variant='j'] .ch-hero .lead .cover { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; border-radius: 0; color: transparent !important; background: #111 !important; }
+[data-variant='j'] .ch-hero .lead .ch-pill { position: relative; z-index: 1; background: #fff; color: #111; }
+[data-variant='j'] .ch-hero .lead h1 { position: relative; z-index: 1; color: #fff; font-size: 64px; max-width: 16ch; margin: 14px 0; }
+[data-variant='j'] .ch-hero .lead p { position: relative; z-index: 1; color: #e6e6e6; }
+
+/* ============================================================
+   創新結構：文章內頁
+   ============================================================ */
+/* B：滿版封面橫幅（cover band） */
+[data-variant='b'] .ch-article .cover { width: 100vw; margin-left: calc(50% - 50vw); aspect-ratio: 21/8; border-radius: 0; }
+/* C：雜誌雙欄內文 */
+[data-variant='c'] .ch-article { max-width: 900px; }
+[data-variant='c'] .ch-article .prose { column-count: 2; column-gap: 44px; font-size: 17px; }
+[data-variant='c'] .ch-article .prose h2 { column-span: all; }
+/* E：純文字、無封面、窄欄 */
+[data-variant='e'] .ch-article { max-width: 680px; }
+[data-variant='e'] .ch-article .cover { display: none !important; }
+/* I：海報式大標、無封面、粗副標 */
+[data-variant='i'] .ch-article { max-width: 800px; }
+[data-variant='i'] .ch-article .cover { display: none !important; }
+[data-variant='i'] .ch-article h1 { font-size: 52px; }
+[data-variant='i'] .ch-article .prose h2 { font-weight: 800; font-size: 28px; }
+/* J：滿版封面橫幅 + 置中 */
+[data-variant='j'] .ch-article .cover { width: 100vw; margin-left: calc(50% - 50vw); aspect-ratio: 21/8; border-radius: 0; }

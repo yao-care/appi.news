@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+<defs>
+<marker id="arr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+<path d="M0,0 L9,3.5 L0,7 z" fill="#777"/>
+</marker>
+</defs>
+<style>text{font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif}</style>
+<rect width="960" height="600" fill="#F6F9FC"/>
+<text x="480" y="44" text-anchor="middle" font-size="22" font-weight="bold" fill="#1B2A4A">中醫四診合參 AI 系統架構</text>
+<rect x="28" y="90" width="158" height="56" rx="8" fill="#EBF5FB" stroke="#3498DB" stroke-width="2"/>
+<text x="107" y="117" text-anchor="middle" font-size="15" font-weight="bold" fill="#1A5276">脈診</text>
+<text x="107" y="135" text-anchor="middle" font-size="11" fill="#555">脈搏節律・波形採集</text>
+<rect x="28" y="170" width="158" height="56" rx="8" fill="#EBF5FB" stroke="#3498DB" stroke-width="2"/>
+<text x="107" y="197" text-anchor="middle" font-size="15" font-weight="bold" fill="#1A5276">望診</text>
+<text x="107" y="215" text-anchor="middle" font-size="11" fill="#555">面色・神態影像辨識</text>
+<rect x="28" y="250" width="158" height="56" rx="8" fill="#EBF5FB" stroke="#3498DB" stroke-width="2"/>
+<text x="107" y="277" text-anchor="middle" font-size="15" font-weight="bold" fill="#1A5276">舌診</text>
+<text x="107" y="295" text-anchor="middle" font-size="11" fill="#555">舌色・苔象自動分析</text>
+<rect x="28" y="330" width="158" height="56" rx="8" fill="#EBF5FB" stroke="#3498DB" stroke-width="2"/>
+<text x="107" y="357" text-anchor="middle" font-size="15" font-weight="bold" fill="#1A5276">問診</text>
+<text x="107" y="375" text-anchor="middle" font-size="11" fill="#555">症狀・病史結構問答</text>
+<line x1="186" y1="118" x2="224" y2="118" stroke="#3498DB" stroke-width="1.5"/>
+<line x1="186" y1="198" x2="224" y2="198" stroke="#3498DB" stroke-width="1.5"/>
+<line x1="186" y1="278" x2="224" y2="278" stroke="#3498DB" stroke-width="1.5"/>
+<line x1="186" y1="358" x2="224" y2="358" stroke="#3498DB" stroke-width="1.5"/>
+<line x1="224" y1="118" x2="224" y2="358" stroke="#3498DB" stroke-width="1.5"/>
+<line x1="224" y1="238" x2="260" y2="238" stroke="#3498DB" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="263" y="168" width="152" height="140" rx="10" fill="#E8F8F5" stroke="#1ABC9C" stroke-width="2.5"/>
+<text x="339" y="223" text-anchor="middle" font-size="14" font-weight="bold" fill="#0E6655">數據採集</text>
+<text x="339" y="244" text-anchor="middle" font-size="14" font-weight="bold" fill="#0E6655">模組</text>
+<text x="339" y="272" text-anchor="middle" font-size="11" fill="#555">多模態輸入整合</text>
+<text x="339" y="289" text-anchor="middle" font-size="11" fill="#555">標準化・特徵提取</text>
+<line x1="415" y1="238" x2="450" y2="238" stroke="#1ABC9C" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="453" y="143" width="178" height="210" rx="10" fill="#FEF5E7" stroke="#E67E22" stroke-width="2.5"/>
+<text x="542" y="183" text-anchor="middle" font-size="14" font-weight="bold" fill="#784212">辨證規則庫</text>
+<text x="542" y="203" text-anchor="middle" font-size="11" fill="#E67E22" font-weight="bold">透明可查規則庫</text>
+<line x1="466" y1="212" x2="618" y2="212" stroke="#E67E22" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="542" y="234" text-anchor="middle" font-size="12" fill="#6E2F05">八綱辨證</text>
+<text x="542" y="256" text-anchor="middle" font-size="12" fill="#6E2F05">臟腑辨證</text>
+<text x="542" y="278" text-anchor="middle" font-size="12" fill="#6E2F05">氣血津液辨證</text>
+<text x="542" y="300" text-anchor="middle" font-size="12" fill="#6E2F05">六經辨證</text>
+<text x="542" y="328" text-anchor="middle" font-size="11" fill="#AAA">可編輯・可審核・可解釋</text>
+<line x1="631" y1="248" x2="665" y2="248" stroke="#E67E22" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="668" y="143" width="170" height="210" rx="10" fill="#EAFAF1" stroke="#27AE60" stroke-width="2.5"/>
+<text x="753" y="183" text-anchor="middle" font-size="14" font-weight="bold" fill="#1D6A2C">診斷結論</text>
+<text x="753" y="205" text-anchor="middle" font-size="11" fill="#555">證型判定・治則參考</text>
+<text x="753" y="222" text-anchor="middle" font-size="10" fill="#999">（非臨床診療指示）</text>
+<line x1="680" y1="234" x2="826" y2="234" stroke="#27AE60" stroke-width="1.5" stroke-dasharray="6,3"/>
+<text x="753" y="264" text-anchor="middle" font-size="13" font-weight="bold" fill="#1A5276">完整推理路徑</text>
+<text x="753" y="286" text-anchor="middle" font-size="11" fill="#555">每步決策有據可查</text>
+<text x="753" y="304" text-anchor="middle" font-size="11" fill="#555">規則依據透明呈現</text>
+<text x="753" y="326" text-anchor="middle" font-size="10" fill="#AAA">支援複核與審查</text>
+<text x="107" y="415" text-anchor="middle" font-size="12" font-weight="bold" fill="#3498DB">四診輸入</text>
+<text x="339" y="330" text-anchor="middle" font-size="12" font-weight="bold" fill="#1ABC9C">採集層</text>
+<text x="542" y="373" text-anchor="middle" font-size="12" font-weight="bold" fill="#E67E22">推理層</text>
+<text x="753" y="373" text-anchor="middle" font-size="12" font-weight="bold" fill="#27AE60">輸出層</text>
+<text x="480" y="540" text-anchor="middle" font-size="11" fill="#BBB">本圖為系統架構示意，不代表任何臨床診療建議</text>
+</svg>

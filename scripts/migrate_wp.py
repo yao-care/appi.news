@@ -13,13 +13,27 @@ import re
 import json
 import html
 import collections
+import urllib.request
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
-from urllib.parse import unquote
+from urllib.parse import unquote, urlparse, urlsplit, urlunsplit, quote
+
+
+def encode_url(u):
+    """把 URL 路徑中的非 ASCII（中文檔名）做 percent-encode，供 urllib 下載。
+    safe='/%' 確保已編碼的 %XX 不被二次編碼。"""
+    p = urlsplit(u)
+    return urlunsplit((p.scheme, p.netloc, quote(p.path, safe="/%"), p.query, p.fragment))
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'old', 'asia-pacificpreventiveinsight.WordPress.2026-06-09.xml')
 OUT = os.path.join(ROOT, 'src', 'content', 'articles')
+IMAGES_DIR = os.path.join(ROOT, 'public', 'images')
+
+# 內文圖片來源政策：自有站台的圖下載到 public/images（複製一份，不依賴外站存活）；
+# 其餘第三方（pexels 等，已取得授權）保留原始絕對連結。
+OWN_IMG_HOSTS = ('appi.news', 'writer.weiqi.kids')
+_img_cache = {}  # 原始 url -> body 要用的 src（避免重複下載/處理）
 
 NS = {
     'wp': 'http://wordpress.org/export/1.2/',
@@ -72,6 +86,47 @@ STATUS_MAP = {
     'private': 'draft',
 }
 
+# ---------------------------------------------------------------- 內文圖片
+
+def resolve_img_src(url, pid, counter):
+    """決定 body 中 <img> 要用的 src。
+    - 自有站台（OWN_IMG_HOSTS）：下載到 public/images/wp-<id>-<n>.<ext>，回傳 /images/...
+    - 第三方（已授權）：原樣保留絕對 URL
+    - 無效（空 / data:）：回傳 None（捨棄該 img）
+    下載失敗時 fallback 為原始連結，確保圖片仍可顯示。
+    """
+    url = html.unescape((url or '').strip())
+    if not url or url.startswith('data:'):
+        return None
+    if url in _img_cache:
+        return _img_cache[url]
+    host = (urlparse(url).hostname or '').lower()
+    is_own = any(host == h or host.endswith('.' + h) for h in OWN_IMG_HOSTS)
+    if not is_own:
+        _img_cache[url] = url  # 第三方：保留原連結
+        return url
+    ext = re.sub(r'\?.*$', '', url).rsplit('.', 1)[-1].lower()
+    if ext not in ('jpg', 'jpeg', 'png', 'webp', 'gif'):
+        ext = 'jpg'
+    counter[0] += 1
+    fn = f'wp-{pid}-{counter[0]}.{ext}'
+    dest = os.path.join(IMAGES_DIR, fn)
+    if not os.path.exists(dest):
+        try:
+            os.makedirs(IMAGES_DIR, exist_ok=True)
+            req = urllib.request.Request(encode_url(url), headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req, timeout=30) as r, open(dest, 'wb') as f:
+                f.write(r.read())
+        except Exception as e:
+            print(f'  ✗ wp-{pid} 內文圖下載失敗，改保留原連結：{url} ({e})')
+            counter[0] -= 1
+            _img_cache[url] = url
+            return url
+    rel = f'/images/{fn}'
+    _img_cache[url] = rel
+    return rel
+
+
 # ---------------------------------------------------------------- HTML 清理
 
 ALLOWED = {
@@ -79,11 +134,11 @@ ALLOWED = {
     'em', 'i', 'a', 'br', 'hr', 'table', 'thead', 'tbody', 'tr', 'th', 'td',
     'code', 'pre', 'sup', 'sub',
 }
-# 連同內容一起丟棄
-DROP_TREE = {'script', 'style', 'img', 'figure', 'iframe', 'noscript', 'svg', 'form', 'button', 'input'}
-# 拆掉標籤但保留子內容
+# 連同內容一起丟棄（img/figure 已改為保留，見 resolve_img_src）
+DROP_TREE = {'script', 'style', 'iframe', 'noscript', 'svg', 'form', 'button', 'input'}
+# 拆掉標籤但保留子內容（figure 拆殼保留內部 img；figcaption 改轉為段落，見下）
 UNWRAP = {'div', 'section', 'span', 'article', 'header', 'footer', 'main',
-          'aside', 'figcaption', 'nav', 'time', 'small', 'mark', 'u',
+          'aside', 'figure', 'nav', 'time', 'small', 'mark', 'u',
           'font', 'center', 'tbody'}
 
 
@@ -91,10 +146,19 @@ VOID = {'br', 'hr', 'img', 'input', 'meta', 'link', 'source', 'col'}
 
 
 class Cleaner(HTMLParser):
-    def __init__(self):
+    def __init__(self, pid):
         super().__init__(convert_charrefs=True)
         self.out = []
         self.skip_depth = 0  # >0 表示正在丟棄子樹（含非 void 巢狀計數）
+        self.pid = pid
+        self.img_counter = [0]  # 該文內已下載自有圖的流水號
+
+    def _emit_img(self, a):
+        src = resolve_img_src(a.get('src', ''), self.pid, self.img_counter)
+        if not src:
+            return
+        alt = html.escape((a.get('alt') or '').strip(), quote=True)
+        self.out.append(f'<img src="{html.escape(src, quote=True)}" alt="{alt}">')
 
     def handle_starttag(self, tag, attrs):
         tag = tag.lower()
@@ -108,6 +172,12 @@ class Cleaner(HTMLParser):
         if a.get('id') == 'article-progress-msgs' or tag in DROP_TREE:
             if tag not in VOID:
                 self.skip_depth = 1
+            return
+        if tag == 'img':
+            self._emit_img(a)
+            return
+        if tag == 'figcaption':  # 圖說轉成獨立段落
+            self.out.append('<p>')
             return
         if tag in UNWRAP:
             return
@@ -129,6 +199,9 @@ class Cleaner(HTMLParser):
         tag = tag.lower()
         if self.skip_depth:
             return
+        if tag == 'img':
+            self._emit_img(dict(attrs))
+            return
         if tag in ('br', 'hr'):
             self.out.append(f'<{tag}>')
 
@@ -138,6 +211,9 @@ class Cleaner(HTMLParser):
             return
         if self.skip_depth:
             self.skip_depth -= 1
+            return
+        if tag == 'figcaption':
+            self.out.append('</p>')
             return
         if tag in UNWRAP or tag in DROP_TREE:
             return
@@ -166,8 +242,8 @@ class Cleaner(HTMLParser):
         return raw.strip()
 
 
-def clean_html(body):
-    c = Cleaner()
+def clean_html(body, pid):
+    c = Cleaner(pid)
     try:
         c.feed(body)
         c.close()
@@ -278,7 +354,7 @@ def main():
         tagset = set(tags)
         article_topics = [t for t, keys in TOPIC_RULES.items() if tagset & keys]
 
-        body = clean_html(body_raw)
+        body = clean_html(body_raw, pid)
         if not body.strip():
             body = f'<p>{html.escape(description)}</p>'
 

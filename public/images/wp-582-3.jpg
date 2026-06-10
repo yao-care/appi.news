@@ -1,0 +1,76 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="守門引擎兩層架構：規則庫與場景 ruleset 分離，回報各關卡個別狀態">
+<defs>
+  <marker id="a" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+    <path d="M0,0 L8,3 L0,6z" fill="#4a7fa5"/>
+  </marker>
+</defs>
+<style>text{font-family:sans-serif}.w{fill:#fff;text-anchor:middle;dominant-baseline:middle}</style>
+<rect width="960" height="600" fill="#eef3f9"/>
+<text x="345" y="34" font-size="18" font-weight="bold" fill="#1a3a52" text-anchor="middle">守門引擎雙層架構</text>
+
+<!-- 規則庫 -->
+<rect x="15" y="50" width="672" height="172" rx="8" fill="#d4e4f4" stroke="#4a7fa5" stroke-width="1.5"/>
+<text x="30" y="70" font-size="13" font-weight="bold" fill="#2d5a7d">規則庫（領域中立）</text>
+<rect x="28" y="80" width="152" height="128" rx="6" fill="#2e5e88"/>
+<text x="104" y="136" class="w" font-size="13">disclosure</text>
+<text x="104" y="156" class="w" font-size="11">資訊揭露</text>
+<rect x="198" y="80" width="152" height="128" rx="6" fill="#2e5e88"/>
+<text x="274" y="136" class="w" font-size="13">pii</text>
+<text x="274" y="156" class="w" font-size="11">個資保護</text>
+<rect x="368" y="80" width="152" height="128" rx="6" fill="#2e5e88"/>
+<text x="444" y="122" class="w" font-size="13">scope_</text>
+<text x="444" y="142" class="w" font-size="13">boundary</text>
+<text x="444" y="162" class="w" font-size="11">範疇邊界</text>
+<rect x="538" y="80" width="138" height="128" rx="6" fill="#2e5e88"/>
+<text x="607" y="128" class="w" font-size="12">hallucination</text>
+<text x="607" y="148" class="w" font-size="11">幻覺偵測</text>
+
+<!-- 選取箭頭（ruleset 指向規則） -->
+<text x="352" y="252" font-size="11" fill="#4a7fa5" text-anchor="middle">← 場景各自選取子集 →</text>
+<line x1="104" y1="295" x2="104" y2="224" stroke="#4a7fa5" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a)"/>
+<line x1="274" y1="295" x2="274" y2="224" stroke="#4a7fa5" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a)"/>
+<line x1="444" y1="295" x2="444" y2="224" stroke="#4a7fa5" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a)"/>
+<line x1="607" y1="295" x2="607" y2="224" stroke="#4a7fa5" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a)"/>
+
+<!-- 場景 Ruleset -->
+<rect x="15" y="298" width="672" height="168" rx="8" fill="#d4e4f4" stroke="#4a7fa5" stroke-width="1.5"/>
+<text x="30" y="318" font-size="13" font-weight="bold" fill="#2d5a7d">場景 Ruleset</text>
+<rect x="28" y="328" width="198" height="124" rx="6" fill="#4a7fa5"/>
+<text x="127" y="362" class="w" font-size="14" font-weight="bold">問診 AI</text>
+<text x="127" y="384" class="w" font-size="11">disclosure</text>
+<text x="127" y="400" class="w" font-size="11">pii · hallucination</text>
+<rect x="248" y="328" width="198" height="124" rx="6" fill="#4a7fa5"/>
+<text x="347" y="362" class="w" font-size="14" font-weight="bold">藥 局</text>
+<text x="347" y="384" class="w" font-size="11">pii</text>
+<text x="347" y="400" class="w" font-size="11">scope_boundary</text>
+<rect x="468" y="328" width="208" height="124" rx="6" fill="#4a7fa5"/>
+<text x="572" y="362" class="w" font-size="14" font-weight="bold">護理記錄</text>
+<text x="572" y="384" class="w" font-size="11">disclosure · pii</text>
+<text x="572" y="400" class="w" font-size="11">hallucination</text>
+
+<!-- 箭頭至右側回報區 -->
+<line x1="689" y1="258" x2="713" y2="258" stroke="#2d5a7d" stroke-width="2.5" marker-end="url(#a)"/>
+
+<!-- 呼叫方回報 -->
+<rect x="715" y="50" width="232" height="416" rx="8" fill="#2d5a7d"/>
+<text x="831" y="78" class="w" font-size="14" font-weight="bold">呼叫方收到</text>
+<text x="831" y="96" class="w" font-size="11">各關卡個別狀態</text>
+<rect x="730" y="110" width="202" height="46" rx="5" fill="#3a6d96"/>
+<text x="831" y="133" class="w" font-size="12" font-weight="bold">disclosure</text>
+<text x="831" y="150" class="w" font-size="11">✓ PASS</text>
+<rect x="730" y="166" width="202" height="46" rx="5" fill="#7a1a1a"/>
+<text x="831" y="189" class="w" font-size="12" font-weight="bold">pii</text>
+<text x="831" y="206" class="w" font-size="11">✗ BLOCK</text>
+<rect x="730" y="222" width="202" height="46" rx="5" fill="#3a6d96"/>
+<text x="831" y="245" class="w" font-size="12" font-weight="bold">scope_boundary</text>
+<text x="831" y="262" class="w" font-size="11">✓ PASS</text>
+<rect x="730" y="278" width="202" height="46" rx="5" fill="#3a6d96"/>
+<text x="831" y="301" class="w" font-size="12" font-weight="bold">hallucination</text>
+<text x="831" y="318" class="w" font-size="11">✓ PASS</text>
+<rect x="730" y="338" width="202" height="68" rx="5" fill="#1a3252" stroke="#7ab0d0" stroke-width="1.2"/>
+<text x="831" y="362" class="w" font-size="12" font-weight="bold">非整體放行</text>
+<text x="831" y="380" class="w" font-size="11">各關卡獨立回報</text>
+<text x="831" y="397" class="w" font-size="10">呼叫方自行決策</text>
+
+<text x="365" y="500" font-size="11" fill="#3a6d96" text-anchor="middle">各 ruleset 從規則庫選取子集，守門引擎逐關評估後各關卡個別回報</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+<style>
+text{font-family:system-ui,"Noto Sans CJK TC","PingFang TC","Microsoft JhengHei",sans-serif}
+.h{font-size:21px;font-weight:bold;fill:#FFFFFF}
+.ch{font-size:14px;font-weight:bold;fill:#FFFFFF}
+.gn{font-size:16px;font-weight:bold;fill:#1F2A28}
+.gs{font-size:12px;fill:#6B7B77}
+.dn{font-size:15px;font-weight:bold;fill:#1B5E4B}
+.ds{font-size:12px;fill:#6B7B77}
+</style>
+<rect width="960" height="600" fill="#FFFFFF"/>
+<rect width="960" height="70" fill="#1B5E4B"/>
+<text x="480" y="43" class="h" text-anchor="middle">桌遊類型 × 認知訓練域 對照</text>
+<rect x="55" y="85" width="375" height="38" rx="5" fill="#2E8B6F"/>
+<text x="242" y="110" class="ch" text-anchor="middle">桌遊類型</text>
+<rect x="530" y="85" width="375" height="38" rx="5" fill="#2E8B6F"/>
+<text x="717" y="110" class="ch" text-anchor="middle">對應認知訓練域</text>
+<!-- Row 1 -->
+<rect x="55" y="143" width="375" height="96" rx="7" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="1.5"/>
+<rect x="80" y="162" width="28" height="36" rx="3" fill="#2E8B6F" opacity="0.35"/>
+<rect x="93" y="168" width="28" height="36" rx="3" fill="#2E8B6F"/>
+<text x="140" y="175" class="gn">記憶配對卡</text>
+<text x="140" y="195" class="gs">翻牌配對，比對相同圖案</text>
+<text x="140" y="213" class="gs">Memory Matching Cards</text>
+<rect x="530" y="143" width="375" height="96" rx="7" fill="#F2F7F5" stroke="#C9A227" stroke-width="1.5"/>
+<rect x="555" y="159" width="5" height="64" rx="2.5" fill="#C9A227"/>
+<text x="573" y="175" class="dn">短期記憶</text>
+<text x="573" y="195" class="ds">工作記憶容量、視覺記憶保留</text>
+<text x="573" y="213" class="ds">Short-term Memory</text>
+<line x1="432" y1="191" x2="519" y2="191" stroke="#C9A227" stroke-width="2" stroke-dasharray="5,3"/>
+<polygon points="519,186 530,191 519,196" fill="#C9A227"/>
+<!-- Row 2 -->
+<rect x="55" y="259" width="375" height="96" rx="7" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="1.5"/>
+<rect x="80" y="272" width="42" height="54" rx="4" fill="#2E8B6F"/>
+<text x="101" y="305" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">123</text>
+<text x="140" y="290" class="gn">數字卡牌遊戲</text>
+<text x="140" y="310" class="gs">計算、排序、策略決策</text>
+<text x="140" y="328" class="gs">Number Card Games</text>
+<rect x="530" y="259" width="375" height="96" rx="7" fill="#F2F7F5" stroke="#C9A227" stroke-width="1.5"/>
+<rect x="555" y="275" width="5" height="64" rx="2.5" fill="#C9A227"/>
+<text x="573" y="290" class="dn">執行功能 ＋ 計算能力</text>
+<text x="573" y="310" class="ds">計劃、抑制控制、數學推理</text>
+<text x="573" y="328" class="ds">Executive Function &amp; Calculation</text>
+<line x1="432" y1="307" x2="519" y2="307" stroke="#C9A227" stroke-width="2" stroke-dasharray="5,3"/>
+<polygon points="519,302 530,307 519,312" fill="#C9A227"/>
+<!-- Row 3 -->
+<rect x="55" y="375" width="375" height="96" rx="7" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="1.5"/>
+<rect x="80" y="388" width="28" height="28" rx="3" fill="#2E8B6F"/>
+<rect x="96" y="404" width="28" height="28" rx="3" fill="#2E8B6F" opacity="0.6"/>
+<text x="140" y="406" class="gn">拼圖 ／ 積木組裝</text>
+<text x="140" y="426" class="gs">形狀辨識、空間推理、手眼協調</text>
+<text x="140" y="444" class="gs">Puzzle / Block Assembly</text>
+<rect x="530" y="375" width="375" height="96" rx="7" fill="#F2F7F5" stroke="#C9A227" stroke-width="1.5"/>
+<rect x="555" y="391" width="5" height="64" rx="2.5" fill="#C9A227"/>
+<text x="573" y="406" class="dn">視覺空間能力 ＋ 手部精細動作</text>
+<text x="573" y="426" class="ds">空間旋轉、方向判斷、手指靈活度</text>
+<text x="573" y="444" class="ds">Visual-Spatial Ability &amp; Fine Motor Skills</text>
+<line x1="432" y1="423" x2="519" y2="423" stroke="#C9A227" stroke-width="2" stroke-dasharray="5,3"/>
+<polygon points="519,418 530,423 519,428" fill="#C9A227"/>
+<!-- Footer -->
+<line x1="55" y1="498" x2="905" y2="498" stroke="#E0EBE6" stroke-width="1.5"/>
+<text x="480" y="526" font-size="11" fill="#6B7B77" text-anchor="middle">※ 本圖為桌遊與認知領域對應說明，非醫療診斷或療效宣稱。</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

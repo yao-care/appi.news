@@ -1,0 +1,61 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg">
+<style>
+text{font-family:'Noto Sans TC',sans-serif}
+.t{font-size:20px;font-weight:bold;fill:#2c3e50}
+.h{font-size:16px;font-weight:bold;fill:#fff}
+.sh{font-size:11px;font-weight:bold;fill:#777;letter-spacing:1px}
+.it{font-size:12px;fill:#444}
+.dk{font-size:13px;font-weight:bold;fill:#fff}
+</style>
+<rect width="960" height="600" fill="#f4f6f8"/>
+<text class="t" x="480" y="42" text-anchor="middle">醫療 AI 幻覺三子型：查核難度比較</text>
+<line x1="40" y1="55" x2="920" y2="55" stroke="#ccc" stroke-width="1"/>
+<!-- 文獻捏造 -->
+<rect x="30" y="65" width="280" height="505" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="1.5"/>
+<path d="M 30,73 Q 30,65 38,65 L 302,65 Q 310,65 310,73 L 310,125 L 30,125 Z" fill="#27ae60"/>
+<text class="h" x="170" y="100" text-anchor="middle">文獻捏造</text>
+<rect x="105" y="138" width="130" height="26" rx="13" fill="#1e8449"/>
+<text class="dk" x="170" y="155" text-anchor="middle">難度：低</text>
+<text class="sh" x="55" y="195">查核方式</text>
+<text class="it" x="55" y="215">▸ 可自動判定</text>
+<text class="sh" x="55" y="250">可用資料源</text>
+<text class="it" x="55" y="270">▸ PubMed / MEDLINE API</text>
+<text class="it" x="55" y="290">▸ DOI 驗證（CrossRef）</text>
+<text class="it" x="55" y="310">▸ Semantic Scholar</text>
+<text class="sh" x="55" y="350">建議定位</text>
+<rect x="45" y="360" width="250" height="55" rx="6" fill="#c8f0db"/>
+<text class="it" x="170" y="383" text-anchor="middle" fill="#1a5e34">批量自動核查</text>
+<text class="it" x="170" y="401" text-anchor="middle" fill="#1a5e34">成本低・覆蓋廣</text>
+<!-- 藥物交互錯誤 -->
+<rect x="340" y="65" width="280" height="505" rx="8" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5"/>
+<path d="M 340,73 Q 340,65 348,65 L 612,65 Q 620,65 620,73 L 620,125 L 340,125 Z" fill="#f39c12"/>
+<text class="h" x="480" y="100" text-anchor="middle">藥物交互錯誤</text>
+<rect x="415" y="138" width="130" height="26" rx="13" fill="#ca7d0a"/>
+<text class="dk" x="480" y="155" text-anchor="middle">難度：中</text>
+<text class="sh" x="365" y="195">查核方式</text>
+<text class="it" x="365" y="215">▸ 部分可查</text>
+<text class="sh" x="365" y="250">可用資料源</text>
+<text class="it" x="365" y="270">▸ DrugBank（免費版）</text>
+<text class="it" x="365" y="290">▸ FDA 藥品標籤資料庫</text>
+<text class="it" x="365" y="310">▸ RxNorm / RxNav</text>
+<text class="sh" x="365" y="350">建議定位</text>
+<rect x="355" y="360" width="250" height="55" rx="6" fill="#fde8b2"/>
+<text class="it" x="480" y="383" text-anchor="middle" fill="#7d4e00">資料庫輔助＋人工複核</text>
+<text class="it" x="480" y="401" text-anchor="middle" fill="#7d4e00">聚焦高風險交互</text>
+<!-- 臨床指引違規 -->
+<rect x="650" y="65" width="280" height="505" rx="8" fill="#fdf2f0" stroke="#e74c3c" stroke-width="1.5"/>
+<path d="M 650,73 Q 650,65 658,65 L 922,65 Q 930,65 930,73 L 930,125 L 650,125 Z" fill="#e74c3c"/>
+<text class="h" x="790" y="100" text-anchor="middle">臨床指引違規</text>
+<rect x="725" y="138" width="130" height="26" rx="13" fill="#a93226"/>
+<text class="dk" x="790" y="155" text-anchor="middle">難度：高</text>
+<text class="sh" x="675" y="195">查核方式</text>
+<text class="it" x="675" y="215">▸ 受授權限制</text>
+<text class="sh" x="675" y="250">可用資料源</text>
+<text class="it" x="675" y="270">▸ UpToDate（需授權）</text>
+<text class="it" x="675" y="290">▸ 各學會指引（部分公開）</text>
+<text class="it" x="675" y="310">▸ WHO / CDC 公開指引</text>
+<text class="sh" x="675" y="350">建議定位</text>
+<rect x="665" y="360" width="250" height="55" rx="6" fill="#f5b7b1"/>
+<text class="it" x="790" y="383" text-anchor="middle" fill="#7b241c">領域專家人工審查</text>
+<text class="it" x="790" y="401" text-anchor="middle" fill="#7b241c">授權限制・需專業判斷</text>
+</svg>

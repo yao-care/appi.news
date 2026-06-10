@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <style>
+    text { font-family: 'Helvetica Neue', Arial, sans-serif; }
+    .t  { font-size:24px; font-weight:bold; fill:#1e293b; }
+    .h  { font-size:17px; font-weight:bold; }
+    .s  { font-size:13px; }
+    .ft { font-size:12px; fill:#94a3b8; }
+  </style>
+  <defs>
+    <marker id="ah" markerWidth="8" markerHeight="6" refX="4" refY="3" orient="auto">
+      <polygon points="0 6,8 3,0 0" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="600" fill="#f1f5f9"/>
+  <text x="480" y="50" text-anchor="middle" class="t">台灣醫療 AI 發展三層架構</text>
+
+  <line x1="68" y1="522" x2="68" y2="88" stroke="#64748b" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="68" y="550" text-anchor="middle" class="s" fill="#64748b">發展</text>
+  <text x="68" y="566" text-anchor="middle" class="s" fill="#64748b">方向</text>
+
+  <!-- Physical AI 照護 (top) -->
+  <rect x="105" y="100" width="825" height="135" rx="10" fill="#5b21b6"/>
+  <circle cx="158" cy="167" r="23" fill="rgba(255,255,255,0.15)"/>
+  <text x="158" y="175" text-anchor="middle" font-size="22" fill="#c4b5fd">③</text>
+  <text x="222" y="140" class="h" fill="white">Physical AI 照護</text>
+  <text x="222" y="163" class="s" fill="#ddd6fe">▸ 照護機器人臨床導入</text>
+  <text x="222" y="183" class="s" fill="#ddd6fe">▸ 感測器網路與遠距監測</text>
+  <text x="222" y="203" class="s" fill="#ddd6fe">▸ 具身 AI 居家照護應用</text>
+  <text x="900" y="175" text-anchor="end" class="s" fill="#c4b5fd">Care Robots / Sensors / Embodied AI</text>
+
+  <!-- 上升箭頭 gap 1 -->
+  <polygon points="480,238 471,249 489,249" fill="#94a3b8"/>
+
+  <!-- GenAI 治理 (middle) -->
+  <rect x="105" y="251" width="825" height="135" rx="10" fill="#047857"/>
+  <circle cx="158" cy="318" r="23" fill="rgba(255,255,255,0.15)"/>
+  <text x="158" y="326" text-anchor="middle" font-size="22" fill="#6ee7b7">②</text>
+  <text x="222" y="291" class="h" fill="white">GenAI 治理</text>
+  <text x="222" y="314" class="s" fill="#a7f3d0">▸ 衛福部指引與法規框架</text>
+  <text x="222" y="334" class="s" fill="#a7f3d0">▸ AI 供應鏈透明度與稽核</text>
+  <text x="222" y="354" class="s" fill="#a7f3d0">▸ 醫療機構 AI 盤點分級</text>
+  <text x="900" y="326" text-anchor="end" class="s" fill="#6ee7b7">Guidelines / Transparency / AI Inventory</text>
+
+  <!-- 上升箭頭 gap 2 -->
+  <polygon points="480,388 471,399 489,399" fill="#94a3b8"/>
+
+  <!-- 資料基礎建設 (bottom) -->
+  <rect x="105" y="401" width="825" height="135" rx="10" fill="#1d4ed8"/>
+  <circle cx="158" cy="468" r="23" fill="rgba(255,255,255,0.15)"/>
+  <text x="158" y="476" text-anchor="middle" font-size="22" fill="#93c5fd">①</text>
+  <text x="222" y="441" class="h" fill="white">資料基礎建設</text>
+  <text x="222" y="464" class="s" fill="#bfdbfe">▸ 本土醫療語料庫建置</text>
+  <text x="222" y="484" class="s" fill="#bfdbfe">▸ 在地資料對齊與標注</text>
+  <text x="222" y="504" class="s" fill="#bfdbfe">▸ 跨院資料隱私整合</text>
+  <text x="900" y="476" text-anchor="end" class="s" fill="#93c5fd">Local Corpus / In-situ Alignment</text>
+
+  <text x="480" y="578" text-anchor="middle" class="ft">底層資料奠基 → 治理框架保障 → Physical AI 照護實踐</text>
+</svg>

@@ -5,6 +5,7 @@ description: "2026 冬季奧運進入倒數高潮！2 月 21 日至 2 月 22 日
 excerpt: "2026 冬季奧運進入倒數高潮！2 月 21 日至 2 月 22 日（Day 15）將帶來多項精彩決賽，包括自由式滑雪、登山滑雪、競速滑冰、雪車、冰壺與花式滑冰。 本篇整理完整轉播時間、比賽項目與直播平台資訊，讓你不錯過任何一場關鍵賽事。 本屆賽事於義大利米蘭與科爾蒂納丹佩佐舉行…"
 publishDate: "2026-02-21T23:10:32+08:00"
 category: "health"
+coverImage: "covers/wp-6.jpg"
 subcategory: "preventive"
 tags: ["中藥", "食療"]
 author: "huang-ziyan"
@@ -27,9 +28,13 @@ legacyCategory: "預防醫學"
 
 <h3>📺 2/21 晚間賽程</h3>
 
+<table><thead><tr><th>時間</th><th>比賽項目</th><th>賽事內容</th><th>轉播頻道</th><th>播出形式</th></tr></thead><tr><td>17:40</td><td>自由式滑雪</td><td>混合團體空中技巧決賽</td><td>體育1台</td><td>LIVE</td></tr><tr><td>20:20</td><td>登山滑雪</td><td>混合團體接力決賽</td><td>體育1台</td><td>LIVE</td></tr><tr><td>21:55</td><td>競速滑冰</td><td>男子／女子集體出發決賽</td><td>體育1台</td><td>LIVE</td></tr></table>
+
 <hr>
 
 <h3>🌙 2/22 跨日賽程</h3>
+
+<table><thead><tr><th>時間</th><th>比賽項目</th><th>賽事內容</th><th>轉播頻道</th><th>播出形式</th></tr></thead><tr><td>01:55</td><td>雪車</td><td>女子雙人第 3／4 趟決賽（中華隊出賽）</td><td>體育3台</td><td>LIVE</td></tr><tr><td>02:00</td><td>冰壺</td><td>男子金牌戰：英國 VS 加拿大</td><td>體育2台</td><td>原音 LIVE</td></tr><tr><td>02:55</td><td>花式滑冰</td><td>優勝者表演</td><td>體育1台</td><td>LIVE</td></tr></table>
 
 <hr>
 

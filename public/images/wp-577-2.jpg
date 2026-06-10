@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <defs>
+    <marker id="a0" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0,10 3.5,0 7" fill="#555"/></marker>
+    <marker id="ar" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0,10 3.5,0 7" fill="#c0392b"/></marker>
+    <marker id="ag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0,10 3.5,0 7" fill="#1a7a40"/></marker>
+  </defs>
+  <style>text{font-family:'Microsoft JhengHei','微軟正黑體','Noto Sans TC','PingFang TC',sans-serif}</style>
+
+  <rect width="960" height="600" fill="#f0f3f8"/>
+
+  <!-- Title -->
+  <text x="480" y="46" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a2e4a">中藥材供應鏈：兩大造假手法與偵測策略</text>
+  <line x1="140" y1="56" x2="820" y2="56" stroke="#1a2e4a" stroke-width="2"/>
+
+  <!-- Supply chain boxes -->
+  <rect x="55" y="95" width="152" height="62" rx="10" fill="#1e5fa8"/>
+  <text x="131" y="122" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">採集產地</text>
+  <text x="131" y="144" text-anchor="middle" font-size="11" fill="#bdd9ff">Production</text>
+
+  <line x1="207" y1="126" x2="258" y2="126" stroke="#555" stroke-width="2.5" marker-end="url(#a0)"/>
+
+  <rect x="258" y="95" width="152" height="62" rx="10" fill="#1e5fa8"/>
+  <text x="334" y="122" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">加工處理</text>
+  <text x="334" y="144" text-anchor="middle" font-size="11" fill="#bdd9ff">Processing</text>
+
+  <line x1="410" y1="126" x2="461" y2="126" stroke="#555" stroke-width="2.5" marker-end="url(#a0)"/>
+
+  <rect x="461" y="95" width="152" height="62" rx="10" fill="#1e5fa8"/>
+  <text x="537" y="122" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">品質檢驗</text>
+  <text x="537" y="144" text-anchor="middle" font-size="11" fill="#bdd9ff">Inspection</text>
+
+  <line x1="613" y1="126" x2="664" y2="126" stroke="#555" stroke-width="2.5" marker-end="url(#a0)"/>
+
+  <rect x="664" y="95" width="152" height="62" rx="10" fill="#1e5fa8"/>
+  <text x="740" y="122" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">市場銷售</text>
+  <text x="740" y="144" text-anchor="middle" font-size="11" fill="#bdd9ff">Market</text>
+
+  <!-- FRAUD 1 branch (under 採集產地) -->
+  <line x1="131" y1="157" x2="131" y2="220" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#ar)"/>
+  <rect x="36" y="220" width="190" height="76" rx="8" fill="#fff3f2" stroke="#c0392b" stroke-width="2"/>
+  <text x="131" y="246" text-anchor="middle" font-size="16" font-weight="bold" fill="#c0392b">洗產地</text>
+  <text x="131" y="266" text-anchor="middle" font-size="11" fill="#555">偽造產地來源文件</text>
+  <text x="131" y="284" text-anchor="middle" font-size="11" fill="#555">混充高價道地藥材</text>
+
+  <line x1="131" y1="296" x2="131" y2="356" stroke="#1a7a40" stroke-width="2" marker-end="url(#ag)"/>
+  <rect x="20" y="356" width="222" height="76" rx="8" fill="#eafaf1" stroke="#1a7a40" stroke-width="2"/>
+  <text x="131" y="378" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a7a40">■ 偵測策略</text>
+  <text x="131" y="400" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2e4a">化學指紋比對</text>
+  <text x="131" y="420" text-anchor="middle" font-size="11" fill="#444">多成分比對 · 溯源產地</text>
+
+  <!-- FRAUD 2 branch (under 品質檢驗) -->
+  <line x1="537" y1="157" x2="537" y2="220" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#ar)"/>
+  <rect x="412" y="220" width="250" height="76" rx="8" fill="#fff3f2" stroke="#c0392b" stroke-width="2"/>
+  <text x="537" y="246" text-anchor="middle" font-size="16" font-weight="bold" fill="#c0392b">加料通過檢驗</text>
+  <text x="537" y="266" text-anchor="middle" font-size="11" fill="#555">針對單一目標化合物添加</text>
+  <text x="537" y="284" text-anchor="middle" font-size="11" fill="#555">欺騙傳統單點指標檢測</text>
+
+  <line x1="537" y1="296" x2="537" y2="356" stroke="#1a7a40" stroke-width="2" marker-end="url(#ag)"/>
+  <rect x="392" y="356" width="290" height="76" rx="8" fill="#eafaf1" stroke="#1a7a40" stroke-width="2"/>
+  <text x="537" y="378" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a7a40">■ 偵測策略</text>
+  <text x="537" y="400" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2e4a">全光譜指紋分析</text>
+  <text x="537" y="420" text-anchor="middle" font-size="11" fill="#444">準確率 95%+ · 整體成分鑑偽</text>
+
+  <!-- Legend -->
+  <rect x="60" y="475" width="14" height="14" fill="#fff3f2" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="82" y="487" font-size="12" fill="#c0392b">造假手法</text>
+  <rect x="190" y="475" width="14" height="14" fill="#eafaf1" stroke="#1a7a40" stroke-width="1.5"/>
+  <text x="212" y="487" font-size="12" fill="#1a7a40">偵測策略</text>
+  <rect x="320" y="475" width="14" height="14" rx="3" fill="#1e5fa8"/>
+  <text x="342" y="487" font-size="12" fill="#1e5fa8">供應鏈階段</text>
+  <line x1="448" y1="482" x2="510" y2="482" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#ar)"/>
+  <text x="518" y="487" font-size="12" fill="#c0392b">造假路徑</text>
+  <line x1="620" y1="482" x2="682" y2="482" stroke="#1a7a40" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="690" y="487" font-size="12" fill="#1a7a40">偵測路徑</text>
+</svg>

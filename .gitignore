@@ -21,6 +21,9 @@ pnpm-debug.log*
 .tmp-shots/
 *.tmp
 
+# python 快取（遷移腳本）
+__pycache__/
+
 # 本地工具 log（非專案內容）
 asvs-server.log
 

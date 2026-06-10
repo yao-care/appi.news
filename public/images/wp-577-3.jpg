@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <defs>
+    <marker id="ah" markerWidth="9" markerHeight="7" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+    <marker id="ahs" markerWidth="9" markerHeight="7" refX="0" refY="3" orient="auto">
+      <polygon points="8 0, 0 3, 8 6" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="960" height="600" fill="#F4F7FB"/>
+  <text x="480" y="46" text-anchor="middle" font-size="22" font-weight="bold" fill="#1C1C3C" font-family="sans-serif">中醫 AI 信任體系三層架構</text>
+  <circle cx="480" cy="310" r="235" fill="#D6EAF8" stroke="#2471A3" stroke-width="2.5"/>
+  <circle cx="480" cy="310" r="155" fill="#D5F5E3" stroke="#1E8449" stroke-width="2.5"/>
+  <circle cx="480" cy="310" r="80" fill="#FDEBD0" stroke="#D35400" stroke-width="2.5"/>
+  <text x="480" y="112" text-anchor="middle" font-size="19" font-weight="bold" fill="#1A5276" font-family="sans-serif">治理層</text>
+  <text x="480" y="136" text-anchor="middle" font-size="14" fill="#2471A3" font-family="sans-serif">責任 · 審核 · 追溯</text>
+  <text x="480" y="190" text-anchor="middle" font-size="17" font-weight="bold" fill="#145A32" font-family="sans-serif">法規層</text>
+  <text x="480" y="212" text-anchor="middle" font-size="13" fill="#1E8449" font-family="sans-serif">標準 · 邊界 · 合規</text>
+  <text x="480" y="304" text-anchor="middle" font-size="17" font-weight="bold" fill="#6E2C00" font-family="sans-serif">技術層</text>
+  <text x="480" y="325" text-anchor="middle" font-size="13" fill="#A04000" font-family="sans-serif">辨識 · 推理 · 記錄</text>
+  <!-- 技術層↔法規層（右上 45°） -->
+  <line x1="537" y1="253" x2="590" y2="200" stroke="#555" stroke-width="2.2" marker-end="url(#ah)" marker-start="url(#ahs)"/>
+  <!-- 法規層↔治理層（左上 135°） -->
+  <line x1="370" y1="200" x2="314" y2="144" stroke="#555" stroke-width="2.2" marker-end="url(#ah)" marker-start="url(#ahs)"/>
+  <!-- 技術層↔治理層（正下，虛線跨層） -->
+  <line x1="480" y1="390" x2="480" y2="543" stroke="#888" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#ah)" marker-start="url(#ahs)"/>
+  <text x="502" y="472" font-size="11" fill="#888" font-family="sans-serif">跨層關聯</text>
+  <text x="480" y="585" text-anchor="middle" font-size="12" fill="#999" font-family="sans-serif">各層雙向互依・共同保障中醫 AI 系統可信度</text>
+</svg>

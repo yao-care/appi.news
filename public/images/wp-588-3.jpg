@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1B5E4B"/>
+    </marker>
+  </defs>
+  <style>text{font-family:'Noto Sans TC','Microsoft JhengHei','PingFang TC',sans-serif;}</style>
+
+  <rect width="960" height="600" fill="#FFFFFF"/>
+
+  <rect x="0" y="0" width="960" height="72" fill="#1B5E4B"/>
+  <text x="480" y="42" text-anchor="middle" fill="#FFFFFF" font-size="22" font-weight="bold">青壯世代心理健康雙軌支持架構</text>
+  <text x="480" y="63" text-anchor="middle" fill="#C9A227" font-size="13">Two-Track Mental Health Support Framework · Taiwan · 15–45 歲</text>
+
+  <rect x="40" y="88" width="410" height="430" rx="10" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <rect x="40" y="88" width="410" height="54" rx="10" fill="#1B5E4B"/>
+  <rect x="40" y="118" width="410" height="24" fill="#1B5E4B"/>
+  <text x="245" y="122" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold">政府補助軌道</text>
+
+  <circle cx="245" cy="174" r="27" fill="#2E8B6F"/>
+  <text x="245" y="181" text-anchor="middle" fill="#FFFFFF" font-size="20" font-weight="bold">政</text>
+  <text x="245" y="222" text-anchor="middle" fill="#1B5E4B" font-size="15" font-weight="bold">青壯世代心理健康支持方案</text>
+
+  <rect x="72" y="234" width="346" height="64" rx="8" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="1.5"/>
+  <circle cx="102" cy="266" r="15" fill="#C9A227"/>
+  <text x="102" y="271" text-anchor="middle" fill="#FFFFFF" font-size="15" font-weight="bold">3</text>
+  <text x="268" y="258" text-anchor="middle" fill="#1F2A28" font-size="14" font-weight="bold">每人 3 次免費心理諮商</text>
+  <text x="268" y="280" text-anchor="middle" fill="#6B7B77" font-size="12">費用全額補助，全台合作諮商所適用</text>
+
+  <rect x="72" y="312" width="346" height="64" rx="8" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="1.5"/>
+  <text x="245" y="339" text-anchor="middle" fill="#1F2A28" font-size="14" font-weight="bold">實施期間：2024 — 2026 年</text>
+  <text x="245" y="361" text-anchor="middle" fill="#6B7B77" font-size="12">政府專案，由公務預算支應費用</text>
+
+  <rect x="72" y="390" width="346" height="64" rx="8" fill="#C9A227" fill-opacity="0.13" stroke="#C9A227" stroke-width="1.5"/>
+  <text x="245" y="417" text-anchor="middle" fill="#1F2A28" font-size="14" font-weight="bold">對象：15 — 45 歲</text>
+  <text x="245" y="439" text-anchor="middle" fill="#6B7B77" font-size="12">在校學生、就業工作者皆可申請</text>
+
+  <rect x="510" y="88" width="410" height="430" rx="10" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <rect x="510" y="88" width="410" height="54" rx="10" fill="#2E8B6F"/>
+  <rect x="510" y="118" width="410" height="24" fill="#2E8B6F"/>
+  <text x="715" y="122" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold">職場 EAP 軌道</text>
+
+  <circle cx="715" cy="174" r="27" fill="#1B5E4B"/>
+  <text x="715" y="181" text-anchor="middle" fill="#FFFFFF" font-size="20" font-weight="bold">職</text>
+  <text x="715" y="222" text-anchor="middle" fill="#2E8B6F" font-size="15" font-weight="bold">員工協助方案（EAP）</text>
+
+  <rect x="542" y="234" width="346" height="64" rx="8" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="1.5"/>
+  <text x="715" y="259" text-anchor="middle" fill="#1F2A28" font-size="14" font-weight="bold">心理健康支援</text>
+  <text x="715" y="281" text-anchor="middle" fill="#6B7B77" font-size="12">專業諮商、壓力調適、情緒管理</text>
+
+  <rect x="542" y="312" width="346" height="64" rx="8" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="1.5"/>
+  <text x="715" y="339" text-anchor="middle" fill="#1F2A28" font-size="14" font-weight="bold">法律 · 財務諮詢</text>
+  <text x="715" y="361" text-anchor="middle" fill="#6B7B77" font-size="12">法律顧問、財務規劃，由雇主出資提供</text>
+
+  <rect x="542" y="390" width="346" height="64" rx="8" fill="#C9A227" fill-opacity="0.13" stroke="#C9A227" stroke-width="1.5"/>
+  <text x="715" y="417" text-anchor="middle" fill="#1F2A28" font-size="14" font-weight="bold">免費 · 保密 · 不留記錄</text>
+  <text x="715" y="439" text-anchor="middle" fill="#6B7B77" font-size="12">員工直接使用，無需主管知情</text>
+
+  <line x1="245" y1="518" x2="428" y2="554" stroke="#1B5E4B" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="715" y1="518" x2="532" y2="554" stroke="#1B5E4B" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="348" y="553" width="264" height="44" rx="9" fill="#1B5E4B"/>
+  <text x="480" y="572" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="bold">共同目標：降低求助門檻</text>
+  <text x="480" y="589" text-anchor="middle" fill="#C9A227" font-size="11">支持職場青壯族群心理健康</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

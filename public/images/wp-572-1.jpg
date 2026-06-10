@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <rect width="960" height="600" fill="#f0f4f8"/>
+  <rect width="960" height="76" fill="#1a3a5c"/>
+  <text x="480" y="33" font-size="23" font-weight="bold" fill="white" text-anchor="middle" font-family="'Microsoft JhengHei',sans-serif">AI 智醫助理考試成績比較</text>
+  <text x="480" y="58" font-size="14" fill="#a8d4f5" text-anchor="middle" font-family="'Microsoft JhengHei',sans-serif">醫師國家考試成績分析 ‧ AI 超越 96.3% 人類考生</text>
+
+  <!-- Chart panel: x=130~830 (700px = 600分) -->
+  <rect x="130" y="96" width="700" height="252" rx="8" fill="white" stroke="#dde3ea" stroke-width="1.5"/>
+  <line x1="305" y1="106" x2="305" y2="336" stroke="#f0f2f5" stroke-width="1"/>
+  <line x1="480" y1="106" x2="480" y2="336" stroke="#f0f2f5" stroke-width="1"/>
+  <line x1="655" y1="106" x2="655" y2="336" stroke="#f0f2f5" stroke-width="1"/>
+  <line x1="830" y1="106" x2="830" y2="336" stroke="#f0f2f5" stroke-width="1"/>
+  <line x1="130" y1="336" x2="830" y2="336" stroke="#c8d0da" stroke-width="1"/>
+  <text x="130" y="352" font-size="11" fill="#aaa" text-anchor="middle" font-family="sans-serif">0</text>
+  <text x="305" y="352" font-size="11" fill="#aaa" text-anchor="middle" font-family="sans-serif">150</text>
+  <text x="480" y="352" font-size="11" fill="#aaa" text-anchor="middle" font-family="sans-serif">300</text>
+  <text x="655" y="352" font-size="11" fill="#aaa" text-anchor="middle" font-family="sans-serif">450</text>
+  <text x="830" y="352" font-size="11" fill="#aaa" text-anchor="middle" font-family="sans-serif">600 分</text>
+
+  <!-- 考生分布 range bar: 240~400分 → x:410 w:187 -->
+  <text x="122" y="162" font-size="13" fill="#666" text-anchor="end" font-family="'Microsoft JhengHei',sans-serif">考生分布</text>
+  <rect x="130" y="142" width="700" height="36" rx="4" fill="#edf2f7"/>
+  <rect x="410" y="142" width="187" height="36" rx="4" fill="#74b9ff" opacity="0.85"/>
+  <text x="460" y="165" font-size="12" fill="white" font-weight="bold" font-family="'Microsoft JhengHei',sans-serif">多數考生</text>
+  <text x="602" y="161" font-size="12" fill="#4a90d9" font-family="'Microsoft JhengHei',sans-serif">約 240–400 分</text>
+
+  <!-- AI 成績 bar: 456分 → width:532, 結尾 x=662 -->
+  <text x="122" y="262" font-size="13" fill="#666" text-anchor="end" font-family="'Microsoft JhengHei',sans-serif">AI 智醫助理</text>
+  <rect x="130" y="242" width="700" height="36" rx="4" fill="#edf2f7"/>
+  <rect x="130" y="242" width="532" height="36" rx="4" fill="#0077b6"/>
+  <text x="390" y="265" font-size="14" fill="white" font-weight="bold" text-anchor="middle" font-family="sans-serif">456 分</text>
+  <text x="668" y="257" font-size="12" fill="#0077b6" font-family="'Microsoft JhengHei',sans-serif">超越及格線</text>
+  <text x="668" y="273" font-size="12" fill="#0077b6" font-family="'Microsoft JhengHei',sans-serif">高出 +96 分</text>
+
+  <!-- 及格線: 360分 → x=550 -->
+  <line x1="550" y1="106" x2="550" y2="336" stroke="#e17055" stroke-width="2.5" stroke-dasharray="7,4"/>
+  <rect x="492" y="106" width="116" height="22" rx="4" fill="#e17055"/>
+  <text x="550" y="122" font-size="12" fill="white" font-weight="bold" text-anchor="middle" font-family="'Microsoft JhengHei',sans-serif">及格線 360 分</text>
+
+  <!-- Stats cards -->
+  <rect x="60" y="382" width="260" height="158" rx="12" fill="white" stroke="#0077b6" stroke-width="2"/>
+  <text x="190" y="446" font-size="42" font-weight="bold" fill="#0077b6" text-anchor="middle" font-family="sans-serif">456</text>
+  <text x="190" y="472" font-size="13" fill="#555" text-anchor="middle" font-family="'Microsoft JhengHei',sans-serif">AI 考試得分</text>
+  <text x="190" y="492" font-size="11" fill="#bbb" text-anchor="middle" font-family="'Microsoft JhengHei',sans-serif">滿分 600 分</text>
+
+  <rect x="350" y="382" width="260" height="158" rx="12" fill="white" stroke="#e17055" stroke-width="2"/>
+  <text x="480" y="446" font-size="42" font-weight="bold" fill="#e17055" text-anchor="middle" font-family="sans-serif">360</text>
+  <text x="480" y="472" font-size="13" fill="#555" text-anchor="middle" font-family="'Microsoft JhengHei',sans-serif">及格門檻</text>
+  <text x="480" y="492" font-size="11" fill="#bbb" text-anchor="middle" font-family="'Microsoft JhengHei',sans-serif">AI 高出 96 分</text>
+
+  <rect x="640" y="382" width="260" height="158" rx="12" fill="white" stroke="#00b894" stroke-width="2"/>
+  <text x="770" y="446" font-size="42" font-weight="bold" fill="#00b894" text-anchor="middle" font-family="sans-serif">96.3%</text>
+  <text x="770" y="472" font-size="13" fill="#555" text-anchor="middle" font-family="'Microsoft JhengHei',sans-serif">超越人類考生</text>
+  <text x="770" y="492" font-size="11" fill="#bbb" text-anchor="middle" font-family="'Microsoft JhengHei',sans-serif">成績優於 96.3% 考生</text>
+</svg>

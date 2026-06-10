@@ -1,0 +1,47 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg">
+<style>
+text{font-family:'PingFang TC','Microsoft JhengHei','Noto Sans CJK TC',sans-serif}
+.t{font-size:20px;font-weight:700;fill:#fff}.h{font-size:14px;font-weight:700;fill:#fff}.n{font-size:15px;font-weight:700;fill:#fff}
+.lb{font-size:16px;font-weight:700;fill:#1a3a5c}.sb{font-size:12px;fill:#5a7fa0}.lw{font-size:13px;fill:#1e3a5f}.ft{font-size:11px;fill:#7a96b2}
+</style>
+
+<rect width="960" height="600" fill="#edf1f7"/>
+<rect width="960" height="68" fill="#1e3a5f"/>
+<text x="480" y="41" text-anchor="middle" class="t">醫療 AI 合規五道關卡與台灣法源對應</text>
+
+<rect x="50" y="82" width="860" height="482" fill="#fff" stroke="#a8bed8" stroke-width="1.5"/>
+<rect x="50" y="82" width="860" height="44" fill="#2d5a8e"/>
+<text x="240" y="109" text-anchor="middle" class="h">合規關卡</text>
+<text x="670" y="109" text-anchor="middle" class="h">對應主要法源（台灣）</text>
+<line x1="430" y1="126" x2="430" y2="564" stroke="#a8bed8" stroke-width="1.5"/>
+
+<rect x="51" y="126" width="858" height="84" fill="#f2f6fb"/>
+<rect x="51" y="294" width="858" height="84" fill="#f2f6fb"/>
+<rect x="51" y="462" width="858" height="102" fill="#f2f6fb"/>
+<line x1="51" y1="210" x2="909" y2="210" stroke="#c5d6e8" stroke-width="1"/>
+<line x1="51" y1="294" x2="909" y2="294" stroke="#c5d6e8" stroke-width="1"/>
+<line x1="51" y1="378" x2="909" y2="378" stroke="#c5d6e8" stroke-width="1"/>
+<line x1="51" y1="462" x2="909" y2="462" stroke="#c5d6e8" stroke-width="1"/>
+
+<circle cx="108" cy="168" r="19" fill="#2d5a8e"/><text x="108" y="174" text-anchor="middle" class="n">1</text>
+<text x="148" y="163" class="lb">揭露與免責</text><text x="148" y="180" class="sb">AI 身份聲明與免責條款</text>
+<text x="445" y="160" class="lw">醫療法 §61（醫療廣告限制）</text><text x="445" y="178" class="lw">消費者保護法（不實廣告禁止）</text>
+
+<circle cx="108" cy="252" r="19" fill="#3a6ea8"/><text x="108" y="258" text-anchor="middle" class="n">2</text>
+<text x="148" y="247" class="lb">來源標註</text><text x="148" y="264" class="sb">引用文獻與資料出處揭示</text>
+<text x="445" y="244" class="lw">著作權法（合理使用條款）</text><text x="445" y="262" class="lw">醫療器材管理法 §8（標示規定）</text>
+
+<circle cx="108" cy="336" r="19" fill="#2d5a8e"/><text x="108" y="342" text-anchor="middle" class="n">3</text>
+<text x="148" y="331" class="lb">越權診斷</text><text x="148" y="348" class="sb">AI 不得取代醫師診斷行為</text>
+<text x="445" y="328" class="lw">醫師法 §28（非法執行醫療業務）</text><text x="445" y="346" class="lw">醫療法 §57（診察義務規定）</text>
+
+<circle cx="108" cy="420" r="19" fill="#3a6ea8"/><text x="108" y="426" text-anchor="middle" class="n">4</text>
+<text x="148" y="415" class="lb">個資外洩</text><text x="148" y="432" class="sb">健康資料蒐集與隱私保護</text>
+<text x="445" y="412" class="lw">個人資料保護法（§6 敏感個資）</text><text x="445" y="430" class="lw">醫療法 §72（病歷及資料保密）</text>
+
+<circle cx="108" cy="513" r="19" fill="#2d5a8e"/><text x="108" y="519" text-anchor="middle" class="n">5</text>
+<text x="148" y="508" class="lb">幻覺內容</text><text x="148" y="525" class="sb">AI 錯誤醫療資訊輸出</text>
+<text x="445" y="505" class="lw">藥事法 §65（藥物廣告規定）</text><text x="445" y="523" class="lw">醫療法 §84（醫療廣告限制）</text>
+
+<text x="480" y="590" text-anchor="middle" class="ft">※ 本圖為示意性整理，實際法律適用請諮詢專業法律意見</text>
+</svg>

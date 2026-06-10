@@ -11,6 +11,11 @@ on:
   schedule:
     - cron: '0 */6 * * *'
 
+# 提前切到 Node.js 24 執行 JS actions（如 actions/deploy-pages@v4），
+# 消除「Node.js 20 actions are deprecated」警告。官方 opt-in 旗標。
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 # 允許部署到 GitHub Pages
 permissions:
   contents: read
@@ -62,9 +67,9 @@ jobs:
       - name: Lighthouse CI
         uses: treosh/lighthouse-ci-action@v12
         with:
+          # staticDistDir 改放 lighthouserc.json 的 ci.collect（此 action 不接受該 input）
           configPath: ./lighthouserc.json
           uploadArtifacts: true
-          staticDistDir: ./_site
         continue-on-error: true
 
       - name: Upload Pages artifact

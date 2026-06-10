@@ -219,9 +219,9 @@ const heroCat = hero ? getCategory(hero.data.category) : undefined;
     font-family: var(--font-sans);
   }
   .hero-side {
-    /* 縱向分隔由 global 的 .divided-list utility 統一控制；此處僅保留側欄左線與內距 */
-    border-left: 1px solid var(--line);
-    padding-left: 32px;
+    /* K 的金色強調左線；縱向每則淡分隔由 global .divided-list 控制（金竖線＋淡横線，K＋E） */
+    border-left: 3px solid var(--appi-accent);
+    padding-left: 28px;
   }
 
   @media (max-width: 900px) {

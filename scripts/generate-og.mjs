@@ -35,20 +35,24 @@ function esc(s) {
 function svg({ label, color }) {
   const W = 1200;
   const H = 630;
-  const dark = '#16263d';
+  // 淺藍灰雅緻：淺底漸層 + 藏青品牌字 + 金色點綴 + 分類色名（保留辨識），對標 K 風格
+  const ink = '#1f3a5f'; // 藏青：品牌字
+  const gold = '#a87515'; // 金：點綴線與細框
+  const sub = '#64708a'; // 中灰藍：副標
+  const labelColor = label ? color : ink; // 有分類用分類色名（辨識），無分類用藏青
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="${dark}"/>
-      <stop offset="1" stop-color="${color}"/>
+      <stop offset="0" stop-color="#f7f9fc"/>
+      <stop offset="1" stop-color="#e9eef5"/>
     </linearGradient>
   </defs>
   <rect width="${W}" height="${H}" fill="url(#g)"/>
-  <rect x="64" y="64" width="${W - 128}" height="${H - 128}" rx="20" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
-  <text x="100" y="170" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="#ffffff" letter-spacing="2">APPI News</text>
-  <text x="100" y="230" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#cdd9ee">Asia-Pacific Press &amp; Insight</text>
-  ${label ? `<text x="100" y="540" font-family="Helvetica, Arial, sans-serif" font-size="88" font-weight="700" fill="#ffffff">${esc(label)}</text>` : `<text x="100" y="540" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="#ffffff">亞太專業觀點</text>`}
-  <rect x="100" y="${label ? 270 : 290}" width="120" height="6" fill="#ffffff" opacity="0.7"/>
+  <rect x="64" y="64" width="${W - 128}" height="${H - 128}" rx="20" fill="none" stroke="${gold}" stroke-opacity="0.45" stroke-width="2"/>
+  <text x="100" y="170" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="${ink}" letter-spacing="2">APPI News</text>
+  <text x="100" y="230" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="${sub}">Asia-Pacific Press &amp; Insight</text>
+  ${label ? `<text x="100" y="540" font-family="Helvetica, Arial, sans-serif" font-size="88" font-weight="700" fill="${labelColor}">${esc(label)}</text>` : `<text x="100" y="540" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="${ink}">亞太專業觀點</text>`}
+  <rect x="100" y="${label ? 270 : 290}" width="120" height="6" fill="${gold}"/>
 </svg>`;
 }
 

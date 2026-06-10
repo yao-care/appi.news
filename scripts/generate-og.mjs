@@ -39,7 +39,7 @@ function svg({ label, color }) {
   const ink = '#1f3a5f'; // 藏青：品牌字
   const gold = '#a87515'; // 金：點綴線與細框
   const sub = '#64708a'; // 中灰藍：副標
-  const labelColor = label ? color : ink; // 有分類用分類色名（辨識），無分類用藏青
+  const labelColor = ink; // 分類名一律藏青，避免封面出現過重的分類色（辨識靠 tag）
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">

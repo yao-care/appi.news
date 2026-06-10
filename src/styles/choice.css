@@ -138,7 +138,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .ch-container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 .ch h1,.ch h2,.ch h3 { font-family: var(--fhead); font-weight: var(--hweight); line-height: 1.3; color: var(--ink); margin: 0 0 .5em; }
-.ch a { color: var(--on-light); }
+/* 只給內文連結上色，避免覆蓋按鈕(.ch-cta/.ch-btn 都是 <a>)的文字色 */
+.ch-article .prose a { color: var(--on-light); text-decoration: underline; }
 
 /* header */
 .ch-header { background: var(--hbg); color: var(--hink); border-bottom: 2px solid color-mix(in srgb, var(--hink) 18%, transparent); }
@@ -196,7 +197,7 @@ img { max-width: 100%; height: auto; display: block; }
 [data-variant='e'] .ch-author { border: none; border-bottom: 2px solid var(--line); border-radius: 0; }
 .ch-author .av { width: 70px; height: 70px; border-radius: 50%; background: var(--tint); flex-shrink: 0; display: grid; place-items: center; font-family: var(--fhead); font-weight: 800; font-size: 24px; color: var(--on-light); }
 .ch-author .name { font-family: var(--fhead); font-weight: 700; font-size: 19px; }
-.ch-author .title { color: var(--primary); font-weight: 600; font-size: 15px; margin: 2px 0 8px; }
+.ch-author .title { color: var(--on-light); font-weight: 600; font-size: 15px; margin: 2px 0 8px; }
 .ch-author .bio { font-size: 15px; color: var(--ink2); line-height: 1.6; }
 
 /* article */
@@ -217,9 +218,9 @@ img { max-width: 100%; height: auto; display: block; }
 /* join */
 .ch-join-hero { background: var(--hbg); color: var(--hink); padding: 60px 0; }
 .ch-join-hero h1 { color: var(--hink); font-size: 38px; max-width: 760px; }
-.ch-join-hero p { color: color-mix(in srgb, var(--hink) 80%, transparent); font-size: 19px; max-width: 640px; margin: 14px 0 26px; }
+.ch-join-hero p { color: var(--hink); font-size: 19px; max-width: 640px; margin: 14px 0 26px; }
 [data-variant='e'] .ch-join-hero { background: var(--surface); }
-[data-variant='a'] .ch-join-hero, [data-variant='c'] .ch-join-hero { background: linear-gradient(135deg, var(--primary), var(--accent)); --hink:#ffffff; }
+[data-variant='a'] .ch-join-hero, [data-variant='c'] .ch-join-hero { background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 62%, #000)); --hink:#ffffff; }
 .ch-chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .ch-chip { background: var(--surface); color: var(--ink2); padding: 9px 16px; border-radius: 22px; font-size: 16px; }
 .ch-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }

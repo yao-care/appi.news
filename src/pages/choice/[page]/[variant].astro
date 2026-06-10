@@ -68,7 +68,7 @@ const STEPS = ['申請', '選擇方案', '建立作者資料', '產生文章', '
         {hero && (
           <section class="ch-hero">
             <div class="lead">
-              <div class="cover" style="display:grid;place-items:center;color:var(--primary);font-weight:800;font-size:22px;background:var(--tint);">{catName(hero.data.category)}</div>
+              <div class="cover" style="display:grid;place-items:center;color:var(--on-light);font-weight:800;font-size:22px;background:var(--tint);">{catName(hero.data.category)}</div>
               <span class="ch-pill" style="margin-top:14px;display:inline-block;">{catName(hero.data.category)}</span>
               <h1>{hero.data.title}</h1>
               <p>{hero.data.excerpt ?? hero.data.description}</p>
@@ -89,7 +89,7 @@ const STEPS = ['申請', '選擇方案', '建立作者資料', '產生文章', '
           <div class="ch-grid ch-grid--4">
             {list.slice(0, 8).map((a) => (
               <article class="ch-card">
-                <div class="cover" style="display:grid;place-items:center;color:var(--primary);font-weight:800;background:var(--tint);">{catName(a.data.category)}</div>
+                <div class="cover" style="display:grid;place-items:center;color:var(--on-light);font-weight:800;background:var(--tint);">{catName(a.data.category)}</div>
                 <div class="body">
                   <span class="ch-tag">{catName(a.data.category)}</span>
                   <h3>{a.data.title}</h3>
@@ -114,7 +114,7 @@ const STEPS = ['申請', '選擇方案', '建立作者資料', '產生文章', '
           <span>{formatDate(article.data.publishDate)}</span>
           <span>· {readingTime(article)} 分鐘閱讀</span>
         </div>
-        <div class="cover" style="display:grid;place-items:center;color:var(--primary);font-weight:800;font-size:24px;background:var(--tint);">{catName(article.data.category)}</div>
+        <div class="cover" style="display:grid;place-items:center;color:var(--on-light);font-weight:800;font-size:24px;background:var(--tint);">{catName(article.data.category)}</div>
         <div class="hl">
           <h3>本文重點</h3>
           <ul><li>{article.data.description}</li></ul>

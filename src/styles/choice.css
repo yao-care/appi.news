@@ -51,6 +51,12 @@ img { max-width: 100%; height: auto; display: block; }
   --hbg:#ffffff; --hink:#1a1a1a; --radius:0px; --fhead:var(--ch-serif); --fbody:var(--ch-sans);
   --hweight:700;
 }
+[data-variant='f'] { /* 上一生醫 Asignbio：鼠尾草綠＋暖白＋大地色，極簡植物感 */
+  --bg:#fbfaf7; --surface:#f2f0e9; --ink:#2d332b; --ink2:#5c6356; --line:#e2dfd5;
+  --primary:#6f8b6a; --primary-ink:#ffffff; --accent:#b08968; --tint:#ebf0e6;
+  --hbg:#fbfaf7; --hink:#3f5a3c; --radius:16px; --fhead:var(--ch-sans); --fbody:var(--ch-sans);
+  --hweight:600;
+}
 
 /* ---------- 風格 token（OKLCH 主層） ---------- */
 @supports (color: oklch(0.5 0.1 250)) {
@@ -83,7 +89,23 @@ img { max-width: 100%; height: auto; display: block; }
     --ink2:oklch(0.48 0.01 40); --line:oklch(0.90 0.008 50);
     --primary:oklch(0.52 0.20 25); --accent:oklch(0.52 0.20 25); --tint:oklch(0.93 0.05 25);
   }
+  [data-variant='f'] {
+    --bg:oklch(0.985 0.006 95); --surface:oklch(0.95 0.012 100); --ink:oklch(0.32 0.02 140);
+    --ink2:oklch(0.49 0.02 135); --line:oklch(0.90 0.012 100);
+    --primary:oklch(0.62 0.05 145); --accent:oklch(0.65 0.07 62); --tint:oklch(0.94 0.03 140);
+    --hink:oklch(0.45 0.06 145);
+  }
 }
+
+/* 上一生醫：植物感柔和裝飾 */
+[data-variant='f'] .ch-hero .lead .cover,
+[data-variant='f'] .ch-join-hero {
+  background-image: radial-gradient(circle at 85% 20%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 40%),
+    radial-gradient(circle at 15% 90%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 45%);
+}
+[data-variant='f'] .ch-join-hero { background-color: var(--surface); --hink: #3f5a3c; }
+[data-variant='f'] .ch-card,
+[data-variant='f'] .ch-author { box-shadow: 0 2px 10px rgba(80, 90, 70, 0.06); }
 
 /* ============================================================
    切換列（風格中立，固定頂部）
@@ -210,7 +232,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 footer.ch-foot { background: var(--hbg); color: var(--hink); margin-top: 56px; padding: 34px 0; font-size: 15px; }
 [data-variant='e'] footer.ch-foot { background: var(--ink); --hink:#fff; }
-[data-variant='a'] footer.ch-foot, [data-variant='c'] footer.ch-foot, [data-variant='d'] footer.ch-foot { background: var(--ink); --hink:#fff; }
+[data-variant='a'] footer.ch-foot, [data-variant='c'] footer.ch-foot, [data-variant='d'] footer.ch-foot, [data-variant='f'] footer.ch-foot { background: var(--ink); --hink:#fff; }
 
 @media (max-width: 860px) {
   .ch-grid--3,.ch-grid--4 { grid-template-columns: repeat(2,1fr); }

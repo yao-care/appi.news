@@ -37,7 +37,7 @@ const tags = tagStats(allInCategory).slice(0, 16).map((t) => t.tag);
 <div class="container channel">
   <Breadcrumbs items={[{ name: category.name }]} />
 
-  <header class="channel-head" style={`--cat-color:${category.color}`}>
+  <header class="page-head page-head--cat channel-head" style={`--cat-color:${category.color}`}>
     <div class="channel-titles">
       <h1>{category.channelName ?? category.name}</h1>
       <span class="channel-en">{category.nameEn}</span>
@@ -90,21 +90,12 @@ const tags = tagStats(allInCategory).slice(0, 16).map((t) => t.tag);
   .channel {
     padding-top: 28px;
   }
-  .channel-head {
-    margin: 18px 0 32px;
-    padding-bottom: 24px;
-    border-bottom: 3px solid var(--cat-color);
-  }
+  /* .channel-head 的外距/底線/h1 由共用 .page-head(--cat) 提供，此處僅保留頻道特有元素 */
   .channel-titles {
     display: flex;
     align-items: baseline;
     gap: 14px;
     flex-wrap: wrap;
-  }
-  .channel-head h1 {
-    font-size: var(--text-2xl);
-    margin: 0;
-    color: var(--cat-color);
   }
   .channel-en {
     font-family: var(--font-sans);

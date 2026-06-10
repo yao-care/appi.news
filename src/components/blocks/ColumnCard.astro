@@ -16,7 +16,7 @@ const cover = column.data.coverImage
   : asset(`og/${column.data.category ?? 'columns'}.png`);
 const cat = getCategory(column.data.category);
 ---
-<article class="column-card">
+<article class="column-card card-k">
   <a class="column-cover" href={href} aria-hidden="true" tabindex="-1">
     <ImageWithFallback src={cover} alt={column.data.title} fallback="og/columns.png" />
   </a>
@@ -35,18 +35,16 @@ const cat = getCategory(column.data.category);
   .column-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
-    background: var(--white);
+    padding-top: 12px;
     transition: box-shadow 0.2s;
   }
   .column-card:hover {
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
   }
   .column-cover {
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    border-radius: var(--radius-sm);
     background: var(--bg-soft);
   }
   .column-cover :global(img) {

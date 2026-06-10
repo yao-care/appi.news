@@ -44,9 +44,9 @@ const cards = columns.map((c) => ({
 >
   <div class="container" style="padding-top:28px;">
     <Breadcrumbs items={[{ name: '專欄' }]} />
-    <header class="channel-head" style="margin:18px 0 32px;padding-bottom:24px;border-bottom:3px solid var(--ink-2);">
-      <h1 style="font-size: var(--text-2xl);margin:0;color:var(--ink-2);">專欄 <span style="font-family:var(--font-sans);font-size: var(--text-sm);color:var(--ink-3);letter-spacing:.05em;">COLUMNS</span></h1>
-      <p style="margin:12px 0 0;font-size: var(--text-sm);color:var(--ink-2);max-width:760px;line-height:1.7;">{cat.description}</p>
+    <header class="page-head">
+      <h1>專欄 <span class="en">COLUMNS</span></h1>
+      <p>{cat.description}</p>
     </header>
 
     {

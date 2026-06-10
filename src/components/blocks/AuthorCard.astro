@@ -21,7 +21,7 @@ const LEVEL_LABELS: Record<string, string> = {
   brand: '品牌作者',
 };
 ---
-<article class="author-card">
+<article class="author-card card-k">
   <ImageWithFallback
     src={avatar}
     alt={author.data.name}
@@ -52,15 +52,11 @@ const LEVEL_LABELS: Record<string, string> = {
   .author-card {
     display: flex;
     gap: 16px;
-    padding: 20px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--white);
-    transition: box-shadow 0.2s, border-color 0.2s;
+    padding: 18px 16px 20px;
+    transition: background 0.2s;
   }
   .author-card:hover {
-    box-shadow: var(--shadow-md);
-    border-color: var(--line-2);
+    background: var(--bg-soft);
   }
   :global(.author-avatar) {
     width: 72px;

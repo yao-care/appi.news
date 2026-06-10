@@ -12,7 +12,7 @@ interface Props {
 }
 const { name, price, unit, summary, features, featured = false, note } = Astro.props;
 ---
-<article class:list={['pricing-card', featured && 'pricing-card--featured']}>
+<article class:list={['pricing-card', 'card-k', featured && 'pricing-card--featured']}>
   {featured && <span class="pricing-badge">熱門</span>}
   <h3 class="pricing-name">{name}</h3>
   <div class="pricing-price">
@@ -34,13 +34,9 @@ const { name, price, unit, summary, features, featured = false, note } = Astro.p
     position: relative;
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
     padding: 26px 24px;
-    background: var(--white);
   }
   .pricing-card--featured {
-    border-color: var(--appi-brand);
     box-shadow: var(--shadow-md);
   }
   .pricing-badge {

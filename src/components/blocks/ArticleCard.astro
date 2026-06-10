@@ -31,7 +31,7 @@ const alt = coverAltFor(article);
 const rt = readingTime(article);
 const desc = article.data.excerpt ?? article.data.description;
 ---
-<article class:list={['acard', `acard--${variant}`]}>
+<article class:list={['acard', `acard--${variant}`, (variant === 'medium' || variant === 'large') && 'card-k']}>
   <a class="acard-media" href={href} tabindex="-1" aria-hidden="true">
     <ImageWithFallback
       src={cover}
@@ -143,6 +143,16 @@ const desc = article.data.excerpt ?? article.data.description;
   .acard-author + time::before {
     content: '';
     margin: 0;
+  }
+
+  /* K 卡片：網格卡（medium/large）套共用 .card-k 頂部金線；此處僅留間距與封面小圓角 */
+  .acard--medium,
+  .acard--large {
+    padding-top: 12px;
+  }
+  .acard--medium .acard-media,
+  .acard--large .acard-media {
+    border-radius: var(--radius-sm);
   }
 
   /* hero / large */

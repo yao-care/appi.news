@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 525" width="1000" height="525" role="img" aria-labelledby="title desc">
+  <title id="title">保健食品廣告合規與 AI 輔助審查示意圖</title>
+  <desc id="desc">桌面上的保健食品、合規文件、AI 掃描介面、風險標記與法規文件，呈現廣告合規審查流程。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f3ea"/>
+      <stop offset="1" stop-color="#e9eef5"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2a47"/>
+      <stop offset="1" stop-color="#19395d"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef5f9"/>
+    </linearGradient>
+    <linearGradient id="ai" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b2748" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#2da7ff" stop-opacity=".45"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0f2a47" flood-opacity=".16"/>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f2a47" flood-opacity=".12"/>
+    </filter>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#7893b3" opacity=".45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="525" fill="url(#bg)"/>
+  <rect y="394" width="1000" height="131" fill="#102b49" opacity=".97"/>
+  <path d="M0 512h1000" stroke="#c59b47" stroke-width="2" opacity=".8"/>
+  <path d="M10 506h200" stroke="#c59b47" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 8" opacity=".9"/>
+
+  <!-- background data map and charts -->
+  <path d="M35 62c39-34 99-30 136-11 31 15 74 3 107 30 31 26 15 68-17 81-52 22-93-21-130-6-42 17-94 21-117-22C-4 99 9 84 35 62Z" fill="url(#dots)" opacity=".55"/>
+  <g opacity=".24" fill="#7893b3">
+    <rect x="33" y="308" width="15" height="71" rx="2"/>
+    <rect x="58" y="285" width="15" height="94" rx="2"/>
+    <rect x="83" y="260" width="15" height="119" rx="2"/>
+    <rect x="108" y="292" width="15" height="87" rx="2"/>
+    <rect x="133" y="324" width="15" height="55" rx="2"/>
+  </g>
+  <g opacity=".28" stroke="#7893b3" stroke-width="2" fill="none">
+    <path d="M226 81l45-32 53 20 18 54-42 38-60-9z"/>
+    <path d="M341 59l55-22 51 33 6 61-52 28-56-31z"/>
+    <circle cx="271" cy="49" r="5" fill="#7893b3"/>
+    <circle cx="324" cy="69" r="5" fill="#7893b3"/>
+    <circle cx="342" cy="123" r="5" fill="#7893b3"/>
+    <path d="M271 49c48 48 77 100 87 157" stroke-dasharray="6 8"/>
+  </g>
+
+  <!-- faint justice scale -->
+  <g transform="translate(790 52)" opacity=".22" stroke="#9a8f7f" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M76 9v226"/>
+    <path d="M28 54c37 15 63 15 96 0 31 15 64 15 99 0"/>
+    <path d="M42 64l-35 93h79z"/>
+    <path d="M208 64l-35 93h79z"/>
+    <path d="M43 238h95"/>
+  </g>
+
+  <!-- shield -->
+  <g transform="translate(223 145)" filter="url(#soft)">
+    <path d="M90 0l82 31v61c0 69-42 122-82 144C50 214 8 161 8 92V31z" fill="url(#navy)"/>
+    <path d="M90 14l68 26v52c0 56-34 101-68 121C56 193 22 148 22 92V40z" fill="none" stroke="#c59b47" stroke-width="4"/>
+    <path d="M56 112l25 28 55-65" fill="none" stroke="#d8aa55" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="90" cy="94" r="114" fill="none" stroke="#7893b3" stroke-width="2" stroke-dasharray="7 8" opacity=".35"/>
+  </g>
+
+  <!-- supplement bottle and box -->
+  <g transform="translate(72 255)" filter="url(#shadow)">
+    <rect x="7" y="0" width="103" height="28" rx="6" fill="#e7dfd2"/>
+    <rect x="2" y="22" width="113" height="160" rx="24" fill="#f7f1e8"/>
+    <path d="M2 95c33 11 67-26 113-10v79H2z" fill="#e1d7c8" opacity=".75"/>
+    <rect x="2" y="145" width="113" height="20" fill="#173456"/>
+    <path d="M14 10h91" stroke="#c8bead" stroke-width="3" stroke-dasharray="2 6"/>
+  </g>
+  <g transform="translate(196 282)" filter="url(#shadow)">
+    <path d="M0 0h115l28 25v156H0z" fill="#eee6d8"/>
+    <path d="M115 0v25h28" fill="#d8ccb8"/>
+    <path d="M0 79c43 10 80-26 143-4v106H0z" fill="#efe9df"/>
+    <rect y="140" width="143" height="41" fill="#143252"/>
+    <path d="M20 160h95" stroke="#c59b47" stroke-width="3"/>
+  </g>
+  <g transform="translate(260 451)" filter="url(#soft)">
+    <ellipse cx="65" cy="17" rx="65" ry="22" fill="#f5efe4"/>
+    <g fill="#dfcfb6" stroke="#c4ad8a">
+      <rect x="39" y="5" width="33" height="16" rx="8"/>
+      <rect x="69" y="8" width="33" height="16" rx="8"/>
+      <rect x="26" y="18" width="33" height="16" rx="8"/>
+      <rect x="61" y="20" width="33" height="16" rx="8"/>
+    </g>
+  </g>
+
+  <!-- central tablet -->
+  <g transform="translate(360 66)" filter="url(#shadow)">
+    <rect width="342" height="333" rx="20" fill="#0c2441"/>
+    <rect x="18" y="18" width="306" height="297" rx="14" fill="url(#screen)"/>
+    <rect x="44" y="45" width="62" height="54" rx="8" fill="#d8e2ea"/>
+    <path d="M52 87l18-20 20 22 10-12 20 22H52z" fill="#5c768f" opacity=".9"/>
+    <circle cx="94" cy="57" r="7" fill="#7893b3"/>
+    <g stroke="#9aa9b7" stroke-width="5" stroke-linecap="round" opacity=".65">
+      <path d="M130 55h111"/><path d="M130 76h145"/><path d="M130 97h103"/>
+      <path d="M72 128h158"/>
+    </g>
+    <g>
+      <circle cx="66" cy="163" r="14" fill="#d84b3f"/><path d="M66 154v13M66 173v1" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+      <rect x="96" y="146" width="128" height="42" rx="9" fill="#efb0a8" opacity=".63"/>
+      <path d="M111 159h83M111 171h69" stroke="#c9655b" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+      <circle cx="243" cy="162" r="4" fill="#d84b3f"/><circle cx="257" cy="162" r="4" fill="#d84b3f"/><circle cx="271" cy="162" r="4" fill="#d84b3f"/>
+    </g>
+    <g>
+      <path d="M66 209l17 31H49z" fill="#e6a31a"/><path d="M66 220v8M66 234v1" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+      <rect x="96" y="207" width="128" height="42" rx="9" fill="#f4d88d" opacity=".7"/>
+      <path d="M111 220h71M111 232h93" stroke="#c7922f" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+      <circle cx="243" cy="223" r="4" fill="#e6a31a"/><circle cx="257" cy="223" r="4" fill="#e6a31a"/><circle cx="271" cy="223" r="4" fill="#e6a31a"/>
+    </g>
+    <g>
+      <circle cx="66" cy="286" r="15" fill="#3eb56b"/><path d="M57 284l7 7 14-18" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="96" y="268" width="128" height="42" rx="9" fill="#b8dfbd" opacity=".72"/>
+      <path d="M111 281h91M111 293h59" stroke="#58a86b" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+      <circle cx="243" cy="286" r="4" fill="#3eb56b"/><circle cx="257" cy="286" r="4" fill="#3eb56b"/><circle cx="271" cy="286" r="4" fill="#3eb56b"/>
+    </g>
+  </g>
+
+  <!-- AI scan overlay without text -->
+  <g transform="translate(620 103)" filter="url(#soft)">
+    <path d="M0 0h139l41 43v212H0z" fill="url(#ai)" stroke="#9bd8ff" stroke-width="2" opacity=".9"/>
+    <rect x="63" y="55" width="56" height="56" rx="8" fill="none" stroke="#d8f4ff" stroke-width="3"/>
+    <rect x="78" y="70" width="26" height="26" fill="none" stroke="#d8f4ff" stroke-width="2"/>
+    <g stroke="#d8f4ff" stroke-width="2" stroke-linecap="round">
+      <path d="M91 38v17M77 43v12M105 43v12M63 83H46M119 83h17M91 111v17M77 111v12M105 111v12"/>
+    </g>
+    <g fill="#d8f4ff">
+      <circle cx="91" cy="34" r="3"/><circle cx="77" cy="40" r="3"/><circle cx="105" cy="40" r="3"/><circle cx="42" cy="83" r="3"/><circle cx="140" cy="83" r="3"/>
+    </g>
+    <path d="M0 95h-87" stroke="#76d8ff" stroke-width="3" opacity=".9"/>
+    <path d="M0 154h-85" stroke="#76d8ff" stroke-width="3" opacity=".9"/>
+    <path d="M0 215h-85" stroke="#76d8ff" stroke-width="3" opacity=".9"/>
+  </g>
+
+  <!-- documents and books -->
+  <g transform="translate(730 235)" filter="url(#shadow)">
+    <rect x="32" y="0" width="185" height="40" rx="4" fill="#102b49"/>
+    <rect x="20" y="42" width="212" height="40" rx="4" fill="#142f50"/>
+    <rect x="0" y="87" width="232" height="54" rx="4" fill="#f4efe5"/>
+    <path d="M0 90c69 19 156-12 232 8" stroke="#d8d0c3" stroke-width="5"/>
+    <g stroke="#c59b47" stroke-width="3" opacity=".8">
+      <path d="M76 14v20M92 14v20M114 14v20"/><path d="M78 55v18M96 55v18"/>
+    </g>
+  </g>
+  <g transform="translate(797 342)" filter="url(#shadow)">
+    <path d="M0 0h160c15 0 27 12 27 27v109H28C13 136 0 124 0 109z" fill="#0f2a47"/>
+    <path d="M0 0h160c15 0 27 12 27 27v109H28C13 136 0 124 0 109z" fill="none" stroke="#c59b47" stroke-width="2" opacity=".8"/>
+    <circle cx="34" cy="30" r="14" fill="#d84b3f"/><path d="M34 22v12M34 40v1" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M34 70l15 27H19z" fill="none" stroke="#e6a31a" stroke-width="4" stroke-linejoin="round"/><path d="M34 78v8" stroke="#e6a31a" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="34" cy="116" r="15" fill="none" stroke="#c59b47" stroke-width="4"/><path d="M25 115l7 7 14-18" stroke="#c59b47" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g stroke="#c59b47" stroke-width="2" opacity=".75"><path d="M75 29h75"/><path d="M75 75h75"/><path d="M75 116h75"/></g>
+  </g>
+
+  <!-- clipboard -->
+  <g transform="translate(486 405) rotate(-4)" filter="url(#shadow)">
+    <rect width="240" height="100" rx="10" fill="#f7f1e8"/>
+    <rect x="80" y="-9" width="80" height="18" rx="8" fill="#d5d0c8" stroke="#887e71"/>
+    <g stroke="#9aa9b7" stroke-width="3" stroke-linecap="round">
+      <path d="M70 31h130"/><path d="M70 54h126"/><path d="M70 77h105"/>
+    </g>
+    <g fill="none" stroke="#3eb56b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M36 25l7 8 17-19"/><path d="M36 48l7 8 17-19"/><path d="M36 72l7 8 17-19"/>
+    </g>
+  </g>
+  <g transform="translate(646 433) rotate(-17)">
+    <rect width="160" height="9" rx="5" fill="#111821"/>
+    <rect x="108" width="30" height="9" fill="#c59b47"/>
+    <path d="M156 4.5l18 7-18 7z" fill="#e2cfaa"/>
+  </g>
+</svg>

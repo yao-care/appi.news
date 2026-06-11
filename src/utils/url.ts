@@ -28,6 +28,8 @@ export function absoluteUrl(path: string, site: URL | string | undefined): strin
 
 /** 取得資產（圖片等）的 base-aware 路徑 */
 export function asset(path: string): string {
+  // 絕對網址（外部圖床等）原樣回傳，不套 base
+  if (/^https?:\/\//i.test(path)) return path;
   const clean = `/${String(path).replace(/^\/+/, '')}`;
   return (BASE.replace(/\/+$/, '') + clean).replace(/\/{2,}/g, '/');
 }

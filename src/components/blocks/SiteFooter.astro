@@ -1,8 +1,22 @@
 ---
 import { SITE } from '@/config/site';
 import { FOOTER_COLUMNS } from '@/config/nav';
+import { CATEGORY_MAP } from '@/config/categories';
+import { getActiveCategorySlugs } from '@/utils/content';
 import { url } from '@/utils/url';
 const year = SITE.org.foundingYear;
+
+// 隱藏沒有已發佈文章的分類連結（與主導覽一致）
+const active = await getActiveCategorySlugs();
+const footerColumns = FOOTER_COLUMNS.map((col) => ({
+  ...col,
+  links: col.links.filter((l) => {
+    const m = l.href.match(/^\/([^/]+)\/$/);
+    const slug = m?.[1];
+    if (!slug || !CATEGORY_MAP[slug]) return true;
+    return active.has(slug);
+  }),
+})).filter((col) => col.links.length > 0);
 ---
 
 <footer class="site-footer">
@@ -20,7 +34,7 @@ const year = SITE.org.foundingYear;
 
     <div class="footer-cols">
       {
-        FOOTER_COLUMNS.map((col) => (
+        footerColumns.map((col) => (
           <div class="footer-col">
             <h3>{col.title}</h3>
             <ul>

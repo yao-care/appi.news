@@ -124,10 +124,7 @@ def main() -> int:
         if new_text != text:
             path.write_text(new_text, encoding="utf-8")
     print(f"clean-bodies: headings cleaned in {n_head}, tail trimmed in {n_tail}")
-    print(f"articles WITHOUT references (待補來源清單): {len(no_refs)}")
-    (ART_DIR.parent.parent.parent / "docs" / "content-todo-no-references.txt").write_text(
-        "\n".join(no_refs) + "\n", encoding="utf-8"
-    )
+    print(f"articles WITHOUT references: {len(no_refs)}（完整待補清單見 docs/content-todo.md）")
     return 0
 
 

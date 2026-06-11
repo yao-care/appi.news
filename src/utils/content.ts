@@ -1,6 +1,8 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { asset } from './url';
 
+export { extractFaq, type FaqItem } from './faq';
+
 export type Article = CollectionEntry<'articles'>;
 export type Author = CollectionEntry<'authors'>;
 export type Column = CollectionEntry<'columns'>;
@@ -48,6 +50,12 @@ export async function getPublishedArticles(): Promise<Article[]> {
 
 export function byCategory(articles: Article[], category: string): Article[] {
   return articles.filter((a) => a.data.category === category);
+}
+
+/** 有已發佈文章的分類 slug 集合（給導覽/頁尾隱藏空分類用） */
+export async function getActiveCategorySlugs(): Promise<Set<string>> {
+  const arts = await getPublishedArticles();
+  return new Set(arts.map((a) => a.data.category));
 }
 
 export function bySubcategory(articles: Article[], sub: string): Article[] {

@@ -22,11 +22,12 @@ import {
   relatedArticles,
   adjacent,
   authorHasPage,
+  extractFaq,
 } from '@/utils/content';
 import { getCategory, getSubcategoryName } from '@/config/categories';
 import { formatDate, isoDate } from '@/utils/date';
 import { absoluteUrl, url } from '@/utils/url';
-import { articleLd, breadcrumbLd } from '@/utils/jsonld';
+import { articleLd, breadcrumbLd, faqLd } from '@/utils/jsonld';
 
 export async function getStaticPaths() {
   const articles = await getPublishedArticles();
@@ -79,6 +80,10 @@ const ld = [
   }),
   breadcrumbLd(Astro.site, [{ name: '首頁', path: '/' }, ...crumbItems]),
 ];
+
+// FAQPage 結構化資料（若文章含「常見問題」區段）
+const faq = extractFaq(article.body ?? '');
+if (faq.length > 0) ld.push(faqLd(faq));
 
 const shareUrl = absoluteUrl(path, Astro.site);
 const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;

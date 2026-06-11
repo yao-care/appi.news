@@ -1,7 +1,18 @@
 ---
 import { SITE } from '@/config/site';
 import { MAIN_NAV } from '@/config/nav';
+import { CATEGORY_MAP } from '@/config/categories';
+import { getActiveCategorySlugs } from '@/utils/content';
 import { url } from '@/utils/url';
+
+// 隱藏沒有已發佈文章的分類（避免導覽連到空頁面）
+const active = await getActiveCategorySlugs();
+const navItems = MAIN_NAV.filter((item) => {
+  const m = item.href.match(/^\/([^/]+)\/$/);
+  const slug = m?.[1];
+  if (!slug || !CATEGORY_MAP[slug]) return true; // 非分類連結（作者群等）一律保留
+  return active.has(slug);
+});
 
 const navUrl = (p: string) => url(p);
 const current = Astro.url.pathname;
@@ -22,7 +33,7 @@ function isActive(href: string): boolean {
     <nav class="main-nav" aria-label="主選單">
       <ul>
         {
-          MAIN_NAV.map((item) => (
+          navItems.map((item) => (
             <li>
               <a href={navUrl(item.href)} class={isActive(item.href) ? 'active' : ''}>
                 {item.label}
@@ -47,7 +58,7 @@ function isActive(href: string): boolean {
   <nav class="mobile-nav" id="mobileNav" aria-label="行動版選單" hidden>
     <ul>
       {
-        MAIN_NAV.map((item) => (
+        navItems.map((item) => (
           <li><a href={navUrl(item.href)}>{item.label}</a></li>
         ))
       }

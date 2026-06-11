@@ -65,14 +65,14 @@
 }
 
 :root {
-  /* ---------- 字級量表（最小 18px，無例外） ---------- */
-  --text-xs: 1.125rem; /* 18px — 徽章、標籤、meta、最小字 */
-  --text-sm: 1.25rem; /* 20px — 次要說明、卡片副標 */
-  --text-base: 1.5rem; /* 24px — 正文預設 */
-  --text-lg: 1.75rem; /* 28px — 強調、卡片標題 */
-  --text-xl: 2rem; /* 32px — 區段標題 */
-  --text-2xl: 3rem; /* 48px — 頁面大標 */
-  --text-3xl: 3.5rem; /* 56px — Hero / 報告標題 */
+  /* ---------- 字級量表 ---------- */
+  --text-xs: 0.9375rem; /* 15px — 徽章、標籤、meta */
+  --text-sm: 1rem;      /* 16px — 次要說明、卡片副標 */
+  --text-base: 1.125rem;/* 18px — 正文預設 */
+  --text-lg: 1.375rem;  /* 22px — 強調、卡片標題 */
+  --text-xl: 1.75rem;   /* 28px — 區段標題 */
+  --text-2xl: 2.5rem;   /* 40px — 頁面大標 */
+  --text-3xl: 3rem;     /* 48px — Hero / 報告標題 */
 
   /* ---------- 字型 ---------- */
   --font-sans: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont,
@@ -173,12 +173,10 @@ h4 {
   margin-bottom: 20px;
 }
 
-/* K 卡片：去四周框、頂部 3px 金線、白底直角。
-   全站網格卡片（文章/作者/專欄/方案）共用——改這一處，全站卡片一起變。 */
+/* K 卡片：去四周框、白底直角；金線移除，改用乾淨媒體卡片風格。 */
 .card-k {
   background: var(--white);
   border: none;
-  border-top: 3px solid var(--appi-accent);
   border-radius: 0;
 }
 
@@ -245,7 +243,7 @@ h4 {
 
 /* ---------- 文章排版（內文） ---------- */
 .article-body {
-  font-size: var(--text-base);
+  font-size: 1.25rem; /* 20px — 文章正文固定，不跟 token 縮小 */
   line-height: 1.85;
   color: var(--ink-2);
 }
@@ -336,6 +334,12 @@ h4 {
   .card-grid--3,
   .card-grid--4 {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .article-body {
+    font-size: 1.125rem; /* 18px — 手機版文章正文最小保護 */
   }
 }
 

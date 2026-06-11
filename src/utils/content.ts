@@ -6,6 +6,12 @@ export type Author = CollectionEntry<'authors'>;
 export type Column = CollectionEntry<'columns'>;
 export type Topic = CollectionEntry<'topics'>;
 
+const SUPPLEMENT_AD_COMPLIANCE_COVER = 'articles/supplement-ad-compliance-ai-review.svg';
+
+function isSupplementAdComplianceArticle(a: Article): boolean {
+  return articleSlug(a).startsWith('保健食品廣告合規完整指南');
+}
+
 /* ----------------------------- articles ----------------------------- */
 
 /**
@@ -140,6 +146,7 @@ export function readingTime(a: Article): number {
 /** 文章封面圖：有 coverImage 用之，否則用分類 fallback */
 export function coverImageFor(a: Article): string {
   if (a.data.coverImage) return asset(a.data.coverImage);
+  if (isSupplementAdComplianceArticle(a)) return asset(SUPPLEMENT_AD_COMPLIANCE_COVER);
   return asset(`og/${a.data.category}.png`);
 }
 

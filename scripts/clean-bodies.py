@@ -63,6 +63,9 @@ BARE_LINK_RE = re.compile(
 # 標題內的 <strong> / </strong>
 HEAD_RE = re.compile(r"(<h[234]>)(.*?)(</h[234]>)", re.DOTALL)
 
+# 遷移誤植在內文、會被當成可見文字渲染的 JSON-LD 段落
+JSONLD_P_RE = re.compile(r'<p>\s*\{(?=[\s\S]*?"@type")[\s\S]*?\}\s*</p>', re.DOTALL)
+
 
 def clean_headings(body: str) -> str:
     def repl(m: re.Match) -> str:
@@ -109,7 +112,8 @@ def main() -> int:
             continue
         fm, body = m.group(1), m.group(2)
 
-        new_body = clean_headings(body)
+        new_body = JSONLD_P_RE.sub("", body)
+        new_body = clean_headings(new_body)
         if new_body != body:
             n_head += 1
         before = new_body

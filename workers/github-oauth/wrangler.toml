@@ -1,0 +1,10 @@
+name = "appi-news-github-oauth"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+
+[vars]
+# TODO(Task 14): 換成 appi.news 專用 OAuth App 的 Client ID
+GITHUB_CLIENT_ID = "REPLACE_ME"
+ALLOWED_ORIGIN = "https://yao-care.github.io"
+OAUTH_SCOPE = "public_repo"
+ADMIN_PATH = "/appi.news/admin/"

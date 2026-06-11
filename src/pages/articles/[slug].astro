@@ -11,6 +11,7 @@ import AuthorBioBox from '@/components/blocks/AuthorBioBox.astro';
 import ShareButtons from '@/components/blocks/ShareButtons.astro';
 import RelatedArticles from '@/components/blocks/RelatedArticles.astro';
 import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
+import EditButton from '@/components/editor/EditButton.svelte';
 import {
   getPublishedArticles,
   getAuthorMap,
@@ -216,6 +217,12 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
       <RelatedArticles articles={related} authorNames={authorNames} title="延伸閱讀" />
     </div>
   </article>
+  <EditButton
+    client:idle
+    repoPath={`src/content/articles/${article.id.endsWith('.md') ? article.id : `${article.id}.md`}`}
+    collection="articles"
+    slug={articleSlug(article)}
+  />
 </BaseLayout>
 
 <style>

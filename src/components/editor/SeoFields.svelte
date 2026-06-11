@@ -36,7 +36,7 @@
 
 <div class="et-fields">
   {#each CORE_FIELDS as f}
-    <label>
+    <label class:full={f.full}>
       <span>{f.label}{#if f.required}<em> *</em>{/if}</span>
       {#if f.type === 'textarea'}
         <textarea value={frontmatter[f.key] ?? ''} oninput={(e) => setCore(f.key, e.currentTarget.value)}></textarea>
@@ -44,7 +44,7 @@
       {:else if f.type === 'enum'}
         <select value={frontmatter[f.key] ?? ''} onchange={(e) => setCore(f.key, e.currentTarget.value)}>
           <option value="" disabled>— 選擇 —</option>
-          {#each f.options as opt}<option value={opt}>{opt}</option>{/each}
+          {#each f.options as opt}<option value={opt.value}>{opt.label}</option>{/each}
         </select>
       {:else if f.type === 'bool'}
         <input type="checkbox" checked={!!frontmatter[f.key]} onchange={(e) => setCore(f.key, e.currentTarget.checked)} />
@@ -66,17 +66,31 @@
 </div>
 
 <style>
-  .et-fields { display: flex; flex-direction: column; gap: 0.75rem; overflow: auto; }
-  .et-fields label { display: flex; flex-direction: column; gap: 0.25rem; }
+  /* 2 欄 grid：標題、描述（.full）與進階區跨整列，其餘欄位左右各 50% 省版面 */
+  .et-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem 1rem;
+    align-items: start;
+  }
+  .et-fields label { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+  .et-fields label.full { grid-column: 1 / -1; }
   .et-fields span { font-family: var(--font-ui); font-size: var(--text-meta); font-weight: 600; color: var(--color-ink); }
   .et-fields em { color: var(--color-coral); font-style: normal; }
   .et-fields :is(input, textarea, select) {
+    width: 100%; box-sizing: border-box;
     font-family: var(--font-ui); font-size: var(--text-body); color: var(--color-ink);
     background: white; border: 1px solid var(--color-fog); border-radius: var(--radius-sm); padding: 0.5rem 0.65rem;
   }
   .et-fields input[type="checkbox"] { width: auto; align-self: start; }
   .et-fields textarea { min-height: 4rem; resize: vertical; }
+  .et-adv { grid-column: 1 / -1; }
   .et-adv summary { cursor: pointer; font-family: var(--font-ui); font-size: var(--text-meta); font-weight: 600; }
-  .et-adv-yaml { width: 100%; min-height: 8rem; font-family: ui-monospace, monospace; }
+  /* 提高 specificity 蓋過 .et-fields textarea 的 4rem min-height */
+  .et-fields .et-adv-yaml { width: 100%; box-sizing: border-box; min-height: 16rem; margin-top: 0.4rem; resize: vertical; font-family: ui-monospace, monospace; }
   .et-adv-err { color: var(--color-coral); }
+
+  @media (max-width: 560px) {
+    .et-fields { grid-template-columns: 1fr; }
+  }
 </style>

@@ -73,5 +73,5 @@
 <div class="et-body-editor" bind:this={el}></div>
 
 <style>
-  .et-body-editor { flex: 1; min-height: 14rem; }
+  .et-body-editor { min-height: 20rem; }
 </style>

@@ -1,5 +1,5 @@
 import { z } from 'astro/zod';
-import { CATEGORY_SLUGS } from '@/config/categories';
+import { CATEGORY_SLUGS, CATEGORIES } from '@/config/categories';
 
 const referenceSchema = z.object({
   title: z.string(),
@@ -54,19 +54,28 @@ export function validateArticleFrontmatter(fm: Record<string, unknown>): Validat
   };
 }
 
+export type EnumOption = { value: string; label: string };
 export type CoreField =
-  | { key: string; label: string; type: 'text' | 'textarea' | 'date'; maxLength?: number; required?: boolean }
-  | { key: string; label: string; type: 'enum'; options: readonly string[]; required?: boolean }
-  | { key: string; label: string; type: 'tags' | 'bool' };
+  | { key: string; label: string; type: 'text' | 'textarea' | 'date'; maxLength?: number; required?: boolean; full?: boolean }
+  | { key: string; label: string; type: 'enum'; options: readonly EnumOption[]; required?: boolean; full?: boolean }
+  | { key: string; label: string; type: 'tags' | 'bool'; full?: boolean };
+
+// status 中文標籤（顯示用；存檔仍是英文 slug）
+const STATUS_OPTIONS: EnumOption[] = [
+  { value: 'draft', label: '草稿' },
+  { value: 'published', label: '已發佈' },
+  { value: 'scheduled', label: '排程' },
+  { value: 'archived', label: '封存' },
+];
 
 // 給 widget 的核心欄位；其餘欄位走「進階 YAML」區
 export const CORE_FIELDS: CoreField[] = [
-  { key: 'title', label: '標題', type: 'text', required: true },
-  { key: 'description', label: '描述（摘要）', type: 'textarea', maxLength: 160, required: true },
-  { key: 'category', label: '分類', type: 'enum', options: CATEGORY_SLUGS, required: true },
+  { key: 'title', label: '標題', type: 'text', required: true, full: true },
+  { key: 'description', label: '描述（摘要）', type: 'textarea', maxLength: 160, required: true, full: true },
+  { key: 'category', label: '分類', type: 'enum', options: CATEGORIES.map((c) => ({ value: c.slug, label: c.name })), required: true },
   { key: 'author', label: '作者', type: 'text' },
   { key: 'tags', label: '標籤', type: 'tags' },
-  { key: 'status', label: '狀態', type: 'enum', options: ['draft', 'published', 'scheduled', 'archived'] },
+  { key: 'status', label: '狀態', type: 'enum', options: STATUS_OPTIONS },
   { key: 'publishDate', label: '發佈日期', type: 'date', required: true },
   { key: 'featured', label: '精選', type: 'bool' },
   { key: 'hero', label: '首頁 Hero', type: 'bool' },

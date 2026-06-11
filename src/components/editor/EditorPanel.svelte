@@ -82,6 +82,13 @@
 
   onDestroy(stopDeployPoll);
 
+  // 開啟編輯器時鎖住背景捲動，避免滾輪事件穿透到底層文章頁
+  onMount(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prev; };
+  });
+
   onMount(async () => {
     if (initialDoc) {
       frontmatter = initialDoc.frontmatter;
@@ -214,78 +221,84 @@
       <button onclick={onclose} aria-label="關閉">✕</button>
     </header>
 
-    {#if status === 'loading'}<p class="et-loading">載入文章內容中…</p>{/if}
+    <div class="et-scroll">
+      {#if status === 'loading'}<p class="et-loading">載入文章內容中…</p>{/if}
 
-    {#if status !== 'loading' && tab === 'seo'}
-      <SeoFields {frontmatter} onchange={(fm) => (frontmatter = fm)} />
-      <div class="et-body">
-        <span>正文</span>
-        <BodyEditor value={body} {slug} onchange={(md) => (body = md)} />
-      </div>
-      {#if AI_ENABLED}
-        <div class="et-ai">
-          <button onclick={() => suggest('improve')}>AI 潤飾正文</button>
-          <button onclick={() => suggest('summarize')}>AI 摘要</button>
-          {#if suggestion}
-            <pre class="et-ai-out">{suggestion}</pre>
-            <button onclick={acceptSuggestion}>採用為正文</button>
+      {#if status !== 'loading' && tab === 'seo'}
+        <SeoFields {frontmatter} onchange={(fm) => (frontmatter = fm)} />
+        <div class="et-body">
+          <span>正文</span>
+          <BodyEditor value={body} {slug} onchange={(md) => (body = md)} />
+        </div>
+        {#if AI_ENABLED}
+          <div class="et-ai">
+            <button onclick={() => suggest('improve')}>AI 潤飾正文</button>
+            <button onclick={() => suggest('summarize')}>AI 摘要</button>
+            {#if suggestion}
+              <pre class="et-ai-out">{suggestion}</pre>
+              <button onclick={acceptSuggestion}>採用為正文</button>
+            {/if}
+          </div>
+        {/if}
+      {/if}
+
+      {#if tab === 'source'}
+        <textarea class="et-source" bind:value={rawDraft} spellcheck="false"></textarea>
+        <button onclick={applySource}>套用原始碼</button>
+      {/if}
+
+      {#if tab === 'seo' && loaded && lintResults.length > 0}
+        <ul class="et-lint" aria-label="內容檢查建議">
+          {#each lintResults as r}
+            <li class="et-lint-{r.level}">
+              <span class="et-lint-level">{r.level}</span>
+              <span class="et-lint-msg">{r.message}{#if r.field} <code>({r.field})</code>{/if}</span>
+              {#if r.fix}<span class="et-lint-fix">建議：{r.fix}</span>{/if}
+            </li>
+          {/each}
+        </ul>
+      {/if}
+
+      {#if status === 'done'}
+        <div class="et-done">
+          {#if deployState === 'live'}
+            <p class="et-done-msg">✅ 已上線！重新整理文章頁就能看到新內容。</p>
+            <p class="et-done-sub">可以關閉這個視窗了。</p>
+          {:else if deployState === 'failed'}
+            <p class="et-done-msg et-done-fail">⚠ 已存檔，但部署失敗。</p>
+            <p class="et-done-sub">
+              請<a href="https://github.com/yao-care/appi.news/actions" target="_blank" rel="noopener noreferrer">查看部署進度</a>了解原因，或聯絡網站工程師。
+            </p>
+          {:else if deployState === 'pending'}
+            <p class="et-done-msg">✓ 已存檔，部署中…</p>
+            <p class="et-done-sub">
+              完成後這裡會自動顯示「已上線」（約 1–2 分鐘）。你也可以直接關閉，網站會在背景更新。
+              <a href="https://github.com/yao-care/appi.news/actions" target="_blank" rel="noopener noreferrer">查看部署進度 →</a>
+            </p>
+          {:else}
+            <p class="et-done-msg">✓ 已存檔並送出更新。可以關閉這個視窗了。</p>
+            <p class="et-done-sub">
+              網站約 1–2 分鐘後更新，屆時重新整理文章頁即可看到新內容。
+              <a href="https://github.com/yao-care/appi.news/actions" target="_blank" rel="noopener noreferrer">查看部署進度 →</a>
+            </p>
           {/if}
+          <div class="et-done-actions">
+            <button class="et-primary" onclick={onclose}>關閉</button>
+            <button onclick={() => { stopDeployPoll(); deployState = ''; status = 'ready'; message = ''; }}>繼續編輯</button>
+          </div>
         </div>
       {/if}
-    {/if}
+    </div>
 
-    {#if tab === 'source'}
-      <textarea class="et-source" bind:value={rawDraft} spellcheck="false"></textarea>
-      <button onclick={applySource}>套用原始碼</button>
-    {/if}
-
-    {#if tab === 'seo' && loaded && lintResults.length > 0}
-      <ul class="et-lint" aria-label="內容檢查建議">
-        {#each lintResults as r}
-          <li class="et-lint-{r.level}">
-            <span class="et-lint-level">{r.level}</span>
-            <span class="et-lint-msg">{r.message}{#if r.field} <code>({r.field})</code>{/if}</span>
-            {#if r.fix}<span class="et-lint-fix">建議：{r.fix}</span>{/if}
-          </li>
-        {/each}
-      </ul>
-    {/if}
-
-    {#if status === 'done'}
-      <div class="et-done">
-        {#if deployState === 'live'}
-          <p class="et-done-msg">✅ 已上線！重新整理文章頁就能看到新內容。</p>
-          <p class="et-done-sub">可以關閉這個視窗了。</p>
-        {:else if deployState === 'failed'}
-          <p class="et-done-msg et-done-fail">⚠ 已存檔，但部署失敗。</p>
-          <p class="et-done-sub">
-            請<a href="https://github.com/yao-care/appi.news/actions" target="_blank" rel="noopener noreferrer">查看部署進度</a>了解原因，或聯絡網站工程師。
-          </p>
-        {:else if deployState === 'pending'}
-          <p class="et-done-msg">✓ 已存檔，部署中…</p>
-          <p class="et-done-sub">
-            完成後這裡會自動顯示「已上線」（約 1–2 分鐘）。你也可以直接關閉，網站會在背景更新。
-            <a href="https://github.com/yao-care/appi.news/actions" target="_blank" rel="noopener noreferrer">查看部署進度 →</a>
-          </p>
-        {:else}
-          <p class="et-done-msg">✓ 已存檔並送出更新。可以關閉這個視窗了。</p>
-          <p class="et-done-sub">
-            網站約 1–2 分鐘後更新，屆時重新整理文章頁即可看到新內容。
-            <a href="https://github.com/yao-care/appi.news/actions" target="_blank" rel="noopener noreferrer">查看部署進度 →</a>
-          </p>
-        {/if}
-        <div class="et-done-actions">
-          <button class="et-primary" onclick={onclose}>關閉</button>
-          <button onclick={() => { stopDeployPoll(); deployState = ''; status = 'ready'; message = ''; }}>繼續編輯</button>
-        </div>
+    {#if status !== 'done'}
+      <div class="et-foot">
+        {#if message}<p class="et-msg">{message}</p>{/if}
+        {#if saveError}<p class="et-msg et-save-error">{saveError}</p>{/if}
+        <footer>
+          <button class="et-primary" onclick={save} disabled={status === 'saving' || status === 'loading'}>儲存</button>
+          <button onclick={reload}>重新載入最新版</button>
+        </footer>
       </div>
-    {:else}
-      {#if message}<p class="et-msg">{message}</p>{/if}
-      {#if saveError}<p class="et-msg et-save-error">{saveError}</p>{/if}
-      <footer>
-        <button class="et-primary" onclick={save} disabled={status === 'saving' || status === 'loading'}>儲存</button>
-        <button onclick={reload}>重新載入最新版</button>
-      </footer>
     {/if}
   </div>
 </div>
@@ -340,10 +353,30 @@
     padding: 0.5rem 0.65rem;
   }
   .et-panel textarea:focus-visible { outline: 2px solid var(--color-teal); outline-offset: 1px; }
-  .et-body { display: flex; flex-direction: column; gap: 0.25rem; flex: 1; margin: 0.75rem 0; min-height: 0; }
+  /* 中段內容捲動區：表單超出時在面板內捲動，overscroll-behavior:contain 阻止滾輪
+     穿透到底層文章頁（搭配 onMount 的 body scroll lock 雙保險） */
+  .et-scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.5rem 0.4rem 0.5rem 0;
+  }
+  .et-foot {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.6rem;
+    margin-top: 0.4rem;
+    border-top: 1px solid var(--color-fog);
+  }
+  .et-body { display: flex; flex-direction: column; gap: 0.25rem; min-height: 0; }
   .et-body span { font-family: var(--font-ui); font-size: var(--text-meta); font-weight: 600; }
-  .et-body textarea { flex: 1; min-height: 8rem; }
-  .et-source { flex: 1; min-height: 12rem; margin: 0.75rem 0; }
+  .et-body textarea { min-height: 8rem; }
+  .et-source { flex: 1; min-height: 16rem; }
   .et-msg {
     color: var(--color-ink);
     background: var(--color-teal-subtle);

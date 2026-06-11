@@ -10,21 +10,30 @@
     "preview": "astro preview",
     "generate:og": "node scripts/generate-og.mjs",
     "check:links": "node scripts/check-links.mjs",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.14",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/svelte": "^7.2.5",
     "@fontsource/inter": "^5.2.8",
     "@fontsource/noto-sans-tc": "^5.2.9",
     "@fontsource/noto-serif-tc": "^5.2.10",
-    "astro": "^5.18.1"
+    "@toast-ui/editor": "^3.2.2",
+    "astro": "^5.18.1",
+    "js-yaml": "^4.2.0",
+    "pinyin-pro": "^3.28.1",
+    "svelte": "^5.56.3"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.10.0",
     "pagefind": "^1.5.2",
     "sharp": "^0.34.5",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.8"
   }
 }

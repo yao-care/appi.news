@@ -12,8 +12,9 @@
 
   let { repoPath, collection, slug, onclose, initialDoc = null } = $props();
 
-  // AI 建議功能開關：AI Worker 已部署 + 設好 ANTHROPIC_API_KEY 後開啟
-  const AI_ENABLED = true;
+  // AI 建議功能開關：刻意關閉（線上即時潤飾會計費，使用者選擇不啟用）。
+  // 要開啟：設好 ai-suggest worker 的 ANTHROPIC_API_KEY secret 後改為 true。
+  const AI_ENABLED = false;
   const AI_WORKER = 'https://appi-news-ai-suggest.lightman-chang.workers.dev';
   let suggestion = $state('');
   async function suggest(task) {

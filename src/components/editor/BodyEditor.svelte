@@ -2,6 +2,7 @@
   import { onMount, onDestroy } from 'svelte';
   import { getToken } from '@/utils/editor/token';
   import { uploadImage } from '@/utils/editor/image-upload';
+  import { compressImage } from '@/utils/editor/image-compress';
 
   let { value = '', slug = '', onchange } = $props();
 
@@ -49,7 +50,8 @@
       hooks: {
         addImageBlobHook: async (blob, callback) => {
           try {
-            const url = await uploadImage({ blob, slug, token: getToken(), timestamp: Date.now() });
+            const compressed = await compressImage(blob, { maxWidth: 1280, mime: 'image/webp', quality: 0.82 });
+            const url = await uploadImage({ blob: compressed, slug, token: getToken(), timestamp: Date.now() });
             callback(url, '');
           } catch (e) {
             alert(e instanceof Error ? e.message : String(e));

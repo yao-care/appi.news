@@ -1,6 +1,7 @@
 <script>
   import { getToken } from '@/utils/editor/token';
   import { uploadImage } from '@/utils/editor/image-upload';
+  import { compressImage } from '@/utils/editor/image-compress';
   import ImagePicker from './ImagePicker.svelte';
 
   // frontmatter：完整物件；onchange(next) 回傳完整物件（與 SeoFields 一致）
@@ -37,8 +38,10 @@
     if (result.source !== 'generated') return;
     uploading = true; uploadError = '';
     try {
-      const url = await uploadImage({ blob: result.blob, slug, token: getToken(), timestamp: Date.now(), dir: 'covers' });
-      sessionPreview = result.previewUrl; // 當場預覽（記憶體圖），不等部署
+      // 壓縮：封面縮到 ≤1280 寬、轉 WebP，避免 ~3.3MB 生成圖拖慢網站
+      const compressed = await compressImage(result.blob, { maxWidth: 1280, mime: 'image/webp', quality: 0.82 });
+      const url = await uploadImage({ blob: compressed, slug, token: getToken(), timestamp: Date.now(), dir: 'covers' });
+      sessionPreview = URL.createObjectURL(compressed); // 當場預覽壓縮後實際上傳的圖
       onchange({ ...frontmatter, coverImage: url });
       showPicker = false;
     } catch (e) {

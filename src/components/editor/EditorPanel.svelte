@@ -9,6 +9,7 @@
   import { validateArticleFrontmatter } from '@/utils/editor/article-schema';
   import SeoFields from './SeoFields.svelte';
   import BodyEditor from './BodyEditor.svelte';
+  import CoverField from './CoverField.svelte';
 
   let { repoPath, collection, slug, onclose, initialDoc = null } = $props();
 
@@ -225,6 +226,7 @@
       {#if status === 'loading'}<p class="et-loading">載入文章內容中…</p>{/if}
 
       {#if status !== 'loading' && tab === 'seo'}
+        <CoverField {frontmatter} {slug} onchange={(fm) => (frontmatter = fm)} />
         <SeoFields {frontmatter} onchange={(fm) => (frontmatter = fm)} />
         <div class="et-body">
           <span>正文</span>

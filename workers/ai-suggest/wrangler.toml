@@ -7,3 +7,5 @@ ALLOWED_ORIGIN = "https://yao-care.github.io"
 ANTHROPIC_MODEL = "claude-haiku-4-5-20251001"
 GITHUB_OWNER = "yao-care"
 GITHUB_REPO = "appi.news"
+# 這把 key 的專案可用模型為 gpt-image-2（即使用者說的「image2」）。
+OPENAI_IMAGE_MODEL = "gpt-image-2"

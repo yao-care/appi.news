@@ -6,6 +6,13 @@ export interface Env {
   ALLOWED_ORIGIN: string;
   GITHUB_OWNER: string;
   GITHUB_REPO: string;
+  // 生圖 secrets（wrangler secret put）；缺 FAL_KEY 時 Flux 端點回 502，OpenAI 不受影響。
+  OPENAI_API_KEY?: string;
+  OPENAI_IMAGE_MODEL?: string; // 'gpt-image-1'（需組織驗證）或 'dall-e-3'（免驗證）；預設 gpt-image-1
+  FAL_KEY?: string;
+  // 圖庫 secrets（Phase 2）
+  UNSPLASH_ACCESS_KEY?: string;
+  PEXELS_API_KEY?: string;
 }
 
 export default { async fetch(req: Request, env: Env) { return handle(req, env); } };
@@ -22,24 +29,108 @@ function json(obj: unknown, status: number, env: Env): Response {
   return new Response(JSON.stringify(obj), { status, headers: { 'content-type': 'application/json', ...cors(env) } });
 }
 
+/** 驗證 Bearer GitHub token 對 repo 有 push 權；通過回 null，否則回對應錯誤 Response。 */
+async function requirePush(request: Request, env: Env): Promise<Response | null> {
+  const token = (request.headers.get('authorization') || '').replace(/^Bearer\s+/i, '');
+  if (!token) return json({ error: '缺少授權' }, 401, env);
+  const repoRes = await fetch(`https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}`, {
+    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'User-Agent': 'appi-ai' },
+  });
+  const repo = (await repoRes.json()) as { permissions?: { push?: boolean } };
+  if (!repo.permissions?.push) return json({ error: '無 repo 寫入權' }, 403, env);
+  return null;
+}
+
+export type GenSize = 'landscape' | 'square' | 'portrait';
+export type GenResult = { b64: string; mime: string };
+
+/** Uint8Array → base64（worker/瀏覽器皆可，無 Node Buffer 相依） */
+function bytesToBase64(bytes: Uint8Array): string {
+  let bin = '';
+  for (const b of bytes) bin += String.fromCharCode(b);
+  return btoa(bin);
+}
+
+/** OpenAI gpt-image-1：同步回 b64_json。 */
+async function genOpenAI(env: Env, prompt: string, size: GenSize): Promise<GenResult> {
+  if (!env.OPENAI_API_KEY) throw new Error('未設定 OPENAI_API_KEY');
+  const model = env.OPENAI_IMAGE_MODEL || 'gpt-image-1';
+  // gpt-image-1 與 dall-e-3 的尺寸與回傳格式不同：dall-e-3 橫式為 1792x1024 且需 response_format
+  // 取 b64；gpt-image-1 橫式 1536x1024 且一律回 b64_json（不接受 response_format 參數）。
+  const dalle = model === 'dall-e-3';
+  const size3: Record<GenSize, string> = dalle
+    ? { landscape: '1792x1024', square: '1024x1024', portrait: '1024x1792' }
+    : { landscape: '1536x1024', square: '1024x1024', portrait: '1024x1536' };
+  // 不送 response_format（dall-e-3 新版 API 不接受）；改為 b64_json / url 兩種回應都接。
+  const res = await fetch('https://api.openai.com/v1/images/generations', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${env.OPENAI_API_KEY}`, 'content-type': 'application/json' },
+    body: JSON.stringify({ model, prompt, n: 1, size: size3[size] }),
+  });
+  if (!res.ok) throw new Error(`OpenAI 生圖失敗（${res.status}）：${(await res.text()).slice(0, 300)}`);
+  const data = (await res.json()) as { data?: { b64_json?: string; url?: string }[] };
+  const item = data.data?.[0];
+  if (item?.b64_json) return { b64: item.b64_json, mime: 'image/png' };
+  if (item?.url) {
+    const img = await fetch(item.url);
+    if (!img.ok) throw new Error(`OpenAI 取圖失敗（${img.status}）`);
+    const mime = img.headers.get('content-type') || 'image/png';
+    return { b64: bytesToBase64(new Uint8Array(await img.arrayBuffer())), mime };
+  }
+  throw new Error('OpenAI 未回傳圖片');
+}
+
+/** Flux（經 fal 同步端點 fal.run）：回圖片 URL，worker 抓回轉 b64。 */
+async function genFlux(env: Env, prompt: string, size: GenSize): Promise<GenResult> {
+  if (!env.FAL_KEY) throw new Error('未設定 FAL_KEY，Flux 暫不可用');
+  const sizeMap: Record<GenSize, string> = { landscape: 'landscape_4_3', square: 'square_hd', portrait: 'portrait_4_3' };
+  const res = await fetch('https://fal.run/fal-ai/flux/schnell', {
+    method: 'POST',
+    headers: { Authorization: `Key ${env.FAL_KEY}`, 'content-type': 'application/json' },
+    body: JSON.stringify({ prompt, image_size: sizeMap[size], num_images: 1 }),
+  });
+  if (!res.ok) throw new Error(`Flux 生圖失敗（${res.status}）：${(await res.text()).slice(0, 300)}`);
+  const data = (await res.json()) as { images?: { url?: string }[] };
+  const url = data.images?.[0]?.url;
+  if (!url) throw new Error('Flux 未回傳圖片');
+  const img = await fetch(url);
+  if (!img.ok) throw new Error(`Flux 取圖失敗（${img.status}）`);
+  const mime = img.headers.get('content-type') || 'image/jpeg';
+  return { b64: bytesToBase64(new Uint8Array(await img.arrayBuffer())), mime };
+}
+
 export async function handle(request: Request, env: Env): Promise<Response> {
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(env) });
 
   const url = new URL(request.url);
+
+  if (request.method === 'GET' && url.pathname === '/config') {
+    return json({
+      openaiImageModel: env.OPENAI_IMAGE_MODEL || 'gpt-image-1',
+      hasOpenAI: !!env.OPENAI_API_KEY,
+      hasFal: !!env.FAL_KEY,
+    }, 200, env);
+  }
+
+  if (request.method === 'POST' && url.pathname === '/generate') {
+    const denied = await requirePush(request, env);
+    if (denied) return denied;
+    const { prompt, model, size } = (await request.json()) as { prompt?: string; model?: string; size?: GenSize };
+    if (!prompt || !prompt.trim()) return json({ error: '缺少 prompt' }, 400, env);
+    const sz: GenSize = size === 'square' || size === 'portrait' ? size : 'landscape';
+    try {
+      const out = model === 'flux' ? await genFlux(env, prompt, sz) : await genOpenAI(env, prompt, sz);
+      return json(out, 200, env);
+    } catch (e) {
+      return json({ error: e instanceof Error ? e.message : String(e) }, 502, env);
+    }
+  }
+
   if (request.method === 'POST' && url.pathname === '/suggest') {
-    const token = (request.headers.get('authorization') || '').replace(/^Bearer\s+/i, '');
-    if (!token) return json({ error: '缺少授權' }, 401, env);
-
-    // 驗證 token 對 repo 有 push 權
-    const repoRes = await fetch(`https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}`, {
-      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'User-Agent': 'et-ai-suggest' },
-    });
-    const repo = (await repoRes.json()) as { permissions?: { push?: boolean } };
-    if (!repo.permissions?.push) return json({ error: '無 repo 寫入權' }, 403, env);
-
+    const denied = await requirePush(request, env);
+    if (denied) return denied;
     const { task, context, selection } = (await request.json()) as { task: string; context: Record<string, unknown>; selection: string };
     const prompt = buildPrompt(task, context, selection);
-
     const aiRes = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: { 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },

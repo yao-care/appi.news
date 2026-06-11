@@ -29,12 +29,10 @@ export const FOOTER_COLUMNS = [
     ],
   },
   {
-    title: '作者與合作',
+    title: '合作洽詢',
     links: [
-      { label: '成為作者', href: '/join/' },
-      { label: '作者方案', href: '/pricing/' },
-      { label: '投稿規範', href: '/contributor-guidelines/' },
       { label: '新聞稿與商業合作', href: '/sponsored/' },
+      { label: '專業內容合作', href: '/professional-content/' },
     ],
   },
   {

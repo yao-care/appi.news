@@ -15,9 +15,8 @@ function isActive(href: string): boolean {
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href={navUrl('/')}>
-      <span class="brand-mark">APPI</span>
-      <span class="brand-text">
-        <span class="brand-name">News</span>
+      <span class="brand-lockup">
+        <span class="brand-name">APPI News</span>
         <span class="brand-tag">亞太專業觀點</span>
       </span>
     </a>
@@ -40,7 +39,6 @@ function isActive(href: string): boolean {
       <a class="search-link" href={navUrl('/search/')} aria-label="搜尋">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
       </a>
-      <a class="join-btn" href={navUrl('/join/')}>成為作者</a>
       <button class="nav-toggle" aria-label="開啟選單" aria-expanded="false" id="navToggle">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
@@ -55,8 +53,6 @@ function isActive(href: string): boolean {
           <li><a href={navUrl(item.href)}>{item.label}</a></li>
         ))
       }
-      <li><a href={navUrl('/columns/')}>專欄</a></li>
-      <li><a href={navUrl('/pricing/')}>作者方案</a></li>
       <li><a href={navUrl('/search/')}>搜尋</a></li>
     </ul>
   </nav>
@@ -95,35 +91,28 @@ function isActive(href: string): boolean {
   .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
     text-decoration: none;
     flex-shrink: 0;
   }
-  .brand-mark {
-    font-family: var(--font-sans);
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    font-size: var(--text-lg);
-    color: var(--appi-brand);
-    background: var(--bg-tint);
-    padding: 3px 9px;
-    border-radius: var(--radius-sm);
-  }
-  .brand-text {
+  .brand-lockup {
     display: flex;
     flex-direction: column;
-    line-height: 1.1;
+    line-height: 1.15;
+    gap: 1px;
   }
   .brand-name {
     font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: var(--text-sm);
-    color: var(--ink);
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+    color: var(--appi-brand);
   }
   .brand-tag {
-    font-size: var(--text-xs);
+    font-family: var(--font-sans);
+    font-size: 0.6875rem; /* 11px — 固定，不跟 token 縮 */
     color: var(--ink-3);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.06em;
+    font-weight: 400;
   }
   .main-nav {
     flex: 1;
@@ -138,7 +127,7 @@ function isActive(href: string): boolean {
   }
   .main-nav a {
     display: block;
-    padding: 8px 11px;
+    padding: 7px 10px;
     color: var(--ink-2);
     font-size: var(--text-sm);
     font-weight: 500;
@@ -166,19 +155,6 @@ function isActive(href: string): boolean {
   .search-link:hover {
     color: var(--appi-brand);
   }
-  .join-btn {
-    background: var(--appi-brand);
-    color: var(--white);
-    padding: 8px 16px;
-    border-radius: var(--radius-sm);
-    font-size: var(--text-xs);
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .join-btn:hover {
-    background: var(--appi-brand-light);
-  }
   .nav-toggle {
     display: none;
     background: none;
@@ -202,6 +178,10 @@ function isActive(href: string): boolean {
     color: var(--ink-2);
     font-weight: 500;
     border-bottom: 1px solid var(--line-2);
+    text-decoration: none;
+  }
+  .mobile-nav a:hover {
+    color: var(--appi-brand);
   }
 
   @media (max-width: 1000px) {
@@ -218,9 +198,6 @@ function isActive(href: string): boolean {
     }
   }
   @media (max-width: 480px) {
-    .join-btn {
-      display: none;
-    }
     .header-inner {
       gap: 14px;
     }

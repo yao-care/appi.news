@@ -1,0 +1,235 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { url } from '@/utils/url';
+
+const services = [
+  {
+    title: 'AI 輔助初稿',
+    desc: '依據作者提供的主題、觀點與專業背景，生成結構化初稿，加速寫作流程。',
+  },
+  {
+    title: '專家同儕審稿',
+    desc: '由 APPI 編輯與領域顧問協助審閱內容正確性、論點清晰度與讀者適配性。',
+  },
+  {
+    title: 'SEO 架構與排版',
+    desc: '標題結構、Meta 資訊、封面圖與內文排版，符合搜尋最佳化與媒體發布標準。',
+  },
+  {
+    title: '媒體刊登與長期曝光',
+    desc: '文章以作者署名發布於 APPI News，建立可被搜尋、可被引用的專業內容資產。',
+  },
+  {
+    title: '作者頁與專欄',
+    desc: '依合作規模提供個人作者頁或品牌專欄頁，建立完整的線上專業形象。',
+  },
+  {
+    title: '商業內容揭露合規',
+    desc: '贊助文章、企業觀點與品牌專欄均依編輯政策規範揭露，維護讀者信任。',
+  },
+];
+
+const audiences = [
+  '醫師、藥師、醫療專業人員',
+  '工程師、科技顧問',
+  '財經研究者、企業顧問',
+  '教育者、講師、教練',
+  '品牌主、診所、機構',
+  '公關、行銷與媒體公司',
+];
+---
+
+<BaseLayout
+  title="專業內容合作 — APPI News"
+  description="APPI News 提供專業內容合作服務，結合 AI 輔助寫作、同儕審稿與媒體刊登，協助專業者建立長期內容資產。"
+  path="/professional-content/"
+  ogImage="og/default.png"
+>
+  <div class="pc-hero">
+    <div class="container">
+      <p class="pc-eyebrow">Professional Content Partnership</p>
+      <h1>專業內容合作</h1>
+      <p class="pc-lead">
+        APPI News 與具備領域專業的作者、機構及品牌合作，透過結構化的內容流程，
+        將專業知識轉化為具可信度、可長期曝光的媒體內容。
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <section class="section">
+      <div class="section-head">
+        <h2>服務項目</h2>
+      </div>
+      <div class="service-grid">
+        {
+          services.map((s) => (
+            <div class="service-item">
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>適合合作對象</h2>
+      </div>
+      <ul class="audience-list">
+        {audiences.map((a) => <li>{a}</li>)}
+      </ul>
+    </section>
+
+    <section class="section pc-principles">
+      <div class="section-head">
+        <h2>編輯獨立原則</h2>
+      </div>
+      <p>
+        所有刊登於 APPI News 的內容，無論合作形式，均須符合本媒體的
+        <a href={url('/editorial-policy/')}>編輯政策</a>與資訊正確性標準。
+        贊助內容與商業合作文章會明確標示，編輯決策不受商業關係影響。
+      </p>
+      <p>
+        我們相信，專業內容的長期價值建立在誠實揭露與內容品質之上，而非短期流量操作。
+      </p>
+    </section>
+
+    <section class="section pc-contact">
+      <h2>洽詢合作</h2>
+      <p>
+        如需了解詳細合作方式、內容規範或費用，請透過以下管道聯絡我們的編輯團隊。
+        我們會在兩個工作日內回覆。
+      </p>
+      <div class="pc-actions">
+        <a class="btn btn--primary" href={url('/contact/')}>聯絡編輯部</a>
+        <a class="btn btn--ghost" href={url('/editorial-policy/')}>閱讀編輯政策</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .pc-hero {
+    background: linear-gradient(160deg, var(--appi-brand-dark) 0%, var(--appi-brand) 100%);
+    color: var(--white);
+    padding-block: 60px 52px;
+    margin-bottom: 8px;
+  }
+  .pc-eyebrow {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--on-brand-dim);
+    margin: 0 0 12px;
+  }
+  .pc-hero h1 {
+    color: var(--white);
+    font-size: var(--text-2xl);
+    margin: 0 0 16px;
+    line-height: 1.25;
+  }
+  .pc-lead {
+    color: var(--on-brand);
+    font-size: var(--text-base);
+    max-width: 700px;
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .service-item {
+    background: var(--bg-soft);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    border-left: 3px solid var(--appi-accent);
+  }
+  .service-item h3 {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .service-item p {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--ink-2);
+    line-height: 1.7;
+  }
+
+  .audience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .audience-list li {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-size: var(--text-sm);
+    color: var(--ink-2);
+    font-weight: 500;
+  }
+
+  .pc-principles p {
+    font-size: var(--text-base);
+    color: var(--ink-2);
+    line-height: 1.8;
+    max-width: 760px;
+    margin: 0 0 1em;
+  }
+
+  .pc-contact {
+    background: var(--bg-tint);
+    border-radius: var(--radius);
+    padding: 40px 40px;
+    margin-bottom: 56px;
+  }
+  .pc-contact h2 {
+    margin: 0 0 12px;
+  }
+  .pc-contact p {
+    font-size: var(--text-sm);
+    color: var(--ink-2);
+    line-height: 1.75;
+    max-width: 640px;
+    margin: 0 0 24px;
+  }
+  .pc-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 860px) {
+    .service-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .audience-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 520px) {
+    .service-grid,
+    .audience-list {
+      grid-template-columns: 1fr;
+    }
+    .pc-hero h1 {
+      font-size: var(--text-xl);
+    }
+    .pc-contact {
+      padding: 28px 20px;
+    }
+  }
+</style>

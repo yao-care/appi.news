@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ArticleCard from '@/components/blocks/ArticleCard.astro';
-import CTAJoinAuthor from '@/components/blocks/CTAJoinAuthor.astro';
 import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
 import CategoryTag from '@/components/ui/CategoryTag.astro';
 import {
@@ -102,7 +101,6 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
       </div>
     </section>
 
-    <CTAJoinAuthor />
   </div>
 </BaseLayout>
 

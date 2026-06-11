@@ -8,11 +8,13 @@ const year = SITE.org.foundingYear;
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <span class="brand-mark">APPI</span>
+      <div class="footer-masthead">
+        <span class="footer-brand-name">APPI News</span>
+      </div>
       <p class="footer-tag">{SITE.tagline}</p>
       <p class="footer-tag-en">{SITE.taglineEn}</p>
       <p class="footer-desc">
-        結合 AI 輔助寫作、專家審稿與媒體刊登的專業觀點平台。
+        提供跨領域專業觀點與深度報導，聚焦亞太地區的健康、科技、財經與社會議題。
       </p>
     </div>
 
@@ -54,21 +56,22 @@ const year = SITE.org.foundingYear;
     gap: 48px;
     padding-block: 52px;
   }
-  .brand-mark {
+  .footer-masthead {
+    display: flex;
+    align-items: center;
+  }
+  .footer-brand-name {
     font-family: var(--font-sans);
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    font-size: var(--text-lg);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.01em;
     color: var(--white);
-    background: rgba(255, 255, 255, 0.12);
-    padding: 4px 10px;
-    border-radius: var(--radius-sm);
-    display: inline-block;
   }
   .footer-tag {
     margin: 14px 0 2px;
     font-weight: 600;
     color: var(--white);
+    font-size: var(--text-sm);
   }
   .footer-tag-en {
     margin: 0;

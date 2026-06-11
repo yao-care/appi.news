@@ -8,7 +8,14 @@ interface Props {
 }
 const { sourceType = 'editorial', custom } = Astro.props;
 const preset = DISCLOSURES[sourceType];
-const text = custom ?? preset?.text;
+const rawText = custom ?? preset?.text;
+const isAiDisclosure =
+  sourceType === 'ai-assisted' ||
+  rawText?.includes('AI 輔助') ||
+  rawText?.includes('AI輔助') ||
+  rawText?.includes('AI 初稿') ||
+  rawText?.includes('AI初稿');
+const text = isAiDisclosure ? undefined : rawText;
 const label = preset?.label ?? '揭露';
 ---
 {

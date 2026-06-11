@@ -2,6 +2,7 @@
 name: "CΛ / Lightman"
 displayTitle: "圍棋思維 × 醫療資訊 × 數位健康"
 bioShort: "從問題背後找真正的問題，把複雜系統拆成可理解、可執行的結構。"
+avatar: "authors/lightman.jpg"
 credentials:
   - "台灣好棋寶寶協會 創辦人"
   - "藥提醒科技 技術長"

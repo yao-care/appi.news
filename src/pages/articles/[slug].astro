@@ -219,7 +219,7 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
   </article>
   <EditButton
     client:idle
-    repoPath={`src/content/articles/${article.id.endsWith('.md') ? article.id : `${article.id}.md`}`}
+    repoPath={article.filePath}
     collection="articles"
     slug={articleSlug(article)}
   />

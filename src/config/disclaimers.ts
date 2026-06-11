@@ -1,5 +1,5 @@
 /**
- * 免責聲明（DisclaimerBox）與 AI 輔助 / 商業揭露（DisclosureBox）文案。
+ * 免責聲明（DisclaimerBox）與內容來源揭露（DisclosureBox）文案。
  * 文章 frontmatter 以 disclaimerType / sourceType 對應到這裡。
  */
 
@@ -41,10 +41,7 @@ export const DISCLOSURES: Record<SourceType, { label: string; text: string } | n
     label: '編輯部',
     text: '本文由 APPI 編輯部製作，內容經編輯檢核。',
   },
-  'ai-assisted': {
-    label: 'AI 輔助',
-    text: '本文使用 AI 輔助整理初稿，並由作者或 APPI 編輯部進行內容檢核與修訂。',
-  },
+  'ai-assisted': null,
   contributor: {
     label: '作者來稿',
     text: '本文為作者來稿，觀點不必然代表 APPI 編輯部立場。',
@@ -65,5 +62,5 @@ export const SOURCE_TYPE_LABELS: Record<SourceType, string> = {
   contributor: '作者來稿',
   sponsored: '商業合作',
   'press-release': '新聞稿',
-  'ai-assisted': 'AI 輔助',
+  'ai-assisted': '編輯部',
 };

@@ -7,9 +7,15 @@ export type Column = CollectionEntry<'columns'>;
 export type Topic = CollectionEntry<'topics'>;
 
 const SUPPLEMENT_AD_COMPLIANCE_COVER = 'articles/supplement-ad-compliance-ai-review.svg';
+const DEMENTIA_FRIENDLY_COMMUNITY_ACTIVITIES_COVER =
+  'articles/dementia-friendly-community-activities-realistic.svg';
 
 function isSupplementAdComplianceArticle(a: Article): boolean {
   return articleSlug(a).startsWith('保健食品廣告合規完整指南');
+}
+
+function isDementiaFriendlyCommunityActivitiesArticle(a: Article): boolean {
+  return articleSlug(a).startsWith('5-個失智友善社區的活動設計原則');
 }
 
 /* ----------------------------- articles ----------------------------- */
@@ -147,6 +153,9 @@ export function readingTime(a: Article): number {
 export function coverImageFor(a: Article): string {
   if (a.data.coverImage) return asset(a.data.coverImage);
   if (isSupplementAdComplianceArticle(a)) return asset(SUPPLEMENT_AD_COMPLIANCE_COVER);
+  if (isDementiaFriendlyCommunityActivitiesArticle(a)) {
+    return asset(DEMENTIA_FRIENDLY_COMMUNITY_ACTIVITIES_COVER);
+  }
   return asset(`og/${a.data.category}.png`);
 }
 

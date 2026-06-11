@@ -2,8 +2,7 @@
   import { onMount } from 'svelte';
   import { getToken, setToken, clearToken } from '@/utils/editor/token';
 
-  // TODO(Task 14): 部署後回填實際 OAuth worker 網域
-  const WORKER = 'https://appi-news-github-oauth.PLACEHOLDER.workers.dev';
+  const WORKER = 'https://appi-news-github-oauth.lightman-chang.workers.dev';
   let loggedIn = $state(false);
 
   onMount(() => {

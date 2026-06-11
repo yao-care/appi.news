@@ -12,10 +12,9 @@
 
   let { repoPath, collection, slug, onclose, initialDoc = null } = $props();
 
-  // AI 建議功能開關：AI Worker 部署 + 設好 ANTHROPIC_API_KEY 後改為 true 即可開啟
-  const AI_ENABLED = false;
-  // TODO(Task 14): 部署後回填實際 workers.dev 網域
-  const AI_WORKER = 'https://appi-news-ai-suggest.PLACEHOLDER.workers.dev';
+  // AI 建議功能開關：AI Worker 已部署 + 設好 ANTHROPIC_API_KEY 後開啟
+  const AI_ENABLED = true;
+  const AI_WORKER = 'https://appi-news-ai-suggest.lightman-chang.workers.dev';
   let suggestion = $state('');
   async function suggest(task) {
     const token = getToken();

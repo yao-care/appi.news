@@ -135,6 +135,48 @@ async function genFlux(env: Env, prompt: string, size: GenSize): Promise<GenResu
   return { b64: bytesToBase64(new Uint8Array(await img.arrayBuffer())), mime };
 }
 
+// ── Flux 走 fal 原生佇列（fal 自己撐生圖，worker 只「提交 + 轉發狀態」，不需 Cloudflare Queue）──
+const FAL_MODEL_PATH = 'fal-ai/flux/schnell';
+const FAL_SIZE: Record<GenSize, string> = { landscape: 'landscape_4_3', square: 'square_hd', portrait: 'portrait_4_3' };
+
+/** 送 fal 佇列，回 request_id（jobId 用）。 */
+async function falSubmit(env: Env, prompt: string, size: GenSize): Promise<string> {
+  if (!env.FAL_KEY) throw new Error('未設定 FAL_KEY，Flux 暫不可用');
+  const res = await fetch(`https://queue.fal.run/${FAL_MODEL_PATH}`, {
+    method: 'POST',
+    headers: { Authorization: `Key ${env.FAL_KEY}`, 'content-type': 'application/json' },
+    body: JSON.stringify({ prompt, image_size: FAL_SIZE[size], num_images: 1 }),
+  });
+  if (!res.ok) throw new Error(`Flux 送出失敗（${res.status}）：${(await res.text()).slice(0, 200)}`);
+  const data = (await res.json()) as { request_id?: string };
+  if (!data.request_id) throw new Error('Flux 未回傳 request_id');
+  return data.request_id;
+}
+
+export type StatusResult =
+  | { status: 'pending' }
+  | { status: 'done'; b64: string; mime: string }
+  | { status: 'error'; error: string };
+
+/** 查 fal 佇列狀態；完成則取圖轉 b64。 */
+async function falStatus(env: Env, requestId: string): Promise<StatusResult> {
+  if (!env.FAL_KEY) return { status: 'error', error: '未設定 FAL_KEY' };
+  const base = `https://queue.fal.run/${FAL_MODEL_PATH}/requests/${requestId}`;
+  const stRes = await fetch(`${base}/status`, { headers: { Authorization: `Key ${env.FAL_KEY}` } });
+  if (!stRes.ok) return { status: 'error', error: `Flux 狀態查詢失敗（${stRes.status}）` };
+  const st = (await stRes.json()) as { status?: string };
+  if (st.status !== 'COMPLETED') return { status: 'pending' }; // IN_QUEUE / IN_PROGRESS
+  const rRes = await fetch(base, { headers: { Authorization: `Key ${env.FAL_KEY}` } });
+  if (!rRes.ok) return { status: 'error', error: `Flux 取結果失敗（${rRes.status}）` };
+  const data = (await rRes.json()) as { images?: { url?: string }[] };
+  const url = data.images?.[0]?.url;
+  if (!url) return { status: 'error', error: 'Flux 未回傳圖片' };
+  const img = await fetch(url);
+  if (!img.ok) return { status: 'error', error: `Flux 取圖失敗（${img.status}）` };
+  const mime = img.headers.get('content-type') || 'image/jpeg';
+  return { status: 'done', b64: bytesToBase64(new Uint8Array(await img.arrayBuffer())), mime };
+}
+
 /** 從 Claude 回應文字抽出標籤陣列：容忍 ```json 包裹或前後雜訊，取第一個 [...]。 */
 export function parseTagArray(text: string): string[] {
   const m = text.match(/\[[\s\S]*?\]/);
@@ -234,21 +276,38 @@ export async function handle(request: Request, env: Env, ctx?: CtxLike): Promise
   if (request.method === 'POST' && url.pathname === '/generate-async') {
     const denied = await requirePush(request, env);
     if (denied) return denied;
-    if (!env.GEN_JOBS || !env.GEN_QUEUE) return json({ error: '未設定工單儲存/佇列' }, 500, env);
     const { prompt, model, size } = (await request.json()) as { prompt?: string; model?: string; size?: GenSize };
     if (!prompt || !prompt.trim()) return json({ error: '缺少 prompt' }, 400, env);
     const sz: GenSize = size === 'square' || size === 'portrait' ? size : 'landscape';
+    const finalPrompt = applyPeopleDirective(prompt);
+
+    // Flux：走 fal 原生佇列。jobId=`fal:<request_id>`，狀態直接查 fal，不動 Cloudflare Queue/KV。
+    if (model === 'flux') {
+      try {
+        const reqId = await falSubmit(env, finalPrompt, sz);
+        return json({ jobId: `fal:${reqId}` }, 200, env);
+      } catch (e) {
+        return json({ error: e instanceof Error ? e.message : String(e) }, 502, env);
+      }
+    }
+
+    // OpenAI：同步 API，無法查狀態 → 用 Cloudflare Queue consumer 扛 + KV 工單。
+    if (!env.GEN_JOBS || !env.GEN_QUEUE) return json({ error: '未設定工單儲存/佇列' }, 500, env);
     const jobId = crypto.randomUUID();
     await env.GEN_JOBS.put(jobId, JSON.stringify({ status: 'pending' }), { expirationTtl: 900 });
-    // 入列 → consumer 背景生圖（耐久、可重試）。不再用 waitUntil（長生圖會被中止）。
-    await env.GEN_QUEUE.send({ jobId, prompt: applyPeopleDirective(prompt), model, size: sz } satisfies GenMessage);
+    await env.GEN_QUEUE.send({ jobId, prompt: finalPrompt, model, size: sz } satisfies GenMessage);
     return json({ jobId }, 200, env);
   }
 
-  // 輪詢工單狀態。jobId 為不可猜的 UUID（能力憑證）→ 不另做權限檢查，避免每次輪詢都打 GitHub。
+  // 輪詢工單狀態。jobId 不可猜（UUID / fal request_id）→ 不另做權限檢查，避免每次輪詢都打 GitHub。
   if (request.method === 'GET' && url.pathname === '/generate-status') {
     const id = url.searchParams.get('id');
     if (!id) return json({ error: '缺少 id' }, 400, env);
+    // Flux：直接查 fal 佇列狀態
+    if (id.startsWith('fal:')) {
+      return json(await falStatus(env, id.slice(4)), 200, env);
+    }
+    // OpenAI：查 KV 工單
     const raw = await env.GEN_JOBS?.get(id);
     if (!raw) return json({ status: 'unknown' }, 200, env);
     return new Response(raw, { status: 200, headers: { 'content-type': 'application/json', ...cors(env) } });

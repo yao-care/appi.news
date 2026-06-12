@@ -78,6 +78,41 @@ describe('非同步生圖', () => {
     expect(kv.store.get(data.jobId)).toContain('AAAA');
   });
 
+  it('Flux：/generate-async 走 fal 佇列，回 fal:<reqId>（不動 Cloudflare Queue/KV）', async () => {
+    const fetchMock = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ permissions: { push: true } }), { status: 200 })) // requirePush
+      .mockResolvedValueOnce(new Response(JSON.stringify({ request_id: 'REQ123' }), { status: 200 })); // fal submit
+    vi.stubGlobal('fetch', fetchMock);
+    const sent: any[] = [];
+    const env2 = { ...env, FAL_KEY: 'fk', GEN_QUEUE: { send: async (b: unknown) => { sent.push(b); } } };
+    const req = new Request('https://w.dev/generate-async', { method: 'POST', headers: { 'content-type': 'application/json', authorization: 'Bearer x' }, body: JSON.stringify({ prompt: '一個人', model: 'flux', size: 'landscape' }) });
+    const res = await handle(req, env2);
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({ jobId: 'fal:REQ123' });
+    expect(sent).toHaveLength(0); // 沒走 Cloudflare Queue
+    expect(fetchMock.mock.calls[1][0]).toContain('queue.fal.run');
+  });
+
+  it('Flux：/generate-status id=fal:… → 查 fal，COMPLETED 取圖回 done', async () => {
+    const fetchMock = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ status: 'COMPLETED' }), { status: 200 })) // status
+      .mockResolvedValueOnce(new Response(JSON.stringify({ images: [{ url: 'https://fal.media/x.jpg' }] }), { status: 200 })) // result
+      .mockResolvedValueOnce(new Response(new Uint8Array([1, 2, 3]), { status: 200, headers: { 'content-type': 'image/jpeg' } })); // image
+    vi.stubGlobal('fetch', fetchMock);
+    const res = await handle(new Request('https://w.dev/generate-status?id=fal:REQ123'), { ...env, FAL_KEY: 'fk' });
+    expect(res.status).toBe(200);
+    const data = await res.json() as { status: string; mime: string; b64: string };
+    expect(data.status).toBe('done');
+    expect(data.mime).toBe('image/jpeg');
+    expect(data.b64).toBe(btoa('\x01\x02\x03'));
+  });
+
+  it('Flux：fal 狀態未完成 → pending', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ status: 'IN_PROGRESS' }), { status: 200 })));
+    const res = await handle(new Request('https://w.dev/generate-status?id=fal:REQ123'), { ...env, FAL_KEY: 'fk' });
+    expect(await res.json()).toEqual({ status: 'pending' });
+  });
+
   it('/generate-status 回 KV 內容；無工單 → unknown', async () => {
     const kv = mockKV();
     kv.store.set('jid', JSON.stringify({ status: 'done', b64: 'AAAA', mime: 'image/png' }));

@@ -30,11 +30,15 @@
     ensureToastCss();
     const { default: Editor } = await import('@toast-ui/editor');
 
-    // 自訂工具列鈕：開 ImagePicker（AI 生成 / 找圖庫 / 上傳 / 圖庫）
+    // 自訂工具列鈕：做成與其他鈕一致的 32x32 圖示按鈕（TOAST 不會幫自訂 el 套外殼，所以手動比照）
     const aiBtn = document.createElement('button');
     aiBtn.type = 'button';
-    aiBtn.textContent = '＋AI圖';
-    aiBtn.style.cssText = 'font-family:inherit;font-size:12px;font-weight:600;color:#1a3a5a;background:none;border:none;cursor:pointer;padding:0 6px;white-space:nowrap;';
+    aiBtn.setAttribute('aria-label', 'AI 生成 / 找圖庫 / 上傳 / 既有圖庫');
+    aiBtn.title = 'AI 生成 / 找圖庫 / 上傳 / 既有圖庫';
+    aiBtn.style.cssText = 'width:32px;height:32px;margin:0 5px;padding:0;border:1px solid transparent;border-radius:3px;background:transparent;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;color:#555;';
+    aiBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/><path d="M18.5 13.5l.8 2.4 2.4.8-2.4.8-.8 2.4-.8-2.4-2.4-.8 2.4-.8z" opacity=".65"/></svg>';
+    aiBtn.addEventListener('mouseenter', () => { aiBtn.style.background = '#f4f4f4'; aiBtn.style.borderColor = '#e5e5e5'; });
+    aiBtn.addEventListener('mouseleave', () => { aiBtn.style.background = 'transparent'; aiBtn.style.borderColor = 'transparent'; });
     aiBtn.addEventListener('click', () => { showPicker = true; });
 
     editor = new Editor({

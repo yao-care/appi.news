@@ -2,6 +2,8 @@
   import { getToken } from '@/utils/editor/token';
   import { b64ToBlob } from '@/utils/editor/image-upload';
   import { AI_WORKER as WORKER } from '@/utils/editor/ai-worker';
+  import { asset } from '@/utils/url';
+  import { listRepoImages } from '@/utils/editor/list-images';
 
   // onpick(result)：
   //   生成 → { source:'generated', blob, mime, previewUrl }
@@ -102,6 +104,50 @@
     if (!stockSel) return;
     onpick?.({ source: 'stock', url: stockSel.full, credit: stockSel.credit, creditUrl: stockSel.creditUrl });
   }
+
+  // ── 上傳 ──
+  let upBlob = $state(null);
+  let upPreview = $state('');
+  function onFile(e) {
+    const f = e.currentTarget.files?.[0];
+    if (!f) return;
+    upBlob = f;
+    upPreview = URL.createObjectURL(f);
+  }
+  function useUpload() {
+    if (!upBlob) return;
+    onpick?.({ source: 'uploaded', blob: upBlob, mime: upBlob.type, previewUrl: upPreview });
+  }
+
+  // ── 圖庫（既有 repo 圖）──
+  let libBusy = $state(false);
+  let libError = $state('');
+  let libImages = $state([]); // { name, dir, path }
+  let libSel = $state(null);
+  let libLoaded = false;
+  async function loadLibrary() {
+    if (libLoaded) return;
+    const token = getToken();
+    if (!token) { libError = '請先登入管理者帳號'; return; }
+    libBusy = true; libError = '';
+    try {
+      libImages = await listRepoImages(token);
+      libLoaded = true;
+      if (!libImages.length) libError = '圖庫沒有圖片';
+    } catch (e) {
+      libError = e instanceof Error ? e.message : String(e);
+    } finally {
+      libBusy = false;
+    }
+  }
+  function gotoLib() {
+    tab = 'library';
+    loadLibrary();
+  }
+  function useLibrary() {
+    if (!libSel) return;
+    onpick?.({ source: 'library', url: libSel.path });
+  }
 </script>
 
 <div class="ip-overlay" role="dialog" aria-modal="true">
@@ -111,7 +157,8 @@
       <nav class="ip-tabs">
         <button class:active={tab === 'generate'} onclick={() => (tab = 'generate')}>AI 生成</button>
         <button class:active={tab === 'stock'} onclick={() => (tab = 'stock')}>AI 找圖庫</button>
-        <!-- Phase 3：上傳、圖庫 -->
+        <button class:active={tab === 'upload'} onclick={() => (tab = 'upload')}>上傳</button>
+        <button class:active={tab === 'library'} onclick={gotoLib}>圖庫</button>
       </nav>
       <button class="ip-x" onclick={onclose} aria-label="關閉">✕</button>
     </header>
@@ -182,6 +229,41 @@
         {/if}
       </div>
     {/if}
+
+    {#if tab === 'upload'}
+      <div class="ip-gen">
+        <label class="ip-field">
+          <span>從電腦選擇圖片</span>
+          <input type="file" accept="image/*" onchange={onFile} />
+        </label>
+        {#if upPreview}
+          <img class="ip-up-preview" src={upPreview} alt="上傳預覽" />
+          <div class="ip-actions">
+            <button class="ip-use" onclick={useUpload}>用這張</button>
+          </div>
+        {/if}
+      </div>
+    {/if}
+
+    {#if tab === 'library'}
+      <div class="ip-gen">
+        <p class="ip-hint">站上已上傳過的圖（covers / images）。{#if libBusy}載入中…{/if}</p>
+        {#if libError}<p class="ip-error">{libError}</p>{/if}
+        {#if libImages.length}
+          <div class="ip-grid">
+            {#each libImages as im}
+              <button class="ip-cell" class:sel={libSel === im} onclick={() => (libSel = im)} title={im.name}>
+                <img src={asset(im.path)} alt={im.name} loading="lazy" />
+                <span class="ip-credit">{im.dir}</span>
+              </button>
+            {/each}
+          </div>
+          <div class="ip-actions">
+            <button class="ip-use" onclick={useLibrary} disabled={!libSel}>用這張</button>
+          </div>
+        {/if}
+      </div>
+    {/if}
   </div>
 </div>
 
@@ -232,4 +314,5 @@
   .ip-cell.sel { border-color: var(--appi-accent, #a87515); }
   .ip-cell img { width: 100%; height: 110px; object-fit: cover; display: block; }
   .ip-credit { position: absolute; left: 0; right: 0; bottom: 0; padding: 2px 6px; font-family: var(--font-ui); font-size: 0.62rem; line-height: 1.3; color: white; background: linear-gradient(transparent, rgba(0,0,0,0.7)); text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ip-up-preview { width: 100%; max-height: 300px; object-fit: contain; border: 1px solid var(--color-fog, #e5e5e5); border-radius: var(--radius-sm, 4px); background: var(--bg-soft, #f5f5f5); }
 </style>

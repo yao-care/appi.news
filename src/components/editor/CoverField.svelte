@@ -54,7 +54,15 @@
       showPicker = false;
       return;
     }
-    if (result.source !== 'generated') return;
+    if (result.source === 'library') {
+      // 既有 repo 圖：直接設站內路徑，不上傳、無署名
+      sessionPreview = '';
+      onchange({ ...frontmatter, coverImage: result.url, coverImageCredit: '' });
+      showPicker = false;
+      return;
+    }
+    // 'generated' | 'uploaded'：都是 blob → 壓縮後上傳 covers
+    if (result.source !== 'generated' && result.source !== 'uploaded') return;
     uploading = true; uploadError = '';
     try {
       // 壓縮：封面縮到 ≤1280 寬、轉 WebP，避免 ~3.3MB 生成圖拖慢網站

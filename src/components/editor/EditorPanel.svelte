@@ -244,7 +244,7 @@
         <SeoFields {frontmatter} {slug} {authors} {body} {defaultAuthorId} onchange={(fm) => (frontmatter = fm)} />
         <div class="et-body">
           <span>內文</span>
-          <BodyEditor value={body} {slug} onchange={(md) => (body = md)} />
+          <BodyEditor value={body} {slug} title={frontmatter.title ?? ''} onchange={(md) => (body = md)} />
         </div>
         {#if AI_ENABLED}
           <div class="et-ai">

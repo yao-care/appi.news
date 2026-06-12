@@ -2,6 +2,7 @@
   import { getToken } from '@/utils/editor/token';
   import { uploadImage } from '@/utils/editor/image-upload';
   import { compressImage } from '@/utils/editor/image-compress';
+  import { asset } from '@/utils/url';
   import ImagePicker from './ImagePicker.svelte';
 
   // frontmatter：完整物件；onchange(next) 回傳完整物件（與 SeoFields 一致）
@@ -12,17 +13,13 @@
   let uploadError = $state('');
   let sessionPreview = $state(''); // 剛上傳的 object URL，當場顯示不等部署
 
-  const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
-
   let coverImage = $derived(frontmatter.coverImage ?? '');
   let coverAlt = $derived(frontmatter.coverAlt ?? '');
 
-  // 預覽來源：本階段剛上傳 > 外部絕對 URL > 站內路徑（補 BASE）
+  // 預覽來源：本階段剛上傳 > 用 asset() 解析（與文章頁同邏輯：絕對 URL 原樣、相對補 BASE 並收斂斜線）
+  // 修正：舊資料的 coverImage 可能無開頭斜線（如 "covers/wp-134.jpg"），手動串接會缺斜線而壞圖。
   let previewSrc = $derived(
-    sessionPreview ? sessionPreview
-    : !coverImage ? ''
-    : /^https?:\/\//.test(coverImage) ? coverImage
-    : `${BASE}${coverImage}`,
+    sessionPreview ? sessionPreview : !coverImage ? '' : asset(coverImage),
   );
 
   function setField(key, value) {

@@ -1,14 +1,15 @@
 <script>
   import { onMount } from 'svelte';
   import { getToken } from '@/utils/editor/token';
-  import { uploadImage } from '@/utils/editor/image-upload';
+  import { imageUploadName, repoImagePath, publicImageUrl, blobToBase64 } from '@/utils/editor/image-upload';
   import { compressImage } from '@/utils/editor/image-compress';
   import { asset } from '@/utils/url';
   import { AI_WORKER } from '@/utils/editor/ai-worker';
   import ImagePicker from './ImagePicker.svelte';
 
-  // frontmatter：完整物件；onchange(next) 回傳完整物件（與 SeoFields 一致）；body：給圖庫推關鍵字
-  let { frontmatter, slug = '', body = '', onchange } = $props();
+  // frontmatter：完整物件；onchange(next) 回傳完整物件；body：給圖庫推關鍵字；
+  // addPending({path,base64,publicUrl})：登記待提交圖（存檔時與 .md 打包成單一 commit）
+  let { frontmatter, slug = '', body = '', addPending, onchange } = $props();
 
   let showPicker = $state(false);
   let uploading = $state(false);
@@ -61,16 +62,17 @@
       showPicker = false;
       return;
     }
-    // 'generated' | 'uploaded'：都是 blob → 壓縮後上傳 covers
+    // 'generated' | 'uploaded'：都是 blob → 壓縮後「登記待提交」（存檔時打包，不即時上傳）
     if (result.source !== 'generated' && result.source !== 'uploaded') return;
     uploading = true; uploadError = '';
     try {
       // 壓縮：封面縮到 ≤1280 寬、轉 WebP，避免 ~3.3MB 生成圖拖慢網站
       const compressed = await compressImage(result.blob, { maxWidth: 1280, mime: 'image/webp', quality: 0.82 });
-      const url = await uploadImage({ blob: compressed, slug, token: getToken(), timestamp: Date.now(), dir: 'covers' });
-      sessionPreview = URL.createObjectURL(compressed); // 當場預覽壓縮後實際上傳的圖
-      // 生成圖無攝影師署名 → 清掉舊 credit
-      onchange({ ...frontmatter, coverImage: url, coverImageCredit: '' });
+      const name = imageUploadName(slug, compressed.type, Date.now());
+      const publicUrl = publicImageUrl(name, 'covers');
+      addPending?.({ path: repoImagePath(name, 'covers'), base64: await blobToBase64(compressed), publicUrl });
+      sessionPreview = URL.createObjectURL(compressed); // 當場預覽（記憶體圖），存檔後才上線
+      onchange({ ...frontmatter, coverImage: publicUrl, coverImageCredit: '' }); // 生成圖無署名 → 清 credit
       showPicker = false;
     } catch (e) {
       uploadError = e instanceof Error ? e.message : String(e);

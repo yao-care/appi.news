@@ -1,11 +1,11 @@
 <script>
   import { onMount, onDestroy } from 'svelte';
-  import { getToken } from '@/utils/editor/token';
-  import { uploadImage } from '@/utils/editor/image-upload';
+  import { imageUploadName, repoImagePath, publicImageUrl, blobToBase64 } from '@/utils/editor/image-upload';
   import { compressImage } from '@/utils/editor/image-compress';
   import ImagePicker from './ImagePicker.svelte';
 
-  let { value = '', slug = '', title = '', onchange } = $props();
+  // addPending：登記待提交圖（存檔時與 .md 打包成單一 commit）
+  let { value = '', slug = '', title = '', addPending, onchange } = $props();
 
   let el;
   let editor;
@@ -61,8 +61,10 @@
         addImageBlobHook: async (blob, callback) => {
           try {
             const compressed = await compressImage(blob, { maxWidth: 1280, mime: 'image/webp', quality: 0.82 });
-            const url = await uploadImage({ blob: compressed, slug, token: getToken(), timestamp: Date.now() });
-            callback(url, '');
+            const name = imageUploadName(slug, compressed.type, Date.now());
+            const publicUrl = publicImageUrl(name);
+            addPending?.({ path: repoImagePath(name), base64: await blobToBase64(compressed), publicUrl });
+            callback(publicUrl, '');
           } catch (e) {
             alert(e instanceof Error ? e.message : String(e));
           }
@@ -77,14 +79,26 @@
     showPicker = false;
     try {
       let url;
-      if (result.source === 'stock' || result.source === 'library') {
-        url = result.url; // 外部 URL / 站內路徑直接用
+      let credit = '';
+      if (result.source === 'stock') {
+        url = result.url; credit = result.credit || ''; // 外部 URL + 攝影師署名
+      } else if (result.source === 'library') {
+        url = result.url; // 站內路徑直接用
       } else {
-        // generated | uploaded：壓縮後上傳 public/images
+        // generated | uploaded：壓縮後登記待提交（存檔時打包）
         const compressed = await compressImage(result.blob, { maxWidth: 1280, mime: 'image/webp', quality: 0.82 });
-        url = await uploadImage({ blob: compressed, slug, token: getToken(), timestamp: Date.now() });
+        const name = imageUploadName(slug, compressed.type, Date.now());
+        url = publicImageUrl(name);
+        addPending?.({ path: repoImagePath(name), base64: await blobToBase64(compressed), publicUrl: url });
       }
       editor?.exec('addImage', { imageUrl: url, altText: '' });
+      // 圖庫圖署名：把剛插入的 markdown image 換成 <figure> + <figcaption>
+      if (credit && editor) {
+        const md = editor.getMarkdown();
+        const imgMd = `![](${url})`;
+        const figure = `<figure>\n  <img src="${url}" alt="">\n  <figcaption>攝影：${credit}</figcaption>\n</figure>`;
+        if (md.includes(imgMd)) editor.setMarkdown(md.replace(imgMd, figure));
+      }
     } catch (e) {
       alert(e instanceof Error ? e.message : String(e));
     }

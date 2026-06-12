@@ -10,7 +10,7 @@
 
   // frontmatter：完整物件；onchange(next) 回傳完整物件
   // authors：[{id,name}]；body：內文（給 AI 推薦標籤）；defaultAuthorId：GitHub 登入對應的作者 id
-  let { frontmatter, slug = '', authors = [], body = '', defaultAuthorId = '', onchange } = $props();
+  let { frontmatter, slug = '', authors = [], body = '', defaultAuthorId = '', addPending, onchange } = $props();
 
   // 由 widget 直接處理、不進「進階 YAML」的 key（含封面欄位）
   const HANDLED_KEYS = [...CORE_KEYS, 'coverImage', 'coverAlt', 'coverImageCredit'];
@@ -104,7 +104,7 @@
   <!-- 中段左右兩欄 -->
   <div class="ef-cols">
     <div class="ef-left">
-      <CoverField {frontmatter} {slug} {body} onchange={(fm) => onchange(fm)} />
+      <CoverField {frontmatter} {slug} {body} {addPending} onchange={(fm) => onchange(fm)} />
     </div>
 
     <div class="ef-right">

@@ -2,7 +2,8 @@
   import { onMount, onDestroy } from 'svelte';
   import { latestDeployRun } from '@/utils/editor/deploy-status';
   import { getToken } from '@/utils/editor/token';
-  import { getFile, putFile } from '@/utils/editor/github';
+  import { getFile } from '@/utils/editor/github';
+  import { commitFiles } from '@/utils/editor/git-commit';
   import { parse, serialize } from '@/utils/editor/mdx-doc';
   import { classifySave } from '@/utils/editor/save-machine';
   import { lint } from '@/utils/editor/lint';
@@ -27,6 +28,11 @@
       // 取不到登入身分就不帶預設，不影響編輯
     }
   });
+
+  // 待提交檔案（生成/上傳的圖）：存檔時與 .md 打包成單一 commit。
+  // 存檔時只挑「實際被引用」的（過濾掉 re-roll/換掉的孤兒圖）。
+  let pendingFiles = $state([]); // { path, base64, publicUrl }
+  function addPending(entry) { pendingFiles = [...pendingFiles, entry]; }
 
   // AI 建議功能開關：刻意關閉（線上即時潤飾會計費，使用者選擇不啟用）。
   // 要開啟：設好 ai-suggest worker 的 ANTHROPIC_API_KEY secret 後改為 true。
@@ -197,17 +203,26 @@
     }
     status = 'saving';
     try {
-      const code = await putFile({
-        path: repoPath,
-        content,
-        sha,
-        message: `content: ${sha ? '前台編輯' : '前台新增'} ${slug}`,
+      // 只打包「實際被內容引用」的待提交圖（過濾掉 re-roll / 換掉的孤兒）
+      const usedPending = pendingFiles.filter((p) => content.includes(p.publicUrl));
+      const files = [
+        ...usedPending.map((p) => ({ path: p.path, content: p.base64, encoding: 'base64' })),
+        { path: repoPath, content, encoding: 'utf-8' },
+      ];
+      const n = usedPending.length;
+      const result = await commitFiles({
+        files,
+        message: `content: ${sha ? '前台編輯' : '前台新增'} ${slug}${n ? `（含 ${n} 張圖）` : ''}`,
         token: getToken(),
       });
-      const outcome = classifySave(code);
+      // Git Data API 的非 fast-forward 是 422 → 比照 409 衝突訊息
+      const outcome = classifySave(result.ok ? 200 : result.status === 422 ? 409 : result.status);
       message = outcome.message;
       status = outcome.state === 'success' ? 'done' : 'error';
-      if (status === 'done') startDeployPoll();
+      if (status === 'done') {
+        pendingFiles = []; // 成功後清空
+        startDeployPoll();
+      }
     } catch {
       const o = classifySave(0); // 視為 network
       message = o.message;
@@ -241,10 +256,10 @@
       {#if status === 'loading'}<p class="et-loading">載入文章內容中…</p>{/if}
 
       {#if status !== 'loading' && tab === 'seo'}
-        <SeoFields {frontmatter} {slug} {authors} {body} {defaultAuthorId} onchange={(fm) => (frontmatter = fm)} />
+        <SeoFields {frontmatter} {slug} {authors} {body} {defaultAuthorId} {addPending} onchange={(fm) => (frontmatter = fm)} />
         <div class="et-body">
           <span>內文</span>
-          <BodyEditor value={body} {slug} title={frontmatter.title ?? ''} onchange={(md) => (body = md)} />
+          <BodyEditor value={body} {slug} title={frontmatter.title ?? ''} {addPending} onchange={(md) => (body = md)} />
         </div>
         {#if AI_ENABLED}
           <div class="et-ai">

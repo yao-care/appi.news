@@ -38,7 +38,7 @@ const OWNER = 'yao-care';
 const REPO = 'appi.news';
 
 // 瀏覽器與 node 皆安全的 blob → base64（無 Node Buffer 相依）
-async function blobToBase64(blob: Blob): Promise<string> {
+export async function blobToBase64(blob: Blob): Promise<string> {
   const bytes = new Uint8Array(await blob.arrayBuffer());
   let bin = '';
   for (const b of bytes) bin += String.fromCharCode(b);

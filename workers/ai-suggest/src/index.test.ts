@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { handle, parseTagArray, stockImageId, type Env } from './index';
+import { handle, parseTagArray, stockImageId, applyPeopleDirective, type Env } from './index';
 
 const env: Env = {
   ANTHROPIC_API_KEY: 'sk-test',
@@ -43,6 +43,27 @@ describe('parseTagArray', () => {
   });
   it('無陣列 → 空', () => {
     expect(parseTagArray('抱歉我無法')).toEqual([]);
+  });
+});
+
+describe('applyPeopleDirective', () => {
+  it('附加台灣人鐵律於 prompt 後', () => {
+    const out = applyPeopleDirective('a person at a desk');
+    expect(out).toContain('a person at a desk');
+    expect(out).toContain('Taiwanese');
+  });
+});
+
+describe('/generate 套用台灣人鐵律', () => {
+  it('送給 OpenAI 的 prompt 含 Taiwanese', async () => {
+    const fetchMock = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ permissions: { push: true } }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ data: [{ b64_json: 'AAAA' }] }), { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    await handle(genReq({ prompt: '一個人', model: 'openai', size: 'landscape' }), env);
+    const body = JSON.parse((fetchMock.mock.calls[1][1] as RequestInit).body as string);
+    expect(body.prompt).toContain('一個人');
+    expect(body.prompt).toContain('Taiwanese');
   });
 });
 

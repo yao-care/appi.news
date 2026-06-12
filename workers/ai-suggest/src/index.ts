@@ -165,6 +165,12 @@ async function searchPexels(env: Env, query: string): Promise<StockPhoto[]> {
   });
 }
 
+// 生圖鐵律：畫面中若出現人物，一律鎖定台灣人。server 端強制附加於所有生圖 prompt，
+// 不管 OpenAI/Flux、封面/內文，或使用者怎麼改 prompt 都會套用（只在真的有人物時生效）。
+export function applyPeopleDirective(prompt: string): string {
+  return `${prompt}\n\nImportant: if any people appear in the image, they must be Taiwanese (East Asian, natural Han Taiwanese appearance). Do not depict people of other ethnicities.`;
+}
+
 export async function handle(request: Request, env: Env): Promise<Response> {
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(env) });
 
@@ -184,8 +190,9 @@ export async function handle(request: Request, env: Env): Promise<Response> {
     const { prompt, model, size } = (await request.json()) as { prompt?: string; model?: string; size?: GenSize };
     if (!prompt || !prompt.trim()) return json({ error: '缺少 prompt' }, 400, env);
     const sz: GenSize = size === 'square' || size === 'portrait' ? size : 'landscape';
+    const finalPrompt = applyPeopleDirective(prompt);
     try {
-      const out = model === 'flux' ? await genFlux(env, prompt, sz) : await genOpenAI(env, prompt, sz);
+      const out = model === 'flux' ? await genFlux(env, finalPrompt, sz) : await genOpenAI(env, finalPrompt, sz);
       return json(out, 200, env);
     } catch (e) {
       return json({ error: e instanceof Error ? e.message : String(e) }, 502, env);

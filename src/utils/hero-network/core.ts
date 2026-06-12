@@ -49,9 +49,20 @@ export function makeNodes(opts: MakeNodesOpts): Node[] {
   return nodes;
 }
 
+/** 預建一條 x→透明度 的線性 scale（左 min、右 max、夾住），供每幀重複呼叫避免重建。 */
+export function makeOpacityScale(width: number, min: number, max: number): (x: number) => number {
+  return scaleLinear([0, width], [min, max]).clamp(true);
+}
+
+/** 預建一個 深藍↔金色 內插器，回傳 (t)=>rgb，t 自動夾在 [0,1]，供每幀重複呼叫避免重建。 */
+export function makeColorMixer(navy: string, gold: string): (t: number) => string {
+  const interp = interpolateRgb(navy, gold);
+  return (t: number) => interp(Math.max(0, Math.min(1, t)));
+}
+
 /** 依 x 位置線性內插基準透明度（左 min、右 max），超出範圍夾住。 */
 export function baseOpacity(x: number, width: number, min: number, max: number): number {
-  return scaleLinear([0, width], [min, max]).clamp(true)(x);
+  return makeOpacityScale(width, min, max)(x);
 }
 
 /** 連線透明度：距離 0 時為 ceil，達 maxDist 以上為 0，線性衰減。 */
@@ -62,8 +73,7 @@ export function linkOpacity(dist: number, maxDist: number, ceil: number): number
 
 /** 依 t∈[0,1] 在深藍與金色間內插，t=0 全藍、t=1 全金（超出範圍夾住）。 */
 export function mixNavyGold(navy: string, gold: string, t: number): string {
-  const tt = Math.max(0, Math.min(1, t));
-  return interpolateRgb(navy, gold)(tt);
+  return makeColorMixer(navy, gold)(t);
 }
 
 /** 0..amp 的正弦脈動，給金色節點呼吸用。 */

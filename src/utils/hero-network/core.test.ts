@@ -4,6 +4,8 @@ import {
   makeNodes,
   pickGoldIndices,
   baseOpacity,
+  makeOpacityScale,
+  makeColorMixer,
   linkOpacity,
   mixNavyGold,
   pulse,
@@ -65,6 +67,27 @@ describe('baseOpacity', () => {
   it('超出範圍時夾住', () => {
     expect(baseOpacity(-50, 1000, 0.18, 0.5)).toBeCloseTo(0.18);
     expect(baseOpacity(2000, 1000, 0.18, 0.5)).toBeCloseTo(0.5);
+  });
+});
+
+describe('makeOpacityScale', () => {
+  it('回傳可重複呼叫的 scale，結果與 baseOpacity 一致', () => {
+    const s = makeOpacityScale(1000, 0.18, 0.5);
+    expect(s(0)).toBeCloseTo(0.18);
+    expect(s(1000)).toBeCloseTo(0.5);
+    expect(s(500)).toBeCloseTo(0.34);
+    expect(s(-50)).toBeCloseTo(0.18); // 夾住
+    expect(s(2000)).toBeCloseTo(0.5); // 夾住
+  });
+});
+
+describe('makeColorMixer', () => {
+  it('回傳可重複呼叫的內插器，結果與 mixNavyGold 一致', () => {
+    const mix = makeColorMixer('#1f3a5f', '#a87515');
+    expect(mix(0)).toBe('rgb(31, 58, 95)');
+    expect(mix(1)).toBe('rgb(168, 117, 21)');
+    expect(mix(2)).toBe('rgb(168, 117, 21)'); // 夾住
+    expect(mix(-1)).toBe('rgb(31, 58, 95)'); // 夾住
   });
 });
 

@@ -1,5 +1,15 @@
 import { buildPrompt } from './prompt';
 
+// 最小結構型別（避免相依 @cloudflare/workers-types，vitest/node 也能編譯；
+// runtime 的真實 KVNamespace / ExecutionContext 結構相容）。
+export interface KvLike {
+  get(key: string): Promise<string | null>;
+  put(key: string, value: string, opts?: { expirationTtl?: number }): Promise<void>;
+}
+export interface CtxLike {
+  waitUntil(p: Promise<unknown>): void;
+}
+
 export interface Env {
   ANTHROPIC_API_KEY: string; // wrangler secret
   ANTHROPIC_MODEL: string;
@@ -14,9 +24,13 @@ export interface Env {
   // 圖庫 secrets（Phase 2）
   UNSPLASH_ACCESS_KEY?: string;
   PEXELS_API_KEY?: string;
+  // 非同步生圖工單暫存
+  GEN_JOBS?: KvLike;
 }
 
-export default { async fetch(req: Request, env: Env) { return handle(req, env); } };
+export default {
+  async fetch(req: Request, env: Env, ctx: CtxLike) { return handle(req, env, ctx); },
+};
 
 function cors(env: Env): Record<string, string> {
   return {
@@ -175,7 +189,17 @@ export function applyPeopleDirective(prompt: string): string {
   return `${prompt}\n\nImportant: if any people appear in the image, they must be Taiwanese (East Asian, natural Han Taiwanese appearance). Do not depict people of other ethnicities.`;
 }
 
-export async function handle(request: Request, env: Env): Promise<Response> {
+// 背景生圖 → 結果寫進 KV 工單（waitUntil 呼叫；瀏覽器另以 /generate-status 輪詢取件）
+async function runGen(env: Env, jobId: string, prompt: string, model: string | undefined, size: GenSize): Promise<void> {
+  try {
+    const out = model === 'flux' ? await genFlux(env, prompt, size) : await genOpenAI(env, prompt, size);
+    await env.GEN_JOBS?.put(jobId, JSON.stringify({ status: 'done', ...out }), { expirationTtl: 900 });
+  } catch (e) {
+    await env.GEN_JOBS?.put(jobId, JSON.stringify({ status: 'error', error: e instanceof Error ? e.message : String(e) }), { expirationTtl: 900 });
+  }
+}
+
+export async function handle(request: Request, env: Env, ctx?: CtxLike): Promise<Response> {
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(env) });
 
   const url = new URL(request.url);
@@ -188,6 +212,30 @@ export async function handle(request: Request, env: Env): Promise<Response> {
     }, 200, env);
   }
 
+  // 非同步生圖：立刻回 jobId，背景生圖；瀏覽器以 /generate-status?id= 輪詢取件（不會 Failed to fetch）
+  if (request.method === 'POST' && url.pathname === '/generate-async') {
+    const denied = await requirePush(request, env);
+    if (denied) return denied;
+    if (!env.GEN_JOBS) return json({ error: '未設定工單儲存（GEN_JOBS）' }, 500, env);
+    const { prompt, model, size } = (await request.json()) as { prompt?: string; model?: string; size?: GenSize };
+    if (!prompt || !prompt.trim()) return json({ error: '缺少 prompt' }, 400, env);
+    const sz: GenSize = size === 'square' || size === 'portrait' ? size : 'landscape';
+    const jobId = crypto.randomUUID();
+    await env.GEN_JOBS.put(jobId, JSON.stringify({ status: 'pending' }), { expirationTtl: 900 });
+    ctx?.waitUntil(runGen(env, jobId, applyPeopleDirective(prompt), model, sz));
+    return json({ jobId }, 200, env);
+  }
+
+  // 輪詢工單狀態。jobId 為不可猜的 UUID（能力憑證）→ 不另做權限檢查，避免每次輪詢都打 GitHub。
+  if (request.method === 'GET' && url.pathname === '/generate-status') {
+    const id = url.searchParams.get('id');
+    if (!id) return json({ error: '缺少 id' }, 400, env);
+    const raw = await env.GEN_JOBS?.get(id);
+    if (!raw) return json({ status: 'unknown' }, 200, env);
+    return new Response(raw, { status: 200, headers: { 'content-type': 'application/json', ...cors(env) } });
+  }
+
+  // 同步生圖（舊版，保留相容；新前端走 /generate-async）
   if (request.method === 'POST' && url.pathname === '/generate') {
     const denied = await requirePush(request, env);
     if (denied) return denied;

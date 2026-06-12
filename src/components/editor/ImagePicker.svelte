@@ -23,6 +23,10 @@
   let selected = $state(null);
   let genCount = $derived(candidates.length);
 
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  // 非同步生圖：POST /generate-async 拿 jobId → 每 3 秒輪詢 /generate-status 取件。
+  // 瀏覽器不再開著長連線苦等，所以不會「Failed to fetch」；慢只是顯示「生成中…Ns」。
   async function generate() {
     if (!prompt.trim()) { error = '請先輸入或調整描述（prompt）'; return; }
     const token = getToken();
@@ -30,31 +34,37 @@
     if (genCount >= 10 && !confirm(`本次已生成 ${genCount} 張（每張都會計費），確定再生一張？`)) return;
     busy = true; error = ''; elapsed = 0;
     const timer = setInterval(() => { elapsed += 1; }, 1000);
-    // 90 秒逾時保護：gpt-image-2 偶爾 >100 秒會被連線切斷成「Failed to fetch」，
-    // 主動 abort 並給可行建議，避免無限轉圈。
-    const ctrl = new AbortController();
-    const to = setTimeout(() => ctrl.abort(), 90000);
     try {
-      const res = await fetch(`${WORKER}/generate`, {
+      // 1) 啟動工單（很快回 jobId）
+      const startRes = await fetch(`${WORKER}/generate-async`, {
         method: 'POST',
         headers: { 'content-type': 'application/json', authorization: `Bearer ${token}` },
         body: JSON.stringify({ prompt, model, size }),
-        signal: ctrl.signal,
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || `生圖失敗（${res.status}）`);
-      const cand = { b64: data.b64, mime: data.mime, previewUrl: `data:${data.mime};base64,${data.b64}` };
-      candidates = [...candidates, cand];
-      selected = cand; // 新生成的自動選取
-    } catch (e) {
-      if (e && e.name === 'AbortError') {
-        error = '生成逾時（超過 90 秒）。gpt-image-2 偶爾很慢，請再按一次重試；想要快，改用 Flux。';
-      } else {
-        const m = e instanceof Error ? e.message : String(e);
-        error = /fetch/i.test(m) ? '連線中斷（生成太久被切斷）。請重試，或改用 Flux（較快）。' : m;
+      const startData = await startRes.json();
+      if (!startRes.ok || !startData.jobId) throw new Error(startData.error || `啟動失敗（${startRes.status}）`);
+      const jobId = startData.jobId;
+
+      // 2) 輪詢取件（最多 4 分鐘）
+      const deadline = Date.now() + 240000;
+      // eslint-disable-next-line no-constant-condition
+      while (true) {
+        await sleep(3000);
+        const stRes = await fetch(`${WORKER}/generate-status?id=${encodeURIComponent(jobId)}`);
+        const st = await stRes.json().catch(() => ({}));
+        if (st.status === 'done') {
+          const cand = { b64: st.b64, mime: st.mime, previewUrl: `data:${st.mime};base64,${st.b64}` };
+          candidates = [...candidates, cand];
+          selected = cand;
+          break;
+        }
+        if (st.status === 'error') throw new Error(st.error || '生成失敗');
+        // 'pending' 或 'unknown'（KV 傳播延遲）都繼續等，直到截止
+        if (Date.now() > deadline) throw new Error('生成逾時（超過 4 分鐘），請重試或改用 Flux。');
       }
+    } catch (e) {
+      error = e instanceof Error ? e.message : String(e);
     } finally {
-      clearTimeout(to);
       clearInterval(timer);
       busy = false;
     }

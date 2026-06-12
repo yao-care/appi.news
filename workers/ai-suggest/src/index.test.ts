@@ -46,6 +46,41 @@ describe('parseTagArray', () => {
   });
 });
 
+function mockKV() {
+  const store = new Map<string, string>();
+  return { store, get: async (k: string) => store.get(k) ?? null, put: async (k: string, v: string) => { store.set(k, v); } };
+}
+
+describe('非同步生圖', () => {
+  it('/generate-async 回 jobId、KV 寫 pending、waitUntil 跑完寫 done', async () => {
+    const fetchMock = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ permissions: { push: true } }), { status: 200 })) // requirePush
+      .mockResolvedValue(new Response(JSON.stringify({ data: [{ b64_json: 'AAAA' }] }), { status: 200 })); // runGen → OpenAI
+    vi.stubGlobal('fetch', fetchMock);
+    const kv = mockKV();
+    let waited: Promise<unknown> | undefined;
+    const ctx = { waitUntil: (p: Promise<unknown>) => { waited = p; } };
+    const req = new Request('https://w.dev/generate-async', { method: 'POST', headers: { 'content-type': 'application/json', authorization: 'Bearer x' }, body: JSON.stringify({ prompt: '一個人', model: 'openai', size: 'landscape' }) });
+    const res = await handle(req, { ...env, GEN_JOBS: kv }, ctx);
+    expect(res.status).toBe(200);
+    const data = await res.json() as { jobId: string };
+    expect(typeof data.jobId).toBe('string');
+    expect(kv.store.get(data.jobId)).toContain('pending');
+    await waited; // 跑完背景生圖
+    expect(kv.store.get(data.jobId)).toContain('done');
+    expect(kv.store.get(data.jobId)).toContain('AAAA');
+  });
+
+  it('/generate-status 回 KV 內容；無工單 → unknown', async () => {
+    const kv = mockKV();
+    kv.store.set('jid', JSON.stringify({ status: 'done', b64: 'AAAA', mime: 'image/png' }));
+    const r1 = await handle(new Request('https://w.dev/generate-status?id=jid'), { ...env, GEN_JOBS: kv });
+    expect(await r1.json()).toMatchObject({ status: 'done', b64: 'AAAA' });
+    const r2 = await handle(new Request('https://w.dev/generate-status?id=none'), { ...env, GEN_JOBS: kv });
+    expect(await r2.json()).toEqual({ status: 'unknown' });
+  });
+});
+
 describe('applyPeopleDirective', () => {
   it('附加台灣人鐵律於 prompt 後', () => {
     const out = applyPeopleDirective('a person at a desk');

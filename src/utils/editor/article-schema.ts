@@ -23,6 +23,7 @@ export const articleSchema = z.object({
   coAuthors: z.array(z.string()).default([]),
   coverImage: z.string().optional(),
   coverAlt: z.string().optional(),
+  coverImageCredit: z.string().optional(),
   status: z.enum(['draft', 'published', 'scheduled', 'archived']).default('published'),
   featured: z.boolean().default(false),
   hero: z.boolean().default(false),

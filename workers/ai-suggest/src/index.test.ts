@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { handle, parseTagArray, type Env } from './index';
+import { handle, parseTagArray, stockImageId, type Env } from './index';
 
 const env: Env = {
   ANTHROPIC_API_KEY: 'sk-test',
@@ -43,6 +43,39 @@ describe('parseTagArray', () => {
   });
   it('無陣列 → 空', () => {
     expect(parseTagArray('抱歉我無法')).toEqual([]);
+  });
+});
+
+describe('stockImageId', () => {
+  it('unsplash / pexels URL → 穩定識別；其他 → null', () => {
+    expect(stockImageId('https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixid=x')).toBe('unsplash:1581235720704-06d3acfcb36f');
+    expect(stockImageId('https://images.pexels.com/photos/3760069/pexels-photo.jpeg')).toBe('pexels:3760069');
+    expect(stockImageId('/covers/wp-1.jpg')).toBeNull();
+  });
+});
+
+describe('/stock', () => {
+  it('合併兩家、濾掉 exclude 的已用圖', async () => {
+    const fetchMock = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ permissions: { push: true } }), { status: 200 }))
+      // unsplash
+      .mockResolvedValueOnce(new Response(JSON.stringify({ results: [
+        { urls: { regular: 'https://images.unsplash.com/photo-AAA?x', small: 'https://images.unsplash.com/photo-AAA?s' }, user: { name: 'Ann', links: { html: 'https://u/ann' } } },
+        { urls: { regular: 'https://images.unsplash.com/photo-BBB?x' }, user: { name: 'Bob' } },
+      ] }), { status: 200 }))
+      // pexels
+      .mockResolvedValueOnce(new Response(JSON.stringify({ photos: [
+        { src: { large: 'https://images.pexels.com/photos/123/p.jpg', medium: 'https://images.pexels.com/photos/123/m.jpg' }, photographer: 'Cat' },
+      ] }), { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    const req = new Request('https://w.dev/stock', { method: 'POST', headers: { 'content-type': 'application/json', authorization: 'Bearer x' }, body: JSON.stringify({ keywords: 'office desk', exclude: ['unsplash:BBB'] }) });
+    const res = await handle(req, { ...env, UNSPLASH_ACCESS_KEY: 'uk', PEXELS_API_KEY: 'pk' });
+    expect(res.status).toBe(200);
+    const data = await res.json() as { photos: { id: string; credit: string }[] };
+    const ids = data.photos.map((p) => p.id);
+    expect(ids).toContain('unsplash:AAA');
+    expect(ids).toContain('pexels:123');
+    expect(ids).not.toContain('unsplash:BBB'); // 被 exclude 濾掉
   });
 });
 

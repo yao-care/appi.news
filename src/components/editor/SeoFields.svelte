@@ -13,7 +13,7 @@
   let { frontmatter, slug = '', authors = [], body = '', defaultAuthorId = '', onchange } = $props();
 
   // 由 widget 直接處理、不進「進階 YAML」的 key（含封面欄位）
-  const HANDLED_KEYS = [...CORE_KEYS, 'coverImage', 'coverAlt'];
+  const HANDLED_KEYS = [...CORE_KEYS, 'coverImage', 'coverAlt', 'coverImageCredit'];
 
   const STATUS_ALL = [
     { value: 'draft', label: '草稿' },
@@ -104,7 +104,7 @@
   <!-- 中段左右兩欄 -->
   <div class="ef-cols">
     <div class="ef-left">
-      <CoverField {frontmatter} {slug} onchange={(fm) => onchange(fm)} />
+      <CoverField {frontmatter} {slug} {body} onchange={(fm) => onchange(fm)} />
     </div>
 
     <div class="ef-right">

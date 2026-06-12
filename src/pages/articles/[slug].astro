@@ -152,6 +152,9 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
         class="article-cover"
         loading="eager"
       />
+      {article.data.coverImageCredit && (
+        <p class="article-cover-credit">攝影：{article.data.coverImageCredit}</p>
+      )}
     </div>
 
     <div class="container article-main">
@@ -294,6 +297,14 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: var(--radius);
+  }
+  .article-cover-credit {
+    max-width: var(--maxw-prose);
+    margin: 6px auto 0;
+    font-family: var(--font-ui);
+    font-size: var(--text-badge);
+    color: var(--color-ink-2, #888);
+    text-align: right;
   }
   .article-main {
     margin-top: 8px;

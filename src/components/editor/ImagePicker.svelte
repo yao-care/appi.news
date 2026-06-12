@@ -3,11 +3,14 @@
   import { b64ToBlob } from '@/utils/editor/image-upload';
   import { AI_WORKER as WORKER } from '@/utils/editor/ai-worker';
 
-  // onpick(result)：{ source:'generated', blob, mime, previewUrl }
+  // onpick(result)：
+  //   生成 → { source:'generated', blob, mime, previewUrl }
+  //   圖庫 → { source:'stock', url, credit, creditUrl }
   // size：'landscape'（封面預設）| 'square' | 'portrait'
-  let { initialPrompt = '', size = 'landscape', onpick, onclose } = $props();
+  // title/body：給「AI 找圖庫」推關鍵字；exclude：已用過的圖庫圖 id（去重）
+  let { initialPrompt = '', size = 'landscape', title = '', body = '', exclude = [], onpick, onclose } = $props();
 
-  let tab = $state('generate'); // 目前僅 AI 生成（Phase 1）
+  let tab = $state('generate'); // generate | stock
   let prompt = $state(initialPrompt);
   let model = $state('openai'); // 'openai'（gpt-image-2）| 'flux'
   let busy = $state(false);
@@ -45,6 +48,60 @@
     if (!selected) return;
     onpick?.({ source: 'generated', blob: b64ToBlob(selected.b64, selected.mime), mime: selected.mime, previewUrl: selected.previewUrl });
   }
+
+  // ── AI 找圖庫 ──
+  let keywords = $state('');
+  let stockBusy = $state(false);
+  let stockError = $state('');
+  let photos = $state([]); // { id, provider, thumb, full, credit, creditUrl }
+  let stockSel = $state(null);
+
+  async function searchStock() {
+    if (!keywords.trim()) { stockError = '請先輸入關鍵字或按「依本文找圖」'; return; }
+    const token = getToken();
+    if (!token) { stockError = '請先登入管理者帳號'; return; }
+    stockBusy = true; stockError = ''; photos = []; stockSel = null;
+    try {
+      const res = await fetch(`${WORKER}/stock`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', authorization: `Bearer ${token}` },
+        body: JSON.stringify({ keywords, exclude }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || `搜尋失敗（${res.status}）`);
+      photos = data.photos ?? [];
+      if (!photos.length) stockError = '找不到（未用過的）圖，試試別的關鍵字';
+    } catch (e) {
+      stockError = e instanceof Error ? e.message : String(e);
+    } finally {
+      stockBusy = false;
+    }
+  }
+
+  async function autoKeywords() {
+    const token = getToken();
+    if (!token) { stockError = '請先登入管理者帳號'; return; }
+    stockBusy = true; stockError = '';
+    try {
+      const res = await fetch(`${WORKER}/keywords`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', authorization: `Bearer ${token}` },
+        body: JSON.stringify({ title, body }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || `關鍵字產生失敗（${res.status}）`);
+      keywords = data.keywords ?? '';
+      await searchStock();
+    } catch (e) {
+      stockError = e instanceof Error ? e.message : String(e);
+      stockBusy = false;
+    }
+  }
+
+  function useStock() {
+    if (!stockSel) return;
+    onpick?.({ source: 'stock', url: stockSel.full, credit: stockSel.credit, creditUrl: stockSel.creditUrl });
+  }
 </script>
 
 <div class="ip-overlay" role="dialog" aria-modal="true">
@@ -53,7 +110,8 @@
       <strong>選擇圖片</strong>
       <nav class="ip-tabs">
         <button class:active={tab === 'generate'} onclick={() => (tab = 'generate')}>AI 生成</button>
-        <!-- Phase 2/3：AI 找圖庫、上傳、圖庫 -->
+        <button class:active={tab === 'stock'} onclick={() => (tab = 'stock')}>AI 找圖庫</button>
+        <!-- Phase 3：上傳、圖庫 -->
       </nav>
       <button class="ip-x" onclick={onclose} aria-label="關閉">✕</button>
     </header>
@@ -90,6 +148,36 @@
           </div>
           <div class="ip-actions">
             <button class="ip-use" onclick={use} disabled={!selected}>用這張</button>
+          </div>
+        {/if}
+      </div>
+    {/if}
+
+    {#if tab === 'stock'}
+      <div class="ip-gen">
+        <div class="ip-controls">
+          <label class="ip-field ip-grow">
+            <span>關鍵字（英文）</span>
+            <input bind:value={keywords} placeholder="例：office desk sitting" onkeydown={(e) => e.key === 'Enter' && searchStock()} />
+          </label>
+          <button class="ip-gen-btn" onclick={autoKeywords} disabled={stockBusy}>依本文找圖</button>
+          <button class="ip-tag-btn" onclick={searchStock} disabled={stockBusy}>{stockBusy ? '搜尋中…' : '搜尋'}</button>
+        </div>
+        <p class="ip-hint">圖片來自 Unsplash / Pexels（免費授權），已自動排除站上用過的圖；選定會標註攝影師。</p>
+
+        {#if stockError}<p class="ip-error">{stockError}</p>{/if}
+
+        {#if photos.length}
+          <div class="ip-grid">
+            {#each photos as ph}
+              <button class="ip-cell" class:sel={stockSel === ph} onclick={() => (stockSel = ph)}>
+                <img src={ph.thumb} alt={ph.credit} loading="lazy" />
+                <span class="ip-credit">{ph.provider} · {ph.credit}</span>
+              </button>
+            {/each}
+          </div>
+          <div class="ip-actions">
+            <button class="ip-use" onclick={useStock} disabled={!stockSel}>用這張</button>
           </div>
         {/if}
       </div>
@@ -133,4 +221,15 @@
   .ip-actions { display: flex; justify-content: flex-end; }
   .ip-use { font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.4rem; border: none; border-radius: var(--radius-sm, 4px); background: var(--appi-accent, #a87515); color: white; cursor: pointer; }
   .ip-use:disabled { opacity: 0.5; cursor: default; }
+
+  /* AI 找圖庫 */
+  .ip-grow { flex: 1; min-width: 0; }
+  .ip-tag-btn { font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.1rem; border: 1px solid var(--appi-brand, #1a3a5a); border-radius: var(--radius-sm, 4px); background: white; color: var(--appi-brand, #1a3a5a); cursor: pointer; }
+  .ip-tag-btn:disabled { opacity: 0.6; cursor: default; }
+  .ip-hint { margin: 0; font-family: var(--font-ui); font-size: var(--text-xs, 0.72rem); color: var(--color-ink-2, #777); }
+  .ip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; max-height: 50vh; overflow: auto; }
+  .ip-cell { position: relative; border: 2px solid transparent; border-radius: var(--radius-sm, 4px); padding: 0; background: none; cursor: pointer; line-height: 0; overflow: hidden; }
+  .ip-cell.sel { border-color: var(--appi-accent, #a87515); }
+  .ip-cell img { width: 100%; height: 110px; object-fit: cover; display: block; }
+  .ip-credit { position: absolute; left: 0; right: 0; bottom: 0; padding: 2px 6px; font-family: var(--font-ui); font-size: 0.62rem; line-height: 1.3; color: white; background: linear-gradient(transparent, rgba(0,0,0,0.7)); text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 </style>

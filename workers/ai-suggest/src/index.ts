@@ -112,6 +112,59 @@ export function parseTagArray(text: string): string[] {
   }
 }
 
+export interface StockPhoto {
+  id: string; // 去重識別：'unsplash:<seg>' / 'pexels:<id>'
+  provider: 'unsplash' | 'pexels';
+  thumb: string;
+  full: string;
+  credit: string; // 攝影師
+  creditUrl: string;
+}
+
+/**
+ * 從圖庫圖 URL 取穩定識別（給去重用，build 端 used-images 與本檔須一致）。
+ * unsplash: images.unsplash.com/photo-<seg> → 'unsplash:<seg>'
+ * pexels:   images.pexels.com/photos/<id>/ → 'pexels:<id>'
+ */
+export function stockImageId(url: string): string | null {
+  const u = url || '';
+  const un = u.match(/images\.unsplash\.com\/photo-([\w-]+)/);
+  if (un) return `unsplash:${un[1]}`;
+  const px = u.match(/images\.pexels\.com\/photos\/(\d+)/);
+  if (px) return `pexels:${px[1]}`;
+  return null;
+}
+
+async function searchUnsplash(env: Env, query: string): Promise<StockPhoto[]> {
+  if (!env.UNSPLASH_ACCESS_KEY) return [];
+  const res = await fetch(`https://api.unsplash.com/search/photos?per_page=20&query=${encodeURIComponent(query)}`, {
+    headers: { Authorization: `Client-ID ${env.UNSPLASH_ACCESS_KEY}`, 'Accept-Version': 'v1' },
+  });
+  if (!res.ok) return [];
+  const data = (await res.json()) as { results?: { urls?: { regular?: string; small?: string }; user?: { name?: string; links?: { html?: string } } }[] };
+  return (data.results ?? []).flatMap((r) => {
+    const full = r.urls?.regular ?? '';
+    const id = stockImageId(full);
+    if (!id) return [];
+    return [{ id, provider: 'unsplash' as const, thumb: r.urls?.small ?? full, full, credit: r.user?.name ?? '', creditUrl: r.user?.links?.html ?? '' }];
+  });
+}
+
+async function searchPexels(env: Env, query: string): Promise<StockPhoto[]> {
+  if (!env.PEXELS_API_KEY) return [];
+  const res = await fetch(`https://api.pexels.com/v1/search?per_page=20&query=${encodeURIComponent(query)}`, {
+    headers: { Authorization: env.PEXELS_API_KEY },
+  });
+  if (!res.ok) return [];
+  const data = (await res.json()) as { photos?: { src?: { large?: string; medium?: string }; photographer?: string; photographer_url?: string }[] };
+  return (data.photos ?? []).flatMap((p) => {
+    const full = p.src?.large ?? '';
+    const id = stockImageId(full);
+    if (!id) return [];
+    return [{ id, provider: 'pexels' as const, thumb: p.src?.medium ?? full, full, credit: p.photographer ?? '', creditUrl: p.photographer_url ?? '' }];
+  });
+}
+
 export async function handle(request: Request, env: Env): Promise<Response> {
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(env) });
 
@@ -153,6 +206,54 @@ export async function handle(request: Request, env: Env): Promise<Response> {
     const ai = (await aiRes.json()) as { content?: { type: string; text: string }[] };
     const text = ai.content?.find((c) => c.type === 'text')?.text ?? '';
     return json({ tags: parseTagArray(text) }, 200, env);
+  }
+
+  if (request.method === 'POST' && url.pathname === '/keywords') {
+    const denied = await requirePush(request, env);
+    if (denied) return denied;
+    const { title, body } = (await request.json()) as { title?: string; body?: string };
+    const prompt = `Based on this article title and excerpt, output 3-5 concise ENGLISH stock-photo search keywords (space-separated, no punctuation, no quotes) that match the topic visually. Output only the keywords.\n\nTitle: ${title ?? ''}\n\nExcerpt: ${(body ?? '').slice(0, 1500)}`;
+    const aiRes = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+      body: JSON.stringify({ model: env.ANTHROPIC_MODEL, max_tokens: 64, messages: [{ role: 'user', content: prompt }] }),
+    });
+    if (!aiRes.ok) return json({ error: `關鍵字產生失敗（${aiRes.status}）` }, 502, env);
+    const ai = (await aiRes.json()) as { content?: { type: string; text: string }[] };
+    const keywords = (ai.content?.find((c) => c.type === 'text')?.text ?? '').trim().replace(/["\n]+/g, ' ').trim();
+    return json({ keywords }, 200, env);
+  }
+
+  if (request.method === 'POST' && url.pathname === '/stock') {
+    const denied = await requirePush(request, env);
+    if (denied) return denied;
+    const { keywords, exclude } = (await request.json()) as { keywords?: string; exclude?: string[] };
+    if (!keywords || !keywords.trim()) return json({ error: '缺少關鍵字' }, 400, env);
+    const ex = new Set(exclude ?? []);
+    const [u, p] = await Promise.all([searchUnsplash(env, keywords), searchPexels(env, keywords)]);
+    // 交錯合併兩家結果，濾掉已用過的圖
+    const merged: StockPhoto[] = [];
+    for (let i = 0; i < Math.max(u.length, p.length); i++) {
+      if (u[i]) merged.push(u[i]);
+      if (p[i]) merged.push(p[i]);
+    }
+    return json({ photos: merged.filter((ph) => !ex.has(ph.id)) }, 200, env);
+  }
+
+  if (request.method === 'POST' && url.pathname === '/alt') {
+    const denied = await requirePush(request, env);
+    if (denied) return denied;
+    const { title, hint } = (await request.json()) as { title?: string; hint?: string };
+    const prompt = `為一篇標題為「${title ?? ''}」的文章封面圖，寫一句精簡的繁體中文替代文字（alt，描述畫面內容，15-30 字，不要加引號或「圖片：」前綴）。${hint ? `畫面線索：${hint}` : ''}`;
+    const aiRes = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+      body: JSON.stringify({ model: env.ANTHROPIC_MODEL, max_tokens: 128, messages: [{ role: 'user', content: prompt }] }),
+    });
+    if (!aiRes.ok) return json({ error: `alt 產生失敗（${aiRes.status}）` }, 502, env);
+    const ai = (await aiRes.json()) as { content?: { type: string; text: string }[] };
+    const alt = (ai.content?.find((c) => c.type === 'text')?.text ?? '').trim().replace(/^["「]+|["」]+$/g, '');
+    return json({ alt }, 200, env);
   }
 
   if (request.method === 'POST' && url.pathname === '/suggest') {

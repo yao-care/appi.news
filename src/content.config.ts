@@ -46,6 +46,7 @@ const articles = defineCollection({
     coAuthors: z.array(z.string()).default([]),
     coverImage: z.string().optional(),
     coverAlt: z.string().optional(),
+    coverImageCredit: z.string().optional(), // 圖庫圖攝影師署名（unsplash/pexels 授權要求）
     status: statusEnum,
     featured: z.boolean().default(false),
     hero: z.boolean().default(false),

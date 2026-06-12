@@ -9,6 +9,7 @@ export interface Env {
   // 生圖 secrets（wrangler secret put）；缺 FAL_KEY 時 Flux 端點回 502，OpenAI 不受影響。
   OPENAI_API_KEY?: string;
   OPENAI_IMAGE_MODEL?: string; // 'gpt-image-1'（需組織驗證）或 'dall-e-3'（免驗證）；預設 gpt-image-1
+  OPENAI_IMAGE_QUALITY?: string; // gpt-image-* 畫質 low|medium|high|auto；預設 low（壓低延遲避免逾時）
   FAL_KEY?: string;
   // 圖庫 secrets（Phase 2）
   UNSPLASH_ACCESS_KEY?: string;
@@ -62,10 +63,13 @@ async function genOpenAI(env: Env, prompt: string, size: GenSize): Promise<GenRe
     ? { landscape: '1792x1024', square: '1024x1024', portrait: '1024x1792' }
     : { landscape: '1536x1024', square: '1024x1024', portrait: '1024x1536' };
   // 不送 response_format（dall-e-3 新版 API 不接受）；改為 b64_json / url 兩種回應都接。
+  // quality 壓低延遲（gpt-image-2 預設較慢易逾時）：env OPENAI_IMAGE_QUALITY，預設 low；dall-e-3 不送。
+  const body: Record<string, unknown> = { model, prompt, n: 1, size: size3[size] };
+  if (!dalle) body.quality = env.OPENAI_IMAGE_QUALITY || 'low';
   const res = await fetch('https://api.openai.com/v1/images/generations', {
     method: 'POST',
     headers: { Authorization: `Bearer ${env.OPENAI_API_KEY}`, 'content-type': 'application/json' },
-    body: JSON.stringify({ model, prompt, n: 1, size: size3[size] }),
+    body: JSON.stringify(body),
   });
   if (!res.ok) throw new Error(`OpenAI 生圖失敗（${res.status}）：${(await res.text()).slice(0, 300)}`);
   const data = (await res.json()) as { data?: { b64_json?: string; url?: string }[] };

@@ -30,11 +30,16 @@
     if (genCount >= 10 && !confirm(`本次已生成 ${genCount} 張（每張都會計費），確定再生一張？`)) return;
     busy = true; error = ''; elapsed = 0;
     const timer = setInterval(() => { elapsed += 1; }, 1000);
+    // 90 秒逾時保護：gpt-image-2 偶爾 >100 秒會被連線切斷成「Failed to fetch」，
+    // 主動 abort 並給可行建議，避免無限轉圈。
+    const ctrl = new AbortController();
+    const to = setTimeout(() => ctrl.abort(), 90000);
     try {
       const res = await fetch(`${WORKER}/generate`, {
         method: 'POST',
         headers: { 'content-type': 'application/json', authorization: `Bearer ${token}` },
         body: JSON.stringify({ prompt, model, size }),
+        signal: ctrl.signal,
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || `生圖失敗（${res.status}）`);
@@ -42,8 +47,14 @@
       candidates = [...candidates, cand];
       selected = cand; // 新生成的自動選取
     } catch (e) {
-      error = e instanceof Error ? e.message : String(e);
+      if (e && e.name === 'AbortError') {
+        error = '生成逾時（超過 90 秒）。gpt-image-2 偶爾很慢，請再按一次重試；想要快，改用 Flux。';
+      } else {
+        const m = e instanceof Error ? e.message : String(e);
+        error = /fetch/i.test(m) ? '連線中斷（生成太久被切斷）。請重試，或改用 Flux（較快）。' : m;
+      }
     } finally {
+      clearTimeout(to);
       clearInterval(timer);
       busy = false;
     }

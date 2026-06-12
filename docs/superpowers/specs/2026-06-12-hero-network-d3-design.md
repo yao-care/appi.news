@@ -61,7 +61,8 @@
 - 卡片白底不透明，乾淨壓在網絡之上。
 
 ### 色彩來源
-- 從 CSS 變數讀取實際品牌色（`--appi-brand`、`--appi-accent`），確保亮／暗色模式一致；於初始化時透過 `getComputedStyle` 取值。
+- 從 CSS 變數讀取實際品牌色（`--appi-brand`、`--appi-accent`），確保亮／暗色模式一致。
+- 本站 CSS 變數實際解析為 `oklch()`，而 d3 `interpolateRgb` 不解析 oklch。故初始化時以 1×1 離屏 canvas 將色值**點陣化成具體 rgb** 再餵給 d3（跨色彩格式最穩，無效時回退 hex）。
 
 ## 效能 / 無障礙 / RWD
 

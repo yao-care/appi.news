@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import HeroNetwork from '@/components/blocks/HeroNetwork.astro';
 import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
 import CategoryTag from '@/components/ui/CategoryTag.astro';
 import { SITE } from '@/config/site';
@@ -45,6 +46,7 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
 <BaseLayout title="首頁" path="/" ogImage="og/home.png">
   <!-- 網站介紹 Hero 區：承接從 header 移下來的中文定位 + 站台介紹 -->
   <section class="intro">
+    <HeroNetwork />
     <div class="container intro-inner">
       <div class="intro-text">
         <span class="intro-eyebrow">{SITE.taglineEn}</span>
@@ -162,12 +164,15 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
 <style>
   /* ---------- 網站介紹 Hero 區 ---------- */
   .intro {
+    position: relative;
     background:
       radial-gradient(120% 150% at 88% 0%, var(--bg-tint) 0%, transparent 58%),
       linear-gradient(180deg, var(--bg-soft) 0%, var(--white) 100%);
     border-bottom: 1px solid var(--line-2);
   }
   .intro-inner {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: 1.3fr 0.7fr;
     align-items: center;

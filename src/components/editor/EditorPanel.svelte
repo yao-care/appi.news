@@ -4,6 +4,9 @@
   import { getToken } from '@/utils/editor/token';
   import { getFile } from '@/utils/editor/github';
   import { commitFiles } from '@/utils/editor/git-commit';
+  import { imageUploadName, b64ToBlob, blobToBase64 } from '@/utils/editor/image-upload';
+  import { compressImage } from '@/utils/editor/image-compress';
+  import { resetGenSession, unusedGenerated } from '@/utils/editor/gen-session';
   import { parse, serialize } from '@/utils/editor/mdx-doc';
   import { classifySave } from '@/utils/editor/save-machine';
   import { lint } from '@/utils/editor/lint';
@@ -33,6 +36,40 @@
   // 存檔時只挑「實際被引用」的（過濾掉 re-roll/換掉的孤兒圖）。
   let pendingFiles = $state([]); // { path, base64, publicUrl }
   function addPending(entry) { pendingFiles = [...pendingFiles, entry]; }
+
+  // C：本階段生成圖記錄；關閉前問是否保留未選用的到圖庫（避免付費生成被丟掉）
+  resetGenSession();
+  let showKeep = $state(false);
+  let keepList = $state([]); // { id, b64, mime, previewUrl, keep }
+  let archiving = $state(false);
+  let keepError = $state('');
+
+  function attemptClose() {
+    const u = unusedGenerated();
+    if (!u.length) { onclose(); return; }
+    keepList = u.map((i) => ({ ...i, previewUrl: `data:${i.mime};base64,${i.b64}`, keep: true }));
+    showKeep = true;
+  }
+
+  async function archiveAndClose() {
+    const chosen = keepList.filter((k) => k.keep);
+    if (!chosen.length) { onclose(); return; }
+    archiving = true; keepError = '';
+    try {
+      const files = [];
+      for (let i = 0; i < chosen.length; i++) {
+        const compressed = await compressImage(b64ToBlob(chosen[i].b64, chosen[i].mime), { maxWidth: 1280, mime: 'image/webp', quality: 0.82 });
+        const name = imageUploadName('gen', compressed.type, Date.now() + i);
+        files.push({ path: `public/generated/${name}`, content: await blobToBase64(compressed), encoding: 'base64' });
+      }
+      const r = await commitFiles({ files, message: `content: 歸檔 ${files.length} 張 AI 生成圖`, token: getToken() });
+      if (!r.ok) { keepError = `歸檔失敗（${r.status}），可重試，或按「不保留，直接關閉」`; archiving = false; return; }
+      onclose();
+    } catch (e) {
+      keepError = e instanceof Error ? e.message : String(e);
+      archiving = false;
+    }
+  }
 
 
   // AI 建議功能開關：刻意關閉（線上即時潤飾會計費，使用者選擇不啟用）。
@@ -243,6 +280,27 @@
 </script>
 
 <div class="et-overlay" role="dialog" aria-modal="true">
+  {#if showKeep}
+    <div class="et-keep">
+      <div class="et-keep-card">
+        <h3>要保留生成的圖嗎？</h3>
+        <p>你這次生成了 {keepList.length} 張還沒用到的圖。勾選要<strong>保留到圖庫</strong>（之後可重用）的，其餘關閉後丟棄。</p>
+        <div class="et-keep-grid">
+          {#each keepList as k}
+            <label class="et-keep-cell" class:on={k.keep}>
+              <img src={k.previewUrl} alt="生成圖" />
+              <input type="checkbox" bind:checked={k.keep} />
+            </label>
+          {/each}
+        </div>
+        {#if keepError}<p class="et-keep-err">{keepError}</p>{/if}
+        <div class="et-keep-actions">
+          <button class="et-keep-discard" onclick={onclose} disabled={archiving}>不保留，直接關閉</button>
+          <button class="et-keep-save" onclick={archiveAndClose} disabled={archiving}>{archiving ? '保留中…' : '保留勾選的並關閉'}</button>
+        </div>
+      </div>
+    </div>
+  {/if}
   <div class="et-panel">
     <header>
       <strong>編輯：{slug}</strong>
@@ -250,7 +308,7 @@
         <button onclick={goSeoTab} disabled={tab === 'seo'}>SEO 欄位</button>
         <button onclick={enterSource} disabled={tab === 'source'}>原始碼</button>
       </nav>
-      <button onclick={onclose} aria-label="關閉">✕</button>
+      <button onclick={attemptClose} aria-label="關閉">✕</button>
     </header>
 
     <div class="et-scroll">
@@ -315,7 +373,7 @@
             </p>
           {/if}
           <div class="et-done-actions">
-            <button class="et-primary" onclick={onclose}>關閉</button>
+            <button class="et-primary" onclick={attemptClose}>關閉</button>
             <button onclick={() => { stopDeployPoll(); deployState = ''; status = 'ready'; message = ''; }}>繼續編輯</button>
           </div>
         </div>
@@ -337,6 +395,21 @@
 
 <style>
   .et-overlay { position: fixed; inset: 0; background: oklch(0 0 0 / 0.5); z-index: 60; display: flex; }
+  /* C：關閉前的「保留生成圖」對話框 */
+  .et-keep { position: absolute; inset: 0; z-index: 70; background: oklch(0 0 0 / 0.4); display: flex; align-items: center; justify-content: center; padding: 1rem; }
+  .et-keep-card { background: white; border-radius: 8px; padding: 1.25rem; width: 100%; max-width: 680px; max-height: 85vh; overflow: auto; }
+  .et-keep-card h3 { margin: 0 0 0.5rem; font-family: var(--font-ui); }
+  .et-keep-card p { margin: 0 0 0.75rem; font-family: var(--font-ui); font-size: var(--text-meta); color: var(--color-ink-2, #666); }
+  .et-keep-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .et-keep-cell { position: relative; border: 2px solid transparent; border-radius: 4px; overflow: hidden; cursor: pointer; line-height: 0; }
+  .et-keep-cell.on { border-color: var(--appi-accent, #a87515); }
+  .et-keep-cell img { width: 100%; height: 110px; object-fit: cover; display: block; }
+  .et-keep-cell input { position: absolute; top: 6px; left: 6px; width: 18px; height: 18px; }
+  .et-keep-err { color: var(--color-coral, #c0392b); font-family: var(--font-ui); font-size: var(--text-meta); }
+  .et-keep-actions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1rem; }
+  .et-keep-discard { font-family: var(--font-ui); padding: 0.5rem 1rem; border: 1px solid var(--color-fog, #ccc); border-radius: 4px; background: white; cursor: pointer; }
+  .et-keep-save { font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.2rem; border: none; border-radius: 4px; background: var(--appi-brand, #1a3a5a); color: white; cursor: pointer; }
+  .et-keep-save:disabled, .et-keep-discard:disabled { opacity: 0.6; cursor: default; }
   .et-panel {
     background: color-mix(in oklch, var(--color-paper) 55%, white);
     color: var(--color-ink);

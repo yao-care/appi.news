@@ -2,6 +2,7 @@
   import { getToken } from '@/utils/editor/token';
   import { b64ToBlob } from '@/utils/editor/image-upload';
   import { AI_WORKER as WORKER } from '@/utils/editor/ai-worker';
+  import { addGenerated, markGenUsed } from '@/utils/editor/gen-session';
   import { asset } from '@/utils/url';
   import { listRepoImages } from '@/utils/editor/list-images';
 
@@ -56,6 +57,7 @@
           const cand = { b64: st.b64, mime: st.mime, previewUrl: `data:${st.mime};base64,${st.b64}` };
           candidates = [...candidates, cand];
           selected = cand;
+          addGenerated(st.b64, st.mime, crypto.randomUUID()); // C：記下這張，關閉前問是否保留
           break;
         }
         if (st.status === 'error') throw new Error(st.error || '生成失敗');
@@ -72,6 +74,7 @@
 
   function use() {
     if (!selected) return;
+    markGenUsed(selected.b64); // C：選用了 → 不再提示歸檔（會隨文章存檔）
     onpick?.({ source: 'generated', blob: b64ToBlob(selected.b64, selected.mime), mime: selected.mime, previewUrl: selected.previewUrl });
   }
 

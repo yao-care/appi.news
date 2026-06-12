@@ -4,13 +4,14 @@ const OWNER = 'yao-care';
 const REPO = 'appi.news';
 const IMG_EXT = /\.(png|jpe?g|webp|gif|avif)$/i;
 
+export type ImageDir = 'images' | 'covers' | 'generated';
 export interface RepoImage {
   name: string;
-  dir: 'images' | 'covers';
+  dir: ImageDir;
   path: string; // 站內路徑（無 BASE），如 /images/foo.jpg
 }
 
-async function listDir(dir: 'images' | 'covers', token: string): Promise<RepoImage[]> {
+async function listDir(dir: ImageDir, token: string): Promise<RepoImage[]> {
   const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/public/${dir}?per_page=1000`, {
     headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
   });
@@ -22,8 +23,10 @@ async function listDir(dir: 'images' | 'covers', token: string): Promise<RepoIma
     .map((i) => ({ name: i.name, dir, path: `/${dir}/${i.name}` }));
 }
 
-/** 列出 covers + images 既有圖；新到舊大致由檔名排序（含時間戳的在後）。 */
+/** 列出 generated + covers + images 既有圖（generated=保留的 AI 生成圖，優先顯示）。 */
 export async function listRepoImages(token: string): Promise<RepoImage[]> {
-  const [covers, images] = await Promise.all([listDir('covers', token), listDir('images', token)]);
-  return [...covers, ...images];
+  const [generated, covers, images] = await Promise.all([
+    listDir('generated', token), listDir('covers', token), listDir('images', token),
+  ]);
+  return [...generated, ...covers, ...images];
 }

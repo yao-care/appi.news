@@ -34,6 +34,7 @@
   let pendingFiles = $state([]); // { path, base64, publicUrl }
   function addPending(entry) { pendingFiles = [...pendingFiles, entry]; }
 
+
   // AI 建議功能開關：刻意關閉（線上即時潤飾會計費，使用者選擇不啟用）。
   // 要開啟：設好 ai-suggest worker 的 ANTHROPIC_API_KEY secret 後改為 true。
   const AI_ENABLED = false;

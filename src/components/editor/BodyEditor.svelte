@@ -2,6 +2,7 @@
   import { onMount, onDestroy } from 'svelte';
   import { imageUploadName, repoImagePath, publicImageUrl, blobToBase64 } from '@/utils/editor/image-upload';
   import { compressImage } from '@/utils/editor/image-compress';
+  import { asset } from '@/utils/url';
   import ImagePicker from './ImagePicker.svelte';
 
   // addPending：登記待提交圖（存檔時與 .md 打包成單一 commit）
@@ -9,8 +10,25 @@
 
   let el;
   let editor;
-  let lastSet = value; // 防止 外部更新 ↔ change 事件互相觸發成迴圈
+  let lastSet = value; // 防止 外部更新 ↔ change 事件互相觸發成迴圈（皆為「儲存形式」）
   let showPicker = $state(false);
+
+  const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
+  let blobMap = []; // 生成/上傳圖的 blob 預覽 URL ↔ 正式路徑（存檔時換回）
+
+  // 進 TOAST：站內路徑（/images、/covers）補 BASE，編輯器才載得到（連舊文章既有圖一併修好）
+  function toDisplay(md) {
+    if (!md || !BASE) return md ?? '';
+    return md.replace(/(\]\(|src=["'])(\/(?:images|covers)\/)/g, (_m, p1, p2) => p1 + BASE + p2);
+  }
+  // 出 TOAST：去掉 BASE 還原站內路徑；blob URL 換回正式路徑 → onchange 一律拿到「儲存形式」
+  function toStore(md) {
+    if (!md) return md ?? '';
+    let out = md;
+    if (BASE) out = out.split(`${BASE}/images/`).join('/images/').split(`${BASE}/covers/`).join('/covers/');
+    for (const m of blobMap) out = out.split(m.blobUrl).join(m.storedUrl);
+    return out;
+  }
 
   // Toast UI 的 CSS 以 runtime <link> 注入（指向 public/vendor 的靜態副本），
   // 刻意不走 import()——否則 Astro 會把它收進文章頁 render-blocking 的 route CSS，
@@ -46,7 +64,7 @@
       height: '78vh', // TOAST 會把此值設為 el 的 inline height（直接拉高內文編輯區）
       initialEditType: 'wysiwyg',
       hideModeSwitch: true,
-      initialValue: value,
+      initialValue: toDisplay(value),
       usageStatistics: false,
       toolbarItems: [
         ['heading', 'bold', 'italic'],
@@ -55,9 +73,9 @@
       ],
       events: {
         change: () => {
-          const md = editor.getMarkdown();
-          lastSet = md;
-          onchange?.(md);
+          const stored = toStore(editor.getMarkdown());
+          lastSet = stored;
+          onchange?.(stored);
         },
       },
       hooks: {
@@ -67,7 +85,10 @@
             const name = imageUploadName(slug, compressed.type, Date.now());
             const publicUrl = publicImageUrl(name);
             addPending?.({ path: repoImagePath(name), base64: await blobToBase64(compressed), publicUrl });
-            callback(publicUrl, '');
+            // 插入 blob URL 當場可預覽；toStore 存檔時換回 publicUrl
+            const objUrl = URL.createObjectURL(compressed);
+            blobMap.push({ blobUrl: objUrl, storedUrl: publicUrl });
+            callback(objUrl, '');
           } catch (e) {
             alert(e instanceof Error ? e.message : String(e));
           }
@@ -77,29 +98,33 @@
     });
   });
 
-  // ImagePicker 選定 → 取得 URL → 插入內文
+  // ImagePicker 選定 → 插入內文。插入「顯示用 URL」當場可預覽；存檔時 EditorPanel 換回「儲存用路徑」。
   async function onPick(result) {
     showPicker = false;
     try {
-      let url;
+      let displayUrl;
+      let storedUrl;
       let credit = '';
       if (result.source === 'stock') {
-        url = result.url; credit = result.credit || ''; // 外部 URL + 攝影師署名
+        displayUrl = storedUrl = result.url; credit = result.credit || ''; // 外部絕對 URL，編輯器/上線都可載
       } else if (result.source === 'library') {
-        url = result.url; // 站內路徑直接用
+        storedUrl = result.url; // 站內路徑（無 BASE，由 build 補）
+        displayUrl = asset(storedUrl); // 編輯器預覽補 BASE 才載得到
       } else {
-        // generated | uploaded：壓縮後登記待提交（存檔時打包）
+        // generated | uploaded：壓縮後登記待提交（存檔時打包）；blob URL 當場預覽
         const compressed = await compressImage(result.blob, { maxWidth: 1280, mime: 'image/webp', quality: 0.82 });
         const name = imageUploadName(slug, compressed.type, Date.now());
-        url = publicImageUrl(name);
-        addPending?.({ path: repoImagePath(name), base64: await blobToBase64(compressed), publicUrl: url });
+        storedUrl = publicImageUrl(name);
+        addPending?.({ path: repoImagePath(name), base64: await blobToBase64(compressed), publicUrl: storedUrl });
+        displayUrl = URL.createObjectURL(compressed);
+        blobMap.push({ blobUrl: displayUrl, storedUrl }); // toStore 存檔時換回
       }
-      editor?.exec('addImage', { imageUrl: url, altText: '' });
+      editor?.exec('addImage', { imageUrl: displayUrl, altText: '' });
       // 圖庫圖署名：把剛插入的 markdown image 換成 <figure> + <figcaption>
       if (credit && editor) {
         const md = editor.getMarkdown();
-        const imgMd = `![](${url})`;
-        const figure = `<figure>\n  <img src="${url}" alt="">\n  <figcaption>攝影：${credit}</figcaption>\n</figure>`;
+        const imgMd = `![](${displayUrl})`;
+        const figure = `<figure>\n  <img src="${displayUrl}" alt="">\n  <figcaption>攝影：${credit}</figcaption>\n</figure>`;
         if (md.includes(imgMd)) editor.setMarkdown(md.replace(imgMd, figure));
       }
     } catch (e) {
@@ -110,7 +135,7 @@
   $effect(() => {
     if (editor && value !== lastSet) {
       lastSet = value;
-      editor.setMarkdown(value ?? '');
+      editor.setMarkdown(toDisplay(value ?? '')); // value 是儲存形式 → 顯示時補 BASE
     }
   });
 

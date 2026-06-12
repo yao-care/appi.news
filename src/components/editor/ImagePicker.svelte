@@ -213,13 +213,16 @@
         {#if error}<p class="ip-error">{error}</p>{/if}
 
         {#if candidates.length}
-          <div class="ip-strip">
-            {#each candidates as c, i}
-              <button class="ip-thumb" class:sel={selected === c} onclick={() => (selected = c)} title="第 {i + 1} 張">
-                <img src={c.previewUrl} alt="候選 {i + 1}" />
-              </button>
-            {/each}
-          </div>
+          {#if selected}<img class="ip-big" src={selected.previewUrl} alt="生成預覽" />{/if}
+          {#if candidates.length > 1}
+            <div class="ip-strip">
+              {#each candidates as c, i}
+                <button class="ip-thumb" class:sel={selected === c} onclick={() => (selected = c)} title="第 {i + 1} 張">
+                  <img src={c.previewUrl} alt="候選 {i + 1}" />
+                </button>
+              {/each}
+            </div>
+          {/if}
           <div class="ip-actions">
             <button class="ip-use" onclick={use} disabled={!selected}>用這張</button>
           </div>
@@ -342,4 +345,6 @@
   .ip-cell img { width: 100%; height: 110px; object-fit: cover; display: block; }
   .ip-credit { position: absolute; left: 0; right: 0; bottom: 0; padding: 2px 6px; font-family: var(--font-ui); font-size: 0.62rem; line-height: 1.3; color: white; background: linear-gradient(transparent, rgba(0,0,0,0.7)); text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .ip-up-preview { width: 100%; max-height: 300px; object-fit: contain; border: 1px solid var(--color-fog, #e5e5e5); border-radius: var(--radius-sm, 4px); background: var(--bg-soft, #f5f5f5); }
+  /* 生成後的大圖預覽 */
+  .ip-big { width: 100%; max-height: 46vh; object-fit: contain; border: 1px solid var(--color-fog, #e5e5e5); border-radius: var(--radius-sm, 4px); background: var(--bg-soft, #f5f5f5); }
 </style>

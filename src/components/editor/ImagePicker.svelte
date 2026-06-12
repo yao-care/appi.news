@@ -17,6 +17,7 @@
   let model = $state('openai'); // 'openai'（gpt-image-2）| 'flux'
   let busy = $state(false);
   let error = $state('');
+  let elapsed = $state(0); // 生成已耗秒數（給回饋，gpt-image-2 約 20–40 秒）
   // 生成候選累加（re-roll 比較用）；selected 指向其中一張
   let candidates = $state([]); // { b64, mime, previewUrl }
   let selected = $state(null);
@@ -27,7 +28,8 @@
     const token = getToken();
     if (!token) { error = '請先登入管理者帳號再生圖'; return; }
     if (genCount >= 10 && !confirm(`本次已生成 ${genCount} 張（每張都會計費），確定再生一張？`)) return;
-    busy = true; error = '';
+    busy = true; error = ''; elapsed = 0;
+    const timer = setInterval(() => { elapsed += 1; }, 1000);
     try {
       const res = await fetch(`${WORKER}/generate`, {
         method: 'POST',
@@ -42,6 +44,7 @@
     } catch (e) {
       error = e instanceof Error ? e.message : String(e);
     } finally {
+      clearInterval(timer);
       busy = false;
     }
   }
@@ -178,11 +181,14 @@
             </select>
           </label>
           <button class="ip-gen-btn" onclick={generate} disabled={busy}>
-            {busy ? '生成中…' : genCount ? '再畫一張' : '生成'}
+            {busy ? `生成中…${elapsed}s` : genCount ? '再畫一張' : '生成'}
           </button>
-          {#if genCount}<span class="ip-count">本次已生成 {genCount} 張</span>{/if}
+          {#if genCount && !busy}<span class="ip-count">本次已生成 {genCount} 張</span>{/if}
         </div>
 
+        {#if busy}
+          <p class="ip-hint">{model === 'openai' ? 'gpt-image-2 畫質高但較慢，約需 20–40 秒，請稍候…' : 'Flux 生成中，通常數秒…'}</p>
+        {/if}
         {#if error}<p class="ip-error">{error}</p>{/if}
 
         {#if candidates.length}

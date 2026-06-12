@@ -34,12 +34,12 @@
     const aiBtn = document.createElement('button');
     aiBtn.type = 'button';
     aiBtn.textContent = '＋AI圖';
-    aiBtn.style.cssText = 'font-family:inherit;font-size:12px;font-weight:600;color:#1a3a5a;background:none;border:none;cursor:pointer;padding:0 4px;';
+    aiBtn.style.cssText = 'font-family:inherit;font-size:12px;font-weight:600;color:#1a3a5a;background:none;border:none;cursor:pointer;padding:0 6px;white-space:nowrap;';
     aiBtn.addEventListener('click', () => { showPicker = true; });
 
     editor = new Editor({
       el,
-      height: '100%',
+      height: '78vh', // TOAST 會把此值設為 el 的 inline height（直接拉高內文編輯區）
       initialEditType: 'wysiwyg',
       hideModeSwitch: true,
       initialValue: value,
@@ -129,5 +129,7 @@
 {/if}
 
 <style>
-  .et-body-editor { min-height: 20rem; }
+  /* 內文編輯區拉高到接近滿版。TOAST 會把 height(78vh) 設成 el 的 inline 高度；
+     此元件是 modal flex 容器裡的可收縮子項，需 flex-shrink:0 才不會被壓回 min-height。 */
+  .et-body-editor { height: 78vh; min-height: 22rem; flex-shrink: 0; }
 </style>

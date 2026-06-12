@@ -2,10 +2,21 @@ name = "appi-news-ai-suggest"
 main = "src/index.ts"
 compatibility_date = "2026-01-01"
 
-# 非同步生圖工單暫存（waitUntil 背景生圖 + 前端輪詢取件）
+# 非同步生圖工單暫存（前端輪詢取件）
 [[kv_namespaces]]
 binding = "GEN_JOBS"
 id = "82839587c59d4150bc66fff4a73608aa"
+
+# 生圖工作佇列：/generate-async 入列 → consumer 背景生圖（不受 request/waitUntil 時限，失敗自動重試）
+[[queues.producers]]
+binding = "GEN_QUEUE"
+queue = "appi-news-gen"
+
+[[queues.consumers]]
+queue = "appi-news-gen"
+max_batch_size = 1
+max_batch_timeout = 1
+max_retries = 2
 
 [vars]
 ALLOWED_ORIGIN = "https://yao-care.github.io"

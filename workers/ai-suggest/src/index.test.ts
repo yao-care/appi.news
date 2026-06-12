@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { handle, parseTagArray, stockImageId, applyPeopleDirective, type Env } from './index';
+import worker, { handle, parseTagArray, stockImageId, applyPeopleDirective, type Env } from './index';
 
 const env: Env = {
   ANTHROPIC_API_KEY: 'sk-test',
@@ -52,21 +52,28 @@ function mockKV() {
 }
 
 describe('非同步生圖', () => {
-  it('/generate-async 回 jobId、KV 寫 pending、waitUntil 跑完寫 done', async () => {
+  it('/generate-async 入列 + KV pending；queue consumer 跑完寫 done', async () => {
     const fetchMock = vi.fn()
       .mockResolvedValueOnce(new Response(JSON.stringify({ permissions: { push: true } }), { status: 200 })) // requirePush
-      .mockResolvedValue(new Response(JSON.stringify({ data: [{ b64_json: 'AAAA' }] }), { status: 200 })); // runGen → OpenAI
+      .mockResolvedValue(new Response(JSON.stringify({ data: [{ b64_json: 'AAAA' }] }), { status: 200 })); // consumer → OpenAI
     vi.stubGlobal('fetch', fetchMock);
     const kv = mockKV();
-    let waited: Promise<unknown> | undefined;
-    const ctx = { waitUntil: (p: Promise<unknown>) => { waited = p; } };
+    const sent: any[] = [];
+    const env2 = { ...env, GEN_JOBS: kv, GEN_QUEUE: { send: async (b: unknown) => { sent.push(b); } } };
     const req = new Request('https://w.dev/generate-async', { method: 'POST', headers: { 'content-type': 'application/json', authorization: 'Bearer x' }, body: JSON.stringify({ prompt: '一個人', model: 'openai', size: 'landscape' }) });
-    const res = await handle(req, { ...env, GEN_JOBS: kv }, ctx);
+    const res = await handle(req, env2);
     expect(res.status).toBe(200);
     const data = await res.json() as { jobId: string };
     expect(typeof data.jobId).toBe('string');
     expect(kv.store.get(data.jobId)).toContain('pending');
-    await waited; // 跑完背景生圖
+    expect(sent).toHaveLength(1);
+    expect(sent[0].jobId).toBe(data.jobId);
+    expect(sent[0].prompt).toContain('Taiwanese'); // 入列時已套台灣人鐵律
+
+    // 模擬 queue consumer 處理該訊息
+    let acked = false;
+    await worker.queue!({ messages: [{ body: sent[0], ack: () => { acked = true; }, retry: () => {} }] }, env2);
+    expect(acked).toBe(true);
     expect(kv.store.get(data.jobId)).toContain('done');
     expect(kv.store.get(data.jobId)).toContain('AAAA');
   });

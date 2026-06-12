@@ -47,8 +47,7 @@
       toolbarItems: [
         ['heading', 'bold', 'italic'],
         ['link', 'ul', 'ol', 'quote'],
-        ['image'],
-        [{ name: 'aiImage', tooltip: 'AI 生成 / 找圖庫 / 上傳 / 既有圖庫', el: aiBtn }],
+        ['image', { name: 'aiImage', tooltip: 'AI 生成 / 找圖庫 / 上傳 / 既有圖庫', el: aiBtn }],
       ],
       events: {
         change: () => {

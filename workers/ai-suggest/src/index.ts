@@ -9,6 +9,15 @@ export interface KvLike {
 export interface CtxLike {
   waitUntil(p: Promise<unknown>): void;
 }
+export interface QueueLike {
+  send(body: unknown): Promise<void>;
+}
+export interface GenMessage {
+  jobId: string;
+  prompt: string;
+  model?: string;
+  size: GenSize;
+}
 
 export interface Env {
   ANTHROPIC_API_KEY: string; // wrangler secret
@@ -24,12 +33,21 @@ export interface Env {
   // 圖庫 secrets（Phase 2）
   UNSPLASH_ACCESS_KEY?: string;
   PEXELS_API_KEY?: string;
-  // 非同步生圖工單暫存
+  // 非同步生圖工單暫存 + 工作佇列
   GEN_JOBS?: KvLike;
+  GEN_QUEUE?: QueueLike;
 }
 
 export default {
   async fetch(req: Request, env: Env, ctx: CtxLike) { return handle(req, env, ctx); },
+  // Queue consumer：背景生圖（不受 request/waitUntil 時限）。被中止則不 ack → 自動重試。
+  async queue(batch: { messages: { body: GenMessage; ack(): void; retry(): void }[] }, env: Env) {
+    for (const msg of batch.messages) {
+      const m = msg.body;
+      await runGen(env, m.jobId, m.prompt, m.model, m.size);
+      msg.ack();
+    }
+  },
 };
 
 function cors(env: Env): Record<string, string> {
@@ -216,13 +234,14 @@ export async function handle(request: Request, env: Env, ctx?: CtxLike): Promise
   if (request.method === 'POST' && url.pathname === '/generate-async') {
     const denied = await requirePush(request, env);
     if (denied) return denied;
-    if (!env.GEN_JOBS) return json({ error: '未設定工單儲存（GEN_JOBS）' }, 500, env);
+    if (!env.GEN_JOBS || !env.GEN_QUEUE) return json({ error: '未設定工單儲存/佇列' }, 500, env);
     const { prompt, model, size } = (await request.json()) as { prompt?: string; model?: string; size?: GenSize };
     if (!prompt || !prompt.trim()) return json({ error: '缺少 prompt' }, 400, env);
     const sz: GenSize = size === 'square' || size === 'portrait' ? size : 'landscape';
     const jobId = crypto.randomUUID();
     await env.GEN_JOBS.put(jobId, JSON.stringify({ status: 'pending' }), { expirationTtl: 900 });
-    ctx?.waitUntil(runGen(env, jobId, applyPeopleDirective(prompt), model, sz));
+    // 入列 → consumer 背景生圖（耐久、可重試）。不再用 waitUntil（長生圖會被中止）。
+    await env.GEN_QUEUE.send({ jobId, prompt: applyPeopleDirective(prompt), model, size: sz } satisfies GenMessage);
     return json({ jobId }, 200, env);
   }
 

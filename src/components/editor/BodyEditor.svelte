@@ -59,10 +59,14 @@
     aiBtn.addEventListener('mouseleave', () => { aiBtn.style.background = 'transparent'; aiBtn.style.borderColor = 'transparent'; });
     aiBtn.addEventListener('click', () => { showPicker = true; });
 
+    // ⚠️ 含原始 HTML（多為 WP 遷移文章）→ 強制 markdown 模式。
+    // WYSIWYG 會把 HTML 重新序列化：併行、吃掉空行 → 文章結構毀損（曾把 235 行壓成 137 行）。
+    // 鎖死模式（hideModeSwitch）避免切到 WYSIWYG 又被重序列化。新文章（無 HTML）才用 WYSIWYG。
+    const hasRawHtml = /<\w+[\s/>]/.test(value || '');
     editor = new Editor({
       el,
       height: '78vh', // TOAST 會把此值設為 el 的 inline height（直接拉高內文編輯區）
-      initialEditType: 'wysiwyg',
+      initialEditType: hasRawHtml ? 'markdown' : 'wysiwyg',
       hideModeSwitch: true,
       initialValue: toDisplay(value),
       usageStatistics: false,

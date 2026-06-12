@@ -99,6 +99,19 @@ async function genFlux(env: Env, prompt: string, size: GenSize): Promise<GenResu
   return { b64: bytesToBase64(new Uint8Array(await img.arrayBuffer())), mime };
 }
 
+/** 從 Claude 回應文字抽出標籤陣列：容忍 ```json 包裹或前後雜訊，取第一個 [...]。 */
+export function parseTagArray(text: string): string[] {
+  const m = text.match(/\[[\s\S]*?\]/);
+  if (!m) return [];
+  try {
+    const arr = JSON.parse(m[0]);
+    if (!Array.isArray(arr)) return [];
+    return arr.map((t) => String(t).trim().replace(/^#/, '')).filter(Boolean).slice(0, 8);
+  } catch {
+    return [];
+  }
+}
+
 export async function handle(request: Request, env: Env): Promise<Response> {
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(env) });
 
@@ -124,6 +137,22 @@ export async function handle(request: Request, env: Env): Promise<Response> {
     } catch (e) {
       return json({ error: e instanceof Error ? e.message : String(e) }, 502, env);
     }
+  }
+
+  if (request.method === 'POST' && url.pathname === '/tags') {
+    const denied = await requirePush(request, env);
+    if (denied) return denied;
+    const { title, body } = (await request.json()) as { title?: string; body?: string };
+    const prompt = `你是繁體中文新聞編輯。根據以下文章標題與內文，提供 5-8 個精簡、具體的繁體中文主題標籤（每個 2-6 字，名詞或主題詞，不要井字號）。只輸出一個 JSON 字串陣列，例如 ["失智照護","社區設計"]，不要任何其他文字或說明。\n\n標題：${title ?? ''}\n\n內文：\n${(body ?? '').slice(0, 4000)}`;
+    const aiRes = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+      body: JSON.stringify({ model: env.ANTHROPIC_MODEL, max_tokens: 256, messages: [{ role: 'user', content: prompt }] }),
+    });
+    if (!aiRes.ok) return json({ error: `推薦標籤失敗（${aiRes.status}）` }, 502, env);
+    const ai = (await aiRes.json()) as { content?: { type: string; text: string }[] };
+    const text = ai.content?.find((c) => c.type === 'text')?.text ?? '';
+    return json({ tags: parseTagArray(text) }, 200, env);
   }
 
   if (request.method === 'POST' && url.pathname === '/suggest') {

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { handle, type Env } from './index';
+import { handle, parseTagArray, type Env } from './index';
 
 const env: Env = {
   ANTHROPIC_API_KEY: 'sk-test',
@@ -25,7 +25,43 @@ function genReq(body: object, auth = 'Bearer ght') {
   });
 }
 
+function tagsReq(body: object, auth = 'Bearer ght') {
+  return new Request('https://w.dev/tags', {
+    method: 'POST', headers: { 'content-type': 'application/json', authorization: auth },
+    body: JSON.stringify(body),
+  });
+}
+
 afterEach(() => vi.restoreAllMocks());
+
+describe('parseTagArray', () => {
+  it('純 JSON 陣列', () => {
+    expect(parseTagArray('["失智照護","社區設計"]')).toEqual(['失智照護', '社區設計']);
+  });
+  it('包在 ```json 與雜訊中也能取出，並去井字號、限 8 個', () => {
+    expect(parseTagArray('好的：\n```json\n["#健康","醫療"]\n```')).toEqual(['健康', '醫療']);
+  });
+  it('無陣列 → 空', () => {
+    expect(parseTagArray('抱歉我無法')).toEqual([]);
+  });
+});
+
+describe('/tags', () => {
+  it('有寫入權 → 呼叫 Claude，回 { tags }', async () => {
+    const fetchMock = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ permissions: { push: true } }), { status: 200 }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ content: [{ type: 'text', text: '["失智照護","音樂治療"]' }] }), { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    const res = await handle(tagsReq({ title: '失智友善', body: '內文…' }), env);
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({ tags: ['失智照護', '音樂治療'] });
+    expect(fetchMock.mock.calls[1][0]).toBe('https://api.anthropic.com/v1/messages');
+  });
+  it('無寫入權 → 403', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ permissions: { push: false } }), { status: 200 })));
+    expect((await handle(tagsReq({ title: 'x' }), env)).status).toBe(403);
+  });
+});
 
 describe('/suggest', () => {
   it('無寫入權的 token → 403', async () => {

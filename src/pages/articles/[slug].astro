@@ -53,6 +53,12 @@ const related = relatedArticles(all, article, 3);
 const authorNames = new Map(
   [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
 );
+// 編輯器作者下拉用
+const authorOptions = [...authorMap.values()].map((a) => ({
+  id: a.id,
+  name: a.data.name,
+  githubLogin: a.data.githubLogin ?? '',
+}));
 const { newer, older } = adjacent(all, article);
 
 const { Content } = await render(article);
@@ -227,6 +233,7 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
     repoPath={article.filePath}
     collection="articles"
     slug={articleSlug(article)}
+    authors={authorOptions}
   />
 </BaseLayout>
 

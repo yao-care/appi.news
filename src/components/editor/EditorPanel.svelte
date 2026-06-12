@@ -9,9 +9,24 @@
   import { validateArticleFrontmatter } from '@/utils/editor/article-schema';
   import SeoFields from './SeoFields.svelte';
   import BodyEditor from './BodyEditor.svelte';
-  import CoverField from './CoverField.svelte';
 
-  let { repoPath, collection, slug, onclose, initialDoc = null } = $props();
+  let { repoPath, collection, slug, onclose, initialDoc = null, authors = [] } = $props();
+
+  // 解析 GitHub 登入帳號 → 對應的預設作者 id（新文章帶入）
+  let defaultAuthorId = $state('');
+  onMount(async () => {
+    try {
+      const res = await fetch('https://api.github.com/user', {
+        headers: { Authorization: `Bearer ${getToken()}`, Accept: 'application/vnd.github+json' },
+      });
+      if (!res.ok) return;
+      const u = await res.json();
+      const login = String(u.login ?? '').toLowerCase();
+      defaultAuthorId = authors.find((a) => (a.githubLogin ?? '').toLowerCase() === login)?.id ?? '';
+    } catch {
+      // 取不到登入身分就不帶預設，不影響編輯
+    }
+  });
 
   // AI 建議功能開關：刻意關閉（線上即時潤飾會計費，使用者選擇不啟用）。
   // 要開啟：設好 ai-suggest worker 的 ANTHROPIC_API_KEY secret 後改為 true。
@@ -226,10 +241,9 @@
       {#if status === 'loading'}<p class="et-loading">載入文章內容中…</p>{/if}
 
       {#if status !== 'loading' && tab === 'seo'}
-        <CoverField {frontmatter} {slug} onchange={(fm) => (frontmatter = fm)} />
-        <SeoFields {frontmatter} onchange={(fm) => (frontmatter = fm)} />
+        <SeoFields {frontmatter} {slug} {authors} {body} {defaultAuthorId} onchange={(fm) => (frontmatter = fm)} />
         <div class="et-body">
-          <span>正文</span>
+          <span>內文</span>
           <BodyEditor value={body} {slug} onchange={(md) => (body = md)} />
         </div>
         {#if AI_ENABLED}

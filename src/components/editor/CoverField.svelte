@@ -59,26 +59,22 @@
 
 <div class="cf">
   <span class="cf-label">封面圖</span>
-  <div class="cf-body">
-    {#if previewSrc}
-      <img class="cf-thumb" src={previewSrc} alt={coverAlt || '封面預覽'} />
-    {:else}
-      <div class="cf-empty">尚無封面</div>
-    {/if}
-    <div class="cf-side">
-      <div class="cf-btns">
-        <button type="button" class="cf-choose" onclick={() => (showPicker = true)} disabled={uploading}>
-          {uploading ? '上傳中…' : coverImage ? '更換封面' : '選擇封面'}
-        </button>
-        {#if coverImage}<button type="button" class="cf-remove" onclick={removeCover}>移除</button>{/if}
-      </div>
-      <label class="cf-alt">
-        <span>替代文字（alt）</span>
-        <input value={coverAlt} oninput={(e) => setField('coverAlt', e.currentTarget.value)} placeholder="描述封面內容，無障礙用" />
-      </label>
-      {#if uploadError}<p class="cf-err">{uploadError}</p>{/if}
-    </div>
+  {#if previewSrc}
+    <img class="cf-preview" src={previewSrc} alt={coverAlt || '封面預覽'} />
+  {:else}
+    <div class="cf-preview cf-empty">尚無封面</div>
+  {/if}
+  <div class="cf-btns">
+    <button type="button" class="cf-choose" onclick={() => (showPicker = true)} disabled={uploading}>
+      {uploading ? '上傳中…' : coverImage ? '更換封面' : '選擇封面'}
+    </button>
+    {#if coverImage}<button type="button" class="cf-remove" onclick={removeCover}>移除</button>{/if}
   </div>
+  <label class="cf-alt">
+    <span>替代文字（alt）</span>
+    <input value={coverAlt} oninput={(e) => setField('coverAlt', e.currentTarget.value)} placeholder="描述封面內容，無障礙用" />
+  </label>
+  {#if uploadError}<p class="cf-err">{uploadError}</p>{/if}
 </div>
 
 {#if showPicker}
@@ -86,12 +82,11 @@
 {/if}
 
 <style>
-  .cf { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.75rem; }
+  /* 整體填滿左欄高度：預覽撐開 (flex:1)，按鈕與 alt 固定在下 */
+  .cf { display: flex; flex-direction: column; gap: 0.4rem; height: 100%; }
   .cf-label { font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); font-weight: 600; color: var(--color-ink); }
-  .cf-body { display: flex; gap: 1rem; align-items: start; }
-  .cf-thumb { width: 180px; height: 120px; object-fit: cover; border-radius: var(--radius-sm, 4px); border: 1px solid var(--color-fog, #e5e5e5); background: var(--bg-soft, #f5f5f5); }
-  .cf-empty { width: 180px; height: 120px; display: flex; align-items: center; justify-content: center; border: 1px dashed var(--color-fog, #ccc); border-radius: var(--radius-sm, 4px); color: var(--color-ink-2, #888); font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); }
-  .cf-side { display: flex; flex-direction: column; gap: 0.5rem; flex: 1; min-width: 0; }
+  .cf-preview { flex: 1 1 auto; width: 100%; min-height: 150px; object-fit: cover; border-radius: var(--radius-sm, 4px); border: 1px solid var(--color-fog, #e5e5e5); background: var(--bg-soft, #f5f5f5); }
+  .cf-empty { display: flex; align-items: center; justify-content: center; border-style: dashed; color: var(--color-ink-2, #888); font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); }
   .cf-btns { display: flex; gap: 0.5rem; }
   .cf-choose { font-family: var(--font-ui); font-weight: 600; padding: 0.45rem 1rem; border: none; border-radius: var(--radius-sm, 4px); background: var(--appi-brand, #1a3a5a); color: white; cursor: pointer; }
   .cf-choose:disabled { opacity: 0.6; cursor: default; }

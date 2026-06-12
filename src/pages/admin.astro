@@ -11,6 +11,12 @@ const quickLinks = articleEntries.slice(0, 5).map((e) => ({
   title: e.data.title,
   href: url(`/articles/${articleSlug(e)}/`),
 }));
+// 編輯器作者下拉用：id + 名稱 + GitHub 登入（對應預設作者）
+const authorOptions = (await getCollection('authors')).map((a) => ({
+  id: a.id,
+  name: a.data.name,
+  githubLogin: a.data.githubLogin ?? '',
+}));
 ---
 <BaseLayout title="管理登入" path="/admin/" noindex={true}>
   <div class="et-admin">
@@ -29,7 +35,7 @@ const quickLinks = articleEntries.slice(0, 5).map((e) => ({
       </ul>
     </section>
 
-    <NewArticle client:only="svelte" />
+    <NewArticle client:only="svelte" authors={authorOptions} />
   </div>
 </BaseLayout>
 

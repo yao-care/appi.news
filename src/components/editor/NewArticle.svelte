@@ -6,6 +6,8 @@
   import { fileExists } from '@/utils/editor/github';
   import EditorPanel from './EditorPanel.svelte';
 
+  let { authors = [] } = $props();
+
   // appi.news 只有 articles 一個可編輯集合
   const collection = 'articles';
   let title = $state('');
@@ -104,7 +106,7 @@
 
 {#if getToken()}
   {#if open}
-    <EditorPanel {repoPath} {collection} {slug} {initialDoc} onclose={() => (open = false)} />
+    <EditorPanel {repoPath} {collection} {slug} {initialDoc} {authors} onclose={() => (open = false)} />
   {:else if taskState === 'pending'}
     <section class="et-new">
       <h2>AI 寫作任務</h2>

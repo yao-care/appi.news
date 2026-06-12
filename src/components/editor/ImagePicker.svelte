@@ -1,12 +1,11 @@
 <script>
   import { getToken } from '@/utils/editor/token';
   import { b64ToBlob } from '@/utils/editor/image-upload';
+  import { AI_WORKER as WORKER } from '@/utils/editor/ai-worker';
 
   // onpick(result)：{ source:'generated', blob, mime, previewUrl }
   // size：'landscape'（封面預設）| 'square' | 'portrait'
   let { initialPrompt = '', size = 'landscape', onpick, onclose } = $props();
-
-  const WORKER = 'https://appi-news-ai-suggest.lightman-chang.workers.dev';
 
   let tab = $state('generate'); // 目前僅 AI 生成（Phase 1）
   let prompt = $state(initialPrompt);

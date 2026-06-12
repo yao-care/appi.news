@@ -84,6 +84,7 @@ const authors = defineCollection({
       .default([]),
     website: z.string().url().optional(),
     emailPublic: z.string().optional(),
+    githubLogin: z.string().optional(), // 編輯器用：對應 GitHub 登入帳號 → 預設作者
     authorLevel: z
       .enum(['contributor', 'verified', 'columnist', 'featured', 'brand'])
       .default('contributor'),

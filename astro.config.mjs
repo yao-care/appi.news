@@ -35,17 +35,25 @@ function rehypeBaseImages() {
     (!prefix || !src.startsWith(prefix + '/'))
       ? (prefix + src).replace(/\/{2,}/g, '/')
       : src;
+  // 為內文 <img> 補上 loading="lazy" / decoding="async"（已存在則不覆寫），降低首屏負擔。
+  const addLazyAttrs = (imgTag) => {
+    let out = imgTag;
+    if (!/\bloading=/.test(out)) out = out.replace(/<img\b/i, '<img loading="lazy"');
+    if (!/\bdecoding=/.test(out)) out = out.replace(/<img\b/i, '<img decoding="async"');
+    return out;
+  };
   const walk = (node) => {
     // 文章 body 多為原始 HTML，在 hast 中是 raw 節點（非 element），需用 regex 處理
     if (node.type === 'raw' && typeof node.value === 'string' && node.value.includes('<img')) {
-      node.value = node.value.replace(
-        /(<img\b[^>]*?\bsrc=")([^"]+)(")/gi,
-        (_m, a, src, c) => a + fixSrc(src) + c,
+      node.value = node.value.replace(/<img\b[^>]*>/gi, (tag) =>
+        addLazyAttrs(tag.replace(/(\bsrc=")([^"]+)(")/i, (_m, a, src, c) => a + fixSrc(src) + c)),
       );
     }
     // 經 rehype-raw 解析過的 img 走這條（保險）
     if (node.type === 'element' && node.tagName === 'img' && node.properties) {
       node.properties.src = fixSrc(node.properties.src);
+      if (node.properties.loading == null) node.properties.loading = 'lazy';
+      if (node.properties.decoding == null) node.properties.decoding = 'async';
     }
     if (node.children) node.children.forEach(walk);
   };

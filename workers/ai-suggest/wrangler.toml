@@ -2,8 +2,28 @@ name = "appi-news-ai-suggest"
 main = "src/index.ts"
 compatibility_date = "2026-01-01"
 
+# 非同步生圖工單暫存（前端輪詢取件）
+[[kv_namespaces]]
+binding = "GEN_JOBS"
+id = "82839587c59d4150bc66fff4a73608aa"
+
+# 生圖工作佇列：/generate-async 入列 → consumer 背景生圖（不受 request/waitUntil 時限，失敗自動重試）
+[[queues.producers]]
+binding = "GEN_QUEUE"
+queue = "appi-news-gen"
+
+[[queues.consumers]]
+queue = "appi-news-gen"
+max_batch_size = 1
+max_batch_timeout = 1
+max_retries = 2
+
 [vars]
 ALLOWED_ORIGIN = "https://yao-care.github.io"
 ANTHROPIC_MODEL = "claude-haiku-4-5-20251001"
 GITHUB_OWNER = "yao-care"
 GITHUB_REPO = "appi.news"
+# 這把 key 的專案可用模型為 gpt-image-2（即使用者說的「image2」）。
+OPENAI_IMAGE_MODEL = "gpt-image-2"
+# 壓低延遲（gpt-image-2 預設畫質約 60s+ 易逾時，low 約 40s）。
+OPENAI_IMAGE_QUALITY = "low"

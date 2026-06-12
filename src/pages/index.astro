@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import HeroNetwork from '@/components/blocks/HeroNetwork.astro';
 import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
 import CategoryTag from '@/components/ui/CategoryTag.astro';
+import { SITE } from '@/config/site';
 import {
   getPublishedArticles,
   getAuthorMap,
@@ -20,6 +22,7 @@ const authorMap = await getAuthorMap();
 const authorNames = new Map(
   [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
 );
+const authorName = (id: string) => authorNames.get(id) ?? 'APPI 編輯部';
 
 const dedupe = makeDeduper();
 
@@ -30,10 +33,10 @@ const hero =
   all[0];
 if (hero) dedupe.take([hero], 1);
 
-// Hero 右側：4 篇純文字標題清單（對齊 K 版型的 .side）
-const secondary = dedupe.take([...featuredArticles(all), ...all], 4);
+// 精選右側：5 篇含小縮圖的清單（補滿垂直空間 + 易辨識）
+const secondary = dedupe.take([...featuredArticles(all), ...all], 5);
 
-// 最新文章：單一等高大圖網格（對齊 K 版型，取代原多分類區塊）
+// 最新文章：單一等高大圖網格（補滿空間）
 const latest = dedupe.take(all, 12, false);
 
 const heroCover = hero ? coverImageFor(hero) : '';
@@ -41,48 +44,103 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
 ---
 
 <BaseLayout title="首頁" path="/" ogImage="og/home.png">
+  <!-- 網站介紹 Hero 區：承接從 header 移下來的中文定位 + 站台介紹 -->
+  <section class="intro">
+    <HeroNetwork />
+    <div class="container intro-inner">
+      <div class="intro-text">
+        <span class="intro-eyebrow">{SITE.taglineEn}</span>
+        <h1 class="intro-title">{SITE.tagline}</h1>
+        <p class="intro-desc">{SITE.description}</p>
+        <div class="intro-cta">
+          <a class="btn btn--primary" href={url('/articles/')}>探索所有文章</a>
+          <a class="btn btn--ghost" href={url('/join/')}>成為作者</a>
+        </div>
+      </div>
+      <div class="intro-art" aria-hidden="true">
+        <svg viewBox="0 0 340 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- 後層卡片（品牌淡色） -->
+          <rect x="74" y="36" width="206" height="168" rx="16" fill="var(--bg-tint)" />
+          <!-- 主卡片（白底＋邊框＋陰影感） -->
+          <rect x="46" y="64" width="214" height="176" rx="18" fill="var(--white)" stroke="var(--line)" stroke-width="2" />
+          <!-- 卡片內媒體區 -->
+          <rect x="66" y="84" width="174" height="74" rx="10" fill="var(--appi-brand)" opacity="0.10" />
+          <!-- 媒體區內的洞察長條（insight 意象） -->
+          <rect x="84" y="128" width="14" height="14" rx="3" fill="var(--appi-brand)" opacity="0.55" />
+          <rect x="106" y="118" width="14" height="24" rx="3" fill="var(--appi-brand)" opacity="0.7" />
+          <rect x="128" y="106" width="14" height="36" rx="3" fill="var(--appi-accent)" />
+          <!-- 標題與內文線條 -->
+          <rect x="66" y="174" width="120" height="11" rx="5.5" fill="var(--ink)" opacity="0.82" />
+          <rect x="66" y="196" width="174" height="7" rx="3.5" fill="var(--ink-3)" opacity="0.5" />
+          <rect x="66" y="210" width="150" height="7" rx="3.5" fill="var(--ink-3)" opacity="0.5" />
+          <!-- 金色強調圓點 -->
+          <circle cx="262" cy="78" r="16" fill="var(--appi-accent)" />
+          <path d="M256 78l4 4 8-9" stroke="var(--white)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
   {
     hero && (
-      <section class="hero container">
-        <div class="hero-main">
-          <a class="hero-media" href={heroHref} tabindex="-1" aria-hidden="true">
-            <ImageWithFallback
-              src={heroCover}
-              alt={coverAltFor(hero)}
-              fallback={`og/${hero.data.category}.png`}
-              loading="eager"
-              class="hero-img"
-            />
-          </a>
-          <div class="hero-text">
-            <CategoryTag category={hero.data.category} subcategory={hero.data.subcategory} />
-            <h1><a href={heroHref}>{hero.data.title}</a></h1>
-            <p>{hero.data.excerpt ?? hero.data.description}</p>
-            <span class="hero-meta">
-              {authorNames.get(hero.data.author) ?? 'APPI 編輯部'} · {formatDate(hero.data.publishDate)}
-            </span>
+      <div class="container">
+        <section class="section feature-section">
+          <div class="section-head">
+            <h2>編輯精選</h2>
+            <a class="more-link" href={url('/articles/')}>所有文章 →</a>
           </div>
-        </div>
 
-        <div class="hero-side divided-list">
-          {
-            secondary.map((a) => (
-              <a class="hs-item" href={url(`/articles/${articleSlug(a)}/`)}>
-                <span class="hs-title">{a.data.title}</span>
-                <span class="hs-meta">
-                  {authorNames.get(a.data.author) ?? 'APPI 編輯部'} · {formatDate(a.data.publishDate)}
-                </span>
+          <div class="feature">
+            <article class="feature-main">
+              <a class="feature-media" href={heroHref} tabindex="-1" aria-hidden="true">
+                <ImageWithFallback
+                  src={heroCover}
+                  alt={coverAltFor(hero)}
+                  fallback={`og/${hero.data.category}.png`}
+                  loading="eager"
+                  class="feature-img"
+                />
               </a>
-            ))
-          }
-        </div>
-      </section>
+              <div class="feature-text">
+                <CategoryTag category={hero.data.category} subcategory={hero.data.subcategory} />
+                <h3 class="feature-title"><a href={heroHref}>{hero.data.title}</a></h3>
+                <p class="feature-excerpt">{hero.data.excerpt ?? hero.data.description}</p>
+                <span class="feature-meta">
+                  {authorName(hero.data.author)} · {formatDate(hero.data.publishDate)}
+                </span>
+              </div>
+            </article>
+
+            <div class="feature-side">
+              {
+                secondary.map((a) => (
+                  <a class="side-item" href={url(`/articles/${articleSlug(a)}/`)}>
+                    <span class="side-thumb">
+                      <ImageWithFallback
+                        src={coverImageFor(a)}
+                        alt={coverAltFor(a)}
+                        fallback={`og/${a.data.category}.png`}
+                        class="side-img"
+                      />
+                    </span>
+                    <span class="side-body">
+                      <span class="side-title">{a.data.title}</span>
+                      <span class="side-meta">
+                        {authorName(a.data.author)} · {formatDate(a.data.publishDate)}
+                      </span>
+                    </span>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </section>
+      </div>
     )
   }
 
   <div class="container">
-    <!-- 最新文章：單一網格（K 版型） -->
-    <section class="section">
+    <section class="section home-latest">
       <div class="section-head">
         <h2>最新文章</h2>
         <a class="more-link" href={url('/articles/')}>所有文章 →</a>
@@ -100,84 +158,171 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
         }
       </div>
     </section>
-
   </div>
 </BaseLayout>
 
 <style>
-  .hero {
+  /* ---------- 網站介紹 Hero 區 ---------- */
+  .intro {
+    position: relative;
+    background:
+      radial-gradient(120% 150% at 88% 0%, var(--bg-tint) 0%, transparent 58%),
+      linear-gradient(180deg, var(--bg-soft) 0%, var(--white) 100%);
+    border-bottom: 1px solid var(--line-2);
+  }
+  .intro-inner {
+    position: relative;
+    z-index: 1;
     display: grid;
-    grid-template-columns: 1.7fr 1fr;
-    gap: 36px;
-    padding-top: 36px;
-    margin-bottom: 24px;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 40px;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
-  .hero-main {
+  .intro-eyebrow {
     display: block;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--appi-accent);
+    font-weight: 600;
   }
-  .hero-media {
+  .intro-title {
+    font-family: var(--font-serif);
+    font-size: var(--text-2xl);
+    line-height: 1.2;
+    margin: 12px 0 0;
+    color: var(--ink);
+  }
+  .intro-desc {
+    margin: 16px 0 24px;
+    font-size: var(--text-base);
+    line-height: 1.8;
+    color: var(--ink-2);
+    max-width: 54ch;
+  }
+  .intro-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .intro-art {
+    display: flex;
+    justify-content: center;
+  }
+  .intro-art svg {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    filter: drop-shadow(0 18px 30px rgba(16, 24, 40, 0.10));
+  }
+
+  /* ---------- 編輯精選 ---------- */
+  .feature {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 40px;
+  }
+  .feature-media {
     display: block;
     overflow: hidden;
     border-radius: var(--radius);
     aspect-ratio: 16 / 9;
     background: var(--bg-soft);
+    box-shadow: var(--shadow-md);
   }
-  :global(.hero-img) {
+  :global(.feature-img) {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
   }
-  .hero-media:hover :global(.hero-img) {
+  .feature-media:hover :global(.feature-img) {
     transform: scale(1.03);
   }
-  .hero-text {
-    padding-top: 16px;
+  .feature-text {
+    padding-top: 18px;
   }
-  .hero-text h1 {
+  .feature-title {
+    font-family: var(--font-serif);
     font-size: var(--text-xl);
     line-height: 1.3;
     margin: 12px 0;
   }
-  .hero-text h1 a {
+  .feature-title a {
     color: var(--ink);
     text-decoration: none;
   }
-  .hero-text h1 a:hover {
+  .feature-title a:hover {
     color: var(--appi-brand);
   }
-  .hero-text p {
+  .feature-excerpt {
     color: var(--ink-2);
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
     line-height: 1.7;
-    margin: 0 0 12px;
+    margin: 0 0 14px;
   }
-  .hero-meta {
+  .feature-meta {
     font-size: var(--text-xs);
     color: var(--ink-3);
     font-family: var(--font-sans);
   }
-  .hero-side {
-    /* K 的金色強調左線；縱向每則淡分隔由 global .divided-list 控制（金竖線＋淡横線，K＋E） */
+
+  /* 精選右側：含小縮圖的文章清單（金色強調左線） */
+  .feature-side {
+    display: flex;
+    flex-direction: column;
     border-left: 3px solid var(--appi-accent);
-    padding-left: 28px;
+    padding-left: 24px;
   }
-  /* K 版型 hero 右側：純文字標題清單（無縮圖） */
-  .hs-item {
-    display: block;
+  .side-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 16px 0;
     text-decoration: none;
+    border-bottom: 1px solid var(--line-2);
   }
-  .hs-title {
+  .side-item:first-child {
+    padding-top: 0;
+  }
+  .side-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .side-thumb {
+    flex: 0 0 88px;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--bg-soft);
+  }
+  :global(.side-img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .side-item:hover :global(.side-img) {
+    transform: scale(1.05);
+  }
+  .side-body {
+    flex: 1;
+    min-width: 0;
+  }
+  .side-title {
     display: block;
     font-family: var(--font-serif);
-    font-size: var(--text-base);
+    font-size: 1.25rem; /* 20px — 恢復至先前列表字級 */
     line-height: 1.45;
     color: var(--ink);
   }
-  .hs-item:hover .hs-title {
+  .side-item:hover .side-title {
     color: var(--appi-brand);
   }
-  .hs-meta {
+  .side-meta {
     display: block;
     margin-top: 6px;
     font-size: var(--text-xs);
@@ -185,19 +330,42 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     font-family: var(--font-sans);
   }
 
+  /* ---------- 最新文章：恢復至先前較大的卡片標題字級 ---------- */
+  .home-latest :global(.acard--medium .acard-title) {
+    font-size: 1.375rem; /* 22px */
+  }
+
   @media (max-width: 900px) {
-    .hero {
+    .intro-inner {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .intro-art {
+      order: -1;
+    }
+    .intro-art svg {
+      max-width: 240px;
+    }
+    .feature {
       grid-template-columns: 1fr;
       gap: 28px;
     }
-    .hero-side {
+    .feature-side {
       border-left: none;
       padding-left: 0;
       border-top: 1px solid var(--line);
-      padding-top: 24px;
+      padding-top: 8px;
     }
-    .hero-text h1 {
-      font-size: var(--text-xl);
+  }
+
+  @media (max-width: 520px) {
+    .side-thumb {
+      flex-basis: 72px;
+    }
+    .side-title {
+      font-size: 1.125rem;
     }
   }
 </style>

@@ -46,6 +46,7 @@ const articles = defineCollection({
     coAuthors: z.array(z.string()).default([]),
     coverImage: z.string().optional(),
     coverAlt: z.string().optional(),
+    coverImageCredit: z.string().optional(), // 圖庫圖攝影師署名（unsplash/pexels 授權要求）
     status: statusEnum,
     featured: z.boolean().default(false),
     hero: z.boolean().default(false),
@@ -84,6 +85,7 @@ const authors = defineCollection({
       .default([]),
     website: z.string().url().optional(),
     emailPublic: z.string().optional(),
+    githubLogin: z.string().optional(), // 編輯器用：對應 GitHub 登入帳號 → 預設作者
     authorLevel: z
       .enum(['contributor', 'verified', 'columnist', 'featured', 'brand'])
       .default('contributor'),

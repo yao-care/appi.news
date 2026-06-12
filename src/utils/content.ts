@@ -1,18 +1,15 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { asset } from './url';
 
+export { extractFaq, type FaqItem } from './faq';
+
 export type Article = CollectionEntry<'articles'>;
 export type Author = CollectionEntry<'authors'>;
 export type Column = CollectionEntry<'columns'>;
 export type Topic = CollectionEntry<'topics'>;
 
-const SUPPLEMENT_AD_COMPLIANCE_COVER = 'articles/supplement-ad-compliance-ai-review.svg';
 const DEMENTIA_FRIENDLY_COMMUNITY_ACTIVITIES_COVER =
   'articles/dementia-friendly-community-activities-realistic.svg';
-
-function isSupplementAdComplianceArticle(a: Article): boolean {
-  return articleSlug(a).startsWith('保健食品廣告合規完整指南');
-}
 
 function isDementiaFriendlyCommunityActivitiesArticle(a: Article): boolean {
   return articleSlug(a).startsWith('5-個失智友善社區的活動設計原則');
@@ -48,6 +45,12 @@ export async function getPublishedArticles(): Promise<Article[]> {
 
 export function byCategory(articles: Article[], category: string): Article[] {
   return articles.filter((a) => a.data.category === category);
+}
+
+/** 有已發佈文章的分類 slug 集合（給導覽/頁尾隱藏空分類用） */
+export async function getActiveCategorySlugs(): Promise<Set<string>> {
+  const arts = await getPublishedArticles();
+  return new Set(arts.map((a) => a.data.category));
 }
 
 export function bySubcategory(articles: Article[], sub: string): Article[] {
@@ -152,7 +155,6 @@ export function readingTime(a: Article): number {
 /** 文章封面圖：有 coverImage 用之，否則用分類 fallback */
 export function coverImageFor(a: Article): string {
   if (a.data.coverImage) return asset(a.data.coverImage);
-  if (isSupplementAdComplianceArticle(a)) return asset(SUPPLEMENT_AD_COMPLIANCE_COVER);
   if (isDementiaFriendlyCommunityActivitiesArticle(a)) {
     return asset(DEMENTIA_FRIENDLY_COMMUNITY_ACTIVITIES_COVER);
   }

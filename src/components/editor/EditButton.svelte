@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { getToken } from '@/utils/editor/token';
 
-  let { repoPath, collection, slug } = $props();
+  let { repoPath, collection, slug, authors = [] } = $props();
   let show = $state(false);
   let open = $state(false);
   let EditorPanel = $state(null);
@@ -18,7 +18,7 @@
 {#if show}
   <button class="et-edit-fab" onclick={openEditor} aria-label="編輯這篇">編輯</button>
   {#if open && EditorPanel}
-    <EditorPanel {repoPath} {collection} {slug} onclose={() => (open = false)} />
+    <EditorPanel {repoPath} {collection} {slug} {authors} onclose={() => (open = false)} />
   {/if}
 {/if}
 

@@ -1,0 +1,259 @@
+---
+// HeroNetwork.astro — 首頁 Hero 淡網絡背景（d3-force 驅動）
+// 純邏輯在 @/utils/hero-network/core；本檔負責 canvas、模擬、rAF、互動、降級。
+---
+<canvas class="hero-network" aria-hidden="true"></canvas>
+
+<style>
+  .hero-network {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  @media (max-width: 520px) {
+    .hero-network {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  import { forceSimulation, forceX, forceY, forceManyBody } from 'd3-force';
+  import { quadtree } from 'd3-quadtree';
+  import {
+    makeNodes,
+    baseOpacity,
+    linkOpacity,
+    mixNavyGold,
+    pulse,
+  } from '@/utils/hero-network/core';
+
+  const canvas = document.querySelector<HTMLCanvasElement>('canvas.hero-network');
+  if (canvas) init(canvas);
+
+  function init(canvas: HTMLCanvasElement) {
+    const host = (canvas.closest('.intro') as HTMLElement | null) ?? canvas.parentElement;
+    const ctx = canvas.getContext('2d');
+    if (!ctx || !host) return;
+
+    // 把任何 CSS 色（含 oklch）點陣化成具體 rgb；d3 的 interpolateRgb 不解析 oklch。
+    function resolveColor(css: string, fallback: string): string {
+      const oc = document.createElement('canvas');
+      oc.width = 1;
+      oc.height = 1;
+      const octx = oc.getContext('2d');
+      if (!octx) return fallback;
+      octx.fillStyle = 'rgb(1, 2, 3)'; // 哨兵：若 css 無效則維持不變
+      octx.fillStyle = css;
+      octx.fillRect(0, 0, 1, 1);
+      const [r, g, b] = octx.getImageData(0, 0, 1, 1).data;
+      if (r === 1 && g === 2 && b === 3) return fallback; // css 無法解析
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    const rootStyle = getComputedStyle(document.documentElement);
+    const NAVY = resolveColor(rootStyle.getPropertyValue('--appi-brand').trim(), '#1f3a5f');
+    const GOLD = resolveColor(rootStyle.getPropertyValue('--appi-accent').trim(), '#a87515');
+
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const mobile = matchMedia('(max-width: 900px)').matches;
+
+    const cfg = {
+      count: mobile ? 30 : 60,
+      goldCount: mobile ? 2 : 3,
+      bias: 0.5,
+      linkDist: 110,
+      minOp: 0.18,
+      maxOp: 0.5,
+      linkCeil: 0.4,
+      nodeR: 2,
+      orbitMin: 6,
+      orbitMax: 16,
+      driftSp: 0.00018,
+      pointerR: 120,
+      pointerPull: 0.6,
+      actHalfLife: 600,
+    };
+
+    let W = 0;
+    let H = 0;
+    let nodes: any[] = [];
+    let sim: any = null;
+    let raf = 0;
+    let last = 0;
+    const pointer = { x: -9999, y: -9999, active: false };
+
+    function size() {
+      const r = host!.getBoundingClientRect();
+      W = r.width;
+      H = r.height;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function build() {
+      nodes = makeNodes({
+        width: W,
+        height: H,
+        count: cfg.count,
+        goldCount: cfg.goldCount,
+        rng: Math.random,
+        bias: cfg.bias,
+      });
+      for (const n of nodes) {
+        n.ox = n.hx;
+        n.oy = n.hy;
+        n.phase = Math.random() * Math.PI * 2;
+        n.sp = 0.6 + Math.random() * 0.8;
+        n.orbitR = cfg.orbitMin + Math.random() * (cfg.orbitMax - cfg.orbitMin);
+        n.act = 0;
+      }
+      if (sim) sim.stop();
+      sim = forceSimulation(nodes)
+        .force('x', forceX((d: any) => d.hx).strength(0.05))
+        .force('y', forceY((d: any) => d.hy).strength(0.05))
+        .force('charge', forceManyBody().strength(-5).distanceMax(90))
+        .alpha(0.4)
+        .alphaTarget(0.04)
+        .alphaDecay(0.02)
+        .velocityDecay(0.5);
+      sim.stop(); // 改由 rAF 手動 tick
+    }
+
+    function step(t: number) {
+      const dt = last ? t - last : 16;
+      last = t;
+      for (const n of nodes) {
+        n.hx = n.ox + Math.cos(t * cfg.driftSp * n.sp + n.phase) * n.orbitR;
+        n.hy = n.oy + Math.sin(t * cfg.driftSp * n.sp + n.phase) * n.orbitR;
+        n.act *= Math.pow(0.5, dt / cfg.actHalfLife);
+      }
+      if (pointer.active) {
+        for (const n of nodes) {
+          const dx = pointer.x - n.x;
+          const dy = pointer.y - n.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < cfg.pointerR) {
+            const f = 1 - dist / cfg.pointerR;
+            n.vx = (n.vx || 0) + (dx / (dist || 1)) * f * cfg.pointerPull;
+            n.vy = (n.vy || 0) + (dy / (dist || 1)) * f * cfg.pointerPull;
+            n.act = Math.max(n.act, f);
+          }
+        }
+      }
+      sim.tick();
+      draw(t);
+      raf = requestAnimationFrame(step);
+    }
+
+    function draw(t: number) {
+      ctx!.clearRect(0, 0, W, H);
+      const qt = quadtree(
+        nodes,
+        (d: any) => d.x,
+        (d: any) => d.y,
+      );
+      ctx!.lineWidth = 1;
+      for (const n of nodes) {
+        qt.visit((node: any, x0: number, y0: number, x1: number, y1: number) => {
+          if (!node.length) {
+            do {
+              const m = node.data;
+              if (m.x > n.x || (m.x === n.x && m.y > n.y)) {
+                const dist = Math.hypot(m.x - n.x, m.y - n.y);
+                const lo = linkOpacity(dist, cfg.linkDist, cfg.linkCeil);
+                if (lo > 0) {
+                  const tcol = Math.max(n.act, m.act, n.gold ? 0.5 : 0, m.gold ? 0.5 : 0);
+                  ctx!.globalAlpha = lo * baseOpacity(n.x, W, cfg.minOp, cfg.maxOp);
+                  ctx!.strokeStyle = mixNavyGold(NAVY, GOLD, tcol);
+                  ctx!.beginPath();
+                  ctx!.moveTo(n.x, n.y);
+                  ctx!.lineTo(m.x, m.y);
+                  ctx!.stroke();
+                }
+              }
+            } while ((node = node.next));
+          }
+          return (
+            x0 > n.x + cfg.linkDist ||
+            x1 < n.x - cfg.linkDist ||
+            y0 > n.y + cfg.linkDist ||
+            y1 < n.y - cfg.linkDist
+          );
+        });
+      }
+      for (const n of nodes) {
+        const goldT = n.gold ? 0.65 + pulse(t, 2600, 0.35) : n.act;
+        const op = Math.min(
+          1,
+          baseOpacity(n.x, W, cfg.minOp, cfg.maxOp) + n.act * 0.4 + (n.gold ? 0.25 : 0),
+        );
+        ctx!.globalAlpha = op;
+        ctx!.fillStyle = mixNavyGold(NAVY, GOLD, goldT);
+        const r = cfg.nodeR + (n.gold ? 0.8 : 0) + n.act * 1.2;
+        ctx!.beginPath();
+        ctx!.arc(n.x, n.y, r, 0, Math.PI * 2);
+        ctx!.fill();
+      }
+      ctx!.globalAlpha = 1;
+    }
+
+    function staticFrame() {
+      for (let i = 0; i < 60; i++) sim.tick();
+      draw(0);
+    }
+
+    function start() {
+      if (raf) return;
+      last = 0;
+      raf = requestAnimationFrame(step);
+    }
+    function stop() {
+      if (raf) cancelAnimationFrame(raf);
+      raf = 0;
+    }
+
+    size();
+    build();
+
+    if (reduce) {
+      staticFrame();
+    } else {
+      if (!mobile) {
+        host.addEventListener('pointermove', (e) => {
+          const r = host!.getBoundingClientRect();
+          pointer.x = e.clientX - r.left;
+          pointer.y = e.clientY - r.top;
+          pointer.active = true;
+        });
+        host.addEventListener('pointerleave', () => {
+          pointer.active = false;
+          pointer.x = -9999;
+          pointer.y = -9999;
+        });
+      }
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const en of entries) en.isIntersecting ? start() : stop();
+        },
+        { threshold: 0 },
+      );
+      io.observe(host);
+    }
+
+    let rt = 0;
+    window.addEventListener('resize', () => {
+      clearTimeout(rt);
+      rt = window.setTimeout(() => {
+        size();
+        build();
+        if (reduce) staticFrame();
+      }, 200);
+    });
+  }
+</script>

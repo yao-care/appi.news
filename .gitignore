@@ -29,3 +29,4 @@ asvs-server.log
 
 # 原始 WordPress 匯出檔（6MB，含選單/附件雜訊；遷移後的 md 已 commit）
 old/
+public/admin/used-images.json

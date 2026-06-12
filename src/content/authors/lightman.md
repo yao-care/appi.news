@@ -20,6 +20,7 @@ socialLinks:
     url: "https://line.me/ti/p/i0_EpxFQVc"
 website: "https://yao.care/"
 emailPublic: "lightman.chang@gmail.com"
+githubLogin: "LightChang"
 authorLevel: "brand"
 joinedDate: "2026-01-15"
 active: true

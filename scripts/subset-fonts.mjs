@@ -83,60 +83,28 @@ for (const file of fontFiles) {
   );
 }
 
-// 4) 改寫 dist 內所有 CSS/HTML 對舊字型檔名的引用（@font-face src、preload 等）。
+// 4) 改寫 dist 內所有 CSS/HTML 對舊字型檔名的引用（@font-face src）；
+//    並把繁中 @font-face 的 font-display 由 swap 改 optional：CJK 字型大，slow-4G 下
+//    swap 會讓 LCP 文字等字型晚到才重繪（LCP 飆高）。optional = 首次未命中即用系統
+//    fallback 字型立即定版（LCP≈FCP），字型背景載入、之後（已快取）才顯示品牌字。
 let rewritten = 0;
 for (const f of listFiles(DIST, ['.css', '.html'])) {
   let text = readFileSync(f, 'utf8');
-  let changed = false;
+  const before = text;
   for (const [oldName, newName] of rename) {
-    if (oldName !== newName && text.includes(oldName)) {
-      text = text.split(oldName).join(newName);
-      changed = true;
-    }
+    if (oldName !== newName && text.includes(oldName)) text = text.split(oldName).join(newName);
   }
-  if (changed) {
+  if (f.endsWith('.css')) {
+    text = text.replace(/@font-face\{[^}]*\}/g, (block) =>
+      block.includes('chinese-traditional')
+        ? block.replace(/font-display:\s*swap/g, 'font-display:optional')
+        : block,
+    );
+  }
+  if (text !== before) {
     writeFileSync(f, text);
     rewritten++;
   }
-}
-
-// 5) 首頁 LCP 是 hero 文字（intro-desc/intro-title），其字型若與十多張 lazy 圖、
-//    其他字重搶頻寬會晚到、swap 晚 → LCP 飆高。對首頁 head 注入這兩個 hero 字型的
-//    preload（最終雜湊檔名），讓它們優先抵達。只動 index.html，避免影響以圖片為 LCP 的內頁。
-const PRELOAD = [
-  /noto-sans-tc-chinese-traditional-400-normal\..*\.woff2$/, // intro-desc 內文
-  /noto-serif-tc-chinese-traditional-700-normal\..*\.woff2$/, // intro-title 標題
-];
-const HOME = join(DIST, 'index.html');
-try {
-  const woff2 = listFiles(ASTRO_DIR, ['.woff2']);
-  const cssTexts = listFiles(DIST, ['.css']).map((f) => readFileSync(f, 'utf8'));
-  // 直接用該字型「在 CSS @font-face 裡的實際 url」當 preload href，確保 base path 完全一致
-  // （換網域時自動跟著變），避免自行拼前綴出錯。
-  function hrefInCss(name) {
-    const esc = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    for (const css of cssTexts) {
-      const m = css.match(new RegExp('url\\(["\']?([^"\')]*' + esc + ')["\']?\\)'));
-      if (m) return m[1];
-    }
-    return null;
-  }
-  const links = PRELOAD.map((re) => woff2.find((p) => re.test(basename(p))))
-    .filter(Boolean)
-    .map((p) => hrefInCss(basename(p)))
-    .filter(Boolean)
-    .map(
-      (href) =>
-        `<link rel="preload" href="${href}" as="font" type="font/woff2" crossorigin>`,
-    );
-  let html = readFileSync(HOME, 'utf8');
-  if (links.length && !html.includes('rel="preload"') ) {
-    html = html.replace('</head>', links.join('') + '</head>');
-    writeFileSync(HOME, html);
-    console.log(`[subset-fonts] 首頁注入 ${links.length} 個 hero 字型 preload`);
-  }
-} catch (e) {
-  console.warn('[subset-fonts] 首頁 preload 注入略過：' + e.message);
 }
 
 console.log(

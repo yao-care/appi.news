@@ -109,11 +109,11 @@
    - 重驗，迴圈到**所有超連結全部可連線且內容相符**才通過。
 4. **站內連結**：跑 `pnpm check:links` 確認站內連結無誤。
 5. **封面圖**：產生封面並存至 `public/covers/`（沿用既有 `coverImage: "covers/<slug>.jpg"` 慣例）。
-6. **段落配圖（避免閱讀疲勞）**：**每個段落依其內容用 OpenAI 影像模型（gpt-image）生成一張對應插圖**。
+6. **段落配圖（避免閱讀疲勞）— 每段必配**：**每一個段落都依其內容用 OpenAI 影像模型（gpt-image）生成一張對應插圖**（單篇段落圖數量 = 段落數）。
    - 沿用既有生圖管線與 **`applyPeopleDirective` 鐵律**：圖中若出現人物，一律台灣人（East Asian, Han Taiwanese），任何 prompt 都自動附加。
    - 風格與封面一致（簡約編輯插畫、無文字）。
    - **效能硬約束（遵守 `PERFORMANCE.md`）**：所有段落圖一律 `loading="lazy"`、轉 webp、依顯示尺寸縮圖、以 `aspect-ratio` 鎖住版位（CLS 維持 0）；存 `public/images/`。
-   - 圖片產出需可控量：單篇段落圖數量 = 段落數，過長文章注意總 payload 與生圖成本。
+   - 成本控管不靠減少張數（每段必配為硬需求），改用較低生圖品質（`OPENAI_IMAGE_QUALITY=low`）與 webp 壓縮控制單張成本與大小。
 7. **frontmatter**：補齊 `title / description / category / subcategory / tags / highlights / references / author: "lightman" / sourceType: "ai-assisted" / disclaimerType`。
 8. **產檔**：寫入 `src/content/articles/<slug>.md`，`status: "draft"`（排程待步驟四決定）。
 9. **本地預覽連結**：啟動 / 沿用本地 `pnpm dev`，提供該文章**渲染後的預覽 URL** 供使用者**閱讀與要求修改**；修訂於同一 session 即時反映，滿意後才進步驟四。
@@ -166,7 +166,7 @@
 | 量產稀釋可信度 | 結論由人給 + differentiation 守則 + references 查證。 |
 | 訂閱額度與互動寫程式共用 | 批次寫作集中時段進行；篇數實測抓手感。 |
 | 段落圖拖垮內頁效能 | 全段落圖 lazy-load + webp + 依尺寸縮圖 + aspect-ratio 鎖 CLS；上線後以第三方 PSI 量測內頁 LCP/CLS，設內頁紅線。 |
-| 段落生圖成本 | 每段一次 OpenAI 生圖、按量計費（非 Claude 訂閱）；日更累積需控管，必要時限制單篇段落圖數或改重點段落才配圖。 |
+| 段落生圖成本 | 每段必配 = 每段一次 OpenAI 生圖、按量計費（非 Claude 訂閱）；日更累積成本以較低生圖品質（`OPENAI_IMAGE_QUALITY=low`）+ webp 壓縮控管，張數不縮減。 |
 | 段落圖機制尚未存在 | 需先擴 content schema + Markdown 渲染；列為實作前置相依（見 §6、§8）。 |
 
 ## 8. 交付項

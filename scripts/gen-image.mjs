@@ -15,6 +15,7 @@ const topic = arg('topic');
 const context = arg('context', '');
 const out = arg('out');
 const width = Number(arg('width', '960'));
+if (!Number.isFinite(width)) { console.error('--width must be a number'); process.exit(1); }
 
 if (!topic || !out) {
   console.error('need --topic and --out');

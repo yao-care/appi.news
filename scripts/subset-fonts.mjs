@@ -107,6 +107,80 @@ for (const f of listFiles(DIST, ['.css', '.html'])) {
   }
 }
 
+// 5) 首頁專用迷你字型：首頁只用到全站字集的一小部分（~數百字）。為首頁單獨產
+//    「只含首頁用字」的子集（每權重 ~330KB → ~70KB），給它們**獨立 family 名**
+//    （NotoSansTC-Home / NotoSerifTC-Home），並只在首頁以 inline <style> 把這些
+//    family 插進 --font-sans / --font-serif 的最前（CJK 段）。
+//    用標準 font-family fallback（非 unicode-range）：迷你字型有的字就用迷你版，
+//    缺的字（如搜尋結果）才落回全站共用字型。故首頁只下載 ~360KB 而非 1.5MB CJK。
+//    （先前用同名 + unicode-range 會被 Chrome 兩份都抓，故改此法。）
+const HOME = join(DIST, 'index.html');
+let homeInjected = 0;
+let homeBytes = 0;
+try {
+  const homeUsed = new Set(baselineChars());
+  for (const ch of readFileSync(HOME, 'utf8')) homeUsed.add(ch);
+  const homeText = [...homeUsed].join('');
+
+  const cssAll = listFiles(DIST, ['.css']).map((f) => readFileSync(f, 'utf8')).join('\n');
+  const hrefFor = (name) => {
+    const m = cssAll.match(new RegExp('url\\(["\']?([^"\')]*' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')'));
+    return m ? m[1] : null;
+  };
+  const varVal = (v) => {
+    const m = cssAll.match(new RegExp('--font-' + v + ':\\s*([^;]+);'));
+    return m ? m[1].trim() : null;
+  };
+
+  const WEIGHTS = [
+    { home: 'NotoSansTC-Home', w: 400, re: /noto-sans-tc-chinese-traditional-400-normal\..*\.woff2$/ },
+    { home: 'NotoSansTC-Home', w: 500, re: /noto-sans-tc-chinese-traditional-500-normal\..*\.woff2$/ },
+    { home: 'NotoSansTC-Home', w: 700, re: /noto-sans-tc-chinese-traditional-700-normal\..*\.woff2$/ },
+    { home: 'NotoSerifTC-Home', w: 600, re: /noto-serif-tc-chinese-traditional-600-normal\..*\.woff2$/ },
+    { home: 'NotoSerifTC-Home', w: 700, re: /noto-serif-tc-chinese-traditional-700-normal\..*\.woff2$/ },
+  ];
+  const woff2now = listFiles(ASTRO_DIR, ['.woff2']);
+  const faces = [];
+  for (const wt of WEIGHTS) {
+    const src = woff2now.find((p) => wt.re.test(basename(p)));
+    if (!src) continue;
+    const sub = await subsetFont(readFileSync(src), homeText, { targetFormat: 'woff2' });
+    const hash = createHash('sha256').update(sub).digest('hex').slice(0, 8);
+    const name = basename(src).replace(/\.woff2$/, '') + `-home.${hash}.woff2`;
+    writeFileSync(join(ASTRO_DIR, name), sub);
+    const prefix = (hrefFor(basename(src)) || '/_astro/' + basename(src)).replace(/[^/]*$/, '');
+    faces.push(
+      `@font-face{font-family:'${wt.home}';font-style:normal;font-weight:${wt.w};font-display:optional;src:url(${prefix}${name}) format('woff2')}`,
+    );
+    homeBytes += sub.length;
+  }
+
+  // 在首頁字型棧中，把站台 web font（"Noto Sans TC"/"Noto Serif TC"）**替換**成 Home
+  // family，後面只接系統字型。關鍵：站台 web font 不能留在棧裡——否則 mini 為
+  // font-display:optional，Chrome 在 optional 區間會去抓棧中下一個 web font 當後備，
+  // 導致全站大字型仍被下載。缺字（搜尋結果等）改落回系統 CJK 字（不 tofu）。
+  const swap = (val, site, home) => {
+    if (val.includes(`"${site}"`)) return val.replace(`"${site}"`, `"${home}"`);
+    return /"Inter",/.test(val) ? val.replace('"Inter",', `"Inter", "${home}",`) : `"${home}", ${val}`;
+  };
+  const sansVal = varVal('sans');
+  const serifVal = varVal('serif');
+  const overrides = [];
+  if (sansVal) overrides.push(`--font-sans:${swap(sansVal, 'Noto Sans TC', 'NotoSansTC-Home')}`);
+  if (serifVal) overrides.push(`--font-serif:${swap(serifVal, 'Noto Serif TC', 'NotoSerifTC-Home')}`);
+
+  if (faces.length && overrides.length) {
+    const style = `<style>${faces.join('')}:root{${overrides.join(';')}}</style>`;
+    let html = readFileSync(HOME, 'utf8');
+    html = html.replace('</head>', style + '</head>');
+    writeFileSync(HOME, html);
+    homeInjected = faces.length;
+    console.log(`[subset-fonts] 首頁迷你字型：${faces.length} 權重、共 ${(homeBytes / 1024).toFixed(0)}KB`);
+  }
+} catch (e) {
+  console.warn('[subset-fonts] 首頁迷你字型略過：' + e.message);
+}
+
 console.log(
-  `[subset-fonts] ${fontFiles.length} 個字型 ${(beforeTotal / 1024 / 1024).toFixed(2)}MB → ${(afterTotal / 1024).toFixed(0)}KB；改寫 ${rewritten} 個 CSS/HTML`,
+  `[subset-fonts] ${fontFiles.length} 個字型 ${(beforeTotal / 1024 / 1024).toFixed(2)}MB → ${(afterTotal / 1024).toFixed(0)}KB；改寫 ${rewritten} 個 CSS/HTML；首頁迷你字型 ${homeInjected} 權重`,
 );

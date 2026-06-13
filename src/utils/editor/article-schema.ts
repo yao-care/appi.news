@@ -27,7 +27,15 @@ export const articleSchema = z.object({
   status: z.enum(['draft', 'published', 'scheduled', 'archived']).default('published'),
   featured: z.boolean().default(false),
   hero: z.boolean().default(false),
-  sourceType: z.enum(['editorial', 'contributor', 'sponsored', 'press-release', 'ai-assisted']).default('editorial'),
+  sourceType: z
+    .enum(['editorial', 'author', 'contributor', 'expert', 'press-release', 'sponsored', 'partner', 'wire'])
+    .default('editorial'),
+  contentType: z
+    .enum(['news', 'feature', 'analysis', 'column', 'opinion', 'interview', 'research-brief', 'guide', 'press-release', 'sponsored', 'video', 'photo-story'])
+    .default('news'),
+  editor: z.string().optional(),
+  reviewedBy: z.array(z.string()).default([]),
+  factCheckedBy: z.array(z.string()).default([]),
   readingTime: z.number().optional(),
   disclaimerType: z.enum(['general', 'medical', 'financial', 'legal', 'sponsored']).default('general'),
   disclosure: z.string().optional(),

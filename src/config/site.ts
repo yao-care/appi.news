@@ -12,7 +12,7 @@ export const SITE = {
   taglineEn: 'Asia-Pacific Press & Insight',
   /** 完整品牌說法 */
   description:
-    'APPI News｜亞太專業觀點，是一個結合 AI 輔助寫作、專家審稿與媒體刊登的專業觀點平台，協助各領域專業者快速建立可信內容資產。',
+    'APPI News｜亞太專業觀點，是一個聚集各領域專業作者的觀點媒體，透過新聞、評論、專欄、專題、專訪與深度分析，協助讀者理解健康、科技、財經、國際、運動、生活等重要議題。',
   /** 預設語系 */
   lang: 'zh-Hant',
   locale: 'zh_TW',

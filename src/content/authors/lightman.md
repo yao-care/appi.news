@@ -26,7 +26,7 @@ joinedDate: "2026-01-15"
 active: true
 showAuthorPage: true
 showColumnPage: true
-disclaimer: "本欄文章為技術與產品觀點分析，部分內容以 AI 輔助產製並經作者檢核，不構成醫療或投資建議。"
+disclaimer: "本欄文章為技術與產品觀點分析，由作者撰稿並檢核，不構成醫療或投資建議。"
 ---
 
 在這個專欄，我關注醫療與數位健康領域真正影響決策與落地的問題，提供結構化分析，而非術語堆砌或科技行銷。

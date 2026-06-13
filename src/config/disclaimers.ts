@@ -28,39 +28,65 @@ export const DISCLAIMERS: Record<DisclaimerType, { label: string; text: string }
   },
 };
 
+/**
+ * sourceType 代表內容來源（誰提供的內容），而非製作工具。
+ * 一般 editorial / author / contributor / expert 內容不需在前台特別揭露；
+ * press-release / sponsored / partner / wire 屬外部或商業來源，需明確揭露。
+ */
 export type SourceType =
   | 'editorial'
+  | 'author'
   | 'contributor'
-  | 'sponsored'
+  | 'expert'
   | 'press-release'
-  | 'ai-assisted';
+  | 'sponsored'
+  | 'partner'
+  | 'wire';
 
-/** 依 sourceType 顯示的揭露文字（DisclosureBox） */
+/** 依 sourceType 顯示的來源揭露文字（DisclosureBox）；null 表示前台不另外顯示揭露框 */
 export const DISCLOSURES: Record<SourceType, { label: string; text: string } | null> = {
   editorial: {
     label: '編輯部',
     text: '本文由 APPI 編輯部製作，內容經編輯檢核。',
   },
-  'ai-assisted': null,
-  contributor: {
-    label: '作者來稿',
-    text: '本文為作者來稿，觀點不必然代表 APPI 編輯部立場。',
+  author: {
+    label: '作者',
+    text: '本文為 APPI 作者撰稿，觀點不必然代表 APPI 編輯部立場。',
   },
-  sponsored: {
-    label: '商業合作',
-    text: '本文為商業合作內容，已依 APPI 商業內容揭露規範標示。',
+  contributor: {
+    label: '特約作者',
+    text: '本文為特約作者來稿，觀點不必然代表 APPI 編輯部立場。',
+  },
+  expert: {
+    label: '專家來稿',
+    text: '本文為專家來稿，由作者本於專業提出觀點，不必然代表 APPI 編輯部立場。',
   },
   'press-release': {
     label: '新聞稿',
     text: '本文為新聞稿內容，相關資訊由發布方提供，APPI 保留基本刊登規範。',
   },
+  sponsored: {
+    label: '贊助內容',
+    text: '本文為贊助 / 商業合作內容，已依 APPI 商業內容揭露規範標示。',
+  },
+  partner: {
+    label: '合作來源',
+    text: '本文為合作夥伴提供之內容，APPI 保留基本刊登與檢核規範。',
+  },
+  wire: {
+    label: '外部授權來源',
+    text: '本文為外部授權 / 通訊社來源內容，著作權歸原發布方所有。',
+  },
 };
 
-/** 內容類型顯示名稱（給文章卡 / breadcrumb 標籤用） */
+/** 來源類型顯示名稱（給文章卡 / breadcrumb 標籤用） */
 export const SOURCE_TYPE_LABELS: Record<SourceType, string> = {
   editorial: '編輯部',
-  contributor: '作者來稿',
-  sponsored: '商業合作',
+  author: '作者',
+  contributor: '特約作者',
+  expert: '專家來稿',
   'press-release': '新聞稿',
-  'ai-assisted': '編輯部',
+  sponsored: '贊助內容',
+  partner: '合作來源',
+  wire: '外部授權來源',
 };

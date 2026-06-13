@@ -13,7 +13,10 @@ const Q = 72;
 
 let html = readFileSync(HOME, 'utf8');
 
-// 逐個 <img ...covers...> 標籤：feature 主圖較大(900)，其餘卡片(600)。
+// 逐個 <img ...covers...> 標籤，依「實際顯示尺寸」分檔（×~2.5 涵蓋 retina）：
+//  - feature-img：主圖顯示 ~651px → 900
+//  - side-img   ：側欄縮圖固定 .side-thumb 88px（行動版 ~142px）→ 360
+//  - 其餘(acard 卡片)：~360px 顯示 → 600
 const imgTagRe = /<img\b[^>]*?\/covers\/[^>]*?>/g;
 const jobs = new Map(); // srcFile -> { width }
 const tags = html.match(imgTagRe) || [];
@@ -21,7 +24,7 @@ for (const tag of tags) {
   const m = tag.match(/src="([^"]*\/covers\/([^"?]+))"/);
   if (!m) continue;
   const file = m[2];
-  const width = /feature-img/.test(tag) ? 900 : 600;
+  const width = /feature-img/.test(tag) ? 900 : /side-img/.test(tag) ? 360 : 600;
   const prev = jobs.get(file);
   if (!prev || width > prev.width) jobs.set(file, { width }); // 同檔取較大需求
 }

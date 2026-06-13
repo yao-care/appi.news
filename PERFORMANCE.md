@@ -101,5 +101,14 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 
 - 首屏關鍵路徑只放**最小必要**資源：不要 preload 大字型（slow-4G 下會搶頻寬拖慢 FCP）、不要塞未壓縮大圖、不要新增 render-blocking 外部 CSS/JS。
 - 純裝飾、會吃主執行緒的東西（如首頁 `HeroNetwork` d3 背景）**延後到 `requestIdleCallback`/load 後**啟動（已如此做，TBT=0）。
-- 圖片一律 `loading="lazy"`（首屏主圖才 `eager`），並縮到顯示尺寸的 webp。
+- 圖片一律 `loading="lazy"`（首屏主圖才 `eager`），並**依實際顯示尺寸**縮成 webp（×~2.5 涵蓋 retina）。`optimize-home-images.mjs` 已分檔：feature 主圖 900、側欄縮圖 `side-img`（`.side-thumb` 僅 88px）360、其餘卡片 600。**改版面或縮圖尺寸時，記得同步調整這些寬度**，否則會服務過大的圖（PSI「圖片傳送效能」會抓）。
 - 內頁（文章頁）目前沿用全站共用字型與原圖以利跨頁快取；若要把內頁也推到滿分，可比照 §2 把同手法延伸到內頁。
+
+---
+
+## 6. 已知限制（PSI 會建議、但目前無法在 GitHub Pages 解的）
+
+- **「使用有效的快取生命週期」**：GitHub Pages 對所有資產固定回 `Cache-Control: max-age=600`（10 分鐘），**我們無法改**（非靜態檔案可控，是 GitHub 伺服器設定）。
+  - 只影響**回訪**（首訪不受影響），且為 PSI 未計分項，不影響分數。
+  - 真正要解，得**換自訂網域 + 自有 CDN**（如 Cloudflare），才能對 `_astro/*`（檔名含 hash、可長快取）設 `max-age=31536000, immutable`。換網域時一併處理。
+- **mobile 90↔100 浮動**：GH Pages CDN 冷/熱邊緣，非程式問題（見 §3）。

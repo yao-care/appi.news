@@ -18,8 +18,34 @@ const disclaimerTypeEnum = z
   .default('general');
 
 const sourceTypeEnum = z
-  .enum(['editorial', 'contributor', 'sponsored', 'press-release', 'ai-assisted'])
+  .enum([
+    'editorial',
+    'author',
+    'contributor',
+    'expert',
+    'press-release',
+    'sponsored',
+    'partner',
+    'wire',
+  ])
   .default('editorial');
+
+const contentTypeEnum = z
+  .enum([
+    'news',
+    'feature',
+    'analysis',
+    'column',
+    'opinion',
+    'interview',
+    'research-brief',
+    'guide',
+    'press-release',
+    'sponsored',
+    'video',
+    'photo-story',
+  ])
+  .default('news');
 
 const statusEnum = z
   .enum(['draft', 'published', 'scheduled', 'archived'])
@@ -51,6 +77,10 @@ const articles = defineCollection({
     featured: z.boolean().default(false),
     hero: z.boolean().default(false),
     sourceType: sourceTypeEnum,
+    contentType: contentTypeEnum,
+    editor: z.string().optional(),
+    reviewedBy: z.array(z.string()).default([]),
+    factCheckedBy: z.array(z.string()).default([]),
     readingTime: z.number().optional(),
     disclaimerType: disclaimerTypeEnum,
     disclosure: z.string().optional(),

@@ -41,7 +41,7 @@ function plain(s: string): string {
 const bodyText = plain(article?.body ?? '');
 const paras = [bodyText.slice(0, 220), bodyText.slice(220, 520)].filter(Boolean);
 
-const NAV = ['焦點', '健康', '科技', '財經', '時事'];
+const NAV = ['焦點', '國際', '健康', '科技', '財經'];
 const catName = (slug: string) => getCategory(slug)?.name ?? slug;
 const authorName = (id: string) => authorMap.get(id)?.data.name ?? 'APPI 編輯部';
 
@@ -154,7 +154,7 @@ const STEPS = ['申請', '選擇方案', '建立作者資料', '產生文章', '
         <section class="ch-join-hero">
           <div class="ch-container">
             <h1>成為 APPI 作者，讓你的專業變成可累積的內容資產</h1>
-            <p>透過 AI 輔助寫作、SEO 架構與媒體刊登流程，協助專業者更快產出文章。</p>
+            <p>加入多作者專業觀點媒體，透過編輯審核、SEO 架構與媒體刊登流程，讓你的專業被更多讀者看見。</p>
             <a class="ch-btn" href="#" style="background:var(--primary-ink);color:var(--primary);">申請成為作者</a>
           </div>
         </section>

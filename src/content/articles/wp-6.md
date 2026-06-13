@@ -10,7 +10,7 @@ subcategory: "events"
 tags: ["中藥", "食療"]
 author: "huang-ziyan"
 status: "published"
-sourceType: "ai-assisted"
+sourceType: "editorial"
 disclaimerType: "medical"
 legacyAuthor: "asignbio"
 legacyCategory: "預防醫學"

@@ -32,7 +32,16 @@
   } from '@/utils/hero-network/core';
 
   const canvas = document.querySelector<HTMLCanvasElement>('canvas.hero-network');
-  if (canvas) init(canvas);
+  if (canvas) {
+    // 純裝飾背景，移出載入關鍵路徑：等 load 後的閒置時段才啟動 d3 模擬，
+    // 避免連續 rAF 佔住主執行緒、延遲 hero 文字（LCP 元素）的繪製/字型 swap。
+    const boot = () =>
+      'requestIdleCallback' in window
+        ? requestIdleCallback(() => init(canvas), { timeout: 2000 })
+        : setTimeout(() => init(canvas), 300);
+    if (document.readyState === 'complete') boot();
+    else window.addEventListener('load', boot, { once: true });
+  }
 
   function init(canvas: HTMLCanvasElement) {
     const host = (canvas.closest('.intro') as HTMLElement | null) ?? canvas.parentElement;

@@ -11,6 +11,8 @@ describe('buildImagePrompt', () => {
   });
   it('缺 topic 時丟錯', () => {
     expect(() => buildImagePrompt({ topic: '' })).toThrow();
+    expect(() => buildImagePrompt({})).toThrow();
+    expect(() => buildImagePrompt({ topic: null })).toThrow();
   });
   it('有 context 時帶入', () => {
     const p = buildImagePrompt({ topic: 'X', context: '醫師信任議題' });
@@ -49,5 +51,16 @@ describe('imgTag', () => {
   });
   it('缺 src 丟錯', () => {
     expect(() => imgTag({ width: 1, height: 1, alt: '' })).toThrow();
+  });
+  it('缺或非數字的 width/height 時丟錯', () => {
+    expect(() => imgTag({ src: '/x.webp', alt: '' })).toThrow();
+  });
+  it('& 被逸出', () => {
+    const t = imgTag({ src: '/x.webp', width: 1, height: 1, alt: 'a & b' });
+    expect(t).toContain('a &amp; b');
+  });
+  it('null alt 變空字串', () => {
+    const t2 = imgTag({ src: '/x.webp', width: 1, height: 1, alt: null });
+    expect(t2).toContain('alt=""');
   });
 });

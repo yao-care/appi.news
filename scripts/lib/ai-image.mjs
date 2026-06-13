@@ -19,18 +19,20 @@ export function buildImagePrompt({ topic, context = '' }) {
 
 // 純函式：任意圖片 buffer → 指定寬度 webp，回傳 {buffer,width,height}
 export async function toWebp(inputBuffer, width = 960, quality = 72) {
-  const buffer = await sharp(inputBuffer)
+  const { data: buffer, info } = await sharp(inputBuffer)
     .resize(width, null, { withoutEnlargement: true })
     .webp({ quality })
-    .toBuffer();
-  const meta = await sharp(buffer).metadata();
-  return { buffer, width: meta.width, height: meta.height };
+    .toBuffer({ resolveWithObject: true });
+  return { buffer, width: info.width, height: info.height };
 }
 
 // 純函式：CLS 安全的 <img>（width/height + lazy + decoding）
 export function imgTag({ src, width, height, alt = '' }) {
   if (!src) throw new Error('src is required');
-  const safeAlt = String(alt).replace(/"/g, '&quot;');
+  if (!Number.isFinite(width) || !Number.isFinite(height)) {
+    throw new Error('imgTag requires numeric width and height (CLS safety)');
+  }
+  const safeAlt = String(alt ?? '').replace(/&/g, '&amp;').replace(/"/g, '&quot;');
   return `<img src="${src}" width="${width}" height="${height}" loading="lazy" decoding="async" alt="${safeAlt}">`;
 }
 
@@ -38,7 +40,7 @@ export function readOpenAIKey() {
   const path = join(homedir(), '.config/appi-news/ai-worker.secrets');
   const m = readFileSync(path, 'utf8').match(/^OPENAI_API_KEY=(.+)$/m);
   if (!m) throw new Error(`OPENAI_API_KEY not found in ${path}`);
-  return m[1].trim();
+  return m[1].trim().replace(/^["']|["']$/g, '');
 }
 
 // 整合（不單元測試）：OpenAI 生圖 → webp

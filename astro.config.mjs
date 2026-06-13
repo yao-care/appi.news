@@ -78,4 +78,7 @@ export default defineConfig({
     mdx(),
   ],
   output: 'static',
+  // 關閉資產 base64 內聯，避免字型被內聯回 render-blocking CSS（原本 107KB 內聯字型），
+  // 並確保所有 woff2 為獨立檔案，供 scripts/subset-fonts.mjs 於 postbuild 子集化。
+  vite: { build: { assetsInlineLimit: 0 } },
 });

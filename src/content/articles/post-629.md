@@ -21,7 +21,7 @@ references:
     publisher: "CSR@天下"
   - title: "台廠應對歐盟CBAM攻略：2關鍵決定憑證需求，如何將碳關稅變競爭優勢"
     url: "https://tcan2050.org.tw/20260121"
-    publisher: "台灣氣候行動網絡"
+    publisher: "台灣氣候行動網路"
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"

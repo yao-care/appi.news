@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-682.webp"
+coverAlt: "台積電董事長魏哲家表態AI晶片需求未見緩和並研究High-NA EUV投資機會"
 ---
 
 2026年6月4日，台積電股東會在新竹落幕後，一段公開談話在半導體產業圈快速傳開。台積電董事長魏哲家在記者面前說：「客戶需求極高，我們只能支援這麼多。我們已竭盡所能。」這句話的背景，是全球算力需求持續升溫下，台積電作為先進製程唯一關鍵供應者所承受的系統性壓力。

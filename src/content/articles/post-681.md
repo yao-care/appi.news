@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-681.webp"
+coverAlt: "台灣AI新創在NVIDIA GTC展示智慧製造與資安方案強化全球供應鏈樞紐地位"
 ---
 
 台灣新創的舞台，在2026年第一次與全球頂尖AI基礎設施論壇共用同一個聚光燈。由台灣國家發展委員會支持、Startup Island TAIWAN矽谷聯絡處主導，夥同StarFab與TAI1 AI加速器組成的代表團，在NVIDIA GTC展示數位孿生、邊緣AI、機器人代理人與智慧醫療解決方案，讓外界看見台灣從硬體製造者走向全堆疊AI輸出者的實質進展。

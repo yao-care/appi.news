@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-683.webp"
+coverAlt: "台灣2025年GDP成長率達8.76%創近十五年新高半導體出口是主要引擎"
 ---
 
 2025年，台灣的GDP成長數據讓多數經濟學家都低估了。主計總處在年度資料完整統計後公布，2025年全年實質GDP成長率為8.76%，[根據中華經濟研究院追蹤的主計總處數據](https://www.cier.edu.tw/economic-indicator)，這是台灣自2011年以來近十五年的最高年度成長紀錄。這個數字的背後，是AI算力需求在全球爆發、台灣半導體供應鏈全速輸出的結果。

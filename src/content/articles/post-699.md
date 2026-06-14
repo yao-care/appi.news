@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-699.webp"
+coverAlt: "台灣達明機器人在台北自動化展發布TM Xplore I人形機器人進軍智慧工廠應用"
 ---
 
 2025年8月20日，台北南港展覽館的台灣自動化智慧機器人展（TAIROS）現場，一台裝在輪式底盤上、頂著感測器陣列的機器人吸引了眾多目光。這是達明機器人（Techman Robot）發布的TM Xplore I，台灣首款本土研發的人形機器人，由廣達集團旗下子公司打造。[台北時報當日報導](https://www.taipeitimes.com/News/News/biz/archives/2025/08/22/2003842443)，達明機器人副總裁王偉霖表示，若量產進程順利，TM Xplore I最快在2026年下半年開始商用。

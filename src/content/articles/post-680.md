@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-680.webp"
+coverAlt: "黃仁勳在GTC台北宣告代理人AI時代已至AI工廠成算力基礎設施新標準"
 ---
 
 2026年6月1日，台北音樂中心座無虛席。NVIDIA創辦人兼執行長黃仁勳站上舞台，說出這場演講最核心的一句話：「今天我們可以說，代理人AI已到來，實用AI已到來。」這不是預言，而是宣告。對台灣半導體與電子製造業來說，這句話的意義遠比任何產品發布都更深遠。

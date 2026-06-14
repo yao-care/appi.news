@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-687.webp"
+coverAlt: "台積電亞利桑那廠2025上半年轉盈淨利1.5億美元海外建廠策略獲首次驗證"
 ---
 
 台積電的亞利桑那廠從2021年破土動工至今，外界最常問的問題只有一個：什麼時候能賺錢？2025年上半年的財報給出了答案。

@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-692.webp"
+coverAlt: "全球資安AI人才缺口Kyndryl基金會擴展至13國台灣資安產業正加速AI轉型布局"
 ---
 
 資安人才的缺口在AI時代正在以更快的速度擴大。這是全球共同面對的結構性問題，也是台灣資安產業在布局出海時的最大機會。

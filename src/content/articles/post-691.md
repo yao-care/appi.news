@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-691.webp"
+coverAlt: "台灣AI新創在CES 2026帶入57家團隊展示資安數位健康能源等跨領域方案"
 ---
 
 台灣第9年走上CES舞台，規模與角色都不同於以往。

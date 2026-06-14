@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-685.webp"
+coverAlt: "台灣每日遭受263萬次網路入侵AI資安工具成防禦基礎設施核心支柱"
 ---
 
 每天263萬次，這是2025年台灣關鍵基礎設施每天面對的網路入侵嘗試次數。台灣國家安全局在年度報告中揭示這個數字，較2024年增加6%，比2023年則高出113%。報告同時指出，印太地區、北約與歐盟的資安機構在2025年多次公開點名中國為全球資安威脅的主要來源。台灣的處境，是這份全球威脅評估中最集中的樣本。

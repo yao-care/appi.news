@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-686.webp"
+coverAlt: "歐盟晶片外交報告將台灣定位為半導體戰略夥伴而非單純供應商"
 ---
 
 2026年，歐盟的半導體戰略思維正在發生一個微妙但重要的轉變：台灣從「採購地」升格為「戰略夥伴」。這個轉變，體現在一份由歐盟委員會共同資助、蒙田研究院主導的政策報告中，報告的標題直接點明了立場：「歐盟與台灣半導體關係：彌合差距、建立信任」。

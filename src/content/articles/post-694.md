@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-694.webp"
+coverAlt: "台灣AI伺服器EMS廠年增率超過一倍重塑全球代工產業版圖"
 ---
 
 [DIGITIMES於2026年2月發布](https://tw.news.yahoo.com/ai%E5%8A%A9%E6%94%BB%E5%85%A8%E7%90%83%E4%BB%A3%E5%B7%A5%E5%B8%82%E5%8D%A0%E6%B4%97%E7%89%8C-%E5%8F%B0%E5%BB%A0%E7%87%9F%E6%94%B6%E6%AF%94%E9%87%8D%E5%8D%87%E8%87%B3%E4%B8%83%E6%88%90-%E7%B7%AF%E5%89%B5%E8%B6%85%E8%BB%8A%E5%BB%A3%E9%81%94%E6%88%90%E4%BA%8C%E5%93%A5-063412875.html)的《2025年全球前20大EMS/ODM業者排名》中，有一個數字值得反覆咀嚼：緯創（含緯穎）全年營收年增率116.2%。這個數字超過台積電同期約30%的年增幅，也讓一件事開始清晰：在AI算力建置的新週期裡，EMS/ODM廠商已成為比晶圓代工更直接受益的一環。

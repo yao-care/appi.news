@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-700.webp"
+coverAlt: "北美資安併購市場2025年近歷史高峰後2026年初急踩煞車AI重設估值邏輯"
 ---
 
 2025年的北美資安併購市場，交出了一張幾乎完美的成績單，隨即在2026年第一季被市場打臉。[根據ION Analytics Mergermarket數據](https://ionanalytics.com/insights/mergermarket/cybersecurity-ma-stalls-after-2025-surge-as-ai-resets-valuations-dealspeak-north-america)，2025年北美資安M&A交易金額達629億美元，接近歷史紀錄，Google以320億美元收購Wiz更創下單筆資安交易的全球紀錄。但熱潮退去的速度同樣驚人：2026年Q1交易活動急速降溫，買家重新評估AI是否正在摧毀他們準備購買的資安資產。

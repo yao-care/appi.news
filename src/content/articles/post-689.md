@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-689.webp"
+coverAlt: "台灣在IMD數位競爭力評比拿下8項全球前3半導體量能與AI密度成核心驅動力"
 ---
 
 競爭力評比的排名往往只看整體名次，但真正揭露一個經濟體核心優勢的，是分項指標的深度分析。

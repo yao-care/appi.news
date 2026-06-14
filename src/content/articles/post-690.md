@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-690.webp"
+coverAlt: "高通在台灣創新挑戰賽2026聚焦AI PC與邊緣AI扶植台灣新創進入終端AI應用市場"
 ---
 
 高通在台灣的新創培育計畫走到第8年，今年把焦點集中在一個問題上：台灣新創能不能用AI PC和邊緣AI做出真正可商用的產品？

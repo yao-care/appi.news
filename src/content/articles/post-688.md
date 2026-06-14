@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-688.webp"
+coverAlt: "台灣新創出口2025年成長29.3%達新台幣1479億元AI與數位應用雙引擎驅動新高"
 ---
 
 台灣新創的出口成績單在2025年交出了一個難以忽視的數字。

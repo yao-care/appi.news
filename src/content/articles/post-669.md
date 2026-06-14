@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-669.webp"
+coverAlt: "台灣生技以智慧醫療再生醫學精準醫療為三大戰略支柱推動升級"
 ---
 
 2026年元旦，行政院在新年談話中明確點名生技產業為「台灣下一個戰略產業」，將其與半導體並列為驅動下一波經濟成長的核心引擎。這份政治定性不是空洞宣示：政府隨即以三個具體支柱框架它，分別是AI驅動的智慧醫療、以細胞與基因治療為核心的再生醫學，以及結合基因體資料的精準醫療。三個方向在2026年同步進入政策加速期，背後有立法、預算與國際市場三重動力在推進。

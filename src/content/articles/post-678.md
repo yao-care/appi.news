@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-678.webp"
+coverAlt: "台灣食藥署AI醫療器材審查指引納入機器學習持續更新走向生命週期管理"
 ---
 
 台灣AI醫療器材的監管體系在過去四年從零起步，逐漸建構出具有國際可對標性的框架。[Chambers and Partners 的 Healthcare AI 2025 台灣章節](https://practiceguides.chambers.com/practice-guides/healthcare-ai-2025/taiwan/trends-and-developments)梳理了台灣食藥署（TFDA）在AI醫療器材監管領域的法律基礎、審查機制與目前核准的設備規模。截至2024年12月，TFDA已核准約50款本土製造及116款進口的AI/ML醫療設備，這個數字反映了台灣在短短數年內從無到有建立審查能量的實際進展。

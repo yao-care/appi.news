@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-659.webp"
+coverAlt: "台英健保機構續簽合作協定共推健康科技評估與給付制度改革"
 ---
 
 台灣健保給付制度走向另一個里程碑。衛生福利部健保署與財團法人醫藥品查驗中心（CDE）於2026年5月11日，在衛福部長石崇良見證下，與英國國家健康與照護卓越研究院（NICE）正式完成合作協定續簽，啟動第二期台英健康科技評估（HTA）合作，有效期至2028年底。這次續簽距離2023年首度簽約僅三年，但優先議題已從「建立合作框架」升級為「具體制度移植與政策改革」，時機點與台灣推動HTA中心法人化的立法進程高度吻合。

@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-661.webp"
+coverAlt: "台灣藥品供應韌性從短缺管理走向戰略備援成國際合作標竿"
 ---
 
 台灣在全球藥品供應議題上的角色，正從受害者轉為規則制定者。2026年6月16日，台灣食藥署署長江振鍵主持[DIA 2026全球年會](https://www.diaglobal.org/en/conference-listing/meetings/2026/06/dia-2026-global-annual-meeting/agenda/16/taiwan-town-hall-strategies-to-promote-medicine-supply-resilience)費城場次的台灣專場，匯集來自歐盟、日本、美國的監管機構代表與醫療系統專業人士，共同研討如何從缺藥應急思維轉向系統性供應韌性治理。這場專場是DIA年會史上首次以台灣為主場的政策交流，標誌著台灣從藥品短缺的接受端躍升為提供解方的主動參與者。

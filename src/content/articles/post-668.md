@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-668.webp"
+coverAlt: "台灣長照3.0元旦啟動導入智慧照顧科技輔具因應失能人口增長"
 ---
 
 台灣在2026年跨入超高齡社會的同時，長照制度也走入第三個世代。[行政院於2025年12月31日正式核定《長照十年計畫3.0》](https://1966.gov.tw/LTC/cp-6572-85008-207.html)，元旦起生效，以8大策略架構因應台灣未來10年的失能人口增長。這次改制不再只是擴大服務量，而是調整照顧模式的根本邏輯：從「把失能者安置好」轉向「盡可能維持功能、延遲惡化」，並且把智慧科技輔具從附加選項變成主流配備。

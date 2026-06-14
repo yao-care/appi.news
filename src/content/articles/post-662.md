@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-662.webp"
+coverAlt: "台灣臨床試驗生態系具全球競爭力四成七試驗聚焦腫瘤藥物研發"
 ---
 
 台灣臨床試驗的全球競爭力在2026年3月有了系統性的量化佐證。台灣研發型藥廠協會（IRPMA）與PwC台灣聯合發布「[建構全球競爭力臨床試驗生態系」報告](https://www.irpma.org.tw/web/upload/20260331170753KMxrN9e.pdf)，透過與英國、加拿大、澳洲、日本、南韓、以色列、新加坡的多維度比較，確認台灣在試驗場域品質與啟動速度上已達國際前段班水準。其中一個關鍵數字是：2024年在台提出的新藥臨床試驗申請（IND）中，有47%屬於腫瘤領域，腫瘤研發主導了台灣整體試驗結構。

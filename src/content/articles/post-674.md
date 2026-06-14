@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-674.webp"
+coverAlt: "台灣精準醫療計畫招募逾56萬人成為全球最大漢人族裔基因體資料庫"
 ---
 
 台灣精準醫療的學術成果在2025年10月躍上全球最頂尖的科學舞台。由中央研究院率領、聯合多家醫學中心建立的「台灣精準醫療計畫」（Taiwan Precision Medicine Initiative，TPMI）研究成果發表於 [Nature 期刊](https://www.nature.com/articles/s41586-025-08000-0)，共招募56萬5千名參與者，整合基因型資料、電子病歷與生活型態資訊，建構出目前規模最大、資料最完整的漢人族裔生物資料庫之一。漢人族裔占全球人口近20%，此前在全球主要生物資料庫中的代表性卻嚴重不足，TPMI的出現正在填補這個空白。

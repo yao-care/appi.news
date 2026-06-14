@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-670.webp"
+coverAlt: "台灣AI醫療智慧健康價值鏈完整成形從研發到部署形成全球示範"
 ---
 
 根據發表於PubMed Central的研究，台灣在2024年全球AI醫療研究論文產出量排名第10，共發表1,331篇。這個數字放在台灣的體量下意義格外突出：一個2,300萬人口的島嶼，在AI醫療研究的全球排行上壓過多數歐洲大國。更廣為人知的脈絡是，[台灣已連續8年蟬聯NUMBEO全球醫療指數第一](https://pmc.ncbi.nlm.nih.gov/articles/PMC12786189)。這兩組數字合在一起，說明的遠超過醫療品質，而是台灣已建立一套從基礎資料到臨床部署的完整AI醫療價值鏈。

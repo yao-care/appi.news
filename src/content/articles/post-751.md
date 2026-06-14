@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-751.webp"
+coverAlt: "元智大學首創AI程式語言列全校大一必修9月全面啟動全台首所"
 ---
 
 2026年3月，一則來自元智大學的公告開始在台灣高教圈流傳。[根據中央社報導](https://www.cna.com.tw/news/ahel/202603030185.aspx)，元智大學宣布自115學年（2026年9月）起，將「AI程式語言」課程列為全校大一新生必修，同時要求所有學生在畢業前修習至少3學分的AI數位應用課程。這是台灣目前第一所以全校制度化方式強制要求AI素養的大學，與多數學校把AI能力包裝為課外選修或自由學程的做法形成明確對比。

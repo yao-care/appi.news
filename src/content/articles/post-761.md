@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-761.webp"
+coverAlt: "台北音樂博覽會奠定東南亞音樂交流樞紐打造跨境版權新生態"
 ---
 
 台北正在嘗試把自己定位為亞洲音樂產業的版權媒合中心。[臺北音樂博覽會TMEX 2025](https://blow.streetvoice.com/82403)訂於8月28日至31日在臺北流行音樂中心（北流）舉辦，今年的主題「Tune in to Taiwan. Sync with Asia.」明確把訊號對準了區域市場。這不是一場純粹的音樂節，而是一個試圖把台灣音樂IP與亞洲採購需求接在一起的商業論壇。

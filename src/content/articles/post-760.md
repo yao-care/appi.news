@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-760.webp"
+coverAlt: "調查台灣職場四成五員工曾安靜離職五成三已在浪潮中自我升級"
 ---
 
 台灣職場正在同時上演兩個截然不同的劇本。一邊是沉默倦怠的安靜離職族，另一邊是主動搭上AI浪潮、積極自我升級的工作者。[104人力銀行2025年《員工C.E.O調查報告》](https://blog.104.com.tw/104data-ceo-investigation-2025)顯示，45%在職者坦承曾進行安靜離職，超過53%在職者已使用過生成式AI工具。這兩群人可能坐在同一個辦公室，甚至同一個部門，這對企業的人才管理提出了截然不同的雙重挑戰。

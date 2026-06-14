@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-747.webp"
+coverAlt: "高齡駕駛換照新制70歲門檻5月31日上路影響全台128萬名長者"
 ---
 
 2026年5月31日，交通部高齡駕駛換照新制正式上路。換照年齡門檻由過去的75歲下修至70歲，依公路局統計，影響對象涵蓋70至74歲的約110萬名駕駛人與75歲以上的約18萬人，合計128萬名長者。這一天開始，台灣對高齡駕駛的管理方式進入新的階段，兼顧的面向涵蓋道路安全與讓長者能在不開車後仍維持移動自主的配套設計。

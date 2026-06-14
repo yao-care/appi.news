@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-759.webp"
+coverAlt: "台灣二零二五年FMCG市場年增六點二電商滲透率突破兩成酷澎暴增八七"
 ---
 
 台灣民生消費品市場的結構正在快速重組。[Worldpanel by Numerator最新發布的2025年第三季報告](https://zh-tw.worldpanelbynumerator.com/insights/tw-2025q3-fmcg-market-trend)顯示，台灣FMCG整體市場銷售額年增6.2%，食品飲料成長5.1%，個人及居家用品則以8.6%的增幅領先全類別。更關鍵的是，線上銷售佔比首度突破兩成門檻，代表每五元民生消費就有超過一元發生在電商平台上。這個比例在三年前還不到一成。

@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-749.webp"
+coverAlt: "台灣2026科技業AI人才缺口達19.3萬軟體網路業搶才6.3萬人居冠"
 ---
 
 2026年4月28日，104人力銀行發布《2026年科技業人才報告書》。[這份報告](https://blog.104.com.tw/104data-tech-industry-recruit-2026)最直接的數字是：台灣科技業每月人才缺口達19.3萬人，軟體及網路業以6.3萬人的缺口居冠，但更值得細看的，是這個19.3萬數字背後的結構重組。AI浪潮讓科技業的人才地圖正在重畫，軟體與半導體的需求消長，揭示了台灣科技產業正在發生的深層位移。

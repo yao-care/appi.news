@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-755.webp"
+coverAlt: "Gallup 2026職場現況員工投入度跌至五年低點管理者角色成關鍵"
 ---
 
 每年Gallup發布《職場現況報告》，都是全球HR與管理圈必讀的一份壓力診斷書。[2026年版的發現](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx)格外沉重：2025年全球員工投入度降至20%，是2020年新冠疫情以來的最低點，而且這是Gallup有史以來第一次記錄到連續兩年投入度下滑。以全球勞動力規模估算，這個數字每年造成的生產力損失約10兆美元，相當於全球GDP的9%。

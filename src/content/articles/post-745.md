@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-745.webp"
+coverAlt: "天下學習2026 DEI報告揭示台灣員工倦怠指數居全球第二企業留才迫在眉睫"
 ---
 
 2026年5月，天下學習發布《2026 DEI報告》，揭示了一個台灣職場正在承受的深層裂縫：台灣員工給雇主的綜合評分僅57.8分，創下四年來新低，而台灣職場的倦怠感更是高居全球第二。這份報告並非第一次揭示這個問題，但57.8這個數字讓人難以忽視，它告訴管理者一件事：員工的感受與企業認為自己所做的之間，存在一道巨大的落差。

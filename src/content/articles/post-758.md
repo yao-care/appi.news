@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-758.webp"
+coverAlt: "台灣逾六成民眾有二手商品購買經驗價格環保雙驅動二手市場進主流"
 ---
 
 台灣二手市場正在跨越「偶爾撿便宜」的門檻，進入常態消費的軌道。[東方線上2025年4月的調查](https://tw.news.yahoo.com/%E5%8F%B0%E7%81%A3%E4%BA%8C%E6%89%8B%E5%B8%82%E5%A0%B4%E8%88%88%E8%B5%B7-%E8%B6%85%E9%81%8E%E5%85%AD%E6%88%90%E6%B0%91%E7%9C%BE%E6%9C%89%E8%B3%BC%E8%B2%B7%E7%B6%93%E9%A9%97-074533059.html)顯示，62.8%的台灣消費者有過購買二手商品的經驗，這個比例在三年前的同類調查中明顯更低。通膨讓消費者的計算方式改變，五折商品不再是退而求其次的選擇，而是有意識的資源配置決策。

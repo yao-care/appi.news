@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-763.webp"
+coverAlt: "世界經濟論壇預測技能缺口加劇台灣產業搶跑人工智慧再培訓賽道"
 ---
 
 技能缺口問題的嚴重程度，在2025年已從企業內部人才討論升級為宏觀政策議題。[世界經濟論壇（WEF）《Future of Jobs Report 2025》](https://www.weforum.org/publications/the-future-of-jobs-report-2025)調查了逾1,000家全球雇主、涵蓋14萬名以上員工，結論是：2030年前，全球59%的勞動力需要再培訓或提升技能，而39%的員工核心技能將在這段期間改變或過時。這兩個數字放在台灣的製造業和服務業脈絡下，代表的是真實且迫切的人力資源壓力。

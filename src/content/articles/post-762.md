@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-762.webp"
+coverAlt: "台北藝術博覽會重返秋季熱潮撐起國際藏家在地連結"
 ---
 
 台北每年十月的藝術博覽會已成為固定日曆。[ART TAIPEI 2025](https://2025.art-taipei.com/taipei/tw)以第32屆之姿於10月23至27日在台北世貿一館登場，由中華民國畫廊協會主辦，127家來自六個國家的畫廊共同參展。在全球藝術市場受到宏觀經濟影響而整體趨緩的背景下，台北藝博的穩定規模是一個值得觀察的信號，代表東亞藝術收藏市場仍有維持動能的結構性支撐。

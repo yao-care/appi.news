@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-756.webp"
+coverAlt: "東方線上2026消費者型態趨勢台灣民眾靜默消費必需品升級非必需品降級"
 ---
 
 2025年12月18日，東方線上消費者研究集團在台北舉辦年度生活型態趨勢研討會，公布《2026東方線上生活型態趨勢研究》。[根據IAA國際廣告協會台北分會的記錄](https://iaataipei.org.tw/news/article/369)，這份研究揭示了一個耐人尋味的矛盾：2025年台灣股市屢創新高，整體經濟數據亮眼，但消費者的實際行為卻往反方向走，消費率與投資率均創近三年新低，儲蓄率達近八年新高。這種「外熱內冷」的格局，讓東方線上把2026年的消費特徵定義為「低耗降速、感性激活」。

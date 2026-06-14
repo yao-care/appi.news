@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-753.webp"
+coverAlt: "Worldpanel 2026台灣民生消費十大趨勢FMCG年增4.8%理性精算消費轉為主流"
 ---
 
 2026年2月，Worldpanel by Numerator消費者指數（原凱度消費者指數）發布年度旗艦研究《2026台灣民生消費十大趨勢》。報告根據長期追蹤台灣消費者實際購買行為，預估今年台灣FMCG市場銷額將[年增4.8%](https://today.line.me/tw/v3/article/kE8WqZ1)。儘管整體零售市場成長放緩，國際局勢仍有不確定性，台灣FMCG市場展現了一定韌性。驅動力不是消費頻率提升，而是來自高價化、產品升級，以及消費者把錢集中花在幾個核心品類上。

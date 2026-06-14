@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-744.webp"
+coverAlt: "楊双子臺灣漫遊錄奪2026布克國際獎台灣文學首度登上英語世界頂尖文壇"
 ---
 
 2026年5月19日深夜，倫敦泰特現代美術館的頒獎台上，台灣作家楊双子接過了這一年最重要的文學獎座。[《臺灣漫遊錄》英譯本《Taiwan Travelogue》](https://www.openbook.org.tw/article/p-72610)拿下2026年國際布克獎（International Booker Prize），成為首部進入決選並獲得首獎肯定的台灣文學英譯作品。這場勝利屬於一本小說，也屬於台灣文學首次以這樣的規模，讓英語世界停下來認真讀懂台灣。

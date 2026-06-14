@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-748.webp"
+coverAlt: "台灣端午消費升級星級飯店粽禮盒奢華化IP聯名訂製引爆高端送禮商機"
 ---
 
 每年端午節，台灣的粽子市場都會上演一場不動聲色的消費升級競賽。2026年更為明顯：當7-ELEVEN在全台7300多家門市推出三麗鷗端午造型香包、星巴克在禮盒提早預購階段就給出9折，傳統飯店端的粽禮盒則以截然不同的方式參戰。晶華、寒舍、萬豪、漢來，這些名字在端午送禮市場中早已是「高端」的代名詞，遠超出住宿品牌的原始範疇。[風傳媒整理了15家飯店的早鳥優惠](https://www.storm.mg/lifestyle/11133495)，最低76折，但更值得注意的不是折扣，而是這些禮盒定義「端午」的方式已經根本改變。

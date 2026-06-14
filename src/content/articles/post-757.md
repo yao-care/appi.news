@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-757.webp"
+coverAlt: "台灣AI技能調查認證者薪資溢價企業為AI素養付出對價"
 ---
 
 AI技能正在重寫台灣職場的薪資結構。[104人力銀行2026年調薪調查](https://blog.104.com.tw/104data-2026-salary-increase)顯示，75%企業願意為具備AI開發技能的人才加薪，平均增幅9.5%以上，遠高於全體員工預期調薪幅度4.5%。這不是象徵性的差距，而是企業人才策略出現結構性轉向的直接訊號。104平台上AI相關職缺已達9.9萬個，年增38%，市場需求根本不是在縮減。

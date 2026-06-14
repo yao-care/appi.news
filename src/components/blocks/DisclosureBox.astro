@@ -8,14 +8,9 @@ interface Props {
 }
 const { sourceType = 'editorial', custom } = Astro.props;
 const preset = DISCLOSURES[sourceType];
-const rawText = custom ?? preset?.text;
-const isAiDisclosure =
-  sourceType === 'ai-assisted' ||
-  rawText?.includes('AI 輔助') ||
-  rawText?.includes('AI輔助') ||
-  rawText?.includes('AI 初稿') ||
-  rawText?.includes('AI初稿');
-const text = isAiDisclosure ? undefined : rawText;
+// 來源揭露：editorial / author / contributor / expert / press-release / sponsored / partner / wire。
+// AI 為內部工具，不在前台揭露。
+const text = custom ?? preset?.text;
 const label = preset?.label ?? '揭露';
 ---
 {

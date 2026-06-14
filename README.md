@@ -1,8 +1,8 @@
 # APPI News｜亞太專業觀點
 
-> Asia-Pacific Press & Insight — 結合 AI 輔助寫作、專家審稿與媒體刊登的專業觀點平台。
+> Asia-Pacific Press & Insight — 聚集各領域專業作者的觀點媒體，透過新聞、評論、專欄、專題、專訪與深度分析，協助讀者理解重要議題。
 
-以 [Astro](https://astro.build) 建置的靜態專業媒體網站，內容涵蓋焦點、健康（APPI Health｜亞太醫頭條）、科技、財經、時事、運動、生活與專欄。
+以 [Astro](https://astro.build) 建置的靜態專業媒體網站，內容涵蓋焦點、國際、健康（APPI Health｜亞太醫頭條）、科技、財經、運動、生活與專欄。
 
 線上：<https://yao-care.github.io/appi.news/>
 
@@ -111,7 +111,7 @@ slug: "url-slug"
 description: "SEO 描述與摘要"
 publishDate: "2026-06-09T09:00:00+08:00"
 updatedDate: "2026-06-09T09:00:00+08:00"   # 可選
-category: "tech"                            # focus/health/tech/finance/society/sports/lifestyle/columns
+category: "tech"                            # focus/international/health/tech/finance/sports/lifestyle/columns
 subcategory: "ai"                           # 可選，須屬於該分類
 tags: ["AI", "資料治理"]
 author: "appi-editorial"                    # 對應 src/content/authors/ 的檔名
@@ -122,7 +122,8 @@ coverAlt: "封面替代文字"
 status: "published"                         # draft / published / scheduled / archived
 featured: true                              # 是否編輯精選
 hero: false                                 # 是否首頁主打
-sourceType: "editorial"                     # editorial/contributor/sponsored/press-release/ai-assisted
+sourceType: "editorial"                     # 內容來源：editorial/author/contributor/expert/press-release/sponsored/partner/wire
+contentType: "news"                         # 內容型態：news/feature/analysis/column/opinion/interview/research-brief/guide/press-release/sponsored/video/photo-story
 disclaimerType: "general"                   # general/medical/financial/legal/sponsored
 highlights: ["重點一", "重點二"]            # 可選，顯示為「本文重點」
 risksAndLimits: ["風險一"]                  # 可選，醫療/財經建議填寫

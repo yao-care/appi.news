@@ -51,33 +51,40 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
       <div class="intro-text">
         <span class="intro-eyebrow">{SITE.taglineEn}</span>
         <h1 class="intro-title">{SITE.tagline}</h1>
-        <p class="intro-desc">{SITE.description}</p>
+        <p class="intro-desc">
+          聚集各領域專業作者，以新聞、評論、專欄、專題、專訪與深度分析，協助讀者理解健康、科技、財經、國際、運動與生活中的重要議題。
+        </p>
         <div class="intro-cta">
           <a class="btn btn--primary" href={url('/articles/')}>探索所有文章</a>
-          <a class="btn btn--ghost" href={url('/join/')}>成為作者</a>
+          <a class="btn btn--ghost" href={url('/join/')}>投稿／成為作者</a>
         </div>
       </div>
-      <div class="intro-art" aria-hidden="true">
-        <svg viewBox="0 0 340 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- 後層卡片（品牌淡色） -->
-          <rect x="74" y="36" width="206" height="168" rx="16" fill="var(--bg-tint)" />
-          <!-- 主卡片（白底＋邊框＋陰影感） -->
-          <rect x="46" y="64" width="214" height="176" rx="18" fill="var(--white)" stroke="var(--line)" stroke-width="2" />
-          <!-- 卡片內媒體區 -->
-          <rect x="66" y="84" width="174" height="74" rx="10" fill="var(--appi-brand)" opacity="0.10" />
-          <!-- 媒體區內的洞察長條（insight 意象） -->
-          <rect x="84" y="128" width="14" height="14" rx="3" fill="var(--appi-brand)" opacity="0.55" />
-          <rect x="106" y="118" width="14" height="24" rx="3" fill="var(--appi-brand)" opacity="0.7" />
-          <rect x="128" y="106" width="14" height="36" rx="3" fill="var(--appi-accent)" />
-          <!-- 標題與內文線條 -->
-          <rect x="66" y="174" width="120" height="11" rx="5.5" fill="var(--ink)" opacity="0.82" />
-          <rect x="66" y="196" width="174" height="7" rx="3.5" fill="var(--ink-3)" opacity="0.5" />
-          <rect x="66" y="210" width="150" height="7" rx="3.5" fill="var(--ink-3)" opacity="0.5" />
-          <!-- 金色強調圓點 -->
-          <circle cx="262" cy="78" r="16" fill="var(--appi-accent)" />
-          <path d="M256 78l4 4 8-9" stroke="var(--white)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
+
+      {/* 右側：極簡媒體分類排版（Editorial Index）——取代原 SaaS 插圖 */}
+      <aside class="intro-index" aria-hidden="true">
+        <div class="eindex">
+          <div class="eindex-head">
+            <span class="eindex-brand">APPI News</span>
+            <span class="eindex-kicker">Editorial Index</span>
+            <span class="eindex-vol">Vol. 2026</span>
+          </div>
+          <ol class="eindex-list">
+            <li><span class="eindex-num">01</span><span class="eindex-en">Focus</span><span class="eindex-zh">焦點</span></li>
+            <li><span class="eindex-num">02</span><span class="eindex-en">International</span><span class="eindex-zh">國際</span></li>
+            <li><span class="eindex-num">03</span><span class="eindex-en">Health</span><span class="eindex-zh">健康</span></li>
+            <li><span class="eindex-num">04</span><span class="eindex-en">Tech</span><span class="eindex-zh">科技</span></li>
+            <li><span class="eindex-num">05</span><span class="eindex-en">Finance</span><span class="eindex-zh">財經</span></li>
+            <li><span class="eindex-num">06</span><span class="eindex-en">Sports</span><span class="eindex-zh">運動</span></li>
+            <li><span class="eindex-num">07</span><span class="eindex-en">Lifestyle</span><span class="eindex-zh">生活</span></li>
+            <li><span class="eindex-num">08</span><span class="eindex-en">Columns</span><span class="eindex-zh">專欄</span></li>
+          </ol>
+          <div class="eindex-foot">
+            <span>Multi-author media</span>
+            <span>Expert viewpoints</span>
+            <span>Analysis &amp; columns</span>
+          </div>
+        </div>
+      </aside>
     </div>
   </section>
 
@@ -174,9 +181,9 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-columns: 1fr 1.2fr; /* 左 ~45% / 右 ~55% */
     align-items: center;
-    gap: 40px;
+    gap: 48px;
     padding-top: 56px;
     padding-bottom: 56px;
   }
@@ -208,15 +215,114 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     gap: 12px;
     flex-wrap: wrap;
   }
-  .intro-art {
+  /* ---------- 右側：Editorial Index 排版視覺 ---------- */
+  .intro-index {
     display: flex;
     justify-content: center;
   }
-  .intro-art svg {
+  .eindex {
+    position: relative;
     width: 100%;
-    max-width: 340px;
-    height: auto;
-    filter: drop-shadow(0 18px 30px rgba(16, 24, 40, 0.10));
+    max-width: 560px;
+    padding: 26px 32px 22px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius);
+    /* 淡色半透明面板，讓背景節點線條若隱若現但不搶主體 */
+    background: color-mix(in oklch, var(--white) 82%, transparent);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+  }
+  /* 左上金色細邊強調，營造 issue／index 感 */
+  .eindex::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--appi-accent) 0%, transparent 72%);
+  }
+  .eindex-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--appi-accent);
+    font-family: var(--font-sans);
+  }
+  .eindex-brand {
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+    color: var(--appi-brand);
+  }
+  .eindex-kicker {
+    font-size: 0.8125rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .eindex-vol {
+    margin-left: auto;
+    font-size: 0.8125rem;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    color: var(--appi-accent);
+  }
+  .eindex-list {
+    list-style: none;
+    margin: 0;
+    padding: 18px 0 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 12px;
+  }
+  .eindex-list li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    column-gap: 10px;
+    row-gap: 2px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line-2);
+  }
+  .eindex-num {
+    grid-row: 1;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--appi-accent);
+  }
+  .eindex-en {
+    grid-row: 1;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--appi-brand);
+  }
+  .eindex-zh {
+    grid-column: 2;
+    grid-row: 2;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    letter-spacing: 0.06em;
+    color: var(--ink-3);
+  }
+  .eindex-foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--appi-accent);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
   }
 
   /* ---------- 編輯精選 ---------- */
@@ -342,11 +448,9 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
       padding-top: 40px;
       padding-bottom: 40px;
     }
-    .intro-art {
-      order: -1;
-    }
-    .intro-art svg {
-      max-width: 240px;
+    /* 手機／平板：文字在上、分類視覺在下（依 DOM 順序，不需 order） */
+    .eindex {
+      max-width: 640px;
     }
     .feature {
       grid-template-columns: 1fr;
@@ -366,6 +470,23 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     }
     .side-title {
       font-size: 1.125rem;
+    }
+    /* 手機：分類視覺縮成精簡矩陣，避免首屏過長 */
+    .eindex {
+      padding: 20px 20px 16px;
+    }
+    .eindex-list {
+      column-gap: 18px;
+      row-gap: 10px;
+    }
+    .eindex-en {
+      font-size: 0.95rem;
+    }
+    .eindex-vol {
+      display: none;
+    }
+    .eindex-foot {
+      letter-spacing: 0.1em;
     }
   }
 </style>

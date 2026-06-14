@@ -19,10 +19,10 @@ export const FOOTER_COLUMNS = [
     title: '內容',
     links: [
       { label: '焦點', href: '/focus/' },
+      { label: '國際', href: '/international/' },
       { label: '健康', href: '/health/' },
       { label: '科技', href: '/tech/' },
       { label: '財經', href: '/finance/' },
-      { label: '時事', href: '/society/' },
       { label: '運動', href: '/sports/' },
       { label: '生活', href: '/lifestyle/' },
       { label: '專欄', href: '/columns/' },

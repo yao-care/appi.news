@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"
+coverImage: "covers/post-702.webp"
+coverAlt: "SpaceX掛牌史上最大IPO帶動台股單日反彈外資終止連續六日賣超"
 ---
 
 2026年6月12日，SpaceX在那斯達克以「SPCX」代號正式掛牌交易，以每股135美元發行，開盤即跳升至150美元，漲幅約11%，盤中一度摸高至164美元。這次IPO的規模達750億美元，是人類資本市場有史以來最大的首次公開募股。消息在亞太市場引發連鎖反應，台股同日從前一日的低迷走出強勁反彈，收盤漲逾千點。

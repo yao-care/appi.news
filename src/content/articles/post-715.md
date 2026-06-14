@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"
+coverImage: "covers/post-715.webp"
+coverAlt: "BlackRock 2026年展望超配美國AI科技股並看好亞洲新興市場半導體布局"
 ---
 
 全球管理資產規模逾11兆美元的BlackRock，在2026年展望中給出了明確立場：AI科技股是這個週期最值得持有的資產，而台灣半導體正是亞洲市場接觸這場大週期最直接的途徑。2026年第二季，BlackRock將已開發市場股票整體升級為超配，IT類股每股盈餘預期成長38%，遠超S&P 500整體水準。這份立場代表全球最大資產管理公司對AI結構性週期的高度信心，對台灣投資人而言具有重要的參考意義。

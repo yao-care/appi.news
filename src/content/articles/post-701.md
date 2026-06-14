@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"
+coverImage: "covers/post-701.webp"
+coverAlt: "台灣股市市值超越印度升至全球第五台積電AI晶片帶動資本市場結構性升格"
 ---
 
 2026年5月26日，台灣股市總市值達到4.95兆美元，首度超越印度的4.92兆美元，晉身全球第五大資本市場，排在美國、中國大陸、日本與香港之後。這個位置變化不是短期的數字遊戲，而是AI半導體產業週期與全球資金重新配置共同作用下的結果，其中最關鍵的推手只有一個名字。

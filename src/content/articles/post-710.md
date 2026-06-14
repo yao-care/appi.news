@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-710.webp"
+coverAlt: "台北金融科技生態系175家公司十年累計募資逾3.67億美元嚴格監管下走出差異化"
 ---
 
 台北並非亞太金融科技版圖中最受矚目的城市，但它的位置比表面看起來更重要。[Tracxn的台北金融科技生態系調查](https://tracxn.com/d/explore/fintech-startups-in-taipei-taiwan/__oCMndCpbKpdNfDL7ohG7PpD8AnLNlJ2inemItr30NeE)顯示，台北共有175家金融科技新創，過去十年累計獲投超過3.67億美元，其中62家已完成至少一輪外部融資，30家達A輪或以上，24家已進入B輪以上的成長期。這個生態系的規模無法與新加坡或香港相提並論，但它走出了一條嚴格監管框架下的差異化路徑，值得台灣在亞太金融科技版圖中爭取更明確的定位。

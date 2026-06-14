@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"
+coverImage: "covers/post-713.webp"
+coverAlt: "2025年全球AI創投規模突破兩千億美元台灣供應鏈成AI基礎建設關鍵節點"
 ---
 
 2025年的全球創投市場只有一個真正的故事：AI吃掉了幾乎一半的資金。根據[台灣經濟研究院FINDIT研究團隊引用的CB Insights統計](https://findit.org.tw/tw/Res/2538)，2025年全球AI領域創投規模達2,258億美元，佔整體4,693億美元投資的48.12%，創有紀錄以來AI吸引比例的最高點。相較於2024年的1,144億美元，幾乎翻倍。在這場全球AI資本浪潮中，台灣供應鏈所在的位置，決定了它在接下來數年的命運，也讓這個數字對台灣的財經圈有著超越統計數字本身的意義。

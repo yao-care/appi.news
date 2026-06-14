@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"
+coverImage: "covers/post-706.webp"
+coverAlt: "亞太ETF市場2026年動能活躍主動式管理固定收益比率雙創新高投資人重新平衡佈局"
 ---
 
 2026年亞太ETF市場的增長動力，已從單純的被動指數複製，轉向更複雜的主動管理與收益導向策略。過去十年間，亞太地區主動式ETF以54%的複合年增率擴張，遠超被動式ETF市場整體40%的增速。這個數字背後，是機構投資人對傳統被動策略日益感到不滿足的現實，尤其是在固定收益領域，被動基準的表現一再落後於主動式管理。

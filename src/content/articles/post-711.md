@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"
+coverImage: "covers/post-711.webp"
+coverAlt: "台灣2024年資本市場IPO募資達576億元AI半導體概念股主導掛牌熱潮"
 ---
 
 台灣資本市場在2024年繳出了一張亮眼的成績單，而2025年更是直接打破所有歷史紀錄。根據[安永台灣的年度IPO統計](https://www.ey.com/zh_tw/newsroom/2025/12/ey-taiwan-news-release-2025-12-23)，台灣2024年共有65家企業完成上市或上櫃，IPO募資總額達新台幣575.67億元，較2023年的346.27億元成長約34%，創下單一年度的歷史新高。但這個紀錄在一年後即告終結，2025年台灣IPO募資額進一步跳升至逾1,050億元，掛牌家數增至77家，幾乎是前一個高峰的兩倍。從更長期的視角來看，全球IPO市場在截至2025年11月底的統計中，亞太地區全年募資金額達616億美元年增24%，躍居全球最大募資市場，台灣的成長恰好搭上這波亞太大勢。

@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"
+coverImage: "covers/post-718.webp"
+coverAlt: "Goldman Sachs 2026展望台灣科技股盈餘成長45%居亞洲市場之冠全球多頭格局確立"
 ---
 
 Goldman Sachs在2026年展望系列報告中，給了台灣科技股一個市場少見的高預測：2026年每股盈餘成長45%，2027年再成長28%。這兩個數字不但高於亞洲鄰近市場，也超過市場共識預估的38%與25%。全球資本對AI科技股的配置邏輯，在Goldman Sachs的框架下指向了美台兩個市場的同步走強，而這份樂觀預測建立在具體的獲利數字與供需結構分析之上，並非單純的情緒性看多。

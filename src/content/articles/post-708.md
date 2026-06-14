@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-708.webp"
+coverAlt: "台灣創投公會倡議類NASDAQ創新板目標2027年新創募資突破50億美元"
 ---
 
 台灣新創生態系的發展長年面對同一道牆：資金進得來，但出不去。台灣的創投業者、企業創投把錢押進新創，卻缺乏本土的高估值出場管道，導致獲利難以在生態系內再循環。2025年4月，[台灣創投公會理事長邱德成在台灣證券交易所觀點平台](https://www.twse.com.tw/market_insights/zh/detail/8a8216d69a3d6cf9019b11c38050047f)正式提出以創新板對標NASDAQ精神的具體倡議，並設定2027年將台灣新創年度募資規模提升至50億美元的量化目標。過去十年台灣全年早期投資金額從200億元成長至近千億元，但資金循環效率的問題始終懸而未解。這是台灣創投圈近年最具體的一次政策倡議，值得認真拆解。

@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"
+coverImage: "covers/post-716.webp"
+coverAlt: "從2025年ETF市場複盤看AI科技股結構性成長下台灣投資人的資產配置策略"
 ---
 
 2025年對全球ETF投資人來說是罕見的一年：押對AI硬體主題的基金，年化報酬動輒超過40%，部分半導體專項ETF甚至突破90%。這場行情的推動力，是AI基礎建設需求已從預期走向現實，從資料中心的水泥鋼筋到晶圓廠的機台設備，每一個環節都出現了可量化的需求爆發。台灣投資人站在台積電與AI伺服器供應鏈的核心位置，卻因工具選擇與配置思路的侷限，往往只捕捉到部分報酬。

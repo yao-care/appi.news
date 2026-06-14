@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"
+coverImage: "covers/post-712.webp"
+coverAlt: "主計總處大幅上修台灣2025年GDP成長預測至7.37%創近十五年最高紀錄"
 ---
 
 台灣的經濟表現在2025年出現了一個讓市場大幅低估的驚喜。[主計總處的最終統計數據](https://www.wealth.com.tw/articles/366c9847-8610-4841-8c42-260e36c22d44)顯示，台灣2025年全年GDP成長率上修至7.37%，創下近十五年最高紀錄，遠超年初各主要機構預測的3至4%區間。第四季的GDP年增率更是達到12.7%，比市場預期的8.5%高出超過4個百分點，幾乎完全出乎市場預料。台灣商品出口全年達6,644億美元，進口5,002億美元，AI相關電子出口爆炸性成長幾乎直接傳導至GDP的統計效果，創造了這一輪少見的大幅超預期紀錄。

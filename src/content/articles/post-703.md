@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"
+coverImage: "covers/post-703.webp"
+coverAlt: "台灣5月CPI年增2.2%創14個月新高升息預期升溫投資人資產配置面臨調整壓力"
 ---
 
 主計總處2026年6月5日公布台灣5月消費者物價指數（CPI），年增率為2.2%，比4月的1.73%擴大了0.47個百分點，創近14個月新高。這個數字讓市場的升息預期在短短幾天內明顯升溫，央行總裁也在立法院財委會答詢時，首次公開設定了「預防性升息」的討論門檻。對一般投資人而言，這一輪物價上揚是民生痛點，同時也直接影響資產配置的優先順序，是兩個層面都需要同步思考的問題。

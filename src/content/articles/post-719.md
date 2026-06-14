@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-719.webp"
+coverAlt: "台灣支付市場規模2025年達1,881億美元電子支付帳戶逾3,481萬筆消費習慣正在改寫"
 ---
 
 台灣的支付市場在2025年完成了一次量級跨越。[金融監督管理委員會公布的2025年12月統計](https://www.fsc.gov.tw/en/home.jsp?id=54&parentpath=0%2C2&mcustomize=multimessage_view.jsp&dataserno=202602120005&dtable=News)顯示，全年非現金支付交易筆數達87.27億筆，總金額8.74兆元台幣。整體卡片與電子支付市場規模達到1,881億美元，行政院設定的「2025年90%民眾完成至少一次行動支付」目標，在政策與市場雙重推力下逼近達成。這個數字說明台灣消費習慣的變化已從邊緣走向主流，但挑戰並未因此結束，第二階段的目標是讓人們從「偶爾試用」變成真正改寫日常消費習慣。

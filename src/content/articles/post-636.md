@@ -5,7 +5,7 @@ description: "截至2025年10月29日，台灣電力交易平台調頻備轉（d
 excerpt: "截至2025年10月29日，台灣電力交易平台調頻備轉（dReg）合格交易容量達810.7MW，超過台電原設定500MW需求的62%。市場過熱與零元競標的出現，顯示民間儲能規模化已成真，但商業模式正在轉型：收益重心從dReg移向E-dReg，儲能業者進入差異化競爭的新階段。"
 publishDate: "2026-06-14T21:37:47+08:00"
 category: "focus"
-subcategory: "trends"
+subcategory: "trend-watch"
 tags: ["儲能", "電力交易平台", "調頻備轉", "dReg", "E-dReg"]
 highlights:
   - "2025年10月29日dReg合格交易容量達810.7MW，遠超台電500MW需求目標，市場出現過熱信號"

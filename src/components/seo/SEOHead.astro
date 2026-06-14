@@ -42,6 +42,9 @@ const ogImagePath = ogImage ?? SITE.defaultOgImage;
 const ogImageAbs = /^https?:\/\//.test(ogImagePath)
   ? ogImagePath
   : new URL(asset(ogImagePath), Astro.site).toString();
+
+// 與 JSON-LD keywords 一致：過濾空字串
+const keywordList = (keywords ?? []).filter(Boolean);
 ---
 
 <meta charset="utf-8" />
@@ -49,7 +52,7 @@ const ogImageAbs = /^https?:\/\//.test(ogImagePath)
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
 {authorName && <meta name="author" content={authorName} />}
-{keywords && keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+{keywordList.length > 0 && <meta name="keywords" content={keywordList.join(', ')} />}
 <link rel="canonical" href={canonical} />
 {noindex && <meta name="robots" content="noindex, nofollow" />}
 

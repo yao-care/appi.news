@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-650.webp"
+coverAlt: "IEA能源創新報告：三百二十家新創與台灣儲能氫能的差異化機會"
 ---
 
 能源創新的規模正在加速，而且比多數人預期的更快進入商業化階段。[IEA《2026年能源創新現況》](https://www.iea.org/reports/the-state-of-energy-innovation-2026)於2026年2月發布第二版，這份報告涵蓋40個以上國家的實務工作者調查，收錄了2025年逾150件創新亮點，並追蹤18項「首創競賽」（Races to First），衡量各國在關鍵技術領域的領先地位。報告釋出的訊號很清楚：能源創新的競爭已從「是否投入」演變為「誰先做到」，而台灣在儲能與氫能這兩個領域的布局，需要更主動的差異化定位。

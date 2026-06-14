@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-639.webp"
+coverAlt: "NASA公布Artemis III四名組員義大利太空人帕米塔諾成首位歐洲人駕駛登月飛船"
 ---
 
 2026年6月9日，NASA在休士頓詹森太空中心正式公布Artemis III任務的四名組員。義大利太空人盧卡‧帕米塔諾（Luca Parmitano）將擔任駕駛，成為歷史上首位被分配至Artemis任務的歐洲太空人。其他三名組員為指揮官Randy Bresnik，以及任務專家Frank Rubio與Andre Douglas，備用組員則由Bob Hines擔任。這支陣容的意義遠超過人員名單：它標誌著美歐太空合作的縱深已從補給站層級，正式推進到載人登月任務的核心操作位置。

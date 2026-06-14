@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-641.webp"
+coverAlt: "剛果烏干達伊波拉確診逾五百例WHO宣告全球公衛緊急事件跨境傳播考驗亞太備戰"
 ---
 
 2026年5月5日，WHO接獲通報，剛果民主共和國伊圖里省Mongbwalu衛生區出現高致死率不明疾病群聚，包含多名醫療工作者死亡。實驗室在5月15日確認病因為Bundibugyo病毒，即伊波拉的一個亞型，DRC當天正式宣告該國第17次伊波拉疫情爆發。兩天後的5月17日，WHO宣告「國際公共衛生緊急事態」（PHEIC），將其定位為全球最高層級的衛生警報。這是COVID-19疫情結束以來首度觸發PHEIC的傳染病事件，性質與規模都值得嚴肅以對。

@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-651.webp"
+coverAlt: "全球氫能進入生死抉擇年：中東砍案、印度風險高、台灣進口策略面臨考驗"
 ---
 
 全球氫能產業在過去三年積累了大量的宣示性承諾，2026年是這些承諾必須兌現或出局的一年。[Wood Mackenzie於1月9日發布的氫能產業展望](https://www.pv-magazine.com/2026/01/09/hydrogen-faces-year-of-reckoning-in-2026-says-wood-mackenzie)以「生死抉擇年」定位2026年，氫能副總裁Murray Douglas的核心判斷很直接：項目能夠推進的地方，是政策支持與採購協議同時到位的地方；兩者有任何一方缺席，項目就停下來。這個邏輯聽起來像常識，但執行中卻打破了數十個正在規劃的大型項目。台灣的氫能進口策略正面對同樣的結構性壓力。

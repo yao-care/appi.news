@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-645.webp"
+coverAlt: "PAHO局長在紐約呼籲優先強化地方衛生能量以確保全球疫情防備基礎"
 ---
 
 全球疫情防備架構正在醞釀一次關鍵轉向。2026年3月26日，泛美衛生組織（PAHO）局長Jarbas Barbosa在紐約出席聯合國第三次疫情防備、準備與應對（PPPR）主題對話，發表了一篇措辭直接的倡議演說。核心論點只有一個：若不從根本投資地方衛生系統能量，任何高層簽署的全球防備框架都只是一層脆弱的政治外殼。

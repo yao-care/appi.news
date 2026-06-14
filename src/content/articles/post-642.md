@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-642.webp"
+coverAlt: "全球海洋熱浪覆蓋面積達27%科學家預警年底前可能升至45%台灣海域首當其衝"
 ---
 
 全球海洋正在以超過預期的速度升溫。[Climate Impact Company的四月分析報告](https://climateimpactcompany.com/april-2026-harine-heatwave-outlook-global-marine-heatwave-aerial-coverage-is-27-and-forecast-to-reach-40-2-2)指出，NOAA數據顯示2026年4月全球海洋熱浪覆蓋率已達27%，超越同期預測值23%。NOAA原本預測三季末前覆蓋率會達到40%，但Climate Impact Company根據目前的超速發展，估計實際數字可能高達45%，屆時幾乎相當於全球一半的海洋都處於熱浪狀態。這個數字不是氣候模型的假設，而是正在發生中的海洋現實。

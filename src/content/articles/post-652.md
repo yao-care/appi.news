@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-652.webp"
+coverAlt: "亞太永續金融2026：銀行加速融資循環經濟，ESG資本市場邁向實質指標驗證"
 ---
 
 2026年4月，Circulate Capital宣布完成亞太循環經濟基金二期首次關閉，募集規模達2.2億美元，聚焦東南亞與南亞的塑膠廢棄物回收與循環供應鏈。它出現的時間點說明了問題：同一個月，香港已完成可持續金融分類法擴充，將過渡融資與氣候適應類別列入認可範疇；ING亦公開預測亞太過渡債券發行量在2026年將超越前一年。幾件事同步發生，指向同一個方向：亞太ESG資本市場正在從「怎麼定義綠」，移向「怎麼驗證循環」。

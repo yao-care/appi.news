@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-646.webp"
+coverAlt: "2025全球能源轉型投資達2.3兆美元亞太佔47%台灣的機會與風險"
 ---
 
 2025年能源轉型投資的數字是一個新紀錄，更是資本重新定向的信號。當全球每年有超過2兆美元流向清潔能源相關領域，傳統化石能源的商業邏輯面對的已經是投資人的持續退出，而非只有政策壓力。這個量級的資本移動，對能源政策、製造供應鏈與金融市場都會產生無法忽視的結構性影響。

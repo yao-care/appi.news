@@ -23,6 +23,8 @@ import {
   adjacent,
   authorHasPage,
   extractFaq,
+  getTopics,
+  authorAvatar,
 } from '@/utils/content';
 import { getCategory, getSubcategoryName } from '@/config/categories';
 import { formatDate, isoDate } from '@/utils/date';
@@ -63,6 +65,14 @@ const { newer, older } = adjacent(all, article);
 
 const { Content } = await render(article);
 
+const topicTitle = new Map((await getTopics()).map((t) => [t.id, t.data.title]));
+const aboutNames = article.data.topics
+  .map((s) => topicTitle.get(s))
+  .filter((x): x is string => Boolean(x));
+const authorImageAbs = author
+  ? new URL(authorAvatar(author), Astro.site).toString()
+  : undefined;
+
 const isMedicalOrNews =
   article.data.category === 'health' || article.data.category === 'focus';
 
@@ -79,10 +89,17 @@ const ld = [
     image: new URL(cover, Astro.site).toString(),
     datePublished: isoDate(article.data.publishDate),
     dateModified: isoDate(article.data.updatedDate ?? article.data.publishDate),
-    authorName,
-    authorPath: authorHasPage(author) ? `/authors/${author!.id}/` : undefined,
+    author: {
+      name: authorName,
+      path: authorHasPage(author) ? `/authors/${author!.id}/` : undefined,
+      image: authorImageAbs,
+      jobTitle: author?.data.displayTitle,
+      sameAs: author?.data.socialLinks.map((s) => s.url),
+    },
     section: cat?.name,
     isNews: isMedicalOrNews,
+    keywords: article.data.tags,
+    about: aboutNames,
   }),
   breadcrumbLd(Astro.site, [{ name: '首頁', path: '/' }, ...crumbItems]),
 ];

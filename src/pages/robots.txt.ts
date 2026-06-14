@@ -7,7 +7,24 @@ export async function GET(context: APIContext) {
         context.site,
       ).toString()
     : '/sitemap-index.xml';
-  const body = `User-agent: *
+  const aiBots = [
+    'GPTBot',
+    'OAI-SearchBot',
+    'ChatGPT-User',
+    'ClaudeBot',
+    'Claude-Web',
+    'anthropic-ai',
+    'PerplexityBot',
+    'Google-Extended',
+    'CCBot',
+    'Bytespider',
+    'Amazonbot',
+  ];
+  const aiBlock =
+    aiBots.map((b) => `User-agent: ${b}`).join('\n') +
+    '\nAllow: /\nDisallow: /admin/\n';
+  const body = `${aiBlock}
+User-agent: *
 Allow: /
 Disallow: /admin/
 

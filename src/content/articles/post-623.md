@@ -24,7 +24,7 @@ references:
     publisher: "Energy Storage News"
 author: "appi-editorial"
 status: "published"
-sourceType: "ai-assisted"
+sourceType: "editorial"
 disclaimerType: "general"
 ---
 

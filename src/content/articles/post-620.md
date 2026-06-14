@@ -24,7 +24,7 @@ references:
     publisher: "台灣自然保育基金會"
 author: "appi-editorial"
 status: "published"
-sourceType: "ai-assisted"
+sourceType: "editorial"
 disclaimerType: "general"
 ---
 

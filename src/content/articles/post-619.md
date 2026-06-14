@@ -24,7 +24,7 @@ references:
     publisher: "科技民主與社會研究中心（DSET）"
 author: "appi-editorial"
 status: "published"
-sourceType: "ai-assisted"
+sourceType: "editorial"
 disclaimerType: "general"
 ---
 

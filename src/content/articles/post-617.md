@@ -24,7 +24,7 @@ references:
     publisher: "RECCESSARY"
 author: "appi-editorial"
 status: "published"
-sourceType: "ai-assisted"
+sourceType: "editorial"
 disclaimerType: "general"
 ---
 

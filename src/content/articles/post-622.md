@@ -24,7 +24,7 @@ references:
     publisher: "European Commission – DG Environment"
 author: "appi-editorial"
 status: "published"
-sourceType: "ai-assisted"
+sourceType: "editorial"
 disclaimerType: "general"
 ---
 

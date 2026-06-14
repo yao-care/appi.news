@@ -24,7 +24,7 @@ references:
     publisher: "POXA Energy"
 author: "appi-editorial"
 status: "published"
-sourceType: "ai-assisted"
+sourceType: "editorial"
 disclaimerType: "general"
 ---
 

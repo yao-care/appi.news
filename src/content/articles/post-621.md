@@ -24,7 +24,7 @@ references:
     publisher: "台積電永續報告"
 author: "appi-editorial"
 status: "published"
-sourceType: "ai-assisted"
+sourceType: "editorial"
 disclaimerType: "general"
 ---
 

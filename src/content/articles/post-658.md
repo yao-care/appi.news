@@ -4,7 +4,7 @@ slug: "post-658"
 description: "Parker太陽探測器在距太陽表面614萬公里處首度記錄太陽風起源與磁重聯現象，確認太陽風兩種生成路徑。更精確的磁場觀測數據將改善太空天氣預報，對亞太衛星通訊安全與台灣低軌道衛星布建具有直接防護意涵。"
 excerpt: "Parker太陽探測器在距太陽表面614萬公里處首度記錄太陽風起源與磁重聯現象，確認太陽風兩種生成路徑。更精確的磁場觀測數據將改善太空天氣預報，對亞太衛星通訊安全與台灣低軌道衛星布建具有直接防護意涵。"
 publishDate: "2025-07-11T08:00:00+08:00"
-category: "focus"
+category: "international"
 subcategory: "global-focus"
 tags: ["太空科技", "太陽風", "太空天氣", "衛星通訊", "NASA"]
 highlights:

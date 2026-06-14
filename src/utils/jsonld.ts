@@ -115,10 +115,14 @@ export function articleLd(
     dateModified: a.dateModified || a.datePublished,
     inLanguage: SITE.lang,
     ...(a.section ? { articleSection: a.section } : {}),
-    ...(a.keywords && a.keywords.length ? { keywords: a.keywords.join(', ') } : {}),
-    ...(a.about && a.about.length
-      ? { about: a.about.map((name) => ({ '@type': 'Thing', name })) }
-      : {}),
+    ...(() => {
+      const kw = (a.keywords ?? []).filter(Boolean);
+      return kw.length ? { keywords: kw.join(', ') } : {};
+    })(),
+    ...(() => {
+      const ab = (a.about ?? []).filter(Boolean);
+      return ab.length ? { about: ab.map((name) => ({ '@type': 'Thing', name })) } : {};
+    })(),
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': absoluteUrl(a.path, site),

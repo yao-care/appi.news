@@ -33,12 +33,20 @@ describe('articleLd', () => {
   });
   it('keywords 與 about 輸出', () => {
     const ld = articleLd(site, baseArgs) as any;
-    expect(ld.keywords).toContain('LLM');
+    expect(ld.keywords).toBe('LLM, 醫療AI');
     expect(JSON.stringify(ld.about)).toContain('數位健康');
   });
   it('isNews 時型別為 NewsArticle', () => {
     const ld = articleLd(site, { ...baseArgs, isNews: true }) as any;
     expect(ld['@type']).toBe('NewsArticle');
+  });
+  it('keywords/about 空陣列或空字串時不輸出該欄位', () => {
+    const ld1 = articleLd(site, { ...baseArgs, keywords: [], about: [] }) as any;
+    expect(ld1.keywords).toBeUndefined();
+    expect(ld1.about).toBeUndefined();
+    const ld2 = articleLd(site, { ...baseArgs, keywords: ['', 'AI'], about: [''] }) as any;
+    expect(ld2.keywords).toBe('AI');
+    expect(ld2.about).toBeUndefined();
   });
   it('author 無 path/image 時仍合法（只有 name）', () => {
     const ld = articleLd(site, { ...baseArgs, author: { name: '編輯部' } }) as any;

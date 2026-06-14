@@ -90,7 +90,7 @@
 | `references` | ≥3 筆（title/url/publisher） |
 | `author` | `appi-editorial` |
 | `status` | `published` |
-| `sourceType` | `ai-assisted` |
+| `sourceType` | `editorial`（現行 schema 已移除 `ai-assisted`，見 commit b7ba8dc「去除 AI 主定位」；APPI 編輯部署名一律 editorial） |
 | `disclaimerType` | `general`；健康醫療題用 `medical`，財經投資題用 `financial` |
 | `coverImage` / `coverAlt` | 必填 |
 

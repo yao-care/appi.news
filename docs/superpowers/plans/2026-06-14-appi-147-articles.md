@@ -66,7 +66,7 @@ references:
     publisher: "<出處>"
 author: "appi-editorial"
 status: "published"
-sourceType: "ai-assisted"
+sourceType: "editorial"
 disclaimerType: "general"
 ---
 

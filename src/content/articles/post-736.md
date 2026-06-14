@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-736.webp"
+coverAlt: "德國FIBO 2026健身大展呈現健身從運動走向全人健康的關鍵轉型"
 ---
 
 2026年4月19日，德國科隆傳出一個清晰的信號：全球健身產業正在換軌。[FIBO 2026在四天內吸引了136個國家、17.5萬名訪客，超過1,000家參展商齊聚展館](https://rxglobal.com/health-future-fibo-2026-wraps-strong-results)，規模較前幾屆持續擴大。但比數字更值得關注的，是這屆展會傳遞的核心訊號：健身不再只是運動，而是一種整合訓練、長壽科學、心理健康與數據管理的全人事業。

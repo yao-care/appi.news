@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-733.webp"
+coverAlt: "台灣運動專責預算2026年達248億較十年前成長三倍運動產業迎投資新量級"
 ---
 
 2026年，台灣對體育運動的財政承諾達到歷史新高點。[整體體育運動預算編列達248億元新台幣](https://www.isdp.eu/wp-content/uploads/2025/12/Brief-Taiwan-Sports-Dec-2-2025-final.pdf)，較2016年的約80億元成長逾三倍，增幅40.9%，是近年預算成長最快的一次。與此同時，2025年9月9日「運動部」正式成立，成為台灣史上第一個獨立的一級運動行政機關，從體育署升格為直屬行政院的部會，在組織架構上為預算執行提供了更高層的政策協調能力。這個雙重轉變的意義，在於台灣正式把運動產業定位為國家級戰略，而非僅僅是教育政策的附屬項目。

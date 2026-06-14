@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-726.webp"
+coverAlt: "統一獅二〇二六中職上半季奪隊史第十八座季冠軍再寫台灣職棒最長王朝紀錄"
 ---
 
 統一獅再度封王。2026年中職上半季，[中央社報導](https://www.cna.com.tw/news/aspt/202506290185.aspx)確認統一7-ELEVEn獅拿下隊史第18座季冠軍，戰績36勝24敗，在聯盟六隊中以最穩定的年度成績率先收下上半季旗幟。這是總教練林岳平接掌兵符以來持續累積的成果，他已成為隊史奪得最多季冠軍的總教練，改寫了過去大石彌太郎和呂文生共同保持的紀錄。

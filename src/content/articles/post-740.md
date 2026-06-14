@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-740.webp"
+coverAlt: "中職2025年總觀眾突破373萬人創聯盟單季新高平均每場破萬台灣職棒黃金時代"
 ---
 
 數字本身已是一句宣言：2025年中職全季進場人次373萬4429人，場均1萬373人，較2024年成長近35%，雙雙寫下中華職棒35年歷史的新高點。[中央社的深度報導](https://project.cna.com.tw/cards/20251008-cpblspectators)清晰記錄了這段從每場僅千餘人的低谷走到今天的漫長過程，而2025年是這個復甦敘事最有說服力的一章。台灣職棒撐過了簽賭黑暗期，也真正重建了屬於自己的黃金時代。

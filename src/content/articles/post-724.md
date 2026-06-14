@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-724.webp"
+coverAlt: "WIPO世界智財日聚焦體育產業十年體育專利年均成長七點六亞洲佔全球申請逾六成"
 ---
 
 2026年4月26日，世界智慧財產權組織（WIPO）以「IP and Sports: Ready, Set, Innovate」為主題迎接第26屆世界智財日。這個主題背後跟著一份厚實的數據：[WIPO發布的體育科技SPARK報告](https://www.wipo.int/en/web/wipo-magazine/articles/ip-and-sports-ready-set-innovate-93241)顯示，2016至2025年間全球共揭露超過65,700件體育相關發明，體育專利的年均複合成長率達7.6%，幾乎是全球所有類別專利平均成長率4.4%的兩倍。體育產業正在以快於整體市場的速度，將創新轉化為受保護的智慧財產。

@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-730.webp"
+coverAlt: "2026台灣職籃林志傑宣告退休最後一舞撼動球迷本土球星文化重建"
 ---
 
 台灣籃球史上最具代表性的球員之一，43歲的「野獸」林志傑，在2026年1月的台北富邦勇士開季記者會上正式宣布：本賽季結束後，他將高掛球鞋，為長達23年的職業生涯畫下句點。消息一出，球迷的不捨情緒迅速在社群蔓延，而富邦勇士球團隨即宣布，將於[2026年4月11至12日在台北小巨蛋舉辦兩場引退賽](https://www.sportsv.net/articles/122638)，打造台灣職業籃球史上規格最高的告別盛典。

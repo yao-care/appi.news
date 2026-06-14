@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-729.webp"
+coverAlt: "FIFA世足熱潮帶動台廠運動耳機出口年增逾130%消費電子搭上全球體育商機"
 ---
 
 四年一度的世界盃足球賽，遠遠超出球場的範疇。2026年FIFA世界盃於6月12日至7月20日在美國、加拿大、墨西哥三地展開，國際足聯估算[全球觀賽人數將突破55億](https://us.plus500.com/instruments/fifa-world-cup-economics~6)，商業總收入達109億美元，較2022年卡達世界盃增長56%。在這波商機浪潮裡，台灣消費電子廠商早在賽事開幕前就已悄悄完成備貨卡位，運動耳機與便攜音響的出口訂單年增逾130%，再次展現台廠在全球體育商品供應鏈中的隱形競爭力。

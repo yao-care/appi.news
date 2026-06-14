@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-738.webp"
+coverAlt: "2025亞洲冬季棒球聯盟11月高雄嘉義開打台日韓五隊熱戰44場"
 ---
 
 台灣棒球的秋冬議題在2025年11月15日正式引爆。[第十屆亞洲冬季棒球聯盟當天在高雄澄清湖棒球場揭幕](https://udn.com/news/story/7001/9107101)，台灣山林、台灣海洋、日職聯隊、日本社會人隊、韓職聯隊五支隊伍，將在為期23天內進行共44場賽事。這是繼2019年之後，台日韓三國再度在冬盟同場對決；韓職聯隊的回歸更讓本屆賽事具備完整的東亞棒球格局，對台灣選手而言是難得的高強度國際實戰機會。

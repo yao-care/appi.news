@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-725.webp"
+coverAlt: "台灣運動產業趨勢報告揭示年產值逼近八千億服務業成下一個成長引擎"
 ---
 
 台灣運動產業正在從「製造出口」走向「服務內需」，這個轉型的速度比多數業者預期的快。TTR台灣趨勢研究於2026年5月發布《運動服務業發展趨勢》報告，[報告顯示](https://dreamrich.com.tw/articles/156)民國114年台灣運動服務業銷售額達547.1億元，創下歷年新高。這個數字代表什麼？對照民國110年疫情衝擊時的286.5億元低點，三年間市場規模幾乎翻倍，而且增長沒有停止的跡象。

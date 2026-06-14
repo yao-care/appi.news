@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-629.webp"
+coverAlt: "台灣綠色投融資規模突破4.9兆元銀行保險業加速佈局邁向2030年六兆目標"
 ---
 
 台灣綠色金融的規模數字，在2026年2月迎來一個新里程碑。[金管會公布，截至2025年底，台灣綠色投融資規模已逾新台幣4.9兆元](https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202602130009&dtable=News)，穩健朝2030年六兆元目標前進。這個數字背後，是銀行授信、保險投資、永續債券市場三條主線同步推進的成果，也反映出金管會把綠色及轉型金融從政策宣示轉化為具體金流的五年成果。

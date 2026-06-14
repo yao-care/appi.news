@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-637.webp"
+coverAlt: "歐盟碳邊境調整機制CBAM過渡申報全面啟動台灣出口廠商備戰碳盤查"
 ---
 
 歐盟CBAM不再是遠方的規劃文件。2026年1月1日，正式期正式啟動，[根據台灣氣候行動網絡的分析](https://tcan2050.org.tw/20260121)，正式期第一週就有超過1萬份含CBAM貨品的進口海關申報透過歐盟整合式海關系統完成驗證，貨品總量超過165萬噸，鋼鐵是大宗。台灣被明確點名為前十大CBAM商品進口來源國之列，與土耳其、中國、印度並排。這個排名不是榮譽，而是提醒：台灣出口廠商要應對的CBAM合規壓力，從概念正式轉為現實。

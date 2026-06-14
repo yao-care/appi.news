@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-633.webp"
+coverAlt: "IEA世界能源展望2025化石燃料需求高峰臨近再生能源連23年破紀錄"
 ---
 
 IEA選在COP30開幕首日（2025年11月12日）發布年度旗艦報告，時間點本身就是一個宣示。[世界能源展望2025](https://www.iea.org/reports/world-energy-outlook-2025/executive-summary)的核心訊息，在各情境下都出現了同一個趨勢：化石燃料的高峰正在逼近，而再生能源在2024年連續第23年創裝置容量新高，建構了所有能源轉型情境的基礎。這份報告的意義不在於一刀切的樂觀預言，而在於它用量化情境描繪出：即便是政策不大幅改變的「現行政策情境」，能源版圖已在結構性位移。

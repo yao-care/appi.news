@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-628.webp"
+coverAlt: "金管會綠色證券認證制度完成試評2026年8月正式啟動企業憑綠色收入取得標章"
 ---
 
 台灣資本市場在2026年多了一個問企業「你賺的錢有多綠」的正式機制。[金管會自2025年推動建置的綠色證券認證制度，已完成試評作業，預計於2026年8月正式啟動認證](https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202602130009&dtable=News)，以上市櫃公司2025年度的綠色收入相關資訊作為評估基礎，12月公布認證名單。這套制度以世界交易所聯合會（WFE）的綠色股權原則為架構，台灣在亞太地區算是推進較快的市場之一。

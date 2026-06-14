@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-632.webp"
+coverAlt: "COP30貝倫氣候峰會29項決定通過全球氣候行動邁向落實十年"
 ---
 
 2025年11月22日深夜，巴西貝倫的談判桌在馬拉松式磋商後終於落槌。[COP30貝倫套案](https://cop30.br/en/news-about-cop30/cop30-approves-belem-package1)由195個締約方以共識方式通過，包含29項決定，主題橫跨氣候融資、適應目標、公正轉型、性別平等與貿易。COP30主席安德烈·科里亞·杜拉戈說了一句話被大量引用：「離開貝倫之後，這一刻不應被記憶為一場會議的結束，而是扭轉局勢十年的開始。」這句話的背後，是真正有約束力的量化承諾，也是留給每個締約方國內政策的作業單。

@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-620.webp"
+coverAlt: "資源循環推動法三讀通過台灣循環經濟從末端管控邁向全生命週期治理"
 ---
 
 台灣推動循環經濟的法制基礎，在2026年6月2日完成了一次根本性的升級。[環境部新聞稿](https://enews.moenv.gov.tw/page/3b3c62c78849f32f/49f0b94e-1173-480e-a41f-b1578905c692)指出，《資源循環推動法》（原《資源回收再利用法》修正草案）當天完成立法院三讀通過，將廢棄物管理的思維從「末端清除處理」徹底改寫為「源頭設計、全生命週期資源治理」。環境部部長彭啓明與資源循環署署長賴瑩瑩親赴立法院致意，立委王正旭在三讀後直言：「本次修法使臺灣在資源循環領域的政策法規接軌國際。」

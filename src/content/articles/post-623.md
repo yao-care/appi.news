@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-623.webp"
+coverAlt: "BNEF全球儲能2035年累計容量將達2025年八倍台灣電池產業迎關鍵視窗"
 ---
 
 儲能市場正在進入一個罕見的高速成長週期，而台灣恰好站在幾條趨勢線交叉的位置上。[BloombergNEF（BNEF）最新預測](https://about.bnef.com/insights/clean-energy/global-energy-storage-boom-three-things-to-know)顯示，全球儲能累計裝置容量在2035年將達到2太瓦（7.3太瓦時），約是2025年水準的八倍。2025年全球年度儲能新增裝置已達112GW/307GWh，超越BNEF原本的預期；到2036年，年度新增量估計將再接近翻倍達308GW。與此同時，台灣在2026年5月通過能源管理法修正草案，強制用電大戶配置自用發電與儲能設備。台灣的儲能市場需求，有了政策層面的明確推力。

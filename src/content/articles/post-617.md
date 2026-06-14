@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-617.webp"
+coverAlt: "台灣碳費首度開徵共收49.7億元半導體業繳22億居各業之冠"
 ---
 
 台灣的碳定價制度在2026年正式從紙面走入現實。[環境部6月3日公布](https://csr.cw.com.tw/article/44713)，首批碳費申報於6月1日截止，461家列管工廠、240家企業全數完成繳費，合計繳納49.7億元，比原先估算的45億元多出近一成。這個數字背後藏著制度設計的細節，也映照出台灣企業面對碳成本時的真實盤算。

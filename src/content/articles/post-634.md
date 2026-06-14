@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-634.webp"
+coverAlt: "IEA再生能源2025報告指出太陽能躍居全球最大新增電力來源"
 ---
 
 太陽能的統治地位在2025年已不需要辯論，只需要看數字。[IEA在2025年10月7日發布的Renewables 2025](https://www.iea.org/reports/renewables-2025)，是國際能源總署每年最重要的再生能源市場報告，這一版的核心結論直接而明確：太陽能將在2025至2030年間貢獻全球再生能源新增容量的近八成，預估2025年全年新增接近600GW，主要動力來自分散式太陽能應用的快速普及。整體算起來，這個六年期間全球將新增4,600GW再生能源，是2019至2024年裝置量的兩倍。這不是加速，是倍速。

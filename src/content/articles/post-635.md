@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-635.webp"
+coverAlt: "全球塑膠公約談判日內瓦擱淺台灣企業提前因應循環包材規範"
 ---
 
 談判現場最後的畫面幾乎成了全球環保媒體的集體嘆息。2025年8月15日清晨6時30分，INC主席的修訂文本在全體會議上遭到拒絕，[INC-5.2在無共識的情況下休會](https://www.genevaenvironmentnetwork.org/resources/updates/road-to-geneva-plastic-pollution-inc-5-2)，距離預定結束時間已超過12個小時。184個國家的代表在日內瓦萬國宮花了十天時間，沒能同意任何文字作為未來協議的基礎。消息一出，路透社、衛報、AFP幾乎同步以「破局」（collapse）報導。全球塑膠公約這四年的談判歷程，走到了最不確定的岔路口。

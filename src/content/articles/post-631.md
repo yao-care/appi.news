@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-631.webp"
+coverAlt: "台灣轉型金融2026年動能爆發能源轉型成為最大投資主軸"
 ---
 
 2026年的氣候金融版圖，正在悄悄重新切割。[根據安聯投信2026年2月的市場分析](https://tw.allianzgi.com/zh-tw/insights/market-insight/20260209-1-transition-financing-set-for-a-transformational-year)，全球能源轉型投資在2024年首度突破2兆美元，2025年年中再生能源開發已吸引3,860億美元資金。更重要的是，2025年底固定收益市場正式將「轉型金融」從「綠色金融」獨立出來，建立專屬指引原則，讓資金有了更清晰的路可走。台灣金管會的行動來得快，2026年新版行動方案把高碳排產業轉型明確納入融資對象，意味著鋼鐵、水泥等「棕色產業」只要能提出有科學依據的減碳路徑，就能夠爭取到機構資金的支持。

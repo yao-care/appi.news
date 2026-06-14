@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-627.webp"
+coverAlt: "台灣永續新元年上市櫃年報須以IFRS永續準則編製專章揭露永續財務資訊"
 ---
 
 台灣的企業永續揭露，在2026年跨過了一道不可回頭的門檻。[金管會2025年11月修正公開發行公司年報應行記載事項準則](https://csr.cw.com.tw/article/44593)，要求上市櫃公司自2026會計年度起，按實收資本額分三階段接軌IFRS永續揭露準則（IFRS S1一般要求、IFRS S2氣候相關揭露），並在年報中以「永續相關財務資訊」專章的方式單獨呈現。這份專章必須提報董事會通過，與財務報告同樣具有法律效力，而非過去那種可以自由發揮的永續報告書附錄。

@@ -26,6 +26,8 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+coverImage: "covers/post-636.webp"
+coverAlt: "台灣電力交易平台調頻儲能容量突破810MW民間儲能規模化里程碑"
 ---
 
 這個數字出現的時間很有意思。[根據RECCESSARY的市場分析](https://www.reccessary.com/zh-tw/news/what-is-dreg-edReg)，截至2025年10月29日，台灣電力交易平台的調頻備轉（dReg）合格交易容量已達810.7MW。台電為這個市場設定的原始需求是500MW，換算下來，市場供給比台電想要的量多出了62%。同一時間點，E-dReg（電能移轉複合動態調節備轉）合格容量達到393.2MW，也在朝台電500MW目標靠攏。兩個數字加在一起，說明台灣民間儲能市場在三年多的快速成長後，已從「不夠用」走到「局部過熱」的新階段。

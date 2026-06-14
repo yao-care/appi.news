@@ -120,6 +120,9 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
   ogImage={ogImg}
   publishedTime={isoDate(article.data.publishDate)}
   modifiedTime={isoDate(article.data.updatedDate ?? article.data.publishDate)}
+  authorName={authorName}
+  authorPath={authorHasPage(author) ? `/authors/${author!.id}/` : undefined}
+  keywords={article.data.tags}
   jsonld={ld}
 >
   <article class="article">

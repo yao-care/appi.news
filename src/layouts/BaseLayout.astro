@@ -16,6 +16,9 @@ interface Props {
   noindex?: boolean;
   publishedTime?: string;
   modifiedTime?: string;
+  authorName?: string;
+  authorPath?: string;
+  keywords?: string[];
   /** 額外的 structured data（文章頁、作者頁等） */
   jsonld?: Record<string, any> | Record<string, any>[];
 }
@@ -29,6 +32,9 @@ const {
   noindex,
   publishedTime,
   modifiedTime,
+  authorName,
+  authorPath,
+  keywords,
   jsonld,
 } = Astro.props;
 
@@ -47,6 +53,9 @@ const baseLd = [websiteLd(Astro.site), orgLd(Astro.site)];
       noindex={noindex}
       publishedTime={publishedTime}
       modifiedTime={modifiedTime}
+      authorName={authorName}
+      authorPath={authorPath}
+      keywords={keywords}
     />
     <JsonLd data={baseLd} />
     {jsonld && <JsonLd data={jsonld} />}

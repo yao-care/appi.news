@@ -25,14 +25,23 @@
   import { quadtree } from 'd3-quadtree';
   import {
     makeNodes,
-    baseOpacity,
+    makeOpacityScale,
+    makeColorMixer,
     linkOpacity,
-    mixNavyGold,
     pulse,
   } from '@/utils/hero-network/core';
 
   const canvas = document.querySelector<HTMLCanvasElement>('canvas.hero-network');
-  if (canvas) init(canvas);
+  if (canvas) {
+    // 純裝飾背景，移出載入關鍵路徑：等 load 後的閒置時段才啟動 d3 模擬，
+    // 避免連續 rAF 佔住主執行緒、延遲 hero 文字（LCP 元素）的繪製/字型 swap。
+    const boot = () =>
+      'requestIdleCallback' in window
+        ? requestIdleCallback(() => init(canvas), { timeout: 2000 })
+        : setTimeout(() => init(canvas), 300);
+    if (document.readyState === 'complete') boot();
+    else window.addEventListener('load', boot, { once: true });
+  }
 
   function init(canvas: HTMLCanvasElement) {
     const host = (canvas.closest('.intro') as HTMLElement | null) ?? canvas.parentElement;
@@ -58,6 +67,9 @@
     const NAVY = resolveColor(rootStyle.getPropertyValue('--appi-brand').trim(), '#1f3a5f');
     const GOLD = resolveColor(rootStyle.getPropertyValue('--appi-accent').trim(), '#a87515');
 
+    // 預建色彩內插器（NAVY/GOLD 固定，整段生命週期建一次）。
+    const mixColor = makeColorMixer(NAVY, GOLD);
+
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const mobile = matchMedia('(max-width: 900px)').matches;
 
@@ -80,6 +92,8 @@
 
     let W = 0;
     let H = 0;
+    // x→透明度 scale 依畫布寬度而定，於 build() 重建（resize 會再呼叫 build）。
+    let opacity: (x: number) => number = makeOpacityScale(1, cfg.minOp, cfg.maxOp);
     let nodes: any[] = [];
     let sim: any = null;
     let raf = 0;
@@ -97,6 +111,7 @@
     }
 
     function build() {
+      opacity = makeOpacityScale(W, cfg.minOp, cfg.maxOp);
       nodes = makeNodes({
         width: W,
         height: H,
@@ -169,8 +184,8 @@
                 const lo = linkOpacity(dist, cfg.linkDist, cfg.linkCeil);
                 if (lo > 0) {
                   const tcol = Math.max(n.act, m.act, n.gold ? 0.5 : 0, m.gold ? 0.5 : 0);
-                  ctx!.globalAlpha = lo * baseOpacity(n.x, W, cfg.minOp, cfg.maxOp);
-                  ctx!.strokeStyle = mixNavyGold(NAVY, GOLD, tcol);
+                  ctx!.globalAlpha = lo * opacity(n.x);
+                  ctx!.strokeStyle = mixColor(tcol);
                   ctx!.beginPath();
                   ctx!.moveTo(n.x, n.y);
                   ctx!.lineTo(m.x, m.y);
@@ -189,12 +204,9 @@
       }
       for (const n of nodes) {
         const goldT = n.gold ? 0.65 + pulse(t, 2600, 0.35) : n.act;
-        const op = Math.min(
-          1,
-          baseOpacity(n.x, W, cfg.minOp, cfg.maxOp) + n.act * 0.4 + (n.gold ? 0.25 : 0),
-        );
+        const op = Math.min(1, opacity(n.x) + n.act * 0.4 + (n.gold ? 0.25 : 0));
         ctx!.globalAlpha = op;
-        ctx!.fillStyle = mixNavyGold(NAVY, GOLD, goldT);
+        ctx!.fillStyle = mixColor(goldT);
         const r = cfg.nodeR + (n.gold ? 0.8 : 0) + n.act * 1.2;
         ctx!.beginPath();
         ctx!.arc(n.x, n.y, r, 0, Math.PI * 2);

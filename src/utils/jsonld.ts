@@ -92,10 +92,17 @@ export function articleLd(
     image: string;
     datePublished: string;
     dateModified: string;
-    authorName: string;
-    authorPath?: string;
+    author: {
+      name: string;
+      path?: string;
+      image?: string;
+      jobTitle?: string;
+      sameAs?: string[];
+    };
     section?: string;
     isNews?: boolean;
+    keywords?: string[];
+    about?: string[];
   },
 ) {
   return {
@@ -108,14 +115,25 @@ export function articleLd(
     dateModified: a.dateModified || a.datePublished,
     inLanguage: SITE.lang,
     ...(a.section ? { articleSection: a.section } : {}),
+    ...(() => {
+      const kw = (a.keywords ?? []).filter(Boolean);
+      return kw.length ? { keywords: kw.join(', ') } : {};
+    })(),
+    ...(() => {
+      const ab = (a.about ?? []).filter(Boolean);
+      return ab.length ? { about: ab.map((name) => ({ '@type': 'Thing', name })) } : {};
+    })(),
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': absoluteUrl(a.path, site),
     },
     author: {
       '@type': 'Person',
-      name: a.authorName,
-      ...(a.authorPath ? { url: absoluteUrl(a.authorPath, site) } : {}),
+      name: a.author.name,
+      ...(a.author.path ? { url: absoluteUrl(a.author.path, site) } : {}),
+      ...(a.author.image ? { image: a.author.image } : {}),
+      ...(a.author.jobTitle ? { jobTitle: a.author.jobTitle } : {}),
+      ...(a.author.sameAs && a.author.sameAs.length ? { sameAs: a.author.sameAs } : {}),
     },
     publisher: {
       '@type': 'Organization',

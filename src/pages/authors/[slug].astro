@@ -89,6 +89,17 @@ const ld = [
             </div>
           )
         }
+        <div class="author-meta">
+          {author.data.website && (
+            <a class="author-link" href={author.data.website} rel="me noopener" target="_blank">官方網站</a>
+          )}
+          {author.data.emailPublic && (
+            <a class="author-link" href={`mailto:${author.data.emailPublic}`}>{author.data.emailPublic}</a>
+          )}
+          {author.data.joinedDate && (
+            <span class="author-joined">加入於 {author.data.joinedDate.getFullYear()} 年</span>
+          )}
+        </div>
       </div>
     </header>
 
@@ -187,6 +198,22 @@ const ld = [
     padding: 3px 11px;
     border-radius: 20px;
     font-family: var(--font-sans);
+  }
+  .author-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    font-size: var(--text-xs);
+    font-family: var(--font-sans);
+  }
+  .author-link {
+    color: var(--appi-brand);
+    font-weight: 600;
+  }
+  .author-joined {
+    color: var(--ink-3);
   }
   .author-bio {
     max-width: var(--maxw-prose);

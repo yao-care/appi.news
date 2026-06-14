@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "prebuild": "node scripts/used-images.mjs",
     "build": "astro build",
-    "postbuild": "pagefind --site dist",
+    "postbuild": "node scripts/subset-fonts.mjs && node scripts/optimize-home-images.mjs && node scripts/inline-home-css.mjs && pagefind --site dist",
     "preview": "astro preview",
     "generate:og": "node scripts/generate-og.mjs",
     "check:links": "node scripts/check-links.mjs",
@@ -31,7 +31,9 @@
     "d3-quadtree": "^3.0.1",
     "d3-scale": "^4.0.2",
     "js-yaml": "^4.2.0",
+    "markdown-it": "^14.2.0",
     "pinyin-pro": "^3.28.1",
+    "sanitize-html": "^2.17.5",
     "svelte": "^5.56.3"
   },
   "devDependencies": {
@@ -41,9 +43,12 @@
     "@types/d3-quadtree": "^3.0.6",
     "@types/d3-scale": "^4.0.9",
     "@types/js-yaml": "^4.0.9",
+    "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.10.0",
+    "@types/sanitize-html": "^2.16.1",
     "pagefind": "^1.5.2",
     "sharp": "^0.34.5",
+    "subset-font": "^2.5.0",
     "typescript": "^5.9.3",
     "vitest": "^4.1.8"
   }

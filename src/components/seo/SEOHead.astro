@@ -13,6 +13,9 @@ interface Props {
   noindex?: boolean;
   publishedTime?: string;
   modifiedTime?: string;
+  authorName?: string;
+  authorPath?: string;
+  keywords?: string[];
 }
 
 const {
@@ -24,6 +27,9 @@ const {
   noindex = false,
   publishedTime,
   modifiedTime,
+  authorName,
+  authorPath,
+  keywords,
 } = Astro.props;
 
 const fullTitle =
@@ -36,12 +42,17 @@ const ogImagePath = ogImage ?? SITE.defaultOgImage;
 const ogImageAbs = /^https?:\/\//.test(ogImagePath)
   ? ogImagePath
   : new URL(asset(ogImagePath), Astro.site).toString();
+
+// 與 JSON-LD keywords 一致：過濾空字串
+const keywordList = (keywords ?? []).filter(Boolean);
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
+{authorName && <meta name="author" content={authorName} />}
+{keywordList.length > 0 && <meta name="keywords" content={keywordList.join(', ')} />}
 <link rel="canonical" href={canonical} />
 {noindex && <meta name="robots" content="noindex, nofollow" />}
 
@@ -57,12 +68,15 @@ const ogImageAbs = /^https?:\/\//.test(ogImagePath)
 <meta property="og:image:height" content="630" />
 {publishedTime && <meta property="article:published_time" content={publishedTime} />}
 {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+{authorPath && <meta property="article:author" content={absoluteUrl(authorPath, Astro.site)} />}
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImageAbs} />
+{SITE.x && <meta name="twitter:site" content={SITE.x} />}
+{SITE.x && <meta name="twitter:creator" content={SITE.x} />}
 
 <!-- RSS -->
 <link

@@ -4,13 +4,16 @@
    所有顏色、字級、間距 token 集中於此；元件僅引用 var(--*)。
    ============================================================ */
 
-@import '@fontsource/noto-sans-tc/400.css';
-@import '@fontsource/noto-sans-tc/500.css';
-@import '@fontsource/noto-sans-tc/700.css';
-@import '@fontsource/noto-serif-tc/600.css';
-@import '@fontsource/noto-serif-tc/700.css';
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/600.css';
+/* 只載入繁中子集進入點（每權重 1 個 @font-face），Latin/數字交給 Inter；
+   render-blocking 字型 CSS 由 545 個 @font-face（662KB）降到 ~7 個（~5KB）。
+   建置後 scripts/subset-fonts.mjs 會再把這些 woff2 子集化成僅含實際用到的字形。 */
+@import '@fontsource/noto-sans-tc/chinese-traditional-400.css';
+@import '@fontsource/noto-sans-tc/chinese-traditional-500.css';
+@import '@fontsource/noto-sans-tc/chinese-traditional-700.css';
+@import '@fontsource/noto-serif-tc/chinese-traditional-600.css';
+@import '@fontsource/noto-serif-tc/chinese-traditional-700.css';
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-600.css';
 
 /* ---------- Hex fallback（舊瀏覽器 / 不支援 oklch） ---------- */
 :root {

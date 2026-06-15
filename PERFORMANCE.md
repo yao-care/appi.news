@@ -95,6 +95,9 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 
 - 量測對象是**部署後的 GitHub Pages 線上站**，不是本機 `pnpm preview`。
 - mobile 分數會在 **90↔100** 間浮動（GH Pages CDN 冷/熱邊緣餵給 Lighthouse 模型的差異），屬正常；**下限應 ≥90**。
+- **剛部署後量測的兩個大坑（會讓你誤判退步）**：
+  1. **冷邊緣**：新部署的大站，許多 CDN 邊緣仍冷，個別頁面的 FCP/LCP 會暴增到 10s+（每資源冷 TTFB 疊加）；等暖（下次 6 小時 cron 重建或自然流量）才是真值。
+  2. **PSI 對固定 URL 釘住舊跑**：PSI 會把某次（常是冷跑）結果快取在該 URL，之後重複量同一網址會一直回同一筆數字（連小數都一樣），暖機也不動。**破解：在網址加 `?cb=<timestamp>`**（GH Pages 靜態頁忽略 query、內容相同），強制 PSI 重跑。實測首頁無 cb 卡 55、加 cb 立刻 91。
 
 ---
 
@@ -115,7 +118,8 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 - 首屏關鍵路徑只放**最小必要**資源：不要 preload 大字型（slow-4G 下會搶頻寬拖慢 FCP）、不要塞未壓縮大圖、不要新增 render-blocking 外部 CSS/JS。
 - 純裝飾、會吃主執行緒的東西（如首頁 `HeroNetwork` d3 背景）**延後到 `requestIdleCallback`/load 後**啟動（已如此做，TBT=0）。
 - 圖片一律 `loading="lazy"`（首屏主圖才 `eager`），並**依實際顯示尺寸**縮成 webp（×~2.5 涵蓋 retina）。`optimize-home-images.mjs` 已分檔：feature 主圖 900、側欄縮圖 `side-img`（`.side-thumb` 僅 88px）360、其餘卡片 600。**改版面或縮圖尺寸時，記得同步調整這些寬度**，否則會服務過大的圖（PSI「圖片傳送效能」會抓）。
-- 內頁（文章頁）現已套用與首頁相同的手法：critical CSS 內聯（`inline-css.mjs`）＋封面縮 webp（`optimize-article-images.mjs`）。字型採全站統一的 unicode-range 切塊（§1-C），切片 URL 固定→跨頁快取，不需為內頁另做任何處理。內頁 PSI 分數待部署後量測回填（首頁基準：desktop 100 / mobile ≥90）。
+- 內頁（文章頁）現已套用與首頁相同的手法：critical CSS 內聯（`inline-css.mjs`）＋封面縮 webp（`optimize-article-images.mjs`）。字型採全站統一的 unicode-range 切塊（§1-C），切片 URL 固定→跨頁快取，不需為內頁另做任何處理。
+- **切塊上線後線上 PSI（2026-06-15 部署、cachebust 量測）**：全站 **TBT=0、CLS≈0、0 render-blocking**（切塊未破壞任何互動/穩定性指標）。warm/fresh 讀值：首頁 desktop 87（FCP 0.2s）/ mobile 91、tag 頁 desktop 93 / mobile 100、文章頁 mobile 79↔100（暖）。字型不再是瓶頸（`font-display:optional` 下不擋首屏）；剩餘浮動是冷邊緣的影像 LCP，會隨 CDN 暖化收斂（見 §3 兩個坑）。**內頁基準：mobile 暖值 ≥79、可達 100；以新部署後 cachebust 複測為準。**
 
 ---
 

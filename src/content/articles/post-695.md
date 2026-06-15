@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-695.webp"
-coverAlt: "台灣AI伺服器無損檢測技術導入讓良率提升20%打造全球品質護城河"
+coverImage: "covers/post-695-stock.jpg"
+coverAlt: "PCB自動光學檢測機台運作中的近距離特寫"
+coverImageCredit: "Photo by Peter Xie on Pexels"
 ---
 
 輝達GB200的問世，讓台灣AI伺服器供應鏈踏進一個以前從未遇過的領域。[根據天下雜誌英文版報導](https://english.cw.com.tw/article/article.action?id=4304)，單台GB200 AI伺服器售價超過新台幣1億元，一塊有細微裂縫的電路板、一個老化的O型橡膠圈，都可能讓這套系統當場報廢。競爭維度已從交期和價格，轉移到品質和良率。台灣廠商正在用一套新工具回應這個挑戰：源自醫療和汽車業的CT無損檢測技術。

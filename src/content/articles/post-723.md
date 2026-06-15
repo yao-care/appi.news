@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-723.webp"
-coverAlt: "2026新北市萬金石馬拉松開跑台灣春季最大路跑吸引萬名跑者挑戰海岸賽道"
+coverImage: "covers/post-723-stock.jpg"
+coverAlt: "選手沿海岸公路奔跑的戶外馬拉松競賽場景"
+coverImageCredit: "Photo by 0xd1ma on Pexels"
 ---
 
 2026年3月15日清晨6時，翡翠灣起跑槍聲響起，12,000名跑者同步踏上新北市萬金石馬拉松的海岸賽道。馬拉松組的6,500人在06:30整出發，挑戰馬的5,500人跟在20分鐘後接力開跑，北海岸台2線這條貫穿萬里、金山、石門三區的路線，再度成為台灣春季最集中的路跑聖地。[競賽官方規程](https://wanjinshi-marathon.com.tw/%E7%AB%B6%E8%B3%BD%E8%A6%8F%E7%A8%8B)顯示，馬拉松全程完賽時限6小時，挑戰馬10公里的完賽門檻則設在1小時50分，兩組門檻設計都在確保賽事品質的同時，對初中階跑者保持足夠的友善度。

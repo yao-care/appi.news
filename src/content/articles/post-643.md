@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-643.webp"
-coverAlt: "ASCO2026胰臟癌靶向藥daraxonrasib存活期從6.7個月倍增至13.2個月三期試驗寫下里程碑"
+coverImage: "covers/post-643-stock.jpg"
+coverAlt: "身穿防護裝備的女性科學家在實驗室使用顯微鏡檢視樣本"
+coverImageCredit: "Photo by Pavel Danilyuk on Pexels"
 ---
 
 胰臟癌長期以來是癌症治療領域最難突破的堡壘。確診後五年存活率長期徘徊在12%以下，轉移性患者的中位整體存活期在過去二十年幾乎沒有本質改善。2026年ASCO年會的Plenary Session在這個背景下出現了一個罕見的場景：當Brian Wolpin醫師展示RASolute 302試驗的Kaplan-Meier曲線時，全場爆發42秒的起立鼓掌。

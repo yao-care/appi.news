@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-743.webp"
-coverAlt: "台灣2026年2月新生兒僅6523人創歷史新低人口連續26個月負成長"
+coverImage: "covers/post-743-stock.jpg"
+coverAlt: "母親在醫院溫柔懷抱新生兒的溫馨場景"
+coverImageCredit: "Photo by Craig Adderley on Pexels"
 ---
 
 2026年3月11日，內政部公布2月戶口統計資料。這份數字讓台灣社會很難視而不見：[2月新生兒數僅6523人](https://news.pts.org.tw/article/798480)，比1月驟減2200人、跌幅約25%，也是有紀錄以來首次單月出生數跌破7000人，創下歷史新低。同期，台灣總人口已連續26個月負成長，平均每天減少285名居民。這個數字背後，不是偶然的統計偏差，是一個社會在房價、工作與人生選擇的重量下，緩緩收縮的真實樣貌。

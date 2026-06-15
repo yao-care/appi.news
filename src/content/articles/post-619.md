@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-619.webp"
-coverAlt: "台灣水治理升格國家戰略六年投入5531億強化防旱與流域韌性"
+coverImage: "covers/post-619-stock.jpg"
+coverAlt: "水流傾瀉而下的混凝土水壩鳥瞰"
+coverImageCredit: "Photo by Kris Møklebust on Pexels"
 ---
 
 台灣的水資源治理格局在2026年4月完成了一次明顯的升級。2026年4月30日，[總統府召開「國家氣候變遷對策委員會」第7次委員會議](https://www.cna.com.tw/news/afe/202604300299.aspx)，經濟部次長賴建信報告「水及流域永續發展行動計畫」，宣布政府規劃自2026年至2031年投入新台幣5,531億元，推動水治理從各部門分頭管轄升格為國家整體治理架構。這個規模與過去相比有實質跳躍，平均每年約922億元，是台灣有史以來最大規模的系統性水資源行動計畫。

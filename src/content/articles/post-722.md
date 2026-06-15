@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-722.webp"
-coverAlt: "2026台北自行車展與TaiSPO雙展開幕九百家廠商打造自行車健康科技生態系"
+coverImage: "covers/post-722-stock.jpg"
+coverAlt: "電動自行車傳動齒輪機構的精細近距離特寫"
+coverImageCredit: "Photo by Motor TruckRun on Pexels"
 ---
 
 2026年3月25日，台北南港展覽館1、2館同步升起兩面旗幟：「台北國際自行車展（TAIPEI CYCLE）」與「台灣國際運動及健身展（TaiSPO）」正式開幕。[外貿協會官方報告](https://www.taitra.org.tw/News_Content.aspx?n=109&s=125916)指出，本屆兩展合計1,100家企業，使用3,950個攤位，215家為國際廠商。這個數字本身不稀奇，稀奇的是兩展第一次真正以「大健康」為共同旗幟，讓自行車產業與健身科技站在同一個敘事框架下對外亮相。

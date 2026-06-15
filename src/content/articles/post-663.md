@@ -30,8 +30,9 @@ risksAndLimits:
   - "本文為醫療資訊整理，非個人醫療建議，多發性骨髓瘤患者治療方案須由專業血液腫瘤科醫師評估。"
   - "硼替佐米療效及副作用因個人病況、療程階段與合併用藥而異，實際使用前應完整諮詢主治醫師。"
   - "健保給付申請仍在審核階段，最終給付條件與適應症範圍以健保署公告為準。"
-coverImage: "covers/post-663.webp"
-coverAlt: "科進製藥首取台灣TFDA癌症藥許可多發性骨髓瘤注射劑本土上市"
+coverImage: "covers/post-663-stock.jpg"
+coverAlt: "臨床不鏽鋼托盤上醫療藥瓶與注射器的近距離特寫"
+coverImageCredit: "Photo by Lucas Guimarães Bueno on Pexels"
 ---
 
 台灣本土製藥業在2026年1月達到一個具體的里程碑。[科進製藥（ScinoPharm Taiwan，股票代號1789）宣布](https://www.scinopharm.com/news-detail/139)，旗下硼替佐米注射劑正式獲得台灣食品藥物管理署（TFDA）核准上市，適應症為多發性骨髓瘤治療。這是科進製藥在台灣取得的第一張癌症製劑許可，也是台灣廠商首次以100%在台生產製造的癌症注射劑同時持有美國FDA與台灣TFDA雙重認證。這個里程碑對台灣醫藥供應鏈韌性的意義，超過單一藥品核准的層次，代表本土製藥能力正式進入頂規癌症治療領域。

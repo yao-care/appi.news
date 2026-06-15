@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-746.webp"
-coverAlt: "台灣2025年生育率跌至0.695創全球主要經濟體最低成少子化困局最嚴峻案例"
+coverImage: "covers/post-746-stock.jpg"
+coverAlt: "哭泣新生兒躺在嬰兒床裡、旁邊放著五彩玩具的溫馨畫面"
+coverImageCredit: "Photo by Ольга Макарова on Pexels"
 ---
 
 2026年4月初，內政部公布2025年人口統計，一個數字讓人難以迴避：台灣2025年總生育率僅0.695，女性一生平均生不到0.7個孩子。這個數字是台灣有史以來最低，也是全球主要經濟體中前所未見的低點。韓國此前以0.72的生育率被廣泛引用為全球最低，而台灣現在超越了它。[公視新聞](https://news.pts.org.tw/article/802317)的報導描述：這一年的崩跌速度遠超預期，從前一年的0.885一口氣跌至0.695，是統計以來降幅最大的一年。

@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-658.webp"
-coverAlt: "Parker太陽探測器史上最近日飛行首度記錄太陽風起源與磁場重聯現象"
+coverImage: "covers/post-658-stock.jpg"
+coverAlt: "太陽表面火焰紋路與邊緣光暈的詳細影像"
+coverImageCredit: "Photo by Pixabay on Pexels"
 ---
 
 2024年12月24日，NASA的Parker太陽探測器完成人類史上最接近太陽的一次飛越，最近距離縮短至太陽表面以外僅614萬公里。[這次飛越捕捉的數據](https://www.sciencedaily.com/releases/2025/07/250711082641.htm)在2025年7月初陸續公開，首度清晰呈現太陽風的起源區域、扭曲磁場結構與噴發碰撞的直接影像，人類第一次在如此近的距離用儀器直接記錄太陽風的誕生過程。

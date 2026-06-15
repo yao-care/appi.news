@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-704.webp"
-coverAlt: "屏東半導體供應鏈專區動土台積電攜七家廠商進駐南台灣產業格局南延"
+coverImage: "covers/post-704-stock.jpg"
+coverAlt: "大型工業廠房建設中重型機具作業的工地現場"
+coverImageCredit: "Photo by On  Shot on Pexels"
 ---
 
 2026年6月12日，台積電攜同帆宣系統、華懋科技、捨得企業、安葆國際、兆聯實業、和淞科技、矽科宏晟等七家廠務供應鏈廠商，在屏東科學園區舉行聯合動土典禮。這座佔地28公頃的半導體供應鏈專區，是全台首座以「建設晶圓廠房及設施」為核心的產業聚落，象徵台灣半導體製造版圖正式跨越高雄，向南延伸至屏東。

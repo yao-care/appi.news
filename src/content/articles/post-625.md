@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-625.webp"
-coverAlt: "環境部認定17類高碳洩漏風險行業鋼鐵水泥碳費可打兩折轉型誘因存疑"
+coverImage: "covers/post-625-stock.jpg"
+coverAlt: "工廠煙囪冒煙的空中俯瞰日落場景"
+coverImageCredit: "Photo by Batuhan Kocabaş on Pexels"
 ---
 
 台灣碳費制度在開徵前夕，已把最重要的折扣機制算好了。[環境部2025年12月18日公告「碳費徵收對象申請認定屬高碳洩漏風險者審核原則」](https://enews.moenv.gov.tw/page/3b3c62c78849f32f/c8658c6f-b5df-4603-a727-7383b62902b0)，確立鋼鐵、水泥、煉油、化學材料等17個行業為高碳洩漏風險行業，符合資格且提出自主減量計畫的業者，可免徵八成排碳量，搭配優惠費率最低每噸僅需繳10元，相當於一般費率300元的三十分之一。這套打折機制的政策邏輯固然有其國際依據，但對高碳產業轉型的實質推力，卻讓氣候政策研究者憂心。

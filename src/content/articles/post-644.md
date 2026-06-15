@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-644.webp"
-coverAlt: "Ember統計2026年四月風能與太陽能全球發電量首度超越天然氣能源版圖質變來臨"
+coverImage: "covers/post-644-stock.jpg"
+coverAlt: "晴空下同時設有風機與太陽能板的再生能源農場"
+coverImageCredit: "Photo by Kindel Media on Pexels"
 ---
 
 全球電力系統在2026年4月越過了一條肉眼看不見的分水嶺。[Ember於5月21日公布的分析報告](https://ember-energy.org/latest-updates/for-the-first-time-wind-and-solar-generated-more-electricity-than-gas-worldwide-in-april-2026)顯示，當月風能與太陽能合計發電531TWh，以54TWh的差距超過天然氣的477TWh，分別佔全球電力的22%和20%。這是史上首個單月風光合計發電量超越天然氣的紀錄。對比五年前的2021年4月：天然氣發電量幾乎沒變（476TWh），但風光合計卻從245TWh成長到531TWh，整整翻倍。天然氣站在原地，再生能源追了過去。

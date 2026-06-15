@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-653.webp"
-coverAlt: "小型模組化核反應爐商業賽局啟動，NuScale完成史上最大6GW部署承諾"
+coverImage: "covers/post-653-stock.jpg"
+coverAlt: "核電廠冷卻塔在晴天冒出蒸氣的景象"
+coverImageCredit: "Photo by Vladimír  Sládek on Pexels"
 ---
 
 小型模組化反應爐（SMR）商業化長期被描述成「即將到來」。2025年9月3日，這個說法開始站不住腳。ENTRA1 Energy與美國田納西河流域管理局（TVA）正式簽署協議，計畫在TVA七州服務區部署最多6 GW的NuScale SMR容量，這是美國史上規模最大的SMR部署承諾。AI算力的電力需求正把「24小時、無碳、穩定」的電力供應從理想變成企業採購規格，SMR不再只是政策辯論題目。

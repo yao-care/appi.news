@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-638.webp"
-coverAlt: "FIFA世界盃2026六月十一日揭幕史上首次三國共辦104場賽事商業版圖全面擴張"
+coverImage: "covers/post-638-stock.jpg"
+coverAlt: "曼徹斯特伊提哈德球場滿場球迷的空中俯瞰"
+coverImageCredit: "Photo by Mylo Kaye on Pexels"
 ---
 
 2026年世界盃於6月11日在墨西哥城阿茲特克球場正式開踢，墨西哥以地主身分迎戰南非，揭開史上規模最大一屆世界盃的序幕。這次賽事首度由美國、墨西哥、加拿大三國聯合主辦，48支隊伍在16座城市上演共104場比賽，比2022年卡達世界盃整整多出24場，賽制與商業結構同步升級。這個規模不只改變了運動產業的現金流，也重塑了全球媒體授權生態，台灣的體育收視市場被迫跟著調整。

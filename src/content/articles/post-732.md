@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-732.webp"
-coverAlt: "台灣首場鐵人三項結合演唱會跨界賽事2026花東三月震撼登場"
+coverImage: "covers/post-732-stock.jpg"
+coverAlt: "穿著防水衣的選手備戰鐵人三項游泳賽段"
+coverImageCredit: "Photo by Cihan Çimen on Pexels"
 ---
 
 當終點線的彩帶還沒拉起，演唱會的燈光已經亮了。2026年3月13至15日，台東森林公園迎來了一場打破傳統賽事框架的運動嘉年華。由LAVA台灣鐵人公司與台灣福斯商旅聯手打造的「[2026 VW LAVanLife玩賽樂園暨350自行車挑戰](https://running.biji.co/index.php?q=news&act=info&id=113784)」，首創「選手跑在演唱會第一排」的獨家體驗，同時舉辦113KM、51.5KM鐵人三項與全新的TRYTRI短程組，吸引超過4,000名選手跨越賽道與舞台的邊界，成為台灣運動賽事娛樂化最具代表性的一場實驗。

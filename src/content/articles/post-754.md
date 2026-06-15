@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-754.webp"
-coverAlt: "台灣春節消費熱潮升溫零售餐飲搶市電商快速物流重塑年節採購生態"
+coverImage: "covers/post-754-stock.jpg"
+coverAlt: "傳統裝飾繽紛、人潮熙攘的夜市節慶場景"
+coverImageCredit: "Photo by Jimmy Liao on Pexels"
 ---
 
 2026年春節9天連假（2月14日至22日）是台灣有史以來最長的農曆新年假期。這個長度改變了消費者的備貨邏輯，也讓電商平台的年節物流策略成為零售業最關注的戰場。[根據風傳媒的整理](https://www.storm.mg/article/11103756)，momo購物宣布春節期間照常出貨，標示「快速到貨」的商品維持正常配送；PChome同步宣布春節不打烊，顧客服務中心每日9:30至18:00正常服務。這是近年春節電商物流覆蓋率最全面的一年，代表消費者不再需要在除夕前把所有東西備齊。

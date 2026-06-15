@@ -12,7 +12,9 @@
 
 ---
 
-## 1. 字型 import 鐵則（這是當初闖禍的根因）
+## 1. 字型策略總覽（歷史根因 → 現況機制）
+
+### 1-A. 當初闖禍的根因（禁止重蹈）
 
 **❌ 絕對禁止** 在 `src/styles/global.css` import Fontsource 的「全腳本」進入點：
 
@@ -22,52 +24,61 @@
 @import '@fontsource/noto-serif-tc/700.css';  /* 108 個 @font-face */
 ```
 
-當初就是這樣寫，導致 **545 個 `@font-face`、662 KB 的 render-blocking CSS**（首頁 `about.*.css`），
-直接拖垮 FCP/LCP。
+當初就是這樣寫，導致 **545 個 `@font-face`、662 KB 的 render-blocking CSS**（首頁 `about.*.css`），直接拖垮 FCP/LCP。
 
-**✅ 只能用「繁中子集」進入點**（每權重只 1 個 `@font-face`）：
+### 1-B. 過渡期做法（已廢棄，勿再採用）
 
-```css
-@import '@fontsource/noto-sans-tc/chinese-traditional-400.css';
-@import '@fontsource/noto-sans-tc/chinese-traditional-500.css';
-@import '@fontsource/noto-sans-tc/chinese-traditional-700.css';
-@import '@fontsource/noto-serif-tc/chinese-traditional-600.css';
-@import '@fontsource/noto-serif-tc/chinese-traditional-700.css';
-@import '@fontsource/inter/latin-400.css';   /* Inter 只要 latin */
-@import '@fontsource/inter/latin-600.css';
-```
+先前曾改用 Fontsource 的繁中子集進入點（`chinese-traditional-<weight>.css`），每權重只 1 個 `@font-face`，避免 render-blocking。之後又嘗試「逐頁迷你字型」（每頁 build 一份只含該頁用字的 woff2），但此做法有根本性缺陷：
 
-- 字型棧（`--font-sans` / `--font-serif`）以 `Inter` 處理 Latin、Noto 處理中文，**不要動順序**。
-- 新增字重時，**務必**用 `chinese-traditional-<weight>.css`，不要圖方便用全腳本進入點。
+- 字型檔數 = 頁數 × 字重，隨文章數無限膨脹（曾達 182 MB+）。
+- 每頁 URL 不同，瀏覽器無法跨頁快取。
+- Build 成本高，難以維護。
+
+已全面廢棄。
+
+### 1-C. 現行機制：unicode-range 切塊（postbuild 自動化）
+
+**現況**由 `scripts/subset-fonts.mjs` 在 postbuild 階段全自動處理，`global.css` 改用 Fontsource 繁中子集進入點作為 build 時的佔位，woff2 與 `@font-face` 在 postbuild 被整批替換：
+
+1. **掃描全站用字**：讀取 `dist/` 所有 HTML，收集實際出現的字元（去重）。全站唯一字 **3,483 個**。
+2. **固定切段**：純函式庫 `scripts/lib/font-slicing.mjs` 依碼位連續性把這些字切成 **18 段**，各權重共用同一組邊界。
+3. **子集化**：每個（字重 × 區段）用 `subset-font` 工具切出一個 woff2，檔名含內容 hash（`<base>.slice-<i>.<hash>.woff2`）。5 個字重 × 18 段 = **90 個切片檔**，繁中字型 dist 總量約 **3.1 MB**（舊逐頁版曾達 182 MB+）。
+4. **注入 unicode-range**：用帶 `unicode-range` 描述符的 `@font-face`（family 名維持真實名稱 `Noto Sans TC` / `Noto Serif TC`、`font-display: optional`）取代 `_astro` CSS 內原本的單體繁中 `@font-face`；隨後 `inline-css.mjs` 照常將 CSS 內聯各頁。
+
+**效益**：瀏覽器只下載當頁實際出現字元命中的少數切片；切片 URL 全站固定（hash 穩定）→ 跨頁可共用 HTTP 快取；字型檔數固定、不隨文章數膨脹；build 回到分鐘級（乾淨 build 約 **201 秒**，exit 0）。
+
+### 1-D. 設計決策與已知坑（別重踩）
+
+1. **family 用真實名稱，不用獨立別名**：字型棧（`--font-sans` / `--font-serif` CSS 變數）中每個位置只有一個 web font family，瀏覽器用 `unicode-range` 決定要不要下載某切片，無需逐頁改棧。
+2. **`font-display: optional` 的行為**：首次造訪以系統 CJK 字定版（不等字型、不擋首屏）；品牌字型在後台下載完成後，下次快取訪問才完整顯示。TBT 保持 0。
+3. **同名 `@font-face` 覆蓋無效**（舊逐頁版踩過）：若對同一 family 同時存在「全量版」與「切片版」@font-face，Chrome 會兩份都嘗試下載。現行機制直接替換，不留舊 @font-face，此問題不再出現。
+4. **新增文章不需重新切段**：切段邊界只取決於全站用字集合，字集變動後下次 build 自動重算並更新 hash，CDN 會取新檔。
 
 ---
 
-## 2. 不要破壞 postbuild 四腳本（首頁與內頁效能達標的關鍵）
+## 2. 不要破壞 postbuild 五腳本（首頁與內頁效能達標的關鍵）
 
-`package.json` 的 `postbuild` 依序跑這四支，**順序不可換、不可拿掉**：
+`package.json` 的 `postbuild` 依序跑這五支，**順序不可換、不可拿掉**：
 
 ```
-node scripts/subset-fonts.mjs           # ① 字型子集化 + 首頁迷你字型 + font-display:optional
-node scripts/optimize-home-images.mjs   # ② 首頁 cover 圖縮成顯示尺寸 webp
+node scripts/subset-fonts.mjs            # ① unicode-range 切塊子集化 + font-display:optional
+node scripts/optimize-home-images.mjs    # ② 首頁 cover 圖縮成顯示尺寸 webp
 node scripts/optimize-article-images.mjs # ③ 內頁文章封面縮成 900px webp
-node scripts/inline-css.mjs             # ④ 全站 critical CSS 內聯、移除 render-blocking link
+node scripts/inline-css.mjs              # ④ 全站 critical CSS 內聯、移除 render-blocking link
+npx pagefind ...                         # ⑤ 搜尋索引
 ```
 
 | 腳本 | 做什麼 | 為何不能拿掉 |
 |---|---|---|
-| `subset-fonts.mjs` | 掃 `dist` 全站實際用字 → 把繁中 woff2 子集化（每權重 ~330KB→~70KB）並重新雜湊檔名；再為**首頁**單獨產「只含首頁用字」的迷你字型（獨立 family `NotoSansTC-Home`/`NotoSerifTC-Home`，只在 `index.html` 以 inline `<style>` 把 `--font-sans/serif` 的站台 web font **換成** Home family）；並把繁中 `@font-face` 改 `font-display:optional` | 首頁 CJK 字型 **1,596KB→430KB**、LCP 9.3s→3.0s |
-| `optimize-home-images.mjs` | 用 sharp 把首頁 cover 圖縮成顯示尺寸 webp（feature 900px、卡片 600px），改寫 `index.html` 的 `<img src>` | 省 ~1.36MB |
+| `subset-fonts.mjs` | 掃 `dist` 全站 HTML 收集實際用字（3,483 字）→ 用 `lib/font-slicing.mjs` 切成 18 段 → 每（字重 × 段）子集成一個 woff2（共 90 個切片，總量 ~3.1 MB）→ 用帶 `unicode-range` 的 `@font-face`（`font-display: optional`）取代 `_astro` CSS 內原本的單體繁中 @font-face | 瀏覽器只下載命中切片；切片 URL 全站固定→跨頁快取；檔數固定不隨文章膨脹 |
+| `optimize-home-images.mjs` | 用 sharp 把首頁 cover 圖縮成顯示尺寸 webp（feature 900px、卡片 600px），改寫 `index.html` 的 `<img src>` | 省 ~1.36 MB |
 | `optimize-article-images.mjs` | 用 sharp 把內頁文章封面縮成 900px webp，改寫各文章頁 `<img src>` | 減少內頁 LCP 圖片傳輸量 |
 | `inline-css.mjs` | 把**全站**外部 CSS（已被 ① 處理過）內聯進各頁 `<head>`、移除外部 `<link>`；排除 `/choice` 與 `/admin` | **FCP 2.9s→0.8s**，最後一哩；現已延伸到內頁 |
 
-**改 build 流程、字型、圖片、CSS 前，先確認不會破壞這四步的假設。**（例如：若把 CSS 改成 Astro 自動全內聯，① 對 `.css` 的改寫就會落空——細節見各腳本註解。）
+**改 build 流程、字型、圖片、CSS 前，先確認不會破壞這五步的假設。**（例如：若把 CSS 改成 Astro 自動全內聯，① 對 `.css` 的改寫就會落空，細節見各腳本註解。）
 
-### 兩個踩過的坑（別重犯）
-1. **同名 `@font-face` + `unicode-range` 覆蓋無效**：Chrome 會把站台版與迷你版**兩份都下載**。
-   → 解法是給迷你字型**獨立 family 名**（見上）。
-2. **`font-display:optional` 的後備會抓下一個 web font**：若首頁字型棧裡站台 web font 還留在 Home family 後面，
-   Chrome 會在 optional 區間去抓它當後備，全站大字型仍被下載。
-   → 解法是把站台 web font 從首頁棧中**替換掉**（後面只接系統字型）。缺字（搜尋結果）落回系統 CJK 字、不 tofu。
+### 一個踩過的坑（別重犯）
+**同名 `@font-face` 同時存在全量版與切片版**：Chrome 會把兩份都嘗試下載。現行機制在 ① 直接把舊 @font-face 整批替換成切片版，dist 裡不留全量版，此問題不再出現。若未來手動加回全量 @font-face，請務必確認舊的已移除。
 
 ---
 
@@ -104,7 +115,7 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 - 首屏關鍵路徑只放**最小必要**資源：不要 preload 大字型（slow-4G 下會搶頻寬拖慢 FCP）、不要塞未壓縮大圖、不要新增 render-blocking 外部 CSS/JS。
 - 純裝飾、會吃主執行緒的東西（如首頁 `HeroNetwork` d3 背景）**延後到 `requestIdleCallback`/load 後**啟動（已如此做，TBT=0）。
 - 圖片一律 `loading="lazy"`（首屏主圖才 `eager`），並**依實際顯示尺寸**縮成 webp（×~2.5 涵蓋 retina）。`optimize-home-images.mjs` 已分檔：feature 主圖 900、側欄縮圖 `side-img`（`.side-thumb` 僅 88px）360、其餘卡片 600。**改版面或縮圖尺寸時，記得同步調整這些寬度**，否則會服務過大的圖（PSI「圖片傳送效能」會抓）。
-- 內頁（文章頁）現已套用與首頁相同的手法：critical CSS 內聯（`inline-css.mjs`）＋封面縮 webp（`optimize-article-images.mjs`），同 §2 的四腳本流程已延伸到內頁。字型部分仍沿用全站共用子集（跨頁快取效益），未另做迷你子集。
+- 內頁（文章頁）現已套用與首頁相同的手法：critical CSS 內聯（`inline-css.mjs`）＋封面縮 webp（`optimize-article-images.mjs`）。字型採全站統一的 unicode-range 切塊（§1-C），切片 URL 固定→跨頁快取，不需為內頁另做任何處理。內頁 PSI 分數待部署後量測回填（首頁基準：desktop 100 / mobile ≥90）。
 
 ---
 

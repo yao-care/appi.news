@@ -22,10 +22,10 @@
 **動到字型、CSS、首頁圖片、全站樣式或 build 流程前，必須先讀 [`PERFORMANCE.md`](./PERFORMANCE.md)。**
 
 1. **字型只能用繁中子集進入點**：`@fontsource/noto-*-tc/chinese-traditional-<weight>.css`、`@fontsource/inter/latin-<weight>.css`。**禁止**全腳本進入點（`@fontsource/noto-sans-tc/400.css` 等）；當初就是這樣造成 545 個 `@font-face`、662 KB render-blocking CSS。
-2. **不要拿掉或改順序** `package.json` `postbuild` 的串接：`subset-fonts.mjs` → `optimize-home-images.mjs` → `inline-home-css.mjs` → `pagefind`。前三支是首頁拿 100 分的關鍵。
+2. **不要拿掉或改順序** `package.json` `postbuild` 的串接：`subset-fonts.mjs` → `optimize-home-images.mjs` → `optimize-article-images.mjs` → `inline-css.mjs` → `pagefind`。四支腳本是首頁與內頁效能達標的關鍵。
 3. **效能驗收用第三方 PSI（Google 機房）對線上站**，不要用本機或 CI 的 Lighthouse（會抖、不準）。PSI key 在 `.env`（已 gitignore）。
 4. **基準不可退回**：desktop 100、mobile 90+、TBT 0、CLS 0。改完務必複測。
-5. 內頁（文章頁）目前未套首頁那套去 render-blocking 處理，mobile 分數偏低是已知結構性現象，非你的改動造成。要動內頁效能前一樣先讀 `PERFORMANCE.md`。
+5. 內頁（文章頁）現已套用 critical CSS 內聯（`inline-css.mjs`）＋封面縮 webp（`optimize-article-images.mjs`），同首頁手法已延伸到內頁。要動內頁效能前一樣先讀 `PERFORMANCE.md`。
 
 ## 部署與驗收
 

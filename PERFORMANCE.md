@@ -42,23 +42,25 @@
 
 ---
 
-## 2. 不要破壞 postbuild 三腳本（首頁拿 100 分的關鍵）
+## 2. 不要破壞 postbuild 四腳本（首頁與內頁效能達標的關鍵）
 
-`package.json` 的 `postbuild` 依序跑這三支，**順序不可換、不可拿掉**：
+`package.json` 的 `postbuild` 依序跑這四支，**順序不可換、不可拿掉**：
 
 ```
-node scripts/subset-fonts.mjs        # ① 字型子集化 + 首頁迷你字型 + font-display:optional
-node scripts/optimize-home-images.mjs # ② 首頁 cover 圖縮成顯示尺寸 webp
-node scripts/inline-home-css.mjs      # ③ 首頁 critical CSS 內聯、移除 render-blocking link
+node scripts/subset-fonts.mjs           # ① 字型子集化 + 首頁迷你字型 + font-display:optional
+node scripts/optimize-home-images.mjs   # ② 首頁 cover 圖縮成顯示尺寸 webp
+node scripts/optimize-article-images.mjs # ③ 內頁文章封面縮成 900px webp
+node scripts/inline-css.mjs             # ④ 全站 critical CSS 內聯、移除 render-blocking link
 ```
 
 | 腳本 | 做什麼 | 為何不能拿掉 |
 |---|---|---|
 | `subset-fonts.mjs` | 掃 `dist` 全站實際用字 → 把繁中 woff2 子集化（每權重 ~330KB→~70KB）並重新雜湊檔名；再為**首頁**單獨產「只含首頁用字」的迷你字型（獨立 family `NotoSansTC-Home`/`NotoSerifTC-Home`，只在 `index.html` 以 inline `<style>` 把 `--font-sans/serif` 的站台 web font **換成** Home family）；並把繁中 `@font-face` 改 `font-display:optional` | 首頁 CJK 字型 **1,596KB→430KB**、LCP 9.3s→3.0s |
 | `optimize-home-images.mjs` | 用 sharp 把首頁 cover 圖縮成顯示尺寸 webp（feature 900px、卡片 600px），改寫 `index.html` 的 `<img src>` | 省 ~1.36MB |
-| `inline-home-css.mjs` | 把首頁 3 個外部 CSS（已被 ① 處理過）內聯進 `<head>`、移除外部 `<link>` | **FCP 2.9s→0.8s**，最後一哩 |
+| `optimize-article-images.mjs` | 用 sharp 把內頁文章封面縮成 900px webp，改寫各文章頁 `<img src>` | 減少內頁 LCP 圖片傳輸量 |
+| `inline-css.mjs` | 把**全站**外部 CSS（已被 ① 處理過）內聯進各頁 `<head>`、移除外部 `<link>`；排除 `/choice` 與 `/admin` | **FCP 2.9s→0.8s**，最後一哩；現已延伸到內頁 |
 
-**改 build 流程、字型、圖片、CSS 前，先確認不會破壞這三步的假設。**（例如：若把 CSS 改成 Astro 自動全內聯，① 對 `.css` 的改寫就會落空——細節見各腳本註解。）
+**改 build 流程、字型、圖片、CSS 前，先確認不會破壞這四步的假設。**（例如：若把 CSS 改成 Astro 自動全內聯，① 對 `.css` 的改寫就會落空——細節見各腳本註解。）
 
 ### 兩個踩過的坑（別重犯）
 1. **同名 `@font-face` + `unicode-range` 覆蓋無效**：Chrome 會把站台版與迷你版**兩份都下載**。
@@ -102,7 +104,7 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 - 首屏關鍵路徑只放**最小必要**資源：不要 preload 大字型（slow-4G 下會搶頻寬拖慢 FCP）、不要塞未壓縮大圖、不要新增 render-blocking 外部 CSS/JS。
 - 純裝飾、會吃主執行緒的東西（如首頁 `HeroNetwork` d3 背景）**延後到 `requestIdleCallback`/load 後**啟動（已如此做，TBT=0）。
 - 圖片一律 `loading="lazy"`（首屏主圖才 `eager`），並**依實際顯示尺寸**縮成 webp（×~2.5 涵蓋 retina）。`optimize-home-images.mjs` 已分檔：feature 主圖 900、側欄縮圖 `side-img`（`.side-thumb` 僅 88px）360、其餘卡片 600。**改版面或縮圖尺寸時，記得同步調整這些寬度**，否則會服務過大的圖（PSI「圖片傳送效能」會抓）。
-- 內頁（文章頁）目前沿用全站共用字型與原圖以利跨頁快取；若要把內頁也推到滿分，可比照 §2 把同手法延伸到內頁。
+- 內頁（文章頁）現已套用與首頁相同的手法：critical CSS 內聯（`inline-css.mjs`）＋封面縮 webp（`optimize-article-images.mjs`），同 §2 的四腳本流程已延伸到內頁。字型部分仍沿用全站共用子集（跨頁快取效益），未另做迷你子集。
 
 ---
 

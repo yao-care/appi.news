@@ -7,7 +7,7 @@
 //
 // 來源涵蓋：掃整份 HTML（含內文、標題、alt、meta、JSON-LD），確保任何會顯示的中文都納入。
 // 前端動態文字（如 admin 編輯器輸入）不在 dist HTML 內，靠字型堆疊末端的系統 CJK 字 fallback。
-import { readdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, rmSync, existsSync } from 'node:fs';
 import { join, basename, dirname } from 'node:path';
 import { createHash } from 'node:crypto';
 import subsetFont from 'subset-font';
@@ -171,6 +171,19 @@ try {
 } catch (e) {
   console.warn('[subset-fonts] 首頁迷你字型略過：' + e.message);
 }
+
+// PILOT：先驗 5 篇文章，部署後 PSI 量測決定是否全量。
+const PILOT = ['post-638', 'post-643', 'post-700', 'post-748', 'post-282'];
+let pilotN = 0;
+for (const slug of PILOT) {
+  const p = join(DIST, 'articles', slug, 'index.html');
+  try {
+    if (existsSync(p) && (await injectMiniFonts(p, miniCtx))) pilotN++;
+  } catch (e) {
+    console.warn(`[subset-fonts] pilot ${slug} 略過：${e.message}`);
+  }
+}
+console.log(`[subset-fonts] pilot 迷你字型：${pilotN} 頁`);
 
 console.log(
   `[subset-fonts] ${fontFiles.length} 個字型 ${(beforeTotal / 1024 / 1024).toFixed(2)}MB → ${(afterTotal / 1024).toFixed(0)}KB；改寫 ${rewritten} 個 CSS/HTML；首頁迷你字型 ${homeInjected} 權重`,

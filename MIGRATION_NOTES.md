@@ -3,6 +3,8 @@
 本文件說明舊 WordPress 站（`old/asia-pacificpreventiveinsight.WordPress.2026-06-09.xml`）
 如何遷移到新的 Astro content collection schema。
 
+> **注意：本檔是 2026-06-09 遷移當時的紀錄。** schema 與分類其後已演進，**現行準據以 [`src/content.config.ts`](./src/content.config.ts) 與 [`src/config/categories.ts`](./src/config/categories.ts) 為準**。已知差異：`sourceType` 不再有 `ai-assisted`（現行預設 `editorial`）；`society` 分類已移除，內容改歸 `international` / `focus`。下方表格保留遷移當下的對照，不代表現行 schema。
+
 ## 遷移工具
 
 ```bash

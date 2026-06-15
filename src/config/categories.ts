@@ -60,7 +60,6 @@ export const CATEGORIES: Category[] = [
     slug: 'health',
     name: '健康',
     nameEn: 'Health',
-    channelName: 'APPI Health｜亞太醫頭條',
     description:
       '聚焦醫療、預防醫學、營養、中醫與整合醫學、心理健康、高齡健康、醫療科技、健康政策與保健食品法規。',
     color: 'oklch(0.58 0.11 170)',

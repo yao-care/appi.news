@@ -1,0 +1,64 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import EmptyState from '@/components/ui/EmptyState.astro';
+import { CATEGORIES } from '@/config/categories';
+import {
+  getPublishedArticles,
+  getAuthorMap,
+  byCategory,
+  bySubcategory,
+} from '@/utils/content';
+
+export async function getStaticPaths() {
+  const all = await getPublishedArticles();
+  const paths: any[] = [];
+  for (const c of CATEGORIES) {
+    if (c.slug === 'columns') continue;
+    const inCat = byCategory(all, c.slug);
+    for (const sub of c.subcategories) {
+      // 只為「有文章」的指標題建立頁面，避免空頁與死連結
+      if (bySubcategory(inCat, sub.slug).length === 0) continue;
+      paths.push({
+        params: { category: c.slug, sub: sub.slug },
+        props: { category: c, sub },
+      });
+    }
+  }
+  return paths;
+}
+
+const { category, sub } = Astro.props;
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+const articles = bySubcategory(byCategory(all, category.slug), sub.slug);
+---
+<BaseLayout
+  title={`${sub.name}｜${category.name}`}
+  description={`APPI News「${category.name}」頻道中所有「${sub.name}」的文章，共 ${articles.length} 篇。`}
+  path={`/${category.slug}/${sub.slug}/`}
+  ogImage={`og/${category.slug}.png`}
+>
+  <div class="container" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: category.name, path: `/${category.slug}/` }, { name: sub.name }]} />
+    <header class="section-head" style="margin-top:18px;">
+      <h2>{sub.name}</h2>
+      <span class="more-link">{articles.length} 篇文章</span>
+    </header>
+    {
+      articles.length === 0 ? (
+        <EmptyState />
+      ) : (
+        <div class="card-grid card-grid--4">
+          {articles.map((a) => (
+            <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />
+          ))}
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>

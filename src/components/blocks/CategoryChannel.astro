@@ -33,6 +33,9 @@ const {
 const heroArticle = showHero ? pageArticles[0] : undefined;
 const rest = showHero ? pageArticles.slice(1) : pageArticles;
 const tags = tagStats(allInCategory).slice(0, 16).map((t) => t.tag);
+
+// 有文章的指標題（子分類）才做成連結，導向該指標題的列表頁
+const subWithArticles = new Set(allInCategory.map((a) => a.data.subcategory).filter(Boolean));
 ---
 <div class="container channel">
   <Breadcrumbs items={[{ name: category.name }]} />
@@ -46,9 +49,15 @@ const tags = tagStats(allInCategory).slice(0, 16).map((t) => t.tag);
     {
       category.subcategories.length > 0 && (
         <nav class="subcats" aria-label="子分類">
-          {category.subcategories.map((s) => (
-            <span class="subcat">{s.name}</span>
-          ))}
+          {category.subcategories.map((s) =>
+            subWithArticles.has(s.slug) ? (
+              <a class="subcat subcat--link" href={url(`/${category.slug}/${s.slug}/`)}>
+                {s.name}
+              </a>
+            ) : (
+              <span class="subcat">{s.name}</span>
+            ),
+          )}
         </nav>
       )
     }
@@ -123,6 +132,14 @@ const tags = tagStats(allInCategory).slice(0, 16).map((t) => t.tag);
     padding: 4px 12px;
     border-radius: 20px;
     font-family: var(--font-sans);
+  }
+  .subcat--link {
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .subcat--link:hover {
+    background: var(--appi-brand);
+    color: var(--white);
   }
   .channel-hero {
     margin-bottom: 32px;

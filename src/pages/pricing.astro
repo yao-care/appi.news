@@ -94,6 +94,7 @@ const faqs = [
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    align-items: start;
   }
   .faq-section {
     max-width: 800px;
@@ -123,11 +124,19 @@ const faqs = [
   @media (max-width: 860px) {
     .pricing-grid {
       grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
   }
-  @media (max-width: 560px) {
+  @media (max-width: 600px) {
+    .pricing-head h1 {
+      font-size: var(--text-xl);
+    }
+    .pricing-head p {
+      font-size: var(--text-sm);
+    }
     .pricing-grid {
       grid-template-columns: 1fr;
+      gap: 16px;
     }
   }
 </style>

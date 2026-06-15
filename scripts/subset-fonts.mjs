@@ -26,10 +26,12 @@ const WEIGHTS = [
 // 基線白名單：ASCII 可見字 + 常見半形/全形標點、CJK 標點，避免邊角缺字。
 function baselineChars() {
   let s = '';
-  for (let c = 0x20; c <= 0x7e; c++) s += String.fromCodePoint(c);
-  for (let c = 0x3000; c <= 0x303f; c++) s += String.fromCodePoint(c);
-  for (let c = 0xff00; c <= 0xffef; c++) s += String.fromCodePoint(c);
-  s += '　、。．，；：？！「」『』（）〔〕【】《》〈〉—…‧·‵′″""''–§¶†‡•○●◎◇◆□■△▲▽▼☆★※←↑→↓№℃℉°±×÷';
+  for (let c = 0x20; c <= 0x7e; c++) s += String.fromCodePoint(c); // ASCII 可見字
+  for (let c = 0x3000; c <= 0x303f; c++) s += String.fromCodePoint(c); // CJK 標點
+  for (let c = 0xff00; c <= 0xffef; c++) s += String.fromCodePoint(c); // 全形 ASCII/標點
+  // 其餘常見符號。彎引號（U+2018/2019/201C/201D）以 codePoint 加入，避免 linter 把它們轉成直引號破壞字串。
+  s += '　、。．，；：？！「」『』（）〔〕【】《》〈〉—…‧·‵′″–§¶†‡•○●◎◇◆□■△▲▽▼☆★※←↑→↓№℃℉°±×÷';
+  for (const cp of [0x2018, 0x2019, 0x201c, 0x201d]) s += String.fromCodePoint(cp);
   return s;
 }
 
@@ -62,7 +64,8 @@ function urlPrefixFor(base) {
   const m = cssAll.match(
     new RegExp('url\\(([^)]*' + base.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + "[^)]*\\.woff2)"),
   );
-  return m ? m[1].replace(/[^/]*$/, '') : null; // 去掉檔名留目錄前綴
+  // 去掉檔名留目錄前綴；並去掉可能的前導引號（Astro 目前輸出無引號，引號版屬防禦）。
+  return m ? m[1].replace(/[^/]*$/, '').replace(/^['"]/, '') : null;
 }
 
 // 3) 每權重 × 每段子集成 woff2，收集切片 @font-face 規則（依 base）。
@@ -121,9 +124,10 @@ if (rewritten === 0) {
 }
 
 // 5) 刪掉舊整包字型（woff2 + woff），避免殘留佔空間（切片檔含 .slice- 不刪）。
+const allFontFiles = listFiles(ASTRO_DIR, ['.woff2', '.woff']);
 let removed = 0;
 for (const w of WEIGHTS) {
-  for (const p of listFiles(ASTRO_DIR, ['.woff2', '.woff'])) {
+  for (const p of allFontFiles) {
     if (basename(p).startsWith(w.base + '.') && !basename(p).includes('.slice-')) {
       rmSync(p);
       removed++;

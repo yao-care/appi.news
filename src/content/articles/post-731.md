@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-731.webp"
-coverAlt: "世界健身World Gym 2025全年淨利成長16.3%宣布股利5.95元連鎖業績創歷史新高"
+coverImage: "covers/post-731-stock.jpg"
+coverAlt: "健身房內器材齊全、健身者積極鍛鍊的活力環境"
+coverImageCredit: "Photo by Victor Freitas on Pexels"
 ---
 
 台灣最大健身連鎖品牌World Gym Corporation（股票代號：2762.TW）在2026年2月公布2025年全年財報，年度淨利達新台幣4.09億元，年增16.3%，每股盈餘同步成長，全年現金股利定為5.95元。這份財務數字是台灣健身產業從疫情谷底走出的最清晰佐證，也是東亞健身消費長期滲透率追趕過程中的重要里程碑。全年累計營收突破109.8億元，創掛牌以來歷史新高；第四季的爆發式獲利，讓這份年報有了遠超過「穩健」的故事可以說。

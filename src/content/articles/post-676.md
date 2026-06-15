@@ -30,8 +30,9 @@ risksAndLimits:
   - "本文為醫療資訊整理，非個人醫療建議，臨床試驗參與資格以主辦機構公告為準"
   - "CAR-T等先進細胞療法目前多處於臨床試驗階段，療效與安全性因適應症與個別患者狀況而有所不同"
   - "試驗數據與適應症核准狀態隨研究進展持續更新，請諮詢專業醫師了解最新資訊"
-coverImage: "covers/post-676.webp"
-coverAlt: "台灣臨床試驗生態系快速審查優勢吸引全球藥廠癌症試驗在台佔比達47%"
+coverImage: "covers/post-676-stock.jpg"
+coverAlt: "醫院臨床環境中的Versa HD放射治療機近距離特寫"
+coverImageCredit: "Photo by Jo McNamara on Pexels"
 ---
 
 台灣在全球臨床試驗版圖上的地位正在持續強化。根據 [Precision for Medicine 的分析報告](https://www.precisionformedicine.com/blog/taiwans-clinical-trial-landscape-fast-efficient-and-high-quality-research)，2024年台灣收到的新藥臨床試驗（IND）申請中，癌症相關試驗佔比達47%，幾乎是所有申請案的一半。這個比例既反映了腫瘤學本身的研究熱度，更說明台灣已形成一套對全球藥廠具有吸引力的試驗環境，從資料基礎設施、醫療覆蓋到技術能量，各個關鍵要素相互支撐。

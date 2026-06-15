@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-671.webp"
-coverAlt: "台灣糖尿病照護AI合作啟動本土驗證首個NHI資料驅動AI臨床服務"
+coverImage: "covers/post-671-stock.jpg"
+coverAlt: "手持採血筆與血糖儀進行血糖測試的近距離特寫"
+coverImageCredit: "Photo by Artem Podrez on Pexels"
 ---
 
 糖尿病是台灣健保的最大單一成本負擔。全台約每10人就有1人受到糖尿病影響，第二型糖尿病患者超過130萬人，長期藥物、定期檢查與相關併發症的照護費用，每年耗用的健保資源遠超過多數慢性病。2024年6月，中央健康保險署與Google Cloud、Google Health共同宣布啟動「AI-on-DM」（AI on Diabetes Mellitus）計畫，用台灣的健保資料庫訓練AI糖尿病管理模型。[這是台灣首次以NHI資料進行AI模型訓練的政府級合作，也是台灣與Google在醫療領域的第一個全國性政府合作案](https://www.taipeitimes.com/News/taiwan/archives/2024/06/14/2003819332)。

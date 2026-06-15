@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-727.webp"
-coverAlt: "中職江坤宇生涯七百安打落地當天成賽事MVP本土打者新世代的長期競爭力標竿"
+coverImage: "covers/post-727-stock.jpg"
+coverAlt: "職棒打者揮棒擊球、教練在場邊觀看的比賽瞬間"
+coverImageCredit: "Photo by Israel Torres on Pexels"
 ---
 
 數字在6月13日的晚間落地。中信兄弟游擊手江坤宇在對戰樂天桃猿的比賽第八局，完成生涯第700支安打，當場同時繳出單場4支安打的成績單，獲選當場MVP。攤開[中華職棒官方進階數據](https://stats.cpbl.com.tw/players/0000004636)，手感在那一晚明顯發燙，4打數4安打的成績讓700安的達成有了戲劇性的落地時刻，而不是在某個平淡的主場夜悄悄跨過門檻。

@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-742.webp"
-coverAlt: "運動訓練科學進化動作品質優先於訓練強度的肌力訓練新典範獲運動醫學認可"
+coverImage: "covers/post-742-stock.jpg"
+coverAlt: "年輕亞裔男性在室內專注舉起槓鈴的力量訓練"
+coverImageCredit: "Photo by Ketut Subiyanto on Pexels"
 ---
 
 2026年3月16日，美國運動醫學會（ACSM）在《Medicine & Science in Sports & Exercise》期刊發表了17年來第一次重大阻力訓練更新。這份整合了137篇系統性回顧、涵蓋逾3萬名受試者的研究結論，核心訊息出乎許多人預料：讓人體進步的，是夠用的動作品質與持之以恆的訓練量，而不是越高越好的強度或越複雜越好的計畫。[這份指引](https://www.moveyourbonespt.com/blog/2026-acsm-resistance-training-guidelines)直接挑戰了健身文化中根深蒂固的「拼命才有效」信仰，也讓功能性訓練在科學基礎上取得了更穩固的地位。

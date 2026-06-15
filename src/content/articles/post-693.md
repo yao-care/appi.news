@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-693.webp"
-coverAlt: "鴻海斥資51億新台幣擴充墨西哥廠攜手NVIDIA搶占AI伺服器北美大單"
+coverImage: "covers/post-693-stock.jpg"
+coverAlt: "生產環境中整齊排列電路板的精細特寫"
+coverImageCredit: "Photo by Andrey Matveev on Pexels"
 ---
 
 AI伺服器的競爭是雙層次的：晶片算力的競爭，以及決定晶片在哪裡組裝、從哪裡出貨的地緣布局競爭。

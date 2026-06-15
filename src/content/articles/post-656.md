@@ -29,8 +29,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-656.webp"
-coverAlt: "IMO特別大會延後通過航運淨零框架，全球首個產業碳定價推遲一年上路"
+coverImage: "covers/post-656-stock.jpg"
+coverAlt: "巨型貨櫃輪在平靜水面乘著日落航行"
+coverImageCredit: "Photo by Pixabay on Pexels"
 ---
 
 2025年10月17日，[國際海事組織（IMO）海洋環境保護委員會（MEPC）特別大會](https://www.imo.org/en/mediacentre/hottopics/pages/cutting-ghg-emissions.aspx)以57票贊成推遲、49票反對通過（另有29票棄權或未出席）的結果，決定不在本次大會通過航運淨零框架。這個框架原本是全球第一個針對單一產業設計的碳定價機制，如今確定延至2026年重新審議，最快2028年3月1日才能生效。

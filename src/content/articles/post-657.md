@@ -29,8 +29,9 @@ references:
     url: "https://www.undp.org/stories/challenges-and-opportunities-rapid-urban-expansion"
     publisher: "UNDP"
     note: "快速都市化挑戰與機遇"
-coverImage: "covers/post-657.webp"
-coverAlt: "亞太城市人口至2050年再增九億，韌性治理才是決定性因素"
+coverImage: "covers/post-657-stock.jpg"
+coverAlt: "台北市區高樓林立天際線的都會鳥瞰"
+coverImageCredit: "Photo by Jimmy Liao on Pexels"
 ---
 
 2025年10月，聯合國開發計畫署（UNDP）與工程顧問公司Arup聯合發布報告《Rethinking Urban Governance for Tomorrow's Cities in Asia-Pacific》。核心數字直接：亞太城市人口將從2023年的24.8億成長至2050年的33.8億，27年新增9億人。氣候衝擊與都市擴張同步加速，兩者交疊的壓力窗口比多數政府的規劃週期短，這是報告選在此時出版的原因。

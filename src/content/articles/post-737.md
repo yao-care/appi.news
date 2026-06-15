@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-737.webp"
-coverAlt: "台灣AI鷹眼棒球科技導入少棒訓練衍生產值75億讓科學訓練從職棒向基層普及"
+coverImage: "covers/post-737-stock.jpg"
+coverAlt: "陽光晴朗的球場上孩童揮棒打棒球的歡樂場景"
+coverImageCredit: "Photo by David McElwee on Pexels"
 ---
 
 一顆棒球從投手手中飛出，在抵達本壘板之前，台灣鷹眼系統已經完成了軌跡計算、轉速分析與落點預測，誤差不超過一公分。這套由工研院開發的電腦視覺技術，長期以來被視為職業棒球的高端工具，但2025年9月經濟部技術司舉辦的「[運動科技研發成果](https://money.udn.com/money/story/5612/9145316)」記者會宣告了一個轉折：台灣鷹眼不只服務職業選手，已正式協助偏鄉紅葉少棒進行科學化訓練。台灣運動科技整體衍生產值達到75億元，科學訓練的普及方向已定。

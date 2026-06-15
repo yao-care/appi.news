@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-728.webp"
-coverAlt: "二〇二六全球健身趨勢台灣解讀穿戴科技穩坐榜首銀髮健身需求大幅躍升"
+coverImage: "covers/post-728-stock.jpg"
+coverAlt: "長者夫婦在室內一同舉哑鈴鍛鍊的健身場景"
+coverImageCredit: "Photo by Yan Krukau on Pexels"
 ---
 
 2026年的全球健身產業有一份每年最被引用的數據來源：美國運動醫學會（ACSM）的年度全球健身趨勢調查。這份報告走到第20年，以2,000位臨床醫師、研究人員與健身業從業人員的問卷為基礎，今年的結果和去年長得很像，但背後的驅動力正在加速分化。[ACSM官方公告](https://acsm.org/top-fitness-trends-2026)確認，2026年排名第一的是穿戴科技，這是過去11年中的第9次奪冠，第二名則是銀髮族健身課程，首度在排行前段取得如此清晰的位置。

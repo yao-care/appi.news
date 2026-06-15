@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-647.webp"
-coverAlt: "NASA雙子衛星ESCAPADE升空與JAXA火衛一採樣任務同步展開火星探索競合新局"
+coverImage: "covers/post-647-stock.jpg"
+coverAlt: "火箭升空時噴射火焰與濃煙的戲劇性畫面"
+coverImageCredit: "Photo by SpaceX on Pexels"
 ---
 
 火星大氣為什麼消失了？這個問題困擾行星科學家幾十年。現在有兩組太空船正在從不同角度逼近答案。2026年3月14日，[NASA的ESCAPADE任務](https://www.nasa.gov/news-release/nasa-blue-origin-launch-two-spacecraft-to-study-mars-solar-wind)以Blue Origin New Glenn火箭升空，送出一對被命名為Blue與Gold的衛星，開始長達18個月的飛行，目標是2027年9月進入火星軌道。與此同時，JAXA的火星衛星探索任務MMX正在種子島完成最終整備，等待H3火箭在日本財政年度2026年的發射窗口。兩個任務在時間軸上高度重疊，在科學目標上彼此互補，構成近年來行星科學合作中難得一見的格局。

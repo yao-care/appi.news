@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-752.webp"
-coverAlt: "台灣社宅轉型包租代管擴至32萬戶青年婚育租屋加碼50%減壓"
+coverImage: "covers/post-752-stock.jpg"
+coverAlt: "台灣高樓公寓大廈彎弧形立面重複排列的建築細節"
+coverImageCredit: "Photo by Sunny Li on Pexels"
 ---
 
 台灣居住政策在2025年底迎來一次明確的路線調整。[根據內政部公告](https://money.udn.com/money/story/5621/9257049)，為強化立即性租屋保障，政策調整為直接興建目標維持18萬戶，包租代管則大幅調升為32萬戶目標，並搭配租金補貼優化，全面照顧百萬租屋家戶。這個調整的背後邏輯清楚：都會區可用土地愈來愈稀缺，新建社宅的速度跟不上需求，必須轉向活化既有空餘屋。

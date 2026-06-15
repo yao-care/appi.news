@@ -30,8 +30,9 @@ risksAndLimits:
   - "本文為醫療資訊整理，非個人醫療建議，CAR-T及細胞療法目前多需依個別適應症評估，請諮詢專業醫師"
   - "各國市場核准狀況、療法可及性及費用差異顯著，實際醫療決策應以當地主管機關最新公告為準"
   - "次世代療法的臨床效益因疾病類型、患者狀況及治療階段而異，不宜直接比較不同試驗的結果"
-coverImage: "covers/post-677.webp"
-coverAlt: "亞太次世代癌症療法加速落地新加坡領跑菲律賓等新興市場積極跟進"
+coverImage: "covers/post-677-stock.jpg"
+coverAlt: "全副防護裝備的科學家在實驗室進行細胞培養研究"
+coverImageCredit: "Photo by Satheesh Sankaran on Pexels"
 ---
 
 亞太地區的次世代癌症療法版圖在2025年出現清晰的梯次分化。[IQVIA的亞太CAR-T療法市場分析報告](https://www.iqvia.com/-/media/iqvia/pdfs/asia-pacific/white-papers/private-market-opportunity-for-car-t-cell-therapy-in-asia-pacific.pdf)以「進階市場」描述新加坡的角色，以「初始市場」描述菲律賓、馬來西亞、越南、印尼與泰國等東南亞五國的現況，清楚標示出這場療法擴散戰的前線格局。整個亞太細胞與基因治療（CGT）市場預計在2027年達到40億美元，而這波增長的核心驅動力正是CAR-T細胞療法從英美頂尖中心向亞洲核心樞紐的逐步擴散。

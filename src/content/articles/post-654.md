@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-654.webp"
-coverAlt: "Insilico Medicine Phase IIa讀出首份正面數據　AI設計藥物走出概念進入臨床實證"
+coverImage: "covers/post-654-stock.jpg"
+coverAlt: "科學家在實驗室中手持移液管進行研究"
+coverImageCredit: "Photo by ThisIsEngineering on Pexels"
 ---
 
 2025年9月，Insilico Medicine公布旗下藥物Rentosertib的Phase IIa讀出結果。這不是一個普通的臨床試驗數據，而是史上第一個靶點由AI發現、分子由AI設計、且在二期臨床試驗中看到正面結果的案例。治療標的是特發性肺纖維化（IPF），一種進展迅速、目前選項有限的嚴重肺部疾病。數據顯示了劑量依賴性的肺功能改善，安全性與耐受性在預期範圍內。整個藥物開發時程從靶點發現到二期讀出，大約五年，而傳統藥物研發通常要十年以上才能走到這個節點。

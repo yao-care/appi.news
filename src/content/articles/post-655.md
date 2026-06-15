@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-655.webp"
-coverAlt: "2025年上半年全球自然災害損失達1310億美元亞太保護缺口與台灣供應鏈風險"
+coverImage: "covers/post-655-stock.jpg"
+coverAlt: "野火在乾燥草地蔓延的壯觀空中俯瞰"
+coverImageCredit: "Photo by K on Pexels"
 ---
 
 慕尼黑再保險（Munich Re）的中期評估確認，[2025年上半年全球自然災害造成1310億美元經濟損失](https://www.cbsnews.com/news/natural-disasters-damage-losses-2025)，其中投保損失800億美元，為1980年有系統紀錄以來的同期次高。洛杉磯野火以530億美元的單一事件損失居首，亞太地區的緬甸地震雖造成逾4500人罹難，卻因保險覆蓋率極低，幾乎未能反映在國際財務統計中。這兩個案例並置，正好說明2025年全球災害損失的核心結構問題。

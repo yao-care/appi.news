@@ -26,8 +26,9 @@ author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-626.webp"
-coverAlt: "離岸風電第三期R3.3取消強制國產化改以ESG評分與履約能力為核心選商指標"
+coverImage: "covers/post-626-stock.jpg"
+coverAlt: "海面上離岸風機群的廣角全景"
+coverImageCredit: "Photo by Damir K . on Pexels"
 ---
 
 台灣離岸風電政策走到第三期，轉了一個大彎。[2026年1月8日，經濟部能源署召開離岸風電區塊開發第三期（R3.3）選商機制草案說明會](https://csr.cw.com.tw/article/44590)，公布新一輪選商方向：強制國產化要求正式成為歷史，取而代之的是以ESG規劃、履約能力與財務能力為核心的百分制評分機制。ESG相關評分項目合計達20分，能否取得70分以上才是拿到容量分配資格的最低門檻。這個轉向，在能源界掀起了一場對政策意圖與執行細節的激烈辯論。

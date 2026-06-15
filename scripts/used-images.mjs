@@ -35,6 +35,15 @@ for (const f of files) {
   }
 }
 
+// 併入本地下載的圖庫封面（covers/<slug>-stock.jpg）。本地檔無 unsplash/pexels URL，
+// markdown 掃不到，故由 stock-covers 管線記錄的清單補上，確保去重涵蓋它們。
+try {
+  const manifest = JSON.parse(readFileSync('docs/content-plan/stock-used.json', 'utf8'));
+  for (const id of manifest.ids || []) ids.add(id);
+} catch {
+  /* 無清單則略過 */
+}
+
 mkdirSync(OUT_DIR, { recursive: true });
 writeFileSync(OUT_FILE, JSON.stringify({ ids: [...ids].sort() }, null, 0));
 console.log(`[used-images] ${files.length} 篇文章 → ${ids.size} 個已用圖庫圖 → ${OUT_FILE}`);

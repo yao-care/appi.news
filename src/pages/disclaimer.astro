@@ -1,6 +1,7 @@
 ---
 import PolicyLayout from '@/layouts/PolicyLayout.astro';
 import { DISCLAIMERS } from '@/config/disclaimers';
+import { url } from '@/utils/url';
 ---
 <PolicyLayout
   title="免責聲明"
@@ -47,7 +48,7 @@ import { DISCLAIMERS } from '@/config/disclaimers';
   <p>{DISCLAIMERS.sponsored.text}</p>
   <p>
     凡屬商業合作、贊助或新聞稿性質的內容，本站均依規範清楚標示，且不會以中立新聞的形式呈現。
-    相關揭露原則請見<a href="/sponsored/">新聞稿與商業合作</a>與<a href="/editorial-policy/">編輯方針</a>。
+    相關揭露原則請見<a href={url('/sponsored/')}>新聞稿與商業合作</a>與<a href={url('/editorial-policy/')}>編輯方針</a>。
   </p>
 
   <h2>六、外部連結與第三方內容</h2>
@@ -59,7 +60,7 @@ import { DISCLAIMERS } from '@/config/disclaimers';
   <h2>七、內容更新與更正</h2>
   <p>
     本站會持續檢視並更新內容。若發現錯誤，我們會儘速更正，並視情況加註說明。
-    若你發現任何內容有誤，歡迎透過<a href="/contact/">聯絡我們</a>指正。
+    若你發現任何內容有誤，歡迎透過<a href={url('/contact/')}>聯絡我們</a>指正。
   </p>
 
   <h2>八、編輯流程與工具</h2>

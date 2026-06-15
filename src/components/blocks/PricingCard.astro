@@ -24,7 +24,7 @@ const { name, price, unit, summary, features, featured = false, note } = Astro.p
     {features.map((f) => <li>{f}</li>)}
   </ul>
   {note && <p class="pricing-note">{note}</p>}
-  <a class:list={['btn', featured ? 'btn--primary' : 'btn--ghost', 'pricing-btn']} href={url('/join/')}>
+  <a class:list={['btn', featured ? 'btn--primary' : 'btn--ghost', 'pricing-btn']} href={url('/submit/')}>
     申請此方案
   </a>
 </article>

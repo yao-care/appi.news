@@ -1,0 +1,207 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import { url } from '@/utils/url';
+
+const addons = [
+  {
+    name: '投稿審閱與上刊申請',
+    price: 'NT$1,000／篇',
+    desc: '適合已完成文章、希望投稿到 APPI 的作者或機構。包含投稿文章基本審閱、格式檢查、基本分類與標籤設定、基本排版與 APPI 上刊申請流程。',
+    note: '投稿不代表保證上刊，所有內容仍須符合 APPI 編輯方針與相關法規要求。',
+  },
+  {
+    name: '企業新聞稿撰寫',
+    price: 'NT$8,000～15,000／篇',
+    desc: '將品牌消息、活動資訊、產品資訊或企業動態整理成新聞稿格式。包含新聞稿架構整理、標題與導言撰寫、品牌或活動資訊整合、基本媒體格式調整與 1 次修改。',
+    note: '醫療、保健食品、財經、法律等高風險內容需符合相關規範，不得宣稱療效或保證收益。',
+  },
+  {
+    name: '遠端企業專訪',
+    price: 'NT$18,000／篇',
+    desc: '透過線上訪談整理品牌故事、企業理念、專業觀點或服務特色。包含訪前提綱設計、30～60 分鐘線上訪談、專訪稿撰寫、基本標題與導言、基本 SEO、APPI 上刊流程與 1～2 次修改。',
+  },
+  {
+    name: '深度企業專訪',
+    price: 'NT$28,000／篇',
+    desc: '適合需要更完整品牌敘事、創辦人故事或企業轉型歷程的品牌與機構。包含訪前資料整理、深度訪綱設計、60～90 分鐘線上訪談、深度專訪稿撰寫、品牌故事整理、基本 SEO、APPI 上刊流程與 2 次修改。',
+  },
+  {
+    name: '現場採訪',
+    price: 'NT$38,000 起／篇',
+    desc: '適合需要現場訪談、場域觀察或多人訪問的品牌與機構。包含採訪前溝通、現場採訪、採訪稿撰寫、基本標題與導言、基本 SEO、APPI 上刊流程與 2 次修改。',
+    note: '不含攝影、影片拍攝、車馬費、場地費、跨縣市交通費與多場次採訪；實際費用依地點、時間、人數與複雜度另行確認。',
+  },
+];
+---
+<BaseLayout
+  title="加購服務與內容說明"
+  description="APPI 的加購服務、內容額度說明與商業內容揭露原則，包含投稿審閱、企業新聞稿、遠端與深度企業專訪、現場採訪等項目。"
+  path="/services/"
+>
+  <div class="container" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '作者方案', path: '/pricing/' }, { name: '加購服務與內容說明' }]} />
+    <header class="services-head">
+      <h1>加購服務與內容說明</h1>
+      <p>
+        以下服務可依需求另外加購，搭配作者方案使用。所有內容仍須符合 APPI 編輯方針、商業揭露規範與相關法規要求。
+      </p>
+    </header>
+
+    <section class="section">
+      <div class="section-head"><h2>加購服務</h2></div>
+      <div class="addon-grid">
+        {addons.map((a) => (
+          <article class="addon-card card-k">
+            <div class="addon-top">
+              <h3>{a.name}</h3>
+              <span class="addon-price">{a.price}</span>
+            </div>
+            <p class="addon-desc">{a.desc}</p>
+            {a.note && <p class="addon-note">{a.note}</p>}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>內容額度說明</h2></div>
+      <p class="services-body">
+        內容額度可用於 APPI 的內容產製、修改、排程或上刊流程。作者或品牌可依自身需求安排使用節奏。
+        所有內容仍需符合 APPI 編輯方針、商業揭露規範與相關法規要求。APPI 不保證流量、搜尋排名或一定上刊，
+        並保留對不符規範內容進行修改、退修或拒絕刊登的權利。
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>商業內容揭露原則</h2></div>
+      <p class="services-body">
+        APPI 接受品牌、企業、診所、機構與專業作者合作，但所有商業合作內容都會依規範清楚標示。商業內容可能標示為：
+      </p>
+      <div class="disclosure-tags">
+        <span class="d-tag">合作</span>
+        <span class="d-tag">贊助</span>
+        <span class="d-tag">品牌專欄</span>
+        <span class="d-tag">企業專訪</span>
+        <span class="d-tag">新聞稿</span>
+      </div>
+      <p class="services-body">
+        APPI 不會將商業內容偽裝成中立新聞，也不會因商業合作關係影響基本事實判斷。醫療、保健食品、財經、法律等
+        高風險主題，需遵守更嚴格的內容標準，不得宣稱療效、保證收益或使用誤導性說法。更完整的內容準則請參閱
+        <a href={url('/editorial-policy/')}>編輯方針</a>。
+      </p>
+    </section>
+
+    <section class="services-cta">
+      <h2>想開始或洽談合作？</h2>
+      <p>已有完成的文章可直接投稿；品牌與機構的合作需求歡迎來信討論。</p>
+      <div class="services-actions">
+        <a class="btn btn--primary" href={url('/submit/')}>投稿成為作者</a>
+        <a class="btn btn--ghost" href={url('/sponsored/')}>新聞稿與商業合作</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .services-head {
+    margin: 18px 0 36px;
+  }
+  .services-head h1 {
+    font-size: var(--text-2xl);
+    margin: 0 0 10px;
+  }
+  .services-head p {
+    color: var(--ink-2);
+    max-width: 680px;
+    line-height: 1.7;
+    margin: 0;
+  }
+  .addon-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: stretch;
+  }
+  .addon-card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px;
+  }
+  .addon-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .addon-top h3 {
+    font-size: var(--text-base);
+    margin: 0;
+  }
+  .addon-price {
+    flex-shrink: 0;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: var(--text-sm);
+    color: var(--appi-brand);
+  }
+  .addon-desc {
+    margin: 0;
+    color: var(--ink-2);
+    font-size: var(--text-sm);
+    line-height: 1.7;
+  }
+  .addon-note {
+    margin: 12px 0 0;
+    color: var(--ink-3);
+    font-size: var(--text-xs);
+    line-height: 1.6;
+  }
+  .services-body {
+    color: var(--ink-2);
+    max-width: 760px;
+    line-height: 1.8;
+    margin: 0;
+  }
+  .disclosure-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .d-tag {
+    background: var(--bg-soft);
+    color: var(--ink-2);
+    padding: 6px 16px;
+    border-radius: 24px;
+    font-size: var(--text-sm);
+    font-family: var(--font-sans);
+  }
+  .services-cta {
+    text-align: center;
+    background: var(--bg-tint);
+    border-radius: var(--radius);
+    padding: 48px 24px;
+    margin-block: 56px;
+  }
+  .services-cta h2 {
+    margin: 0 0 8px;
+  }
+  .services-cta p {
+    color: var(--ink-2);
+    margin: 0 0 20px;
+  }
+  .services-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 720px) {
+    .addon-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

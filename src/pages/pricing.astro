@@ -2,48 +2,48 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PricingCard from '@/components/blocks/PricingCard.astro';
 import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import { url } from '@/utils/url';
 
 const plans = [
   {
-    name: '單篇體驗', price: '1,800', unit: '元 / 篇',
-    summary: '適合初次體驗者',
-    features: ['1 篇文章額度', '寫作工具輔助', '基本排版', '基本 SEO', '封面圖', '文章署名', '不含作者頁', '不含專欄頁'],
+    name: '單篇體驗', price: '1,800', unit: '元 / 次',
+    summary: '適合第一次體驗 APPI 內容產製與上刊流程者',
+    features: ['1 次內容產製額度', 'APPI 上刊流程', '基本排版', '基本 SEO 標題與描述', '封面圖', '作者署名', '基本內容檢核'],
   },
   {
-    name: '創站季繳', price: '4,800', unit: '元 / 季',
-    summary: '適合想測試內容經營的專業者',
-    features: ['12 篇文章額度', '可一次使用並排程', '簡版作者頁', '基本排版與 SEO', '封面圖', '基礎內容檢核', '季末數據摘要'],
+    name: '季度作者方案', price: '6,000', unit: '元 / 季',
+    summary: '適合想開始穩定累積專業內容的作者',
+    features: ['12 次內容產製額度', 'APPI 上刊流程', '基本排版與 SEO', '封面圖', '作者署名', '可依需求安排內容發布', '基本內容檢核'],
   },
   {
-    name: '創站年繳', price: '15,000', unit: '元 / 年',
-    summary: '限前 20 位或前期名額',
-    features: ['60 篇文章額度', '可一次使用並排程', '完整作者頁', '專欄頁', '基本排版與 SEO', '封面圖', '每季數據報告', '創站作者標籤'],
-    featured: true,
-    note: '前期限量名額',
+    name: '年度作者方案', price: '21,000', unit: '元 / 年',
+    summary: '適合想長期經營專業形象與作者頁者',
+    features: ['48 次內容產製額度', 'APPI 上刊流程', '基本排版與 SEO', '封面圖', '作者署名', '作者／品牌專屬頁面', '年度簡易數據摘要', '基本內容檢核'],
   },
   {
-    name: '正式年繳', price: '19,800', unit: '元 / 年',
-    summary: '適合長期經營個人品牌者',
-    features: ['48 篇文章額度', '完整作者頁', '專欄頁', '每季數據報告', '優質文章可首頁推薦'],
+    name: '年度內容資產方案', price: '24,000', unit: '元 / 年',
+    summary: '適合想建立完整內容資產與專屬網站者',
+    features: ['年度作者方案所有內容', '48 次內容產製額度', '作者／品牌專屬頁面', '專屬網站', '文章分類整理', '年度簡易數據摘要', '基本內容檢核'],
   },
   {
-    name: '高產專欄', price: '29,800', unit: '元 / 年',
-    summary: '適合積極經營者',
-    features: ['96 篇文章額度', '完整作者頁', '專欄頁', '優先排程', '數據報告'],
+    name: '年度成長方案', price: '36,000', unit: '元 / 年',
+    summary: '適合想結合內容、網站與 SEO 基礎服務者',
+    features: ['年度內容資產方案所有內容', '專屬網站', '基礎關鍵字規劃', 'SEO 標題與描述建議', 'GA／GSC 基礎串接', '每季簡易 SEO 數據摘要', '站內分類與內部連結建議'],
   },
   {
-    name: '品牌專欄', price: '48,000', unit: '元起 / 年',
-    summary: '適合企業、診所與機構',
-    features: ['品牌專欄頁', '多人作者', '客製文章額度', '企業或診所介紹', '數據報告', '可加購新聞稿、專題合作、社群圖卡'],
+    name: '品牌內容方案', price: '48,000', unit: '元 / 年',
+    summary: '適合品牌、企業、診所、機構或專業個人品牌',
+    features: ['年度成長方案所有內容', 'SEO 基礎服務', '1 篇深度企業專訪', '1 篇企業新聞稿', '商業內容揭露標示', '每季簡易 SEO 數據摘要'],
   },
 ];
 
 const faqs = [
-  { q: '文章可以一次用完嗎？', a: '年繳額度可一次使用並排程，但發布仍需符合平台規範。' },
-  { q: '文章是否保證流量？', a: '不保證。APPI 提供 SEO 架構、媒體呈現與內容累積，但流量取決於主題、品質、搜尋需求與外部分享。' },
-  { q: '是否一定會通過上刊？', a: '文章需符合平台內容規範。醫療、財經、法律、保健食品等高風險內容需更嚴謹檢核。' },
-  { q: '作者頁何時開啟？', a: '依方案或文章累積條件開啟。單篇體驗不含完整作者頁。' },
-  { q: 'AI 會直接替我發布文章嗎？', a: '不會。AI 協助產生初稿，作者需自行審閱，平台依規範進行檢核。' },
+  { q: '文章是否保證流量？', a: '不保證。APPI 提供內容產製流程、基本 SEO 架構、媒體呈現與內容累積，但實際流量會受主題、搜尋需求、內容品質、外部分享與時間累積影響。' },
+  { q: '是否保證搜尋排名？', a: '不保證。SEO 基礎服務是協助搜尋引擎理解內容與網站架構，不代表保證排名或保證曝光。' },
+  { q: '內容是否一定會上刊？', a: '不一定。所有內容都需符合 APPI 編輯方針與相關規範。醫療、保健食品、財經、法律等高風險主題將採取更嚴謹的檢核標準。' },
+  { q: '可以刊登商業內容嗎？', a: '可以，但必須清楚揭露。商業合作內容會依性質標示為合作、贊助、品牌專欄、企業專訪或新聞稿，不會偽裝成中立新聞。' },
+  { q: '作者需要自己提供專業內容嗎？', a: '需要。APPI 協助整理、排版、產製與刊登，但專業判斷、核心觀點與事實基礎仍需由作者或合作方提供。' },
+  { q: '投稿和方案額度有什麼不同？', a: '投稿是作者已完成文章後向 APPI 申請審閱與上刊；方案額度則包含 APPI 的內容產製流程、基本排版、基本 SEO、封面圖與上刊流程，適合需要長期累積內容的人。' },
 ];
 ---
 <BaseLayout
@@ -61,6 +61,19 @@ const faqs = [
     <div class="pricing-grid">
       {plans.map((p) => <PricingCard {...p} />)}
     </div>
+
+    <section class="pricing-links">
+      <div class="pricing-link-card">
+        <h2>加購服務與內容說明</h2>
+        <p>投稿審閱、企業新聞稿、遠端與深度專訪、現場採訪等加購項目，以及內容額度與商業揭露原則，都整理在這裡。</p>
+        <a class="btn btn--ghost" href={url('/services/')}>查看加購服務與說明</a>
+      </div>
+      <div class="pricing-link-card">
+        <h2>準備好開始了嗎？</h2>
+        <p>已有完成的文章可直接投稿；想長期經營專業內容，也可以從這裡了解作者流程。</p>
+        <a class="btn btn--primary" href={url('/submit/')}>投稿成為作者</a>
+      </div>
+    </section>
 
     <section class="section faq-section">
       <div class="section-head"><h2>常見問題</h2></div>
@@ -94,7 +107,27 @@ const faqs = [
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    align-items: start;
+    align-items: stretch;
+  }
+  .pricing-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 48px 0 8px;
+  }
+  .pricing-link-card {
+    background: var(--bg-tint);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+  }
+  .pricing-link-card h2 {
+    font-size: var(--text-lg);
+    margin: 0 0 10px;
+  }
+  .pricing-link-card p {
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin: 0 0 18px;
   }
   .faq-section {
     max-width: 800px;
@@ -132,6 +165,10 @@ const faqs = [
       font-size: var(--text-sm);
     }
     .pricing-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .pricing-links {
       grid-template-columns: 1fr;
       gap: 16px;
     }

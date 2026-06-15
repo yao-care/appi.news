@@ -59,32 +59,6 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
           <a class="btn btn--ghost" href={url('/join/')}>投稿／成為作者</a>
         </div>
       </div>
-
-      {/* 右側：極簡媒體分類排版（Editorial Index）——取代原 SaaS 插圖 */}
-      <aside class="intro-index" aria-hidden="true">
-        <div class="eindex">
-          <div class="eindex-head">
-            <span class="eindex-brand">APPI News</span>
-            <span class="eindex-kicker">Editorial Index</span>
-            <span class="eindex-vol">Vol. 2026</span>
-          </div>
-          <ol class="eindex-list">
-            <li><span class="eindex-num">01</span><span class="eindex-en">Focus</span><span class="eindex-zh">焦點</span></li>
-            <li><span class="eindex-num">02</span><span class="eindex-en">International</span><span class="eindex-zh">國際</span></li>
-            <li><span class="eindex-num">03</span><span class="eindex-en">Health</span><span class="eindex-zh">健康</span></li>
-            <li><span class="eindex-num">04</span><span class="eindex-en">Tech</span><span class="eindex-zh">科技</span></li>
-            <li><span class="eindex-num">05</span><span class="eindex-en">Finance</span><span class="eindex-zh">財經</span></li>
-            <li><span class="eindex-num">06</span><span class="eindex-en">Sports</span><span class="eindex-zh">運動</span></li>
-            <li><span class="eindex-num">07</span><span class="eindex-en">Lifestyle</span><span class="eindex-zh">生活</span></li>
-            <li><span class="eindex-num">08</span><span class="eindex-en">Columns</span><span class="eindex-zh">專欄</span></li>
-          </ol>
-          <div class="eindex-foot">
-            <span>Multi-author media</span>
-            <span>Expert viewpoints</span>
-            <span>Analysis &amp; columns</span>
-          </div>
-        </div>
-      </aside>
     </div>
   </section>
 
@@ -180,12 +154,14 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
   .intro-inner {
     position: relative;
     z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr; /* 左 ~45% / 右 ~55% */
-    align-items: center;
-    gap: 48px;
-    padding-top: 56px;
-    padding-bottom: 56px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  /* 拿掉右側 Editorial Index 後改為置中報頭：左右網絡背景對稱，避免單側留白 */
+  .intro-text {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
   }
   .intro-eyebrow {
     display: block;
@@ -204,125 +180,17 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     color: var(--ink);
   }
   .intro-desc {
-    margin: 16px 0 24px;
+    margin: 16px auto 28px;
     font-size: var(--text-base);
     line-height: 1.8;
     color: var(--ink-2);
-    max-width: 54ch;
+    max-width: 52ch;
   }
   .intro-cta {
     display: flex;
+    justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
-  }
-  /* ---------- 右側：Editorial Index 排版視覺 ---------- */
-  .intro-index {
-    display: flex;
-    justify-content: center;
-  }
-  .eindex {
-    position: relative;
-    width: 100%;
-    max-width: 560px;
-    padding: 26px 32px 22px;
-    border: 1px solid var(--line-2);
-    border-radius: var(--radius);
-    /* 淡色半透明面板，讓背景節點線條若隱若現但不搶主體 */
-    background: color-mix(in oklch, var(--white) 82%, transparent);
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
-  }
-  /* 左上金色細邊強調，營造 issue／index 感 */
-  .eindex::before {
-    content: '';
-    position: absolute;
-    inset: 0 0 auto 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--appi-accent) 0%, transparent 72%);
-  }
-  .eindex-head {
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--appi-accent);
-    font-family: var(--font-sans);
-  }
-  .eindex-brand {
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-size: var(--text-xs);
-    color: var(--appi-brand);
-  }
-  .eindex-kicker {
-    font-size: 0.8125rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-  }
-  .eindex-vol {
-    margin-left: auto;
-    font-size: 0.8125rem;
-    letter-spacing: 0.06em;
-    font-weight: 600;
-    color: var(--appi-accent);
-  }
-  .eindex-list {
-    list-style: none;
-    margin: 0;
-    padding: 18px 0 16px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
-    row-gap: 12px;
-  }
-  .eindex-list li {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: baseline;
-    column-gap: 10px;
-    row-gap: 2px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--line-2);
-  }
-  .eindex-num {
-    grid-row: 1;
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    color: var(--appi-accent);
-  }
-  .eindex-en {
-    grid-row: 1;
-    font-family: var(--font-serif);
-    font-weight: 600;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    line-height: 1.1;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    color: var(--appi-brand);
-  }
-  .eindex-zh {
-    grid-column: 2;
-    grid-row: 2;
-    font-family: var(--font-sans);
-    font-size: var(--text-xs);
-    letter-spacing: 0.06em;
-    color: var(--ink-3);
-  }
-  .eindex-foot {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 18px;
-    padding-top: 14px;
-    border-top: 1px solid var(--appi-accent);
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-2);
   }
 
   /* ---------- 編輯精選 ---------- */
@@ -442,15 +310,10 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
   }
 
   @media (max-width: 900px) {
+    /* 平板：報頭收窄留白，讓影像豐富的「編輯精選」更早進入視野 */
     .intro-inner {
-      grid-template-columns: 1fr;
-      gap: 28px;
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
-    /* 手機／平板：文字在上、分類視覺在下（依 DOM 順序，不需 order） */
-    .eindex {
-      max-width: 640px;
+      padding-top: 44px;
+      padding-bottom: 44px;
     }
     .feature {
       grid-template-columns: 1fr;
@@ -465,28 +328,19 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
   }
 
   @media (max-width: 520px) {
+    /* 手機：進一步壓縮報頭高度，首屏底部就能看到「編輯精選」的封面圖 */
+    .intro-inner {
+      padding-top: 32px;
+      padding-bottom: 28px;
+    }
+    .intro-desc {
+      margin-bottom: 24px;
+    }
     .side-thumb {
       flex-basis: 72px;
     }
     .side-title {
       font-size: 1.125rem;
-    }
-    /* 手機：分類視覺縮成精簡矩陣，避免首屏過長 */
-    .eindex {
-      padding: 20px 20px 16px;
-    }
-    .eindex-list {
-      column-gap: 18px;
-      row-gap: 10px;
-    }
-    .eindex-en {
-      font-size: 0.95rem;
-    }
-    .eindex-vol {
-      display: none;
-    }
-    .eindex-foot {
-      letter-spacing: 0.1em;
     }
   }
 </style>

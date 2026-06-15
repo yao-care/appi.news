@@ -15,6 +15,9 @@ describe('partitionCodepoints', () => {
     expect(slices).toHaveLength(1);
     expect([...slices[0].chars].sort()).toEqual(['a', 'b']);
   });
+  it('targetPerSlice <= 0 丟 RangeError', () => {
+    expect(() => partitionCodepoints('a', 0)).toThrow(RangeError);
+  });
 });
 
 describe('unicodeRange', () => {
@@ -53,5 +56,11 @@ describe('replaceFontFaces', () => {
     const { css: out, changed } = replaceFontFaces(css, base, ['@font-face{X}']);
     expect(changed).toBe(false);
     expect(out).toBe(css);
+  });
+  it('容忍 @font-face 與大括號間的空白', () => {
+    const css = `@font-face {font-family:'Noto Sans TC';src:url(/_astro/${base}.abc.woff2) format("woff2")}`;
+    const { css: out, changed } = replaceFontFaces(css, base, ['@font-face{X}']);
+    expect(changed).toBe(true);
+    expect(out).toBe('@font-face{X}');
   });
 });

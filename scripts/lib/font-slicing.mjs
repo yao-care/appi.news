@@ -3,6 +3,7 @@
 // 把文字的唯一碼位排序後，依碼位連續切成「每段約 targetPerSlice 字」的區段。
 // 回傳每段 { chars, min, max }：chars 給 subset-font 子集用，min/max 給 unicode-range。
 export function partitionCodepoints(text, targetPerSlice = 200) {
+  if (targetPerSlice <= 0) throw new RangeError(`targetPerSlice must be > 0, got ${targetPerSlice}`);
   const cps = [...new Set([...text].map((ch) => ch.codePointAt(0)))].sort((a, b) => a - b);
   const slices = [];
   for (let i = 0; i < cps.length; i += targetPerSlice) {
@@ -27,10 +28,12 @@ export function faceCss({ family, weight, url, range }) {
   return `@font-face{font-family:'${family}';font-style:normal;font-weight:${weight};font-display:optional;src:url(${url}) format('woff2');unicode-range:${range}}`;
 }
 
+// 注意：以 [^}]* 比對 block 內容，假設 @font-face 的值不含巢狀 '}'（字型 CSS 不會）。
+// 容忍 @font-face 與 '{' 間的空白，但仍針對壓縮後的單層 block。
 // 移除 CSS 中內容參照到 baseName 的所有 @font-face，於尾端插入 newRules。回傳 { css, changed }。
 export function replaceFontFaces(css, baseName, newRules) {
   let changed = false;
-  const out = css.replace(/@font-face\{[^}]*\}/g, (block) => {
+  const out = css.replace(/@font-face\s*\{[^}]*\}/g, (block) => {
     if (block.includes(baseName)) {
       changed = true;
       return '';

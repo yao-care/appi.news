@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "prebuild": "node scripts/used-images.mjs",
     "build": "astro build",
-    "postbuild": "node scripts/subset-fonts.mjs && node scripts/optimize-home-images.mjs && node scripts/inline-home-css.mjs && pagefind --site dist",
+    "postbuild": "node scripts/subset-fonts.mjs && node scripts/optimize-home-images.mjs && node scripts/optimize-article-images.mjs && node scripts/inline-css.mjs && pagefind --site dist",
     "preview": "astro preview",
     "generate:og": "node scripts/generate-og.mjs",
     "check:links": "node scripts/check-links.mjs",

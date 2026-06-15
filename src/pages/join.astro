@@ -8,8 +8,9 @@ const audiences = [
   '品牌主', '診所與機構',
 ];
 const offers = [
-  '寫作與初稿工具', '封面圖產生', '基本 SEO', '文章排版', '媒體刊登',
-  '作者署名', '作者頁或專欄頁（依方案）', '數據報告（依方案）', '內容檢核流程',
+  '寫作與初稿工具', '封面圖產生', '基本 SEO', '文章排版', 'APPI 上刊流程',
+  '作者署名', '作者或品牌專屬頁面（依方案）', '專屬網站（依方案）', '數據摘要（依方案）',
+  '企業專訪與新聞稿（加購）', '內容檢核流程',
 ];
 const steps = [
   '申請', '選擇方案', '建立作者資料', '使用系統產生文章',
@@ -30,7 +31,7 @@ const steps = [
         讓你的專業觀點被更多讀者看見，建立長期搜尋曝光與專業形象。
       </p>
       <div class="join-cta">
-        <a class="btn btn--primary" href={url('/contact/')}>申請成為作者</a>
+        <a class="btn btn--primary" href={url('/submit/')}>投稿成為作者</a>
         <a class="btn btn--ghost" href={url('/pricing/')}>查看方案</a>
       </div>
     </div>
@@ -64,7 +65,7 @@ const steps = [
       <h2>準備好了嗎？</h2>
       <p>從單篇體驗開始，或直接選擇適合長期經營的方案。</p>
       <div class="join-cta">
-        <a class="btn btn--primary" href={url('/contact/')}>申請成為作者</a>
+        <a class="btn btn--primary" href={url('/submit/')}>投稿成為作者</a>
         <a class="btn btn--ghost" href={url('/pricing/')}>查看方案</a>
       </div>
     </section>

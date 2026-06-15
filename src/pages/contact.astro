@@ -1,6 +1,7 @@
 ---
 import PolicyLayout from '@/layouts/PolicyLayout.astro';
 import { SITE } from '@/config/site';
+import { url } from '@/utils/url';
 ---
 <PolicyLayout
   title="聯絡我們"
@@ -23,16 +24,17 @@ import { SITE } from '@/config/site';
   <h2>不同需求，對應窗口</h2>
   <ul>
     <li>
-      <strong>成為作者</strong>：若你具備特定領域的專業背景，希望以作者身分在 APPI 發表觀點，
-      請先參考<a href="/join/">成為 APPI 作者</a>與<a href="/pricing/">作者方案</a>，再來信附上簡歷與作品連結。
+      <strong>成為作者 / 投稿</strong>：若你具備特定領域的專業背景，希望以作者身分在 APPI 發表觀點，
+      歡迎前往<a href={url('/submit/')}>投稿成為作者</a>填寫表單；也可先參考
+      <a href={url('/join/')}>成為 APPI 作者</a>與<a href={url('/pricing/')}>作者方案</a>。
     </li>
     <li>
       <strong>商業合作 / 新聞稿</strong>：品牌、企業與機構的合作需求，
-      請參考<a href="/sponsored/">新聞稿與商業合作</a>，並於來信簡述合作目標、形式與時程。
+      請參考<a href={url('/sponsored/')}>新聞稿與商業合作</a>，並於來信簡述合作目標、形式與時程。
     </li>
     <li>
       <strong>內容指正</strong>：若你發現文章內容有誤或來源連結失效，歡迎來信指出篇名與問題段落，
-      我們會依<a href="/editorial-policy/">編輯方針</a>查證並儘速更正。
+      我們會依<a href={url('/editorial-policy/')}>編輯方針</a>查證並儘速更正。
     </li>
     <li>
       <strong>媒體與轉載授權</strong>：如需引用、轉載本站內容或洽詢採訪，請來信說明用途與刊載範圍。
@@ -48,10 +50,10 @@ import { SITE } from '@/config/site';
   <h2>隱私說明</h2>
   <p>
     你來信所提供的個人資料，僅用於回覆與處理你的需求，我們會依
-    <a href="/privacy/">隱私權政策</a>妥善保管，不作其他用途。
+    <a href={url('/privacy/')}>隱私權政策</a>妥善保管，不作其他用途。
   </p>
 
   <p style="color:var(--ink-3);font-size: var(--text-xs);">
-    註：線上聯絡表單與自助投稿系統為第二階段功能，目前請先以電子郵件聯繫。
+    註：投稿與作者申請建議直接使用<a href={url('/submit/')}>投稿頁面</a>的表單，其他需求歡迎以電子郵件聯繫。
   </p>
 </PolicyLayout>

@@ -1,0 +1,354 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/config/site';
+import { url } from '@/utils/url';
+
+// Formspree 表單 endpoint。
+// 註冊步驟：到 https://formspree.io 用 hello@appi.news 註冊 → New Form →
+// 複製 https://formspree.io/f/xxxxxxxx 形式的 endpoint 貼到下面這行即可上線。
+// 在尚未填入前，表單會停用送出並提示改用 Email 投稿。
+const FORMSPREE_ENDPOINT = '';
+const formReady = FORMSPREE_ENDPOINT.length > 0;
+
+const steps = [
+  '送出投稿或申請表單',
+  'APPI 內部進行身份與內容初步確認',
+  '選擇方案或確認單篇上刊',
+  '建立作者資料、使用系統協助產製',
+  '作者審稿、平台檢核',
+  '排程發布並追蹤數據',
+];
+---
+<BaseLayout
+  title="投稿成為作者"
+  description="APPI 歡迎各領域專家投稿。已有現成文章可直接投稿，想長期經營專業內容可了解作者方案與工作流程。"
+  path="/submit/"
+  ogImage="og/default.png"
+>
+  <section class="submit-hero">
+    <div class="container">
+      <h1>投稿成為 APPI 作者</h1>
+      <p>
+        APPI 歡迎醫療、科技、財經、營養、法律、教育等各領域的專業作者。無論你已經有完成的文章，
+        或想長期把專業整理成可累積的內容資產，都可以從這裡開始。
+      </p>
+      <div class="submit-hero-cta">
+        <a class="btn btn--primary" href="#direct">我有現成文章，直接投稿</a>
+        <a class="btn btn--ghost" href="#become">我想長期經營，成為作者</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="paths">
+      <article class="path-card" id="direct">
+        <span class="path-tag">直接投稿</span>
+        <h2>已有現成文章</h2>
+        <p>
+          適合已經完成稿件、希望投稿到 APPI 的作者或機構。填寫下方表單並貼上內容，我們收到後會先做基本審閱與身份確認，
+          再回覆後續上刊流程。
+        </p>
+        <a class="btn btn--primary" href="#submit-form">填寫投稿表單</a>
+      </article>
+
+      <article class="path-card" id="become">
+        <span class="path-tag">成為作者</span>
+        <h2>想長期經營專業內容</h2>
+        <p>
+          適合想穩定累積內容、經營作者頁或品牌形象的專業者。建議先了解作者方案與 APPI 提供的工作流程，
+          再透過表單與我們聯繫，我們會協助你選擇合適的方案。
+        </p>
+        <div class="path-actions">
+          <a class="btn btn--ghost" href={url('/pricing/')}>查看作者方案</a>
+          <a class="btn btn--ghost" href={url('/join/')}>了解作者流程</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>合作流程</h2></div>
+      <ol class="flow-steps">
+        {steps.map((s, i) => (
+          <li><span class="flow-num">{i + 1}</span><span>{s}</span></li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="form-section" id="submit-form">
+      <div class="form-head">
+        <h2>投稿與作者申請表單</h2>
+        <p>
+          請填寫以下資訊，標示 <span class="req">*</span> 為必填。我們收到後會先進行基本審閱與身份確認，再回覆後續流程。
+        </p>
+      </div>
+
+      <form
+        class="submit-form"
+        method="POST"
+        action={formReady ? FORMSPREE_ENDPOINT : undefined}
+      >
+        <input type="hidden" name="_subject" value="APPI 投稿／作者申請" />
+
+        <div class="field">
+          <label for="name">姓名 <span class="req">*</span></label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+
+        <div class="field">
+          <label for="role">身份／職業 <span class="req">*</span></label>
+          <input
+            type="text"
+            id="role"
+            name="role"
+            required
+            placeholder="例如：營養師、軟體工程師、診所負責人"
+          />
+        </div>
+
+        <div class="field">
+          <label for="email">電子信箱 <span class="req">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+
+        <div class="field">
+          <label for="topic">投稿主題或作品連結</label>
+          <input type="text" id="topic" name="topic" placeholder="文章主題、領域，或既有作品連結（選填）" />
+        </div>
+
+        <div class="field">
+          <label for="message">投稿內容或需求說明</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="8"
+            placeholder="可直接貼上文章內容，或說明你的投稿主題與合作需求。若文章較長，也可於下方改用 Email 寄送。"
+          ></textarea>
+        </div>
+
+        <div class="form-foot">
+          <button type="submit" class="btn btn--primary" disabled={!formReady}>
+            送出投稿
+          </button>
+          {!formReady && (
+            <p class="form-hint">
+              線上表單即將開放，目前請先以 Email 投稿（見下方）。
+            </p>
+          )}
+        </div>
+      </form>
+
+      <p class="mail-fallback">
+        不方便使用表單，或文章內容較長？也可以直接寄信到
+        <a href={`mailto:${SITE.email}?subject=${encodeURIComponent('APPI 投稿／作者申請')}`}>{SITE.email}</a>，
+        並附上姓名、身份／職業與投稿內容或作品連結。
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .submit-hero {
+    background: linear-gradient(135deg, var(--appi-brand-dark), var(--appi-brand));
+    color: var(--white);
+    padding-block: 60px;
+    margin-bottom: 16px;
+  }
+  .submit-hero h1 {
+    color: var(--white);
+    font-size: var(--text-2xl);
+    max-width: 820px;
+    line-height: 1.3;
+    margin: 0 0 14px;
+  }
+  .submit-hero p {
+    color: var(--on-brand);
+    font-size: var(--text-base);
+    max-width: 700px;
+    line-height: 1.7;
+    margin: 0 0 26px;
+  }
+  .submit-hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .submit-hero :global(.btn--primary) {
+    background: var(--white);
+    color: var(--appi-brand);
+  }
+  .submit-hero :global(.btn--ghost) {
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .paths {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 40px 0 8px;
+    align-items: stretch;
+  }
+  .path-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px 26px;
+    scroll-margin-top: 84px;
+  }
+  .path-tag {
+    align-self: flex-start;
+    background: var(--appi-brand);
+    color: var(--white);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-family: var(--font-sans);
+    margin-bottom: 14px;
+  }
+  .path-card h2 {
+    font-size: var(--text-lg);
+    margin: 0 0 10px;
+  }
+  .path-card p {
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin: 0 0 20px;
+    flex: 1;
+  }
+  .path-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .flow-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .flow-steps li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px;
+    font-weight: 600;
+    color: var(--ink-2);
+    font-size: var(--text-sm);
+    line-height: 1.4;
+  }
+  .flow-num {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--appi-brand);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+  }
+
+  .form-section {
+    background: var(--bg-tint);
+    border-radius: var(--radius);
+    padding: 40px;
+    margin-block: 16px 64px;
+    scroll-margin-top: 84px;
+  }
+  .form-head h2 {
+    margin: 0 0 8px;
+  }
+  .form-head p {
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin: 0 0 24px;
+    max-width: 640px;
+  }
+  .req {
+    color: var(--appi-brand);
+  }
+  .submit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 640px;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .field label {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .field input,
+  .field textarea {
+    font: inherit;
+    color: var(--ink);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    width: 100%;
+  }
+  .field textarea {
+    resize: vertical;
+    line-height: 1.6;
+  }
+  .field input:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--appi-brand);
+  }
+  .form-foot {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .submit-form button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .form-hint {
+    margin: 0;
+    font-size: var(--text-xs);
+    color: var(--ink-3);
+  }
+  .mail-fallback {
+    margin: 24px 0 0;
+    font-size: var(--text-sm);
+    color: var(--ink-2);
+    line-height: 1.7;
+    max-width: 640px;
+  }
+
+  @media (max-width: 760px) {
+    .paths {
+      grid-template-columns: 1fr;
+    }
+    .flow-steps {
+      grid-template-columns: 1fr;
+    }
+    .submit-hero h1 {
+      font-size: var(--text-xl);
+    }
+    .form-section {
+      padding: 28px 20px;
+    }
+  }
+</style>

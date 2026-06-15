@@ -1,5 +1,6 @@
 ---
 import PolicyLayout from '@/layouts/PolicyLayout.astro';
+import { url } from '@/utils/url';
 ---
 <PolicyLayout
   title="隱私權政策"
@@ -65,7 +66,7 @@ import PolicyLayout from '@/layouts/PolicyLayout.astro';
     <li>請求停止蒐集、處理或利用。</li>
     <li>請求刪除。</li>
   </ul>
-  <p>如需行使上述權利，請透過<a href="/contact/">聯絡我們</a>與我們聯繫，我們將在合理期間內處理你的請求。</p>
+  <p>如需行使上述權利，請透過<a href={url('/contact/')}>聯絡我們</a>與我們聯繫，我們將在合理期間內處理你的請求。</p>
 
   <h2>七、兒童與未成年人隱私</h2>
   <p>

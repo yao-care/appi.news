@@ -4,8 +4,8 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
 import { url } from '@/utils/url';
 
 const formats = [
-  '新聞稿刊登', '專題合作', '品牌專欄', '企業專訪',
-  '活動報導', '產業白皮書', '社群圖卡', '內容策略顧問',
+  '企業新聞稿撰寫', '遠端企業專訪', '深度企業專訪', '現場採訪',
+  '品牌內容方案', '品牌專欄', '投稿審閱與上刊', '商業內容揭露標示',
 ];
 ---
 <BaseLayout
@@ -26,7 +26,9 @@ const formats = [
     <section class="section">
       <div class="section-head"><h2>合作形式</h2></div>
       <p class="section-intro">
-        從單篇新聞稿到長期的品牌專欄與內容顧問，我們提供多種合作形式，可依你的目標與預算彈性搭配。
+        從單篇新聞稿到深度專訪與長期品牌專欄，我們提供多種合作形式，可依你的目標與預算彈性搭配。
+        各項目的內容與費用整理在<a href={url('/services/')}>加購服務與內容說明</a>，長期合作可參考
+        <a href={url('/pricing/')}>品牌內容方案</a>。
       </p>
       <div class="format-grid">
         {formats.map((f) => <div class="format-card">{f}</div>)}

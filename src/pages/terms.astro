@@ -1,5 +1,6 @@
 ---
 import PolicyLayout from '@/layouts/PolicyLayout.astro';
+import { url } from '@/utils/url';
 ---
 <PolicyLayout
   title="服務條款"
@@ -41,7 +42,7 @@ import PolicyLayout from '@/layouts/PolicyLayout.astro';
   </p>
   <p>
     本站保留是否刊登、調整或下架任何投稿內容的最終決定權。相關規範請參閱
-    <a href="/editorial-policy/">編輯方針</a>。
+    <a href={url('/editorial-policy/')}>編輯方針</a>。
   </p>
 
   <h2>四、使用者行為</h2>
@@ -56,7 +57,7 @@ import PolicyLayout from '@/layouts/PolicyLayout.astro';
   <h2>五、商業合作</h2>
   <p>
     本站接受新聞稿、品牌專欄、專題合作等商業合作，所有商業合作內容均依 APPI 商業內容揭露規範清楚標示，
-    不會以中立新聞的形式呈現。詳細合作形式與揭露原則請見<a href="/sponsored/">新聞稿與商業合作</a>。
+    不會以中立新聞的形式呈現。詳細合作形式與揭露原則請見<a href={url('/sponsored/')}>新聞稿與商業合作</a>。
   </p>
 
   <h2>六、第三方連結</h2>
@@ -69,7 +70,7 @@ import PolicyLayout from '@/layouts/PolicyLayout.astro';
   <p>
     本站已盡合理努力維持內容的正確、即時與完整，但不就此提供任何明示或默示的擔保。
     在法律允許的最大範圍內，本站不對因使用或無法使用本站內容、服務所生之任何直接、間接、附帶或衍生之損失負責。
-    各類內容的詳細免責說明請見<a href="/disclaimer/">免責聲明</a>。
+    各類內容的詳細免責說明請見<a href={url('/disclaimer/')}>免責聲明</a>。
   </p>
 
   <h2>八、條款變更</h2>
@@ -86,6 +87,6 @@ import PolicyLayout from '@/layouts/PolicyLayout.astro';
 
   <h2>十、聯絡我們</h2>
   <p>
-    對本條款有任何疑問，歡迎透過<a href="/contact/">聯絡我們</a>與我們聯繫。
+    對本條款有任何疑問，歡迎透過<a href={url('/contact/')}>聯絡我們</a>與我們聯繫。
   </p>
 </PolicyLayout>

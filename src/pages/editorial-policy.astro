@@ -1,5 +1,6 @@
 ---
 import PolicyLayout from '@/layouts/PolicyLayout.astro';
+import { url } from '@/utils/url';
 ---
 <PolicyLayout
   title="編輯方針"
@@ -41,7 +42,7 @@ import PolicyLayout from '@/layouts/PolicyLayout.astro';
   <p>
     我們在發布前會就內容的事實、引用與數據進行查證；發布後若發現錯誤，會儘速更正，
     並視情況在文末加註更正說明。讀者若發現內容有誤，歡迎透過
-    <a href="/contact/">聯絡我們</a>指正，我們會依本方針處理。
+    <a href={url('/contact/')}>聯絡我們</a>指正，我們會依本方針處理。
   </p>
 
   <h2>四、醫療健康內容規範</h2>
@@ -64,6 +65,6 @@ import PolicyLayout from '@/layouts/PolicyLayout.astro';
     APPI 接受新聞稿、品牌專欄、企業專訪等商業合作，但所有商業內容都必須依規範清楚揭露，
     並標示為「合作」「贊助」「新聞稿」或「品牌專欄」。商業關係不會影響編輯對事實的判斷，
     合作內容同樣須符合本方針的查證與內容標準。詳細合作形式請見
-    <a href="/sponsored/">新聞稿與商業合作</a>。
+    <a href={url('/sponsored/')}>新聞稿與商業合作</a>。
   </p>
 </PolicyLayout>

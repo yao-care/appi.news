@@ -27,8 +27,8 @@ status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
 coverImage: "covers/post-698-stock.jpg"
-coverAlt: "矽晶圓上每格晶片清晰可見的顯微特寫"
-coverImageCredit: "Photo by Laura Ockel on Unsplash"
+coverAlt: "電腦處理器晶片的細部特寫"
+coverImageCredit: "Photo by SHOX ART on Pexels"
 ---
 
 台積電在2025年10月16日公布的第三季財報，再次刷新了投資人對「歷史紀錄」這個詞的想像。[CNBC報導](https://www.cnbc.com/2025/10/16/tsmc-hits-yet-another-record-as-profit-surges-39percent-beating-estimates-on-ai-chip-demand-surge.html)，台積電Q3合計營收達331億美元，較去年同期成長39%，淨利潤年增39.1%，雙雙超越市場預期。連續多季創新高的背後，是一個結構性的需求轉移：AI運算從研究實驗室進入消費端，帶動了對先進製程晶片幾乎沒有上限的需求。

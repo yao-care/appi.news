@@ -2,7 +2,7 @@
 
 > Asia-Pacific Press & Insight — 聚集各領域專業作者的觀點媒體，透過新聞、評論、專欄、專題、專訪與深度分析，協助讀者理解重要議題。
 
-以 [Astro](https://astro.build) 建置的靜態專業媒體網站，內容涵蓋焦點、國際、健康（APPI Health｜亞太醫頭條）、科技、財經、運動、生活與專欄。
+以 [Astro](https://astro.build) 建置的靜態專業媒體網站，內容涵蓋焦點、國際、健康（APPI Health）、科技、財經、運動、生活與專欄。
 
 線上：<https://yao-care.github.io/appi.news/>
 

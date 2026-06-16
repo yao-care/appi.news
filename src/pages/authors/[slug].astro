@@ -77,12 +77,11 @@ const ld = [
     <Breadcrumbs items={[{ name: '作者群', path: '/authors/' }, { name: author.data.name }]} />
 
     <header class="author-hero">
-      <ImageWithFallback src={avatar} alt={author.data.name} fallback="og/author.png" class="author-hero-avatar" width={112} height={112} />
+      <ImageWithFallback src={avatar} alt={author.data.name} fallback="og/author.png" class="author-hero-avatar" width={96} height={96} />
       <div class="author-hero-info">
         <span class="author-hero-level">{LEVEL_LABELS[author.data.authorLevel]}</span>
         <h1>{author.data.name}</h1>
         {author.data.displayTitle && <p class="author-hero-title">{author.data.displayTitle}</p>}
-        {author.data.bioShort && <p class="author-hero-bio">{author.data.bioShort}</p>}
         {
           author.data.specialties.length > 0 && (
             <div class="author-specialties">
@@ -94,9 +93,6 @@ const ld = [
           {author.data.website && (
             <a class="author-link" href={author.data.website} rel="me noopener" target="_blank">官方網站</a>
           )}
-          {author.data.socialLinks.map((s) => (
-            <a class="author-link" href={s.url} rel="me noopener" target="_blank">{s.label}</a>
-          ))}
           {author.data.emailPublic && (
             <a class="author-link" href={`mailto:${author.data.emailPublic}`}>{author.data.emailPublic}</a>
           )}
@@ -109,18 +105,15 @@ const ld = [
 
     <div class="author-bio prose article-body">
       <Content />
+      {
+        author.data.credentials.length > 0 && (
+          <>
+            <h2>專業資格</h2>
+            <ul>{author.data.credentials.map((c) => <li>{c}</li>)}</ul>
+          </>
+        )
+      }
     </div>
-
-    {
-      author.data.credentials.length > 0 && (
-        <section class="section">
-          <div class="section-head"><h2>現任與經歷</h2></div>
-          <ul class="author-credentials">
-            {author.data.credentials.map((c) => <li>{c}</li>)}
-          </ul>
-        </section>
-      )
-    }
 
     {
       myColumns.length > 0 && authorHasColumnPage(author) && (
@@ -159,23 +152,19 @@ const ld = [
   }
   .author-hero {
     display: flex;
-    gap: 28px;
+    gap: 24px;
     align-items: center;
-    margin: 18px 0 36px;
-    padding: 28px;
-    background: linear-gradient(135deg, var(--bg-tint), var(--bg-soft));
-    border: 1px solid var(--line-2);
-    border-radius: var(--radius);
+    margin: 18px 0 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
   }
   :global(.author-hero-avatar) {
-    width: 112px;
-    height: 112px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
     background: var(--bg-soft);
-    border: 3px solid #fff;
-    box-shadow: var(--shadow-md);
   }
   .author-hero-level {
     display: inline-block;
@@ -197,13 +186,6 @@ const ld = [
     font-weight: 600;
     font-family: var(--font-sans);
   }
-  .author-hero-bio {
-    margin: 0 0 14px;
-    color: var(--ink-2);
-    font-size: var(--text-sm);
-    line-height: 1.7;
-    max-width: 52ch;
-  }
   .author-specialties {
     display: flex;
     flex-wrap: wrap;
@@ -211,9 +193,8 @@ const ld = [
   }
   .author-specialties span {
     font-size: var(--text-xs);
-    background: #fff;
+    background: var(--bg-soft);
     color: var(--ink-2);
-    border: 1px solid var(--line-2);
     padding: 3px 11px;
     border-radius: 20px;
     font-family: var(--font-sans);
@@ -236,24 +217,6 @@ const ld = [
   }
   .author-bio {
     max-width: var(--maxw-prose);
-  }
-  .author-credentials {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 12px;
-  }
-  .author-credentials li {
-    background: var(--bg-soft);
-    border-left: 3px solid var(--appi-accent);
-    border-radius: var(--radius-sm);
-    padding: 12px 16px;
-    font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--ink);
-    font-family: var(--font-sans);
   }
   .author-columns {
     list-style: none;
@@ -285,13 +248,8 @@ const ld = [
       flex-direction: column;
       text-align: center;
       align-items: center;
-      gap: 18px;
     }
-    .author-hero-bio {
-      max-width: none;
-    }
-    .author-specialties,
-    .author-meta {
+    .author-specialties {
       justify-content: center;
     }
   }

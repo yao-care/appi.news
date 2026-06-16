@@ -2,6 +2,8 @@
 name: "黃子彥"
 displayTitle: "預防醫學與中醫養生內容總編輯"
 bioShort: "長期投入預防醫學與中醫養生知識整合，擅長融合傳統健康觀點與現代醫學研究，以食物與飲食為切入點傳遞健康教育。"
+avatar: "authors/huang-ziyan.jpg"
+portrait: "authors/huang-ziyan-full.jpg"
 credentials:
   - "中華民國上醫預防醫學發展協會副理事長（現任）"
   - "上一生醫研發總監（現任）"

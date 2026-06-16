@@ -9,7 +9,7 @@ description: APPI News 每週數據週報。讀 GA4+GSC 四區塊數據、跑外
 
 ## 步驟 1：抓數據
 跑 `node scripts/weekly-data.mjs`，取得四區塊 JSON（period / articlePerf / searchOpportunities / trafficHealth）。
-- 若指令失敗：直接跳到「失敗處理」。
+- 失敗判定：若指令**非零離開**或 stdout **不是合法 JSON**，視為失敗，直接跳到「失敗處理」（不要把空/部分輸出當成功）。
 
 ## 步驟 2：外部熱題雷達
 用 WebSearch / WebFetch 掃 Anthropic / OpenAI / Google 官方 blog、arXiv cs.AI、Hacker News 高分科技題，列出近一週熱題。

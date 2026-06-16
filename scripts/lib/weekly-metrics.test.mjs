@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { pctChange, categoryOf, isAiReferral, topArticles, searchOpportunities } from './weekly-metrics.mjs';
+import { pctChange, categoryOf, isAiReferral, topArticles, searchOpportunities, categoryBreakdown } from './weekly-metrics.mjs';
 
 describe('小工具', () => {
   it('pctChange 四捨五入到整數百分比，前值 0 回 null', () => {
@@ -47,6 +47,18 @@ describe('searchOpportunities', () => {
     expect(searchOpportunities(resp)).toEqual([
       { query: '機會二', impressions: 800, clicks: 5, ctr: 0.006, position: 18.0 },
       { query: 'ai 對齊', impressions: 500, clicks: 3, ctr: 0.006, position: 14.2 },
+    ]);
+  });
+});
+
+describe('categoryBreakdown', () => {
+  it('上週有、本週掉到 0 的分類仍出現且 wowPct=-100', () => {
+    const ga = (path, views) => ({ dimensionValues: [{ value: path }], metricValues: [{ value: String(views) }] });
+    const cur = { rows: [ga('/tech/a/', 100)] };
+    const prev = { rows: [ga('/tech/a/', 100), ga('/health/b/', 50)] };
+    expect(categoryBreakdown(cur, prev)).toEqual([
+      { category: 'tech', views: 100, wowPct: 0 },
+      { category: 'health', views: 0, wowPct: -100 },
     ]);
   });
 });

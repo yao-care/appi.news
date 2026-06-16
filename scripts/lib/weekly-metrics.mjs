@@ -15,7 +15,7 @@ export function categoryOf(path) {
 
 export function isAiReferral(source) {
   const s = (source || '').toLowerCase();
-  return AI_HOSTS.some((h) => s === h || s.endsWith(`.${h}`) || s.includes(h));
+  return AI_HOSTS.some((h) => s === h || s.endsWith(`.${h}`));
 }
 
 const rows = (report) => report?.rows ?? [];
@@ -42,8 +42,8 @@ export function categoryBreakdown(curReport, prevReport) {
   };
   const cur = sum(curReport);
   const prev = sum(prevReport);
-  return Object.keys(cur)
-    .map((category) => ({ category, views: cur[category], wowPct: pctChange(cur[category], prev[category] || 0) }))
+  return [...new Set([...Object.keys(cur), ...Object.keys(prev)])]
+    .map((category) => ({ category, views: cur[category] || 0, wowPct: pctChange(cur[category] || 0, prev[category] || 0) }))
     .sort((a, b) => b.views - a.views);
 }
 

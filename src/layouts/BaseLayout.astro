@@ -5,6 +5,7 @@ import SEOHead from '@/components/seo/SEOHead.astro';
 import JsonLd from '@/components/seo/JsonLd.astro';
 import SiteHeader from '@/components/blocks/SiteHeader.astro';
 import SiteFooter from '@/components/blocks/SiteFooter.astro';
+import Analytics from '@/components/seo/Analytics.astro';
 import { orgLd, websiteLd } from '@/utils/jsonld';
 
 interface Props {
@@ -59,6 +60,7 @@ const baseLd = [websiteLd(Astro.site), orgLd(Astro.site)];
     />
     <JsonLd data={baseLd} />
     {jsonld && <JsonLd data={jsonld} />}
+    <Analytics />
   </head>
   <body>
     <a class="skip-link" href="#main">跳到主要內容</a>

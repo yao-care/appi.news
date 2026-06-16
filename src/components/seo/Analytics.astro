@@ -1,0 +1,41 @@
+---
+/**
+ * Google Analytics 4（gtag）延遲載入。
+ *
+ * 效能鐵則（PERFORMANCE.md §4/§5）：TBT 必須維持 0。gtag.js 會在主執行緒
+ * 解析/執行，若放進首屏關鍵路徑會吃 TBT，因此這裡：
+ *   1. 等 window `load` 之後（已過 TBT 量測窗 FCP→TTI）。
+ *   2. 再用 requestIdleCallback（無則 setTimeout 後備）在閒置時才插入 gtag.js。
+ * 並用 hostname 守門：僅在正式網域 appi.news 啟用，避免本機 / pnpm preview /
+ * 舊的 github.io 專案頁重複送資料污染 GA。
+ *
+ * GA ID 來源是 src/config/site.ts 的 SITE.gaId（空字串則整段不輸出）。
+ * 用 set:html 原樣輸出腳本文字（gaId 為固定常數，無注入風險）；
+ * 不用 define:vars + 樣板字串包裹，那會被當成被丟棄的字串、IIFE 不執行。
+ */
+import { SITE } from '@/config/site';
+const gaId = SITE.gaId;
+const snippet = `(function () {
+  var host = location.hostname;
+  if (host !== 'appi.news' && host !== 'www.appi.news') return;
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=${gaId}';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', '${gaId}');
+  }
+  window.addEventListener('load', function () {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadGA, { timeout: 4000 });
+    } else {
+      setTimeout(loadGA, 1500);
+    }
+  });
+})();`;
+---
+{gaId && <script is:inline set:html={snippet} />}

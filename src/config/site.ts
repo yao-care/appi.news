@@ -13,6 +13,8 @@ export const SITE = {
   /** 完整品牌說法 */
   description:
     'APPI News｜亞太專業觀點，是一個聚集各領域專業作者的觀點媒體，透過新聞、評論、專欄、專題、專訪與深度分析，協助讀者理解健康、科技、財經、國際、運動、生活等重要議題。',
+  /** Google Analytics 4 評估 ID（空字串則不輸出追蹤碼）。延遲載入見 components/seo/Analytics.astro */
+  gaId: 'G-38R2SZ5FTQ',
   /** 預設語系 */
   lang: 'zh-Hant',
   locale: 'zh_TW',

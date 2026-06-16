@@ -77,10 +77,10 @@ export function handleInteraction({ rawBody, headers, signingSecret, allowlist, 
   }
 
   if (payload.type === 'view_submission') {
-    const { userId, viewpoint, length, topic } = parseModalSubmission(payload);
+    const { userId, viewpoint, length, publishDate, topic } = parseModalSubmission(payload);
     if (!isAuthorized(userId, allowlist)) return errorsResponse('你沒有觸發權限');
     if (inFlight) return errorsResponse('目前已有一篇在產製中，請等它完成再試');
-    const job = toJob(topic, viewpoint, { length });
+    const job = toJob(topic, viewpoint, { length, publishDate });
     const errs = validateJob(job);
     if (errs.length) return errorsResponse(errs.join('；'));
     return {
@@ -140,8 +140,10 @@ function runEngine(job) {
   child.on('close', (code) => {
     inFlight = false;
     if (code === 0) {
-      const m = out.match(/PUBLISHED_URL=(\S+)/);
-      notify(m ? `✅ 自動產文完成並發佈：「${job.title}」\n<${m[1]}|看文章>` : `✅ 自動產文完成並發佈：「${job.title}」`);
+      const url = out.match(/PUBLISHED_URL=(\S+)/)?.[1];
+      const sched = out.match(/SCHEDULED_DATE=(\S+)/)?.[1];
+      const link = url ? `\n<${url}|${sched ? '預覽連結' : '看文章'}>` : '';
+      notify(sched ? `✅ 已排程 ${sched} 發佈：「${job.title}」${link}` : `✅ 自動產文完成並發佈：「${job.title}」${link}`);
     } else {
       notify(`⚠️ 自動產文失敗（exit ${code}）：「${job.title}」\n\`\`\`${out.slice(-800)}\`\`\``);
     }

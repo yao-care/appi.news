@@ -111,10 +111,9 @@ newsroom 是**互動式日更引擎**，四步：①議題雷達 →②`AskUserQ
 
 ## 7. 發佈與事後編輯
 
-- 起草完成、`status: published`、`publishDate` 設現在。
-- **push 前唯一硬性 gate：`pnpm check:links`**。綠 → `git add -A && commit && push`，GitHub Actions 部署上線；紅 → 不發佈，改動留工作區待處理 + Slack 報錯（避免壞連結擋整站部署）。
+- **排期（Phase 2，預設）**：預設排到「最近一個還沒有文章的日子」（掃既有 `publishDate` 找空檔，維持日更）。該日＝今天 → `status: published` 立即上線；未來 → `status: scheduled` + 該日 08:00（+08:00），由 6h cron 到時自動現身。**modal 選填日期可覆寫**（指定特定日）。實作：`scripts/lib/publish-slot.mjs`（`nextOpenPublishDate`）+ 引擎 `computeSchedule`。
+- **push 前唯一硬性 gate：`pnpm check:links`**。綠 → `git add -A && commit && push`，GitHub Actions 部署；紅 → 不發佈，改動留工作區待處理 + Slack 報錯（避免壞連結擋整站部署）。
 - 上線後作者**進編輯器修改**（事實、用詞、補強真人觀點）。這是品質與事實的事後兜底。
-- 想排期而非立即上線時，可改 `status: scheduled` + 未來 `publishDate`，由 6h cron 自動現身（既有機制）；預設是立即發佈。
 
 ## 8. 失敗處理（無人值守：失敗要出聲）
 
@@ -127,7 +126,7 @@ newsroom 是**互動式日更引擎**，四步：①議題雷達 →②`AskUserQ
 
 ## 9. 已定案 vs 待拍板
 
-**已定（2026-06-16）**：① 觸發＝Slack 按鈕 + 看法 modal（§4）；② 真人觀點＝modal 必填、沒收到不動筆（§4、§6）；③ **發佈＝寫完 `status: published` 直接 push 上線、事後進編輯器修改，不走 PR；唯一自動 gate＝`check:links`**（§7）；④ author-memory 照 newsroom 在發佈時寫（§6）。
+**已定（2026-06-16）**：① 觸發＝Slack 按鈕 + 看法 modal（§4）；② 真人觀點＝modal 必填、沒收到不動筆（§4、§6）；③ **發佈＝push main、不走 PR、事後編輯；預設排到最近空檔（維持日更）、modal 可指定日期，當天空檔則立即 `published`；唯一自動 gate＝`check:links`**（§7）；④ author-memory 照 newsroom 在發佈時寫（§6）。
 
 **仍待你拍板（次要，不卡主結構）**：
 
@@ -135,7 +134,7 @@ newsroom 是**互動式日更引擎**，四步：①議題雷達 →②`AskUserQ
 2. **每次上限**：一批最多自動產幾篇（建議硬上限 ≤3）。
 3. **篇幅預設**：預設短稿（800–1500）還是深稿？modal 要不要加選填覆寫。
 4. **配圖成本**：每段 + 封面都跑 `gen-image.mjs`，要不要設圖數上限。
-5. **立即發佈 vs 排期**：預設立即 `published`，要不要保留「排到未來時段」選項。
+5. ~~立即發佈 vs 排期~~（**已實作 Phase 2**：預設排到最近空檔、modal 可指定日期、當天空檔即時發）。
 6. **端點落腳**：互動端點掛 pm2 + NPM 反代（沿用主機現有模式），用哪個網域/路徑。
 
 ## 10. 分階段交付建議

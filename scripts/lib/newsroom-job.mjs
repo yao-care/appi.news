@@ -63,6 +63,11 @@ export function validateJob(job) {
     errors.push(`length 必須是 ${LENGTHS.join(' / ')}，收到：${JSON.stringify(job.length)}`);
   }
 
+  // 排程日若有給，須為 YYYY-MM-DD（或 ISO 起頭）
+  if (job.publishDate != null && !/^\d{4}-\d{2}-\d{2}/.test(String(job.publishDate))) {
+    errors.push(`publishDate 須為 YYYY-MM-DD，收到：${JSON.stringify(job.publishDate)}`);
+  }
+
   return errors;
 }
 
@@ -81,5 +86,6 @@ export function normalizeJob(job) {
     angle: isNonEmptyString(job.angle) ? job.angle.trim() : '',
     length: job.length ?? LENGTH_DEFAULT,
     mustCite: Array.isArray(job.mustCite) ? job.mustCite.filter(isNonEmptyString) : [],
+    publishDate: job.publishDate ? String(job.publishDate).slice(0, 10) : null, // 指定排程日；null=引擎自選空檔
   };
 }

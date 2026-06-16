@@ -12,6 +12,8 @@ import {
   VIEWPOINT_ACTION,
   LENGTH_BLOCK,
   LENGTH_ACTION,
+  DATE_BLOCK,
+  DATE_ACTION,
 } from './slack-interaction.mjs';
 
 const topic = () => ({
@@ -105,9 +107,34 @@ describe('toJob', () => {
     expect(job.category).toBe('tech');
     expect(job.title).toContain('居家陪伴機器人');
   });
-  it('帶 length 選項', () => {
-    expect(toJob(topic(), '看法', { length: 'deep' }).length).toBe('deep');
-    expect(toJob(topic(), '看法').length).toBeUndefined();
+  it('帶 length / publishDate 選項', () => {
+    const job = toJob(topic(), '看法', { length: 'deep', publishDate: '2026-06-22' });
+    expect(job.length).toBe('deep');
+    expect(job.publishDate).toBe('2026-06-22');
+    expect(toJob(topic(), '看法').publishDate).toBeUndefined();
+  });
+});
+
+describe('排期日期（Phase 2）', () => {
+  it('modal 含選填日期挑選器（留空＝下一個空檔）', () => {
+    const v = buildViewpointModal({ topic: topic() });
+    const db = v.blocks.find((b) => b.block_id === DATE_BLOCK);
+    expect(db.optional).toBe(true);
+    expect(db.element.type).toBe('datepicker');
+  });
+
+  it('parseModalSubmission 取出選定日期；沒選 → null', () => {
+    const withDate = {
+      type: 'view_submission',
+      user: { id: 'U' },
+      view: {
+        private_metadata: JSON.stringify(topic()),
+        state: { values: { [VIEWPOINT_BLOCK]: { [VIEWPOINT_ACTION]: { value: '看法' } }, [DATE_BLOCK]: { [DATE_ACTION]: { selected_date: '2026-06-25' } } } },
+      },
+    };
+    expect(parseModalSubmission(withDate).publishDate).toBe('2026-06-25');
+    const noDate = { type: 'view_submission', user: { id: 'U' }, view: { private_metadata: JSON.stringify(topic()), state: { values: { [VIEWPOINT_BLOCK]: { [VIEWPOINT_ACTION]: { value: '看法' } } } } } };
+    expect(parseModalSubmission(noDate).publishDate).toBeNull();
   });
 });
 

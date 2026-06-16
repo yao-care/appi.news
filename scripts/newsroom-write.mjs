@@ -18,9 +18,13 @@
 //
 // 設計依據：docs/superpowers/specs/2026-06-16-unattended-newsroom-design.md
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { validateJob, normalizeJob } from './lib/newsroom-job.mjs';
+import { nextOpenPublishDate, takenDatesFromContents } from './lib/publish-slot.mjs';
+
+const ARTICLES_DIR = 'src/content/articles';
 
 function die(msg) {
   console.error(`✖ ${msg}`);
@@ -35,10 +39,36 @@ function sh(cmd, args, opts = {}) {
   return (r.stdout || '').trim();
 }
 
-/** 批次模式起草 prompt：跳雷達/問答、保留起草與查證、直接發佈（不 push，由協調器 gate 後處理）。 */
-export function buildDraftPrompt(job) {
+/** 決定發佈狀態與日期：指定日 > 下一個空檔；今天/過去→published、未來→scheduled。 */
+function computeSchedule(job) {
+  const taipeiToday = new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10);
+  let target = job.publishDate || null;
+  if (!target) {
+    let contents = [];
+    try {
+      contents = readdirSync(ARTICLES_DIR)
+        .filter((f) => f.endsWith('.md'))
+        .map((f) => readFileSync(join(ARTICLES_DIR, f), 'utf8'));
+    } catch {
+      contents = [];
+    }
+    target = nextOpenPublishDate(takenDatesFromContents(contents), taipeiToday);
+  }
+  const scheduled = target > taipeiToday;
+  return {
+    status: scheduled ? 'scheduled' : 'published',
+    dateYmd: target,
+    publishDate: scheduled ? `${target}T08:00:00+08:00` : new Date().toISOString(),
+    scheduled,
+  };
+}
+
+/** 批次模式起草 prompt：跳雷達/問答、保留起草與查證、不 push（由協調器 gate 後處理）。 */
+export function buildDraftPrompt(job, schedule = null) {
   const cite = job.mustCite.length ? `\n必引來源：\n${job.mustCite.map((c) => `- ${c}`).join('\n')}` : '';
   const len = job.length === 'deep' ? '深稿（3000+ 字）' : '短稿（800–1500 字）';
+  const status = schedule?.status ?? 'published';
+  const pubDate = schedule?.publishDate ?? new Date().toISOString();
   return [
     '你正在以「無人值守批次模式」執行 APPI News 的 /newsroom 科技類起草，寫完直接發佈。',
     '先讀 .claude/skills/newsroom/SKILL.md、persona.md、author-memory.json。',
@@ -55,7 +85,7 @@ export function buildDraftPrompt(job) {
     '',
     '【務必照做】',
     '1. 完整執行 newsroom 步驟三：查料、擴寫、每段必配圖、超連結逐條查證（每條 2xx 且內容支持該句，死連結一律換或刪），去 AI 腔複查、繁中台灣用語複查。',
-    '2. frontmatter：status: "published"、publishDate 設為現在、category: "tech"、author: "lightman"、sourceType: "editorial"（須為 src/content.config.ts 的 sourceType enum 合法值），並用 disclosure 欄位揭露「以 AI 輔助起草、經人工查證編輯」。',
+    `2. frontmatter：status: "${status}"、publishDate: "${pubDate}"、category: "tech"、author: "lightman"、sourceType: "editorial"（須為 src/content.config.ts 的 sourceType enum 合法值），並用 disclosure 欄位揭露「以 AI 輔助起草、經人工查證編輯」。`,
     '3. 寫入 src/content/articles/<slug>.md（slug 你自訂，英文 kebab），並依步驟三.9 把本篇追加進 author-memory.json。',
     '4. 嚴禁杜撰：數據/事實/引述都要可連線來源；Q3 真人觀點只用工單給的那段，不得自行虛構作者經歷。',
     '5. **不要 git add / commit / push**——版控與發佈由外層腳本在 check:links gate 後處理。',
@@ -82,13 +112,15 @@ function main() {
     die(`工單未過驗證（零副作用退出）：\n  - ${errors.join('\n  - ')}`);
   }
   const job = normalizeJob(raw);
-  const prompt = buildDraftPrompt(job);
+  const schedule = computeSchedule(job);
+  const prompt = buildDraftPrompt(job, schedule);
 
   if (!go && !stage) {
     console.log('— DRY RUN（不帶 --go/--stage，零副作用）—');
     console.log(`工單通過：${job.title}（tech${job.subcategory ? '/' + job.subcategory : ''}，${job.length}）`);
-    console.log('將呼叫：claude -p <批次起草 prompt>（status: published）');
-    console.log('gate：pnpm check:links（壞連結擋整站部署）；然後 git commit + push 上線');
+    console.log(`排程：${schedule.status}（${schedule.scheduled ? '排到 ' + schedule.dateYmd : '今天，立即發佈'}）`);
+    console.log('將呼叫：claude -p <批次起草 prompt>');
+    console.log('gate：pnpm check:links（壞連結擋整站部署）；然後 git commit + push');
     console.log('\n===== 批次起草 prompt 預覽 =====\n');
     console.log(prompt);
     return;
@@ -123,12 +155,13 @@ function main() {
 
   console.log('→ commit');
   sh('git', ['add', '-A']);
-  sh('git', ['commit', '-m', `feat(article): 自動發佈 — ${job.title}\n\n科技類自動產文（status: published）。真人觀點由作者提供。`]);
+  sh('git', ['commit', '-m', `feat(article): 自動產文 — ${job.title}\n\n科技類自動產文（status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。真人觀點由作者提供。`]);
   if (go) {
-    console.log('→ push 上線');
+    console.log('→ push');
     sh('git', ['push']);
-    console.log('✓ 已發佈上線。可進編輯器修改。');
-    if (url) console.log(`PUBLISHED_URL=${url}`); // 給外層（Slack 回報）解析
+    console.log(schedule.scheduled ? `✓ 已排程 ${schedule.dateYmd} 發佈。` : '✓ 已發佈上線。可進編輯器修改。');
+    if (schedule.scheduled) console.log(`SCHEDULED_DATE=${schedule.dateYmd}`); // 給外層解析
+    if (url) console.log(`PUBLISHED_URL=${url}`);
   } else {
     console.log(`✓ 已 stage（commit 在分支 ${branch}，未 push）。審稿 OK 後 cherry-pick 到 main push 上線。`);
     if (url) console.log(`STAGED_SLUG=${slug}`);

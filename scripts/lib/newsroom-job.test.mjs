@@ -58,6 +58,11 @@ describe('validateJob — 鐵律 gate', () => {
     expect(errs.some((e) => e.includes('length'))).toBe(true);
   });
 
+  it('合法 publishDate 通過、非法格式被擋', () => {
+    expect(validateJob({ ...validJob(), publishDate: '2026-06-20' })).toEqual([]);
+    expect(validateJob({ ...validJob(), publishDate: '06/20' }).some((e) => e.includes('publishDate'))).toBe(true);
+  });
+
   it('非物件輸入不爆炸', () => {
     expect(validateJob(null).length).toBeGreaterThan(0);
     expect(validateJob('x').length).toBeGreaterThan(0);
@@ -75,6 +80,11 @@ describe('normalizeJob — 預設值與淨化', () => {
     expect(n.category).toBe(TECH_CATEGORY);
     expect(n.title).toBe('有空白');
     expect(n.mustCite).toEqual([]);
+  });
+
+  it('publishDate 截到 YYYY-MM-DD；沒給 → null', () => {
+    expect(normalizeJob({ ...validJob(), publishDate: '2026-06-20T08:00:00+08:00' }).publishDate).toBe('2026-06-20');
+    expect(normalizeJob(validJob()).publishDate).toBeNull();
   });
 
   it('不改動入參', () => {

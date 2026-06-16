@@ -12,6 +12,8 @@ export const VIEWPOINT_BLOCK = 'viewpoint_block';
 export const VIEWPOINT_ACTION = 'viewpoint_input';
 export const LENGTH_BLOCK = 'length_block';
 export const LENGTH_ACTION = 'length_select';
+export const DATE_BLOCK = 'date_block';
+export const DATE_ACTION = 'date_pick';
 
 /** 按鈕 value 帶 topic（週報建議欄位）。Slack button value 上限 2000 字元，逾限丟錯。 */
 export function buildTopicButtonValue(topic) {
@@ -59,6 +61,14 @@ export function buildViewpointModal({ topic }) {
           ],
         },
       },
+      {
+        type: 'input',
+        block_id: DATE_BLOCK,
+        optional: true,
+        label: { type: 'plain_text', text: '發佈日期' },
+        element: { type: 'datepicker', action_id: DATE_ACTION },
+        hint: { type: 'plain_text', text: '留空＝排到最近一個還沒有文章的日子（維持日更）。' },
+      },
     ],
   };
 }
@@ -89,7 +99,8 @@ export function parseModalSubmission(payload) {
   }
   const viewpoint = view.state?.values?.[VIEWPOINT_BLOCK]?.[VIEWPOINT_ACTION]?.value ?? '';
   const length = view.state?.values?.[LENGTH_BLOCK]?.[LENGTH_ACTION]?.selected_option?.value || 'short';
-  return { userId: payload.user?.id, viewpoint: String(viewpoint).trim(), length, topic };
+  const publishDate = view.state?.values?.[DATE_BLOCK]?.[DATE_ACTION]?.selected_date || null;
+  return { userId: payload.user?.id, viewpoint: String(viewpoint).trim(), length, publishDate, topic };
 }
 
 /** 授權人白名單檢查。預設拒（白名單空或 user 不在內 → false），安全優先。 */
@@ -102,5 +113,6 @@ export function isAuthorized(userId, allowlist) {
 export function toJob(topic, viewpoint, opts = {}) {
   const job = { ...(topic ?? {}), viewpoint: String(viewpoint ?? '').trim() };
   if (opts.length) job.length = opts.length;
+  if (opts.publishDate) job.publishDate = opts.publishDate;
   return job;
 }

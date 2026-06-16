@@ -2,7 +2,8 @@
 name: "APPI 編輯部"
 displayTitle: "跨領域專業內容編輯團隊"
 bioShort: "APPI News 平台共用署名，負責跨領域議題的選題、編輯、查證與內容標準維護，並依主題性質安排相應的專業檢核與揭露流程。"
-avatar: "authors/appi-editorial.svg"
+avatar: "authors/appi-editorial.jpg"
+portrait: "authors/appi-editorial-full.jpg"
 credentials:
   - "APPI News 平台編輯團隊"
   - "跨領域專業作者與審閱流程統整"

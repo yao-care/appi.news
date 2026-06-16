@@ -18,7 +18,7 @@ description: APPI News 每週數據週報。讀 GA4+GSC 四區塊數據、跑外
 ## 步驟 3：合成動態 2-6 個建議方向
 融合「站內需求」（GSC searchOpportunities 高曝光低點擊 + articlePerf 分類動能）與「外部熱題」。
 - 每個候選用 `站內需求強度 × 外部熱度 × APPI相關` 質性評估，**過門檻才收**；強訊號多就到 6，弱週就少，**沒強訊號就明說「本週無強建議」**。
-- 讀 `.claude/skills/newsroom/author-memory.json` 去重，已寫過的題不重複推。
+- 去重（兩份都比對，語意比對非只比字面，重複就排除）：①`.claude/skills/newsroom/author-memory.json`（已寫過的文章）；②跑 `node scripts/topic-ledger.mjs recent`（近期已推薦過的候選題，與每日雷達共用同一帳本，避免兩邊撞題）。
 - 每個建議欄位（對齊 newsroom 雷達格式）：標題 / 訊號依據 / 建議切角 / 候選結論 / 建議分類，編號。
 
 ## 步驟 4：組訊息並發送
@@ -47,6 +47,7 @@ description: APPI News 每週數據週報。讀 GA4+GSC 四區塊數據、跑外
 - `suggestions` 每項欄位＝newsroom 工單欄位（`title/conclusion/angle/signal/category/subcategory`）。**`category` 用 `src/config/categories.ts` 的合法 slug**；只有 `tech` 會掛按鈕。
 - 沒強建議時 `suggestions` 給 `[]`，並在 blocks 寫明「本週無強建議」。
 跑 `node scripts/slack-post.mjs /tmp/weekly-report-payload.json` 發送。回報 `sent ts=` 即成功。
+**發送成功後**（若有 `suggestions`），跑 `node scripts/topic-ledger.mjs append /tmp/weekly-report-payload.json` 把建議記進帳本，每日雷達才不會重複推同題。
 
 ## 失敗處理
 任一步驟致命失敗（資料抓不到、token 失效）：把

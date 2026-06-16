@@ -77,10 +77,10 @@ export function handleInteraction({ rawBody, headers, signingSecret, allowlist, 
   }
 
   if (payload.type === 'view_submission') {
-    const { userId, viewpoint, topic } = parseModalSubmission(payload);
+    const { userId, viewpoint, length, topic } = parseModalSubmission(payload);
     if (!isAuthorized(userId, allowlist)) return errorsResponse('你沒有觸發權限');
     if (inFlight) return errorsResponse('目前已有一篇在產製中，請等它完成再試');
-    const job = toJob(topic, viewpoint);
+    const job = toJob(topic, viewpoint, { length });
     const errs = validateJob(job);
     if (errs.length) return errorsResponse(errs.join('；'));
     return {
@@ -139,7 +139,12 @@ function runEngine(job) {
   child.stderr.on('data', (d) => (out += d));
   child.on('close', (code) => {
     inFlight = false;
-    notify(code === 0 ? `✅ 自動產文完成並發佈：「${job.title}」` : `⚠️ 自動產文失敗（exit ${code}）：「${job.title}」\n\`\`\`${out.slice(-800)}\`\`\``);
+    if (code === 0) {
+      const m = out.match(/PUBLISHED_URL=(\S+)/);
+      notify(m ? `✅ 自動產文完成並發佈：「${job.title}」\n<${m[1]}|看文章>` : `✅ 自動產文完成並發佈：「${job.title}」`);
+    } else {
+      notify(`⚠️ 自動產文失敗（exit ${code}）：「${job.title}」\n\`\`\`${out.slice(-800)}\`\`\``);
+    }
   });
   child.on('error', (e) => {
     inFlight = false;

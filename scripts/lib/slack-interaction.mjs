@@ -10,6 +10,8 @@ export const WRITE_ACTION_ID = 'newsroom_write_topic';
 export const MODAL_CALLBACK_ID = 'newsroom_viewpoint_submit';
 export const VIEWPOINT_BLOCK = 'viewpoint_block';
 export const VIEWPOINT_ACTION = 'viewpoint_input';
+export const LENGTH_BLOCK = 'length_block';
+export const LENGTH_ACTION = 'length_select';
 
 /** 按鈕 value 帶 topic（週報建議欄位）。Slack button value 上限 2000 字元，逾限丟錯。 */
 export function buildTopicButtonValue(topic) {
@@ -42,6 +44,21 @@ export function buildViewpointModal({ topic }) {
         },
         hint: { type: 'plain_text', text: '機器人會用你這段當文章的真人觀點，沒有就不動筆。' },
       },
+      {
+        type: 'input',
+        block_id: LENGTH_BLOCK,
+        optional: true,
+        label: { type: 'plain_text', text: '篇幅' },
+        element: {
+          type: 'static_select',
+          action_id: LENGTH_ACTION,
+          initial_option: { text: { type: 'plain_text', text: '短稿（800–1500 字）' }, value: 'short' },
+          options: [
+            { text: { type: 'plain_text', text: '短稿（800–1500 字）' }, value: 'short' },
+            { text: { type: 'plain_text', text: '深稿（3000+ 字）' }, value: 'deep' },
+          ],
+        },
+      },
     ],
   };
 }
@@ -71,7 +88,8 @@ export function parseModalSubmission(payload) {
     throw new Error('private_metadata 非合法 JSON');
   }
   const viewpoint = view.state?.values?.[VIEWPOINT_BLOCK]?.[VIEWPOINT_ACTION]?.value ?? '';
-  return { userId: payload.user?.id, viewpoint: String(viewpoint).trim(), topic };
+  const length = view.state?.values?.[LENGTH_BLOCK]?.[LENGTH_ACTION]?.selected_option?.value || 'short';
+  return { userId: payload.user?.id, viewpoint: String(viewpoint).trim(), length, topic };
 }
 
 /** 授權人白名單檢查。預設拒（白名單空或 user 不在內 → false），安全優先。 */
@@ -80,7 +98,9 @@ export function isAuthorized(userId, allowlist) {
   return !!userId && allowlist.includes(userId);
 }
 
-/** topic（週報建議欄位）+ 作者看法 → 引擎工單（交給 newsroom-job 的 validateJob 把關）。 */
-export function toJob(topic, viewpoint) {
-  return { ...(topic ?? {}), viewpoint: String(viewpoint ?? '').trim() };
+/** topic（週報建議欄位）+ 作者看法 + 選項 → 引擎工單（交給 newsroom-job 的 validateJob 把關）。 */
+export function toJob(topic, viewpoint, opts = {}) {
+  const job = { ...(topic ?? {}), viewpoint: String(viewpoint ?? '').trim() };
+  if (opts.length) job.length = opts.length;
+  return job;
 }

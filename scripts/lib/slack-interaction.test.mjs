@@ -10,6 +10,8 @@ import {
   MODAL_CALLBACK_ID,
   VIEWPOINT_BLOCK,
   VIEWPOINT_ACTION,
+  LENGTH_BLOCK,
+  LENGTH_ACTION,
 } from './slack-interaction.mjs';
 
 const topic = () => ({
@@ -102,5 +104,37 @@ describe('toJob', () => {
     expect(job.viewpoint).toBe('我的看法');
     expect(job.category).toBe('tech');
     expect(job.title).toContain('居家陪伴機器人');
+  });
+  it('帶 length 選項', () => {
+    expect(toJob(topic(), '看法', { length: 'deep' }).length).toBe('deep');
+    expect(toJob(topic(), '看法').length).toBeUndefined();
+  });
+});
+
+describe('篇幅選項（Phase 2）', () => {
+  const subWithLen = (len) => ({
+    type: 'view_submission',
+    user: { id: 'U' },
+    view: {
+      private_metadata: JSON.stringify(topic()),
+      state: {
+        values: {
+          [VIEWPOINT_BLOCK]: { [VIEWPOINT_ACTION]: { value: '看法' } },
+          ...(len ? { [LENGTH_BLOCK]: { [LENGTH_ACTION]: { selected_option: { value: len } } } } : {}),
+        },
+      },
+    },
+  });
+
+  it('modal 含篇幅選擇塊（選填、預設短稿）', () => {
+    const v = buildViewpointModal({ topic: topic() });
+    const lb = v.blocks.find((b) => b.block_id === LENGTH_BLOCK);
+    expect(lb.optional).toBe(true);
+    expect(lb.element.initial_option.value).toBe('short');
+  });
+
+  it('parseModalSubmission 取出篇幅；沒選 → 預設 short', () => {
+    expect(parseModalSubmission(subWithLen('deep')).length).toBe('deep');
+    expect(parseModalSubmission(subWithLen(null)).length).toBe('short');
   });
 });

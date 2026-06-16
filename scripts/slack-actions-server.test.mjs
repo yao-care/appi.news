@@ -74,6 +74,19 @@ describe('handleInteraction — 送出看法觸發', () => {
     expect(r.startEngine.category).toBe('tech');
   });
 
+  it('帶篇幅選擇 deep → startEngine.length=deep（Phase 2）', () => {
+    const payload = form({
+      type: 'view_submission',
+      user: { id: 'U0AGB084S2H' },
+      view: {
+        private_metadata: JSON.stringify(techTopic()),
+        state: { values: { viewpoint_block: { viewpoint_input: { value: '看法' } }, length_block: { length_select: { selected_option: { value: 'deep' } } } } },
+      },
+    });
+    const r = call(payload);
+    expect(r.startEngine.length).toBe('deep');
+  });
+
   it('非 tech 題 → errors，不觸發引擎', () => {
     const r = call(submission({ ...techTopic(), category: 'health' }, '看法'));
     expect(r.body).toContain('errors');

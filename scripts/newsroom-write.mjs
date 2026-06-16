@@ -108,6 +108,10 @@ function main() {
   // 必須真的產出了文章
   const produced = sh('git', ['status', '--porcelain', 'src/content/articles/']);
   if (!produced) die('claude 沒有在 src/content/articles/ 產出文章，中止（不發佈）');
+  // 從產出檔推出 slug → 文章網址（給 Slack 回報帶連結）
+  const artLine = produced.split('\n').map((l) => l.trim()).find((l) => l.endsWith('.md'));
+  const slug = artLine ? artLine.replace(/^.*src\/content\/articles\//, '').replace(/\.md$/, '') : null;
+  const url = slug ? `https://appi.news/articles/${slug}/` : null;
 
   // gate：壞連結會擋整站部署，沒過就不發佈（改動留在工作區供檢查，不自動還原）
   console.log('→ pnpm check:links（唯一自動關卡）');
@@ -124,8 +128,10 @@ function main() {
     console.log('→ push 上線');
     sh('git', ['push']);
     console.log('✓ 已發佈上線。可進編輯器修改。');
+    if (url) console.log(`PUBLISHED_URL=${url}`); // 給外層（Slack 回報）解析
   } else {
     console.log(`✓ 已 stage（commit 在分支 ${branch}，未 push）。審稿 OK 後 cherry-pick 到 main push 上線。`);
+    if (url) console.log(`STAGED_SLUG=${slug}`);
   }
 }
 

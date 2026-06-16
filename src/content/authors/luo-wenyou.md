@@ -17,9 +17,9 @@ socialLinks:
     url: "https://www.instagram.com/pharmacist_lo/"
 authorLevel: "columnist"
 joinedDate: "2026-03-01"
-active: true
-showAuthorPage: true
-showColumnPage: true
+active: false
+showAuthorPage: false
+showColumnPage: false
 disclaimer: "本欄文章為健康衛教與資訊整理，不能取代醫師或藥師的個別診療與用藥建議。"
 ---
 

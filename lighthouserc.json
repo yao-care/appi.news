@@ -3,9 +3,9 @@
     "collect": {
       "staticDistDir": "./_site",
       "url": [
-        "http://localhost/appi.news/",
-        "http://localhost/appi.news/health/",
-        "http://localhost/appi.news/about/"
+        "http://localhost/",
+        "http://localhost/health/",
+        "http://localhost/about/"
       ]
     },
     "assert": {

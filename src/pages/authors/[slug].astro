@@ -34,7 +34,8 @@ const authorNames = new Map(
 const articles = byAuthor(all, author.id);
 const path = `/authors/${author.id}/`;
 const avatar = authorAvatar(author);
-const portrait = author.data.portrait ? asset(author.data.portrait) : null;
+// 作者頁內文左欄用完整人像（正方形大圖）；缺 portrait 時退回 avatar，再退回 og fallback
+const heroImage = author.data.portrait ? asset(author.data.portrait) : avatar;
 
 const allColumns = await getColumns();
 const myColumns = allColumns.filter(
@@ -82,94 +83,97 @@ const ld = [
   <div class="container author-page">
     <Breadcrumbs items={[{ name: '作者群', path: '/authors/' }, { name: author.data.name }]} />
 
-    <div class="author-layout">
-      <aside class="author-aside">
-        <div class="author-card">
-          <ImageWithFallback src={avatar} alt={author.data.name} fallback="og/author.png" class="author-aside-avatar" width={120} height={120} />
-          <span class="author-aside-level">{LEVEL_LABELS[author.data.authorLevel]}</span>
-          <h1 class="author-aside-name">{author.data.name}</h1>
-          {author.data.displayTitle && <p class="author-aside-title">{author.data.displayTitle}</p>}
+    <div class="author-hero">
+      <div class="author-intro">
+        <ImageWithFallback src={heroImage} alt={author.data.name} fallback="og/author.png" class="author-intro-img" width={600} height={600} />
+        <span class="author-intro-level">{LEVEL_LABELS[author.data.authorLevel]}</span>
+        <h1 class="author-intro-name">{author.data.name}</h1>
+        {author.data.displayTitle && <p class="author-intro-title">{author.data.displayTitle}</p>}
+        {author.data.bioShort && <p class="author-intro-lead">{author.data.bioShort}</p>}
 
-          {
-            author.data.credentials.length > 0 && (
-              <div class="author-aside-block">
-                <h2>現任與經歷</h2>
-                <ul class="author-aside-creds">
-                  {author.data.credentials.map((c) => <li>{c}</li>)}
-                </ul>
-              </div>
-            )
-          }
-
-          {
-            hasContact && (
-              <div class="author-aside-block">
-                <h2>聯絡</h2>
-                <div class="author-aside-links">
-                  {author.data.website && (
-                    <a href={author.data.website} rel="me noopener" target="_blank">官方網站</a>
-                  )}
-                  {author.data.socialLinks.map((s) => (
-                    <a href={s.url} rel="me noopener" target="_blank">{s.label}</a>
-                  ))}
-                  {author.data.emailPublic && (
-                    <a href={`mailto:${author.data.emailPublic}`}>{author.data.emailPublic}</a>
-                  )}
-                </div>
-              </div>
-            )
-          }
-
-          {
-            author.data.joinedDate && (
-              <p class="author-aside-joined">加入於 {author.data.joinedDate.getFullYear()} 年</p>
-            )
-          }
-        </div>
-      </aside>
-
-      <div class="author-main">
         {
-          portrait && (
-            <figure class="author-portrait">
-              <ImageWithFallback src={portrait} alt={author.data.name} fallback="og/author.png" class="author-portrait-img" width={832} height={755} />
-            </figure>
+          author.data.credentials.length > 0 && (
+            <div class="author-intro-block">
+              <h2>現任與經歷</h2>
+              <ul class="author-creds">
+                {author.data.credentials.map((c) => <li>{c}</li>)}
+              </ul>
+            </div>
           )
         }
+
+        {
+          hasContact && (
+            <div class="author-intro-block">
+              <h2>聯絡</h2>
+              <div class="author-links">
+                {author.data.website && (
+                  <a href={author.data.website} rel="me noopener" target="_blank">官方網站</a>
+                )}
+                {author.data.socialLinks.map((s) => (
+                  <a href={s.url} rel="me noopener" target="_blank">{s.label}</a>
+                ))}
+                {author.data.emailPublic && (
+                  <a href={`mailto:${author.data.emailPublic}`}>{author.data.emailPublic}</a>
+                )}
+              </div>
+            </div>
+          )
+        }
+
+        {
+          author.data.joinedDate && (
+            <p class="author-joined">加入於 {author.data.joinedDate.getFullYear()} 年</p>
+          )
+        }
+      </div>
+
+      <div class="author-detail">
+        {
+          author.data.specialties.length > 0 && (
+            <div class="author-detail-block">
+              <h2>專長領域</h2>
+              <ul class="author-specialties">
+                {author.data.specialties.map((s) => <li>{s}</li>)}
+              </ul>
+            </div>
+          )
+        }
+
         <div class="author-bio prose article-body">
           <Content />
         </div>
-
-        {
-          myColumns.length > 0 && authorHasColumnPage(author) && (
-            <section class="section">
-              <div class="section-head"><h2>專欄</h2></div>
-              <ul class="author-columns">
-                {myColumns.map((c) => (
-                  <li>
-                    <a href={url(`/columns/${c.id}/`)}>{c.data.title}</a>
-                    <span>{c.data.description}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )
-        }
-
-        <section class="section">
-          <div class="section-head"><h2>文章（{articles.length}）</h2></div>
-          {
-            articles.length > 0 ? (
-              <div class="card-grid">
-                {articles.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
-              </div>
-            ) : (
-              <EmptyState title="尚無文章" message="這位作者的文章即將上線。" />
-            )
-          }
-        </section>
       </div>
     </div>
+
+    {
+      myColumns.length > 0 && authorHasColumnPage(author) && (
+        <section class="section">
+          <div class="section-head"><h2>專欄</h2></div>
+          <ul class="author-columns">
+            {myColumns.map((c) => (
+              <li>
+                <a href={url(`/columns/${c.id}/`)}>{c.data.title}</a>
+                <span>{c.data.description}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <section class="section">
+      <div class="section-head"><h2>文章（{articles.length}）</h2></div>
+      {
+        articles.length > 0 ? (
+          <div class="card-grid">
+            {articles.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
+          </div>
+        ) : (
+          <EmptyState title="尚無文章" message="這位作者的文章即將上線。" />
+        )
+      }
+    </section>
   </div>
 </BaseLayout>
 
@@ -178,78 +182,79 @@ const ld = [
     padding-top: 28px;
   }
 
-  .author-layout {
+  /* ---------- Hero：左右各半，重點落在左欄 ---------- */
+  .author-hero {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
     align-items: start;
-    margin-top: 24px;
+    margin: 24px 0 8px;
   }
 
-  /* ---------- 左欄：個人檔案卡 ---------- */
-  .author-aside {
-    position: sticky;
-    top: 80px;
+  /* ---------- 左欄：介紹（重點、字較大） ---------- */
+  .author-intro {
+    min-width: 0;
   }
-  .author-card {
-    background: var(--bg-soft);
-    border: 1px solid var(--line-2);
-    border-radius: var(--radius);
-    padding: 24px;
-  }
-  :global(.author-aside-avatar) {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+  :global(.author-intro-img) {
+    width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+    display: block;
+    border-radius: var(--radius);
     background: var(--bg-soft);
-    border: 3px solid #fff;
     box-shadow: var(--shadow-sm);
   }
-  .author-aside-level {
+  .author-intro-level {
     display: inline-block;
-    margin-top: 16px;
+    margin-top: 20px;
     font-size: var(--text-xs);
     color: var(--appi-brand);
     background: var(--bg-tint);
-    padding: 2px 10px;
+    padding: 3px 12px;
     border-radius: 20px;
     font-family: var(--font-sans);
     font-weight: 600;
   }
-  .author-aside-name {
-    font-size: var(--text-lg);
-    line-height: 1.3;
-    margin: 12px 0 4px;
+  .author-intro-name {
+    font-size: var(--text-2xl);
+    line-height: 1.2;
+    margin: 14px 0 6px;
   }
-  .author-aside-title {
+  .author-intro-title {
     margin: 0;
     color: var(--appi-brand);
     font-weight: 600;
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
     font-family: var(--font-sans);
+    line-height: 1.4;
   }
-  .author-aside-block {
-    margin-top: 20px;
-    padding-top: 18px;
+  .author-intro-lead {
+    margin: 16px 0 0;
+    font-size: var(--text-base);
+    line-height: 1.85;
+    color: var(--ink-2);
+  }
+  .author-intro-block {
+    margin-top: 24px;
+    padding-top: 20px;
     border-top: 1px solid var(--line-2);
   }
-  .author-aside-block h2 {
+  .author-intro-block h2 {
     font-size: var(--text-xs);
     color: var(--ink-3);
     font-family: var(--font-sans);
     font-weight: 700;
     letter-spacing: 0.04em;
-    margin: 0 0 12px;
+    margin: 0 0 14px;
   }
-  .author-aside-creds {
+  .author-creds {
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
     gap: 10px;
   }
-  .author-aside-creds li {
+  .author-creds li {
     font-size: var(--text-sm);
     color: var(--ink);
     font-weight: 600;
@@ -258,42 +263,55 @@ const ld = [
     padding-left: 12px;
     border-left: 3px solid var(--appi-accent);
   }
-  .author-aside-links {
+  .author-links {
     display: flex;
     flex-direction: column;
-    gap: 9px;
-    font-size: var(--text-xs);
+    gap: 10px;
+    font-size: var(--text-sm);
     font-family: var(--font-sans);
   }
-  .author-aside-links a {
+  .author-links a {
     color: var(--appi-brand);
     font-weight: 600;
     word-break: break-all;
   }
-  .author-aside-joined {
-    margin: 18px 0 0;
+  .author-joined {
+    margin: 20px 0 0;
     font-size: var(--text-xs);
     color: var(--ink-3);
     font-family: var(--font-sans);
   }
 
-  /* ---------- 右欄：主內容 ---------- */
-  .author-main {
+  /* ---------- 右欄：專長領域 + 詳細介紹 ---------- */
+  .author-detail {
     min-width: 0;
   }
-  .author-portrait {
-    margin: 0 0 24px;
-    max-width: var(--maxw-prose);
+  .author-detail-block {
+    margin-bottom: 32px;
   }
-  :global(.author-portrait-img) {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius);
+  .author-detail-block h2 {
+    font-size: var(--text-xl);
+    margin: 0 0 16px;
+  }
+  .author-specialties {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+  }
+  .author-specialties li {
+    font-size: var(--text-base);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    padding: 10px 16px;
     background: var(--bg-soft);
-    box-shadow: var(--shadow-sm);
+    border-left: 3px solid var(--appi-brand);
+    border-radius: 0 var(--radius) var(--radius) 0;
   }
   .author-bio {
-    max-width: var(--maxw-prose);
+    max-width: none;
   }
   .author-columns {
     list-style: none;
@@ -321,12 +339,15 @@ const ld = [
   }
 
   @media (max-width: 860px) {
-    .author-layout {
+    .author-hero {
       grid-template-columns: 1fr;
-      gap: 28px;
+      gap: 32px;
     }
-    .author-aside {
-      position: static;
+    :global(.author-intro-img) {
+      max-width: 340px;
+    }
+    .author-intro-name {
+      font-size: var(--text-xl);
     }
   }
 </style>

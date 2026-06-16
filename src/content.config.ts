@@ -108,6 +108,8 @@ const authors = defineCollection({
     displayTitle: z.string().optional(),
     bioShort: z.string().default(''),
     avatar: z.string().optional(),
+    /** 作者頁內文用的完整人像（avatar 為臉部方形裁切，此為原圖） */
+    portrait: z.string().optional(),
     credentials: z.array(z.string()).default([]),
     specialties: z.array(z.string()).default([]),
     socialLinks: z

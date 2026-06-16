@@ -15,7 +15,7 @@ import {
   authorAvatar,
 } from '@/utils/content';
 import { getColumns } from '@/utils/content';
-import { url } from '@/utils/url';
+import { url, asset } from '@/utils/url';
 import { personLd, breadcrumbLd } from '@/utils/jsonld';
 
 export async function getStaticPaths() {
@@ -34,6 +34,7 @@ const authorNames = new Map(
 const articles = byAuthor(all, author.id);
 const path = `/authors/${author.id}/`;
 const avatar = authorAvatar(author);
+const portrait = author.data.portrait ? asset(author.data.portrait) : null;
 
 const allColumns = await getColumns();
 const myColumns = allColumns.filter(
@@ -128,6 +129,13 @@ const ld = [
       </aside>
 
       <div class="author-main">
+        {
+          portrait && (
+            <figure class="author-portrait">
+              <ImageWithFallback src={portrait} alt={author.data.name} fallback="og/author.png" class="author-portrait-img" width={832} height={755} />
+            </figure>
+          )
+        }
         <div class="author-bio prose article-body">
           <Content />
         </div>
@@ -272,6 +280,17 @@ const ld = [
   /* ---------- 右欄：主內容 ---------- */
   .author-main {
     min-width: 0;
+  }
+  .author-portrait {
+    margin: 0 0 24px;
+    max-width: var(--maxw-prose);
+  }
+  :global(.author-portrait-img) {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+    box-shadow: var(--shadow-sm);
   }
   .author-bio {
     max-width: var(--maxw-prose);

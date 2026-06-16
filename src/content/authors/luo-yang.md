@@ -2,6 +2,8 @@
 name: "羅揚"
 displayTitle: "健康內容主編與保健食品產業觀察作者"
 bioShort: "牙醫醫學士，高雄醫學大學口腔衛生研究所背景，研究方向為牙科植體材料。現為本日有據 Evidence Today 主編，關注預防醫學、保健食品、營養科學與大眾健康溝通。"
+avatar: "authors/luo-yang.jpg"
+portrait: "authors/luo-yang-full.jpg"
 credentials:
   - "本日有據 Evidence Today 主編"
   - "樂地滋有限公司 負責人"

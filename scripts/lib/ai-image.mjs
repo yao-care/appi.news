@@ -2,6 +2,11 @@ import sharp from 'sharp';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { homedir } from 'node:os';
+import { execFileSync } from 'node:child_process';
+
+// 生圖專門機制：Cloudflare Worker（與前端 src/utils/editor/ai-worker.ts 同一個，
+// OpenAI/Fal 金鑰已設在 worker 上）。換網域時兩邊一起改。
+export const AI_WORKER = 'https://appi-news-ai-suggest.lightman-chang.workers.dev';
 
 // 沿用 worker / regen-covers 的台灣人物鐵律
 export const PEOPLE_DIRECTIVE =
@@ -43,7 +48,32 @@ export function readOpenAIKey() {
   return m[1].trim().replace(/^["']|["']$/g, '');
 }
 
-// 整合（不單元測試）：OpenAI 生圖 → webp
+// 取 GitHub token（worker 以 repo push 權限防付費 API 被濫用）：env 優先，否則 gh auth token。
+export function githubToken() {
+  if (process.env.GITHUB_TOKEN) return process.env.GITHUB_TOKEN.trim();
+  if (process.env.GH_TOKEN) return process.env.GH_TOKEN.trim();
+  try {
+    return execFileSync('gh', ['auth', 'token'], { encoding: 'utf8' }).trim();
+  } catch {
+    return '';
+  }
+}
+
+// 經 worker 同步生圖（POST /generate → {b64,mime}），回 webp。worker 端會強制台灣人物鐵律。
+async function generateViaWorker({ prompt, width, token }) {
+  const res = await fetch(`${AI_WORKER}/generate`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+    body: JSON.stringify({ prompt, size: 'landscape' }),
+  });
+  if (!res.ok) throw new Error(`worker 生圖失敗（${res.status}）：${(await res.text()).slice(0, 200)}`);
+  const { b64 } = await res.json();
+  if (!b64) throw new Error('worker 未回傳圖片');
+  return toWebp(Buffer.from(b64, 'base64'), width);
+}
+
+// 整合（不單元測試）：生圖 → webp。
+// 優先走專門機制（worker，金鑰已配好）；無 GitHub token 才退回本機 OpenAI 金鑰。
 export async function generateImage({
   topic,
   context = '',
@@ -52,8 +82,15 @@ export async function generateImage({
   size = '1536x1024',
   quality = 'low', // 段落圖多，用 low 控成本
 }) {
-  const key = readOpenAIKey();
   const prompt = buildImagePrompt({ topic, context });
+
+  const token = githubToken();
+  if (token) {
+    return generateViaWorker({ prompt, width, token });
+  }
+
+  // fallback：本機 OpenAI 金鑰直打
+  const key = readOpenAIKey();
   const res = await fetch('https://api.openai.com/v1/images/generations', {
     method: 'POST',
     headers: { Authorization: `Bearer ${key}`, 'content-type': 'application/json' },

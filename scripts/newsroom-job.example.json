@@ -1,0 +1,11 @@
+{
+  "title": "Anthropic 新模型對台灣中小開發團隊的實際導入成本",
+  "signal": "GSC「claude api 價格」曝光 40、排名 13、CTR 0.5%",
+  "angle": "從台灣中小團隊的實際預算與 context 成本切入，不談規格大戰",
+  "conclusion": "值得導入，但要先用快取與較小模型壓 context 成本，否則帳單失控",
+  "category": "tech",
+  "subcategory": "ai",
+  "viewpoint": "（此欄由 Slack modal 收集：作者本人對這題的真實看法／本業經驗，必填）",
+  "length": "short",
+  "mustCite": []
+}

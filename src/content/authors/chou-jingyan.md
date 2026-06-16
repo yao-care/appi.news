@@ -2,6 +2,8 @@
 name: "周敬彥"
 displayTitle: "Winsame 數位行銷 負責人"
 bioShort: "十多年搜尋引擎優化與數位廣告經驗，專精 SEO、AEO、GEO 與 Google／Facebook 廣告，專注研究 AI 搜尋時代的流量變化與品牌曝光策略。"
+avatar: "authors/chou-jingyan.jpg"
+portrait: "authors/chou-jingyan-full.jpg"
 credentials:
   - "Winsame 數位行銷 負責人"
   - "十多年網站經營、SEO 與數位廣告實戰經驗"

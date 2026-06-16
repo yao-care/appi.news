@@ -2,6 +2,8 @@
 name: "黃子彥"
 displayTitle: "漢方保健食品研發與預防醫學推廣作者"
 bioShort: "漢方草本機能食品研發與預防醫學推廣作者，擅長以中醫「君臣佐使」的配伍概念結合現代食品研發與機能配方設計，協助大眾從飲食、作息與日常保健中建立完整的健康觀念。"
+avatar: "authors/huang-ziyan.jpg"
+portrait: "authors/huang-ziyan-full.jpg"
 credentials:
   - "中華民國上醫預防醫學發展協會副理事長（現任）"
   - "上一生醫研發總監（現任）"

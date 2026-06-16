@@ -17,7 +17,7 @@ export const SITE = {
   lang: 'zh-Hant',
   locale: 'zh_TW',
   /** 社群 / 聯絡 */
-  email: 'hello@appi.news',
+  email: 'evidencetodaynewsdesk@gmail.com',
   /** 預設社群分享圖（相對 BASE_URL） */
   defaultOgImage: 'og/default.png',
   /** Twitter/X 帳號（含 @；未設定則不輸出 twitter:site/creator） */

@@ -3,11 +3,10 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { SITE } from '@/config/site';
 import { url } from '@/utils/url';
 
-// Formspree 表單 endpoint。
-// 註冊步驟：到 https://formspree.io 用 hello@appi.news 註冊 → New Form →
-// 複製 https://formspree.io/f/xxxxxxxx 形式的 endpoint 貼到下面這行即可上線。
-// 在尚未填入前，表單會停用送出並提示改用 Email 投稿。
-const FORMSPREE_ENDPOINT = '';
+// Formspree 表單 endpoint（已綁定聯絡信箱）。
+// 表單以原生 POST 為基線（無 JS 也可送出），再用 fetch 做 AJAX 強化：
+// 留在原頁、即時顯示成功／錯誤訊息。
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgobdjyz';
 const formReady = FORMSPREE_ENDPOINT.length > 0;
 
 const steps = [
@@ -83,6 +82,7 @@ const steps = [
       </div>
 
       <form
+        id="contributeForm"
         class="submit-form"
         method="POST"
         action={formReady ? FORMSPREE_ENDPOINT : undefined}
@@ -135,6 +135,8 @@ const steps = [
             </p>
           )}
         </div>
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
       </form>
 
       <p class="mail-fallback">
@@ -145,6 +147,49 @@ const steps = [
     </section>
   </div>
 </BaseLayout>
+
+<script>
+  // AJAX 強化：攔截送出，改用 fetch 提交到 Formspree，留在原頁顯示結果。
+  // 若 JS 失效，表單仍會以原生 POST 正常送出（漸進增強）。
+  const form = document.getElementById('contributeForm') as HTMLFormElement | null;
+  const status = document.getElementById('formStatus');
+
+  if (form && form.action && status) {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      if (btn) btn.disabled = true;
+      status.hidden = true;
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+
+        if (res.ok) {
+          form.reset();
+          status.textContent = '已收到你的投稿，我們會儘速與你聯繫，感謝！';
+          status.className = 'form-status form-status--ok';
+        } else {
+          const data = await res.json().catch(() => null);
+          const errors = data && Array.isArray(data.errors) ? data.errors : null;
+          status.textContent = errors
+            ? errors.map((e: { message: string }) => e.message).join('，')
+            : '送出時發生問題，請稍後再試，或改用下方 Email 投稿。';
+          status.className = 'form-status form-status--err';
+        }
+      } catch {
+        status.textContent = '網路連線發生問題，請稍後再試，或改用下方 Email 投稿。';
+        status.className = 'form-status form-status--err';
+      } finally {
+        status.hidden = false;
+        if (btn) btn.disabled = false;
+      }
+    });
+  }
+</script>
 
 <style>
   .submit-hero {
@@ -328,6 +373,24 @@ const steps = [
     margin: 0;
     font-size: var(--text-xs);
     color: var(--ink-3);
+  }
+  .form-status {
+    margin: 18px 0 0;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    max-width: 640px;
+  }
+  .form-status--ok {
+    background: color-mix(in srgb, var(--appi-brand) 10%, var(--white));
+    border: 1px solid color-mix(in srgb, var(--appi-brand) 35%, var(--white));
+    color: var(--appi-brand-dark, var(--ink));
+  }
+  .form-status--err {
+    background: #fdecec;
+    border: 1px solid #f3c2c2;
+    color: #a12a2a;
   }
   .mail-fallback {
     margin: 24px 0 0;

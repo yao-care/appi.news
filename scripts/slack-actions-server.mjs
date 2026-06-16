@@ -40,15 +40,15 @@ const errorsResponse = (msg) => ({
 /**
  * 純決策：給原始請求，回一個「該怎麼回應 + 要做什麼副作用」的物件。不碰網路、不發文。
  * 回傳：{ status, body?, contentType?, openModal?:{view,triggerId}, startEngine?:job }
+ * 不判斷忙碌與否——是否立刻跑或排隊由 I/O 殼層的佇列決定（驗證過就一律回 startEngine）。
  * @param {object} p
  * @param {string} p.rawBody
  * @param {object} p.headers              小寫鍵的標頭物件
  * @param {string} p.signingSecret
  * @param {string[]} p.allowlist          授權 Slack user
- * @param {boolean} p.inFlight            是否已有一篇在產製中
  * @param {number} [p.now]                unix 秒（測試注入）
  */
-export function handleInteraction({ rawBody, headers, signingSecret, allowlist, inFlight, now }) {
+export function handleInteraction({ rawBody, headers, signingSecret, allowlist, now }) {
   let verified = false;
   try {
     verified = verifySlackSignature({
@@ -79,7 +79,6 @@ export function handleInteraction({ rawBody, headers, signingSecret, allowlist, 
   if (payload.type === 'view_submission') {
     const { userId, viewpoint, length, publishDate, topic } = parseModalSubmission(payload);
     if (!isAuthorized(userId, allowlist)) return errorsResponse('你沒有觸發權限');
-    if (inFlight) return errorsResponse('目前已有一篇在產製中，請等它完成再試');
     const job = toJob(topic, viewpoint, { length, publishDate });
     const errs = validateJob(job);
     if (errs.length) return errorsResponse(errs.join('；'));
@@ -100,7 +99,11 @@ const PORT = Number(process.env.SLACK_ACTIONS_PORT || 3399);
 const SIGNING_SECRET = process.env.SLACK_SIGNING_SECRET;
 const BOT_TOKEN = process.env.SLACK_BOT_TOKEN;
 const REPO_DIR = fileURLToPath(new URL('..', import.meta.url)); // scripts/.. = repo 根
-let inFlight = false; // 同時只允許一篇，避免並發 --go 撞 git
+
+// 序列佇列：同時只跑一篇（避免並發 --go 撞共用 git 工作區），其餘排隊等前一篇跑完自動接上。
+// 純記憶體，不持久化——server 重啟（pm2 restart）會清空尚未開跑的佇列，與舊版 inFlight 行為一致。
+const queue = []; // 待產製工單（不含正在跑的那篇）
+let running = false; // 是否已有一篇在產製中
 
 function readRawBody(req) {
   return new Promise((resolve, reject) => {
@@ -127,18 +130,37 @@ async function slackApi(method, body) {
 
 const notify = (text) => postMessage({ token: BOT_TOKEN, channel: SLACK_CHANNEL, text }).catch(() => {});
 
+// 收工單：沒在跑就立刻開跑；正在跑就排隊並回報順位。輪到時 drain() 自動接上。
+function enqueue(job) {
+  if (running) {
+    queue.push(job);
+    const ahead = queue.length; // 正在跑的 1 篇 + 排在這篇前面的（queue.length - 1）
+    notify(`🗂️ 已排入佇列：「${job.title}」，前面還有 ${ahead} 篇（含正在產製中的 1 篇）。輪到時自動開始。`);
+    return;
+  }
+  queue.push(job);
+  drain();
+}
+
+// 若沒有正在跑的，從佇列取下一篇開跑（單一進入點，保證序列）。
+function drain() {
+  if (running || queue.length === 0) return;
+  runEngine(queue.shift());
+}
+
 function runEngine(job) {
-  inFlight = true;
+  running = true;
   const dir = mkdtempSync(join(tmpdir(), 'newsroom-'));
   const jobPath = join(dir, 'job.json');
   writeFileSync(jobPath, JSON.stringify(job));
-  notify(`📝 開始自動撰寫：「${job.title}」（約十幾分鐘，完成回報）`);
+  const waiting = queue.length ? `（後面還有 ${queue.length} 篇排隊）` : '';
+  notify(`📝 開始自動撰寫：「${job.title}」（約十幾分鐘，完成回報）${waiting}`);
   const child = spawn('node', ['scripts/newsroom-write.mjs', jobPath, '--go'], { cwd: REPO_DIR, env: process.env });
   let out = '';
   child.stdout.on('data', (d) => (out += d));
   child.stderr.on('data', (d) => (out += d));
   child.on('close', (code) => {
-    inFlight = false;
+    running = false;
     if (code === 0) {
       const url = out.match(/PUBLISHED_URL=(\S+)/)?.[1];
       const sched = out.match(/SCHEDULED_DATE=(\S+)/)?.[1];
@@ -147,10 +169,12 @@ function runEngine(job) {
     } else {
       notify(`⚠️ 自動產文失敗（exit ${code}）：「${job.title}」\n\`\`\`${out.slice(-800)}\`\`\``);
     }
+    drain(); // 接下一篇（成功或失敗都繼續）
   });
   child.on('error', (e) => {
-    inFlight = false;
+    running = false;
     notify(`⚠️ 自動產文無法啟動：「${job.title}」：${e.message}`);
+    drain();
   });
 }
 
@@ -171,7 +195,6 @@ function startServer() {
         headers: req.headers,
         signingSecret: SIGNING_SECRET,
         allowlist: NEWSROOM_AUTHORIZED_SLACK_USERS,
-        inFlight,
       });
     } catch (e) {
       res.writeHead(200).end();
@@ -188,7 +211,7 @@ function startServer() {
         notify(`⚠️ 開 modal 失敗：${e.message}`),
       );
     }
-    if (result.startEngine) runEngine(result.startEngine);
+    if (result.startEngine) enqueue(result.startEngine);
   }).listen(PORT, '0.0.0.0', () => console.log(`slack-actions-server on 0.0.0.0:${PORT}（repo=${REPO_DIR}）`));
 }
 

@@ -16,13 +16,13 @@ const techTopic = () => ({
   subcategory: 'industry-tech',
 });
 
-function call(rawBody, { ts = NOW, sign = true, inFlight = false, now = NOW } = {}) {
+function call(rawBody, { ts = NOW, sign = true, now = NOW } = {}) {
   const headers = {};
   if (sign) {
     headers['x-slack-request-timestamp'] = String(ts);
     headers['x-slack-signature'] = computeSlackSignature(SECRET, String(ts), rawBody);
   }
-  return handleInteraction({ rawBody, headers, signingSecret: SECRET, allowlist: ALLOW, inFlight, now });
+  return handleInteraction({ rawBody, headers, signingSecret: SECRET, allowlist: ALLOW, now });
 }
 
 const form = (obj) => 'payload=' + encodeURIComponent(JSON.stringify(obj));
@@ -112,9 +112,9 @@ describe('handleInteraction — 送出看法觸發', () => {
     expect(r.startEngine).toBeUndefined();
   });
 
-  it('已有一篇在產製中 → errors，不觸發引擎', () => {
-    const r = call(submission(techTopic(), '看法'), { inFlight: true });
-    expect(r.body).toContain('errors');
-    expect(r.startEngine).toBeUndefined();
+  it('決策層不判斷忙碌：合法工單一律 startEngine（排隊與否由佇列決定）', () => {
+    const r = call(submission(techTopic(), '看法'));
+    expect(r.body).toContain('clear');
+    expect(r.startEngine).toBeDefined();
   });
 });

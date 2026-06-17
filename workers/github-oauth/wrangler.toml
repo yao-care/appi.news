@@ -1,9 +1,12 @@
 name = "appi-news-github-oauth"
 main = "src/index.ts"
 compatibility_date = "2026-01-01"
+# Lightman.chang@gmail.com 帳號（worker 所在；CLI 有多帳號時非互動部署需要）
+account_id = "9d9e58b5e0d1657b8f74bd2cbfc91ee3"
 
 [vars]
 GITHUB_CLIENT_ID = "Ov23li5ZlTLWwUxraTM1"
-ALLOWED_ORIGIN = "https://yao-care.github.io"
+# 編輯器已搬到自訂網域 appi.news（base 為 /），登入後 token 要導回這裡。
+ALLOWED_ORIGIN = "https://appi.news"
 OAUTH_SCOPE = "public_repo"
-ADMIN_PATH = "/appi.news/admin/"
+ADMIN_PATH = "/admin/"

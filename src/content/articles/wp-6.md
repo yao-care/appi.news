@@ -6,6 +6,7 @@ excerpt: "2026 冬季奧運進入倒數高潮！2 月 21 日至 2 月 22 日（D
 publishDate: "2026-02-21T23:10:32+08:00"
 category: "sports"
 coverImage: "covers/wp-6.jpg"
+coverAlt: "2026 米蘭冬季奧運賽場雪景，選手在冰雪競技場上馳騁"
 subcategory: "events"
 tags: ["中藥", "食療"]
 author: "huang-ziyan"

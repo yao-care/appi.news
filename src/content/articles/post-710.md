@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "financial"
 coverImage: "covers/post-710.webp"
 coverAlt: "台北金融科技生態系175家公司十年累計募資逾3.67億美元嚴格監管下走出差異化"
 ---

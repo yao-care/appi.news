@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "financial"
 coverImage: "covers/post-719.webp"
 coverAlt: "台灣支付市場規模2025年達1,881億美元電子支付帳戶逾3,481萬筆消費習慣正在改寫"
 ---

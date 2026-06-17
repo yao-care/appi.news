@@ -27,7 +27,7 @@ status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
 coverImage: "covers/post-649.webp"
-coverAlt: "ICAP年報：G20十四國碳交易成主流，台灣出口業者面對CBAM合規壓力"
+coverAlt: "全球碳市場示意圖，顯示排放交易體系在各大洲的擴張版圖"
 ---
 
 碳交易已經不是歐洲的特有實驗。[ICAP《2026年全球排放交易現況》](https://icapcarbonaction.com/en/publications/emissions-trading-worldwide-icap-status-report-2026)於4月14日發布，確認G20成員國中已有14個實施排放交易體系，相較2005年歐盟ETS上路時的全球格局，規模擴大了五倍以上。2026年再有3個新的國家級系統啟動，碳定價正在從氣候政策的邊緣選項移向主流工具。這份年報的意義，對台灣製造業而言具體得多：碳成本不再是遠方政策討論，而是已經開始影響出口報價與供應鏈配置的現實變數。

@@ -27,7 +27,7 @@ status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
 coverImage: "covers/post-648.webp"
-coverAlt: "新加坡MGF主體型AI治理框架全球首發台灣AI服務輸出的合規門檻正在成形"
+coverAlt: "新加坡城市夜景，象徵亞太AI治理框架制定的前沿角色"
 ---
 
 當AI系統開始自主規劃目標、串連工具、在無人直接監督的情況下完成多步驟任務，傳統的AI倫理指引就失去了錨定點。現有的責任框架預設有人在迴路中，但主體型AI（agentic AI）的設計前提恰好相反。新加坡選擇在這個缺口最清晰的時候出手：2026年1月22日，IMDA部長Josephine Teo在世界經濟論壇的會場上正式發布《主體型AI治理框架》（Model AI Governance Framework for Agentic AI，簡稱MGF），成為全球第一個針對此類系統制定完整治理架構的國家監理機構。

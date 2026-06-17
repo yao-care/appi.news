@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "medical"
 coverImage: "covers/post-661-stock.jpg"
 coverAlt: "各色泡殼藥片與膠囊整齊排列的近距離特寫"
 coverImageCredit: "Photo by Polina Tankilevitch on Pexels"

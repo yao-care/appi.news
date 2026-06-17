@@ -25,9 +25,9 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "medical"
 coverImage: "covers/post-675.webp"
-coverAlt: "全球人工智慧醫療設備監管十年回顧台灣TFDA框架對標美歐日韓體系"
+coverAlt: "研究人員檢視AI醫療設備螢幕，象徵全球十年監管框架回顧比較"
 ---
 
 人工智慧醫療設備從概念到監管框架的建立，花了全球主要衛生主管機關整整十年。[Frontiers in Medicine 2025年發表的系統性回顧](https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1630408/full)梳理了2015年至2025年間全球AI醫療設備（Artificial Intelligence Medical Devices，AIMD）的監管演進，涵蓋美國FDA、歐盟、日本、韓國與台灣食藥署（TFDA）等主要體系，指出這十年各國雖然都從無到有建立了初步框架，但演算法透明度、上市後監控與新興生成式AI帶來的監管空白，至今仍是各國共同面臨的未解難題。

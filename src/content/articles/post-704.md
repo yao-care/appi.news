@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "financial"
 coverImage: "covers/post-704-stock.jpg"
 coverAlt: "大型工業廠房建設中重型機具作業的工地現場"
 coverImageCredit: "Photo by On  Shot on Pexels"

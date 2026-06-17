@@ -25,9 +25,9 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "financial"
 coverImage: "covers/post-705.webp"
-coverAlt: "台灣2026年外商直接投資法規持續自由化負面表列加黃金卡稅惠吸引AI與綠能資本"
+coverAlt: "台北101與現代商辦大樓，象徵台灣外商直接投資持續自由化的商業環境"
 ---
 
 台灣的外商直接投資（FDI）環境在2026年持續朝自由化方向演進。以「自由為原則、管制為例外」設計的負面表列制度，搭配針對AI科技、再生能源、研發活動的租稅優惠，以及吸引高端外籍專業人士的黃金卡機制，讓台灣對跨國資本的磁吸力在特定戰略領域明顯增強。對有意進入台灣市場的境外投資人而言，理解這套框架的結構是做出有效配置決策的前提。

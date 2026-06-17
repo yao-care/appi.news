@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "financial"
 coverImage: "covers/post-720.webp"
 coverAlt: "台灣晶片出口印度2030年預計翻倍TSMC推進1.4奈米製程重塑亞太半導體供應鏈"
 ---

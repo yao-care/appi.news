@@ -25,9 +25,9 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "medical"
 coverImage: "covers/post-667.webp"
-coverAlt: "台灣全民健保元旦起擴大給付多項保障升級民眾實質受益"
+coverAlt: "健保卡與藥品並排，象徵台灣健保新制擴大給付保障升級"
 ---
 
 每年元旦，健保新制的上路往往被夾在跨年新聞之間匆匆帶過，但2026年的這一批調整幅度明顯超過往年。[衛生福利部官方公告](https://www.mohw.gov.tw/cp-43-85142-1.html)列出逾十項同步生效的政策，從篩檢補助到住院費用上限，從罕病用藥到早產兒保護，涵蓋面之廣在近年健保史上少見。這批調整背後是財務壓力與擴大保障的雙軌平衡，而其中幾項細節，直接影響數十萬人的就醫選擇。

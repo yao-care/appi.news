@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "medical"
 coverImage: "covers/post-662-stock.jpg"
 coverAlt: "身穿防護設備的科學家在實驗室進行精密實驗"
 coverImageCredit: "Photo by Jonathan Borba on Pexels"

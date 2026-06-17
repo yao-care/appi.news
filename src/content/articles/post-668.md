@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "medical"
 coverImage: "covers/post-668-stock.jpg"
 coverAlt: "照護員協助坐輪椅長者在安養院走廊移動"
 coverImageCredit: "Photo by Jsme  MILA on Pexels"

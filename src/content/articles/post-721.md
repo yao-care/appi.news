@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "financial"
 coverImage: "covers/post-721.webp"
 coverAlt: "台灣創投協會呼籲接受失敗文化風險資本轉型才能讓台灣成為亞洲創新中心"
 ---

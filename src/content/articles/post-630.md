@@ -27,7 +27,7 @@ status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
 coverImage: "covers/post-630.webp"
-coverAlt: "台灣碳費與歐盟CBAM雙重碳成本時代企業碳管理從合規義務走向競爭力布局"
+coverAlt: "工廠煙囪排放廢氣，象徵台灣碳費與歐盟CBAM雙重碳成本壓力"
 ---
 
 台灣企業在2026年同時承受兩套碳成本制度的壓力，一套來自國內，一套來自出口目的地的彼岸。國內的[台灣碳費自2026年起正式開徵](https://vos.tier.org.tw/Viewpoint03More.aspx?DGUID=e647c86a-8f75-4921-9094-23bab5839817)，首波納管281家企業、約500個廠區，門檻是全廠年排放量合計達2.5萬公噸二氧化碳當量以上的電力業、燃氣供應業及製造業。與此同時，歐盟碳邊境調整機制（CBAM）在2026年1月1日正式實施，鋼鐵、鋁、水泥、肥料、電力設備的出口商需要購買CBAM憑證。兩套機制疊加，碳管理能力首度成為影響企業財務結構的核心變數。

@@ -64,6 +64,8 @@ const ld = [
     jobTitle: author.data.displayTitle,
     description: author.data.bioShort,
     image: new URL(avatar, Astro.site).toString(),
+    knowsAbout: author.data.specialties,
+    credentials: author.data.credentials,
     sameAs: author.data.socialLinks.map((s) => s.url),
     isOrganization: author.data.isOrganization,
   }),

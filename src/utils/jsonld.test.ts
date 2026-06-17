@@ -54,4 +54,22 @@ describe('articleLd', () => {
     expect(ld.author.name).toBe('編輯部');
     expect(ld.author.url).toBeUndefined();
   });
+  it('citations 輸出 schema.org citation（CreativeWork，含 url/publisher）', () => {
+    const ld = articleLd(site, {
+      ...baseArgs,
+      citations: [
+        { title: 'MCP 公告', url: 'https://example.com/mcp', publisher: 'Anthropic' },
+        { title: '無連結來源' },
+      ],
+    }) as any;
+    expect(ld.citation).toHaveLength(2);
+    expect(ld.citation[0]['@type']).toBe('CreativeWork');
+    expect(ld.citation[0].url).toBe('https://example.com/mcp');
+    expect(ld.citation[0].publisher.name).toBe('Anthropic');
+    expect(ld.citation[1].url).toBeUndefined();
+  });
+  it('citations 空陣列時不輸出 citation', () => {
+    const ld = articleLd(site, { ...baseArgs, citations: [] }) as any;
+    expect(ld.citation).toBeUndefined();
+  });
 });

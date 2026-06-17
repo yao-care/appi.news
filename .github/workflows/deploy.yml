@@ -90,3 +90,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # 部署完成、線上可取得後，才向 IndexNow 推送近期上線/更新的網址，
+      # 讓 Bing（含 ChatGPT Search / Copilot）等引擎即時重爬。best-effort，不擋部署。
+      - name: Checkout (for IndexNow)
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Submit URLs to IndexNow
+        run: node scripts/indexnow.mjs
+        continue-on-error: true

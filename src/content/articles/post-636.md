@@ -1,33 +1,39 @@
 ---
-title: "台灣電力交易平台調頻儲能容量突破810MW民間儲能規模化里程碑"
-slug: "post-636"
-description: "截至2025年10月29日，台灣電力交易平台調頻備轉（dReg）合格交易容量達810.7MW，超過台電原設定500MW需求的62%。市場過熱與零元競標的出現，顯示民間儲能規模化已成真，但商業模式正在轉型：收益重心從dReg移向E-dReg，儲能業者進入差異化競爭的新階段。"
-excerpt: "截至2025年10月29日，台灣電力交易平台調頻備轉（dReg）合格交易容量達810.7MW，超過台電原設定500MW需求的62%。市場過熱與零元競標的出現，顯示民間儲能規模化已成真，但商業模式正在轉型：收益重心從dReg移向E-dReg，儲能業者進入差異化競爭的新階段。"
+title: 台灣電力交易平台調頻儲能容量突破810MW民間儲能規模化里程碑
+slug: post-636
+description: 截至2025年10月29日，台灣電力交易平台調頻備轉（dReg）合格交易容量達810.7MW，超過台電原設定500MW需求的62%。市場過熱與零元競標的出現，顯示民間儲能規模化已成真，但商業模式正在轉型：收益重心從dReg移向E-dReg，儲能業者進入差異化競爭的新階段。
+excerpt: 截至2025年10月29日，台灣電力交易平台調頻備轉（dReg）合格交易容量達810.7MW，超過台電原設定500MW需求的62%。市場過熱與零元競標的出現，顯示民間儲能規模化已成真，但商業模式正在轉型：收益重心從dReg移向E-dReg，儲能業者進入差異化競爭的新階段。
 publishDate: "2026-06-14T21:37:47+08:00"
-category: "focus"
-subcategory: "trend-watch"
-tags: ["儲能", "電力交易平台", "調頻備轉", "dReg", "E-dReg"]
+category: focus
+subcategory: trend-watch
+tags:
+  - 儲能
+  - 電力交易平台
+  - 調頻備轉
+  - dReg
+  - E-dReg
 highlights:
-  - "2025年10月29日dReg合格交易容量達810.7MW，遠超台電500MW需求目標，市場出現過熱信號"
-  - "dReg競標價格長期維持在零元，顯示供給過剩，E-dReg的複合儲能服務成為新的收益核心"
-  - "台電2025年電網端儲能總目標為1,000MW，民間提供840MW、台電自建160MW，政策如期達標可期"
-  - "96家合格交易者參與日前輔助服務市場，儲能聚合商模式降低門檻，大型案場集中度持續上升"
+  - 2025年10月29日dReg合格交易容量達810.7MW，遠超台電500MW需求目標，市場出現過熱信號
+  - dReg競標價格長期維持在零元，顯示供給過剩，E-dReg的複合儲能服務成為新的收益核心
+  - 台電2025年電網端儲能總目標為1,000MW，民間提供840MW、台電自建160MW，政策如期達標可期
+  - 96家合格交易者參與日前輔助服務市場，儲能聚合商模式降低門檻，大型案場集中度持續上升
 references:
-  - title: "dReg、E-dReg是什麼？白話解析電力交易平台的運作與申請流程"
-    url: "https://www.reccessary.com/zh-tw/news/what-is-dreg-edReg"
-    publisher: "RECCESSARY"
-  - title: "2026年2月儲能及E-dReg組成分析"
-    url: "https://info.poxa.io/report/20260302"
-    publisher: "POXA Info"
-  - title: "台電輔助服務商機介紹"
-    url: "https://www.billionwatts.com.tw/taipower-ancillary-service"
-    publisher: "盛齊綠能"
-author: "appi-editorial"
-status: "published"
-sourceType: "editorial"
-disclaimerType: "general"
-coverImage: "covers/post-636.webp"
-coverAlt: "台灣電力交易平台調頻儲能容量突破810MW民間儲能規模化里程碑"
+  - title: dReg、E-dReg是什麼？白話解析電力交易平台的運作與申請流程
+    url: https://www.reccessary.com/zh-tw/news/what-is-dreg-edReg
+    publisher: RECCESSARY
+  - title: 2026年2月儲能及E-dReg組成分析
+    url: https://info.poxa.io/report/20260302
+    publisher: POXA Info
+  - title: 台電輔助服務商機介紹
+    url: https://www.billionwatts.com.tw/taipower-ancillary-service
+    publisher: 盛齊綠能
+author: appi-editorial
+status: published
+sourceType: editorial
+disclaimerType: general
+coverImage: /covers/post-644-stock.jpg
+coverAlt: 台灣電力交易平台調頻儲能容量突破810MW民間儲能規模化里程碑
+coverImageCredit: ""
 ---
 
 這個數字出現的時間很有意思。[根據RECCESSARY的市場分析](https://www.reccessary.com/zh-tw/news/what-is-dreg-edReg)，截至2025年10月29日，台灣電力交易平台的調頻備轉（dReg）合格交易容量已達810.7MW。台電為這個市場設定的原始需求是500MW，換算下來，市場供給比台電想要的量多出了62%。同一時間點，E-dReg（電能移轉複合動態調節備轉）合格容量達到393.2MW，也在朝台電500MW目標靠攏。兩個數字加在一起，說明台灣民間儲能市場在三年多的快速成長後，已從「不夠用」走到「局部過熱」的新階段。

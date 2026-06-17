@@ -361,6 +361,35 @@ export async function handle(request: Request, env: Env, ctx?: CtxLike): Promise
     return json({ keywords }, 200, env);
   }
 
+  if (request.method === 'POST' && url.pathname === '/slug') {
+    const denied = await requirePush(request, env);
+    if (denied) return denied;
+    const { title, direction, sources } = (await request.json()) as {
+      title?: string;
+      direction?: string;
+      sources?: string;
+    };
+    const prompt = `You are naming the URL slug for a Traditional-Chinese news article on a Taiwanese site (appi.news).\nReturn ONE concise, descriptive ENGLISH slug in kebab-case.\nRules:\n- lowercase ASCII only, words joined by hyphens, allowed chars: a-z 0-9 -\n- 3 to 6 words, clearly conveys the topic; translate the Chinese topic into English keywords\n- use common English forms for proper nouns: 台積電=tsmc, 輝達/NVIDIA=nvidia, 鴻海=foxconn, 世界盃=world-cup, 聯準會=fed, 歐盟=eu, 健保=nhi, 中職=cpbl\n- keep a key year/number only if it aids identification (e.g. world-cup-2026); do not stuff numbers\n- do NOT output generic slugs like news, article, taiwan-update\nOutput ONLY the slug, nothing else.\n\nTitle: ${title ?? ''}${direction ? `\nAngle: ${direction}` : ''}${sources ? `\nSources: ${String(sources).slice(0, 500)}` : ''}`;
+    const aiRes = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+      body: JSON.stringify({ model: env.ANTHROPIC_MODEL, max_tokens: 64, messages: [{ role: 'user', content: prompt }] }),
+    });
+    if (!aiRes.ok) return json({ error: `slug 產生失敗（${aiRes.status}）` }, 502, env);
+    const ai = (await aiRes.json()) as { content?: { type: string; text: string }[] };
+    const raw = ai.content?.find((c) => c.type === 'text')?.text ?? '';
+    // server 端淨化：強制 kebab、只留 a-z0-9-、截斷至 60 字
+    const slug = raw
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .slice(0, 60)
+      .replace(/-+$/g, '');
+    if (!slug) return json({ error: 'slug 產生失敗（空結果）' }, 502, env);
+    return json({ slug }, 200, env);
+  }
+
   if (request.method === 'POST' && url.pathname === '/stock') {
     const denied = await requirePush(request, env);
     if (denied) return denied;

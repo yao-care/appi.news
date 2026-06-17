@@ -43,6 +43,20 @@ export async function getPublishedArticles(): Promise<Article[]> {
     .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
 }
 
+/**
+ * 排程草稿：status 非 draft/archived，但 publishDate 仍在未來（尚未公開）。
+ * 僅供站內「草稿預覽＋編輯」用——這些會在 [slug].astro 產出 noindex、
+ * 不進列表/sitemap/RSS/llms 的預覽頁，到 publishDate 後由 cron 重建自動轉正。
+ */
+export async function getScheduledPreviewArticles(): Promise<Article[]> {
+  const all = await getCollection('articles');
+  return all.filter((a) => {
+    if (a.data.draft) return false;
+    if (a.data.status === 'draft' || a.data.status === 'archived') return false;
+    return a.data.publishDate.getTime() > Date.now(); // 尚未到發佈時間
+  });
+}
+
 export function byCategory(articles: Article[], category: string): Article[] {
   return articles.filter((a) => a.data.category === category);
 }

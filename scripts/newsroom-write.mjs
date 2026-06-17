@@ -18,9 +18,10 @@
 //
 // 設計依據：docs/superpowers/specs/2026-06-16-unattended-newsroom-design.md
 
-import { readFileSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
+import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs';
+import { join, dirname } from 'node:path';
 import { spawnSync } from 'node:child_process';
+import yaml from 'js-yaml';
 import { validateJob, normalizeJob } from './lib/newsroom-job.mjs';
 import { nextOpenPublishDate, takenDatesFromContents } from './lib/publish-slot.mjs';
 
@@ -37,6 +38,22 @@ function sh(cmd, args, opts = {}) {
     throw new Error(`指令失敗（exit ${r.status}）：${cmd} ${args.join(' ')}\n${r.stderr || r.stdout || ''}`);
   }
   return (r.stdout || '').trim();
+}
+
+/** 解析文章 frontmatter + 內文圖數；回傳 { data, body, inlineImages } 或 null。 */
+function parseArticle(file) {
+  const rawTxt = readFileSync(file, 'utf8');
+  const m = rawTxt.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+  if (!m) return null;
+  let data;
+  try {
+    data = yaml.load(m[1]);
+  } catch {
+    return null;
+  }
+  const body = m[2] || '';
+  const inlineImages = (body.match(/!\[[^\]]*\]\(|<img\b/g) || []).length;
+  return { data: data || {}, body, inlineImages };
 }
 
 /** 決定發佈狀態與日期：指定日 > 下一個空檔；今天/過去→published、未來→scheduled。 */
@@ -144,6 +161,36 @@ function main() {
   const artLine = produced.split('\n').map((l) => l.trim()).find((l) => l.endsWith('.md'));
   const slug = artLine ? artLine.replace(/^.*src\/content\/articles\//, '').replace(/\.md$/, '') : null;
   const url = slug ? `https://appi.news/articles/${slug}/` : null;
+
+  // 配圖硬性 gate（只擋自動產文這條路）：缺封面 / 封面檔不存在 / 內文 0 張圖 → 中止不發佈。
+  const articleFile = slug ? join(ARTICLES_DIR, `${slug}.md`) : null;
+  const parsed = articleFile && existsSync(articleFile) ? parseArticle(articleFile) : null;
+  if (!parsed) die(`讀不到產出文章做配圖檢查：${articleFile}`);
+  const cover = parsed.data.coverImage ? String(parsed.data.coverImage).replace(/^\//, '') : '';
+  const imgProblems = [];
+  if (!cover) imgProblems.push('缺 coverImage（每篇必須有封面）');
+  else if (!existsSync(join('public', cover))) imgProblems.push(`coverImage 檔不存在：public/${cover}`);
+  if (parsed.inlineImages < 1) imgProblems.push('內文 0 張圖（每篇至少要有一張內文配圖）');
+  if (imgProblems.length) {
+    die(`配圖 gate 未過，不發佈（改動留工作區待補圖）：\n  - ${imgProblems.join('\n  - ')}`);
+  }
+
+  // 給協調器回報 Slack 用：內文摘要 + 重點 + 預覽/編輯連結（同一 URL）。寫入 job 同目錄。
+  const result = {
+    title: parsed.data.title || job.title,
+    url,
+    scheduled: schedule.scheduled,
+    dateYmd: schedule.dateYmd,
+    excerpt: parsed.data.excerpt || parsed.data.description || '',
+    highlights: Array.isArray(parsed.data.highlights) ? parsed.data.highlights.slice(0, 5) : [],
+    coverImage: cover,
+    inlineImages: parsed.inlineImages,
+  };
+  try {
+    writeFileSync(join(dirname(jobPath), 'result.json'), JSON.stringify(result));
+  } catch (e) {
+    console.error(`（result.json 寫入失敗，不影響發佈）：${e.message}`);
+  }
 
   // gate：壞連結會擋整站部署，沒過就不發佈（改動留在工作區供檢查，不自動還原）
   console.log('→ pnpm check:links（唯一自動關卡）');

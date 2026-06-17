@@ -14,6 +14,7 @@ import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
 import EditButton from '@/components/editor/EditButton.svelte';
 import {
   getPublishedArticles,
+  getScheduledPreviewArticles,
   getAuthorMap,
   articleSlug,
   coverImageFor,
@@ -32,14 +33,22 @@ import { absoluteUrl, url } from '@/utils/url';
 import { articleLd, breadcrumbLd, faqLd } from '@/utils/jsonld';
 
 export async function getStaticPaths() {
-  const articles = await getPublishedArticles();
-  return articles.map((article) => ({
-    params: { slug: articleSlug(article) },
-    props: { article },
-  }));
+  const published = await getPublishedArticles();
+  // 排程草稿也產頁（noindex、不進列表），供站內預覽＋編輯；到 publishDate 後 cron 重建自動轉正。
+  const previews = await getScheduledPreviewArticles();
+  return [
+    ...published.map((article) => ({
+      params: { slug: articleSlug(article) },
+      props: { article, preview: false },
+    })),
+    ...previews.map((article) => ({
+      params: { slug: articleSlug(article) },
+      props: { article, preview: true },
+    })),
+  ];
 }
 
-const { article } = Astro.props;
+const { article, preview = false } = Astro.props;
 const all = await getPublishedArticles();
 const authorMap = await getAuthorMap();
 
@@ -139,8 +148,19 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
   authorPath={authorHasPage(author) ? `/authors/${author!.id}/` : undefined}
   keywords={article.data.tags}
   jsonld={ld}
+  noindex={preview}
 >
   <article class="article">
+    {
+      preview && (
+        <div class="container">
+          <p class="article-preview-banner">
+            排程草稿預覽（未公開）· 預定 {formatDate(article.data.publishDate)} 發佈。
+            登入 <a href={url('/admin/')}>/admin</a> 後右下角會浮出「編輯」鈕可直接修改。
+          </p>
+        </div>
+      )
+    }
     <div class="container article-head-wrap">
       <Breadcrumbs items={crumbItems} />
 
@@ -234,7 +254,7 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
 
         <DisclaimerBox type={article.data.disclaimerType} />
 
-        <TagList tags={article.data.tags} title="標籤" />
+        <TagList tags={article.data.tags} title="標籤" plain={preview} />
 
         <ShareButtons url={shareUrl} title={article.data.title} />
 
@@ -275,6 +295,22 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
 </BaseLayout>
 
 <style>
+  .article-preview-banner {
+    max-width: var(--maxw-prose);
+    margin: 18px auto 0;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-coral);
+    border-radius: var(--radius-card);
+    background: color-mix(in oklch, var(--color-coral) 12%, white);
+    color: var(--color-ink);
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    line-height: 1.5;
+  }
+  .article-preview-banner a {
+    color: var(--color-coral);
+    font-weight: 600;
+  }
   .article-head-wrap {
     padding-top: 28px;
   }

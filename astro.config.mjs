@@ -1,6 +1,7 @@
 // @ts-check
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { defineConfig } from 'astro/config';
+import yaml from 'js-yaml';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import svelte from '@astrojs/svelte';
@@ -13,6 +14,37 @@ import svelte from '@astrojs/svelte';
 const articleRedirects = JSON.parse(
   readFileSync(new URL('./src/redirects.json', import.meta.url), 'utf-8'),
 );
+
+/**
+ * 排程草稿（status 非 draft/archived、但 publishDate 仍在未來）的網址路徑集合。
+ * 這些會由 [slug].astro 產出 noindex 預覽頁供站內預覽＋編輯，但**不可進 sitemap**
+ * （否則搜尋引擎會提前發現未公開草稿，破壞「排程＝隱藏」）。與 src/utils/content.ts
+ * 的 getScheduledPreviewArticles 同邏輯，這裡於 build 期以純 fs 計算給 sitemap filter 用。
+ */
+function scheduledPreviewPaths() {
+  const dir = new URL('./src/content/articles/', import.meta.url);
+  const now = Date.now();
+  const paths = new Set();
+  for (const f of readdirSync(dir)) {
+    if (!f.endsWith('.md') && !f.endsWith('.mdx')) continue;
+    const raw = readFileSync(new URL(f, dir), 'utf-8');
+    const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if (!m) continue;
+    let d;
+    try {
+      d = yaml.load(m[1]);
+    } catch {
+      continue;
+    }
+    if (!d || typeof d !== 'object') continue;
+    if (d.draft || d.status === 'draft' || d.status === 'archived') continue;
+    if (!d.publishDate || new Date(d.publishDate).getTime() <= now) continue;
+    const slug = d.slug || f.replace(/\.mdx?$/, '');
+    paths.add(`/articles/${slug}/`);
+  }
+  return paths;
+}
+const previewPaths = scheduledPreviewPaths();
 
 /**
  * ── 換網域只需改這裡 ──────────────────────────────────────────────
@@ -83,7 +115,11 @@ export default defineConfig({
   integrations: [
     svelte(),
     sitemap({
-      filter: (page) => !page.includes('/admin') && !page.includes('/choice'),
+      // 排除 admin / choice，以及排程草稿預覽頁（noindex，不可進 sitemap）。
+      filter: (page) =>
+        !page.includes('/admin') &&
+        !page.includes('/choice') &&
+        ![...previewPaths].some((p) => page.endsWith(p)),
     }),
     mdx(),
   ],

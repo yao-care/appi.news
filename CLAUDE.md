@@ -30,7 +30,9 @@
 ## 部署與驗收
 
 - 部署設定在 `.github/workflows/deploy.yml`，觸發條件有三：**push 到 `main`**、**每 6 小時 cron**、**手動 `workflow_dispatch`**。
-- `status: scheduled` 且 `publishDate` 在未來的文章會被隱藏，到時間後由 6 小時 cron 重建自動上線。
+- `status: scheduled` 且 `publishDate` 在未來的文章**不進列表/sitemap/RSS/llms**（由 `getPublishedArticles()` 過濾），到時間後由 6 小時 cron 重建自動上線。
+  - 但會在 `/articles/<slug>/` 產出一個 **noindex、不被任何站內連結指到**的「排程草稿預覽頁」（`getScheduledPreviewArticles()` + `[slug].astro` getStaticPaths），供作者**站內預覽＋編輯**（登入 `/admin` 後右下角「編輯」鈕）。sitemap 由 `astro.config.mjs` 的 `previewPaths` 排除；tag 在預覽頁渲染為純文字（避免連到未產出的 tag 頁擋 `check:links`）。到 `publishDate` 後同一 URL 自動轉正（拿掉 noindex、進列表）。
+- 自動產文（`scripts/newsroom-write.mjs`）有**配圖硬性 gate**：缺 `coverImage` / 封面檔不存在 / 內文 0 張圖 → 中止不發佈（改動留工作區待補）。完成後寫 `result.json`，由 `slack-actions-server.mjs` 回報 Slack 帶**內文摘要＋重點＋預覽/編輯連結**。
 - 上線前自檢：`pnpm build && pnpm check:links`（**站內壞連結是硬性 gate，會擋部署**；Lighthouse 是軟性、僅參考）。
 - 驗收以**部署後的線上站**為準，不是本機 `pnpm preview`。
 - **上線後必用 PSI（PageSpeed Insights，Google 機房）檢查線上站**，涵蓋 performance / accessibility / best-practices / seo。本機與 CI 的 Lighthouse 會抖、不可當準（細節見 `PERFORMANCE.md` §3）。

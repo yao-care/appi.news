@@ -5,8 +5,10 @@ import { slugify } from '@/utils/content';
 interface Props {
   tags: string[];
   title?: string;
+  /** 純文字模式：標籤不連到 /tags/ 頁（排程草稿預覽用，避免連到尚未產出的 tag 頁）。 */
+  plain?: boolean;
 }
-const { tags, title } = Astro.props;
+const { tags, title, plain = false } = Astro.props;
 ---
 {
   tags.length > 0 && (
@@ -15,7 +17,7 @@ const { tags, title } = Astro.props;
       <ul>
         {tags.map((t) => (
           <li>
-            <a href={url(`/tags/${slugify(t)}/`)}>#{t}</a>
+            {plain ? <span>#{t}</span> : <a href={url(`/tags/${slugify(t)}/`)}>#{t}</a>}
           </li>
         ))}
       </ul>
@@ -44,7 +46,8 @@ const { tags, title } = Astro.props;
     margin: 0;
     padding: 0;
   }
-  .tag-list a {
+  .tag-list a,
+  .tag-list ul span {
     display: inline-block;
     font-size: var(--text-xs);
     color: var(--ink-2);

@@ -13,7 +13,7 @@
 // 純決策邏輯抽成 handleInteraction（可單元測試、無 I/O）；server 與引擎觸發是薄殼。
 
 import { createServer } from 'node:http';
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import { writeFileSync, mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -100,6 +100,27 @@ const SIGNING_SECRET = process.env.SLACK_SIGNING_SECRET;
 const BOT_TOKEN = process.env.SLACK_BOT_TOKEN;
 const REPO_DIR = fileURLToPath(new URL('..', import.meta.url)); // scripts/.. = repo 根
 
+// 隔離模式（專屬發佈 checkout）：每篇開跑前把工作區拉回 origin/main 的乾淨最新狀態，
+// 讓自動產文完全不受「有人正在這個目錄開發 / 留未提交改動 / 本地落後遠端」影響。
+// 只在 PUBLISH_ISOLATED=1（由 publisher 的 pm2 環境設定）時啟用——避免誤在開發目錄 reset --hard 毀掉未存檔的改動。
+const PUBLISH_ISOLATED = process.env.PUBLISH_ISOLATED === '1';
+function prepareCleanCheckout() {
+  if (!PUBLISH_ISOLATED) return { ok: true };
+  const steps = [
+    ['git', ['fetch', 'origin', '--prune']],
+    ['git', ['checkout', '-q', 'main']],
+    ['git', ['reset', '--hard', 'origin/main']],
+    ['git', ['clean', '-fd']], // 清未追蹤殘留；不帶 -x，保留 node_modules / dist / .env
+  ];
+  for (const [cmd, args] of steps) {
+    const r = spawnSync(cmd, args, { cwd: REPO_DIR, encoding: 'utf8' });
+    if (r.status !== 0) {
+      return { ok: false, msg: `${cmd} ${args.join(' ')} 失敗：${(r.stderr || r.stdout || '').trim().slice(-300)}` };
+    }
+  }
+  return { ok: true };
+}
+
 // 序列佇列：同時只跑一篇（避免並發 --go 撞共用 git 工作區），其餘排隊等前一篇跑完自動接上。
 // 純記憶體，不持久化——server 重啟（pm2 restart）會清空尚未開跑的佇列，與舊版 inFlight 行為一致。
 const queue = []; // 待產製工單（不含正在跑的那篇）
@@ -154,6 +175,14 @@ function runEngine(job) {
   const jobPath = join(dir, 'job.json');
   writeFileSync(jobPath, JSON.stringify(job));
   const waiting = queue.length ? `（後面還有 ${queue.length} 篇排隊）` : '';
+  // 專屬發佈 checkout：開跑前拉回 origin/main 乾淨最新狀態（隔離開發狀態的影響）。
+  const prep = prepareCleanCheckout();
+  if (!prep.ok) {
+    running = false;
+    notify(`⚠️ 自動產文未開始：「${job.title}」\n發佈 checkout 同步失敗：${prep.msg}`);
+    drain();
+    return;
+  }
   notify(`📝 開始自動撰寫：「${job.title}」（約十幾分鐘，完成回報）${waiting}`);
   const child = spawn('node', ['scripts/newsroom-write.mjs', jobPath, '--go'], { cwd: REPO_DIR, env: process.env });
   let out = '';

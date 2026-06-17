@@ -16,9 +16,9 @@ references:
   - title: "618商機燒 零售三強拚場 爭食百億元大餅"
     url: "https://money.udn.com/money/story/10871/9561358"
     publisher: "經濟日報"
-  - title: "「618」恐成關稅開徵前最後一個購物節 5大電商磨刀霍霍"
-    url: "https://tw.news.yahoo.com/618-%E6%81%90%E6%88%90%E9%97%9C%E7%A8%85%E9%96%8B%E5%BE%81%E5%89%8D%E6%9C%80%E5%BE%8C-%E5%80%8B%E8%B3%BC%E7%89%A9%E7%AF%80-5%E5%A4%A7%E9%9B%BB%E5%95%86%E7%A3%A8%E5%88%80%E9%9C%8D%E9%9C%8D-%E8%B6%85%E7%8B%82%E5%84%AA%E6%83%A0%E6%87%B6%E4%BA%BA%E5%8C%85-232000362.html"
-    publisher: "Yahoo新聞"
+  - title: "電商購物節調查：618購物節成長逾一成，消費者購買前三為個人清潔、美妝保養用品、3C"
+    url: "https://mic.iii.org.tw/news.aspx?id=657"
+    publisher: "資策會產業情報研究所（MIC）"
   - title: "2026台灣民生消費十大趨勢 FMCG線上銷額佔比達二成"
     url: "https://today.line.me/tw/v3/article/kE8WqZ1"
     publisher: "LINE TODAY 食力 foodNEXT"
@@ -31,7 +31,7 @@ coverAlt: "女性一邊查看手機一邊確認網路購物包裹的居家場景
 coverImageCredit: "Photo by saravut vanset on Pexels"
 ---
 
-台灣電商上半年最大購物檔618在2026年迎來一個新轉折點。根據[資策會產業情報研究所（MIC）的調查](https://tw.news.yahoo.com/618-%E6%81%90%E6%88%90%E9%97%9C%E7%A8%85%E9%96%8B%E5%BE%81%E5%89%8D%E6%9C%80%E5%BE%8C-%E5%80%8B%E8%B3%BC%E7%AF%A9-5%E5%A4%A7%E9%9B%BB%E5%95%86%E7%A3%A8%E5%88%80%E9%9C%8D%E9%9C%8D-%E8%B6%85%E7%8B%82%E5%84%AA%E6%83%A0%E6%87%B6%E4%BA%BA%E5%8C%85-232000362.html)，台灣消費者在電商購物節的參與集中化趨勢愈來愈明顯，超過八成網友全年參與的電商購物節在3個以內。618因此成為電商平台爭奪重度消費者的戰略要地。而支撐這場競爭的底層數據，則是Worldpanel的一個關鍵發現：2026年台灣FMCG線上銷額已佔整體市場兩成，年成長率達10%。
+台灣電商上半年最大購物檔618在2026年迎來一個新轉折點。根據資策會產業情報研究所（MIC）的調查，台灣消費者在電商購物節的參與集中化趨勢愈來愈明顯，超過八成網友全年參與的電商購物節在3個以內。618因此成為電商平台爭奪重度消費者的戰略要地。而支撐這場競爭的底層數據，則是Worldpanel的一個關鍵發現：2026年台灣FMCG線上銷額已佔整體市場兩成，年成長率達10%。
 
 ## 三強各出奇招，百億商機誰來分
 

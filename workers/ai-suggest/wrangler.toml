@@ -1,6 +1,8 @@
 name = "appi-news-ai-suggest"
 main = "src/index.ts"
 compatibility_date = "2026-01-01"
+# Lightman.chang@gmail.com 帳號（worker 所在；CLI 有多帳號時非互動部署需要）
+account_id = "9d9e58b5e0d1657b8f74bd2cbfc91ee3"
 
 # 非同步生圖工單暫存（前端輪詢取件）
 [[kv_namespaces]]

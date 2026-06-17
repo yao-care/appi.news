@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "generate:og": "node scripts/generate-og.mjs",
     "check:links": "node scripts/check-links.mjs",
+    "indexnow": "node scripts/indexnow.mjs",
     "astro": "astro",
     "test": "vitest run",
     "test:watch": "vitest"

@@ -45,22 +45,12 @@ export type SourceType =
 
 /** 依 sourceType 顯示的來源揭露文字（DisclosureBox）；null 表示前台不另外顯示揭露框 */
 export const DISCLOSURES: Record<SourceType, { label: string; text: string } | null> = {
-  editorial: {
-    label: '編輯部',
-    text: '本文由 APPI 編輯部製作，內容經編輯檢核。',
-  },
-  author: {
-    label: '作者',
-    text: '本文為 APPI 作者撰稿，觀點不必然代表 APPI 編輯部立場。',
-  },
-  contributor: {
-    label: '特約作者',
-    text: '本文為特約作者來稿，觀點不必然代表 APPI 編輯部立場。',
-  },
-  expert: {
-    label: '專家來稿',
-    text: '本文為專家來稿，由作者本於專業提出觀點，不必然代表 APPI 編輯部立場。',
-  },
+  // editorial / author / contributor / expert 為一般編輯部與作者內容，
+  // 前台不另外顯示揭露框，避免干擾閱讀（仍由作者署名與文末免責承擔內容責任）。
+  editorial: null,
+  author: null,
+  contributor: null,
+  expert: null,
   'press-release': {
     label: '新聞稿',
     text: '本文為新聞稿內容，相關資訊由發布方提供，APPI 保留基本刊登規範。',

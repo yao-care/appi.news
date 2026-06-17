@@ -196,5 +196,23 @@
     "predictions": [
       "SaaS 與 API 的認證設定錯誤會從零星事故變成企業外洩的主流管道；隨著 vibe coding 與 AI 生成設定加速上線，沒人回頭審的『預設未驗證』破口只會更隱形，先把對外端點與第三方服務、agent 串接邊界盤成例行事的組織，會比被動等標準與法規的同業更有準備。"
     ]
+  },
+  {
+    "slug": "databricks-genie-one-agent-governance",
+    "title": "Databricks 把 AI agent 變「同事」：當 vibe coding 進公司，資料權限邊界誰來守",
+    "publishDate": "2026-06-20",
+    "category": "tech",
+    "tags": ["Databricks Genie One", "AI agent 同事", "vibe coding", "Unity Catalog 資料治理", "企業 AI 權限邊界"],
+    "conclusion": "Databricks 6/16 發表 Genie One，把 agent 講成能跑重複工作流的『同事』、並給業務開了 vibe coding 環境 Genie App Builder；真正的門檻不是好不好用，而是當全員都能自助生成連著正式資料的 app，每個會自己動作的 agent 都成了新的權限治理對象，得靠 Unity Catalog 這類治理層在 App Space 層級把資料與權限邊界收住，可信度靠落地流程不靠模型聰明。",
+    "claims": [
+      "Genie One 被定位成跨結構化與非結構化資料、能替團隊自動跑工作的 agentic coworker；Genie Agents 把任一段 Genie 對話存成會繼承記憶、可重複跑的 agent，Genie App Builder 是給業務用的全託管 vibe coding 環境；Genie One/Agents/Code 直接 GA，App Builder 與 ZeroOps 進私測，CEO Ali Ghodsi 稱 AI 說不出毛利為何變動『不是 AI 問題，是脈絡問題』。",
+      "『agent 變同事』改變的是誰能生出在公司跑的軟體：Genie App Builder 想讓最貼近業務問題的人用自然語言自己建連著正式資料的 app，且組織能撐一大堆 app 而不累積治理債；當動到資料的人從少數工程師變成全公司，治理收不收得住才是真門檻。",
+      "Databricks 把治理押在 Unity Catalog：app 帶著 Unity Catalog 權限與存取控制上線，且權限在 App Space 層級由管理員統一定義資源與資料存取、on-behalf-of-user API scope，同一 space 的 app 自動繼承，讓非資安專家的開發者也能安全碰資料；但這恰好證明每個 agent 都是新的權限治理對象（延續 mcp-de-facto-standard-agent-governance），可信度靠落地流程不靠模型聰明（延續 llm-healthcare-promise-limits）。",
+      "企業該先定義 agent/app 要解的情境、誰用、碰得到哪張表，再決定開放範圍，順序不能倒（延續 what-is-claw-llm-client-tool）；落地前先盤三格：App Space 權限預設值開多大、on-behalf-of-user 用誰身分讀資料、哪些 agent 從問答升級成會自動執行的工作流。",
+      "作者本人觀點：十分期待看到大公司願意把 AI 落地與治理的成功與失敗心得攤開分享，因為發表會證明不了治理在真實組織撐不撐得住，一手經驗能讓好做法擴散更快、不必每家重踩一遍，這會促進更多好的 AI 出現。"
+    ],
+    "predictions": [
+      "把 agent 做成『同事』、讓全員 vibe coding 自助生成連著正式資料的 app 會成為企業 AI 的主流形態；隨之而來的治理重心會從『模型好不好用』移到『每個 agent 與 app 動得到哪些資料、用誰的權限』，先把 App Space 預設權限、on-behalf-of-user 身分與自動執行型 agent 盤成例行事的組織，會比追介面功能的同業更不容易在沒人看的地方滾出治理債。"
+    ]
   }
 ]

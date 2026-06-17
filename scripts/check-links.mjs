@@ -3,7 +3,10 @@
  * 掃描 dist/ 內所有 HTML 的站內 href/src，解析到實際輸出檔；
  * 有任何壞連結即 exit 1，讓 GitHub Actions 部署失敗、退回、不上線。
  *
- * 為 base-path（/appi.news）感知版本：會先去掉 base 前綴再對應到 dist 檔案。
+ * base 無關：dist/ 的輸出路徑本身已反映建置時的 base，站內連結一律照實
+ * 對應到 dist 檔案，不去剝除任何前綴。早期版本硬寫去掉 '/appi.news' 前綴，
+ * 換成自訂網域（base='/'）後，反而把多帶 '/appi.news' 的雙前綴 404 連結
+ * 當成合法放行 —— 連結一律走 url() 產生即可避免，這支只負責照實驗收。
  *   pnpm check:links
  */
 import { readdirSync, readFileSync, statSync } from 'node:fs';
@@ -13,8 +16,6 @@ import { dirname } from 'node:path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = join(__dirname, '..', 'dist');
-const BASE = '/appi.news';
-
 function walk(dir, out = []) {
   for (const name of readdirSync(dir)) {
     const p = join(dir, name);
@@ -32,7 +33,6 @@ const existing = new Set(
 
 function candidates(target) {
   let path = target;
-  if (path.startsWith(BASE)) path = path.slice(BASE.length);
   if (!path.startsWith('/')) return null; // 相對連結略過
   path = decodeURIComponent(path.split('#')[0].split('?')[0]);
   if (path.endsWith('/')) return [path + 'index.html'];

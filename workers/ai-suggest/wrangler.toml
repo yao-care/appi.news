@@ -19,7 +19,8 @@ max_batch_timeout = 1
 max_retries = 2
 
 [vars]
-ALLOWED_ORIGIN = "https://yao-care.github.io"
+# 編輯器實際開在自訂網域 appi.news（github.io 會 301 轉到此），CORS 必須對齊此來源。
+ALLOWED_ORIGIN = "https://appi.news"
 ANTHROPIC_MODEL = "claude-haiku-4-5-20251001"
 GITHUB_OWNER = "yao-care"
 GITHUB_REPO = "appi.news"

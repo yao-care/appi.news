@@ -179,5 +179,22 @@
     "predictions": [
       "MCP 標準底定後，agent 治理重心會從『選哪個協定』移到『每台 server 的權限、憑證、審計誰管』；標準與法規都會晚到、agent 串接速度不會等，先建立治理意識與盤點機制的組織會比被動等條文標準的同業更有準備。"
     ]
+  },
+  {
+    "slug": "servicenow-saas-api-auth-misconfiguration-breach",
+    "title": "ServiceNow 八個月內第三次認證漏洞：SaaS API 設定錯誤正在變成主流外洩管道",
+    "publishDate": "2026-06-18",
+    "category": "tech",
+    "tags": ["SaaS 資安", "API 認證設定錯誤", "ServiceNow 漏洞", "企業資料外洩", "AI agent 權限治理"],
+    "conclusion": "ServiceNow 6/9 揭露一個 Scripted REST 端點因 requires_authentication 預設 false，讓未授權請求以 Guest 身分查到客戶資料表，且是修補前資料就被觸及的首例；事件揭示 SaaS 與 API 認證設定錯誤已成 2026 企業外洩的代表類型，企業該把『預設未驗證』列為優先稽核項，並主動盤點自家與 agent 串接的 API 認證邊界，而非等標準或法規補上。",
+    "claims": [
+      "出問題的端點是 /api/now/related_list_edit/create，requires_authentication 預設 false，未授權請求以最低權限 Guest 身分執行；ServiceNow 6/5 修補、6/9 揭露（KB3067321），並確認攻擊者在修補前已成功查詢客戶執行個體資料表。",
+      "這是八個月內又一起認證相關漏洞；八個月前的 CVE-2025-12420（2025/10，AppOmni 發現）同樣是未驗證冒用任何使用者，但那次修在被利用之前、無被利用證據，這次卻是修補前資料就被觸及的首例（ServiceNow 6/10 補充稱該活動可能與研究者或漏洞獎金有關，但未驗證查到客戶資料表這件事不變）。",
+      "六月不只 ServiceNow：Novo Nordisk 六月中證實內部 IT 遭未授權存取、臨床試驗病患資料外洩（姓名等直接識別資訊未受影響），Nintendo 遭 ShadowByt3$ 竊 859MB 員工資料喊價 200 萬美元、破口在第三方平台 TINYpulse；三者共通點是外洩入口都在串接出去的邊界服務，而非核心系統。",
+      "作者本人觀點：隨著 vibe coding 的人越來越多，很多服務上線時忽略程式品質、也沒注意到 AI 無意間造成的漏洞，requires_authentication=false 這種沒人回頭檢查的預設值正是代表；可信度靠落地流程不是靠工具強弱（延續 post-282），防禦做法是把預設未驗證列優先稽核、把 SaaS 供應商與自家 agent 串接的 API（每台 server 是新權限對象，呼應 mcp-de-facto-standard-agent-governance）一併盤點，先定義情境再決定開放（延續 post-280）。"
+    ],
+    "predictions": [
+      "SaaS 與 API 的認證設定錯誤會從零星事故變成企業外洩的主流管道；隨著 vibe coding 與 AI 生成設定加速上線，沒人回頭審的『預設未驗證』破口只會更隱形，先把對外端點與第三方服務、agent 串接邊界盤成例行事的組織，會比被動等標準與法規的同業更有準備。"
+    ]
   }
 ]

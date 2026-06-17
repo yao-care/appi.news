@@ -162,5 +162,22 @@
     "predictions": [
       "AI 基本法配套規範最長要等各部會 2 年內陸續訂定，模型改版速度遠快於法規，便利與紀律的取捨會長期存在；先建立 ISO/IEC 42001 類管理骨架、把盤點變例行事的企業，會在規則到位前就握有可稽核、可踩剎車的治理機制，比被動等條文的同業更有準備。"
     ]
+  },
+  {
+    "slug": "mcp-de-facto-standard-agent-governance",
+    "title": "MCP 成 AI agent 事實標準後，Anthropic 把它捐了：企業現在要治理的是什麼",
+    "publishDate": "2026-06-17",
+    "category": "tech",
+    "tags": ["MCP", "Model Context Protocol", "AI agent 治理", "Agentic AI Foundation", "MCP server 資安"],
+    "conclusion": "MCP 月下載破 9,700 萬、2025/12 被捐給 Linux Foundation 旗下 Agentic AI Foundation 成為廠商中立事實標準後，企業要面對的不再是『選哪個協定』，而是 agent 接外部工具的治理與權限邊界；每個 MCP server 都該被當成一個新的權限治理對象，落地治理比工具強弱更關鍵。",
+    "claims": [
+      "MCP 的 Python/TypeScript SDK 合計月下載破 9,700 萬、較發布初期約 10 萬成長約 970 倍，公開 server 逾 9,600 個、四大廠（Claude/ChatGPT/Gemini/Copilot）原生支援；2025/12/9 由 Anthropic 捐給 Linux Foundation 旗下 Agentic AI Foundation（與 Block、OpenAI 共同創立），治理權轉為廠商中立。",
+      "Claude Agent SDK 原訂 2026/6/15 把程式化呼叫改扣獨立月額度、與人工互動額度分離，後經官方公告喊停維持原狀；但『把人在用與 agent 自己在跑切成兩個池』的方向，說明 agent 已被當成需單獨治理的獨立行為者。",
+      "標準化是雙面刃：降低整合成本的同時，NIST CAISI 於 2026/2/17 啟動 AI Agent Standards Initiative 處理 agent 認證/授權/互通與攻擊面；MCP server 普遍存在過度授權、無驗證、OAuth token 單點失效等風險，每台 server 都是新的權限治理對象。",
+      "對上台灣《人工智慧基本法》（民國114/12/23 三讀）：法令到位不等於意識到位，企業或政府若沒先建立治理意識，會把『有法有標準』誤讀成『裝了就安全』或因看不懂而整批禁用；延續 post-282『落地設計比工具強弱更關鍵』與 post-280『先定義情境再選工具』的立場。"
+    ],
+    "predictions": [
+      "MCP 標準底定後，agent 治理重心會從『選哪個協定』移到『每台 server 的權限、憑證、審計誰管』；標準與法規都會晚到、agent 串接速度不會等，先建立治理意識與盤點機制的組織會比被動等條文標準的同業更有準備。"
+    ]
   }
 ]

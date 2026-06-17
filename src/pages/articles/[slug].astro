@@ -103,6 +103,7 @@ const ld = [
       image: authorImageAbs,
       jobTitle: author?.data.displayTitle,
       sameAs: author?.data.socialLinks.map((s) => s.url),
+      isOrganization: author?.data.isOrganization,
     },
     section: cat?.name,
     isNews: isMedicalOrNews,

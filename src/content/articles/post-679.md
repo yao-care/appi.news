@@ -22,9 +22,9 @@ references:
   - title: "Redefining Super Aged: Taiwan's Path in an Ageing Era"
     url: "https://taiwaninsight.org/2025/11/03/redefining-super-aged-taiwans-path-in-an-ageing-era"
     publisher: "Taiwan Insight"
-author: "appi-editorial"
+author: "lightman"
 status: "published"
-sourceType: "editorial"
+sourceType: "author"
 disclaimerType: "medical"
 risksAndLimits:
   - "本文為醫療照護政策資訊整理，非個人醫療建議，長照服務申請資格與補助金額以衛福部最新公告為準"

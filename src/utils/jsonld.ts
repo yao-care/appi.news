@@ -69,14 +69,16 @@ export function personLd(
     description?: string;
     image?: string;
     sameAs?: string[];
+    /** 機構/團隊署名（如編輯部）→ 以 Organization 呈現，省略 jobTitle */
+    isOrganization?: boolean;
   },
 ) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Person',
+    '@type': author.isOrganization ? 'Organization' : 'Person',
     name: author.name,
     url: absoluteUrl(author.path, site),
-    ...(author.jobTitle ? { jobTitle: author.jobTitle } : {}),
+    ...(author.jobTitle && !author.isOrganization ? { jobTitle: author.jobTitle } : {}),
     ...(author.description ? { description: author.description } : {}),
     ...(author.image ? { image: author.image } : {}),
     ...(author.sameAs && author.sameAs.length ? { sameAs: author.sameAs } : {}),
@@ -110,6 +112,8 @@ export function articleLd(
       image?: string;
       jobTitle?: string;
       sameAs?: string[];
+      /** 機構/團隊署名（如編輯部）→ author 以 Organization 呈現 */
+      isOrganization?: boolean;
     };
     section?: string;
     isNews?: boolean;
@@ -140,11 +144,11 @@ export function articleLd(
       '@id': absoluteUrl(a.path, site),
     },
     author: {
-      '@type': 'Person',
+      '@type': a.author.isOrganization ? 'Organization' : 'Person',
       name: a.author.name,
       ...(a.author.path ? { url: absoluteUrl(a.author.path, site) } : {}),
       ...(a.author.image ? { image: a.author.image } : {}),
-      ...(a.author.jobTitle ? { jobTitle: a.author.jobTitle } : {}),
+      ...(a.author.jobTitle && !a.author.isOrganization ? { jobTitle: a.author.jobTitle } : {}),
       ...(a.author.sameAs && a.author.sameAs.length ? { sameAs: a.author.sameAs } : {}),
     },
     publisher: {

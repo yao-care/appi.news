@@ -22,9 +22,9 @@ references:
   - title: "胃癌防治 — 衛生福利部國民健康署"
     url: "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=5006"
     publisher: "衛生福利部國民健康署"
-author: "appi-editorial"
+author: "luo-yang"
 status: "published"
-sourceType: "editorial"
+sourceType: "author"
 disclaimerType: "medical"
 risksAndLimits:
   - "本文為醫療資訊整理，非個人醫療建議，篩檢計畫細節以國健署最新公告為準"

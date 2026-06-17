@@ -22,9 +22,9 @@ references:
   - title: "Taiwan's Clinical Trial Landscape: Fast, Efficient, and High-Quality Research"
     url: "https://www.precisionformedicine.com/blog/taiwans-clinical-trial-landscape-fast-efficient-and-high-quality-research"
     publisher: "Precision for Medicine"
-author: "appi-editorial"
+author: "luo-yang"
 status: "published"
-sourceType: "editorial"
+sourceType: "author"
 disclaimerType: "medical"
 risksAndLimits:
   - "本文為醫療政策與癌症防治資訊整理，非個人癌症篩檢或治療建議，相關檢查決策請諮詢腫瘤科或家庭醫師。"

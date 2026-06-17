@@ -123,6 +123,8 @@ const authors = defineCollection({
       .default('contributor'),
     joinedDate: z.coerce.date().optional(),
     active: z.boolean().default(true),
+    /** 此「作者」實為機構/團隊署名（如編輯部）→ 結構化資料以 Organization 而非 Person 呈現 */
+    isOrganization: z.boolean().default(false),
     showAuthorPage: z.boolean().default(false),
     showColumnPage: z.boolean().default(false),
     disclaimer: z.string().optional(),

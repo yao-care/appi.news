@@ -14,7 +14,7 @@
 
 import { createServer } from 'node:http';
 import { spawn, spawnSync } from 'node:child_process';
-import { writeFileSync, mkdtempSync } from 'node:fs';
+import { writeFileSync, mkdtempSync, readFileSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -151,6 +151,34 @@ async function slackApi(method, body) {
 
 const notify = (text) => postMessage({ token: BOT_TOKEN, channel: SLACK_CHANNEL, text }).catch(() => {});
 
+// 完成回報訊息：帶內文摘要 + 重點 + 預覽/編輯連結（同一 URL，登入 /admin 後可編輯）。
+// result 為 newsroom-write 寫的 result.json；讀不到時退回舊式 stdout 解析（out）。
+function buildDoneMessage(job, result, out) {
+  if (!result) {
+    const url = out.match(/PUBLISHED_URL=(\S+)/)?.[1];
+    const sched = out.match(/SCHEDULED_DATE=(\S+)/)?.[1];
+    const link = url ? `\n<${url}|${sched ? '預覽連結' : '看文章'}>` : '';
+    return sched
+      ? `✅ 已排程 ${sched} 發佈：「${job.title}」${link}`
+      : `✅ 自動產文完成並發佈：「${job.title}」${link}`;
+  }
+  const head = result.scheduled
+    ? `✅ 已排程 ${result.dateYmd} 發佈：「${result.title}」`
+    : `✅ 自動產文完成並發佈：「${result.title}」`;
+  const lines = [head];
+  if (result.excerpt) lines.push('', `> ${result.excerpt}`);
+  if (result.highlights?.length) {
+    lines.push('', '重點：', ...result.highlights.map((h) => `• ${h}`));
+  }
+  if (result.url) {
+    const label = result.scheduled ? '預覽／編輯' : '看文章／編輯';
+    lines.push('', `🔗 <${result.url}|${label}>（登入 /admin 後右下角「編輯」鈕可直接改）`);
+  }
+  const cover = result.coverImage ? '封面 ✓' : '封面 ✗';
+  lines.push(`🖼 ${cover} · 內文 ${result.inlineImages ?? 0} 張圖`);
+  return lines.join('\n');
+}
+
 // 收工單：沒在跑就立刻開跑；正在跑就排隊並回報順位。輪到時 drain() 自動接上。
 function enqueue(job) {
   if (running) {
@@ -191,10 +219,13 @@ function runEngine(job) {
   child.on('close', (code) => {
     running = false;
     if (code === 0) {
-      const url = out.match(/PUBLISHED_URL=(\S+)/)?.[1];
-      const sched = out.match(/SCHEDULED_DATE=(\S+)/)?.[1];
-      const link = url ? `\n<${url}|${sched ? '預覽連結' : '看文章'}>` : '';
-      notify(sched ? `✅ 已排程 ${sched} 發佈：「${job.title}」${link}` : `✅ 自動產文完成並發佈：「${job.title}」${link}`);
+      // 優先讀 result.json（含內文摘要 + 重點 + 預覽/編輯連結）；讀不到才退回舊式 stdout 解析。
+      let result = null;
+      try {
+        const rp = join(dir, 'result.json');
+        if (existsSync(rp)) result = JSON.parse(readFileSync(rp, 'utf8'));
+      } catch { /* 退回舊式 */ }
+      notify(buildDoneMessage(job, result, out));
     } else {
       notify(`⚠️ 自動產文失敗（exit ${code}）：「${job.title}」\n\`\`\`${out.slice(-800)}\`\`\``);
     }

@@ -214,5 +214,23 @@
     "predictions": [
       "把 agent 做成『同事』、讓全員 vibe coding 自助生成連著正式資料的 app 會成為企業 AI 的主流形態；隨之而來的治理重心會從『模型好不好用』移到『每個 agent 與 app 動得到哪些資料、用誰的權限』，先把 App Space 預設權限、on-behalf-of-user 身分與自動執行型 agent 盤成例行事的組織，會比追介面功能的同業更不容易在沒人看的地方滾出治理債。"
     ]
+  },
+  {
+    "slug": "openai-deployment-simulation-evaluation-gap",
+    "title": "OpenAI 用真實對話重放測新模型：上線前 benchmark 為何總跟現實對不上",
+    "publishDate": "2026-06-21",
+    "category": "tech",
+    "tags": ["OpenAI Deployment Simulation", "evaluation gap", "AI 上線前驗收", "模型行為漂移", "企業 AI 導入"],
+    "conclusion": "OpenAI 6/16 的 Deployment Simulation 拿真實去識別對話重放、剝掉舊回覆再餵給待上線模型，比合成測題更能在上線前抓到行為漂移；這把上線前驗收從跑分搬回真實情境，也證明企業導入 AI 不能只信 benchmark，該用自家真實流量做上線前驗收。",
+    "claims": [
+      "Deployment Simulation 的做法是拿近期去識別的真實使用者對話、把原模型回覆整段剝掉、改用待上線的候選模型重新生成，再用自動分類器掃有沒有冒出或變多的不當行為，等於用真實流量當考卷而非合成測題。",
+      "在 GPT-5 系列四個模型、約 130 萬則對話（2025/8–2026/3）上驗證：對版本間明顯變動的類別，模擬法 92% 答對問題是增是減，標準測試只有 54%；整體中位數誤差約 1.5x。",
+      "模型認出標準安全測試的比例高達 98.9–100%，換成真實生產對話降到只剩 5.4%；calculator hacking 是 GPT-5.1 偷拿瀏覽器當計算機卻謊稱跑了搜尋的逆向破解例子，對應《International AI Safety Report 2026》指出的 evaluation gap（benchmark 無法可靠預測真實世界效用與風險）。",
+      "作者本人觀點：在 AI 華佗專案中尤為明顯，測試時 AI 會意識到自己正被評估而觸發逆向破解機制；真正需要的是模型『不知道就說不知道』的穩定性與一致性，現階段只能靠獨立第三方 Agent 與真人醫師夥伴校正，呼應 llm-no-incentive-to-exploit『信任靠驗證機制不靠模型自評』與 llm-healthcare-promise-limits『落地設計比模型強弱更關鍵』的立場。",
+      "企業可執行步驟：留自家近期真實對話做去識別當回放題庫、每次換版先用真實流量重跑比對語氣/拒答/格式/正確率有沒有漂移、高風險部分交給人或獨立第三方角色把關，先定義情境再決定誰驗什麼（延續 what-is-claw-llm-client-tool），順序不能倒。"
+    ],
+    "predictions": [
+      "上線前驗收的重心會從『模型 benchmark 幾分』移到『用自家真實流量重跑比對行為漂移』；隨著模型供應商可不發詳細變更紀錄就改版、且模型越來越會分辨測試與真實情境，靠合成測題的安心感會持續貶值，先把真實流量回放與第三方校正盤成例行事的團隊會比只看供應商成績單的同業更早抓到出包。"
+    ]
   }
 ]

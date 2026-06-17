@@ -2,12 +2,13 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { url } from '@/utils/url';
-import { articleSlug } from '@/utils/content';
+import { articleSlug, getPublishedArticles } from '@/utils/content';
 import AdminLogin from '@/components/editor/AdminLogin.svelte';
 import NewArticle from '@/components/editor/NewArticle.svelte';
 
-const articleEntries = await getCollection('articles', ({ data }) => !data.draft);
-const quickLinks = articleEntries.slice(0, 5).map((e) => ({
+// 只連已實際產出頁面的文章（getPublishedArticles 套同一套 isPublic 過濾：
+// 隱藏 draft/archived 與未到 publishDate 的排程文）。否則會連到沒 build 的排程文 → 壞連結擋部署。
+const quickLinks = (await getPublishedArticles()).slice(0, 5).map((e) => ({
   title: e.data.title,
   href: url(`/articles/${articleSlug(e)}/`),
 }));

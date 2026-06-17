@@ -153,8 +153,11 @@ function main() {
     die(`check:links 未過，不發佈（改動留在工作區待你處理）：${e.message}`);
   }
 
-  console.log('→ commit');
-  sh('git', ['add', '-A']);
+  console.log('→ commit（只加文章產物，不用 git add -A）');
+  // 只 stage 自動產文會產生的東西：文章、封面、內文圖、跨文記憶。
+  // 不用 git add -A——否則 job 起跑後到這裡之間，工作區若有其他未提交改動
+  // （例如有人同時在開發），會被掃進這篇發佈 commit。起點的乾淨檢查擋不了中途新增的檔。
+  sh('git', ['add', '--', 'src/content/articles', 'public/covers', 'public/images', '.claude/skills/newsroom/author-memory.json']);
   sh('git', ['commit', '-m', `feat(article): 自動產文 — ${job.title}\n\n科技類自動產文（status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。真人觀點由作者提供。`]);
   if (go) {
     console.log('→ push');

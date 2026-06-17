@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "legal"
 coverImage: "covers/post-640.webp"
 coverAlt: "歐盟議會大樓外觀，象徵AI法高風險條款修正協議的立法進展"
 ---

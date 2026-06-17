@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "legal"
 coverImage: "covers/post-648.webp"
 coverAlt: "新加坡城市夜景，象徵亞太AI治理框架制定的前沿角色"
 ---

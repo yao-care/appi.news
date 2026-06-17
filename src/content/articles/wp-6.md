@@ -15,6 +15,11 @@ sourceType: "editorial"
 disclaimerType: "medical"
 legacyAuthor: "asignbio"
 legacyCategory: "預防醫學"
+references:
+  - title: "2026 Winter Olympics"
+    url: "https://en.wikipedia.org/wiki/2026_Winter_Olympics"
+    publisher: "Wikipedia"
+    note: "米蘭科爾蒂納 2026 冬奧賽事概覽（2/6–2/22、16 個競技項目）"
 ---
 
 <p>2026 冬季奧運進入倒數高潮！2 月 21 日至 2 月 22 日（Day 15）將帶來多項精彩決賽，包括自由式滑雪、登山滑雪、競速滑冰、雪車、冰壺與花式滑冰。</p>

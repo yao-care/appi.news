@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "legal"
 coverImage: "covers/post-630.webp"
 coverAlt: "工廠煙囪排放廢氣，象徵台灣碳費與歐盟CBAM雙重碳成本壓力"
 ---

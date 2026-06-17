@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "legal"
 coverImage: "covers/post-649.webp"
 coverAlt: "全球碳市場示意圖，顯示排放交易體系在各大洲的擴張版圖"
 ---

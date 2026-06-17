@@ -1,0 +1,47 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/blocks/ArticleCard.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import Pagination from '@/components/ui/Pagination.astro';
+import { getPublishedArticles, getAuthorMap } from '@/utils/content';
+
+const PAGE_SIZE = 18;
+
+export async function getStaticPaths() {
+  const PAGE_SIZE = 18;
+  const all = await getPublishedArticles();
+  const totalPages = Math.max(1, Math.ceil(all.length / PAGE_SIZE));
+  const paths: any[] = [];
+  // 第 1 頁由 index.astro 處理，這裡只產生 2..totalPages，不產生 /articles/page/1/
+  for (let p = 2; p <= totalPages; p++) {
+    paths.push({ params: { page: String(p) }, props: { page: p, totalPages } });
+  }
+  return paths;
+}
+
+const { page, totalPages } = Astro.props;
+const all = await getPublishedArticles();
+const authorMap = await getAuthorMap();
+const authorNames = new Map(
+  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
+);
+
+const start = (page - 1) * PAGE_SIZE;
+const pageArticles = all.slice(start, start + PAGE_SIZE);
+---
+<BaseLayout
+  title={`所有文章（第 ${page} 頁）`}
+  description={`APPI News 所有已發佈文章，依時間排序（第 ${page} 頁，共 ${totalPages} 頁）。`}
+  path={`/articles/page/${page}/`}
+>
+  <div class="container" style="padding-top:28px;">
+    <Breadcrumbs items={[{ name: '所有文章', path: '/articles/' }, { name: `第 ${page} 頁` }]} />
+    <div class="section-head" style="margin-top:18px;">
+      <h2>所有文章（{all.length}）</h2>
+    </div>
+    <div class="card-grid card-grid--4">
+      {pageArticles.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
+    </div>
+    <Pagination currentPage={page} totalPages={totalPages} base="/articles/" />
+  </div>
+</BaseLayout>

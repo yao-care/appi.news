@@ -25,9 +25,9 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "medical"
 coverImage: "covers/post-672.webp"
-coverAlt: "台灣數位健康法規框架完備數位醫療產品納入AI機器學習監管新標準"
+coverAlt: "平板電腦上顯示數位醫療介面，象徵台灣AI醫材法規框架完備"
 ---
 
 對外資醫療科技企業而言，進入一個新市場前最優先確認的，是監管規則是否清楚。台灣在這一點的得分，近年明顯高於多數亞洲競爭市場。ICLG（國際比較法律指南）在2026年的數位健康法規國別報告中指出，台灣的《醫療器材管理法》提供了完整的法律定義架構，將具備診斷、治療、預防或改善人體機能的醫療軟體明確納入醫療器材範疇，消除了AI醫療產品在法律定性上的灰色地帶。這個清晰度，是台灣在全球AI醫療器材市場中能持續吸引外來投資的制度基礎。

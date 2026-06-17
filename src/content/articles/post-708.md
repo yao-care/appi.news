@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "financial"
 coverImage: "covers/post-708.webp"
 coverAlt: "台灣創投公會倡議類NASDAQ創新板目標2027年新創募資突破50億美元"
 ---

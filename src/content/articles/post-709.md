@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "financial"
 coverImage: "covers/post-709.webp"
 coverAlt: "台灣2024年新創早期投資額達33.4億美元企業創投主導生態系格局重塑"
 ---

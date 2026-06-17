@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "legal"
 coverImage: "covers/post-635-stock.jpg"
 coverAlt: "民眾在沙灘上清理散落塑膠垃圾"
 coverImageCredit: "Photo by Ron Lach on Pexels"

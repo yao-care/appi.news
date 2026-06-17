@@ -28,7 +28,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "legal"
 coverImage: "covers/post-656-stock.jpg"
 coverAlt: "巨型貨櫃輪在平靜水面乘著日落航行"
 coverImageCredit: "Photo by Pixabay on Pexels"

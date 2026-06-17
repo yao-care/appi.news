@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "medical"
 coverImage: "covers/post-674-stock.jpg"
 coverAlt: "帶有粒子特效的DNA雙螺旋藝術渲染圖"
 coverImageCredit: "Photo by Nicola Narracci on Pexels"

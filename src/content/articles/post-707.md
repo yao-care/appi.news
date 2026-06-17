@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "financial"
 coverImage: "covers/post-707.webp"
 coverAlt: "全球FinTech融資2025年重回疫情前規模超級大額交易主導2026年延續集中化趨勢"
 ---

@@ -25,9 +25,9 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "medical"
 coverImage: "covers/post-666.webp"
-coverAlt: "加拿大政府徵募AI醫療科技代表團赴台推動健保資料跨境研究合作"
+coverAlt: "加拿大與台灣國旗並列，象徵兩國AI醫療科技研究合作啟動"
 ---
 
 加拿大聯邦政府選擇台灣作為AI醫療科技研究合作的重點市場，背後有一個具體的政策工具：[加拿大國際創新計畫（CIIP）](https://www.tradecommissioner.gc.ca/en/our-solutions/support-programs/canadian-international-innovation-program/canadian-ai-medtech-digital-health-taiwan-partnering-delegation-taiwan.html)。這個由全球事務部（Global Affairs Canada）貿易專員辦公室與國家研究委員會工業研究協助計畫（NRC IRAP）共同執行的框架，2026年鎖定台灣，計畫在8月4至7日組成代表團，走訪台北、新竹、桃園三個醫療科技聚落，安排加拿大企業與台灣機構進行一對一配對洽談。

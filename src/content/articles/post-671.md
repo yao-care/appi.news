@@ -25,7 +25,7 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "medical"
 coverImage: "covers/post-671-stock.jpg"
 coverAlt: "手持採血筆與血糖儀進行血糖測試的近距離特寫"
 coverImageCredit: "Photo by Artem Podrez on Pexels"

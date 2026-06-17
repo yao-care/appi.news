@@ -20,21 +20,21 @@ references:
     url: "https://www.tfda.gov.tw/tc/site.aspx?sid=3803"
     publisher: "衛生福利部食品藥物管理署"
   - title: "FDA Artificial Intelligence and Machine Learning Action Plan"
-    url: "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device"
+    url: "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
     publisher: "US FDA"
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "medical"
 coverImage: "covers/post-675.webp"
-coverAlt: "全球人工智慧醫療設備監管十年回顧台灣TFDA框架對標美歐日韓體系"
+coverAlt: "研究人員檢視AI醫療設備螢幕，象徵全球十年監管框架回顧比較"
 ---
 
 人工智慧醫療設備從概念到監管框架的建立，花了全球主要衛生主管機關整整十年。[Frontiers in Medicine 2025年發表的系統性回顧](https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1630408/full)梳理了2015年至2025年間全球AI醫療設備（Artificial Intelligence Medical Devices，AIMD）的監管演進，涵蓋美國FDA、歐盟、日本、韓國與台灣食藥署（TFDA）等主要體系，指出這十年各國雖然都從無到有建立了初步框架，但演算法透明度、上市後監控與新興生成式AI帶來的監管空白，至今仍是各國共同面臨的未解難題。
 
 ## 十年監管演進：從靜態審查到生命週期管理
 
-2015年前後，AI在醫療影像分析的突破性表現讓全球監管機關意識到，傳統的醫療器材審查框架並不適用於「會自我學習更新」的軟體。美國FDA率先在2019年提出行動方案，並在此後幾年持續更新指引架構。最關鍵的節點發生在2024年12月：[FDA正式定案「AI設備預定變更控制計畫」（Predetermined Change Control Plans）指引](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device)，要求製造商在產品上市時就規劃好未來演算法更新的範圍與驗證方法，讓監管機關得以事前審查而非每次更新都重新送審。這項做法代表全球AIMD監管的典範轉移：從「核准即終點」走向「整個生命週期的持續監管」。
+2015年前後，AI在醫療影像分析的突破性表現讓全球監管機關意識到，傳統的醫療器材審查框架並不適用於「會自我學習更新」的軟體。美國FDA率先在2019年提出行動方案，並在此後幾年持續更新指引架構。最關鍵的節點發生在2024年12月：[FDA正式定案「AI設備預定變更控制計畫」（Predetermined Change Control Plans）指引](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device)，要求製造商在產品上市時就規劃好未來演算法更新的範圍與驗證方法，讓監管機關得以事前審查而非每次更新都重新送審。這項做法代表全球AIMD監管的典範轉移：從「核准即終點」走向「整個生命週期的持續監管」。
 
 歐盟的路徑則是透過2017年起逐步生效的醫療器材法規（MDR）以及2024年通過的AI法案建立雙軌監管體系，將高風險AI系統（包括多數醫療AI應用）納入強制透明度與人為監督要求。日本藥品與醫療器材局（PMDA）和韓國食品藥品安全處（MFDS）則分別建立了針對AI軟體的專屬審查指引，韓國還率先建立AI醫療器材上市後真實世界證據收集機制。
 

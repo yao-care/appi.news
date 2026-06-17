@@ -25,9 +25,9 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "legal"
 coverImage: "covers/post-640.webp"
-coverAlt: "歐盟五月完成AI法高風險條款簡化協議高風險系統合規期限延至2027年底"
+coverAlt: "歐盟議會大樓外觀，象徵AI法高風險條款修正協議的立法進展"
 ---
 
 歐盟在2026年5月7日完成了一場低調但影響深遠的立法動作。[歐盟理事會與歐洲議會就AI法Omnibus修正達成臨時政治協議](https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules)，將Annex III高風險AI系統的合規截止日期從原本的2026年8月2日，延後16個月至2027年12月2日。整合進電梯、玩具等受監管產品的高風險AI系統則再延至2028年8月2日。這份協議為在歐盟市場提供AI產品與服務的業者提供了更長的準備時間，但同時也確立了法規基準線，讓任何想靠模糊地帶拖延的策略失去依據。

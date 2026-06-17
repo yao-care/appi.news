@@ -25,9 +25,9 @@ references:
 author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
-disclaimerType: "general"
+disclaimerType: "medical"
 coverImage: "covers/post-660.webp"
-coverAlt: "台灣醫療品質國際排名奪冠健保數位化與預防照護成雙引擎"
+coverAlt: "台灣現代化醫院外觀，象徵全球醫療品質排名第一的醫療體系"
 ---
 
 台灣醫療體系的國際地位在2026年再度獲得量化確認。[Numbeo發布的2026全球醫療保健指數](https://www.numbeo.com/health-care/rankings_by_country.jsp)顯示，台灣以87.1分位居全球第一，高雄（89.5）與台北（87.2）亦包辦全球城市前兩名，連續多年穩守榜首位置。同一時期，CEOWORLD醫療保健指數也以78.72分將台灣列為全球最佳，評估維度涵蓋醫療基礎設施、醫事人員能力、藥品可及性與政府應急準備。台灣在兩個不同來源的獨立指數中同時稱冠，代表其醫療體系優勢已形成跨評量方法的共識，而非偶然的統計結果。

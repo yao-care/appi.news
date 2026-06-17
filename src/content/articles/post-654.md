@@ -1,6 +1,6 @@
 ---
-title: "Insilico Medicine Phase IIa讀出首份正面數據　AI設計藥物走出概念進入臨床實證"
-slug: "post-654"
+title: "Insilico AI 設計藥物讀出二期正面數據，跨入臨床實證階段"
+slug: "insilico-ai-drug-phase-two-data"
 description: "2025年9月，Insilico Medicine公布史上首個由AI發現靶點、AI設計分子的藥物臨床二期正面數據，治療標的是特發性肺纖維化（IPF）。這個讀出是整個AI藥物設計領域從「有能力做到」轉為「已有臨床實證」的分水嶺。台灣生技廠商如何在這波轉折中找到切入點，是比跟風討論AI更值得認真對待的問題。"
 excerpt: "2025年9月，Insilico Medicine公布史上首個由AI發現靶點、AI設計分子的藥物臨床二期正面數據，治療標的是特發性肺纖維化（IPF）。這個讀出是整個AI藥物設計領域從「有能力做到」轉為「已有臨床實證」的分水嶺。台灣生技廠商如何在這波轉折中找到切入點，是比跟風討論AI更值得認真對待的問題。"
 publishDate: "2025-10-01T08:00:00+08:00"

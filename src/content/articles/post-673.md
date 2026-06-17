@@ -1,6 +1,6 @@
 ---
-title: "台灣公費癌症篩檢擴大至六大癌症胃癌補助首度納入將惠及逾60萬民眾"
-slug: "post-673"
+title: "公費癌篩擴大至六項，胃癌首納補助、惠及逾 60 萬人"
+slug: "cancer-screening-expanded-stomach"
 description: "國健署自2026年起補助45至74歲民眾終身一次公費胃幽門螺旋桿菌糞便抗原檢測，公費篩檢項目從五項擴至六項。胃癌為台灣第七大癌症死因，每年逾2千人死亡，多數確診時已屬晚期，早篩早治是降低死亡率的核心策略。"
 excerpt: "國健署自2026年起補助45至74歲民眾終身一次公費胃幽門螺旋桿菌糞便抗原檢測，公費篩檢項目從五項擴至六項。胃癌為台灣第七大癌症死因，每年逾2千人死亡，多數確診時已屬晚期，早篩早治是降低死亡率的核心策略。"
 publishDate: "2026-01-01T00:00:00+08:00"
@@ -22,9 +22,9 @@ references:
   - title: "胃癌防治 — 衛生福利部國民健康署"
     url: "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=5006"
     publisher: "衛生福利部國民健康署"
-author: "appi-editorial"
+author: "luo-yang"
 status: "published"
-sourceType: "editorial"
+sourceType: "author"
 disclaimerType: "medical"
 risksAndLimits:
   - "本文為醫療資訊整理，非個人醫療建議，篩檢計畫細節以國健署最新公告為準"

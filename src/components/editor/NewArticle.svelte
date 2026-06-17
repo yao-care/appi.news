@@ -2,6 +2,7 @@
   import { onDestroy } from 'svelte';
   import { getToken } from '@/utils/editor/token';
   import { slugFromTitle } from '@/utils/editor/slugify';
+  import { fetchSuggestedSlug } from '@/utils/editor/slug-suggest';
   import { createArticleIssue } from '@/utils/editor/issue';
   import { fileExists } from '@/utils/editor/github';
   import EditorPanel from './EditorPanel.svelte';
@@ -29,19 +30,24 @@
   let polling = false;
   let pollTimer = null;
 
-  // 決定 slug：自訂有值須合法；否則自動拼音。不合法回 null（已 alert）。
-  function resolveSlug() {
+  // 決定 slug：自訂有值須合法；否則請 AI 產語意化英文 slug，失敗才退回拼音。不合法回 null（已 alert）。
+  async function resolveSlug() {
     if (!title.trim()) { alert('請先填標題'); return null; }
     const c = customSlug.trim();
     if (c) {
       if (!/^[a-z0-9-]+$/.test(c)) { alert('自訂網址只能用小寫英文、數字與連字號，例如 vitamin-c-myth'); return null; }
       return c;
     }
-    return slugFromTitle(title.trim());
+    try {
+      return await fetchSuggestedSlug({ title: title.trim(), direction, sources, token: getToken() });
+    } catch {
+      // AI 不可用時退回拼音，確保流程不中斷
+      return slugFromTitle(title.trim());
+    }
   }
 
-  function start() {
-    const s = resolveSlug();
+  async function start() {
+    const s = await resolveSlug();
     if (!s) return;
     slug = s;
     repoPath = `src/content/${collection}/${slug}.md`;
@@ -53,7 +59,7 @@
   }
 
   async function createTask() {
-    const s = resolveSlug();
+    const s = await resolveSlug();
     if (!s) return;
     slug = s;
     taskRepoPath = `src/content/${collection}/${slug}.md`;
@@ -133,7 +139,7 @@
         <label>
           <span>自訂網址（slug）</span>
           <input placeholder="留空則由標題自動產生" bind:value={customSlug} />
-          <small>選填；只能用小寫英文、數字、連字號。留空會自動以標題拼音產生。</small>
+          <small>選填；只能用小寫英文、數字、連字號。留空會由 AI 依標題產生語意化英文網址（AI 不可用時退回拼音）。</small>
         </label>
         <fieldset class="et-ai-task">
           <legend>AI 代寫（選填，交給 Claude Code 撰寫）</legend>

@@ -1,6 +1,6 @@
 ---
 title: "數位健康工具融入長照體系助力台灣超高齡社會補充照護人力缺口"
-slug: "post-679"
+slug: "digital-health-tools-elderly-care"
 description: "台灣2025年正式進入超高齡社會，65歲以上人口佔比超過20%，長照3.0計畫同步於2026年啟動。JMIR Aging 2025年最新系統性回顧指出，數位健康工具在老年慢性病患者中的採用障礙集中於數位素養不足、隱私疑慮與缺乏整合式支援，這三項障礙的突破是填補長照人力缺口的關鍵前提。"
 excerpt: "台灣2025年正式進入超高齡社會，65歲以上人口佔比超過20%，長照3.0計畫同步於2026年啟動。JMIR Aging 2025年最新系統性回顧指出，數位健康工具在老年慢性病患者中的採用障礙集中於數位素養不足、隱私疑慮與缺乏整合式支援，這三項障礙的突破是填補長照人力缺口的關鍵前提。"
 publishDate: "2025-08-01T00:00:00+08:00"
@@ -22,9 +22,9 @@ references:
   - title: "Redefining Super Aged: Taiwan's Path in an Ageing Era"
     url: "https://taiwaninsight.org/2025/11/03/redefining-super-aged-taiwans-path-in-an-ageing-era"
     publisher: "Taiwan Insight"
-author: "appi-editorial"
+author: "lightman"
 status: "published"
-sourceType: "editorial"
+sourceType: "author"
 disclaimerType: "medical"
 risksAndLimits:
   - "本文為醫療照護政策資訊整理，非個人醫療建議，長照服務申請資格與補助金額以衛福部最新公告為準"

@@ -65,6 +65,7 @@ const ld = [
     description: author.data.bioShort,
     image: new URL(avatar, Astro.site).toString(),
     sameAs: author.data.socialLinks.map((s) => s.url),
+    isOrganization: author.data.isOrganization,
   }),
   breadcrumbLd(Astro.site, [
     { name: '首頁', path: '/' },

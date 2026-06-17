@@ -1,6 +1,6 @@
 ---
 title: "日本癌症照護改革對台灣的啟示早篩創新突破胰臟癌存活難關"
-slug: "post-665"
+slug: "japan-cancer-care-pancreatic-screening"
 description: "世界經濟論壇2026年4月報告分析日本癌症照護創新，胰臟癌五年存活率五年間提升逾五個百分點，日本第四期癌症防治計畫鎖定60%篩檢率目標。台灣面臨相似挑戰，早篩政策與治療創新並進的路徑值得深入參照。"
 excerpt: "世界經濟論壇2026年4月報告分析日本癌症照護創新，胰臟癌五年存活率五年間提升逾五個百分點，日本第四期癌症防治計畫鎖定60%篩檢率目標。台灣面臨相似挑戰，早篩政策與治療創新並進的路徑值得深入參照。"
 publishDate: "2026-04-01T09:00:00+08:00"
@@ -22,9 +22,9 @@ references:
   - title: "Taiwan's Clinical Trial Landscape: Fast, Efficient, and High-Quality Research"
     url: "https://www.precisionformedicine.com/blog/taiwans-clinical-trial-landscape-fast-efficient-and-high-quality-research"
     publisher: "Precision for Medicine"
-author: "appi-editorial"
+author: "luo-yang"
 status: "published"
-sourceType: "editorial"
+sourceType: "author"
 disclaimerType: "medical"
 risksAndLimits:
   - "本文為醫療政策與癌症防治資訊整理，非個人癌症篩檢或治療建議，相關檢查決策請諮詢腫瘤科或家庭醫師。"

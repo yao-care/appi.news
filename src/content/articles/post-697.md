@@ -1,6 +1,6 @@
 ---
-title: "全球半導體供應鏈分析揭示台積電先進封裝CoWoS持續擴大領先優勢"
-slug: "post-697"
+title: "台積電 CoWoS 持續擴大領先，NVIDIA 預訂逾七成產能"
+slug: "tsmc-cowos-nvidia-capacity-booking"
 description: "TrendForce與業界數據同步指向相同結論：在AI算力建置週期中，台積電CoWoS先進封裝已從配角晉升為核心資源。輝達預訂超過七成CoWoS-L產能、封裝晶圓售價逼近7奈米製程水準，台灣的製造優勢正從晶圓製造延伸至封裝領域。"
 excerpt: "TrendForce與業界數據同步指向相同結論：在AI算力建置週期中，台積電CoWoS先進封裝已從配角晉升為核心資源。輝達預訂超過七成CoWoS-L產能、封裝晶圓售價逼近7奈米製程水準，台灣的製造優勢正從晶圓製造延伸至封裝領域。"
 publishDate: "2025-12-01T10:00:00+08:00"

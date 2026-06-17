@@ -1,6 +1,6 @@
 ---
-title: "高通在台灣創新挑戰賽2026聚焦AI PC與邊緣AI扶植台灣新創進入終端AI應用市場"
-slug: "post-690"
+title: "高通台灣創新挑戰賽 2026 聚焦 AI PC 與邊緣 AI，扶植本土新創"
+slug: "qualcomm-taiwan-innovate-challenge-2026"
 description: "高通（Qualcomm）2026年台灣創新挑戰賽（QITC 2026）以AI PC與邊緣AI為核心主題，開放台灣本土公司報名，鼓勵以Qualcomm晶片平台開發AI端側應用。這個從2019年延續至今的計畫，是高通以半導體底蘊培育台灣終端AI應用新創生態的長期投資。"
 excerpt: "高通（Qualcomm）2026年台灣創新挑戰賽（QITC 2026）以AI PC與邊緣AI為核心主題，開放台灣本土公司報名，鼓勵以Qualcomm晶片平台開發AI端側應用。這個從2019年延續至今的計畫，是高通以半導體底蘊培育台灣終端AI應用新創生態的長期投資。"
 publishDate: "2026-02-20T08:00:00+08:00"

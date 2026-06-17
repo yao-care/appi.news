@@ -131,6 +131,27 @@ describe('applyPeopleDirective', () => {
   });
 });
 
+describe('/slug', () => {
+  function slugReq(body: object, auth = 'Bearer ght') {
+    return new Request('https://w.dev/slug', {
+      method: 'POST', headers: { 'content-type': 'application/json', authorization: auth },
+      body: JSON.stringify(body),
+    });
+  }
+
+  it('把 Claude 回的雜訊淨化成 kebab-case slug', async () => {
+    const fetchMock = vi.fn()
+      .mockResolvedValueOnce(new Response(JSON.stringify({ permissions: { push: true } }), { status: 200 })) // requirePush
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify({ content: [{ type: 'text', text: ' TSMC Q3 Profit! ' }] }), { status: 200 }),
+      );
+    vi.stubGlobal('fetch', fetchMock);
+    const res = await handle(slugReq({ title: '台積電 Q3 獲利年增 39%' }), env);
+    expect(res.status).toBe(200);
+    expect((await res.json() as { slug: string }).slug).toBe('tsmc-q3-profit');
+  });
+});
+
 describe('/generate 套用台灣人鐵律', () => {
   it('送給 OpenAI 的 prompt 含 Taiwanese', async () => {
     const fetchMock = vi.fn()

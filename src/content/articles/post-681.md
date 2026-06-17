@@ -1,6 +1,6 @@
 ---
-title: "台灣AI新創在NVIDIA GTC展示智慧製造與資安方案強化全球供應鏈樞紐地位"
-slug: "post-681"
+title: "台灣新創 NVIDIA GTC 秀智慧製造與資安，鞏固供應鏈樞紐"
+slug: "taiwan-startups-nvidia-gtc-manufacturing"
 description: "台灣新創代表團於2026年NVIDIA GTC展示數位孿生、邊緣AI、智慧製造與資安方案，與華碩、研華、聯發科等大廠並肩參展，展現從硬體代工跨越為全堆疊AI創新輸出的實力，在AI供應鏈中確立更高地位。"
 excerpt: "台灣新創代表團於2026年NVIDIA GTC展示數位孿生、邊緣AI、智慧製造與資安方案，與華碩、研華、聯發科等大廠並肩參展，展現從硬體代工跨越為全堆疊AI創新輸出的實力，在AI供應鏈中確立更高地位。"
 publishDate: "2026-06-03T10:00:00+08:00"

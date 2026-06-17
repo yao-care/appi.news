@@ -1,6 +1,6 @@
 ---
-title: "Worldpanel 2026台灣民生消費十大趨勢FMCG年增4.8%理性精算消費轉為主流"
-slug: "post-753"
+title: "Worldpanel：2026 台灣 FMCG 估增 4.8%，理性精算消費成主流"
+slug: "worldpanel-2026-fmcg-rational-spending"
 description: "Worldpanel by Numerator發布《2026台灣民生消費十大趨勢》，預估台灣FMCG市場銷額年增4.8%。消費者購買頻率下降、單次金額提高，「一次購足」取代衝動消費；食品飲料與個人護理升級，非必需品消費降級，電商通路重洗牌。"
 excerpt: "Worldpanel by Numerator發布《2026台灣民生消費十大趨勢》，預估台灣FMCG市場銷額年增4.8%。消費者購買頻率下降、單次金額提高，「一次購足」取代衝動消費；食品飲料與個人護理升級，非必需品消費降級，電商通路重洗牌。"
 publishDate: "2026-02-09T09:00:00+08:00"

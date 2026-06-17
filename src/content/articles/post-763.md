@@ -1,6 +1,6 @@
 ---
 title: "世界經濟論壇預測技能缺口加劇台灣產業搶跑人工智慧再培訓賽道"
-slug: "post-763"
+slug: "wef-skills-gap-ai-reskilling"
 description: "WEF《Future of Jobs Report 2025》預測2030年前59%勞動力需再培訓，39%核心技能將過時。台灣半導體和製造業正在搶跑AI人才培育視窗，但技能半衰期縮短至12至18個月讓培訓策略面臨根本挑戰。"
 excerpt: "WEF《Future of Jobs Report 2025》預測2030年前59%勞動力需再培訓，39%核心技能將過時。台灣半導體和製造業正在搶跑AI人才培育視窗，但技能半衰期縮短至12至18個月讓培訓策略面臨根本挑戰。"
 publishDate: "2025-07-01T10:00:00+08:00"

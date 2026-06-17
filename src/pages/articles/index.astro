@@ -2,13 +2,19 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ArticleCard from '@/components/blocks/ArticleCard.astro';
 import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import Pagination from '@/components/ui/Pagination.astro';
 import { getPublishedArticles, getAuthorMap } from '@/utils/content';
+
+const PAGE_SIZE = 18;
 
 const all = await getPublishedArticles();
 const authorMap = await getAuthorMap();
 const authorNames = new Map(
   [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
 );
+
+const totalPages = Math.max(1, Math.ceil(all.length / PAGE_SIZE));
+const pageArticles = all.slice(0, PAGE_SIZE);
 ---
 <BaseLayout
   title="所有文章"
@@ -21,7 +27,8 @@ const authorNames = new Map(
       <h2>所有文章（{all.length}）</h2>
     </div>
     <div class="card-grid card-grid--4">
-      {all.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
+      {pageArticles.map((a) => <ArticleCard article={a} variant="medium" authorName={authorNames.get(a.data.author)} />)}
     </div>
+    <Pagination currentPage={1} totalPages={totalPages} base="/articles/" />
   </div>
 </BaseLayout>

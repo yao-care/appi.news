@@ -65,6 +65,14 @@ const { newer, older } = adjacent(all, article);
 
 const { Content } = await render(article);
 
+// 只有 updatedDate 晚於 publishDate 才視為有效更新日；早於或等於一律忽略，
+// 避免顯示無意義的「更新於」與輸出 dateModified < datePublished 的無效結構化資料。
+const validUpdatedDate =
+  article.data.updatedDate &&
+  article.data.updatedDate.getTime() > article.data.publishDate.getTime()
+    ? article.data.updatedDate
+    : undefined;
+
 const topicTitle = new Map((await getTopics()).map((t) => [t.id, t.data.title]));
 const aboutNames = article.data.topics
   .map((s) => topicTitle.get(s))
@@ -88,7 +96,7 @@ const ld = [
     path,
     image: new URL(cover, Astro.site).toString(),
     datePublished: isoDate(article.data.publishDate),
-    dateModified: isoDate(article.data.updatedDate ?? article.data.publishDate),
+    dateModified: isoDate(validUpdatedDate ?? article.data.publishDate),
     author: {
       name: authorName,
       path: authorHasPage(author) ? `/authors/${author!.id}/` : undefined,
@@ -119,7 +127,7 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
   ogType="article"
   ogImage={ogImg}
   publishedTime={isoDate(article.data.publishDate)}
-  modifiedTime={isoDate(article.data.updatedDate ?? article.data.publishDate)}
+  modifiedTime={isoDate(validUpdatedDate ?? article.data.publishDate)}
   authorName={authorName}
   authorPath={authorHasPage(author) ? `/authors/${author!.id}/` : undefined}
   keywords={article.data.tags}
@@ -153,10 +161,9 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
             {formatDate(article.data.publishDate)}
           </time>
           {
-            article.data.updatedDate &&
-              article.data.updatedDate.getTime() !== article.data.publishDate.getTime() && (
-                <span class="byline-updated">（更新於 {formatDate(article.data.updatedDate)}）</span>
-              )
+            validUpdatedDate && (
+              <span class="byline-updated">（更新於 {formatDate(validUpdatedDate)}）</span>
+            )
           }
           <span class="byline-sep">·</span>
           <span>{rt} 分鐘閱讀</span>

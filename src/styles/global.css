@@ -30,7 +30,7 @@
   /* 中性 */
   --ink: #1e2030;
   --ink-2: #5e6070;
-  --ink-3: #8a8c98;
+  --ink-3: #6e7276;
   --line: #d5d6da;
   --line-2: #e8e9ed;
   --bg: #ffffff;
@@ -55,7 +55,7 @@
 
     --ink: oklch(0.20 0.01 250);
     --ink-2: oklch(0.45 0.01 250);
-    --ink-3: oklch(0.60 0.008 250);
+    --ink-3: oklch(0.55 0.008 250);
     --line: oklch(0.85 0.005 250);
     --line-2: oklch(0.92 0.005 250);
     --bg: oklch(1 0 0);

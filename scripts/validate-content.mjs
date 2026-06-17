@@ -362,18 +362,18 @@ for (const { file, data, error, slug } of articleParsed) {
   if (category === 'finance' && data.disclaimerType !== 'financial') {
     warn(file, `category 為 finance 但 disclaimerType 不是 financial（目前：${data.disclaimerType ?? '(未填)'}）`);
   }
-  const haystack = [
-    data.title,
-    data.description,
-    ...(Array.isArray(data.tags) ? data.tags : []),
-  ]
-    .filter((x) => typeof x === 'string')
-    .join(' ');
-  const hitLegal = LEGAL_KEYWORDS.filter((k) => haystack.includes(k));
-  if (hitLegal.length > 0 && data.disclaimerType !== 'legal') {
+  // 法律字眼檢查只看「標題」且僅在「尚未設任何特定免責」時提醒：
+  //   - disclaimerType 是單一值，health→medical、finance→financial 已涵蓋該文主要
+  //     風險領域，無法再疊 legal，對這類文章不應再要求改 legal（否則永遠誤報）。
+  //   - 法律字眼只出現在 description / tags（標題未涉）多為順帶提及，不據此要求 legal。
+  // 真正需要 legal 免責的目標：標題本身即涉法律/法規/訴訟…且還沒設任何特定免責者。
+  const title = typeof data.title === 'string' ? data.title : '';
+  const hitLegalTitle = LEGAL_KEYWORDS.filter((k) => title.includes(k));
+  const noSpecificDisclaimer = data.disclaimerType == null || data.disclaimerType === 'general';
+  if (hitLegalTitle.length > 0 && noSpecificDisclaimer) {
     warn(
       file,
-      `標題/描述/tags 出現法律相關字眼（${hitLegal.join('、')}）但 disclaimerType 不是 legal`,
+      `標題出現法律相關字眼（${hitLegalTitle.join('、')}）但未設 legal 免責（disclaimerType 目前：${data.disclaimerType ?? '(未填)'}）`,
     );
   }
 

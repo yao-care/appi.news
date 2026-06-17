@@ -249,5 +249,22 @@
     "predictions": [
       "當基建層讓任何人都能快速生出連著正式資料的應用，醫療那套『先治理再開放』的紀律會從少數高度監管產業的負擔，慢慢變成所有團隊都得補的課；先把維運與資料治理當例行事的團隊，會比只追估值與聲量、把治理留到出事再補的同業更不容易在沒人看的地方滾出治理債。"
     ]
+  },
+  {
+    "slug": "kpmg-agent-365-workforce-governance",
+    "title": "KPMG 把 AI agent 推給 27.6 萬員工：全員部署之後，治理才是真考題",
+    "publishDate": "2026-06-23",
+    "category": "tech",
+    "tags": ["KPMG Agent 365", "Microsoft Agent 365", "企業 AI agent 治理", "大規模 agent 部署", "agent 權限與責任歸屬"],
+    "conclusion": "KPMG 6/9 宣布把 Microsoft 365 Copilot 與 Agent 365 鋪給全球逾 27.6 萬名員工，代表企業把 agent 當全員工具大規模鋪開；真正難的不是導入，而是 27 萬人同時用 agent 時權限、稽核與責任歸屬要一次到位，治理不是部署完再補的附加題，而是這場部署本身的考題，延續基本法問責與『先建治理意識』立場。",
+    "claims": [
+      "KPMG 6/9 與微軟擴大合作，把 Microsoft 365 Copilot 擴大到全球逾 27.6 萬名專業人員（距初次導入約兩年），並導入 Microsoft Agent 365 來部署、監控與保護組織內的 AI agent、強化自家 Trusted AI 框架；微軟 Deb Cupp 稱這是『從實驗走向企業規模影響』的一步，對應六月企業端從試點轉向 production-grade 部署。",
+      "Agent 365 被微軟定位成『AI agent 的控制層』，拆成五個能力（註冊表、存取控制、可視化、互通、資安）：註冊表是防止 agent 蔓延的唯一事實來源，存取控制要求每個 agent 有唯一 agent ID 並限制在需要的資源上，哲學是『用管理員工的同一套基礎設施管理 agent』（Entra agent ID）；Enterprise DNA 評為『治理是功能本身，不是事後補的東西』。",
+      "規模放大的不是功能而是治理破口面積：導入一個 agent 與讓 27 萬人同時用是兩種難度，Enterprise DNA 指出多數企業卡在試點跳 production 那一步（agent 在真實系統跑、扛真實責任）；責任歸屬最硬，該問『治理模式長什麼樣、agent 出錯誰負責』，延續 ai-basic-law-risk-classification-enterprise-checklist『法令到位不等於意識到位、先建治理意識』、mcp-de-facto-standard-agent-governance『每個 agent 都是新權限治理對象』、llm-healthcare-promise-limits『可信度靠落地流程不靠模型』、what-is-claw-llm-client-tool『先定義情境再決定開放、順序不能倒』。可執行盤三格：註冊表有沒有列全、存取是否收到只給需要的、哪些 agent 升級成自動執行工作流。",
+      "作者本人觀點：醫療 AI 的成功關鍵不在擁有多少技術，而在建立正確的治理模式；借鏡 KPMG 實踐，讓最了解問題的人主導 AI、讓最了解風險的人建立護欄，在完善的資料治理基礎上推動創新；期待更多醫療夥伴共同成長，把 AI 從工具導入提升為組織能力，創造兼具安全性、可信度與實際價值的智慧醫療未來。"
+    ],
+    "predictions": [
+      "企業 AI 的重心會從『agent 好不好用、模型多強』移到『27 萬人規模下誰碰得到哪些資料、操作有沒有軌跡、出錯算誰的』；先把 agent 註冊表、唯一身分與存取範圍、自動執行型 agent 的責任歸屬盤成例行事的組織，會比把治理留到全員都開好之後再補的同業更不容易在沒人看的地方滾出治理債。"
+    ]
   }
 ]

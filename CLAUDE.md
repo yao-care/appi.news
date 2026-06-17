@@ -33,6 +33,15 @@
 - `status: scheduled` 且 `publishDate` 在未來的文章會被隱藏，到時間後由 6 小時 cron 重建自動上線。
 - 上線前自檢：`pnpm build && pnpm check:links`（**站內壞連結是硬性 gate，會擋部署**；Lighthouse 是軟性、僅參考）。
 - 驗收以**部署後的線上站**為準，不是本機 `pnpm preview`。
+- **上線後必用 PSI（PageSpeed Insights，Google 機房）檢查線上站**，涵蓋 performance / accessibility / best-practices / seo。本機與 CI 的 Lighthouse 會抖、不可當準（細節見 `PERFORMANCE.md` §3）。
+  - **金鑰**：`PSI_API_KEY` 存在 `/root/appi.news/.env`（已 gitignore，**勿寫進任何 commit 檔案**）。取得方式：Google Cloud Console 啟用 PageSpeed Insights API → 建 API 金鑰。
+  - **用法**：`set -a; source .env; set +a` 後
+    ```bash
+    curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=<URL>&strategy=mobile&category=performance&category=accessibility&category=seo&category=best-practices&key=$PSI_API_KEY"
+    ```
+    取 `lighthouseResult.categories.<cat>.score`。`strategy` 可換 `desktop`。
+  - **量測陷阱（會誤判退步，務必依 `PERFORMANCE.md` §3 處理）**：①剛部署 CDN 冷邊緣 → FCP/LCP 暴增到 10s+，等暖（下次 6h cron 或自然流量）才是真值；②PSI 對固定 URL **釘住舊冷跑** → 網址加 `?cb=<timestamp>` 強制重跑。**判讀重點：TBT / CLS / render-blocking / 各請求耗時** 若都正常，低分多半是冷邊緣假象，不要對假問題改程式。
+  - **基準（不可退回，見 `PERFORMANCE.md` §4）**：desktop 100、mobile 90–100、TBT 0、CLS 0；無障礙 ≥0.95（目前線上 100）。
 - commit / push 前不需反覆要授權；但**破壞性、對外的動作仍須先確認**。
 - **在 `main`（預設分支）上要 commit，先開分支**。
 - 注意 `~/.claude/settings.json` 有 deny 規則擋 `git branch -D`、`git push --force` 等；刪已合併分支改用「先刪遠端 → `git fetch --prune` → 小寫 `git branch -d`」。

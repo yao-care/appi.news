@@ -1,6 +1,6 @@
 ---
-title: "台灣糖尿病照護AI合作啟動本土驗證首個NHI資料驅動AI臨床服務"
-slug: "post-671"
+title: "健保署攜 Google Cloud 推糖尿病 AI，風險評估從 20 分鐘縮到 25 秒"
+slug: "nhi-google-cloud-diabetes-ai"
 description: "健保署與Google Cloud 2024年6月合作啟動「AI-on-DM」計畫，以23年、2,300萬筆健保資料訓練糖尿病AI模型，將風險評估從20分鐘壓縮至25秒，是台灣首個政府主導的全國性預防性AI醫療整合。"
 excerpt: "健保署與Google Cloud 2024年6月合作啟動「AI-on-DM」計畫，以23年、2,300萬筆健保資料訓練糖尿病AI模型，將風險評估從20分鐘壓縮至25秒，是台灣首個政府主導的全國性預防性AI醫療整合。"
 publishDate: "2025-12-20T00:00:00+08:00"

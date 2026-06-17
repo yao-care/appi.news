@@ -1,6 +1,6 @@
 ---
-title: "ASCO2026胰臟癌靶向藥daraxonrasib存活期從6.7個月倍增至13.2個月三期試驗寫下里程碑"
-slug: "post-643"
+title: "ASCO 2026：胰臟癌新藥 daraxonrasib 中位存活期從 6.7 個月倍增至 13.2 個月"
+slug: "asco-pancreatic-daraxonrasib-survival"
 description: "2026年ASCO年會上，Revolution Medicines的daraxonrasib三期RASolute 302試驗數據正式發表，針對曾接受治療的轉移性胰臟癌患者，中位整體存活期從化療的6.7個月提升至13.2個月，風險比0.40。這個結果是RAS抑制劑領域的突破，也為台灣精準醫療藥物研發提供可借鑑的策略藍圖。"
 excerpt: "2026年ASCO年會上，Revolution Medicines的daraxonrasib三期RASolute 302試驗數據正式發表，針對曾接受治療的轉移性胰臟癌患者，中位整體存活期從化療的6.7個月提升至13.2個月，風險比0.40。這個結果是RAS抑制劑領域的突破，也為台灣精準醫療藥物研發提供可借鑑的策略藍圖。"
 publishDate: "2026-06-15T00:23:33+08:00"

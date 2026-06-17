@@ -1,8 +1,18 @@
 // @ts-check
+import { readFileSync } from 'node:fs';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import svelte from '@astrojs/svelte';
+
+/**
+ * 舊 post-NNN 文章網址 → 語意化 slug 的轉址表（由 src/redirects.json 維護）。
+ * GitHub Pages 為純靜態、無法回真 301，Astro 於 build 時為每個來源網址產生
+ * 一頁 meta-refresh + rel=canonical 的轉址頁，爬蟲與 LLM 皆會跟隨、權重幾乎全傳遞。
+ */
+const articleRedirects = JSON.parse(
+  readFileSync(new URL('./src/redirects.json', import.meta.url), 'utf-8'),
+);
 
 /**
  * ── 換網域只需改這裡 ──────────────────────────────────────────────
@@ -66,6 +76,7 @@ export default defineConfig({
   site: SITE,
   base: BASE,
   trailingSlash: 'always',
+  redirects: articleRedirects,
   markdown: {
     rehypePlugins: [rehypeBaseImages],
   },

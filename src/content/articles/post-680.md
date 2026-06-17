@@ -1,6 +1,6 @@
 ---
-title: "黃仁勳在GTC台北宣告代理人AI時代已至AI工廠成算力基礎設施新標準"
-slug: "post-680"
+title: "黃仁勳 GTC 台北宣告代理人 AI 時代，AI 工廠成算力新標準"
+slug: "huang-gtc-taipei-agentic-ai-factory"
 description: "NVIDIA執行長黃仁勳於2026年6月1日GTC台北主題演講中宣告代理人AI正式實用化，AI工廠成為全球算力基礎設施核心，台灣供應鏈從硬體代工升格為AI工廠共同設計夥伴，NVIDIA在台合作夥伴超過150家。"
 excerpt: "NVIDIA執行長黃仁勳於2026年6月1日GTC台北主題演講中宣告代理人AI正式實用化，AI工廠成為全球算力基礎設施核心，台灣供應鏈從硬體代工升格為AI工廠共同設計夥伴，NVIDIA在台合作夥伴超過150家。"
 publishDate: "2026-06-03T09:00:00+08:00"

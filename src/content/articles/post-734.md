@@ -1,6 +1,6 @@
 ---
-title: "台灣E-bike市場佈局加速TAIPEI CYCLE帶動電動自行車成亞太低碳移動主流"
-slug: "post-734"
+title: "TAIPEI CYCLE 加速 E-bike 布局，台廠搶亞太低碳移動供應鏈"
+slug: "taipei-cycle-ebike-low-carbon"
 description: "2026年TAIPEI CYCLE以「Cycling to Wellness」為主題吸引900家廠商參展，E-bike成為核心展區。台灣電動自行車出口在2025年庫存調整後逐步回溫，結合亞太低碳移動政策的推進，台廠正在把製造優勢轉化為全球綠色出行供應鏈的關鍵地位。"
 excerpt: "2026年TAIPEI CYCLE以「Cycling to Wellness」為主題吸引900家廠商參展，E-bike成為核心展區。台灣電動自行車出口在2025年庫存調整後逐步回溫，結合亞太低碳移動政策的推進，台廠正在把製造優勢轉化為全球綠色出行供應鏈的關鍵地位。"
 publishDate: "2026-03-01T08:00:00+08:00"

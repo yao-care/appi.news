@@ -1,6 +1,6 @@
 ---
-title: "NASA雙子衛星ESCAPADE升空與JAXA火衛一採樣任務同步展開火星探索競合新局"
-slug: "post-647"
+title: "NASA ESCAPADE 雙星升空，JAXA 火衛一採樣同步備戰：火星探索新局"
+slug: "nasa-escapade-jaxa-mars-missions"
 description: "2026年3月14日，NASA委由Blue Origin New Glenn火箭發射ESCAPADE雙子衛星，首度以協調飛行模式研究太陽風如何剝蝕火星大氣。JAXA的MMX任務同期備戰，預計以H3火箭前往火衛一Phobos採樣，並於2031年返回地球。兩個任務代表亞太太空機構與美方協作的行星科學新模式，也為台灣衛星供應鏈帶來具體參照座標。"
 excerpt: "2026年3月14日，NASA委由Blue Origin New Glenn火箭發射ESCAPADE雙子衛星，首度以協調飛行模式研究太陽風如何剝蝕火星大氣。JAXA的MMX任務同期備戰，預計以H3火箭前往火衛一Phobos採樣，並於2031年返回地球。兩個任務代表亞太太空機構與美方協作的行星科學新模式，也為台灣衛星供應鏈帶來具體參照座標。"
 publishDate: "2026-03-14T09:00:00+08:00"

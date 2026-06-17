@@ -51,7 +51,7 @@ references:
 
 <h2>CES 的機器人，到底在解誰的問題</h2>
 
-<p>先把能力跟需求拆開。連廠商自己都沒把這些產品定位成「照顧長者」，<a href="https://www.prnewswire.com/news-releases/ecovacs-introduces-lilmilo-an-emotional-ai-companion-robot-designed-to-bring-warmth-presence-and-connection-into-everyday-life-302771294.html" target="_blank" rel="noopener">LilMilo 官方甚至明講是要「補充」而非取代真實人際關係</a>。長者的需求不是家裡有沒有一台會動的機器，而是吃藥有沒有準時、跌倒有沒有人知道、一個人在家會不會悶出事。能力很多，不代表對準這些需求。先定義要解哪一類問題，再回頭看哪台機器符合前提，順序不能倒。這個毛病我在<a href="/articles/post-282/">先前談 LLM 是不是醫療救贖那篇</a>講過：落地設計的品質，遠比硬體或模型的強弱更關鍵。</p>
+<p>先把能力跟需求拆開。連廠商自己都沒把這些產品定位成「照顧長者」，<a href="https://www.prnewswire.com/news-releases/ecovacs-introduces-lilmilo-an-emotional-ai-companion-robot-designed-to-bring-warmth-presence-and-connection-into-everyday-life-302771294.html" target="_blank" rel="noopener">LilMilo 官方甚至明講是要「補充」而非取代真實人際關係</a>。長者的需求不是家裡有沒有一台會動的機器，而是吃藥有沒有準時、跌倒有沒有人知道、一個人在家會不會悶出事。能力很多，不代表對準這些需求。先定義要解哪一類問題，再回頭看哪台機器符合前提，順序不能倒。這個毛病我在<a href="/articles/llm-healthcare-promise-limits/">先前談 LLM 是不是醫療救贖那篇</a>講過：落地設計的品質，遠比硬體或模型的強弱更關鍵。</p>
 
 <img src="/images/companion-robots-ai-basic-law-elderly-care-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="長者的真實需求是準時吃藥與在家安全，而非家裡有沒有一台會動的機器">
 
@@ -91,7 +91,7 @@ references:
 
 <p>真正棘手的不是隱私，是情感。陪伴機器人要有效，往往需要長者對它產生依附，但同一份依附也可能變成過度依賴。<a href="https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1626471/full" target="_blank" rel="noopener">一篇回顧長者面對社交機器人經驗的研究，把他們的恐懼分成幾類，其中就有「害怕變得依賴」</a>。</p>
 
-<p>依賴本身不是壞事，甚至是機器人能發揮作用的條件。問題在於，當機器人變成長輩唯一的說話對象，家人會不會就此心安理得地少回家、少打電話。這回到信任的根本。我在<a href="/articles/post-278/">先前談 LLM 不會打從心底佔你便宜那篇</a>說過，機器值得信任，是因為運作機制裡沒有要佔你便宜的誘因。但陪伴機器人背後是會賣訂閱、做生意的廠商，它有沒有動機讓長輩黏得更緊、用得更久？這個誘因結構，得在情感依賴變成商業模式之前先看清楚。</p>
+<p>依賴本身不是壞事，甚至是機器人能發揮作用的條件。問題在於，當機器人變成長輩唯一的說話對象，家人會不會就此心安理得地少回家、少打電話。這回到信任的根本。我在<a href="/articles/llm-no-incentive-to-exploit/">先前談 LLM 不會打從心底佔你便宜那篇</a>說過，機器值得信任，是因為運作機制裡沒有要佔你便宜的誘因。但陪伴機器人背後是會賣訂閱、做生意的廠商，它有沒有動機讓長輩黏得更緊、用得更久？這個誘因結構，得在情感依賴變成商業模式之前先看清楚。</p>
 
 <img src="/images/companion-robots-ai-basic-law-elderly-care-s5.webp" width="960" height="640" loading="lazy" decoding="async" alt="長者與陪伴機器人之間的情感連結，依賴是一把雙面刃">
 

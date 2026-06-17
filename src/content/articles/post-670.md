@@ -1,6 +1,6 @@
 ---
 title: "台灣AI醫療智慧健康價值鏈完整成形從研發到部署形成全球示範"
-slug: "post-670"
+slug: "taiwan-ai-healthcare-value-chain"
 description: "從健保資料奠基到HIMSS Stage 7認證，台灣AI醫療在2025年完成價值鏈六大環節，連續8年全球醫療指數第一的背後是一套可複製的系統性架構。"
 excerpt: "從健保資料奠基到HIMSS Stage 7認證，台灣AI醫療在2025年完成價值鏈六大環節，連續8年全球醫療指數第一的背後是一套可複製的系統性架構。"
 publishDate: "2026-02-10T00:00:00+08:00"

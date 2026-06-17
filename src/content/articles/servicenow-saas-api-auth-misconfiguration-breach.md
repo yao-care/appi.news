@@ -72,7 +72,7 @@ references:
 
 <p>我自己這陣子的感受是這樣。隨著用 vibe coding 的人越來越多，很多服務上線時忽略了程式品質，也沒有注意到 AI 無意間造成的漏洞。把這個觀察接回 ServiceNow 那個 <code>requires_authentication=false</code>，其實是同一件事的兩個版本。一個「預設不需要驗證」的設定值，正是那種功能跑得起來、就不會有人回頭多看一眼的東西。</p>
 
-<p>AI 幫你把端點生出來、把功能接起來、把 demo 跑通，這些它都很強。但「這個端點該不該對外開」「Guest 身分碰得到什麼」這種判斷，模型不會主動替你踩剎車，它只會把你要的功能交出來。這也是我先前一直在講的同一條線：<a href="/articles/post-282/">能不能信任一個系統，靠的是落地流程的品質，不是工具本身有多強</a>。工具越好用、出活越快，沒人把關的設定就越容易整批帶上線，破口不會變少，只會變得更隱形。</p>
+<p>AI 幫你把端點生出來、把功能接起來、把 demo 跑通，這些它都很強。但「這個端點該不該對外開」「Guest 身分碰得到什麼」這種判斷，模型不會主動替你踩剎車，它只會把你要的功能交出來。這也是我先前一直在講的同一條線：<a href="/articles/llm-healthcare-promise-limits/">能不能信任一個系統，靠的是落地流程的品質，不是工具本身有多強</a>。工具越好用、出活越快，沒人把關的設定就越容易整批帶上線，破口不會變少，只會變得更隱形。</p>
 
 <img src="/images/servicenow-saas-api-auth-misconfiguration-breach-s4.webp" width="960" height="640" loading="lazy" decoding="async" alt="vibe coding 風潮下服務匆促上線忽略程式品質，AI 順手生成的設定漏洞沒人回頭檢查">
 
@@ -80,7 +80,7 @@ references:
 
 <p>講防禦，不講攻擊。這件事不需要等什麼高深的資安方案，先做盤點就能擋掉一大半。具體有四條。</p>
 
-<p>第一，把「預設未驗證」列為優先稽核項。逐一檢查每一個對外的 API 與端點，預設值到底要不要驗證、匿名或 Guest 身分能碰到哪些資料表。這次 ServiceNow 出事的就是這一格，它最該被排在盤點清單的最前面。第二，把 SaaS 供應商也算進來。你公司用的每一個 SaaS，包含第三方 HR、問卷調查、CRM，各自開了哪些 API、用誰的憑證、能讀寫什麼，都要列冊，任天堂的破口就在這一層。第三，自家 AI agent 串接的 API 一樣要收。<a href="/articles/mcp-de-facto-standard-agent-governance/">每一台 agent 接出去的 server，都該被當成一個新的權限治理對象</a>，agent 會自己去連一堆系統，認證邊界沒收好，問題只會以機器的速度擴大。第四，順序不要倒。<a href="/articles/post-280/">先定義這個端點要解決什麼情境、誰該用，再決定要不要對外開放</a>，不是先開好再回頭補驗證。</p>
+<p>第一，把「預設未驗證」列為優先稽核項。逐一檢查每一個對外的 API 與端點，預設值到底要不要驗證、匿名或 Guest 身分能碰到哪些資料表。這次 ServiceNow 出事的就是這一格，它最該被排在盤點清單的最前面。第二，把 SaaS 供應商也算進來。你公司用的每一個 SaaS，包含第三方 HR、問卷調查、CRM，各自開了哪些 API、用誰的憑證、能讀寫什麼，都要列冊，任天堂的破口就在這一層。第三，自家 AI agent 串接的 API 一樣要收。<a href="/articles/mcp-de-facto-standard-agent-governance/">每一台 agent 接出去的 server，都該被當成一個新的權限治理對象</a>，agent 會自己去連一堆系統，認證邊界沒收好，問題只會以機器的速度擴大。第四，順序不要倒。<a href="/articles/what-is-claw-llm-client-tool/">先定義這個端點要解決什麼情境、誰該用，再決定要不要對外開放</a>，不是先開好再回頭補驗證。</p>
 
 <img src="/images/servicenow-saas-api-auth-misconfiguration-breach-s5.webp" width="960" height="640" loading="lazy" decoding="async" alt="企業盤點自家與 AI agent 串接的 API 認證邊界，把預設未驗證列為優先稽核項">
 

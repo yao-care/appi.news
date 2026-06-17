@@ -1,6 +1,6 @@
 ---
-title: "KPMG季度脈搏報告揭示亞洲CVC在AI浪潮下投資比例與規模同創歷史新高"
-slug: "post-714"
+title: "KPMG：亞洲 CVC 在 AI 浪潮下投資量與規模同創新高"
+slug: "kpmg-asia-cvc-ai-record"
 description: "KPMG《Venture Pulse Q4 2025》顯示，2025年全球企業創投規模達2,869億美元為史上次高，美國企業對AI公司的CVC投資創紀錄，亞洲方面澳洲、中國、日本各出現億級AI交易，台灣新創在AI賽道上吸引的CVC投資比例持續攀高，正是這股全球企業創投浪潮的亞洲縮影。"
 excerpt: "KPMG《Venture Pulse Q4 2025》顯示，2025年全球企業創投規模達2,869億美元為史上次高，美國企業對AI公司的CVC投資創紀錄，亞洲方面澳洲、中國、日本各出現億級AI交易，台灣新創在AI賽道上吸引的CVC投資比例持續攀高，正是這股全球企業創投浪潮的亞洲縮影。"
 publishDate: "2026-01-10T09:00:00+08:00"

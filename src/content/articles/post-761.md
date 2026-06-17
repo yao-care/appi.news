@@ -1,6 +1,6 @@
 ---
 title: "台北音樂博覽會奠定東南亞音樂交流樞紐打造跨境版權新生態"
-slug: "post-761"
+slug: "taipei-music-expo-southeast-asia"
 description: "臺北音樂博覽會TMEX 2025於8月底在北流舉辦，以「Tune in to Taiwan. Sync with Asia.」為主題，匯聚近50家音樂產業品牌與百位國際買家，推動台灣音樂IP走向東南亞授權市場。"
 excerpt: "臺北音樂博覽會TMEX 2025於8月底在北流舉辦，以「Tune in to Taiwan. Sync with Asia.」為主題，匯聚近50家音樂產業品牌與百位國際買家，推動台灣音樂IP走向東南亞授權市場。"
 publishDate: "2025-09-01T10:00:00+08:00"

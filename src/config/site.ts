@@ -28,6 +28,17 @@ export const SITE = {
   org: {
     legalName: 'APPI News',
     foundingYear: 2026,
+    /**
+     * 機構的對外權威連結（給 schema.org sameAs 用）。
+     * LLM／搜尋引擎靠這些連結交叉核對「APPI News 是真實存在、可信的媒體實體」。
+     * 請填入官方帳號完整網址，例如：
+     *   'https://www.facebook.com/...', 'https://www.linkedin.com/company/...',
+     *   'https://x.com/...', 'https://www.threads.net/@...', 維基百科條目等。
+     * 留空陣列則不輸出 sameAs。
+     */
+    sameAs: [] as string[],
+    /** 機構聯絡信箱（給 schema.org contactPoint 用；留空則不輸出） */
+    contactEmail: 'evidencetodaynewsdesk@gmail.com',
   },
 } as const;
 

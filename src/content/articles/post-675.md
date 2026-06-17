@@ -1,6 +1,6 @@
 ---
-title: "全球人工智慧醫療設備監管十年回顧台灣TFDA框架對標美歐日韓體系"
-slug: "post-675"
+title: "全球 AI 醫材監管十年回顧：台灣 TFDA 對標美歐日韓體系"
+slug: "global-ai-medical-device-regulation-decade"
 description: "Frontiers in Medicine 2025年發表人工智慧醫療設備（AIMD）全球監管十年回顧，涵蓋美FDA、歐盟、日本、韓國與台灣TFDA等主要監管體系的發展歷程，指出動態監管框架、上市後監控與演算法透明度為各國共同面臨的核心挑戰。"
 excerpt: "Frontiers in Medicine 2025年發表人工智慧醫療設備（AIMD）全球監管十年回顧，涵蓋美FDA、歐盟、日本、韓國與台灣TFDA等主要監管體系的發展歷程，指出動態監管框架、上市後監控與演算法透明度為各國共同面臨的核心挑戰。"
 publishDate: "2025-10-01T00:00:00+08:00"

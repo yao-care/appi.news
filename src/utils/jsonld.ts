@@ -4,15 +4,27 @@ import { absoluteUrl } from './url';
 type SiteUrl = URL | string | undefined;
 
 export function orgLd(site: SiteUrl) {
+  const sameAs = (SITE.org.sameAs ?? []).filter(Boolean);
+  const contactEmail = SITE.org.contactEmail?.trim();
   return {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'NewsMediaOrganization',
     name: SITE.name,
     legalName: SITE.org.legalName,
     description: SITE.description,
     url: absoluteUrl('/', site),
     foundingDate: String(SITE.org.foundingYear),
     logo: absoluteUrl(SITE.defaultOgImage, site),
+    ...(sameAs.length ? { sameAs } : {}),
+    ...(contactEmail
+      ? {
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'editorial',
+            email: contactEmail,
+          },
+        }
+      : {}),
   };
 }
 

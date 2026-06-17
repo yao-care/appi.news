@@ -44,4 +44,18 @@ describe('extractFaq', () => {
   it('returns empty when there is no FAQ', () => {
     expect(extractFaq('<h2>前言</h2><p>沒有問答。</p>')).toEqual([]);
   });
+
+  it('extracts <p><strong>Q</strong><br>A</p> Q&A and excludes a trailing 結語', () => {
+    const body = `
+<h2>常見問題</h2>
+<p><strong>MCP 變成標準了，是不是接了就安全？</strong><br>不是。標準解決的是怎麼接，不解決權限誰管。</p>
+<p><strong>沒用 MCP 是不是就不用管？</strong><br>不見得，只要有 agent 連內部系統，治理問題一樣存在。</p>
+<h2>結語</h2>
+<p>標準幫你把門做成同一種規格，沒幫你決定誰拿鑰匙。</p>`;
+    const faq = extractFaq(body);
+    expect(faq).toHaveLength(2);
+    expect(faq[0].question).toBe('MCP 變成標準了，是不是接了就安全？');
+    expect(faq[0].answer).toContain('標準解決的是怎麼接');
+    expect(faq.some((f) => f.question === '結語')).toBe(false);
+  });
 });

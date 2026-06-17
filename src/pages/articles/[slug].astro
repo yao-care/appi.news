@@ -103,12 +103,18 @@ const ld = [
       image: authorImageAbs,
       jobTitle: author?.data.displayTitle,
       sameAs: author?.data.socialLinks.map((s) => s.url),
+      knowsAbout: author?.data.specialties,
       isOrganization: author?.data.isOrganization,
     },
     section: cat?.name,
     isNews: isMedicalOrNews,
     keywords: article.data.tags,
     about: aboutNames,
+    citations: article.data.references.map((r) => ({
+      title: r.title,
+      url: r.url,
+      publisher: r.publisher,
+    })),
   }),
   breadcrumbLd(Astro.site, [{ name: '首頁', path: '/' }, ...crumbItems]),
 ];

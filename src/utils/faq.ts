@@ -15,7 +15,10 @@ function stripHtml(s: string): string {
     .trim();
 }
 
-const FAQ_EXCLUDE = /(參考(文獻|資料|來源)|延伸閱讀|關於作者|免責聲明|作者與編輯)/;
+// 非問答的區段標題：用來（a）把它們從問題候選中濾除，（b）標記 FAQ 區段的結尾，
+// 避免把「結語/小結」這類結論段當成 FAQ 問題（曾導致 FAQPage 只輸出一筆「結語」）。
+const FAQ_EXCLUDE =
+  /(參考(文獻|資料|來源)|延伸閱讀|關於作者|免責聲明|作者與編輯|結語|結論|小結|總結|重點摘要|延伸思考|展望|前言|背景)/;
 
 export interface FaqItem {
   question: string;
@@ -23,9 +26,11 @@ export interface FaqItem {
 }
 
 /**
- * 兩種來源：(1) 明確「常見問題 / FAQ」區段下的所有標題；
- *          (2) 全文中以「Q1 / Q2…」起頭的標題（醫療 AI 系列常用）。
- * 皆以標題為問題、其後段落為答案；以問題文字去重。
+ * 三種來源：
+ *   (1a) 明確「常見問題 / FAQ」區段下的標題式 Q&A（<h3>問題</h3><p>答案</p>）；
+ *   (1b) 同區段內的段落粗體式 Q&A（<p><strong>問題？</strong><br>答案</p>）——日更文章主要格式；
+ *   (2)  全文中以「Q1 / Q2…」起頭的標題（醫療 AI 系列常用）。
+ * 皆以問題文字去重；FAQ 區段在遇到「結語/參考/免責…」等非問答標題時結束。
  */
 export function extractFaq(body: string): FaqItem[] {
   const out: FaqItem[] = [];
@@ -41,17 +46,27 @@ export function extractFaq(body: string): FaqItem[] {
     out.push({ question: q, answer: a });
   };
 
-  // (1) 明確 FAQ 區段：區段標題之後的所有 h2-4 視為問題（問題可能與區段同為 h2，
-  //     如「常見問題」下接多個 <h2>問題；參考文獻/免責等由 FAQ_EXCLUDE 濾除）
+  // (1) 明確 FAQ 區段
   const start = /<(h[234])>[^<]*(?:常見問題|FAQ|常見\s*Q\s*&\s*A)[^<]*<\/\1>/i.exec(body);
   if (start) {
-    const section = body.slice(start.index + start[0].length);
+    let section = body.slice(start.index + start[0].length);
+    // 在第一個「結語/參考/免責…」等非問答標題處截斷，界定 FAQ 區段範圍，
+    // 同時避免 (1b) 把後續段落的粗體文字誤抓成問題。
+    const boundary = /<(h[234])>([\s\S]*?)<\/\1>/g;
+    let bm: RegExpExecArray | null;
+    while ((bm = boundary.exec(section)) !== null) {
+      if (FAQ_EXCLUDE.test(stripHtml(bm[2]))) {
+        section = section.slice(0, bm.index);
+        break;
+      }
+    }
+    // (1a) 標題式：<h2-4>問題</h2-4> 後接答案段落
     const qa = /<(h[234])>([\s\S]*?)<\/\1>\s*([\s\S]*?)(?=<h[234]>|$)/g;
     let m: RegExpExecArray | null;
-    while ((m = qa.exec(section)) !== null) {
-      if (FAQ_EXCLUDE.test(stripHtml(m[2]))) break; // 到達參考文獻/免責等 → FAQ 區段結束
-      push(m[2], m[3]);
-    }
+    while ((m = qa.exec(section)) !== null) push(m[2], m[3]);
+    // (1b) 段落粗體式：<p><strong>問題？</strong><br>答案</p>
+    const pq = /<p>\s*<strong>([\s\S]*?)<\/strong>\s*(?:<br\s*\/?>)?\s*([\s\S]*?)<\/p>/gi;
+    while ((m = pq.exec(section)) !== null) push(m[1], m[2]);
   }
 
   // (2) 全文 Q 起頭標題

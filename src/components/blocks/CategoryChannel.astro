@@ -34,8 +34,9 @@ const heroArticle = showHero ? pageArticles[0] : undefined;
 const rest = showHero ? pageArticles.slice(1) : pageArticles;
 const tags = tagStats(allInCategory).slice(0, 16).map((t) => t.tag);
 
-// 有文章的指標題（子分類）才做成連結，導向該指標題的列表頁
+// 只顯示目前已有文章的子分類；沒有文章的子分類完全隱藏（不顯示灰色不可點標籤）。
 const subWithArticles = new Set(allInCategory.map((a) => a.data.subcategory).filter(Boolean));
+const visibleSubcategories = category.subcategories.filter((s) => subWithArticles.has(s.slug));
 ---
 <div class="container channel">
   <Breadcrumbs items={[{ name: category.name }]} />
@@ -47,17 +48,13 @@ const subWithArticles = new Set(allInCategory.map((a) => a.data.subcategory).fil
     </div>
     <p class="channel-desc">{category.description}</p>
     {
-      category.subcategories.length > 0 && (
+      visibleSubcategories.length > 0 && (
         <nav class="subcats" aria-label="子分類">
-          {category.subcategories.map((s) =>
-            subWithArticles.has(s.slug) ? (
-              <a class="subcat subcat--link" href={url(`/${category.slug}/${s.slug}/`)}>
-                {s.name}
-              </a>
-            ) : (
-              <span class="subcat">{s.name}</span>
-            ),
-          )}
+          {visibleSubcategories.map((s) => (
+            <a class="subcat subcat--link" href={url(`/${category.slug}/${s.slug}/`)}>
+              {s.name}
+            </a>
+          ))}
         </nav>
       )
     }

@@ -10,6 +10,17 @@
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO"
+
+# 隔離模式（跑在專屬 publisher checkout）：開跑前拉回 origin/main 乾淨最新狀態，
+# 讓選題去重讀到的 author-memory 與最新發佈一致，且不受開發目錄影響。
+# 只在 PUBLISH_ISOLATED=1（由 crontab 指定）時啟用——避免誤在開發目錄 reset --hard。
+# 不帶 -x，保留 node_modules/dist/.env；帳本在 $HOME 全域，不受影響。
+if [ "${PUBLISH_ISOLATED:-}" = "1" ]; then
+  git fetch -q origin --prune && git checkout -q main && git reset -q --hard origin/main && git clean -qfd || {
+    echo "⚠️ 隔離同步失敗，仍以現有 checkout 續跑"
+  }
+fi
+
 set -a
 # shellcheck disable=SC1090
 source "$HOME/.config/appi-news/report.env"   # SLACK_BOT_TOKEN

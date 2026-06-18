@@ -372,5 +372,23 @@
     "predictions": [
       "企業 AI 的重心會從『agent 是不是真的、模型多強』移到『哪個部門先被 agent 化、部署速度與治理速度的落差怎麼補』；先把先被 agent 化部門（客服到財務）的情境、權限與問責逐格盤成例行事的組織，會比把治理留到全員都開好之後再補的同業更不容易在沒人看的地方滾出治理債。"
     ]
+  },
+  {
+    "slug": "frontier-model-cyber-capability-governance",
+    "title": "當前沿模型開始附帶網路攻防能力：企業與政府的疑慮，是模型釋出治理的下一個門檻",
+    "publishDate": "2026-06-30",
+    "category": "tech",
+    "tags": ["前沿 AI 模型", "網路攻防能力", "AI 模型治理", "Capability-Based Access", "AI 基本法風險分類"],
+    "conclusion": "新一代旗艦模型被點名具備強大網路攻防能力後，企業與政府的不安不是反應過度，而是暴露了一個治理缺口：模型釋出的分級、存取門檻與責任歸屬還沒跟上能力曲線。該補的是治理框架，不是叫大家別用；真正的缺口不是能力是授權，企業該用《人工智慧基本法》風險分類加 ISO/IEC 42001 在能力升級時同步收緊存取門檻、責任歸屬與動態降階。",
+    "claims": [
+      "前沿模型攻防同源、能力是真的：Anthropic Project Glasswing 中 Mythos Preview 已找出上千個高風險漏洞（含 OpenBSD 27 年、FFmpeg 16 年、Linux 核心串接提權），官方明言讓 AI 在壞人手裡危險的能力正是防守端找漏洞補漏洞無可取代的同一組能力，攻與防無法切開。",
+      "六月事件鏈：美國商務部（Lutnick、國家網路主任 Cairncross 具名）要求對外國人停止 Fable 5／Mythos 5 存取、Anthropic 全球暫停；76 位資安老將（Alex Stamos、Katie Moussouris、Rachel Tobac 等）連署稱『把最好的模型從防守方手上拿走』很危險；Trump 6/2 行政命令建 covered frontier model 機密評測（NSA 局長認定、釋出前 30 天早期存取）但全程自願、明文不建強制核照；G7（6/15-17 Evian）談 trusted partners、Macron 與 Altman 喊話，仍停在政治協商。",
+      "作者本人觀點（核心）：高風險技術不是禁止而是分級（航空＝飛行員執照／航空器認證／維修規範／事故調查）；現在的不對稱是 AI 已能自己規劃執行調用工具、模型取得卻仍接近註冊帳號即可用。真正的治理缺口不是能力是授權：MCP 談工具存取、OpenShell 談 Runtime Policy、Agent 談自主執行，政策圈卻還在比參數。下一階段會出現 Capability-Based Access：不看是不是企業、不看付多少錢，而看模型具備什麼能力決定門檻。",
+      "作者本人觀點（治理真空）：更深的問題是『誰有資格決定一個模型太強了』。Anthropic 認為問題有限（狹窄非通用越獄、漏洞相對簡單其他公開模型也找得到）、美國政府認為必須下架、產業界反對認為限制傷害防禦研究與資安工作；三方都有理卻沒有共同判準，暴露沒有共同接受的 Frontier AI 審核機制這個治理真空。",
+      "企業對照（拉回台灣）：用《人工智慧基本法》（民國114/12/23 三讀、國科會主管、數位部風險分類框架、高風險標示警語＋責任歸屬＋救濟）＋ISO/IEC 42001（AIMS 全生命週期管理）兩骨架，能力升級時同步收緊三格：存取門檻（高階模型收進限定身分用途、留稽核，即 Capability-Based Access 落地）、責任歸屬（哪些動作要人工確認、哪些情境不交給 AI）、動態降階（仿 Fable 5 高風險題自動降階）；延續 llm-healthcare-promise-limits 可信度靠落地流程不靠模型、what-is-claw-llm-client-tool 先定義情境再決定開放、mcp-de-facto-standard-agent-governance、nvidia-openshell-agent-authorization-layer、ai-basic-law-risk-classification-enterprise-checklist。"
+    ],
+    "predictions": [
+      "前沿模型釋出的勝負訊號會從『模型多強、跑多少分』移到『有沒有一套依能力決定存取門檻、責任歸屬可問責的審核機制』；國際短期內難有共同接受的 Frontier AI 審核機制，授權邊界的爭執（誰能決定模型太強了、防守方拿不拿得到最好工具）會反覆出現，先把存取門檻、責任歸屬與動態降階盤成例行事、把風險分類加 ISO/IEC 42001 當骨架的企業，會比等條文等國際共識的同業更不容易在沒人看的地方滾出治理債。"
+    ]
   }
 ]

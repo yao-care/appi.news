@@ -8,7 +8,7 @@ category: health
 subcategory: tcm-integrative
 tags: ["新冠疫苗追加劑", "65歲以上疫苗", "免疫衰老", "疾管署COVID疫苗", "老年人疫苗接種"]
 author: "huang-ziyan"
-coverImage: "https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-187/images/1.png"
+coverImage: "covers/appi-news-187.webp"
 coverAlt: "長者在診所接受新冠疫苗追加劑接種"
 status: published
 sourceType: author
@@ -32,7 +32,7 @@ draft: false
 
 疾管署近期開放 65 歲以上民眾追加新冠疫苗，這個政策不是隨便喊喊的，背後有一整套免疫學的邏輯。如果你家有長輩、或你自己已年過六十五，以下這 5 件事值得花幾分鐘好好了解。
 
-![長者在診所接受新冠疫苗追加劑接種](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-187/images/1.png)
+![長者在診所接受新冠疫苗追加劑接種](/images/appi-news-187-1.webp)
 
 ## 一、年紀大了，免疫力到底怎麼了？
 
@@ -52,7 +52,7 @@ draft: false
 
 2026 年發表於《Journal of Gerontology》的研究，在 60 歲以上成人身上接種新冠第四劑後觀察到：雖然抗體（體液免疫）在各年齡層都有提升，但細胞免疫方面，老年組的 CD4+ T 細胞干擾素分泌量顯著低於年輕組（註1）。這說明一件事：**老年人打疫苗，起步的免疫反應就比較費力，需要更主動地維持保護力。**
 
-![免疫衰老三大機制示意圖：T細胞庫縮小、B細胞反應遲緩、慢性低度發炎，共同導致老年人疫苗效果降低](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-187/images/2.png)
+![免疫衰老三大機制示意圖：T細胞庫縮小、B細胞反應遲緩、慢性低度發炎，共同導致老年人疫苗效果降低](/images/appi-news-187-2.webp)
 
 ## 二、打過疫苗了，保護力為什麼還會消退？
 
@@ -68,7 +68,7 @@ draft: false
 
 世界衛生組織（WHO）在 2026 年的最新建議中明確指出，高風險長者族群（75 歲以上，或 60 歲以上具有慢性病等共病症者）每年應接種**至少 1 劑**新冠疫苗，理想情況下每 6 個月 1 次；其他年長族群則建議每年至少接種 1 劑，以維持足夠的保護力（註4）。台灣疾管署開放 65 歲以上追加劑，正是依循這個分級風險框架所制定的在地應對方案。
 
-![追加劑與基礎接種的抗體半衰期對比圖：追加劑比基礎接種延長71至84%的抗體持續時間](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-187/images/3.png)
+![追加劑與基礎接種的抗體半衰期對比圖：追加劑比基礎接種延長71至84%的抗體持續時間](/images/appi-news-187-3.webp)
 
 ## 三、追加劑的保護效果有多強？
 
@@ -126,7 +126,7 @@ draft: false
 4. **接種後留觀 15 至 30 分鐘**：留在接種院所，確認沒有立即性過敏反應再離開
 5. **接種後 24–48 小時留意反應**：輕微酸痛、疲倦、低燒是正常的免疫反應，無需驚慌；若症狀超過 3 天或加重，應就醫
 
-![65歲以上接種新冠追加劑的5項準備清單](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-187/images/4.svg)
+![65歲以上接種新冠追加劑的5項準備清單](/images/appi-news-187-4.webp)
 
 **帶走的重點**
 

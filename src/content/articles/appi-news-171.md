@@ -8,7 +8,7 @@ category: health
 subcategory: preventive
 tags: ["泳池衛生", "夏季防感染", "水質安全", "皮膚保護", "傳染病預防"]
 author: "appi-editorial"
-coverImage: "https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-171/images/1.png"
+coverImage: "covers/appi-news-171.webp"
 coverAlt: "泳池消毒效果比較：標準加氯可殺滅大腸桿菌與病毒，但隱孢子蟲卵囊與腺病毒仍可存活"
 status: published
 sourceType: editorial
@@ -46,7 +46,7 @@ draft: false
 
 然而，不同地區與時期的爆發病原體差異明顯。腺病毒（Adenovirus）正是其中一例。2024 年針對中國 29 起泳池爆發事件的系統性回顧發現，**93% 的爆發由腺病毒（而非隱孢子蟲）引起**，每次爆發中位感染人數達 89 人；其中 90% 的根本原因是泳池維護管理不當，在於「沒有維持足夠的有效餘氯濃度」，而非病毒天生對氯免疫。
 
-![泳池消毒效果比較：標準加氯可殺滅大腸桿菌與病毒，但隱孢子蟲卵囊與腺病毒仍可存活](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-171/images/1.png)
+![泳池消毒效果比較：標準加氯可殺滅大腸桿菌與病毒，但隱孢子蟲卵囊與腺病毒仍可存活](/images/appi-news-171-1.webp)
 
 泳池「水色清澈」反映的是濁度（turbidity），不等同於微生物安全。懸浮顆粒越多，病原體越容易藏匿其後、降低消毒效率。但水清澈，也無法排除病原體的存在。
 
@@ -72,7 +72,7 @@ draft: false
 
 泳池邊的更衣室、淋浴間地板是皮癬菌（Dermatophyte）的主要傳播場所。1997 年日本一項研究發現，游泳課學生中有 63.6% 是足癬帶菌者；從泳池地板和公共浴場地板上均可分離出皮癬菌，以鬚毛癬菌（*Trichophyton mentagrophytes*）為主，佔分離株的 85%。
 
-![泳池四大常見感染部位：耳道（游泳耳）、眼睛（腺病毒結膜炎）、腸道（隱孢子蟲腹瀉）、足部（足癬）](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-171/images/2.png)
+![泳池四大常見感染部位：耳道（游泳耳）、眼睛（腺病毒結膜炎）、腸道（隱孢子蟲腹瀉）、足部（足癬）](/images/appi-news-171-2.webp)
 
 「急性外耳道炎的主要病原體為銅綠假單胞菌與金黃色葡萄球菌，常發生於游泳後或耳道輕度外傷後，局部外用含皮質類固醇的抗菌製劑是標準一線治療。」— Schaefer P, Baugh RF. *Am Fam Physician*, 2012（PMID: 23198673）
 
@@ -120,7 +120,7 @@ draft: false
 - 水面出現油脂薄膜（主要為防曬油與汗水的混合物），是承載量與換水管理不足的警訊
 - 高風險族群（兒童、免疫低下者）可選擇早場時段，尖峰下午時段的累積汙染負荷較高
 
-![健康游泳五步驟：入池前沖澡、戴泳鏡、避免吞水、更衣室穿拖鞋、出池後擦乾耳道](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-171/images/3.png)
+![健康游泳五步驟：入池前沖澡、戴泳鏡、避免吞水、更衣室穿拖鞋、出池後擦乾耳道](/images/appi-news-171-3.webp)
 
 ### 常見問題
 

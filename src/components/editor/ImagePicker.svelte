@@ -1,5 +1,6 @@
 <script>
   import { getToken } from '@/utils/editor/token';
+  import { startLogin } from '@/utils/editor/auth';
   import { b64ToBlob } from '@/utils/editor/image-upload';
   import { AI_WORKER as WORKER } from '@/utils/editor/ai-worker';
   import { addGenerated, markGenUsed } from '@/utils/editor/gen-session';
@@ -12,6 +13,13 @@
   // size：'landscape'（封面預設）| 'square' | 'portrait'
   // title/body：給「AI 找圖庫」推關鍵字；exclude：已用過的圖庫圖 id（去重）
   let { initialPrompt = '', size = 'landscape', title = '', body = '', exclude = [], onpick, onclose } = $props();
+
+  // 登入失效旗標：沒 token 或 worker 回 401/403 時亮起，讓各分頁顯示「重新登入」鈕。
+  let needLogin = $state(false);
+  // worker 回應的授權失敗（401 缺少授權 / 403 無寫入權）→ 亮重新登入鈕
+  function flagAuth(res) {
+    if (res.status === 401 || res.status === 403) needLogin = true;
+  }
 
   let tab = $state('generate'); // generate | stock
   let prompt = $state(initialPrompt);
@@ -31,9 +39,9 @@
   async function generate() {
     if (!prompt.trim()) { error = '請先輸入或調整描述（prompt）'; return; }
     const token = getToken();
-    if (!token) { error = '請先登入管理者帳號再生圖'; return; }
+    if (!token) { needLogin = true; error = '尚未登入或登入已失效，請重新登入再生圖。'; return; }
     if (genCount >= 10 && !confirm(`本次已生成 ${genCount} 張（每張都會計費），確定再生一張？`)) return;
-    busy = true; error = ''; elapsed = 0;
+    busy = true; error = ''; needLogin = false; elapsed = 0;
     const timer = setInterval(() => { elapsed += 1; }, 1000);
     try {
       // 1) 啟動工單（很快回 jobId）
@@ -43,7 +51,7 @@
         body: JSON.stringify({ prompt, model, size }),
       });
       const startData = await startRes.json();
-      if (!startRes.ok || !startData.jobId) throw new Error(startData.error || `啟動失敗（${startRes.status}）`);
+      if (!startRes.ok || !startData.jobId) { flagAuth(startRes); throw new Error(startData.error || `啟動失敗（${startRes.status}）`); }
       const jobId = startData.jobId;
 
       // 2) 輪詢取件（最多 4 分鐘）
@@ -88,8 +96,8 @@
   async function searchStock() {
     if (!keywords.trim()) { stockError = '請先輸入關鍵字或按「依本文找圖」'; return; }
     const token = getToken();
-    if (!token) { stockError = '請先登入管理者帳號'; return; }
-    stockBusy = true; stockError = ''; photos = []; stockSel = null;
+    if (!token) { needLogin = true; stockError = '尚未登入或登入已失效，請重新登入。'; return; }
+    stockBusy = true; stockError = ''; needLogin = false; photos = []; stockSel = null;
     try {
       const res = await fetch(`${WORKER}/stock`, {
         method: 'POST',
@@ -97,7 +105,7 @@
         body: JSON.stringify({ keywords, exclude }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || `搜尋失敗（${res.status}）`);
+      if (!res.ok) { flagAuth(res); throw new Error(data.error || `搜尋失敗（${res.status}）`); }
       photos = data.photos ?? [];
       if (!photos.length) stockError = '找不到（未用過的）圖，試試別的關鍵字';
     } catch (e) {
@@ -109,8 +117,8 @@
 
   async function autoKeywords() {
     const token = getToken();
-    if (!token) { stockError = '請先登入管理者帳號'; return; }
-    stockBusy = true; stockError = '';
+    if (!token) { needLogin = true; stockError = '尚未登入或登入已失效，請重新登入。'; return; }
+    stockBusy = true; stockError = ''; needLogin = false;
     try {
       const res = await fetch(`${WORKER}/keywords`, {
         method: 'POST',
@@ -118,7 +126,7 @@
         body: JSON.stringify({ title, body }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || `關鍵字產生失敗（${res.status}）`);
+      if (!res.ok) { flagAuth(res); throw new Error(data.error || `關鍵字產生失敗（${res.status}）`); }
       keywords = data.keywords ?? '';
       await searchStock();
     } catch (e) {
@@ -155,7 +163,7 @@
   async function loadLibrary() {
     if (libLoaded) return;
     const token = getToken();
-    if (!token) { libError = '請先登入管理者帳號'; return; }
+    if (!token) { needLogin = true; libError = '尚未登入或登入已失效，請重新登入。'; return; }
     libBusy = true; libError = '';
     try {
       libImages = await listRepoImages(token);
@@ -176,6 +184,12 @@
     onpick?.({ source: 'library', url: libSel.path });
   }
 </script>
+
+{#snippet reloginBtn()}
+  {#if needLogin}
+    <button class="ip-relogin" onclick={startLogin}>重新登入 GitHub</button>
+  {/if}
+{/snippet}
 
 <div class="ip-overlay" role="dialog" aria-modal="true">
   <div class="ip-panel">
@@ -214,6 +228,7 @@
           <p class="ip-hint">{model === 'openai' ? 'gpt-image-2 畫質高但較慢，約需 20–40 秒，請稍候…' : 'Flux 生成中，通常數秒…'}</p>
         {/if}
         {#if error}<p class="ip-error">{error}</p>{/if}
+        {@render reloginBtn()}
 
         {#if candidates.length}
           {#if selected}<img class="ip-big" src={selected.previewUrl} alt="生成預覽" />{/if}
@@ -246,6 +261,7 @@
         <p class="ip-hint">圖片來自 Unsplash / Pexels（免費授權），已自動排除站上用過的圖；選定會標註攝影師。</p>
 
         {#if stockError}<p class="ip-error">{stockError}</p>{/if}
+        {@render reloginBtn()}
 
         {#if photos.length}
           <div class="ip-grid">
@@ -282,6 +298,7 @@
       <div class="ip-gen">
         <p class="ip-hint">站上已上傳過的圖（covers / images）。{#if libBusy}載入中…{/if}</p>
         {#if libError}<p class="ip-error">{libError}</p>{/if}
+        {@render reloginBtn()}
         {#if libImages.length}
           <div class="ip-grid">
             {#each libImages as im}
@@ -329,6 +346,7 @@
   .ip-gen-btn:disabled { opacity: 0.6; cursor: default; }
   .ip-count { font-family: var(--font-ui); font-size: var(--text-xs, 0.75rem); color: var(--color-ink-2, #666); }
   .ip-error { color: var(--color-coral, #c0392b); font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); margin: 0; white-space: pre-wrap; }
+  .ip-relogin { align-self: flex-start; font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.1rem; border: 1px solid var(--appi-brand, #1a3a5a); border-radius: var(--radius-sm, 4px); background: var(--appi-brand, #1a3a5a); color: white; cursor: pointer; }
   .ip-strip { display: flex; gap: 0.5rem; flex-wrap: wrap; }
   .ip-thumb { border: 2px solid transparent; border-radius: var(--radius-sm, 4px); padding: 0; cursor: pointer; background: none; line-height: 0; overflow: hidden; }
   .ip-thumb.sel { border-color: var(--appi-accent, #a87515); }

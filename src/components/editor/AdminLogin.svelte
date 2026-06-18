@@ -1,28 +1,24 @@
 <script>
   import { onMount } from 'svelte';
   import { getToken, setToken, clearToken } from '@/utils/editor/token';
+  import { startLogin, OAUTH_STATE_KEY } from '@/utils/editor/auth';
 
-  const WORKER = 'https://appi-news-github-oauth.lightman-chang.workers.dev';
   let loggedIn = $state(false);
 
   onMount(() => {
     const hash = new URLSearchParams(location.hash.slice(1));
     const token = hash.get('token');
     const state = hash.get('state');
-    const expected = sessionStorage.getItem('appi_oauth_state');
+    const expected = sessionStorage.getItem(OAUTH_STATE_KEY);
     if (token && state && state === expected) {
       setToken(token);
-      sessionStorage.removeItem('appi_oauth_state');
+      sessionStorage.removeItem(OAUTH_STATE_KEY);
       history.replaceState(null, '', location.pathname); // 清掉 fragment
     }
     loggedIn = !!getToken();
   });
 
-  function login() {
-    const state = Math.random().toString(36).slice(2); // 僅作 CSRF 對照，非密鑰
-    sessionStorage.setItem('appi_oauth_state', state);
-    location.href = `${WORKER}/auth?state=${state}`;
-  }
+  const login = startLogin;
   function logout() {
     clearToken();
     loggedIn = false;

@@ -354,5 +354,23 @@
     "predictions": [
       "AI 募資的勝負訊號會從『金額多大、模型多強』移到『投資人結構是不是從財務資金轉成跨產業的戰略資金』；當能源、製造、平台級資本持續替 AI 模型背書，把 AI 當跨產業基建押注會成常態，台廠真正該追的是這些戰略資金買什麼、需求最後流到算力/記憶體/封裝的哪一段，而非單一模型的跑分高低。"
     ]
+  },
+  {
+    "slug": "enterprise-app-agents-department-order",
+    "title": "市場不再問『agent 是不是真的』，改問『哪個部門先被 agent 化』：Gartner 估 2026 年底 40% 企業 app 內建 agent",
+    "publishDate": "2026-06-29",
+    "category": "tech",
+    "tags": ["企業 AI agent", "Gartner 預測", "agent 化部門排序", "AI 治理落差", "agent 權限問責"],
+    "conclusion": "2026 年中市場焦點從『agent 是不是真的』轉向『哪個部門先被 agent 化』；當 AWS、Google Cloud、微軟、GitHub、IBM、Databricks 用同一套語言描述 agent、Gartner 估 2026 年底 40% 企業 app 內建任務型 agent（2025 還不到 5%），採用變成預設，真正的落差不是技術而是治理跟不上部署速度，要靠先定義情境、權限、問責的逐格盤點來補。",
+    "claims": [
+      "市場轉折訊號：blog.mean.ceo 指 2026 年六月是市場停止問『agent 是不是真的』、改問『哪個部門先被 agent 化』的月份；Gartner 估到 2026 年底 40% 企業應用內建任務型 agent，2025 還不到 5%（一年翻八倍），AI agent 市場 2026 年約 115.5 億美元、2025 為 79.2 億（Precedence Research）。",
+      "轉折是真的不是行銷：AWS、Google Cloud、微軟、GitHub、IBM、Databricks 用同一套詞描述 agent（有目標、記憶、規劃、工具、部分自主），是市場結構成形而非巧合；詞彙與資金都對齊後 agent 內建變軟體預設配備。",
+      "作者本人觀點（部門排序）：先被 agent 化的部門排序是客服、IT Service Desk、業務支援、人資、法務、財務，因為這些部門本來就在接收請求、查資料、執行流程，本質就是 agent 工作；越往後請求越不規則、判斷後果越重，排序邏輯是工作有多像接單查料跑流程而非技術難度。",
+      "真正落差是部署速度 vs 治理速度：對照 KPMG 把 Copilot/Agent 365 鋪給全球逾 27.6 萬員工（kpmg-agent-365-workforce-governance）、Databricks 把 agent 當『同事』（databricks-genie-one-agent-governance），導入一個與全員同用是兩種難度，部署可一聲令下、治理不行；agent 從客服往法務財務爬時權限與問責同步變難，每個 agent 都是新權限治理對象（mcp-de-facto-standard-agent-governance），先定義情境再決定開放、順序不能倒（what-is-claw-llm-client-tool）。",
+      "作者本人觀點（新創紅利）：當部門能力被做成 agent 內建進軟體，新創有機會無痛擁有過去要養整組客服/IT/法務/財務團隊才撐得起的大公司資源，這點讓人期待；但能用上不等於用得好，可信度靠落地流程不靠模型聰明（llm-healthcare-promise-limits），新創拿到的是工具不是大公司踩過的坑，誰先把情境、權限、問責盤清楚誰才真的把資源變成自己的。"
+    ],
+    "predictions": [
+      "企業 AI 的重心會從『agent 是不是真的、模型多強』移到『哪個部門先被 agent 化、部署速度與治理速度的落差怎麼補』；先把先被 agent 化部門（客服到財務）的情境、權限與問責逐格盤成例行事的組織，會比把治理留到全員都開好之後再補的同業更不容易在沒人看的地方滾出治理債。"
+    ]
   }
 ]

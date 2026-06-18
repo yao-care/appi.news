@@ -8,7 +8,7 @@ category: health
 subcategory: preventive
 tags: ["熱傷害", "中暑", "熱衰竭", "戶外安全", "高溫危害", "預防"]
 author: "appi-editorial"
-coverImage: "https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-170/images/1.png"
+coverImage: "covers/appi-news-170.webp"
 coverAlt: "戶外工作者在高溫環境下的休息補水場景"
 status: published
 sourceType: editorial
@@ -36,7 +36,7 @@ references:
     url: "https://vocus.cc/article/68ac0422fd89780001c1574e"
 draft: false
 ---
-![戶外工作者在高溫環境下的休息補水場景](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-170/images/1.png)
+![戶外工作者在高溫環境下的休息補水場景](/images/appi-news-170-1.webp)
 
 ## 一、台灣熱傷害就診屢創新高
 
@@ -58,7 +58,7 @@ draft: false
 
 衛生福利部熱傷害衛教資料說明：中暑嚴重時會出現無法流汗、神智混亂、抽筋乃至昏迷等中樞神經症狀，與熱衰竭的「仍有意識、大量排汗」形成明顯對比。正是這個皮膚乾濕的關鍵差異，決定了現場應對的緊迫程度。
 
-![熱衰竭與中暑症狀對照：皮膚濕冷大量出汗（熱衰竭）vs 皮膚乾熱停止排汗（中暑）](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-170/images/2.png)
+![熱衰竭與中暑症狀對照：皮膚濕冷大量出汗（熱衰竭）vs 皮膚乾熱停止排汗（中暑）](/images/appi-news-170-2.webp)
 
 ## 三、誰最需要高度警覺？風險族群與暴露條件
 
@@ -100,7 +100,7 @@ draft: false
 - **補充水分**：不等口渴再喝，每天至少補充 2,000 毫升開水；高強度戶外作業每小時至少一杯（約 240 毫升），避免含酒精和高糖飲料。
 - **提高警覺**：職安署建置的「高氣溫作業防護資訊網」（osha.gov.tw）依氣溫、濕度、風速和日射量即時計算作業地點的熱危害風險等級，等級 4 時雇主有法定防護義務，工作者也應主動要求調整工作節奏與休息比例。
 
-![熱傷害預防三要訣圖示：查詢熱危害等級、補充水分、穿著透氣衣物](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-170/images/3.png)
+![熱傷害預防三要訣圖示：查詢熱危害等級、補充水分、穿著透氣衣物](/images/appi-news-170-3.webp)
 
 - 熱衰竭：大量出汗、皮膚濕冷、神智清醒，屬緊急但可現場處理的情況；中暑：停止排汗、皮膚乾熱、可能意識不清，需立即送醫
 - 台灣 2024 年熱傷害就診 3,942 人次創歷史新高，農業、營造、道路修護工人是職業暴露的最高風險族群

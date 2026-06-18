@@ -8,7 +8,7 @@ category: health
 subcategory: tcm-integrative
 tags: ["漢他病毒症候群", "漢他病毒傳染途徑", "大掃除防鼠", "鼠糞清理方法", "防鼠三不"]
 author: "huang-ziyan"
-coverImage: "https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-190/images/1.png"
+coverImage: "covers/appi-news-190.webp"
 coverAlt: "在昏暗儲藏室用掃帚清掃鼠糞時，塵埃微粒在密閉空間中飄散，顯示乾掃的氣膠風險"
 status: published
 sourceType: author
@@ -32,7 +32,7 @@ draft: false
 
 一個日常居家環境，讓人不禁想問：面對有鼠跡的空間，「先開窗、再拿掃帚清一清」這個直覺動作，到底哪裡出了問題？
 
-![在昏暗儲藏室用掃帚清掃鼠糞時，塵埃微粒在密閉空間中飄散，顯示乾掃的氣膠風險](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-190/images/1.png)
+![在昏暗儲藏室用掃帚清掃鼠糞時，塵埃微粒在密閉空間中飄散，顯示乾掃的氣膠風險](/images/appi-news-190-1.webp)
 
 ## 一、漢他病毒的傳染方式，不是「被咬才中招」
 
@@ -60,7 +60,7 @@ draft: false
 
 封閉空間的危險性更高：通風不良時，氣膠微粒在空氣中懸浮時間更長、濃度更高，吸入的機會隨之增加。這就是為什麼「先通風再清掃」是第一步，而不是清完才開窗。
 
-![漢他病毒傳播路徑圖：感染鼠留排泄物→乾燥→清掃揚起→氣膠懸浮密閉空間→人吸入→感染](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-190/images/2.png)
+![漢他病毒傳播路徑圖：感染鼠留排泄物→乾燥→清掃揚起→氣膠懸浮密閉空間→人吸入→感染](/images/appi-news-190-2.webp)
 
 ## 三、台灣現況：個案不多，但每一例都不輕鬆
 
@@ -104,7 +104,7 @@ draft: false
 
 若家中發現大量鼠跡或疑似鼠窩，可聯絡地方環保局申請協助捕鼠，或撥打疾管署防疫專線 **1922** 詢問後續處理方式。
 
-![防鼠三不原則：不讓鼠進（封堵縫隙）、不讓鼠住（清除雜物堆積）、不讓鼠吃（密封食物垃圾）](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-190/images/3.svg)
+![防鼠三不原則：不讓鼠進（封堵縫隙）、不讓鼠住（清除雜物堆積）、不讓鼠吃（密封食物垃圾）](/images/appi-news-190-3.webp)
 
 「預防漢他病毒感染，最有效的方法是避免接觸囓齒動物及其排泄物，並維持居家和工作場所的環境衛生。」——世界衛生組織（WHO），Hantavirus Fact Sheet
 

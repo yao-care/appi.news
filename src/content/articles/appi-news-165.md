@@ -8,7 +8,7 @@ category: health
 subcategory: preventive
 tags: ["性健康", "衛教創新", "宗教活動", "社區教育", "文化融合"]
 author: "appi-editorial"
-coverImage: "https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-165/images/1.png"
+coverImage: "covers/appi-news-165.webp"
 coverAlt: "大甲媽遶境沿線的性健康問事處攤位，結合傳統廟會元素吸引信眾互動"
 status: published
 sourceType: editorial
@@ -40,7 +40,7 @@ draft: false
 
 彰化縣衛生局選擇遶境作為衛教場域，背景是台灣梅毒感染人數連年上升，特別是20至39歲族群增幅明顯，而傳統衛教管道對這個族群的觸及率有限。遶境的高人流與非正式氛圍，提供了降低性健康禁忌門檻的特殊機會。
 
-![大甲媽遶境沿線的性健康問事處攤位，結合傳統廟會元素吸引信眾互動](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-165/images/1.png)
+![大甲媽遶境沿線的性健康問事處攤位，結合傳統廟會元素吸引信眾互動](/images/appi-news-165-1.webp)
 
 ## 二、機制解釋：宗教場域如何降低民眾對性健康議題的戒心？
 
@@ -52,7 +52,7 @@ draft: false
 
 疾管署分析指出，梅毒個案增加與「民眾就醫檢驗及性行為模式有關」，年輕族群中網路交友、不安全性行為是重要因素，預估未來一至兩年個案數仍可能持續增加。（疾管署，引自公共電視報導，2025年）
 
-![台灣梅毒感染趨勢圖：2022至2025年15至24歲族群連年攀升](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-165/images/2.png)
+![台灣梅毒感染趨勢圖：2022至2025年15至24歲族群連年攀升](/images/appi-news-165-2.webp)
 
 ## 三、風險判斷：哪些族群最需要關注性傳染病？
 
@@ -89,7 +89,7 @@ draft: false
 - 台灣梅毒感染持續上升：2025年全年9,072例，15至24歲族群增幅9%並連續四年攀升；女性感染增幅高於男性，症狀不典型需主動篩檢
 - 預防關鍵：全程使用保險套、定期主動篩檢（24歲以下可利用免費快速篩檢服務）、確診後通知性伴侶
 
-![性傳染病預防三步驟：使用保險套、定期篩檢、通知性伴侶](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-165/images/3.png)
+![性傳染病預防三步驟：使用保險套、定期篩檢、通知性伴侶](/images/appi-news-165-3.webp)
 
 ### 常見問題
 

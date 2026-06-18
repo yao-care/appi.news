@@ -390,5 +390,23 @@
     "predictions": [
       "前沿模型釋出的勝負訊號會從『模型多強、跑多少分』移到『有沒有一套依能力決定存取門檻、責任歸屬可問責的審核機制』；國際短期內難有共同接受的 Frontier AI 審核機制，授權邊界的爭執（誰能決定模型太強了、防守方拿不拿得到最好工具）會反覆出現，先把存取門檻、責任歸屬與動態降階盤成例行事、把風險分類加 ISO/IEC 42001 當骨架的企業，會比等條文等國際共識的同業更不容易在沒人看的地方滾出治理債。"
     ]
+  },
+  {
+    "slug": "mastra-npm-supply-chain-stale-credential",
+    "title": "AI 開發框架 Mastra 的 npm 套件遭大規模投毒：舊貢獻者權限沒收回，成了供應鏈破口",
+    "publishDate": "2026-07-01",
+    "category": "tech",
+    "tags": ["npm 供應鏈攻擊", "Mastra 套件投毒", "貢獻者權限殘留", "AI 開發供應鏈", "lockfile 版本鎖定"],
+    "conclusion": "6/17 有人用一個沒被收回的前貢獻者帳號（ehindero），在 88 分鐘內把 Mastra 生態 142 個 @mastra 套件（連同 mastra、create-mastra 共 144 個）重新發佈、塞進 easy-day-js 惡意相依；事件重點不是手法多新，而是『離職貢獻者的 scope 權限從沒被收回』這種沒人回頭審的權限殘留，正成為 AI 開發供應鏈最常見的破口。防禦三件治理事：定期盤點 scope 與 token 權限離職即撤、鎖版本而非浮動範圍並開 provenance／lockfile 稽核、出事輪換 npm／GitHub／雲端／LLM API 等所有憑證。",
+    "claims": [
+      "攻擊者用閒置約 16 個月的前貢獻者帳號 ehindero，於 2026/6/17 UTC 01:12–02:39 共 88 分鐘自動化重新發佈 142 個 @mastra 套件（連同 mastra、create-mastra 共 144 個受影響）；npm 不會因閒置收回 scope 發佈權限，根因是專案權限衛生而非零時差漏洞（Snyk：Project hygiene, not a zero-day）。",
+      "手法是 typosquat 相依抽換：先發乾淨誘餌 easy-day-js@1.11.21（仿冒 dayjs）再發武器化 1.11.22 標 latest，套件相依寫成 ^1.11.21，npm semver 在安裝時自動解析到惡意版；postinstall 關 TLS、寫信標、生背景常駐、自刪 setup.cjs 抹痕跡，第二階段鎖定逾 160 個瀏覽器加密貨幣錢包外掛（MetaMask/Keplr/Coinbase 等）竊取錢包與瀏覽器資料。",
+      "影響規模：@mastra/core 週下載約 91 萬、整個 Mastra 生態合計週下載逾 110 萬；破口卻是一把沒人記得拔掉的鑰匙（能不能攻破與有沒有人收回權限是兩件事）。",
+      "真人觀點（作者本人）：Mastra 投毒事件是 AI 生態系開始重演企業 IT 三十年的老問題，延伸出 AI 供應鏈最大的漏洞不是程式碼，而是沒人記得的權限。離職權限沒收、放著不管的存取憑證、沒人回頭審的預設值（呼應 servicenow-saas-api-auth-misconfiguration-breach『沒人回頭檢查的預設』），AI 開發又放大它——每個外部相依都是新權限治理對象（呼應 mcp-de-facto-standard-agent-governance），但這是 npm 套件供應鏈這條新管道；先定義誰該有發佈權再決定開放（延續 what-is-claw-llm-client-tool），可信度靠落地流程不靠猜是誰（延續 llm-healthcare-promise-limits）。",
+      "歸因：Orca 指 tradecraft 與 Sapphire Sleet（BlueNoroff）有重疊（微軟先注意到），但 Snyk 明說這起事件本身歸因未確認、不臆測；對防守方而言是不是某團體所為不影響該補的洞。"
+    ],
+    "predictions": [
+      "AI 開發供應鏈的破口會從『程式碼有沒有漏洞』移到『權限有沒有人收』；隨著 AI 一句話拉進大量相依、相依清單長得比人盤得動的還快，離職權限殘留、舊 token 沒撤、浮動版本範圍自動拉到投毒版這類沒人回頭看的問題會更隱形，先把 scope／token 權限盤點離職即撤、鎖版本與 lockfile 稽核盤成例行事的團隊，會比被動等套件平台補機制的同業更不容易在沒人看的地方被一把舊鑰匙撬開。"
+    ]
   }
 ]

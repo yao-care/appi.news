@@ -179,6 +179,26 @@ function buildDoneMessage(job, result, out) {
   return lines.join('\n');
 }
 
+// 輪詢文章 URL 直到回 200（部署完成 + CDN 生效）。每次帶 cache-buster 避免釘住舊 404。
+async function waitForLive(url, tries = 40, intervalMs = 15000) {
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(`${url}${url.includes('?') ? '&' : '?'}cb=${Date.now()}-${i}`, { redirect: 'follow' });
+      if (res.ok) return true;
+    } catch { /* 重試 */ }
+    await new Promise((r) => setTimeout(r, intervalMs));
+  }
+  return false;
+}
+
+// 等頁面真的上線後，才送出帶連結的正式完成訊息（避免作者點到部署中的 404）。不阻塞佇列。
+async function announceWhenLive(job, result, out, url) {
+  if (!url) { notify(buildDoneMessage(job, result, out)); return; }
+  const live = await waitForLive(url);
+  const msg = buildDoneMessage(job, result, out);
+  notify(live ? msg : `${msg}\n（⚠️ 預覽頁部署較久，若點開仍 404 請稍候一兩分鐘重新整理）`);
+}
+
 // 收工單：沒在跑就立刻開跑；正在跑就排隊並回報順位。輪到時 drain() 自動接上。
 function enqueue(job) {
   if (running) {
@@ -225,7 +245,12 @@ function runEngine(job) {
         const rp = join(dir, 'result.json');
         if (existsSync(rp)) result = JSON.parse(readFileSync(rp, 'utf8'));
       } catch { /* 退回舊式 */ }
-      notify(buildDoneMessage(job, result, out));
+      const url = result?.url || out.match(/PUBLISHED_URL=(\S+)/)?.[1] || null;
+      const sched = result ? result.scheduled : /SCHEDULED_DATE=/.test(out);
+      const dateYmd = result?.dateYmd || out.match(/SCHEDULED_DATE=(\S+)/)?.[1] || '';
+      // 先確認「完成」但不附連結；連結等頁面真的上線（部署完成）才送，避免點到 404。
+      notify(`✅ 自動產文完成：「${result?.title || job.title}」${sched && dateYmd ? `（排程 ${dateYmd} 發佈）` : ''}\n⏳ 部署中，預覽連結待頁面上線後送出（約 3–5 分鐘）`);
+      announceWhenLive(job, result, out, url); // 背景輪詢，不阻塞佇列
     } else {
       notify(`⚠️ 自動產文失敗（exit ${code}）：「${job.title}」\n\`\`\`${out.slice(-800)}\`\`\``);
     }

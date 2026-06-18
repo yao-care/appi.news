@@ -319,5 +319,23 @@
     "predictions": [
       "把消費端顧客對話變成可部署 agent 的供應商會越來越多，企業 AI 的勝負會從『agent 好不好用』移到『這批對話的同意範圍、二次利用、跨境、撤出與稽核有沒有先盤清楚』；供應商有讓你越黏越緊的誘因，先把這五道閘盤成例行事、保留換家與踩剎車餘地的組織，會比把客戶關係整包交出去、等出事才回頭問的同業更不容易在沒人看的地方滾出治理債。"
     ]
+  },
+  {
+    "slug": "nvidia-openshell-agent-authorization-layer",
+    "title": "NVIDIA 把 agent 護欄做進開源平台：OpenShell 加 Nemotron 3，17 家軟體大廠一起賭『自我進化』的 agent",
+    "publishDate": "2026-06-27",
+    "category": "tech",
+    "tags": ["NVIDIA OpenShell", "Nemotron 3 Ultra", "AI agent 授權治理", "agent 護欄 runtime", "MCP 對照"],
+    "conclusion": "NVIDIA 這波開源 agent 平台的重點不是又一個 toolkit，而是把政策化的安全/網路/隱私護欄做成 runtime（OpenShell）、再配一顆為長任務調過的開源模型（Nemotron 3 Ultra）；真正要看的是治理被往工具層下沉，而不是模型跑分。MCP 解決連接、OpenShell 解決授權，是兩種治理哲學，企業導入前要先問護欄政策誰定義、會不會被綁進另一套生態。",
+    "claims": [
+      "NVIDIA 在開源 agent 開發平台（Agent Toolkit）裡放了 OpenShell runtime 與 Nemotron 3 Ultra，採用名單含 Adobe、Salesforce、SAP、ServiceNow、CrowdStrike、Red Hat 在內共 17 家軟體大廠；重點是把安全/網路/隱私護欄從提示詞改寫成 runtime 層強制執行，治理往工具層下沉而非模型跑分。",
+      "OpenShell 是 Apache 2.0 開源 runtime，不靠行為提示而是對 agent 運行環境施加限制、agent 改不掉；三件套是可程式化系統與網路隔離的 sandbox、檔案/網路/process 三層逐動作判定的 deny-by-default policy engine、把敏感脈絡留本地只在政策允許才送往前沿模型的 Privacy Router，動作執行前先驗證權限、session 互相隔離、留完整 allow/deny 稽核軌跡。",
+      "Nemotron 3 Ultra 是為長鏈 agent 調過的開源模型（550B MoE、每次推理約啟用 55B、權重資料配方全開源），吞吐量比同級開源模型快 5 倍、在 SWE-bench 與 Terminal-Bench 上用更少 token 把複雜 agent 任務成本壓低約 30%；重點是 agent 連續動很多步時旁邊有沒有東西踩得住剎車。",
+      "MCP 解決連接（所有工具都能接），OpenShell 解決授權（先決定哪些工具能接），是兩種治理哲學；OpenShell 把權限收進 NVIDIA 自家 runtime 與 Nemotron 生態，方便的代價是授權邊界長在別人家地基上，呼應 mcp-de-facto-standard-agent-governance『每台 server 都是新權限治理對象』。",
+      "作者本人觀點：當 agent 時代來臨，最重要的基礎設施或許不是模型而是授權系統，真正危險的不是 GPT 太聰明而是跑歪後怎麼即時修正執行方向；台灣團隊導入前先問三件事且順序不能倒（情境與要碰的系統資料、護欄政策誰定義能否匯出換 runtime 搬不搬得走、deny-by-default 預設權限開多大哪些動作要人工確認），延續 what-is-claw-llm-client-tool 先定義情境再選工具與 llm-healthcare-promise-limits 可信度靠落地流程不靠模型。"
+    ],
+    "predictions": [
+      "agent 治理重心會從『選哪個協定、模型多強』移到『授權邊界由誰定義、護欄的鑰匙握在誰手上』；把護欄做進平台會成趨勢，但先盤清情境、政策可攜性與預設權限、保留換 runtime 餘地的組織，會比直接把授權邊界整套押進單一供應商生態的同業更不容易被綁死。"
+    ]
   }
 ]

@@ -317,3 +317,39 @@ describe('/generate', () => {
     expect(res.status).toBe(502);
   });
 });
+
+describe('/stock-search 圖庫代理', () => {
+  function stockReq(body: object, auth = 'Bearer ght') {
+    return new Request('https://w.dev/stock-search', {
+      method: 'POST', headers: { 'content-type': 'application/json', authorization: auth },
+      body: JSON.stringify(body),
+    });
+  }
+  function mockByUrl() {
+    return vi.fn(async (input: RequestInfo | URL) => {
+      const u = String(typeof input === 'string' ? input : (input as Request).url ?? input);
+      if (u.includes('api.github.com/repos')) return new Response(JSON.stringify({ permissions: { push: true } }), { status: 200 });
+      if (u.includes('api.unsplash.com')) return new Response(JSON.stringify({ results: [{ urls: { regular: 'https://images.unsplash.com/photo-abc123', small: 'https://images.unsplash.com/photo-abc123?w=200' }, user: { name: 'Ann', links: { html: 'https://unsplash.com/@ann' } } }] }), { status: 200 });
+      if (u.includes('api.pexels.com')) return new Response(JSON.stringify({ photos: [{ src: { large: 'https://images.pexels.com/photos/9988/x.jpg', medium: 'https://images.pexels.com/photos/9988/x.jpg?w=300' }, photographer: 'Bob', photographer_url: 'https://pexels.com/@bob' }] }), { status: 200 });
+      return new Response('not found', { status: 404 });
+    });
+  }
+  it('回兩家候選（含去重 id）', async () => {
+    vi.stubGlobal('fetch', mockByUrl());
+    const res = await handle(stockReq({ query: 'data center' }), { ...env, UNSPLASH_ACCESS_KEY: 'u', PEXELS_API_KEY: 'p' });
+    expect(res.status).toBe(200);
+    const body = (await res.json()) as { unsplash: { id: string }[]; pexels: { id: string }[] };
+    expect(body.unsplash[0].id).toBe('unsplash:abc123');
+    expect(body.pexels[0].id).toBe('pexels:9988');
+  });
+  it('缺 query → 400', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ permissions: { push: true } }), { status: 200 })));
+    const res = await handle(stockReq({}), env);
+    expect(res.status).toBe(400);
+  });
+  it('無 push 權 → 403', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ permissions: { push: false } }), { status: 200 })));
+    const res = await handle(stockReq({ query: 'x' }), env);
+    expect(res.status).toBe(403);
+  });
+});

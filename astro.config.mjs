@@ -30,13 +30,14 @@ function scheduledPreviewPaths() {
     const raw = readFileSync(new URL(f, dir), 'utf-8');
     const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     if (!m) continue;
-    let d;
+    let parsed;
     try {
-      d = yaml.load(m[1]);
+      parsed = yaml.load(m[1]);
     } catch {
       continue;
     }
-    if (!d || typeof d !== 'object') continue;
+    if (!parsed || typeof parsed !== 'object') continue;
+    const d = /** @type {Record<string, any>} */ (parsed);
     if (d.draft || d.status === 'draft' || d.status === 'archived') continue;
     if (!d.publishDate || new Date(d.publishDate).getTime() <= now) continue;
     const slug = d.slug || f.replace(/\.mdx?$/, '');

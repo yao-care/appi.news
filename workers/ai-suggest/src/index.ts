@@ -272,6 +272,17 @@ export async function handle(request: Request, env: Env, ctx?: CtxLike): Promise
     }, 200, env);
   }
 
+  // 圖庫搜尋代理：worker 持有 Unsplash/Pexels 金鑰，build 端（get-image.mjs / 批次工具）
+  // 不必在本機存金鑰。授權同生圖（repo push 權限），回 { unsplash:[StockPhoto], pexels:[StockPhoto] }。
+  if (request.method === 'POST' && url.pathname === '/stock-search') {
+    const denied = await requirePush(request, env);
+    if (denied) return denied;
+    const { query } = (await request.json()) as { query?: string };
+    if (!query || !query.trim()) return json({ error: '缺少 query' }, 400, env);
+    const [unsplash, pexels] = await Promise.all([searchUnsplash(env, query), searchPexels(env, query)]);
+    return json({ unsplash, pexels }, 200, env);
+  }
+
   // 非同步生圖：立刻回 jobId，背景生圖；瀏覽器以 /generate-status?id= 輪詢取件（不會 Failed to fetch）
   if (request.method === 'POST' && url.pathname === '/generate-async') {
     const denied = await requirePush(request, env);

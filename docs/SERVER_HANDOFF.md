@@ -5,8 +5,8 @@
 
 ## 你的工作
 
-- **現在的主任務**：每週「數據週報 → Slack」，技能 `/weekly-report`，由 cron 觸發。
-- **未來**：子專案 2「無人值守自動產文」（尚未做，見最後一節）。
+- **子專案 1**：每週「數據週報 → Slack」，技能 `/weekly-report`，由 cron 觸發。
+- **子專案 2（已上線）**：半自動產文。`daily-tech-radar`（cron 一天三次）發候選題到 Slack → 作者點「我要寫這題」→ `slack-actions-server`（pm2 `appinews-slack-actions`）觸發 `scripts/newsroom-write.mjs` 起草＋配圖 gate＋查證 → 排程上線。詳見最後一節與 repo 根 `CLAUDE.md` §自動發文 pipeline。
 
 ## 開機前置（git clone 之後一定要做 —— 這些東西「不在」repo，是故意的）
 
@@ -60,6 +60,16 @@ pnpm test
 - **剛上線時 users 可能為 0**：gtag 2026-06-16 才上站，早於此的週報區間本就沒有 GA 追蹤資料，不是 bug。GSC 因獨立索引可能已有少量資料。
 - **週報失敗會主動發一則「⚠️ 週報失敗」到 Slack**（不靜默）。收到就先查 `node scripts/weekly-data.mjs` 能不能讀到（token 失效 / property 設定 / 網路）。
 
-## 下一步（子專案 2，尚未實作）
+## 子專案 2：半自動產文（已上線）
 
-無人值守自動產文：把週報的建議方向接成 Slack 按鈕確認 → 觸發 `/newsroom` 撰寫。**高風險**（對外發佈、碰禁杜撰鐵律），要獨立 spec + 設計人工審核關卡，別直接自動發稿。沿用上方 `google-data.mjs` 資料層。
+把選題建議接成 Slack 按鈕確認 → 觸發產文。**對外發佈、碰禁杜撰鐵律，屬高風險**，故保留人工關卡：候選題要作者在 Slack 主動點「我要寫這題」才會寫；產文有**配圖硬性 gate**（缺封面/內文 0 圖即中止不發），完成後回報摘要/重點/預覽連結待人複核，文章預設**排程**而非立即上線。
+
+| 元件 | 路徑 / 識別 | 說明 |
+|---|---|---|
+| 選題雷達 | `.claude/skills/daily-tech-radar/`、`scripts/cron/daily-tech-radar.sh` | 只產 tech 候選；cron UTC 21:20 / 03:11 / 10:18 |
+| 自動產文 | `scripts/newsroom-write.mjs`（沿用 newsroom skill 的文風/查證） | headless 起草＋配圖 gate，寫 `result.json` |
+| Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文並回報 |
+| 去重帳本 | `scripts/topic-ledger.mjs`、`/root/.local/state/appi-news/suggested-topics.json` | 與週報共用，避免撞題 |
+| 發佈隔離 checkout | `/root/appi.news-publisher`（`PUBLISH_ISOLATED=1`） | 產文在此跑，每篇 reset 到 `origin/main` |
+
+> **改發佈端程式要連動**：push → 在 `/root/appi.news-publisher` `git pull` → `pm2 restart appinews-slack-actions`（**只 restart 會載到舊碼**）。資料層仍沿用 `scripts/lib/google-data.mjs`。

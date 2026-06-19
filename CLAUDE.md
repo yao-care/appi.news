@@ -3,9 +3,20 @@
 > 本檔是 **APPI News 專案專屬規則**，疊加在全域 `~/.claude/CLAUDE.md` 之上。衝突時以本檔為準。
 > 給「怎麼動這個專案」的人看（AI 代理與開發者）。「怎麼維護、怎麼新增內容」的完整說明在 [`README.md`](./README.md)。
 
+## 維護情境路由（先決定你在哪一格，再讀對應事實來源）
+
+> `README.md`（給人）與本檔（給 AI/開發者）是**兩個對等入口、內容互相對齊**；不論你讀哪一份，下表都帶你到正確的事實來源（SOT）。入口只負責導航與鐵則，**操作細節在各 SOT，不在入口重複**。
+
+| 你要做的事 | 情境 | 依序讀（事實來源） |
+|---|---|---|
+| 優化/更新專案本體：效能、版面、schema、build、部署 | 🛠 開發 | 本檔 §動手前驗證＋§效能鐵則 → [`PERFORMANCE.md`](./PERFORMANCE.md)（動字型/CSS/圖/build 前必讀）→ [`README.md`](./README.md) §開發 |
+| 手動新增內容：文章、作者、專欄、分類 | ✍ 內容 | [`README.md`](./README.md) §新增內容 → `src/content.config.ts`、`src/config/categories.ts`（schema/分類唯一準據） |
+| 自動發文：選題雷達 → Slack → 自動產文 → 排程上線 | 🤖 自動化 | 本檔 §自動發文 pipeline → `.claude/skills/daily-tech-radar/`＋`.claude/skills/newsroom/` |
+| 了解網路曝光量：流量、搜尋曝光、AI 轉介、週報 | 📊 數據 | 本檔 §數據與網路曝光量 → `.claude/skills/weekly-report/SKILL.md` → [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
+
 ## 技術速覽
 
-- **Astro 5**（`output: 'static'`）+ **pnpm**，部署 GitHub Actions → GitHub Pages：`https://yao-care.github.io/appi.news/`。
+- **Astro 5**（`output: 'static'`）+ **pnpm**，部署 GitHub Actions → GitHub Pages，正式網域 **`https://appi.news/`**（自訂網域；`yao-care.github.io/appi.news/` 為退回選項，做法見 `README.md`「目前正式網域設定」）。
 - **套件管理一律 pnpm**（有 `pnpm-lock.yaml`；用 npm 會炸 `Cannot read properties of null`）。
 - 內容是 **Astro Content Collections**（`src/content/`：`articles` / `authors` / `columns` / `topics`），搜尋用 **Pagefind**。
 - 科技類日更靠 `/newsroom` skill（`.claude/skills/newsroom/`）。
@@ -56,6 +67,49 @@
 - 日更走 `/newsroom` skill；作者人格與跨文記憶在 `.claude/skills/newsroom/persona.md`、`author-memory.json`。
 - 新文必填 `tags`（餵 keywords / RSS / llms 索引）；文章規格與欄位以 `src/content.config.ts` 為唯一準據。
 
+## 自動發文 pipeline（全貌）
+
+整條鏈每天自動跑，是「內容情境」的主力產線；操作細節在各 skill，本段只給全貌與鐵則。
+
+```
+daily-tech-radar（cron 一天三次）→ 發候選題到 Slack（帶「我要寫這題」按鈕）
+  → 作者點按鈕 → slack-actions-server 收事件 → 觸發 newsroom-write.mjs
+  → 起草＋逐段配圖＋連結逐條查證 →（配圖硬性 gate）→ commit → 排程/上線
+週末另跑 weekly-report，把曝光數據回饋成下一輪選題（見 §數據與網路曝光量）
+```
+
+| 元件 | 路徑 / 識別 | 角色 |
+|---|---|---|
+| 選題雷達 | `.claude/skills/daily-tech-radar/`、`scripts/cron/daily-tech-radar.sh` | 只產 tech 候選；cron UTC 21:20 / 03:11 / 10:18（台北 05:20 / 11:11 / 18:18） |
+| 起草引擎 | `.claude/skills/newsroom/`（`SKILL.md` / `persona.md` / `author-memory.json`） | 文風、人格、跨文記憶；`/newsroom` 互動寫作也走它 |
+| 自動產文 | `scripts/newsroom-write.mjs` | headless 起草＋**配圖硬性 gate**（缺 coverImage／封面檔不存在／內文 0 圖 → 中止不發），完成寫 `result.json` |
+| Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文，回報摘要/重點/預覽連結 |
+| 去重帳本 | `scripts/topic-ledger.mjs`、`/root/.local/state/appi-news/suggested-topics.json` | 雷達與週報共用，避免撞題 |
+| 發佈隔離 checkout | `/root/appi.news-publisher`（`PUBLISH_ISOLATED=1`） | 自動產文在此跑，每篇 reset 到 `origin/main`；dev 目錄未提交改動不受影響 |
+
+**鐵則**：
+
+- **配圖 gate 不可繞過**：缺圖一律中止、留工作區待補。
+- **改發佈端程式**（`slack-actions-server.mjs` 等）：push → 在 `/root/appi.news-publisher` pull → `pm2 restart appinews-slack-actions`；**只 restart 會載到舊碼**。
+- server cron 以 **UTC** 計（這台 Vixie cron 忽略 `CRON_TZ`），寫排程要手動換算。
+
+## 數據與網路曝光量
+
+了解站台曝光/流量的基礎設施。**讀數據前先看這裡，操作（怎麼跑、金鑰怎麼擺）在 `docs/SERVER_HANDOFF.md` 與 weekly-report skill。**
+
+| 元件 | 路徑 / 識別 | 說明 |
+|---|---|---|
+| 站上埋點 | `src/components/seo/Analytics.astro`、`SITE.gaId`（`src/config/site.ts`，現為 `G-38R2SZ5FTQ`） | GA4 gtag，`requestIdleCallback` 延遲載入以保 TBT=0 |
+| 數據抓取 | `scripts/weekly-data.mjs`、`scripts/lib/google-data.mjs` | 自簽 JWT 讀 GA4＋GSC，輸出四區塊 JSON |
+| 週報技能 | `.claude/skills/weekly-report/SKILL.md`、`scripts/cron/weekly-report.sh` | 數據 → 熱題雷達 → 建議方向 → 發 Slack；cron UTC 週日 22:17（台北週一 06:17） |
+| 設定常數 | `scripts/lib/report-config.mjs` | GA4 property `541946427`、GSC `sc-domain:appi.news`、Slack 頻道 `C0AFYV3TAMV` |
+| 機密金鑰 | `~/.config/appi-news/ga4-sa.json`、`~/.config/appi-news/report.env` | **永不進 repo**；server 端設定見 `docs/SERVER_HANDOFF.md` |
+
+**注意**：
+
+- 週報「AI 轉介點擊」= 真人從 AI 答案點連結進站，**不等於**被 AI 爬蟲抓取/引用（GA 是 client-side JS，爬蟲不跑 JS）。真 AEO 量測需另案（見 `PERFORMANCE.md` §6、`docs/SERVER_HANDOFF.md`）。
+- **禁杜撰數據**：報告曝光/流量一律以 `weekly-data.mjs` 實跑輸出為準，不可憑記憶或估算（呼應 §動手前驗證）。
+
 ## 真實來源指標（要改什麼，先看哪裡）
 
 | 要動的東西 | 唯一事實來源 |
@@ -68,3 +122,7 @@
 | 新增內容步驟、架構說明 | `README.md` |
 | WordPress 遷移 | `MIGRATION_NOTES.md` |
 | 日更流程與作者人格 | `.claude/skills/newsroom/` |
+| 自動發文 pipeline | `.claude/skills/daily-tech-radar/`＋`scripts/newsroom-write.mjs`＋`scripts/slack-actions-server.mjs` |
+| 數據 / 網路曝光量 | `scripts/weekly-data.mjs`＋`.claude/skills/weekly-report/`＋`scripts/lib/report-config.mjs` |
+| 機密金鑰位置 | `.env`（PSI）、`~/.config/appi-news/`（GA4/GSC/Slack）— 永不進 repo |
+| server 端自動化交接 | `docs/SERVER_HANDOFF.md` |

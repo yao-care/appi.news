@@ -89,11 +89,11 @@ npx pagefind ...                         # ⑤ 搜尋索引
 
 ```bash
 source .env   # PSI_API_KEY=...（已被 .gitignore 忽略）
-U="https%3A%2F%2Fyao-care.github.io%2Fappi.news%2F"
+U="https%3A%2F%2Fappi.news%2F"   # 正式網域；舊專案頁 yao-care.github.io/appi.news/ 僅退回時用
 curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strategy=mobile&category=performance&key=$PSI_API_KEY"
 ```
 
-- 量測對象是**部署後的 GitHub Pages 線上站**，不是本機 `pnpm preview`。
+- 量測對象是**部署後的線上站 `https://appi.news/`**（自訂網域，底層仍是 GitHub Pages CDN），不是本機 `pnpm preview`。
 - mobile 分數會在 **90↔100** 間浮動（GH Pages CDN 冷/熱邊緣餵給 Lighthouse 模型的差異），屬正常；**下限應 ≥90**。
 - **剛部署後量測的兩個大坑（會讓你誤判退步）**：
   1. **冷邊緣**：新部署的大站，許多 CDN 邊緣仍冷，個別頁面的 FCP/LCP 會暴增到 10s+（每資源冷 TTFB 疊加）；等暖（下次 6 小時 cron 重建或自然流量）才是真值。
@@ -127,5 +127,5 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 
 - **「使用有效的快取生命週期」**：GitHub Pages 對所有資產固定回 `Cache-Control: max-age=600`（10 分鐘），**我們無法改**（非靜態檔案可控，是 GitHub 伺服器設定）。
   - 只影響**回訪**（首訪不受影響），且為 PSI 未計分項，不影響分數。
-  - 真正要解，得**換自訂網域 + 自有 CDN**（如 Cloudflare），才能對 `_astro/*`（檔名含 hash、可長快取）設 `max-age=31536000, immutable`。換網域時一併處理。
+  - 真正要解，得在自訂網域 `appi.news` 前面**接自有 CDN**（如 Cloudflare；目前 `appi.news` 仍直接走 GitHub Pages CDN），才能對 `_astro/*`（檔名含 hash、可長快取）設 `max-age=31536000, immutable`。接 CDN 時一併處理。
 - **mobile 90↔100 浮動**：GH Pages CDN 冷/熱邊緣，非程式問題（見 §3）。

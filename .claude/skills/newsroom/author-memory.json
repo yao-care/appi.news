@@ -553,5 +553,23 @@
     "predictions": [
       "醫療 AI 的監理重心會從『模型準不準、跑分多高』移到『會行動的 agent 誰來監督、出錯責任歸屬找不找得到人』；以 AI 監督 AI 的雙層覆核會成趨勢，但真人回饋環節與責任歸屬制度撐不撐得住才決定成敗，先把哪些動作可自主、真人問責點、責任歸屬盤成例行事的團隊與監理，會比把『裝了監督 agent 就安全』當結案的同業更不容易在沒人看的地方出包。"
     ]
+  },
+  {
+    "slug": "anthropic-korea-in-region-data-playbook",
+    "title": "Anthropic 一口氣拿下 NAVER、三星、LG：開首爾辦公室、用「在地資料控管」整套端走韓國企業市場",
+    "publishDate": "2026-07-08",
+    "category": "tech",
+    "tags": ["Anthropic 首爾辦公室", "Claude 企業導入", "in-region 資料控管", "資料主權", "AI 國家安全合作"],
+    "conclusion": "AI 大廠拿下一個國家的企業市場靠的不只是模型強，而是在地辦公室＋資料主權＋國家級安全合作＋in-region data 整套打包；從 Anthropic 的韓國打法回看台灣，台廠導入前沿 AI 時 in-region 資料控管會是談判與選型的關鍵籌碼，但整套打包的反面就是綁定，要同時把可換性留好。",
+    "claims": [
+      "Anthropic 2026/6/17 開首爾辦公室（亞太繼東京、班加羅爾第三站、KiYoung Choi 領軍），同日公布一串企業導入名單：NAVER 上千名工程師用 Claude Code、Samsung SDS 把 Claude Cowork/Code 推進三星電子、LG CNS 鋪給上千員工、Nexon 用 Claude Code 開發線上遊戲、Hanwha Solutions 透過 AWS Bedrock 導入（來源 Anthropic 官方、Benzinga、Korea Times）。",
+      "作者本人觀點（核心，Q3）：為什麼韓國企業敢把核心開發流程交給 Claude？不在模型多強，在 Anthropic 把四件事一起打包——在地辦公室、資料主權、國家級安全合作、in-region data，少一件採購單位就簽不下去；工程組織導入 coding agent 等於把程式碼/架構/商業邏輯餵外部模型，沒在地落地、沒境內資料保證、沒政府背書，法務資安那關過不了，模型再強也只停在 PoC。",
+      "in-region data 是敢交出去的前提：Hanwha 走 AWS Bedrock 是為滿足嚴格境內資料落地與安全要求，資料不出境才是它願意把 Claude 給全球員工用的條件；資料主權是採購紅線（留哪個司法管轄區、誰能存取、出事算誰）而非口號，Anthropic 把資料控管的選項直接做進方案，不丟給客戶自理。",
+      "國家級安全合作補上信任最後一塊：Anthropic 與韓國科學技術資通訊部簽 MOU、與韓國 AI 安全研究所合作評測 Claude 韓語模型安全並處理資安威脅，並給 NAIRL（KAIST/高麗/延世/POSTECH）60 名研究者用於 AI 安全/評估/對齊；韓國已列全球 Claude.ai 使用量前十二名，KED Global 形容韓國是全球 AI 巨頭主戰場（OpenAI、Google、Cohere、中國 MiniMax/智譜都在搶）。",
+      "反面就是綁定：首爾辦公室上線同週，美國商務部出口管制令要求對外國人停止存取 Fable 5/Mythos 5，連韓國剛簽約夥伴（三星電子、SK 海力士、SK 電訊、KISA）合作都被卡（來源 Digital Today）；in-region data 解資料落地、解不了地緣政治一夜斷供（延續 single-vendor-ai-continuity-risk 真正風險在管不到的外力）。台廠盤三格：資料邊界（先列哪些料餵模型再要求 in-region 落地與稽核）、可換性（別黏死單一 API、留 fallback，買的是切換模型的能力，延續 microsoft-foundry-multi-model-optionality）、主權對齊（對照政府主權 AI 與信賴產業，延續 ai-new-infrastructure-compute-trusted-industries）；先定義情境再選工具順序不能倒（what-is-claw-llm-client-tool）、可信度靠落地流程不靠模型聰明（llm-healthcare-promise-limits）。"
+    ],
+    "predictions": [
+      "AI 大廠的國家市場攻防會從『模型多強、誰跑分高』移到『有沒有把在地辦公室、資料主權、in-region 資料控管、國家級安全合作整套打包端上桌』；企業導入前沿 AI 的談判重心會從價格與功能移到資料落地與可換性，先把資料邊界、fallback 與主權對齊盤成例行事的台廠，會比只比模型強弱、把核心流程綁死單一供應商的同業更不容易在斷供或合規那天束手無策。"
+    ]
   }
 ]

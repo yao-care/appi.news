@@ -479,5 +479,23 @@
     "predictions": [
       "AI 健康答案的勝負訊號會從『自評跑分贏過醫師幾分』移到『落地有沒有驗證機制接住、誰驗何時轉診』；隨著每週數億人把問健康從搜尋引擎換成 AI，供應商會持續用未公開外審的自評宣稱勝過醫師，先把 AI 答案定位成升級版搜尋、用四層框架讀、把第三四層判斷與轉診把關盤成例行事的人與診所，會比直接把分數當定論、把判斷權交給模型的同業更不容易在評測落差最深的後兩層出包。"
     ]
+  },
+  {
+    "slug": "microsoft-foundry-multi-model-optionality",
+    "title": "微軟自研 coding 模型、Foundry 收進逾 11000 個模型：平台層「去單一供應商」對企業選型的訊號",
+    "publishDate": "2026-07-04",
+    "category": "tech",
+    "tags": ["微軟 Foundry", "MAI-Code-1-Flash", "多模型平台", "模型商品化", "企業 AI 選型"],
+    "conclusion": "微軟六月推自研 MAI-Code-1-Flash 並把 Foundry 目錄做到逾一萬一千個模型（含 Claude Opus 4.8），明言降低對 OpenAI 依賴、替開發者壓低成本；對企業的訊號是平台層正走『模型可換、不押單一供應商』，選型該對齊可換性與成本，而非無腦追單一最強模型。",
+    "claims": [
+      "微軟在 2026/6 Build 大會推自研程式碼模型 MAI-Code-1-Flash（把文字描述生成應用與網站程式碼、嵌入 GitHub Copilot 與 VS Code），公開目的是降低對 OpenAI 依賴並替開發者降成本；微軟 AI 主管稱特定情境調校後成本效率比 GPT-5.5 高十倍，Nadella 框架是『從消費前沿模型變成完整參與在前沿』（來源 ResultSense）。",
+      "Foundry 目錄逾一千九百個精選模型加上 Hugging Face 逾萬個開源模型、合計破一萬一千個，供應商橫跨 OpenAI/Meta/Mistral/DeepSeek/NVIDIA，並含 Anthropic Claude 家族（Claude Opus 4.8 於 2026/5/29 進 Foundry、被標為最適合程式與代理任務的頂尖模型）；平台不再幫使用者押單一供應商（來源 Digital Digest、Microsoft Learn、Future Work）。",
+      "作者本人觀點（核心）：平台層正在去單一模型供應商，是非常大的產業訊號。以前一家公司配一顆模型（Google→Gemini、Anthropic→Claude、OpenAI→GPT），現在 Azure Foundry、AWS Bedrock、Vertex AI 三家雲全走 multi-model，代表模型逐漸商品化（commoditization），可延伸成『企業未來買的不是模型，而是切換模型的能力』。",
+      "綁死風險的反例同月發生：SpaceX 6/16 以六百億美元收購 Cursor 母公司 Anysphere，被買後 Cursor 的模型選擇不再純為開發者最佳、依賴單一供應商等於生產流程可能因管不到的原因一夜改變；Google 6/18 收掉消費版 Gemini CLI 與 Code Assist 要大家搬去 Antigravity；押單一供應商的成本正被市場標出來（來源 Kilo、9to5Google）。",
+      "給企業判讀：選型對齊可換性與成本而非追當下最強（最強每月換人、綁死成本跟很久），延續 what-is-claw-llm-client-tool『先定義情境再選工具、順序不能倒』、claude-fable-5-mythos-class-model-tiering『依任務難度分流別全用最貴』、opencode-overtakes-commercial-ide『先決定要不要可組合能不能換掉』、llm-healthcare-promise-limits『落地設計比模型聰明關鍵』、odyssey-world-models-physical-ai-moat『聊天模型商品化護城河變淺』；模型層留換家餘地三件事＝把供應商介面抽成獨立一層別黏死某家 API、備自家真實情境題庫換模型先比對、把成本與可用性當例行監看留第二三順位。"
+    ],
+    "predictions": [
+      "企業 AI 選型的勝負訊號會從『用哪顆當下最強的模型』移到『能不能輕鬆換家』；隨著三大雲都走 multi-model、模型持續商品化，單一模型越來越難成為選平台的理由，先把供應商介面抽象化、備好自家測試題與第二三順位、把可換性當例行事的團隊，會比把身家壓在單一最強模型上的同業更不容易在供應商漲價、被收購或退場時被一把鎖綁死。"
+    ]
   }
 ]

@@ -21,6 +21,7 @@
 import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { spawnSync } from 'node:child_process';
+import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { validateJob, normalizeJob } from './lib/newsroom-job.mjs';
 import { nextOpenPublishDate, takenDatesFromContents } from './lib/publish-slot.mjs';
@@ -111,6 +112,47 @@ export function buildDraftPrompt(job, schedule = null) {
   ].join('\n');
 }
 
+/**
+ * 解析觀點 gate 的查核輸出（純函式，可單元測試）。
+ * 期望 claude 回一行：`VIEWPOINT_GATE=PASS｜<反映於哪>` 或 `VIEWPOINT_GATE=FAIL｜<理由>`。
+ * @returns {{ok:boolean, infra:boolean, note:string}}
+ *   ok    - 觀點是否充分反映於內文（gate 是否放行）
+ *   infra - 是否為「查核工具異常／格式無法解析」（非文章問題，應重跑而非改稿）
+ *   note  - 反映在哪 / 為何沒過 / 異常說明
+ */
+export function parseViewpointVerdict(stdout) {
+  const m = String(stdout || '').match(/VIEWPOINT_GATE\s*=\s*(PASS|FAIL)\s*[｜|:：\-]?\s*(.*)$/im);
+  if (!m) return { ok: false, infra: true, note: '無法從查核輸出解析判定（回傳格式異常）' };
+  const pass = m[1].toUpperCase() === 'PASS';
+  const note = (m[2] || '').trim().slice(0, 200);
+  return { ok: pass, infra: false, note: note || (pass ? '已反映' : '未充分反映') };
+}
+
+/** 觀點 gate：起草後問 claude「Q3 作者觀點有沒有真的反映在內文」。失敗一律 fail-closed。 */
+function checkViewpointReflected(viewpoint, body) {
+  const prompt = [
+    '你是 APPI News 的編輯查核員，只做一件事：判斷「作者真人觀點」有沒有實際反映在文章內文裡。',
+    '通過標準：內文要有可辨識的段落或語句承載這個觀點的主旨（立場、判斷或本業經驗），讓讀者讀得出作者的角度；',
+    '不通過：只把觀點稀釋成中性敘述、或根本沒提到、或只是泛泛帶過。從嚴認定。',
+    '',
+    '【作者真人觀點（Q3）】',
+    viewpoint,
+    '',
+    '【文章內文】',
+    body,
+    '',
+    '只輸出一行，二選一（用全形直線 ｜ 分隔）：',
+    'VIEWPOINT_GATE=PASS｜<反映在哪：引用最相關的一句內文，30字內>',
+    'VIEWPOINT_GATE=FAIL｜<為什麼沒反映或被稀釋，30字內>',
+  ].join('\n');
+  const r = spawnSync('claude', ['-p', prompt], { encoding: 'utf8' });
+  if (r.error || r.status !== 0) {
+    const tail = (r.stderr || r.stdout || r.error?.message || '').trim().slice(-200);
+    return { ok: false, infra: true, note: `claude 查核失敗（exit ${r.status}）：${tail}` };
+  }
+  return parseViewpointVerdict(r.stdout);
+}
+
 function main() {
   const args = process.argv.slice(2);
   const go = args.includes('--go');
@@ -176,7 +218,17 @@ function main() {
     die(`配圖 gate 未過，不發佈（改動留工作區待補圖）：\n  - ${imgProblems.join('\n  - ')}`);
   }
 
-  // 給協調器回報 Slack 用：內文摘要 + 重點 + 預覽/編輯連結（同一 URL）。寫入 job 同目錄。
+  // 真人觀點硬性 gate（只擋自動產文這條路）：Q3 作者觀點必須真的反映在內文，
+  // 否則中止不發佈——避免產出「讀不出作者想法」的中性稿（過去作者反映看不到自己的觀點）。
+  console.log('→ 真人觀點 gate（Q3 是否反映於內文）');
+  const vp = checkViewpointReflected(job.viewpoint, parsed.body);
+  if (!vp.ok) {
+    if (vp.infra) die(`真人觀點 gate 無法判定（查核工具異常、非文章問題，請重跑）：${vp.note}`);
+    die(`真人觀點 gate 未過，不發佈（改動留工作區待補）：作者觀點未充分反映於內文 — ${vp.note}`);
+  }
+  console.log(`  ✓ 觀點已反映：${vp.note}`);
+
+  // 給協調器回報 Slack 用：內文摘要 + 重點 + 本次採用觀點 + 預覽/編輯連結（同一 URL）。寫入 job 同目錄。
   const result = {
     title: parsed.data.title || job.title,
     url,
@@ -186,6 +238,8 @@ function main() {
     highlights: Array.isArray(parsed.data.highlights) ? parsed.data.highlights.slice(0, 5) : [],
     coverImage: cover,
     inlineImages: parsed.inlineImages,
+    viewpoint: job.viewpoint, // 本次採用的真人觀點（給 Slack 回報，作者可目視確認有無進文）
+    viewpointNote: vp.note, // gate 判定「反映於哪一句」
   };
   try {
     writeFileSync(join(dirname(jobPath), 'result.json'), JSON.stringify(result));
@@ -219,4 +273,7 @@ function main() {
   }
 }
 
-main();
+// 只有「直接執行」才跑；被 import（測試）時不執行、零副作用。
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main();
+}

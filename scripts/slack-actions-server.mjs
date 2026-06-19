@@ -153,7 +153,7 @@ const notify = (text) => postMessage({ token: BOT_TOKEN, channel: SLACK_CHANNEL,
 
 // 完成回報訊息：帶內文摘要 + 重點 + 預覽/編輯連結（同一 URL，登入 /admin 後可編輯）。
 // result 為 newsroom-write 寫的 result.json；讀不到時退回舊式 stdout 解析（out）。
-function buildDoneMessage(job, result, out) {
+export function buildDoneMessage(job, result, out) {
   if (!result) {
     const url = out.match(/PUBLISHED_URL=(\S+)/)?.[1];
     const sched = out.match(/SCHEDULED_DATE=(\S+)/)?.[1];
@@ -169,6 +169,12 @@ function buildDoneMessage(job, result, out) {
   if (result.excerpt) lines.push('', `> ${result.excerpt}`);
   if (result.highlights?.length) {
     lines.push('', '重點：', ...result.highlights.map((h) => `• ${h}`));
+  }
+  // 本次採用的真人觀點（C：讓作者目視確認自己的想法有無進文、有無被稀釋）。
+  if (result.viewpoint) {
+    const vp = result.viewpoint.length > 140 ? `${result.viewpoint.slice(0, 140)}…` : result.viewpoint;
+    lines.push('', `🗣 本次採用觀點：${vp}`);
+    if (result.viewpointNote) lines.push(`↳ 反映於：${result.viewpointNote}`);
   }
   if (result.url) {
     const label = result.scheduled ? '預覽／編輯' : '看文章／編輯';

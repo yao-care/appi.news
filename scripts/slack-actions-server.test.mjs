@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { handleInteraction } from './slack-actions-server.mjs';
+import { handleInteraction, buildDoneMessage } from './slack-actions-server.mjs';
 import { computeSlackSignature } from './lib/slack-verify.mjs';
 import { WRITE_ACTION_ID, MODAL_CALLBACK_ID } from './lib/slack-interaction.mjs';
 
@@ -116,5 +116,36 @@ describe('handleInteraction — 送出看法觸發', () => {
     const r = call(submission(techTopic(), '看法'));
     expect(r.body).toContain('clear');
     expect(r.startEngine).toBeDefined();
+  });
+});
+
+describe('buildDoneMessage — 完成回報帶採用觀點（C）', () => {
+  const job = { title: '居家陪伴機器人' };
+
+  it('有 viewpoint → 訊息含「本次採用觀點」與反映處', () => {
+    const msg = buildDoneMessage(job, {
+      title: '居家陪伴機器人',
+      url: 'https://appi.news/articles/x/',
+      scheduled: false,
+      viewpoint: '我帶過長照團隊，最大痛點是問責歸屬',
+      viewpointNote: '第二段點出問責歸屬',
+    }, '');
+    expect(msg).toContain('本次採用觀點');
+    expect(msg).toContain('長照團隊');
+    expect(msg).toContain('反映於');
+    expect(msg).toContain('問責歸屬');
+  });
+
+  it('過長的 viewpoint 會截斷加省略號', () => {
+    const long = '長'.repeat(200);
+    const msg = buildDoneMessage(job, { title: 't', viewpoint: long }, '');
+    expect(msg).toContain('…');
+    expect(msg).not.toContain(long);
+  });
+
+  it('無 result（退回 stdout 解析）→ 不爆、也不出觀點行', () => {
+    const msg = buildDoneMessage(job, null, 'PUBLISHED_URL=https://appi.news/articles/x/');
+    expect(msg).not.toContain('本次採用觀點');
+    expect(msg).toContain('看文章');
   });
 });

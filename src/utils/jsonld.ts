@@ -21,7 +21,20 @@ export function orgLd(site: SiteUrl) {
     description: SITE.description,
     url: absoluteUrl('/', site),
     foundingDate: String(SITE.org.foundingYear),
-    logo: absoluteUrl(SITE.defaultOgImage, site),
+    // 方形品牌 logo（給搜尋引擎 knowledge panel / AI 實體卡用）
+    logo: {
+      '@type': 'ImageObject',
+      url: absoluteUrl('icon-512.png', site),
+      width: 512,
+      height: 512,
+    },
+    // E-E-A-T 信任訊號：把站上既有政策頁接成 schema.org 欄位，
+    // 供 Google News 與生成式引擎判斷媒體可信度（頁面內容見對應 route）。
+    publishingPrinciples: absoluteUrl('/editorial-policy/', site),
+    ethicsPolicy: absoluteUrl('/editorial-policy/', site),
+    correctionsPolicy: absoluteUrl('/editorial-policy/', site),
+    actionableFeedbackPolicy: absoluteUrl('/contact/', site),
+    ownershipFundingInfo: absoluteUrl('/about/', site),
     ...(sameAs.length ? { sameAs } : {}),
     ...(contactEmail
       ? {

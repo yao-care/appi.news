@@ -32,15 +32,25 @@ describe('suggestionBlocks', () => {
     expect(parsed.topic.category).toBe('tech');
   });
 
-  it('非 tech 建議 → 只有文字、不掛按鈕', () => {
-    const blocks = suggestionBlocks([tech({ category: 'health', subcategory: 'medical' })]);
-    expect(actions(blocks)).toHaveLength(0);
-    // 仍有標題文字
-    expect(JSON.stringify(blocks)).toContain('AI 編碼工具定價');
+  it('其他可自動產 vertical（international/sports/lifestyle）也掛按鈕', () => {
+    expect(actions(suggestionBlocks([tech({ category: 'international', subcategory: 'asia' })]))).toHaveLength(1);
+    expect(actions(suggestionBlocks([tech({ category: 'sports', subcategory: 'baseball' })]))).toHaveLength(1);
+    expect(actions(suggestionBlocks([tech({ category: 'lifestyle', subcategory: 'food' })]))).toHaveLength(1);
   });
 
-  it('混合 → 只有 tech 那些掛按鈕', () => {
-    const blocks = suggestionBlocks([tech(), tech({ category: 'finance' }), tech({ title: '第三題' })]);
+  it('未開放的分類（health/finance）→ 只有文字、不掛按鈕', () => {
+    expect(actions(suggestionBlocks([tech({ category: 'health', subcategory: 'medical' })]))).toHaveLength(0);
+    expect(actions(suggestionBlocks([tech({ category: 'finance' })]))).toHaveLength(0);
+    expect(JSON.stringify(suggestionBlocks([tech({ category: 'health' })]))).toContain('AI 編碼工具定價');
+  });
+
+  it('事實稿（kind: factual）不掛按鈕（由 cron 觸發、非人工填觀點）', () => {
+    const blocks = suggestionBlocks([tech({ category: 'lifestyle', subcategory: 'consumer', kind: 'factual' })]);
+    expect(actions(blocks)).toHaveLength(0);
+  });
+
+  it('混合 → 只有可自動產且非事實稿的掛按鈕', () => {
+    const blocks = suggestionBlocks([tech(), tech({ category: 'finance' }), tech({ category: 'international', title: '第三題' })]);
     expect(actions(blocks)).toHaveLength(2);
   });
 

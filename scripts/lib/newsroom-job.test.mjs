@@ -21,7 +21,13 @@ describe('validateJob — 鐵律 gate', () => {
     expect(validateJob(validJob())).toEqual([]);
   });
 
-  it('鐵律1：非 tech 類被擋', () => {
+  it('合法的其他 vertical（international / sports / lifestyle）通過', () => {
+    expect(validateJob({ ...validJob(), category: 'international', subcategory: 'asia' })).toEqual([]);
+    expect(validateJob({ ...validJob(), category: 'sports', subcategory: 'baseball' })).toEqual([]);
+    expect(validateJob({ ...validJob(), category: 'lifestyle', subcategory: 'aging-life' })).toEqual([]);
+  });
+
+  it('鐵律1：未開放自動產文的分類（health）被擋', () => {
     const errs = validateJob({ ...validJob(), category: 'health' });
     expect(errs.some((e) => e.includes('category'))).toBe(true);
   });
@@ -31,14 +37,28 @@ describe('validateJob — 鐵律 gate', () => {
     expect(errs.some((e) => e.includes('category'))).toBe(true);
   });
 
-  it('鐵律2：缺 viewpoint 被擋（禁杜撰防線）', () => {
+  it('鐵律2：觀點稿缺 viewpoint 被擋（禁杜撰防線）', () => {
     const { viewpoint, ...rest } = validJob();
     expect(validateJob(rest).some((e) => e.includes('viewpoint'))).toBe(true);
   });
 
-  it('鐵律2：空白 viewpoint 被擋', () => {
+  it('鐵律2：觀點稿空白 viewpoint 被擋', () => {
     const errs = validateJob({ ...validJob(), viewpoint: '   ' });
     expect(errs.some((e) => e.includes('viewpoint'))).toBe(true);
+  });
+
+  it('事實稿（kind: factual）不要求 viewpoint', () => {
+    const { viewpoint, ...rest } = validJob();
+    expect(validateJob({ ...rest, kind: 'factual', category: 'lifestyle', subcategory: 'aging-life' })).toEqual([]);
+  });
+
+  it('非法 kind 被擋', () => {
+    expect(validateJob({ ...validJob(), kind: 'rant' }).some((e) => e.includes('kind'))).toBe(true);
+  });
+
+  it('非法 contentType 被擋、合法通過', () => {
+    expect(validateJob({ ...validJob(), contentType: 'meme' }).some((e) => e.includes('contentType'))).toBe(true);
+    expect(validateJob({ ...validJob(), contentType: 'guide' })).toEqual([]);
   });
 
   it('缺 title / conclusion 被擋', () => {
@@ -48,9 +68,10 @@ describe('validateJob — 鐵律 gate', () => {
     ).toBe(true);
   });
 
-  it('tech 以外的 subcategory 被擋', () => {
-    const errs = validateJob({ ...validJob(), subcategory: 'medical' });
-    expect(errs.some((e) => e.includes('subcategory'))).toBe(true);
+  it('subcategory 不屬於該分類被擋', () => {
+    expect(validateJob({ ...validJob(), subcategory: 'medical' }).some((e) => e.includes('subcategory'))).toBe(true);
+    // 對的子分類放錯分類也被擋（baseball 是 sports 的）
+    expect(validateJob({ ...validJob(), subcategory: 'baseball' }).some((e) => e.includes('subcategory'))).toBe(true);
   });
 
   it('非法 length 被擋', () => {
@@ -75,11 +96,39 @@ describe('normalizeJob — 預設值與淨化', () => {
     expect(n.length).toBe(LENGTH_DEFAULT);
   });
 
-  it('category 一律正規成 tech、trim 文字、mustCite 預設空陣列', () => {
+  it('category 原樣帶過（不再寫死 tech）、trim 文字、mustCite 預設空陣列', () => {
     const n = normalizeJob({ ...validJob(), title: '  有空白  ' });
     expect(n.category).toBe(TECH_CATEGORY);
     expect(n.title).toBe('有空白');
     expect(n.mustCite).toEqual([]);
+    const intl = normalizeJob({ ...validJob(), category: 'international', subcategory: 'asia' });
+    expect(intl.category).toBe('international');
+    expect(intl.categoryName).toBe('國際');
+  });
+
+  it('未給 kind → column（觀點稿）：作者 lightman、觀點 gate 開、contentType news', () => {
+    const n = normalizeJob(validJob());
+    expect(n.kind).toBe('column');
+    expect(n.author).toBe('lightman');
+    expect(n.viewpointRequired).toBe(true);
+    expect(n.viewpointGate).toBe(true);
+    expect(n.contentType).toBe('news');
+  });
+
+  it('kind: factual（事實稿）：編輯部署名、觀點 gate 關、contentType guide、viewpoint 可空', () => {
+    const { viewpoint, ...rest } = validJob();
+    const n = normalizeJob({ ...rest, kind: 'factual', category: 'lifestyle', subcategory: 'aging-life' });
+    expect(n.kind).toBe('factual');
+    expect(n.author).toBe('appi-editorial');
+    expect(n.viewpointGate).toBe(false);
+    expect(n.contentType).toBe('guide');
+    expect(n.viewpoint).toBe('');
+  });
+
+  it('明確指定 author / contentType 時不被預設覆蓋', () => {
+    const n = normalizeJob({ ...validJob(), author: 'guest-x', contentType: 'analysis' });
+    expect(n.author).toBe('guest-x');
+    expect(n.contentType).toBe('analysis');
   });
 
   it('publishDate 截到 YYYY-MM-DD；沒給 → null', () => {

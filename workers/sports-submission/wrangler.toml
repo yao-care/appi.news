@@ -1,0 +1,13 @@
+name = "appi-news-sports-submission"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+# Lightman.chang@gmail.com 帳號（與其他 worker 同帳號；CLI 多帳號時非互動部署需要）
+account_id = "9d9e58b5e0d1657b8f74bd2cbfc91ee3"
+
+[vars]
+# 投稿表單頁所在來源；CORS 必須對齊（換網域要同步改並 redeploy，見 ai-suggest CORS 記憶）。
+ALLOWED_ORIGIN = "https://appi.news"
+
+# 機密用 wrangler secret put（勿寫進此檔）：
+#   wrangler secret put SLACK_WEBHOOK_URL   # Slack incoming webhook，收投稿給編輯審
+#   wrangler secret put TURNSTILE_SECRET    # （選配）設了才驗 Turnstile 防機器人灌投稿

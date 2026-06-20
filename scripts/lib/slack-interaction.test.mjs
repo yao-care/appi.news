@@ -4,9 +4,13 @@ import {
   buildViewpointModal,
   parseButtonInteraction,
   parseModalSubmission,
+  buildPublishButton,
+  parsePublishInteraction,
+  isPublishAction,
   isAuthorized,
   toJob,
   WRITE_ACTION_ID,
+  PUBLISH_ACTION_ID,
   MODAL_CALLBACK_ID,
   VIEWPOINT_BLOCK,
   VIEWPOINT_ACTION,
@@ -85,6 +89,35 @@ describe('parseModalSubmission', () => {
   });
   it('非 view_submission 丟錯', () => {
     expect(() => parseModalSubmission({ type: 'block_actions' })).toThrow();
+  });
+});
+
+describe('發佈鈕（事實稿待審草稿核可上線）', () => {
+  const btn = () => buildPublishButton({ slug: 'typhoon-2026-closures', title: '颱風停班課整理' });
+
+  it('buildPublishButton：action_id 正確、value 帶 slug', () => {
+    const b = btn();
+    expect(b.elements[0].action_id).toBe(PUBLISH_ACTION_ID);
+    expect(JSON.parse(b.elements[0].value).slug).toBe('typhoon-2026-closures');
+  });
+
+  it('isPublishAction：發佈鈕 → true、寫題鈕 → false', () => {
+    expect(isPublishAction({ type: 'block_actions', actions: [{ action_id: PUBLISH_ACTION_ID, value: '{}' }] })).toBe(true);
+    expect(isPublishAction({ type: 'block_actions', actions: [{ action_id: WRITE_ACTION_ID, value: '{}' }] })).toBe(false);
+    expect(isPublishAction({ type: 'view_submission' })).toBe(false);
+  });
+
+  it('parsePublishInteraction：取出 userId / slug / title', () => {
+    const payload = { type: 'block_actions', user: { id: 'U9' }, actions: [btn().elements[0]] };
+    const r = parsePublishInteraction(payload);
+    expect(r.userId).toBe('U9');
+    expect(r.slug).toBe('typhoon-2026-closures');
+    expect(r.title).toBe('颱風停班課整理');
+  });
+
+  it('parsePublishInteraction：slug 不合法 / 非 JSON 丟錯', () => {
+    expect(() => parsePublishInteraction({ type: 'block_actions', actions: [{ action_id: PUBLISH_ACTION_ID, value: JSON.stringify({ slug: '../etc/passwd' }) }] })).toThrow();
+    expect(() => parsePublishInteraction({ type: 'block_actions', actions: [{ action_id: PUBLISH_ACTION_ID, value: 'nope' }] })).toThrow();
   });
 });
 

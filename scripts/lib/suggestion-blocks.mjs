@@ -1,10 +1,15 @@
-// 把週報的「建議方向」結構化陣列 → Block Kit blocks，每個 tech 建議掛「我要寫這題」按鈕。
+// 把週報/雷達的「建議方向」結構化陣列 → Block Kit blocks，可自動產文的建議掛「我要寫這題」按鈕。
 // 由 slack-post.mjs 呼叫；按鈕 value 用 buildTopicButtonValue（與互動端點解析對齊）。
-// 只有 category==='tech' 的建議掛按鈕（本管線只自動產科技類，spec §1）。
+// 掛按鈕條件：category 屬於可自動產文 vertical（verticals.mjs）且非事實稿（kind!=='factual'）。
+//   事實稿（颱風/樂齡/優惠）由 cron 直接觸發、不走人工按鈕填觀點，故不掛按鈕。
 
 import { buildTopicButtonValue, WRITE_ACTION_ID } from './slack-interaction.mjs';
+import { isVertical } from './verticals.mjs';
 
-const TECH = 'tech';
+/** 此建議可否走「按鈕 → 填觀點 → 自動產文」流程（觀點稿且分類可自動產）。 */
+function isButtonEligible(s) {
+  return !!s && isVertical(s.category) && s.kind !== 'factual';
+}
 
 function suggestionText(s, n) {
   const parts = [];
@@ -21,11 +26,11 @@ export function suggestionBlocks(suggestions) {
   if (!Array.isArray(suggestions) || suggestions.length === 0) return [];
   const blocks = [
     { type: 'divider' },
-    { type: 'section', text: { type: 'mrkdwn', text: '💡 *本週建議寫作方向*（科技類可按鈕一鍵開寫）' } },
+    { type: 'section', text: { type: 'mrkdwn', text: '💡 *建議寫作方向*（可按鈕一鍵開寫）' } },
   ];
   suggestions.forEach((s, i) => {
     blocks.push({ type: 'section', text: { type: 'mrkdwn', text: suggestionText(s, i + 1) } });
-    if (s && s.category === TECH) {
+    if (isButtonEligible(s)) {
       let value = null;
       try {
         value = buildTopicButtonValue(s);

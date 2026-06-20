@@ -23,6 +23,9 @@ import {
   parseButtonInteraction,
   parseModalSubmission,
   buildViewpointModal,
+  buildPublishButton,
+  parsePublishInteraction,
+  isPublishAction,
   isAuthorized,
   toJob,
   VIEWPOINT_BLOCK,
@@ -71,6 +74,12 @@ export function handleInteraction({ rawBody, headers, signingSecret, allowlist, 
   }
 
   if (payload.type === 'block_actions') {
+    // 「發佈」鈕（事實稿待審草稿核可上線）：與「我要寫這題」分流。
+    if (isPublishAction(payload)) {
+      const { userId, slug, title } = parsePublishInteraction(payload);
+      if (!isAuthorized(userId, allowlist)) return { status: 200, body: '' }; // 未授權靜默忽略
+      return { status: 200, body: '', startPublish: { slug, title } };
+    }
     const { userId, triggerId, topic } = parseButtonInteraction(payload);
     if (!isAuthorized(userId, allowlist)) return { status: 200, body: '' }; // 未授權靜默忽略
     return { status: 200, body: '', openModal: { view: buildViewpointModal({ topic }), triggerId } };
@@ -150,6 +159,10 @@ async function slackApi(method, body) {
 }
 
 const notify = (text) => postMessage({ token: BOT_TOKEN, channel: SLACK_CHANNEL, text }).catch(() => {});
+const notifyBlocks = (text, blocks) => postMessage({ token: BOT_TOKEN, channel: SLACK_CHANNEL, text, blocks }).catch(() => {});
+
+/** 佇列任務的顯示名（write 用標題、publish 用標題或 slug）。 */
+const taskLabel = (task) => (task.type === 'publish' ? task.title || task.slug : task.job?.title || '（未命名）');
 
 // 完成回報訊息：帶內文摘要 + 重點 + 預覽/編輯連結（同一 URL，登入 /admin 後可編輯）。
 // result 為 newsroom-write 寫的 result.json；讀不到時退回舊式 stdout 解析（out）。
@@ -162,9 +175,11 @@ export function buildDoneMessage(job, result, out) {
       ? `✅ 已排程 ${sched} 發佈：「${job.title}」${link}`
       : `✅ 自動產文完成並發佈：「${job.title}」${link}`;
   }
-  const head = result.scheduled
-    ? `✅ 已排程 ${result.dateYmd} 發佈：「${result.title}」`
-    : `✅ 自動產文完成並發佈：「${result.title}」`;
+  const head = result.pendingApproval
+    ? `📝 已產出待審草稿（未上線）：「${result.title}」`
+    : result.scheduled
+      ? `✅ 已排程 ${result.dateYmd} 發佈：「${result.title}」`
+      : `✅ 自動產文完成並發佈：「${result.title}」`;
   const lines = [head];
   if (result.excerpt) lines.push('', `> ${result.excerpt}`);
   if (result.highlights?.length) {
@@ -177,11 +192,12 @@ export function buildDoneMessage(job, result, out) {
     if (result.viewpointNote) lines.push(`↳ 反映於：${result.viewpointNote}`);
   }
   if (result.url) {
-    const label = result.scheduled ? '預覽／編輯' : '看文章／編輯';
+    const label = result.pendingApproval ? '預覽／編輯草稿' : result.scheduled ? '預覽／編輯' : '看文章／編輯';
     lines.push('', `🔗 <${result.url}|${label}>（登入 /admin 後右下角「編輯」鈕可直接改）`);
   }
   const cover = result.coverImage ? '封面 ✓' : '封面 ✗';
   lines.push(`🖼 ${cover} · 內文 ${result.inlineImages ?? 0} 張圖`);
+  if (result.pendingApproval) lines.push('', '審閱沒問題就按下方「✅ 發佈這篇」上線；要改先點上面連結進編輯器。');
   return lines.join('\n');
 }
 
@@ -198,29 +214,55 @@ async function waitForLive(url, tries = 40, intervalMs = 15000) {
 }
 
 // 等頁面真的上線後，才送出帶連結的正式完成訊息（避免作者點到部署中的 404）。不阻塞佇列。
+// 待審草稿（pendingApproval）：附「✅ 發佈這篇」鈕，作者審閱後一鍵核可上線。
 async function announceWhenLive(job, result, out, url) {
-  if (!url) { notify(buildDoneMessage(job, result, out)); return; }
-  const live = await waitForLive(url);
-  const msg = buildDoneMessage(job, result, out);
-  notify(live ? msg : `${msg}\n（⚠️ 預覽頁部署較久，若點開仍 404 請稍候一兩分鐘重新整理）`);
-}
-
-// 收工單：沒在跑就立刻開跑；正在跑就排隊並回報順位。輪到時 drain() 自動接上。
-function enqueue(job) {
-  if (running) {
-    queue.push(job);
-    const ahead = queue.length; // 正在跑的 1 篇 + 排在這篇前面的（queue.length - 1）
-    notify(`🗂️ 已排入佇列：「${job.title}」，前面還有 ${ahead} 篇（含正在產製中的 1 篇）。輪到時自動開始。`);
+  const pending = result?.pendingApproval && result?.slug;
+  if (!url) {
+    const msg = buildDoneMessage(job, result, out);
+    if (pending) notifyBlocks(msg, [{ type: 'section', text: { type: 'mrkdwn', text: msg } }, buildPublishButton({ slug: result.slug, title: result.title })]);
+    else notify(msg);
     return;
   }
-  queue.push(job);
+  const live = await waitForLive(url);
+  const base = buildDoneMessage(job, result, out);
+  const msg = live ? base : `${base}\n（⚠️ 預覽頁部署較久，若點開仍 404 請稍候一兩分鐘重新整理）`;
+  if (pending) {
+    notifyBlocks(msg, [{ type: 'section', text: { type: 'mrkdwn', text: msg } }, buildPublishButton({ slug: result.slug, title: result.title })]);
+  } else {
+    notify(msg);
+  }
+}
+
+// 收任務（write 產文 / publish 核可上線）：沒在跑就立刻開跑；正在跑就排隊並回報順位。
+function enqueue(task) {
+  if (running) {
+    queue.push(task);
+    const ahead = queue.length;
+    notify(`🗂️ 已排入佇列：「${taskLabel(task)}」，前面還有 ${ahead} 件（含正在處理中的 1 件）。輪到時自動開始。`);
+    return;
+  }
+  queue.push(task);
   drain();
 }
 
-// 若沒有正在跑的，從佇列取下一篇開跑（單一進入點，保證序列）。
+// 若沒有正在跑的，從佇列取下一件開跑（單一進入點，保證序列）。
 function drain() {
   if (running || queue.length === 0) return;
-  runEngine(queue.shift());
+  const task = queue.shift();
+  if (task.type === 'publish') runPublish(task);
+  else runEngine(task.job);
+}
+
+// 共用：開跑前的專屬發佈 checkout 同步。失敗回 false 並回報。
+function syncCheckoutOrFail(label) {
+  const prep = prepareCleanCheckout();
+  if (!prep.ok) {
+    running = false;
+    notify(`⚠️ 未開始：「${label}」\n發佈 checkout 同步失敗：${prep.msg}`);
+    drain();
+    return false;
+  }
+  return true;
 }
 
 function runEngine(job) {
@@ -228,15 +270,9 @@ function runEngine(job) {
   const dir = mkdtempSync(join(tmpdir(), 'newsroom-'));
   const jobPath = join(dir, 'job.json');
   writeFileSync(jobPath, JSON.stringify(job));
-  const waiting = queue.length ? `（後面還有 ${queue.length} 篇排隊）` : '';
+  const waiting = queue.length ? `（後面還有 ${queue.length} 件排隊）` : '';
   // 專屬發佈 checkout：開跑前拉回 origin/main 乾淨最新狀態（隔離開發狀態的影響）。
-  const prep = prepareCleanCheckout();
-  if (!prep.ok) {
-    running = false;
-    notify(`⚠️ 自動產文未開始：「${job.title}」\n發佈 checkout 同步失敗：${prep.msg}`);
-    drain();
-    return;
-  }
+  if (!syncCheckoutOrFail(job.title)) return;
   notify(`📝 開始自動撰寫：「${job.title}」（約十幾分鐘，完成回報）${waiting}`);
   const child = spawn('node', ['scripts/newsroom-write.mjs', jobPath, '--go'], { cwd: REPO_DIR, env: process.env });
   let out = '';
@@ -254,17 +290,49 @@ function runEngine(job) {
       const url = result?.url || out.match(/PUBLISHED_URL=(\S+)/)?.[1] || null;
       const sched = result ? result.scheduled : /SCHEDULED_DATE=/.test(out);
       const dateYmd = result?.dateYmd || out.match(/SCHEDULED_DATE=(\S+)/)?.[1] || '';
+      const pending = result?.pendingApproval || /PENDING_APPROVAL_SLUG=/.test(out);
       // 先確認「完成」但不附連結；連結等頁面真的上線（部署完成）才送，避免點到 404。
-      notify(`✅ 自動產文完成：「${result?.title || job.title}」${sched && dateYmd ? `（排程 ${dateYmd} 發佈）` : ''}\n⏳ 部署中，預覽連結待頁面上線後送出（約 3–5 分鐘）`);
+      const headline = pending
+        ? `📝 待審草稿已產出：「${result?.title || job.title}」\n⏳ 預覽頁部署中，連結與「發佈」鈕待頁面上線後送出（約 3–5 分鐘）`
+        : `✅ 自動產文完成：「${result?.title || job.title}」${sched && dateYmd ? `（排程 ${dateYmd} 發佈）` : ''}\n⏳ 部署中，預覽連結待頁面上線後送出（約 3–5 分鐘）`;
+      notify(headline);
       announceWhenLive(job, result, out, url); // 背景輪詢，不阻塞佇列
     } else {
       notify(`⚠️ 自動產文失敗（exit ${code}）：「${job.title}」\n\`\`\`${out.slice(-800)}\`\`\``);
     }
-    drain(); // 接下一篇（成功或失敗都繼續）
+    drain(); // 接下一件（成功或失敗都繼續）
   });
   child.on('error', (e) => {
     running = false;
     notify(`⚠️ 自動產文無法啟動：「${job.title}」：${e.message}`);
+    drain();
+  });
+}
+
+// 核可上線：把事實稿待審草稿轉正（status→published、publishDate→now）並 push。
+function runPublish(task) {
+  running = true;
+  const label = task.title || task.slug;
+  if (!syncCheckoutOrFail(label)) return;
+  notify(`🚀 核可上線中：「${label}」`);
+  const child = spawn('node', ['scripts/newsroom-publish.mjs', task.slug, '--go'], { cwd: REPO_DIR, env: process.env });
+  let out = '';
+  child.stdout.on('data', (d) => (out += d));
+  child.stderr.on('data', (d) => (out += d));
+  child.on('close', (code) => {
+    running = false;
+    if (code === 0) {
+      const url = out.match(/PUBLISHED_URL=(\S+)/)?.[1] || `https://appi.news/articles/${task.slug}/`;
+      notify(`✅ 已核可上線：「${label}」\n⏳ 部署中（約 3–5 分鐘），連結待頁面上線後送出。`);
+      announceWhenLive({ title: label }, { title: label, url, scheduled: false }, out, url);
+    } else {
+      notify(`⚠️ 核可上線失敗（exit ${code}）：「${label}」\n\`\`\`${out.slice(-800)}\`\`\``);
+    }
+    drain();
+  });
+  child.on('error', (e) => {
+    running = false;
+    notify(`⚠️ 核可上線無法啟動：「${label}」：${e.message}`);
     drain();
   });
 }
@@ -302,7 +370,8 @@ function startServer() {
         notify(`⚠️ 開 modal 失敗：${e.message}`),
       );
     }
-    if (result.startEngine) enqueue(result.startEngine);
+    if (result.startEngine) enqueue({ type: 'write', job: result.startEngine });
+    if (result.startPublish) enqueue({ type: 'publish', slug: result.startPublish.slug, title: result.startPublish.title });
   }).listen(PORT, '0.0.0.0', () => console.log(`slack-actions-server on 0.0.0.0:${PORT}（repo=${REPO_DIR}）`));
 }
 

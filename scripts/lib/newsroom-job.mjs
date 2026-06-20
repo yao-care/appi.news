@@ -1,32 +1,40 @@
-// 無人值守自動產文（子專案 2 / Phase 0）的「寫作工單」解析與驗證。
+// 無人值守自動產文的「寫作工單」解析與驗證。
 // 純函式、無副作用，方便單元測試。協調器 scripts/newsroom-write.mjs 用它把關。
 //
-// 工單來源：週報建議方向（標題/訊號依據/切角/候選結論/建議分類）+ Slack modal 的「作者看法」。
-// 兩條不可破的鐵律 gate 在此強制：
-//   1. 只限科技類（category === 'tech'）——newsroom 是科技類日更引擎。
-//   2. 作者看法必填——沒收到真人看法不動筆，機器人永不杜撰個人觀點。
+// 工單來源：選題雷達建議（標題/訊號依據/切角/候選結論/分類）+（觀點稿才有）Slack modal 的「作者看法」。
+// 不可破的鐵律 gate 在此強制：
+//   1. 分類必須是「開放自動產文」的 vertical 之一（見 scripts/lib/verticals.mjs；非白名單一律擋）。
+//   2. 觀點稿（kind: column）作者看法必填——沒收到真人看法不動筆，機器人永不杜撰個人觀點。
+//      事實稿（kind: factual，颱風/樂齡/優惠等服務型）不要求觀點、由編輯部署名。
 //
-// 分類事實來源是 src/config/categories.ts；此處只硬編「tech」與其子分類 slug，
-// 改分類體系時兩邊要一起改（categories.ts 為準）。
+// 分類與內容形態的事實來源是 scripts/lib/verticals.mjs（它再鏡像 src/config/categories.ts）。
 
+import {
+  VERTICALS,
+  VERTICAL_SLUGS,
+  KINDS,
+  KIND_SLUGS,
+  KIND_DEFAULT,
+  CONTENT_TYPES,
+  isVertical,
+  subcategoriesOf,
+  verticalName,
+} from './verticals.mjs';
+
+// 向後相容匯出（既有測試 / 呼叫端仍 import 這兩個）。
 export const TECH_CATEGORY = 'tech';
-
-// 對齊 src/config/categories.ts 的 tech.subcategories（唯一事實來源在那）。
-export const TECH_SUBCATEGORIES = [
-  'ai',
-  'security',
-  'digital-tools',
-  'software-products',
-  'startup',
-  'semiconductor',
-  'industry-tech',
-  'tech-policy',
-];
+export const TECH_SUBCATEGORIES = subcategoriesOf('tech');
 
 export const LENGTH_DEFAULT = 'short'; // Q4 未提供時的預設：短稿 800–1500 字
 export const LENGTHS = ['short', 'deep'];
 
 const isNonEmptyString = (v) => typeof v === 'string' && v.trim().length > 0;
+
+/** 取工單的內容形態（kind）；非法或未給 → 預設 column。回傳 KINDS 的設定物件。 */
+export function kindOf(job) {
+  const k = job && typeof job.kind === 'string' ? job.kind : KIND_DEFAULT;
+  return KINDS[k] ? k : KIND_DEFAULT;
+}
 
 /**
  * 驗證工單。回傳錯誤字串陣列；空陣列＝通過。
@@ -39,23 +47,39 @@ export function validateJob(job) {
     return ['工單不是物件'];
   }
 
-  // 鐵律 1：只限科技類
-  if (job.category !== TECH_CATEGORY) {
-    errors.push(`category 必須是 "${TECH_CATEGORY}"（本管線只自動產科技類），收到：${JSON.stringify(job.category)}`);
+  // 鐵律 1：分類必須是開放自動產文的 vertical
+  if (!isNonEmptyString(job.category) || !isVertical(job.category)) {
+    errors.push(
+      `category 必須是可自動產文的分類之一（${VERTICAL_SLUGS.join(' / ')}），收到：${JSON.stringify(job.category)}`,
+    );
   }
 
-  // 鐵律 2：作者看法必填（禁杜撰根防線）
-  if (!isNonEmptyString(job.viewpoint)) {
-    errors.push('viewpoint（作者看法）必填且不可空白——沒收到真人看法不動筆');
+  // 內容形態若有給，必須合法
+  if (job.kind != null && !KIND_SLUGS.includes(job.kind)) {
+    errors.push(`kind 必須是 ${KIND_SLUGS.join(' / ')}，收到：${JSON.stringify(job.kind)}`);
+  }
+
+  // 鐵律 2：觀點稿作者看法必填（禁杜撰根防線）；事實稿不要求
+  const requiresViewpoint = KINDS[kindOf(job)].viewpointRequired;
+  if (requiresViewpoint && !isNonEmptyString(job.viewpoint)) {
+    errors.push('viewpoint（作者看法）必填且不可空白——觀點稿沒收到真人看法不動筆');
   }
 
   // 起草必要欄位
   if (!isNonEmptyString(job.title)) errors.push('title 必填');
   if (!isNonEmptyString(job.conclusion)) errors.push('conclusion（核心結論）必填');
 
-  // 子分類若有給，必須屬於 tech
-  if (job.subcategory != null && !TECH_SUBCATEGORIES.includes(job.subcategory)) {
-    errors.push(`subcategory "${job.subcategory}" 不屬於 tech；可選：${TECH_SUBCATEGORIES.join(' / ')}`);
+  // 子分類若有給，必須屬於該分類（分類本身合法才檢查，否則訊息會混淆）
+  if (job.subcategory != null && isVertical(job.category)) {
+    const allowed = subcategoriesOf(job.category);
+    if (!allowed.includes(job.subcategory)) {
+      errors.push(`subcategory "${job.subcategory}" 不屬於 ${job.category}；可選：${allowed.join(' / ')}`);
+    }
+  }
+
+  // contentType 若有給，必須是 schema 合法值
+  if (job.contentType != null && !CONTENT_TYPES.includes(job.contentType)) {
+    errors.push(`contentType "${job.contentType}" 非合法值；可選：${CONTENT_TYPES.join(' / ')}`);
   }
 
   // 篇幅若有給，必須合法
@@ -76,12 +100,21 @@ export function validateJob(job) {
  * 僅在 validateJob 通過後呼叫才有意義。
  */
 export function normalizeJob(job) {
+  const kind = kindOf(job);
+  const kindCfg = KINDS[kind];
   return {
     title: job.title.trim(),
     conclusion: job.conclusion.trim(),
-    viewpoint: job.viewpoint.trim(),
-    category: TECH_CATEGORY,
+    viewpoint: isNonEmptyString(job.viewpoint) ? job.viewpoint.trim() : '',
+    category: job.category, // 不再寫死 tech；validateJob 已確保是合法 vertical
+    categoryName: verticalName(job.category),
     subcategory: job.subcategory ?? null,
+    kind,
+    author: isNonEmptyString(job.author) ? job.author.trim() : kindCfg.defaultAuthor,
+    contentType: isNonEmptyString(job.contentType) ? job.contentType : kindCfg.defaultContentType,
+    viewpointRequired: kindCfg.viewpointRequired,
+    viewpointGate: kindCfg.viewpointGate,
+    requireApproval: kindCfg.requireApproval,
     signal: isNonEmptyString(job.signal) ? job.signal.trim() : '',
     angle: isNonEmptyString(job.angle) ? job.angle.trim() : '',
     length: job.length ?? LENGTH_DEFAULT,
@@ -89,3 +122,6 @@ export function normalizeJob(job) {
     publishDate: job.publishDate ? String(job.publishDate).slice(0, 10) : null, // 指定排程日；null=引擎自選空檔
   };
 }
+
+// 讓呼叫端（newsroom-write）能拿到分類中文名等
+export { VERTICALS, VERTICAL_SLUGS, verticalName };

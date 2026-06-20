@@ -1,0 +1,114 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+// 學生賽事「拉式投稿」表單：學校／隊伍／主辦單位主動提供賽事資訊。
+// 送到 sports-submission worker 的 /submit，由編輯在 Slack 人工審核（不自動發文、不自動回信）。
+//
+// 部署後把下面 WORKER_URL 換成實際 worker 網址（wrangler deploy 後取得）。
+// 若啟用 Turnstile 防濫用，填 TURNSTILE_SITEKEY 並取消表單內 widget 註解。
+const WORKER_URL = 'https://appi-news-sports-submission.<your-subdomain>.workers.dev/submit';
+const TURNSTILE_SITEKEY = ''; // 選配
+---
+
+<BaseLayout
+  title="學生賽事投稿"
+  description="學校、隊伍、主辦單位可在這裡提供學生賽事資訊，APPI 編輯審核後可能採訪報導。"
+  path="/sports/submit/"
+  ogImage="og/default.png"
+>
+  <section class="container sports-submit">
+    <h1>學生賽事投稿</h1>
+    <p class="lead">
+      你是學校、隊伍或主辦單位嗎？把你們的賽事資訊提供給我們，APPI 編輯會人工審核，
+      評估是否報導。這是邀請提供資訊，不保證刊登；我們不會自動回信，會由編輯與你聯繫。
+    </p>
+
+    <form id="sports-form" class="sports-form" novalidate>
+      <label>賽事名稱 <span aria-hidden="true">*</span>
+        <input name="eventName" required maxlength="120" placeholder="例：113 學年度全國高中籃球聯賽 北區複賽" />
+      </label>
+      <label>主辦／學校／隊伍 <span aria-hidden="true">*</span>
+        <input name="organizer" required maxlength="120" />
+      </label>
+      <div class="row">
+        <label>聯絡人 <span aria-hidden="true">*</span>
+          <input name="contactName" required maxlength="120" />
+        </label>
+        <label>聯絡方式（email 或電話）<span aria-hidden="true">*</span>
+          <input name="contactInfo" required maxlength="120" placeholder="coach@example.edu.tw 或 09xxxxxxxx" />
+        </label>
+      </div>
+      <div class="row">
+        <label>比賽日期
+          <input name="eventDate" maxlength="120" placeholder="2026-07-15" />
+        </label>
+        <label>地點
+          <input name="location" maxlength="120" />
+        </label>
+        <label>層級
+          <input name="level" maxlength="120" placeholder="國小／國中／高中／大專" />
+        </label>
+      </div>
+      <label>官方／報名連結
+        <input name="sourceUrl" type="url" maxlength="120" placeholder="https://..." />
+      </label>
+      <label>補充說明（賽程、是否歡迎採訪等）
+        <textarea name="description" maxlength="2000" rows="5"></textarea>
+      </label>
+
+      <!-- 啟用 Turnstile 時取消註解，並填上 TURNSTILE_SITEKEY：
+      <div class="cf-turnstile" data-sitekey={TURNSTILE_SITEKEY}></div>
+      <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer is:inline></script>
+      -->
+
+      <button type="submit" class="btn btn--primary">送出投稿</button>
+      <p id="sports-form-status" class="form-status" role="status" aria-live="polite"></p>
+      <p class="privacy-note">
+        你提供的聯絡資訊僅供 APPI 編輯內部審核與聯繫使用，不會公開、不會寫入網站。
+      </p>
+    </form>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ WORKER_URL }} is:inline>
+  const form = document.getElementById('sports-form');
+  const status = document.getElementById('sports-form-status');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = '送出中…';
+    const data = Object.fromEntries(new FormData(form).entries());
+    const token = form.querySelector('[name="cf-turnstile-response"]');
+    if (token) data.turnstileToken = token.value;
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const out = await res.json().catch(() => ({}));
+      if (res.ok) {
+        form.reset();
+        status.textContent = out.message || '已收到投稿，感謝提供！';
+      } else {
+        status.textContent = out.error || '送出失敗，請稍後再試。';
+      }
+    } catch {
+      status.textContent = '送出失敗，請檢查網路後再試。';
+    }
+  });
+</script>
+
+<style>
+  .sports-submit { max-width: 720px; padding-block: 2.5rem; }
+  .sports-submit h1 { margin-bottom: 0.5rem; }
+  .lead { color: var(--color-text-muted, #555); margin-bottom: 2rem; }
+  .sports-form { display: grid; gap: 1.1rem; }
+  .sports-form label { display: grid; gap: 0.35rem; font-weight: 600; font-size: 0.95rem; }
+  .sports-form input, .sports-form textarea {
+    font: inherit; padding: 0.6rem 0.7rem; border: 1px solid var(--color-border, #ccc);
+    border-radius: 8px; font-weight: 400; width: 100%; box-sizing: border-box;
+  }
+  .sports-form .row { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .form-status { min-height: 1.4em; font-weight: 600; }
+  .privacy-note { color: var(--color-text-muted, #666); font-size: 0.85rem; font-weight: 400; }
+</style>

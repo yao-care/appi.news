@@ -841,5 +841,28 @@
     "predictions": [
       "前沿能力的價格門檻會被中國開源權重一階一階往下壓、自架與資料自主從理想變務實選項；但選型與成本的勝負會從『哪個模型單價最低、跑分最高』移到『拿自家真實任務量出來的整體流程成本，以及自架守不守得住』，先用迷宮計費思維算總成本、把落地設計與資料治理當例行事的團隊，會比看 token 牌價就換模型的同業更不容易在便宜模型上反而花更多、或在自架後守不住資料。"
     ]
+  },
+  {
+    "slug": "kodak-shinyhunters-third-party-integration-breach",
+    "title": "柯達證實遭入侵、ShinyHunters 聲稱握 220 萬筆資料：第三方平台整合又成外洩破口",
+    "publishDate": "2026-07-12",
+    "category": "tech",
+    "tags": [
+      "ShinyHunters",
+      "柯達資料外洩",
+      "第三方整合資安",
+      "OAuth 供應鏈攻擊",
+      "企業資安應變"
+    ],
+    "conclusion": "柯達 6/17 證實未授權第三方短暫存取有限資料，此前 ShinyHunters 6/15 上架外洩網站聲稱握有逾 220 萬筆顧客個資並設 6/18 期限；柯達說『有限』、攻擊者喊 220 萬筆且無佐證，但真正該記的不是數字，是這波鎖定的位置：企業串接出去的第三方平台整合那條信任鏈。企業該盤的是每個整合的存取邊界、資料血緣、權杖衛生與通報時程，攻擊面不在城牆中央而在被外包出去、開了就沒人回頭看的接縫。",
+    "claims": [
+      "柯達 6/17 證實『未授權第三方非法取得有限公司資料的暫時存取權』、已找外部資安專家與執法單位（BleepingComputer）；此前 ShinyHunters 6/15 把柯達列上外洩網站、聲稱竊得逾 220 萬筆含顧客個資與內部企業資料、設 6/18 外洩期限（SecurityWeek）；ShinyHunters 未公開佐證樣本屬勒索集團常見手法（Malwarebytes）；柯達今為 B2B 商用印刷／先進材料／化學公司、持約 79,000 項專利，所謂『220 萬筆顧客個資』是誰的、從哪流出比數字本身更該問。",
+      "柯達沒揭露破口，但攻擊者習慣可講：ShinyHunters 過去一年極活躍、近期利用 Oracle PeopleSoft 零時差影響至少 100 個組織（SecurityWeek）；資安分析把柯達歸進其鎖定企業 SaaS 整合的持續性活動、點名 Salesforce Aura／Salesloft Drift／Snowflake／Oracle PeopleSoft，且用這些平台第三方整合者曝險被拉高與有無直接往來無關（TechJack）；去年 Salesloft/Drift 戰役竊第三方整合 OAuth 權杖存取下游客戶、逾千組織受害聲稱逾 15 億筆 Salesforce 紀錄，核心一句『你授權第三方整合的當下安全邊界就延伸到那家廠商』（Push Security）；不替柯達認定同路，但同攻擊者同類標的值得當主要假設先盤，延續 servicenow-saas-api-auth-misconfiguration-breach『入口在串接出去那層不在核心系統』。",
+      "作者本人觀點（工程本質）：現代系統最大攻擊面不是程式碼，而是你沒畫清楚的 API 信任邊界。三層問題：①API 整合本身是隱性信任邊界（SaaS 串 SaaS／webhook／OAuth／token），每接一條就交出一段信任，該問哪一段其實控制不到；②資料流向盤點（data flow mapping）缺失，知道有 API 卻不知道資料實際流到哪，沒 data lineage 就等於沒 security model；③事件應變是工程與公關的耦合，不是修 bug，而是 revoke tokens／audit logs／rebuild trust boundary／notify timeline compliance，且柯達說『有限』vs 220 萬筆的對外缺口正源於內部沒先把資料流盤清楚。延續 what-is-claw-llm-client-tool『先定義情境再開整合、順序不能倒』、llm-healthcare-promise-limits『可信度靠落地流程不靠工具大牌』、mcp-de-facto-standard-agent-governance『每個串接進來的服務都是新權限治理對象』。",
+      "可執行盤點四條（防禦，不講攻擊）：①每個第三方整合列冊（SaaS／webhook／OAuth 各用誰的權杖、能讀寫哪些資料表、權限多大）；②畫資料血緣（含個資資料實際經過哪些第三方，這就是安全模型）；③權杖衛生（OAuth／API token 定期輪換、離職或停用整合立刻撤權、最小必要權限，這類攻擊靠的就是沒人記得拔掉的鑰匙）；④通報時程平時就定好（誰判定、幾小時內升級、什麼程度對外與通報主管機關），別等資料上了外洩網站才想流程。從『權限開最大又最久沒人看』的整合先盤起。"
+    ],
+    "predictions": [
+      "企業外洩的主流入口會從『核心系統被攻破』移到『第三方平台整合的信任鏈』；隨著 SaaS 串接與 OAuth 授權越接越多、清單長得比人盤得動還快，開了就沒人回頭看、權限開過大的整合會成為最隱形的破口，先把每條整合列冊、畫資料血緣、做權杖衛生與定好通報時程的組織，會比被動等平台補機制、出事才喊『有限資料』的同業更不容易在沒人看的接縫上被一把舊鑰匙撬開。"
+    ]
   }
 ]

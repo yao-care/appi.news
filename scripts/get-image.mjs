@@ -8,12 +8,17 @@
 // 用法:
 //   node scripts/get-image.mjs --topic "段落主題" --context "文章脈絡" \
 //        --out public/images/<slug>-s<N>.webp [--width 960] [--query "english stock query"] [--people] [--dry-run]
-// 輸出: 一行 JSON：{ mode:"stock"|"generated", reason, file, src, width, height, tag, credit?, source?, pageUrl? }
+//   國際線「嵌入可授權原圖」（只接受白名單來源，否則 fail-closed 退非零）:
+//   node scripts/get-image.mjs --topic "..." --out public/images/x.webp \
+//        --embed-url "https://upload.wikimedia.org/...jpg" --credit "作者 — CC BY-SA 4.0, Wikimedia Commons" --page-url "https://commons.wikimedia.org/..."
+// 輸出: 一行 JSON：{ mode:"stock"|"generated"|"embedded", reason, file, src, width, height, tag, credit?, source?, pageUrl?, license? }
 //   mode=stock 時附 credit/source/pageUrl（封面請寫進 coverImageCredit；圖庫授權允許免署名，內文可省）。
+//   mode=embedded 時 credit 為必填（嵌入原圖一律署名），license/source 記錄授權與來源。
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { generateImage, imgTag, toWebp } from './lib/ai-image.mjs';
 import { searchStock } from './lib/stock.mjs';
+import { classifyImageSource } from './lib/image-sources.mjs';
 
 function arg(name, def) {
   const i = process.argv.indexOf(`--${name}`);
@@ -28,6 +33,9 @@ const width = Number(arg('width', '960'));
 const query = arg('query', topic);
 const wantPeople = has('people');
 const dryRun = has('dry-run');
+const embedUrl = arg('embed-url');
+const credit = arg('credit');
+const pageUrl = arg('page-url');
 
 if (!topic || !out) {
   console.error('need --topic and --out');
@@ -84,7 +92,61 @@ async function tryStock(cand) {
   };
 }
 
+/**
+ * 嵌入可授權原圖：只接受白名單來源（image-sources.mjs），否則 fail-closed 退非零，
+ * 讓起草端據此退回圖庫/AI。署名為必填（嵌入原圖一律署名）。
+ */
+async function embed() {
+  const cls = classifyImageSource(embedUrl);
+  if (!cls.allowed) {
+    console.error(`embed 來源未授權，拒絕嵌入：${cls.reason}`);
+    process.exit(2); // 非 1：與一般錯誤區分，代表「來源不在白名單、請改用圖庫/AI」
+  }
+  if (!credit || !credit.trim()) {
+    console.error(`embed 需 --credit（嵌入原圖一律署名）。此來源署名格式：${cls.source.creditHint}`);
+    process.exit(1);
+  }
+  if (dryRun) {
+    return { mode: 'embedded', file: out, src, credit: credit.trim(), license: cls.source.license, source: cls.source.id, pageUrl: pageUrl || embedUrl, dry: true };
+  }
+  let raw;
+  try {
+    const res = await fetch(embedUrl, { signal: AbortSignal.timeout(20000) });
+    if (!res.ok) {
+      console.error(`embed 下載失敗 HTTP ${res.status}`);
+      process.exit(1);
+    }
+    raw = Buffer.from(await res.arrayBuffer());
+    if (raw.length < 5000) {
+      console.error('embed 下載檔過小，疑似非圖片');
+      process.exit(1);
+    }
+  } catch (e) {
+    console.error(`embed 下載錯誤：${e.message}`);
+    process.exit(1);
+  }
+  const webp = await toWebp(raw, width);
+  mkdirSync(dirname(out), { recursive: true });
+  writeFileSync(out, webp.buffer);
+  return {
+    mode: 'embedded',
+    file: out,
+    src,
+    width: webp.width,
+    height: webp.height,
+    tag: imgTag({ src, width: webp.width, height: webp.height, alt: '' }),
+    credit: credit.trim(),
+    license: cls.source.license,
+    source: cls.source.id,
+    pageUrl: pageUrl || embedUrl,
+  };
+}
+
 async function main() {
+  // 嵌入可授權原圖（國際線）：白名單把關，非白名單退非零→起草端改圖庫/AI。
+  if (embedUrl) {
+    return embed();
+  }
   // 人物圖：直接生成（保證台灣人）。
   if (wantPeople) {
     return generate('people');

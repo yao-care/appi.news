@@ -57,9 +57,27 @@ function parseArticle(file) {
   return { data: data || {}, body, inlineImages };
 }
 
+// 待審草稿用的「遠未來」排程日：讓事實稿產出後只建 noindex 預覽頁、永不自動上線，
+// 等人工核可（Slack 發佈鈕或編輯器把日期改成今天）才轉正。
+const PENDING_APPROVAL_DAYS = 365;
+
 /** 決定發佈狀態與日期：指定日 > 下一個空檔；今天/過去→published、未來→scheduled。 */
 function computeSchedule(job) {
   const taipeiToday = new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10);
+
+  // 需人工審核（事實稿）：排到遠未來＝待審草稿（建預覽頁、不進列表、不自動上線）。
+  if (job.requireApproval) {
+    const future = new Date(Date.now() + PENDING_APPROVAL_DAYS * 86400 * 1000);
+    const dateYmd = future.toISOString().slice(0, 10);
+    return {
+      status: 'scheduled',
+      dateYmd,
+      publishDate: `${dateYmd}T08:00:00+08:00`,
+      scheduled: true,
+      pendingApproval: true,
+    };
+  }
+
   let target = job.publishDate || null;
   if (!target) {
     let contents = [];
@@ -201,7 +219,11 @@ function main() {
   if (!go && !stage) {
     console.log('— DRY RUN（不帶 --go/--stage，零副作用）—');
     console.log(`工單通過：${job.title}（${job.category}${job.subcategory ? '/' + job.subcategory : ''}，${job.kind}，${job.length}）`);
-    console.log(`排程：${schedule.status}（${schedule.scheduled ? '排到 ' + schedule.dateYmd : '今天，立即發佈'}）`);
+    console.log(
+      schedule.pendingApproval
+        ? '排程：待人工審核（產待審草稿、建預覽頁、不自動上線；核可才轉正）'
+        : `排程：${schedule.status}（${schedule.scheduled ? '排到 ' + schedule.dateYmd : '今天，立即發佈'}）`,
+    );
     console.log('將呼叫：claude -p <批次起草 prompt>');
     console.log('gate：pnpm check:links（壞連結擋整站部署）；然後 git commit + push');
     console.log('\n===== 批次起草 prompt 預覽 =====\n');
@@ -269,6 +291,8 @@ function main() {
     inlineImages: parsed.inlineImages,
     viewpoint: job.viewpoint, // 本次採用的真人觀點（給 Slack 回報，作者可目視確認有無進文）
     viewpointNote: vp.note, // gate 判定「反映於哪一句」
+    pendingApproval: !!schedule.pendingApproval, // 事實稿待審：Slack 帶「發佈」鈕、不自動上線
+    slug, // 給「發佈」動作定位文章
   };
   try {
     writeFileSync(join(dirname(jobPath), 'result.json'), JSON.stringify(result));
@@ -289,15 +313,22 @@ function main() {
   // 不用 git add -A——否則 job 起跑後到這裡之間，工作區若有其他未提交改動
   // （例如有人同時在開發），會被掃進這篇發佈 commit。起點的乾淨檢查擋不了中途新增的檔。
   sh('git', ['add', '--', 'src/content/articles', 'public/covers', 'public/images', '.claude/skills/newsroom/author-memory.json']);
-  const commitBody = job.kind === 'factual'
-    ? `${job.categoryName}類自動產文（事實型／編輯部，status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。`
-    : `${job.categoryName}類自動產文（status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。真人觀點由作者提供。`;
+  const commitBody = schedule.pendingApproval
+    ? `${job.categoryName}類自動產文（事實型／編輯部，待人工審核，未上線；核可後轉正）。`
+    : job.kind === 'factual'
+      ? `${job.categoryName}類自動產文（事實型／編輯部，status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。`
+      : `${job.categoryName}類自動產文（status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。真人觀點由作者提供。`;
   sh('git', ['commit', '-m', `feat(article): 自動產文 — ${job.title}\n\n${commitBody}`]);
   if (go) {
     console.log('→ push');
     sh('git', ['push']);
-    console.log(schedule.scheduled ? `✓ 已排程 ${schedule.dateYmd} 發佈。` : '✓ 已發佈上線。可進編輯器修改。');
-    if (schedule.scheduled) console.log(`SCHEDULED_DATE=${schedule.dateYmd}`); // 給外層解析
+    if (schedule.pendingApproval) {
+      console.log('✓ 已產出待審草稿並上推（建預覽頁、不進列表、不自動上線）。核可後才轉正。');
+      if (slug) console.log(`PENDING_APPROVAL_SLUG=${slug}`); // 給外層解析
+    } else {
+      console.log(schedule.scheduled ? `✓ 已排程 ${schedule.dateYmd} 發佈。` : '✓ 已發佈上線。可進編輯器修改。');
+      if (schedule.scheduled) console.log(`SCHEDULED_DATE=${schedule.dateYmd}`); // 給外層解析
+    }
     if (url) console.log(`PUBLISHED_URL=${url}`);
   } else {
     console.log(`✓ 已 stage（commit 在分支 ${branch}，未 push）。審稿 OK 後 cherry-pick 到 main push 上線。`);

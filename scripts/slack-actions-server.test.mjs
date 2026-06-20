@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { handleInteraction, buildDoneMessage } from './slack-actions-server.mjs';
 import { computeSlackSignature } from './lib/slack-verify.mjs';
-import { WRITE_ACTION_ID, MODAL_CALLBACK_ID } from './lib/slack-interaction.mjs';
+import { WRITE_ACTION_ID, PUBLISH_ACTION_ID, MODAL_CALLBACK_ID } from './lib/slack-interaction.mjs';
 
 const SECRET = 'test_secret';
 const NOW = 1718000000;
@@ -116,6 +116,38 @@ describe('handleInteraction — 送出看法觸發', () => {
     const r = call(submission(techTopic(), '看法'));
     expect(r.body).toContain('clear');
     expect(r.startEngine).toBeDefined();
+  });
+});
+
+describe('handleInteraction — 發佈鈕（事實稿核可上線）', () => {
+  const publishBtn = (slug, userId = 'U0AGB084S2H') =>
+    form({ type: 'block_actions', user: { id: userId }, actions: [{ action_id: PUBLISH_ACTION_ID, value: JSON.stringify({ slug, title: 't' }) }] });
+
+  it('授權人按發佈鈕 → 200 + startPublish（不開 modal、不 startEngine）', () => {
+    const r = call(publishBtn('typhoon-2026-closures'));
+    expect(r.status).toBe(200);
+    expect(r.startPublish.slug).toBe('typhoon-2026-closures');
+    expect(r.openModal).toBeUndefined();
+    expect(r.startEngine).toBeUndefined();
+  });
+
+  it('未授權人按發佈鈕 → 200 但不 startPublish', () => {
+    const r = call(publishBtn('typhoon-2026-closures', 'Uxxxx'));
+    expect(r.status).toBe(200);
+    expect(r.startPublish).toBeUndefined();
+  });
+});
+
+describe('buildDoneMessage — 待審草稿帶發佈提示', () => {
+  it('pendingApproval → 標頭為待審、含發佈提示語、連結標籤為草稿', () => {
+    const msg = buildDoneMessage({ title: 't' }, {
+      title: '颱風停班課整理', url: 'https://appi.news/articles/x/', scheduled: true,
+      pendingApproval: true, slug: 'x',
+    }, '');
+    expect(msg).toContain('待審草稿');
+    expect(msg).toContain('發佈這篇');
+    expect(msg).toContain('預覽／編輯草稿');
+    expect(msg).not.toContain('已排程');
   });
 });
 

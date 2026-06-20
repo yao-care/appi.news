@@ -38,6 +38,7 @@ export const KINDS = {
     label: '觀點稿',
     viewpointRequired: true, // 沒收到真人看法不動筆
     viewpointGate: true, // 起草後查核觀點是否真的反映於內文
+    requireApproval: false, // 過 gate 直接發佈上線（同 tech 日更）
     defaultAuthor: 'lightman',
     defaultContentType: 'news',
   },
@@ -45,6 +46,7 @@ export const KINDS = {
     label: '事實稿',
     viewpointRequired: false, // 服務型資訊不逼塞個人觀點
     viewpointGate: false,
+    requireApproval: true, // 事實稿一律「人工審後發」：先產待審草稿，核可才上線
     defaultAuthor: 'appi-editorial',
     defaultContentType: 'guide',
   },

@@ -114,6 +114,7 @@ export function normalizeJob(job) {
     contentType: isNonEmptyString(job.contentType) ? job.contentType : kindCfg.defaultContentType,
     viewpointRequired: kindCfg.viewpointRequired,
     viewpointGate: kindCfg.viewpointGate,
+    requireApproval: kindCfg.requireApproval,
     signal: isNonEmptyString(job.signal) ? job.signal.trim() : '',
     angle: isNonEmptyString(job.angle) ? job.angle.trim() : '',
     length: job.length ?? LENGTH_DEFAULT,

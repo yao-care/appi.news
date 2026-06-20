@@ -8,6 +8,8 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 // 若啟用 Turnstile 防濫用，填 TURNSTILE_SITEKEY 並取消表單內 widget 註解。
 const WORKER_URL = 'https://appi-news-sports-submission.<your-subdomain>.workers.dev/submit';
 const TURNSTILE_SITEKEY = ''; // 選配
+// Worker 還沒部署（URL 仍是 placeholder）時，顯示「建置中」而非壞掉的表單。
+const ready = !WORKER_URL.includes('<your-subdomain>');
 ---
 
 <BaseLayout
@@ -23,7 +25,11 @@ const TURNSTILE_SITEKEY = ''; // 選配
       評估是否報導。這是邀請提供資訊，不保證刊登；我們不會自動回信，會由編輯與你聯繫。
     </p>
 
-    <form id="sports-form" class="sports-form" novalidate>
+    {!ready && (
+      <p class="form-status">投稿管道建置中，近期開放，敬請期待。</p>
+    )}
+
+    <form id="sports-form" class="sports-form" novalidate style={ready ? undefined : 'display:none'}>
       <label>賽事名稱 <span aria-hidden="true">*</span>
         <input name="eventName" required maxlength="120" placeholder="例：113 學年度全國高中籃球聯賽 北區複賽" />
       </label>

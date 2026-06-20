@@ -11,7 +11,7 @@
 //     normalizeKey 只做廉價的字面去重（避免帳本自己存重複列），抓不到改寫，那交給模型。
 //
 // 用法：
-//   node scripts/topic-ledger.mjs recent [windowDays]      # 印近 N 天推薦過的題（餵進雷達 prompt）
+//   node scripts/topic-ledger.mjs recent [windowDays] [category]  # 印近 N 天推薦過的題（可選只列某分類）
 //   node scripts/topic-ledger.mjs append <payload.json>    # 把 payload.suggestions 記進帳本（發送成功後才跑）
 //
 // 環境變數：TOPIC_LEDGER_PATH 可覆寫帳本路徑（測試用）。
@@ -68,10 +68,15 @@ export function prune(ledger, today, retentionDays = RETENTION_DAYS) {
   return (Array.isArray(ledger) ? ledger : []).filter((e) => e.date && daysBetween(today, e.date) <= retentionDays);
 }
 
-/** 近 windowDays 推薦過的題，組成餵 prompt 的文字（新到舊）。空則回提示字串。 */
-export function recentLines(ledger, today, windowDays = WINDOW_DAYS) {
+/**
+ * 近 windowDays 推薦過的題，組成餵 prompt 的文字（新到舊）。空則回提示字串。
+ * category 給定時只列該分類（外加 category 為 null 的舊紀錄，寧可多列也別漏去重）；
+ * 讓各 vertical 雷達彼此不互相去重（科技題不該因為運動推過就被排除）。
+ */
+export function recentLines(ledger, today, windowDays = WINDOW_DAYS, category = null) {
   const rows = (Array.isArray(ledger) ? ledger : [])
     .filter((e) => e.date && daysBetween(today, e.date) <= windowDays)
+    .filter((e) => !category || e.category == null || e.category === category)
     .sort((a, b) => (a.date < b.date ? 1 : -1));
   if (rows.length === 0) return '（近期無推薦紀錄）';
   return rows.map((e) => `- [${e.date}]${e.subcategory ? ` (${e.subcategory})` : ''} ${e.title}`).join('\n');
@@ -94,13 +99,14 @@ function writeLedger(path, ledger) {
 }
 
 function main() {
-  const [cmd, arg] = process.argv.slice(2);
+  const [cmd, arg, arg2] = process.argv.slice(2);
   const path = ledgerPath();
   const today = taipeiToday();
 
   if (cmd === 'recent') {
     const windowDays = Number(arg) > 0 ? Number(arg) : WINDOW_DAYS;
-    process.stdout.write(recentLines(readLedger(path), today, windowDays) + '\n');
+    const category = arg2 || null; // 可選：只列該分類（讓各 vertical 雷達不互相去重）
+    process.stdout.write(recentLines(readLedger(path), today, windowDays, category) + '\n');
     return;
   }
 

@@ -72,4 +72,16 @@ describe('recentLines — 餵 prompt 的近期清單', () => {
     expect(recentLines([{ date: '2026-05-01', title: '太舊', key: 'c' }], TODAY, 14)).toBe('（近期無推薦紀錄）');
     expect(recentLines([], TODAY)).toBe('（近期無推薦紀錄）');
   });
+
+  it('依 category 過濾：只列該分類 + 無分類的舊紀錄（寧多勿漏去重）', () => {
+    const mixed = [
+      { date: '2026-06-16', title: '科技題', key: 'a', category: 'tech', subcategory: 'ai' },
+      { date: '2026-06-15', title: '運動題', key: 'b', category: 'sports', subcategory: 'baseball' },
+      { date: '2026-06-14', title: '舊無分類題', key: 'c', subcategory: 'x' },
+    ];
+    const out = recentLines(mixed, TODAY, 14, 'tech');
+    expect(out).toContain('科技題');
+    expect(out).toContain('舊無分類題'); // category 為 null → 一律保留
+    expect(out).not.toContain('運動題'); // 別的分類不互相去重
+  });
 });

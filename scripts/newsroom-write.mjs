@@ -87,26 +87,49 @@ export function buildDraftPrompt(job, schedule = null) {
   const len = job.length === 'deep' ? '深稿（3000+ 字）' : '短稿（800–1500 字）';
   const status = schedule?.status ?? 'published';
   const pubDate = schedule?.publishDate ?? new Date().toISOString();
+  const catName = job.categoryName || job.category;
+  const author = job.author || 'lightman';
+  const contentType = job.contentType || 'news';
+  const subcat = job.subcategory ? ` / ${job.subcategory}` : '';
+  const factual = job.kind === 'factual';
+
+  // 觀點稿：融入真人觀點、走作者人格與跨文記憶。事實稿：編輯部中性服務語氣、無個人觀點。
+  const viewpointLine = factual
+    ? '- 內容形態：事實／服務型 roundup（編輯部署名）。不要加入任何個人觀點或立場，只做準確、可查證的資訊整理。'
+    : `- 真人觀點／本業經驗（Q3，作者本人提供，務必融入，不得稀釋成中性）：${job.viewpoint}`;
+
+  const readLine = factual
+    ? '先讀 .claude/skills/newsroom/SKILL.md（取其配圖、超連結查證、繁中台灣用語、去 AI 腔規則）。本篇以「編輯部」中性服務語氣撰寫，不套個人作者人格。'
+    : '先讀 .claude/skills/newsroom/SKILL.md、persona.md、author-memory.json。';
+
+  const memoryStep = factual
+    ? '3. 寫入 src/content/articles/<slug>.md（slug 你自訂，英文 kebab）。事實稿不需追加 author-memory.json。'
+    : '3. 寫入 src/content/articles/<slug>.md（slug 你自訂，英文 kebab），並依步驟三.9 把本篇追加進 author-memory.json。';
+
+  const noFabricate = factual
+    ? '4. 嚴禁杜撰：數據/事實/日期/地點/金額都要可連線官方或權威來源；查不到就不寫，寧缺勿錯（服務型資訊錯誤會誤導讀者）。'
+    : '4. 嚴禁杜撰：數據/事實/引述都要可連線來源；Q3 真人觀點只用工單給的那段，不得自行虛構作者經歷。';
+
   return [
-    '你正在以「無人值守批次模式」執行 APPI News 的 /newsroom 科技類起草，寫完直接發佈。',
-    '先讀 .claude/skills/newsroom/SKILL.md、persona.md、author-memory.json。',
+    `你正在以「無人值守批次模式」執行 APPI News 的 /newsroom ${catName}類起草，寫完直接發佈。`,
+    readLine,
     '',
     '【本批工單（取代 newsroom 步驟一雷達與步驟二問答）】',
     `- 題目（標題）：${job.title}`,
     `- 核心結論（Q1）：${job.conclusion}`,
     `- 切角（Q2）：${job.angle || '（依結論自訂）'}`,
-    `- 真人觀點／本業經驗（Q3，作者本人提供，務必融入，不得稀釋成中性）：${job.viewpoint}`,
+    viewpointLine,
     `- 篇幅（Q4）：${len}`,
     `- 數據依據：${job.signal || '（無）'}`,
-    `- 分類：tech${job.subcategory ? ` / ${job.subcategory}` : ''}`,
+    `- 分類：${job.category}${subcat}`,
     cite,
     '',
     '【務必照做】',
     '1. 完整執行 newsroom 步驟三：查料、擴寫、超連結逐條查證（每條 2xx 且內容支持該句，死連結一律換或刪），去 AI 腔複查、繁中台灣用語複查。',
     '1a. 每段必配圖，一律用 `node scripts/get-image.mjs`（不要用 gen-image.mjs）：概念/物件/場景圖**不要**加 --people（先搜圖庫、找不到才 AI 生成）；人物為主體的圖才加 --people（直接 AI 生成、模組強制台灣人）。封面同法；若封面回傳 mode:"stock" 要把 credit 寫進 frontmatter coverImageCredit。',
-    `2. frontmatter：status: "${status}"、publishDate: "${pubDate}"、category: "tech"、author: "lightman"、sourceType: "editorial"（須為 src/content.config.ts 的 sourceType enum 合法值），並用 disclosure 欄位揭露「以 AI 輔助起草、經人工查證編輯」。`,
-    '3. 寫入 src/content/articles/<slug>.md（slug 你自訂，英文 kebab），並依步驟三.9 把本篇追加進 author-memory.json。',
-    '4. 嚴禁杜撰：數據/事實/引述都要可連線來源；Q3 真人觀點只用工單給的那段，不得自行虛構作者經歷。',
+    `2. frontmatter：status: "${status}"、publishDate: "${pubDate}"、category: "${job.category}"${job.subcategory ? `、subcategory: "${job.subcategory}"` : ''}、author: "${author}"、contentType: "${contentType}"、sourceType: "editorial"（須為 src/content.config.ts 的 enum 合法值），並用 disclosure 欄位揭露「以 AI 輔助起草、經人工查證編輯」。`,
+    memoryStep,
+    noFabricate,
     '5. **不要 git add / commit / push**——版控與發佈由外層腳本在 check:links gate 後處理。',
     '6. 完成後，最後輸出一段「查證報告」：條列文中每一條超連結 + 其 HTTP 狀態 + 是否支持該句。',
   ].join('\n');
@@ -177,7 +200,7 @@ function main() {
 
   if (!go && !stage) {
     console.log('— DRY RUN（不帶 --go/--stage，零副作用）—');
-    console.log(`工單通過：${job.title}（tech${job.subcategory ? '/' + job.subcategory : ''}，${job.length}）`);
+    console.log(`工單通過：${job.title}（${job.category}${job.subcategory ? '/' + job.subcategory : ''}，${job.kind}，${job.length}）`);
     console.log(`排程：${schedule.status}（${schedule.scheduled ? '排到 ' + schedule.dateYmd : '今天，立即發佈'}）`);
     console.log('將呼叫：claude -p <批次起草 prompt>');
     console.log('gate：pnpm check:links（壞連結擋整站部署）；然後 git commit + push');
@@ -218,15 +241,21 @@ function main() {
     die(`配圖 gate 未過，不發佈（改動留工作區待補圖）：\n  - ${imgProblems.join('\n  - ')}`);
   }
 
-  // 真人觀點硬性 gate（只擋自動產文這條路）：Q3 作者觀點必須真的反映在內文，
+  // 真人觀點硬性 gate（只擋觀點稿 kind: column）：Q3 作者觀點必須真的反映在內文，
   // 否則中止不發佈——避免產出「讀不出作者想法」的中性稿（過去作者反映看不到自己的觀點）。
-  console.log('→ 真人觀點 gate（Q3 是否反映於內文）');
-  const vp = checkViewpointReflected(job.viewpoint, parsed.body);
-  if (!vp.ok) {
-    if (vp.infra) die(`真人觀點 gate 無法判定（查核工具異常、非文章問題，請重跑）：${vp.note}`);
-    die(`真人觀點 gate 未過，不發佈（改動留工作區待補）：作者觀點未充分反映於內文 — ${vp.note}`);
+  // 事實稿（kind: factual，颱風/樂齡/優惠等服務型）無個人觀點，略過此 gate。
+  let vp = { ok: true, infra: false, note: '' };
+  if (job.viewpointGate && job.viewpoint) {
+    console.log('→ 真人觀點 gate（Q3 是否反映於內文）');
+    vp = checkViewpointReflected(job.viewpoint, parsed.body);
+    if (!vp.ok) {
+      if (vp.infra) die(`真人觀點 gate 無法判定（查核工具異常、非文章問題，請重跑）：${vp.note}`);
+      die(`真人觀點 gate 未過，不發佈（改動留工作區待補）：作者觀點未充分反映於內文 — ${vp.note}`);
+    }
+    console.log(`  ✓ 觀點已反映：${vp.note}`);
+  } else {
+    console.log('→ 真人觀點 gate：事實型／無觀點稿，略過');
   }
-  console.log(`  ✓ 觀點已反映：${vp.note}`);
 
   // 給協調器回報 Slack 用：內文摘要 + 重點 + 本次採用觀點 + 預覽/編輯連結（同一 URL）。寫入 job 同目錄。
   const result = {
@@ -260,7 +289,10 @@ function main() {
   // 不用 git add -A——否則 job 起跑後到這裡之間，工作區若有其他未提交改動
   // （例如有人同時在開發），會被掃進這篇發佈 commit。起點的乾淨檢查擋不了中途新增的檔。
   sh('git', ['add', '--', 'src/content/articles', 'public/covers', 'public/images', '.claude/skills/newsroom/author-memory.json']);
-  sh('git', ['commit', '-m', `feat(article): 自動產文 — ${job.title}\n\n科技類自動產文（status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。真人觀點由作者提供。`]);
+  const commitBody = job.kind === 'factual'
+    ? `${job.categoryName}類自動產文（事實型／編輯部，status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。`
+    : `${job.categoryName}類自動產文（status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。真人觀點由作者提供。`;
+  sh('git', ['commit', '-m', `feat(article): 自動產文 — ${job.title}\n\n${commitBody}`]);
   if (go) {
     console.log('→ push');
     sh('git', ['push']);

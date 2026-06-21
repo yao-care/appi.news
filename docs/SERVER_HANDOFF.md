@@ -41,8 +41,8 @@ pnpm test
 | 技能 | `.claude/skills/weekly-report/SKILL.md` | 讀數據 → 雷達 → 建議 → 發 Slack |
 | 資料層 | `scripts/lib/google-data.mjs` | JWT 自簽 → `ga4RunReport` / `gscQuery`（子專案 2 也用） |
 | 純轉換 | `scripts/lib/weekly-metrics.mjs` | GA4/GSC 原始回應 → 四區塊 |
-| 設定 | `scripts/lib/report-config.mjs` | GA4 property `541946427`、GSC `sc-domain:appi.news`、Slack 頻道 `C0AFYV3TAMV` |
-| 投遞 | `scripts/slack-post.mjs` + `scripts/lib/slack.mjs` | bot `appinews_agent` @ Weiqi.Kids workspace |
+| 設定 | `scripts/lib/report-config.mjs` | GA4 property `541946427`、GSC `sc-domain:appi.news`、Slack 一分類一頻道（`CATEGORY_CHANNELS`）、預設/週報頻道＝作者群 `C0BC4JRQJF6` |
+| 投遞 | `scripts/slack-post.mjs` + `scripts/lib/slack.mjs` | bot `appi_claude` @ **appi.news** workspace（T0BCV23MAJU）；依 category 路由 |
 | cron 進入點 | `scripts/cron/weekly-report.sh` | `source` 金鑰 → `claude -p "/weekly-report"` |
 | 設計文件 | `docs/superpowers/specs/2026-06-16-weekly-report-slack-design.md`、`docs/superpowers/plans/2026-06-16-weekly-report-slack.md` | spec / 實作計畫 |
 

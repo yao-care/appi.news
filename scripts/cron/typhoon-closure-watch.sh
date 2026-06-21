@@ -4,7 +4,7 @@ TASK="颱風停班課"
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
 exec 9>/tmp/appi-publisher-cron.lock
-flock -w 1800 9 || { echo "取鎖逾時"; node scripts/cron-report.mjs --text "⏳ $TASK 略過（另一 publisher cron 執行中）" 2>/dev/null || true; exit 0; }
+flock -w 1800 9 || { echo "取鎖逾時，略過本次（颱風安靜模式：不報）"; exit 0; }
 if [ "${PUBLISH_ISOLATED:-}" = "1" ]; then git fetch -q origin --prune && git checkout -q main && git reset -q --hard origin/main && git clean -qfd || echo "⚠️ 隔離同步失敗，續跑"; fi
 set -a
 # shellcheck disable=SC1090
@@ -14,8 +14,11 @@ ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
 out="$(claude -p "/typhoon-closure-watch" 2>&1)"; rc=$?
 printf '%s\n' "$out"
 if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond' <<<"$out"; then
-  if grep -q 'sent ts=' <<<"$out"; then msg="🌀 $TASK：偵測到停班課，已產待審草稿（發佈鈕在生活台）"; else msg="✅ $TASK：目前無停班課（$ts）"; fi
-  node scripts/cron-report.mjs --text "$msg" || true; exit 0
+  # 安靜模式：只在「有停課」才報（已產待審草稿）；無停課的時段不發，避免每小時洗頻。
+  if grep -q 'sent ts=' <<<"$out"; then
+    node scripts/cron-report.mjs --text "🌀 $TASK：偵測到停班課，已產待審草稿（發佈鈕在生活台）（$ts）" || true
+  fi
+  exit 0
 fi
 node scripts/cron-report.mjs --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
 exit "$rc"

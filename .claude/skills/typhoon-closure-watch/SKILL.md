@@ -13,15 +13,22 @@ description: APPI News 颱風停班停課即時守望。檢查人事行政總處
 - **不預測**：只報「已公告」的停班課，不推測會不會放假。
 - 每條都附官方來源 inline 超連結。
 
-## 步驟 1：抓官方現況
-WebFetch 人事行政總處停班課頁，解析出目前**已公告**的停班停課情形，整理成清單寫到 `/tmp/typhoon-closures.json`：
+## 步驟 1：抓官方現況（兩個來源交叉，避免抓到過期資料）
+1. **WebFetch 人事行政總處停班課頁** `https://www.dgpa.gov.tw/typh/daily/nds.html`（這是「目前現況」的權威頁）：
+   - 頁面若含字串 **「無停班停課訊息」** 或表格無資料 → **目前無停班課**，closures 給空陣列 `[]`（後面步驟 2 會安靜結束）。
+   - 否則解析表格（縣市名稱 / 是否停止上班上課情形）成清單。
+2. **結構化細節用 NCDR 機器可讀 feed**（比爬 HTML 穩）：WebFetch `https://alerts.ncdr.nat.gov.tw/RssAtomFeed.ashx?AlertType=33`，逐則取 `summary`（如「屏東縣三地門鄉:明天停止上班、停止上課」）、`cap:effective`、`cap:expires`。
+   - **鐵則：這個 feed 是歷史緩衝，會留舊公告。務必只取 `cap:expires > 現在（台北時間）` 的項目**，否則會把好幾天前的舊停課當成現在的（曾驗證會有此坑）。必要時點進該則連結的 `.cap` 檔取乾淨 ISO 的 expires/areaDesc。
+   - 以 nds.html 的「目前現況」為準、CAP feed 補地區細節；兩者矛盾時以 nds.html 為主。
+
+把目前**仍生效**的停班停課整理寫到 `/tmp/typhoon-closures.json`：
 ```json
 { "closures": [
   { "area": "臺北市", "status": "停止上班、停止上課", "date": "2026-07-10" },
   { "area": "宜蘭縣", "status": "停止上課（不停止上班）", "date": "2026-07-10" }
 ] }
 ```
-- 沒有任何停班課公告（無颱風影響）→ closures 給空陣列 `[]`。
+- 無生效中的停班課 → closures 給空陣列 `[]`。
 
 ## 步驟 2：變更偵測（避免重複洗訊息）
 跑 `node scripts/typhoon-state.mjs check /tmp/typhoon-closures.json`：

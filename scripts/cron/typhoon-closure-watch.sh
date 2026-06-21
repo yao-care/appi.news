@@ -10,6 +10,10 @@ set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO"
 
+# 並發保護：多個 publisher cron 同時 reset/寫同一 checkout 會互洗未提交工作；同時只放一個。
+exec 9>/tmp/appi-publisher-cron.lock
+flock -w 1800 9 || { echo "$(date -u +%FT%TZ) 取鎖逾時、另一 publisher cron 仍在跑，略過本次"; exit 0; }
+
 if [ "${PUBLISH_ISOLATED:-}" = "1" ]; then
   git fetch -q origin --prune && git checkout -q main && git reset -q --hard origin/main && git clean -qfd || {
     echo "⚠️ 隔離同步失敗，仍以現有 checkout 續跑"

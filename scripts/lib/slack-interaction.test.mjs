@@ -93,12 +93,14 @@ describe('parseModalSubmission', () => {
 });
 
 describe('發佈鈕（事實稿待審草稿核可上線）', () => {
-  const btn = () => buildPublishButton({ slug: 'typhoon-2026-closures', title: '颱風停班課整理' });
+  const btn = () => buildPublishButton({ slug: 'typhoon-2026-closures', title: '颱風停班課整理', category: 'lifestyle' });
 
-  it('buildPublishButton：action_id 正確、value 帶 slug', () => {
+  it('buildPublishButton：action_id 正確、value 帶 slug + category', () => {
     const b = btn();
     expect(b.elements[0].action_id).toBe(PUBLISH_ACTION_ID);
-    expect(JSON.parse(b.elements[0].value).slug).toBe('typhoon-2026-closures');
+    const v = JSON.parse(b.elements[0].value);
+    expect(v.slug).toBe('typhoon-2026-closures');
+    expect(v.category).toBe('lifestyle');
   });
 
   it('isPublishAction：發佈鈕 → true、寫題鈕 → false', () => {
@@ -107,12 +109,13 @@ describe('發佈鈕（事實稿待審草稿核可上線）', () => {
     expect(isPublishAction({ type: 'view_submission' })).toBe(false);
   });
 
-  it('parsePublishInteraction：取出 userId / slug / title', () => {
+  it('parsePublishInteraction：取出 userId / slug / title / category', () => {
     const payload = { type: 'block_actions', user: { id: 'U9' }, actions: [btn().elements[0]] };
     const r = parsePublishInteraction(payload);
     expect(r.userId).toBe('U9');
     expect(r.slug).toBe('typhoon-2026-closures');
     expect(r.title).toBe('颱風停班課整理');
+    expect(r.category).toBe('lifestyle');
   });
 
   it('parsePublishInteraction：slug 不合法 / 非 JSON 丟錯', () => {

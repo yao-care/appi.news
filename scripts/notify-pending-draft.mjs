@@ -12,7 +12,7 @@ import { pathToFileURL } from 'node:url';
 import { postMessage } from './lib/slack.mjs';
 import { buildPublishButton } from './lib/slack-interaction.mjs';
 import { buildDoneMessage } from './slack-actions-server.mjs';
-import { SLACK_CHANNEL } from './lib/report-config.mjs';
+import { channelForCategory } from './lib/report-config.mjs';
 
 async function main() {
   const resultPath = process.argv[2];
@@ -42,11 +42,12 @@ async function main() {
   if (result.pendingApproval && result.slug) {
     blocks = [
       { type: 'section', text: { type: 'mrkdwn', text } },
-      buildPublishButton({ slug: result.slug, title: result.title }),
+      buildPublishButton({ slug: result.slug, title: result.title, category: result.category }),
     ];
   }
 
-  const r = await postMessage({ token, channel: SLACK_CHANNEL, text, blocks });
+  const channel = channelForCategory(result.category); // 路由到對應分類頻道（如生活）
+  const r = await postMessage({ token, channel, text, blocks });
   console.log('sent ts=' + r.ts);
 }
 

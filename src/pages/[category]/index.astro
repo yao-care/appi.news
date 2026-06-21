@@ -7,6 +7,7 @@ import {
   getAuthorMap,
   byCategory,
 } from '@/utils/content';
+import { url } from '@/utils/url';
 
 const PAGE_SIZE = 18;
 
@@ -35,6 +36,14 @@ const pageArticles = inCat.slice(0, PAGE_SIZE);
   path={`/${category.slug}/`}
   ogImage={`og/${category.slug}.png`}
 >
+  {category.slug === 'sports' && (
+    <section class="sports-submit-cta">
+      <div class="container">
+        <span>🏅 學校、隊伍或主辦單位嗎？</span>
+        <a href={url('/sports/submit/')}>提供你們的學生賽事資訊 →</a>
+      </div>
+    </section>
+  )}
   <CategoryChannel
     category={category}
     pageArticles={pageArticles}
@@ -45,3 +54,11 @@ const pageArticles = inCat.slice(0, PAGE_SIZE);
     showHero={true}
   />
 </BaseLayout>
+
+<style>
+  .sports-submit-cta { background: var(--color-surface-alt, #f4f6f8); border-radius: 10px; margin: 1rem auto 0; }
+  .sports-submit-cta .container { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; padding: 0.8rem 1rem; }
+  .sports-submit-cta span { font-weight: 600; }
+  .sports-submit-cta a { font-weight: 700; color: var(--color-accent, #1a6); text-decoration: none; }
+  .sports-submit-cta a:hover { text-decoration: underline; }
+</style>

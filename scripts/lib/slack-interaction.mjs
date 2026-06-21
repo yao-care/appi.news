@@ -104,9 +104,9 @@ export function parseModalSubmission(payload) {
   return { userId: payload.user?.id, viewpoint: String(viewpoint).trim(), length, publishDate, topic };
 }
 
-/** 待審草稿完成訊息要附的「發佈」鈕（value 帶 slug + 標題，供端點解析）。 */
-export function buildPublishButton({ slug, title }) {
-  const value = JSON.stringify({ slug, title: title ?? '' });
+/** 待審草稿完成訊息要附的「發佈」鈕（value 帶 slug + 標題 + 分類，供端點解析與回報路由）。 */
+export function buildPublishButton({ slug, title, category }) {
+  const value = JSON.stringify({ slug, title: title ?? '', category: category ?? '' });
   if (value.length > 2000) throw new Error(`發佈鈕 value 超過 2000 字元（${value.length}）`);
   return {
     type: 'actions',
@@ -116,7 +116,7 @@ export function buildPublishButton({ slug, title }) {
   };
 }
 
-/** 解析「發佈」鈕點擊（block_actions）→ { userId, slug, title }。失敗丟錯。 */
+/** 解析「發佈」鈕點擊（block_actions）→ { userId, slug, title, category }。失敗丟錯。 */
 export function parsePublishInteraction(payload) {
   if (payload?.type !== 'block_actions') throw new Error('非 block_actions');
   const action = payload.actions?.find((a) => a?.action_id === PUBLISH_ACTION_ID) ?? payload.actions?.[0];
@@ -128,7 +128,7 @@ export function parsePublishInteraction(payload) {
     throw new Error('發佈鈕 value 非合法 JSON');
   }
   if (!data?.slug || !/^[a-z0-9][a-z0-9-]*$/.test(data.slug)) throw new Error('發佈鈕 slug 不合法');
-  return { userId: payload.user?.id, slug: data.slug, title: data.title || '' };
+  return { userId: payload.user?.id, slug: data.slug, title: data.title || '', category: data.category || '' };
 }
 
 /** 判斷一個 block_actions payload 是不是「發佈」鈕（用來在端點分流）。 */

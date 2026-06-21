@@ -283,6 +283,7 @@ function main() {
   const result = {
     title: parsed.data.title || job.title,
     url,
+    category: job.category, // 給 Slack 回報路由到對應分類頻道
     scheduled: schedule.scheduled,
     dateYmd: schedule.dateYmd,
     excerpt: parsed.data.excerpt || parsed.data.description || '',

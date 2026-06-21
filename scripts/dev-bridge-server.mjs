@@ -14,7 +14,7 @@
 
 import { spawnSync } from 'node:child_process';
 import { createServer } from 'node:http';
-import { mkdirSync, existsSync, readFileSync, writeFileSync, renameSync } from 'node:fs';
+import { mkdirSync, existsSync, readFileSync, writeFileSync, renameSync, symlinkSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { query } from '@anthropic-ai/claude-agent-sdk';
@@ -99,6 +99,16 @@ function ensureWorktree(threadTs) {
   mkdirSync(WT_ROOT, { recursive: true });
   // -B：分支已存在就重設到 origin/main；新建 worktree 指向它
   git(['worktree', 'add', '-B', branch, wt, 'origin/main']);
+  // worktree 沒有 node_modules（gitignore），但與 base clone 同一 lockfile；
+  // 共用 base 的 node_modules（pnpm 連到全域 store），讓 pnpm build/check:links 能跑。
+  const baseModules = `${BASE_CLONE}/node_modules`;
+  if (existsSync(baseModules) && !existsSync(`${wt}/node_modules`)) {
+    try {
+      symlinkSync(baseModules, `${wt}/node_modules`, 'dir');
+    } catch (e) {
+      console.error('node_modules symlink 失敗（build 可能需自行 pnpm install）', e.message);
+    }
+  }
   return { branch, worktree: wt };
 }
 

@@ -1,5 +1,43 @@
 ---
 import PolicyLayout from '@/layouts/PolicyLayout.astro';
+import JsonLd from '@/components/seo/JsonLd.astro';
+import { faqLd } from '@/utils/jsonld';
+import { url } from '@/utils/url';
+
+// 機構級常見問題（內容皆改寫自本頁與編輯方針，未杜撰）。
+// 同一份資料：(1) 頁面可見區段；(2) FAQPage 結構化資料 → 餵 AI 問答與搜尋常見問題。
+const faqItems = [
+  {
+    question: 'APPI News 是什麼樣的媒體？',
+    answer:
+      'APPI News（Asia-Pacific Press & Insight，亞太專業觀點）是一個以專業作者為主體的觀點媒體，集結醫療、科技、財經、國際、運動與生活等領域的第一線工作者，透過新聞、評論、專欄、專題、專訪與深度分析，協助讀者理解各領域的重要議題。',
+  },
+  {
+    question: 'APPI News 涵蓋哪些領域？',
+    answer:
+      '涵蓋焦點、國際、健康、科技、財經、運動、生活與專欄等分類。其中健康頻道 APPI Health 聚焦醫療、預防醫學、營養、中醫與整合醫學、心理健康、高齡健康、醫療科技與健康政策等內容，在來源檢核與免責揭露上採取更嚴謹的標準。',
+  },
+  {
+    question: 'APPI News 的內容如何查證與更正？',
+    answer:
+      '內容在發布前會就事實、引用與數據進行查證；發布後若發現錯誤會儘速更正，並視情況在文末加註更正說明。讀者若發現內容有誤，歡迎透過「聯絡我們」指正，我們會依編輯方針處理。',
+  },
+  {
+    question: '商業合作內容會如何揭露？',
+    answer:
+      'APPI 接受新聞稿、品牌專欄、企業專訪等商業合作，但所有商業內容都會在顯著位置清楚標示為「合作」「贊助」「新聞稿」或「品牌專欄」，不會以中立新聞的形式呈現。商業關係不會影響編輯對事實的判斷。',
+  },
+  {
+    question: 'APPI News 提供醫療或投資建議嗎？',
+    answer:
+      'APPI 不是醫療診斷平台，也不提供個人化的醫療、法律或投資建議。涉及用藥、療程、個人健康或財務決策時，請諮詢專業人員。',
+  },
+  {
+    question: '如何成為 APPI News 的作者？',
+    answer:
+      'APPI 以多作者、多領域的專業觀點為核心，歡迎具專業背景者投稿。可透過「投稿成為作者」頁面了解合作形式與加入方式。',
+  },
+];
 ---
 <PolicyLayout
   title="關於 APPI"
@@ -46,4 +84,20 @@ import PolicyLayout from '@/layouts/PolicyLayout.astro';
     醫療、財經、法律等高風險主題，會經過更嚴謹的審閱與檢核流程。
     無論製作過程如何，專業判斷與內容責任，始終由作者與編輯部共同承擔。
   </p>
+
+  <h2>常見問題</h2>
+  {
+    faqItems.map((item) => (
+      <Fragment>
+        <h3>{item.question}</h3>
+        <p>{item.answer}</p>
+      </Fragment>
+    ))
+  }
+  <p>
+    其他問題歡迎透過<a href={url('/contact/')}>聯絡我們</a>提出，
+    或參考<a href={url('/editorial-policy/')}>編輯方針</a>與<a href={url('/submit/')}>投稿成為作者</a>。
+  </p>
+
+  <JsonLd data={faqLd(faqItems)} />
 </PolicyLayout>

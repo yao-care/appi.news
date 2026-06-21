@@ -61,7 +61,13 @@ const keywordList = (keywords ?? []).filter(Boolean);
 {authorName && <meta name="author" content={authorName} />}
 {keywordList.length > 0 && <meta name="keywords" content={keywordList.join(', ')} />}
 <link rel="canonical" href={canonical} />
-{noindex && <meta name="robots" content="noindex, nofollow" />}
+{
+  noindex ? (
+    <meta name="robots" content="noindex, nofollow" />
+  ) : (
+    <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  )
+}
 
 <!-- Open Graph -->
 <meta property="og:site_name" content={SITE.name} />

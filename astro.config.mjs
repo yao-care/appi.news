@@ -48,6 +48,41 @@ function scheduledPreviewPaths() {
 const previewPaths = scheduledPreviewPaths();
 
 /**
+ * 收集每篇已發佈文章的 lastmod（updatedDate ?? publishDate），供 sitemap serialize 用。
+ * key 為文章 slug，serialize 時由 URL 的 /articles/<slug>/ 取回對應日期。
+ * 排程草稿（publishDate 在未來）不納入（它們本來就被 filter 排除在 sitemap 外）。
+ */
+function articleLastmods() {
+  const dir = new URL('./src/content/articles/', import.meta.url);
+  const now = Date.now();
+  const map = new Map();
+  for (const f of readdirSync(dir)) {
+    if (!f.endsWith('.md') && !f.endsWith('.mdx')) continue;
+    const raw = readFileSync(new URL(f, dir), 'utf-8');
+    const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if (!m) continue;
+    let parsed;
+    try {
+      parsed = yaml.load(m[1]);
+    } catch {
+      continue;
+    }
+    if (!parsed || typeof parsed !== 'object') continue;
+    const d = /** @type {Record<string, any>} */ (parsed);
+    if (d.draft || d.status === 'draft' || d.status === 'archived') continue;
+    if (!d.publishDate) continue;
+    const pub = new Date(d.publishDate).getTime();
+    if (pub > now) continue; // 排程草稿不進 sitemap
+    const slug = d.slug || f.replace(/\.mdx?$/, '');
+    const last = d.updatedDate && new Date(d.updatedDate).getTime() > pub ? d.updatedDate : d.publishDate;
+    const iso = new Date(last).toISOString();
+    map.set(slug, iso);
+  }
+  return map;
+}
+const lastmods = articleLastmods();
+
+/**
  * ── 換網域只需改這裡 ──────────────────────────────────────────────
  * 目前：自訂網域 → https://appi.news/（DNS 已切到 GitHub Pages、public/CNAME 已就位）
  * 若要退回 GitHub 專案頁 https://yao-care.github.io/appi.news/：
@@ -121,6 +156,16 @@ export default defineConfig({
         !page.includes('/admin') &&
         !page.includes('/choice') &&
         ![...previewPaths].some((p) => page.endsWith(p)),
+      // 為文章頁補 lastmod（updatedDate ?? publishDate），幫爬蟲分配抓取預算。
+      // 不設 priority/changefreq —— Google 已明說忽略，加了只是雜訊。
+      serialize(item) {
+        // pathname 對非 ASCII（中文）slug 會是 percent-encoded，需解碼才對得上 map key。
+        const m = new URL(item.url).pathname.match(/\/articles\/([^/]+)\/$/);
+        const slug = m ? decodeURIComponent(m[1]) : undefined;
+        const iso = slug && lastmods.get(slug);
+        if (iso) item.lastmod = iso;
+        return item;
+      },
     }),
     mdx(),
   ],

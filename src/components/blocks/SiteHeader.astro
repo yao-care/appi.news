@@ -35,7 +35,11 @@ function isActive(href: string): boolean {
         {
           navItems.map((item) => (
             <li>
-              <a href={navUrl(item.href)} class={isActive(item.href) ? 'active' : ''}>
+              <a
+                href={navUrl(item.href)}
+                class={isActive(item.href) ? 'active' : ''}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+              >
                 {item.label}
               </a>
             </li>
@@ -59,7 +63,14 @@ function isActive(href: string): boolean {
     <ul>
       {
         navItems.map((item) => (
-          <li><a href={navUrl(item.href)}>{item.label}</a></li>
+          <li>
+            <a
+              href={navUrl(item.href)}
+              aria-current={isActive(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
         ))
       }
       <li><a href={navUrl('/search/')}>搜尋</a></li>
@@ -70,15 +81,36 @@ function isActive(href: string): boolean {
 <script>
   const toggle = document.getElementById('navToggle');
   const menu = document.getElementById('mobileNav');
-  toggle?.addEventListener('click', () => {
-    const open = menu?.hasAttribute('hidden');
+
+  function setOpen(open: boolean) {
+    if (!menu || !toggle) return;
     if (open) {
-      menu?.removeAttribute('hidden');
+      menu.removeAttribute('hidden');
       toggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden'; // 開啟時鎖背景捲動
     } else {
-      menu?.setAttribute('hidden', '');
+      menu.setAttribute('hidden', '');
       toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     }
+  }
+
+  toggle?.addEventListener('click', () => setOpen(menu?.hasAttribute('hidden') ?? false));
+  // 點選單內連結後關閉
+  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  // 按 Esc 關閉
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
+  });
+  // 點選單外部關閉（toggle 自身的點擊由上面處理，這裡排除）
+  document.addEventListener('click', (e) => {
+    if (!menu || menu.hasAttribute('hidden')) return;
+    const t = e.target as Node;
+    if (!menu.contains(t) && !toggle?.contains(t)) setOpen(false);
+  });
+  // 視窗放大到桌機寬度時（選單改由 CSS 隱藏）一併解除捲動鎖定
+  window.matchMedia('(min-width: 1001px)').addEventListener('change', (e) => {
+    if (e.matches) setOpen(false);
   });
 </script>
 

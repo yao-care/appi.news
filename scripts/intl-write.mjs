@@ -73,6 +73,8 @@ function flattenPicks(picks) {
   for (const region of Object.keys(picks)) {
     for (const s of picks[region]) out.push({ ...s, region });
   }
+  // 最熱的先處理（樣稿有料；--limit 測試時先碰到強題）。
+  out.sort((a, b) => b.numSources - a.numSources || b.numArticles - a.numArticles);
   return out;
 }
 

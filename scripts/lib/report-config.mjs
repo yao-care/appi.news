@@ -14,7 +14,7 @@ export const CATEGORY_CHANNELS = {
   tech: 'C0BC105LB18', // 科技
   finance: 'C0BC4JR40A0', // 財經
   sports: 'C0BC106C42E', // 運動
-  lifestyle: 'C0BBXBJ7W4V', // 生活
+  lifestyle: 'C0BBKFCD6MV', // 生活
 };
 
 // 「請 claude 幫我做」開發頻道（讀此頻道訊息 → 跑 Claude）。

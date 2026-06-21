@@ -23,7 +23,7 @@ describe('channelForCategory — 分類路由', () => {
     expect(channelForCategory('tech')).toBe('C0BC105LB18');
     expect(channelForCategory('international')).toBe('C0BBKF9TN23');
     expect(channelForCategory('sports')).toBe('C0BC106C42E');
-    expect(channelForCategory('lifestyle')).toBe('C0BBXBJ7W4V');
+    expect(channelForCategory('lifestyle')).toBe('C0BBKFCD6MV');
   });
   it('未知/未給 → 預設頻道', () => {
     expect(channelForCategory('nope')).toBe(SLACK_CHANNEL);

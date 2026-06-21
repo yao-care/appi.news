@@ -10,10 +10,11 @@
 ## 設定
 ```bash
 cd workers/sports-submission
-wrangler secret put SLACK_WEBHOOK_URL   # 必填：Slack incoming webhook
+wrangler secret put SLACK_BOT_TOKEN     # 必填：與全站一致的 bot token（chat.postMessage）
 wrangler secret put TURNSTILE_SECRET    # 選配：設了才驗 Turnstile
 wrangler deploy
 ```
+收件頻道 `SLACK_CHANNEL` 在 `wrangler.toml`（運動台 `C0BC106C42E`）。bot 須在該頻道內。
 `ALLOWED_ORIGIN` 在 `wrangler.toml`，換網域要同步改並 redeploy（CORS）。
 
 ## 前端

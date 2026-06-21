@@ -1,7 +1,8 @@
 // Slack chat.postMessage 薄封裝。Slack 即使 HTTP 200 也可能 ok:false，要看 body。
-export async function postMessage({ token, channel, text, blocks }) {
+export async function postMessage({ token, channel, text, blocks, thread_ts }) {
   const payload = { channel, text };
   if (blocks) payload.blocks = blocks;
+  if (thread_ts) payload.thread_ts = thread_ts; // 在 thread 內回覆（dev-bridge 用）
   const res = await fetch('https://slack.com/api/chat.postMessage', {
     method: 'POST',
     headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json; charset=utf-8' },

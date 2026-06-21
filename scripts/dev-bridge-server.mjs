@@ -245,7 +245,14 @@ async function main() {
   }
   const auth = await slackGet('auth.test', {});
   botUserId = auth.user_id;
-  console.log(`dev-bridge 啟動：bot=${auth.user}(${botUserId}) channel=${DEV_CHANNEL} base=${BASE_CLONE} poll=${POLL_MS}ms`);
+
+  // 冷啟動：state 為空時把游標設到「現在」，只回應啟動後的新訊息，
+  // 不回放頻道歷史（否則會把舊訊息全當新對話、開一堆 worktree）。
+  if (!state.channelLastTs) {
+    state.channelLastTs = (Date.now() / 1000).toFixed(6);
+    saveState(state);
+  }
+  console.log(`dev-bridge 啟動：bot=${auth.user}(${botUserId}) channel=${DEV_CHANNEL} base=${BASE_CLONE} poll=${POLL_MS}ms since=${state.channelLastTs}`);
 
   // 健康檢查（本機）：pm2 / 監控用
   createServer((req, res) => {

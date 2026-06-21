@@ -7,7 +7,9 @@ account_id = "9d9e58b5e0d1657b8f74bd2cbfc91ee3"
 [vars]
 # 投稿表單頁所在來源；CORS 必須對齊（換網域要同步改並 redeploy，見 ai-suggest CORS 記憶）。
 ALLOWED_ORIGIN = "https://appi.news"
+# 收投稿的 Slack 頻道 ID（運動台）；與 report-config.mjs CATEGORY_CHANNELS.sports 一致。
+SLACK_CHANNEL = "C0BC106C42E"
 
 # 機密用 wrangler secret put（勿寫進此檔）：
-#   wrangler secret put SLACK_WEBHOOK_URL   # Slack incoming webhook，收投稿給編輯審
+#   wrangler secret put SLACK_BOT_TOKEN     # 與全站一致的 bot token，chat.postMessage 收投稿給編輯審
 #   wrangler secret put TURNSTILE_SECRET    # （選配）設了才驗 Turnstile 防機器人灌投稿

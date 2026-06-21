@@ -6,7 +6,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 //
 // 部署後把下面 WORKER_URL 換成實際 worker 網址（wrangler deploy 後取得）。
 // 若啟用 Turnstile 防濫用，填 TURNSTILE_SITEKEY 並取消表單內 widget 註解。
-const WORKER_URL = 'https://appi-news-sports-submission.<your-subdomain>.workers.dev/submit';
+const WORKER_URL = 'https://appi-news-sports-submission.lightman-chang.workers.dev/submit';
 const TURNSTILE_SITEKEY = ''; // 選配
 // Worker 還沒部署（URL 仍是 placeholder）時，顯示「建置中」而非壞掉的表單。
 const ready = !WORKER_URL.includes('<your-subdomain>');

@@ -12,7 +12,8 @@
 
 export interface Env {
   ALLOWED_ORIGIN: string; // 例：https://appi.news
-  SLACK_WEBHOOK_URL: string; // wrangler secret：Slack incoming webhook（轉投稿給編輯審）
+  SLACK_BOT_TOKEN: string; // wrangler secret：bot token（與全站一致，chat.postMessage 轉投稿給編輯審）
+  SLACK_CHANNEL: string; // wrangler.toml var：收投稿的頻道 ID（運動台 C0BC106C42E）
   TURNSTILE_SECRET?: string; // wrangler secret：設了才驗 Turnstile（防機器人灌投稿）
 }
 
@@ -155,14 +156,21 @@ async function handle(req: Request, env: Env): Promise<Response> {
   const errors = validateSubmission(payload);
   if (errors.length) return json({ error: errors.join('；') }, 422, env);
 
-  if (!env.SLACK_WEBHOOK_URL) return json({ error: '伺服器未設定收件管道' }, 500, env);
+  if (!env.SLACK_BOT_TOKEN || !env.SLACK_CHANNEL) return json({ error: '伺服器未設定收件管道' }, 500, env);
   const submission = sanitize(payload);
-  const slackRes = await fetch(env.SLACK_WEBHOOK_URL, {
+  // 與全站一致：bot token + chat.postMessage（見 scripts/lib/slack.mjs）。
+  // Slack 即使 HTTP 200 也可能 ok:false，必須看 body。
+  const slackRes = await fetch('https://slack.com/api/chat.postMessage', {
     method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ text: `🏅 學生賽事投稿：${submission.eventName}`, blocks: buildSlackBlocks(submission) }),
+    headers: { Authorization: `Bearer ${env.SLACK_BOT_TOKEN}`, 'content-type': 'application/json; charset=utf-8' },
+    body: JSON.stringify({
+      channel: env.SLACK_CHANNEL,
+      text: `🏅 學生賽事投稿：${submission.eventName}`,
+      blocks: buildSlackBlocks(submission),
+    }),
   });
-  if (!slackRes.ok) return json({ error: '送出失敗，請稍後再試' }, 502, env);
+  const slackJson = (await slackRes.json().catch(() => ({ ok: false }))) as { ok?: boolean };
+  if (!slackJson.ok) return json({ error: '送出失敗，請稍後再試' }, 502, env);
 
   return json({ ok: true, message: '已收到投稿，編輯會人工審核後與你聯繫。感謝提供！' }, 200, env);
 }

@@ -57,10 +57,11 @@ description: APPI News 每週數據週報。讀 GA4+GSC 四區塊數據、跑外
 ```
 - `suggestions` 每項欄位＝newsroom 工單欄位（`title/conclusion/angle/signal/category/subcategory`）。**`category` 用 `src/config/categories.ts` 的合法 slug**；只有 `tech` 會掛按鈕。
 - 沒強建議時 `suggestions` 給 `[]`，並在 blocks 寫明「本週無強建議」。
-跑 `node scripts/slack-post.mjs /tmp/weekly-report-payload.json` 發送。回報 `sent ts=` 即成功。
+跑 `node scripts/slack-post.mjs /tmp/weekly-report-payload.json authors` 發送（**週報是跨類訊息，一律發作者群**；不加 `authors` 會被第一則 suggestion 的 category 帶去分類頻道——這是早期的坑）。回報 `sent ts=` 即成功。
+- suggestion 的「我要寫這題」按鈕 value 自帶 category，發在作者群也照樣能觸發該分類的自動產文，不受頻道影響。
 **發送成功後**（若有 `suggestions`），跑 `node scripts/topic-ledger.mjs append /tmp/weekly-report-payload.json` 把建議記進帳本，每日雷達才不會重複推同題。
 
 ## 失敗處理
 任一步驟致命失敗（資料抓不到、token 失效）：把
 `{ "text": "⚠️ APPI News 週報失敗：<原因一句>" }` 寫到 `/tmp/weekly-report-payload.json`，
-跑 `node scripts/slack-post.mjs /tmp/weekly-report-payload.json`，讓失敗在 Slack 出聲，不要靜默。
+跑 `node scripts/slack-post.mjs /tmp/weekly-report-payload.json authors`，讓失敗在作者群出聲，不要靜默。

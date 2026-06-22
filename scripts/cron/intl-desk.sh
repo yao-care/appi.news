@@ -19,7 +19,6 @@ if [ "$rc" -eq 0 ]; then
   if [ -n "$urls" ]; then
     n=$(grep -c . <<<"$urls")
     node scripts/cron-report.mjs --category international --text "$(printf '🌍 國際編譯自動上架 %s 篇（%s）：\n%s' "$n" "$ts" "$urls")" || true
-    node scripts/cron-report.mjs --text "✅ $TASK：上架 $n 篇（$ts）" || true
   else
     node scripts/cron-report.mjs --text "✅ $TASK：本次無上架（無突出熱題/已寫過/無可授權圖）（$ts）" || true
   fi

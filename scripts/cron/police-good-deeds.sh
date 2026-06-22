@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 每週 cron：警消好人好事（掃各地警局新聞稿→暖聞→自動上架）。台北週三 14:30 = UTC 06:30。
+# 每日 cron：警消好人好事（掃各地警局新聞稿→暖聞→自動上架）。台北 11:50 = UTC 03:50。
 TASK="警消好人好事"
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
@@ -18,7 +18,6 @@ if [ "$rc" -eq 0 ]; then
   url=$(grep -oE 'PUBLISHED=\S+' <<<"$out" | sed 's/PUBLISHED=//' | head -1)
   if [ -n "$url" ]; then
     node scripts/cron-report.mjs --category lifestyle --text "$(printf '🚓 警消好人好事已上架（%s）：\n%s' "$ts" "$url")" || true
-    node scripts/cron-report.mjs --text "✅ $TASK：已上架（$ts）" || true
   else
     node scripts/cron-report.mjs --text "✅ $TASK：本次無新好人好事（未上架）（$ts）" || true
   fi

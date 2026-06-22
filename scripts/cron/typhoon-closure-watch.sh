@@ -11,7 +11,8 @@ set -a
 source "$HOME/.config/appi-news/report.env"
 set +a
 ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
-out="$(claude -p "/typhoon-closure-watch" 2>&1)"; rc=$?
+out="$(timeout 1200 claude -p "/typhoon-closure-watch" 2>&1)"; rc=$?
+[ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
 printf '%s\n' "$out"
 if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond' <<<"$out"; then
   # 安靜模式：只在「有停課」才報（已產待審草稿）；無停課的時段不發，避免每小時洗頻。

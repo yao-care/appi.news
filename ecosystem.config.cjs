@@ -14,17 +14,5 @@ module.exports = {
       out_file: '/root/.pm2/logs/appinews-slack-actions-out.log',
       error_file: '/root/.pm2/logs/appinews-slack-actions-err.log',
     },
-    {
-      // 子專案 3：dev 頻道「請 claude 幫我做」對話橋接（輪詢式，不需對外埠）。
-      // 部署：push → publisher pull → pm2 restart appinews-dev-bridge && pm2 save
-      // 健康：curl -s http://127.0.0.1:3400/health   # 應回 ok
-      // 前置：須先 git clone <origin> /root/appi.news-devbridge（專屬工作 clone）。
-      name: 'appinews-dev-bridge',
-      script: 'scripts/dev-bridge-start.sh',
-      interpreter: 'bash',
-      cwd: __dirname,
-      out_file: '/root/.pm2/logs/appinews-dev-bridge-out.log',
-      error_file: '/root/.pm2/logs/appinews-dev-bridge-err.log',
-    },
   ],
 };

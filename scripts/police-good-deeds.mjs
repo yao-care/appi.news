@@ -12,6 +12,7 @@ import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildPolicePrompt, parsePoliceResult } from './lib/police-good-deeds.mjs';
+import { pushToMain } from './lib/git-publish.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
 const has = (n) => process.argv.includes(`--${n}`);
@@ -70,7 +71,8 @@ function main() {
   sh('git', ['add', '--', ARTICLES_DIR, 'public/covers', 'public/images']);
   sh('git', ['commit', '-m', `feat(article): 警消好人好事整理\n\n整理自各地警察局公開新聞稿、附原文出處、編輯部署名。`]);
   if (go) {
-    sh('git', ['push']);
+    const _pr = pushToMain({ cwd: process.cwd() });
+    if (!_pr.ok) die(`推送 main 失敗：${_pr.err}`);
     console.log(`✓ 已上架。${v.slug ? `PUBLISHED=https://appi.news/articles/${v.slug}/` : ''}`);
   } else {
     console.log(`✓ 已 stage（未 push）。STAGED=${v.slug || ''}`);

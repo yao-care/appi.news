@@ -15,6 +15,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
+import { pushToMain } from './lib/git-publish.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
 
@@ -99,7 +100,8 @@ function main() {
   sh('git', ['add', '--', file]);
   sh('git', ['commit', '-m', `feat(article): 核可上線 — ${slug}\n\n事實稿待審草稿經人工核可，轉正立即發佈。`]);
   console.log('→ push');
-  sh('git', ['push']);
+  const _pr = pushToMain({ cwd: process.cwd() });
+  if (!_pr.ok) die(`推送 main 失敗：${_pr.err}`);
   const url = `https://appi.news/articles/${slug}/`;
   console.log('✓ 已核可上線。');
   console.log(`PUBLISHED_URL=${url}`);

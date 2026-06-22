@@ -13,6 +13,7 @@ import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildIntlPrompt, parseIntlResult } from './lib/intl-write.mjs';
+import { pushToMain } from './lib/git-publish.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
 
@@ -137,7 +138,8 @@ function main() {
   const updN = wrote.filter((x) => x.action === 'update').length;
   sh('git', ['commit', '-m', `feat(international): 國際編譯自動產文（新 ${newN}、更新 ${updN}）\n\nGDELT 選題＋事實編譯，編輯部署名、附原文出處。`]);
   if (go) {
-    sh('git', ['push']);
+    const _pr = pushToMain({ cwd: process.cwd() });
+    if (!_pr.ok) die(`推送 main 失敗：${_pr.err}`);
     console.log(`✓ 已上線：新 ${newN}、更新 ${updN} 篇。`);
     for (const x of wrote) if (x.slug) console.log(`PUBLISHED=https://appi.news/articles/${x.slug}/`);
   } else {

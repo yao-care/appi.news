@@ -3,9 +3,9 @@
 TASK="颱風停班課"
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
-exec 9>/tmp/appi-publisher-cron.lock
-flock -w 1800 9 || { echo "取鎖逾時，略過本次（颱風安靜模式：不報）"; exit 0; }
-if [ "${PUBLISH_ISOLATED:-}" = "1" ]; then git fetch -q origin --prune && git checkout -q main && git reset -q --hard origin/main && git clean -qfd || echo "⚠️ 隔離同步失敗，續跑"; fi
+# 多工：在自己的臨時 worktree 裡跑（off origin/main），與其他 publisher cron 並行、互不洗檔。
+source "$(dirname "$0")/_worktree.sh"
+cron_enter_worktree "typhoon" || { echo "無法建 worktree，略過本次（颱風安靜模式：不報）"; exit 0; }
 set -a
 # shellcheck disable=SC1090
 source "$HOME/.config/appi-news/report.env"

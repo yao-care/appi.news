@@ -2,8 +2,8 @@
 dist/
 .astro/
 
-# dependencies
-node_modules/
+# dependencies（不帶斜線：連 cron worktree 共用的 node_modules symlink 也一併忽略）
+node_modules
 
 # logs
 *.log

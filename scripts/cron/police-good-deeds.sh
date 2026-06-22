@@ -3,9 +3,9 @@
 TASK="警消好人好事"
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
-exec 9>/tmp/appi-publisher-cron.lock
-flock -w 1800 9 || { echo "取鎖逾時"; node scripts/cron-report.mjs --text "⏳ $TASK 略過（另一 publisher cron 執行中）" 2>/dev/null || true; exit 0; }
-if [ "${PUBLISH_ISOLATED:-}" = "1" ]; then git fetch -q origin --prune && git checkout -q main && git reset -q --hard origin/main && git clean -qfd || echo "⚠️ 隔離同步失敗，續跑"; fi
+# 多工：在自己的臨時 worktree 裡跑（off origin/main），與其他 publisher cron 並行、互不洗檔。
+source "$(dirname "$0")/_worktree.sh"
+cron_enter_worktree "police" || { node "$PUBLISHER/scripts/cron-report.mjs" --text "⚠️ $TASK：無法建 worktree，略過本次" 2>/dev/null || true; exit 0; }
 set -a
 # shellcheck disable=SC1090
 source "$HOME/.config/appi-news/report.env"

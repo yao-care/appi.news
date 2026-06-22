@@ -24,6 +24,7 @@ import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { validateJob, normalizeJob } from './lib/newsroom-job.mjs';
+import { pushToMain } from './lib/git-publish.mjs';
 import { nextOpenPublishDate, takenDatesFromContents } from './lib/publish-slot.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
@@ -322,7 +323,8 @@ function main() {
   sh('git', ['commit', '-m', `feat(article): 自動產文 — ${job.title}\n\n${commitBody}`]);
   if (go) {
     console.log('→ push');
-    sh('git', ['push']);
+    const _pr = pushToMain({ cwd: process.cwd() });
+    if (!_pr.ok) die(`推送 main 失敗：${_pr.err}`);
     if (schedule.pendingApproval) {
       console.log('✓ 已產出待審草稿並上推（建預覽頁、不進列表、不自動上線）。核可後才轉正。');
       if (slug) console.log(`PENDING_APPROVAL_SLUG=${slug}`); // 給外層解析

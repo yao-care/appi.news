@@ -112,9 +112,9 @@ function main() {
   console.log(`→ 國際編譯：${stories.length} 則，分支 ${branch}（${go ? '寫作後 push 上線' : 'stage 不 push'}）`);
 
   // 時間預算：每則寫作約 6~7 分鐘，cron 外層 timeout 1200s。預設只在「開新題前」still 在
-  // 預算內才續寫，故必須讓「預算 + 一則最久耗時 + 尾段(check:links/commit/push)」< 1200s，
-  // 否則會像之前那樣被 timeout 砍在迴圈中途、整批 0 上架。預設 600s（env 可調）。
-  const budgetMs = Number(process.env.INTL_TIME_BUDGET_MS || 600_000);
+  // 預算內才續寫，故必須讓「預算 + 一則最久耗時 + 尾段(build~126s + check:links + push)」< 1200s，
+  // 否則會像之前那樣被 timeout 砍在迴圈中途、整批 0 上架。預設 540s（含 build 後仍留足尾段；env 可調）。
+  const budgetMs = Number(process.env.INTL_TIME_BUDGET_MS || 540_000);
   const start = Date.now();
   const results = [];
   let skipped = 0;
@@ -141,6 +141,11 @@ function main() {
     console.log(`\n✓ 本批無產出（全部跳過/無進展）。new/update=${wrote.length}`);
     return;
   }
+  // worktree 每次都是全新 checkout、沒有 dist/，check:links 直接讀 dist 會 ENOENT。
+  // 先 build 出 dist（含 pagefind，否則 /search/ 會少 /pagefind/ 連結）再檢查，與 deploy.yml 同把關。
+  console.log('\n→ pnpm build（產 dist 供 check:links；worktree 無殘留 dist）');
+  try { sh('pnpm', ['build'], { stdio: 'inherit' }); }
+  catch (e) { die(`build 失敗，不發佈（改動留工作區）：${e.message}`); }
   console.log('\n→ pnpm check:links');
   try { sh('pnpm', ['check:links'], { stdio: 'inherit' }); }
   catch (e) { die(`check:links 未過，不發佈（改動留工作區）：${e.message}`); }

@@ -17,10 +17,10 @@ printf '%s\n' "$out"
 if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond' <<<"$out"; then
   # 安靜模式：只在「有停課」才報（已產待審草稿）；無停課的時段不發，避免每小時洗頻。
   if grep -q 'sent ts=' <<<"$out"; then
-    node scripts/cron-report.mjs --text "🌀 $TASK：偵測到停班課，已產待審草稿（發佈鈕在生活台）（$ts）" || true
+    node scripts/cron-report.mjs --category lifestyle --text "🌀 $TASK：偵測到停班課，已產待審草稿（發佈鈕在生活台）（$ts）" || true
   fi
   exit 0
 fi
 # 失敗只發 dev 頻道（站長指示：抓不到資料/出錯不要洗作者群與生活台；每小時跑，沒颱風時尤其不該吵）。
-node scripts/cron-report.mjs --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
+node scripts/cron-report.mjs --category lifestyle --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
 exit "$rc"

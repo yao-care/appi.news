@@ -15,7 +15,13 @@ description: APPI News 每日「科技類」選題雷達。掃外部熱題產出
 1. `.claude/skills/newsroom/author-memory.json`：已寫過/已排程的文章。
 2. 跑 `node scripts/topic-ledger.mjs recent`：近期**已推薦過但還沒被寫**的候選題（含 weekly-report 推過的，共用同一帳本）。把輸出當「最近已經丟過、不要再丟」的清單。
 
-## 步驟 2：雷達（外部熱題）
+## 步驟 2a：站內搜尋需求（GSC 訊號，與外部熱題並列）
+跑 `export GOOGLE_APPLICATION_CREDENTIALS=~/.config/appi-news/ga4-sa.json && node scripts/seo-opportunities.mjs`，取 `searchDemandTopics`（讀者實際在 Google 搜、本站還沒吃到點擊的高曝光 query）。
+- 把這些**高曝光低點擊的需求題優先納入**選題：若有 tech 相關的需求 query（AI / 資安 / 晶片 / 軟體工具…），優先補一篇對準它。
+- 這是「站內需求」訊號，與步驟 2b 的「外部熱題」**並列融合**，不是取代。需求題與熱題撞同一件事時，視為同一候選（仍走步驟 1 去重）。
+- 失敗（缺金鑰/網路/非 JSON）→ 降級成「只靠外部熱題」，繼續，不致命。
+
+## 步驟 2b：雷達（外部熱題）
 用 WebSearch / WebFetch 掃近 1–2 天熱題：
 - Anthropic / OpenAI / Google 官方 blog（模型發布、重大公告）
 - arXiv cs.AI / cs.CL 近期熱門

@@ -15,6 +15,13 @@ export async function GET(context: APIContext) {
   const articles = await getPublishedArticles();
   const authors = (await getAuthors()).filter((a) => a.data.active && authorHasPage(a));
 
+  // 重點文章：以「updatedDate ?? publishDate」新到舊取前 15 篇（已排除排程草稿）。
+  const lastTouched = (a: (typeof articles)[number]) =>
+    (a.data.updatedDate ?? a.data.publishDate).getTime();
+  const featuredArticles = [...articles]
+    .sort((a, b) => lastTouched(b) - lastTouched(a))
+    .slice(0, 15);
+
   const body = buildLlmsTxt({
     name: SITE.name,
     tagline: SITE.tagline,
@@ -34,7 +41,7 @@ export async function GET(context: APIContext) {
       description: c.description,
       url: absoluteUrl(`/${c.slug}/`, site),
     })),
-    articles: articles.slice(0, 20).map((a) => ({
+    articles: featuredArticles.map((a) => ({
       title: a.data.title,
       url: absoluteUrl(`/articles/${articleSlug(a)}/`, site),
       description: a.data.description,

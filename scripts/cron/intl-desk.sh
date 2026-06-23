@@ -15,10 +15,12 @@ out="$(timeout 1200 node scripts/intl-write.mjs --go 2>&1)"; rc=$?
 [ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
 printf '%s\n' "$out"
 if [ "$rc" -eq 0 ]; then
-  urls=$(grep -oE 'PUBLISHED=\S+' <<<"$out" | sed 's/PUBLISHED=//')
-  if [ -n "$urls" ]; then
-    n=$(grep -c . <<<"$urls")
-    node scripts/cron-report.mjs --category international --text "$(printf '🌍 國際編譯自動上架 %s 篇（%s）：\n%s' "$n" "$ts" "$urls")" || true
+  # PUBLISHED 行格式：PUBLISHED=<url> ｜ <title>。取整行內容，組成「• 標題 + 連結」。
+  pub=$(grep '^PUBLISHED=' <<<"$out" | sed 's/^PUBLISHED=//')
+  if [ -n "$pub" ]; then
+    n=$(grep -c . <<<"$pub")
+    list=$(awk -F' ｜ ' '{printf "• %s\n  %s\n", $2, $1}' <<<"$pub")
+    node scripts/cron-report.mjs --category international --text "$(printf '🌍 國際編譯自動上架 %s 篇（%s）：\n%s' "$n" "$ts" "$list")" || true
   else
     node scripts/cron-report.mjs --text "✅ $TASK：本次無上架（無突出熱題/已寫過/無可授權圖）（$ts）" || true
   fi

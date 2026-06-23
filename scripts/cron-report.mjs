@@ -9,7 +9,7 @@
 import { readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import { postMessage } from './lib/slack.mjs';
-import { channelForCategory, DEV_CHANNEL } from './lib/report-config.mjs';
+import { channelForCategory } from './lib/report-config.mjs';
 
 function arg(n) { const i = process.argv.indexOf(`--${n}`); return i >= 0 ? process.argv[i + 1] : undefined; }
 
@@ -19,8 +19,8 @@ async function main() {
   const category = arg('category'); // 未給 → channelForCategory 回預設作者群
   let text = process.argv.includes('--stdin') ? readFileSync(0, 'utf8') : arg('text');
   if (!text || !text.trim()) { console.error('缺 --text'); process.exit(1); }
-  // --dev：發到 dev 頻道（給「失敗但不想洗作者群/分類台」的安靜值勤回報用，如颱風守望抓取失敗）。
-  const channel = process.argv.includes('--dev') ? DEV_CHANNEL : channelForCategory(category);
+  // 未給 --category → 預設作者群（值勤/錯誤哨兵）。dev 台只給 @bot 開發需求，cron 一律不發 dev。
+  const channel = channelForCategory(category);
   const r = await postMessage({ token, channel, text });
   console.log('cron-report sent ts=' + r.ts);
 }

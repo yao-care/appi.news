@@ -252,7 +252,13 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
 
         <ReferenceList references={article.data.references} />
 
-        <DisclaimerBox type={article.data.disclaimerType} />
+        {/* 事實型外部/通訊社新聞（wire）不掛「一般資訊・不構成專業建議」這種給觀點/建議文用的免責聲明
+            （已有 wire 來源揭露框）；但顯式標了 medical/financial/legal 等高風險警語仍照常顯示。 */}
+        {
+          !(article.data.sourceType === 'wire' && article.data.disclaimerType === 'general') && (
+            <DisclaimerBox type={article.data.disclaimerType} />
+          )
+        }
 
         <TagList tags={article.data.tags} title="標籤" plain={preview} />
 

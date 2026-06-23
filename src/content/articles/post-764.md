@@ -1,18 +1,18 @@
 ---
-title: "黎巴嫩戰火未歇衝擊美伊協議　伊朗稱關閉荷莫茲海峽、美方否認"
+title: "美伊瑞士談判傳「進展令人鼓舞」　設荷莫茲海峽通訊線、黎巴嫩防衝突機制"
 slug: "lebanon-ceasefire-us-iran-hormuz"
-description: "以色列與真主黨6月持續交火，黎巴嫩衛生部稱單日至少21死，數度讓美伊停戰備忘錄瀕臨破裂。伊朗6月20日宣稱關閉荷莫茲海峽、美方反駁航運照常，雙方仍將於週日在瑞士展開技術性談判。"
-excerpt: "以色列與真主黨6月持續交火，黎巴嫩衛生部稱單日至少21死，數度讓美伊停戰備忘錄瀕臨破裂。伊朗6月20日宣稱關閉荷莫茲海峽、美方反駁航運照常，雙方仍將於週日在瑞士展開技術性談判。"
+description: "美伊6月21日在瑞士展開高層談判，斡旋的卡達與巴基斯坦稱進展「令人鼓舞」：雙方就荷莫茲海峽建立通訊線、為黎巴嫩戰事設「防止衝突小組」，並接續整週技術性談判，目標60天內敲定核子協議。此前以黎交火與荷莫茲「關閉」羅生門曾讓談判瀕臨破裂。"
+excerpt: "美伊6月21日在瑞士展開高層談判，斡旋的卡達與巴基斯坦稱進展「令人鼓舞」：雙方就荷莫茲海峽建立通訊線、為黎巴嫩戰事設「防止衝突小組」，並接續整週技術性談判，目標60天內敲定核子協議。此前以黎交火與荷莫茲「關閉」羅生門曾讓談判瀕臨破裂。"
 publishDate: "2026-06-21T11:30:00+08:00"
-updatedDate: "2026-06-21T11:30:00+08:00"
+updatedDate: "2026-06-23T18:40:00+08:00"
 category: "international"
 subcategory: "middle-east"
 tags: ["以色列", "黎巴嫩", "伊朗", "真主黨", "荷莫茲海峽", "中東情勢"]
 highlights:
-  - "黎巴嫩南部6月19日交火，黎國衛生部稱至少21人死亡，以軍亦有4名士兵陣亡，含一名中校"
-  - "美伊原訂在瑞士簽署的後續談判一度延後、副總統范斯取消行程，14點備忘錄給雙方60天談成核子協議"
-  - "伊朗軍方6月20日宣稱關閉荷莫茲海峽，指控以色列空襲是美方違反備忘錄；美方反駁航運照常"
-  - "停火由卡達、美國、伊朗斡旋；以色列堅持暫不撤出黎南，伊朗稱續占即屬違約"
+  - "美伊6月21日在瑞士比爾根施托克展開高層談判，卡達與巴基斯坦稱進展「令人鼓舞」、整週接續技術性談判"
+  - "雙方就荷莫茲海峽建立通訊線避免擦槍走火、為黎巴嫩戰事設「防止衝突小組」，目標60天內談成核子協議"
+  - "美方由副總統范斯領軍，伊朗由國會議長加利巴夫帶隊、外長阿拉奇齊同行；談判一度因川普言論短暫中斷"
+  - "此前黎南6月19日交火黎方稱至少21死，伊朗6月20日宣稱關閉荷莫茲海峽、美方反駁航運照常"
 references:
   - title: "2026 Israel–Lebanon ceasefire"
     url: "https://en.wikipedia.org/wiki/2026_Israel%E2%80%93Lebanon_ceasefire"
@@ -29,6 +29,12 @@ references:
   - title: "Iran Army Declares Strait of Hormuz 'Closed' Over MOU 'Breach'"
     url: "https://www.newsweek.com/iran-army-strait-of-hormuz-closed-vance-open-mou-trump-deal-breach-12098993"
     publisher: "Newsweek"
+  - title: "Mediators hail 'encouraging progress' in talks between Iran and US to end war"
+    url: "https://www.irishnews.com/news/world/mediators-hail-encouraging-progress-in-talks-between-iran-and-us-to-end-war-AJ2TSZ3PORNEBDDB6CGUGOQRMU/"
+    publisher: "The Irish News"
+  - title: "Mediators report progress in Iran-US talks to end war"
+    url: "https://www.enca.com/news-top-stories/mediators-report-progress-iran-us-talks-end-war"
+    publisher: "eNCA"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"
@@ -40,7 +46,15 @@ coverAlt: "海上航行的大型油輪"
 coverImageCredit: "Photo by İrfan Simsar on Pexels"
 ---
 
-中東一紙停戰協議與一場仍在延燒的戰火，正在同一條時間軸上拉扯。以色列與黎巴嫩真主黨在2026年6月持續交火，數度讓美國與伊朗剛簽下的停戰備忘錄瀕臨破裂；到了6月20日，伊朗軍方更宣稱關閉荷莫茲海峽，美方隨即反駁航運一切照常。這些事件環環相扣，背後是一份要在60天內談出核子協議的脆弱框架。
+幾度瀕臨破裂的美伊談判，6月下旬傳出較明確的進展。美國與伊朗於6月21日在瑞士展開高層談判，斡旋的卡達與巴基斯坦稱協商「進展令人鼓舞」，雙方就荷莫茲海峽建立通訊線、為黎巴嫩戰事設立「防止衝突小組」，並接續整週技術性談判，目標是在60天內敲定核子協議。在這之前，以黎交火與荷莫茲海峽「是否關閉」的羅生門，曾數度讓美伊剛簽下的停戰備忘錄瀕臨破裂。
+
+## 瑞士談判傳出進展
+
+據[愛爾蘭新聞報（The Irish News）報導](https://www.irishnews.com/news/world/mediators-hail-encouraging-progress-in-talks-between-iran-and-us-to-end-war-AJ2TSZ3PORNEBDDB6CGUGOQRMU/)，美伊這輪高層談判6月21日（週日）在瑞士盧塞恩湖畔的比爾根施托克（Bürgenstock）登場，美方代表團由副總統范斯（JD Vance）領軍，並有特使維特科夫（Steve Witkoff）與總統女婿庫許納（Jared Kushner）同行；伊朗一方則由國會議長加利巴夫（Mohammad Bagher Ghalibaf）帶隊、外長阿拉奇齊（Abbas Araghchi）同行。斡旋方卡達與巴基斯坦發表聯合聲明，稱高層談判已結束、技術性磋商將持續整週，並形容此輪協商取得「令人鼓舞的進展」。
+
+兩項具體成果聚焦在降低衝突風險。據[同篇愛爾蘭新聞報報導](https://www.irishnews.com/news/world/mediators-hail-encouraging-progress-in-talks-between-iran-and-us-to-end-war-AJ2TSZ3PORNEBDDB6CGUGOQRMU/)與[eNCA報導](https://www.enca.com/news-top-stories/mediators-report-progress-iran-us-talks-end-war)，雙方就荷莫茲海峽建立一條通訊線，以「避免事故與誤判」、確保船隻安全通行；針對黎巴嫩戰事，則設立一個納入雙方與黎巴嫩當局的「防止衝突小組」（de-confliction cell），用以避免戰火重燃。這份上週簽署的過渡協議，給予談判方約60天時間處理伊朗核子計畫的最終安排。
+
+伊朗外長阿拉奇齊對斡旋成果表態正面。[eNCA引述](https://www.enca.com/news-top-stories/mediators-report-progress-iran-us-talks-end-war)其說法稱，「巴基斯坦與卡達不懈的斡旋，為終結黎巴嫩戰事帶來重大進展」，並提到在過渡期內「石油與石化品出口獲得豁免、封鎖解除、部分凍結資產獲釋」。不過談判過程並非一帆風順；[愛爾蘭新聞報](https://www.irishnews.com/news/world/mediators-hail-encouraging-progress-in-talks-between-iran-and-us-to-end-war-AJ2TSZ3PORNEBDDB6CGUGOQRMU/)指出，美國總統川普稍早在社群貼文與福斯新聞（Fox News）受訪時的言論一度觸怒伊朗代表，使協商短暫中斷。
 
 ## 停火多次瀕臨破裂
 
@@ -72,5 +86,6 @@ coverImageCredit: "Photo by İrfan Simsar on Pexels"
 
 ## 更新時間軸
 
+- （更新 2026-06-23：美伊6月21日在瑞士比爾根施托克展開高層談判，斡旋的卡達與巴基斯坦稱進展「令人鼓舞」；雙方建立荷莫茲海峽通訊線、設黎巴嫩「防止衝突小組」，並接續整週技術性談判，目標60天內談成核子協議。）（[The Irish News](https://www.irishnews.com/news/world/mediators-hail-encouraging-progress-in-talks-between-iran-and-us-to-end-war-AJ2TSZ3PORNEBDDB6CGUGOQRMU/)、[eNCA](https://www.enca.com/news-top-stories/mediators-report-progress-iran-us-talks-end-war)）
 - （2026-06-21）伊朗軍方6月20日宣稱關閉荷莫茲海峽，美方反駁航運照常；美伊談判團隊仍準備赴瑞士展開週日的技術性談判。（[Newsweek](https://www.newsweek.com/iran-army-strait-of-hormuz-closed-vance-open-mou-trump-deal-breach-12098993)）
 - （2026-06-19）黎南交火黎方稱至少21死、以軍4名士兵陣亡；美伊瑞士談判一度延後、范斯取消行程，以伊就以軍撤出黎南僵持。（[Al Jazeera](https://www.aljazeera.com/news/2026/6/19/us-iran-talks-postponed-as-israel-attacks-lebanon)、[PBS](https://www.pbs.org/newshour/world/israel-and-hezbollah-renew-ceasefire-after-u-s-and-iran-call-off-talks-over-fighting-in-lebanon)、[CBS](https://www.cbsnews.com/live-updates/iran-war-us-deal-peace-israel-lebanon-hezbollah-strait-of-hormuz/)）

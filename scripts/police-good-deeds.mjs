@@ -65,6 +65,11 @@ function main() {
   const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
   if (v.action !== 'new' || !produced) { console.log('✓ 本次無產出（各家抓不到或無合格好人好事）。'); return; }
 
+  // worktree 每次都是全新 checkout、沒有 dist/，check:links 直接讀 dist 會 ENOENT。
+  // 先 build 出 dist（含 pagefind，否則 /search/ 會少 /pagefind/ 連結）再檢查，與 deploy.yml 同把關。
+  console.log('→ pnpm build（產 dist 供 check:links；worktree 無殘留 dist）');
+  try { sh('pnpm', ['build'], { stdio: 'inherit' }); }
+  catch (e) { die(`build 失敗，不發佈（改動留工作區）：${e.message}`); }
   console.log('→ pnpm check:links');
   try { sh('pnpm', ['check:links'], { stdio: 'inherit' }); }
   catch (e) { die(`check:links 未過，不發佈（改動留工作區）：${e.message}`); }

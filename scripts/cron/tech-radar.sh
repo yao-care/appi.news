@@ -5,7 +5,7 @@ set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
 # 多工：在自己的臨時 worktree 裡跑（off origin/main），與其他 publisher cron 並行、互不洗檔。
 source "$(dirname "$0")/_worktree.sh"
-cron_enter_worktree "radar" || { node "$PUBLISHER/scripts/cron-report.mjs" --text "⚠️ $TASK：無法建 worktree，略過本次" 2>/dev/null || true; exit 0; }
+cron_enter_worktree "radar" || { node "$PUBLISHER/scripts/cron-report.mjs" --category tech --text "⚠️ $TASK：無法建 worktree，略過本次" 2>/dev/null || true; exit 0; }
 set -a
 # shellcheck disable=SC1090
 source "$HOME/.config/appi-news/report.env"
@@ -24,5 +24,5 @@ if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|RADA
   fi
   exit 0
 fi
-node scripts/cron-report.mjs --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
+node scripts/cron-report.mjs --category tech --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
 exit "$rc"

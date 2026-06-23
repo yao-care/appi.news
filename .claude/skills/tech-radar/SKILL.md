@@ -70,4 +70,4 @@ description: APPI News 每日「科技類」選題雷達。掃外部熱題產出
 這是給 cron 解析的硬契約——cron 不再靠猜你敘述裡有沒有「sent ts=」，請務必照輸出。
 
 ## 失敗處理
-任一步致命失敗（雷達掛、token 失效、用量達上限）：把 `{ "text": "⚠️ 每日科技選題失敗：<原因一句>" }` 寫到 payload，跑 `slack-post`，讓失敗在 Slack 出聲，不要靜默；並讓回應最後一行輸出 `RADAR_RESULT=FAIL`。
+任一步致命失敗（雷達掛、token 失效、用量達上限）：把 `{ "text": "⚠️ 每日科技選題失敗：<原因一句>", "category": "tech" }` 寫到 payload，跑 `slack-post`（**payload 帶 `category:"tech"` → 失敗發到科技台，與本線一致；不發 dev、不發作者群**），讓失敗在 Slack 出聲，不要靜默；並讓回應最後一行輸出 `RADAR_RESULT=FAIL`。

@@ -58,6 +58,6 @@ description: APPI News 颱風停班停課即時守望。檢查人事行政總處
 2. **回報成功後**才跑 `node scripts/typhoon-state.mjs record /tmp/typhoon-closures.json`，把這次的停班課情形記為已產出（下次相同就不重複；之後若有縣市新增/變更會再產一篇更新版）。
    - 失敗就不要 record（讓下次重試）。
 
-## 步驟 5：失敗處理（失敗→作者群錯誤哨兵；dev 台只給開發需求，不發 dev）
-抓不到官方頁、解析失敗、gate 未過：把 `{ "text": "⚠️ 颱風停班課守望失敗：<原因一句>" }` 寫到 `/tmp/typhoon-fail.json`，跑 `node scripts/slack-post.mjs /tmp/typhoon-fail.json`（**不帶第二參數＝預設作者群，作為錯誤哨兵**）。
-- 頻道紀律：**成功判定「無停班課」安靜結束、不發任何訊息**（步驟 2 exit 3）；**有停班課→生活台**（發佈鈕，由 notify-pending-draft 處理）；**失敗→作者群**（錯誤哨兵）。**dev 台只放 @bot 開發需求，颱風線一律不發 dev。**
+## 步驟 5：失敗處理（失敗→生活台，與本線一致；不發作者群、不發 dev）
+抓不到官方頁、解析失敗、gate 未過：把 `{ "text": "⚠️ 颱風停班課守望失敗：<原因一句>", "category": "lifestyle" }` 寫到 `/tmp/typhoon-fail.json`，跑 `node scripts/slack-post.mjs /tmp/typhoon-fail.json`（**payload 帶 `category:"lifestyle"` → 發到生活台**）。
+- 頻道紀律：**成功判定「無停班課」安靜結束、不發任何訊息**（步驟 2 exit 3）；**有停班課→生活台**（發佈鈕，由 notify-pending-draft 處理）；**失敗→生活台**。**dev 台只放 @bot 開發需求，颱風線一律不發 dev。**

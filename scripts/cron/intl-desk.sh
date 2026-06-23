@@ -19,6 +19,15 @@ if [ "$rc" -eq 0 ]; then
   pub=$(grep '^PUBLISHED=' <<<"$out" | sed 's/^PUBLISHED=//')
   if [ -n "$pub" ]; then
     n=$(grep -c . <<<"$pub")
+    # 送 Slack 前，先等 GitHub Pages 部署完成、文章線上真的讀得到（HTTP 200）再發，
+    # 避免作者一點連結還是 404（push 後到部署上線約 3-5 分鐘）。最多等 10 分鐘，逾時仍發。
+    deadline=$(( $(date +%s) + 600 ))
+    for u in $(awk -F' ｜ ' '{print $1}' <<<"$pub"); do
+      until [ "$(curl -s -4 -o /dev/null -w '%{http_code}' "$u")" = "200" ]; do
+        [ "$(date +%s)" -ge "$deadline" ] && { echo "⚠️ 等逾時，$u 仍非 200，仍照常發 Slack"; break; }
+        sleep 20
+      done
+    done
     list=$(awk -F' ｜ ' '{printf "• %s\n  %s\n", $2, $1}' <<<"$pub")
     node scripts/cron-report.mjs --category international --text "$(printf '🌍 國際編譯自動上架 %s 篇（%s）：\n%s' "$n" "$ts" "$list")" || true
   else

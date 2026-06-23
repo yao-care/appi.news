@@ -28,7 +28,7 @@ if [ "$rc" -eq 0 ]; then
     list=$(awk -F' ｜ ' '{printf "• %s\n  %s", $2, $1}' <<<"$pub")
     node scripts/cron-report.mjs --category lifestyle --text "$(printf '🚓 警消好人好事已上架（%s）：\n%s' "$ts" "$list")" || true
   else
-    node scripts/cron-report.mjs --text "✅ $TASK：本次無新好人好事（未上架）（$ts）" || true
+    echo "（本次無產出，安靜不報）"
   fi
   exit 0
 fi

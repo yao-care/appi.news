@@ -15,8 +15,8 @@ out="$(timeout 1200 claude -p "/lifestyle-deals" 2>&1)"; rc=$?
 [ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
 printf '%s\n' "$out"
 if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond' <<<"$out"; then
-  if grep -q 'sent ts=' <<<"$out"; then msg="✅ $TASK：有連假，已產待審草稿（發佈鈕在生活台）"; else msg="✅ $TASK：本次無即將到來的連假（未產出）"; fi
-  node scripts/cron-report.mjs --text "$msg（$ts）" || true; exit 0
+  if grep -q 'sent ts=' <<<"$out"; then node scripts/cron-report.mjs --text "✅ $TASK：有連假，已產待審草稿（發佈鈕在生活台）（$ts）" || true; else echo "（本次無連假，安靜不報）"; fi
+  exit 0
 fi
 node scripts/cron-report.mjs --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
 exit "$rc"

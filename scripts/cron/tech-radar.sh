@@ -20,7 +20,7 @@ if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|RADA
   if grep -qiE 'RADAR_RESULT=SENT|sent ts=' <<<"$out"; then
     node scripts/cron-report.mjs --category tech --text "✅ $TASK：已發候選到科技台（$ts）" || true
   else
-    node scripts/cron-report.mjs --text "✅ $TASK：本次無新題（未發）（$ts）" || true
+    echo "（本次無產出，安靜不報）"
   fi
   exit 0
 fi

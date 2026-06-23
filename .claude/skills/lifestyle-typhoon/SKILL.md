@@ -58,8 +58,6 @@ description: APPI News 颱風停班停課即時守望。檢查人事行政總處
 2. **回報成功後**才跑 `node scripts/typhoon-state.mjs record /tmp/typhoon-closures.json`，把這次的停班課情形記為已產出（下次相同就不重複；之後若有縣市新增/變更會再產一篇更新版）。
    - 失敗就不要 record（讓下次重試）。
 
-## 步驟 5：失敗處理（只發 dev 頻道，不洗作者群/生活台）
-抓不到官方頁、解析失敗、gate 未過：把 `{ "text": "⚠️ 颱風停班課守望失敗：<原因一句>" }` 寫到 `/tmp/typhoon-fail.json`，跑 `node scripts/slack-post.mjs /tmp/typhoon-fail.json dev`（**第二參數 `dev` 路由到開發頻道**）。
-- 站長指示：每小時跑、沒颱風時不要拿失敗訊息洗作者群與生活台；失敗一律發 dev 頻道留紀錄即可。
-- **成功判定「無停班課」本來就安靜結束**（步驟 2 exit 3），不發任何訊息。
-- dev 頻道仍會留下失敗紀錄，颱風天若連續失敗，從 dev 頻道仍查得到，不會無聲無息。
+## 步驟 5：失敗處理（失敗→作者群錯誤哨兵；dev 台只給開發需求，不發 dev）
+抓不到官方頁、解析失敗、gate 未過：把 `{ "text": "⚠️ 颱風停班課守望失敗：<原因一句>" }` 寫到 `/tmp/typhoon-fail.json`，跑 `node scripts/slack-post.mjs /tmp/typhoon-fail.json`（**不帶第二參數＝預設作者群，作為錯誤哨兵**）。
+- 頻道紀律：**成功判定「無停班課」安靜結束、不發任何訊息**（步驟 2 exit 3）；**有停班課→生活台**（發佈鈕，由 notify-pending-draft 處理）；**失敗→作者群**（錯誤哨兵）。**dev 台只放 @bot 開發需求，颱風線一律不發 dev。**

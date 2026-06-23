@@ -8,7 +8,7 @@
 import { readFileSync } from 'node:fs';
 import { postMessage } from './lib/slack.mjs';
 import { suggestionBlocks } from './lib/suggestion-blocks.mjs';
-import { channelForCategory, SLACK_CHANNEL, DEV_CHANNEL } from './lib/report-config.mjs';
+import { channelForCategory, SLACK_CHANNEL } from './lib/report-config.mjs';
 
 const [, , payloadPath, channelArg] = process.argv;
 const token = process.env.SLACK_BOT_TOKEN;
@@ -22,7 +22,6 @@ const blocks = extra.length ? [...(baseBlocks || []), ...extra] : baseBlocks;
 const cat = category || (Array.isArray(suggestions) && suggestions[0]?.category);
 const channel =
   channelArg === 'authors' || channelArg === 'default' ? SLACK_CHANNEL
-  : channelArg === 'dev' ? DEV_CHANNEL // 安靜失敗哨兵（如颱風守望抓取失敗）發 dev 頻道，不洗作者群/分類台
   : channelArg || channelForCategory(cat);
 try {
   const r = await postMessage({ token, channel, text, blocks });

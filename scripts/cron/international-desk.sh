@@ -31,7 +31,7 @@ if [ "$rc" -eq 0 ]; then
     list=$(awk -F' ｜ ' '{printf "• %s\n  %s\n", $2, $1}' <<<"$pub")
     node scripts/cron-report.mjs --category international --text "$(printf '🌍 國際編譯自動上架 %s 篇（%s）：\n%s' "$n" "$ts" "$list")" || true
   else
-    node scripts/cron-report.mjs --text "✅ $TASK：本次無上架（無突出熱題/已寫過/無可授權圖）（$ts）" || true
+    echo "（本次無產出，安靜不報）"
   fi
   exit 0
 fi

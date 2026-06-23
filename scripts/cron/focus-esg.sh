@@ -6,7 +6,7 @@ set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
 # 多工：在自己的臨時 worktree 裡跑（off origin/main），與其他 publisher cron 並行、互不洗檔。
 source "$(dirname "$0")/_worktree.sh"
-cron_enter_worktree "focus" || { node "$PUBLISHER/scripts/cron-report.mjs" --dev --text "⚠️ $TASK：無法建 worktree，略過本次" 2>/dev/null || true; exit 0; }
+cron_enter_worktree "focus" || { node "$PUBLISHER/scripts/cron-report.mjs" --text "⚠️ $TASK：無法建 worktree，略過本次" 2>/dev/null || true; exit 0; }
 set -a
 # shellcheck disable=SC1090
 source "$HOME/.config/appi-news/report.env"
@@ -31,9 +31,9 @@ if [ "$rc" -eq 0 ]; then
     list=$(awk -F' ｜ ' '{printf "• %s\n  %s\n", $2, $1}' <<<"$pub")
     node scripts/cron-report.mjs --category focus --text "$(printf '🌏 焦點/ESG 自動上架 %s 篇（%s）：\n%s' "$n" "$ts" "$list")" || true
   else
-    node scripts/cron-report.mjs --dev --text "✅ $TASK：本次無夠新夠強的題（未產出）（$ts）" || true
+    echo "（本次無產出，安靜不報）"
   fi
   exit 0
 fi
-node scripts/cron-report.mjs --dev --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
+node scripts/cron-report.mjs --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
 exit "$rc"

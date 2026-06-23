@@ -8,6 +8,10 @@
 
 /** 分類 → { 中文名, 合法子分類 slug }。子分類對齊 src/config/categories.ts。 */
 export const VERTICALS = {
+  focus: {
+    name: '焦點',
+    subcategories: ['today', 'major-issues', 'editors-pick', 'trend-watch', 'policy-watch', 'special-report'],
+  },
   tech: {
     name: '科技',
     subcategories: ['ai', 'security', 'digital-tools', 'software-products', 'startup', 'semiconductor', 'industry-tech', 'tech-policy'],

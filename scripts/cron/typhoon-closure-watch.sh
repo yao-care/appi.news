@@ -21,5 +21,6 @@ if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond' <<<
   fi
   exit 0
 fi
-node scripts/cron-report.mjs --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
+# 失敗只發 dev 頻道（站長指示：抓不到資料/出錯不要洗作者群與生活台；每小時跑，沒颱風時尤其不該吵）。
+node scripts/cron-report.mjs --dev --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
 exit "$rc"

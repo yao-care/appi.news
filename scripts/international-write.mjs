@@ -1,9 +1,9 @@
-// 國際編譯台協調器：選題（intl-select）→ 每則熱題交給 Claude 寫作/更新 → 上架。
-// 純寫作邏輯在 scripts/lib/intl-write.mjs（可測）。
+// 國際編譯台協調器：選題（international-select）→ 每則熱題交給 Claude 寫作/更新 → 上架。
+// 純寫作邏輯在 scripts/lib/international-write.mjs（可測）。
 //
 // 安全：預設 dry-run（只印「選到的題 + 要餵給 Claude 的寫作指令」，零副作用、零寫作）。
-//   node scripts/intl-write.mjs                 # dry-run：印選題 + 第一則的完整寫作指令
-//   node scripts/intl-write.mjs --go            # （待審核寫作指令後啟用）真的寫作並上架
+//   node scripts/international-write.mjs                 # dry-run：印選題 + 第一則的完整寫作指令
+//   node scripts/international-write.mjs --go            # （待審核寫作指令後啟用）真的寫作並上架
 //
 // 一天一次由 cron 呼叫。
 
@@ -12,7 +12,7 @@ import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
-import { buildIntlPrompt, parseIntlResult } from './lib/intl-write.mjs';
+import { buildIntlPrompt, parseIntlResult } from './lib/international-write.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
@@ -74,7 +74,7 @@ function dropArticle(slug, action) {
 
 /** 跑選題引擎，回 picks {region:[stories]}。 */
 function runSelection(hours, maxPer) {
-  const r = spawnSync('node', ['scripts/intl-select.mjs', '--hours', String(hours), '--max', String(maxPer), '--json'], {
+  const r = spawnSync('node', ['scripts/international-select.mjs', '--hours', String(hours), '--max', String(maxPer), '--json'], {
     encoding: 'utf8',
     maxBuffer: 64 * 1024 * 1024,
   });

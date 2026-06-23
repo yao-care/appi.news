@@ -1,10 +1,10 @@
 // 國際編譯台「選題引擎」CLI：下載近 N 小時的 GDELT Events 檔 → 解析 → 每區挑相對熱門題。
-// 純邏輯在 scripts/lib/intl-select.mjs（可單元測試）；這裡只做下載與輸出。
+// 純邏輯在 scripts/lib/international-select.mjs（可單元測試）；這裡只做下載與輸出。
 //
 // 用法：
-//   node scripts/intl-select.mjs                  # 預設近 24h、每區最多 3 則，印出選題
-//   node scripts/intl-select.mjs --hours 6        # 縮短視窗（快測）
-//   node scripts/intl-select.mjs --max 2 --json   # 每區上限 2、輸出 JSON（給下游撰寫用）
+//   node scripts/international-select.mjs                  # 預設近 24h、每區最多 3 則，印出選題
+//   node scripts/international-select.mjs --hours 6        # 縮短視窗（快測）
+//   node scripts/international-select.mjs --max 2 --json   # 每區上限 2、輸出 JSON（給下游撰寫用）
 //
 // GDELT Events 原始檔：免費、無 API 流量限制（http://data.gdeltproject.org/gdeltv2/）。
 
@@ -13,7 +13,7 @@ import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { parseEventRow, selectHotByRegion, REGIONS } from './lib/intl-select.mjs';
+import { parseEventRow, selectHotByRegion, REGIONS } from './lib/international-select.mjs';
 
 const UA = 'Mozilla/5.0 (appi-news intl-radar)';
 const BASE = 'http://data.gdeltproject.org/gdeltv2';

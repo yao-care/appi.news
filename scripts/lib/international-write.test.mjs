@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buildIntlPrompt, parseIntlResult, defaultSubcategory } from './intl-write.mjs';
+import { buildIntlPrompt, parseIntlResult, defaultSubcategory } from './international-write.mjs';
 
 const story = { region: '中東', sourceUrl: 'https://x.com/iran', numArticles: 50, numSources: 12, fullName: 'Tehran, Tehran, Iran' };
 

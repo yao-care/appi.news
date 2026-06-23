@@ -1,6 +1,6 @@
 // 國際編譯台「選題引擎」純邏輯（可單元測試、無 I/O）。
 // 輸入：GDELT Events（export）檔解析出的事件列；輸出：每區「相對熱門」的代表題。
-// I/O（下載 24h Events 檔）在 scripts/intl-select.mjs。
+// I/O（下載 24h Events 檔）在 scripts/international-select.mjs。
 //
 // 機制（全部用真實 GDELT 欄位，非推測）：
 //   - 每個 GDELT event 自帶 NumArticles / NumSources＝「被幾篇/幾家報導」＝天然熱度。

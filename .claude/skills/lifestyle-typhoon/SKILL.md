@@ -1,5 +1,5 @@
 ---
-name: typhoon-closure-watch
+name: lifestyle-typhoon
 description: APPI News 颱風停班停課即時守望。檢查人事行政總處官方停班課公告，有「新的或變更的」停班停課情形才產一篇事實型待審草稿，回報 Slack 附「發佈」鈕供人工核可上線。供 cron 高頻 headless 呼叫；無颱風時安靜結束。
 ---
 

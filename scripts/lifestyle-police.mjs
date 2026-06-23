@@ -1,17 +1,17 @@
 // 警消好人好事協調器：掃各地警局新聞稿 → Claude 寫暖聞 roundup → 自動上架。
-// 純寫作邏輯在 scripts/lib/police-good-deeds.mjs。一週一次由 cron 呼叫。
+// 純寫作邏輯在 scripts/lib/lifestyle-police.mjs。一週一次由 cron 呼叫。
 //
 // 安全：預設 dry-run（只印寫作指令）。--stage 寫+commit 不 push；--go 寫+commit+push 上架。
-//   node scripts/police-good-deeds.mjs            # dry-run
-//   node scripts/police-good-deeds.mjs --stage    # 產樣稿（不上線）
-//   node scripts/police-good-deeds.mjs --go        # 自動上架
+//   node scripts/lifestyle-police.mjs            # dry-run
+//   node scripts/lifestyle-police.mjs --stage    # 產樣稿（不上線）
+//   node scripts/lifestyle-police.mjs --go        # 自動上架
 
 import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
-import { buildPolicePrompt, parsePoliceResult } from './lib/police-good-deeds.mjs';
+import { buildPolicePrompt, parsePoliceResult } from './lib/lifestyle-police.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
@@ -84,7 +84,7 @@ function main() {
   if (v.action !== 'new' || !produced) { console.log('✓ 本次無產出（各家抓不到或無合格好人好事）。'); return; }
 
   // 用系統時間蓋掉模型寫的 publishDate（模型無可靠時鐘，常把「現在」填成未來整點 → 變排程稿、
-  // 不立即上線）。警消是全自動即時發，必須當下上線（同 intl-write 的處理）。
+  // 不立即上線）。警消是全自動即時發，必須當下上線（同 international-write 的處理）。
   if (v.slug) {
     const file = join(ARTICLES_DIR, `${v.slug}.md`);
     if (existsSync(file)) writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${new Date().toISOString()}"`));

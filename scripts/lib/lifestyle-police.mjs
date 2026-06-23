@@ -1,5 +1,5 @@
 // 警消好人好事「整理」純邏輯（可單元測試、無 I/O）。
-// 協調器 scripts/police-good-deeds.mjs 用它組 Claude 寫作 prompt。
+// 協調器 scripts/lifestyle-police.mjs 用它組 Claude 寫作 prompt。
 //
 // 決策（站長定）：全自動上架、跟著官方公開新聞稿走（員警照原稿具名、民眾比照原稿揭露、
 // 不轉載版權照片、連結逐條驗活）。來源＝各縣市警察局官方新聞稿；抓不到的當次略過（可接受）。

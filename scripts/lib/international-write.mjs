@@ -1,5 +1,5 @@
 // 國際編譯台「撰寫指令」純邏輯（可單元測試、無 I/O）。
-// 協調器 scripts/intl-write.mjs 用它對每則選到的熱題組 Claude 寫作 prompt。
+// 協調器 scripts/international-write.mjs 用它對每則選到的熱題組 Claude 寫作 prompt。
 //
 // 規則全部來自與站長談定的國際線規格：
 //   - 來源 GDELT 選題（已初篩熱門）；寫作以「實際讀原文」為準。

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buildPolicePrompt, parsePoliceResult, POLICE_SOURCES } from './police-good-deeds.mjs';
+import { buildPolicePrompt, parsePoliceResult, POLICE_SOURCES } from './lifestyle-police.mjs';
 
 describe('POLICE_SOURCES', () => {
   it('含主力好人好事來源（高雄/宜蘭/屏東）且都有 URL', () => {

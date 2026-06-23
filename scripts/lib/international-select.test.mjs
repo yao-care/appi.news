@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { regionForFullName, parseEventRow, aggregateStories, relativeHotPicks, selectHotByRegion, COL } from './intl-select.mjs';
+import { regionForFullName, parseEventRow, aggregateStories, relativeHotPicks, selectHotByRegion, COL } from './international-select.mjs';
 
 // 造一列 61 欄的 Events 列，只填我們用到的欄位。
 function row({ id = '1', numArticles = 1, numSources = 1, fullName = 'New Delhi, Delhi, India', url = 'https://x.com/a' }) {

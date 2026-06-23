@@ -58,7 +58,7 @@ export function buildIntlPrompt(story, recentActive = []) {
     '   - 嚴格基於事實、不杜撰；每個事實、數字、引述都附 inline 來源超連結，且逐條查證可連線（2xx 且內容支持該句）。',
     '   - 台灣讀者視角的繁中，編輯部中性語氣，去 AI 腔；**不要加入個人觀點/立場**。',
     `   - frontmatter：category: "international"、subcategory（你依內容判定）、author: "appi-editorial"、contentType: "news"、sourceType: "wire"、status: "published"、publishDate: 現在（更新模式則保留原 publishDate、設 updatedDate 為現在），disclosure 揭露「以 AI 編譯、附原文出處」。`,
-    '6. **圖片（鐵則：不用 AI 生圖）**：用 `node scripts/get-image.mjs --embed-url <圖URL> --credit "<署名>" --page-url <來源頁>` 嵌入**可授權**原圖（跨同事件多篇找：白名單來源見 image-sources.mjs；外媒原圖會被拒）；找不到可授權原圖就改用 `node scripts/get-image.mjs`（圖庫真實照片，不要 --people、不要 AI）。**兩者都拿不到圖 → 不要發，輸出 `INTL_RESULT=SKIP｜無可授權圖片` 結束。**',
+    '6. **封面圖＝動筆前的前置關卡（鐵則：不用 AI 生圖；先過這關才准寫內文）**：**動筆寫內文之前，先取得封面圖**——用 `node scripts/get-image.mjs --embed-url <圖URL> --credit "<署名>" --page-url <來源頁> --out public/covers/<slug>-cover.webp` 嵌入**可授權**原圖（跨同事件多篇找：白名單來源見 image-sources.mjs；外媒原圖會被拒）；找不到可授權原圖就改用 `node scripts/get-image.mjs --out public/covers/<slug>-cover.webp`（圖庫真實照片，不要 --people、不要 AI）。**封面圖拿不到（指令非零或檔案沒生出來）→ 立刻輸出 `INTL_RESULT=SKIP｜無可授權封面圖` 結束，不要寫文章（不要只設 coverImage 卻沒有真的存到檔）。** 封面到手後才寫內文；frontmatter `coverImage: "covers/<slug>-cover.webp"`（mode:stock 時把 credit 寫進 `coverImageCredit`）；內文配圖同樣用 get-image.mjs（圖庫真實照片）。',
     '7. **slug/檔名**：新文用語意化英文 kebab slug（例 uk-rejoin-eu-march），**檔名＝frontmatter slug＝INTL_RESULT 回報的 slug，三者一致；不要用 post-NNN**。寫入/更新 src/content/articles/<slug>.md。**不要 git add/commit/push**（外層處理）。',
     '',
     '【近 30 天進行中國際文（去重/更新比對用）】',

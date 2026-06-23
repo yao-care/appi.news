@@ -1,4 +1,5 @@
 import type { APIContext } from 'astro';
+import { absoluteUrl } from '@/utils/url';
 
 export async function GET(context: APIContext) {
   const sitemapUrl = context.site
@@ -7,6 +8,7 @@ export async function GET(context: APIContext) {
         context.site,
       ).toString()
     : '/sitemap-index.xml';
+  const newsSitemapUrl = absoluteUrl('/news-sitemap.xml', context.site);
   const aiBots = [
     'GPTBot',
     'OAI-SearchBot',
@@ -29,6 +31,7 @@ Allow: /
 Disallow: /admin/
 
 Sitemap: ${sitemapUrl}
+Sitemap: ${newsSitemapUrl}
 `;
   return new Response(body, {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },

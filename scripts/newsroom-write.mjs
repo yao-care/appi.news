@@ -303,6 +303,15 @@ function main() {
   }
 
   // gate：壞連結會擋整站部署，沒過就不發佈（改動留在工作區供檢查，不自動還原）
+  // 先 build 出當前 dist 再 check:links（含 pagefind）。否則 check:links 驗的是殘留舊 dist、
+  // 看不到這篇新文章的連結 → 壞連結會被放行、push 後才在 deploy.yml 炸、壞 commit 卡住 main。
+  // 與 intl/police 同把關（worktree 線是因為沒 dist，這條是因為 dist 過期，殊途同歸都要先 build）。
+  console.log('→ pnpm build（產當前 dist 供 check:links 驗到新文章）');
+  try {
+    sh('pnpm', ['build'], { stdio: 'inherit' });
+  } catch (e) {
+    die(`build 失敗，不發佈（改動留在工作區待你處理）：${e.message}`);
+  }
   console.log('→ pnpm check:links（唯一自動關卡）');
   try {
     sh('pnpm', ['check:links'], { stdio: 'inherit' });

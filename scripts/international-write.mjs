@@ -14,6 +14,7 @@ import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildIntlPrompt, parseIntlResult } from './lib/international-write.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
+import { buildCheckWithResync } from './lib/build-check.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
 
@@ -198,14 +199,9 @@ function main() {
   // 並順手取回每篇 title 供 Slack 回報。必須在 build/commit 之前。
   const nowIso = new Date().toISOString();
   for (const x of wrote) if (x.slug) x.title = stampDateAndTitle(x.slug, x.action, nowIso);
-  // worktree 每次都是全新 checkout、沒有 dist/，check:links 直接讀 dist 會 ENOENT。
-  // 先 build 出 dist（含 pagefind，否則 /search/ 會少 /pagefind/ 連結）再檢查，與 deploy.yml 同把關。
-  console.log('\n→ pnpm build（產 dist 供 check:links；worktree 無殘留 dist）');
-  try { sh('pnpm', ['build'], { stdio: 'inherit' }); }
-  catch (e) { die(`build 失敗，不發佈（改動留工作區）：${e.message}`); }
-  console.log('\n→ pnpm check:links');
-  try { sh('pnpm', ['check:links'], { stdio: 'inherit' }); }
-  catch (e) { die(`check:links 未過，不發佈（改動留工作區）：${e.message}`); }
+  // worktree 無殘留 dist → 先 build 再 check:links；失敗時同步最新 main 自癒重試一次（並發防護，不序列化）。
+  try { buildCheckWithResync(); }
+  catch (e) { die(`build/check:links 未過（已自癒重試），不發佈（改動留工作區）：${e.message}`); }
 
   sh('git', ['add', '--', ARTICLES_DIR, 'public/covers', 'public/images']);
   const newN = wrote.filter((x) => x.action === 'new').length;

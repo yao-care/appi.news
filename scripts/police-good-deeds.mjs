@@ -6,7 +6,7 @@
 //   node scripts/police-good-deeds.mjs --stage    # 產樣稿（不上線）
 //   node scripts/police-good-deeds.mjs --go        # 自動上架
 
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
@@ -64,6 +64,13 @@ function main() {
 
   const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
   if (v.action !== 'new' || !produced) { console.log('✓ 本次無產出（各家抓不到或無合格好人好事）。'); return; }
+
+  // 用系統時間蓋掉模型寫的 publishDate（模型無可靠時鐘，常把「現在」填成未來整點 → 變排程稿、
+  // 不立即上線）。警消是全自動即時發，必須當下上線（同 intl-write 的處理）。
+  if (v.slug) {
+    const file = join(ARTICLES_DIR, `${v.slug}.md`);
+    if (existsSync(file)) writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${new Date().toISOString()}"`));
+  }
 
   // worktree 每次都是全新 checkout、沒有 dist/，check:links 直接讀 dist 會 ENOENT。
   // 先 build 出 dist（含 pagefind，否則 /search/ 會少 /pagefind/ 連結）再檢查，與 deploy.yml 同把關。

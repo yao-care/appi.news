@@ -6,7 +6,7 @@
 ## 你的工作
 
 - **子專案 1**：每週「數據週報 → Slack」，技能 `/weekly-report`，由 cron 觸發。
-- **子專案 2（已上線）**：半自動產文。`daily-tech-radar`（cron 一天三次）發候選題到 Slack → 作者點「我要寫這題」→ `slack-actions-server`（pm2 `appinews-slack-actions`）觸發 `scripts/newsroom-write.mjs` 起草＋配圖 gate＋查證 → 排程上線。詳見最後一節與 repo 根 `CLAUDE.md` §自動發文 pipeline。
+- **子專案 2（已上線）**：半自動產文。`tech-radar`（cron 一天三次）發候選題到 Slack → 作者點「我要寫這題」→ `slack-actions-server`（pm2 `appinews-slack-actions`）觸發 `scripts/newsroom-write.mjs` 起草＋配圖 gate＋查證 → 排程上線。詳見最後一節與 repo 根 `CLAUDE.md` §自動發文 pipeline。
 
 ## 開機前置（git clone 之後一定要做 —— 這些東西「不在」repo，是故意的）
 
@@ -66,7 +66,7 @@ pnpm test
 
 | 元件 | 路徑 / 識別 | 說明 |
 |---|---|---|
-| 選題雷達 | `.claude/skills/daily-tech-radar/`、`scripts/cron/daily-tech-radar.sh` | 只產 tech 候選；cron UTC 21:20 / 03:11 / 10:18 |
+| 選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選；cron UTC 21:20 / 03:11 / 10:18 |
 | 自動產文 | `scripts/newsroom-write.mjs`（沿用 newsroom skill 的文風/查證） | headless 起草＋配圖 gate，寫 `result.json` |
 | Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文並回報 |
 | 去重帳本 | `scripts/topic-ledger.mjs`、`/root/.local/state/appi-news/suggested-topics.json` | 與週報共用，避免撞題 |
@@ -82,21 +82,21 @@ pnpm test
 
 | 任務 | cron 腳本 | UTC | 台北 | 來源 | 上線方式 | 發 Slack？ |
 |---|---|---|---|---|---|---|
-| 科技選題雷達 | daily-tech-radar.sh | 21:20 / 03:11 / 10:18 | 05:20/11:11/18:18 | WebSearch | 候選→人點按鈕→寫→自動上線 | ✅候選到**科技**台 |
-| 國際編譯台 | intl-desk.sh | 02:30 | 10:30 | **GDELT Events 原始檔**（intl-select/intl-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
-| 連假優惠 | lifestyle-deals-roundup.sh | 02:00 | 10:00 | data.gov.tw #14718 假日曆（tw-holidays.mjs）+ 雙鐵 | 事實稿→**待審草稿+發佈鈕** | ✅有連假時發**生活**台/失敗哨兵 |
-| 颱風停班課 | typhoon-closure-watch.sh | 每小時（5–11 月） | 每小時 | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
-| 警消好人好事 | police-good-deeds.sh | 週三 06:30 | 週三 14:30 | 各地警局新聞稿（police-good-deeds.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
+| 科技選題雷達 | tech-radar.sh | 21:20 / 03:11 / 10:18 | 05:20/11:11/18:18 | WebSearch | 候選→人點按鈕→寫→自動上線 | ✅候選到**科技**台 |
+| 國際編譯台 | international-desk.sh | 02:30 | 10:30 | **GDELT Events 原始檔**（international-select/international-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
+| 連假優惠 | lifestyle-deals.sh | 02:00 | 10:00 | data.gov.tw #14718 假日曆（tw-holidays.mjs）+ 雙鐵 | 事實稿→**待審草稿+發佈鈕** | ✅有連假時發**生活**台/失敗哨兵 |
+| 颱風停班課 | lifestyle-typhoon.sh | 每小時（5–11 月） | 每小時 | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
+| 警消好人好事 | lifestyle-police.sh | 週三 06:30 | 週三 14:30 | 各地警局新聞稿（lifestyle-police.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 每週數據週報 | weekly-report.sh | 週日 22:17 | 週一 06:17 | GA4+GSC | n/a（數據）| ✅週報到**作者群** |
 
 - **並發保護（重要）**：所有 publisher-checkout cron 開頭都用 `flock -w 1800 /tmp/appi-publisher-cron.lock` 序列化——因為每支都 `git reset --hard origin/main`，若兩支同時跑會互洗未提交工作。同時只放一支，取鎖逾時就略過本次。**新增 cron 務必沿用此 flock 樣板。**
-- **國際是長跑**（最多 8 區×3 篇、逐篇 Claude 撰寫，單次可能數小時）；其他 cron 在此期間取不到鎖會略過重試，故國際排最前（02:30）、警消刻意排到 06:30 避開。要降國際耗時就調 `intl-write.mjs` 的 `--max`。
+- **國際是長跑**（最多 8 區×3 篇、逐篇 Claude 撰寫，單次可能數小時）；其他 cron 在此期間取不到鎖會略過重試，故國際排最前（02:30）、警消刻意排到 06:30 避開。要降國際耗時就調 `international-write.mjs` 的 `--max`。
 - **每次執行都回報 Slack（`scripts/cron-report.mjs`）**：不論完成/無產出/失敗/略過(取鎖逾時)，都發一則「值勤回報」到**作者群**頻道（`channelForCategory(undefined)`=預設台）。**內容本身**另發對應分類頻道：國際/警消上架→該分類頻道帶連結（Slack 自動 unfurl 出標題）；科技候選→科技台；優惠/颱風待審草稿→生活台（發佈鈕）。
   - **颱風每小時**：值勤回報每小時發作者群（有停課才另發生活台草稿）。作者群會因此較吵；若要可把颱風值勤回報關掉或改發專屬監控頻道。
 - 上表「發 Slack？」欄已過時——改以本段為準：**全部 cron 每次都回報作者群**。
 
 ### 各頻道維護重點
-- **國際**：來源是 GDELT **原始檔**（搜尋 API 會被擋）；選題用「來源家數」相對統計挑每區突出題；撰寫嚴格基於事實、附原文連結、圖片可授權否則跳過（不用 AI 圖）、同事件有進展則更新原文（故事線、30 天窗）。詳見記憶 `intl-desk-gdelt`。
+- **國際**：來源是 GDELT **原始檔**（搜尋 API 會被擋）；選題用「來源家數」相對統計挑每區突出題；撰寫嚴格基於事實、附原文連結、圖片可授權否則跳過（不用 AI 圖）、同事件有進展則更新原文（故事線、30 天窗）。詳見記憶 `international-desk-gdelt`。
 - **生活·颱風／優惠**：事實稿，`kind: factual` → 產「待審草稿」（status:scheduled+遠未來日）+ Slack 發佈鈕，**人工核可才上線**（`newsroom-publish.mjs` 轉正）。
 - **生活·警消**：跟官方原稿具名、不轉載版權照、附原文連結驗活、圖庫示意圖、全自動上架。境外 IP 約 13–14 家警局可抓、8 家被地理/WAF 擋（當次略過）。
 - **運動**：**純拉式**（學生賽事），無 cron、無自動產文。投稿＝`workers/sports-submission`（**待部署**：建 Slack webhook→`wrangler deploy`→填 `submit.astro` 的 WORKER_URL）+ `/sports/submit/`（運動分類頁有入口）。邀請＝`docs/sports-student-invite-windows.md`（7 官方機構窗口）+ `sports-invite-draft`（只起草、人工送）。

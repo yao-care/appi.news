@@ -1,5 +1,5 @@
 ---
-name: lifestyle-deals-roundup
+name: lifestyle-deals
 description: APPI News「連假城市優惠」事實型 roundup。臨近國定連假時，整理各縣市交通、景點、住宿、餐飲優惠，產一篇待審草稿（編輯部署名、無個人觀點），回報 Slack 附「發佈」鈕供人工核可上線。供 cron headless 呼叫。
 ---
 

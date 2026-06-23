@@ -1,5 +1,5 @@
 ---
-name: daily-tech-radar
+name: tech-radar
 description: APPI News 每日「科技類」選題雷達。掃外部熱題產出一串 tech 候選題，組成帶「我要寫這題」按鈕的清單發到 Slack，供作者每天挑選觸發自動產文。供 cron headless 呼叫。
 ---
 

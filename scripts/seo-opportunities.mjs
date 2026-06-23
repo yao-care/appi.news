@@ -1,5 +1,5 @@
 // GSC 驅動的 SEO 機會工具：純 Search Console，輸出三區塊 JSON 到 stdout（不含 LLM）。
-// 供 daily-tech-radar（選題接搜尋需求）與 weekly-report（第 2 頁衝刺／改標題）讀。
+// 供 tech-radar（選題接搜尋需求）與 weekly-report（第 2 頁衝刺／改標題）讀。
 //
 // 用法：
 //   export GOOGLE_APPLICATION_CREDENTIALS=~/.config/appi-news/ga4-sa.json

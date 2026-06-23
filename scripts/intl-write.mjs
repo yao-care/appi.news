@@ -7,7 +7,7 @@
 //
 // 一天一次由 cron 呼叫。
 
-import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync, existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
@@ -50,6 +50,26 @@ function stampDateAndTitle(slug, action, nowIso) {
   }
   writeFileSync(file, raw);
   return title;
+}
+
+/**
+ * 回傳該篇文章「引用了、但 public/ 下不存在」的本地圖檔清單（封面＋內文）。
+ * 用來在 build/check:links 之前就攔下「有引用卻沒存到圖」的半成品，避免一篇壞圖拖垮整批。
+ */
+function missingLocalAssets(slug) {
+  const file = join(ARTICLES_DIR, `${slug}.md`);
+  if (!existsSync(file)) return ['（文章檔不存在）'];
+  const raw = readFileSync(file, 'utf8');
+  const refs = new Set();
+  for (const m of raw.matchAll(/(covers|images)\/[A-Za-z0-9._-]+\.(?:webp|png|jpe?g|avif)/gi)) refs.add(m[0]);
+  return [...refs].filter((r) => !existsSync(join('public', r)));
+}
+
+/** 剔除一篇有問題的文章：UPDATE 還原、NEW 刪除，使它不進這次發佈批次。 */
+function dropArticle(slug, action) {
+  const file = join(ARTICLES_DIR, `${slug}.md`);
+  if (action === 'update') { try { sh('git', ['checkout', '--', file]); } catch { /* 還原失敗就算了 */ } }
+  else if (existsSync(file)) { try { rmSync(file); } catch { /* 刪不掉就算了 */ } }
 }
 
 /** 跑選題引擎，回 picks {region:[stories]}。 */
@@ -158,9 +178,20 @@ function main() {
 
   // 有產出才往下（check:links → 一次 commit → push）。一天一批一個 commit、一次部署。
   const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
-  const wrote = results.filter((x) => x.action === 'new' || x.action === 'update');
-  if (!produced) {
-    console.log(`\n✓ 本批無產出（全部跳過/無進展）。new/update=${wrote.length}`);
+  let wrote = results.filter((x) => x.action === 'new' || x.action === 'update');
+  // 逐篇驗證引用的本地圖檔（封面＋內文）真的存在；缺圖的整篇剔除，不讓一篇壞圖在 check:links
+  // 把整批一起擋掉（呼應「沒圖就不發」：封面是動筆前的前置關卡，但 AI 不穩，這裡是程式保險）。
+  for (const x of wrote.slice()) {
+    if (!x.slug) continue;
+    const missing = missingLocalAssets(x.slug);
+    if (missing.length) {
+      console.log(`  ⚠️ 剔除 ${x.slug}：缺本地圖檔（${missing.join('、')}），不發這篇、不拖垮整批`);
+      dropArticle(x.slug, x.action);
+      wrote = wrote.filter((w) => w !== x);
+    }
+  }
+  if (!produced || wrote.length === 0) {
+    console.log(`\n✓ 本批無有效產出（全部跳過/無進展，或缺圖被剔除）。`);
     return;
   }
   // 用系統時間蓋掉模型寫的 publishDate/updatedDate（模型常排成未來整點 → 不立即上線），

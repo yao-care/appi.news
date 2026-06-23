@@ -29,6 +29,10 @@ describe('parseIntlResult', () => {
     expect(parseIntlResult('INTL_RESULT=NEW｜iran-us-talks')).toMatchObject({ action: 'new', slug: 'iran-us-talks' });
     expect(parseIntlResult('一些 log\nINTL_RESULT=UPDATE｜post-1 有新進展')).toMatchObject({ action: 'update', slug: 'post-1' });
   });
+  it('清掉 slug 帶出的反引號/引號/標點', () => {
+    expect(parseIntlResult('INTL_RESULT=NEW｜`uk-starmer-resigns`')).toMatchObject({ slug: 'uk-starmer-resigns' });
+    expect(parseIntlResult('INTL_RESULT=NEW｜"uk-foo-bar".')).toMatchObject({ slug: 'uk-foo-bar' });
+  });
   it('SKIP', () => {
     expect(parseIntlResult('INTL_RESULT=SKIP｜內容農場')).toMatchObject({ action: 'skip' });
   });

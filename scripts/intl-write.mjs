@@ -111,8 +111,20 @@ function main() {
   const branch = sh('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
   console.log(`→ 國際編譯：${stories.length} 則，分支 ${branch}（${go ? '寫作後 push 上線' : 'stage 不 push'}）`);
 
+  // 時間預算：每則寫作約 6~7 分鐘，cron 外層 timeout 1200s。預設只在「開新題前」still 在
+  // 預算內才續寫，故必須讓「預算 + 一則最久耗時 + 尾段(check:links/commit/push)」< 1200s，
+  // 否則會像之前那樣被 timeout 砍在迴圈中途、整批 0 上架。預設 600s（env 可調）。
+  const budgetMs = Number(process.env.INTL_TIME_BUDGET_MS || 600_000);
+  const start = Date.now();
   const results = [];
-  for (const s of stories) {
+  let skipped = 0;
+  for (let i = 0; i < stories.length; i++) {
+    const s = stories[i];
+    if (i > 0 && Date.now() - start > budgetMs) {
+      skipped = stories.length - i;
+      console.log(`\n⏳ 時間預算（${Math.round(budgetMs / 1000)}s）用盡：本批處理 ${i} 則，其餘 ${skipped} 則留下次 cron 接續（避免被外層 timeout 砍在中途）。`);
+      break;
+    }
     const prompt = buildIntlPrompt(s, recent);
     console.log(`\n→ [${s.region}] ${s.numSources}家 | ${s.fullName}`);
     const r = spawnSync('claude', ['-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });

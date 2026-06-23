@@ -23,6 +23,24 @@ function sh(cmd, args, opts = {}) {
   return (r.stdout || '').trim();
 }
 
+/** 回傳該篇引用了、但 public/ 下不存在的本地圖檔（封面＋內文）。空陣列＝都在。 */
+function missingLocalAssets(slug) {
+  const file = join(ARTICLES_DIR, `${slug}.md`);
+  if (!existsSync(file)) return ['（文章檔不存在）'];
+  const raw = readFileSync(file, 'utf8');
+  const refs = new Set();
+  for (const m of raw.matchAll(/(covers|images)\/[A-Za-z0-9._-]+\.(?:webp|png|jpe?g|avif)/gi)) refs.add(m[0]);
+  return [...refs].filter((r) => !existsSync(join('public', r)));
+}
+
+/** 讀文章 title（給 Slack 回報帶標題用）。 */
+function articleTitle(slug) {
+  try {
+    const m = readFileSync(join(ARTICLES_DIR, `${slug}.md`), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    return (m && (yaml.load(m[1]) || {}).title) || '';
+  } catch { return ''; }
+}
+
 /** 近 N 天已發的警消好人好事整理（slug 以 police-good-deeds 起頭）標題，給去重。 */
 function recentPoliceTitles(days = 30) {
   const cutoff = Date.now() - days * 86400 * 1000;
@@ -72,6 +90,13 @@ function main() {
     if (existsSync(file)) writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${new Date().toISOString()}"`));
   }
 
+  // 缺圖驗證：引用了卻沒存到檔的本地圖（封面／內文）→ 不發（避免 check:links 壞連結）。
+  // 警消封面可有可無，但「設了 coverImage 就要有檔」；缺就中止、留工作區待查。
+  if (v.slug) {
+    const missing = missingLocalAssets(v.slug);
+    if (missing.length) die(`引用的本地圖檔不存在（${missing.join('、')}），不發佈（改動留工作區）`);
+  }
+
   // worktree 每次都是全新 checkout、沒有 dist/，check:links 直接讀 dist 會 ENOENT。
   // 先 build 出 dist（含 pagefind，否則 /search/ 會少 /pagefind/ 連結）再檢查，與 deploy.yml 同把關。
   console.log('→ pnpm build（產 dist 供 check:links；worktree 無殘留 dist）');
@@ -85,9 +110,11 @@ function main() {
   if (go) {
     const _pr = pushToMain({ cwd: process.cwd() });
     if (!_pr.ok) die(`推送 main 失敗：${_pr.err}`);
-    console.log(`✓ 已上架。${v.slug ? `PUBLISHED=https://appi.news/articles/${v.slug}/` : ''}`);
+    console.log('✓ 已上架。');
+    if (v.slug) console.log(`PUBLISHED=https://appi.news/articles/${v.slug}/ ｜ ${articleTitle(v.slug) || v.slug}`);
   } else {
-    console.log(`✓ 已 stage（未 push）。STAGED=${v.slug || ''}`);
+    console.log('✓ 已 stage（未 push）。');
+    if (v.slug) console.log(`STAGED=${v.slug} ｜ ${articleTitle(v.slug) || v.slug}`);
   }
 }
 

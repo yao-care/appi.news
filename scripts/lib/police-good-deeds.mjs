@@ -44,7 +44,7 @@ export function buildPolicePrompt(recentTitles = [], days = 7) {
     '- **員警照原稿具名**（這是公開表揚、官方已對外公布）；**民眾比照原稿的揭露程度**（原稿匿名就匿名、具名就具名），不自行加碼也不自行刪改事實。',
     '- 嚴格基於官方新聞稿事實、不杜撰；**每則附該則官方新聞稿的 inline 超連結**，且逐條查證可連線（2xx）。死連結就不收該則。',
     '- 繁中台灣用語、去 AI 腔、編輯部中性語氣、不加個人評論。',
-    '- **不要轉載官方頁或 FB 的版權照片**；封面用 `node scripts/get-image.mjs`（圖庫真實照片，警民互助/警車等示意，不要 --people、不要 AI 生圖）；圖庫拿不到就不配封面也可（暖聞 roundup 可無封面）。',
+    '- **不要轉載官方頁或 FB 的版權照片**；封面（可有可無）用 `node scripts/get-image.mjs --out public/covers/<slug>-cover.webp`（圖庫真實照片，警民互助/警車等示意，不要 --people、不要 AI 生圖）。**鐵則：設了 coverImage 就一定要先確認該檔真的存在；拿不到圖就乾脆不設 coverImage（暖聞 roundup 可無封面），絕不要設了 coverImage 卻沒有真的存到檔**（會變壞連結、整篇發不出）。內文若配圖同理。',
     '',
     '【去重】比對近 30 天已發的好人好事整理，不要重複同一事件：',
     recent,
@@ -62,5 +62,8 @@ export function parsePoliceResult(stdout) {
   const action = m[1].toLowerCase();
   const rest = (m[2] || '').trim();
   if (action === 'skip') return { action: 'skip', slug: null, note: rest };
-  return { action: 'new', slug: rest.split(/[\s｜|]/)[0] || null, note: rest };
+  // 清掉模型偶爾帶出的反引號/引號/標點，slug 只留 [a-z0-9-]，避免壞 URL／壞資料夾名（同 intl）。
+  const raw = rest.split(/[\s｜|]/)[0] || '';
+  const slug = raw.toLowerCase().replace(/[^a-z0-9-]/g, '').replace(/^-+|-+$/g, '') || null;
+  return { action: 'new', slug, note: rest };
 }

@@ -29,4 +29,7 @@ describe('parsePoliceResult', () => {
     expect(parsePoliceResult('POLICE_RESULT=SKIP｜各家逾時')).toMatchObject({ action: 'skip' });
     expect(parsePoliceResult('亂回').infra).toBe(true);
   });
+  it('清掉 slug 帶出的反引號/引號/標點', () => {
+    expect(parsePoliceResult('POLICE_RESULT=NEW｜`police-good-deeds-2026-06-23`')).toMatchObject({ slug: 'police-good-deeds-2026-06-23' });
+  });
 });

@@ -7,7 +7,7 @@
 //
 // 一天一次由 cron 呼叫。
 
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
@@ -29,6 +29,28 @@ function arg(name, def) {
   return i >= 0 ? process.argv[i + 1] : def;
 }
 const has = (n) => process.argv.includes(`--${n}`);
+
+/**
+ * 用真實系統時間蓋掉模型寫的 publishDate（NEW）/ updatedDate（UPDATE）。
+ * 模型沒有可靠時鐘，常把「現在」寫成未來整點（如 13:00/18:30）→ 變排程稿、不立即上線、
+ * 點連結只看到 noindex 預覽。這裡強制蓋成 now，確保新聞當下就上線。回傳 title 供 Slack 回報。
+ */
+function stampDateAndTitle(slug, action, nowIso) {
+  const file = join(ARTICLES_DIR, `${slug}.md`);
+  if (!existsSync(file)) return '';
+  let raw = readFileSync(file, 'utf8');
+  const fm = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  let title = '';
+  try { title = (yaml.load(fm ? fm[1] : '') || {}).title || ''; } catch { /* 標題拿不到不致命 */ }
+  if (action === 'new') {
+    raw = raw.replace(/^publishDate:.*$/m, `publishDate: "${nowIso}"`);
+  } else if (action === 'update') {
+    if (/^updatedDate:.*$/m.test(raw)) raw = raw.replace(/^updatedDate:.*$/m, `updatedDate: "${nowIso}"`);
+    else raw = raw.replace(/^(publishDate:.*)$/m, `$1\nupdatedDate: "${nowIso}"`);
+  }
+  writeFileSync(file, raw);
+  return title;
+}
 
 /** 跑選題引擎，回 picks {region:[stories]}。 */
 function runSelection(hours, maxPer) {
@@ -141,6 +163,10 @@ function main() {
     console.log(`\n✓ 本批無產出（全部跳過/無進展）。new/update=${wrote.length}`);
     return;
   }
+  // 用系統時間蓋掉模型寫的 publishDate/updatedDate（模型常排成未來整點 → 不立即上線），
+  // 並順手取回每篇 title 供 Slack 回報。必須在 build/commit 之前。
+  const nowIso = new Date().toISOString();
+  for (const x of wrote) if (x.slug) x.title = stampDateAndTitle(x.slug, x.action, nowIso);
   // worktree 每次都是全新 checkout、沒有 dist/，check:links 直接讀 dist 會 ENOENT。
   // 先 build 出 dist（含 pagefind，否則 /search/ 會少 /pagefind/ 連結）再檢查，與 deploy.yml 同把關。
   console.log('\n→ pnpm build（產 dist 供 check:links；worktree 無殘留 dist）');
@@ -158,10 +184,10 @@ function main() {
     const _pr = pushToMain({ cwd: process.cwd() });
     if (!_pr.ok) die(`推送 main 失敗：${_pr.err}`);
     console.log(`✓ 已上線：新 ${newN}、更新 ${updN} 篇。`);
-    for (const x of wrote) if (x.slug) console.log(`PUBLISHED=https://appi.news/articles/${x.slug}/`);
+    for (const x of wrote) if (x.slug) console.log(`PUBLISHED=https://appi.news/articles/${x.slug}/ ｜ ${x.title || x.slug}`);
   } else {
     console.log(`✓ 已 stage（commit 在 ${branch}，未 push）：新 ${newN}、更新 ${updN} 篇。`);
-    for (const x of wrote) if (x.slug) console.log(`STAGED=${x.slug}`);
+    for (const x of wrote) if (x.slug) console.log(`STAGED=${x.slug} ｜ ${x.title || x.slug}`);
   }
 }
 

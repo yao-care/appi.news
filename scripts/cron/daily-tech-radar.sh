@@ -14,8 +14,10 @@ ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
 out="$(timeout 1200 claude -p "/daily-tech-radar" 2>&1)"; rc=$?
 [ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
 printf '%s\n' "$out"
-if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond' <<<"$out"; then
-  if grep -q 'sent ts=' <<<"$out"; then
+# 失敗偵測：rc 非 0，或輸出含 API/拒答/用量上限字樣（含 Claude「weekly limit」用量上限）。
+if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|RADAR_RESULT=FAIL|hit your .*limit|weekly limit|usage limit' <<<"$out"; then
+  # 狀態以 SKILL 收尾機器標記 RADAR_RESULT=SENT/NONE 為準（舊措辭 sent ts= 留作 fallback，避免漏判）。
+  if grep -qiE 'RADAR_RESULT=SENT|sent ts=' <<<"$out"; then
     node scripts/cron-report.mjs --category tech --text "✅ $TASK：已發候選到科技台（$ts）" || true
   else
     node scripts/cron-report.mjs --text "✅ $TASK：本次無新題（未發）（$ts）" || true

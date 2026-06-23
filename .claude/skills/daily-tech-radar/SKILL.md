@@ -41,7 +41,7 @@ description: APPI News 每日「科技類」選題雷達。掃外部熱題產出
 `title`（標題）/ `conclusion`（候選結論）/ `angle`（建議切角）/ `signal`（訊號依據：寫真實來源與熱度）/ `category: "tech"` / `subcategory`（合法 tech slug）。
 - 每篇都要有**真實外部依據**（signal 註明來源/熱度），不可空泛。
 - 強訊號優先。一天跑三次，**不保證每次都有題**：去重後剩幾個就給幾個，寧缺勿濫、不要為了湊數重複或硬掰。
-- **去重後若沒有夠新、夠強的題，就不要發**（不寫 payload、不跑 slack-post，直接結束）。一天被洗三則重複或空訊息比沒訊息更糟。
+- **去重後若沒有夠新、夠強的題，就不要發**（不寫 payload、不跑 slack-post，直接結束，並依步驟 4 收尾輸出 `RADAR_RESULT=NONE`）。一天被洗三則重複或空訊息比沒訊息更糟。
 
 ## 步驟 4：組訊息並發送
 寫 `/tmp/daily-topics-payload.json`（`suggestions` 由 `slack-post` 自動展開成「每篇一顆『我要寫這題』按鈕」）：
@@ -63,5 +63,11 @@ description: APPI News 每日「科技類」選題雷達。掃外部熱題產出
 跑 `node scripts/slack-post.mjs /tmp/daily-topics-payload.json`。回報 `sent ts=` 即成功。
 **發送成功後**，跑 `node scripts/topic-ledger.mjs append /tmp/daily-topics-payload.json` 把這批記進帳本，下一輪（與 weekly-report）才不會重複推。沒發送就不要 append。
 
+**收尾機器標記（cron 靠這行判定狀態，務必輸出、不可改字）**：回應的**最後一行**只輸出下列其一（不加引號、不包 code block、前後不要多字）：
+- 有發題：`RADAR_RESULT=SENT`
+- 去重後沒題、刻意不發：`RADAR_RESULT=NONE`
+
+這是給 cron 解析的硬契約——cron 不再靠猜你敘述裡有沒有「sent ts=」，請務必照輸出。
+
 ## 失敗處理
-任一步致命失敗（雷達掛、token 失效）：把 `{ "text": "⚠️ 每日科技選題失敗：<原因一句>" }` 寫到 payload，跑 `slack-post`，讓失敗在 Slack 出聲，不要靜默。
+任一步致命失敗（雷達掛、token 失效、用量達上限）：把 `{ "text": "⚠️ 每日科技選題失敗：<原因一句>" }` 寫到 payload，跑 `slack-post`，讓失敗在 Slack 出聲，不要靜默；並讓回應最後一行輸出 `RADAR_RESULT=FAIL`。

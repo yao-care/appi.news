@@ -76,28 +76,51 @@ function main() {
   if (sh('git', ['status', '--porcelain'])) die('工作區不乾淨，請先清乾淨再跑');
   const branch = sh('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
   console.log(`→ 焦點/ESG 整理（分支 ${branch}，${go ? '上架' : 'stage 不 push'}）`);
-  const r = spawnSync('claude', ['-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
-  if (r.error || r.status !== 0) die(`claude 失敗：${(r.stderr || r.error?.message || '').slice(-200)}`);
-  const v = parseFocusEsgResult(r.stdout);
-  console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
+
+  // 一輪多篇（比照國際）：每次寫一篇 → 把已寫的加進去重清單再寫下一篇，直到 claude 回 SKIP（沒更多
+  // 夠新夠強的題）或時間預算用盡。時間預算須讓「預算 + 一篇最久耗時 + build(~126s) + push」< 外層 1200s，
+  // 故預設 540s（env FOCUS_TIME_BUDGET_MS 可調）；MAX 為安全上限。最後整批一次 build/check/commit/push。
+  const budgetMs = Number(process.env.FOCUS_TIME_BUDGET_MS || 540_000);
+  const maxArticles = Number(process.env.FOCUS_MAX || 4);
+  const start = Date.now();
+  const excludeTitles = [...recent]; // 去重清單，每寫一篇就加入，避免下一篇撞題
+  const wrote = [];
+  for (let i = 0; i < maxArticles; i++) {
+    if (i > 0 && Date.now() - start > budgetMs) {
+      console.log(`\n⏳ 時間預算（${Math.round(budgetMs / 1000)}s）用盡：本批已寫 ${wrote.length} 篇，其餘留下次。`);
+      break;
+    }
+    const prompt = buildFocusEsgPrompt(excludeTitles, 7);
+    console.log(`\n→ 第 ${i + 1} 篇…`);
+    const r = spawnSync('claude', ['-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+    if (r.error || r.status !== 0) { console.log(`  ⚠️ claude 失敗，停止本批：${(r.stderr || r.error?.message || '').slice(-200)}`); break; }
+    const v = parseFocusEsgResult(r.stdout);
+    console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
+    if (v.action !== 'new' || !v.slug) { console.log('  本輪無更多夠新夠強的題，停止。'); break; }
+    wrote.push(v);
+    excludeTitles.push(articleTitle(v.slug) || v.slug);
+  }
 
   const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
-  if (v.action !== 'new' || !produced) { console.log('✓ 本次無產出（無夠新夠強的題／各源抓不到）。'); return; }
+  if (!produced || wrote.length === 0) { console.log('\n✓ 本次無產出（無夠新夠強的題／各源抓不到）。'); return; }
 
-  // 用系統時間蓋掉模型寫的 publishDate（模型無可靠時鐘，常把「現在」填成未來整點）。自動發佈須當下上線。
-  if (v.slug) {
+  // 用系統時間蓋掉模型寫的 publishDate（模型常把「現在」填成未來整點）；並逐篇驗證引用的本地圖檔存在，
+  // 缺圖的整篇剔除（不讓一篇壞圖用 check:links 拖垮整批）。
+  const nowIso = new Date().toISOString();
+  let kept = [];
+  for (const v of wrote) {
     const file = join(ARTICLES_DIR, `${v.slug}.md`);
-    if (existsSync(file)) writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${new Date().toISOString()}"`));
-  }
-
-  // 缺圖驗證：引用了卻沒存到檔的本地圖 → 不發（避免 check:links 壞連結整篇擋掉）。
-  if (v.slug) {
+    if (existsSync(file)) writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${nowIso}"`));
     const missing = missingLocalAssets(v.slug);
-    if (missing.length) die(`引用的本地圖檔不存在（${missing.join('、')}），不發佈（改動留工作區）`);
+    if (missing.length) {
+      console.log(`  ⚠️ 剔除 ${v.slug}：缺本地圖檔（${missing.join('、')}）`);
+      if (existsSync(file)) rmSync(file);
+    } else kept.push(v);
   }
+  if (kept.length === 0) { console.log('\n✓ 本批全部缺圖被剔除，無發佈。'); return; }
 
   // worktree 每次都是全新 checkout、沒有 dist/，check:links 直接讀 dist 會 ENOENT；先 build 再檢查。
-  console.log('→ pnpm build（產 dist 供 check:links；worktree 無殘留 dist）');
+  console.log('\n→ pnpm build（產 dist 供 check:links；worktree 無殘留 dist）');
   try { sh('pnpm', ['build'], { stdio: 'inherit' }); }
   catch (e) { die(`build 失敗，不發佈（改動留工作區）：${e.message}`); }
   console.log('→ pnpm check:links');
@@ -105,15 +128,15 @@ function main() {
   catch (e) { die(`check:links 未過，不發佈（改動留工作區）：${e.message}`); }
 
   sh('git', ['add', '--', ARTICLES_DIR, 'public/covers', 'public/images']);
-  sh('git', ['commit', '-m', `feat(article): 焦點/ESG 自動產文 — ${articleTitle(v.slug) || v.slug}\n\n整理自主管機關／權威來源公開資料、附原文出處、編輯部署名。`]);
+  sh('git', ['commit', '-m', `feat(article): 焦點/ESG 自動產文（${kept.length} 篇）\n\n整理自主管機關／權威來源公開資料、附原文出處、編輯部署名。`]);
   if (go) {
     const _pr = pushToMain({ cwd: process.cwd() });
     if (!_pr.ok) die(`推送 main 失敗：${_pr.err}`);
-    console.log('✓ 已上架。');
-    if (v.slug) console.log(`PUBLISHED=https://appi.news/articles/${v.slug}/ ｜ ${articleTitle(v.slug) || v.slug}`);
+    console.log(`✓ 已上架 ${kept.length} 篇。`);
+    for (const v of kept) console.log(`PUBLISHED=https://appi.news/articles/${v.slug}/ ｜ ${articleTitle(v.slug) || v.slug}`);
   } else {
-    console.log('✓ 已 stage（未 push）。');
-    if (v.slug) console.log(`STAGED=${v.slug} ｜ ${articleTitle(v.slug) || v.slug}`);
+    console.log(`✓ 已 stage ${kept.length} 篇（未 push）。`);
+    for (const v of kept) console.log(`STAGED=${v.slug} ｜ ${articleTitle(v.slug) || v.slug}`);
   }
 }
 

@@ -16,18 +16,20 @@ out="$(timeout 1200 node scripts/focus-esg.mjs --go 2>&1)"; rc=$?
 [ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
 printf '%s\n' "$out"
 if [ "$rc" -eq 0 ]; then
-  # PUBLISHED 行格式：PUBLISHED=<url> ｜ <title>
-  pub=$(grep '^PUBLISHED=' <<<"$out" | sed 's/^PUBLISHED=//' | head -1)
+  # 一輪多篇：可能有多行 PUBLISHED=<url> ｜ <title>
+  pub=$(grep '^PUBLISHED=' <<<"$out" | sed 's/^PUBLISHED=//')
   if [ -n "$pub" ]; then
-    u=$(awk -F' ｜ ' '{print $1}' <<<"$pub")
-    # 送 Slack 前先等部署完成、文章線上讀得到（HTTP 200）再發，避免點連結 404。最多等 10 分鐘，逾時仍發。
-    deadline=$(( $(date +%s) + 600 ))
-    until [ "$(curl -s -4 -o /dev/null -w '%{http_code}' "$u")" = "200" ]; do
-      [ "$(date +%s)" -ge "$deadline" ] && { echo "⚠️ 等逾時，$u 仍非 200，仍照常發 Slack"; break; }
-      sleep 20
+    n=$(grep -c . <<<"$pub")
+    # 送 Slack 前，逐篇等部署完成、線上讀得到（HTTP 200）再發，避免點連結 404。每篇最多等 10 分鐘，逾時仍發。
+    for u in $(awk -F' ｜ ' '{print $1}' <<<"$pub"); do
+      deadline=$(( $(date +%s) + 600 ))
+      until [ "$(curl -s -4 -o /dev/null -w '%{http_code}' "$u")" = "200" ]; do
+        [ "$(date +%s)" -ge "$deadline" ] && { echo "⚠️ 等逾時，$u 仍非 200，仍照常發 Slack"; break; }
+        sleep 20
+      done
     done
-    list=$(awk -F' ｜ ' '{printf "• %s\n  %s", $2, $1}' <<<"$pub")
-    node scripts/cron-report.mjs --category focus --text "$(printf '🌏 焦點/ESG 自動上架（%s）：\n%s' "$ts" "$list")" || true
+    list=$(awk -F' ｜ ' '{printf "• %s\n  %s\n", $2, $1}' <<<"$pub")
+    node scripts/cron-report.mjs --category focus --text "$(printf '🌏 焦點/ESG 自動上架 %s 篇（%s）：\n%s' "$n" "$ts" "$list")" || true
   else
     node scripts/cron-report.mjs --dev --text "✅ $TASK：本次無夠新夠強的題（未產出）（$ts）" || true
   fi

@@ -13,6 +13,7 @@ import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildPolicePrompt, parsePoliceResult } from './lib/lifestyle-police.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
+import { buildCheckWithResync } from './lib/build-check.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
 const has = (n) => process.argv.includes(`--${n}`);
@@ -97,14 +98,9 @@ function main() {
     if (missing.length) die(`引用的本地圖檔不存在（${missing.join('、')}），不發佈（改動留工作區）`);
   }
 
-  // worktree 每次都是全新 checkout、沒有 dist/，check:links 直接讀 dist 會 ENOENT。
-  // 先 build 出 dist（含 pagefind，否則 /search/ 會少 /pagefind/ 連結）再檢查，與 deploy.yml 同把關。
-  console.log('→ pnpm build（產 dist 供 check:links；worktree 無殘留 dist）');
-  try { sh('pnpm', ['build'], { stdio: 'inherit' }); }
-  catch (e) { die(`build 失敗，不發佈（改動留工作區）：${e.message}`); }
-  console.log('→ pnpm check:links');
-  try { sh('pnpm', ['check:links'], { stdio: 'inherit' }); }
-  catch (e) { die(`check:links 未過，不發佈（改動留工作區）：${e.message}`); }
+  // worktree 無殘留 dist → 先 build 再 check:links；失敗時同步最新 main 自癒重試一次（並發防護，不序列化）。
+  try { buildCheckWithResync(); }
+  catch (e) { die(`build/check:links 未過（已自癒重試），不發佈（改動留工作區）：${e.message}`); }
   sh('git', ['add', '--', ARTICLES_DIR, 'public/covers', 'public/images']);
   sh('git', ['commit', '-m', `feat(article): 警消好人好事整理\n\n整理自各地警察局公開新聞稿、附原文出處、編輯部署名。`]);
   if (go) {

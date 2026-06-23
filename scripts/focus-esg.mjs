@@ -13,6 +13,7 @@ import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildFocusEsgPrompt, parseFocusEsgResult } from './lib/focus-esg.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
+import { buildCheckWithResync } from './lib/build-check.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
 const has = (n) => process.argv.includes(`--${n}`);
@@ -119,13 +120,9 @@ function main() {
   }
   if (kept.length === 0) { console.log('\n✓ 本批全部缺圖被剔除，無發佈。'); return; }
 
-  // worktree 每次都是全新 checkout、沒有 dist/，check:links 直接讀 dist 會 ENOENT；先 build 再檢查。
-  console.log('\n→ pnpm build（產 dist 供 check:links；worktree 無殘留 dist）');
-  try { sh('pnpm', ['build'], { stdio: 'inherit' }); }
-  catch (e) { die(`build 失敗，不發佈（改動留工作區）：${e.message}`); }
-  console.log('→ pnpm check:links');
-  try { sh('pnpm', ['check:links'], { stdio: 'inherit' }); }
-  catch (e) { die(`check:links 未過，不發佈（改動留工作區）：${e.message}`); }
+  // worktree 無殘留 dist → 先 build 再 check:links；失敗時同步最新 main 自癒重試一次（並發防護，不序列化）。
+  try { buildCheckWithResync(); }
+  catch (e) { die(`build/check:links 未過（已自癒重試），不發佈（改動留工作區）：${e.message}`); }
 
   sh('git', ['add', '--', ARTICLES_DIR, 'public/covers', 'public/images']);
   sh('git', ['commit', '-m', `feat(article): 焦點/ESG 自動產文（${kept.length} 篇）\n\n整理自主管機關／權威來源公開資料、附原文出處、編輯部署名。`]);

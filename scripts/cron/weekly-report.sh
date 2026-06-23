@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# 每週 cron：數據週報（GA4+GSC→Slack）。台北週一 06:17 = UTC 週日 22:17。
-TASK="每週數據週報"
+# 定期 cron：數據報告（GA4+GSC→Slack），每 3 天一次（站長定，UTC 22:17）。
+# 報告內部用滾動 7 天視窗＋週對比，每 3 天跑＝重疊滾動報告，讓 SEO 機會／AI 引用等慢訊號更跟得上。
+TASK="數據報告"
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
 # 多工：在自己的臨時 worktree 裡跑（off origin/main），與其他 publisher cron 並行、互不洗檔。

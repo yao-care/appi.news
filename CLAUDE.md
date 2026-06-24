@@ -9,6 +9,17 @@
 >
 > **三層分工**：本檔/README＝導航＋鐵則；說明文件（`PERFORMANCE.md`、`docs/SERVER_HANDOFF.md`…）＝**怎麼做**；[`docs/lessons/`](./docs/lessons/)＝**為什麼**（踩過的坑與重大決策，問題→原因→解法）。SOT 遇到「為什麼這樣做」一律連到 lessons，不在原地重述歷史。
 
+### 新增一條歷史經驗（lesson）的流程
+
+**觸發**：每當你**診斷並修掉一個非顯而易見的坑**，或做了一個**會影響後人**的重大取捨，就補一篇 lesson。判準＝「下一個人不知道會再踩」。
+
+1. **寫正本**：在 `docs/lessons/` 新增 `<kebab-slug>.md`，照 [`docs/lessons/README.md`](./docs/lessons/README.md) 的骨架（摘要列＋**問題 → 原因 → 解法 → 怎麼避免重犯**）。相近主題優先**併進現有篇**的新小節，別碎檔。
+2. **登錄索引**：在 `docs/lessons/README.md` 的「現有篇目」表加一列。
+3. **SOP 指路**：在對應說明文件把「為什麼/歷史」改成一句話連到正本，**不在 SOP 重述**。
+4. **記憶指回**：若有對應 Claude 記憶，記憶改成一句話指回 in-repo 正本（記憶不進 repo，只留操作摘要）。
+
+**不該寫成 lesson 的**（留在記憶/設定即可）：使用者偏好、操作性 config（頻道 ID、property、流量基準）、進行中計畫與 todo——這些不是可重用的工程教訓。
+
 | 你要做的事 | 情境 | 依序讀（事實來源） |
 |---|---|---|
 | 優化/更新專案本體：效能、版面、schema、build、部署 | 🛠 開發 | 本檔 §動手前驗證＋§效能鐵則 → [`PERFORMANCE.md`](./PERFORMANCE.md)（動字型/CSS/圖/build 前必讀）→ [`README.md`](./README.md) §開發 |

@@ -198,12 +198,20 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     display: grid;
     grid-template-columns: 1.6fr 1fr;
     gap: 40px;
+    align-items: stretch; /* 兩欄等高：由內容較高的右側清單決定列高 */
+  }
+  /* 左欄改 flex 直排：標題/摘要佔自然高度，主圖填滿剩餘高度，
+     使「圖+標題」整體高度＝右側 5 篇清單高度（全站滿版下不再讓 16:9 主圖自己撐高）。 */
+  .feature-main {
+    display: flex;
+    flex-direction: column;
   }
   .feature-media {
     display: block;
     overflow: hidden;
     border-radius: var(--radius);
-    aspect-ratio: 16 / 9;
+    flex: 1 1 auto;
+    min-height: 200px; /* 極端比例下的保底高度，避免主圖被壓到過扁 */
     background: var(--bg-soft);
     box-shadow: var(--shadow-md);
   }
@@ -325,6 +333,14 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     .feature {
       grid-template-columns: 1fr;
       gap: 28px;
+    }
+    /* 單欄堆疊時沒有右側可對齊，主圖恢復 16:9 正常框 */
+    .feature-main {
+      display: block;
+    }
+    .feature-media {
+      aspect-ratio: 16 / 9;
+      min-height: 0;
     }
     .feature-side {
       border-left: none;

@@ -29,7 +29,10 @@ const has = (name) => process.argv.includes(`--${name}`);
 const topic = arg('topic');
 const context = arg('context', '');
 let out = arg('out');
-const width = Number(arg('width', '960'));
+// 封面（covers/）需 ≥1200px（Discover/Top Stories 大圖門檻）；內文圖（images/）維持 960
+// （單篇多圖、且無 postbuild 縮圖，控文章頁重量）。--width 明確帶入時一律以其為準。
+const isCover = /(^|\/)covers\//.test(String(out ?? ''));
+const width = Number(arg('width', isCover ? '1200' : '960'));
 const query = arg('query', topic);
 const wantPeople = has('people');
 const dryRun = has('dry-run');

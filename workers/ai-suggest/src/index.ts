@@ -219,9 +219,12 @@ async function searchUnsplash(env: Env, query: string): Promise<StockPhoto[]> {
     headers: { Authorization: `Client-ID ${env.UNSPLASH_ACCESS_KEY}`, 'Accept-Version': 'v1' },
   });
   if (!res.ok) return [];
-  const data = (await res.json()) as { results?: { urls?: { regular?: string; small?: string }; user?: { name?: string; links?: { html?: string } } }[] };
+  const data = (await res.json()) as { results?: { urls?: { raw?: string; full?: string; regular?: string; small?: string }; user?: { name?: string; links?: { html?: string } } }[] };
   return (data.results ?? []).flatMap((r) => {
-    const full = r.urls?.regular ?? '';
+    // 封面需 ≥1200px（Discover/Top Stories 大圖）：raw 加 Imgix 參數取寬 1600，
+    // 退回 full / regular（regular 僅 1080，不足，僅最後手段）。
+    const raw = r.urls?.raw;
+    const full = raw ? `${raw}&w=1600&q=80&fm=jpg&fit=max` : (r.urls?.full ?? r.urls?.regular ?? '');
     const id = stockImageId(full);
     if (!id) return [];
     return [{ id, provider: 'unsplash' as const, thumb: r.urls?.small ?? full, full, credit: r.user?.name ?? '', creditUrl: r.user?.links?.html ?? '' }];
@@ -234,9 +237,10 @@ async function searchPexels(env: Env, query: string): Promise<StockPhoto[]> {
     headers: { Authorization: env.PEXELS_API_KEY },
   });
   if (!res.ok) return [];
-  const data = (await res.json()) as { photos?: { src?: { large?: string; medium?: string }; photographer?: string; photographer_url?: string }[] };
+  const data = (await res.json()) as { photos?: { src?: { large2x?: string; original?: string; large?: string; medium?: string }; photographer?: string; photographer_url?: string }[] };
   return (data.photos ?? []).flatMap((p) => {
-    const full = p.src?.large ?? '';
+    // 封面需 ≥1200px：large2x（寬 1880）優先，退回 original / large（large 僅 940，不足）。
+    const full = p.src?.large2x ?? p.src?.original ?? p.src?.large ?? '';
     const id = stockImageId(full);
     if (!id) return [];
     return [{ id, provider: 'pexels' as const, thumb: p.src?.medium ?? full, full, credit: p.photographer ?? '', creditUrl: p.photographer_url ?? '' }];

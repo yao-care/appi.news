@@ -123,6 +123,47 @@ export function personLd(
   };
 }
 
+/**
+ * schema.org @type 對照：以 contentType 為主、sourceType 可覆寫為 Article（廣編/新聞稿）。
+ * 單一事實來源：article 頁與 news-sitemap 准入共用此分類，避免兩處各寫一份。
+ * contentType / sourceType 取自 src/content.config.ts 的 enum（預設 news / editorial）。
+ */
+export function articleSchemaType(contentType: string, sourceType?: string): string {
+  // 廣編/新聞稿一律 Article，不論 contentType（防 contentType:news + sourceType:sponsored 誤標）
+  if (sourceType === 'sponsored' || sourceType === 'press-release') return 'Article';
+  switch (contentType) {
+    case 'analysis':
+    case 'research-brief':
+      return 'AnalysisNewsArticle';
+    case 'column':
+    case 'opinion':
+      return 'OpinionNewsArticle';
+    case 'guide':
+    case 'press-release':
+    case 'sponsored':
+      return 'Article';
+    // news / feature / interview / video / photo-story 及 legacy 無欄位 → 一般新聞
+    default:
+      return 'NewsArticle';
+  }
+}
+
+/**
+ * Google News sitemap 准入：廣編/新聞稿/常青指南不得進 Google News；opinion/column 允許。
+ * 與 articleSchemaType 共用同一套 contentType/sourceType 判斷。
+ */
+export function isGoogleNewsEligible(contentType: string, sourceType?: string): boolean {
+  if (sourceType === 'sponsored' || sourceType === 'press-release') return false;
+  if (
+    contentType === 'sponsored' ||
+    contentType === 'press-release' ||
+    contentType === 'guide'
+  ) {
+    return false;
+  }
+  return true;
+}
+
 export function faqLd(items: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',
@@ -155,7 +196,8 @@ export function articleLd(
       isOrganization?: boolean;
     };
     section?: string;
-    isNews?: boolean;
+    /** schema.org @type，如 'NewsArticle' | 'AnalysisNewsArticle' | 'Article'。預設 'Article'。 */
+    schemaType?: string;
     keywords?: string[];
     about?: string[];
     /** 文章參考來源 → 輸出 schema.org citation，強化可溯源性與 AI 引用信任 */
@@ -164,7 +206,7 @@ export function articleLd(
 ) {
   return {
     '@context': 'https://schema.org',
-    '@type': a.isNews ? 'NewsArticle' : 'Article',
+    '@type': a.schemaType ?? 'Article',
     '@id': `${absoluteUrl(a.path, site)}#article`,
     headline: a.headline,
     description: a.description,

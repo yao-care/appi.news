@@ -30,7 +30,7 @@ import {
 import { getCategory, getSubcategoryName } from '@/config/categories';
 import { formatDate, isoDate } from '@/utils/date';
 import { absoluteUrl, url } from '@/utils/url';
-import { articleLd, breadcrumbLd, faqLd } from '@/utils/jsonld';
+import { articleLd, breadcrumbLd, faqLd, articleSchemaType } from '@/utils/jsonld';
 
 export async function getStaticPaths() {
   const published = await getPublishedArticles();
@@ -90,8 +90,6 @@ const authorImageAbs = author
   ? new URL(authorAvatar(author), Astro.site).toString()
   : undefined;
 
-const isMedicalOrNews =
-  article.data.category === 'health' || article.data.category === 'focus';
 
 // structured data
 const crumbItems = [
@@ -116,7 +114,7 @@ const ld = [
       isOrganization: author?.data.isOrganization,
     },
     section: cat?.name,
-    isNews: isMedicalOrNews,
+    schemaType: articleSchemaType(article.data.contentType, article.data.sourceType),
     keywords: article.data.tags,
     about: aboutNames,
     citations: article.data.references.map((r) => ({

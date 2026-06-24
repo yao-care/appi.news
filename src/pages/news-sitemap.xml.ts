@@ -2,6 +2,7 @@ import type { APIContext } from 'astro';
 import { SITE } from '@/config/site';
 import { getPublishedArticles, articleSlug } from '@/utils/content';
 import { absoluteUrl } from '@/utils/url';
+import { isGoogleNewsEligible } from '@/utils/jsonld';
 
 /**
  * Google News sitemap。
@@ -31,7 +32,10 @@ export async function GET(context: APIContext) {
   const site = context.site;
   const now = Date.now();
   const articles = (await getPublishedArticles()).filter(
-    (a) => now - a.data.publishDate.getTime() <= WINDOW_MS,
+    (a) =>
+      now - a.data.publishDate.getTime() <= WINDOW_MS &&
+      // 廣編/新聞稿/常青指南不得進 Google News（與 articleLd @type 分類同源）
+      isGoogleNewsEligible(a.data.contentType, a.data.sourceType),
   );
 
   const urls = articles

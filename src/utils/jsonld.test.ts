@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { articleLd } from './jsonld.ts';
+import { articleLd, articleSchemaType, isGoogleNewsEligible } from './jsonld.ts';
 
 const site = 'https://yao-care.github.io/appi.news/';
 const baseArgs = {
@@ -36,9 +36,15 @@ describe('articleLd', () => {
     expect(ld.keywords).toBe('LLM, 醫療AI');
     expect(JSON.stringify(ld.about)).toContain('數位健康');
   });
-  it('isNews 時型別為 NewsArticle', () => {
-    const ld = articleLd(site, { ...baseArgs, isNews: true }) as any;
+  it('未傳 schemaType 時退到安全的 Article（不過度宣稱新聞）', () => {
+    const ld = articleLd(site, baseArgs) as any;
+    expect(ld['@type']).toBe('Article');
+  });
+  it('傳入 schemaType 時依其輸出 @type', () => {
+    const ld = articleLd(site, { ...baseArgs, schemaType: 'NewsArticle' }) as any;
     expect(ld['@type']).toBe('NewsArticle');
+    const ld2 = articleLd(site, { ...baseArgs, schemaType: 'AnalysisNewsArticle' }) as any;
+    expect(ld2['@type']).toBe('AnalysisNewsArticle');
   });
   it('keywords/about 空陣列或空字串時不輸出該欄位', () => {
     const ld1 = articleLd(site, { ...baseArgs, keywords: [], about: [] }) as any;
@@ -71,5 +77,50 @@ describe('articleLd', () => {
   it('citations 空陣列時不輸出 citation', () => {
     const ld = articleLd(site, { ...baseArgs, citations: [] }) as any;
     expect(ld.citation).toBeUndefined();
+  });
+});
+
+describe('articleSchemaType', () => {
+  it('時效新聞類 → NewsArticle', () => {
+    for (const ct of ['news', 'feature', 'interview', 'video', 'photo-story']) {
+      expect(articleSchemaType(ct)).toBe('NewsArticle');
+    }
+  });
+  it('legacy 無 contentType（任意未列值）→ NewsArticle', () => {
+    expect(articleSchemaType('')).toBe('NewsArticle');
+  });
+  it('分析類 → AnalysisNewsArticle', () => {
+    expect(articleSchemaType('analysis')).toBe('AnalysisNewsArticle');
+    expect(articleSchemaType('research-brief')).toBe('AnalysisNewsArticle');
+  });
+  it('評論類 → OpinionNewsArticle', () => {
+    expect(articleSchemaType('column')).toBe('OpinionNewsArticle');
+    expect(articleSchemaType('opinion')).toBe('OpinionNewsArticle');
+  });
+  it('常青/廣編/新聞稿 → Article', () => {
+    expect(articleSchemaType('guide')).toBe('Article');
+    expect(articleSchemaType('press-release')).toBe('Article');
+    expect(articleSchemaType('sponsored')).toBe('Article');
+  });
+  it('sourceType 廣編/新聞稿覆寫為 Article（不論 contentType）', () => {
+    expect(articleSchemaType('news', 'sponsored')).toBe('Article');
+    expect(articleSchemaType('analysis', 'press-release')).toBe('Article');
+  });
+});
+
+describe('isGoogleNewsEligible', () => {
+  it('一般新聞與評論允許進 Google News', () => {
+    expect(isGoogleNewsEligible('news', 'editorial')).toBe(true);
+    expect(isGoogleNewsEligible('column', 'author')).toBe(true);
+    expect(isGoogleNewsEligible('analysis', 'editorial')).toBe(true);
+  });
+  it('廣編/新聞稿/常青指南不得進 Google News', () => {
+    expect(isGoogleNewsEligible('sponsored')).toBe(false);
+    expect(isGoogleNewsEligible('press-release')).toBe(false);
+    expect(isGoogleNewsEligible('guide')).toBe(false);
+  });
+  it('sourceType 廣編/新聞稿覆寫為不准入', () => {
+    expect(isGoogleNewsEligible('news', 'sponsored')).toBe(false);
+    expect(isGoogleNewsEligible('news', 'press-release')).toBe(false);
   });
 });

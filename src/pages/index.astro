@@ -34,7 +34,9 @@ const hero =
 if (hero) dedupe.take([hero], 1);
 
 // 精選右側：5 篇含小縮圖的清單（補滿垂直空間 + 易辨識）
-const secondary = dedupe.take([...featuredArticles(all), ...all], 5);
+// 右側精選清單：備齊最多 10 則。窄螢幕只顯示前 5 則（CSS 控制）；
+// 寬螢幕（≥1440px）右側夠寬時切雙欄、顯示全部 10 則，填左側大圖造成的縱向留白。
+const secondary = dedupe.take([...featuredArticles(all), ...all], 10);
 
 // 最新文章：單一等高大圖網格（補滿空間）
 const latest = dedupe.take(all, 12, false);
@@ -271,6 +273,12 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
   .side-item:first-child {
     padding-top: 0;
   }
+  /* 預設只顯示前 5 則（其餘留待寬螢幕雙欄時才顯示，見 ≥1440px） */
+  .side-item:nth-child(n + 6) {
+    display: none;
+  }
+  /* 第 5 則為單欄時的末則、雙欄時左欄末則；第 10 則為雙欄右欄末則 */
+  .side-item:nth-child(5),
   .side-item:last-child {
     border-bottom: none;
     padding-bottom: 0;
@@ -350,6 +358,24 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     }
     .side-title {
       font-size: 1.125rem;
+    }
+  }
+
+  /* 寬螢幕：右側夠寬時切雙欄、顯示全部 10 則，填滿左側大圖造成的縱向留白。
+     欄內由上往下排（grid-auto-flow: column + 5 列）：第 1~5 則在左欄、6~10 則在右欄。 */
+  @media (min-width: 1440px) {
+    .feature-side {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-auto-flow: column;
+      column-gap: 28px;
+    }
+    .side-item:nth-child(n + 6) {
+      display: flex;
+    }
+    .side-item:nth-child(6) {
+      padding-top: 0; /* 右欄頂端首則不留上內距 */
     }
   }
 </style>

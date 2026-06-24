@@ -22,6 +22,9 @@ interface Props {
   keywords?: string[];
   /** 額外的 structured data（文章頁、作者頁等） */
   jsonld?: Record<string, any> | Record<string, any>[];
+  /** 額外的 RSS feed（如分類 feed）供 <head> 自動探索 */
+  rssHref?: string;
+  rssTitle?: string;
 }
 
 const {
@@ -37,6 +40,8 @@ const {
   authorPath,
   keywords,
   jsonld,
+  rssHref,
+  rssTitle,
 } = Astro.props;
 
 const baseLd = [websiteLd(Astro.site), orgLd(Astro.site)];
@@ -57,6 +62,8 @@ const baseLd = [websiteLd(Astro.site), orgLd(Astro.site)];
       authorName={authorName}
       authorPath={authorPath}
       keywords={keywords}
+      rssHref={rssHref}
+      rssTitle={rssTitle}
     />
     <JsonLd data={baseLd} />
     {jsonld && <JsonLd data={jsonld} />}

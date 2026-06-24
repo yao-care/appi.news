@@ -83,7 +83,7 @@
   --font-serif: 'Noto Serif TC', Georgia, 'Times New Roman', serif;
 
   /* ---------- 排版 ---------- */
-  --maxw: 1180px;
+  --maxw: none;
   --maxw-prose: 760px;
   --radius: 10px;
   --radius-sm: 6px;
@@ -341,19 +341,16 @@ h4 {
   gap: 24px;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
+/* 全站無寬度上限：固定欄數改 auto-fill，欄數隨可用寬度自動增加（卡片寬度維持
+   在 min 附近，不會被拉寬→封面圖不會糊）。--3 卡片較大用較大 min，--4 較密用較小 min。 */
 .card-grid--3 {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 .card-grid--4 {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-@media (max-width: 860px) {
-  .card-grid--3,
-  .card-grid--4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* 手機安全閥：min-width 會在極窄視窗造成水平溢出，故 ≤520px 一律單欄。 */
 @media (max-width: 520px) {
   .card-grid,
   .card-grid--3,

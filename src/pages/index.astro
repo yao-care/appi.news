@@ -126,7 +126,7 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
         <h2>最新文章</h2>
         <a class="more-link" href={url('/articles/')}>所有文章 →</a>
       </div>
-      <div class="card-grid card-grid--3">
+      <div class="card-grid">
         {
           latest.map((a) => (
             <ArticleCard
@@ -206,6 +206,13 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     aspect-ratio: 16 / 9;
     background: var(--bg-soft);
     box-shadow: var(--shadow-md);
+  }
+  /* postbuild 會把 feature 圖包進 <picture>（大螢幕換高解圖）；picture 預設 inline，
+     需 block 撐滿 .feature-media 外框，圖才不會塌高（CLS 仍由外框 aspect-ratio 控制）。 */
+  .feature-media :global(picture) {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   :global(.feature-img) {
     width: 100%;

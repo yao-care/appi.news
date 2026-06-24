@@ -25,3 +25,12 @@ const { articles, authorNames, title = '相關文章' } = Astro.props;
     </section>
   )
 }
+
+<style>
+  /* 延伸閱讀固定 3 則：全站無寬度上限下，這裡仍維持一個寬度上限置中，
+     避免 3 張卡在寬螢幕被 auto-fill 拉散、靠左留大片空白。 */
+  .related {
+    max-width: 1180px;
+    margin-inline: auto;
+  }
+</style>

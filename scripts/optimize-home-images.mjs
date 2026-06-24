@@ -50,6 +50,38 @@ for (const [file, { width }] of jobs) {
 for (const [file, out] of rename) {
   html = html.split('/covers/' + file).join('/covers/' + out);
 }
+
+// 編輯精選大圖（feature-img）：全站無寬度上限下，它會被拉到整列寬。手機/平板沿用上面
+// 的 900px webp（src 不變→ LCP/流量零退步）；桌機（≥1200px）改用原圖原生寬度的高解 webp
+// （最高 ~1536px，withoutEnlargement 不放大）以免在 1600px+/4K 變糊。手法＝把 <img> 包進
+// <picture>，只在 ≥1200px 命中 <source>。
+let featureFile = null;
+for (const tag of tags) {
+  if (/feature-img/.test(tag)) {
+    const m = tag.match(/src="[^"]*\/covers\/([^"?]+)"/);
+    if (m) featureFile = m[1];
+  }
+}
+if (featureFile && existsSync(join(COVERS, featureFile))) {
+  const buf = await sharp(join(COVERS, featureFile))
+    .resize(1600, null, { withoutEnlargement: true })
+    .webp({ quality: Q })
+    .toBuffer();
+  const hash = createHash('sha256').update(buf).digest('hex').slice(0, 8);
+  const outLarge = `${basename(featureFile).replace(/\.[a-z]+$/i, '')}-hlarge.${hash}.webp`;
+  writeFileSync(join(COVERS, outLarge), buf);
+  // 此時 html 內 feature 的 <img src> 已被改寫成 900px webp；把該 <img> 包進 <picture>
+  const featTag = (html.match(/<img\b[^>]*feature-img[^>]*>/) || [])[0];
+  if (featTag) {
+    const prefix = (featTag.match(/src="([^"]*\/covers\/)/) || [])[1] || '/covers/';
+    const picture =
+      `<picture><source media="(min-width: 1200px)" srcset="${prefix}${outLarge}" type="image/webp" />` +
+      `${featTag}</picture>`;
+    html = html.replace(featTag, picture);
+    console.log(`[optimize-home-images] feature 大圖 <picture> 換高解：${outLarge}`);
+  }
+}
+
 writeFileSync(HOME, html);
 
 console.log(

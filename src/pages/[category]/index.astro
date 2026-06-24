@@ -35,6 +35,8 @@ const pageArticles = inCat.slice(0, PAGE_SIZE);
   description={category.description}
   path={`/${category.slug}/`}
   ogImage={`og/${category.slug}.png`}
+  rssHref={`/${category.slug}/rss.xml`}
+  rssTitle={`${category.name} RSS`}
 >
   {category.slug === 'sports' && (
     <section class="sports-submit-cta">

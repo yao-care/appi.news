@@ -1,7 +1,35 @@
-# Google Publisher Center 登記資料包（APPI News）
+# Google News 收錄資料包（APPI News）
 
-> 目的：到 https://publishercenter.google.com 建立刊物時照此貼。**非收錄前提**（Google News 現為自動收錄），這步是管理門面（品牌名、logo、分區）的加分項。
 > 所有欄位取自 `src/config/site.ts`、`src/config/categories.ts` 與線上站實測，非憑記憶。
+
+## ⚠️ 現況更正（2025/03 Google 改版，必讀）
+
+Google News 已於 **2025 年 3 月**全面改為**自動生成刊物頁**。官方明確表示：**Google News 不再使用 Publisher Center 裡提交的 RSS feed 或網站位置**，手動建立的刊物頁也不再對使用者顯示；標題、地區、版面等自訂功能多半移除。Publisher Center 現在主要剩 **Reader Revenue Manager（訂閱變現）** 與 **News Showcase** 兩用途。
+（來源：https://support.google.com/news/publisher-center/answer/15898024）
+
+**因此：**
+
+- **沒有 XML / feed 要「貼進 Publisher Center」** —— 它已不吃。下方 §3「Content/feeds」段保留僅供歷史參考，現已失效。
+- **Google News 收錄是自動的**，靠 Google 爬取你的網站 + **Search Console 的 news sitemap**（見 §3.1），不需在 Publisher Center 送審。
+- Publisher Center 仍可上傳 **logo（Images 分頁）**，這是少數還保留的設定（見 §2）；要不要建刊物純看你是否需要 Reader Revenue Manager / News Showcase。
+
+---
+
+## 3.1 給 Google 的 XML / feed 一覽（真正有效的管道）
+
+Google News／一般搜尋實際吃的是下面這些，管道是 **Google Search Console**（非 Publisher Center），且**均已提交、即時驗證健康**：
+
+| XML / feed | 網址 | 狀態（線上＋GSC 實測） | 用途 |
+|---|---|---|---|
+| **News sitemap** | `https://appi.news/news-sitemap.xml` | HTTP 200；GSC 已提交、type=news、0 錯誤、每日自動抓取 | Google News 收錄主訊號 |
+| 一般 sitemap（index） | `https://appi.news/sitemap-index.xml` | HTTP 200；GSC 已提交、0 錯誤 | 一般搜尋索引 |
+| RSS feed | `https://appi.news/rss.xml` | HTTP 200、30 筆全文 | 讀者／聚合器（Google News 已不用，仍有效） |
+
+- 三者皆已寫進 `https://appi.news/robots.txt`。
+- news sitemap 規格／准入邏輯見 `src/pages/news-sitemap.xml.ts`（48h 窗、廣編/新聞稿/常青指南排除）。
+- **要交給 Google 的「XML 資料」就是上面三個 URL，且已透過 Search Console 交付，無需再做。**
+
+---
 
 ## 0. 前置：你本人要做的事
 

@@ -864,5 +864,29 @@
     "predictions": [
       "企業外洩的主流入口會從『核心系統被攻破』移到『第三方平台整合的信任鏈』；隨著 SaaS 串接與 OAuth 授權越接越多、清單長得比人盤得動還快，開了就沒人回頭看、權限開過大的整合會成為最隱形的破口，先把每條整合列冊、畫資料血緣、做權杖衛生與定好通報時程的組織，會比被動等平台補機制、出事才喊『有限資料』的同業更不容易在沒人看的接縫上被一把舊鑰匙撬開。"
     ]
+  },
+  {
+    "slug": "lastpass-klue-oauth-token-breach",
+    "title": "LastPass 證實客戶資料外洩：第三方情報平台 Klue 的 OAuth token 被竊，連帶掃到 Snyk、Tanium 一票廠商",
+    "publishDate": "2026-06-24",
+    "category": "tech",
+    "tags": [
+      "LastPass 資料外洩",
+      "OAuth token",
+      "SaaS 供應鏈攻擊",
+      "第三方整合資安",
+      "Salesforce 外洩"
+    ],
+    "conclusion": "LastPass 這次客戶資料外洩破口不在自家系統，而在它接的第三方競品情報平台 Klue：攻擊者用一組被遺忘的舊憑證打進 Klue、竄改整合系統收割客戶 OAuth 長期權杖，再拿這些權杖直接讀走各家 Salesforce 的 CRM 資料；密碼庫未受影響，受害的反而多是資安廠。企業真正該補的不是攻擊手法，而是『給了多少第三方整合長期權杖』這筆沒人在盤的爛帳：盤點、最小權限、授權到期一起收。",
+    "claims": [
+      "LastPass 6/12 接獲 Klue 通報，外洩限於存放 Salesforce 的 CRM 資料（姓名、電話、email、地址、客服案件、業務往來），LastPass 產品/基礎設施/客戶密碼庫與加密機密均未受影響（CyberInsider、Hackread）；被搬走的是業務聯絡簿不是保險箱，但聯絡資料正好是精準釣魚的彈藥，資料分級不同後果路徑也不同。",
+      "攻擊鏈從一家被打變一票一起倒的關鍵是 OAuth 長期權杖：攻擊者用 Klue 當初試做後放棄、卻沒收回的舊整合憑證進入，推惡意更新收割客戶 OAuth 權杖（CSO Online）；Klue 是競品情報平台，手握一大批客戶授權連 Salesforce/Gong 的長期權杖，被偷等於同時拿到十幾家公司鑰匙；ReliaQuest 還原攻擊者用合法整合帳號生成權杖、跑自動化 Python 腳本對 Salesforce REST API 連查約 24 小時，量與節奏是批量撈取非日常流量，因整合被信任而幾乎沒被檢視。",
+      "受害名單幾乎是資安產業點名簿：HackerOne、Snyk、Tanium、Recorded Future、Huntress、Jamf、OneTrust、Gong、Sprout Social、LastPass，SecurityWeek 後補 BeyondTrust、確認逾十餘家總數約 15 家（TechCrunch、Hackread、SecurityWeek）；它們不是不懂資安，破口根本不在它們家，共通點只有都用了同一個第三方情報平台，說明你的資安等級還取決於把鑰匙交給了誰、那家的牆有多高。",
+      "作者本人觀點（這個時代怎麼用 AI 補強）：AI 不是更厲害的防火牆（這次用合法授權、走被信任整合，沒惡意程式可掃、沒盜帳號可擋，這樣想就解錯題），真正該頂的是兩件人做不來又非做不可的苦工：①把沒人在盤的第三方整合爛帳持續盤起來（清點 OAuth 授權、找殭屍整合與權限過大項）、②學每個整合的基線做異常存取偵測（正常同步不會凌晨對 REST API 連打 24 小時）；但 AI 只整理訊號、標異常，撤不撤、砍不砍的判斷留給人，可信度靠落地流程不靠模型聰明（延續 llm-healthcare-promise-limits），把判斷整包丟給 AI 等於把更大的鑰匙交給還沒學會監控的對象。",
+      "可執行三步（順序不能倒）：①先盤點—列出所有對核心平台有 OAuth 存取的第三方 app 與其擁有者/權限/最後使用時間，挖出殭屍整合（ThreatLocker）；②收斂權限—逐一收到最小權限，只讀聯絡人的工具別給讀寫所有物件；③設授權到期—替整合憑證設輪替週期、定期重新授權、撤銷可疑 OAuth 與更新權杖、稽核 Salesforce 存取事件常態化，別讓權杖永生（ReliaQuest『任何有 OAuth 存取核心平台的第三方 app 都該被清點/監控/收斂到最小權限』）。延續 servicenow-saas-api-auth-misconfiguration-breach『入口在串接出去那層不在核心系統』、mcp-de-facto-standard-agent-governance『每個串接進來的整合都是新權限治理對象、OAuth 權杖單點失效放大全鏈風險』、what-is-claw-llm-client-tool『先定義情境再決定開放、順序不能倒』。"
+    ],
+    "predictions": [
+      "企業外洩的主流入口會持續從核心系統移到第三方整合的長期 OAuth 授權那條信任鏈；隨著 SaaS 串接越接越多、長期權杖發出去就沒人回頭收，攻擊者會更常去打你信任、但防得鬆的第三方再用合法授權走進來，先把第三方整合盤點、最小權限與授權到期當例行事、並用 AI 接走盤點與異常偵測苦工的組織，會比把鑰匙發出去就忘了、等資料被搬走才知道的同業更不容易在沒人看的接縫被一把舊鑰匙撬開。"
+    ]
   }
 ]

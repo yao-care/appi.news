@@ -22,12 +22,30 @@
 
 ## 現有篇目
 
-| 篇目 | 範圍 | 一句話 |
-|---|---|---|
-| [font-render-blocking.md](./font-render-blocking.md) | 字型/效能 | 全腳本字型進入點造成 545 個 @font-face、662 KB render-blocking，怎麼救回來的 |
-| [psi-cold-edge.md](./psi-cold-edge.md) | 效能量測 | 剛部署 PSI 暴跌到 55 多半是冷邊緣假象，別對假問題改程式 |
-| [google-indexing-api-gray-area.md](./google-indexing-api-gray-area.md) | SEO/收錄 | 「有 GSC key 就能催收錄」是誤解；Indexing API 對新聞站非官方、200 不保證收錄 |
-| [wordpress-date-permalink-404.md](./wordpress-date-permalink-404.md) | SEO/轉址 | 舊 WordPress 日期網址漏接轉址變 404，仍在流失 Google 曝光 |
+**效能**
+| 篇目 | 一句話 |
+|---|---|
+| [font-render-blocking.md](./font-render-blocking.md) | 全腳本字型進入點造成 545 個 @font-face、662 KB render-blocking，怎麼救回來的 |
+| [psi-cold-edge.md](./psi-cold-edge.md) | 剛部署 PSI 暴跌到 55 多半是冷邊緣假象，別對假問題改程式 |
+
+**SEO / 換網域**
+| 篇目 | 一句話 |
+|---|---|
+| [google-indexing-api-gray-area.md](./google-indexing-api-gray-area.md) | 「有 GSC key 就能催收錄」是誤解；Indexing API 對新聞站非官方、200 不保證收錄 |
+| [wordpress-date-permalink-404.md](./wordpress-date-permalink-404.md) | 舊 WordPress 日期網址漏接轉址變 404，仍在流失 Google 曝光 |
+| [domain-change-worker-cors.md](./domain-change-worker-cors.md) | 換網域漏改 Cloudflare Worker 的 ALLOWED_ORIGIN → 編輯器「Failed to fetch」 |
+
+**自動化 / 發佈 / git**
+| 篇目 | 一句話 |
+|---|---|
+| [automation-runtime-staleness.md](./automation-runtime-staleness.md) | 改了卻沒生效：程式從 publisher checkout 跑、cron 一律 UTC、.sh/server 改完要 pull |
+| [auto-publish-pipeline-traps.md](./auto-publish-pipeline-traps.md) | 發佈正確性三坑：worktree 要先 build、publishDate 用系統時間蓋、多工不序列化用自癒重試 |
+| [commit-hygiene-shared-checkout.md](./commit-hygiene-shared-checkout.md) | 共用 checkout 別把別人 WIP 掃進 commit：只 stage 文章產物 / 用 pathspec |
+
+**內容 / 查證**
+| 篇目 | 一句話 |
+|---|---|
+| [link-and-content-validation.md](./link-and-content-validation.md) | 連結查證與內容檢查的假陽性：bot 擋、IPv6 要 curl -4、regex 截斷、legal 誤報、引號不一致 |
 
 > 更早的一次性遷移紀錄另見 [`../../MIGRATION_NOTES.md`](../../MIGRATION_NOTES.md)（WordPress → Astro，2026-06-09 當時快照）。
 > 更多尚未整理成正本的踩坑，散在 Claude 本地記憶（`~/.claude/projects/-root-appi-news/memory/`），可逐步提煉成這裡的正本。

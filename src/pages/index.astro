@@ -200,16 +200,27 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     display: grid;
     grid-template-columns: 1.6fr 1fr;
     gap: 40px;
-    /* 兩欄等高（grid 預設 stretch）：右側清單較高時左欄跟著拉齊，反之亦然 */
+    /* 兩欄等高（grid 預設 stretch）：列高由右側清單的自然高度決定 */
+  }
+  /* 左欄：標題/摘要佔自然高度，大圖填滿剩餘高度 → 左欄總高＝右側清單高，兩邊皆不留白。
+     flex-basis:0（非 auto）是關鍵：高度純由「右側確定性內容」反推，不取用圖片原生尺寸，
+     避免上次 flex-basis:auto 用直幅圖原生高度當基準導致的 CLS 抖動。 */
+  .feature-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
   }
   .feature-media {
     display: block;
     overflow: hidden;
     border-radius: var(--radius);
-    aspect-ratio: 16 / 9; /* 固定比例＝CLS 確定為 0，勿改成動態高度 */
-    max-height: 420px; /* 全站滿版下，寬螢幕主圖不再依 16/9 自己撐到很高（原 2560px 下達 ~840px） */
+    flex: 1 1 0; /* 吸收高度差；高度由 grid 列高（右側內容）決定，首次繪製即確定→CLS 0 */
+    min-height: 0;
     background: var(--bg-soft);
     box-shadow: var(--shadow-md);
+  }
+  .feature-text {
+    flex: 0 0 auto; /* 不吸收剩餘空間，維持自然高度 */
   }
   /* postbuild 會把 feature 圖包進 <picture>（大螢幕換高解圖）；picture 預設 inline，
      需 block 撐滿 .feature-media 外框，圖才不會塌高（CLS 仍由外框 aspect-ratio 控制）。 */
@@ -335,6 +346,14 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     .feature {
       grid-template-columns: 1fr;
       gap: 28px;
+    }
+    /* 單欄堆疊時沒有右側可對齊，左欄回正常流、大圖回 16:9 固定框 */
+    .feature-main {
+      display: block;
+    }
+    .feature-media {
+      flex: none;
+      aspect-ratio: 16 / 9;
     }
     .feature-side {
       border-left: none;

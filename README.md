@@ -25,9 +25,10 @@
 
 ## 維護者必讀
 
-- **效能：[`PERFORMANCE.md`](./PERFORMANCE.md)** — 動字型、CSS、首頁圖片、全站樣式或 build 流程前**務必先讀**。記錄當初把效能拖垮的根因與不可重犯的鐵則。
+- **效能：[`PERFORMANCE.md`](./PERFORMANCE.md)** — 動字型、CSS、首頁圖片、全站樣式或 build 流程前**務必先讀**：現行做法與不可退回的底線。
 - **開發紀律：[`CLAUDE.md`](./CLAUDE.md)** — pnpm、動手前驗證、部署、效能底線、內容紀律。
-- **內容遷移：[`MIGRATION_NOTES.md`](./MIGRATION_NOTES.md)** — 舊 WordPress 內容遷移工具與對照。
+- **歷史經驗：[`docs/lessons/`](./docs/lessons/)** — 踩過的坑與重大決策（問題→原因→解法）。說明文件遇到「為什麼這樣做」一律連到這裡。
+- **內容遷移：[`MIGRATION_NOTES.md`](./MIGRATION_NOTES.md)** — 舊 WordPress 內容遷移工具與對照（2026-06-09 歷史快照）。
 
 完整文件索引見文末「[文件索引](#文件索引)」。
 
@@ -287,7 +288,7 @@ public/
   images/      內文圖
   covers/      封面（build 時另產縮圖 webp）
 .claude/skills/newsroom/   日更引擎 skill（SKILL.md / persona.md / author-memory.json）
-docs/          內容規劃與待補清單（見下）
+docs/          lessons/（歷史經驗正本）、SERVER_HANDOFF、內容規劃與待補清單
 PERFORMANCE.md   ★ 效能維護鐵則（必讀）
 CLAUDE.md        AI / 開發者紀律規則
 MIGRATION_NOTES.md  WordPress 遷移工具與對照
@@ -301,7 +302,8 @@ MIGRATION_NOTES.md  WordPress 遷移工具與對照
 |---|---|---|
 | [`README.md`](./README.md) | 維護者（人）｜**對等入口** | 本檔：開發、新增內容、自動發文、曝光量、上線 |
 | [`CLAUDE.md`](./CLAUDE.md) | AI / 開發者｜**對等入口** | 維護情境路由、動手前驗證、效能底線、部署、內容紀律 |
-| [`PERFORMANCE.md`](./PERFORMANCE.md) | 全員（改 build/字型/CSS/圖片前必讀） | 效能根因與不可重犯的鐵則 |
+| [`PERFORMANCE.md`](./PERFORMANCE.md) | 全員（改 build/字型/CSS/圖片前必讀） | 效能現行做法與不可退回的底線（歷史根因連到 `docs/lessons/`） |
+| [`docs/lessons/`](./docs/lessons/) | 全員 | **歷史經驗正本**：踩過的坑與重大決策（問題→原因→解法）；說明文件的「為什麼」都連這裡 |
 | [`MIGRATION_NOTES.md`](./MIGRATION_NOTES.md) | 維護者 | WordPress 遷移工具、欄位/分類對照、遷移統計（2026-06-09 歷史紀錄） |
 | [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) | server 端 AI/維運 | 自動化在 server 上的開機前置、金鑰擺放、cron、週報＋自動產文操作 |
 | [`docs/content-todo.md`](./docs/content-todo.md) | 編輯團隊 | 內容待補清單（缺 references / highlights / 圖等） |

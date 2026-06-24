@@ -88,8 +88,10 @@ pnpm test
 | 颱風停班課 | lifestyle-typhoon.sh | 每小時（5–11 月） | 每小時 | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
 | 警消好人好事 | lifestyle-police.sh | 週三 06:30 | 週三 14:30 | 各地警局新聞稿（lifestyle-police.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 每週數據週報 | weekly-report.sh | 週日 22:17 | 週一 06:17 | GA4+GSC | n/a（數據）| ✅週報到**作者群** |
+| 新文章送 Indexing API | indexing-submit.sh | 06:00 | 14:00 | 線上 sitemap | n/a（送 Google 收錄）| 有送才報**作者群** |
 
-- **並發保護（重要）**：所有 publisher-checkout cron 開頭都用 `flock -w 1800 /tmp/appi-publisher-cron.lock` 序列化——因為每支都 `git reset --hard origin/main`，若兩支同時跑會互洗未提交工作。同時只放一支，取鎖逾時就略過本次。**新增 cron 務必沿用此 flock 樣板。**
+- **並發保護（重要）**：所有**會 `git reset --hard origin/main`** 的 publisher-checkout cron 開頭都用 `flock -w 1800 /tmp/appi-publisher-cron.lock` 序列化，避免兩支同時跑互洗未提交工作。同時只放一支，取鎖逾時就略過本次。**新增這類 cron 務必沿用此 flock 樣板。**
+  - **例外**：`indexing-submit.sh` 是**純資料腳本**（只讀線上 sitemap + 帳本 + 呼叫 API，不碰 git 工作區），故**不走 flock、不需 worktree**，與其他 cron 無洗檔競態。背景見 [`docs/lessons/google-indexing-api-gray-area.md`](./lessons/google-indexing-api-gray-area.md)。
 - **國際是長跑**（最多 8 區×3 篇、逐篇 Claude 撰寫，單次可能數小時）；其他 cron 在此期間取不到鎖會略過重試，故國際排最前（02:30）、警消刻意排到 06:30 避開。要降國際耗時就調 `international-write.mjs` 的 `--max`。
 - **每次執行都回報 Slack（`scripts/cron-report.mjs`）**：不論完成/無產出/失敗/略過(取鎖逾時)，都發一則「值勤回報」到**作者群**頻道（`channelForCategory(undefined)`=預設台）。**內容本身**另發對應分類頻道：國際/警消上架→該分類頻道帶連結（Slack 自動 unfurl 出標題）；科技候選→科技台；優惠/颱風待審草稿→生活台（發佈鈕）。
   - **颱風每小時**：值勤回報每小時發作者群（有停課才另發生活台草稿）。作者群會因此較吵；若要可把颱風值勤回報關掉或改發專屬監控頻道。

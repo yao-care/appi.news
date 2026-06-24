@@ -12,29 +12,13 @@
 
 ---
 
-## 1. 字型策略總覽（歷史根因 → 現況機制）
+## 1. 字型策略總覽
 
-### 1-A. 當初闖禍的根因（禁止重蹈）
-
-**❌ 絕對禁止** 在 `src/styles/global.css` import Fontsource 的「全腳本」進入點：
-
-```css
-/* 禁止！這會帶入日/韓/西里爾/希臘/越南…全部子集 */
-@import '@fontsource/noto-sans-tc/400.css';   /* 105 個 @font-face */
-@import '@fontsource/noto-serif-tc/700.css';  /* 108 個 @font-face */
-```
-
-當初就是這樣寫，導致 **545 個 `@font-face`、662 KB 的 render-blocking CSS**（首頁 `about.*.css`），直接拖垮 FCP/LCP。
-
-### 1-B. 過渡期做法（已廢棄，勿再採用）
-
-先前曾改用 Fontsource 的繁中子集進入點（`chinese-traditional-<weight>.css`），每權重只 1 個 `@font-face`，避免 render-blocking。之後又嘗試「逐頁迷你字型」（每頁 build 一份只含該頁用字的 woff2），但此做法有根本性缺陷：
-
-- 字型檔數 = 頁數 × 字重，隨文章數無限膨脹（曾達 182 MB+）。
-- 每頁 URL 不同，瀏覽器無法跨頁快取。
-- Build 成本高，難以維護。
-
-已全面廢棄。
+> **鐵則（為什麼這樣訂，見歷史正本）**：
+> - **❌ 禁止**在 `src/styles/global.css` import Fontsource「全腳本」進入點（`@fontsource/noto-sans-tc/400.css` 等）——會帶進日/韓/西里爾…全部子集。**只能用繁中子集進入點**（`chinese-traditional-<weight>.css`）作 build 佔位，由 postbuild 切塊。
+> - **❌ 禁止**逐頁迷你字型（已證實會膨脹到 182 MB+、不可跨頁快取）。
+>
+> 當初就是全腳本進入點造成 **545 個 `@font-face`、662 KB render-blocking CSS**，把 mobile 拖到 ~57。完整前因後果（含已廢棄歧路）見 [`docs/lessons/font-render-blocking.md`](./docs/lessons/font-render-blocking.md)。
 
 ### 1-C. 現行機制：unicode-range 切塊（postbuild 自動化）
 
@@ -78,7 +62,7 @@ npx pagefind ...                         # ⑤ 搜尋索引
 **改 build 流程、字型、圖片、CSS 前，先確認不會破壞這五步的假設。**（例如：若把 CSS 改成 Astro 自動全內聯，① 對 `.css` 的改寫就會落空，細節見各腳本註解。）
 
 ### 一個踩過的坑（別重犯）
-**同名 `@font-face` 同時存在全量版與切片版**：Chrome 會把兩份都嘗試下載。現行機制在 ① 直接把舊 @font-face 整批替換成切片版，dist 裡不留全量版，此問題不再出現。若未來手動加回全量 @font-face，請務必確認舊的已移除。
+**同名 `@font-face` 同時存在全量版與切片版**：Chrome 會把兩份都嘗試下載。現行機制在 ① 直接整批替換、dist 不留全量版，故不再出現；未來若手動加回全量 @font-face，務必先確認舊的已移除。前因後果見 [`docs/lessons/font-render-blocking.md`](./docs/lessons/font-render-blocking.md)。
 
 ---
 
@@ -95,9 +79,8 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 
 - 量測對象是**部署後的線上站 `https://appi.news/`**（自訂網域，底層仍是 GitHub Pages CDN），不是本機 `pnpm preview`。
 - mobile 分數會在 **90↔100** 間浮動（GH Pages CDN 冷/熱邊緣餵給 Lighthouse 模型的差異），屬正常；**下限應 ≥90**。
-- **剛部署後量測的兩個大坑（會讓你誤判退步）**：
-  1. **冷邊緣**：新部署的大站，許多 CDN 邊緣仍冷，個別頁面的 FCP/LCP 會暴增到 10s+（每資源冷 TTFB 疊加）；等暖（下次 6 小時 cron 重建或自然流量）才是真值。
-  2. **PSI 對固定 URL 釘住舊跑**：PSI 會把某次（常是冷跑）結果快取在該 URL，之後重複量同一網址會一直回同一筆數字（連小數都一樣），暖機也不動。**破解：在網址加 `?cb=<timestamp>`**（GH Pages 靜態頁忽略 query、內容相同），強制 PSI 重跑。實測首頁無 cb 卡 55、加 cb 立刻 91。
+- **剛部署後量測的兩個大坑（會讓你誤判退步）**——①**冷邊緣**：新部署大站 CDN 邊緣仍冷，FCP/LCP 暴增到 10s+，等暖才是真值；②**PSI 對固定 URL 釘住舊（冷）跑**：**破解＝網址加 `?cb=<timestamp>`** 強制重跑（實測首頁無 cb 卡 55、加 cb 立刻 91）。
+  - **判讀準則**：先看 TBT / CLS / render-blocking / 各請求耗時，若都正常只是總分低，幾乎一定是冷邊緣假象，**別對假問題改程式**。前因後果見 [`docs/lessons/psi-cold-edge.md`](./docs/lessons/psi-cold-edge.md)。
 
 ---
 

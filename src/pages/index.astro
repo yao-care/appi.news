@@ -200,27 +200,20 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     display: grid;
     grid-template-columns: 1.6fr 1fr;
     gap: 40px;
-    /* 兩欄等高（grid 預設 stretch）：列高由右側清單的自然高度決定 */
+    /* 兩欄等高（grid 預設 stretch）。左欄（圖+文）較高，右欄用 space-between 撐開填滿 */
   }
-  /* 左欄：標題/摘要佔自然高度，大圖填滿剩餘高度 → 左欄總高＝右側清單高，兩邊皆不留白。
-     flex-basis:0（非 auto）是關鍵：高度純由「右側確定性內容」反推，不取用圖片原生尺寸，
-     避免上次 flex-basis:auto 用直幅圖原生高度當基準導致的 CLS 抖動。 */
-  .feature-main {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-  }
+  /* 大圖固定 16:9（永不變形＝CLS 0）；max-height 只在 ultrawide（左欄極寬時）防止 16:9
+     算出過高，超過後改為較寬的裁切而非繼續長高。勿改成 flex 動態高度（會讓圖變直幅/超扁，
+     見此區歷次踩坑）。 */
   .feature-media {
     display: block;
+    width: 100%; /* 強制填滿欄寬：ultrawide 觸 max-height 時只裁高（寬幅 banner），不縮寬留橫向白 */
     overflow: hidden;
     border-radius: var(--radius);
-    flex: 1 1 0; /* 吸收高度差；高度由 grid 列高（右側內容）決定，首次繪製即確定→CLS 0 */
-    min-height: 0;
+    aspect-ratio: 16 / 9;
+    max-height: 620px;
     background: var(--bg-soft);
     box-shadow: var(--shadow-md);
-  }
-  .feature-text {
-    flex: 0 0 auto; /* 不吸收剩餘空間，維持自然高度 */
   }
   /* postbuild 會把 feature 圖包進 <picture>（大螢幕換高解圖）；picture 預設 inline，
      需 block 撐滿 .feature-media 外框，圖才不會塌高（CLS 仍由外框 aspect-ratio 控制）。 */
@@ -266,10 +259,12 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     font-family: var(--font-sans);
   }
 
-  /* 精選右側：含小縮圖的文章清單（金色強調左線） */
+  /* 精選右側：含小縮圖的文章清單（金色強調左線）。
+     space-between：項目均勻撐開填滿左欄高度 → 無留白，不靠扭曲大圖。 */
   .feature-side {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     border-left: 3px solid var(--appi-accent);
     padding-left: 24px;
   }
@@ -337,8 +332,9 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     font-size: 1.375rem; /* 22px */
   }
 
-  @media (max-width: 900px) {
-    /* 平板：報頭收窄留白，讓影像豐富的「編輯精選」更早進入視野 */
+  @media (max-width: 1100px) {
+    /* ≤1100：編輯精選改上下堆疊。窄欄時左圖（16:9）偏短、右側 5 則偏高，
+       並排會在左下留白；堆疊（大圖在上、清單在下）才不留白。報頭也順勢收窄。 */
     .intro-inner {
       padding-top: 44px;
       padding-bottom: 44px;
@@ -347,14 +343,7 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
       grid-template-columns: 1fr;
       gap: 28px;
     }
-    /* 單欄堆疊時沒有右側可對齊，左欄回正常流、大圖回 16:9 固定框 */
-    .feature-main {
-      display: block;
-    }
-    .feature-media {
-      flex: none;
-      aspect-ratio: 16 / 9;
-    }
+    /* 單欄堆疊時右側清單在大圖下方，移除金色左線改頂線 */
     .feature-side {
       border-left: none;
       padding-left: 0;
@@ -380,15 +369,18 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     }
   }
 
-  /* 寬螢幕：右側夠寬時切雙欄、顯示全部 10 則，填滿左側大圖造成的縱向留白。
-     欄內由上往下排（grid-auto-flow: column + 5 列）：第 1~5 則在左欄、6~10 則在右欄。 */
-  @media (min-width: 1440px) {
+  /* 夠寬（≥1800px，欄寬充足不會折行爆高）才切雙欄、顯示全部 10 則。
+     欄內由上往下排（grid-auto-flow: column + 5 列）：第 1~5 則在左欄、6~10 則在右欄。
+     align-content: space-between 讓兩欄項目均勻撐開填滿左欄高度（無留白）。
+     1024~1799px 維持單欄 5 則 + flex space-between（窄雙欄會折行爆高、把大圖撐成直幅）。 */
+  @media (min-width: 1800px) {
     .feature-side {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(5, auto);
       grid-auto-flow: column;
       column-gap: 28px;
+      align-content: space-between;
     }
     .side-item:nth-child(n + 6) {
       display: flex;

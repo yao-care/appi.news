@@ -10,6 +10,21 @@
 
 ---
 
+## 0.5 介面導覽（設定都在「刊物內頁」，不在首頁）
+
+建立刊物後，狀態會是 **Draft（草稿）**。設定不在 Publisher Center 首頁，要**點進你建立的那個刊物**，內頁分頁如下：
+
+| 分頁 | 填什麼 | 對應本檔 |
+|---|---|---|
+| General（一般） | 名稱、總部地點、聯絡方式、語言、發佈設定 | §1 |
+| Content（內容） | 網站網址、RSS feed、分區（Sections） | §3、§4 |
+| Images（圖片） | 方形＋淺色＋深色 logo | §2 |
+| Review & publish（審核與發佈） | 檢查問題後送審 | — |
+
+填完按送審 → 狀態變 **Under Review（審核中，幾天到一週）→ Online（上線）**。看到「審核中」是正常流程，不是出錯。
+
+---
+
 ## 1. 刊物基本資料（Publication details）
 
 | 欄位 | 填入值 |
@@ -28,16 +43,17 @@
 
 ## 2. Logo / 圖像資產
 
-Publisher Center 通常要兩種 logo，規格如下對照現有檔案：
+Publisher Center 的 **Images** 分頁要三種 logo（方形＋淺色模式＋深色模式），已全部備好：
 
-| 用途 | 規格要求 | 現有檔案 | 狀態 |
+| 用途（Publisher Center 欄位） | 規格要求 | 檔案 | 狀態 |
 |---|---|---|---|
-| **方形 logo**（Square） | 1:1，建議 ≥512px | `https://appi.news/icon-512.png`（512×512） | ✅ 可直接用 |
-| **長方形 logo**（Rectangular／wordmark，多數版位主用） | 寬高比約 10:3，透明背景、深色字，寬 200–1000px | `https://appi.news/logo-horizontal.png`（1000×300，透明底）／向量原檔 `logo-horizontal.svg` | ✅ 已產 |
+| **方形 logo**（Square） | PNG/JPG，1:1，≥512px（建議 1024） | `https://appi.news/icon-512.png`（512×512） | ✅ |
+| **淺色模式 logo**（Light mode，給白底，深色字） | 長方形、透明底 | `https://appi.news/logo-horizontal.png`（1000×300）／向量 `logo-horizontal.svg` | ✅ |
+| **深色模式 logo**（Dark mode，給深底，淺色字） | 長方形、透明底 | `https://appi.news/logo-horizontal-dark.png`（1000×300）／向量 `logo-horizontal-dark.svg` | ✅ |
 | Favicon | — | `https://appi.news/favicon.ico` / `favicon.svg` | ✅ |
 | 預設社群圖（備用視覺） | 1200×630 | `https://appi.news/og/default.png` | ✅ |
 
-> 長方形含字 logo（橫式 APPI News 標誌，透明底）已產出：線上 `https://appi.news/logo-horizontal.png`、向量原檔 `https://appi.news/logo-horizontal.svg`。沿用品牌色（深藍 #1f3a5f／#2d5286、金 #a87515）與 favicon 標記。
+> 橫式 logo（淺色＋深色兩版）沿用品牌色（深藍 #1f3a5f／#2d5286、金 #a87515；深色版字標改白＋亮金 #e0aa4e）與 favicon 標記。方形 logo 直接用 `icon-512.png`。
 
 ---
 

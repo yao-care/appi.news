@@ -934,5 +934,29 @@
     "predictions": [
       "AI 電力競賽會從『去哪找電』延伸到『機櫃內怎麼把電穩穩安全送進 GPU』，800V HVDC 普及讓電源保護半導體（固態斷路器晶片）獨立長出市場；台廠在電源系統、功率元件擴產與伺服器代工吃得到，但電源保護晶片這顆 IP 短期仍以歐美廠領先，先看清楚自家在 800V 哪一段（系統／元件／IP）再加碼的台廠，會比把『缺電』籠統當題材押的同業更準。"
     ]
+  },
+  {
+    "slug": "openai-jalapeno-inference-chip",
+    "title": "OpenAI 端出自研推論晶片 Jalapeño、博通操刀：九個月 tape-out，「全端自製」從口號變產品",
+    "publishDate": "2026-07-15",
+    "category": "tech",
+    "tags": [
+      "OpenAI Jalapeño",
+      "自研推論晶片",
+      "博通 ASIC",
+      "台積電先進封裝",
+      "台廠半導體供應鏈"
+    ],
+    "conclusion": "OpenAI 首款自研晶片 Jalapeño 由博通負責矽智財與實作、台積電 3nm 代工，九個月走完設計到 tape-out；重點不是去 Nvidia 化，而是前沿大廠把推論成本與供應鏈主導權往上游收，台廠該盯的是代工與封裝接單怎麼分、而非被誰取代。",
+    "claims": [
+      "Jalapeño 是 OpenAI 首款自研晶片、專為自家 LLM 推論量身的 ASIC；OpenAI 出架構與需求定義、博通做矽智財與 Tomahawk 網通、Celestica 做機板機櫃整合，台積電 3nm 製造、systolic array 架構、前 Google 工程師 Richard Ho 領軍，並用自家模型加速設計，九個月完成設計到 tape-out（號稱史上最快 ASIC 週期）。",
+      "別把它讀成一夜去 Nvidia 化：它是推論專用 ASIC，訓練仍以 Nvidia 為主夥伴，定位是邊緣分散而非決裂；官方主打每瓦效能，外電報導早期測試指向每代幣推論成本約砍五成但屬早期數據非量產確認值；初批原訂 2026 年底、現預期落 2027 年，是一場成本結構戰不是一夜換掉 Nvidia。",
+      "設計 IP 在博通手上，但晶圓與 CoWoS 封裝仍在台灣落地、客戶換誰都跑不掉；2026 台積電 CoWoS 月產能自約 8 萬片爬向 12 萬片、輝達吃約六成，博通客製 ASIC 預配年增約 122%、世芯-KY（Alchip）因 AWS Trainium 增約 200% 至 6 萬片，博通配額中替 OpenAI 預留約 1 萬片；台廠在代工、先進封裝、ASIC 設計服務這層 custom-silicon 是直接玩家，風險在客戶集中、最高毛利設計 IP 段被美系廠吃走、CoWoS 產能被輝達排擠。",
+      "讀供應鏈用三問框架（誰在買單、買什麼、連動到先進製程與封測哪一段，延續 deepseek-capital-taiwan-supply-chain）、卡位點分段看（延續 ai-datacenter-800v-power-protection-chip）、方向已由國家定但勝負在落地吃到哪一段（延續 ai-new-infrastructure-compute-trusted-industries）。",
+      "作者本人觀點：OpenAI 的路數是上面先把賺錢的應用層吃下來（2026 年初在 ChatGPT 放廣告把流量變現）、下面再把最貴的推論晶片自己做，垂直整合兩面包夾讓『全端自製』從口號變成有產品；對手要對的不是一顆晶片是整條從使用者到矽的價值鏈，台廠的價值不在有沒有被點名、而在守不守得住代工/封裝/ASIC 設計服務並往設計 IP 端再爬一格。"
+    ],
+    "predictions": [
+      "前沿 AI 大廠自研推論 ASIC 會從個案變常態，AI 晶片的勝負訊號會從『模型跑分、誰家 GPU』移到『推論成本結構與供應鏈主導權往誰上游收』；不管設計 IP 落在哪家，需求最後仍流向先進製程代工與 CoWoS 封裝，先把代工/封裝/ASIC 設計服務守住並往設計 IP 端爬的台廠，會比只擔心被取代的同業更早接住這波 custom-silicon 紅利。"
+    ]
   }
 ]

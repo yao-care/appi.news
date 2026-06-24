@@ -23,7 +23,8 @@ export function buildImagePrompt({ topic, context = '' }) {
 }
 
 // 純函式：任意圖片 buffer → 指定寬度 webp，回傳 {buffer,width,height}
-export async function toWebp(inputBuffer, width = 960, quality = 72) {
+// 封面預設寬 1200（Discover/Top Stories 大圖門檻）；withoutEnlargement 故來源不足時不放大。
+export async function toWebp(inputBuffer, width = 1200, quality = 72) {
   const { data: buffer, info } = await sharp(inputBuffer)
     .resize(width, null, { withoutEnlargement: true })
     .webp({ quality })
@@ -77,7 +78,7 @@ async function generateViaWorker({ prompt, width, token }) {
 export async function generateImage({
   topic,
   context = '',
-  width = 960,
+  width = 1200,
   model = 'gpt-image-2',
   size = '1536x1024',
   quality = 'low', // 段落圖多，用 low 控成本

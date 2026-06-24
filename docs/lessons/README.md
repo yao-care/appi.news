@@ -32,6 +32,7 @@
 | 篇目 | 一句話 |
 |---|---|
 | [google-indexing-api-gray-area.md](./google-indexing-api-gray-area.md) | 「有 GSC key 就能催收錄」是誤解；Indexing API 對新聞站非官方、200 不保證收錄 |
+| [google-news-surfaces-and-cover-image.md](./google-news-surfaces-and-cover-image.md) | Google News 2025-03 起不吃提交的 feed/section（自動抓取）；JSON-LD/og 圖指原圖非 900 顯示圖，封面 ≥1200 從來源端解 |
 | [wordpress-date-permalink-404.md](./wordpress-date-permalink-404.md) | 舊 WordPress 日期網址漏接轉址變 404，仍在流失 Google 曝光 |
 | [domain-change-worker-cors.md](./domain-change-worker-cors.md) | 換網域漏改 Cloudflare Worker 的 ALLOWED_ORIGIN → 編輯器「Failed to fetch」 |
 

@@ -157,7 +157,7 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     position: relative;
     z-index: 1;
     padding-top: 64px;
-    padding-bottom: 64px;
+    padding-bottom: 32px; /* 收窄報頭與「編輯精選」之間的間距（搭配 .feature-section margin-top） */
   }
   /* 拿掉右側 Editorial Index 後改為置中報頭：左右網絡背景對稱，避免單側留白 */
   .intro-text {
@@ -196,6 +196,10 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
   }
 
   /* ---------- 編輯精選 ---------- */
+  /* 收窄與上方報頭的間距（全站 .section 上下 margin 為 56px，此處只縮上緣） */
+  .feature-section {
+    margin-top: 28px;
+  }
   .feature {
     display: grid;
     grid-template-columns: 1.6fr 1fr;

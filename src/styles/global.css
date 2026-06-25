@@ -83,7 +83,10 @@
   --font-serif: 'Noto Serif TC', Georgia, 'Times New Roman', serif;
 
   /* ---------- 排版 ---------- */
-  --maxw: none;
+  /* 全站統一版心：.container（頁首、頁尾、首頁、分類、列表）共用同一條閱讀寬度並置中，
+     超寬螢幕兩側留白。卡片網格仍 auto-fill，在此寬度內排 4–5 欄。
+     （曾短暫改 none 走全滿版，導致「編輯精選」固定兩欄被無限拉長、右側縮圖比例縮水。） */
+  --maxw: 1440px;
   --maxw-prose: 760px;
   --radius: 10px;
   --radius-sm: 6px;

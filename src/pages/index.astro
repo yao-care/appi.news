@@ -33,10 +33,10 @@ const hero =
   all[0];
 if (hero) dedupe.take([hero], 1);
 
-// 精選右側：5 篇含小縮圖的清單（補滿垂直空間 + 易辨識）
-// 右側精選清單：備齊最多 10 則。窄螢幕只顯示前 5 則（CSS 控制）；
-// 寬螢幕（≥1440px）右側夠寬時切雙欄、顯示全部 10 則，填左側大圖造成的縱向留白。
-const secondary = dedupe.take([...featuredArticles(all), ...all], 10);
+// 精選右側：含小縮圖的清單，補滿左側大圖造成的縱向留白。
+// 全站版心上限 1440px 後右欄不再夠寬切雙欄（會把標題擠成多行），固定單欄 5 則最平衡，
+// 也避免多載 5 張看不到的縮圖（display:none 仍會下載）。
+const secondary = dedupe.take([...featuredArticles(all), ...all], 5);
 
 // 最新文章：單一等高大圖網格（補滿空間）
 const latest = dedupe.take(all, 12, false);
@@ -283,18 +283,13 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
   .side-item:first-child {
     padding-top: 0;
   }
-  /* 預設只顯示前 5 則（其餘留待寬螢幕雙欄時才顯示，見 ≥1440px） */
-  .side-item:nth-child(n + 6) {
-    display: none;
-  }
-  /* 第 5 則為單欄時的末則、雙欄時左欄末則；第 10 則為雙欄右欄末則 */
-  .side-item:nth-child(5),
+  /* 末則去底線與底內距 */
   .side-item:last-child {
     border-bottom: none;
     padding-bottom: 0;
   }
   .side-thumb {
-    flex: 0 0 88px;
+    flex: 0 0 120px;
     aspect-ratio: 4 / 3;
     border-radius: var(--radius-sm);
     overflow: hidden;
@@ -319,6 +314,9 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
     font-size: 1.25rem; /* 20px — 恢復至先前列表字級 */
     line-height: 1.45;
     color: var(--ink);
+    /* trim 首行行高 leading，讓縮圖上緣對齊標題「筆畫」上緣（而非行框上緣），
+       固定圖文頂對齊格式，不因標題 2/3 行而產生視覺落差。 */
+    margin-top: -0.2em;
   }
   .side-item:hover .side-title {
     color: var(--appi-brand);
@@ -354,6 +352,10 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
       border-top: 1px solid var(--line);
       padding-top: 8px;
     }
+    /* 堆疊時清單為整列寬，縮圖略收，避免相對顯小 */
+    .side-thumb {
+      flex-basis: 96px;
+    }
   }
 
   @media (max-width: 520px) {
@@ -366,31 +368,11 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
       margin-bottom: 24px;
     }
     .side-thumb {
-      flex-basis: 72px;
+      flex-basis: 80px;
     }
     .side-title {
       font-size: 1.125rem;
     }
   }
 
-  /* 夠寬（≥1800px，欄寬充足不會折行爆高）才切雙欄、顯示全部 10 則。
-     欄內由上往下排（grid-auto-flow: column + 5 列）：第 1~5 則在左欄、6~10 則在右欄。
-     align-content: space-between 讓兩欄項目均勻撐開填滿左欄高度（無留白）。
-     1024~1799px 維持單欄 5 則 + flex space-between（窄雙欄會折行爆高、把大圖撐成直幅）。 */
-  @media (min-width: 1800px) {
-    .feature-side {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(5, auto);
-      grid-auto-flow: column;
-      column-gap: 28px;
-      align-content: space-between;
-    }
-    .side-item:nth-child(n + 6) {
-      display: flex;
-    }
-    .side-item:nth-child(6) {
-      padding-top: 0; /* 右欄頂端首則不留上內距 */
-    }
-  }
 </style>

@@ -15,9 +15,15 @@ out="$(timeout 1200 claude -p "/lifestyle-typhoon" 2>&1)"; rc=$?
 [ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
 printf '%s\n' "$out"
 if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond' <<<"$out"; then
-  # 安靜模式：只在「有停課」才報（已產待審草稿）；無停課的時段不發，避免每小時洗頻。
+  # 安靜模式：只在「有停課」才報；無停課的時段不發，避免每小時洗頻。
   if grep -q 'sent ts=' <<<"$out"; then
-    node scripts/cron-report.mjs --category lifestyle --text "🌀 $TASK：偵測到停班課，已產待審草稿（發佈鈕在生活台）（$ts）" || true
+    # 標題要分辨兩種情況，否則會把「就地更新已上線文章」誤報成待審草稿（滾動更新時 result.updated=true、pendingApproval=false）。
+    if [ -f /tmp/result.json ] && node -e 'const r=JSON.parse(require("fs").readFileSync("/tmp/result.json","utf8"));process.exit(r.updated&&!r.pendingApproval?0:1)' 2>/dev/null; then
+      headline="🌀 $TASK：同一事件停班課情形有變，已就地更新原文並上線（非新草稿、無發佈鈕）（$ts）"
+    else
+      headline="🌀 $TASK：偵測到停班課，已產待審草稿（發佈鈕在生活台）（$ts）"
+    fi
+    node scripts/cron-report.mjs --category lifestyle --text "$headline" || true
   fi
   exit 0
 fi

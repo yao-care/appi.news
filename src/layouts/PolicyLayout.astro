@@ -13,14 +13,16 @@ const { title, description, path, updated, lead } = Astro.props;
 ---
 <BaseLayout title={title} description={description ?? lead} path={path}>
   <div class="container policy-wrap">
-    <Breadcrumbs items={[{ name: title }]} />
-    <header class="policy-head">
-      <h1>{title}</h1>
-      {lead && <p class="policy-lead">{lead}</p>}
-      {updated && <p class="policy-updated">最後更新：{updated}</p>}
-    </header>
-    <div class="prose article-body policy-body">
-      <slot />
+    <div class="policy-shell">
+      <Breadcrumbs items={[{ name: title }]} />
+      <header class="policy-head">
+        <h1>{title}</h1>
+        {lead && <p class="policy-lead">{lead}</p>}
+        {updated && <p class="policy-updated">最後更新：{updated}</p>}
+      </header>
+      <div class="prose article-body policy-body">
+        <slot />
+      </div>
     </div>
   </div>
 </BaseLayout>
@@ -28,6 +30,12 @@ const { title, description, path, updated, lead } = Astro.props;
 <style>
   .policy-wrap {
     padding-block: 32px 24px;
+  }
+  /* 單欄閱讀版心：麵包屑、頁首、正文共用同一條閱讀寬度並置中，
+     不受全站 .container 滿版（--maxw: none）影響。 */
+  .policy-shell {
+    max-width: var(--maxw-prose);
+    margin-inline: auto;
   }
   .policy-head {
     margin-block: 16px 28px;
@@ -50,6 +58,7 @@ const { title, description, path, updated, lead } = Astro.props;
     color: var(--ink-3);
   }
   .policy-body {
-    margin-inline: auto;
+    /* 閱讀寬度已由 .policy-shell 統一掌管，正文只需填滿外層。 */
+    max-width: none;
   }
 </style>

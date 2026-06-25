@@ -36,7 +36,11 @@ async function main() {
 
   const msg = buildDoneMessage({ title: result.title }, result, '');
   const note = '（⏳ 預覽頁部署中，若連結點開 404 請稍候一兩分鐘）';
-  const text = `${msg}\n${note}`;
+  // 滾動更新既有文章（同一颱風事件）：用「已更新」開頭點明不是新的一篇，避免讀者誤以為又多一篇。
+  const updatedPrefix = result.updated
+    ? `♻️ *同一事件已更新（非新文章）*：停班停課情形有變，已就地更新原文並刷新「最後更新」時間。\n\n`
+    : '';
+  const text = `${updatedPrefix}${msg}\n${note}`;
 
   let blocks;
   if (result.pendingApproval && result.slug) {

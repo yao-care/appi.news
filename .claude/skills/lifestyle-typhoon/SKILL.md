@@ -31,9 +31,12 @@ description: APPI News 颱風停班停課即時守望。檢查人事行政總處
 - 無生效中的停班課 → closures 給空陣列 `[]`。
 
 ## 步驟 2：變更偵測（避免重複洗訊息）
-跑 `node scripts/typhoon-state.mjs check /tmp/typhoon-closures.json`：
-- **exit 3（SAME 或 NO_CLOSURES）→ 立刻安靜結束**（沒有新變化、或根本沒颱風，不產出、不回報）。
-- **exit 0（CHANGED）→ 有新的或變更的停班課情形，往下產出**。
+跑 `node scripts/typhoon-state.mjs check /tmp/typhoon-closures.json`，記下它印出的兩行：`SIGNATURE=…` 與 **`EPISODE_SLUG=…`**（目前進行中颱風事件的文章 slug，空＝目前沒有進行中的事件文章）。
+- **exit 0（CHANGED）→ 有新的或變更的停班課情形，往下產出**。**`EPISODE_SLUG` 非空 → 走「滾動更新」（改寫同一篇，見步驟 3）；空 → 新建一篇。**
+- **exit 3 且 SAME → 立刻安靜結束**（沒有新變化，不產出、不回報）。
+- **exit 3 且 NO_CLOSURES**：目前沒颱風。**若 `EPISODE_SLUG` 非空（表示剛結束一場颱風）→ 跑 `node scripts/typhoon-state.mjs record /tmp/typhoon-closures.json` 把事件狀態清空（下次有颱風才會新建一篇），然後安靜結束**；若 `EPISODE_SLUG` 本來就空 → 直接安靜結束。
+
+> **同一颱風事件＝同一篇、滾動更新（重要）**：一場颱風期間停班課情形會一變再變（先個別鄉鎮、再全縣、再加別縣市）。**不要每次變更都產一篇新文章**，否則同一天會洗出好幾篇重複的「停班停課一覽」。機制是：同一事件**只維護一篇**，每次有變更就**改寫那一篇**（更新 title／重點／內文＋`updatedDate`，沿用原網址、原排程、原封面）。事件由 `EPISODE_SLUG` 認定；颱風結束（NO_CLOSURES）才清空、下一場才另起新篇。
 
 ## 步驟 3：建工單並起草（事實稿）
 寫工單 JSON 到 `/tmp/typhoon-job.json`：
@@ -46,16 +49,20 @@ description: APPI News 颱風停班停課即時守望。檢查人事行政總處
   "subcategory": "life"
 }
 ```
-（標題日期用官方公告的實際日期。）
+（標題日期用官方公告的實際日期。標題要反映**目前最新、最完整**的停班課全貌，不是只有這次新增的那幾個。）
+
+- **滾動更新時（步驟 2 的 `EPISODE_SLUG` 非空）**：在工單**多加一行 `"slug": "<EPISODE_SLUG>"`**（填入步驟 2 印出的值）。`newsroom-write` 會改寫那一篇既有文章、沿用原排程與封面、更新 `updatedDate`，**不會新建第二篇**。
+- **新建時（`EPISODE_SLUG` 空）**：工單**不要**帶 `slug`，讓引擎自選。
 
 跑 `node scripts/newsroom-write.mjs /tmp/typhoon-job.json --go`。
 - 以「編輯部、無觀點」語氣，按縣市清楚列出停班/停課狀態與適用日期，附人事行政總處來源連結；每段配圖（颱風天情境概念圖走圖庫優先，不要 --people）。
-- 過配圖 / check:links gate 後產出**待審草稿**（建預覽頁、不自動上線），commit/push，`result.json` 寫在 job 同目錄（`/tmp/result.json`）。
+- 過配圖 / check:links gate 後產出**待審草稿**（建預覽頁、不自動上線），commit/push，`result.json` 寫在 job 同目錄（`/tmp/result.json`）。滾動更新時 `result.json` 會帶 `updated:true`，notify 會用「已更新」措辭。
 - 文末加一句「停班課情形以人事行政總處及各縣市政府最新公告為準，請以官方為依據」。
 
 ## 步驟 4：回報 Slack 並記錄狀態
-1. `node scripts/notify-pending-draft.mjs /tmp/result.json`（待審草稿摘要 + 預覽連結 + 「✅ 發佈這篇」鈕）。
-2. **回報成功後**才跑 `node scripts/typhoon-state.mjs record /tmp/typhoon-closures.json`，把這次的停班課情形記為已產出（下次相同就不重複；之後若有縣市新增/變更會再產一篇更新版）。
+1. `node scripts/notify-pending-draft.mjs /tmp/result.json`（草稿摘要 + 預覽連結；待審時帶「✅ 發佈這篇」鈕，滾動更新已上線的文章則純通知不帶鈕）。
+2. **回報成功後**才跑 `node scripts/typhoon-state.mjs record /tmp/typhoon-closures.json --slug <result.json 的 slug>`，把這次的停班課情形與**事件文章 slug**一起記下。
+   - 帶 `--slug` 是關鍵：它讓下一次有變更時，`EPISODE_SLUG` 指回同一篇 → 走滾動更新而不是新建。新建與滾動更新都照這樣 record（slug 相同、簽章更新）。
    - 失敗就不要 record（讓下次重試）。
 
 ## 步驟 5：失敗處理（失敗→生活台，與本線一致；不發作者群、不發 dev）

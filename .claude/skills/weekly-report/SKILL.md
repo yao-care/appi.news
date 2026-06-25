@@ -50,48 +50,50 @@ description: APPI News 每週數據週報。讀 GA4+GSC 四區塊數據、跑外
 - 每個建議欄位（對齊 newsroom 雷達格式）：標題 / 訊號依據 / 建議切角 / 候選結論 / 建議分類，編號。
 
 ## 步驟 4：組訊息並發送
-把數據組成 Block Kit `blocks`（數字深入處附 GA/GSC 連結）：
-```
-📊 APPI News 週報  <period.start>–<period.end>
-① 文章/分類表現：
-   • Top3 頁面(路徑/瀏覽/停留秒)
-   • 各頁面類型(byPageType：首頁/文章內文/作者頁/分類索引… 瀏覽 + wowPct)，並一句點出流量是讀者讀文章還是團隊看作者頁/後台
-   • 文章分類動能(byArticleCategory：依文章真實分類 瀏覽 + wowPct)
-② 🔍 搜尋與 SEO 啟動：
-   • seoHealth：出現於搜尋頁數 / 總曝光 / 總點擊 / 平均排名，並一句判讀（索引在累積但排名/CTR 待優化 vs 尚未被索引）
-   • Top searchOpportunities(query/曝光/排名/CTR)
-②b 🎯 SEO 機會（來自步驟 1b seo-opportunities）：
-   • 第 2 頁衝刺(pageOpportunities Top3~5：路徑/分類/曝光/排名/CTR)，一句點出「補內鏈/補深度可進第一頁」
-   • 改標題搶點擊(titleCtrCandidates Top3~5：query/路徑/分類/曝光/排名/CTR)，一句點出「排名還行但標題沒吸引點擊」
-③ 📈 流量健康度：users + usersWoWPct + 主要 sources
-④ 🤖 AI 轉介點擊（非被引用）：trafficHealth.aiReferrals
-④b 🤖 AI 引用量測（來自步驟 1c geo-citation-audit，真量測「被 AI 引用」）：
-   • recent 摘要：被引用題數/總題數 + 被引用率 + 範例(題目/引擎/連結)
-   • 明確標註：這是「被 AI 引擎引用」(GEO/AEO)，與上面 ④「AI 轉介點擊」(真人從 AI 答案點進站)不同
-（頁尾：資料區間、來源 GA4+GSC、產生時間）
-```
-- `byPageType` / `byArticleCategory` 的 key 轉成中文標籤再呈現（home→首頁、article→文章內文、author→作者頁、category→分類索引、column→專欄、topic→專題、tag→標籤、page→其他頁；uncategorized→未分類）。
-- 早期週次 `wowPct` 多為 `null`（無前期基準），顯示「—」即可，不要硬掰百分比。
-**建議方向不要自己寫進 blocks**；改成在 payload 放一個結構化 `suggestions` 陣列，slack-post 會自動展開成文字 + 按鈕（**tech 類掛「我要寫這題」按鈕**，點了就能在 Slack 觸發自動產文；非 tech 只顯示文字）。
+
+> **版面已收歸決定論渲染器，不要自己手刻 blocks。** 以前手刻常把「query｜曝光｜排名｜CTR」四欄塞一行，手機換行後對不齊、無法閱讀（站長 2026-06 回報）。現在你只填**結構化數據 + 質性一句話 `notes`**，版面交給 `scripts/lib/weekly-blocks.mjs`（兩行制、標籤跟著數字、手機可讀）。為什麼這樣設計見 [`docs/lessons/weekly-report-mobile-layout.md`](../../../docs/lessons/weekly-report-mobile-layout.md)。
+
+把步驟 1～1c 的數據**原封不動**放進 `report`（欄位名沿用各 script 輸出，不要改名、不要預先格式化數字/百分比，渲染器會處理千分位、CTR 分數轉百分比、排名四捨五入、中文標籤、WoW 正負號與 `null→—`）。你只另外寫 `notes` 的幾句質性判讀。
 
 寫 `/tmp/weekly-report-payload.json`：
 ```jsonc
 {
   "text": "<純文字摘要（含建議標題，給通知預覽用）>",
-  "blocks": [ /* 只放四區塊數據 + 頁尾 */ ],
+  "report": {
+    "period": { "start": "...", "end": "..." },                 // 來自 weekly-data
+    "articlePerf": { "topArticles": [...], "byPageType": [...], "byArticleCategory": [...] },
+    "seoHealth": { "pagesInSearch": 0, "totalImpressions": 0, "totalClicks": 0, "avgPosition": 0 },
+    "searchOpportunities": [ /* {query,impressions,clicks,ctr,position} */ ],
+    "seoOpportunities": {                                        // 來自步驟 1b（可缺，缺則略過該區）
+      "pageOpportunities": [ /* {page,category,impressions,position,ctr} */ ],
+      "titleCtrCandidates": [ /* {query,page,category,impressions,position,ctr} */ ]
+    },
+    "trafficHealth": { "users": 0, "usersWoWPct": null, "sources": [...], "aiReferrals": [...] },
+    "geoText": "<步驟 1c：被引用題數/總題數 + 被引用率 + 一個範例；無法實查則省略此欄>",
+    "generatedAt": "<產生時間，如 2026-06-25 06:17>",
+    "notes": {                                                   // 質性一句話，皆可選；以斜體接在對應區塊後
+      "pageType": "一句點出流量是讀者讀文章還是團隊看作者頁/後台",
+      "seoHealth": "一句判讀：索引在累積但排名/CTR 待優化 vs 尚未被索引",
+      "page2": "一句：補內鏈/補深度可進第一頁",
+      "titleCtr": "一句：排名還行但標題沒吸引點擊",
+      "traffic": "一句：使用者升降的原因"
+    }
+  },
   "suggestions": [
     { "title": "...", "conclusion": "...", "angle": "...", "signal": "...",
       "category": "tech", "subcategory": "ai" }   // 欄位對齊 newsroom 工單；category 必填
   ]
 }
 ```
-- `suggestions` 每項欄位＝newsroom 工單欄位（`title/conclusion/angle/signal/category/subcategory`）。**`category` 用 `src/config/categories.ts` 的合法 slug**；只有 `tech` 會掛按鈕。
-- 沒強建議時 `suggestions` 給 `[]`，並在 blocks 寫明「本週無強建議」。
-跑 `node scripts/slack-post.mjs /tmp/weekly-report-payload.json authors` 發送（**週報是跨類訊息，一律發作者群**；不加 `authors` 會被第一則 suggestion 的 category 帶去分類頻道——這是早期的坑）。回報 `sent ts=` 即成功。
+- **不要在 `report` 裡放預先排版好的文字或 blocks**；只放原始數據 + `notes`。渲染器負責中文標籤（home→首頁、article→文章內文…uncategorized→未分類）、千分位、CTR 分數→百分比、`wowPct: null → —`。
+- `suggestions` 每項欄位＝newsroom 工單欄位（`title/conclusion/angle/signal/category/subcategory`）。**`category` 用 `src/config/categories.ts` 的合法 slug**；只有可自動產文的 vertical（tech…）會掛「我要寫這題」按鈕，非 tech 只顯示文字。
+- 沒強建議時 `suggestions` 給 `[]`，並在 `notes` 或 `text` 寫明「本週無強建議」。
+
+跑 `node scripts/weekly-report-post.mjs /tmp/weekly-report-payload.json` 發送（**固定發作者群**；此 script 不走分類路由，不會被 suggestion 的 category 帶走）。回報 `sent ts=` 即成功。
 - suggestion 的「我要寫這題」按鈕 value 自帶 category，發在作者群也照樣能觸發該分類的自動產文，不受頻道影響。
 **發送成功後**（若有 `suggestions`），跑 `node scripts/topic-ledger.mjs append /tmp/weekly-report-payload.json` 把建議記進帳本，每日雷達才不會重複推同題。
 
 ## 失敗處理
 任一步驟致命失敗（資料抓不到、token 失效）：把
-`{ "text": "⚠️ APPI News 週報失敗：<原因一句>" }` 寫到 `/tmp/weekly-report-payload.json`，
-跑 `node scripts/slack-post.mjs /tmp/weekly-report-payload.json authors`，讓失敗在作者群出聲，不要靜默。
+`{ "text": "⚠️ APPI News 週報失敗：<原因一句>" }` 寫到 `/tmp/weekly-report-payload.json`（**不帶 `report`**，weekly-report-post 會只發純文字），
+跑 `node scripts/weekly-report-post.mjs /tmp/weekly-report-payload.json`，讓失敗在作者群出聲，不要靜默。

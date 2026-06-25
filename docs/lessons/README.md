@@ -42,6 +42,7 @@
 | [automation-runtime-staleness.md](./automation-runtime-staleness.md) | 改了卻沒生效：程式從 publisher checkout 跑、cron 一律 UTC、.sh/server 改完要 pull |
 | [auto-publish-pipeline-traps.md](./auto-publish-pipeline-traps.md) | 發佈正確性三坑：worktree 要先 build、publishDate 用系統時間蓋、多工不序列化用自癒重試 |
 | [commit-hygiene-shared-checkout.md](./commit-hygiene-shared-checkout.md) | 共用 checkout 別把別人 WIP 掃進 commit：只 stage 文章產物 / 用 pathspec |
+| [weekly-report-mobile-layout.md](./weekly-report-mobile-layout.md) | 週報手機排版崩掉：模型手刻多欄塞一行；版面收歸決定論渲染器，模型只填數據+notes |
 
 **內容 / 查證**
 | 篇目 | 一句話 |

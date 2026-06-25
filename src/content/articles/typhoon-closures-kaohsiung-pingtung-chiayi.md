@@ -2,7 +2,7 @@
 title: "6 月 25 日颱風停班停課最新一覽：高雄旗山美濃、屏東全縣、嘉義山區陸續停班停課"
 slug: "typhoon-closures-kaohsiung-pingtung-chiayi"
 description: "依行政院人事行政總處公告，6 月 25 日高雄市旗山區、美濃區中午 12 時起停止上班上課，屏東縣全縣下午 2 時起停止上班上課，嘉義縣阿里山等 5 個山區鄉鎮下午 2 時起停止上班上課。整理各地適用時間與官方查詢管道。"
-publishDate: "2027-06-25T08:00:00+08:00"
+publishDate: "2026-06-25T07:08:50.981Z"
 category: "lifestyle"
 subcategory: "life"
 tags:
@@ -19,7 +19,7 @@ tags:
 author: "appi-editorial"
 sourceType: "editorial"
 contentType: "guide"
-status: "scheduled"
+status: "published"
 coverImage: "covers/typhoon-closures-kaohsiung-pingtung-chiayi.webp"
 coverAlt: "颱風強降雨下積水的城市街道"
 coverImageCredit: "Photo by yusrizal iskadi on Unsplash"
@@ -40,6 +40,7 @@ references:
   - title: "天然災害停止上班及上課作業辦法（全國法規資料庫）"
     url: "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=S0110022"
     publisher: "法務部全國法規資料庫"
+updatedDate: "2026-06-25T07:08:50.981Z"
 ---
 
 依行政院人事行政總處彙整的[天然災害停止上班及上課情形](https://www.dgpa.gov.tw/typh/daily/nds.html)，6 月 25 日高雄市旗山區、美濃區自中午 12 時起停止上班、停止上課，屏東縣自下午 2 時起全縣停止上班、停止上課，嘉義縣竹崎鄉、梅山鄉、番路鄉、大埔鄉、阿里山鄉也自下午 2 時起停止上班、停止上課。這天的停班課集中在高屏與嘉義山區，各地起算時間不同，多數是從當天某個時段起算，不是一整天從早停到晚。

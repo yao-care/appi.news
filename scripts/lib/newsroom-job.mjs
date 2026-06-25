@@ -92,6 +92,11 @@ export function validateJob(job) {
     errors.push(`publishDate 須為 YYYY-MM-DD，收到：${JSON.stringify(job.publishDate)}`);
   }
 
+  // 固定 slug 若有給，須為英文 kebab（給滾動更新／同一事件就地改寫用；不給＝引擎自選）
+  if (job.slug != null && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(String(job.slug))) {
+    errors.push(`slug 須為英文 kebab（a-z0-9 與連字號），收到：${JSON.stringify(job.slug)}`);
+  }
+
   return errors;
 }
 
@@ -120,6 +125,7 @@ export function normalizeJob(job) {
     length: job.length ?? LENGTH_DEFAULT,
     mustCite: Array.isArray(job.mustCite) ? job.mustCite.filter(isNonEmptyString) : [],
     publishDate: job.publishDate ? String(job.publishDate).slice(0, 10) : null, // 指定排程日；null=引擎自選空檔
+    slug: isNonEmptyString(job.slug) ? job.slug.trim() : null, // 固定 slug；給滾動更新就地改寫用，null=引擎自選
   };
 }
 

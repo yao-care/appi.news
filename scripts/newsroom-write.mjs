@@ -100,8 +100,10 @@ function computeSchedule(job) {
   };
 }
 
-/** 批次模式起草 prompt：跳雷達/問答、保留起草與查證、不 push（由協調器 gate 後處理）。 */
-export function buildDraftPrompt(job, schedule = null) {
+/** 批次模式起草 prompt：跳雷達/問答、保留起草與查證、不 push（由協調器 gate 後處理）。
+ *  opts.isUpdate=true：固定 slug 的檔已存在，這是「同一事件的滾動更新」——改寫既有檔、沿用原排程。 */
+export function buildDraftPrompt(job, schedule = null, opts = {}) {
+  const isUpdate = !!opts.isUpdate;
   const cite = job.mustCite.length ? `\n必引來源：\n${job.mustCite.map((c) => `- ${c}`).join('\n')}` : '';
   const len = job.length === 'deep' ? '深稿（3000+ 字）' : '短稿（800–1500 字）';
   const status = schedule?.status ?? 'published';
@@ -121,9 +123,15 @@ export function buildDraftPrompt(job, schedule = null) {
     ? '先讀 .claude/skills/newsroom/SKILL.md（取其配圖、超連結查證、繁中台灣用語、去 AI 腔規則）。本篇以「編輯部」中性服務語氣撰寫，不套個人作者人格。'
     : '先讀 .claude/skills/newsroom/SKILL.md、persona.md、author-memory.json。';
 
-  const memoryStep = factual
-    ? '3. 寫入 src/content/articles/<slug>.md（slug 你自訂，英文 kebab）。事實稿不需追加 author-memory.json。'
-    : '3. 寫入 src/content/articles/<slug>.md（slug 你自訂，英文 kebab），並依步驟三.9 把本篇追加進 author-memory.json。';
+  // slug：工單若指定固定 slug（滾動更新／同一事件就地改寫用），就用它、不自訂；否則引擎自選。
+  const slugTarget = job.slug ? `src/content/articles/${job.slug}.md` : 'src/content/articles/<slug>.md（slug 你自訂，英文 kebab）';
+  const memoryTail = factual ? '事實稿不需追加 author-memory.json。' : '並依步驟三.9 把本篇追加進 author-memory.json。';
+  const memoryStep = isUpdate
+    ? [
+        `3. **同一事件的滾動更新**：改寫既有檔 ${slugTarget}（slug 固定、不要改）。先讀原檔，把 title／description／highlights／內文改寫成反映「最新、最完整」的停班停課全貌（涵蓋先前已列、再加上新增或變更的縣市/地區與適用時間）。`,
+        `3a. **沿用原檔的 status 與 publishDate 不要動**（避免把已發佈或待審草稿的排程打回原形）；**沿用原 coverImage 檔名與既有內文圖**，只有新增段落才另配新圖。把 frontmatter 的 updatedDate 設為現在（台北時間 ISO 8601，例如 ${new Date(Date.now() + 8 * 3600 * 1000).toISOString().replace('Z', '+08:00')}）。${memoryTail}`,
+      ].join('\n')
+    : `3. 寫入 ${slugTarget}。${memoryTail}`;
 
   const noFabricate = factual
     ? '4. 嚴禁杜撰：數據/事實/日期/地點/金額都要可連線官方或權威來源；查不到就不寫，寧缺勿錯（服務型資訊錯誤會誤導讀者）。'
@@ -146,7 +154,9 @@ export function buildDraftPrompt(job, schedule = null) {
     '【務必照做】',
     '1. 完整執行 newsroom 步驟三：查料、擴寫、超連結逐條查證（每條 2xx 且內容支持該句，死連結一律換或刪），去 AI 腔複查、繁中台灣用語複查。',
     '1a. 每段必配圖，一律用 `node scripts/get-image.mjs`（不要用 gen-image.mjs）：概念/物件/場景圖**不要**加 --people（先搜圖庫、找不到才 AI 生成）；人物為主體的圖才加 --people（直接 AI 生成、模組強制台灣人）。封面同法；若封面回傳 mode:"stock" 要把 credit 寫進 frontmatter coverImageCredit。',
-    `2. frontmatter：status: "${status}"、publishDate: "${pubDate}"、category: "${job.category}"${job.subcategory ? `、subcategory: "${job.subcategory}"` : ''}、author: "${author}"、contentType: "${contentType}"、sourceType: "editorial"（須為 src/content.config.ts 的 enum 合法值），並用 disclosure 欄位揭露「以 AI 輔助起草、經人工查證編輯」。`,
+    isUpdate
+      ? `2. frontmatter：**status 與 publishDate 一律沿用原檔現值、不要改**（滾動更新不得改變排程）；category/subcategory/author/contentType/sourceType 維持原檔；新增或更新 updatedDate（見步驟 3a）。disclosure 揭露「以 AI 輔助起草、經人工查證編輯」。`
+      : `2. frontmatter：status: "${status}"、publishDate: "${pubDate}"、category: "${job.category}"${job.subcategory ? `、subcategory: "${job.subcategory}"` : ''}、author: "${author}"、contentType: "${contentType}"、sourceType: "editorial"（須為 src/content.config.ts 的 enum 合法值），並用 disclosure 欄位揭露「以 AI 輔助起草、經人工查證編輯」。`,
     memoryStep,
     noFabricate,
     '5. **不要 git add / commit / push**——版控與發佈由外層腳本在 check:links gate 後處理。',
@@ -215,15 +225,19 @@ function main() {
   }
   const job = normalizeJob(raw);
   const schedule = computeSchedule(job);
-  const prompt = buildDraftPrompt(job, schedule);
+  // 固定 slug 且該檔已存在 → 同一事件的滾動更新（改寫既有檔、沿用原排程），否則新建。
+  const isUpdate = !!job.slug && existsSync(join(ARTICLES_DIR, `${job.slug}.md`));
+  const prompt = buildDraftPrompt(job, schedule, { isUpdate });
 
   if (!go && !stage) {
     console.log('— DRY RUN（不帶 --go/--stage，零副作用）—');
     console.log(`工單通過：${job.title}（${job.category}${job.subcategory ? '/' + job.subcategory : ''}，${job.kind}，${job.length}）`);
     console.log(
-      schedule.pendingApproval
-        ? '排程：待人工審核（產待審草稿、建預覽頁、不自動上線；核可才轉正）'
-        : `排程：${schedule.status}（${schedule.scheduled ? '排到 ' + schedule.dateYmd : '今天，立即發佈'}）`,
+      isUpdate
+        ? `模式：滾動更新既有文章 ${job.slug}（沿用原排程與封面，只改寫內文＋updatedDate）`
+        : schedule.pendingApproval
+          ? '排程：待人工審核（產待審草稿、建預覽頁、不自動上線；核可才轉正）'
+          : `排程：${schedule.status}（${schedule.scheduled ? '排到 ' + schedule.dateYmd : '今天，立即發佈'}）`,
     );
     console.log('將呼叫：claude -p <批次起草 prompt>');
     console.log('gate：pnpm check:links（壞連結擋整站部署）；然後 git commit + push');
@@ -246,9 +260,10 @@ function main() {
   // 必須真的產出了文章
   const produced = sh('git', ['status', '--porcelain', 'src/content/articles/']);
   if (!produced) die('claude 沒有在 src/content/articles/ 產出文章，中止（不發佈）');
-  // 從產出檔推出 slug → 文章網址（給 Slack 回報帶連結）
+  // 從產出檔推出 slug → 文章網址（給 Slack 回報帶連結）。
+  // 工單指定固定 slug 時以它為準（滾動更新就是改寫該檔；避免 git 同時動到別檔誤判）。
   const artLine = produced.split('\n').map((l) => l.trim()).find((l) => l.endsWith('.md'));
-  const slug = artLine ? artLine.replace(/^.*src\/content\/articles\//, '').replace(/\.md$/, '') : null;
+  const slug = job.slug || (artLine ? artLine.replace(/^.*src\/content\/articles\//, '').replace(/\.md$/, '') : null);
   const url = slug ? `https://appi.news/articles/${slug}/` : null;
 
   // 配圖硬性 gate（只擋自動產文這條路）：缺封面 / 封面檔不存在 / 內文 0 張圖 → 中止不發佈。
@@ -293,7 +308,10 @@ function main() {
     inlineImages: parsed.inlineImages,
     viewpoint: job.viewpoint, // 本次採用的真人觀點（給 Slack 回報，作者可目視確認有無進文）
     viewpointNote: vp.note, // gate 判定「反映於哪一句」
-    pendingApproval: !!schedule.pendingApproval, // 事實稿待審：Slack 帶「發佈」鈕、不自動上線
+    // 待審＝Slack 帶「發佈」鈕。滾動更新時依「原檔現值」判定：原檔仍是草稿→還要審（帶鈕）；
+    // 原檔已是 published（已上線）→ 更新不需再審，純通知、不帶鈕（避免把已上線文章誤導成待審）。
+    pendingApproval: isUpdate ? parsed.data.status !== 'published' : !!schedule.pendingApproval,
+    updated: isUpdate, // 這次是滾動更新既有文章（給 Slack 回報用「已更新」措辭）
     slug, // 給「發佈」動作定位文章
   };
   try {
@@ -324,12 +342,15 @@ function main() {
   // 不用 git add -A——否則 job 起跑後到這裡之間，工作區若有其他未提交改動
   // （例如有人同時在開發），會被掃進這篇發佈 commit。起點的乾淨檢查擋不了中途新增的檔。
   sh('git', ['add', '--', 'src/content/articles', 'public/covers', 'public/images', '.claude/skills/newsroom/author-memory.json']);
-  const commitBody = schedule.pendingApproval
-    ? `${job.categoryName}類自動產文（事實型／編輯部，待人工審核，未上線；核可後轉正）。`
-    : job.kind === 'factual'
-      ? `${job.categoryName}類自動產文（事實型／編輯部，status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。`
-      : `${job.categoryName}類自動產文（status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。真人觀點由作者提供。`;
-  sh('git', ['commit', '-m', `feat(article): 自動產文 — ${job.title}\n\n${commitBody}`]);
+  const commitBody = isUpdate
+    ? `${job.categoryName}類自動產文（事實型／編輯部，同一事件滾動更新；沿用原排程與封面，改寫內文＋updatedDate）。`
+    : schedule.pendingApproval
+      ? `${job.categoryName}類自動產文（事實型／編輯部，待人工審核，未上線；核可後轉正）。`
+      : job.kind === 'factual'
+        ? `${job.categoryName}類自動產文（事實型／編輯部，status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。`
+        : `${job.categoryName}類自動產文（status: ${schedule.status}${schedule.scheduled ? '，' + schedule.dateYmd : ''}）。真人觀點由作者提供。`;
+  const commitSubject = isUpdate ? `feat(article): 滾動更新 — ${job.title}` : `feat(article): 自動產文 — ${job.title}`;
+  sh('git', ['commit', '-m', `${commitSubject}\n\n${commitBody}`]);
   if (go) {
     console.log('→ push');
     const _pr = pushToMain({ cwd: process.cwd() });

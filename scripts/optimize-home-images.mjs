@@ -15,7 +15,7 @@ let html = readFileSync(HOME, 'utf8');
 
 // 逐個 <img ...covers...> 標籤，依「實際顯示尺寸」分檔（×~2.5 涵蓋 retina）：
 //  - feature-img：主圖顯示 ~651px → 900
-//  - side-img   ：側欄縮圖固定 .side-thumb 88px（行動版 ~142px）→ 360
+//  - side-img   ：側欄縮圖 .side-thumb 桌機 120px（堆疊/行動 ≤96px）×2.5 retina → 360
 //  - 其餘(acard 卡片)：~360px 顯示 → 600
 const imgTagRe = /<img\b[^>]*?\/covers\/[^>]*?>/g;
 const jobs = new Map(); // srcFile -> { width }

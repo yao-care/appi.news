@@ -1,5 +1,11 @@
 {
   "permissions": {
-    "allow": ["Bash(node scripts/gen-image.mjs:*)"]
+    "allow": [
+      "Bash(node scripts/*:*)",
+      "Bash(curl:*)",
+      "Bash(gh pr merge:*)",
+      "WebFetch",
+      "WebSearch"
+    ]
   }
 }

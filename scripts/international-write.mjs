@@ -170,7 +170,7 @@ function main() {
     }
     const prompt = buildIntlPrompt(s, recent);
     console.log(`\n→ [${s.region}] ${s.numSources}家 | ${s.fullName}`);
-    const r = spawnSync('claude', ['-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+    const r = spawnSync('claude-appi', ['-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
     if (r.error || r.status !== 0) { console.log(`  ⚠️ claude 失敗：${(r.stderr || r.error?.message || '').slice(-200)}`); results.push({ s, action: 'error' }); continue; }
     const v = parseIntlResult(r.stdout);
     console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);

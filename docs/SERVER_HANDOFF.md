@@ -95,7 +95,7 @@ pnpm test
 | 颱風停班課 | lifestyle-typhoon.sh | 每小時（5–11 月） | 每小時 | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
 | 新文章送 Indexing API | indexing-submit.sh | 06:00 | 14:00 | 線上 sitemap | n/a（送 Google 收錄）| 有送才報 **dev 台** |
 | 數據報告 | weekly-report.sh | 00:17（每 3 天） | 08:17 | GA4+GSC | n/a（數據）| ✅報告到**作者群** |
-| 維運心跳 | heartbeat.sh | 23:30 | 07:30 | 本地內容/狀態 + GSC（seo-opportunities）| n/a（維運）| ✅📊數據心跳＋🤖大腦優化到 **dev 台** |
+| 維運心跳 | heartbeat.sh | 21:40 | 05:40 | 本地內容/狀態 + GSC（seo-opportunities）| n/a（維運）| ✅📊數據心跳＋🤖大腦優化到 **dev 台**（排在 tech-radar 05:20 後 20 分，brain 撞額度會退化不出錯）|
 
 - **並發保護（重要）**：已從「全域 flock + 共用工作目錄」改為**每支 cron 各開自己的臨時 detached worktree**（`scripts/cron/_worktree.sh` 的 `cron_enter_worktree`，off `origin/main`）→ 互不洗檔、可**真正並行**；寫稿端最後用 `pushToMain`（push `HEAD:main`，撞拒就 fetch+rebase 重試）安全上線。新增這類 cron 一律 `source _worktree.sh` 並 `cron_enter_worktree "<slug>"`。背景見 [`docs/lessons/`](./lessons/)（自動線多工不序列化）。
   - **例外**：`indexing-submit.sh`、`heartbeat.sh` 是**純資料/唯讀腳本**（不碰 git 工作區、不喚 Claude 或只在最後喚一次），故**不走 worktree**，與其他 cron 無洗檔競態。背景見 [`docs/lessons/google-indexing-api-gray-area.md`](./lessons/google-indexing-api-gray-area.md)。

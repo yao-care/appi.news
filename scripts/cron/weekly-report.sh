@@ -13,10 +13,10 @@ set -a
 source "$HOME/.config/appi-news/report.env"
 set +a
 ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
-out="$(timeout 1200 claude-appi -p "/weekly-report" 2>&1)"; rc=$?
+out="$(timeout 1200 claude-appi --model sonnet -p "/weekly-report" 2>&1)"; rc=$?
 [ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
 printf '%s\n' "$out"
-if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond' <<<"$out"; then
+if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit' <<<"$out"; then
   node scripts/cron-report.mjs --text "✅ $TASK：完成（$ts）" || true; exit 0
 fi
 node scripts/cron-report.mjs --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true

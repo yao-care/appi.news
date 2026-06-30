@@ -197,7 +197,7 @@ function checkViewpointReflected(viewpoint, body) {
     'VIEWPOINT_GATE=PASS｜<反映在哪：引用最相關的一句內文，30字內>',
     'VIEWPOINT_GATE=FAIL｜<為什麼沒反映或被稀釋，30字內>',
   ].join('\n');
-  const r = spawnSync('claude-appi', ['-p', prompt], { encoding: 'utf8' });
+  const r = spawnSync('claude-appi', ['--model', 'haiku', '-p', prompt], { encoding: 'utf8' });
   if (r.error || r.status !== 0) {
     const tail = (r.stderr || r.stdout || r.error?.message || '').trim().slice(-200);
     return { ok: false, infra: true, note: `claude 查核失敗（exit ${r.status}）：${tail}` };
@@ -254,7 +254,7 @@ function main() {
   console.log(`→ 在分支 ${branch} 上起草並發佈`);
 
   console.log('→ claude 起草中…');
-  const draft = spawnSync('claude-appi', ['-p', prompt], { stdio: 'inherit' });
+  const draft = spawnSync('claude-appi', ['--model', 'sonnet', '-p', prompt], { stdio: 'inherit' });
   if (draft.status !== 0) die(`claude 起草失敗（exit ${draft.status}）`);
 
   // 必須真的產出了文章

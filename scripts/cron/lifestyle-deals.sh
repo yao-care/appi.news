@@ -11,10 +11,10 @@ set -a
 source "$HOME/.config/appi-news/report.env"
 set +a
 ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
-out="$(timeout 1200 claude-appi -p "/lifestyle-deals" 2>&1)"; rc=$?
+out="$(timeout 1200 claude-appi --model sonnet -p "/lifestyle-deals" 2>&1)"; rc=$?
 [ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
 printf '%s\n' "$out"
-if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond' <<<"$out"; then
+if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit' <<<"$out"; then
   if grep -q 'sent ts=' <<<"$out"; then node scripts/cron-report.mjs --category lifestyle --text "✅ $TASK：有連假，已產待審草稿（發佈鈕在生活台）（$ts）" || true; else echo "（本次無連假，安靜不報）"; fi
   exit 0
 fi

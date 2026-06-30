@@ -93,8 +93,8 @@ function main() {
     }
     const prompt = buildFocusEsgPrompt(excludeTitles, 7);
     console.log(`\n→ 第 ${i + 1} 篇…`);
-    const r = spawnSync('claude-appi', ['-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
-    if (r.error || r.status !== 0) { console.log(`  ⚠️ claude 失敗，停止本批：${(r.stderr || r.error?.message || '').slice(-200)}`); break; }
+    const r = spawnSync('claude-appi', ['--model', 'sonnet', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+    if (r.error || r.status !== 0) { console.log(`  ⚠️ claude 失敗，停止本批：${(r.stderr || r.error?.message || r.stdout || '').slice(-200)}`); break; }
     const v = parseFocusEsgResult(r.stdout);
     console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
     if (v.action !== 'new' || !v.slug) { console.log('  本輪無更多夠新夠強的題，停止。'); break; }

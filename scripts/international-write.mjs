@@ -170,7 +170,7 @@ function main() {
     }
     const prompt = buildIntlPrompt(s, recent);
     console.log(`\n→ [${s.region}] ${s.numSources}家 | ${s.fullName}`);
-    const r = spawnSync('claude-appi', ['--model', 'sonnet', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+    const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
     // claude-appi 撞「每週用量上限」時會 exit 0 但只印限額訊息 → 必須查 stdout，否則整批被誤判成「無產出、安靜」。
     if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) { console.log(`  ⚠️ claude 失敗：${(r.stderr || r.stdout || r.error?.message || '').slice(-200)}`); results.push({ s, action: 'error' }); continue; }
     const v = parseIntlResult(r.stdout);

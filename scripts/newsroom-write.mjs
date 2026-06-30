@@ -256,7 +256,7 @@ function main() {
   console.log(`→ 在分支 ${branch} 上起草並發佈`);
 
   console.log('→ claude 起草中…');
-  const draft = spawnSync('claude-appi', ['--model', 'sonnet', '-p', prompt], { stdio: 'inherit' });
+  const draft = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { stdio: 'inherit' });
   if (draft.status !== 0) die(`claude 起草失敗（exit ${draft.status}）`);
 
   // 必須真的產出了文章

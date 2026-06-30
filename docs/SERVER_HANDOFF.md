@@ -81,7 +81,7 @@ pnpm test
 
 ### cron 總表（全部跑在 publisher checkout、UTC 計時）
 
-> **模型**：所有 cron 一律用 **Sonnet**（newsroom 主稿 Sonnet、viewpoint gate Haiku），**不再用 Opus**——全 Opus 曾把 claude-appi 週用量額度燒爆、自動化全失敗，背景見 [`docs/lessons/automation-model-and-account-split.md`](./lessons/automation-model-and-account-split.md)。新增任何 `claude-appi -p` 呼叫**務必帶 `--model`**，別吃全域預設。
+> **模型**：所有 cron 一律用 **Sonnet 5（`claude-sonnet-5`）**（newsroom 主稿 Sonnet、viewpoint gate Haiku），**不再用 Opus**——全 Opus 曾把 claude-appi 週用量額度燒爆、自動化全失敗，背景見 [`docs/lessons/automation-model-and-account-split.md`](./lessons/automation-model-and-account-split.md)。新增任何 `claude-appi -p` 呼叫**務必帶 `--model`**，別吃全域預設。
 > **日誌**：集中在 `/var/log/appi-news/<job>.log`（不放 `/tmp`，方便稽核）。
 > **crontab 排版**：所有 appi.news 行收在 crontab 末段同一個「APPI NEWS」區塊，勿再散落到其他專案之間。
 

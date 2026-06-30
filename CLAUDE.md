@@ -87,7 +87,7 @@
 - **`claude`（開發）**：人在 dev 目錄 `/root/appi.news` 互動開發、commit、改 crontab。
 - **`claude-appi`（營運，`CLAUDE_CONFIG_DIR=~/.claude-appi`）**：所有 cron／自動產文走它（在 publisher checkout 跑）。
 
-**模型**：Opus 已退場。所有 `claude-appi` 呼叫**一律明確帶 `--model`**——產文／選題／週報用 **Sonnet**、newsroom 觀點查核 gate 用 **Haiku**。全域預設仍是 Opus，**不帶 `--model` 就會默默吃 Opus 燒爆週額度**（出過事，見 [`docs/lessons/automation-model-and-account-split.md`](./docs/lessons/automation-model-and-account-split.md)）。
+**模型**：Opus 已退場。所有 `claude-appi` 呼叫**一律明確帶 `--model`**——產文／選題／週報用 **Sonnet 5（`claude-sonnet-5`）**、newsroom 觀點查核 gate 用 **Haiku**。全域預設仍是 Opus，**不帶 `--model` 就會默默吃 Opus 燒爆週額度**（出過事，見 [`docs/lessons/automation-model-and-account-split.md`](./docs/lessons/automation-model-and-account-split.md)）。
 
 **判斷自動化成功不能只看 exit code**：`claude-appi` 撞用量上限／拒答會 **exit 0** 只印 stdout；`.sh` 要用失敗 regex（含 `weekly limit`）、`.mjs` 要掃 stdout。
 

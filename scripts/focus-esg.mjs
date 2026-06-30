@@ -93,7 +93,7 @@ function main() {
     }
     const prompt = buildFocusEsgPrompt(excludeTitles, 7);
     console.log(`\n→ 第 ${i + 1} 篇…`);
-    const r = spawnSync('claude-appi', ['--model', 'sonnet', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+    const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
     // claude-appi 撞「每週用量上限」時會 exit 0 但只印限額訊息 → 必須查 stdout，否則被誤判成「無題、安靜」。
     if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) { console.log(`  ⚠️ claude 失敗，停止本批：${(r.stderr || r.stdout || r.error?.message || '').slice(-200)}`); break; }
     const v = parseFocusEsgResult(r.stdout);

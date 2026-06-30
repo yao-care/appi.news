@@ -3,7 +3,7 @@
 #   📊 數據心跳（data-heartbeat.mjs，純讀本地、無 LLM、必發）
 #   🤖 大腦優化（brain-checkup.mjs，claude-appi sonnet 判讀 SEO/內容機會；撞限額退化成只報事實）
 # 參考 dreamer868 pipeline/slack/heartbeat-{data,brain}.sh。純讀取：不碰 git 工作區、不需 worktree、不需 flock。
-# 模型鐵則：brain 已在 .mjs 內明確帶 --model sonnet（不帶會吃 Opus 燒週額度）。
+# 模型鐵則：brain 已在 .mjs 內明確帶 --model claude-sonnet-5（不帶會吃 Opus 燒週額度）。
 TASK="維運心跳"
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"

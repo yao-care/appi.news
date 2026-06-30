@@ -3,6 +3,17 @@
 TASK="颱風停班課"
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
+
+# 前置 gate（純資料，不動用 Claude/worktree）：颱風季每小時跑，沒颱風的時段直接安靜結束以省用量。
+# 官方「目前現況」權威頁（人事行政總處 nds.html）含「無停班停課訊息」＝確定無停班課 → 跳過。
+# 抓取失敗／非 200／找不到該字串（＝可能有停班課）一律 fail-open，照走完整流程，絕不漏報。
+NDS_URL="https://www.dgpa.gov.tw/typh/daily/nds.html"
+if curl -s -4 --max-time 30 --fail "$NDS_URL" 2>/dev/null | grep -q "無停班停課訊息"; then
+  echo "前置 gate：官方頁顯示「無停班停課訊息」，安靜結束（未動用 Claude）。"
+  exit 0
+fi
+echo "前置 gate：偵測到可能停班課或抓取不確定 → 進入完整流程（fail-open）。"
+
 # 多工：在自己的臨時 worktree 裡跑（off origin/main），與其他 publisher cron 並行、互不洗檔。
 source "$(dirname "$0")/_worktree.sh"
 cron_enter_worktree "typhoon" || { echo "無法建 worktree，略過本次（颱風安靜模式：不報）"; exit 0; }

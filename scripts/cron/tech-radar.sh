@@ -11,7 +11,7 @@ set -a
 source "$HOME/.config/appi-news/report.env"
 set +a
 ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
-out="$(timeout 1200 claude-appi --model sonnet -p "/tech-radar" 2>&1)"; rc=$?
+out="$(timeout 1200 claude-appi --model claude-sonnet-5 -p "/tech-radar" 2>&1)"; rc=$?
 [ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
 printf '%s\n' "$out"
 # 失敗偵測：rc 非 0，或輸出含 API/拒答/用量上限字樣（含 Claude「weekly limit」用量上限）。

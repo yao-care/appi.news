@@ -19,7 +19,7 @@
 
 ## 解法（怎麼修 + 現在怎麼維持）
 
-- **模型分級**（全面 Sonnet，gate 用 Haiku，Opus 退場）：所有 `claude-appi` 呼叫一律帶 `--model`——cron/`.mjs` 產文與選題、週報 → `--model sonnet`；`newsroom-write.mjs` 的 viewpoint 二元查核 gate → `--model haiku`。
+- **模型分級**（全面 Sonnet，gate 用 Haiku，Opus 退場）：所有 `claude-appi` 呼叫一律帶 `--model`——cron/`.mjs` 產文與選題、週報 → `--model claude-sonnet-5`；`newsroom-write.mjs` 的 viewpoint 二元查核 gate → `--model haiku`。
 - **限額/錯誤要顯形**：
   - `.sh` 失敗 regex 統一含 `hit your .*limit|weekly limit|usage limit`（rc=0 但輸出命中 → 走失敗分支）。
   - `.mjs` spawn 後**同時掃 stdout** 的限額/錯誤字樣（`API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit`）才算成功；失敗訊息加印 `r.stdout`。

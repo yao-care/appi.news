@@ -6,7 +6,7 @@
 
 ## 帳號與模型
 - 自動化一律用 **`claude-appi`**（營運帳號，`CLAUDE_CONFIG_DIR=~/.claude-appi`）；人在 dev 互動開發才用 `claude`。
-- 每個 `claude-appi -p` 呼叫**必帶 `--model`**：產文／選題／週報 → `sonnet`、newsroom viewpoint 查核 gate → `haiku`。**不帶就會吃全域預設 Opus、燒爆週用量上限**（出過事 → [`automation-model-and-account-split.md`](./lessons/automation-model-and-account-split.md)）。
+- 每個 `claude-appi -p` 呼叫**必帶 `--model`**：產文／選題／週報 → `claude-sonnet-5`、newsroom viewpoint 查核 gate → `haiku`。**不帶就會吃全域預設 Opus、燒爆週用量上限**（出過事 → [`automation-model-and-account-split.md`](./lessons/automation-model-and-account-split.md)）。
 - **判斷成功不能只看 exit code**：`claude-appi` 撞用量上限／拒答會 **exit 0** 且只印 stdout。`.sh` 用失敗 regex（含 `weekly limit|usage limit`）、`.mjs` 掃 `stdout` 限額字樣，才算失敗。
 
 ## 排程與時區

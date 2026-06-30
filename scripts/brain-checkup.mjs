@@ -1,7 +1,7 @@
 // 🤖 大腦優化（每日驗收）— 蒐集確定性 SEO/內容訊號 → claude-appi(sonnet) 濃縮成「機會 + 待辦」報告。
 // 參考 dreamer868 的 checkup/run.mjs + heartbeat-brain.sh 模式（報告型，不自動改碼）。
 // 鐵則：
-//   - 模型一律明確 --model sonnet（全域預設是 Opus，不帶會燒爆週額度）。
+//   - 模型一律明確 --model claude-sonnet-5（全域預設是 Opus，不帶會燒爆週額度）。
 //   - claude-appi 撞週限會 exit 0 只印限額訊息 → 用 regex 偵測，退化成「僅確定性事實」，不沉默。
 //   - 效能判讀內嵌冷邊緣 caveat：低流量站 PSI 分數低多半是假象，別建議追 PSI 分數改程式
 //     （見 PERFORMANCE.md §3 / docs/lessons/psi-cold-edge.md）。
@@ -53,7 +53,7 @@ ${facts}
 }
 
 function runClaude(prompt) {
-  const r = spawnSync('claude-appi', ['--model', 'sonnet', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, timeout: 300000 });
+  const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, timeout: 300000 });
   const text = r.stdout || '';
   const failed = r.error || r.status !== 0 || LIMIT_RE.test(text) || !text.trim();
   return { text: text.trim(), failed };

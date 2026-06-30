@@ -1,7 +1,7 @@
 // 純轉換：吃 GA4 runReport / GSC query 的原始回應，吐週報區塊資料。無 I/O、好測。
 // 站內頁面分類（slug→category 映射）I/O 在 article-category-map.mjs，傳進來。
 
-const AI_HOSTS = ['chatgpt.com', 'openai.com', 'perplexity.ai', 'gemini.google.com', 'copilot.microsoft.com', 'claude.ai'];
+export const AI_HOSTS = ['chatgpt.com', 'openai.com', 'perplexity.ai', 'gemini.google.com', 'copilot.microsoft.com', 'claude.ai'];
 
 // src/config/categories.ts 的 8 個分類 slug（columns 另歸頁面類型「專欄」）。
 const NEWS_CATEGORIES = ['focus', 'international', 'health', 'tech', 'finance', 'sports', 'lifestyle'];

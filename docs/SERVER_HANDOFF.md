@@ -80,19 +80,24 @@ pnpm test
 
 ### cron 總表（全部跑在 publisher checkout、UTC 計時）
 
+> **模型**：所有 cron 一律用 **Sonnet**（newsroom 主稿 Sonnet、viewpoint gate Haiku），**不再用 Opus**——全 Opus 曾把 claude-appi 週用量額度燒爆、自動化全失敗，背景見 [`docs/lessons/automation-model-and-account-split.md`](./lessons/automation-model-and-account-split.md)。新增任何 `claude-appi -p` 呼叫**務必帶 `--model`**，別吃全域預設。
+> **日誌**：集中在 `/var/log/appi-news/<job>.log`（不放 `/tmp`，方便稽核）。
+> **crontab 排版**：所有 appi.news 行收在 crontab 末段同一個「APPI NEWS」區塊，勿再散落到其他專案之間。
+
 | 任務 | cron 腳本 | UTC | 台北 | 來源 | 上線方式 | 發 Slack？ |
 |---|---|---|---|---|---|---|
 | 科技選題雷達 | tech-radar.sh | 21:20 / 03:11 / 10:18 | 05:20/11:11/18:18 | WebSearch | 候選→人點按鈕→寫→自動上線 | ✅候選到**科技**台 |
-| 國際編譯台 | international-desk.sh | 02:30 | 10:30 | **GDELT Events 原始檔**（international-select/international-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
+| 焦點/ESG | focus-esg.sh | 01:30 | 09:30 | 6 議題群權威來源（focus-esg.mjs）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 連假優惠 | lifestyle-deals.sh | 02:00 | 10:00 | data.gov.tw #14718 假日曆（tw-holidays.mjs）+ 雙鐵 | 事實稿→**待審草稿+發佈鈕** | ✅有連假時發**生活**台/失敗哨兵 |
+| 國際編譯台 | international-desk.sh | 02:30 | 10:30 | **GDELT Events 原始檔**（international-select/international-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
+| 警消好人好事 | lifestyle-police.sh | 03:50（每日） | 11:50 | 各地警局新聞稿（lifestyle-police.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 颱風停班課 | lifestyle-typhoon.sh | 每小時（5–11 月） | 每小時 | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
-| 警消好人好事 | lifestyle-police.sh | 週三 06:30 | 週三 14:30 | 各地警局新聞稿（lifestyle-police.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
-| 每週數據週報 | weekly-report.sh | 週日 22:17 | 週一 06:17 | GA4+GSC | n/a（數據）| ✅週報到**作者群** |
 | 新文章送 Indexing API | indexing-submit.sh | 06:00 | 14:00 | 線上 sitemap | n/a（送 Google 收錄）| 有送才報**作者群** |
+| 數據報告 | weekly-report.sh | 00:17（每 3 天） | 08:17 | GA4+GSC | n/a（數據）| ✅報告到**作者群** |
 
-- **並發保護（重要）**：所有**會 `git reset --hard origin/main`** 的 publisher-checkout cron 開頭都用 `flock -w 1800 /tmp/appi-publisher-cron.lock` 序列化，避免兩支同時跑互洗未提交工作。同時只放一支，取鎖逾時就略過本次。**新增這類 cron 務必沿用此 flock 樣板。**
-  - **例外**：`indexing-submit.sh` 是**純資料腳本**（只讀線上 sitemap + 帳本 + 呼叫 API，不碰 git 工作區），故**不走 flock、不需 worktree**，與其他 cron 無洗檔競態。背景見 [`docs/lessons/google-indexing-api-gray-area.md`](./lessons/google-indexing-api-gray-area.md)。
-- **國際是長跑**（最多 8 區×3 篇、逐篇 Claude 撰寫，單次可能數小時）；其他 cron 在此期間取不到鎖會略過重試，故國際排最前（02:30）、警消刻意排到 06:30 避開。要降國際耗時就調 `international-write.mjs` 的 `--max`。
+- **並發保護（重要）**：已從「全域 flock + 共用工作目錄」改為**每支 cron 各開自己的臨時 detached worktree**（`scripts/cron/_worktree.sh` 的 `cron_enter_worktree`，off `origin/main`）→ 互不洗檔、可**真正並行**；寫稿端最後用 `pushToMain`（push `HEAD:main`，撞拒就 fetch+rebase 重試）安全上線。新增這類 cron 一律 `source _worktree.sh` 並 `cron_enter_worktree "<slug>"`。背景見 [`docs/lessons/`](./lessons/)（自動線多工不序列化）。
+  - **例外**：`indexing-submit.sh` 是**純資料腳本**（只讀線上 sitemap + 帳本 + 呼叫 API，不碰 git 工作區），故**不走 worktree**，與其他 cron 無洗檔競態。背景見 [`docs/lessons/google-indexing-api-gray-area.md`](./lessons/google-indexing-api-gray-area.md)。
+- **國際是長跑**（最多 8 區×3 篇、逐篇 Claude 撰寫）；各 cron 各自 worktree 並行，不再彼此卡鎖。要降國際耗時就調 `international-write.mjs` 的 `--max` 或 `INTL_TIME_BUDGET_MS`。
 - **每次執行都回報 Slack（`scripts/cron-report.mjs`）**：不論完成/無產出/失敗/略過(取鎖逾時)，都發一則「值勤回報」到**作者群**頻道（`channelForCategory(undefined)`=預設台）。**內容本身**另發對應分類頻道：國際/警消上架→該分類頻道帶連結（Slack 自動 unfurl 出標題）；科技候選→科技台；優惠/颱風待審草稿→生活台（發佈鈕）。
   - **颱風每小時**：值勤回報每小時發作者群（有停課才另發生活台草稿）。作者群會因此較吵；若要可把颱風值勤回報關掉或改發專屬監控頻道。
 - 上表「發 Slack？」欄已過時——改以本段為準：**全部 cron 每次都回報作者群**。

@@ -18,7 +18,7 @@ printf '%s\n' "$out"
 
 # 失敗：rc 非 0 或輸出含 FAIL 標記
 if [ "$rc" -ne 0 ] || grep -q 'INDEXING_RESULT=FAIL' <<<"$out"; then
-  node scripts/cron-report.mjs --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 400 <<<"$out")")" || true
+  node scripts/cron-report.mjs --dev --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 400 <<<"$out")")" || true
   exit "${rc:-1}"
 fi
 
@@ -26,7 +26,7 @@ fi
 if line="$(grep -oE 'INDEXING_RESULT=SENT n=[0-9]+ remain=[0-9]+' <<<"$out")"; then
   n="$(grep -oE 'n=[0-9]+' <<<"$line" | head -1 | cut -d= -f2)"
   remain="$(grep -oE 'remain=[0-9]+' <<<"$line" | cut -d= -f2)"
-  node scripts/cron-report.mjs --text "🔎 $TASK：已送 ${n} 篇新文章給 Google（剩 ${remain}，$ts）" || true
+  node scripts/cron-report.mjs --dev --text "🔎 $TASK：已送 ${n} 篇新文章給 Google（剩 ${remain}，$ts）" || true
 else
   echo "（無新文章，安靜不報）"
 fi

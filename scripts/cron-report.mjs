@@ -4,12 +4,13 @@
 // 用法：
 //   node scripts/cron-report.mjs --text "訊息"                    # 發到作者群（值勤回報）
 //   node scripts/cron-report.mjs --category international --text "✅ 上架 3 篇\n<url>..."  # 發到國際台
-//   echo "長訊息" | node scripts/cron-report.mjs --category lifestyle --stdin
+//   node scripts/cron-report.mjs --dev --text "..."              # 發到 dev 頻道（維運/心跳/索引等系統訊號）
+//   echo "長訊息" | node scripts/cron-report.mjs --dev --stdin
 
 import { readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import { postMessage } from './lib/slack.mjs';
-import { channelForCategory } from './lib/report-config.mjs';
+import { channelForCategory, DEV_CHANNEL } from './lib/report-config.mjs';
 
 function arg(n) { const i = process.argv.indexOf(`--${n}`); return i >= 0 ? process.argv[i + 1] : undefined; }
 
@@ -19,8 +20,8 @@ async function main() {
   const category = arg('category'); // 未給 → channelForCategory 回預設作者群
   let text = process.argv.includes('--stdin') ? readFileSync(0, 'utf8') : arg('text');
   if (!text || !text.trim()) { console.error('缺 --text'); process.exit(1); }
-  // 未給 --category → 預設作者群（值勤/錯誤哨兵）。dev 台只給 @bot 開發需求，cron 一律不發 dev。
-  const channel = channelForCategory(category);
+  // 頻道優先序：--dev（維運/心跳/系統訊號，非內容、非 @bot 開發需求）＞ --category 分類頻道 ＞ 預設作者群。
+  const channel = process.argv.includes('--dev') ? DEV_CHANNEL : channelForCategory(category);
   const r = await postMessage({ token, channel, text });
   console.log('cron-report sent ts=' + r.ts);
 }

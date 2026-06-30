@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 每日 cron：科技選題雷達（台北 05:20/11:11/18:18 = UTC 21:20/03:11/10:18）。
+# 每日 cron：科技選題雷達（每日一次：台北 05:20 = UTC 21:20）。
 TASK="科技選題雷達"
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"

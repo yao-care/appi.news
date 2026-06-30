@@ -23,7 +23,7 @@
 - **限額/錯誤要顯形**：
   - `.sh` 失敗 regex 統一含 `hit your .*limit|weekly limit|usage limit`（rc=0 但輸出命中 → 走失敗分支）。
   - `.mjs` spawn 後**同時掃 stdout** 的限額/錯誤字樣（`API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit`）才算成功；失敗訊息加印 `r.stdout`。
-- **crontab 收歸單一區塊**：所有 appi.news 行集中到 crontab 末段「APPI NEWS」區塊，補回 tech-radar（3×）與 typhoon（`0 * * 5-11 *`，颱風季每小時），日誌統一 `/var/log/appi-news/<job>.log`。
+- **crontab 收歸單一區塊**：所有 appi.news 行集中到 crontab 末段「APPI NEWS」區塊，補回 tech-radar 與 typhoon（`0 * * 5-11 *`，颱風季每小時）排程行，日誌統一 `/var/log/appi-news/<job>.log`。（tech-radar 後依站長指示由一天三次改每日一次。）
 
 ## 怎麼避免重犯 / 相關
 

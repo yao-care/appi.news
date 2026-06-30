@@ -8,6 +8,8 @@ interface Props {
   fallback?: string;
   class?: string;
   loading?: 'lazy' | 'eager';
+  /** LCP 首屏主圖設 'high'，讓瀏覽器優先抓（Core Web Vitals 建議；其餘維持 auto） */
+  fetchpriority?: 'high' | 'low' | 'auto';
   width?: number;
   height?: number;
 }
@@ -17,6 +19,7 @@ const {
   fallback = 'og/default.png',
   class: className,
   loading = 'lazy',
+  fetchpriority,
   width,
   height,
 } = Astro.props;
@@ -28,6 +31,7 @@ const fallbackSrc = /^https?:\/\//.test(fallback) ? fallback : asset(fallback);
   alt={alt}
   class={className}
   loading={loading}
+  fetchpriority={fetchpriority}
   width={width}
   height={height}
   data-fallback={fallbackSrc}

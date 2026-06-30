@@ -79,8 +79,9 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 
 - 量測對象是**部署後的線上站 `https://appi.news/`**（自訂網域，底層仍是 GitHub Pages CDN），不是本機 `pnpm preview`。
 - mobile 分數會在 **90↔100** 間浮動（GH Pages CDN 冷/熱邊緣餵給 Lighthouse 模型的差異），屬正常；**下限應 ≥90**。
-- **剛部署後量測的兩個大坑（會讓你誤判退步）**——①**冷邊緣**：新部署大站 CDN 邊緣仍冷，FCP/LCP 暴增到 10s+，等暖才是真值；②**PSI 對固定 URL 釘住舊（冷）跑**：**破解＝網址加 `?cb=<timestamp>`** 強制重跑（實測首頁無 cb 卡 55、加 cb 立刻 91）。
+- **剛部署後量測的兩個大坑（會讓你誤判退步）**——①**冷邊緣**：新部署大站 CDN 邊緣仍冷，FCP/LCP 暴增到 10s+，等暖才是真值；②**PSI 對固定 URL 釘住舊（冷）跑**：**破解＝網址加 `?cb=<timestamp>`** 強制重跑。
   - **判讀準則**：先看 TBT / CLS / render-blocking / 各請求耗時，若都正常只是總分低，幾乎一定是冷邊緣假象，**別對假問題改程式**。前因後果見 [`docs/lessons/psi-cold-edge.md`](./docs/lessons/psi-cold-edge.md)。
+  - **低流量站的重要修正（2026-06-30 實測）**：以前寫「無 cb 卡 55、加 cb 立刻 91」**不再可靠**。本站流量極低（gtag 才上線兩週、週使用者約 200），**PSI 自己用的 POP 長期冷、cb 也暖不到它** → mobile 仍卡 ~55、FCP/LCP 飆高，且**無 CrUX field data 可佐證**。此時別把「cb 還是低分」當成真退步：改看 ①暖讀時 FCP 是否正常（curl 本地暖邊緣後 FCP 可達 1.2s、TBT=0、CLS=0、hero webp 0.23s 載完＝頁面健康）＋②Lighthouse 有沒有指出可修成因（render-blocking/慢請求/lazy-LCP/prioritize-LCP 全 None＝無可修、純冷邊緣）。詳見 [`docs/lessons/psi-cold-edge.md`](./docs/lessons/psi-cold-edge.md) §低流量站追記。
 
 ---
 
@@ -100,7 +101,7 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 
 - 首屏關鍵路徑只放**最小必要**資源：不要 preload 大字型（slow-4G 下會搶頻寬拖慢 FCP）、不要塞未壓縮大圖、不要新增 render-blocking 外部 CSS/JS。
 - 純裝飾、會吃主執行緒的東西（如首頁 `HeroNetwork` d3 背景）**延後到 `requestIdleCallback`/load 後**啟動（已如此做，TBT=0）。
-- 圖片一律 `loading="lazy"`（首屏主圖才 `eager`），並**依實際顯示尺寸**縮成 webp（×~2.5 涵蓋 retina）。`optimize-home-images.mjs` 已分檔：feature 主圖 900、側欄縮圖 `side-img`（`.side-thumb` 僅 88px）360、其餘卡片 600。**改版面或縮圖尺寸時，記得同步調整這些寬度**，否則會服務過大的圖（PSI「圖片傳送效能」會抓）。
+- 圖片一律 `loading="lazy"`（首屏主圖才 `eager`，且 LCP 主圖加 `fetchpriority="high"` 讓瀏覽器優先抓——`ImageWithFallback` 有此 prop，首頁 hero 已設；其餘維持 auto），並**依實際顯示尺寸**縮成 webp（×~2.5 涵蓋 retina）。`optimize-home-images.mjs` 已分檔：feature 主圖 900、側欄縮圖 `side-img`（`.side-thumb` 僅 88px）360、其餘卡片 600。**改版面或縮圖尺寸時，記得同步調整這些寬度**，否則會服務過大的圖（PSI「圖片傳送效能」會抓）。
 - 內頁（文章頁）現已套用與首頁相同的手法：critical CSS 內聯（`inline-css.mjs`）＋封面縮 webp（`optimize-article-images.mjs`）。字型採全站統一的 unicode-range 切塊（§1-C），切片 URL 固定→跨頁快取，不需為內頁另做任何處理。
 - **切塊上線後線上 PSI（2026-06-15 部署、cachebust 量測）**：全站 **TBT=0、CLS≈0、0 render-blocking**（切塊未破壞任何互動/穩定性指標）。warm/fresh 讀值：首頁 desktop 87（FCP 0.2s）/ mobile 91、tag 頁 desktop 93 / mobile 100、文章頁 mobile 79↔100（暖）。字型不再是瓶頸（`font-display:optional` 下不擋首屏）；剩餘浮動是冷邊緣的影像 LCP，會隨 CDN 暖化收斂（見 §3 兩個坑）。**內頁基準：mobile 暖值 ≥79、可達 100；以新部署後 cachebust 複測為準。**
 

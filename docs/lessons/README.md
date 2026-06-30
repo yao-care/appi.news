@@ -26,7 +26,7 @@
 | 篇目 | 一句話 |
 |---|---|
 | [font-render-blocking.md](./font-render-blocking.md) | 全腳本字型進入點造成 545 個 @font-face、662 KB render-blocking，怎麼救回來的 |
-| [psi-cold-edge.md](./psi-cold-edge.md) | 剛部署 PSI 暴跌到 55 多半是冷邊緣假象，別對假問題改程式 |
+| [psi-cold-edge.md](./psi-cold-edge.md) | 剛部署 PSI 暴跌到 55 多半是冷邊緣假象，別對假問題改程式；低流量站連 cb 都暖不回 PSI 的 POP，判健康看暖讀指標非總分 |
 
 **SEO / 換網域**
 | 篇目 | 一句話 |

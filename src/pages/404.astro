@@ -1,8 +1,106 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { url } from '@/utils/url';
+import { getPublishedArticles, articleSlug } from '@/utils/content';
+
+/**
+ * 舊網址兜底轉址（client-side）。
+ *
+ * 為什麼需要：站台由 WordPress 遷移到 Astro，舊永久連結是 /YYYY/MM/<中文slug>/、
+ * /appi.news/*（舊 github.io 雙前綴）、/author|category|tag/* 等。redirects.json 只能
+ * 逐條列舉「已知」的舊網址產 meta-refresh 轉址頁；但 Google 會持續爬到、外站/NotebookLM
+ * 也會帶人打到「快照當下沒列到」的舊網址 → 落到本頁。這裡用一份全文章 slug+標題索引，
+ * 在 client 端把舊型路徑模糊比對到正確文章自動轉址，涵蓋整個長尾，不必每次追著 GA 補。
+ * （SEO 正權重仍靠 redirects.json 的 rel=canonical 轉址頁；本段是真人 UX 與未列舉網址的安全網。）
+ * 完整脈絡見 docs/lessons/legacy-url-redirects.md。
+ */
+const ARTS = (await getPublishedArticles()).map((a) => ({ s: articleSlug(a), t: a.data.title }));
 ---
 <BaseLayout title="找不到頁面" path="/404/" noindex={true}>
+  <script is:inline define:vars={{ ARTS, BASE: import.meta.env.BASE_URL }}>
+    (function () {
+      try {
+        var base = (BASE || '/').replace(/\/+$/, ''); // '' 代表根網域
+        var p = decodeURIComponent(location.pathname);
+        var go = function (path) {
+          location.replace(base + path + location.search);
+        };
+        // 1) 舊 github.io 雙前綴 /appi.news/... → 去前綴，交回正常路由/轉址頁處理
+        if (p.indexOf('/appi.news/') === 0) {
+          go(p.replace('/appi.news', '') || '/');
+          return;
+        }
+        var norm = function (s) {
+          return (s || '')
+            .toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[?!,，。：:、！？「」『』（）()【】\[\]．·“”"'’]/g, '')
+            .replace(/-+/g, '-')
+            .replace(/^-|-$/g, '');
+        };
+        // 2) 取出候選 slug 片段
+        var seg = null;
+        var legacy = false; // 明確舊型（日期型）才允許標題模糊比對
+        var m = p.match(/^\/\d{4}\/\d{2}\/(.+?)\/?$/); // /YYYY/MM/<seg>/
+        if (m) {
+          seg = m[1];
+          legacy = true;
+        } else {
+          var m2 = p.match(/^\/articles\/(.+?)\/?$/); // /articles/<seg>/（slug 失準）
+          if (m2) seg = m2[1];
+        }
+        if (seg && !/^page\//.test(seg)) {
+          var cand = norm(seg);
+          var hit = null;
+          var i;
+          // a) slug 正規化後完全相符
+          for (i = 0; i < ARTS.length; i++) {
+            if (norm(ARTS[i].s) === cand) {
+              hit = ARTS[i];
+              break;
+            }
+          }
+          // b) slug 前綴（WP 當初把中文 slug 切短）
+          if (!hit) {
+            for (i = 0; i < ARTS.length; i++) {
+              var ns = norm(ARTS[i].s);
+              if (ns && (ns.indexOf(cand) === 0 || (cand.indexOf(ns) === 0 && ns.length >= 8))) {
+                hit = ARTS[i];
+                break;
+              }
+            }
+          }
+          // c) 標題共同前綴（僅限明確舊型路徑，避免誤導現役打錯的 /articles/ 網址）
+          if (!hit && legacy) {
+            var best = null;
+            var bl = 0;
+            for (i = 0; i < ARTS.length; i++) {
+              var t = norm(ARTS[i].t);
+              var j = 0;
+              var n = Math.min(t.length, cand.length);
+              while (j < n && t[j] === cand[j]) j++;
+              if (j > bl && j >= 8) {
+                bl = j;
+                best = ARTS[i];
+              }
+            }
+            hit = best;
+          }
+          if (hit) {
+            go('/articles/' + hit.s + '/');
+            return;
+          }
+        }
+        // 3) 舊月份彙整 / 作者 / 分類 / 標籤 archive → 文章列表
+        if (legacy || /^\/(author|category|tag)\//.test(p) || /^\/\d{4}\/\d{2}\/?$/.test(p) || /\/page\/\d+\/?$/.test(p)) {
+          go('/articles/');
+          return;
+        }
+      } catch (e) {
+        /* 比對失敗就顯示一般 404，不擋使用者 */
+      }
+    })();
+  </script>
   <div class="container" style="padding:80px 20px;text-align:center;">
     <p style="font-size: var(--text-3xl);font-weight:700;color:var(--appi-brand);font-family:var(--font-sans);margin:0;">404</p>
     <h1 style="margin:8px 0 12px;">找不到這個頁面</h1>

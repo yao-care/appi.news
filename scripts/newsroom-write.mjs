@@ -198,7 +198,9 @@ function checkViewpointReflected(viewpoint, body) {
     'VIEWPOINT_GATE=FAIL｜<為什麼沒反映或被稀釋，30字內>',
   ].join('\n');
   const r = spawnSync('claude-appi', ['--model', 'haiku', '-p', prompt], { encoding: 'utf8' });
-  if (r.error || r.status !== 0) {
+  // claude-appi 撞「每週用量上限」時會 exit 0 但只印限額訊息 → 一併視為 infra 失敗，別讓 gate 誤判成 FAIL。
+  const limitHit = /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '');
+  if (r.error || r.status !== 0 || limitHit) {
     const tail = (r.stderr || r.stdout || r.error?.message || '').trim().slice(-200);
     return { ok: false, infra: true, note: `claude 查核失敗（exit ${r.status}）：${tail}` };
   }

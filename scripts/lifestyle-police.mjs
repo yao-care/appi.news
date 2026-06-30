@@ -77,7 +77,8 @@ function main() {
   const branch = sh('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
   console.log(`→ 警消好人好事整理（分支 ${branch}，${go ? '上架' : 'stage 不 push'}）`);
   const r = spawnSync('claude-appi', ['--model', 'sonnet', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
-  if (r.error || r.status !== 0) die(`claude 失敗：${(r.stderr || r.error?.message || r.stdout || '').slice(-200)}`);
+  // claude-appi 撞「每週用量上限」時會 exit 0 但只印限額訊息 → 必須查 stdout，否則被誤判成「無產出」。
+  if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) die(`claude 失敗：${(r.stderr || r.stdout || r.error?.message || '').slice(-200)}`);
   const v = parsePoliceResult(r.stdout);
   console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
 

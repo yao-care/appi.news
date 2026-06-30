@@ -48,6 +48,7 @@ pnpm test
 
 ## 規則（務必遵守，違反會出事）
 
+- **自動化鐵則總表**（帳號／模型／cron／並發／發佈端／日誌）見 [`docs/automation-invariants.md`](./automation-invariants.md)——動任何 cron／自動產文前先過一遍。
 - **機密永不進 repo**。別把 token/key 寫進任何被追蹤的檔案、別 commit `~/.config/appi-news/*`、別在 commit message 貼出來。
 - **內容鐵則**（見 `CLAUDE.md`）：全文繁體中文 + 台灣用語、去 AI 腔（禁破折號/AI 套語）、**禁政治**、**禁杜撰**（不可捏造作者、數據、來源）、所有資料附「可連線」的來源超連結。
 - **在 `main` 上要 commit 先開分支**；push 後務必 `git status` 確認非 ahead（失敗訊息尾「and the repository exists.」是錯誤、不是成功）。

@@ -81,6 +81,7 @@ const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
                   alt={coverAltFor(hero)}
                   fallback={`og/${hero.data.category}.png`}
                   loading="eager"
+                  fetchpriority="high"
                   class="feature-img"
                 />
               </a>

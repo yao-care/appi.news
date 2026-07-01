@@ -8,6 +8,18 @@
 import { articleSlugOf } from './weekly-metrics.mjs';
 
 const NEWS_CATEGORIES = ['focus', 'international', 'health', 'tech', 'finance', 'sports', 'lifestyle'];
+
+// 區塊中文名 + 呈現順序(對齊網站 header;作者群/專欄殿後,首頁/其他不列進 8 區塊)。
+export const SECTION_LABELS = {
+  focus: '焦點', international: '國際', health: '健康', tech: '科技', finance: '財經',
+  sports: '運動', lifestyle: '生活', columns: '專欄', authors: '作者群',
+  home: '首頁', other: '其他', uncategorized: '未分類',
+};
+export const SECTION_ORDER = ['focus', 'international', 'health', 'tech', 'finance', 'sports', 'lifestyle', 'columns', 'authors'];
+/** slug/key → 中文名(查不到回原字)。 */
+export function sectionLabel(key) {
+  return SECTION_LABELS[key] || key;
+}
 const SECTION_SEGS = new Set([...NEWS_CATEGORIES, 'columns']); // 分類索引首段
 const rows = (report) => report?.rows ?? [];
 const dim = (r, i) => r.dimensionValues[i].value;

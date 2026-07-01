@@ -49,11 +49,18 @@ export const QUESTION_SET = [
 /** 本站網域（判「被引用」）。 */
 export const OWN_DOMAIN = 'appi.news';
 
-// 跨分類共通的大型綜合媒體（任何題出現都算數）。
+// 跨分類共通競品（任何題出現都算數）：綜合日報 + 綜合商業/權威媒體。
+// 商業/權威媒體（商周、哈佛商業評論、今周刊、天下、遠見）跨 beat 到處被引用，
+// 且是站長點名要對標的權威指標，故列共通、不綁單一分類（實跑 baseline 發現漏算而升級）。
 const SHARED_COMPETITORS = [
   { name: '中央社', domain: 'cna.com.tw' },
   { name: '聯合新聞網', domain: 'udn.com' },
   { name: '自由時報', domain: 'ltn.com.tw' },
+  { name: '商業周刊', domain: 'businessweekly.com.tw' },
+  { name: '哈佛商業評論', domain: 'hbrtaiwan.com' },
+  { name: '今周刊', domain: 'businesstoday.com.tw' },
+  { name: '天下', domain: 'cw.com.tw' },
+  { name: '遠見', domain: 'gvm.com.tw' },
 ];
 
 // 分類專屬競品（含站長點名要贏的商周、哈佛商業評論）。domain 用最specific可辨識網域。

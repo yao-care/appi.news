@@ -147,6 +147,7 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
   keywords={article.data.tags}
   jsonld={ld}
   noindex={preview}
+  contentGroup={article.data.category}
 >
   <article class="article">
     {

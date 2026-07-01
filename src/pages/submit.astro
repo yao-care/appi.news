@@ -170,6 +170,9 @@ const steps = [
 
         if (res.ok) {
           form.reset();
+          // GA4 轉換事件（漏斗終點）。非同步、送出成功後才發、不帶 PII（email 不進事件）。
+          const gtag = (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag;
+          if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_type: 'contributor_submit' });
           status.textContent = '已收到你的投稿，我們會儘速與你聯繫，感謝！';
           status.className = 'form-status form-status--ok';
         } else {

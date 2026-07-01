@@ -7,6 +7,7 @@ import SiteHeader from '@/components/blocks/SiteHeader.astro';
 import SiteFooter from '@/components/blocks/SiteFooter.astro';
 import Analytics from '@/components/seo/Analytics.astro';
 import { orgLd, websiteLd } from '@/utils/jsonld';
+import { CATEGORY_SLUGS } from '@/config/categories';
 
 interface Props {
   title: string;
@@ -25,6 +26,9 @@ interface Props {
   /** 額外的 RSS feed（如分類 feed）供 <head> 自動探索 */
   rssHref?: string;
   rssTitle?: string;
+  /** GA content_group（分區塊觀測用）。文章頁 URL 無分類，須明確傳 category；
+   *  其餘頁不傳、由 path 自動推導（首頁=home、/tech/=tech、/authors/=authors…）。 */
+  contentGroup?: string;
 }
 
 const {
@@ -42,9 +46,20 @@ const {
   jsonld,
   rssHref,
   rssTitle,
+  contentGroup,
 } = Astro.props;
 
 const baseLd = [websiteLd(Astro.site), orgLd(Astro.site)];
+
+// content_group：優先用明確傳入（文章頁傳 category）；否則由 path 首段推導。
+const seg = (path || '/').split(/[?#]/)[0].replace(/^\/+/, '').split('/')[0];
+const resolvedContentGroup =
+  contentGroup ||
+  (!seg
+    ? 'home'
+    : CATEGORY_SLUGS.includes(seg) || ['authors', 'topics', 'tags', 'articles'].includes(seg)
+      ? seg
+      : 'other');
 ---
 
 <!doctype html>
@@ -67,7 +82,7 @@ const baseLd = [websiteLd(Astro.site), orgLd(Astro.site)];
     />
     <JsonLd data={baseLd} />
     {jsonld && <JsonLd data={jsonld} />}
-    <Analytics />
+    <Analytics contentGroup={resolvedContentGroup} />
   </head>
   <body>
     <a class="skip-link" href="#main">跳到主要內容</a>

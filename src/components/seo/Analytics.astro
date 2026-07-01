@@ -15,6 +15,9 @@
  */
 import { SITE } from '@/config/site';
 const gaId = SITE.gaId;
+// content_group：讓 GA 原生按區塊彙整人數/停留。值來自我方 enum/推導，仍消毒成
+// 只含 [a-z0-9_-]（防注入這段 inline script），空值退 'other'。
+const contentGroup = (String(Astro.props.contentGroup || 'other').replace(/[^a-z0-9_-]/gi, '').slice(0, 40)) || 'other';
 const snippet = `(function () {
   var host = location.hostname;
   if (host !== 'appi.news' && host !== 'www.appi.news') return;
@@ -27,7 +30,7 @@ const snippet = `(function () {
     function gtag() { window.dataLayer.push(arguments); }
     window.gtag = gtag;
     gtag('js', new Date());
-    gtag('config', '${gaId}');
+    gtag('config', '${gaId}', { content_group: '${contentGroup}' });
   }
   window.addEventListener('load', function () {
     if ('requestIdleCallback' in window) {

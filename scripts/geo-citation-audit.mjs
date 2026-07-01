@@ -23,6 +23,7 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { flatQuestions, classifyCitedUrls, competitorName } from './lib/geo-question-set.mjs';
 
 const DEFAULT_QUESTIONS = 6;
 const MIN_QUESTIONS = 5;
@@ -129,15 +130,30 @@ export function pruneRounds(ledger, today, retentionDays = RETENTION_DAYS) {
   return { rounds };
 }
 
-/** 正規化一輪量測（補 date、強制 items 欄位型別）。 */
+/**
+ * 正規化一輪量測（補 date、強制 items 欄位型別）。
+ * 若 item 帶 `citedUrls`（依顯著度排序的引用連結）＋ `category`，就用量表自動判定
+ * 本站是否被引用（cited/rank/url）與命中的競品 domain（competitors），避免模型自評出錯。
+ * 舊格式（直接給 cited/rank/url）仍相容。
+ */
 export function normalizeRound(round, today) {
-  const items = (Array.isArray(round?.items) ? round.items : []).map((it) => ({
-    question: String(it.question ?? ''),
-    engine: String(it.engine ?? round?.engine ?? 'unknown'),
-    cited: Boolean(it.cited),
-    rank: it.rank == null ? null : Number(it.rank),
-    url: it.url == null ? null : String(it.url),
-  }));
+  const items = (Array.isArray(round?.items) ? round.items : []).map((it) => {
+    const category = it.category == null ? null : String(it.category);
+    const hasUrls = Array.isArray(it.citedUrls);
+    const derived = hasUrls ? classifyCitedUrls(it.citedUrls, category) : null;
+    const competitors = derived
+      ? derived.competitors
+      : Array.isArray(it.competitors) ? it.competitors.map(String) : [];
+    return {
+      question: String(it.question ?? ''),
+      category,
+      engine: String(it.engine ?? round?.engine ?? 'unknown'),
+      cited: derived ? derived.cited : Boolean(it.cited),
+      rank: derived ? derived.rank : it.rank == null ? null : Number(it.rank),
+      url: derived ? derived.url : it.url == null ? null : String(it.url),
+      competitors,
+    };
+  });
   return { date: round?.date || today, engine: round?.engine ?? null, items };
 }
 
@@ -149,6 +165,8 @@ export function recentSummary(ledger, today, windowDays = RECENT_WINDOW_DAYS) {
   let total = 0;
   let cited = 0;
   const byEngine = {};
+  const byCategory = {};
+  const compTally = {}; // domain → 命中題數
   const examples = [];
   for (const r of rounds) {
     for (const it of r.items ?? []) {
@@ -156,13 +174,19 @@ export function recentSummary(ledger, today, windowDays = RECENT_WINDOW_DAYS) {
       const e = it.engine || 'unknown';
       byEngine[e] = byEngine[e] || { total: 0, cited: 0 };
       byEngine[e].total += 1;
+      const cat = it.category || 'uncategorized';
+      byCategory[cat] = byCategory[cat] || { total: 0, cited: 0 };
+      byCategory[cat].total += 1;
+      for (const d of it.competitors ?? []) compTally[d] = (compTally[d] || 0) + 1;
       if (it.cited) {
         cited += 1;
         byEngine[e].cited += 1;
+        byCategory[cat].cited += 1;
         if (examples.length < 5) examples.push({ date: r.date, engine: e, question: it.question, rank: it.rank, url: it.url });
       }
     }
   }
+  const rate = (o) => (o.total ? Math.round((o.cited / o.total) * 100) / 100 : null);
   return {
     windowDays,
     rounds: rounds.length,
@@ -170,6 +194,10 @@ export function recentSummary(ledger, today, windowDays = RECENT_WINDOW_DAYS) {
     citedQuestions: cited,
     citedRate: total ? Math.round((cited / total) * 100) / 100 : null,
     byEngine,
+    byCategory: Object.fromEntries(Object.entries(byCategory).map(([k, v]) => [k, { ...v, rate: rate(v) }])),
+    competitorShare: Object.entries(compTally)
+      .map(([domain, hits]) => ({ domain, name: competitorName(domain), citedQuestions: hits, rate: total ? Math.round((hits / total) * 100) / 100 : null }))
+      .sort((a, b) => b.citedQuestions - a.citedQuestions),
     perRound: rounds.map((r) => {
       const t = (r.items ?? []).length;
       const c = (r.items ?? []).filter((x) => x.cited).length;
@@ -236,9 +264,24 @@ function cmdRecent(windowDays) {
   console.log(JSON.stringify(summary, null, 2));
 }
 
+/** 固定量表題庫（aeo-radar skill 用；穩定骨幹，含 category 供分分類統計）。 */
+function cmdCuratedQuestions() {
+  console.log(
+    JSON.stringify(
+      {
+        date: taipeiToday(),
+        note: '固定量表（非品牌、7 分類各 3 題）。逐題問 AI 引擎、蒐集引用連結，組 round.json（item 帶 citedUrls+category）交 record 自動判本站/競品。',
+        questions: flatQuestions(),
+      },
+      null,
+      2,
+    ),
+  );
+}
+
 async function main() {
   const [cmd, arg] = process.argv.slice(2);
-  if (cmd === 'questions') return cmdQuestions(Number(arg) || DEFAULT_QUESTIONS);
+  if (cmd === 'questions') return arg === 'curated' ? cmdCuratedQuestions() : cmdQuestions(Number(arg) || DEFAULT_QUESTIONS);
   if (cmd === 'record') return cmdRecord(arg);
   if (cmd === 'recent') return cmdRecent(Number(arg));
   console.error('用法：node scripts/geo-citation-audit.mjs <questions [n] | record <round.json> | recent [windowDays]>');

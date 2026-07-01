@@ -39,6 +39,27 @@ function seoFacts(seo) {
   return out;
 }
 
+/** 跑 geo-citation-audit recent 取 AEO 被引用趨勢；失敗回 null（不擋心跳）。 */
+function geoSignals() {
+  const r = spawnSync('node', [join(REPO, 'scripts/geo-citation-audit.mjs'), 'recent', '30'], {
+    cwd: REPO, encoding: 'utf8', timeout: 60000, maxBuffer: 16 * 1024 * 1024,
+  });
+  if (r.status !== 0) return null;
+  try { return JSON.parse(r.stdout); } catch { return null; }
+}
+
+/** AEO 被引用摘要濃縮成幾行事實（無資料時誠實說待累積）。 */
+function geoFacts(geo) {
+  if (!geo || !geo.totalQuestions) return ['• AEO 能見度：_(近 30 天無 aeo-radar 量測資料，待累積)_'];
+  const out = [];
+  out.push(`• AEO 被引用：近 30 天 ${geo.rounds} 輪、${geo.citedQuestions}/${geo.totalQuestions} 題引用到 appi.news（率 ${geo.citedRate}）`);
+  const blind = Object.entries(geo.byCategory || {}).filter(([, v]) => v.cited === 0).map(([k]) => k);
+  if (blind.length) out.push(`   ‣ 完全隱形的 beat：${blind.join('、')}`);
+  const comp = (geo.competitorShare || []).slice(0, 5);
+  if (comp.length) out.push(`   ‣ 這些題被 AI 當權威的競品：${comp.map((c) => `${c.name}(${c.citedQuestions})`).join('、')}`);
+  return out;
+}
+
 function buildPrompt(facts) {
   return `你是 appi.news 的維運/SEO 大腦，每天做一次「優化驗收」。以下是今天的確定性訊號：
 
@@ -48,6 +69,7 @@ ${facts}
 - 繁體中文、台灣用語；去 AI 腔，禁破折號、禁「不僅…更…」「值得注意的是」這類套語。
 - 結構：用「機會」與「待辦」兩小段，各 2-4 條 bullet，每條一句話、可執行（例如「為 X 文補 2 條內鏈指向 Y」）。
 - 以 SEO 訊號為主軸（第 2 頁衝刺、改標題搶點擊、補需求題）；若訊號不足就誠實說資料待累積，不要硬湊。
+- 若有 AEO 能見度訊號：把「完全隱形的 beat」與「競品在哪些題被 AI 當權威（尤其商周/哈佛商業評論）」轉成一條選題/補稿方向；全站 0 被引用時，結論是先衝收錄與權威內容，別建議追這個數字。
 - 效能/PSI 注意：本站流量低，PSI mobile 分數低多半是冷邊緣假象，**不要**建議「為了拉高 PSI 分數去改程式」；真要動效能先看 TBT/CLS/render-blocking 與實體資源。
 - 全文 800 字內，不要前言結語，直接給內容。`;
 }
@@ -60,7 +82,8 @@ function runClaude(prompt) {
 }
 
 const seo = seoSignals();
-const facts = seoFacts(seo).join('\n');
+const geo = geoSignals();
+const facts = [...seoFacts(seo), ...geoFacts(geo)].join('\n');
 
 const { text, failed } = runClaude(buildPrompt(facts));
 
@@ -70,6 +93,7 @@ if (failed) {
     '🤖 *大腦優化（每日驗收）* ⚠️（AI 判讀失敗，僅確定性事實）',
     '',
     ...seoFacts(seo),
+    ...geoFacts(geo),
   ].join('\n'));
 } else {
   process.stdout.write(`🤖 *大腦優化（每日驗收）*\n\n${text}`);

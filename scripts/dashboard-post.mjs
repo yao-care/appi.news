@@ -25,7 +25,8 @@ const fn = run('funnel-report.mjs', ['--days', String(days)]);
 const geo = run('geo-citation-audit.mjs', ['recent', '30']);
 
 const lines = [];
-lines.push(`📊 *APPI News 數據總覽*（近 ${days} 天）`);
+lines.push(`📊 *APPI News 數據總覽*（近 ${days} 天，每日 05:40 自動更新）`);
+lines.push('_網站各分類的流量與經營訊號一則看完。分區塊=網站分類、瀏覽=瀏覽次數、停留=每次瀏覽平均秒數;要細節點最底 GA 連結。_');
 
 // ── 8 區塊(中文置頂)──
 lines.push('');

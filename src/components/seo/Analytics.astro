@@ -15,9 +15,9 @@
  */
 import { SITE } from '@/config/site';
 const gaId = SITE.gaId;
-// content_group：讓 GA 原生按區塊彙整人數/停留。值來自我方 enum/推導，仍消毒成
-// 只含 [a-z0-9_-]（防注入這段 inline script），空值退 'other'。
-const contentGroup = (String(Astro.props.contentGroup || 'other').replace(/[^a-z0-9_-]/gi, '').slice(0, 40)) || 'other';
+// content_group：讓 GA 原生按區塊彙整人數/停留。值來自我方 enum/推導（中文分類名）。
+// 允許中文,只移除會破壞這段 inline script 的字元（引號/反斜線/角括號/換行）防注入,空值退「其他」。
+const contentGroup = (String(Astro.props.contentGroup || '其他').replace(/['"\\<>\r\n]/g, '').slice(0, 40)) || '其他';
 const snippet = `(function () {
   var host = location.hostname;
   if (host !== 'appi.news' && host !== 'www.appi.news') return;

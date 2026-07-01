@@ -7,7 +7,7 @@ import SiteHeader from '@/components/blocks/SiteHeader.astro';
 import SiteFooter from '@/components/blocks/SiteFooter.astro';
 import Analytics from '@/components/seo/Analytics.astro';
 import { orgLd, websiteLd } from '@/utils/jsonld';
-import { CATEGORY_SLUGS } from '@/config/categories';
+import { CATEGORY_SLUGS, getCategoryName } from '@/config/categories';
 
 interface Props {
   title: string;
@@ -51,15 +51,18 @@ const {
 
 const baseLd = [websiteLd(Astro.site), orgLd(Astro.site)];
 
-// content_group：優先用明確傳入（文章頁傳 category）；否則由 path 首段推導。
+// content_group：先取原始 key（明確傳入的 category slug，或由 path 首段推導），
+// 再映射成中文分類名給 GA（分類走 getCategoryName，其餘用固定對照）。
 const seg = (path || '/').split(/[?#]/)[0].replace(/^\/+/, '').split('/')[0];
-const resolvedContentGroup =
+const cgKey =
   contentGroup ||
   (!seg
     ? 'home'
     : CATEGORY_SLUGS.includes(seg) || ['authors', 'topics', 'tags', 'articles'].includes(seg)
       ? seg
       : 'other');
+const CG_LABELS: Record<string, string> = { home: '首頁', authors: '作者群', topics: '專題', tags: '標籤', articles: '文章', other: '其他' };
+const resolvedContentGroup = CATEGORY_SLUGS.includes(cgKey) ? getCategoryName(cgKey) : (CG_LABELS[cgKey] ?? '其他');
 ---
 
 <!doctype html>

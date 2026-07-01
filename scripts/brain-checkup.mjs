@@ -60,6 +60,35 @@ function geoFacts(geo) {
   return out;
 }
 
+/** 跑 section-report / funnel-report 取分區塊動能與轉換;失敗回 null（不擋心跳）。 */
+function reportSignals(script, args = []) {
+  const r = spawnSync('node', [join(REPO, 'scripts', script), ...args], {
+    cwd: REPO, encoding: 'utf8', timeout: 90000, maxBuffer: 16 * 1024 * 1024,
+    env: { ...process.env, GOOGLE_APPLICATION_CREDENTIALS: process.env.GOOGLE_APPLICATION_CREDENTIALS || `${process.env.HOME}/.config/appi-news/ga4-sa.json` },
+  });
+  if (r.status !== 0) return null;
+  try { return JSON.parse(r.stdout); } catch { return null; }
+}
+
+/** 分區塊動能:哪些 beat 讀者最黏(平均停留高)、量能。 */
+function sectionFacts(sec) {
+  const list = (sec?.sections || []).filter((s) => !['home', 'other', 'authors'].includes(s.section));
+  if (!list.length) return ['• 分區塊人流：_(無資料，待累積)_'];
+  const byEng = [...list].sort((a, b) => (b.avgEngagedSecPerView || 0) - (a.avgEngagedSecPerView || 0)).slice(0, 3);
+  const byViews = [...list].sort((a, b) => b.views - a.views).slice(0, 3);
+  return [
+    `• 最黏的分區塊(每次瀏覽平均停留)：${byEng.map((s) => `${s.section}(${s.avgEngagedSecPerView}s)`).join('、')}`,
+    `• 量能前段：${byViews.map((s) => `${s.section}(${s.views})`).join('、')}`,
+  ];
+}
+
+/** 服務漏斗:意向頁→投稿→lead。 */
+function funnelFacts(fn) {
+  const f = fn?.funnel;
+  if (!f) return ['• 服務漏斗：_(無資料，待累積)_'];
+  return [`• 服務漏斗：方案/服務頁 ${f.steps?.[0]?.users ?? 0} 人 → 投稿頁 ${f.steps?.[1]?.users ?? 0} 人 → 送出 ${f.leads} 次（generate_lead 需埋點部署後才計）`];
+}
+
 function buildPrompt(facts) {
   return `你是 appi.news 的維運/SEO 大腦，每天做一次「優化驗收」。以下是今天的確定性訊號：
 
@@ -70,6 +99,7 @@ ${facts}
 - 結構：用「機會」與「待辦」兩小段，各 2-4 條 bullet，每條一句話、可執行（例如「為 X 文補 2 條內鏈指向 Y」）。
 - 以 SEO 訊號為主軸（第 2 頁衝刺、改標題搶點擊、補需求題）；若訊號不足就誠實說資料待累積，不要硬湊。
 - 若有 AEO 能見度訊號：把「完全隱形的 beat」與「競品在哪些題被 AI 當權威（尤其商周/哈佛商業評論）」轉成一條選題/補稿方向；全站 0 被引用時，結論是先衝收錄與權威內容，別建議追這個數字。
+- 若有分區塊/漏斗訊號：把「最黏(平均停留高)的 beat」轉成一條「加碼該 beat 選題」的建議；服務漏斗若卡在某段(意向頁→投稿落差大)，給一條 CTA/文案優化待辦。
 - 效能/PSI 注意：本站流量低，PSI mobile 分數低多半是冷邊緣假象，**不要**建議「為了拉高 PSI 分數去改程式」；真要動效能先看 TBT/CLS/render-blocking 與實體資源。
 - 全文 800 字內，不要前言結語，直接給內容。`;
 }
@@ -83,7 +113,9 @@ function runClaude(prompt) {
 
 const seo = seoSignals();
 const geo = geoSignals();
-const facts = [...seoFacts(seo), ...geoFacts(geo)].join('\n');
+const sec = reportSignals('section-report.mjs', ['--days', '28']);
+const fn = reportSignals('funnel-report.mjs', ['--days', '28']);
+const facts = [...seoFacts(seo), ...geoFacts(geo), ...sectionFacts(sec), ...funnelFacts(fn)].join('\n');
 
 const { text, failed } = runClaude(buildPrompt(facts));
 
@@ -94,6 +126,8 @@ if (failed) {
     '',
     ...seoFacts(seo),
     ...geoFacts(geo),
+    ...sectionFacts(sec),
+    ...funnelFacts(fn),
   ].join('\n'));
 } else {
   process.stdout.write(`🤖 *大腦優化（每日驗收）*\n\n${text}`);

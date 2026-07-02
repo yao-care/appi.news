@@ -68,8 +68,9 @@
     取 `lighthouseResult.categories.<cat>.score`。`strategy` 可換 `desktop`。
   - **量測陷阱（會誤判退步，務必依 `PERFORMANCE.md` §3 處理）**：①剛部署 CDN 冷邊緣 → FCP/LCP 暴增到 10s+，等暖（下次 6h cron 或自然流量）才是真值；②PSI 對固定 URL **釘住舊冷跑** → 網址加 `?cb=<timestamp>` 強制重跑。**判讀重點：TBT / CLS / render-blocking / 各請求耗時** 若都正常，低分多半是冷邊緣假象，不要對假問題改程式。
   - **基準（不可退回，見 `PERFORMANCE.md` §4）**：desktop 100、mobile 90–100、TBT 0、CLS 0；無障礙 ≥0.95（目前線上 100）。
-- commit / push 前不需反覆要授權；但**破壞性、對外的動作仍須先確認**。
-- **在 `main`（預設分支）上要 commit，先開分支**。
+- **改動的終點是「已發佈上線」，不是「分支就緒」**：日常內容／功能／版面／技術／SEO 改動一律走完整條——開分支 → `pnpm build && pnpm check:links` 綠 → merge 進 `main` → `git push origin main`（觸發 deploy.yml）→ 等發佈完 → 驗線上站 → **才回報**。**不要停下來問「要不要 push／開 PR」**（站長已反覆強調；把自家網站內容 push＋發佈＝早已授權的既定流程，**不算**下一條的「對外先確認」）。
+- **只有這幾類才先問一句**（其餘一律直接做到發佈）：①不可逆的資料／內容刪除或覆寫（刪非自建產物、drop DB）；②向真實外部第三方主動送出（寄信給 BBC／客戶、公開社群發文）；③DNS／基礎設施／金鑰變更；④`force-push`／改寫歷史／刪遠端分支；⑤**全新且沒討論過的產品方向**（例：英文投稿包裝——先確認方向再動手，別自行開工）。
+- **在 `main`（預設分支）上要 commit，先開分支**（但別停在分支——照上面走到發佈）。
 - 注意 `~/.claude/settings.json` 有 deny 規則擋 `git branch -D`、`git push --force` 等；刪已合併分支改用「先刪遠端 → `git fetch --prune` → 小寫 `git branch -d`」。
 
 ## 內容紀律（文章產出）

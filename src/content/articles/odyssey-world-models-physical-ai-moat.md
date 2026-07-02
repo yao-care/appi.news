@@ -36,6 +36,7 @@ references:
   - title: "Q1 2026 Shatters Venture Funding Records As AI Boom Pushes Startup Investment To $300B"
     url: "https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/"
     publisher: "Crunchbase News"
+originalContribution: "本文逐一比對 Odyssey A 輪（Nvidia 在列）與 B 輪（Nvidia 退出、Amazon 及 AMD Ventures 進場）投資人名單的結構變化，以「護城河在真實世界資料與硬體整合、而非演算法」為分析框架，並交叉 Crunchbase 實體 AI 資金流向數據，延伸評估台灣感測器、機構件與邊緣運算在這條供應鏈的切入點。"
 ---
 
 創投圈這半年有個轉向，不在新聞標題裡，在出資名單裡。

@@ -283,6 +283,15 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
             )
           }
         </nav>
+
+        {
+          article.data.originalContribution && (
+            <aside class="original-contribution">
+              <h2>編按｜本文原創貢獻</h2>
+              <p>{article.data.originalContribution}</p>
+            </aside>
+          )
+        }
       </div>
     </div>
 
@@ -463,6 +472,30 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
     color: var(--ink);
     font-weight: 600;
     line-height: 1.4;
+  }
+
+  .original-contribution {
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 14px 20px;
+    margin-top: 32px;
+  }
+  .original-contribution h2 {
+    font-family: var(--font-ui);
+    font-size: var(--text-badge);
+    font-weight: 600;
+    color: var(--ink-3);
+    letter-spacing: 0.04em;
+    margin: 0 0 6px;
+    text-transform: uppercase;
+  }
+  .original-contribution p {
+    font-family: var(--font-ui);
+    font-size: var(--text-meta);
+    color: var(--ink-2);
+    line-height: 1.65;
+    margin: 0;
   }
 
   @media (max-width: 600px) {

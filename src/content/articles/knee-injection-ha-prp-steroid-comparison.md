@@ -1,33 +1,41 @@
 ---
-title: "膝蓋退化打針怎麼選？玻尿酸、PRP、類固醇注射的實證、費用與健保給付一次比較"
-slug: "knee-injection-ha-prp-steroid-comparison"
-description: "膝蓋退化想打針,主要有三種:類固醇快速消炎、玻尿酸潤滑緩衝且健保有條件給付、PRP 是自體血小板生長因子促修復但需自費。本文比較三者的作用機制、效果維持、實證與指引立場、費用與健保給付條件,並說明依退化程度、預算與健保資格該怎麼選。"
-excerpt: "膝蓋退化打針到底打什麼?玻尿酸、PRP、類固醇的效果、費用與健保給付差在哪、又該怎麼選,一次比清楚。"
-publishDate: "2026-12-01T09:00:00.000Z"
-category: "health"
-subcategory: "medical"
-tags: ["玻尿酸", "PRP", "類固醇", "膝關節注射", "退化性關節炎", "再生醫療", "健保給付", "增生療法"]
-author: "appi-editorial"
-coverImage: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1080&q=80&fm=jpg&fit=max"
-coverAlt: "醫療人員準備注射針劑,示意膝關節注射治療"
-coverImageCredit: "Photo by CDC on Unsplash"
-status: "scheduled"
-sourceType: "wire"
-contentType: "guide"
-disclaimerType: "medical"
-disclosure: "本文整理自成大骨科醫師衛教與國內醫療院所公開資料,並附原文出處連結供查證。個別療法是否適合、費用與健保給付以就診時醫師評估與最新健保規定為準,本文不構成醫療建議。"
+title: 膝蓋退化打針怎麼選？玻尿酸、PRP、類固醇注射的實證、費用與健保給付一次比較
+slug: knee-injection-ha-prp-steroid-comparison
+description: 膝蓋退化想打針,主要有三種:類固醇快速消炎、玻尿酸潤滑緩衝且健保有條件給付、PRP 是自體血小板生長因子促修復但需自費。本文比較三者的作用機制、效果維持、實證與指引立場、費用與健保給付條件,並說明依退化程度、預算與健保資格該怎麼選。
+excerpt: 膝蓋退化打針到底打什麼?玻尿酸、PRP、類固醇的效果、費用與健保給付差在哪、又該怎麼選,一次比清楚。
+publishDate: "2026-07-01"
+category: health
+subcategory: medical
+tags:
+  - 玻尿酸
+  - PRP
+  - 類固醇
+  - 膝關節注射
+  - 退化性關節炎
+  - 再生醫療
+  - 健保給付
+  - 增生療法
+author: appi-editorial
+coverImage: https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1080&q=80&fm=jpg&fit=max
+coverAlt: 醫療人員準備注射針劑,示意膝關節注射治療
+coverImageCredit: Photo by CDC on Unsplash
+status: published
+sourceType: wire
+contentType: guide
+disclaimerType: medical
+disclosure: 本文整理自成大骨科醫師衛教與國內醫療院所公開資料,並附原文出處連結供查證。個別療法是否適合、費用與健保給付以就診時醫師評估與最新健保規定為準,本文不構成醫療建議。
 highlights:
-  - "膝蓋退化常見三種注射:類固醇快速消炎、止痛約維持 4 至 12 週,同一關節一年建議不超過 3 至 4 次。"
-  - "玻尿酸負責潤滑緩衝、效果約維持 6 個月,對輕中度退化較有效;健保有條件給付,但美國骨科醫學會 2022 年指引對玻尿酸給予中等程度反對。"
-  - "PRP 是自體血小板生長因子、效果約 6 至 12 個月,屬再生醫療全額自費、單次約 1.5 至 2 萬元;對疼痛可能有幫助,但軟骨再生的證據仍在累積。"
-  - "打針只是輔助,體重管理與肌力訓練才是保護關節的根本;選哪一種要看退化程度、預算與健保資格。"
+  - 膝蓋退化常見三種注射:類固醇快速消炎、止痛約維持 4 至 12 週,同一關節一年建議不超過 3 至 4 次。
+  - 玻尿酸負責潤滑緩衝、效果約維持 6 個月,對輕中度退化較有效;健保有條件給付,但美國骨科醫學會 2022 年指引對玻尿酸給予中等程度反對。
+  - PRP 是自體血小板生長因子、效果約 6 至 12 個月,屬再生醫療全額自費、單次約 1.5 至 2 萬元;對疼痛可能有幫助,但軟骨再生的證據仍在累積。
+  - 打針只是輔助,體重管理與肌力訓練才是保護關節的根本;選哪一種要看退化程度、預算與健保資格。
 references:
-  - title: "退化性膝關節炎打針治療完整指南:類固醇、玻尿酸、PRP、HA-PRP,骨科醫師一次比清楚"
-    url: "https://bonedavid.com/2845/"
-    publisher: "戴大為醫師(成大醫院骨科)"
-  - title: "玻尿酸? PRP? 膝蓋痛打針到底打什麼?"
-    url: "https://med-net.com/cmscontent/Content/577"
-    publisher: "med-net 健康網"
+  - title: 退化性膝關節炎打針治療完整指南:類固醇、玻尿酸、PRP、HA-PRP,骨科醫師一次比清楚
+    url: https://bonedavid.com/2845/
+    publisher: 戴大為醫師(成大醫院骨科)
+  - title: 玻尿酸? PRP? 膝蓋痛打針到底打什麼?
+    url: https://med-net.com/cmscontent/Content/577
+    publisher: med-net 健康網
 ---
 
 膝蓋退化到一定程度,吃藥、復健的效果有限時，很多人會被建議「打針」。但打針其實有好幾種，效果、費用和健保給付差很多。膝蓋退化常見的注射主要有三類：類固醇負責快速消炎救急、玻尿酸負責潤滑緩衝且健保有條件給付、PRP 則是抽自己的血製成、用生長因子促進修復但需要自費。到底該選哪一種，取決於你的退化程度、預算，以及符不符合健保資格。以下一次比清楚。

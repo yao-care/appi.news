@@ -161,6 +161,10 @@ coverImageCredit: RDNE Stock project
 
 ***
 
+### 延伸閱讀
+
+- [髖關節整體評估與 6–12 週整合治療規劃：專訪張家誠醫師](/articles/appi-news-97/)
+
 **參考文獻**
 
 （註1）Hernando MF, et al. Deep gluteal syndrome: anatomy, imaging, and management of sciatic nerve entrapments in the subgluteal space. *Skeletal Radiol.* 2015;44(7):919-934. [PubMed](https://pubmed.ncbi.nlm.nih.gov/25820850/)

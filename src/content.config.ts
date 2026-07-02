@@ -94,6 +94,12 @@ const articles = defineCollection({
     /** 遷移用：保留 WordPress 原始作者帳號與分類，供日後人工校對 */
     legacyAuthor: z.string().optional(),
     legacyCategory: z.string().optional(),
+    /**
+     * 本文相對外媒／同題報導多做了什麼，以一兩句描述：
+     * 例如原始採訪、資料整理、在地脈絡補充、文件比對、跨來源交叉查核等。
+     * 有值時文末渲染「編按｜本文原創貢獻」小卡；未填則不顯示。
+     */
+    originalContribution: z.string().optional(),
   }),
 });
 

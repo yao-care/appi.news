@@ -169,6 +169,13 @@ draft: false
 
 ---
 
+### 延伸閱讀
+
+- [髖關節痛的症狀、5 大成因與非手術治療全解析](/articles/hip-pain-symptoms-causes-treatment/)
+- [深臀症候群：反覆髖臀痛的診斷與針法治療](/articles/appi-news-96/)
+- [髖關節疼痛該看哪一科？先分清是退化還是關節唇撕裂](/articles/hip-pain-which-specialist/)
+- [髖關節唇撕裂免開刀？PLT 凍晶與 PRP 再生治療怎麼選](/articles/hip-labral-tear-plt-cryogel/)
+
 ### 參考文獻
 
 （註1）Velázquez-Saornil J, et al. "Efficacy of ultrasound-guided versus non-guided dry needling in musculoskeletal pain: systematic review." *Journal of Pain Research*, 2023.

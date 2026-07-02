@@ -1,36 +1,44 @@
 ---
-title: "高齡者怎麼預防肌少症？阻力訓練、蛋白質與維生素 D 的實證方法一次看"
-slug: "sarcopenia-prevention-evidence-elderly"
-description: "肌少症是肌肉量與肌力隨年齡流失,會增加跌倒、失能風險。預防有三大實證支柱:阻力訓練最有效、60 歲以上蛋白質每公斤體重補 1.2 至 1.5 克、維生素 D 與日照。本文整理 AWGS 2019 診斷標準與小腿圍、SARC-F 自我初篩,以及實證的運動與營養做法。"
-excerpt: "肌少症不是老了就只能認命。用 AWGS 診斷標準自我初篩,再靠阻力訓練、足夠蛋白質與維生素 D 三支柱,實證預防肌肉流失。"
-publishDate: "2026-12-01T09:00:00.000Z"
-category: "health"
-subcategory: "aging-health"
-tags: ["肌少症", "高齡健康", "阻力訓練", "蛋白質", "維生素D", "AWGS", "預防醫學", "肌力"]
-author: "appi-editorial"
-coverImage: "https://images.unsplash.com/photo-1658314755811-73c806249f31?w=1080&q=80&fm=jpg&fit=max"
-coverAlt: "高齡者進行肌力訓練,象徵以運動預防肌少症"
-coverImageCredit: "Photo by Centre for Ageing Better on Unsplash"
-status: "scheduled"
-sourceType: "wire"
-contentType: "guide"
-disclaimerType: "medical"
-disclosure: "本文整理自亞洲肌少症工作小組(AWGS)診斷共識與國內醫療院所、千禧之愛健康基金會等衛教資料,並附原文出處連結供查證。個別運動與營養處方請依醫師或營養師評估,本文不構成醫療建議。"
+title: 高齡者怎麼預防肌少症？阻力訓練、蛋白質與維生素 D 的實證方法一次看
+slug: sarcopenia-prevention-evidence-elderly
+description: 肌少症是肌肉量與肌力隨年齡流失,會增加跌倒、失能風險。預防有三大實證支柱:阻力訓練最有效、60 歲以上蛋白質每公斤體重補 1.2 至 1.5 克、維生素 D 與日照。本文整理 AWGS 2019 診斷標準與小腿圍、SARC-F 自我初篩,以及實證的運動與營養做法。
+excerpt: 肌少症不是老了就只能認命。用 AWGS 診斷標準自我初篩,再靠阻力訓練、足夠蛋白質與維生素 D 三支柱,實證預防肌肉流失。
+publishDate: "2026-07-01"
+category: health
+subcategory: aging-health
+tags:
+  - 肌少症
+  - 高齡健康
+  - 阻力訓練
+  - 蛋白質
+  - 維生素D
+  - AWGS
+  - 預防醫學
+  - 肌力
+author: appi-editorial
+coverImage: https://images.unsplash.com/photo-1658314755811-73c806249f31?w=1080&q=80&fm=jpg&fit=max
+coverAlt: 高齡者進行肌力訓練,象徵以運動預防肌少症
+coverImageCredit: Photo by Centre for Ageing Better on Unsplash
+status: published
+sourceType: wire
+contentType: guide
+disclaimerType: medical
+disclosure: 本文整理自亞洲肌少症工作小組(AWGS)診斷共識與國內醫療院所、千禧之愛健康基金會等衛教資料,並附原文出處連結供查證。個別運動與營養處方請依醫師或營養師評估,本文不構成醫療建議。
 highlights:
-  - "肌少症是肌肉量與肌力隨年齡流失,會削弱行動力、提高跌倒與失能風險,但可透過運動與營養實證預防。"
-  - "AWGS 2019 診斷以握力(男 < 28 公斤、女 < 18 公斤)、六公尺步速(< 1.0 公尺/秒)與肌肉量為準;民眾可先用小腿圍(男 < 34、女 < 33 公分)或 SARC-F 問卷自我初篩。"
-  - "阻力訓練是預防肌少症最有效的方式;光靠走路等有氧運動不足以維持肌肉量。"
-  - "蛋白質攝取:腎功能正常者一般每公斤體重 1 至 1.2 克,60 歲以上建議提高到 1.2 至 1.5 克,並分配到三餐、搭配維生素 D 與日照。"
+  - 肌少症是肌肉量與肌力隨年齡流失,會削弱行動力、提高跌倒與失能風險,但可透過運動與營養實證預防。
+  - AWGS 2019 診斷以握力(男 < 28 公斤、女 < 18 公斤)、六公尺步速(< 1.0 公尺/秒)與肌肉量為準;民眾可先用小腿圍(男 < 34、女 < 33 公分)或 SARC-F 問卷自我初篩。
+  - 阻力訓練是預防肌少症最有效的方式;光靠走路等有氧運動不足以維持肌肉量。
+  - 蛋白質攝取:腎功能正常者一般每公斤體重 1 至 1.2 克,60 歲以上建議提高到 1.2 至 1.5 克,並分配到三餐、搭配維生素 D 與日照。
 references:
-  - title: "亞洲肌少症診斷共識 2019 更新版"
-    url: "https://www.careonline.com.tw/2020/02/sarcopenia.html"
-    publisher: "照護線上"
-  - title: "2025 亞洲肌少症工作小組 AWGS 最新共識"
-    url: "https://www.1000-love.org.tw/contents/views?id=116"
-    publisher: "千禧之愛健康基金會"
-  - title: "預防肌少症 飲食均衡＋阻力訓練打下好「肌」礎"
-    url: "https://www.auh.org.tw/NewsInfo/NewsArticle?no=1668"
-    publisher: "亞洲大學附屬醫院"
+  - title: 亞洲肌少症診斷共識 2019 更新版
+    url: https://www.careonline.com.tw/2020/02/sarcopenia.html
+    publisher: 照護線上
+  - title: 2025 亞洲肌少症工作小組 AWGS 最新共識
+    url: https://www.1000-love.org.tw/contents/views?id=116
+    publisher: 千禧之愛健康基金會
+  - title: 預防肌少症 飲食均衡＋阻力訓練打下好「肌」礎
+    url: https://www.auh.org.tw/NewsInfo/NewsArticle?no=1668
+    publisher: 亞洲大學附屬醫院
 ---
 
 上了年紀肌肉會慢慢流失,這件事很多人知道,但真正麻煩的是「肌少症」:當肌肉量與肌力流失到一定程度,不只走路變慢、提東西沒力,更會顯著增加跌倒、骨折與失能的風險。好消息是,肌少症是可以實證預防的,關鍵三支柱是阻力訓練、足夠的優質蛋白質,以及維生素 D 與日照。以下先教你怎麼自我初篩,再說明每一項該怎麼做。

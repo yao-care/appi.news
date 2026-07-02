@@ -1,12 +1,14 @@
-// 警消好人好事「整理」純邏輯（可單元測試、無 I/O）。
-// 協調器 scripts/lifestyle-police.mjs 用它組 Claude 寫作 prompt。
+// 警消好人好事「寫作」純邏輯（可單元測試、無 I/O）。
+// 協調器 scripts/lifestyle-police.mjs 先用 ./police-fetch.mjs 固定抓好候選清單（零 LLM），
+// 再用本檔的 buildPolicePrompt 組「只挑選＋寫作」的 prompt 給 Claude。
 //
 // 決策（站長定）：全自動上架、跟著官方公開新聞稿走（員警照原稿具名、民眾比照原稿揭露、
-// 不轉載版權照片、連結逐條驗活）。來源＝各縣市警察局官方新聞稿；抓不到的當次略過（可接受）。
-// 完整來源狀態見 docs/police-good-deeds-sources.md。
+// 不轉載版權照片、連結逐條驗活）。抓取＝固定程式（見 police-fetch.mjs），LLM 不再自己上網抓。
+//
+// 重構脈絡：原本整段抓取交給 LLM agent（WebFetch 逐站抓、還自己翻第二頁重抓），既慢又燒
+// session 額度、凌晨多線疊加撞 rate limit hang→timeout(exit124)。改成「固定抓→LLM 只寫」。
 
-// 主力來源（境外機房實測可達者優先；其餘仍會嘗試、抓不到就跳過）。
-// 標 priority 的是好人好事最現成的專欄/頻道。
+// 站點清單保留供測試/文件參考；實際運行的站配置在 ./police-fetch.mjs 的 POLICE_SITES。
 export const POLICE_SOURCES = [
   { area: '高雄市', url: 'https://kcpd.kcg.gov.tw/News.aspx?n=3FAEF3DDE4DD3CD0&sms=4ED7718667AAD9B5', priority: true, note: '獨立「好人好事」頻道' },
   { area: '宜蘭縣', url: 'https://www.ilcpb.gov.tw/News.aspx?n=16343&sms=16080', priority: true, note: '「警馨錄」專欄' },
@@ -24,34 +26,49 @@ export const POLICE_SOURCES = [
   { area: '臺東縣', url: 'https://www.ttcpb.gov.tw/chinese/index.jsp', note: '須偽裝瀏覽器 UA' },
 ];
 
-/** 組 Claude 寫作 prompt：掃來源 → 挑近 N 天好人好事 → 跟原稿具名寫 roundup → 自動上架。 */
-export function buildPolicePrompt(recentTitles = [], days = 7) {
-  const srcLines = POLICE_SOURCES.map((s) => `  - ${s.area}：${s.url}${s.note ? `（${s.note}）` : ''}${s.priority ? ' ★好人好事最多' : ''}`).join('\n');
+/** 把固定抓好的候選清單格式化成 prompt 內的素材區塊。 */
+function formatCandidates(candidates = []) {
+  if (!candidates.length) return '（無候選）';
+  return candidates
+    .map((c, i) => {
+      const date = c.date ? `（${c.date}）` : '';
+      const sum = c.summary ? `\n     摘要：${c.summary}` : '';
+      return `  ${i + 1}. [${c.area}]${date} ${c.title}\n     連結：${c.url}${sum}`;
+    })
+    .join('\n');
+}
+
+/**
+ * 組 Claude「只挑選＋寫作」prompt。抓取已由 police-fetch 固定完成，這裡不叫 LLM 上網。
+ * @param {Array<{area,title,url,date,summary}>} candidates 已抓好＋已驗證的候選清單
+ * @param {string[]} recentTitles 近 30 天已發標題（去重）
+ * @param {number} days 收錄天數（僅用於文案說明）
+ */
+export function buildPolicePrompt(candidates = [], recentTitles = [], days = 7) {
   const recent = recentTitles.length ? recentTitles.map((t) => `  - ${t}`).join('\n') : '（近期無）';
   return [
     '你是 APPI News 生活線編輯，把台灣各地警察的「好人好事」整理成一篇繁中（台灣用語）暖聞，給讀者看。全自動上架、編輯部署名、無個人觀點。',
     '',
-    '【來源（逐一 WebFetch 官方新聞稿索引，抓不到/逾時/被擋就跳過該家，不要卡住）】',
-    srcLines,
-    '（以上是主力；金門需容忍 TLS、臺東需偽裝瀏覽器 UA。抓不到的當次略過可接受。）',
+    `【素材】以下是系統已從各地警局官網「固定抓取並逐條驗證連結可連」的近 ${days} 天好人好事候選（已幫你初篩、附區域／連結／日期／摘要）。你的工作是**挑選＋寫作**，**不需要、也不要自己上網抓取、WebFetch 或翻頁**——所有事實與連結都用下面提供的：`,
+    formatCandidates(candidates),
     '',
     '【挑選】',
-    `- 只收**近 ${days} 天**的**好人好事**：協助/救援/尋人尋親、拾金不昧、助弱扶老、暖心義舉、阻詐善後等。`,
-    '- **排除**：純執法查緝、車禍刑案、防詐宣導、統計週報、長官致詞/表揚大會流水帳。',
-    '- 跨縣市挑 5–8 則有代表性的；地區盡量分散。',
+    '- 從上面候選挑 5–8 則有代表性、地區盡量分散的，整理成一篇 roundup。',
+    '- 若合適的候選不足 5 則，就用現有的寫（有幾則寫幾則）；若完全沒有像樣的好人好事，輸出 SKIP。',
+    '- 明顯不是好人好事的（純執法、宣導、流水帳）不要選。',
     '',
-    '【撰寫鐵則（跟著官方原稿走）】',
-    '- **員警照原稿具名**（這是公開表揚、官方已對外公布）；**民眾比照原稿的揭露程度**（原稿匿名就匿名、具名就具名），不自行加碼也不自行刪改事實。',
-    '- 嚴格基於官方新聞稿事實、不杜撰；**每則附該則官方新聞稿的 inline 超連結**，且逐條查證可連線（2xx）。死連結就不收該則。',
+    '【撰寫鐵則（跟著提供的素材走）】',
+    '- 嚴格基於提供的標題與摘要事實、**不杜撰**；每則附上面**提供的官方新聞稿連結原封不動**（不要改寫網址、不要自己編網址）。',
+    '- 員警照摘要具名（公開表揚）；民眾比照摘要的揭露程度，不自行加碼也不刪改事實。',
     '- 繁中台灣用語、去 AI 腔、編輯部中性語氣、不加個人評論。',
-    '- **不要轉載官方頁或 FB 的版權照片**；封面（可有可無）用 `node scripts/get-image.mjs --out public/covers/<slug>-cover.webp`（圖庫真實照片，警民互助/警車等示意，不要 --people、不要 AI 生圖）。**鐵則：設了 coverImage 就一定要先確認該檔真的存在；拿不到圖就乾脆不設 coverImage（暖聞 roundup 可無封面），絕不要設了 coverImage 卻沒有真的存到檔**（會變壞連結、整篇發不出）。內文若配圖同理。',
+    '- **不要轉載官方頁或 FB 的版權照片**；封面可有可無，用 `node scripts/get-image.mjs --out public/covers/<slug>-cover.webp`（圖庫真實照片、警民互助/警車等示意，不要 --people、不要 AI 生圖）。**設了 coverImage 就一定要確認該檔真的存在；拿不到圖就不要設 coverImage**（暖聞 roundup 可無封面），絕不可設了卻沒存到檔（會變壞連結、整篇發不出）。',
     '',
     '【去重】比對近 30 天已發的好人好事整理，不要重複同一事件：',
     recent,
     '',
     '【frontmatter】category: "lifestyle"、subcategory: "life"、author: "appi-editorial"、contentType: "news"、sourceType: "wire"、status: "published"、publishDate 現在；slug 語意化英文 kebab（如 police-good-deeds-2026-06-21，避免 post-NNN，檔名＝slug）；disclosure 揭露「整理自各地警察局公開新聞稿、附原文出處」。寫入 src/content/articles/<slug>.md，**不要 git add/commit/push**（外層處理）。',
     '',
-    '【最後輸出】一行：`POLICE_RESULT=NEW｜<slug>`（有寫）或 `POLICE_RESULT=SKIP｜<原因>`（各家都抓不到、或近 N 天無合格好人好事）；若有寫，再附查證報告（每條超連結＋HTTP 狀態）。',
+    '【最後輸出】一行：`POLICE_RESULT=NEW｜<slug>`（有寫）或 `POLICE_RESULT=SKIP｜<原因>`（無合適候選）。',
   ].join('\n');
 }
 

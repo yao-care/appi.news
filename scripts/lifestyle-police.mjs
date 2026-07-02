@@ -12,6 +12,7 @@ import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildPolicePrompt, parsePoliceResult } from './lib/lifestyle-police.mjs';
+import { fetchPoliceCandidates } from './lib/police-fetch.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
 
@@ -59,19 +60,27 @@ function recentPoliceTitles(days = 30) {
   return out;
 }
 
-function main() {
+async function main() {
   const go = has('go');
   const stage = has('stage');
   const recent = recentPoliceTitles(30);
-  const prompt = buildPolicePrompt(recent, 7);
+
+  // 固定抓取（零 LLM）：各站列表 → 近 7 天 + 關鍵字初篩 → 查證 2xx → 抓詳情正文 → 候選清單。
+  console.log('→ 固定抓取各地警局好人好事候選中（零 LLM）…');
+  const candidates = await fetchPoliceCandidates({ days: 7, log: (m) => console.log(m) });
+  console.log(`共 ${candidates.length} 則候選（近 7 天、關鍵字初篩、連結已驗證）。`);
+  const prompt = buildPolicePrompt(candidates, recent, 7);
 
   if (!go && !stage) {
     console.log('— DRY RUN（零副作用）—');
-    console.log(`近 30 天已發好人好事整理：${recent.length} 篇`);
+    console.log(`近 30 天已發：${recent.length} 篇；候選：${candidates.length} 則`);
     console.log('\n===== Claude 寫作指令 =====\n');
     console.log(prompt);
     return;
   }
+
+  // 零候選 → 不呼叫 LLM（省額度、避免撞 rate limit）。
+  if (!candidates.length) { console.log('✓ 本次無候選（各站近 7 天無合格好人好事），不呼叫 LLM，安靜結束。'); return; }
 
   if (sh('git', ['status', '--porcelain'])) die('工作區不乾淨，請先清乾淨再跑');
   const branch = sh('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
@@ -116,5 +125,5 @@ function main() {
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  try { main(); } catch (e) { die(e.message); }
+  main().catch((e) => die(e.message));
 }

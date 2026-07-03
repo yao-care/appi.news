@@ -112,7 +112,8 @@ tech-radar（cron 每日一次）→ 發候選題到 Slack（帶「我要寫這�
 | 選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選；排程／模型見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §cron 總表 |
 | 起草引擎 | `.claude/skills/newsroom/`（`SKILL.md` / `persona.md` / `author-memory.json`） | 文風、人格、跨文記憶；`/newsroom` 互動寫作也走它 |
 | 自動產文 | `scripts/newsroom-write.mjs` | headless 起草＋**配圖硬性 gate**（缺 coverImage／封面檔不存在／內文 0 圖 → 中止不發），完成寫 `result.json` |
-| Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文，回報摘要/重點/預覽連結 |
+| Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文，回報摘要/重點/預覽連結；也收 GitHub webhook（dev-bot 開發、`article-draft` 寫作） |
+| /admin 寫作任務消費端 | `scripts/article-write.mjs`＋`scripts/lib/article-issue.mjs`（webhook `article-draft` → newsroom `--stage` → PR） | /admin 開的 `article-draft` issue → 走 newsroom 正規產線（配圖 gate 保留）寫成 **kind=factual 待審草稿** → 開 PR；merge 後仍待審，用編輯器／發佈鈕轉正。為什麼＝[`docs/lessons/article-draft-consumer.md`](./docs/lessons/article-draft-consumer.md) |
 | 去重帳本 | `scripts/topic-ledger.mjs`、`/root/.local/state/appi-news/suggested-topics.json` | 雷達與週報共用，避免撞題 |
 | 發佈隔離 checkout | `/root/appi.news-publisher`（`PUBLISH_ISOLATED=1`） | 自動產文在此跑，每篇 reset 到 `origin/main`；dev 目錄未提交改動不受影響 |
 

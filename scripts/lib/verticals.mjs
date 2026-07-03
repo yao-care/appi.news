@@ -4,17 +4,33 @@
 // 沿用本專案既有慣例（newsroom-job.mjs 原本就硬編 tech 子分類並註明「以 categories.ts 為準」）。
 // 改 categories.ts 的分類/子分類 slug 時，這裡要一起改（categories.ts 為唯一事實來源）。
 //
-// 範圍：只列「開放給自動產文」的分類。focus / health / finance / columns 暫不自動產，故不在此。
+// 兩層範圍：
+//   ALL_CATEGORIES ＝ src/config/categories.ts 全部 8 類的鏡像（含 focus/health/finance/columns），
+//     供「真人經 /admin 下單」放寬驗證用（人工下單非機器自選題，不受自動產文白名單限制）。
+//   VERTICALS      ＝ ALL_CATEGORIES 的子集，只列「開放給機器自動產文／自動選題」的分類。
+//     focus / health / finance / columns 不自動產（機器不自選這些題），故不在 VERTICALS。
 
-/** 分類 → { 中文名, 合法子分類 slug }。子分類對齊 src/config/categories.ts。 */
-export const VERTICALS = {
-  tech: {
-    name: '科技',
-    subcategories: ['ai', 'security', 'digital-tools', 'software-products', 'startup', 'semiconductor', 'industry-tech', 'tech-policy'],
+/** 全分類目錄（鏡像 src/config/categories.ts 全部 8 類）→ { 中文名, 合法子分類 slug }。 */
+export const ALL_CATEGORIES = {
+  focus: {
+    name: '焦點',
+    subcategories: ['today', 'major-issues', 'editors-pick', 'trend-watch', 'policy-watch', 'special-report'],
   },
   international: {
     name: '國際',
     subcategories: ['global-focus', 'asia', 'americas', 'europe', 'middle-east', 'global-trends', 'cross-strait', 'international-organizations'],
+  },
+  health: {
+    name: '健康',
+    subcategories: ['medical', 'preventive', 'nutrition', 'tcm-integrative', 'mental-health', 'aging-health', 'medtech', 'health-policy', 'supplement-regulation'],
+  },
+  tech: {
+    name: '科技',
+    subcategories: ['ai', 'security', 'digital-tools', 'software-products', 'startup', 'semiconductor', 'industry-tech', 'tech-policy'],
+  },
+  finance: {
+    name: '財經',
+    subcategories: ['industry', 'management', 'market', 'fintech', 'business-model', 'real-estate', 'consumer-finance', 'investing-literacy'],
   },
   sports: {
     name: '運動',
@@ -24,7 +40,19 @@ export const VERTICALS = {
     name: '生活',
     subcategories: ['life', 'consumer', 'family', 'travel', 'food', 'workplace', 'education', 'aging-life', 'life-tech', 'reading-leisure'],
   },
+  columns: {
+    name: '專欄',
+    subcategories: ['author-column', 'expert-view', 'editorial-view', 'guest-column', 'brand-column', 'personal-view'],
+  },
 };
+
+export const ALL_CATEGORY_SLUGS = Object.keys(ALL_CATEGORIES);
+
+/** 開放給機器自動產文的分類（ALL_CATEGORIES 子集）。 */
+const AUTO_VERTICAL_SLUGS = ['tech', 'international', 'sports', 'lifestyle'];
+
+/** 分類 → { 中文名, 合法子分類 slug }。子分類對齊 src/config/categories.ts。 */
+export const VERTICALS = Object.fromEntries(AUTO_VERTICAL_SLUGS.map((s) => [s, ALL_CATEGORIES[s]]));
 
 export const VERTICAL_SLUGS = Object.keys(VERTICALS);
 
@@ -71,4 +99,18 @@ export function verticalName(slug) {
 
 export function subcategoriesOf(slug) {
   return VERTICALS[slug]?.subcategories ?? [];
+}
+
+// ── 全分類版（含 focus/health/finance/columns）：供真人 /admin 下單放寬驗證用 ──
+
+export function isCategoryAny(slug) {
+  return Object.prototype.hasOwnProperty.call(ALL_CATEGORIES, slug);
+}
+
+export function categoryNameAny(slug) {
+  return ALL_CATEGORIES[slug]?.name ?? slug;
+}
+
+export function subcategoriesOfAny(slug) {
+  return ALL_CATEGORIES[slug]?.subcategories ?? [];
 }

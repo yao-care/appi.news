@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { createHmac } from 'node:crypto';
-import { verifyGithubSignature, parseGithubEvent, SPEC_LABEL } from './github-webhook.mjs';
+import { verifyGithubSignature, parseGithubEvent, SPEC_LABEL, ARTICLE_LABEL } from './github-webhook.mjs';
 
 describe('verifyGithubSignature', () => {
   const secret = 's3cret';
@@ -33,6 +33,12 @@ describe('parseGithubEvent', () => {
 
   it('沒掛 label 的 issue → ignore', () => {
     expect(parseGithubEvent({ eventType: 'issues', payload: { action: 'opened', issue: { number: 1, labels: [] } } }).kind).toBe('ignore');
+  });
+
+  it('article-draft issue 開 → writeArticle（分支 article/issue-N）', () => {
+    const issue = { number: 110, title: '[文章] 沙拉油', labels: [{ name: ARTICLE_LABEL }] };
+    const out = parseGithubEvent({ eventType: 'issues', payload: { action: 'opened', issue } });
+    expect(out).toEqual({ kind: 'writeArticle', issue: 110, branch: 'article/issue-110', title: '[文章] 沙拉油' });
   });
 
   it('非 opened（如 edited）→ ignore', () => {

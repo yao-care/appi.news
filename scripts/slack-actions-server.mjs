@@ -414,7 +414,7 @@ function devDrain() {
   devRunning = true;
   const job = devQueue.shift();
   const done = () => { devRunning = false; devDrain(); };
-  const run = { consolidate: runConsolidate, createIssue: runCreateIssue, develop: runDevelop, publish: runDevPublish }[job.type];
+  const run = { consolidate: runConsolidate, createIssue: runCreateIssue, develop: runDevelop, writeArticle: runWriteArticle, publish: runDevPublish }[job.type];
   (run ? run(job) : Promise.resolve()).catch((e) => console.error('devbot job 失敗', job.type, e.message)).finally(done);
 }
 
@@ -486,6 +486,28 @@ async function runDevelop({ issue, branch, title, iterate }) {
   await devReply(threadTs, text, blocks);
 }
 
+// /admin article-draft：走 newsroom 正規產線寫成文章 → PR（不 merge、不部署）。
+// 來源是 /admin 開的 issue（非 Slack 討論串），故無 thread，回報發 dev 頻道頂層。
+async function runWriteArticle({ issue, title }) {
+  await devReply(undefined, `✍️ 收到寫作任務 #${issue}（${title || ''}），走 newsroom 正規產線撰寫中…（含配圖與連結查證，約數分鐘）`);
+  const dir = mkdtempSync(join(tmpdir(), 'article-write-'));
+  const r = await spawnNode(['scripts/article-write.mjs', dir, '--issue', String(issue)]);
+  if (!existsSync(join(dir, 'result.json'))) {
+    return devReply(undefined, `⚠️ 寫作任務 #${issue} 失敗（無 result）：\n\`\`\`${r.out.slice(-700)}\`\`\``);
+  }
+  const res = JSON.parse(readFileSync(join(dir, 'result.json'), 'utf8'));
+  if (!res.ok) {
+    const detail = res.error || '未知錯誤';
+    const log = res.log ? `\n\`\`\`${String(res.log).slice(-600)}\`\`\`` : '';
+    return devReply(undefined, `⚠️ 寫作任務 #${issue} 未完成：${detail}${log}\n（改動留在 worktree 待補；補齊後可重開工單或在該分支續寫。）`);
+  }
+  const prUrl = res.pr ? `https://github.com/${GITHUB_REPO}/pull/${res.pr}` : '（PR 待確認）';
+  const highlights = Array.isArray(res.highlights) && res.highlights.length
+    ? `\n${res.highlights.map((h) => `• ${h}`).join('\n')}` : '';
+  const text = `✅ *#${issue} ${res.title}* 已寫好（${res.category}／待審草稿）\n\n> ${(res.excerpt || '').slice(0, 600)}${highlights}\n\nPR：${prUrl}\n審查合併後為 noindex 待審草稿，用編輯器／發佈鈕把日期改今天即上線。`;
+  await devReply(undefined, text);
+}
+
 // 發佈鈕：merge PR → 觸發 GitHub Pages 部署 → 回貼線上連結。
 async function runDevPublish({ pr, issue, branch, title }) {
   const meta = devbot.issues[issue] || {};
@@ -528,6 +550,7 @@ function handleGithubReq(rawBody, headers) {
   const ev = parseGithubEvent({ eventType: headers['x-github-event'], payload, botLogin: GH_BOT_LOGIN });
   if (ev.kind === 'develop') return { status: 200, body: 'ok', devJob: { type: 'develop', issue: ev.issue, branch: ev.branch, title: ev.title } };
   if (ev.kind === 'iterate') return { status: 200, body: 'ok', devJob: { type: 'develop', issue: ev.issue, branch: ev.branch, iterate: ev.comment } };
+  if (ev.kind === 'writeArticle') return { status: 200, body: 'ok', devJob: { type: 'writeArticle', issue: ev.issue, branch: ev.branch, title: ev.title } };
   return { status: 200, body: 'ok' };
 }
 

@@ -12,13 +12,17 @@
 import {
   VERTICALS,
   VERTICAL_SLUGS,
+  ALL_CATEGORY_SLUGS,
   KINDS,
   KIND_SLUGS,
   KIND_DEFAULT,
   CONTENT_TYPES,
   isVertical,
+  isCategoryAny,
   subcategoriesOf,
+  subcategoriesOfAny,
   verticalName,
+  categoryNameAny,
 } from './verticals.mjs';
 
 // 向後相容匯出（既有測試 / 呼叫端仍 import 這兩個）。
@@ -39,18 +43,26 @@ export function kindOf(job) {
 /**
  * 驗證工單。回傳錯誤字串陣列；空陣列＝通過。
  * 不丟例外（讓呼叫端決定怎麼回報），不改動入參。
+ *
+ * @param {object} job
+ * @param {{allowAnyCategory?: boolean}} [opts]
+ *   allowAnyCategory=true：放寬分類白名單成「全部合法分類」（含 focus/health/finance/columns）。
+ *   只給「真人經 /admin 下單」用——人工下單非機器自選題，不受自動產文白名單限制。
+ *   預設 false＝維持自動產線的鐵律（只收 vertical），行為與過去完全一致。
  */
-export function validateJob(job) {
+export function validateJob(job, { allowAnyCategory = false } = {}) {
   const errors = [];
 
   if (!job || typeof job !== 'object') {
     return ['工單不是物件'];
   }
 
-  // 鐵律 1：分類必須是開放自動產文的 vertical
-  if (!isNonEmptyString(job.category) || !isVertical(job.category)) {
+  // 鐵律 1：分類必須合法。自動產線＝只收 vertical；/admin 真人下單＝放寬成全部合法分類。
+  const categoryOk = allowAnyCategory ? isCategoryAny(job.category) : isVertical(job.category);
+  const categoryList = allowAnyCategory ? ALL_CATEGORY_SLUGS : VERTICAL_SLUGS;
+  if (!isNonEmptyString(job.category) || !categoryOk) {
     errors.push(
-      `category 必須是可自動產文的分類之一（${VERTICAL_SLUGS.join(' / ')}），收到：${JSON.stringify(job.category)}`,
+      `category 必須是${allowAnyCategory ? '合法' : '可自動產文'}的分類之一（${categoryList.join(' / ')}），收到：${JSON.stringify(job.category)}`,
     );
   }
 
@@ -70,8 +82,9 @@ export function validateJob(job) {
   if (!isNonEmptyString(job.conclusion)) errors.push('conclusion（核心結論）必填');
 
   // 子分類若有給，必須屬於該分類（分類本身合法才檢查，否則訊息會混淆）
-  if (job.subcategory != null && isVertical(job.category)) {
-    const allowed = subcategoriesOf(job.category);
+  const categoryValidForSub = allowAnyCategory ? isCategoryAny(job.category) : isVertical(job.category);
+  if (job.subcategory != null && categoryValidForSub) {
+    const allowed = allowAnyCategory ? subcategoriesOfAny(job.category) : subcategoriesOf(job.category);
     if (!allowed.includes(job.subcategory)) {
       errors.push(`subcategory "${job.subcategory}" 不屬於 ${job.category}；可選：${allowed.join(' / ')}`);
     }
@@ -111,8 +124,8 @@ export function normalizeJob(job) {
     title: job.title.trim(),
     conclusion: job.conclusion.trim(),
     viewpoint: isNonEmptyString(job.viewpoint) ? job.viewpoint.trim() : '',
-    category: job.category, // 不再寫死 tech；validateJob 已確保是合法 vertical
-    categoryName: verticalName(job.category),
+    category: job.category, // 不再寫死 tech；validateJob 已確保是合法分類
+    categoryName: categoryNameAny(job.category), // 全分類版（含 health/focus/finance/columns）
     subcategory: job.subcategory ?? null,
     kind,
     author: isNonEmptyString(job.author) ? job.author.trim() : kindCfg.defaultAuthor,

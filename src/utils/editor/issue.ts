@@ -4,6 +4,7 @@ const REPO = 'appi.news';
 
 export type IssueBrief = {
   collection: string;
+  category: string; // 文章分類 slug（health/tech/…，對齊 src/config/categories.ts）；消費端 article-write 用它產稿
   title: string;
   slug: string;
   direction?: string;
@@ -15,7 +16,8 @@ export function buildIssueBody(b: IssueBrief): string {
   const or = (v?: string) => (v && v.trim() ? v.trim() : '未指定');
   return `## 文章寫作工單
 
-- 分類（collection）: ${b.collection}
+- 集合（collection）: ${b.collection}
+- 分類（category）: ${b.category}
 - 標題: ${b.title}
 - 目標檔案: \`src/content/articles/${b.slug}.md\`
 - 網址: \`/${b.collection}/${b.slug}/\`

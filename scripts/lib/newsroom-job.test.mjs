@@ -32,6 +32,27 @@ describe('validateJob — 鐵律 gate', () => {
     expect(errs.some((e) => e.includes('category'))).toBe(true);
   });
 
+  it('allowAnyCategory：真人 /admin 下單時放寬——health 通過', () => {
+    // 事實稿（factual）不需 viewpoint；health/焦點/財經/專欄 皆屬合法分類
+    const job = { title: 'T', conclusion: 'C', category: 'health', kind: 'factual' };
+    expect(validateJob(job, { allowAnyCategory: true })).toEqual([]);
+    expect(validateJob({ ...job, category: 'finance' }, { allowAnyCategory: true })).toEqual([]);
+    expect(validateJob({ ...job, category: 'focus' }, { allowAnyCategory: true })).toEqual([]);
+    expect(validateJob({ ...job, category: 'columns' }, { allowAnyCategory: true })).toEqual([]);
+  });
+
+  it('allowAnyCategory：仍擋不存在的分類與越界子分類', () => {
+    expect(validateJob({ title: 'T', conclusion: 'C', category: 'nope', kind: 'factual' }, { allowAnyCategory: true })
+      .some((e) => e.includes('category'))).toBe(true);
+    expect(validateJob({ title: 'T', conclusion: 'C', category: 'health', subcategory: 'ai', kind: 'factual' }, { allowAnyCategory: true })
+      .some((e) => e.includes('subcategory'))).toBe(true);
+  });
+
+  it('預設（自動產線）不放寬：health 仍被擋，行為與過去一致', () => {
+    expect(validateJob({ title: 'T', conclusion: 'C', category: 'health', kind: 'factual' })
+      .some((e) => e.includes('category'))).toBe(true);
+  });
+
   it('鐵律1：缺 category 被擋', () => {
     const errs = validateJob({ ...validJob(), category: undefined });
     expect(errs.some((e) => e.includes('category'))).toBe(true);

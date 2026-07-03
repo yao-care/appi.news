@@ -6,6 +6,10 @@ import { createHmac, timingSafeEqual } from 'node:crypto';
 import { branchForIssue } from './devbot.mjs';
 
 export const SPEC_LABEL = 'dev-bot'; // 由「建立需求單」開的 issue 都掛這個 label
+export const ARTICLE_LABEL = 'article-draft'; // /admin「新增寫作任務」開的 issue（走 newsroom 產線寫成文章 → PR）
+
+/** article-draft issue #N → 專屬分支名（與 dev/issue-N 區隔）。與 article-write.mjs 一致。 */
+const branchForArticle = (n) => `article/issue-${Number(n)}`;
 
 /**
  * 驗 GitHub webhook 簽章（X-Hub-Signature-256: sha256=<hex>）。
@@ -30,7 +34,7 @@ const hasLabel = (issue, label) =>
 /**
  * 解析 GitHub 事件 → 管線動作。
  * @param {{eventType:string, payload:object, botLogin?:string}} p
- * @returns {{kind:'develop'|'iterate'|'ping'|'ignore', issue?:number, branch?:string, title?:string, comment?:string, commenter?:string}}
+ * @returns {{kind:'develop'|'iterate'|'writeArticle'|'ping'|'ignore', issue?:number, branch?:string, title?:string, comment?:string, commenter?:string}}
  */
 export function parseGithubEvent({ eventType, payload, botLogin } = {}) {
   if (eventType === 'ping') return { kind: 'ping' };
@@ -39,6 +43,12 @@ export function parseGithubEvent({ eventType, payload, botLogin } = {}) {
   if (eventType === 'issues' && payload.action === 'opened' && hasLabel(payload.issue, SPEC_LABEL)) {
     const n = payload.issue.number;
     return { kind: 'develop', issue: n, branch: branchForIssue(n), title: payload.issue.title || '' };
+  }
+
+  // /admin「新增寫作任務」開的 article-draft issue → 走 newsroom 產線寫成文章、開 PR。
+  if (eventType === 'issues' && payload.action === 'opened' && hasLabel(payload.issue, ARTICLE_LABEL)) {
+    const n = payload.issue.number;
+    return { kind: 'writeArticle', issue: n, branch: branchForArticle(n), title: payload.issue.title || '' };
   }
 
   if (eventType === 'issue_comment' && payload.action === 'created' && hasLabel(payload.issue, SPEC_LABEL)) {

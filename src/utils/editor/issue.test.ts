@@ -4,17 +4,18 @@ import { buildIssueBody, createArticleIssue } from './issue';
 afterEach(() => vi.restoreAllMocks());
 
 describe('buildIssueBody', () => {
-  it('含目標檔案路徑、網址、各欄位', () => {
-    const body = buildIssueBody({ collection: 'articles', title: 'X', slug: 'x-1', direction: '寫淺白', sources: 'PubMed', conclusion: '結論Y' });
+  it('含目標檔案路徑、網址、分類、各欄位', () => {
+    const body = buildIssueBody({ collection: 'articles', category: 'health', title: 'X', slug: 'x-1', direction: '寫淺白', sources: 'PubMed', conclusion: '結論Y' });
     expect(body).toContain('src/content/articles/x-1.md');
     expect(body).toContain('/articles/x-1/');
+    expect(body).toContain('分類（category）: health');
     expect(body).toContain('寫淺白');
     expect(body).toContain('PubMed');
     expect(body).toContain('結論Y');
     expect(body).toContain('禁止杜撰');
   });
   it('選填欄位空白 → 顯示「未指定」', () => {
-    const body = buildIssueBody({ collection: 'articles', title: 'T', slug: 's' });
+    const body = buildIssueBody({ collection: 'articles', category: 'health', title: 'T', slug: 's' });
     expect(body).toContain('未指定');
   });
 });
@@ -23,7 +24,7 @@ describe('createArticleIssue', () => {
   it('POST 到 issues，title 帶 [文章]、label article-draft，回 number/url', async () => {
     const spy = vi.fn(async () => new Response(JSON.stringify({ number: 12, html_url: 'https://github.com/yao-care/appi.news/issues/12' }), { status: 201 }));
     vi.stubGlobal('fetch', spy);
-    const r = await createArticleIssue({ collection: 'articles', title: '標題', slug: 's-1', token: 'tok' });
+    const r = await createArticleIssue({ collection: 'articles', category: 'health', title: '標題', slug: 's-1', token: 'tok' });
     expect(r).toEqual({ number: 12, url: 'https://github.com/yao-care/appi.news/issues/12' });
     const [url, init] = spy.mock.calls[0];
     expect(url).toBe('https://api.github.com/repos/yao-care/appi.news/issues');
@@ -34,7 +35,7 @@ describe('createArticleIssue', () => {
   });
   it('非 2xx → 丟可讀錯誤', async () => {
     vi.stubGlobal('fetch', vi.fn(async () => new Response('no', { status: 403 })));
-    await expect(createArticleIssue({ collection: 'articles', title: 'T', slug: 's', token: 't' }))
+    await expect(createArticleIssue({ collection: 'articles', category: 'health', title: 'T', slug: 's', token: 't' }))
       .rejects.toThrow('建立 Issue 失敗（403）');
   });
 });

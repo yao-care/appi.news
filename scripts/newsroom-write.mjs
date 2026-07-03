@@ -211,8 +211,11 @@ function main() {
   const args = process.argv.slice(2);
   const go = args.includes('--go');
   const stage = args.includes('--stage');
+  // --allow-any-category：放寬分類白名單成「全部合法分類」（含 health/focus/finance/columns）。
+  // 只給「真人經 /admin 下單」的 article-write 協調器用；自動選題產線不帶此旗標、維持只收 vertical。
+  const allowAnyCategory = args.includes('--allow-any-category');
   const jobPath = args.find((a) => !a.startsWith('--'));
-  if (!jobPath) die('用法：node scripts/newsroom-write.mjs <job.json> [--go]');
+  if (!jobPath) die('用法：node scripts/newsroom-write.mjs <job.json> [--go|--stage] [--allow-any-category]');
 
   // 1) 讀 + 驗
   let raw;
@@ -221,7 +224,7 @@ function main() {
   } catch (e) {
     die(`讀不到/解析不了工單 ${jobPath}：${e.message}`);
   }
-  const errors = validateJob(raw);
+  const errors = validateJob(raw, { allowAnyCategory });
   if (errors.length) {
     die(`工單未過驗證（零副作用退出）：\n  - ${errors.join('\n  - ')}`);
   }

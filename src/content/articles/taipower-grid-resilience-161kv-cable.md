@@ -5,7 +5,7 @@ description: "台電「強化電網韌性建設計畫」近期完成約193億元
 publishDate: "2026-06-23T19:15:00+08:00"
 category: "focus"
 subcategory: "trend-watch"
-tags: ["台電", "強韌電網", "電網韌性", "161kV電纜", "能源轉型", "供電穩定", "淨零"]
+tags: ["台電", "強韌電網", "強韌電網計畫", "電網韌性", "161kV電纜", "能源轉型", "供電穩定", "淨零"]
 author: "appi-editorial"
 coverImage: "covers/taipower-grid-resilience-161kv-cable.webp"
 coverAlt: "台灣高壓輸電電塔與電力線路，象徵全台電網基礎建設"

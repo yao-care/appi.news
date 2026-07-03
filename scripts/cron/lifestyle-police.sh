@@ -32,5 +32,9 @@ if [ "$rc" -eq 0 ]; then
   fi
   exit 0
 fi
-node scripts/cron-report.mjs --category lifestyle --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
+# 失敗回報：先帶「收到哪幾則候選」（否則盲切末 500 bytes 只會留到末尾那些收 0 的縣市，
+# 看起來全 0 卻說有 N 則、自相矛盾），再附最後 300 bytes 的真正錯誤（session/weekly limit、逾時…）。
+cand=$(grep '^CANDIDATE=' <<<"$out" | sed 's/^CANDIDATE=/• /')
+total=$(grep -oE '共 [0-9]+ 則候選' <<<"$out" | tail -1)
+node scripts/cron-report.mjs --category lifestyle --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s\n%s\n%s' "$TASK" "$rc" "$ts" "${total:-候選數未知}" "${cand:-（本次未收到候選）}" "$(tail -c 300 <<<"$out")")" || true
 exit "$rc"

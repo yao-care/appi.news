@@ -69,6 +69,9 @@ async function main() {
   console.log('→ 固定抓取各地警局好人好事候選中（零 LLM）…');
   const candidates = await fetchPoliceCandidates({ days: 7, log: (m) => console.log(m) });
   console.log(`共 ${candidates.length} 則候選（近 7 天、關鍵字初篩、連結已驗證）。`);
+  // 逐則印出候選（含 CANDIDATE= 前綴供 .sh 失敗回報擷取）：否則只看得到各縣市計數，
+  // 撞額度失敗時完全不知道收到的是哪幾則、白抓一場。
+  for (const c of candidates) console.log(`CANDIDATE=${c.area}｜${c.title}｜${c.url}`);
   const prompt = buildPolicePrompt(candidates, recent, 7);
 
   if (!go && !stage) {

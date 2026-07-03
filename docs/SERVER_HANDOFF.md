@@ -89,14 +89,15 @@ pnpm test
 |---|---|---|---|---|---|---|
 | 科技選題雷達 | tech-radar.sh | 21:20 | 05:20（每日一次） | WebSearch | 候選→人點按鈕→寫→自動上線 | ✅候選到**科技**台 |
 | 焦點/ESG | focus-esg.sh | 01:30 | 09:30 | 6 議題群權威來源（focus-esg.mjs）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
-| 連假優惠 | lifestyle-deals.sh | 02:00 | 10:00 | data.gov.tw #14718 假日曆（tw-holidays.mjs）+ 雙鐵 | 事實稿→**待審草稿+發佈鈕** | ✅有連假時發**生活**台/失敗哨兵 |
-| 國際編譯台 | international-desk.sh | 02:30 | 10:30 | **GDELT Events 原始檔**（international-select/international-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
-| 警消好人好事 | lifestyle-police.sh | 03:50（每日） | 11:50 | 各地警局新聞稿（lifestyle-police.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
+| 連假優惠 | lifestyle-deals.sh | 10:00 | 18:00 | data.gov.tw #14718 假日曆（tw-holidays.mjs）+ 雙鐵 | 事實稿→**待審草稿+發佈鈕** | ✅有連假時發**生活**台/失敗哨兵 |
+| 國際編譯台 | international-desk.sh | 15:00 | 23:00 | **GDELT Events 原始檔**（international-select/international-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
+| 警消好人好事 | lifestyle-police.sh | 04:45（每日） | 12:45 | 各地警局新聞稿（lifestyle-police.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 颱風停班課 | lifestyle-typhoon.sh | 每小時（5–11 月） | 每小時 | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
 | 新文章送 Indexing API | indexing-submit.sh | 06:00 | 14:00 | 線上 sitemap | n/a（送 Google 收錄）| 有送才報 **dev 台** |
 | 數據報告 | weekly-report.sh | 00:17（每 3 天） | 08:17 | GA4+GSC | n/a（數據）| ✅報告到**作者群** |
 | 維運心跳 | heartbeat.sh | 21:40 | 05:40 | 本地內容/狀態 + GSC（seo-opportunities）| n/a（維運）| ✅📊數據心跳＋🤖大腦優化到 **dev 台**（排在 tech-radar 05:20 後 20 分，brain 撞額度會退化不出錯）|
 
+- **內容線排程刻意攤開，別再併回早上（2026-07-03）**：焦點/ESG 01:30、警消好人好事 04:45、連假優惠 10:00、國際編譯台 15:00（UTC）。四條各喚 claude-appi Sonnet；claude-appi 的 session 額度是**每 5 小時一個共用視窗**，原本全擠在 01:30–03:50 → 同一視窗搶額度，排最後的警消每天餓死（先撞 weekly limit、再 session limit）。故拉開成任兩條相隔 ≥5h 或跨 04:30 reset 邊界，一個視窗最多落一條。**代價**＝連假優惠/國際編譯台上線時間移到台北傍晚/深夜。要再調時間，務必維持這個間隔，別看「都在白天比較整齊」就併回去。（另一個常態吸額度點是 agent.writer 每小時 :40 的 cron-write，跨專案，未動。）
 - **並發保護（重要）**：已從「全域 flock + 共用工作目錄」改為**每支 cron 各開自己的臨時 detached worktree**（`scripts/cron/_worktree.sh` 的 `cron_enter_worktree`，off `origin/main`）→ 互不洗檔、可**真正並行**；寫稿端最後用 `pushToMain`（push `HEAD:main`，撞拒就 fetch+rebase 重試）安全上線。新增這類 cron 一律 `source _worktree.sh` 並 `cron_enter_worktree "<slug>"`。背景見 [`docs/lessons/`](./lessons/)（自動線多工不序列化）。
   - **例外**：`indexing-submit.sh`、`heartbeat.sh` 是**純資料/唯讀腳本**（不碰 git 工作區、不喚 Claude 或只在最後喚一次），故**不走 worktree**，與其他 cron 無洗檔競態。背景見 [`docs/lessons/google-indexing-api-gray-area.md`](./lessons/google-indexing-api-gray-area.md)。
 - **維運/系統訊號改發 dev 台（2026-06-30）**：原本「cron 一律不發 dev、dev 只給 @bot」的政策放寬——**非內容的維運訊號**（`heartbeat.sh` 的 📊 數據心跳＋🤖 大腦優化、`indexing-submit.sh` 的索引提交回報）改走 **dev 台**（`cron-report.mjs --dev` → `DEV_CHANNEL`），與內容/值勤回報（作者群、分類台）分流，維運訊號不再吵作者群。內容類 cron 仍照舊發作者群/分類台。🤖 大腦優化是**報告型**（claude-appi Sonnet 判讀 SEO/內容機會，撞週限會退化成只報確定性事實、不沉默），不自動改碼。

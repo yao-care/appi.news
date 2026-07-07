@@ -6,7 +6,7 @@
 ## 你的工作
 
 - **子專案 1**：每週「數據週報 → Slack」，技能 `/weekly-report`，由 cron 觸發。
-- **子專案 2（已上線）**：半自動產文。`tech-radar`（cron 每日一次）發候選題到 Slack → 作者點「我要寫這題」→ `slack-actions-server`（pm2 `appinews-slack-actions`）觸發 `scripts/newsroom-write.mjs` 起草＋配圖 gate＋查證 → 排程上線。詳見最後一節與 repo 根 `CLAUDE.md` §自動發文 pipeline。
+- **子專案 2（已上線）**：半自動產文。~~`tech-radar`（cron 每日一次）發候選題到 Slack~~（**cron 已於 2026-07-07 停用**，不再固定推播；引擎與按鈕流程保留）→ 作者點「我要寫這題」→ `slack-actions-server`（pm2 `appinews-slack-actions`）觸發 `scripts/newsroom-write.mjs` 起草＋配圖 gate＋查證 → 排程上線。**寫作觸發現改由**：週報（weekly-report，每 3 天）的「一鍵開寫」按鈕、`/newsroom` 互動寫作、或 `/admin` 下單。詳見最後一節與 repo 根 `CLAUDE.md` §自動發文 pipeline。
 
 ## 開機前置（git clone 之後一定要做 —— 這些東西「不在」repo，是故意的）
 
@@ -67,7 +67,7 @@ pnpm test
 
 | 元件 | 路徑 / 識別 | 說明 |
 |---|---|---|
-| 選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選；cron UTC 21:20（每日一次） |
+| 選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選；**cron 已於 2026-07-07 停用**（skill/腳本保留，隨時可手動跑或反註解 crontab 恢復）|
 | 自動產文 | `scripts/newsroom-write.mjs`（沿用 newsroom skill 的文風/查證） | headless 起草＋配圖 gate，寫 `result.json` |
 | Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文並回報 |
 | 去重帳本 | `scripts/topic-ledger.mjs`、`/root/.local/state/appi-news/suggested-topics.json` | 與週報共用，避免撞題 |
@@ -87,7 +87,7 @@ pnpm test
 
 | 任務 | cron 腳本 | UTC | 台北 | 來源 | 上線方式 | 發 Slack？ |
 |---|---|---|---|---|---|---|
-| 科技選題雷達 | tech-radar.sh | 21:20 | 05:20（每日一次） | WebSearch | 候選→人點按鈕→寫→自動上線 | ✅候選到**科技**台 |
+| ~~科技選題雷達~~ **[停用 2026-07-07]** | tech-radar.sh | ~~21:20~~ | ~~05:20~~ | WebSearch | 候選→人點按鈕→寫→自動上線 | — |
 | 焦點/ESG | focus-esg.sh | 01:30 | 09:30 | 6 議題群權威來源（focus-esg.mjs）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 連假優惠 | lifestyle-deals.sh | 10:00 | 18:00 | data.gov.tw #14718 假日曆（tw-holidays.mjs）+ 雙鐵 | 事實稿→**待審草稿+發佈鈕** | ✅有連假時發**生活**台/失敗哨兵 |
 | 國際編譯台 | international-desk.sh | 15:00 | 23:00 | **GDELT Events 原始檔**（international-select/international-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|

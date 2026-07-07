@@ -31,3 +31,16 @@
 - **判斷自動化「成功」不能只看 exit code**：`claude -p` 撞限額/拒答會 exit 0；一定要掃輸出字樣。`.sh` 用 regex、`.mjs` 用 stdout 測試。
 - **改 crontab 後做集合稽核**：比對「非-appi 排程行 old vs new 應完全一致」、確認 appi 每支腳本都有對應排程行（別只留註解）。
 - 與「改了沒生效」併讀：程式從 publisher checkout 跑、`.sh`/server 改完要 `git -C /root/appi.news-publisher pull`，見 [automation-runtime-staleness.md](./automation-runtime-staleness.md)；多工 worktree 並行見 [auto-publish-pipeline-traps.md](./auto-publish-pipeline-traps.md)。SOP 對照 [`docs/SERVER_HANDOFF.md`](../SERVER_HANDOFF.md) §cron 總表。
+
+## 續（2026-07-07）：偵測到限額只 `continue` → 一次 cron 打 24 個空 session 的重試風暴
+
+**問題**：盤點 `~/.claude-appi` 的 token 用量時發現，`international-desk` 一次 cron 會產生 ~24 個 0-token session（intl worktree 每個 24 檔），且六月成功率 0%、七月只 7%（其他 cron 七月都已回到 60–100%）。實測一個 worktree 的 24 個 session **全在 38 秒內連發、間隔 ~1.5s、全部撞限額**。
+
+**原因**：`international-write.mjs` 對「選到的每則熱題」各呼叫一次 `claude-appi -p`（intl 用 GDELT 選題常 ~8 區×3 = 24 則）。前一版雖已**正確偵測**到限額（上面第 2 點的 stdout regex），但走的是 `continue`——跳過這則、續打下一則。可是**限額是帳號層級**，本批剩下每則必然同樣被擋；而限額訊息**秒回**（~1.5s），永遠吃不到迴圈的 540s 時間預算 guard（那 guard 是為「每則正常寫 6–7 分鐘」設計的）→ 於是 38 秒內把整批 24 則打光，全成空跑。intl 是唯一會這樣的：typhoon/lifestyle/police 是事件觸發、每次通常 0–1 則，不會迴圈。
+
+**解法**：把「限額」與「單則錯誤」拆開處理——**撞限額 → `break` 立刻中止整批**（一次探測就夠，剩下的留額度重置後下次 cron 接續，已寫好的照原邏輯上架）；其餘單則 API error/拒答才 `continue` 跳過該則續跑。改在 `international-write.mjs` 寫作迴圈內。
+
+**怎麼避免重犯 / 相關**：
+- **偵測到限額不能只記錄後繼續**：限額是帳號層級、且訊息秒回，任何「每項一次 LLM 呼叫」的批次迴圈都要**遇限額即中止整批**，否則 N 項變 N 次空打。
+- **時間預算 guard 擋不住限額風暴**：那種 guard 假設每次呼叫都真的花時間；限額秒回會穿過它。需要**針對限額另設中止路徑**。
+- 新增任何會「逐項呼叫 `claude-appi -p`」的自動化（如 focus-esg 等多項迴圈）沿用同一守則。

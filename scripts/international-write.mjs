@@ -171,8 +171,17 @@ function main() {
     const prompt = buildIntlPrompt(s, recent);
     console.log(`\n→ [${s.region}] ${s.numSources}家 | ${s.fullName}`);
     const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
-    // claude-appi 撞「每週用量上限」時會 exit 0 但只印限額訊息 → 必須查 stdout，否則整批被誤判成「無產出、安靜」。
-    if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) { console.log(`  ⚠️ claude 失敗：${(r.stderr || r.stdout || r.error?.message || '').slice(-200)}`); results.push({ s, action: 'error' }); continue; }
+    const stdout = r.stdout || '';
+    // 撞用量上限是「帳號層級」：這則被擋，本批剩下每則都會被擋。限流訊息秒回（吃不到時間預算），
+    // 若照單則錯誤 continue 下去會把整批 20+ 則狂打成空跑（見 docs/lessons）。→ 立刻中止整批。
+    // claude-appi 撞上限時會 exit 0 只印限額訊息 → 必須查 stdout，不能只看 exit code。
+    if (/hit your .*limit|weekly limit|usage limit/i.test(stdout)) {
+      skipped = stories.length - i;
+      console.log(`  ⛔ 撞用量上限，中止本批（剩 ${skipped} 則待額度重置後下次 cron 接續）：${stdout.slice(-160)}`);
+      break;
+    }
+    // 其餘（單則 API error / 拒答）才跳過這一則、續跑下一則。
+    if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond/i.test(stdout)) { console.log(`  ⚠️ claude 失敗（跳過此則）：${(r.stderr || stdout || r.error?.message || '').slice(-200)}`); results.push({ s, action: 'error' }); continue; }
     const v = parseIntlResult(r.stdout);
     console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
     results.push({ s, ...v });

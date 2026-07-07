@@ -1,18 +1,28 @@
 ---
-title: "油輪冒伊朗革命衛隊威脅闖荷莫茲海峽　改走阿曼沿岸新航道、單週通行量飆至125艘"
+title: "荷莫茲海峽再爆攻擊：卡達籍LNG船、沙國油輪同遭擊中　恐撕毀三週前停火備忘錄"
 slug: "hormuz-tankers-oman-route-iran-threats"
-description: "由油輪「Stoic Warrior」號領頭的一批船隻6月25日改走阿曼與國際海事組織新闢的沿岸航道，貼著穆桑代姆半島通過荷莫茲海峽。伊朗革命衛隊宣稱該航道「不可接受且極度危險」、警告「違者將受處置」，並對一艘油輪嗆「你在我飛彈射程內」。勞氏船舶情報統計上週通行量回升至125艘。"
-excerpt: "由油輪「Stoic Warrior」號領頭的一批船隻6月25日改走阿曼與國際海事組織新闢的沿岸航道，貼著穆桑代姆半島通過荷莫茲海峽。伊朗革命衛隊宣稱該航道「不可接受且極度危險」、警告「違者將受處置」，並對一艘油輪嗆「你在我飛彈射程內」。勞氏船舶情報統計上週通行量回升至125艘。"
+description: "英國軍方7月7日證實，兩艘船隻在阿曼利馬外海遭不明投射物擊中：卡達籍液化天然氣船「Al Rekayyat」引擎室起火，一艘沙烏地籍油輪船體受損，均無人員傷亡。卡達外交部譴責這是「對國際航行不可接受的攻擊」，伊朗未正式承認，但可能撕毀三週前簽署、讓海峽對所有船隻開放60天的備忘錄；川普警告「要嘛達成協議、要嘛我們把任務做完」。"
+excerpt: "英國軍方7月7日證實，兩艘船隻在阿曼利馬外海遭不明投射物擊中：卡達籍液化天然氣船「Al Rekayyat」引擎室起火，一艘沙烏地籍油輪船體受損，均無人員傷亡。卡達外交部譴責這是「對國際航行不可接受的攻擊」，伊朗未正式承認，但可能撕毀三週前簽署、讓海峽對所有船隻開放60天的備忘錄；川普警告「要嘛達成協議、要嘛我們把任務做完」。"
 publishDate: "2026-06-26T02:41:33.700Z"
+updatedDate: "2026-07-07T15:09:30.406Z"
 category: "international"
 subcategory: "middle-east"
-tags: ["荷莫茲海峽", "伊朗", "阿曼", "革命衛隊", "國際海事組織", "油輪航運", "中東情勢"]
+tags: ["荷莫茲海峽", "伊朗", "阿曼", "卡達", "革命衛隊", "液化天然氣", "油輪航運", "中東情勢"]
 highlights:
-  - "油輪「Stoic Warrior」號6月25日領頭改走阿曼與國際海事組織（IMO）合闢的沿岸新航道，貼著阿曼穆桑代姆半島通過荷莫茲海峽"
-  - "伊朗革命衛隊稱新航道「不可接受且極度危險」、警告「違者將受處置」，並對一艘油輪以無線電嗆「你在我飛彈射程內」"
-  - "勞氏船舶情報統計，上週通過海峽船隻回升至125艘、前一週僅33艘，但仍低於戰前每日130艘以上水準"
-  - "一艘船隻在阿曼外海遭擊中後，IMO秘書長多明格斯宣布暫停撤離行動；同日美國國務卿魯比歐赴波斯灣安撫盟邦"
+  - "英國軍方7月7日證實，兩艘船隻週一（7/6）夜間在阿曼利馬外海遭不明投射物擊中：卡達籍LNG船「Al Rekayyat」引擎室起火、一艘沙烏地籍油輪船體受損，均無人員傷亡"
+  - "英國海事貿易行動中心（UKMTO）證實遇襲；路透社引述消息人士稱伊朗革命衛隊發射至少兩枚飛彈，德黑蘭官媒暗示是伊朗所為，但未正式承認"
+  - "卡達外交部發言人稱此舉是「對國際航行與全球能源安全不可接受的攻擊」；事件恐撕毀三週前簽署、讓海峽對所有船隻開放60天的備忘錄"
+  - "美國總統川普警告伊朗「要嘛達成協議、要嘛我們把任務做完」，國際油價聞訊走揚；此前，油輪「Stoic Warrior」號6月25日曾領頭改走阿曼沿岸新航道，通行量一度回升至單週125艘"
 references:
+  - title: "British military says second ship hit in Strait of Hormuz"
+    url: "https://www.local10.com/business/2026/07/07/british-military-says-second-ship-hit-in-strait-of-hormuz/"
+    publisher: "Local10 (AP)"
+  - title: "Ships attacked in the Strait of Hormuz: What that means for ongoing talks"
+    url: "https://www.aljazeera.com/news/2026/7/7/ships-attacked-in-the-strait-of-hormuz-what-that-means-for-ongoing-talks"
+    publisher: "Al Jazeera"
+  - title: "Oil prices rise after report of Iranian attack on commercial ships in Strait of Hormuz"
+    url: "https://www.cnbc.com/2026/07/07/oil-prices-iran-strait-hormuz.html"
+    publisher: "CNBC"
   - title: "Oil tankers navigate the Strait of Hormuz despite threats from Iran's Revolutionary Guard"
     url: "https://www.inquirer.com/news/nation-world/strait-of-hormuz-iran-threats-20260625.html"
     publisher: "The Philadelphia Inquirer (AP)"
@@ -36,18 +46,36 @@ coverAlt: "海上航行的大型油輪"
 coverImageCredit: "Photo by Seval Torun on Unsplash"
 ---
 
-在伊朗革命衛隊（IRGC）持續威脅航運的情況下，一批油輪6月25日仍闖過荷莫茲海峽，改走阿曼與聯合國機構新近劃設、貼近阿曼海岸的替代航道。伊朗隨即宣稱這條航道「不可接受且極度危險」、揚言「違者將受處置」，海峽通行量則在停滯數月後明顯回升。
+荷莫茲海峽的緊張情勢7月初再度升溫。英國軍方7月7日證實，兩艘船隻在阿曼外海遭不明投射物擊中，其中一艘卡達籍液化天然氣（LNG）運輸船引擎室起火，所幸均無人員傷亡。卡達外交部隨即譴責這是「對國際航行不可接受的攻擊」，而這起事件恐讓三週前才簽署、讓海峽暫時對所有船隻開放的停火備忘錄面臨瓦解。這波新攻擊，發生在伊朗革命衛隊持續威脅航運、油輪6月底改走阿曼沿岸新航道之後。
 
-## 油輪改走阿曼沿岸新航道
+## 兩船遭擊中：LNG船起火、油輪受損
+
+據[Local10轉發的美聯社報導](https://www.local10.com/business/2026/07/07/british-military-says-second-ship-hit-in-strait-of-hormuz/)，英國海事貿易行動中心（UKMTO）證實，兩艘船隻週一（7月6日）夜間在阿曼北部利馬（Limah）外海遭投射物擊中。UKMTO描述其中一起攻擊為「投射物擊中船隻左舷，當時該船正試圖南行駛出海峽、前往阿曼灣」。[半島電視台報導](https://www.aljazeera.com/news/2026/7/7/ships-attacked-in-the-strait-of-hormuz-what-that-means-for-ongoing-talks)指出，受創船隻分別是卡達籍LNG運輸船「Al Rekayyat」與一艘沙烏地阿拉伯籍原油運輸船，事發地點約在利馬外海8海浬（15公里）處；「Al Rekayyat」號引擎室起火，另一艘油輪則船體受損，兩船均無人員傷亡回報。
+
+責任歸屬目前仍屬羅生門。[半島電視台報導](https://www.aljazeera.com/news/2026/7/7/ships-attacked-in-the-strait-of-hormuz-what-that-means-for-ongoing-talks)引述路透社消息人士說法，指伊朗革命衛隊（IRGC）發射至少兩枚飛彈；伊朗國營電視台雖暗示德黑蘭涉入此次攻擊、聲稱該船隻「忽視警告」，但伊朗官方並未正式承認犯案，美國中央司令部與伊朗革命衛隊雙方都未對事件公開評論。
+
+## 卡達譴責「不可接受」　備忘錄恐生變
+
+<figure>
+<img src="/images/hormuz-tankers-oman-route-iran-threats-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="沿著海岸航行的貨輪與油輪">
+<figcaption>荷莫茲海峽再傳船隻遇襲，卡達外交部稱是對國際航行的不可接受攻擊。（示意圖／Photo by Jacob Fryer on Unsplash）</figcaption>
+</figure>
+
+卡達外交部發言人安薩里（Majed Al-Ansari）對此事件表態強硬。[Local10引述美聯社報導](https://www.local10.com/business/2026/07/07/british-military-says-second-ship-hit-in-strait-of-hormuz/)，安薩里稱「Al Rekayyat」號遭鎖定攻擊，是「對國際航行與全球能源安全不可接受的攻擊」，並形容此舉「嚴重且明確違反國際法」。
+
+這起攻擊的時機格外敏感。據[半島電視台報導](https://www.aljazeera.com/news/2026/7/7/ships-attacked-in-the-strait-of-hormuz-what-that-means-for-ongoing-talks)，美伊三週前簽署的備忘錄原本約定，荷莫茲海峽至少60天內須對所有船隻開放通行，作為雙方談判永久協議的基礎；但備忘錄簽署後四天，通過海峽的船隻僅7艘，遠低於戰前每日120至140艘的水準，而美伊另一份為期一週、暫停海峽攻擊的協議也已到期。半島電視台引述南佛羅里達大學政治學教授米拉尼（Mohsen Milani）分析，伊朗正試圖把「對海峽一半的實質掌控」轉化成談判籌碼。
+
+## 川普：要嘛達成協議、要嘛做完任務
+
+美國總統川普對此事件反應強烈。[CNBC報導](https://www.cnbc.com/2026/07/07/oil-prices-iran-strait-hormuz.html)指出，川普7月6日表示美伊「要嘛達成協議、要嘛我們把任務做完」，重申對伊朗採取軍事行動的威脅；受攻擊消息影響，國際油價隨後走揚。[半島電視台報導](https://www.aljazeera.com/news/2026/7/7/ships-attacked-in-the-strait-of-hormuz-what-that-means-for-ongoing-talks)則引述伊朗外長阿拉奇齊（Abbas Araghchi）回應，若威脅持續，最終協議的談判恐怕無法展開。雙方爭執焦點還包括伊朗是否可對通行船隻收費、海峽內水雷疑慮，以及以色列對黎巴嫩的軍事行動。
+
+## 事件背景：油輪改走阿曼沿岸新航道
+
+在這波攻擊發生之前，伊朗革命衛隊（IRGC）已持續威脅航運數週。一批油輪6月25日仍闖過荷莫茲海峽，改走阿曼與聯合國機構新近劃設、貼近阿曼海岸的替代航道。伊朗隨即宣稱這條航道「不可接受且極度危險」、揚言「違者將受處置」，海峽通行量則在停滯數月後明顯回升。
 
 據[費城詢問報（The Philadelphia Inquirer）轉發的美聯社報導](https://www.inquirer.com/news/nation-world/strait-of-hormuz-iran-threats-20260625.html)，由油輪「Stoic Warrior」號領頭的數艘船隻，6月25日（週四）上午先沿著阿拉伯聯合大公國（UAE）海岸、再轉往阿曼，貼著阿曼最北端的穆桑代姆半島（Musandam Peninsula）近岸航行，通過荷莫茲海峽。這條路線是阿曼與聯合國轄下的國際海事組織（IMO）共同劃設、近日推動的替代航道。
 
 [拉斯維加斯評論報（Las Vegas Review-Journal）同樣引述美聯社](https://www.reviewjournal.com/news/politics-and-government/oil-tankers-use-new-route-through-strait-of-hormuz-despite-iranian-threats-3842820/)指出，這條新航道刻意走在阿曼領海一側、遠離伊朗單方面公告的傳統航道，目的是降低船隻遭伊朗攔截或攻擊的風險。
-
-<figure>
-<img src="/images/hormuz-tankers-oman-route-iran-threats-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="沿著海岸航行的貨輪與油輪">
-<figcaption>油輪改走阿曼穆桑代姆半島近岸的新航道，避開伊朗公告的傳統航道。（示意圖／Photo by Jacob Fryer on Unsplash）</figcaption>
-</figure>
 
 ## 伊朗：唯一合法航道由伊朗公告　「違者將受處置」
 
@@ -66,3 +94,8 @@ coverImageCredit: "Photo by Seval Torun on Unsplash"
 這波海上對峙，發生在美伊試圖談成過渡和平協議的背景下。據[費城詢問報](https://www.inquirer.com/news/nation-world/strait-of-hormuz-iran-threats-20260625.html)與[愛爾蘭快報](https://www.irishexaminer.com/world/arid-41869023.html)報導，美國與伊朗上週簽署一份諒解備忘錄，給予雙方60天時間敲定過渡協議，內容涵蓋船隻通行權與伊朗濃縮鈾庫存等議題。美國國務卿魯比歐（Marco Rubio）6月25日赴波斯灣會晤海灣阿拉伯國家合作委員會（GCC）官員，向盟邦保證美方仍堅守支持這條新航道的立場。
 
 荷莫茲海峽是全球能源運輸的咽喉。根據[維基百科彙整的「2026年荷莫茲海峽危機」條目](https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis)，這場危機自2026年2月底軍事衝突爆發後升溫，伊朗一度宣布封鎖海峽、攔截或攻擊船隻，使這條平日承載全球大量原油外運的水道一度近乎癱瘓。如今船隻嘗試循新航道恢復通行，但伊朗與相關各方對「哪條航道合法」各執一詞，海峽局勢仍未真正穩定。
+
+## 更新時間軸
+
+- （更新 2026-07-07：英國軍方證實兩船在阿曼利馬外海遭不明投射物擊中，卡達籍LNG船「Al Rekayyat」引擎室起火、沙國籍油輪受損，均無人員傷亡；卡達外交部譴責「不可接受」，事件恐撕毀三週前簽署的60天通行備忘錄；川普警告「要嘛達成協議、要嘛我們把任務做完」。）（[Local10](https://www.local10.com/business/2026/07/07/british-military-says-second-ship-hit-in-strait-of-hormuz/)、[Al Jazeera](https://www.aljazeera.com/news/2026/7/7/ships-attacked-in-the-strait-of-hormuz-what-that-means-for-ongoing-talks)、[CNBC](https://www.cnbc.com/2026/07/07/oil-prices-iran-strait-hormuz.html)）
+- （2026-06-26）油輪「Stoic Warrior」號6月25日領頭改走阿曼與IMO合闢的沿岸新航道；伊朗革命衛隊稱該航道「不可接受且極度危險」並警告「違者將受處置」；海峽單週通行量回升至125艘，仍低於戰前水準。（[The Philadelphia Inquirer](https://www.inquirer.com/news/nation-world/strait-of-hormuz-iran-threats-20260625.html)、[Irish Examiner](https://www.irishexaminer.com/world/arid-41869023.html)、[Las Vegas Review-Journal](https://www.reviewjournal.com/news/politics-and-government/oil-tankers-use-new-route-through-strait-of-hormuz-despite-iranian-threats-3842820/)）

@@ -1,0 +1,54 @@
+---
+title: "台日簽署抗高溫MOU：從跨部會兵推到國際合作，涼適地圖整合逾9600處降溫據點"
+slug: "taiwan-japan-extreme-heat-mou"
+description: "環境部7月4日在高雄科工館促成台灣防災產業協會與日本能率協會、靜岡縣防災用品普及促進協議會簽署三方合作備忘錄，就高溫調適、城市韌性與產業技術交流建立長期合作機制；環境部同時公開全台9,641處涼適據點的開放資料。"
+publishDate: "2026-07-07T01:35:27.120Z"
+category: "focus"
+subcategory: "policy-watch"
+tags: ["極端高溫", "氣候調適", "城市韌性", "台日合作", "涼適地圖", "環境部"]
+author: "appi-editorial"
+coverImage: "covers/taiwan-japan-extreme-heat-mou-cover.webp"
+coverAlt: "夏日城市街道與行道樹樹蔭，象徵都市降溫與高溫調適"
+coverImageCredit: "Photo by Iván W. Lui on Unsplash"
+status: "published"
+sourceType: "wire"
+contentType: "news"
+disclaimerType: "general"
+disclosure: "本文整理自環境部新聞專區公開新聞稿與中央社等媒體公開報導，並附原文出處連結；事實與數字以官方原文為準。"
+highlights:
+  - "環境部7月4日在高雄科工館促成台灣防災產業協會，與日本能率協會、靜岡縣防災用品普及促進協議會簽署三方合作備忘錄，聚焦高溫調適、城市韌性、技術交流與產業媒合。"
+  - "環境部同步公開「涼適地圖」，以AI Ready開放資料格式整合全台9,641處涼適據點，涵蓋公有場館、超商、量販店、社福據點與企業響應空間。"
+  - "環境部長彭啓明指出，台北測站5月27日測得攝氏38.3度，創設站130年來5月最高溫紀錄；環境部6月29日已完成跨部會40°C極端高溫應變演練。"
+references:
+  - title: "環境部新聞專區。臺日攜手抗高溫　三方簽署MOU 打造亞洲城市韌性合作新模式"
+    url: "https://enews.moenv.gov.tw/page/3b3c62c78849f32f/9eb1016e-ae38-4de8-80c6-d7c88844e9f2"
+    publisher: "環境部"
+  - title: "中央社。極端氣候來臨 彭啓明見證台日簽MOU合作抗高溫"
+    url: "https://www.cna.com.tw/news/ahel/202607040080.aspx"
+    publisher: "中央社"
+  - title: "蕃新聞。打造亞洲城市韌性合作新模式 臺日聯手手抗高溫 三方簽署MOU"
+    url: "https://n.yam.com/Article/20260704727013"
+    publisher: "蕃新聞"
+  - title: "蕃新聞。臺日正式結盟簽署MOU 打造「亞洲抗熱防護網」 環境部彭啓明見證"
+    url: "https://n.yam.com/Article/20260704356709"
+    publisher: "蕃新聞"
+draft: false
+---
+
+環境部7月4日在高雄國立科學工藝博物館舉辦「2026臺日抗高溫大聯盟－涼適嘉年華」，促成台灣防災產業協會與日本能率協會、靜岡縣防災用品普及促進協議會簽署三方合作備忘錄（MOU），[依環境部新聞專區說明](https://enews.moenv.gov.tw/page/3b3c62c78849f32f/9eb1016e-ae38-4de8-80c6-d7c88844e9f2)，三方將以此建立長期合作平台，持續推動高溫調適、城市韌性、技術交流、人才交流及產業媒合。活動展期至7月5日。
+
+## 從兵棋推演到國際合作備忘錄
+
+環境部長彭啓明在活動中表示，「高溫不是未來式，而是現在進行式」，強調「沒有任何國家或單位能單打獨鬥，唯有中央、地方、企業及國際共同合作」。[中央社報導](https://www.cna.com.tw/news/ahel/202607040080.aspx)，這場MOU簽署是繼環境部6月底完成跨部會40°C極端高溫應變演練後，將調適工作進一步延伸到國際合作層次，由過去單一部會的內部兵棋推演，擴大為與日本防災產業、學研機構的技術與人才交流機制。
+
+<img src="/images/taiwan-japan-extreme-heat-mou-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="公共空間的降溫遮蔭座椅，象徵涼適據點與高溫調適">
+
+## 涼適地圖開放9,641處據點資料
+
+環境部同步公開「涼適地圖」，[據蕃新聞報導](https://n.yam.com/Article/20260704727013)，這項平台整合全台9,641處涼適據點，包含公有場館、便利商店、量販超市、社福據點與企業響應空間，並以AI Ready資料格式開放各界介接應用，供民眾查詢就近的避暑地點。彭啓明並提到，都市降溫的根本之道在於增加綠蔭，呼應環境部近期同步推動的國土綠蔭社會溝通工作。
+
+彭啓明也提到，台北測站5月27日測得攝氏38.3度，創下設站130年以來5月最高溫紀錄，[另一篇蕃新聞報導引述](https://n.yam.com/Article/20260704356709)其談話指出，極端氣候與強聖嬰現象已成全球常態，未來調適作為將比減碳工程更具長期關鍵性。
+
+<img src="/images/taiwan-japan-extreme-heat-mou-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="城市街道行道樹綠蔭，象徵都市綠化降低熱島效應">
+
+三方MOU簽署後，後續合作將聚焦於高溫防護技術與防災產業的實務交流，包括城市降溫設計、社區調適能量與跨國經驗分享。環境部並未在新聞稿中提出後續合作案的具體時程或量化目標，相關進度仍待三方後續協商。

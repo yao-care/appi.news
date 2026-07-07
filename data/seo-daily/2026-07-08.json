@@ -1,0 +1,2489 @@
+{
+  "date": "2026-07-08",
+  "generatedAt": "2026-07-07T21:20:01.776Z",
+  "ga4": {
+    "range": "7daysAgo..yesterday",
+    "sessions": 165,
+    "users": 130,
+    "views": 222,
+    "avgDurationSec": 116,
+    "taiwanOrganicSessions": 43,
+    "channels": [
+      {
+        "channel": "Direct",
+        "sessions": 64
+      },
+      {
+        "channel": "Organic Search",
+        "sessions": 60
+      },
+      {
+        "channel": "Referral",
+        "sessions": 27
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 16
+      },
+      {
+        "channel": "AI Assistant",
+        "sessions": 3
+      },
+      {
+        "channel": "Cross-network",
+        "sessions": 1
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/",
+        "views": 47
+      },
+      {
+        "path": "/articles/humanoid-robots-figure-bmw-production-line/",
+        "views": 11
+      },
+      {
+        "path": "/authors/",
+        "views": 11
+      },
+      {
+        "path": "/articles/",
+        "views": 8
+      },
+      {
+        "path": "/health/",
+        "views": 8
+      },
+      {
+        "path": "/articles/taipower-grid-resilience-161kv-cable/",
+        "views": 7
+      },
+      {
+        "path": "/finance/",
+        "views": 7
+      },
+      {
+        "path": "/2026/",
+        "views": 6
+      },
+      {
+        "path": "/articles/vc-association-embrace-failure-culture/",
+        "views": 6
+      },
+      {
+        "path": "/focus/",
+        "views": 6
+      },
+      {
+        "path": "/articles/taiwan-offshore-wind-r3-3-admin-contract-update/",
+        "views": 5
+      },
+      {
+        "path": "/lifestyle/",
+        "views": 5
+      },
+      {
+        "path": "/articles/benzo-pyrene-oil-long-term-exposure/",
+        "views": 4
+      },
+      {
+        "path": "/articles/knee-injection-ha-prp-steroid-comparison/",
+        "views": 4
+      },
+      {
+        "path": "/articles/typhoon-closures-kaohsiung-pingtung-chiayi/",
+        "views": 4
+      }
+    ]
+  },
+  "gsc": {
+    "range": "2026-06-27..2026-07-04",
+    "totals": {
+      "clicks": 64,
+      "impressions": 3338,
+      "ctr": 0.019173157579388856,
+      "position": 15.791192330736969
+    },
+    "topQueries": [
+      {
+        "query": "國科會 預算",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 2
+      },
+      {
+        "query": "髖關節",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 122
+      },
+      {
+        "query": "161kv",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "query": "2026冬季奧運轉播",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "query": "2026科技業人才報告書",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "query": "6/25停班停課",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "query": "6月25日停班停課",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "query": "android 17 gemini intelligence",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "query": "appi news japan",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "query": "cbam",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 100
+      },
+      {
+        "query": "cbam申報",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 62.5
+      },
+      {
+        "query": "dash diet 中文",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 95
+      },
+      {
+        "query": "dha epa",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 79
+      },
+      {
+        "query": "e dreg",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "query": "epa dha",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 84.75
+      },
+      {
+        "query": "epa dha 差別",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 81
+      },
+      {
+        "query": "epa dha差別",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 75
+      },
+      {
+        "query": "epa 是 什麼",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 72
+      },
+      {
+        "query": "epa 脂肪酸",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "query": "epa是什麼",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 85
+      },
+      {
+        "query": "f.a.c.e 美顏針",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 87
+      },
+      {
+        "query": "f.a.c.e. 美顏針",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 75
+      },
+      {
+        "query": "face美顏針",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 75.25
+      },
+      {
+        "query": "glp-1 副作用",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 77
+      },
+      {
+        "query": "gtc taipei",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 48
+      }
+    ],
+    "topPages": [
+      {
+        "page": "https://appi.news/articles/typhoon-closures-kaohsiung-pingtung-chiayi/",
+        "clicks": 9,
+        "impressions": 201,
+        "ctr": 0.04477611940298507,
+        "position": 8.278606965174129
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "clicks": 6,
+        "impressions": 301,
+        "ctr": 0.019933554817275746,
+        "position": 6.548172757475083
+      },
+      {
+        "page": "https://appi.news/articles/uk-halifax-brand-ends-lloyds-rebrand/",
+        "clicks": 4,
+        "impressions": 33,
+        "ctr": 0.12121212121212122,
+        "position": 3.878787878787879
+      },
+      {
+        "page": "https://appi.news/",
+        "clicks": 3,
+        "impressions": 8,
+        "ctr": 0.375,
+        "position": 3.25
+      },
+      {
+        "page": "https://appi.news/articles/ai-basic-law-risk-classification-enterprise-checklist/",
+        "clicks": 2,
+        "impressions": 7,
+        "ctr": 0.2857142857142857,
+        "position": 5.571428571428571
+      },
+      {
+        "page": "https://appi.news/articles/dup-donaldson-guilty-sex-offences/",
+        "clicks": 2,
+        "impressions": 19,
+        "ctr": 0.10526315789473684,
+        "position": 4.421052631578947
+      },
+      {
+        "page": "https://appi.news/articles/police-good-deeds-2026-06-24/",
+        "clicks": 2,
+        "impressions": 52,
+        "ctr": 0.038461538461538464,
+        "position": 6.788461538461538
+      },
+      {
+        "page": "https://appi.news/articles/post-725/",
+        "clicks": 2,
+        "impressions": 15,
+        "ctr": 0.13333333333333333,
+        "position": 9.6
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-carbon-market-ets-three-track/",
+        "clicks": 2,
+        "impressions": 16,
+        "ctr": 0.125,
+        "position": 7.9375
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-extreme-heat-drill-2026/",
+        "clicks": 2,
+        "impressions": 50,
+        "ctr": 0.04,
+        "position": 7.2
+      },
+      {
+        "page": "https://appi.news/articles/%E5%B0%8D%E6%AF%94%E5%90%84%E5%9C%8B%E5%A4%96%E9%80%81%E7%94%9F%E6%85%8B%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC-foodpanda-%E5%81%9A%E4%B8%8D%E4%B8%8B%E5%8E%BB%EF%BC%9F/",
+        "clicks": 1,
+        "impressions": 10,
+        "ctr": 0.1,
+        "position": 9
+      },
+      {
+        "page": "https://appi.news/articles/ai-new-infrastructure-compute-trusted-industries/",
+        "clicks": 1,
+        "impressions": 24,
+        "ctr": 0.041666666666666664,
+        "position": 7.083333333333333
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "clicks": 1,
+        "impressions": 110,
+        "ctr": 0.00909090909090909,
+        "position": 68.56363636363636
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-194/",
+        "clicks": 1,
+        "impressions": 9,
+        "ctr": 0.1111111111111111,
+        "position": 6.333333333333333
+      },
+      {
+        "page": "https://appi.news/articles/benzo-pyrene-oil-long-term-exposure/",
+        "clicks": 1,
+        "impressions": 6,
+        "ctr": 0.16666666666666666,
+        "position": 7.5
+      },
+      {
+        "page": "https://appi.news/articles/bonn-climate-talks-2026-stall-road-to-cop31/",
+        "clicks": 1,
+        "impressions": 9,
+        "ctr": 0.1111111111111111,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/carbon-fee-ets-taiwan-japan-korea-forum-2026/",
+        "clicks": 1,
+        "impressions": 8,
+        "ctr": 0.125,
+        "position": 6.75
+      },
+      {
+        "page": "https://appi.news/articles/carbon-inventory-scope3-harmonization/",
+        "clicks": 1,
+        "impressions": 19,
+        "ctr": 0.05263157894736842,
+        "position": 5.842105263157895
+      },
+      {
+        "page": "https://appi.news/articles/eu-japan-circular-economy-laws/",
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 0.14285714285714285,
+        "position": 10.857142857142858
+      },
+      {
+        "page": "https://appi.news/articles/food-ad-violations-kaohsiung-fines/",
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 0.14285714285714285,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/hormuz-tankers-oman-route-iran-threats/",
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 7.25
+      },
+      {
+        "page": "https://appi.news/articles/lincoln-reflecting-pool-vandalism-claim/",
+        "clicks": 1,
+        "impressions": 18,
+        "ctr": 0.05555555555555555,
+        "position": 6.444444444444445
+      },
+      {
+        "page": "https://appi.news/articles/police-good-deeds-2026-06-23/",
+        "clicks": 1,
+        "impressions": 6,
+        "ctr": 0.16666666666666666,
+        "position": 5.166666666666667
+      },
+      {
+        "page": "https://appi.news/articles/post-306/",
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 0.2,
+        "position": 10.2
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "clicks": 1,
+        "impressions": 44,
+        "ctr": 0.022727272727272728,
+        "position": 80.38636363636364
+      }
+    ],
+    "pageQueryCross": [
+      {
+        "page": "https://appi.news/articles/ai-new-infrastructure-compute-trusted-industries/",
+        "query": "國科會 預算",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 2
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖關節",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 122
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 73.33333333333333
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻 副作用",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 41
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻 功效",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 52.333333333333336
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻 的 副作用",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻 的 功效 與 禁忌",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 46
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻功效",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻功效與禁忌",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 38.5
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻的副作用",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻的功效吃法",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 36.5
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻的功效和副作用",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 39
+      },
+      {
+        "page": "https://appi.news/articles/%E5%AE%AE%E9%AC%A5%E5%8A%87%E5%B8%B8%E5%AE%A2%E3%80%8C%E8%97%8F%E7%B4%85%E8%8A%B1%E3%80%8D%E7%9A%84%E4%BF%9D%E5%81%A5%E5%8A%9F%E6%95%88%E8%88%87%E9%A2%A8%E9%9A%AA%EF%BC%9F%E5%BE%9E%E7%9D%A1%E7%9C%A0/",
+        "query": "藏紅花功效",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 64.75
+      },
+      {
+        "page": "https://appi.news/articles/%E5%AE%AE%E9%AC%A5%E5%8A%87%E5%B8%B8%E5%AE%A2%E3%80%8C%E8%97%8F%E7%B4%85%E8%8A%B1%E3%80%8D%E7%9A%84%E4%BF%9D%E5%81%A5%E5%8A%9F%E6%95%88%E8%88%87%E9%A2%A8%E9%9A%AA%EF%BC%9F%E5%BE%9E%E7%9D%A1%E7%9C%A0/",
+        "query": "藏紅花的功效",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "page": "https://appi.news/articles/%E6%B2%B9%E7%94%98%E6%9E%9C%E5%8A%9F%E6%95%88%E4%B8%80%E6%AC%A1%E7%9C%8B%E6%87%82%EF%BC%9A%E6%8A%97%E6%B0%A7%E5%8C%96%E3%80%81%E9%99%8D%E8%A1%80%E8%84%82%E3%80%81%E8%AD%B7%E8%82%9D%E8%88%87%E6%94%B9/",
+        "query": "油 甘 果",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 59
+      },
+      {
+        "page": "https://appi.news/articles/%E6%B2%B9%E7%94%98%E6%9E%9C%E5%8A%9F%E6%95%88%E4%B8%80%E6%AC%A1%E7%9C%8B%E6%87%82%EF%BC%9A%E6%8A%97%E6%B0%A7%E5%8C%96%E3%80%81%E9%99%8D%E8%A1%80%E8%84%82%E3%80%81%E8%AD%B7%E8%82%9D%E8%88%87%E6%94%B9/",
+        "query": "油甘子 功效",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "page": "https://appi.news/articles/%E6%B2%B9%E7%94%98%E6%9E%9C%E5%8A%9F%E6%95%88%E4%B8%80%E6%AC%A1%E7%9C%8B%E6%87%82%EF%BC%9A%E6%8A%97%E6%B0%A7%E5%8C%96%E3%80%81%E9%99%8D%E8%A1%80%E8%84%82%E3%80%81%E8%AD%B7%E8%82%9D%E8%88%87%E6%94%B9/",
+        "query": "油甘果",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 51
+      },
+      {
+        "page": "https://appi.news/articles/%E6%B2%B9%E7%94%98%E6%9E%9C%E5%8A%9F%E6%95%88%E4%B8%80%E6%AC%A1%E7%9C%8B%E6%87%82%EF%BC%9A%E6%8A%97%E6%B0%A7%E5%8C%96%E3%80%81%E9%99%8D%E8%A1%80%E8%84%82%E3%80%81%E8%AD%B7%E8%82%9D%E8%88%87%E6%94%B9/",
+        "query": "油甘果的功效",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "page": "https://appi.news/articles/%E6%B7%BA%E7%84%99%E6%AF%94%E8%BC%83%E5%81%A5%E5%BA%B7%EF%BC%9F%E6%B7%B1%E7%84%99%E6%AF%94%E8%BC%83%E6%BA%AB%E5%92%8C%EF%BC%9F%E5%92%96%E5%95%A1%E6%88%90%E5%88%86%E7%9C%9F%E7%9B%B8%E4%B8%80%E6%AC%A1/",
+        "query": "淺 焙 咖啡 的 好處",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 78
+      },
+      {
+        "page": "https://appi.news/articles/%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%80%E5%88%B0%E4%B8%8B%E5%8D%88%E5%B0%B1%E9%A0%AD%E7%97%9B%EF%BC%9F%E5%B8%B8%E8%A6%8B%E7%94%9F%E6%B4%BB%E8%AA%98%E5%9B%A0%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9A7-%E5%80%8B/",
+        "query": "下午頭痛",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/%E8%86%9D%E8%93%8B%E9%80%80%E5%8C%96%E8%AE%8A%E5%A4%A9%E5%B0%B1%E6%9C%83%E7%97%9B%EF%BC%9F%E5%B0%88%E5%AE%B6%E6%8E%A8%E8%96%A65%E5%A4%A7%E9%81%8B%E5%8B%95%EF%BC%8C%E5%BC%B7%E5%8C%96%E9%97%9C%E7%AF%80/",
+        "query": "膝關節退化運動",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 47.18181818181818
+      },
+      {
+        "page": "https://appi.news/articles/%E8%86%BD%E5%9B%BA%E9%86%87%E9%81%8E%E9%AB%98%E4%B8%8D%E8%83%BD%E5%90%83%E9%9B%9E%E8%9B%8B%EF%BC%9F%E5%B0%88%E5%AE%B6%E7%A0%B4%E8%A7%A3%E8%BF%B7%E6%80%9D%EF%BC%8C%E9%80%99%E6%A8%A3%E5%90%83%E8%AE%93/",
+        "query": "雞蛋膽固醇高嗎",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 69
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖 關節 疼痛",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 82
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖 關節 痛 原因",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 85
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖 關節 痛 治療",
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 88.07692307692308
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖關節受傷症狀",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 73
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖關節炎",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 83
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖關節疼痛",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 73.2
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖關節疼痛 檢查",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 95.66666666666667
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖關節痛",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 82.27272727272727
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖關節酸痛",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 84.75
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%97%9B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%97%87%E7%8B%80%EF%BC%9F%E6%95%99%E4%BD%A0%E5%88%A4%E6%96%B7%E4%B8%8D%E5%90%8C%E5%8E%9F%E5%9B%A0%E8%88%87%E6%B2%BB%E7%99%82%E6%96%B9/",
+        "query": "髖 關節",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 92
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%97%9B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%97%87%E7%8B%80%EF%BC%9F%E6%95%99%E4%BD%A0%E5%88%A4%E6%96%B7%E4%B8%8D%E5%90%8C%E5%8E%9F%E5%9B%A0%E8%88%87%E6%B2%BB%E7%99%82%E6%96%B9/",
+        "query": "髖 關節 外側 痛",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 77
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%97%9B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%97%87%E7%8B%80%EF%BC%9F%E6%95%99%E4%BD%A0%E5%88%A4%E6%96%B7%E4%B8%8D%E5%90%8C%E5%8E%9F%E5%9B%A0%E8%88%87%E6%B2%BB%E7%99%82%E6%96%B9/",
+        "query": "髖 關節 痛 原因",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 93.33333333333333
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%97%9B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%97%87%E7%8B%80%EF%BC%9F%E6%95%99%E4%BD%A0%E5%88%A4%E6%96%B7%E4%B8%8D%E5%90%8C%E5%8E%9F%E5%9B%A0%E8%88%87%E6%B2%BB%E7%99%82%E6%96%B9/",
+        "query": "髖 關節 痛 治療",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 88.25
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%97%9B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%97%87%E7%8B%80%EF%BC%9F%E6%95%99%E4%BD%A0%E5%88%A4%E6%96%B7%E4%B8%8D%E5%90%8C%E5%8E%9F%E5%9B%A0%E8%88%87%E6%B2%BB%E7%99%82%E6%96%B9/",
+        "query": "髖關節 膝蓋痛",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 69
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%97%9B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%97%87%E7%8B%80%EF%BC%9F%E6%95%99%E4%BD%A0%E5%88%A4%E6%96%B7%E4%B8%8D%E5%90%8C%E5%8E%9F%E5%9B%A0%E8%88%87%E6%B2%BB%E7%99%82%E6%96%B9/",
+        "query": "髖關節炎",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 95
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%97%9B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%97%87%E7%8B%80%EF%BC%9F%E6%95%99%E4%BD%A0%E5%88%A4%E6%96%B7%E4%B8%8D%E5%90%8C%E5%8E%9F%E5%9B%A0%E8%88%87%E6%B2%BB%E7%99%82%E6%96%B9/",
+        "query": "髖關節疼痛",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 97.5
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%97%9B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%97%87%E7%8B%80%EF%BC%9F%E6%95%99%E4%BD%A0%E5%88%A4%E6%96%B7%E4%B8%8D%E5%90%8C%E5%8E%9F%E5%9B%A0%E8%88%87%E6%B2%BB%E7%99%82%E6%96%B9/",
+        "query": "髖關節痛",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 74.63636363636364
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%97%9B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%97%87%E7%8B%80%EF%BC%9F%E6%95%99%E4%BD%A0%E5%88%A4%E6%96%B7%E4%B8%8D%E5%90%8C%E5%8E%9F%E5%9B%A0%E8%88%87%E6%B2%BB%E7%99%82%E6%96%B9/",
+        "query": "髖關節酸痛",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 80
+      },
+      {
+        "page": "https://appi.news/articles/2026-%E5%86%AC%E5%AD%A3%E5%A5%A7%E9%81%8B%E8%BD%89%E6%92%AD%E6%87%B6%E4%BA%BA%E5%8C%85%EF%BD%9C2-21-2-22-day-15-%E8%B3%BD%E7%A8%8B%E8%A1%A8%E3%80%81live-%E7%9B%B4%E6%92%AD%E5%B9%B3%E5%8F%B0/",
+        "query": "2026冬季奧運轉播",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "f.a.c.e 美顏針",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 87
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "f.a.c.e. 美顏針",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 75
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "face美顏針",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 75.25
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "中醫美顏針",
+        "clicks": 0,
+        "impressions": 39,
+        "ctr": 0,
+        "position": 78.51282051282051
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "中醫美顏針有效嗎",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 71.5
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "圖片",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美顏針",
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 71.7
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美顏針 中醫",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 75.25
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美顏針 副作用",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 62.75
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美顏針 禁忌",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 69.16666666666667
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美颜针",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-180/",
+        "query": "glp-1 副作用",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 77
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-180/",
+        "query": "瘦瘦針 原理",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 41
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-180/",
+        "query": "瘦瘦針原理",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 92
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-186/",
+        "query": "蓮 霧 功效",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-186/",
+        "query": "蓮霧功效與禁忌",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 51
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-186/",
+        "query": "蓮霧升糖指數",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-189/",
+        "query": "蜱蟲會飛嗎",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-193/",
+        "query": "檳榔的危害",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-194/",
+        "query": "android 17 gemini intelligence",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-96/",
+        "query": "王威鵬 醫師",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/asco-pancreatic-daraxonrasib-survival/",
+        "query": "胰臟癌新藥daraxonrasib正式發表",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "page": "https://appi.news/articles/carbon-inventory-scope3-harmonization/",
+        "query": "永續專章",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://appi.news/articles/deepseek-capital-taiwan-supply-chain/",
+        "query": "寧德時代",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://appi.news/articles/eu-cbam-transition-reporting-starts/",
+        "query": "cbam",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 100
+      },
+      {
+        "page": "https://appi.news/articles/eu-cbam-transition-reporting-starts/",
+        "query": "cbam申報",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 62.5
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "中度高温警报",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.666666666666668
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "中度高溫警報",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 3.3333333333333335
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "中等高溫警告",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "嚴重高溫警告",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "極端高溫警報",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 3.2857142857142856
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "橘色警報 - 高溫",
+        "clicks": 0,
+        "impressions": 142,
+        "ctr": 0,
+        "position": 7.830985915492958
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "橙色警告 - 炎熱",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "橙色警报 - 高温",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 7.666666666666667
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "黃色警報 - 高溫",
+        "clicks": 0,
+        "impressions": 84,
+        "ctr": 0,
+        "position": 5.583333333333333
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "黃色警報：降溫",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 6.142857142857143
+      },
+      {
+        "page": "https://appi.news/articles/frontier-model-cyber-capability-governance/",
+        "query": "前沿模型",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "page": "https://appi.news/articles/hip-pain-symptoms-causes-treatment/",
+        "query": "髖 關節",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "page": "https://appi.news/articles/hip-pain-symptoms-causes-treatment/",
+        "query": "髖 關節 痛 原因",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 76
+      },
+      {
+        "page": "https://appi.news/articles/hip-pain-symptoms-causes-treatment/",
+        "query": "髖 關節 痛 治療",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 71.5
+      },
+      {
+        "page": "https://appi.news/articles/hip-pain-symptoms-causes-treatment/",
+        "query": "髖關節受傷症狀",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 99
+      },
+      {
+        "page": "https://appi.news/articles/hip-pain-symptoms-causes-treatment/",
+        "query": "髖關節炎",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 98
+      },
+      {
+        "page": "https://appi.news/articles/hip-pain-symptoms-causes-treatment/",
+        "query": "髖關節痛",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 74.75
+      },
+      {
+        "page": "https://appi.news/articles/hip-pain-symptoms-causes-treatment/",
+        "query": "髖關節酸痛",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 91
+      },
+      {
+        "page": "https://appi.news/articles/hip-pain-which-specialist/",
+        "query": "髖關節疼痛 檢查",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 69.66666666666667
+      },
+      {
+        "page": "https://appi.news/articles/hip-pcp-regenerative-therapy/",
+        "query": "pcp prp差異",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://appi.news/articles/holiday-food-safety-guide/",
+        "query": "食材管理",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 62.25
+      },
+      {
+        "page": "https://appi.news/articles/hypertension-dash-diet-menu/",
+        "query": "dash diet 中文",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 95
+      },
+      {
+        "page": "https://appi.news/articles/knee-injection-ha-prp-steroid-comparison/",
+        "query": "prp 玻尿酸 比較",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "page": "https://appi.news/articles/macbook-neo-%E5%80%BC%E5%BE%97%E8%B2%B7%E5%97%8E%EF%BC%9F19900%E5%85%83%E6%9C%80%E4%BE%BF%E5%AE%9C-macbook-%E8%A6%8F%E6%A0%BC%E3%80%81%E5%84%AA%E7%BC%BA%E9%BB%9E%E8%88%87%E8%B3%BC%E8%B2%B7%E5%BB%BA/",
+        "query": "macbook neo",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 69
+      },
+      {
+        "page": "https://appi.news/articles/male-menopause-low-testosterone/",
+        "query": "男性荷爾蒙低下",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 76
+      },
+      {
+        "page": "https://appi.news/articles/meta-business-agent-customer-conversation-governance/",
+        "query": "meta agent",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/odyssey-world-models-physical-ai-moat/",
+        "query": "世界模型",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "page": "https://appi.news/articles/offshore-wind-r3-3-esg-scoring/",
+        "query": "離岸風電 3-3",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "page": "https://appi.news/articles/omega-3%E8%84%82%E8%82%AA%E9%85%B8%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9Aepa%E5%92%8Cdha%E7%9A%84%E5%8A%9F%E8%83%BD%E5%B7%AE%E7%95%B0%E8%88%87%E6%AF%8F%E6%97%A5%E6%94%9D%E5%8F%96%E5%BB%BA/",
+        "query": "dha epa",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 79
+      },
+      {
+        "page": "https://appi.news/articles/omega-3%E8%84%82%E8%82%AA%E9%85%B8%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9Aepa%E5%92%8Cdha%E7%9A%84%E5%8A%9F%E8%83%BD%E5%B7%AE%E7%95%B0%E8%88%87%E6%AF%8F%E6%97%A5%E6%94%9D%E5%8F%96%E5%BB%BA/",
+        "query": "epa dha",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 84.75
+      },
+      {
+        "page": "https://appi.news/articles/omega-3%E8%84%82%E8%82%AA%E9%85%B8%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9Aepa%E5%92%8Cdha%E7%9A%84%E5%8A%9F%E8%83%BD%E5%B7%AE%E7%95%B0%E8%88%87%E6%AF%8F%E6%97%A5%E6%94%9D%E5%8F%96%E5%BB%BA/",
+        "query": "epa dha 差別",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 81
+      },
+      {
+        "page": "https://appi.news/articles/omega-3%E8%84%82%E8%82%AA%E9%85%B8%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9Aepa%E5%92%8Cdha%E7%9A%84%E5%8A%9F%E8%83%BD%E5%B7%AE%E7%95%B0%E8%88%87%E6%AF%8F%E6%97%A5%E6%94%9D%E5%8F%96%E5%BB%BA/",
+        "query": "epa dha差別",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 75
+      },
+      {
+        "page": "https://appi.news/articles/omega-3%E8%84%82%E8%82%AA%E9%85%B8%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9Aepa%E5%92%8Cdha%E7%9A%84%E5%8A%9F%E8%83%BD%E5%B7%AE%E7%95%B0%E8%88%87%E6%AF%8F%E6%97%A5%E6%94%9D%E5%8F%96%E5%BB%BA/",
+        "query": "epa 是 什麼",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 72
+      },
+      {
+        "page": "https://appi.news/articles/omega-3%E8%84%82%E8%82%AA%E9%85%B8%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9Aepa%E5%92%8Cdha%E7%9A%84%E5%8A%9F%E8%83%BD%E5%B7%AE%E7%95%B0%E8%88%87%E6%AF%8F%E6%97%A5%E6%94%9D%E5%8F%96%E5%BB%BA/",
+        "query": "epa 脂肪酸",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "page": "https://appi.news/articles/omega-3%E8%84%82%E8%82%AA%E9%85%B8%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9Aepa%E5%92%8Cdha%E7%9A%84%E5%8A%9F%E8%83%BD%E5%B7%AE%E7%95%B0%E8%88%87%E6%AF%8F%E6%97%A5%E6%94%9D%E5%8F%96%E5%BB%BA/",
+        "query": "epa是什麼",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 85
+      },
+      {
+        "page": "https://appi.news/articles/omega-3%E8%84%82%E8%82%AA%E9%85%B8%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9Aepa%E5%92%8Cdha%E7%9A%84%E5%8A%9F%E8%83%BD%E5%B7%AE%E7%95%B0%E8%88%87%E6%AF%8F%E6%97%A5%E6%94%9D%E5%8F%96%E5%BB%BA/",
+        "query": "الفرق بين dha و epa",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 89
+      },
+      {
+        "page": "https://appi.news/articles/osteoarthritis-nonsurgical-prp/",
+        "query": "prp 玻尿酸 比較",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 78.75
+      },
+      {
+        "page": "https://appi.news/articles/osteoarthritis-nonsurgical-prp/",
+        "query": "prp 關節 注射 缺點",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 135
+      },
+      {
+        "page": "https://appi.news/articles/osteoarthritis-nonsurgical-prp/",
+        "query": "prp關節注射缺點",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 95
+      },
+      {
+        "page": "https://appi.news/articles/osteoarthritis-nonsurgical-prp/",
+        "query": "玻尿酸 prp",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 71.9
+      },
+      {
+        "page": "https://appi.news/articles/osteoarthritis-nonsurgical-prp/",
+        "query": "膝蓋注射",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "page": "https://appi.news/articles/osteoarthritis-nonsurgical-prp/",
+        "query": "關節注射",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 62
+      },
+      {
+        "page": "https://appi.news/articles/passkey-passwordless-login/",
+        "query": "passkey 原理",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "page": "https://appi.news/articles/passkey-passwordless-login/",
+        "query": "行動自然人憑證 通行密鑰",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/passkey-passwordless-login/",
+        "query": "這部裝置上沒有行動自然人憑證的任何密碼金鑰",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "page": "https://appi.news/articles/passkey-passwordless-login/",
+        "query": "通行密鑰是什麼",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "page": "https://appi.news/articles/pingtung-semiconductor-zone-groundbreaking/",
+        "query": "台積電屏東",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 61
+      },
+      {
+        "page": "https://appi.news/articles/police-good-deeds-2026-06-24/",
+        "query": "薛琪樺",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/police-good-deeds-2026-06-25/",
+        "query": "關山分局",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "page": "https://appi.news/articles/post-303/",
+        "query": "原發性經痛",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖 關節 痛 原因",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 77.375
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖 關節 痛 治療",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 77.9
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖關節 膝蓋痛",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 78
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖關節炎",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 77
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖關節疼痛",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 83.25
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖關節疼痛 檢查",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 93
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖關節痛",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 89.55555555555556
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖關節酸痛",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 64.2
+      },
+      {
+        "page": "https://appi.news/articles/post-551/",
+        "query": "天然甜味劑",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 49.75
+      },
+      {
+        "page": "https://appi.news/articles/post-551/",
+        "query": "甜 味 劑",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 79
+      },
+      {
+        "page": "https://appi.news/articles/post-567/",
+        "query": "tsh 正常 值",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 44
+      },
+      {
+        "page": "https://appi.news/articles/post-567/",
+        "query": "tsh 甲狀腺 刺激 素 偏 低",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 66
+      },
+      {
+        "page": "https://appi.news/articles/post-567/",
+        "query": "tsh正常值",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "page": "https://appi.news/articles/post-571/",
+        "query": "sis 痛症療程",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "page": "https://appi.news/articles/post-571/",
+        "query": "sis超磁場治療儀",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 78
+      },
+      {
+        "page": "https://appi.news/articles/post-620/",
+        "query": "循環再利用",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 73
+      },
+      {
+        "page": "https://appi.news/articles/post-626/",
+        "query": "離岸風電3-3",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/post-641/",
+        "query": "伊波拉病毒2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 115
+      },
+      {
+        "page": "https://appi.news/articles/post-644/",
+        "query": "風全球",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/post-704/",
+        "query": "台積電屏東",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 97
+      },
+      {
+        "page": "https://appi.news/articles/post-726/",
+        "query": "上半季冠軍",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "page": "https://appi.news/articles/post-749/",
+        "query": "2026科技業人才報告書",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://appi.news/articles/resource-circulation-act-passed/",
+        "query": "循環再利用",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 61
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "161kv",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "taipower grid resilience plan 強韌電網 計畫",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 10年 5645億",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 5645 億",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 5645 億 10 年",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 5.666666666666667
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 5645 億 10年",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 5645 億 十年",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 5645 億 官方",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電161kv",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電強韌電網計畫",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "建置成本",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-offshore-wind-r3-3-admin-contract-update/",
+        "query": "離岸風電",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-offshore-wind-r3-3-admin-contract-update/",
+        "query": "離岸風電3-3",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-offshore-wind-r3-3-admin-contract-update/",
+        "query": "風電",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 51
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-startups-nvidia-gtc-manufacturing/",
+        "query": "gtc taipei",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 48
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-water-consumption-fee-2026/",
+        "query": "水費減免2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-water-consumption-fee-2026/",
+        "query": "水費漲價2026",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-water-consumption-fee-2026/",
+        "query": "水費調漲2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "t4 甲狀腺",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 66
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "tsh",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 72
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "tsh 2.61",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "tsh 低",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "tsh 偏 低 t4 偏 高",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 38
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "tsh 高",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "tsh甲狀腺刺激素偏低",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 56
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "tsh甲狀腺刺激素偏高",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 70
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "甲狀腺 t4",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 75
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "甲狀腺 指數",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 80
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "甲狀腺 數值",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "page": "https://appi.news/articles/typhoon-closures-kaohsiung-pingtung-chiayi/",
+        "query": "6/25停班停課",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "page": "https://appi.news/articles/typhoon-closures-kaohsiung-pingtung-chiayi/",
+        "query": "6月25日停班停課",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "page": "https://appi.news/articles/uk-heatwave-red-warning-40c/",
+        "query": "严重高温警报",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/uk-heatwave-red-warning-40c/",
+        "query": "嚴重高溫警告",
+        "clicks": 0,
+        "impressions": 39,
+        "ctr": 0,
+        "position": 4.666666666666666
+      },
+      {
+        "page": "https://appi.news/articles/uk-heatwave-red-warning-40c/",
+        "query": "極端高溫警告",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://appi.news/articles/uk-heatwave-red-warning-40c/",
+        "query": "極端高溫警報",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 25.333333333333332
+      },
+      {
+        "page": "https://appi.news/articles/uk-heatwave-red-warning-40c/",
+        "query": "英國 高溫",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "page": "https://appi.news/articles/uni-lions-18th-title-dynasty/",
+        "query": "統一獅冠軍",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "page": "https://appi.news/articles/vc-association-nasdaq-style-board/",
+        "query": "這個",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/wanjinshi-marathon-2026-gold-label/",
+        "query": "萬金石馬拉松2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 41
+      },
+      {
+        "page": "https://appi.news/articles/work-iq-semantic-index-org-governance/",
+        "query": "work iq",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/authors/huang-ziyan/",
+        "query": "黃子彥",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 6.578947368421052
+      },
+      {
+        "page": "https://appi.news/contact/",
+        "query": "appi news japan",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "page": "https://appi.news/tags/e-dreg/",
+        "query": "e dreg",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "page": "https://mastodon.appi.news/",
+        "query": "mastodon",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 47
+      }
+    ],
+    "strikingDistance": [
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "橘色警報 - 高溫",
+        "clicks": 0,
+        "impressions": 142,
+        "ctr": 0,
+        "position": 7.830985915492958
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "黃色警報 - 高溫",
+        "clicks": 0,
+        "impressions": 84,
+        "ctr": 0,
+        "position": 5.583333333333333
+      },
+      {
+        "page": "https://appi.news/authors/huang-ziyan/",
+        "query": "黃子彥",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 6.578947368421052
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "黃色警報：降溫",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 6.142857142857143
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "橙色警报 - 高温",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 7.666666666666667
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 5645 億",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "嚴重高溫警告",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "161kv",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "中度高温警报",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.666666666666668
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 5645 億 10 年",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 5.666666666666667
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-96/",
+        "query": "王威鵬 醫師",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/passkey-passwordless-login/",
+        "query": "這部裝置上沒有行動自然人憑證的任何密碼金鑰",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 5645 億 十年",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "page": "https://appi.news/articles/work-iq-semantic-index-org-governance/",
+        "query": "work iq",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-189/",
+        "query": "蜱蟲會飛嗎",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/carbon-inventory-scope3-harmonization/",
+        "query": "永續專章",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://appi.news/articles/deepseek-capital-taiwan-supply-chain/",
+        "query": "寧德時代",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://appi.news/articles/hip-pcp-regenerative-therapy/",
+        "query": "pcp prp差異",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://appi.news/articles/meta-business-agent-customer-conversation-governance/",
+        "query": "meta agent",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/police-good-deeds-2026-06-24/",
+        "query": "薛琪樺",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/post-749/",
+        "query": "2026科技業人才報告書",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "taipower grid resilience plan 強韌電網 計畫",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 10年 5645億",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 5645 億 10年",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 5645 億 官方",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電強韌電網計畫",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "建置成本",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-offshore-wind-r3-3-admin-contract-update/",
+        "query": "離岸風電",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-high-low-guide/",
+        "query": "tsh 2.61",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/uk-heatwave-red-warning-40c/",
+        "query": "严重高温警报",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      }
+    ],
+    "highImpZeroClick": [
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "橘色警報 - 高溫",
+        "clicks": 0,
+        "impressions": 142,
+        "ctr": 0,
+        "position": 7.830985915492958
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "黃色警報 - 高溫",
+        "clicks": 0,
+        "impressions": 84,
+        "ctr": 0,
+        "position": 5.583333333333333
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "中醫美顏針",
+        "clicks": 0,
+        "impressions": 39,
+        "ctr": 0,
+        "position": 78.51282051282051
+      },
+      {
+        "page": "https://appi.news/articles/uk-heatwave-red-warning-40c/",
+        "query": "嚴重高溫警告",
+        "clicks": 0,
+        "impressions": 39,
+        "ctr": 0,
+        "position": 4.666666666666666
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美顏針",
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 71.7
+      },
+      {
+        "page": "https://appi.news/authors/huang-ziyan/",
+        "query": "黃子彥",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 6.578947368421052
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "極端高溫警報",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 3.2857142857142856
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖 關節 痛 治療",
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 88.07692307692308
+      },
+      {
+        "page": "https://appi.news/articles/%E8%86%9D%E8%93%8B%E9%80%80%E5%8C%96%E8%AE%8A%E5%A4%A9%E5%B0%B1%E6%9C%83%E7%97%9B%EF%BC%9F%E5%B0%88%E5%AE%B6%E6%8E%A8%E8%96%A65%E5%A4%A7%E9%81%8B%E5%8B%95%EF%BC%8C%E5%BC%B7%E5%8C%96%E9%97%9C%E7%AF%80/",
+        "query": "膝關節退化運動",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 47.18181818181818
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖關節痛",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 82.27272727272727
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%97%9B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%97%87%E7%8B%80%EF%BC%9F%E6%95%99%E4%BD%A0%E5%88%A4%E6%96%B7%E4%B8%8D%E5%90%8C%E5%8E%9F%E5%9B%A0%E8%88%87%E6%B2%BB%E7%99%82%E6%96%B9/",
+        "query": "髖關節痛",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 74.63636363636364
+      },
+      {
+        "page": "https://appi.news/articles/osteoarthritis-nonsurgical-prp/",
+        "query": "玻尿酸 prp",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 71.9
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖 關節 痛 治療",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 77.9
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "中度高溫警報",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 3.3333333333333335
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖關節痛",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 89.55555555555556
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖 關節 痛 原因",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 85
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "face美顏針",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 75.25
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "中醫美顏針有效嗎",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 71.5
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美顏針 中醫",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 75.25
+      },
+      {
+        "page": "https://appi.news/articles/omega-3%E8%84%82%E8%82%AA%E9%85%B8%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%EF%BC%9Aepa%E5%92%8Cdha%E7%9A%84%E5%8A%9F%E8%83%BD%E5%B7%AE%E7%95%B0%E8%88%87%E6%AF%8F%E6%97%A5%E6%94%9D%E5%8F%96%E5%BB%BA/",
+        "query": "epa是什麼",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 85
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖 關節 痛 原因",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 77.375
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "黃色警報：降溫",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 6.142857142857143
+      },
+      {
+        "page": "https://appi.news/articles/offshore-wind-r3-3-esg-scoring/",
+        "query": "離岸風電 3-3",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%97%9B%E6%9C%89%E5%93%AA%E4%BA%9B%E7%97%87%E7%8B%80%EF%BC%9F%E6%95%99%E4%BD%A0%E5%88%A4%E6%96%B7%E4%B8%8D%E5%90%8C%E5%8E%9F%E5%9B%A0%E8%88%87%E6%B2%BB%E7%99%82%E6%96%B9/",
+        "query": "髖 關節 痛 原因",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 93.33333333333333
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美顏針 禁忌",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 69.16666666666667
+      },
+      {
+        "page": "https://appi.news/articles/extreme-heat-warning-guide/",
+        "query": "橙色警报 - 高温",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 7.666666666666667
+      },
+      {
+        "page": "https://appi.news/articles/%E9%AB%96%E9%97%9C%E7%AF%80%E7%96%BC%E7%97%9B%E7%9C%8B%E5%93%AA%E4%B8%80%E7%A7%91%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%E6%98%AF%E9%80%80%E5%8C%96%E9%82%84%E6%98%AF%E9%97%9C%E7%AF%80%E6%92%95%E8%A3%82/",
+        "query": "髖關節疼痛",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 73.2
+      },
+      {
+        "page": "https://appi.news/articles/post-426/",
+        "query": "髖關節酸痛",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 64.2
+      },
+      {
+        "page": "https://appi.news/articles/taipower-grid-resilience-161kv-cable/",
+        "query": "台電 強韌電網 計畫 5645 億",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻功效",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 43
+      }
+    ]
+  },
+  "index": {
+    "sitemaps": [
+      {
+        "path": "https://appi.news/sitemap-index.xml",
+        "submitted": 1876,
+        "errors": "0",
+        "warnings": "0"
+      },
+      {
+        "path": "https://appi.news/news-sitemap.xml",
+        "submitted": 8,
+        "errors": "0",
+        "warnings": "0"
+      }
+    ],
+    "coverage": [
+      {
+        "url": "https://appi.news/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-07-06T17:41:26Z"
+      },
+      {
+        "url": "https://appi.news/focus/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-06-16T08:13:57Z"
+      },
+      {
+        "url": "https://appi.news/international/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-06-16T08:14:10Z"
+      },
+      {
+        "url": "https://appi.news/health/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-06-29T04:18:45Z"
+      },
+      {
+        "url": "https://appi.news/tech/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-06-23T05:06:24Z"
+      },
+      {
+        "url": "https://appi.news/finance/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-06-16T08:14:04Z"
+      },
+      {
+        "url": "https://appi.news/sports/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-06-16T08:14:02Z"
+      },
+      {
+        "url": "https://appi.news/lifestyle/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-06-16T08:14:07Z"
+      },
+      {
+        "url": "https://appi.news/topics/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-06-23T07:59:52Z"
+      },
+      {
+        "url": "https://appi.news/articles/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-07-03T06:31:19Z"
+      }
+    ]
+  }
+}

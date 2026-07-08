@@ -31,7 +31,7 @@ draft: false
 
 本文從四個面向拆解：不把單一 AI 服務當唯一命脈、設計容錯與降級的工作流邏輯、面對高管制趨勢的預期調整，以及如何處理同樣的 Prompt 在不同 LLM 跑出不同結果的問題。
 
-![單點依賴與分散韌性工作流的結構對比示意](https://writer.weiqi.kids/articles/appi.news/AI%E6%95%B8%E4%BD%8D%E5%81%A5%E5%BA%B7%E8%A8%AD%E8%A8%88%E8%80%85-%E5%BC%B5%E9%A5%92%E8%BC%9D/issue-195/images/1.png)
+![單點依賴與分散韌性工作流的結構對比示意](https://appi.news/images/appi-news-195/1.png)
 
 ---
 
@@ -64,7 +64,7 @@ draft: false
 
 **有效的容錯設計包含三個環節：自動重試處理短期波動、服務降級觸發備援路由、人工接手作為最終保底。三者的觸發條件要事先定義，而不是等到出問題時才臨時判斷。**
 
-![三層容錯設計流程：重試退避、服務降級路由、人工接手保底](https://writer.weiqi.kids/articles/appi.news/AI%E6%95%B8%E4%BD%8D%E5%81%A5%E5%BA%B7%E8%A8%AD%E8%A8%88%E8%80%85-%E5%BC%B5%E9%A5%92%E8%BC%9D/issue-195/images/2.png)
+![三層容錯設計流程：重試退避、服務降級路由、人工接手保底](https://appi.news/images/appi-news-195/2.png)
 
 錯誤分兩類，處理方式不同。
 
@@ -93,7 +93,7 @@ draft: false
 
 **核心調整是：把 AI 服務的可用性從「固定假設」改為「可變條件」，並把追蹤焦點從「哪個模型被禁了」移向「管制框架的邏輯是什麼、哪類能力是監管重點」。追蹤框架邏輯能讓你預判方向，只追蹤個別禁用事件讓你每次都要重新應急。**
 
-![面對 AI 管制趨勢的組織應對情境示意](https://writer.weiqi.kids/articles/appi.news/AI%E6%95%B8%E4%BD%8D%E5%81%A5%E5%BA%B7%E8%A8%AD%E8%A8%88%E8%80%85-%E5%BC%B5%E9%A5%92%E8%BC%9D/issue-195/images/3.png)
+![面對 AI 管制趨勢的組織應對情境示意](https://appi.news/images/appi-news-195/3.png)
 
 Claude Fable 5 被比照核彈與軍武等級管制禁用，不是孤立事件。全球主要司法管轄區對高能力 AI 系統的監管框架都在加速演進。歐盟 AI Act 已針對高風險 AI 系統訂定強制要求；美國的行政命令與 NIST AI Risk Management Framework 持續更新對應機制；對最高能力 AI 系統的關注程度只增不減。這個趨勢有其結構性邏輯，不會因某個模型的普及而逆轉。
 
@@ -138,7 +138,7 @@ Claude Fable 5 被比照核彈與軍武等級管制禁用，不是孤立事件�
 | Few-shot 範例示範 | 格式嚴格或語氣一致性要求高 | 高 | 中（需維護範例庫） |
 | 調整系統提示角色設定 | 角色扮演或專業口吻要求 | 視模型差異大 | 中（需逐一測試） |
 
-![模糊指令與明確指令在不同 AI 模型上的輸出差異對比示意圖](https://writer.weiqi.kids/articles/appi.news/AI%E6%95%B8%E4%BD%8D%E5%81%A5%E5%BA%B7%E8%A8%AD%E8%A8%88%E8%80%85-%E5%BC%B5%E9%A5%92%E8%BC%9D/issue-195/images/4.png)
+![模糊指令與明確指令在不同 AI 模型上的輸出差異對比示意圖](https://appi.news/images/appi-news-195/4.png)
 
 ---
 

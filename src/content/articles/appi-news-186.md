@@ -27,7 +27,7 @@ draft: false
 
 問題不在能否吃，重點是怎麼吃、吃多少、搭什麼。以下 5 件事，是理解蓮霧與血糖的起點。
 
-![新鮮粉紅蓮霧排列在木質桌面上，光澤飽滿，呈現台灣夏日常見水果樣貌](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-186/images/1.jpg)
+![新鮮粉紅蓮霧排列在木質桌面上，光澤飽滿，呈現台灣夏日常見水果樣貌](https://appi.news/images/appi-news-186/1.jpg)
 
 ---
 
@@ -81,7 +81,7 @@ draft: false
 2. **搭配蛋白質或健康脂肪**：和幾顆堅果或一片低脂起司一起吃，可進一步延緩血糖上升速度
 3. **時機安排在正餐後 1 至 2 小時**：消化系統在處理其他食物時，水果的糖分不會孤立地快速進入血流；睡前大量食用要避免
 
-![糖尿病患者蓮霧食用指南：份量建議 2 至 3 顆、飯後食用、品種差異與搭配建議](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-186/images/2.svg)
+![糖尿病患者蓮霧食用指南：份量建議 2 至 3 顆、飯後食用、品種差異與搭配建議](https://appi.news/images/appi-news-186/2.svg)
 
 ---
 
@@ -97,7 +97,7 @@ draft: false
 
 有一點要說清楚：這些研究使用的是高度純化的化合物，濃度遠高於你吃幾顆蓮霧能攝取到的量。研究的意義在於「蓮霧的多酚成分值得關注」，而不是「吃蓮霧可以治糖尿病」。成分有效不等於成品有效，這是健康資訊裡最常被跳過的一道牆。
 
-![蓮霧活性多酚化合物 vescalagin 作用機轉示意：從蓮霧多酚到改善肝臟胰島素信號的流程](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-186/images/3.png)
+![蓮霧活性多酚化合物 vescalagin 作用機轉示意：從蓮霧多酚到改善肝臟胰島素信號的流程](https://appi.news/images/appi-news-186/3.png)
 
 ---
 

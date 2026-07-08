@@ -25,7 +25,7 @@ references:
     url: "https://pubmed.ncbi.nlm.nih.gov/22972081/"
 draft: false
 ---
-![兒童居家五大危險區域示意圖，包含廚房、浴室、樓梯、藥物收納處與地板散落小物](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-164/images/1.png)
+![兒童居家五大危險區域示意圖，包含廚房、浴室、樓梯、藥物收納處與地板散落小物](https://appi.news/images/appi-news-164/1.png)
 
 ## 一、新聞背景：家才是兒童意外傷害最常見的現場
 
@@ -49,7 +49,7 @@ draft: false
 
 中毒案例通常在成人短暫離開視線的幾分鐘內發生——幼兒誤食外觀類似零食的藥物或清潔劑，原因往往不是沒有警覺，而是沒有預期到孩子「這麼快就會爬過去」。
 
-![幼兒與成人頭身比例對比圖，說明幼兒重心偏高更易跌倒](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-164/images/2.png)
+![幼兒與成人頭身比例對比圖，說明幼兒重心偏高更易跌倒](https://appi.news/images/appi-news-164/2.png)
 
 ## 三、居家五大危險情境：辨識誰最需要注意
 
@@ -118,7 +118,7 @@ draft: false
 - 區分「要先問大人才能做」與「自己可以決定」的事，而非所有事都說不
 - 所有主要照顧者（包含祖父母、臨時保母）對安全規則保持一致，避免訊息混亂
 
-![親子進行居家安全闖關遊戲，孩子指認廚房危險並學習停止動作](https://writer.weiqi.kids/articles/appi.news/appi.news%E7%B7%A8%E8%BC%AF%E9%83%A8/issue-164/images/3.png)
+![親子進行居家安全闖關遊戲，孩子指認廚房危險並學習停止動作](https://appi.news/images/appi-news-164/3.png)
 
 - 兒童意外傷害高比例發生在家中，跌倒、燒燙傷、溺水、中毒、異物哽塞是五大類型
 - 1–5 歲是高風險年齡：幼兒重心偏高、好奇心強、風險認知不足，三者疊加使家中危險被放大

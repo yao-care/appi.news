@@ -25,7 +25,7 @@ references:
     url: "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight"
 draft: false
 ---
-![瘦瘦針（GLP-1）與中醫整合減重概念示意圖](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-179/images/1.png)
+![瘦瘦針（GLP-1）與中醫整合減重概念示意圖](https://appi.news/images/appi-news-179/1.png)
 
 你有沒有發現，很多人打了瘦瘦針，體重確實掉了，但停藥後又慢慢爬回來？效果不是假的，反彈也不是意外。問題出在，瘦瘦針是工具，不是答案。
 
@@ -56,7 +56,7 @@ draft: false
 
 GLP-1 受體促效劑模擬人體飯後自然分泌的腸泌素，主要透過三個機制發揮作用：延緩胃排空（讓飽足感持續更長時間）、調節腦部食慾中樞、協助胰島素分泌穩定。對食慾的直接調控，是它有別於傳統減重藥的核心優勢。
 
-![GLP-1 受體促效劑三大作用機制：抑制食慾、延緩胃排空、調節胰島素](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-179/images/2.png)
+![GLP-1 受體促效劑三大作用機制：抑制食慾、延緩胃排空、調節胰島素](https://appi.news/images/appi-news-179/2.png)
 
 2021 年發表於《新英格蘭醫學期刊》的 STEP 1 大型試驗（Wilding et al.）顯示，結合生活型態介入的每週 2.4 mg 司美格魯肽，平均讓體重減少約 15%，遠高於安慰劑組的 2.4%。這個數字對頑固型肥胖患者來說，是過去傳統減重方式難以企及的效果。
 
@@ -106,7 +106,7 @@ STEP 1 試驗中，治療組有 44% 受試者回報噁心症狀，雖然多數�
 
 月恆整合醫學診所的臨床做法提供了一個可參考的模式：由中醫先評估體質與身體狀態、完整抽血後，再搭配瘦瘦針與營養諮詢，並建議每兩週回診，透過問診、望診、脈診持續調整，同步監控掉髮、月經、情緒等早期變化。
 
-![整合減重三階段路徑：治療前評估、施打期追蹤、停藥後維持](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-179/images/3.png)
+![整合減重三階段路徑：治療前評估、施打期追蹤、停藥後維持](https://appi.news/images/appi-news-179/3.png)
 
 **你現在就能做的事**
 

@@ -31,7 +31,7 @@ draft: false
 
 正確認識躁鬱症，是邁向穩定生活的第一步。
 
-![雙向情緒障礙情緒週期示意圖，呈現躁狂、穩定與憂鬱三種狀態循環交替的過程](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-192/images/1.png)
+![雙向情緒障礙情緒週期示意圖，呈現躁狂、穩定與憂鬱三種狀態循環交替的過程](https://appi.news/images/appi-news-192/1.png)
 
 ## 一、什麼是躁鬱症？情緒的波動不只是「高低」
 
@@ -154,9 +154,9 @@ WHO 指出，鋰鹽（Lithium）與丙戊酸鈉（Valproate）是急性躁狂期
 
 重點不在多吃什麼補充品，而在把節律還給身體。每天固定時間接觸自然光、固定的睡眠時間、減少深夜的螢幕刺激——這些看起來很「基本」的行為，對雙向情緒障礙患者的大腦而言，有著比你想像更深層的影響。
 
-![躁鬱症早期警訊資訊圖，左欄列出躁狂或輕躁期警訊，右欄列出憂鬱期警訊](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-192/images/2.svg)
+![躁鬱症早期警訊資訊圖，左欄列出躁狂或輕躁期警訊，右欄列出憂鬱期警訊](https://appi.news/images/appi-news-192/2.svg)
 
-![躁鬱症整合管理模型示意圖，顯示藥物、心理治療、生活調整與社會支持四個核心要素的相互關係](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-192/images/3.png)
+![躁鬱症整合管理模型示意圖，顯示藥物、心理治療、生活調整與社會支持四個核心要素的相互關係](https://appi.news/images/appi-news-192/3.png)
 
 **關於躁鬱症，你需要帶走的幾件事**
 

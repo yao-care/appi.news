@@ -1,0 +1,78 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg">
+<defs><style>text{font-family:sans-serif} .T{font-size:21px;font-weight:700;fill:#1B5E4B} .S{font-size:12px;fill:#6B7B77} .N{font-size:20px;font-weight:700;fill:#fff} .H{font-size:13px;font-weight:700;fill:#1F2A28;text-anchor:middle} .D{font-size:11px;fill:#6B7B77;text-anchor:middle} .K{font-size:11px;font-weight:700;fill:#C9A227;text-anchor:middle}</style></defs>
+<rect width="960" height="600" fill="#fff"/>
+<rect width="960" height="108" fill="#F2F7F5"/>
+<text x="480" y="44" class="T" text-anchor="middle">紅黃綠標示上路前：消費者食品選購五步驟</text>
+<text x="480" y="68" class="S" text-anchor="middle">現在就能用的實用指南 ── 從翻看標示到回歸原型食物</text>
+<line x1="48" y1="82" x2="912" y2="82" stroke="#2E8B6F" stroke-width="1.5"/>
+<text x="480" y="100" font-size="11" fill="#2E8B6F" text-anchor="middle">▼ 五個動作，每次購物都能立即執行</text>
+<rect x="24" y="118" width="168" height="432" rx="10" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
+<circle cx="108" cy="157" r="25" fill="#1B5E4B"/>
+<text x="108" y="164" class="N" text-anchor="middle">1</text>
+<rect x="80" y="192" width="56" height="68" rx="4" fill="none" stroke="#2E8B6F" stroke-width="2"/>
+<line x1="87" y1="207" x2="129" y2="207" stroke="#2E8B6F" stroke-width="1.5"/>
+<line x1="87" y1="219" x2="129" y2="219" stroke="#2E8B6F" stroke-width="1.5"/>
+<line x1="87" y1="231" x2="118" y2="231" stroke="#C9A227" stroke-width="2.5"/>
+<line x1="87" y1="243" x2="129" y2="243" stroke="#6B7B77" stroke-width="1"/>
+<line x1="87" y1="253" x2="115" y2="253" stroke="#6B7B77" stroke-width="1"/>
+<text x="108" y="284" class="H">翻看背面</text>
+<text x="108" y="300" class="H">營養標示</text>
+<text x="108" y="324" class="D">加工食品背面或</text>
+<text x="108" y="339" class="D">側面都有營養標示</text>
+<text x="108" y="354" class="D">這是選購的起點</text>
+<rect x="204" y="118" width="168" height="432" rx="10" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
+<circle cx="288" cy="157" r="25" fill="#1B5E4B"/>
+<text x="288" y="164" class="N" text-anchor="middle">2</text>
+<circle cx="288" cy="232" r="30" fill="none" stroke="#2E8B6F" stroke-width="2"/>
+<text x="288" y="228" font-size="12" fill="#1F2A28" text-anchor="middle" font-weight="700">糖 鈉</text>
+<text x="288" y="244" font-size="10" fill="#1F2A28" text-anchor="middle">飽和脂肪</text>
+<line x1="310" y1="254" x2="322" y2="264" stroke="#2E8B6F" stroke-width="3.5" stroke-linecap="round"/>
+<text x="288" y="284" class="H">找三大數值</text>
+<text x="288" y="312" class="K">糖／鈉／飽和脂肪</text>
+<text x="288" y="332" class="D">以每 100g 為基準</text>
+<text x="288" y="347" class="D">比較不同產品</text>
+<text x="288" y="362" class="D">不要只看每份量</text>
+<rect x="384" y="118" width="168" height="432" rx="10" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
+<circle cx="468" cy="157" r="25" fill="#1B5E4B"/>
+<text x="468" y="164" class="N" text-anchor="middle">3</text>
+<rect x="430" y="196" width="20" height="60" rx="3" fill="#2E8B6F"/>
+<rect x="458" y="214" width="20" height="42" rx="3" fill="#C9A227"/>
+<rect x="486" y="206" width="20" height="50" rx="3" fill="#6B7B77" opacity=".6"/>
+<line x1="422" y1="258" x2="516" y2="258" stroke="#1B5E4B" stroke-width="1.5"/>
+<text x="468" y="284" class="H">對照建議上限</text>
+<text x="468" y="310" class="K">糖 ＜25g ／天</text>
+<text x="468" y="326" class="K">鈉 ＜2000mg ／天</text>
+<text x="468" y="342" class="K">飽和脂肪 ＜18g</text>
+<text x="468" y="366" class="D">單項食品最好不超過</text>
+<text x="468" y="381" class="D">每日上限的 1/3</text>
+<rect x="564" y="118" width="168" height="432" rx="10" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
+<circle cx="648" cy="157" r="25" fill="#1B5E4B"/>
+<text x="648" y="164" class="N" text-anchor="middle">4</text>
+<rect x="620" y="192" width="56" height="68" rx="4" fill="none" stroke="#2E8B6F" stroke-width="2"/>
+<text x="626" y="210" font-size="10" fill="#1F2A28">成分：</text>
+<line x1="626" y1="220" x2="644" y2="220" stroke="#6B7B77" stroke-width="1"/>
+<circle cx="650" cy="220" r="4" fill="none" stroke="#2E8B6F" stroke-width="1.5"/>
+<line x1="626" y1="232" x2="644" y2="232" stroke="#6B7B77" stroke-width="1"/>
+<circle cx="650" cy="232" r="4" fill="none" stroke="#2E8B6F" stroke-width="1.5"/>
+<line x1="626" y1="244" x2="644" y2="244" stroke="#6B7B77" stroke-width="1"/>
+<circle cx="650" cy="244" r="4" fill="#C9A227" stroke="#C9A227" stroke-width="1.5"/>
+<text x="648" y="284" class="H">評估成分表</text>
+<text x="648" y="310" class="D">排序愈前含量愈多</text>
+<text x="648" y="325" class="D">留意人工添加糖</text>
+<text x="648" y="340" class="D">氫化油、色素</text>
+<text x="648" y="355" class="D">及防腐劑等添加物</text>
+<rect x="744" y="118" width="168" height="432" rx="10" fill="#F2F7F5" stroke="#C9A227" stroke-width="2.5"/>
+<circle cx="828" cy="157" r="25" fill="#C9A227"/>
+<text x="828" y="164" class="N" text-anchor="middle">5</text>
+<circle cx="828" cy="232" r="28" fill="none" stroke="#2E8B6F" stroke-width="2"/>
+<ellipse cx="818" cy="233" rx="10" ry="13" fill="#2E8B6F" opacity=".3"/>
+<ellipse cx="838" cy="233" rx="10" ry="13" fill="#C9A227" opacity=".3"/>
+<path d="M820,212 Q828,202 836,212" fill="none" stroke="#2E8B6F" stroke-width="2"/>
+<text x="828" y="284" class="H">優先原型食物</text>
+<text x="828" y="310" class="D">蔬果、豆類、全穀</text>
+<text x="828" y="325" class="D">堅果等天然食材</text>
+<text x="828" y="340" class="D">成分單純看得懂</text>
+<text x="828" y="355" class="D">是最佳的選擇</text>
+<rect x="0" y="558" width="960" height="42" fill="#F2F7F5"/>
+<text x="480" y="580" font-size="10" fill="#6B7B77" text-anchor="middle">資料來源：衛生福利部食品藥物管理署　本圖表僅供消費參考，不構成醫療建議</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

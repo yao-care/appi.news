@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#2E8B6F"/></marker>
+<marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#C9A227"/></marker>
+</defs>
+<style>text{font-family:'Microsoft JhengHei','Noto Sans TC',sans-serif}</style>
+<rect width="960" height="600" fill="#fff"/>
+<rect width="960" height="72" fill="#1B5E4B"/>
+<text x="480" y="42" text-anchor="middle" font-size="26" font-weight="bold" fill="#fff">GLP-1 受體促效劑三大作用機制</text>
+<text x="480" y="62" text-anchor="middle" font-size="13" fill="#C9A227">腸道分泌的荷爾蒙，同步作用於三大器官，調節血糖與體重</text>
+<rect x="380" y="100" width="200" height="58" rx="29" fill="#2E8B6F"/>
+<text x="480" y="126" text-anchor="middle" font-size="21" font-weight="bold" fill="#fff">GLP-1</text>
+<text x="480" y="147" text-anchor="middle" font-size="12" fill="#F2F7F5">腸泌素荷爾蒙</text>
+<line x1="432" y1="158" x2="200" y2="263" stroke="#2E8B6F" stroke-width="2.5" marker-end="url(#arr)"/>
+<line x1="480" y1="158" x2="480" y2="263" stroke="#2E8B6F" stroke-width="2.5" marker-end="url(#arr)"/>
+<line x1="528" y1="158" x2="760" y2="263" stroke="#2E8B6F" stroke-width="2.5" marker-end="url(#arr)"/>
+<rect x="50" y="268" width="270" height="152" rx="12" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+<path d="M62,268 Q50,268 50,280 L50,310 L320,310 L320,280 Q320,268 308,268 Z" fill="#1B5E4B"/>
+<text x="185" y="296" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">胰臟</text>
+<text x="185" y="328" text-anchor="middle" font-size="15" font-weight="bold" fill="#1B5E4B">促進胰島素分泌</text>
+<text x="185" y="352" text-anchor="middle" font-size="13" fill="#6B7B77">偵測血糖升高後</text>
+<text x="185" y="372" text-anchor="middle" font-size="13" fill="#6B7B77">刺激胰臟釋出更多胰島素</text>
+<text x="185" y="392" text-anchor="middle" font-size="13" fill="#6B7B77">有效降低血糖濃度</text>
+<rect x="345" y="268" width="270" height="152" rx="12" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+<path d="M357,268 Q345,268 345,280 L345,310 L615,310 L615,280 Q615,268 603,268 Z" fill="#1B5E4B"/>
+<text x="480" y="296" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">大腦</text>
+<text x="480" y="328" text-anchor="middle" font-size="15" font-weight="bold" fill="#1B5E4B">抑制食慾</text>
+<text x="480" y="352" text-anchor="middle" font-size="13" fill="#6B7B77">作用於下視丘飽足中樞</text>
+<text x="480" y="372" text-anchor="middle" font-size="13" fill="#6B7B77">降低進食慾望</text>
+<text x="480" y="392" text-anchor="middle" font-size="13" fill="#6B7B77">支持長期熱量控制</text>
+<rect x="640" y="268" width="270" height="152" rx="12" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+<path d="M652,268 Q640,268 640,280 L640,310 L910,310 L910,280 Q910,268 898,268 Z" fill="#1B5E4B"/>
+<text x="775" y="296" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">腸胃</text>
+<text x="775" y="328" text-anchor="middle" font-size="15" font-weight="bold" fill="#1B5E4B">延遲胃排空</text>
+<text x="775" y="352" text-anchor="middle" font-size="13" fill="#6B7B77">減緩胃部排空速度</text>
+<text x="775" y="372" text-anchor="middle" font-size="13" fill="#6B7B77">延長餐後飽足感</text>
+<text x="775" y="392" text-anchor="middle" font-size="13" fill="#6B7B77">降低餐後血糖波動</text>
+<line x1="185" y1="420" x2="185" y2="455" stroke="#C9A227" stroke-width="2" marker-end="url(#arr2)"/>
+<line x1="440" y1="420" x2="252" y2="455" stroke="#C9A227" stroke-width="2" marker-end="url(#arr2)"/>
+<line x1="520" y1="420" x2="708" y2="455" stroke="#C9A227" stroke-width="2" marker-end="url(#arr2)"/>
+<line x1="775" y1="420" x2="775" y2="455" stroke="#C9A227" stroke-width="2" marker-end="url(#arr2)"/>
+<rect x="80" y="458" width="300" height="65" rx="10" fill="#C9A227"/>
+<text x="230" y="488" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">血糖控制改善</text>
+<text x="230" y="509" text-anchor="middle" font-size="12" fill="#fff">HbA1c 穩定下降・餐後血糖平緩</text>
+<rect x="580" y="458" width="300" height="65" rx="10" fill="#C9A227"/>
+<text x="730" y="488" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">體重管理輔助</text>
+<text x="730" y="509" text-anchor="middle" font-size="12" fill="#fff">減少熱量攝取・體重逐步改善</text>
+<text x="480" y="556" text-anchor="middle" font-size="11" fill="#6B7B77">GLP-1 藥物效果因人而異，使用前請諮詢醫療專業人員</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

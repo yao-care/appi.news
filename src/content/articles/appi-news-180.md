@@ -54,7 +54,7 @@ GLP-1（類升糖素胜肽-1）本來就是你每次進食後，小腸自然分�
 
 Wegovy（更高劑量 semaglutide，適應症擴及肥胖）在台灣尚未正式核准為減重用途，使用前請確認目前藥品核准狀態（註1）。
 
-![GLP-1 受體促效劑三大作用機制：促進胰島素分泌、抑制食慾、延遲胃排空](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-180/images/1.svg)
+![GLP-1 受體促效劑三大作用機制：促進胰島素分泌、抑制食慾、延遲胃排空](https://appi.news/images/appi-news-180/1.svg)
 
 ---
 
@@ -92,7 +92,7 @@ GLP-1 藥物本身經腎臟排泄比例並不高（主要靠酵素降解），�
 
 你可以把這個評估過程，理解為廚師在開始料理之前，先確認所有食材的新鮮度和保存狀態。跳過這一步，再好的食譜也可能出問題。
 
-![瘦瘦針使用前必做六項抽血評估清單](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-180/images/2.svg)
+![瘦瘦針使用前必做六項抽血評估清單](https://appi.news/images/appi-news-180/2.svg)
 
 ---
 
@@ -162,7 +162,7 @@ GLP-1 藥物會顯著降低食慾，進食量大幅減少，這雖然是它的�
 
 2026 年發表的系統性文獻回顧（涵蓋 16 項隨機試驗、7,096 名受試者）指出，若配合生活型態介入，瘦體重在體重下降過程中整體保持穩定；但目前最佳的營養介入策略仍需更多臨床試驗確認（註4）。
 
-![瘦瘦針前中後三階段健康管理時程圖](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-180/images/3.svg)
+![瘦瘦針前中後三階段健康管理時程圖](https://appi.news/images/appi-news-180/3.svg)
 
 ---
 

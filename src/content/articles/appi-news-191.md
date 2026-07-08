@@ -31,7 +31,7 @@ references:
     url: "https://www.osteoporosis.foundation/educational-hub/topic/calcium/calcium-recommendations"
 draft: false
 ---
-![長者在設有扶手的明亮居家環境中安全行走](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-191/images/1.png)
+![長者在設有扶手的明亮居家環境中安全行走](https://appi.news/images/appi-news-191/1.png)
 
 你有沒有發現，很多人說起老年人的跌倒，第一個反應都是「哎，上了年紀就是這樣」，卻沒有停下來問：為什麼一跤對年輕人只是瘀青，對長者卻可能是生命的轉折？
 
@@ -72,7 +72,7 @@ draft: false
 - **吸菸與過量飲酒**：影響骨骼代謝
 - **長期使用類固醇**：藥物性骨質流失的常見原因
 
-![正常骨骼與骨質疏鬆骨骼的橫截面對比：健康骨骼骨小梁緊密，骨質疏鬆骨骼骨小梁稀疏空洞](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-191/images/2.png)
+![正常骨骼與骨質疏鬆骨骼的橫截面對比：健康骨骼骨小梁緊密，骨質疏鬆骨骼骨小梁稀疏空洞](https://appi.news/images/appi-news-191/2.png)
 
 「骨質疏鬆在臨床上直到骨折發生前通常是靜默的，而任何 50 歲以上成人的骨折，都代表未來骨折風險的顯著上升。」——LeBoff MS 等人（2022），《骨質疏鬆國際期刊》
 

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+<defs><style>text{font-family:'Noto Sans TC','微軟正黑體',sans-serif;}</style></defs>
+<rect width="960" height="600" fill="#fff"/>
+<rect width="960" height="68" fill="#1B5E4B"/>
+<text x="480" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#fff">口腔黏膜病變進程圖</text>
+<text x="480" y="58" text-anchor="middle" font-size="13" fill="#C9A227">正常黏膜 → 黏膜下纖維化與白斑 → 上皮發育不良 → 口腔鱗狀細胞癌</text>
+
+<rect x="50" y="85" width="178" height="360" rx="10" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+<rect x="50" y="85" width="178" height="45" rx="10" fill="#2E8B6F"/>
+<rect x="50" y="110" width="178" height="20" fill="#2E8B6F"/>
+<text x="139" y="114" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">第一期</text>
+<circle cx="139" cy="200" r="45" fill="#A8D5C2" stroke="#2E8B6F" stroke-width="2"/>
+<ellipse cx="127" cy="196" rx="15" ry="11" fill="#7EC8A4"/>
+<ellipse cx="149" cy="204" rx="13" ry="9" fill="#7EC8A4"/>
+<text x="139" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F2A28">正常黏膜</text>
+<text x="139" y="289" text-anchor="middle" font-size="11" fill="#6B7B77">健康粉紅色組織</text>
+<text x="139" y="309" text-anchor="middle" font-size="11" fill="#6B7B77">表面光滑均勻</text>
+<text x="139" y="329" text-anchor="middle" font-size="11" fill="#6B7B77">無異常病灶</text>
+<rect x="69" y="390" width="140" height="32" rx="7" fill="#2E8B6F"/>
+<text x="139" y="411" text-anchor="middle" font-size="12" fill="#fff">危險性：低</text>
+
+<line x1="238" y1="265" x2="255" y2="265" stroke="#C9A227" stroke-width="3"/>
+<polygon points="255,258 270,265 255,272" fill="#C9A227"/>
+
+<rect x="272" y="85" width="178" height="360" rx="10" fill="#F2F7F5" stroke="#C9A227" stroke-width="2"/>
+<rect x="272" y="85" width="178" height="45" rx="10" fill="#C9A227"/>
+<rect x="272" y="110" width="178" height="20" fill="#C9A227"/>
+<text x="361" y="114" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">第二期</text>
+<ellipse cx="361" cy="200" rx="52" ry="38" fill="#F5CBA7" stroke="#C9A227" stroke-width="2"/>
+<rect x="330" y="191" width="26" height="15" rx="4" fill="#fff" stroke="#C9A227" stroke-width="1.5"/>
+<rect x="360" y="198" width="21" height="13" rx="3" fill="#fff" stroke="#C9A227" stroke-width="1.5"/>
+<rect x="342" y="211" width="17" height="10" rx="3" fill="#eee" stroke="#C9A227" stroke-width="1"/>
+<text x="361" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F2A28">纖維化與白斑</text>
+<text x="361" y="289" text-anchor="middle" font-size="11" fill="#6B7B77">出現白色斑塊</text>
+<text x="361" y="309" text-anchor="middle" font-size="11" fill="#6B7B77">組織變硬僵化</text>
+<text x="361" y="329" text-anchor="middle" font-size="11" fill="#6B7B77">張口困難</text>
+<rect x="291" y="390" width="140" height="32" rx="7" fill="#C9A227"/>
+<text x="361" y="411" text-anchor="middle" font-size="12" fill="#fff">危險性：中</text>
+
+<line x1="460" y1="265" x2="477" y2="265" stroke="#E07B2A" stroke-width="3"/>
+<polygon points="477,258 492,265 477,272" fill="#E07B2A"/>
+
+<rect x="494" y="85" width="178" height="360" rx="10" fill="#F2F7F5" stroke="#E07B2A" stroke-width="2"/>
+<rect x="494" y="85" width="178" height="45" rx="10" fill="#E07B2A"/>
+<rect x="494" y="110" width="178" height="20" fill="#E07B2A"/>
+<text x="583" y="114" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">第三期</text>
+<ellipse cx="583" cy="200" rx="52" ry="38" fill="#F5A67A" stroke="#E07B2A" stroke-width="2"/>
+<circle cx="566" cy="196" r="9" fill="#E07B2A" opacity="0.55"/>
+<circle cx="585" cy="190" r="7" fill="#E07B2A" opacity="0.65"/>
+<circle cx="573" cy="211" r="11" fill="#E07B2A" opacity="0.45"/>
+<circle cx="595" cy="207" r="8" fill="#E07B2A" opacity="0.6"/>
+<text x="583" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F2A28">上皮發育不良</text>
+<text x="583" y="289" text-anchor="middle" font-size="11" fill="#6B7B77">細胞型態異常</text>
+<text x="583" y="309" text-anchor="middle" font-size="11" fill="#6B7B77">增生不規則</text>
+<text x="583" y="329" text-anchor="middle" font-size="11" fill="#6B7B77">癌前病變</text>
+<rect x="513" y="390" width="140" height="32" rx="7" fill="#E07B2A"/>
+<text x="583" y="411" text-anchor="middle" font-size="12" fill="#fff">危險性：高</text>
+
+<line x1="682" y1="265" x2="699" y2="265" stroke="#C0392B" stroke-width="3"/>
+<polygon points="699,258 714,265 699,272" fill="#C0392B"/>
+
+<rect x="716" y="85" width="178" height="360" rx="10" fill="#F2F7F5" stroke="#C0392B" stroke-width="2"/>
+<rect x="716" y="85" width="178" height="45" rx="10" fill="#C0392B"/>
+<rect x="716" y="110" width="178" height="20" fill="#C0392B"/>
+<text x="805" y="114" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">第四期</text>
+<ellipse cx="805" cy="200" rx="50" ry="36" fill="#E88080" stroke="#C0392B" stroke-width="2"/>
+<path d="M778,198 Q790,181 805,192 Q818,179 829,196 Q839,189 841,207 Q833,222 818,219 Q808,230 796,221 Q782,224 775,210 Z" fill="#C0392B" opacity="0.72"/>
+<text x="805" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F2A28">口腔鱗狀細胞癌</text>
+<text x="805" y="289" text-anchor="middle" font-size="11" fill="#6B7B77">惡性腫瘤形成</text>
+<text x="805" y="309" text-anchor="middle" font-size="11" fill="#6B7B77">侵犯周邊組織</text>
+<text x="805" y="329" text-anchor="middle" font-size="11" fill="#6B7B77">需積極治療</text>
+<rect x="735" y="390" width="140" height="32" rx="7" fill="#C0392B"/>
+<text x="805" y="411" text-anchor="middle" font-size="12" fill="#fff">危險性：極高</text>
+
+<rect x="50" y="467" width="840" height="10" rx="5" fill="#F2F7F5"/>
+<rect x="50" y="467" width="210" height="10" rx="5" fill="#2E8B6F"/>
+<rect x="260" y="467" width="210" height="10" fill="#C9A227"/>
+<rect x="470" y="467" width="210" height="10" fill="#E07B2A"/>
+<rect x="680" y="467" width="210" height="10" rx="5" fill="#C0392B"/>
+<text x="155" y="492" text-anchor="middle" font-size="11" fill="#2E8B6F">正常</text>
+<text x="365" y="492" text-anchor="middle" font-size="11" fill="#C9A227">前驅病變</text>
+<text x="575" y="492" text-anchor="middle" font-size="11" fill="#E07B2A">癌前病變</text>
+<text x="785" y="492" text-anchor="middle" font-size="11" fill="#C0392B">惡性腫瘤</text>
+<text x="480" y="530" text-anchor="middle" font-size="11" fill="#6B7B77">※ 早期發現、早期治療，定期口腔檢查是預防關鍵</text>
+<text x="480" y="552" text-anchor="middle" font-size="10" fill="#6B7B77">本圖僅供衛教參考，不作為診斷依據，請諮詢專業醫療人員</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+<style>
+text{font-family:'Noto Sans TC',sans-serif;dominant-baseline:middle}
+.T{font-size:20px;font-weight:700;fill:#FFFFFF}
+.S{font-size:12px;fill:#C9A227}
+.H{font-size:12px;font-weight:700;fill:#FFFFFF}
+.N{font-size:13px;font-weight:700;fill:#1B5E4B}
+.C{font-size:11px;fill:#6B7B77}
+.P{font-size:12px;fill:#1F2A28}
+.B{font-size:11px;font-weight:700}
+</style>
+<rect width="960" height="600" fill="#F2F7F5"/>
+<rect width="960" height="80" fill="#1B5E4B"/>
+<text x="480" y="30" class="T" text-anchor="middle">瘦瘦針（GLP-1）使用前六項必做抽血評估清單</text>
+<text x="480" y="58" class="S" text-anchor="middle">施打前完整健康評估，確保用藥安全，最終用藥決策以醫師判斷為準</text>
+<rect x="20" y="88" width="920" height="496" fill="#FFFFFF"/>
+<rect x="20" y="88" width="920" height="40" fill="#2E8B6F"/>
+<text x="145" y="108" class="H" text-anchor="middle">檢測項目</text>
+<text x="335" y="108" class="H" text-anchor="middle">指標代號</text>
+<text x="580" y="108" class="H" text-anchor="middle">評估目的</text>
+<text x="851" y="108" class="H" text-anchor="middle">風險等級</text>
+<line x1="270" y1="128" x2="270" y2="584" stroke="#E0EBE7" stroke-width="1"/>
+<line x1="400" y1="128" x2="400" y2="584" stroke="#E0EBE7" stroke-width="1"/>
+<line x1="762" y1="128" x2="762" y2="584" stroke="#E0EBE7" stroke-width="1"/>
+<rect x="20" y="128" width="920" height="76" fill="#F2F7F5"/>
+<text x="30" y="154" class="N">空腹血糖 ／ HbA1c</text><text x="30" y="179" class="C">糖化血色素</text>
+<text x="280" y="166" class="P">FBS、HbA1c</text>
+<text x="410" y="154" class="P">偵測糖尿病，評估基礎血糖控制</text><text x="410" y="179" class="C">血糖異常者需注意低血糖風險</text>
+<rect x="793" y="153" width="80" height="26" fill="#1B5E4B" rx="13"/>
+<text x="833" y="166" class="B" fill="#FFFFFF" text-anchor="middle">必查</text>
+<line x1="20" y1="204" x2="940" y2="204" stroke="#E0EBE7" stroke-width="1"/>
+<text x="30" y="230" class="N">肝功能 ALT ／ AST</text><text x="30" y="255" class="C">肝臟功能指數</text>
+<text x="280" y="242" class="P">ALT、AST</text>
+<text x="410" y="230" class="P">排除肝病，避免藥物加重肝損傷</text><text x="410" y="255" class="C">轉胺酶升高者用藥需謹慎監測</text>
+<rect x="793" y="229" width="80" height="26" fill="#1B5E4B" rx="13"/>
+<text x="833" y="242" class="B" fill="#FFFFFF" text-anchor="middle">必查</text>
+<line x1="20" y1="280" x2="940" y2="280" stroke="#E0EBE7" stroke-width="1"/>
+<rect x="20" y="280" width="920" height="76" fill="#F2F7F5"/>
+<text x="30" y="306" class="N">腎功能 eGFR</text><text x="30" y="331" class="C">腎絲球過濾率</text>
+<text x="280" y="318" class="P">eGFR、Creatinine</text>
+<text x="410" y="306" class="P">確認腎臟排藥能力，防止藥物蓄積</text><text x="410" y="331" class="C">腎功能不全者需調整用藥劑量</text>
+<rect x="793" y="305" width="80" height="26" fill="#1B5E4B" rx="13"/>
+<text x="833" y="318" class="B" fill="#FFFFFF" text-anchor="middle">必查</text>
+<line x1="20" y1="356" x2="940" y2="356" stroke="#E0EBE7" stroke-width="1"/>
+<text x="30" y="382" class="N">甲狀腺 TSH</text><text x="30" y="407" class="C">促甲狀腺素</text>
+<text x="280" y="394" class="P">TSH、fT4</text>
+<text x="410" y="382" class="P">排除甲狀腺髓樣癌等相關禁忌</text><text x="410" y="407" class="C">有家族甲狀腺癌病史者列為禁忌</text>
+<rect x="793" y="381" width="80" height="26" fill="#C9A227" rx="13"/>
+<text x="833" y="394" class="B" fill="#1F2A28" text-anchor="middle">建議</text>
+<line x1="20" y1="432" x2="940" y2="432" stroke="#E0EBE7" stroke-width="1"/>
+<rect x="20" y="432" width="920" height="76" fill="#F2F7F5"/>
+<text x="30" y="458" class="N">血脂四項</text><text x="30" y="483" class="C">全套血脂檢查</text>
+<text x="280" y="470" class="P">TC、LDL、HDL、TG</text>
+<text x="410" y="458" class="P">評估心血管基礎風險，追蹤用藥成效</text><text x="410" y="483" class="C">GLP-1 可改善血脂，建立用藥前後對照</text>
+<rect x="793" y="457" width="80" height="26" fill="#C9A227" rx="13"/>
+<text x="833" y="470" class="B" fill="#1F2A28" text-anchor="middle">建議</text>
+<line x1="20" y1="508" x2="940" y2="508" stroke="#E0EBE7" stroke-width="1"/>
+<text x="30" y="534" class="N">澱粉酶 ／ 脂肪酶</text><text x="30" y="559" class="C">胰臟酵素</text>
+<text x="280" y="546" class="P">Amylase、Lipase</text>
+<text x="410" y="534" class="P">排除胰臟炎病史或潛在胰臟風險</text><text x="410" y="559" class="C">急性胰臟炎病史者為相對禁忌</text>
+<rect x="793" y="533" width="80" height="26" fill="#C9A227" rx="13"/>
+<text x="833" y="546" class="B" fill="#1F2A28" text-anchor="middle">建議</text>
+<rect x="20" y="88" width="920" height="496" fill="none" stroke="#C8DAD5" stroke-width="1"/>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

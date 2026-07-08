@@ -32,7 +32,7 @@ draft: false
 
 問題往往不在美顏針本身，而在前後的配套有沒有跟上。美顏針就像一道需要精準控溫的料理，食材再好，火候不對、收尾馬虎，出鍋那一刻還是差了點意思。術前的皮膚準備、施作中奈米銀離子的輔助、術後微針貼片的修復配套，缺一不可。
 
-![美顏針三階段照護流程圖：術前準備、施作中、術後修復](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-177/images/1.png)
+![美顏針三階段照護流程圖：術前準備、施作中、術後修復](https://appi.news/images/appi-news-177/1.png)
 
 ## 一、美顏針是什麼？皮膚在那些微小通道裡做了什麼
 
@@ -42,7 +42,7 @@ draft: false
 
 一份分析 64 篇臨床試驗的系統性回顧指出，微針療程「具有出色的安全性與耐受性」，其誘導膠原蛋白重塑的機制讓它在改善皮膚質地上表現穩定，且與其他療法搭配時效果更顯著（Chen et al., 2025）。
 
-![微針穿透皮膚各層、誘導真皮層膠原蛋白生成的截面示意圖](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-177/images/2.png)
+![微針穿透皮膚各層、誘導真皮層膠原蛋白生成的截面示意圖](https://appi.news/images/appi-news-177/2.png)
 
 ## 二、術前準備：皮膚狀態決定修復速度
 
@@ -82,7 +82,7 @@ draft: false
 4. **術後第 4-7 天**：恢復正常保濕，繼續避免酸類、酒精、香料產品
 5. **術後第 8 天起**：若無異常，可逐步恢復日常護膚流程，但防曬不可中斷
 
-![微針貼片貼附皮膚、活性成分溶入真皮層的細部示意圖](https://writer.weiqi.kids/articles/appi.news/%E8%8D%89%E6%9C%AC%E4%B8%8A%E8%86%B3%E9%86%AB%E5%BB%9A-%E5%AD%90%E5%BD%A5%28%E9%98%BF%E5%8D%A1%E8%A5%BF%E6%91%BA%E7%96%8A%E7%89%88%29/issue-177/images/3.png)
+![微針貼片貼附皮膚、活性成分溶入真皮層的細部示意圖](https://appi.news/images/appi-news-177/3.png)
 
 ## 五、術後一週：什麼能用、什麼要遠離
 

@@ -92,7 +92,7 @@ pnpm test
 | 連假優惠 | lifestyle-deals.sh | 10:00 | 18:00 | data.gov.tw #14718 假日曆（tw-holidays.mjs）+ 雙鐵 | 事實稿→**待審草稿+發佈鈕** | ✅有連假時發**生活**台/失敗哨兵 |
 | 國際編譯台 | international-desk.sh | 15:00 | 23:00 | **GDELT Events 原始檔**（international-select/international-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 警消好人好事 | lifestyle-police.sh | 04:45（每日） | 12:45 | 各地警局新聞稿（lifestyle-police.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
-| 颱風停班課 | lifestyle-typhoon.sh | 每小時（5–11 月） | 每小時 | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
+| 颱風停班課 | lifestyle-typhoon.sh | 每 15 分鐘（5–11 月） | */15 * * 5-11 * | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
 | 新文章送 Indexing API | indexing-submit.sh | 06:00 | 14:00 | 線上 sitemap | n/a（送 Google 收錄）| 有送才報 **dev 台** |
 | 數據報告 | weekly-report.sh | 00:17（每 3 天） | 08:17 | GA4+GSC | n/a（數據）| ✅報告到**作者群** |
 | 維運心跳 | heartbeat.sh | 21:40 | 05:40 | 本地內容/狀態 + GSC（seo-opportunities）| n/a（維運）| ✅📊數據心跳＋🤖大腦優化到 **dev 台**（排在 tech-radar 05:20 後 20 分，brain 撞額度會退化不出錯）|
@@ -102,9 +102,9 @@ pnpm test
   - **例外**：`indexing-submit.sh`、`heartbeat.sh` 是**純資料/唯讀腳本**（不碰 git 工作區、不喚 Claude 或只在最後喚一次），故**不走 worktree**，與其他 cron 無洗檔競態。背景見 [`docs/lessons/google-indexing-api-gray-area.md`](./lessons/google-indexing-api-gray-area.md)。
 - **維運/系統訊號改發 dev 台（2026-06-30）**：原本「cron 一律不發 dev、dev 只給 @bot」的政策放寬——**非內容的維運訊號**（`heartbeat.sh` 的 📊 數據心跳＋🤖 大腦優化、`indexing-submit.sh` 的索引提交回報）改走 **dev 台**（`cron-report.mjs --dev` → `DEV_CHANNEL`），與內容/值勤回報（作者群、分類台）分流，維運訊號不再吵作者群。內容類 cron 仍照舊發作者群/分類台。🤖 大腦優化是**報告型**（claude-appi Sonnet 判讀 SEO/內容機會，撞週限會退化成只報確定性事實、不沉默），不自動改碼。
 - **國際是長跑**（最多 8 區×3 篇、逐篇 Claude 撰寫）；各 cron 各自 worktree 並行，不再彼此卡鎖。要降國際耗時就調 `international-write.mjs` 的 `--max` 或 `INTL_TIME_BUDGET_MS`。
-- **颱風前置 gate（省用量）**：`lifestyle-typhoon.sh` 在建 worktree／喚 Claude **之前**，先用 `curl -4` 抓人事行政總處 `nds.html`，含「無停班停課訊息」就**安靜結束、完全不動用 Claude／worktree**（颱風季沒颱風的時段每小時用量＝0）。抓取失敗／非 200／找不到該字串一律 **fail-open** 照走完整流程，絕不漏報。要改 gate 字串或來源就動這支 `.sh` 開頭（改後記得 publisher pull）。
+- **颱風前置 gate（省用量）**：`lifestyle-typhoon.sh` 在建 worktree／喚 Claude **之前**，先用 `curl -4` 抓人事行政總處 `nds.html`，含「無停班停課訊息」就**安靜結束、完全不動用 Claude／worktree**（颱風季沒颱風的時段每 15 分鐘跑一次、用量＝0）。抓取失敗／非 200／找不到該字串一律 **fail-open** 照走完整流程，絕不漏報。要改 gate 字串或來源就動這支 `.sh` 開頭（改後記得 publisher pull）。
 - **每次執行都回報 Slack（`scripts/cron-report.mjs`）**：不論完成/無產出/失敗/略過(取鎖逾時)，都發一則「值勤回報」到**作者群**頻道（`channelForCategory(undefined)`=預設台）。**內容本身**另發對應分類頻道：國際/警消上架→該分類頻道帶連結（Slack 自動 unfurl 出標題）；科技候選→科技台；優惠/颱風待審草稿→生活台（發佈鈕）。
-  - **颱風每小時**：值勤回報每小時發作者群（有停課才另發生活台草稿）。作者群會因此較吵；若要可把颱風值勤回報關掉或改發專屬監控頻道。
+  - **颱風每 15 分鐘（安靜模式，例外）**：沒颱風時前置 gate 靜默 exit、**不發任何 Slack**（所以 15 分鐘一次也不會洗作者群）；只有真偵測到停課才發生活台待審草稿（發佈鈕），失敗只發 dev 台。
 - 上表「發 Slack？」欄已過時——改以本段為準：**全部 cron 每次都回報作者群**。
 
 ### 各頻道維護重點

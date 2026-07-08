@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# 每小時 cron（颱風季 5-11 月）：颱風停班課守望（→待審草稿→人工核可）。
+# 每 15 分鐘 cron（颱風季 5-11 月）：颱風停班課守望（→待審草稿→人工核可）。
 TASK="颱風停班課"
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
 
-# 前置 gate（純資料，不動用 Claude/worktree）：颱風季每小時跑，沒颱風的時段直接安靜結束以省用量。
+# 前置 gate（純資料，不動用 Claude/worktree）：颱風季每 15 分鐘跑，沒颱風的時段直接安靜結束以省用量。
 # 官方「目前現況」權威頁（人事行政總處 nds.html）含「無停班停課訊息」＝確定無停班課 → 跳過。
 # 抓取失敗／非 200／找不到該字串（＝可能有停班課）一律 fail-open，照走完整流程，絕不漏報。
 NDS_URL="https://www.dgpa.gov.tw/typh/daily/nds.html"

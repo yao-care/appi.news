@@ -51,6 +51,7 @@
 | 篇目 | 一句話 |
 |---|---|
 | [link-and-content-validation.md](./link-and-content-validation.md) | 連結查證與內容檢查的假陽性：bot 擋、IPv6 要 curl -4、regex 截斷、legal 誤報、引號不一致 |
+| [wp-migration-broken-inline-html.md](./wp-migration-broken-inline-html.md) | 76 篇 wp-* 帶遷移破損 inline HTML（頂部重複 FAQ／巢狀 table／blockquote 內 hr），build+check:links 看不到；確定性腳本掃修＋dist 驗收 |
 
 > 更早的一次性遷移紀錄另見 [`../../MIGRATION_NOTES.md`](../../MIGRATION_NOTES.md)（WordPress → Astro，2026-06-09 當時快照）。
 > 更多尚未整理成正本的踩坑，散在 Claude 本地記憶（`~/.claude/projects/-root-appi-news/memory/`），可逐步提煉成這裡的正本。

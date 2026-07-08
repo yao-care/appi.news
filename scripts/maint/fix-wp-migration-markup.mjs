@@ -14,7 +14,7 @@ const onlyArg = process.argv.indexOf('--only');
 const ONLY = onlyArg >= 0 ? new Set(process.argv[onlyArg + 1].split(',')) : null;
 
 const skipped = []; // {file, pattern, reason}
-const stats = { A: 0, B: 0, C: 0, filesA: 0, filesB: 0, filesC: 0, filesChanged: 0 };
+const stats = { A: 0, B: 0, C: 0, D: 0, filesA: 0, filesB: 0, filesC: 0, filesD: 0, filesChanged: 0 };
 
 function splitFrontmatter(text) {
   // 期望格式：--- \n fm \n --- \n body
@@ -111,6 +111,16 @@ function fixHrInBlockquote(body) {
   return { body: out, n };
 }
 
+// 型態 D：孤兒 <h4>標籤</h4> 緊接（僅空行/<img>）<h3> → 刪 h4（h4→h3 是層級倒置的遷移殘留，h3 才是真標題）
+function fixOrphanH4(body) {
+  let n = 0;
+  const out = body.replace(
+    /<h4>[^<]+<\/h4>[ \t]*\n(?=(?:[ \t]*\n|[ \t]*<img[^>]*>[ \t]*\n)*[ \t]*<h3>)/g,
+    () => { n++; return ''; },
+  );
+  return { body: out, n };
+}
+
 const files = readdirSync(DIR).filter((f) => f.endsWith('.md'));
 let changedFiles = [];
 for (const f of files) {
@@ -124,9 +134,11 @@ for (const f of files) {
   const a = fixTopFaq(body, base); body = a.body;
   const b = fixNestedTables(body, base); body = b.body;
   const c = fixHrInBlockquote(body); body = c.body;
+  const d = fixOrphanH4(body); body = d.body;
   if (a.n) { stats.A += a.n; stats.filesA++; }
   if (b.n) { stats.B += b.n; stats.filesB++; }
   if (c.n) { stats.C += c.n; stats.filesC++; }
+  if (d.n) { stats.D += d.n; stats.filesD++; }
   const newText = parts.head + body;
   if (newText !== orig) {
     changedFiles.push({ base, a: a.n, b: b.n, c: c.n });
@@ -140,6 +152,7 @@ console.log(`改動檔數：${stats.filesChanged}`);
 console.log(`型態 A 頂部重複 FAQ：${stats.A} 處 / ${stats.filesA} 檔`);
 console.log(`型態 B 巢狀 table：   ${stats.B} 處 / ${stats.filesB} 檔`);
 console.log(`型態 C blockquote 內 hr：${stats.C} 處 / ${stats.filesC} 檔`);
+console.log(`型態 D 孤兒 h4→h3：   ${stats.D} 處 / ${stats.filesD} 檔`);
 console.log(`\n改動明細（前 60）：`);
 for (const c of changedFiles.slice(0, 60)) console.log(`  ${c.base}: A=${c.a} B=${c.b} C=${c.c}`);
 if (changedFiles.length > 60) console.log(`  …其餘 ${changedFiles.length - 60} 檔`);

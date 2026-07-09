@@ -12,8 +12,7 @@ set -a
 source "$HOME/.config/appi-news/report.env"
 set +a
 ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
-out="$(timeout 1200 node scripts/focus-esg.mjs --go 2>&1)"; rc=$?
-[ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
+out="$(node scripts/focus-esg.mjs --go 2>&1)"; rc=$?
 printf '%s\n' "$out"
 if [ "$rc" -eq 0 ]; then
   # 一輪多篇：可能有多行 PUBLISHED=<url> ｜ <title>

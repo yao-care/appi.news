@@ -1,6 +1,6 @@
 # 自動發佈管線的正確性陷阱（build、日期、並發、持續事件）
 
-> 摘要：worktree 沒殘留 dist 會讓 check:links 整批失敗；模型填的 publishDate 會排到未來被濾掉；多工線不可加 flock，要用自癒重試；持續事件（颱風）每變更產新文章會洗出多篇重複，要改滾動更新同一篇。｜ 範圍：自動化/發佈 ｜ 狀態：已解決 ｜ 日期：2026-06-25
+> 摘要：worktree 沒殘留 dist 會讓 check:links 整批失敗；模型填的 publishDate 會排到未來被濾掉；多工線不可加 flock，要用自癒重試；持續事件（颱風）每變更產新文章會洗出多篇重複，要改滾動更新同一篇；**撰寫型 cron 的外層 `timeout 1200` 是舊 flock 模型的殘留，全 worktree 化後只會砍掉快完成的 build、白燒 token，已移除（§E）**。｜ 範圍：自動化/發佈 ｜ 狀態：已解決 ｜ 日期：2026-06-25（§E 補於 2026-07-09）
 
 對應 SOP：[`docs/SERVER_HANDOFF.md`](../SERVER_HANDOFF.md) §子專案 3（cron 總表）。
 
@@ -9,7 +9,7 @@
 - **問題**：cron 自動上架在 `check:links` 卡住、**0 篇上線**，錯誤 `ENOENT scandir .../dist`。
 - **原因**：PR #54 把 cron 改成「每次全新 worktree」（off origin/main），**worktree 沒有殘留 `dist/`**，而 `scripts/check-links.mjs` 直接讀 `dist/`。科技 newsroom 跑在 publisher 主目錄、有殘留 dist 才沒炸，但那反而是驗**過期 dist**、放行了新文章的壞連結 → push 後 deploy 才炸、壞 commit 卡 main。
 - **解法**：**所有自動發佈線在 `check:links` 前一律先 `pnpm build`**（要含 pagefind，否則 `/search/` 少 `/pagefind/*` 連結會誤報；只跑 `astro build` 不夠）。已修：國際/警消 PR #59、科技 PR #67。
-- **注意**：build 約 126s，要算進外層 `timeout 1200` 的尾段；寫作時間預算留「最久一則 + build + check + push」< 1200s。
+- **注意**：build 已隨站台長大變重（`subset-fonts` 要掃全站 HTML、2026-07 已達 2300+ 頁），整條「寫作 + build + check + push」常超過 20 分鐘。**外層 timeout 已移除（見 §E），別再假設 build ~126s / 全程 < 1200s**。
 
 ## B. publishDate 用系統時間蓋寫，別讓模型填
 
@@ -23,7 +23,7 @@
 - **原因**：各線各自跑在獨立 worktree（PR #54）就是要**並行、互不等待**；加全域 flock 會讓線互相卡住，違反設計（站長 2026-06-23 明確要求「本來就可多工、不要卡住」）。
 - **解法**：build+check 一律走 `scripts/lib/build-check.mjs` 的 **`buildCheckWithResync()`**：check 失敗 → `git fetch + merge origin/main` 補齊另一條已完成內容 → 再 build+check 一次（真壞才放棄）。**自癒、不序列化、不卡住。** 新增自動線一律用它，別自己寫裸 build/check。
 
-> **與 flock 的分界（別混淆）**：會 `git reset --hard origin/main` 的 **publisher 主 checkout cron**（tech-radar、weekly-report、lifestyle-deals…）仍用 `flock /tmp/appi-publisher-cron.lock` 序列化，因為它們共用同一個工作樹、並發會互洗。**獨立 worktree 的多工線**才是不序列化、走 resync。兩種機制並存，看「有沒有共用同一個工作樹」。相關：[automation-runtime-staleness.md](./automation-runtime-staleness.md)。
+> **與 flock 的分界（已全面收斂，2026-07-09 更新）**：早期部分 cron 跑在 **publisher 主 checkout**（`git reset --hard origin/main` + `flock /tmp/appi-publisher-cron.lock` 序列化）。**現況：全部 cron（含 tech-radar／weekly-report／lifestyle-deals）都已改用 `_worktree.sh` 的獨立 detached worktree**，`grep -l cron_enter_worktree scripts/cron/*.sh` 可證；**已無任何主 checkout flock 型 cron**。因此「寫稿期間握著共用鎖」的情境**已不存在**——各線只在 `_worktree.sh` 內 `flock -w 120` 鎖住「fetch + 建 worktree」的 ~1 秒，寫稿/build/push 全程不持鎖。相關：[automation-runtime-staleness.md](./automation-runtime-staleness.md)。
 
 ## D. 持續演進的事件要「滾動更新同一篇」，不是每變更產一篇
 
@@ -34,3 +34,11 @@
   - `newsroom-write.mjs` 工單可帶固定 `slug`：該檔已存在＝**滾動更新**，改寫既有檔、**沿用原 `status`／`publishDate`／封面，只更新 `updatedDate` 與內文**。關鍵防呆：不可用 `computeSchedule()` 的新排程蓋寫——否則會把**已上線**的文章打回未來日草稿（下架）。`pendingApproval` 改依「原檔現值」判定。
   - SKILL 步驟：`EPISODE_SLUG` 非空 → 帶 slug 滾動更新；空 → 新建；`record` 一律帶 `--slug`；`NO_CLOSURES` 且事件存在 → 清空狀態，下一場才另起新篇。
 - **怎麼避免重犯**：任何「同一主題會持續更新」的自動線（颱風、選舉開票、災情即時、賽事比分…），**先想清楚事件同一性**：用穩定 slug ＋就地改寫，不要把「更新」做成「新增」。判準＝「同一件事的後續，讀者只想看到最新的一篇」。對應實作見 `.claude/skills/lifestyle-typhoon/SKILL.md` §步驟 2「同一颱風事件＝同一篇」與 `scripts/newsroom-write.mjs` 的 `isUpdate` 分支（PR #95）。
+
+## E. 撰寫型 cron 不要設 `timeout`（舊 flock 時代的殘留，只會砍掉快完成的 build）
+
+- **問題**：`國際編譯台`（`international-desk`）2026-07-08 15:00 UTC 那次 exit 124——log 顯示文章已起草、`subset-fonts` 掃完 2348 頁、首頁圖已最佳化，卡在 `pnpm build` 尾段被外層 `timeout 1200` 砍掉（`ELIFECYCLE Command failed` 是 build 被 SIGTERM 中斷的假象）。**整趟寫作 token 全部白燒、文章沒上線**。站長明確要求：撰寫別設時間上限。
+- **原因**：`timeout 1200` 連同註解「避免卡死共用鎖」是**舊架構（publisher 主 checkout ＋ 全域 flock 序列化）的殘留**——那時一支卡死會一直握著共用鎖擋住別線，才需要上限砍掉它。**PR #54 後全部 cron 改用獨立 worktree、寫稿全程不持鎖（見 §C）**，這個上限就失去意義，只剩「站台長大 build 變重（掃全站 2300+ 頁）＋每條連結都要逐一查證，整趟常 > 20 分鐘」時**把快完成的工作砍掉**的害處。
+- **解法**：**撰寫/發佈型 cron 一律不包 `timeout`**：`international-desk`、`lifestyle-police`、`focus-esg`、`lifestyle-deals`、`lifestyle-typhoon` 的 `out="$(... 2>&1)"` 已移除 `timeout 1200` 前綴與 `rc==124` 補註（2026-07-09）。重複寫的防護不靠時間上限，而是**獨立 worktree ＋ `pushToMain` 的 fetch+rebase 重試**（同一題就算兩趟並跑，也是 rebase 收斂、颱風更走滾動更新同一 slug）。
+- **保留 timeout 的例外**：**非撰寫、可重跑、無 build 的**報告/探針/資料型仍保留合理上限——`weekly-report`／`tech-radar`（報告/清單）、`aeo-radar`（探針 1800）、`heartbeat`（data 120/dashboard 180/brain 360）、`indexing-submit`（API 600）。砍掉它們不會丟棄快完成的文章，且能防罕見卡死堆積。
+- **怎麼避免重犯**：判準＝「這支 cron 會不會**產出一篇要 build＋發佈的文章**？」會 → 不設 timeout（砍掉＝白燒＋沒上線）；只是報告/抓資料/送 API → 可留 timeout。**不要因為『看到別支有 timeout 就照抄』**——先分辨它是不是撰寫型。改這幾支 `.sh` 後記得 push → `/root/appi.news-publisher` `git pull` 才生效。

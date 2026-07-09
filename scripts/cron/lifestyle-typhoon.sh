@@ -22,8 +22,7 @@ set -a
 source "$HOME/.config/appi-news/report.env"
 set +a
 ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
-out="$(timeout 1200 claude-appi --model claude-sonnet-5 -p "/lifestyle-typhoon" 2>&1)"; rc=$?
-[ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
+out="$(claude-appi --model claude-sonnet-5 -p "/lifestyle-typhoon" 2>&1)"; rc=$?
 printf '%s\n' "$out"
 if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit' <<<"$out"; then
   # 安靜模式：只在「有停課」才報；無停課的時段不發，避免每小時洗頻。

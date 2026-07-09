@@ -11,8 +11,7 @@ set -a
 source "$HOME/.config/appi-news/report.env"
 set +a
 ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
-out="$(timeout 1200 node scripts/international-write.mjs --go 2>&1)"; rc=$?
-[ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 1200s 被中止（避免卡死共用鎖）"
+out="$(node scripts/international-write.mjs --go 2>&1)"; rc=$?
 printf '%s\n' "$out"
 if [ "$rc" -eq 0 ]; then
   # PUBLISHED 行格式：PUBLISHED=<url> ｜ <title>。取整行內容，組成「• 標題 + 連結」。

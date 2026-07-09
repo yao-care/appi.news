@@ -16,6 +16,7 @@ import { loadServiceAccount, getAccessToken, gscQuery } from './lib/google-data.
 import { GSC_SCOPE } from './lib/report-config.mjs';
 import { articleSlugOf } from './lib/weekly-metrics.mjs';
 import { loadArticleCategoryMap } from './lib/article-category-map.mjs';
+import { isMutedQuery } from './lib/muted-queries.mjs';
 
 // ───────────────────────── 門檻（可用 env 覆寫，測試/調參用）─────────────────────────
 const PAGE_OPP_MIN_IMPRESSIONS = Number(process.env.SEO_PAGE_OPP_MIN_IMPR || 5);
@@ -89,7 +90,7 @@ export function pageOpportunities(pageResp, catMap = {}, n = TOP_N) {
 /** S3：改標題搶點擊。dimensions=['query','page']。 */
 export function titleCtrCandidates(qpResp, catMap = {}, n = TOP_N) {
   return (qpResp?.rows ?? [])
-    .filter((r) => (r.impressions || 0) >= TITLE_MIN_IMPRESSIONS && (r.ctr || 0) < TITLE_MAX_CTR && !isBrandQuery(r.keys[0]))
+    .filter((r) => (r.impressions || 0) >= TITLE_MIN_IMPRESSIONS && (r.ctr || 0) < TITLE_MAX_CTR && !isBrandQuery(r.keys[0]) && !isMutedQuery(r.keys[0]))
     .sort((a, b) => b.impressions - a.impressions)
     .slice(0, n)
     .map((r) => ({
@@ -109,7 +110,7 @@ export function titleCtrCandidates(qpResp, catMap = {}, n = TOP_N) {
  */
 export function searchDemandTopics(queryResp, n = TOP_N) {
   return (queryResp?.rows ?? [])
-    .filter((r) => (r.impressions || 0) >= DEMAND_MIN_IMPRESSIONS && (r.clicks || 0) <= DEMAND_MAX_CLICKS && !isBrandQuery(r.keys[0]))
+    .filter((r) => (r.impressions || 0) >= DEMAND_MIN_IMPRESSIONS && (r.clicks || 0) <= DEMAND_MAX_CLICKS && !isBrandQuery(r.keys[0]) && !isMutedQuery(r.keys[0]))
     .sort((a, b) => b.impressions - a.impressions)
     .slice(0, n)
     .map((r) => ({

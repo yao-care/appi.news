@@ -84,6 +84,7 @@ const CATEGORY_COMPETITORS = {
     { name: 'Heho健康', domain: 'heho.com.tw' },
     { name: '元氣網', domain: 'health.udn.com' },
     { name: '良醫健康網', domain: 'health.businessweekly.com.tw' },
+    { name: '上醫預防醫學發展協會', domain: 'gcm.org.tw' },
   ],
   tech: [
     { name: 'iThome', domain: 'ithome.com.tw' },

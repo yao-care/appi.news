@@ -52,7 +52,7 @@ draft: false
 
 即使用80.48%這個較嚴謹的數字，情況也不輕鬆。臺大醫院牙周病科主任張博鈞指出，[這些牙周病患者當中，約有一半屬於中重度、需要積極治療](https://epaper.ntuh.gov.tw/health/202509/project_1.html)。也就是說，每兩個台灣成年人就有一個有牙周炎，其中又有一半已經不是刷刷牙就能處理的程度。衛福部口腔健康司也持續進行[不同年度的口腔健康調查](https://dep.mohw.gov.tw/DOOH/lp-6553-124-xCat-03.html)，這是盛行率的官方事實來源。
 
-<img src="/images/gum-disease-whole-body-s1.webp" width="960" height="600" loading="lazy" decoding="async" alt="牙周病分期示意，從健康牙齦到牙齦炎、牙周炎與齒槽骨流失">
+<img src="/images/gum-disease-whole-body-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="牙周病分期示意，從健康牙齦到牙齦炎、牙周炎與齒槽骨流失">
 
 牙周病的本質，是牙菌斑與牙結石長期刺激牙齦造成的慢性發炎，進一步破壞支撐牙齒的齒槽骨。它之所以會和全身健康扯上關係，關鍵就在「慢性發炎」這四個字。發炎的牙周組織可能讓細菌與發炎物質進入血流，而慢性發炎正是許多全身性疾病的共同土壤。這是一個合理的推測機轉，但推測機轉不等於已證實的因果，這點請先記住，後面每一段都會用到。
 
@@ -70,7 +70,7 @@ draft: false
 
 美國心臟協會（AHA）2012年的科學聲明結論很明確：[觀察性研究支持牙周病與動脈粥狀硬化性血管疾病之間有『獨立相關』，但並不支持因果關係；也沒有證據顯示治療牙周病能預防這類血管疾病或改變其結果](https://pubmed.ncbi.nlm.nih.gov/22514251/)。十多年後立場也沒有翻盤。AHA在2025年底發布的最新科學聲明再次重申，[牙周病與動脈粥狀硬化性心血管疾病之間存在獨立相關，但因果關係尚未確認，也沒有直接證據顯示治療牙周病可以預防心血管疾病](https://newsroom.heart.org/news/gum-disease-may-be-linked-to-plaque-buildup-in-arteries-higher-risk-of-major-cvd-events)。
 
-<img src="/images/gum-disease-whole-body-s2.webp" width="960" height="540" loading="lazy" decoding="async" alt="牙周病與心血管關聯的示意，強調相關而非因果">
+<img src="/images/gum-disease-whole-body-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="牙周病與心血管關聯的示意，強調相關而非因果">
 
 那些看起來很驚人的數字，也要放回「相關」的框架裡讀。AHA 2025聲明引用的觀察性數據顯示，[每天刷牙一次或更少的人，10年心血管疾病風險為13.7%；一天刷三次以上的人為7.35%](https://newsroom.heart.org/news/gum-disease-may-be-linked-to-plaque-buildup-in-arteries-higher-risk-of-major-cvd-events)。這是關聯，不是因果，不能解讀成「多刷牙就能把心臟病風險砍一半」。原因在於，牙周病和心血管疾病共享一大堆風險因子：抽菸、年齡、肥胖、糖尿病。這些共同因子本身就會同時推高兩邊，所以看到它們一起出現，並不等於一個造成了另一個。
 
@@ -92,7 +92,7 @@ Cochrane 2017年的系統性回顧結論相當保守：[目前不清楚孕期牙
 
 第二個是特殊族群的高頻率洗牙。[糖尿病、懷孕婦女、口乾症等特殊族群，健保給付每3個月就能洗牙一次，一般民眾則是每半年一次](https://www.mohw.gov.tw/cp-16-72376-1.html)。要提醒的是，這個高頻率是由牙醫依你的高風險身分向健保申報，並非病人自行主張就有，就診時記得主動告知自己的糖尿病或懷孕狀況，請牙醫評估申報。另外澄清一個常見誤會：糖尿病與孕婦的3個月洗牙，是在[2022年擴大方案之前就已經納入的既有對象](https://www.cna.com.tw/news/ahel/202202080299.aspx)，2022年3月新增的是腦血管疾病、洗腎、使用抗骨鬆藥物、惡性腫瘤等族群。想知道洗牙相關的迷思與完整給付規則，可以參考我們的另一篇：[健保洗牙半年一次，會把牙齒洗壞、讓牙縫變大嗎](/articles/dental-scaling-myths/)。
 
-<img src="/images/gum-disease-whole-body-s3.webp" width="960" height="600" loading="lazy" decoding="async" alt="牙醫進行牙周檢查與衛教的示意，象徵健保牙周照護計畫">
+<img src="/images/gum-disease-whole-body-s3.webp" width="960" height="640" loading="lazy" decoding="async" alt="牙醫進行牙周檢查與衛教的示意，象徵健保牙周照護計畫">
 
 ## 你現在可以做的三件事
 

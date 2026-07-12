@@ -52,7 +52,7 @@ draft: false
 
 台灣官方也是同一立場。衛福部明確指出，[含氟牙膏的氟化物濃度必須超過1000 ppm才具防齲功效，而世界衛生組織、國際牙醫聯盟與美國疾病管制中心都認為使用氟化物防蛀既安全又有效](https://www.mohw.gov.tw/cp-3792-40211-1.html)。牙醫師公會全國聯合會也建議，[孩子一長牙就開始刷，並使用1000 ppm以上的含氟牙膏](https://n.yam.com/Article/20260528303113)。所以選牙膏的第一個重點，反而是別去買標榜「無氟」或濃度不明的產品，那才是把孩子暴露在蛀牙風險裡。
 
-<img src="/images/fluoride-toothpaste-kids-s1.webp" width="960" height="600" loading="lazy" decoding="async" alt="不同濃度含氟牙膏與防蛀實證示意">
+<img src="/images/fluoride-toothpaste-kids-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="不同濃度含氟牙膏與防蛀實證示意">
 
 ## 分齡用量一次記住：米粒與豌豆
 
@@ -68,7 +68,7 @@ draft: false
 
 門檻有多高，看真實案例最清楚。英國那份資料裡，[一名8歲、25公斤的兒童，是吞下「整條」2800 ppm的高氟牙膏（約280毫克氟，超過該童安全每日上限兩倍以上）才因症狀被送醫評估](https://www.sps.nhs.uk/articles/considering-fluoride-and-accidental-ingestion-of-toothpaste/)。而2800 ppm是處方級的高氟牙膏，不是市售兒童牙膏。事實查核平台MyGoPen也把「含氟牙膏會害中毒」的網傳說法判為易誤解，[指出該說法源自約50年前的舊研究、缺乏當代代表性證據，正常每天刷兩次、把泡沫吐掉，難以攝入足量](https://www.mygopen.com/2023/12/toothpaste.html)。
 
-<img src="/images/fluoride-toothpaste-kids-s2.webp" width="960" height="540" loading="lazy" decoding="async" alt="牙膏用量與氟中毒門檻的劑量對比示意">
+<img src="/images/fluoride-toothpaste-kids-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="牙膏用量與氟中毒門檻的劑量對比示意">
 
 ## 氟斑齒與骨骼、神經的疑慮，該怎麼看
 

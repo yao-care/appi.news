@@ -52,7 +52,7 @@ draft: false
 
 再看把多份研究合起來的統合分析。一篇彙整8個世代研究、共14362名長者的分析指出，[有缺牙者失智風險約高1.34倍，而且呈劑量反應關係，缺愈多顆風險愈高](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305430/)。這份研究裡最關鍵的一組對比，值得每個家庭記住：[缺牙又沒裝假牙者風險升高（約1.53倍），但有裝假牙者的風險與一般人無異（約0.98倍）](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305430/)。這強烈暗示，問題不在「掉了牙」本身，而在「掉了沒補、咬合回不來」。
 
-<img src="/images/tooth-loss-dementia-s1.webp" width="960" height="600" loading="lazy" decoding="async" alt="缺牙數與失智風險關聯的示意，強調有裝假牙者風險接近常人">
+<img src="/images/tooth-loss-dementia-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="缺牙數與失智風險關聯的示意，強調有裝假牙者風險接近常人">
 
 台灣也有本土研究。臺北榮總針對81名60歲以上民眾的研究發現，[自然牙缺失超過14顆者，罹患阿茲海默症的風險約高出10倍、輕度認知障礙風險高出近5倍；研究也觀察到，有以固定或活動假牙修復缺牙者，其認知障礙相關風險較低](https://www.healthnews.com.tw/article/68714)。這個「10倍」數字很驚人，但必須誠實提醒：這份研究只有81人、屬於單一時間點的橫斷面設計，樣本小、無法判斷先後因果，那個倍數的參考性遠不如前面的大型世代研究。會把它放進來，是因為它有台灣本土脈絡，但請把它當成「和大型研究方向一致的補充」，別被10倍這個數字帶著走。
 
@@ -72,7 +72,7 @@ draft: false
 
 它的重要性在於後果。一份追蹤2011名社區長者的地標研究發現，[有口腔衰弱的長者，後續發生身體衰弱、肌少症、失能與死亡的風險，分別約為一般長者的2.4、2.2、2.3、2.2倍](https://pubmed.ncbi.nlm.nih.gov/29161342/)。也就是說，口腔的衰退往往是全身衰退的前哨站。這也和我們談過的[高齡者怎麼預防肌少症](/articles/sarcopenia-prevention-evidence-elderly/)是同一個大主題的不同切面：嘴巴咬不動、營養跟不上，肌肉自然守不住。
 
-<img src="/images/tooth-loss-dementia-s2.webp" width="960" height="600" loading="lazy" decoding="async" alt="口腔衰弱與身體衰弱、肌少症關聯的示意">
+<img src="/images/tooth-loss-dementia-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="口腔衰弱與身體衰弱、肌少症關聯的示意">
 
 好消息是，口腔衰弱可以自己先做初步篩檢。有一份8題的自填問卷「口腔衰弱指標OFI-8」，[題目包含比半年前更難吃硬的食物、喝茶湯會嗆到、口乾、外出頻率等，總分0到11分，3分為中風險、4分以上為高風險、建議就醫評估](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0283803)。它是自我提醒的工具，不是診斷，分數高就找牙醫進一步看。
 

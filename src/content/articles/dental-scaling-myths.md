@@ -68,7 +68,7 @@ draft: false
 
 打個比方，牙結石就像水管內壁的水垢。剛開始是軟的、擦得掉，一旦結成硬垢，就得用工具刮。這也是為什麼牙結石特別容易堆在唾液腺開口附近，例如下排門牙的內側、上排大臼齒的外側。它不會因為你多刷幾下就消失，這不是刷牙認不認真的問題，是物理與化學的問題。
 
-<img src="/images/dental-scaling-myths-s2.webp" width="960" height="600" loading="lazy" decoding="async" alt="牙齒結構與牙結石堆積示意，說明牙菌斑鈣化成硬垢的過程">
+<img src="/images/dental-scaling-myths-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="牙齒結構與牙結石堆積示意，說明牙菌斑鈣化成硬垢的過程">
 
 ## 迷思一：洗牙會磨壞琺瑯質？
 

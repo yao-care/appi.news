@@ -3,7 +3,7 @@ title: "看懂健檢報告"
 description: "健檢紅字別自己嚇自己，也別輕忽。這個主題把肝指數、糖化血色素、膽固醇、腎功能、甲狀腺等健檢最常見的數字翻成白話，教你怎麼判讀、什麼時候該行動、什麼時候數字會騙人。"
 category: "health"
 coverImage: "og/health.png"
-tags: ["看懂健檢報告", "健檢報告", "血液檢查", "健康識讀"]
+tags: ["健檢報告", "預防醫學"]
 featured: true
 status: "active"
 articles: ["liver-enzymes-got-gpt", "hba1c-prediabetes", "ldl-cholesterol-targets", "egfr-kidney-function", "thyroid-tsh-subclinical"]

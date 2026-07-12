@@ -13,6 +13,8 @@ status: scheduled
 sourceType: author
 contentType: guide
 disclaimerType: medical
+topics: ["oral-care"]
+column: "evidence-based-health"
 highlights:
   - "含氟牙膏防蛀有高品質實證：Cochrane回顧確認1000到1500 ppm含氟牙膏能顯著減少蛀牙"
   - "分齡用量好記：3歲以下米粒大小（薄塗）、3到6歲豌豆大小，並讓孩子把泡沫吐掉"

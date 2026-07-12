@@ -13,6 +13,8 @@ status: published
 sourceType: author
 contentType: guide
 disclaimerType: medical
+topics: ["oral-care"]
+column: "evidence-based-health"
 highlights:
   - "健保給付13歲以上民眾每半年洗牙一次，通常只付掛號費約150到200元，是CP值最高的口腔投資"
   - "洗牙不會磨壞琺瑯質：超音波是把牙結石『震除』而非刮牙齒，琺瑯質硬度是骨頭的好幾倍"

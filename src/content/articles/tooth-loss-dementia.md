@@ -13,6 +13,8 @@ status: scheduled
 sourceType: author
 contentType: analysis
 disclaimerType: medical
+topics: ["oral-care"]
+column: "evidence-based-health"
 highlights:
   - "缺牙又沒裝假牙者失智風險約高1.3到1.9倍，但這是觀察性研究的『相關』，不是證明缺牙導致失智"
   - "統合分析發現有裝假牙者的失智風險與一般人接近，缺牙沒補者才明顯升高，補回咬合是關鍵"

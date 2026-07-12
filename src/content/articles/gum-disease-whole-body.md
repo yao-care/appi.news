@@ -13,6 +13,8 @@ status: scheduled
 sourceType: author
 contentType: analysis
 disclaimerType: medical
+topics: ["oral-care"]
+column: "evidence-based-health"
 highlights:
   - "依衛福部2015到2016年調查，台灣成人牙周病盛行率約80.48%，其中約半數屬中重度、需要積極治療"
   - "牙周病與糖尿病是真正的雙向關係：牙周治療後3個月HbA1c約下降0.27到0.48%，但長期效果證據仍不一致"

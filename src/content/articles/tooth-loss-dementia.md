@@ -2,7 +2,7 @@
 title: "缺牙拖著不補，失智風險真的會上升嗎？"
 slug: "tooth-loss-dementia"
 description: "缺牙又不補，與失智風險升高有『相關』（觀察性研究），並非證明因果。研究也發現有裝假牙者的失智風險接近常人。認識口腔衰弱這個可逆的高齡前哨，別把掉牙當成正常老化。"
-publishDate: 2026-07-15
+publishDate: 2026-07-15T20:00:00+08:00
 category: health
 subcategory: aging-health
 tags: ["缺牙", "失智", "口腔衰弱", "假牙", "高齡健康"]

@@ -2,7 +2,7 @@
 title: "含氟牙膏會讓小孩氟中毒嗎？把安全劑量算給家長看"
 slug: "fluoride-toothpaste-kids"
 description: "含氟牙膏正確用量不會讓孩子氟中毒。中毒門檻是每公斤5毫克氟，20公斤孩子要一次吞下約半條家庭號牙膏才可能達到。把分齡用量、氟斑齒與塗氟補助一次講清楚。"
-publishDate: 2026-07-14
+publishDate: 2026-07-14T20:00:00+08:00
 category: health
 subcategory: preventive
 tags: ["含氟牙膏", "兒童防蛀", "氟中毒", "塗氟", "氟斑齒"]

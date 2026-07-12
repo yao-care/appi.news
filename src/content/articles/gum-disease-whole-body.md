@@ -2,7 +2,7 @@
 title: "八成台灣成人有牙周病：它如何和糖尿病、心臟病互相拖累？"
 slug: "gum-disease-whole-body"
 description: "台灣成人牙周病盛行率約八成。牙周病與糖尿病有雙向惡化關係，與心血管疾病則是『相關』而非因果。用實證把關聯和因果分清楚，並教你用好健保牙周照護。"
-publishDate: 2026-07-13
+publishDate: 2026-07-13T20:00:00+08:00
 category: health
 subcategory: medical
 tags: ["牙周病", "糖尿病", "心血管疾病", "慢性發炎", "健保牙周照護"]

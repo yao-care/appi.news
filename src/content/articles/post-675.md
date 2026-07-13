@@ -6,7 +6,7 @@ excerpt: "Frontiers in Medicine 2025年發表人工智慧醫療設備（AIMD）�
 publishDate: "2025-10-01T00:00:00+08:00"
 category: "health"
 subcategory: "health-policy"
-tags: ["AI醫療器材", "TFDA", "醫療監管", "機器學習", "人工智慧"]
+tags: ["AI醫療器材", "食藥署", "醫療監管", "機器學習", "人工智慧"]
 highlights:
   - "Frontiers in Medicine回顧2015至2025年全球AIMD監管演變，FDA、歐盟、日本、韓國與台灣TFDA均在這十年建立初步框架"
   - "台灣TFDA已核准約50款本土製造及116款進口AI/ML醫療設備，涵蓋超音波AI判讀、放射影像分析等應用"

@@ -6,7 +6,7 @@ excerpt: "FDA 一邊衝核准量、一邊把低風險軟體移出監管，台灣
 publishDate: "2026-07-20T08:00:00+08:00"
 category: "tech"
 subcategory: "tech-policy"
-tags: ["AI 醫材", "FDA", "TFDA", "歐盟 AI 法", "醫療器材軟體", "數位醫療法規"]
+tags: ["AI 醫材", "FDA", "食藥署", "歐盟 AI 法", "醫療器材軟體", "數位醫療法規"]
 coverImage: "covers/fda-ai-medical-device-taiwan-eu.webp"
 coverAlt: "AI 醫療影像診斷軟體在螢幕上分析掃描影像，象徵各國對 AI 醫材的監管路線"
 coverImageCredit: "Photo by Charlss GonzHu on Pexels"

@@ -6,7 +6,7 @@ excerpt: "Chambers Healthcare AI 2025台灣章節指出，台灣TFDA自2021年�
 publishDate: "2025-07-01T00:00:00+08:00"
 category: "health"
 subcategory: "health-policy"
-tags: ["TFDA", "AI醫療器材", "機器學習", "醫療軟體", "監管政策"]
+tags: ["食藥署", "AI醫療器材", "機器學習", "醫療軟體", "監管政策"]
 highlights:
   - "TFDA於2021年8月發布AI/ML醫療軟體查驗登記指引，奠定本土AI醫療器材審查基礎規範"
   - "截至2024年12月已核准約50款本土製造及116款進口AI/ML醫療設備，涵蓋超音波AI判讀等多類應用"

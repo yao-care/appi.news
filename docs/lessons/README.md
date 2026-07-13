@@ -42,7 +42,7 @@
 |---|---|
 | [automation-model-and-account-split.md](./automation-model-and-account-split.md) | 帳號切換洗掉排程行＋全 Opus 燒爆週額度＋claude-appi 撞限額會 exit 0：cron 一律帶 --model、判成功不能只看 exit code；續：偵測到限額只 continue → 逐項批次變 24 次空打，須遇限額即 break 中止整批 |
 | [automation-runtime-staleness.md](./automation-runtime-staleness.md) | 改了卻沒生效：程式從 publisher checkout 跑、cron 一律 UTC、.sh/server 改完要 pull |
-| [auto-publish-pipeline-traps.md](./auto-publish-pipeline-traps.md) | 發佈正確性四坑：worktree 要先 build、publishDate 用系統時間蓋、多工不序列化用自癒重試、持續事件滾動更新同一篇不要每變更產新文章 |
+| [auto-publish-pipeline-traps.md](./auto-publish-pipeline-traps.md) | 發佈正確性坑：worktree 要先 build、publishDate 用系統時間蓋、多工不序列化用自癒重試、持續事件滾動更新同一篇；§F 一篇缺封面 webp 會讓 check:links 擋掉整條共用部署佇列、連累別線排程文，要在進 main 前攔（validate-content 升 error） |
 | [commit-hygiene-shared-checkout.md](./commit-hygiene-shared-checkout.md) | 共用 checkout 別把別人 WIP 掃進 commit：只 stage 文章產物 / 用 pathspec |
 | [weekly-report-mobile-layout.md](./weekly-report-mobile-layout.md) | 週報手機排版崩掉：模型手刻多欄塞一行；版面收歸決定論渲染器，模型只填數據+notes |
 | [deterministic-fetch-llm-only-writes.md](./deterministic-fetch-llm-only-writes.md) | 自動線抓資料別交給 LLM agent（慢/發散翻頁/燒額度）；改固定抓→LLM 只寫；exit124 是逾時非額度、cron 別擠同一 5h session 視窗 |
@@ -53,6 +53,7 @@
 |---|---|
 | [link-and-content-validation.md](./link-and-content-validation.md) | 連結查證與內容檢查的假陽性：bot 擋、IPv6 要 curl -4、regex 截斷、legal 誤報、引號不一致 |
 | [wp-migration-broken-inline-html.md](./wp-migration-broken-inline-html.md) | 76 篇 wp-* 帶遷移破損 inline HTML（頂部重複 FAQ／巢狀 table／blockquote 內 hr），build+check:links 看不到；確定性腳本掃修＋dist 驗收 |
+| [tag-and-terminology-hygiene.md](./tag-and-terminology-hygiene.md) | 標籤 86% 是碎標籤、重點是把同義／英文縮寫（TSMC→台積電、TFDA→食藥署…）收斂到 canonical 別稀釋集群；掃中國用語一律 context-aware，代碼/用戶/激活/網絡多為合法，全域 sed 會改錯，全站真錯只有存儲/美聯儲 |
 
 > 更早的一次性遷移紀錄另見 [`../../MIGRATION_NOTES.md`](../../MIGRATION_NOTES.md)（WordPress → Astro，2026-06-09 當時快照）。
 > 更多尚未整理成正本的踩坑，散在 Claude 本地記憶（`~/.claude/projects/-root-appi-news/memory/`），可逐步提煉成這裡的正本。

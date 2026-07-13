@@ -1,0 +1,45 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="700" fill="#1B5E4B">家中常被忽略的五大積水熱點</text>
+  <text x="480" y="76" text-anchor="middle" font-size="16" fill="#6B7B77">定期清空這些角落，降低病媒蚊孳生風險</text>
+
+  <!-- 卡片1：冷氣機集水盤 -->
+  <rect x="90" y="100" width="240" height="220" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="210" cy="175" r="44" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="3"/>
+  <rect x="180" y="152" width="60" height="26" rx="4" fill="none" stroke="#1B5E4B" stroke-width="5"/>
+  <line x1="188" y1="188" x2="232" y2="188" stroke="#1B5E4B" stroke-width="5"/>
+  <circle cx="210" cy="203" r="6" fill="#C9A227"/>
+  <text x="210" y="255" text-anchor="middle" font-size="21" font-weight="700" fill="#1F2A28">冷氣機集水盤</text>
+
+  <!-- 卡片2：花盆底盤 -->
+  <rect x="360" y="100" width="240" height="220" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="480" cy="175" r="44" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="3"/>
+  <path d="M462,155 L498,155 L490,188 L470,188 Z" fill="none" stroke="#1B5E4B" stroke-width="5"/>
+  <ellipse cx="480" cy="198" rx="28" ry="9" fill="none" stroke="#1B5E4B" stroke-width="5"/>
+  <ellipse cx="480" cy="198" rx="18" ry="4" fill="#C9A227"/>
+  <text x="480" y="255" text-anchor="middle" font-size="21" font-weight="700" fill="#1F2A28">花盆底盤</text>
+
+  <!-- 卡片3：屋簷排水溝 -->
+  <rect x="630" y="100" width="240" height="220" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="750" cy="175" r="44" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="3"/>
+  <path d="M718,168 L750,146 L782,168" fill="none" stroke="#1B5E4B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M722,192 Q750,210 778,192" fill="none" stroke="#1B5E4B" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="750" cy="196" rx="14" ry="4" fill="#C9A227"/>
+  <text x="750" y="255" text-anchor="middle" font-size="21" font-weight="700" fill="#1F2A28">屋簷排水溝</text>
+
+  <!-- 卡片4：廢棄輪胎 -->
+  <rect x="225" y="350" width="240" height="220" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="345" cy="425" r="44" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="3"/>
+  <circle cx="345" cy="425" r="30" fill="none" stroke="#1B5E4B" stroke-width="6"/>
+  <circle cx="345" cy="425" r="13" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="3"/>
+  <circle cx="345" cy="425" r="6" fill="#C9A227"/>
+  <text x="345" y="505" text-anchor="middle" font-size="21" font-weight="700" fill="#1F2A28">廢棄輪胎</text>
+
+  <!-- 卡片5：塑膠椅凹陷處 -->
+  <rect x="495" y="350" width="240" height="220" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="615" cy="425" r="44" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="3"/>
+  <rect x="597" y="395" width="36" height="20" rx="3" fill="none" stroke="#1B5E4B" stroke-width="5"/>
+  <path d="M590,417 Q615,438 640,417" fill="none" stroke="#1B5E4B" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="615" cy="423" rx="15" ry="5" fill="#C9A227"/>
+  <text x="615" y="505" text-anchor="middle" font-size="21" font-weight="700" fill="#1F2A28">塑膠椅凹陷處</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

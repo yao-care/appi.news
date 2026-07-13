@@ -1,0 +1,46 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="62" text-anchor="middle" font-family="sans-serif" font-size="34" font-weight="bold" fill="#1B5E4B">陽台防蚊：親子共同清空花盆底盤</text>
+  <text x="480" y="96" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#6B7B77">雨後隨手清除積水，降低病媒蚊孳生風險</text>
+
+  <rect x="80" y="130" width="800" height="410" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+
+  <line x1="110" y1="175" x2="850" y2="175" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="160" y1="175" x2="160" y2="215" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="300" y1="175" x2="300" y2="215" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="440" y1="175" x2="440" y2="215" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="580" y1="175" x2="580" y2="215" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="720" y1="175" x2="720" y2="215" stroke="#2E8B6F" stroke-width="4"/>
+
+  <rect x="84" y="480" width="792" height="56" fill="#2E8B6F" fill-opacity="0.12"/>
+
+  <path d="M395,375 L465,375 L452,435 L408,435 Z" fill="#C9A227" stroke="#1B5E4B" stroke-width="2"/>
+  <ellipse cx="430" cy="440" rx="46" ry="11" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <ellipse cx="430" cy="438" rx="30" ry="5" fill="#2E8B6F" fill-opacity="0.5"/>
+
+  <path d="M460,443 Q520,470 560,500" fill="none" stroke="#2E8B6F" stroke-width="3" stroke-dasharray="6,6"/>
+  <circle cx="490" cy="455" r="4" fill="#2E8B6F"/>
+  <circle cx="522" cy="472" r="4" fill="#2E8B6F"/>
+  <circle cx="548" cy="490" r="4" fill="#2E8B6F"/>
+
+  <rect x="545" y="505" width="40" height="10" rx="3" fill="#1B5E4B" fill-opacity="0.7"/>
+  <line x1="551" y1="505" x2="551" y2="515" stroke="#F2F7F5" stroke-width="2"/>
+  <line x1="565" y1="505" x2="565" y2="515" stroke="#F2F7F5" stroke-width="2"/>
+  <line x1="579" y1="505" x2="579" y2="515" stroke="#F2F7F5" stroke-width="2"/>
+
+  <path d="M628,375 Q580,395 465,425" fill="none" stroke="#1B5E4B" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="650" cy="340" r="22" fill="#1B5E4B"/>
+  <path d="M628,360 Q650,350 672,360 L668,440 Q650,450 632,440 Z" fill="#2E8B6F"/>
+  <rect x="636" y="440" width="12" height="50" fill="#1B5E4B"/>
+  <rect x="656" y="440" width="12" height="50" fill="#1B5E4B"/>
+
+  <path d="M715,392 Q685,405 600,415" fill="none" stroke="#2E8B6F" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="730" cy="365" r="16" fill="#2E8B6F"/>
+  <path d="M715,380 Q730,373 745,380 L742,435 Q730,442 718,435 Z" fill="#C9A227"/>
+  <rect x="720" y="435" width="8" height="35" fill="#1B5E4B"/>
+  <rect x="734" y="435" width="8" height="35" fill="#1B5E4B"/>
+
+  <text x="430" y="475" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1F2A28">花盆底盤積水</text>
+  <text x="565" y="530" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1F2A28">倒掉積水，避免孳生病媒蚊</text>
+  <text x="685" y="475" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1F2A28">親子同心，定期巡檢</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

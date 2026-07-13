@@ -6,7 +6,7 @@ excerpt: "KPMG《Venture Pulse Q4 2025》顯示，2025年全球企業創投規�
 publishDate: "2026-01-10T09:00:00+08:00"
 category: "finance"
 subcategory: "investing-literacy"
-tags: ["企業創投", "CVC", "KPMG", "亞洲創投", "AI賽道"]
+tags: ["企業創投", "KPMG", "亞洲創投", "AI賽道"]
 highlights:
   - "KPMG統計2025年全球CVC投資規模達2,869億美元，為有紀錄以來的史上次高，儘管交易件數持續下滑"
   - "美國企業對AI公司的CVC投資在2025年創下歷史紀錄，Anthropic獲微軟與NVIDIA共投150億美元為Q4最大單筆"

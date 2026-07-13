@@ -1,6 +1,6 @@
 # 自動發佈管線的正確性陷阱（build、日期、並發、持續事件）
 
-> 摘要：worktree 沒殘留 dist 會讓 check:links 整批失敗；模型填的 publishDate 會排到未來被濾掉；多工線不可加 flock，要用自癒重試；持續事件（颱風）每變更產新文章會洗出多篇重複，要改滾動更新同一篇；**撰寫型 cron 的外層 `timeout 1200` 是舊 flock 模型的殘留，全 worktree 化後只會砍掉快完成的 build、白燒 token，已移除（§E）**。｜ 範圍：自動化/發佈 ｜ 狀態：已解決 ｜ 日期：2026-06-25（§E 補於 2026-07-09）
+> 摘要：worktree 沒殘留 dist 會讓 check:links 整批失敗；模型填的 publishDate 會排到未來被濾掉；多工線不可加 flock，要用自癒重試；持續事件（颱風）每變更產新文章會洗出多篇重複，要改滾動更新同一篇；**撰寫型 cron 的外層 `timeout 1200` 是舊 flock 模型的殘留，全 worktree 化後只會砍掉快完成的 build、白燒 token，已移除（§E）**；**一篇缺封面 webp 的文章會讓 check:links 擋掉「整條」共用部署佇列、害別線排程文也上不了線，要在進 main 前就攔（§F）**。｜ 範圍：自動化/發佈 ｜ 狀態：已解決 ｜ 日期：2026-06-25（§E 補於 2026-07-09、§F 補於 2026-07-13）
 
 對應 SOP：[`docs/SERVER_HANDOFF.md`](../SERVER_HANDOFF.md) §子專案 3（cron 總表）。
 
@@ -42,3 +42,13 @@
 - **解法**：**撰寫/發佈型 cron 一律不包 `timeout`**：`international-desk`、`lifestyle-police`、`focus-esg`、`lifestyle-deals`、`lifestyle-typhoon` 的 `out="$(... 2>&1)"` 已移除 `timeout 1200` 前綴與 `rc==124` 補註（2026-07-09）。重複寫的防護不靠時間上限，而是**獨立 worktree ＋ `pushToMain` 的 fetch+rebase 重試**（同一題就算兩趟並跑，也是 rebase 收斂、颱風更走滾動更新同一 slug）。
 - **保留 timeout 的例外**：**非撰寫、可重跑、無 build 的**報告/探針/資料型仍保留合理上限——`weekly-report`／`tech-radar`（報告/清單）、`aeo-radar`（探針 1800）、`heartbeat`（data 120/dashboard 180/brain 360）、`indexing-submit`（API 600）。砍掉它們不會丟棄快完成的文章，且能防罕見卡死堆積。
 - **怎麼避免重犯**：判準＝「這支 cron 會不會**產出一篇要 build＋發佈的文章**？」會 → 不設 timeout（砍掉＝白燒＋沒上線）；只是報告/抓資料/送 API → 可留 timeout。**不要因為『看到別支有 timeout 就照抄』**——先分辨它是不是撰寫型。改這幾支 `.sh` 後記得 push → `/root/appi.news-publisher` `git pull` 才生效。
+
+## F. 一篇缺封面 webp 會讓 check:links 擋掉「整條」共用部署佇列（不只那篇）
+
+- **問題**：2026-07-13 自動日更推的「關於黑胡椒」（`appi-news-184`，status: published）frontmatter 寫 `coverImage: covers/appi-news-184.webp`，但那張封面 webp **沒被 commit**（只有內文圖 `images/appi-news-184/1.jpg`、`2.png`、`3.svg`）。這張缺圖被相關文章當縮圖引用 33 處，`check:links` 硬 gate 判「內部壞連結」→ **從 03:42 UTC 起每一次部署都失敗（含 06:00 那班 cron）**。真正的痛點不是這篇上不了，而是**整條共用部署佇列被卡住**——當晚 20:00 該轉正的排程文（口腔系列「牙周病」）也因此上不了線，且線上站停在舊版本。
+- **原因**：兩層破口疊加。①**批次封面步驟漏一篇且無聲**：`cover: appi-news-N` 這個 commit 對 182/183/376/377 都有、對 184 就是沒有（cover 步驟對該篇 skip 或 fail 卻沒中止、沒告警），frontmatter 仍指向不存在的檔。②**唯一的硬擋在部署端**：`scripts/validate-content.mjs` 其實有檢查封面存在（`publicExists`，M. coverImage 段），但**只 `warn` 不 `error`**（`prebuild` 因此放行、`pnpm build` 成功）；真正會擋的只剩部署時的 `check:links`，而它擋的是**整條共用佇列**，不是單篇。於是「一篇壞文章 = 全站發佈停擺、還連累別線」。
+- **解法（救回）**：用生圖 worker（`scripts/lib/ai-image.mjs` 的 `gpt-image-2`，本機只需有 repo push 權限的 GitHub token）補生那張封面、commit、push → check:links 過關、佇列解鎖。因當下已過該日排程時間（20:00＝12:00 UTC），這一 push 觸發的 build 也**順帶把排程文一起轉正**。
+- **怎麼避免重犯**：核心原則＝**壞連結要在「進 main 前」擋、而且擋單篇；別靠部署端 `check:links` 擋、那會擋全站又連累別線**。
+  1. **把 `validate-content.mjs` 的「coverImage 檔案不存在」由 `warn` 升為 `error`**（先略過 `http(s)://` 開頭的外部網址封面以免誤殺，站上確有數篇用 Unsplash URL 當封面），並在**內容產生端的 checkout**（`newsroom-write.mjs`／`article-write.mjs`／`appi-news-*` 批次封面線）push 前跑 `pnpm validate:content` 當 pre-push gate——壞文章當場失敗、不進 main、不害別線。
+  2. **任何會寫文章的路徑**（含繞過 newsroom 配圖 gate 的 `appi-news-*` 批次、`apply-stock-covers.mjs`）都要在 commit 前確認 `coverImage` 指向的檔案真的存在；批次封面步驟對單篇 skip/fail 要**中止該篇或至少報錯**，不要無聲跳過。
+  判準＝「這個壞連結會不會在部署時擋住『別人』？會 → 一定要在進 main 前攔下來、指名單篇，而不是留給 `check:links` 在部署端擋掉整條佇列。」對應 SOP：[`docs/automation-invariants.md`](../automation-invariants.md) 的配圖 gate 一節。

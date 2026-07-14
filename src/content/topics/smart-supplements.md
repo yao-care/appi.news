@@ -6,7 +6,7 @@ coverImage: "og/health.png"
 tags: ["保健食品", "廣告合規"]
 featured: true
 status: "active"
-articles: ["nmn-anti-aging-taiwan", "multivitamin-worth-taking", "collagen-supplement-skin", "lutein-eye-health-areds2", "probiotics-how-to-choose", "red-yeast-rice-monacolin-safety", "supplement-labels-explained", "supplement-lab-report", "precision-nutrition", "wp-247", "wp-595"]
+articles: ["nmn-anti-aging-taiwan", "multivitamin-worth-taking", "collagen-supplement-skin", "lutein-eye-health-areds2", "probiotics-how-to-choose", "red-yeast-rice-monacolin-safety", "supplement-labels-explained", "supplement-lab-report", "precision-nutrition", "supplements-five-buying-principles", "functional-food-ad-compliance-ai"]
 ---
 
 保健食品是台灣人最捨得花錢、卻也最容易被行銷牽著走的品項。菌數印得越大越好？膠原吃了會補到臉上？葉黃素能救 3C 眼？紅麴比降血脂藥安全？這些直覺，很多都剛好抓錯重點。

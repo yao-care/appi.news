@@ -10,7 +10,7 @@ tags: ["SK 海力士", "HBM", "那斯達克", "台積電", "先進封裝"]
 coverImage: "covers/sk-hynix-nasdaq-hbm-listing.webp"
 coverAlt: "象徵 SK 海力士赴那斯達克掛牌募資、把 HBM 產能軍備競賽壓上資本市場的示意"
 coverImageCredit: "Photo by Markus Spiske on Pexels"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

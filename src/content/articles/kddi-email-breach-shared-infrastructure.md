@@ -10,7 +10,7 @@ tags: ["KDDI 外洩", "資安", "供應鏈風險", "撞庫攻擊", "個資保護
 coverImage: "covers/kddi-email-breach-shared-infrastructure.webp"
 coverAlt: "資料中心機房伺服器與網路線，象徵多家 ISP 共用的信箱基礎設施"
 coverImageCredit: "Photo by Brett Sayles on Pexels"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

@@ -10,7 +10,7 @@ tags: ["前沿 AI 模型", "網路攻防能力", "AI 模型治理", "Capability-
 coverImage: "covers/frontier-model-cyber-capability-governance.webp"
 coverAlt: "前沿 AI 模型附帶網路攻防能力，引發企業與政府對釋出治理的疑慮"
 coverImageCredit: "Photo by Adi Goldstein on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

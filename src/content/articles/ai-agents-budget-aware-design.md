@@ -10,7 +10,7 @@ tags: ["AI agent", "token 成本", "預算設計", "agentic AI", "AI 治理"]
 coverImage: "covers/ai-agents-budget-aware-design.webp"
 coverAlt: "象徵 AI agent 花錢與預算監控的成本儀表板示意"
 coverImageCredit: "Photo by Luke Chesser on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

@@ -9,7 +9,7 @@ subcategory: "startup"
 tags: ["Supabase 募資", "AI 基建層", "vibe coding", "AI 新創估值", "資料治理成本"]
 coverImage: "covers/supabase-500m-ai-infrastructure-layer.webp"
 coverAlt: "資本熱錢從 AI 模型流向應用基建層，資料庫與部署平台成為新焦點的示意"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

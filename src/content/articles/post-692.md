@@ -22,7 +22,7 @@ references:
   - title: "Kyndryl Foundation grantees drive global opportunities"
     url: "https://www.kyndryl.com/nz/en/about-us/news/2026/04/kyndryl-foundation-global-skills-development"
     publisher: "Kyndryl New Zealand"
-author: "lightman"
+author: "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "general"

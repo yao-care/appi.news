@@ -10,7 +10,7 @@ tags: ["世界模型", "實體 AI", "Odyssey 募資", "AI 基礎建設", "台灣
 coverImage: "covers/odyssey-world-models-physical-ai-moat.webp"
 coverAlt: "象徵創投資金從聊天機器人轉向世界模型與實體 AI 基礎層的抽象示意"
 coverImageCredit: "Photo by Conny Schneider on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

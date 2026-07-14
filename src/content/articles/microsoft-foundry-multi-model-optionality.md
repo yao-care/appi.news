@@ -10,7 +10,7 @@ tags: ["微軟 Foundry", "MAI-Code-1-Flash", "多模型平台", "模型商品化
 coverImage: "covers/microsoft-foundry-multi-model-optionality.webp"
 coverAlt: "象徵雲端平台同時上架上萬個 AI 模型、走向去單一供應商的抽象網絡示意"
 coverImageCredit: "Photo by Conny Schneider on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

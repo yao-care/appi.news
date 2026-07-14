@@ -10,7 +10,7 @@ tags: ["Claude Design", "AI 設計工具", "用量額度", "成本可預期性",
 coverImage: "covers/claude-design-cost-predictability.webp"
 coverAlt: "象徵 AI 設計工具用量成本與可預期性的抽象示意"
 coverImageCredit: "Photo by Tima Miroshnichenko on Pexels"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

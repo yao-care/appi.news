@@ -10,7 +10,7 @@ tags: ["AI 數學證明", "Lean 4", "形式化驗證", "AI 可信度", "台灣�
 coverImage: "covers/ai-theorem-proving-lean-verifiable.webp"
 coverAlt: "AI 產出的數學證明被機器逐行驗證的示意"
 coverImageCredit: "Photo by Vitaly Gariev on Pexels"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

@@ -9,7 +9,7 @@ subcategory: "ai"
 tags: ["Claude Fable 5", "Mythos 5", "AI 模型分層", "模型選型", "agentic coding"]
 coverImage: "covers/claude-fable-5-mythos-class-model-tiering.webp"
 coverAlt: "AI 模型能力一層疊一層往上分層，最頂端是新開出的層級"
-author: "lightman"
+author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 contentType: "analysis"

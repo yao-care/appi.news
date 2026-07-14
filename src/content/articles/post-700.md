@@ -22,7 +22,7 @@ references:
   - title: "Megadeals fuel M&A surge to USD 3.39 trillion"
     url: "https://ionanalytics.com/insights/mergermarket/megadeals-fuel-ma-surge-to-usd-3-39-trillion"
     publisher: "ION Analytics / Mergermarket"
-author: "lightman"
+author: "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "general"

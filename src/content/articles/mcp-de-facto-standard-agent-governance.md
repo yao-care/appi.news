@@ -9,7 +9,7 @@ subcategory: "digital-tools"
 tags: ["MCP", "Model Context Protocol", "AI agent 治理", "Agentic AI Foundation", "MCP server 資安"]
 coverImage: "covers/mcp-de-facto-standard-agent-governance.webp"
 coverAlt: "AI agent 透過統一標準協定連接企業內部多個系統與工具，象徵 MCP 成為事實標準後的治理課題"
-author: "lightman"
+author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

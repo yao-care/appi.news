@@ -10,7 +10,7 @@ tags: ["AI agent", "多代理編排", "企業 AI 治理", "Cognizant", "ServiceN
 coverImage: "covers/enterprise-agent-orchestration-control-tower.webp"
 coverAlt: "象徵企業把跨廠牌 AI agent 匯進單一編排層與中控台的網路操作中心示意"
 coverImageCredit: "Photo by Fernando Narvaez on Pexels"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

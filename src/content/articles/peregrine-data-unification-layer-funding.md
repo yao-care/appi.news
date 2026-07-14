@@ -12,7 +12,7 @@ tags:
   - "AI 基建層"
   - "AI 新創估值"
   - "資料孤島整合"
-author: "lightman"
+author: "appi-editorial"
 coverImage: "covers/peregrine-data-unification-layer-funding.webp"
 coverAlt: "抽象資料節點互相串連的示意，象徵資本從 AI 模型流向把分散資料統一的基建層"
 coverImageCredit: "Photo by jonakoh _ on Unsplash"

@@ -10,7 +10,7 @@ tags: ["SK 海力士", "HBM", "先進封裝", "台積電", "CoWoS"]
 coverImage: "covers/sk-hynix-packaging-hbm-tsmc.webp"
 coverAlt: "象徵 SK 海力士把資本壓上 HBM 先進封裝、將競爭戰線從晶圓拉到後段封測的示意"
 coverImageCredit: "Photo by Marta Branco on Pexels"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

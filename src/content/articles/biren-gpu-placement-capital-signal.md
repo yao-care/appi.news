@@ -10,7 +10,7 @@ tags: ["壁仞科技", "國產GPU", "港股配股", "半導體資本", "台灣�
 coverImage: "covers/biren-gpu-placement-capital-signal.webp"
 coverAlt: "象徵國產 GPU 壁仞科技以港股配股募資、加速晶片商轉的抽象示意"
 coverImageCredit: "Photo by Umberto on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

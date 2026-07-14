@@ -10,7 +10,7 @@ tags: ["AMD", "記憶體牆", "AI 加速器", "HBM", "台灣半導體供應鏈"]
 coverImage: "covers/amd-mext-memory-wall.webp"
 coverAlt: "資料中心記憶體晶片與電路示意，象徵 AI 加速器競爭從算力轉向記憶體牆"
 coverImageCredit: "Photo by Steve A Johnson on Pexels"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

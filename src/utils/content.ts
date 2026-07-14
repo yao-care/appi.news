@@ -137,6 +137,13 @@ export function relatedArticles(all: Article[], current: Article, n = 4): Articl
         score += 1;
       const shared = a.data.tags.filter((t) => current.data.tags.includes(t)).length;
       score += shared;
+      // 同專欄／同主題叢集強加權：讓「延伸閱讀」優先把讀者導向同一權威叢集內的姊妹文，
+      // 而非只靠 category/tags 撈到不相干的同類新聞（收攏主題權威、提高每次瀏覽篇數）。
+      if (current.data.column && a.data.column === current.data.column) score += 3;
+      const sharedTopics = a.data.topics.filter((t) =>
+        current.data.topics.includes(t)
+      ).length;
+      score += sharedTopics * 3;
       return { a, score };
     })
     .filter((x) => x.score > 0)

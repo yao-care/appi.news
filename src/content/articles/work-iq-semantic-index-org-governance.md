@@ -10,7 +10,7 @@ tags: ["微軟 Work IQ", "語意索引", "組織知識治理", "AI agent 權限�
 coverImage: "covers/work-iq-semantic-index-org-governance.webp"
 coverAlt: "抽象數位網路節點與連線，象徵 Work IQ 把組織協作行為做成語意索引"
 coverImageCredit: "Photo by Shubham Dhage on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 disclaimerType: "general"

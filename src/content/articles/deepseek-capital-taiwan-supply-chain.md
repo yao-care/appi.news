@@ -10,7 +10,7 @@ tags: ["DeepSeek 募資", "中國 AI 資本", "寧德時代 CATL", "台廠供應
 coverImage: "covers/deepseek-capital-taiwan-supply-chain.webp"
 coverAlt: "象徵中國 AI 龍頭 DeepSeek 募資與戰略資本進場的資本市場示意"
 coverImageCredit: "Photo by Growtika on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

@@ -9,7 +9,7 @@ subcategory: "ai"
 tags: ["OpenAI Deployment Simulation", "evaluation gap", "AI 上線前驗收", "模型行為漂移", "企業 AI 導入"]
 coverImage: "covers/openai-deployment-simulation-evaluation-gap.webp"
 coverAlt: "OpenAI 用真實使用者對話重放，餵給還沒上線的新模型做上線前測試的示意"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

@@ -10,7 +10,7 @@ tags: ["Meta Business Agent", "顧客對話資料", "訓練資料隱私", "個�
 coverImage: "covers/meta-business-agent-customer-conversation-governance.webp"
 coverAlt: "抽象的對話泡泡與資料連線網路，象徵 Meta 把海量顧客對話變成企業 agent"
 coverImageCredit: "Photo by kuu akura on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 disclaimerType: "general"

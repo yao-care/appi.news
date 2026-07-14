@@ -10,7 +10,7 @@ tags: ["npm 供應鏈攻擊", "Mastra 套件投毒", "貢獻者權限殘留", "A
 coverImage: "covers/mastra-npm-supply-chain-stale-credential.webp"
 coverAlt: "Mastra AI 框架的 npm 套件遭大規模供應鏈投毒，相依套件被植入惡意程式的示意"
 coverImageCredit: "Photo by FlyD on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

@@ -10,7 +10,7 @@ tags: ["長脈絡視窗", "Gemini 3.5 Pro", "RAG", "AI 選型", "lost in the mid
 coverImage: "covers/long-context-landing-scenarios.webp"
 coverAlt: "象徵超長脈絡 AI 模型把大量資料串流進單一視窗的抽象示意"
 coverImageCredit: "Photo by Pachon in Motion on Pexels"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

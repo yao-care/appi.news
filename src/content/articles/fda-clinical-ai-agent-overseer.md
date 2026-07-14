@@ -36,6 +36,8 @@ references:
   - title: "ARPA-H Funds First FDA-Authorized AI Agent to Manage Heart Care Around the Clock"
     url: "https://www.techtimes.com/articles/318089/20260609/arpa-h-funds-first-fda-authorized-ai-agent-manage-heart-care-around-clock.htm"
     publisher: "Tech Times"
+column: "ai-healthcare"
+topics: ["ai-medical-regulation"]
 ---
 
 美國醫療高等研究計畫署（ARPA-H）要做一件以前沒人正式做成的事：打造[第一個拿到 FDA 授權、會自己行動的臨床 AI agent](https://arpa-h.gov/news-and-events/arpa-h-revolutionize-cardiovascular-disease-management-clinical-agentic-ai)。這個計畫叫 ADVOCATE，鎖定心臟衰竭與心肌梗塞康復的病人，要做一個直接面對病人的 agent，[能自主調整門診、用藥、飲食和運動](https://arpa-h.gov/explore-funding/programs/advocate)，連處方都能[自己開、自己改](https://arpa-h.gov/news-and-events/arpa-h-revolutionize-cardiovascular-disease-management-clinical-agentic-ai)。為了盯著它，計畫另外要做一個監督用的 overseer agent。重點在這裡：當醫療 AI 走到「自己調整治療」這一步，監理要解的題就從「演算法準不準」，換成「誰來監督這個會動手的 agent」。

@@ -10,7 +10,7 @@ tags: ["ShinyHunters", "柯達資料外洩", "第三方整合資安", "OAuth 供
 coverImage: "covers/kodak-shinyhunters-third-party-integration-breach.webp"
 coverAlt: "柯達遭駭客入侵、勒索集團 ShinyHunters 聲稱握有逾 220 萬筆顧客資料，第三方平台整合成資料外洩破口的示意"
 coverImageCredit: "Photo by FlyD on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

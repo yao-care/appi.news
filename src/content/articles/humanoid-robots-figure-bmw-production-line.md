@@ -10,7 +10,7 @@ tags: ["人形機器人", "Figure 03", "BMW 產線", "實體 AI 落地", "台灣
 coverImage: "covers/humanoid-robots-figure-bmw-production-line.webp"
 coverAlt: "人形機器人站在工廠產線旁，象徵人形機器人從展示影片走進真實量產現場"
 coverImageCredit: "Photo by Simon Kadula on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

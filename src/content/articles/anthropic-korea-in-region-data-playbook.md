@@ -11,7 +11,7 @@ tags:
   - "in-region 資料控管"
   - "資料主權"
   - "AI 國家安全合作"
-author: "lightman"
+author: "appi-editorial"
 sourceType: "editorial"
 contentType: "analysis"
 status: "scheduled"

@@ -39,6 +39,8 @@ references:
     url: "https://www.mohw.gov.tw/cp-5016-59558-1.html"
     publisher: "衛生福利部"
 originalContribution: "本文以『執法裁量 ≠ 核准』為分析框架，逐一拆解 TEMPO 鬆綁的四道上市前關卡（510(k)/PMA、IDE、Part 50/56）、廠商仍須守的義務，並把它與台灣『上市』與『健保給付』兩條各自為政的路線對照，指出台灣真正該學的是把兩者綁成一條路。"
+column: "ai-healthcare"
+topics: ["ai-medical-regulation"]
 ---
 
 美國 FDA 7 月 1 日起跑一個叫 TEMPO 的試辦，讓 AI 數位醫材不必先走完 510(k) 或上市前核准（PMA），就能用在傳統 Medicare 的慢性病病患身上。它靠的不是一張新的通行證，是 FDA 選擇「暫時不追究」，法律上叫執法裁量（enforcement discretion）。這句話怎麼讀，決定你把它看成鬆綁，還是換了個名字的臨床試驗。

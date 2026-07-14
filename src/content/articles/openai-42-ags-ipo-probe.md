@@ -37,6 +37,8 @@ references:
     url: "https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-statement-openai%E2%80%99s-recapitalization-plan"
     publisher: "California Department of Justice"
 originalContribution: "本文把這樁調查從『廣告用詞爭議』重新定位成『對話式 AI 的健康資料蒐集落在 HIPAA 之外』的制度性缺口，並以 IPO 揭露義務會把法規風險寫進招股書、第一次被市場定價為分析軸，再對照台灣個資法特種資料與 AI 基本法風險分類，指出本地服務該補的驗證與責任歸屬環節。"
+column: "ai-healthcare"
+topics: ["ai-medical-regulation"]
 ---
 
 42 個州的檢察長同時對一家公司發傳票，這件事本身就是訊號。2026 年 6 月中，由紐約檢察長 Letitia James 領銜，[42 個州的檢察長對 OpenAI 送出一份範圍很廣的傳票](https://thenextweb.com/news/openai-state-attorneys-general-investigation-ipo)，要的東西橫跨廣告、用戶留存、消費者與健康資料、對未成年與長者的處理、深度學習模型的行為，一路到內部政策。時間點更關鍵：這是在 OpenAI 6 月 8 日機密遞件 S-1、準備上市之後幾天發生的。這不是一次例行抽查，是趕在上市前把一堆沒解決的問題攤到檯面上。
@@ -59,7 +61,7 @@ originalContribution: "本文把這樁調查從『廣告用詞爭議』重新定
 
 <img src="/images/openai-42-ags-ipo-probe-s4.webp" width="867" height="1300" loading="lazy" decoding="async" alt="股市與 IPO 示意，象徵上市揭露義務讓法規風險被定價">
 
-那台灣該從這條新聞讀出什麼？不是看熱鬧，是拿它當對照組。台灣的個資法把健康、醫療、病歷這類列為特種個人資料，蒐集使用的門檻本來就比一般資料高；剛上路的 AI 基本法又疊了一層[風險分類的框架，把不同用途的 AI 分級管理](/articles/ai-basic-law-risk-classification-enterprise-checklist/)。把美國這樁調查的邏輯搬過來，該問的具體問題是：本地的健康問答、心理陪伴、長照相關的 AI 服務，蒐集這些特種資料時，同意機制、資料落地、以及出錯時的責任歸屬，補齊了沒有。這跟德國法院[認定 Google 要為 AI 摘要的錯誤負責](/articles/google-ai-overview-liability-germany/)是同一種訊號：AI 一旦介入敏感決策，「我只是工具」擋不住責任。台灣的優勢是這些法規框架都已經在，缺的是把它真的套到這類新服務上，而不是等出事才追。
+那台灣該從這條新聞讀出什麼？不是看熱鬧，是拿它當對照組。台灣的個資法把健康、醫療、病歷這類列為特種個人資料，蒐集使用的門檻本來就比一般資料高；剛上路的 AI 基本法又疊了一層[風險分類的框架，把不同用途的 AI 分級管理](/articles/ai-basic-law-risk-classification-enterprise-checklist/)。把美國這樁調查的邏輯搬過來，該問的具體問題是：本地的健康問答、心理陪伴、長照相關的 AI 服務，蒐集這些特種資料時，同意機制、資料落地、以及出錯時的責任歸屬，補齊了沒有。這跟德國法院認定 Google 要為 AI 摘要的錯誤負責是同一種訊號：AI 一旦介入敏感決策，「我只是工具」擋不住責任。台灣的優勢是這些法規框架都已經在，缺的是把它真的套到這類新服務上，而不是等出事才追。
 
 <img src="/images/openai-42-ags-ipo-probe-s5.webp" width="960" height="720" loading="lazy" decoding="async" alt="資料隱私保護與法規盾牌示意，象徵台灣個資法與 AI 基本法的落地">
 

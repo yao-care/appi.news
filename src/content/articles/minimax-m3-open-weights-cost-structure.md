@@ -11,7 +11,7 @@ tags:
   - "AI 智慧成本"
   - "自架大型語言模型"
   - "AI 選型成本結構"
-author: "lightman"
+author: "appi-editorial"
 sourceType: "editorial"
 contentType: "analysis"
 status: "scheduled"

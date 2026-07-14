@@ -10,7 +10,7 @@ tags: ["Together AI", "開源模型", "AI 基礎建設", "neocloud", "台灣供�
 coverImage: "covers/together-ai-open-model-neocloud.webp"
 coverAlt: "資料中心機房伺服器陣列，象徵開源模型代管與 AI 基礎建設吸金"
 coverImageCredit: "Photo by panumas nikhomkhai on Pexels"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

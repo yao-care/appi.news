@@ -10,7 +10,7 @@ tags: ["ASIC", "AI 晶片", "台灣 IC 設計", "摩根大通", "世芯-KY", "�
 coverImage: "covers/asic-over-gpu-taiwan-ic-design.webp"
 coverAlt: "象徵 AI 資本從通用 GPU 轉向客製化 ASIC 晶片的半導體示意"
 coverImageCredit: "Photo by Ivan Chumak on Pexels"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

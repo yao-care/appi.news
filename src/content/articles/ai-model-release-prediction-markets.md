@@ -10,7 +10,7 @@ tags: ["GPT-5.6", "預測市場", "AI 選型", "Polymarket", "OpenAI"]
 coverImage: "covers/ai-model-release-prediction-markets.webp"
 coverAlt: "象徵模型發布日期變成預測市場賭盤標的的抽象金融示意"
 coverImageCredit: "Photo by Kanchanara on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

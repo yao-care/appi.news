@@ -34,6 +34,8 @@ references:
     url: "https://aiweekly.co/node/3147"
     publisher: "AI Weekly"
 originalContribution: "本文把這則被廣泛包裝成『AI 自己做出科學發現』的新聞拆回三個可分辨的部分（模型提假設、自動化實驗室跑量、人工驗證守門），用『被解掉的是通量問題不是知識問題』作為分析框架，指出可信度來自濕實驗室驗證迴路而非模型能力，並據此評估台灣生技與臨床試驗生態系真正該補的是自動化實驗室與資料基礎，而非一顆更大的模型。"
+column: "ai-healthcare"
+topics: ["medical-ai-frontline"]
 ---
 
 AI 這次不是在答題，是真的走進實驗室做了實驗。6 月 17 日，OpenAI 與波蘭化學新創 Molecule.one 公布一項成果：GPT-5.4 搭配對方的 agent 系統 Maria 與一座自動化實驗室，[跑了 10,080 筆化學反應](https://www.rdworldonline.com/openai-and-molecule-one-report-a-near-autonomous-ai-chemist-that-improved-a-stubborn-coupling-reaction/)，改良了醫藥化學界卡多年的一個偶聯反應。但這則新聞值得先踩個剎車：被打破的不是「智力」瓶頸，是「通量」瓶頸；成果可信是因為背後有一整套濕實驗室驗證迴路與人工守門，不是因為模型變聰明。看懂它解的是哪一類問題，比記住一萬這個數字重要。

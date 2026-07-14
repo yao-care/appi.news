@@ -22,7 +22,7 @@ references:
   - title: "NVIDIA GTC Taiwan 2026: The AI Factory Era Has Arrived"
     url: "https://tspasemiconductor.substack.com/p/nvidia-gtc-taiwan-2026-the-ai-factory"
     publisher: "TSPA Semiconductor"
-author: "lightman"
+author: "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "general"

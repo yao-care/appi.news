@@ -22,7 +22,7 @@ references:
   - title: "Taiwan Humanoid Robot Market Report 2025-2030"
     url: "https://www.marketsandmarkets.com/Market-Reports/taiwan-humanoid-robot-market-130022038.html"
     publisher: "MarketsandMarkets"
-author: "lightman"
+author: "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "general"

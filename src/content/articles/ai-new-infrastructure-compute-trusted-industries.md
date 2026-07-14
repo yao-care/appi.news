@@ -9,7 +9,7 @@ subcategory: "tech-policy"
 tags: ["AI 新十大建設", "科技預算 1800 億", "五大信賴產業", "主權 AI 算力", "台灣半導體產值"]
 coverImage: "covers/ai-new-infrastructure-compute-trusted-industries.webp"
 coverAlt: "台灣 AI 新十大建設與 1800 億科技預算，算力中心與半導體產業布局示意"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

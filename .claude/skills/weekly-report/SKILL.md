@@ -39,13 +39,14 @@ description: APPI News 每週數據週報。讀 GA4+GSC 四區塊數據、跑外
    跑 `node scripts/geo-citation-audit.mjs record /tmp/geo-round.json` 寫進帳本，再跑 `node scripts/geo-citation-audit.mjs recent 30` 取趨勢摘要供 blocks 引用。
 - 無法實查（工具受限）→ 此段降級略過，不擋週報主流程。
 
-## 步驟 2：外部熱題雷達
-用 WebSearch / WebFetch 掃 Anthropic / OpenAI / Google 官方 blog、arXiv cs.AI、Hacker News 高分科技題，列出近一週熱題。
-**套專案內容鐵律**：避開政治（政黨/政治人物/選舉/人事）、台灣視角、tech/APPI 相關，比照 147 內容庫定調。雷達失敗 → 降級成「只有數據、無建議」，繼續。
+## 步驟 2：外部熱題雷達（**以可贏性選、非以熱度選**）
+用 WebSearch / WebFetch 掃近一週，**先掃對口車道**：醫療 AI/數位健康/醫材法規/健康資料、以及有強台灣在地角度的科技/政策題。泛科技熱題（官方 blog 發新模型、HN 高分、募資/併購/漲價）**預設不收**——那是紅海、被巨頭壟斷、稀釋主題權威（同 tech-radar 的核心原則）。
+**套專案內容鐵律**：避開政治（政黨/政治人物/選舉/人事）、台灣視角、tech/APPI 相關，比照內容庫定調。雷達失敗 → 降級成「只有數據、無建議」，繼續。
 
 ## 步驟 3：合成動態 2-6 個建議方向
-融合「站內需求」（GSC searchOpportunities 高曝光低點擊 + 步驟 1b 的 `searchDemandTopics` + articlePerf 分類動能）與「外部熱題」。
-- 每個候選用 `站內需求強度 × 外部熱度 × APPI相關` 質性評估，**過門檻才收**；強訊號多就到 6，弱週就少，**沒強訊號就明說「本週無強建議」**。
+以「站內需求」（GSC searchOpportunities 高曝光低點擊 + 步驟 1b 的 `searchDemandTopics` + articlePerf 分類動能）**為主**，外部熱題只當對口補充。
+- **每個候選必須過可贏性 gate**（同 tech-radar 步驟 3）：①對口 AI×健康**或**強台灣角度；②非純事件新聞（募資/併購/漲價/發表/人事）；③有 evergreen 解讀角度（放三個月還有人搜）；④賽道未被 iThome/科技新報/Bloomberg/官方 blog 壟斷。四項全過才收。
+- 過 gate 後，強訊號多就到 6，弱週就少，**沒強訊號就明說「本週無強建議」**，不要為了湊數把紅海題端出來。
 - 去重（兩份都比對，語意比對非只比字面，重複就排除）：①`.claude/skills/newsroom/author-memory.json`（已寫過的文章）；②跑 `node scripts/topic-ledger.mjs recent`（近期已推薦過的候選題，與每日雷達共用同一帳本，避免兩邊撞題）。
 - 每個建議欄位（對齊 newsroom 雷達格式）：標題 / 訊號依據 / 建議切角 / 候選結論 / 建議分類，編號。
 

@@ -6,7 +6,7 @@ coverImage: "og/tech.png"
 tags: ["台積電", "先進封裝", "HBM", "半導體"]
 featured: true
 status: "active"
-articles: ["tsmc-q3-profit-ai-record", "tsmc-cowos-nvidia-capacity-booking", "tsmc-arizona-first-half-profit", "tsmc-wei-ai-demand-high-na-euv", "tsmc-three-site-overseas-fabs", "pingtung-semiconductor-zone-groundbreaking", "imd-digital-competitiveness-ranking", "intel-foundry-apple-18a-tsmc", "dram-price-fixing-lawsuit-taiwan", "tsmc-amkor-arizona-packaging", "cowos-coupe-ai-chip-bottleneck", "tsmc-system-era-sellers-market", "hbm-squeezes-legacy-dram-prices", "tsmc-itc-patent-import-ban", "etched-sohu-transformer-asic-bet", "hbm4-memory-bottleneck", "nvidia-culitho-tsmc-fab-automation", "nearfield-metrology-chip-bottleneck", "tsmc-price-hike-downstream-cost-chain", "korea-hbm-packaging-national-bet", "tsmc-copos-panel-packaging-bet", "amd-mext-memory-wall", "sk-hynix-packaging-hbm-tsmc"]
+articles: ["tsmc-q3-profit-ai-record", "tsmc-cowos-nvidia-capacity-booking", "tsmc-arizona-first-half-profit", "tsmc-wei-ai-demand-high-na-euv", "tsmc-three-site-overseas-fabs", "pingtung-semiconductor-zone-groundbreaking", "imd-digital-competitiveness-ranking", "amd-mext-memory-wall", "sk-hynix-packaging-hbm-tsmc"]
 ---
 
 台灣半導體供應鏈是全球科技的樞紐，也是 APPI 科技頻道追蹤最深的主軸之一。

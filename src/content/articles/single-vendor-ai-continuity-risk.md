@@ -10,7 +10,7 @@ tags: ["出口管制", "Claude Fable 5", "單一供應商風險", "營運連續�
 coverImage: "covers/single-vendor-ai-continuity-risk.webp"
 coverAlt: "紅色緊急停止按鈕，象徵單一 AI 雲模型可能被一紙命令一夕關閉"
 coverImageCredit: "Photo by Jason Leung on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

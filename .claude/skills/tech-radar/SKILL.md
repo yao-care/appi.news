@@ -1,33 +1,39 @@
 ---
 name: tech-radar
-description: APPI News 每日「科技類」選題雷達。掃外部熱題產出一串 tech 候選題，組成帶「我要寫這題」按鈕的清單發到 Slack，供作者每天挑選觸發自動產文。供 cron headless 呼叫。
+description: APPI News 每日科技選題雷達。以「可贏性」而非「熱度」選題——主獵 AI×數位健康/醫療（本站有權威、打得贏的車道），優先站內搜尋需求，過可贏性 gate 才發。組成帶「我要寫這題」按鈕的清單發到 Slack，供作者每天挑選觸發自動產文。供 cron headless 呼叫。
 ---
 
 # Daily Tech Radar
 
-你是 APPI News 的每日**科技類**選題雷達。全程繁體中文 + 台灣用語、去 AI 腔。產出一串可點選的科技候選題發到 Slack，供作者每天挑想寫的。
+你是 APPI News 的每日科技選題雷達。全程繁體中文 + 台灣用語、去 AI 腔。產出一串可點選的科技候選題發到 Slack，供作者每天挑想寫的。
 
-## 範圍：只限科技類（`category: "tech"`）
-**只產 tech 候選，不要其他分類。** 子分類用 `src/config/categories.ts` 的 tech slug 之一：`ai / security / digital-tools / software-products / startup / semiconductor / industry-tech / tech-policy`。
+## 核心原則：選「打得贏」的，不是選「最熱」的
+
+**熱度 ≠ 可贏性。** 全世界都在報的商品新聞（某家發新模型、某新創募資、台積電漲價）正是紅海——被 iThome／科技新報／Bloomberg／官方 blog 壟斷，本站排不上、上線即過期，只會稀釋站層級主題權威。雷達的任務是找**本站能贏**的題：
+
+1. **主獵場＝AI×數位健康/醫療**：醫療 AI 落地、數位健康、TFDA/FDA 醫材法規、健康資料/EHR/FHIR、高齡照護科技、AI 醫療信任與責任。這是本站作者有可信度、又和健康引擎相鄰複利的車道，**每天優先從這裡找題**。
+2. **次獵場＝有強台灣在地角度的科技/政策**：台灣產業、法規、在地影響，且非純新聞轉述。
+3. 其餘泛科技熱題**預設不收**，除非同時通過步驟 3 的可贏性 gate。
+
+## 範圍：`category: "tech"`
+子分類用 `src/config/categories.ts` 的 tech slug 之一：`ai / security / digital-tools / software-products / startup / semiconductor / industry-tech / tech-policy`。**主力用 `ai`（尤其 AI×健康交叉）**；`semiconductor / industry-tech / startup` 這類商品新聞重災區，非有強台灣角度＋evergreen 解讀不收。**寧缺勿濫，8 格不必湊滿。**
 
 ## 步驟 1：去重（一天跑三次，這步是重點）
 兩份都要比對，**任一重複就排除**（語意比對，不是只比字面；改寫過、換切角但講同一件事的也算重複）：
 1. `.claude/skills/newsroom/author-memory.json`：已寫過/已排程的文章。
 2. 跑 `node scripts/topic-ledger.mjs recent`：近期**已推薦過但還沒被寫**的候選題（含 weekly-report 推過的，共用同一帳本）。把輸出當「最近已經丟過、不要再丟」的清單。
 
-## 步驟 2a：站內搜尋需求（GSC 訊號，與外部熱題並列）
+## 步驟 2a：站內搜尋需求（**主訊號，先做**）
 跑 `export GOOGLE_APPLICATION_CREDENTIALS=~/.config/appi-news/ga4-sa.json && node scripts/seo-opportunities.mjs`，取 `searchDemandTopics`（讀者實際在 Google 搜、本站還沒吃到點擊的高曝光 query）。
-- 把這些**高曝光低點擊的需求題優先納入**選題：若有 tech 相關的需求 query（AI / 資安 / 晶片 / 軟體工具…），優先補一篇對準它。
-- 這是「站內需求」訊號，與步驟 2b 的「外部熱題」**並列融合**，不是取代。需求題與熱題撞同一件事時，視為同一候選（仍走步驟 1 去重）。
-- 失敗（缺金鑰/網路/非 JSON）→ 降級成「只靠外部熱題」，繼續，不致命。
+- **這是主訊號，不是配料。** 有真實搜尋需求、本站又還沒排上＝真機會（demand-driven、打得贏）。tech 相關的需求 query（AI / 醫療 AI / 數位健康 / 資安 / 軟體工具…）**優先各補一篇對準它**，尤其對口 AI×健康的需求題最優先。
+- 步驟 2b 的「外部熱題」只是**補充**：外部題唯有同時對口主獵場或有強台灣角度、且過步驟 3 gate 才收；與需求題撞同一件事時視為同一候選（仍走步驟 1 去重）。
+- 失敗（缺金鑰/網路/非 JSON）→ 降級成「只靠外部熱題（但 gate 照樣嚴格）」，繼續，不致命。
 
-## 步驟 2b：雷達（外部熱題）
-用 WebSearch / WebFetch 掃近 1–2 天熱題：
-- Anthropic / OpenAI / Google 官方 blog（模型發布、重大公告）
-- arXiv cs.AI / cs.CL 近期熱門
-- Hacker News 高分科技題
-- 半導體 / 台灣科技產業（台積電、晶片、先進製程…）
-- 醫療 AI × 法規 / 合規 交叉題
+## 步驟 2b：外部熱題（**補充，且以主獵場為主**）
+用 WebSearch / WebFetch 掃近 1–2 天，**先掃對口車道，最後才看泛科技**：
+- **主獵場（優先）**：醫療 AI 落地與臨床導入、數位健康/長照科技、TFDA/FDA 等醫材法規動態、健康資料/EHR/FHIR、AI 醫療信任與責任、老藥新用×AI。
+- **次獵場**：有強台灣在地角度的科技/政策題（台灣產業結構、法規、在地影響），且**不是純新聞轉述**。
+- 泛科技熱題（官方 blog 發新模型、HN 高分、募資/併購/漲價）**預設不收**——這是紅海，除非能同時通過步驟 3 gate（罕見）。**不要為了填量把這類倒進來**。
 
 **套內容鐵律**：避開政治（政黨/政治人物/選舉/人事）、台灣視角、tech/APPI 相關、去 AI 腔。
 
@@ -36,12 +42,22 @@ description: APPI News 每日「科技類」選題雷達。掃外部熱題產出
 - **直接略過需要研究或描寫攻擊手法的題**：不要為了填 `security` 格去查 CVE 的利用方式、提示注入怎麼打、怎麼繞過防護。這類題不研究、不產出，該格留空即可（8 子分類本來就不必湊滿，寧缺勿濫）。
 - 即使收了合格資安題，`title / conclusion / angle / signal` 全用防禦/報導語氣（例：「某某攻擊事件揭露，企業 agent 權限邊界該怎麼收」），不寫任何可操作的攻擊步驟。
 
-## 步驟 3：產出 tech 候選（去重後夠新才給，沒有就不發）
+## 步驟 3：可贏性 gate（過不了就丟，不要湊量）
+
+去重後，每個候選**必須四項全過**才留，任一不過直接丟：
+
+1. **對口或在地**：對口 AI×健康主獵場，**或**有強台灣在地角度。純國際泛科技一律不過。
+2. **非純事件新聞**：不是「某某募資/併購/漲價/發表/人事」這種一次性事件轉述。事件可當引子，但候選本身要有超越事件的判斷。
+3. **有 evergreen 解讀角度**：能寫成「怎麼判讀/對台灣代表什麼/該準備什麼」的耐讀解讀，不是「今天發生了什麼」。放三個月還有人搜、還讀得下去。
+4. **賽道沒被巨頭壟斷**：這題的 SERP 若已被 iThome／科技新報／Bloomberg／官方 blog 佔滿第一頁，本站排不上，丟。挑他們不會寫或寫不深的角度。
+
+> 自問一句：「這題明天每家科技媒體都會報嗎？」會 → 丟（紅海）。「只有我們用 AI×健康的視角/台灣角度講得清楚嗎？」是 → 收。
+
 每個候選欄位（對齊 newsroom 工單，**端點按鈕會直接吃**）：
-`title`（標題）/ `conclusion`（候選結論）/ `angle`（建議切角）/ `signal`（訊號依據：寫真實來源與熱度）/ `category: "tech"` / `subcategory`（合法 tech slug）。
-- 每篇都要有**真實外部依據**（signal 註明來源/熱度），不可空泛。
-- 強訊號優先。一天跑三次，**不保證每次都有題**：去重後剩幾個就給幾個，寧缺勿濫、不要為了湊數重複或硬掰。
-- **去重後若沒有夠新、夠強的題，就不要發**（不寫 payload、不跑 slack-post，直接結束，並依步驟 4 收尾輸出 `RADAR_RESULT=NONE`）。一天被洗三則重複或空訊息比沒訊息更糟。
+`title`（標題）/ `conclusion`（候選結論）/ `angle`（建議切角）/ `signal`（訊號依據：寫真實來源＋**為何過 gate**）/ `category: "tech"` / `subcategory`（合法 tech slug）。
+- 每篇都要有**真實外部依據**（signal 註明來源），不可空泛。
+- 一天跑三次，**不保證每次都有題**：過 gate 剩幾個就給幾個，寧缺勿濫、不要為了湊數重複或硬掰。
+- **過 gate 後若沒有題，就不要發**（不寫 payload、不跑 slack-post，直接結束，並依步驟 4 收尾輸出 `RADAR_RESULT=NONE`）。一天被洗三則紅海或空訊息比沒訊息更糟。
 
 ## 步驟 4：組訊息並發送
 寫 `/tmp/daily-topics-payload.json`（`suggestions` 由 `slack-post` 自動展開成「每篇一顆『我要寫這題』按鈕」）：
@@ -56,7 +72,7 @@ description: APPI News 每日「科技類」選題雷達。掃外部熱題產出
   "suggestions": [
     { "title": "...", "conclusion": "...", "angle": "...", "signal": "...",
       "category": "tech", "subcategory": "ai" }
-    // …約 8 個，全部 category:"tech"
+    // …過 gate 剩幾個放幾個（通常 1–4 個，寧缺勿濫），全部 category:"tech"
   ]
 }
 ```

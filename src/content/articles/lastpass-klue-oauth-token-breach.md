@@ -11,7 +11,7 @@ tags:
   - "SaaS 供應鏈攻擊"
   - "第三方整合資安"
   - "Salesforce 外洩"
-author: "lightman"
+author: "appi-editorial"
 contentType: "news"
 sourceType: "editorial"
 status: "published"

@@ -37,6 +37,8 @@ references:
     url: "https://www.startuphub.ai/ai-news/artificial-intelligence/2026/gpt-5-pro-solves-immunological-puzzle"
     publisher: "StartupHub.ai"
 originalContribution: "本文以『假說引擎 vs 真相神諭』為分析框架，逐一拆解這則新聞真正的訊號（held-out 實驗預測）與被過度解讀的部分（相近故事曾入 bioRxiv 預印本的訓練資料疑慮），並用『可信度靠流程不是模型大小』重讀有效的三個結構性條件，延伸評估台灣臨床資料在這條驗證迴路上的真實卡位點。"
+column: "ai-healthcare"
+topics: ["medical-ai-frontline"]
 ---
 
 GPT-5 Pro 幫一位免疫學家解開了卡三年的 T 細胞謎題，還準確預測了一場沒被公開過的實驗結果。這件事是真的，也確實漂亮。但真正該讀懂的不是「AI 會做科學了」，而是它在哪裡、為什麼有效：它是一台假說引擎，不是一座真相神諭。把它讀成後者，就對不上這件事的份量，也會在自己的研究現場解錯題。

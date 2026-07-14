@@ -34,6 +34,8 @@ references:
     url: "https://www.startuphub.ai/ai-news/artificial-intelligence/2026/openai-unveils-lifescibench"
     publisher: "StartupHub.ai"
 originalContribution: "本文把 LifeSciBench 拆成兩層分開讀：一層是『分數與崩跌位置』的技術訊號（文字題 45.1% 對上真實資料題 28.1%，指出瓶頸在讀真實研究產物而非知識背誦），另一層是『誰握尺』的誘因結構問題（OpenAI 自出自評自秀、排除 Claude、無人類基準），並據此給台灣生技產業一套『看基準先看握尺的人』的判讀框架。"
+column: "ai-healthcare"
+topics: ["medical-ai-frontline"]
 ---
 
 OpenAI 剛端出一套自己設計的生命科學研究評測 LifeSciBench，結果連它家最強的模型都只過了 36.1% 的題目，[等於六成四的真實研究任務直接不及格](https://science.slashdot.org/story/26/06/20/202204/openai-announces-benchmarks-for-ai-life-sciences-research-its-best-model-failed-639-of-the-test)。這個數字本身值得看。但更值得看的是握尺的人：出題的是 OpenAI、改考卷的是 OpenAI、被拿出來當範例秀成績的還是 OpenAI 自家模型。一份自己出題、自己改考卷、自己頒獎的成績單，不管分數高低，先天就少一層可信度。

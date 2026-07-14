@@ -6,7 +6,7 @@ publishDate: "2026-07-09T08:00:00+08:00"
 category: "tech"
 subcategory: "software-products"
 tags: ["Apple Siri", "Google Gemini", "單一供應商依賴", "AI 選型", "AI 落地法規"]
-author: "lightman"
+author: "appi-editorial"
 sourceType: "editorial"
 contentType: "analysis"
 status: "scheduled"

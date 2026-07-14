@@ -10,7 +10,7 @@ tags: ["NVIDIA OpenShell", "Nemotron 3 Ultra", "AI agent 授權治理", "agent �
 coverImage: "covers/nvidia-openshell-agent-authorization-layer.webp"
 coverAlt: "象徵 AI agent 安全護欄與授權治理被做進開源平台 runtime 層"
 coverImageCredit: "Photo by Markus Winkler on Pexels"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

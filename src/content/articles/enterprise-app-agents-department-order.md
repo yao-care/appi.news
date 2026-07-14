@@ -10,7 +10,7 @@ tags: ["企業 AI agent", "Gartner 預測", "agent 化部門排序", "AI 治理�
 coverImage: "covers/enterprise-app-agents-department-order.webp"
 coverAlt: "企業軟體內建任務型 AI agent 的趨勢轉折，市場開始排序哪個部門先被 agent 化"
 coverImageCredit: "Photo by Luke Chesser on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

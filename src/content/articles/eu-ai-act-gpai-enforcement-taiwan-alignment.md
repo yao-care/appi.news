@@ -10,7 +10,7 @@ tags: ["歐盟 AI 法", "GPAI 通用型 AI", "AI Act 執法", "高風險 AI 系�
 coverImage: "covers/eu-ai-act-gpai-enforcement-taiwan-alignment.webp"
 coverAlt: "象徵歐盟 AI 法執法權上路、對通用型 AI 監管的政策氛圍"
 coverImageCredit: "Photo by Christian Lue on Unsplash"
-author: "lightman"
+author: "appi-editorial"
 status: "published"
 sourceType: "editorial"
 contentType: "analysis"

@@ -162,7 +162,7 @@ const columnFiles = walk(join(CONTENT, 'columns'));
 function fileSlugSet(files) {
   const set = new Set();
   for (const f of files) {
-    const base = f.split('/').pop().replace(/\.(md|mdx)$/, '');
+    const base = f.split(/[\\/]/).pop().replace(/\.(md|mdx)$/, '');
     set.add(base);
   }
   return set;
@@ -175,7 +175,7 @@ const columnSlugs = fileSlugSet(columnFiles);
 // 文章 slug：frontmatter slug 優先，否則檔名。先建好供 topic.articles 反查。
 const articleParsed = articleFiles.map((file) => {
   const { data, error } = parseFrontmatter(file);
-  const base = file.split('/').pop().replace(/\.(md|mdx)$/, '');
+  const base = file.split(/[\\/]/).pop().replace(/\.(md|mdx)$/, '');
   const slug = data && typeof data.slug === 'string' && data.slug.trim() !== '' ? data.slug : base;
   return { file, data, error, slug, base };
 });

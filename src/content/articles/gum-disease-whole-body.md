@@ -1,47 +1,54 @@
 ---
-title: "八成台灣成人有牙周病：它如何和糖尿病、心臟病互相拖累？"
-slug: "gum-disease-whole-body"
-description: "台灣成人牙周病盛行率約八成。牙周病與糖尿病有雙向惡化關係，與心血管疾病則是『相關』而非因果。用實證把關聯和因果分清楚，並教你用好健保牙周照護。"
-publishDate: 2026-07-13T20:00:00+08:00
+title: 八成台灣成人有牙周病：它如何和糖尿病、心臟病互相拖累？
+slug: gum-disease-whole-body
+description: 台灣成人牙周病盛行率約八成。牙周病與糖尿病有雙向惡化關係，與心血管疾病則是『相關』而非因果。用實證把關聯和因果分清楚，並教你用好健保牙周照護。
+publishDate: 2026-07-13T12:00:00.000Z
 category: health
 subcategory: medical
-tags: ["牙周病", "糖尿病", "心血管疾病", "慢性發炎", "健保牙周照護"]
-author: "luo-yang"
-coverImage: "covers/gum-disease-whole-body.webp"
-coverAlt: "牙齦發炎與全身健康關聯的醫療示意圖"
-status: scheduled
+tags:
+  - 牙周病
+  - 糖尿病
+  - 心血管疾病
+  - 慢性發炎
+  - 健保牙周照護
+author: luo-yang
+coverImage: /covers/gum-disease-whole-body-1784040711430.webp
+coverAlt: 牙齦發炎與全身健康關聯的醫療示意圖
+status: published
 sourceType: author
 contentType: analysis
 disclaimerType: medical
-topics: ["oral-care"]
-column: "evidence-based-health"
+topics:
+  - oral-care
+column: evidence-based-health
 highlights:
-  - "依衛福部2015到2016年調查，台灣成人牙周病盛行率約80.48%，其中約半數屬中重度、需要積極治療"
-  - "牙周病與糖尿病是真正的雙向關係：牙周治療後3個月HbA1c約下降0.27到0.48%，但長期效果證據仍不一致"
-  - "牙周病與心血管疾病目前只有『獨立相關』的證據，美國心臟協會2012與2025聲明都明講尚未證實因果"
-  - "健保有牙周病統合性照護計畫，糖尿病、孕婦等特殊族群還可每3個月洗牙一次，別讓資格睡著"
+  - 依衛福部2015到2016年調查，台灣成人牙周病盛行率約80.48%，其中約半數屬中重度、需要積極治療
+  - 牙周病與糖尿病是真正的雙向關係：牙周治療後3個月HbA1c約下降0.27到0.48%，但長期效果證據仍不一致
+  - 牙周病與心血管疾病目前只有『獨立相關』的證據，美國心臟協會2012與2025聲明都明講尚未證實因果
+  - 健保有牙周病統合性照護計畫，糖尿病、孕婦等特殊族群還可每3個月洗牙一次，別讓資格睡著
 readingTime: 10
-originalContribution: "整理台灣官方牙周病盛行率的正確數字與定義，並依IDF/EFP共識、美國心臟協會兩份科學聲明與Cochrane回顧，嚴格區分牙周病與糖尿病、心血管、早產之間『相關』與『因果』的證據等級，對照健保現行給付。"
+originalContribution: 整理台灣官方牙周病盛行率的正確數字與定義，並依IDF/EFP共識、美國心臟協會兩份科學聲明與Cochrane回顧，嚴格區分牙周病與糖尿病、心血管、早產之間『相關』與『因果』的證據等級，對照健保現行給付。
 references:
-  - title: "認識牙周病（臺大醫院健康電子報．口腔醫學部牙周病科張博鈞主任）"
-    url: "https://epaper.ntuh.gov.tw/health/202509/project_1.html"
+  - title: 認識牙周病（臺大醫院健康電子報．口腔醫學部牙周病科張博鈞主任）
+    url: https://epaper.ntuh.gov.tw/health/202509/project_1.html
   - title: "Scientific evidence on the links between periodontal diseases and diabetes: IDF/EFP consensus report（Sanz et al., 2018）"
-    url: "https://pubmed.ncbi.nlm.nih.gov/29208508/"
+    url: https://pubmed.ncbi.nlm.nih.gov/29208508/
   - title: "Periodontitis and diabetes: a two-way street（European Federation of Periodontology）"
-    url: "https://www.efp.org/publications-hub/periodontitis-and-diabetes-a-two-way-street/"
+    url: https://www.efp.org/publications-hub/periodontitis-and-diabetes-a-two-way-street/
   - title: "Periodontal disease and atherosclerotic vascular disease: a scientific statement from the American Heart Association（2012）"
-    url: "https://pubmed.ncbi.nlm.nih.gov/22514251/"
-  - title: "Gum disease may be linked to plaque buildup in arteries（American Heart Association Newsroom, 2025）"
-    url: "https://newsroom.heart.org/news/gum-disease-may-be-linked-to-plaque-buildup-in-arteries-higher-risk-of-major-cvd-events"
-  - title: "Treating periodontal disease for preventing adverse birth outcomes in pregnant women（Cochrane Review, 2017）"
-    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6481493/"
-  - title: "改善牙周病 健保99年推出牙周病統合性照護計畫（衛生福利部）"
-    url: "https://www.mohw.gov.tw/cp-3162-27004-1.html"
-  - title: "孕期保護牙，產後不缺牙 健保提升特殊照護方案（衛生福利部）"
-    url: "https://www.mohw.gov.tw/cp-16-72376-1.html"
-  - title: "高風險病患健保給付每3個月洗牙 3/1起27萬人受惠（中央社）"
-    url: "https://www.cna.com.tw/news/ahel/202202080299.aspx"
+    url: https://pubmed.ncbi.nlm.nih.gov/22514251/
+  - title: Gum disease may be linked to plaque buildup in arteries（American Heart Association Newsroom, 2025）
+    url: https://newsroom.heart.org/news/gum-disease-may-be-linked-to-plaque-buildup-in-arteries-higher-risk-of-major-cvd-events
+  - title: Treating periodontal disease for preventing adverse birth outcomes in pregnant women（Cochrane Review, 2017）
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6481493/
+  - title: 改善牙周病 健保99年推出牙周病統合性照護計畫（衛生福利部）
+    url: https://www.mohw.gov.tw/cp-3162-27004-1.html
+  - title: 孕期保護牙，產後不缺牙 健保提升特殊照護方案（衛生福利部）
+    url: https://www.mohw.gov.tw/cp-16-72376-1.html
+  - title: 高風險病患健保給付每3個月洗牙 3/1起27萬人受惠（中央社）
+    url: https://www.cna.com.tw/news/ahel/202202080299.aspx
 draft: false
+coverImageCredit: ""
 ---
 
 台灣約八成成人有牙周病。它和糖尿病之間是雙向惡化關係，治療牙周病確實可能小幅改善血糖；但它和心臟病之間，目前的科學證據只到「相關」，還沒到「治好牙周病就能預防心臟病」的程度。這篇文章想做的，就是把「相關」和「因果」這條界線劃清楚，讓你既不輕忽牙周病，也不被誇大的說法牽著走。

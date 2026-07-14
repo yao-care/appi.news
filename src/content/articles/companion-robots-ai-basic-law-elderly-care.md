@@ -43,6 +43,8 @@ references:
     url: "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1626471/full"
     publisher: "Frontiers in Robotics and AI"
     note: "長者面對社交機器人的恐懼類型，含隱私、信任與依賴"
+column: "ai-healthcare"
+topics: ["digital-health-elderly-care"]
 ---
 
 <p>今年的 CES，主角換成了會走進客廳的機器人。LG 拿出 CLOiD 人形機器人，主打讓家裡變成<a href="https://www.engadget.com/home/smart-home/lg-will-show-off-a-humanoid-robot-for-household-chores-at-ces-2026-145411218.html" target="_blank" rel="noopener">「Zero Labor Home」，把人從耗時家務裡解放出來</a>；掃地機器人不再只貼著地板跑，<a href="https://www.tomsguide.com/home/home-appliances/i-just-saw-roborocks-new-two-legged-robot-vacuum-climb-stairs-and-even-jump-in-mid-air" target="_blank" rel="noopener">Roborock 的 Saros Rover 長出兩條腿能爬樓梯</a>；連陪伴型的也來了，Ecovacs 推出<a href="https://www.prnewswire.com/news-releases/ecovacs-introduces-lilmilo-an-emotional-ai-companion-robot-designed-to-bring-warmth-presence-and-connection-into-everyday-life-302771294.html" target="_blank" rel="noopener">情感型 AI 陪伴機器人 LilMilo</a>。</p>

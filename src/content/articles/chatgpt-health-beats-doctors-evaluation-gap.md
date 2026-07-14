@@ -37,6 +37,8 @@ references:
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12547120/"
     publisher: "PMC / npj Digital Medicine"
     note: "benchmark 表現好不保證轉成更準診斷、更好流程或更高病人安全；在 HealthBench 拿高分不等於臨床決策做得好"
+column: "ai-healthcare"
+topics: ["medical-ai-frontline"]
 ---
 
 <p>OpenAI 在 6 月放出一個很搶眼的說法：新模型寫的健康答案，比醫師親手寫的還好。<a href="https://the-decoder.com/chatgpts-new-health-upgrade-beats-doctor-written-answers-openai-says/" target="_blank" rel="noopener">它說 GPT-5.5 Instant 在五項評比裡，全面勝過 GPT-4o 與醫師親手寫的答案</a>。這句話很容易讓人立刻選邊站，一邊喊 AI 要取代醫師了，一邊罵這是行銷話術。但我想先把焦點從分數上移開。真正該記住的數字不是它贏了幾項，是<a href="https://techcrunch.com/2026/01/07/openai-unveils-chatgpt-health-says-230-million-users-ask-about-health-each-week/" target="_blank" rel="noopener">每週已經有超過 2.3 億人拿 ChatGPT 問健康與保健問題</a>。這 2.3 億人問完之後，誰來把關、什麼時候該回到醫師，才是會真正影響到人的地方。跑分高不高，是其次。</p>

@@ -45,6 +45,8 @@ references:
     url: "https://www.theglobeandmail.com/investing/markets/stocks/IRTC/pressreleases/314181/irhythm-holdings-announces-fourth-quarter-and-full-year-2025-financial-results/"
     publisher: "The Globe and Mail"
     note: "2025 全年營收成長 26.2% 達 7.471 億美元，主要來自 Zio 服務量成長"
+column: "ai-healthcare"
+topics: ["ai-medical-regulation"]
 ---
 
 <p>一家心臟監測公司被勒索，最值得記住的細節不是駭客喊了多少錢，而是他們從哪裡進來的。<a href="https://www.securityweek.com/irhythm-confirms-data-stolen-in-hack/" target="_blank" rel="noopener">心律監測廠 iRhythm 在 6 月 8 日偵測到，由第三方平台代管的某些商業應用上，出現了未授權的活動，隔天 6 月 9 日就有人發來訊息，聲稱已經竊得包含病患受保護健康資訊（PHI）在內的敏感資料，要脅付錢換取不公開</a>。被攻破的不是它的醫材，不是它的雲端心電圖演算法，是一個掛在別人平台上、平常沒人盯著的商業應用。這一點，才是醫療業現在真正該抄起來的功課。</p>

@@ -43,6 +43,8 @@ references:
     url: "https://www.reedsmith.com/our-insights/blogs/viewpoints/102kq35/the-eu-ai-act-and-medical-devices-navigating-high-risk-compliance/"
     publisher: "Reed Smith LLP"
 originalContribution: "本文把美國、台灣、歐盟三地對 AI 醫材的監管拆成同一組座標（上市前審查密度、風險分界怎麼畫、AI 專屬義務加在哪），逐一對照後指出台灣的瓶頸不在法規速度而在臨床場域驗證與商業化落地，主張『先問要解哪類風險，再決定抄不抄別人的鬆綁』。"
+column: "ai-healthcare"
+topics: ["ai-medical-regulation"]
 ---
 
 美國 FDA 正在同時做兩件方向相反的事：一邊把 AI 醫材的累計核准量衝到逾 1,350 件，一邊在 2026 年初把一批低風險的穿戴裝置與臨床決策支援軟體移出醫材監管。這是「低風險放行、把審查火力集中在醫療級宣稱」的路線。台灣走的是另一條：不太分風險高低，AI 醫材大多要先過查驗登記（premarket）逐案審才能上市。歐盟更嚴，在既有的醫材法規 MDR 之上，再疊一層 AI 法的高風險義務。三條路線不是誰進步誰落後，而是各自賭了不同的風險假設。台灣要問的，不是該抄哪一條，而是自己真正卡在哪。

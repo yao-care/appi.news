@@ -37,6 +37,8 @@ references:
     url: "https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-statement-openai%E2%80%99s-recapitalization-plan"
     publisher: "California Department of Justice"
 originalContribution: "本文把這樁調查從『廣告用詞爭議』重新定位成『對話式 AI 的健康資料蒐集落在 HIPAA 之外』的制度性缺口，並以 IPO 揭露義務會把法規風險寫進招股書、第一次被市場定價為分析軸，再對照台灣個資法特種資料與 AI 基本法風險分類，指出本地服務該補的驗證與責任歸屬環節。"
+column: "ai-healthcare"
+topics: ["ai-medical-regulation"]
 ---
 
 42 個州的檢察長同時對一家公司發傳票，這件事本身就是訊號。2026 年 6 月中，由紐約檢察長 Letitia James 領銜，[42 個州的檢察長對 OpenAI 送出一份範圍很廣的傳票](https://thenextweb.com/news/openai-state-attorneys-general-investigation-ipo)，要的東西橫跨廣告、用戶留存、消費者與健康資料、對未成年與長者的處理、深度學習模型的行為，一路到內部政策。時間點更關鍵：這是在 OpenAI 6 月 8 日機密遞件 S-1、準備上市之後幾天發生的。這不是一次例行抽查，是趕在上市前把一堆沒解決的問題攤到檯面上。

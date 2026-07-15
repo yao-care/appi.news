@@ -2,7 +2,7 @@
 title: "關於納豆與血壓控制，你需要知道的 5 件事"
 slug: "appi-news-183"
 description: "納豆激酶真的能降血壓嗎？從作用機轉、臨床數據到實際食用建議，完整解析納豆對心血管的科學根據，以及哪些人不適合食用。"
-publishDate: 2026-07-15
+publishDate: 2026-07-13
 category: health
 subcategory: tcm-integrative
 tags: ["納豆", "高血壓", "納豆激酶", "血壓控制", "維生素K2"]

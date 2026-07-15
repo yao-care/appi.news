@@ -2,12 +2,11 @@
 title: "Android 17 的 Gemini Intelligence：5 項讓手機 AI 從輔助升級為主動代理的能力"
 slug: "appi-news-194"
 description: "Android 17 把 Gemini AI 整合進系統層級，推出 Gemini Intelligence 功能套件。本文拆解五項核心能力、硬體門檻，以及裝置端 AI 推論對用戶隱私與實際使用的意義。"
-publishDate: 2026-06-18
-updatedDate: 2026-06-18
+publishDate: 2026-07-15
 category: tech
 subcategory: ai
 tags: ["Android 17", "Gemini Intelligence", "Pixel AI 功能", "手機 AI 能力", "on-device AI"]
-author: "appi-editorial"
+author: "lightman"
 coverImage: "covers/appi-news-194.webp"
 coverAlt: "Android 手機展示 Gemini Intelligence 主動代理介面示意圖"
 status: published
@@ -32,7 +31,7 @@ draft: false
 
 這件事要先把問題定義清楚。手機 AI 過去的角色是「工具」，用戶下指令，系統執行一個動作，完成。Gemini Intelligence 想往前走一層——讓 AI 從被動回應轉換為主動感知情境、跨應用協調並代理執行。這個轉換背後牽涉到系統整合層次、硬體門檻和落地能力的真實邊界，是這篇文章要拆解的核心。
 
-![Android 手機展示 Gemini Intelligence 主動代理介面示意圖](/images/appi-news-194-1.webp)
+![Android 手機展示 Gemini Intelligence 主動代理介面示意圖](https://appi.news/images/appi-news-194/1.png)
 
 ## 一、Gemini Intelligence 不是更強的語音助理
 
@@ -78,7 +77,7 @@ Magic Cue 整合了 Gmail、Google 日曆和訊息應用，在偵測到相關內
 
 這個功能的核心問題意識是：用戶每天在幾個 App 之間重複轉換資料，這些動作本身沒有認知價值，只是操作摩擦。Magic Cue 嘗試讓這類機械式轉換消失。
 
-![Gemini Intelligence 五項核心功能架構示意圖](/images/appi-news-194-2.webp)
+![Gemini Intelligence 五項核心功能架構示意圖](https://appi.news/images/appi-news-194/2.png)
 
 ## 三、硬體門檻：不是所有手機都能執行
 
@@ -130,7 +129,7 @@ Google 還要求裝置承諾至少 5 年作業系統更新，確保 Gemini Intel
 - 裝置端推論的設計重點是隱私保護與低延遲：個人資料不上傳伺服器，但這也是硬體門檻高的根本原因
 - 現有落地限制包含：支援機型少、功能分波上線、第三方 App 整合深度不足；完整體驗預計在 2026 下半年逐步到位
 
-![Pixel 9 與 Pixel 10 的 Gemini Intelligence 相容性差異比較圖](/images/appi-news-194-3.webp)
+![Pixel 9 與 Pixel 10 的 Gemini Intelligence 相容性差異比較圖](https://appi.news/images/appi-news-194/3.png)
 
 ### 常見問題
 

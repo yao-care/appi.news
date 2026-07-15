@@ -2,8 +2,7 @@
 title: "熱衰竭和中暑差在哪？分辨症狀、緊急急救與預防指南"
 slug: "appi-news-170"
 description: "熱衰竭與中暑代表截然不同的危險程度，卻常被混用。了解兩者核心差異、如何判斷緊急程度，以及戶外工作者與運動愛好者的具體預防步驟。"
-publishDate: 2026-06-18
-updatedDate: 2026-06-18
+publishDate: 2026-07-15
 category: health
 subcategory: preventive
 tags: ["熱傷害", "中暑", "熱衰竭", "戶外安全", "高溫危害", "預防"]
@@ -13,7 +12,7 @@ coverAlt: "戶外工作者在高溫環境下的休息補水場景"
 status: published
 sourceType: editorial
 contentType: news
-disclaimerType: general
+disclaimerType: medical
 readingTime: 10
 references:
   - title: "衛生福利部 (2023). 夏天高溫氣候 熟記「三要訣」遠離熱傷害"
@@ -36,7 +35,7 @@ references:
     url: "https://vocus.cc/article/68ac0422fd89780001c1574e"
 draft: false
 ---
-![戶外工作者在高溫環境下的休息補水場景](/images/appi-news-170-1.webp)
+![戶外工作者在高溫環境下的休息補水場景](https://appi.news/images/appi-news-170/1.png)
 
 ## 一、台灣熱傷害就診屢創新高
 
@@ -58,7 +57,7 @@ draft: false
 
 衛生福利部熱傷害衛教資料說明：中暑嚴重時會出現無法流汗、神智混亂、抽筋乃至昏迷等中樞神經症狀，與熱衰竭的「仍有意識、大量排汗」形成明顯對比。正是這個皮膚乾濕的關鍵差異，決定了現場應對的緊迫程度。
 
-![熱衰竭與中暑症狀對照：皮膚濕冷大量出汗（熱衰竭）vs 皮膚乾熱停止排汗（中暑）](/images/appi-news-170-2.webp)
+![熱衰竭與中暑症狀對照：皮膚濕冷大量出汗（熱衰竭）vs 皮膚乾熱停止排汗（中暑）](https://appi.news/images/appi-news-170/2.png)
 
 ## 三、誰最需要高度警覺？風險族群與暴露條件
 
@@ -100,7 +99,7 @@ draft: false
 - **補充水分**：不等口渴再喝，每天至少補充 2,000 毫升開水；高強度戶外作業每小時至少一杯（約 240 毫升），避免含酒精和高糖飲料。
 - **提高警覺**：職安署建置的「高氣溫作業防護資訊網」（osha.gov.tw）依氣溫、濕度、風速和日射量即時計算作業地點的熱危害風險等級，等級 4 時雇主有法定防護義務，工作者也應主動要求調整工作節奏與休息比例。
 
-![熱傷害預防三要訣圖示：查詢熱危害等級、補充水分、穿著透氣衣物](/images/appi-news-170-3.webp)
+![熱傷害預防三要訣圖示：查詢熱危害等級、補充水分、穿著透氣衣物](https://appi.news/images/appi-news-170/3.png)
 
 - 熱衰竭：大量出汗、皮膚濕冷、神智清醒，屬緊急但可現場處理的情況；中暑：停止排汗、皮膚乾熱、可能意識不清，需立即送醫
 - 台灣 2024 年熱傷害就診 3,942 人次創歷史新高，農業、營造、道路修護工人是職業暴露的最高風險族群

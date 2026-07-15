@@ -1,33 +1,28 @@
 ---
-title: 關於美顏針，你需要知道的 6 件事：從術前到術後修復
-slug: appi-news-177
-description: 美顏針的成效，三分靠施作，七分靠前後配套。奈米銀離子噴霧、微針貼片在術前、術中、術後各有不同角色，本文完整梳理三階段照護重點。
-publishDate: "2026-06-22"
+title: "關於美顏針，你需要知道的 6 件事：從術前到術後修復"
+slug: "appi-news-177"
+description: "美顏針的成效，三分靠施作，七分靠前後配套。奈米銀離子噴霧、微針貼片在術前、術中、術後各有不同角色，本文完整梳理三階段照護重點。"
+publishDate: 2026-07-15
 category: health
 subcategory: tcm-integrative
-tags:
-  - 美顏針
-  - 奈米銀離子
-  - 微針貼片
-  - 術後修復
-author: huang-ziyan
-coverImage: covers/appi-news-177.webp
-coverAlt: 美顏針三階段照護流程圖：術前準備、施作中、術後修復
+tags: ["美顏針", "奈米銀離子", "微針貼片", "術後修復"]
+author: "huang-ziyan"
+coverImage: "covers/appi-news-177.webp"
+coverAlt: "美顏針三階段照護流程圖：術前準備、施作中、術後修復"
 status: published
 sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 11
 references:
-  - title: Chen W, Jian X, Yu B. (2025). Review of Applications of Microneedling in Melasma. *Journal of Cosmetic Dermatology*, 24(1):e16707
-    url: https://pubmed.ncbi.nlm.nih.gov/39731267/
+  - title: "Chen W, Jian X, Yu B. (2025). Review of Applications of Microneedling in Melasma. *Journal of Cosmetic Dermatology*, 24(1):e16707"
+    url: "https://pubmed.ncbi.nlm.nih.gov/39731267/"
   - title: "Singh M, Singh RK, Raza F, et al. (2022). Silver Nanoparticles and Its Mechanistic Insight for Chronic Wound Healing: Review on Recent Progress. *Molecules*, 27(17):5587"
-    url: https://pubmed.ncbi.nlm.nih.gov/36080353/
-  - title: Wong R, Murphy A, Lira M, et al. (2023). Microneedling with a Novel, n-3-PUFA-Rich Formulation Accelerates Inflammation Resolution to Improve Skin Recovery Outcomes in Adults with Healthy Skin. *Dermatology and Therapy*, 13(12), 3057–3069
-    url: https://pubmed.ncbi.nlm.nih.gov/37833618/
+    url: "https://pubmed.ncbi.nlm.nih.gov/36080353/"
+  - title: "Wong R, Murphy A, Lira M, et al. (2023). Microneedling with a Novel, n-3-PUFA-Rich Formulation Accelerates Inflammation Resolution to Improve Skin Recovery Outcomes in Adults with Healthy Skin. *Dermatology and Therapy*, 13(12), 3057–3069"
+    url: "https://pubmed.ncbi.nlm.nih.gov/37833618/"
 draft: false
 ---
-
 你有沒有發現，很多人做完美顏針，滿心期待皮膚「煥然一新」，卻紅了三天、悶出幾顆疹子，最後把怨氣出在療程上？
 
 問題往往不在美顏針本身，而在前後的配套有沒有跟上。美顏針就像一道需要精準控溫的料理，食材再好，火候不對、收尾馬虎，出鍋那一刻還是差了點意思。術前的皮膚準備、施作中奈米銀離子的輔助、術後微針貼片的修復配套，缺一不可。
@@ -136,7 +131,3 @@ draft: false
 
 ### Q5: 美顏針前後可以敷面膜嗎？
 術前一週可以敷保濕類面膜（無酸、無酒精配方），幫助皮膚屏障水潤備戰。術後 48 小時內先不要敷，讓微創通道自然閉合。48 小時後可選用修復類面膜（積雪草、EGF、玻尿酸），但避免功能性面膜（美白、去角質）。
-
-### 延伸閱讀
-
-- [美顏針的中醫整合評估：從全身狀態看臉部問題](/articles/appi-news-178/)

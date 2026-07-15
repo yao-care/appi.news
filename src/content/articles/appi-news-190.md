@@ -2,7 +2,8 @@
 title: "清鼠窩只要通風就夠了嗎？漢他病毒的傳染陷阱比你想的更隱蔽"
 slug: "appi-news-190"
 description: "2026年台灣首例漢他病毒症候群個案死亡，成因是住家長期鼠患。大掃除清鼠糞時的乾掃和吸塵，才是最危險的環節。7步正確清掃SOP，說清楚氣膠風險怎麼避。"
-publishDate: 2026-07-15
+publishDate: 2026-06-18
+updatedDate: 2026-06-18
 category: health
 subcategory: tcm-integrative
 tags: ["漢他病毒症候群", "漢他病毒傳染途徑", "大掃除防鼠", "鼠糞清理方法", "防鼠三不"]
@@ -12,7 +13,7 @@ coverAlt: "在昏暗儲藏室用掃帚清掃鼠糞時，塵埃微粒在密閉空
 status: published
 sourceType: author
 contentType: column
-disclaimerType: medical
+disclaimerType: general
 readingTime: 13
 references:
   - title: "Nuzum EO, Rossi CA, Stephenson EH, LeDuc JW. (1988). Aerosol transmission of Hantaan and related viruses to laboratory rats. *American Journal of Tropical Medicine and Hygiene*, 38(3), 636-640"
@@ -31,7 +32,7 @@ draft: false
 
 一個日常居家環境，讓人不禁想問：面對有鼠跡的空間，「先開窗、再拿掃帚清一清」這個直覺動作，到底哪裡出了問題？
 
-![在昏暗儲藏室用掃帚清掃鼠糞時，塵埃微粒在密閉空間中飄散，顯示乾掃的氣膠風險](https://appi.news/images/appi-news-190/1.png)
+![在昏暗儲藏室用掃帚清掃鼠糞時，塵埃微粒在密閉空間中飄散，顯示乾掃的氣膠風險](/images/appi-news-190-1.webp)
 
 ## 一、漢他病毒的傳染方式，不是「被咬才中招」
 
@@ -59,7 +60,7 @@ draft: false
 
 封閉空間的危險性更高：通風不良時，氣膠微粒在空氣中懸浮時間更長、濃度更高，吸入的機會隨之增加。這就是為什麼「先通風再清掃」是第一步，而不是清完才開窗。
 
-![漢他病毒傳播路徑圖：感染鼠留排泄物→乾燥→清掃揚起→氣膠懸浮密閉空間→人吸入→感染](https://appi.news/images/appi-news-190/2.png)
+![漢他病毒傳播路徑圖：感染鼠留排泄物→乾燥→清掃揚起→氣膠懸浮密閉空間→人吸入→感染](/images/appi-news-190-2.webp)
 
 ## 三、台灣現況：個案不多，但每一例都不輕鬆
 
@@ -103,7 +104,7 @@ draft: false
 
 若家中發現大量鼠跡或疑似鼠窩，可聯絡地方環保局申請協助捕鼠，或撥打疾管署防疫專線 **1922** 詢問後續處理方式。
 
-![防鼠三不原則：不讓鼠進（封堵縫隙）、不讓鼠住（清除雜物堆積）、不讓鼠吃（密封食物垃圾）](https://appi.news/images/appi-news-190/3.svg)
+![防鼠三不原則：不讓鼠進（封堵縫隙）、不讓鼠住（清除雜物堆積）、不讓鼠吃（密封食物垃圾）](/images/appi-news-190-3.webp)
 
 「預防漢他病毒感染，最有效的方法是避免接觸囓齒動物及其排泄物，並維持居家和工作場所的環境衛生。」——世界衛生組織（WHO），Hantavirus Fact Sheet
 

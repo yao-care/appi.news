@@ -2,7 +2,7 @@
 title: "赴歐美旅遊被蜱蟲咬，就一定會得萊姆病嗎？"
 slug: "appi-news-189"
 description: "2026年台灣首例境外移入萊姆病來自瑞典森林活動。了解蜱蟲傳播條件、遊走性紅斑辨識、24小時黃金移除窗口，以及赴歐美旅遊的完整防護清單。"
-publishDate: 2026-06-18
+publishDate: 2026-07-15
 category: health
 subcategory: tcm-integrative
 tags: ["萊姆病", "蜱蟲", "歐美旅遊防護", "遊走性紅斑", "境外移入傳染病", "防蟲措施"]

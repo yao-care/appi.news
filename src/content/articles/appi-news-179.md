@@ -2,7 +2,7 @@
 title: "瘦瘦針×中醫整合：體質調理、副作用管理、停藥後維持"
 slug: "appi-news-179"
 description: "瘦瘦針（GLP-1）效果顯著，但停藥後體重容易反彈。本文從中醫體質評估、副作用緩解到停藥後維持，完整說明中西醫整合減重的臨床思路與實用步驟。"
-publishDate: 2026-06-21
+publishDate: 2026-07-15
 category: health
 subcategory: tcm-integrative
 tags: ["瘦瘦針", "GLP-1", "減重管理", "營養管控", "健康管理"]

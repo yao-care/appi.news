@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+<defs><style>text{font-family:"PingFang TC","Microsoft JhengHei","Noto Sans CJK TC",sans-serif}.hd{font-size:28px;font-weight:700;fill:#fff}.st{font-size:13px;fill:#C9A227}.pt{font-size:20px;font-weight:700;fill:#1B5E4B}.lb{font-size:14px;fill:#1F2A28}.sl{font-size:12px;fill:#6B7B77}</style></defs>
+<rect width="960" height="600" fill="#fff"/>
+<rect width="960" height="80" fill="#1B5E4B"/>
+<text x="480" y="48" text-anchor="middle" class="hd">防鼠三不原則</text>
+<text x="480" y="70" text-anchor="middle" class="st">不讓鼠進 · 不讓鼠住 · 不讓鼠吃</text>
+
+<!-- Panel 1: No Entry -->
+<rect x="20" y="100" width="280" height="470" rx="12" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+<circle cx="160" cy="148" r="28" fill="#1B5E4B"/>
+<text x="160" y="157" text-anchor="middle" font-size="22" font-weight="700" fill="#C9A227">1</text>
+<rect x="65" y="192" width="55" height="28" rx="2" fill="#2E8B6F" opacity="0.7"/>
+<rect x="125" y="192" width="55" height="28" rx="2" fill="#2E8B6F" opacity="0.7"/>
+<rect x="185" y="192" width="70" height="28" rx="2" fill="#2E8B6F" opacity="0.7"/>
+<rect x="65" y="225" width="35" height="28" rx="2" fill="#2E8B6F" opacity="0.7"/>
+<rect x="104" y="223" width="52" height="32" rx="2" fill="#fff" stroke="#C9A227" stroke-width="2"/>
+<line x1="104" y1="233" x2="156" y2="255" stroke="#C9A227" stroke-width="1.5"/>
+<line x1="104" y1="246" x2="156" y2="255" stroke="#C9A227" stroke-width="1.5"/>
+<line x1="117" y1="223" x2="156" y2="246" stroke="#C9A227" stroke-width="1.5"/>
+<line x1="131" y1="223" x2="156" y2="237" stroke="#C9A227" stroke-width="1.5"/>
+<rect x="160" y="225" width="50" height="28" rx="2" fill="#2E8B6F" opacity="0.7"/>
+<rect x="215" y="225" width="40" height="28" rx="2" fill="#2E8B6F" opacity="0.7"/>
+<text x="160" y="285" text-anchor="middle" font-size="11" fill="#C9A227">金屬網 + 矽利康封堵</text>
+<text x="160" y="330" text-anchor="middle" class="pt">不讓鼠進</text>
+<text x="160" y="357" text-anchor="middle" class="lb">封堵縫隙與管線孔洞</text>
+<text x="160" y="380" text-anchor="middle" class="sl">以金屬網、矽利康填補</text>
+<text x="160" y="400" text-anchor="middle" class="sl">每一道可能入侵的縫隙</text>
+
+<!-- Panel 2: No Shelter -->
+<rect x="340" y="100" width="280" height="470" rx="12" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+<circle cx="480" cy="148" r="28" fill="#1B5E4B"/>
+<text x="480" y="157" text-anchor="middle" font-size="22" font-weight="700" fill="#C9A227">2</text>
+<rect x="365" y="200" width="55" height="45" rx="3" fill="#6B7B77" opacity="0.4" stroke="#6B7B77"/>
+<rect x="427" y="208" width="45" height="37" rx="3" fill="#6B7B77" opacity="0.4" stroke="#6B7B77"/>
+<rect x="375" y="248" width="75" height="50" rx="3" fill="#6B7B77" opacity="0.4" stroke="#6B7B77"/>
+<line x1="365" y1="200" x2="420" y2="245" stroke="#cc3333" stroke-width="2.5"/>
+<line x1="420" y1="200" x2="365" y2="245" stroke="#cc3333" stroke-width="2.5"/>
+<path d="M 460 228 L 508 228 L 498 218 M 508 228 L 498 238" stroke="#1B5E4B" stroke-width="2.5" fill="none"/>
+<rect x="512" y="198" width="93" height="100" rx="5" fill="#fff" stroke="#2E8B6F" stroke-width="1.5"/>
+<text x="558" y="254" text-anchor="middle" font-size="13" fill="#2E8B6F">清空整潔</text>
+<text x="480" y="330" text-anchor="middle" class="pt">不讓鼠住</text>
+<text x="480" y="357" text-anchor="middle" class="lb">清除紙箱與雜物堆積</text>
+<text x="480" y="380" text-anchor="middle" class="sl">定期整理儲藏空間</text>
+<text x="480" y="400" text-anchor="middle" class="sl">杜絕老鼠藏匿築巢</text>
+
+<!-- Panel 3: No Food -->
+<rect x="660" y="100" width="280" height="470" rx="12" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+<circle cx="800" cy="148" r="28" fill="#1B5E4B"/>
+<text x="800" y="157" text-anchor="middle" font-size="22" font-weight="700" fill="#C9A227">3</text>
+<rect x="688" y="215" width="75" height="65" rx="5" fill="#2E8B6F"/>
+<rect x="683" y="203" width="85" height="16" rx="5" fill="#1B5E4B"/>
+<rect x="686" y="199" width="79" height="9" rx="3" fill="#C9A227"/>
+<rect x="793" y="222" width="60" height="58" rx="4" fill="#2E8B6F"/>
+<rect x="787" y="210" width="72" height="16" rx="5" fill="#1B5E4B"/>
+<rect x="790" y="206" width="66" height="9" rx="3" fill="#C9A227"/>
+<path d="M 808 210 Q 823 199 838 210" stroke="#1B5E4B" stroke-width="2" fill="none"/>
+<circle cx="725" cy="307" r="15" fill="#C9A227"/>
+<polyline points="715,307 722,315 736,294" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="823" cy="307" r="15" fill="#C9A227"/>
+<polyline points="813,307 820,315 834,294" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="800" y="348" text-anchor="middle" class="pt">不讓鼠吃</text>
+<text x="800" y="375" text-anchor="middle" class="lb">密封食物並加蓋垃圾桶</text>
+<text x="800" y="398" text-anchor="middle" class="sl">食物以密封容器存放</text>
+<text x="800" y="418" text-anchor="middle" class="sl">徹底斷絕老鼠食物來源</text>
+
+<text x="480" y="590" text-anchor="middle" font-size="12" fill="#6B7B77">三管齊下，有效防制鼠害，守護居家衛生安全</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

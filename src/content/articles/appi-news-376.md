@@ -2,7 +2,7 @@
 title: "雨後登革熱防治完整指南：孳生源清除、巡倒清刷與居家防蚊"
 slug: "appi-news-376"
 description: "雨後為什麼登革熱風險升高？從積水容器孳生病媒蚊的原理，到巡倒清刷四步驟、居家防蚊熱點與社區動員，一次看懂雨後登革熱防治的完整做法。"
-publishDate: 2026-07-15
+publishDate: 2026-07-13
 category: health
 subcategory: preventive
 tags: ["登革熱防治", "病媒蚊孳生源", "雨後防蚊", "巡倒清刷", "登革熱社區防治"]

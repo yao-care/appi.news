@@ -2,7 +2,7 @@
 title: "關於雨後防蚊，家庭要知道的5件事"
 slug: "appi-news-377"
 description: "雨停之後，陽台的積水最快九天就能孵出會飛的蚊子。從官方巡倒清刷到親子巡檢任務，這篇文章用具體行動，幫有孩子與長輩的家庭把登革熱風險降到最低。"
-publishDate: 2026-07-15
+publishDate: 2026-07-13
 category: health
 subcategory: preventive
 tags: ["雨後防蚊", "雨後積水怎麼清", "家庭防蚊方法", "登革熱家庭防護", "小孩被蚊子咬", "防蚊生活習慣"]

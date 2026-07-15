@@ -2,7 +2,7 @@
 title: "「紅黃綠」食品標示真能降低慢性病風險嗎？"
 slug: "appi-news-188"
 description: "衛福部推動的食品紅黃綠三色分級標示，預計2026年下半年以自願制上路。從國際研究證據到台灣制度設計，解析前端警示標示能否真正幫助消費者降低慢性病風險，以及消費者現在能做的事。"
-publishDate: 2026-07-15
+publishDate: 2026-06-18
 category: health
 subcategory: tcm-integrative
 tags: ["食品紅黃綠標示", "前端警示標示", "慢性病預防", "食品標示制度", "衛福部食藥署"]

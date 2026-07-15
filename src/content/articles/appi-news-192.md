@@ -2,7 +2,7 @@
 title: "躁鬱症完整指南：從辨識誤診警訊到長期穩定管理"
 slug: "appi-news-192"
 description: "躁鬱症（雙向情緒障礙）因情緒起伏劇烈常被誤認為個性問題，平均延誤診斷多年。本文帶你認識三種類型、常見誤診成因、中醫情志觀點，以及整合藥物、心理與生活調整的實用管理策略。"
-publishDate: 2026-06-18
+publishDate: 2026-07-15
 category: health
 subcategory: tcm-integrative
 tags: ["躁鬱症", "雙向情緒障礙", "雙極性情感疾患", "誤診", "情緒管理", "心情穩定劑", "心理健康"]

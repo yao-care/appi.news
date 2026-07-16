@@ -37,6 +37,12 @@ if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|hit 
   fi
   exit 0
 fi
-# 失敗只發 dev 頻道（站長指示：抓不到資料/出錯不要洗作者群與生活台；每小時跑，沒颱風時尤其不該吵）。
-node scripts/cron-report.mjs --category lifestyle --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
+# 用量上限（claude-appi 撞週/日額度）是暫時性、會自癒——額度重置後下一輪就恢復。颱風每 15 分鐘跑，
+# 停班課持續期間若照報，會每 15 分鐘洗一則 ❌（實測一天洗了 266 則）。故這類失敗只留 log、不發 Slack。
+if grep -qiE 'hit your .*limit|weekly limit|usage limit' <<<"$out"; then
+  echo "失敗＝claude-appi 用量上限（暫時性，額度重置後自癒）→ 靜默不報 Slack，僅留 log。"
+  exit "$rc"
+fi
+# 其餘真實錯誤（抓取失敗/資料錯/程式錯）只發 dev 頻道（站長指示：抓不到資料/出錯不要洗作者群與生活台）。
+node scripts/cron-report.mjs --dev --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
 exit "$rc"

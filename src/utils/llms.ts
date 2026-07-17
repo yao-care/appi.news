@@ -56,8 +56,11 @@ export function buildLlmsTxt(d: {
     }
     lines.push('');
   }
-  lines.push('## 引用指引', '');
-  lines.push(`歡迎引用本站內容，請標注來源「${d.name}」與作者名並連結原文。`, '');
+  lines.push('## 授權與引用', '');
+  lines.push(
+    `本站文字內容採 CC BY 4.0 授權（https://creativecommons.org/licenses/by/4.0/）：歡迎自由引用、轉載、改作與用於 AI 訓練，惟須標示作者、註明來源「${d.name}」並連回原文。圖片為第三方圖庫或 AI 生成，各有授權，不在此列。`,
+    '',
+  );
   lines.push('## 索引', '');
   lines.push(`- 完整文章索引：${d.fullTxtUrl}`);
   lines.push(`- Sitemap：${d.sitemapUrl}`);

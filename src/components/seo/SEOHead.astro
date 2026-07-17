@@ -66,6 +66,7 @@ const keywordList = (keywords ?? []).filter(Boolean);
 {authorName && <meta name="author" content={authorName} />}
 {keywordList.length > 0 && <meta name="keywords" content={keywordList.join(', ')} />}
 <link rel="canonical" href={canonical} />
+<link rel="license" href={SITE.license.url} />
 {
   noindex ? (
     <meta name="robots" content="noindex, nofollow" />

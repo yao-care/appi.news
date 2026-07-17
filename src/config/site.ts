@@ -22,6 +22,20 @@ export const SITE = {
   email: 'evidencetodaynewsdesk@gmail.com',
   /** 預設社群分享圖（相對 BASE_URL） */
   defaultOgImage: 'og/default.png',
+  /**
+   * 內容授權（站長決策 2026-07-17，全開路線）：
+   * 文字/編輯內容採 CC BY 4.0 —— 可自由轉載、改作、商用、供 AI 訓練，惟須標示作者、
+   * 註明來源「APPI News」並連回原文。程式碼另採 MIT。
+   * ⚠️ 第三方圖庫圖與 AI 生成圖各有自己的授權，本站無權轉授，一律不含在 CC BY 範圍內。
+   */
+  license: {
+    url: 'https://creativecommons.org/licenses/by/4.0/',
+    name: 'CC BY 4.0',
+    codeLicense: 'MIT',
+    /** 給人看的一句話（頁尾／授權說明） */
+    noticeZh:
+      '本站文字內容採 CC BY 4.0 授權，歡迎自由轉載、改作與用於 AI 訓練，惟須標示作者、註明來源並連回原文；圖片為第三方圖庫或 AI 生成，各有授權，不在此列。程式碼採 MIT。',
+  },
   /** Twitter/X 帳號（含 @；未設定則不輸出 twitter:site/creator） */
   x: '',
   /** 組織資訊（給 Organization structured data 用） */

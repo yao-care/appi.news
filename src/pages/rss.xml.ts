@@ -13,6 +13,6 @@ export async function GET(context: APIContext) {
     description: SITE.description,
     site: site ?? SITE.taglineEn,
     items: toRssItems(articles.slice(0, 30), authorMap, site),
-    customData: `<language>zh-Hant</language>`,
+    customData: `<language>zh-Hant</language><copyright>文字內容採 CC BY 4.0 授權（${SITE.license.url}）：可自由轉載、改作與供 AI 訓練，須標示作者、註明來源「${SITE.name}」並連回原文；圖片不在此列。</copyright>`,
   });
 }

@@ -259,5 +259,9 @@ export function articleLd(
     },
     // publisher 以 @id 參照頁面上的 NewsMediaOrganization 節點（含 logo），避免重複定義
     publisher: { '@id': orgId(site) },
+    // 內容授權：文字內容採 CC BY 4.0（機器可讀，供 AI／搜尋引擎判讀「可自由使用但須署名」）。
+    // 注意：僅涵蓋文字，第三方圖庫／AI 生成圖不在此授權內（見 SITE.license 註解）。
+    license: SITE.license.url,
+    copyrightHolder: { '@id': orgId(site) },
   };
 }

@@ -1,0 +1,49 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="55" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="700" fill="#1B5E4B">季軍戰存廢論點天秤</text>
+  <text x="200" y="130" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#1B5E4B">維持論點</text>
+  <text x="770" y="130" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#1B5E4B">廢除論點</text>
+
+  <rect x="410" y="540" width="140" height="16" rx="5" fill="#1B5E4B"/>
+  <path d="M480 500 L438 540 L522 540 Z" fill="#1B5E4B"/>
+  <line x1="480" y1="300" x2="480" y2="500" stroke="#1B5E4B" stroke-width="8"/>
+  <circle cx="480" cy="300" r="11" fill="#C9A227" stroke="#1B5E4B" stroke-width="2"/>
+
+  <line x1="200" y1="330" x2="770" y2="270" stroke="#1B5E4B" stroke-width="6"/>
+  <circle cx="200" cy="330" r="6" fill="#1B5E4B"/>
+  <circle cx="770" cy="270" r="6" fill="#1B5E4B"/>
+
+  <line x1="200" y1="330" x2="100" y2="390" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="200" y1="330" x2="300" y2="390" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="770" y1="270" x2="670" y2="330" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="770" y1="270" x2="870" y2="330" stroke="#2E8B6F" stroke-width="2"/>
+
+  <rect x="80" y="390" width="240" height="70" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <rect x="650" y="330" width="240" height="70" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+
+  <circle cx="140" cy="425" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <polygon points="140,415 143,421 149,421 144,425 146,432 140,428 134,432 136,425 131,421 137,421" fill="#C9A227"/>
+  <circle cx="200" cy="425" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="200" cy="425" r="9" fill="none" stroke="#C9A227" stroke-width="2"/>
+  <line x1="200" y1="415" x2="200" y2="435" stroke="#C9A227" stroke-width="2"/>
+  <circle cx="260" cy="425" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <path d="M260 434 L260 416 M254 422 L260 416 L266 422" fill="none" stroke="#C9A227" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="710" cy="365" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <path d="M701 365 Q710 373 719 365" fill="none" stroke="#6B7B77" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="770" cy="365" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <line x1="770" y1="357" x2="770" y2="373" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+  <line x1="762" y1="365" x2="778" y2="365" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="830" cy="365" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <rect x="820" y="357" width="6" height="16" fill="#C9A227"/>
+  <rect x="828" y="363" width="6" height="10" fill="#C9A227"/>
+  <rect x="836" y="368" width="6" height="5" fill="#C9A227"/>
+
+  <text x="140" y="480" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">國家榮譽</text>
+  <text x="200" y="480" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">獎金</text>
+  <text x="260" y="480" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">世界排名分</text>
+
+  <text x="710" y="420" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">選手疲勞</text>
+  <text x="770" y="420" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">受傷風險</text>
+  <text x="830" y="420" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">賽事強度低</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

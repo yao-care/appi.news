@@ -4,12 +4,29 @@ TASK="颱風停班課"
 set -uo pipefail
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
 
-# 前置 gate（純資料，不動用 Claude/worktree）：颱風季每 15 分鐘跑，沒颱風的時段直接安靜結束以省用量。
-# 官方「目前現況」權威頁（人事行政總處 nds.html）含「無停班停課訊息」＝確定無停班課 → 跳過。
-# 抓取失敗／非 200／找不到該字串（＝可能有停班課）一律 fail-open，照走完整流程，絕不漏報。
+# ── 前置 gate（純資料，全程不動用 Claude/worktree）：颱風季每 15 分鐘跑，用官方頁面內容決定要不要叫 sonnet ──
+# 權威頁＝人事行政總處 nds.html。抓一次、下面兩關重複用同一份（避免二次抓取與競態）。
 NDS_URL="https://www.dgpa.gov.tw/typh/daily/nds.html"
-if curl -s -4 --max-time 30 --fail "$NDS_URL" 2>/dev/null | grep -q "無停班停課訊息"; then
+SIG_FILE="/root/.local/state/appi-news/typhoon-gate-sig.txt"
+NDS_HTML="$(curl -s -4 --max-time 30 --fail "$NDS_URL" 2>/dev/null)"; curl_rc=$?
+
+# (1) 明確「無停班停課訊息」＝確定無颱風停課 → 安靜結束。
+if [ "$curl_rc" -eq 0 ] && grep -q "無停班停課訊息" <<<"$NDS_HTML"; then
   echo "前置 gate：官方頁顯示「無停班停課訊息」，安靜結束（未動用 Claude）。"
+  exit 0
+fi
+
+# (2) 內容簽章：只取各縣市停班課公告區塊＋公告日期，排除每次都變的「更新時間」時鐘（否則簽章每次都不同、等於沒做）。
+#     與上次「已成功處理」的簽章相同 → 內容沒變 → 安靜結束、不叫 sonnet。這是額度被「每 15 分鐘叫起完整 session 只為判斷沒變」空轉燒穿的主修。
+#     抓取失敗／非 200／算不出簽章 → CUR_SIG 空 → 不比對，照 fail-open 走完整流程（絕不因省額度漏報）。
+CUR_SIG=""
+if [ "$curl_rc" -eq 0 ] && [ -n "$NDS_HTML" ]; then
+  sig_rows="$(grep -a 'StopWorkSchool_Info' <<<"$NDS_HTML" | sed -e 's/<[^>]*>//g' -e 's/&nbsp;/ /g' | tr -s '[:space:]' ' ' | sed 's/^ *//;s/ *$//')"
+  sig_date="$(sed 's/<[^>]*>//g' <<<"$NDS_HTML" | tr -s '[:space:]' ' ' | grep -oE '[0-9]{2,3}年 ?[0-9]{1,2}月 ?[0-9]{1,2}日 天然災害停止上班及上課情形' | head -1)"
+  [ -n "$sig_rows" ] && CUR_SIG="$(printf '%s|%s' "$sig_date" "$sig_rows" | sha256sum | cut -d' ' -f1)"
+fi
+if [ -n "$CUR_SIG" ] && [ -f "$SIG_FILE" ] && [ "$CUR_SIG" = "$(cat "$SIG_FILE" 2>/dev/null)" ]; then
+  echo "前置 gate：各縣市停班課公告與上次已處理者相同（簽章 ${CUR_SIG:0:12}…），安靜結束（未動用 Claude）。"
   exit 0
 fi
 echo "前置 gate：偵測到可能停班課或抓取不確定 → 進入完整流程（fail-open）。"
@@ -35,6 +52,9 @@ if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|hit 
     fi
     node scripts/cron-report.mjs --category lifestyle --text "$headline" || true
   fi
+  # 本次內容已成功處理完（含「確認 SAME、安靜結束」也算成功）→ 記錄簽章；之後內容不變的輪次即在前置 gate 跳過、不再叫 sonnet。
+  # 失敗／撞用量上限不會走到這裡 → 簽章不更新 → 下一輪仍會重試，額度重置後自然補上，不會漏報。
+  if [ -n "${CUR_SIG:-}" ]; then mkdir -p "$(dirname "$SIG_FILE")"; printf '%s\n' "$CUR_SIG" > "$SIG_FILE"; fi
   exit 0
 fi
 # 用量上限（claude-appi 撞週/日額度）是暫時性、會自癒——額度重置後下一輪就恢復。颱風每 15 分鐘跑，

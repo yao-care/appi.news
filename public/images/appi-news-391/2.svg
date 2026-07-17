@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <style>
+    .title{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:34px;font-weight:700;fill:#1B5E4B;}
+    .sub{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:17px;fill:#6B7B77;}
+    .label{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:22px;font-weight:700;fill:#1F2A28;text-anchor:middle;}
+    .desc{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:15px;fill:#6B7B77;text-anchor:middle;}
+  </style>
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="58" class="title" text-anchor="middle">為什麼球員不想踢季軍戰？</text>
+  <text x="480" y="88" class="sub" text-anchor="middle">四個常見原因（無先後順序）</text>
+
+  <!-- Card 1: 士氣受挫 -->
+  <rect x="30" y="140" width="210" height="380" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <circle cx="135" cy="212" r="40" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
+  <circle cx="120" cy="204" r="4" fill="#1B5E4B"/>
+  <circle cx="150" cy="204" r="4" fill="#1B5E4B"/>
+  <path d="M115 232 Q135 216 155 232" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linecap="round"/>
+  <text x="135" y="292" class="label">士氣受挫</text>
+  <text x="135" y="322" class="desc">準決賽落敗後</text>
+  <text x="135" y="344" class="desc">心理難以調適</text>
+
+  <!-- Card 2: 體力透支 -->
+  <rect x="260" y="140" width="210" height="380" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <rect x="335" y="180" width="60" height="34" rx="5" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
+  <rect x="395" y="190" width="8" height="14" fill="#1B5E4B"/>
+  <rect x="339" y="184" width="18" height="26" fill="#C9A227"/>
+  <text x="365" y="292" class="label">體力透支</text>
+  <text x="365" y="322" class="desc">連續征戰一個月</text>
+  <text x="365" y="344" class="desc">賽事後精疲力竭</text>
+
+  <!-- Card 3: 板凳輪替 -->
+  <rect x="490" y="140" width="210" height="380" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <circle cx="595" cy="212" r="40" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
+  <path d="M578 198 A20 20 0 0 1 614 202" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M610 194 L616 202 L607 205" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M612 226 A20 20 0 0 1 576 222" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M580 230 L574 222 L583 219" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linejoin="round"/>
+  <text x="595" y="292" class="label">板凳輪替</text>
+  <text x="595" y="322" class="desc">教練派替補球員</text>
+  <text x="595" y="344" class="desc">上場累積經驗</text>
+
+  <!-- Card 4: 受傷風險 -->
+  <rect x="720" y="140" width="210" height="380" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <circle cx="825" cy="212" r="40" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
+  <rect x="811" y="196" width="28" height="8" rx="2" fill="#C9A227"/>
+  <rect x="821" y="186" width="8" height="28" rx="2" fill="#C9A227"/>
+  <text x="825" y="292" class="label">受傷風險</text>
+  <text x="825" y="322" class="desc">身心負荷加重</text>
+  <text x="825" y="344" class="desc">增加運動傷害機率</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

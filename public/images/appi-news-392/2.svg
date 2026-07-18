@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+<style>
+.title{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:28px;font-weight:700;fill:#003A93;}
+.bank{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:20px;font-weight:700;fill:#1F1F1F;}
+.stance{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:18px;font-weight:700;fill:#D1482A;}
+.desc{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:13px;fill:#6B7280;}
+.abbr{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:17px;font-weight:700;fill:#FFFFFF;}
+</style>
+<rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+<text x="480" y="52" text-anchor="middle" class="title">四大央行利率政策方向</text>
+<line x1="370" y1="70" x2="590" y2="70" stroke="#D1482A" stroke-width="3"/>
+
+<rect x="20" y="105" width="210" height="425" rx="12" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+<circle cx="125" cy="185" r="34" fill="#003A93"/>
+<text x="125" y="191" text-anchor="middle" class="abbr">Fed</text>
+<text x="125" y="245" text-anchor="middle" class="bank">聯準會</text>
+<line x1="100" y1="345" x2="150" y2="325" stroke="#3D6BB5" stroke-width="5" stroke-linecap="round"/>
+<polygon points="150,325 137,323 144,337" fill="#3D6BB5"/>
+<text x="125" y="405" text-anchor="middle" class="stance">按兵不動</text>
+<text x="125" y="430" text-anchor="middle" class="stance">（偏鷹）</text>
+<text x="125" y="480" text-anchor="middle" class="desc">維持利率不變</text>
+<text x="125" y="500" text-anchor="middle" class="desc">保留後續升息彈性</text>
+
+<rect x="260" y="105" width="210" height="425" rx="12" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+<circle cx="365" cy="185" r="34" fill="#003A93"/>
+<text x="365" y="191" text-anchor="middle" class="abbr">ECB</text>
+<text x="365" y="245" text-anchor="middle" class="bank">歐洲央行</text>
+<line x1="365" y1="350" x2="365" y2="310" stroke="#D1482A" stroke-width="5" stroke-linecap="round"/>
+<polygon points="365,298 352,320 378,320" fill="#D1482A"/>
+<text x="365" y="405" text-anchor="middle" class="stance">升息</text>
+<text x="365" y="480" text-anchor="middle" class="desc">持續調升基準利率</text>
+<text x="365" y="500" text-anchor="middle" class="desc">抑制通膨壓力</text>
+
+<rect x="500" y="105" width="210" height="425" rx="12" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+<circle cx="605" cy="185" r="34" fill="#003A93"/>
+<text x="605" y="191" text-anchor="middle" class="abbr">BOJ</text>
+<text x="605" y="245" text-anchor="middle" class="bank">日本央行</text>
+<line x1="605" y1="350" x2="605" y2="310" stroke="#D1482A" stroke-width="5" stroke-linecap="round"/>
+<polygon points="605,298 592,320 618,320" fill="#D1482A"/>
+<text x="605" y="405" text-anchor="middle" class="stance">政策正常化</text>
+<text x="605" y="480" text-anchor="middle" class="desc">逐步脫離超寬鬆</text>
+<text x="605" y="500" text-anchor="middle" class="desc">貨幣政策</text>
+
+<rect x="740" y="105" width="210" height="425" rx="12" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+<circle cx="845" cy="185" r="34" fill="#003A93"/>
+<text x="845" y="191" text-anchor="middle" class="abbr">RBNZ</text>
+<text x="845" y="245" text-anchor="middle" class="bank">紐西蘭央行</text>
+<line x1="845" y1="350" x2="845" y2="310" stroke="#D1482A" stroke-width="5" stroke-linecap="round"/>
+<polygon points="845,298 832,320 858,320" fill="#D1482A"/>
+<text x="845" y="405" text-anchor="middle" class="stance">升息</text>
+<text x="845" y="480" text-anchor="middle" class="desc">因應通膨數據</text>
+<text x="845" y="500" text-anchor="middle" class="desc">調升利率水準</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>

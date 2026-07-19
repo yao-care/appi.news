@@ -1,15 +1,17 @@
 ---
 title: "英相交接倒數：伯納姆週末搬入唐寧街、內閣名單週一公布　財政大臣傳於米勒班、馬哈穆德間拍板"
 slug: "uk-starmer-resigns-pm"
-description: "大曼徹斯特市長伯納姆已無競爭當選工黨黨魁，預計7月20日（週一）接任英國首相，正式接替6月22日請辭的施凱爾。他本週末啟動搬入唐寧街10號的流程，內閣名單訂於就任當天公布；財政大臣一職傳出在工黨左翼屬意的米勒班與現任內政大臣馬哈穆德之間拍板，接替現任財政大臣里夫斯。伯納姆並表示施政將優先推動社會照護改革，地方分權工作將由他設在曼徹斯特的『10號北方辦公室』主導。"
-excerpt: "伯納姆預計7月20日接任英國首相，本週末啟動搬入唐寧街流程、內閣名單訂於就任當天公布。財政大臣人選傳於米勒班與現任內政大臣馬哈穆德間二選一，他並表示施政將優先推動社會照護改革。"
+description: "大曼徹斯特市長伯納姆已無競爭當選工黨黨魁，預計7月20日（週一）接任英國首相，正式接替6月22日請辭的施凱爾。他本週末啟動搬入唐寧街10號的流程，內閣名單訂於就任當天公布；財政大臣一職傳出在工黨左翼屬意的米勒班與現任內政大臣馬哈穆德之間拍板，接替現任財政大臣里夫斯。前首相蘇納克與強森也分別透過報章與電視節目對伯納姆提出建議，施凱爾則表態不會公開給繼任者建議。伯納姆並表示施政將優先推動社會照護改革，地方分權工作將由他設在曼徹斯特的『10號北方辦公室』主導。"
+excerpt: "伯納姆預計7月20日接任英國首相，本週末啟動搬入唐寧街流程、內閣名單訂於就任當天公布。前首相蘇納克、強森分別提出交接建議，財政大臣人選傳於米勒班與現任內政大臣馬哈穆德間二選一。"
 publishDate: "2026-06-23T12:00:00+08:00"
-updatedDate: "2026-07-18T15:18:21.808Z"
+updatedDate: "2026-07-19T15:18:08.284Z"
 category: "international"
 subcategory: "europe"
 tags: ["英國", "施凱爾", "工黨", "改革黨", "伯納姆", "唐寧街", "財富稅", "川普", "內閣改組", "馬哈穆德"]
 highlights:
   - "伯納姆本週末啟動搬入唐寧街10號的流程，內閣名單訂於他7月20日（週一）正式就任當天公布"
+  - "前首相蘇納克在《星期日泰晤士報》撰文建議伯納姆『充分把握初到唐寧街的每一秒』，並鎖定『兩三項』核心優先政策；前首相強森則於天空新聞節目提醒伯納姆『時間不多』，需重振投資人信心"
+  - "施凱爾則表態不會公開對外提供交接建議"
   - "財政大臣人選傳於工黨左翼屬意的米勒班（Ed Miliband）與現任內政大臣馬哈穆德（Shabana Mahmood）間二選一，接替現任財政大臣里夫斯（Rachel Reeves）"
   - "伯納姆表示施政將優先推動社會照護改革，地方分權工作將由設在曼徹斯特的『10號北方辦公室』（'No 10 North'）主導，預計上任第一週造訪"
   - "接受球評萊內克（Gary Lineker）專訪時，伯納姆拒絕排除引入財富稅，稱『現在不會排除任何選項』，強調需要『更大程度的公平感』"
@@ -40,6 +42,12 @@ references:
   - title: "Burnham says he is 'finalising' cabinet ahead of becoming PM on Monday"
     url: "https://www.myjoyonline.com/burnham-says-he-is-finalising-cabinet-ahead-of-becoming-pm-on-monday/"
     publisher: "MyJoyOnline"
+  - title: "Boris Johnson's and Rishi Sunak's advice for incoming PM Andy Burnham"
+    url: "https://www.enfieldindependent.co.uk/news/national/26292058.boris-johnsons-rishi-sunaks-advice-incoming-pm-andy-burnham/"
+    publisher: "Enfield Independent"
+  - title: "Boris Johnson's and Rishi Sunak's advice for incoming PM Andy Burnham"
+    url: "https://uk.news.yahoo.com/boris-johnson-rishi-sunak-advice-173600788.html"
+    publisher: "Yahoo News UK"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"
@@ -51,7 +59,7 @@ coverAlt: "英國首相施凱爾抵達唐寧街10號（資料照）"
 coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commons"
 ---
 
-英國政權交接進入最後倒數。大曼徹斯特市長伯納姆（Andy Burnham）已無競爭當選工黨黨魁，預計7月20日（週一）正式接任英國首相，接替6月22日宣布請辭的施凱爾（Sir Keir Starmer）。據[Barrhead News報導](https://www.barrheadnews.com/news/national/26291389.burnham-finalising-plans-government-becoming-prime-minister-monday/)，伯納姆本週末即展開搬入唐寧街10號的流程，內閣名單訂於他正式就任當天公布；財政大臣一職傳出在工黨左翼屬意的米勒班（Ed Miliband），與現任內政大臣馬哈穆德（Shabana Mahmood）之間拍板，接替現任財政大臣里夫斯（Rachel Reeves）。伯納姆先前確定接班後接受球評萊內克（Gary Lineker）專訪，首度就財富稅與對美關係表態，拒絕排除開徵財富稅，也允諾會以「非常坦率」的態度與美國總統川普互動。
+英國政權交接進入最後倒數。大曼徹斯特市長伯納姆（Andy Burnham）已無競爭當選工黨黨魁，預計7月20日（週一）正式接任英國首相，接替6月22日宣布請辭的施凱爾（Sir Keir Starmer）。據[Barrhead News報導](https://www.barrheadnews.com/news/national/26291389.burnham-finalising-plans-government-becoming-prime-minister-monday/)，伯納姆本週末即展開搬入唐寧街10號的流程，內閣名單訂於他正式就任當天公布；財政大臣一職傳出在工黨左翼屬意的米勒班（Ed Miliband），與現任內政大臣馬哈穆德（Shabana Mahmood）之間拍板，接替現任財政大臣里夫斯（Rachel Reeves）。伯納姆先前確定接班後接受球評萊內克（Gary Lineker）專訪，首度就財富稅與對美關係表態，拒絕排除開徵財富稅，也允諾會以「非常坦率」的態度與美國總統川普互動。就任前夕，前首相蘇納克（Rishi Sunak）與強森（Boris Johnson）也分別透過報章與電視節目公開向他建言，工黨籍的施凱爾則表態不會公開給予繼任者建議。
 
 ## 「該面對現實了」：回顧請辭導火線
 
@@ -95,12 +103,21 @@ coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commo
 
 背景部分，[MyJoyOnline報導](https://www.myjoyonline.com/burnham-says-he-is-finalising-cabinet-ahead-of-becoming-pm-on-monday/)指出，伯納姆已取得379名工黨議員支持及11個工會聯盟的全面支持，是唯一入局的黨魁候選人。正式交接程序上，據[Barrhead News報導](https://www.barrheadnews.com/news/national/26291389.burnham-finalising-plans-government-becoming-prime-minister-monday/)，施凱爾週一將先赴白金漢宮向國王遞交辭呈，伯納姆隨後晉見國王「吻手」（kiss hands）就任，並於唐寧街發表首場演說。
 
+## 前首相隔空傳授經驗：蘇納克籲把握初期、強森警告時間緊迫
+
+伯納姆正式就任前夕，兩位保守黨籍前首相分別公開對他提出建議。據[Enfield Independent報導](https://www.enfieldindependent.co.uk/news/national/26292058.boris-johnsons-rishi-sunaks-advice-incoming-pm-andy-burnham/)，前首相蘇納克（Rishi Sunak）在《星期日泰晤士報》撰文，建議伯納姆「充分把握初到唐寧街的每一秒」，並坦言自己當時沒有留給自己「反思的片刻」，是他的遺憾之一。[Yahoo News UK報導](https://uk.news.yahoo.com/boris-johnson-rishi-sunak-advice-173600788.html)補充，蘇納克強調首相「必須要有計畫」，盡快鎖定「兩三項」核心優先政策並向白廳（Whitehall）傳達，趁「聲勢最高」的時候把握時機；他也提到，內閣中外交大臣的人選是最重要的職位之一。
+
+前首相強森（Boris Johnson）則在天空新聞（Sky News）節目中示警，伯納姆「時間不多」，形容英國公眾正快速更換首相人選。據[Enfield Independent報導](https://www.enfieldindependent.co.uk/news/national/26292058.boris-johnsons-rishi-sunaks-advice-incoming-pm-andy-burnham/)，強森認為伯納姆需要「重振投資人對這個國家的信心」，並應「思考稅收政策」、設法遏止人才外流。
+
+相較於兩位保守黨前首相罕見公開建言，工黨籍的施凱爾（Sir Keir Starmer）則採取不同態度。[Yahoo News UK報導](https://uk.news.yahoo.com/boris-johnson-rishi-sunak-advice-173600788.html)指出，施凱爾已表態不會公開對外提供交接建議給接任的伯納姆。
+
 ## 對台灣讀者的關注點
 
 英國是七大工業國（G7）成員，也是台灣重要的理念相近夥伴之一。7月20日首相換人上任，加上伯納姆在稅制與對美關係上釋出的初步立場，短期內對英國的財政政策、對歐關係、國防支出與印太布局等議題的後續走向都可能帶來變數，值得持續觀察。在新政府正式就任、路線進一步明朗化之前，相關政策方向仍存在不確定性。
 
 ## 更新時間軸
 
+- （更新 2026-07-19：伯納姆就任前夕，前首相蘇納克在《星期日泰晤士報》撰文建議他「充分把握初到唐寧街的每一秒」、盡快鎖定「兩三項」核心優先政策；前首相強森在天空新聞節目提醒伯納姆「時間不多」，需重振投資人信心、思考稅收政策。工黨籍的施凱爾則表態不會公開對外提供交接建議。）（[Enfield Independent](https://www.enfieldindependent.co.uk/news/national/26292058.boris-johnsons-rishi-sunaks-advice-incoming-pm-andy-burnham/)、[Yahoo News UK](https://uk.news.yahoo.com/boris-johnson-rishi-sunak-advice-173600788.html)）
 - （更新 2026-07-18：伯納姆本週末啟動搬入唐寧街10號流程，內閣名單訂於他7月20日正式就任當天公布；財政大臣人選傳於工黨左翼屬意的米勒班與現任內政大臣馬哈穆德間二選一，接替現任財政大臣里夫斯。伯納姆並表示施政將優先推動社會照護改革，地方分權工作將由設在曼徹斯特的「10號北方辦公室」主導，預計上任第一週造訪。）（[Barrhead News](https://www.barrheadnews.com/news/national/26291389.burnham-finalising-plans-government-becoming-prime-minister-monday/)、[MyJoyOnline](https://www.myjoyonline.com/burnham-says-he-is-finalising-cabinet-ahead-of-becoming-pm-on-monday/)）
 - （更新 2026-07-16：工黨黨魁提名7月16日截止，伯納姆到7月15日已取得逾九成國會黨團連署及足額地方黨部提名，等同無競爭當選黨魁，預計7月20日接任首相。他接受萊內克專訪，拒絕排除開徵財富稅，允諾以「非常坦率」的態度與川普互動；保守黨黨魁貝德諾克批評他「已在談加稅」，預言「混亂之夏」。）（[Yahoo Finance UK](https://uk.finance.yahoo.com/news/andy-burnham-declines-rule-wealth-163156908.html)、[Barrhead News](https://www.barrheadnews.com/news/national/26284089.andy-burnham-declines-rule-wealth-tax-will-upfront-trump/)、[Wikipedia](https://en.wikipedia.org/wiki/2026_Labour_Party_leadership_crisis)）
 - （2026-06-23）英國首相施凱爾6月22日在唐寧街10號外宣布請辭，成為英國10年來第六位下台的首相；下台導火線是5月地方選舉慘敗、法拉吉的改革黨在英格蘭大舉斬獲。工黨7月9日起開放黨魁提名，大曼徹斯特市長伯納姆剛贏得補選取得議員資格，被視為熱門接班人。（[Barrhead News](https://www.barrheadnews.com/news/national/26216635.starmer-right-go-failing-deliver-change-john-swinney-says/)、[Al Jazeera](https://www.aljazeera.com/news/2026/6/22/why-has-keir-starmer-resigned-as-uk-prime-minister-and-who-will-take-over)、[Wikipedia](https://en.wikipedia.org/wiki/2026_Labour_Party_leadership_crisis)、[CBS News](https://www.cbsnews.com/news/keir-starmer-resigns-uk-prime-minister-labour-party-andy-burnham/)）

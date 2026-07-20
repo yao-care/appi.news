@@ -117,7 +117,16 @@ function main() {
     if (missing.length) {
       console.log(`  ⚠️ 剔除 ${v.slug}：缺本地圖檔（${missing.join('、')}）`);
       if (existsSync(file)) rmSync(file);
-    } else kept.push(v);
+      continue;
+    }
+    // 去 AI 腔硬 gate：命中機械可判的簽名句就剔除這篇，不拖垮整批。為什麼＝docs/lessons/ai-tone-gate.md。
+    const _tone = spawnSync('node', ['scripts/check-ai-tone.mjs', file], { encoding: 'utf8' });
+    if (_tone.status !== 0) {
+      console.log(`  ⚠️ 剔除 ${v.slug}：去 AI 腔硬 tell，不發這篇、不拖垮整批\n${_tone.stdout || _tone.stderr || ''}`);
+      if (existsSync(file)) rmSync(file);
+      continue;
+    }
+    kept.push(v);
   }
   if (kept.length === 0) { console.log('\n✓ 本批全部缺圖被剔除，無發佈。'); return; }
 

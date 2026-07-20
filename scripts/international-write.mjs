@@ -199,6 +199,16 @@ function main() {
       console.log(`  ⚠️ 剔除 ${x.slug}：缺本地圖檔（${missing.join('、')}），不發這篇、不拖垮整批`);
       dropArticle(x.slug, x.action);
       wrote = wrote.filter((w) => w !== x);
+      continue;
+    }
+    // 去 AI 腔硬 gate：命中機械可判的簽名句（破折號／自我辯白旁白）就剔除這篇，不拖垮整批。
+    // 為什麼＝docs/lessons/ai-tone-gate.md。
+    const _tone = spawnSync('node', ['scripts/check-ai-tone.mjs', join(ARTICLES_DIR, `${x.slug}.md`)], { encoding: 'utf8' });
+    if (_tone.status !== 0) {
+      console.log(`  ⚠️ 剔除 ${x.slug}：去 AI 腔硬 tell，不發這篇、不拖垮整批\n${_tone.stdout || _tone.stderr || ''}`);
+      dropArticle(x.slug, x.action);
+      wrote = wrote.filter((w) => w !== x);
+      continue;
     }
   }
   if (!produced || wrote.length === 0) {

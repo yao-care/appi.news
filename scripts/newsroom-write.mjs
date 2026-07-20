@@ -153,7 +153,7 @@ export function buildDraftPrompt(job, schedule = null, opts = {}) {
     '',
     '【務必照做】',
     '1. 完整執行 newsroom 步驟三：查料、擴寫、超連結逐條查證（每條 2xx 且內容支持該句，死連結一律換或刪），去 AI 腔複查、繁中台灣用語複查。',
-    '1a. 每段必配圖，一律用 `node scripts/get-image.mjs`（不要用 gen-image.mjs）：概念/物件/場景圖**不要**加 --people（先搜圖庫、找不到才 AI 生成）；人物為主體的圖才加 --people（直接 AI 生成、模組強制台灣人）。封面同法；若封面回傳 mode:"stock" 要把 credit 寫進 frontmatter coverImageCredit。',
+    '1a. 每段必配圖，一律用 `node scripts/get-image.mjs`（不要用 gen-image.mjs）：概念/物件/場景圖**不要**加 --people（先搜圖庫、找不到才 AI 生成、維持插畫風）；人物為主體的圖才加 --people（走擬真攝影生成：sonnet 展開＋haiku 視覺自檢＋不合格自動重生、模組強制台灣人）。**人物圖務必多帶** `--caption "<這張圖要傳達的訊息>"` `--alt "<中文畫面描述>"` `--article-context "<本篇主題>"` 讓展開扣題。封面同法；若封面回傳 mode:"stock" 要把 credit 寫進 frontmatter coverImageCredit。',
     isUpdate
       ? `2. frontmatter：**status 與 publishDate 一律沿用原檔現值、不要改**（滾動更新不得改變排程）；category/subcategory/author/contentType/sourceType 維持原檔；新增或更新 updatedDate（見步驟 3a）。disclosure 揭露「以 AI 輔助起草、經人工查證編輯」。`
       : `2. frontmatter：status: "${status}"、publishDate: "${pubDate}"、category: "${job.category}"${job.subcategory ? `、subcategory: "${job.subcategory}"` : ''}、author: "${author}"、contentType: "${contentType}"、sourceType: "editorial"（須為 src/content.config.ts 的 enum 合法值），並用 disclosure 欄位揭露「以 AI 輔助起草、經人工查證編輯」。`,

@@ -84,8 +84,11 @@ function bytesToBase64(bytes: Uint8Array): string {
   return btoa(bin);
 }
 
-/** OpenAI gpt-image-1：同步回 b64_json。 */
-async function genOpenAI(env: Env, prompt: string, size: GenSize): Promise<GenResult> {
+/** 合法的 gpt-image quality（防呆：只放行這幾個，其餘退回 env/預設）。 */
+const VALID_QUALITY = new Set(['low', 'medium', 'high', 'auto']);
+
+/** OpenAI gpt-image-1：同步回 b64_json。quality 可 per-request 覆寫（人物 photoreal 用 medium）。 */
+async function genOpenAI(env: Env, prompt: string, size: GenSize, quality?: string): Promise<GenResult> {
   if (!env.OPENAI_API_KEY) throw new Error('未設定 OPENAI_API_KEY');
   const model = env.OPENAI_IMAGE_MODEL || 'gpt-image-1';
   // gpt-image-1 與 dall-e-3 的尺寸與回傳格式不同：dall-e-3 橫式為 1792x1024 且需 response_format
@@ -95,9 +98,10 @@ async function genOpenAI(env: Env, prompt: string, size: GenSize): Promise<GenRe
     ? { landscape: '1792x1024', square: '1024x1024', portrait: '1024x1792' }
     : { landscape: '1536x1024', square: '1024x1024', portrait: '1024x1536' };
   // 不送 response_format（dall-e-3 新版 API 不接受）；改為 b64_json / url 兩種回應都接。
-  // quality 壓低延遲（gpt-image-2 預設較慢易逾時）：env OPENAI_IMAGE_QUALITY，預設 low；dall-e-3 不送。
+  // quality：per-request（合法值才收）> env OPENAI_IMAGE_QUALITY > 'low'（壓低延遲避逾時）；dall-e-3 不送。
+  const q = quality && VALID_QUALITY.has(quality) ? quality : env.OPENAI_IMAGE_QUALITY || 'low';
   const body: Record<string, unknown> = { model, prompt, n: 1, size: size3[size] };
-  if (!dalle) body.quality = env.OPENAI_IMAGE_QUALITY || 'low';
+  if (!dalle) body.quality = q;
   const res = await fetch('https://api.openai.com/v1/images/generations', {
     method: 'POST',
     headers: { Authorization: `Bearer ${env.OPENAI_API_KEY}`, 'content-type': 'application/json' },
@@ -332,12 +336,12 @@ export async function handle(request: Request, env: Env, ctx?: CtxLike): Promise
   if (request.method === 'POST' && url.pathname === '/generate') {
     const denied = await requirePush(request, env);
     if (denied) return denied;
-    const { prompt, model, size } = (await request.json()) as { prompt?: string; model?: string; size?: GenSize };
+    const { prompt, model, size, quality } = (await request.json()) as { prompt?: string; model?: string; size?: GenSize; quality?: string };
     if (!prompt || !prompt.trim()) return json({ error: '缺少 prompt' }, 400, env);
     const sz: GenSize = size === 'square' || size === 'portrait' ? size : 'landscape';
     const finalPrompt = applyPeopleDirective(prompt);
     try {
-      const out = model === 'flux' ? await genFlux(env, finalPrompt, sz) : await genOpenAI(env, finalPrompt, sz);
+      const out = model === 'flux' ? await genFlux(env, finalPrompt, sz) : await genOpenAI(env, finalPrompt, sz, quality);
       return json(out, 200, env);
     } catch (e) {
       return json({ error: e instanceof Error ? e.message : String(e) }, 502, env);

@@ -1,8 +1,10 @@
 import sharp from 'sharp';
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, unlinkSync, mkdtempSync } from 'node:fs';
 import { join } from 'node:path';
-import { homedir } from 'node:os';
+import { homedir, tmpdir } from 'node:os';
 import { execFileSync } from 'node:child_process';
+import { expandPhotoPrompt, composePhotoPrompt } from './photo-prompt.mjs';
+import { visualCheck } from './visual-check.mjs';
 
 // 生圖專門機制：Cloudflare Worker（與前端 src/utils/editor/ai-worker.ts 同一個，
 // OpenAI/Fal 金鑰已設在 worker 上）。換網域時兩邊一起改。
@@ -61,11 +63,14 @@ export function githubToken() {
 }
 
 // 經 worker 同步生圖（POST /generate → {b64,mime}），回 webp。worker 端會強制台灣人物鐵律。
-async function generateViaWorker({ prompt, width, token }) {
+// quality 明確帶入時附進 body（人物 photoreal 用 'medium'）；省略則由 worker 用其 env 預設（low）。
+async function generateViaWorker({ prompt, width, token, quality }) {
+  const body = { prompt, size: 'landscape' };
+  if (quality) body.quality = quality;
   const res = await fetch(`${AI_WORKER}/generate`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${token}`, 'content-type': 'application/json' },
-    body: JSON.stringify({ prompt, size: 'landscape' }),
+    body: JSON.stringify(body),
   });
   if (!res.ok) throw new Error(`worker 生圖失敗（${res.status}）：${(await res.text()).slice(0, 200)}`);
   const { b64 } = await res.json();
@@ -82,12 +87,15 @@ export async function generateImage({
   model = 'gpt-image-2',
   size = '1536x1024',
   quality = 'low', // 段落圖多，用 low 控成本
+  prompt: prebuiltPrompt, // 人物 photoreal 路徑傳 composePhotoPrompt 組好的完整 prompt
 }) {
-  const prompt = buildImagePrompt({ topic, context });
+  const prompt = prebuiltPrompt && String(prebuiltPrompt).trim()
+    ? String(prebuiltPrompt).trim()
+    : buildImagePrompt({ topic, context });
 
   const token = githubToken();
   if (token) {
-    return generateViaWorker({ prompt, width, token });
+    return generateViaWorker({ prompt, width, token, quality });
   }
 
   // fallback：本機 OpenAI 金鑰直打
@@ -101,4 +109,51 @@ export async function generateImage({
   const b64 = (await res.json()).data?.[0]?.b64_json;
   if (!b64) throw new Error('no image returned');
   return toWebp(Buffer.from(b64, 'base64'), width);
+}
+
+// 生成圖 → 暫存成 jpg（Read/vision 讀 webp 支援不保證）→ 視覺自檢 → 清暫存。
+async function checkWebp(webpBuffer, prompt, alt) {
+  const dir = mkdtempSync(join(tmpdir(), 'appi-imgchk-'));
+  const jpg = join(dir, 'check.jpg');
+  try {
+    await sharp(webpBuffer).jpeg({ quality: 90 }).toFile(jpg);
+    return await visualCheck(jpg, prompt, alt);
+  } catch {
+    return { ok: true }; // 檢查環節本身失敗不阻斷
+  } finally {
+    try { unlinkSync(jpg); } catch { /* 忽略 */ }
+  }
+}
+
+/**
+ * 人物 photoreal 生圖（newsroom --people 路徑，移植自 writer 的優化流程）：
+ *   ① sonnet 展開 detail →②composePhotoPrompt 組完整攝影 prompt →③生圖（quality medium）
+ *   →④haiku 視覺自檢（手指/文字/AI 破綻/東亞面孔）→⑤不合格用同 prompt 重生一次（第二張無條件採用）
+ * 全程「失敗即退回、不阻斷」：展開失敗退短 detail；驗圖失敗放行。
+ * 回 {buffer,width,height, expanded, checked, ok, regenerated, checkReason?}
+ */
+export async function generatePersonImage({
+  topic,
+  context = '',
+  caption = '',
+  alt = '',
+  articleContext = '',
+  width = 1200,
+  quality = 'medium', // 人物擬真照：low 會糊，升 medium
+}) {
+  if (!topic || !String(topic).trim()) throw new Error('topic is required');
+
+  const detail = await expandPhotoPrompt({ brief: topic, alt, caption, articleContext: articleContext || context });
+  const finalDetail = detail || [topic, caption || context || alt].filter(Boolean).join('. ').trim();
+  const prompt = composePhotoPrompt(finalDetail);
+
+  const first = await generateImage({ topic, context, width, quality, prompt });
+  const verdict = await checkWebp(first.buffer, prompt, alt);
+  if (verdict.ok) {
+    return { ...first, expanded: !!detail, checked: true, ok: true, regenerated: false };
+  }
+
+  // 不合格：同 prompt 重擲一次，第二張無條件採用（不再驗、不阻斷）。
+  const second = await generateImage({ topic, context, width, quality, prompt });
+  return { ...second, expanded: !!detail, checked: true, ok: false, regenerated: true, checkReason: verdict.reason };
 }

@@ -16,7 +16,7 @@
 //   mode=embedded 時 credit 為必填（嵌入原圖一律署名），license/source 記錄授權與來源。
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
-import { generateImage, imgTag, toWebp } from './lib/ai-image.mjs';
+import { generateImage, generatePersonImage, imgTag, toWebp } from './lib/ai-image.mjs';
 import { searchStock } from './lib/stock.mjs';
 import { classifyImageSource } from './lib/image-sources.mjs';
 
@@ -38,6 +38,11 @@ const wantPeople = has('people');
 const dryRun = has('dry-run');
 const embedUrl = arg('embed-url');
 const credit = arg('credit');
+// 人物 photoreal 展開用脈絡（皆可省，缺就退回 topic/context）：
+//   --caption 這張圖要傳達的訊息（最重要）／--alt 中文畫面描述／--article-context 文章主題
+const caption = arg('caption', '');
+const altText = arg('alt', '');
+const articleContext = arg('article-context', '');
 const pageUrl = arg('page-url');
 
 if (!topic || !out) {
@@ -145,14 +150,38 @@ async function embed() {
   };
 }
 
+/** 人物 photoreal 生圖（--people）：sonnet 展開 prompt → 生圖 medium → haiku 驗圖 → 不合格重生一次。 */
+async function generatePerson() {
+  if (dryRun) return { mode: 'generated', reason: 'people', people: true, file: out, src, dry: true };
+  const r = await generatePersonImage({
+    topic, context, caption, alt: altText, articleContext, width,
+  });
+  mkdirSync(dirname(out), { recursive: true });
+  writeFileSync(out, r.buffer);
+  return {
+    mode: 'generated',
+    reason: 'people',
+    people: true,
+    file: out,
+    src,
+    width: r.width,
+    height: r.height,
+    tag: imgTag({ src, width: r.width, height: r.height, alt: altText || '' }),
+    expanded: r.expanded,      // sonnet 展開是否成功（false=退回短 detail）
+    checked: r.checked,        // 是否過視覺自檢
+    regenerated: r.regenerated, // 是否因不合格重生一次
+    ...(r.checkReason ? { checkReason: r.checkReason } : {}),
+  };
+}
+
 async function main() {
   // 嵌入可授權原圖（國際線）：白名單把關，非白名單退非零→起草端改圖庫/AI。
   if (embedUrl) {
     return embed();
   }
-  // 人物圖：直接生成（保證台灣人）。
+  // 人物圖：photoreal 生成（保證台灣人＋展開＋自檢重生）。
   if (wantPeople) {
-    return generate('people');
+    return generatePerson();
   }
   // 概念圖：先圖庫。無金鑰 / 搜尋失敗 / 無候選 / 下載失敗 → 退回生成。
   let candidates = [];

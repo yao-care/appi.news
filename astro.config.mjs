@@ -151,10 +151,9 @@ export default defineConfig({
   integrations: [
     svelte(),
     sitemap({
-      // 排除 admin / choice，以及排程草稿預覽頁（noindex，不可進 sitemap）。
+      // 排除 admin，以及排程草稿預覽頁（noindex，不可進 sitemap）。
       filter: (page) =>
         !page.includes('/admin') &&
-        !page.includes('/choice') &&
         ![...previewPaths].some((p) => page.endsWith(p)),
       // 為文章頁補 lastmod（updatedDate ?? publishDate），幫爬蟲分配抓取預算。
       // 不設 priority/changefreq —— Google 已明說忽略，加了只是雜訊。

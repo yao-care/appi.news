@@ -9,10 +9,7 @@
 //    （元件樣式寫 Astro/Svelte scoped <style> 或進 global.css）
 //
 // ── appi.news 遷移期凍結（2026-07-20 接軌 v2 時的存量豁免；禁再擴充） ──
-// a) choice.css＋/choice 頁：初期「風格選擇」預覽實驗室（11 套風格各自帶整組
-//    調色盤與全腳本字型進入點，共 214 處存量違規），無法機械整併——併入
-//    global.css 會把 545 個 @font-face 拖進全站（效能崩盤，見 PERFORMANCE.md）。
-//    整檔跳過掃描。TODO：定案風格 K 已上線，建議站主決定是否整區刪除 /choice。
+// （/choice 風格實驗室已於 2026-07-20 整區刪除，原 a) 整檔跳掃豁免同步移除。）
 // b) LEGACY_COLOR_FILES：存量「token 外硬編顏色」65 處（多為 var(--x, #hex)
 //    fallback、rgba 疊層、canvas JS 色字串、theme-color meta），超過機械修門檻
 //    且部分 fallback 指向未定義 token（--color-surface-alt/--color-accent/
@@ -25,14 +22,10 @@ import { join, extname, relative, basename } from "node:path";
 const ROOT = "src";
 const TOKEN_FILE = join("src", "styles", "variables.css");
 // 舊站遷移期可暫加既有檔（凍結用，禁再擴充）；新站一律只有這兩檔。
-const STYLE_WHITELIST = new Set(["variables.css", "global.css", "choice.css"]);
-// 整檔跳過（遷移期凍結，禁再擴充；理由見檔頭 a)）
-const SKIP_FILES = new Set([
-  join("src", "styles", "choice.css"),
-]);
-const SKIP_DIRS = new Set([
-  join("src", "pages", "choice"),
-]);
+const STYLE_WHITELIST = new Set(["variables.css", "global.css"]);
+// 整檔跳過：已清空（/choice 刪除後無豁免對象）；禁新增
+const SKIP_FILES = new Set([]);
+const SKIP_DIRS = new Set([]);
 // 僅豁免「顏色」規則（遷移期凍結，禁再擴充；理由見檔頭 b)）
 const LEGACY_COLOR_FILES = new Set([
   join("src", "components", "blocks", "CTAJoinAuthor.astro"),

@@ -59,9 +59,9 @@
 2. **顏色只准寫在 `src/styles/variables.css`**（design token 單一來源，oklch＋hex fallback）；其他檔一律引用 `var(--*)`。
 3. **禁 `!important`**。
 4. **禁外部 CDN**（fonts.googleapis / cdnjs / unpkg / jsdelivr）；字型自託管 @fontsource（仍須遵守上方效能鐵則的繁中子集進入點）。
-5. **css 檔白名單**：`src/` 的 `.css` 只准 `src/styles/{variables,global,choice}.css`，新增 css 檔即 fail；元件樣式寫 scoped `<style>` 或進 `global.css`。
+5. **css 檔白名單**：`src/` 的 `.css` 只准 `src/styles/{variables,global}.css`，新增 css 檔即 fail；元件樣式寫 scoped `<style>` 或進 `global.css`。
 
-**遷移期凍結（禁再擴充）**：`choice.css`＋`src/pages/choice/` 整檔跳過掃描；17 個既有檔僅豁免「顏色」規則（存量 `var(--x, #hex)` fallback、rgba 疊層、canvas JS 色字串）。凍結清單與 TODO 見 `scripts/check-design.mjs` 檔頭——**新檔案一律不得加入凍結清單**。
+**遷移期凍結（禁再擴充）**：17 個既有檔僅豁免「顏色」規則（存量 `var(--x, #hex)` fallback、rgba 疊層、canvas JS 色字串）。凍結清單與 TODO 見 `scripts/check-design.mjs` 檔頭——**新檔案一律不得加入凍結清單，清一檔移一檔**。（/choice 實驗室與其整檔豁免已於 2026-07-20 刪除。）
 
 ## 部署與驗收
 

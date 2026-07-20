@@ -99,10 +99,23 @@ postbuild  →  scripts/subset-fonts.mjs             ① 字型子集化 + 首�
 
 部署 workflow（`.github/workflows/deploy.yml`）build 後設 gate：
 
+- **設計規範 v2（硬性，會擋部署）**：`pnpm build` 先跑 `scripts/check-design.mjs`（`pnpm check:design` 可單獨跑），五條規則見下方「設計規範（v2）」；違規即 build fail，CI 的 `notify-failure` job 會發 Slack 告警要求修正重審。
 - **站內壞連結（硬性，會擋部署）**：`pnpm check:links` 掃 `dist/` 全站連結，有壞連結即失敗、退回、不上線；base-path 感知（正式網域 base 為 `/`）。
 - **Lighthouse（軟性，不擋部署）**：跑在 CI runner localhost、結果 noisy，僅參考；以線上 PSI 為準。
 
 本地上線前自檢：`pnpm build && pnpm check:links`。
+
+## 設計規範（v2，2026-07-20 全站統一）
+
+`scripts/check-design.mjs` 於 build 前掃 `src/` 下所有 `.css`/`.astro`/`.svelte`，違規即擋：
+
+1. **font-size 禁 px** — 一律用 `var(--text-*)` 字級階梯（正文 ≥18px）。
+2. **顏色只准寫在 `src/styles/variables.css`**（oklch 主要＋hex fallback）；其他檔一律 `var(--*)`。
+3. **禁 `!important`**。
+4. **禁外部 CDN**（fonts.googleapis / cdnjs / unpkg / jsdelivr）；字型自託管（@fontsource）。
+5. **css 檔白名單** — `src/` 的 `.css` 只准 `src/styles/{variables,global,choice}.css`；元件樣式寫 scoped `<style>` 或進 global.css。
+
+> 遷移期凍結（禁再擴充，清單與理由見 `scripts/check-design.mjs` 檔頭）：`choice.css`＋`/choice` 頁整檔跳過；17 個既有檔僅豁免「顏色」一條（存量 `var(--x, #hex)` fallback 等待收斂進 variables.css）。
 
 ## 目前正式網域設定
 
@@ -269,7 +282,7 @@ src/
   layouts/     BaseLayout / ChoiceLayout / PolicyLayout
   pages/       路由（index / [category] / articles/[slug] / authors / columns / topics /
                search / rss.xml.ts / robots.txt.ts / llms.txt.ts / llms-full.txt.ts）
-  styles/      global.css（design token + 字型 import，僅繁中子集進入點）
+  styles/      variables.css（design token，唯一可寫死顏色）/ global.css（基礎樣式＋字型 import，僅繁中子集進入點）/ choice.css（/choice 預覽，遷移期凍結）
   utils/       content / url / date / jsonld / faq / llms / editor / hero-network
 scripts/
   used-images.mjs          prebuild：抽已用圖庫圖

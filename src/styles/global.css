@@ -1,7 +1,8 @@
 /* ============================================================
-   APPI News — 全站設計 token 與基礎樣式（單一設定來源）
-   規範：design-tokens（OKLCH + hex fallback、最小字級 18px）
-   所有顏色、字級、間距 token 集中於此；元件僅引用 var(--*)。
+   APPI News — 全站基礎樣式
+   設計 token（顏色/字級/字型/排版）已抽出至 variables.css（單一設定來源，
+   2026-07-20 設計規範 v2 整併）；本檔只留基礎樣式與 utility，元件僅引用 var(--*)。
+   規範 v2 由 scripts/check-design.mjs 於 build 前守門。
    ============================================================ */
 
 /* 只載入繁中子集進入點（每權重 1 個 @font-face），Latin/數字交給 Inter；
@@ -15,106 +16,8 @@
 @import '@fontsource/inter/latin-400.css';
 @import '@fontsource/inter/latin-600.css';
 
-/* ---------- Hex fallback（舊瀏覽器 / 不支援 oklch） ---------- */
-:root {
-  /* 品牌 */
-  --appi-brand: #1f3a5f;
-  --appi-brand-light: #2d5286;
-  --appi-brand-dark: #16263d;
-  --appi-accent: #a87515;
-  --appi-accent-soft: #f7efdd;
-  /* 深色底（品牌底）上的文字 */
-  --on-brand: #d7e0ec;
-  --on-brand-dim: #9fb2cc;
-
-  /* 中性 */
-  --ink: #1e2030;
-  --ink-2: #5e6070;
-  --ink-3: #6e7276;
-  --line: #d5d6da;
-  --line-2: #e8e9ed;
-  --bg: #ffffff;
-  --bg-soft: #f5f6f8;
-  --bg-tint: #eaf0f8;
-  --white: #ffffff;
-
-  /* 連結 */
-  --color-link: #1e5ab8;
-}
-
-/* ---------- OKLCH（主要） ---------- */
-@supports (color: oklch(0.5 0.1 250)) {
-  :root {
-    --appi-brand: oklch(0.34 0.06 252);
-    --appi-brand-light: oklch(0.43 0.08 255);
-    --appi-brand-dark: oklch(0.26 0.05 252);
-    --appi-accent: oklch(0.60 0.10 75);
-    --appi-accent-soft: oklch(0.95 0.03 80);
-    --on-brand: oklch(0.88 0.02 252);
-    --on-brand-dim: oklch(0.74 0.03 252);
-
-    --ink: oklch(0.20 0.01 250);
-    --ink-2: oklch(0.45 0.01 250);
-    --ink-3: oklch(0.55 0.008 250);
-    --line: oklch(0.85 0.005 250);
-    --line-2: oklch(0.92 0.005 250);
-    --bg: oklch(1 0 0);
-    --bg-soft: oklch(0.97 0.005 250);
-    --bg-tint: oklch(0.95 0.02 252);
-    --white: oklch(1 0 0);
-
-    --color-link: oklch(0.48 0.15 250);
-  }
-}
-
-:root {
-  /* ---------- 字級量表 ---------- */
-  --text-xs: 0.9375rem; /* 15px — 徽章、標籤、meta */
-  --text-sm: 1rem;      /* 16px — 次要說明、卡片副標 */
-  --text-base: 1.125rem;/* 18px — 正文預設 */
-  --text-lg: 1.375rem;  /* 22px — 強調、卡片標題 */
-  --text-xl: 1.75rem;   /* 28px — 區段標題 */
-  --text-2xl: 2.5rem;   /* 40px — 頁面大標 */
-  --text-3xl: 3rem;     /* 48px — Hero / 報告標題 */
-
-  /* ---------- 字型 ---------- */
-  --font-sans: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-  --font-serif: 'Noto Serif TC', Georgia, 'Times New Roman', serif;
-
-  /* ---------- 排版 ---------- */
-  /* 全站統一版心：.container（頁首、頁尾、首頁、分類、列表）共用同一條閱讀寬度並置中，
-     超寬螢幕兩側留白。卡片網格仍 auto-fill，在此寬度內排 4–5 欄。
-     （曾短暫改 none 走全滿版，導致「編輯精選」固定兩欄被無限拉長、右側縮圖比例縮水。） */
-  --maxw: 1440px;
-  --maxw-prose: 760px;
-  --radius: 10px;
-  --radius-sm: 6px;
-  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.05);
-  --shadow-md: 0 4px 14px rgba(16, 24, 40, 0.08);
-
-  /* ── 編輯器（/admin）相容 token：映射 evidencetoday 命名到 appi.news 設計系統 ── */
-  --color-ink: var(--ink, #1a1a1a);
-  --color-paper: var(--bg-soft, #f7f5f0);
-  --color-fog: var(--line-2, #d9d6cf);
-  --color-teal: var(--appi-brand, #1f3a5f);
-  --color-teal-hover: color-mix(in oklch, var(--color-teal) 85%, black);
-  --color-teal-subtle: color-mix(in oklch, var(--color-teal) 12%, white);
-  --color-coral: var(--appi-accent, #a87515);
-  --color-coral-hover: color-mix(in oklch, var(--color-coral) 85%, black);
-  --font-ui: var(--font-sans, system-ui, sans-serif);
-  /* 編輯器 UI chrome 用 UI 尺寸，刻意不借 appi.news 內容字級（--text-base 24px 太大），
-     也避免動到內容字級鐵律 */
-  --text-meta: 0.875rem;
-  --text-body: 1rem;
-  --text-badge: 0.75rem;
-  /* --radius-sm is already defined above (6px) — omitted to avoid circular reference */
-  --radius-pill: 999px;
-  --radius-card: var(--radius, 12px);
-  --shadow-card: var(--shadow-md, 0 2px 8px rgb(0 0 0 / 0.08));
-  --space-page-x: clamp(1rem, 5vw, 2rem);
-  --space-page-y: clamp(1.5rem, 4vw, 3rem);
-}
+/* 設計 token（唯一允許寫死顏色的檔案） */
+@import './variables.css';
 
 *,
 *::before,

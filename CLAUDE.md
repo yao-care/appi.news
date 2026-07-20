@@ -51,6 +51,18 @@
 4. **基準不可退回**：desktop 100、mobile 90+、TBT 0、CLS 0。改完務必複測。
 5. 內頁（文章頁）現已套用 critical CSS 內聯（`inline-css.mjs`）＋封面縮 webp（`optimize-article-images.mjs`），同首頁手法已延伸到內頁。要動內頁效能前一樣先讀 `PERFORMANCE.md`。
 
+## 設計規範（v2，2026-07-20 全站統一，CI 硬性守門）
+
+`scripts/check-design.mjs` 接在 `pnpm build` 最前面（`pnpm check:design` 可單獨跑），掃 `src/` 下所有 `.css`/`.astro`/`.svelte`，違規即 build fail、擋部署，CI `notify-failure` job 發 Slack 告警：
+
+1. **font-size 禁 px**：一律 `var(--text-*)` 字級階梯（正文 ≥18px）。
+2. **顏色只准寫在 `src/styles/variables.css`**（design token 單一來源，oklch＋hex fallback）；其他檔一律引用 `var(--*)`。
+3. **禁 `!important`**。
+4. **禁外部 CDN**（fonts.googleapis / cdnjs / unpkg / jsdelivr）；字型自託管 @fontsource（仍須遵守上方效能鐵則的繁中子集進入點）。
+5. **css 檔白名單**：`src/` 的 `.css` 只准 `src/styles/{variables,global,choice}.css`，新增 css 檔即 fail；元件樣式寫 scoped `<style>` 或進 `global.css`。
+
+**遷移期凍結（禁再擴充）**：`choice.css`＋`src/pages/choice/` 整檔跳過掃描；17 個既有檔僅豁免「顏色」規則（存量 `var(--x, #hex)` fallback、rgba 疊層、canvas JS 色字串）。凍結清單與 TODO 見 `scripts/check-design.mjs` 檔頭——**新檔案一律不得加入凍結清單**。
+
 ## 部署與驗收
 
 - 部署設定在 `.github/workflows/deploy.yml`，觸發條件有三：**push 到 `main`**、**每 6 小時 cron**、**手動 `workflow_dispatch`**。

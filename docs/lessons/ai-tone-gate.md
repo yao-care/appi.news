@@ -1,0 +1,55 @@
+# 去 AI 腔沒有真正的守門，只是寫作 prompt 裡的自檢指示
+
+> 摘要：健康資料三部曲開頭「先揭露，免得你覺得我在夾帶」等自我辯白 meta 旁白上了線；查下去發現全站三道硬 gate 沒一道讀正文，去 AI 腔一直只是 prompt 指示 ｜ 範圍：內容/文風/自動化 ｜ 狀態：已解決（緩解） ｜ 日期：2026-07-20
+
+## 問題（症狀）
+
+站長讀到 `medical-ai-compliance-lessons` 開頭這段，直覺「這根本不像人寫的」：
+
+> ## 先講清楚：我為什麼有資格談這些坑
+> 先揭露，免得你覺得我在夾帶。本文拿來當範例的 goalkeeper…
+
+同一天上線、互相連結的三篇（`taiwan-health-data-platform-join`、`taiwan-health-data-why-now`）共享同一種 AI 腔：自我辯白 meta 旁白（「這不是我危言聳聽」「說實話」「老實承認」）、自問自答暖場、「每節結尾都放大到國家級平台」的模板感、兩篇收在同一句金句「判斷權在你，不在平台的新聞稿」。站長的原話是：「我的整個網站都有這個機制，為什麼會沒有攔截到？」
+
+## 原因（根因）
+
+**站上根本沒有「掃正文文風」的機制。** 全站三道硬 gate 沒有一道讀正文一個字：
+
+- `validate-content.mjs`（prebuild）→ frontmatter / slug / 分類 / disclaimer / 封面，**metadata only**。
+- `check-design.mjs`（build）→ CSS / 顏色 / 字級 token。
+- `check-links.mjs` → 站內連結。
+
+去 AI 腔一直只活在**寫作 prompt 的自檢指示**裡（`.claude/skills/newsroom/SKILL.md` 步驟三.7「產檔前必過」）。模型少做，下游沒有任何東西回頭再查。「整個網站都有這個機制」對 design/links/metadata 為真，對**正文文風從來沒有機制，只有一句提醒**。
+
+而且**這次漏掉的 pattern 連那句提醒都沒列**：清單當時只寫破折號／不僅…更／值得注意的是／自問自答，**沒有**「自我辯白 meta 旁白」這一家族。所以就算模型認真自檢，也不會把「免得你覺得我在夾帶」判成違規——規則沒點過它的名。
+
+**為什麼不能直接加一堆 regex 硬掃全站**（走過的彎路，別再走）：正文文風 regex 誤判極高，實測全站 440 篇——
+
+- 破折號 `—`：**123 篇**存量命中（多為 wp-* 遷移舊文）。全站硬 fail＝一次擋掉 123 篇的部署。
+- 「危言聳聽」：`這不是危言聳聽，是疾管署年年提醒的` 是**正當人話**；`不僅…更`（53 篇）、自問自答（`那高風險義務呢？` 是真 H2 標題）全是誤判大戶。
+
+結論：正文文風**無法**用 regex 全自動判對，硬掃全站只會二選一——不是誤擋就是擋死存量。
+
+## 解法（怎麼修 + 現在怎麼維持）
+
+分三層，刻意不做「全站硬掃」：
+
+1. **補齊自檢清單**（`SKILL.md` 步驟三.7）：新增「自我辯白 meta 旁白」「模板感結構」兩條，明列這次的簽名句與「跨篇重複金句」。這是**寫作端**，讓模型一開始就別寫出來。
+
+2. **`scripts/check-ai-tone.mjs`——唯一真正掃正文的機械 gate**，設計取捨（別改壞）：
+   - **只掃改動的文章**（預設相對 `origin/main`），把 440 篇存量 grandfather 掉——只有新寫/改寫的文章受硬 gate 約束（同 `check-design` 當初凍結存量的邏輯）。
+   - **ERROR（exit 1，擋 build）只擋機械可判、近乎零誤判的簽名句**：破折號、`免得你…`、`我在夾帶`、`不怕你笑`、`先講清楚我為什麼有資格…`。
+   - **WARN（exit 0，只印）**：語氣類高誤判 tell（值得注意的是／不僅…更／危言聳聽…），給人/agent 覆查，不擋。
+   - 掃描前剝掉 frontmatter / 程式碼 / HTML 註解 / inline code / 連結與圖片的 URL，避免 `---` 分隔線、URL 裡的 `--` 之類假陽性。
+   - **抓不到 git base（CI 淺 checkout、無 origin/main）→ 掃 0 檔、exit 0**，永不誤擋部署。
+
+3. **兩個執行點**（因為作者稿與自動稿的發佈路徑不同）：
+   - `pnpm build` 串了 `check:tone`（`check-design` 之後）：擋**分支/dev 稿**——這次三篇正是 `sourceType: author`、走分支合併，這關會在合併前 exit 1 擋下。
+   - `newsroom-write.mjs` 在配圖 gate 之後跑 `check-ai-tone <檔>`：擋**自動稿**（cron 直推 main，build gate 的 diff 對 main 為空、抓不到）。
+
+## 怎麼避免重犯 / 相關
+
+- **新增去 AI 腔規則時，兩邊都要動**：`SKILL.md` 步驟三.7（自檢，涵蓋語氣類）＋ `check-ai-tone.mjs`（機械 gate，只加**零誤判**的硬 tell；語氣類永遠留 WARN，別升 ERROR）。
+- **盤點存量**：`node scripts/check-ai-tone.mjs --all`（report-only，永不擋）。想清 123 篇破折號存量就照這份逐篇清、清一篇少一篇。
+- **其他自動線尚未接**（phase 2）：`international-write` / `lifestyle-civic` / `lifestyle-police` / `focus-esg` 各有自己的 commit 路徑，還沒串 `check-ai-tone`；要接就在各自 commit 前加一行 `spawnSync('node',['scripts/check-ai-tone.mjs', 檔])`、非 0 就 die。
+- 相關：`content-refs-and-local-build-parity.md`（本機只跑 `astro build` 會跳過 prebuild 硬 gate）、`link-and-content-validation.md`（另一類內容假陽性）。

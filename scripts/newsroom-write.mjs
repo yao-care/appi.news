@@ -284,6 +284,14 @@ function main() {
     die(`配圖 gate 未過，不發佈（改動留工作區待補圖）：\n  - ${imgProblems.join('\n  - ')}`);
   }
 
+  // 去 AI 腔硬性 gate（只擋機械可判的簽名句：破折號／自我辯白 meta 旁白）。
+  // 語氣類 tell 靠 SKILL 步驟三.7 自檢，這關只兜住模型漏掉的那幾條硬 tell。
+  // 為什麼＝docs/lessons/ai-tone-gate.md（「先揭露，免得你覺得我在夾帶」上線事件）。
+  const tone = spawnSync('node', ['scripts/check-ai-tone.mjs', articleFile], { encoding: 'utf8' });
+  if (tone.status !== 0) {
+    die(`去 AI 腔 gate 未過，不發佈（改動留工作區待改）：\n${(tone.stdout || '') + (tone.stderr || '')}`);
+  }
+
   // 真人觀點硬性 gate（只擋觀點稿 kind: column）：Q3 作者觀點必須真的反映在內文，
   // 否則中止不發佈——避免產出「讀不出作者想法」的中性稿（過去作者反映看不到自己的觀點）。
   // 事實稿（kind: factual，颱風/樂齡/優惠等服務型）無個人觀點，略過此 gate。

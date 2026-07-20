@@ -219,6 +219,22 @@ h4 {
   border-radius: var(--radius);
   margin-block: 1.6em;
 }
+/* 帶圖說的圖片：外距移到 figure，圖與圖說貼在一起（見 rehype-figcaption.mjs）。 */
+.article-body figure {
+  margin-block: 1.6em;
+}
+.article-body figure img {
+  margin-block: 0;
+  display: block;
+}
+.article-body figcaption {
+  margin-top: 0.6em;
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--ink-3);
+  text-align: center;
+}
 .article-body code {
   background: var(--bg-soft);
   padding: 0.15em 0.4em;

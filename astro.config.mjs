@@ -5,6 +5,7 @@ import yaml from 'js-yaml';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import svelte from '@astrojs/svelte';
+import { rehypeFigcaption } from './src/utils/rehype-figcaption.mjs';
 
 /**
  * 舊 post-NNN 文章網址 → 語意化 slug 的轉址表（由 src/redirects.json 維護）。
@@ -146,7 +147,8 @@ export default defineConfig({
   trailingSlash: 'always',
   redirects: articleRedirects,
   markdown: {
-    rehypePlugins: [rehypeBaseImages],
+    // rehypeBaseImages 先補 base/lazy，rehypeFigcaption 再把帶 title 的單圖段落轉成可見圖說。
+    rehypePlugins: [rehypeBaseImages, rehypeFigcaption],
   },
   integrations: [
     svelte(),

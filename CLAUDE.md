@@ -113,7 +113,7 @@
 > **多分類自動內容（國際/生活/運動）**：科技以外的頻道**各有各的萃取邏輯與來源**（GDELT、政府開放資料、各地警局、學生賽事投稿…），**不是同一套雷達**。完整 cron 總表、各頻道來源/上線方式/Slack 行為、並發保護，見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §子專案 3；設計脈絡見記憶 `new-verticals-automation-plan` / `international-desk-gdelt` / `slack-appi-news-workspace`。下面這條是科技日更（最早的那條）。
 
 ```
-tech-radar（cron 已於 2026-07-07 停用；skill 保留，改由週報按鈕/`/newsroom`/`/admin` 觸發）→ 發候選題到 Slack（帶「我要寫這題」按鈕）
+tech-radar（cron 每日 UTC 21:20＝台北 05:20；2026-07-07 曾停用、2026-07-20 重新啟用；亦可由週報按鈕/`/newsroom`/`/admin` 觸發）→ 發候選題到 Slack（帶「我要寫這題」按鈕）
   → 作者點按鈕 → slack-actions-server 收事件 → 觸發 newsroom-write.mjs
   → 起草＋逐段配圖＋連結逐條查證 →（配圖硬性 gate）→ commit → 排程/上線
 週末另跑 weekly-report，把曝光數據回饋成下一輪選題（見 §數據與網路曝光量）

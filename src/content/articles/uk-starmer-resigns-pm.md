@@ -1,22 +1,21 @@
 ---
-title: "英相交接倒數：伯納姆週末搬入唐寧街、內閣名單週一公布　財政大臣傳於米勒班、馬哈穆德間拍板"
+title: "伯納姆就任英國首相：唐寧街首場演說允民眾『喘息空間』　廢數位身分證、馬哈穆德掌財政"
 slug: "uk-starmer-resigns-pm"
-description: "大曼徹斯特市長伯納姆已無競爭當選工黨黨魁，預計7月20日（週一）接任英國首相，正式接替6月22日請辭的施凱爾。他本週末啟動搬入唐寧街10號的流程，內閣名單訂於就任當天公布；財政大臣一職傳出在工黨左翼屬意的米勒班與現任內政大臣馬哈穆德之間拍板，接替現任財政大臣里夫斯。前首相蘇納克與強森也分別透過報章與電視節目對伯納姆提出建議，施凱爾則表態不會公開給繼任者建議。伯納姆並表示施政將優先推動社會照護改革，地方分權工作將由他設在曼徹斯特的『10號北方辦公室』主導。"
-excerpt: "伯納姆預計7月20日接任英國首相，本週末啟動搬入唐寧街流程、內閣名單訂於就任當天公布。前首相蘇納克、強森分別提出交接建議，財政大臣人選傳於米勒班與現任內政大臣馬哈穆德間二選一。"
+description: "大曼徹斯特市長伯納姆7月20日正式就任英國首相，先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街10號外發表首場首相演說，承諾在生活成本上給民眾『喘息空間』，並宣布廢除前朝施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，把資源轉向紓困。內閣名單同日公布，財政大臣一職由馬哈穆德出任，可望成為英國史上首位穆斯林女性財政大臣；原被看好接掌財政的米勒班傳將轉任外交大臣，庫珀回任內政大臣。伯納姆延續先前規劃，將在曼徹斯特設立『10號北方辦公室』推動地方分權；泰晤士水務公司國有化與北海油氣鑽探政策方向則尚未拍板。"
+excerpt: "伯納姆7月20日正式就任英國首相，唐寧街首場演說承諾給民眾『喘息空間』、廢除數位身分證計畫；內閣同日公布，馬哈穆德掌財政、米勒班傳轉任外交大臣。"
 publishDate: "2026-06-23T12:00:00+08:00"
-updatedDate: "2026-07-19T15:18:08.284Z"
+updatedDate: "2026-07-20T15:17:08.264Z"
 category: "international"
 subcategory: "europe"
-tags: ["英國", "施凱爾", "工黨", "改革黨", "伯納姆", "唐寧街", "財富稅", "川普", "內閣改組", "馬哈穆德"]
+tags: ["英國", "施凱爾", "工黨", "改革黨", "伯納姆", "唐寧街", "財富稅", "川普", "內閣改組", "馬哈穆德", "數位身分證"]
 highlights:
-  - "伯納姆本週末啟動搬入唐寧街10號的流程，內閣名單訂於他7月20日（週一）正式就任當天公布"
-  - "前首相蘇納克在《星期日泰晤士報》撰文建議伯納姆『充分把握初到唐寧街的每一秒』，並鎖定『兩三項』核心優先政策；前首相強森則於天空新聞節目提醒伯納姆『時間不多』，需重振投資人信心"
-  - "施凱爾則表態不會公開對外提供交接建議"
-  - "財政大臣人選傳於工黨左翼屬意的米勒班（Ed Miliband）與現任內政大臣馬哈穆德（Shabana Mahmood）間二選一，接替現任財政大臣里夫斯（Rachel Reeves）"
-  - "伯納姆表示施政將優先推動社會照護改革，地方分權工作將由設在曼徹斯特的『10號北方辦公室』（'No 10 North'）主導，預計上任第一週造訪"
-  - "接受球評萊內克（Gary Lineker）專訪時，伯納姆拒絕排除引入財富稅，稱『現在不會排除任何選項』，強調需要『更大程度的公平感』"
-  - "被問及川普先前稱曼徹斯特為『某座城鎮』，伯納姆笑稱『曼徹斯特人可能不會很高興』，但允諾會以『非常坦率』的態度與川普互動、同時尊重總統職位"
-  - "保守黨黨魁貝德諾克批評伯納姆『已在談論再次提高稅收』，預測英國將迎來『混亂之夏』"
+  - "伯納姆7月20日先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街10號外發表首場首相演說，承諾給民眾『喘息空間、對生活成本的一些協助』"
+  - "演說中他自稱是『10年內第7位』首相，將此刻定位為英國的『斷路器』時刻，稱『這需要我這一代政治人物拿出更高水準、迎接新的挑戰』"
+  - "伯納姆宣布廢除施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，將資源轉向生活成本協助"
+  - "內閣同日公布：馬哈穆德（Shabana Mahmood）出任財政大臣，可望成為英國史上首位穆斯林女性財政大臣；原傳出可能接掌財政的米勒班（Ed Miliband）轉任外交大臣，庫珀（Yvette Cooper）回任內政大臣"
+  - "工黨左翼對財政大臣人選『相當不滿』，黨內人士稱此舉是向市場壓力『屈服』的訊號"
+  - "泰晤士水務公司（Thames Water，背負逾200億英鎊債務）暫時國有化、北海油氣鑽探政策方向均尚未拍板"
+  - "地方分權工作延續先前規劃，由設在曼徹斯特的『10號北方辦公室』主導"
 references:
   - title: "Starmer right to go after failing to deliver change, John Swinney says"
     url: "https://www.barrheadnews.com/news/national/26216635.starmer-right-go-failing-deliver-change-john-swinney-says/"
@@ -48,6 +47,21 @@ references:
   - title: "Boris Johnson's and Rishi Sunak's advice for incoming PM Andy Burnham"
     url: "https://uk.news.yahoo.com/boris-johnson-rishi-sunak-advice-173600788.html"
     publisher: "Yahoo News UK"
+  - title: "'Circuit breaker for Britain': Read Andy Burnham's first speech as Prime Minister in full"
+    url: "https://labourlist.org/2026/07/andy-burnham-first-speech-pm-transcript/"
+    publisher: "LabourList"
+  - title: "Andy Burnham is declared leader of UK's Labour Party, pledges to restore hope"
+    url: "https://www.pbs.org/newshour/world/andy-burnham-is-declared-leader-of-uks-labour-party-pledges-to-restore-hope"
+    publisher: "PBS NewsHour"
+  - title: "Burnham set to revamp UK government with energy and AI boost"
+    url: "https://www.thenationalnews.com/news/uk/2026/07/20/burnham-set-to-revamp-uk-government-with-energy-and-ai-boost/"
+    publisher: "The National"
+  - title: "Andy Burnham Becomes UK's 7th PM In A Decade As Starmer Resigns, Cabinet Named Later Today"
+    url: "https://www.hngn.com/articles/272188/20260720/andy-burnham-becomes-uks-7th-pm-decade-starmer-resigns-cabinet-named-later-today.htm"
+    publisher: "HNGN"
+  - title: "Burnham to promise 'breathing room' as he takes over as PM"
+    url: "https://www.perspectivemedia.com/burnham-to-promise-breathing-room-as-he-takes-over-as-pm/"
+    publisher: "Perspective Media"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"
@@ -59,7 +73,7 @@ coverAlt: "英國首相施凱爾抵達唐寧街10號（資料照）"
 coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commons"
 ---
 
-英國政權交接進入最後倒數。大曼徹斯特市長伯納姆（Andy Burnham）已無競爭當選工黨黨魁，預計7月20日（週一）正式接任英國首相，接替6月22日宣布請辭的施凱爾（Sir Keir Starmer）。據[Barrhead News報導](https://www.barrheadnews.com/news/national/26291389.burnham-finalising-plans-government-becoming-prime-minister-monday/)，伯納姆本週末即展開搬入唐寧街10號的流程，內閣名單訂於他正式就任當天公布；財政大臣一職傳出在工黨左翼屬意的米勒班（Ed Miliband），與現任內政大臣馬哈穆德（Shabana Mahmood）之間拍板，接替現任財政大臣里夫斯（Rachel Reeves）。伯納姆先前確定接班後接受球評萊內克（Gary Lineker）專訪，首度就財富稅與對美關係表態，拒絕排除開徵財富稅，也允諾會以「非常坦率」的態度與美國總統川普互動。就任前夕，前首相蘇納克（Rishi Sunak）與強森（Boris Johnson）也分別透過報章與電視節目公開向他建言，工黨籍的施凱爾則表態不會公開給予繼任者建議。
+英國正式完成政權交接。大曼徹斯特市長伯納姆（Andy Burnham）7月20日先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街10號外發表首場首相演說，正式接替同日稍早遞出辭呈的施凱爾（Sir Keir Starmer）。據[LabourList刊出的演說全文](https://labourlist.org/2026/07/andy-burnham-first-speech-pm-transcript/)，伯納姆在演說中承諾「給民眾一些喘息空間、對生活成本的一些協助」，並自稱是「10年內第7位」走上唐寧街的首相，將此刻定位為英國的「斷路器」時刻。他同日宣布廢除施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，把資源轉向生活成本協助；內閣名單也同步公布，財政大臣一職由馬哈穆德（Shabana Mahmood）出任，可望成為英國史上首位穆斯林女性財政大臣，原被看好接掌財政的米勒班（Ed Miliband）傳將轉任外交大臣，庫珀（Yvette Cooper）回任內政大臣。伯納姆確定接班後曾接受球評萊內克（Gary Lineker）專訪，首度就財富稅與對美關係表態，拒絕排除開徵財富稅，也允諾會以「非常坦率」的態度與美國總統川普互動；就任前夕，前首相蘇納克（Rishi Sunak）與強森（Boris Johnson）也分別透過報章與電視節目公開向他建言。
 
 ## 「該面對現實了」：回顧請辭導火線
 
@@ -75,7 +89,7 @@ coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commo
 
 ## 從補選議員到無競爭接班
 
-<img src="/images/uk-starmer-resigns-pm-burnham.webp" width="660" height="880" loading="lazy" decoding="async" alt="大曼徹斯特市長伯納姆，將於7月20日接任英國首相（資料照）">
+<img src="/images/uk-starmer-resigns-pm-burnham.webp" width="660" height="880" loading="lazy" decoding="async" alt="大曼徹斯特市長伯納姆，已於7月20日接任英國首相（資料照）">
 
 工黨黨魁改選的時程，最終走向了一場沒有對手的競賽。據[半島電視台報導](https://www.aljazeera.com/news/2026/6/22/why-has-keir-starmer-resigned-as-uk-prime-minister-and-who-will-take-over)，提名原訂7月9日開放、7月16日截止，候選人須取得至少81名工黨議員（約占該黨403席國會席次的兩成）連署提名。但[英文維基百科整理的條目](https://en.wikipedia.org/wiki/2026_Labour_Party_leadership_crisis)指出，其他傳出有意參選的人選最終都選擇不參選，伯納姆到7月15日已取得逾九成國會黨團連署及足額地方黨部提名，使他人已無法在數學上入局，結果等同以「歡呼」方式無競爭當選黨魁。
 
@@ -85,7 +99,7 @@ coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commo
 
 拍板接班後，伯納姆接受球評出身的媒體人萊內克（Gary Lineker）旗下製作公司Goalhanger專訪，首度就財政與外交立場鬆口。據[Yahoo Finance UK報導](https://uk.finance.yahoo.com/news/andy-burnham-declines-rule-wealth-163156908.html)，被問及是否會對富人開徵財富稅時，伯納姆表示：「我現在不會排除任何選項。我確實認為我們需要更大程度的公平感，讓民眾感受到事情正以正確、公平的方式在做。」他也暗示政府「可能在某個時點必須要求多一點」以平衡英國財政，但強調會先審視公共財政現況再做政策承諾。
 
-[Barrhead News報導](https://www.barrheadnews.com/news/national/26284089.andy-burnham-declines-rule-wealth-tax-will-upfront-trump/)指出，伯納姆已承諾遵守工黨的財政規則——排除調高加值稅、所得稅或國民保險費——但暗示在這個框架之內，稅制仍有調整空間；他也強調不想被外界視為「帶著怨恨和議題而來」的人。
+[Barrhead News報導](https://www.barrheadnews.com/news/national/26284089.andy-burnham-declines-rule-wealth-tax-will-upfront-trump/)指出，伯納姆已承諾遵守工黨的財政規則，排除調高加值稅、所得稅或國民保險費，但暗示在這個框架之內，稅制仍有調整空間；他也強調不想被外界視為「帶著怨恨和議題而來」的人。
 
 對於美英關係，伯納姆的態度是既坦率又謹慎。[Yahoo Finance UK報導](https://uk.finance.yahoo.com/news/andy-burnham-declines-rule-wealth-163156908.html)引述他的說法：「我會用同樣的方式非常坦率地跟他打交道……這就是做自己，不是嗎？這關乎尊重這個職位、這段關係、英美關係。」[Barrhead News報導](https://www.barrheadnews.com/news/national/26284089.andy-burnham-declines-rule-wealth-tax-will-upfront-trump/)補充，當被問及川普先前曾把曼徹斯特稱為「某座城鎮」，伯納姆笑稱「曼徹斯特人（Mancs）可能不會很高興」，但表示他會用「符合自己風格」的方式處理雙方的分歧。
 
@@ -111,12 +125,25 @@ coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commo
 
 相較於兩位保守黨前首相罕見公開建言，工黨籍的施凱爾（Sir Keir Starmer）則採取不同態度。[Yahoo News UK報導](https://uk.news.yahoo.com/boris-johnson-rishi-sunak-advice-173600788.html)指出，施凱爾已表態不會公開對外提供交接建議給接任的伯納姆。
 
+## 正式接任：晉見國王、唐寧街首場演說允「喘息空間」
+
+7月20日交接程序按原訂規劃進行。據[HNGN報導](https://www.hngn.com/articles/272188/20260720/andy-burnham-becomes-uks-7th-pm-decade-starmer-resigns-cabinet-named-later-today.htm)，施凱爾上午11時15分於唐寧街發表卸任演說，隨後赴白金漢宮向國王查爾斯三世遞交辭呈；他在演說中稱自己把英國留在「更好的狀態」，並列舉持續支持烏克蘭、禁止未滿16歲民眾使用社群媒體等施政成績。伯納姆隨後晉見國王「吻手」就任，於下午1時前在唐寧街10號外發表他就任首相後的首場演說。
+
+演說中，伯納姆將整場交接定調為「反思與決心」的時刻。據[LabourList刊出的演說全文](https://labourlist.org/2026/07/andy-burnham-first-speech-pm-transcript/)，他說：「我剛從白金漢宮過來……我是過去10年內第6位走上這條街的人，是2016年以來第7位首相」，並稱「這需要我這一代政治人物拿出更高水準、迎接新的挑戰」。他將自己的上任框架為英國的「斷路器」（circuit breaker）時刻，承諾「改變政治，讓它更講求合作、更著重解決問題而非互相攻訐」，並預告年底前將提出一份「十年計畫」，勾勒英國從現況通往他所期望方向的路徑。
+
+生活成本是演說的核心承諾。[LabourList刊出的演說全文](https://labourlist.org/2026/07/andy-burnham-first-speech-pm-transcript/)引述伯納姆說：「但我現在可以做一件事，給民眾一些喘息空間、對生活成本的一些協助。」他在演說中把終結街頭無家可歸現象列為優先施政項目之一。
+
+伯納姆同日宣布廢除前朝政策、並公布新內閣人事。據[PBS NewsHour報導](https://www.pbs.org/newshour/world/andy-burnham-is-declared-leader-of-uks-labour-party-pledges-to-restore-hope)，他取消了施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，將原本編列的資源轉向生活成本協助；[Perspective Media報導](https://www.perspectivemedia.com/burnham-to-promise-breathing-room-as-he-takes-over-as-pm/)補充，泰晤士水務公司（背負逾200億英鎊債務）暫時國有化，以及北海油氣鑽探的政策方向，伯納姆政府則尚未拍板。
+
+內閣人事同日底定，財政大臣一職由現任內政大臣馬哈穆德（Shabana Mahmood）出任，落幕了先前傳出的懸念。據[The National報導](https://www.thenationalnews.com/news/uk/2026/07/20/burnham-set-to-revamp-uk-government-with-energy-and-ai-boost/)，馬哈穆德掌財政有望成為英國史上首位穆斯林女性財政大臣；原本傳出可能接掌財政的米勒班（Ed Miliband）改任外交大臣，取代回任內政大臣的庫珀（Yvette Cooper）。同一篇報導指出，米勒班原本負責的能源業務將延續推動，政府並新設「AI大臣」職位；工黨左翼陣營對財政大臣人選「相當不滿」，黨內人士稱此舉是向市場壓力「屈服」的訊號，並示警「若由左翼人士出任財政大臣，英國公債（gilt）市場恐劇烈波動」。
+
 ## 對台灣讀者的關注點
 
 英國是七大工業國（G7）成員，也是台灣重要的理念相近夥伴之一。7月20日首相換人上任，加上伯納姆在稅制與對美關係上釋出的初步立場，短期內對英國的財政政策、對歐關係、國防支出與印太布局等議題的後續走向都可能帶來變數，值得持續觀察。在新政府正式就任、路線進一步明朗化之前，相關政策方向仍存在不確定性。
 
 ## 更新時間軸
 
+- （更新 2026-07-20：伯納姆正式就任英國首相，先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街發表首場首相演說，承諾給民眾「喘息空間、對生活成本的一些協助」，並自稱是「10年內第7位」首相、將此刻定位為英國的「斷路器」時刻。他同日宣布廢除施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫；內閣名單同步公布，馬哈穆德出任財政大臣、可望成為英國史上首位穆斯林女性財政大臣，米勒班轉任外交大臣、庫珀回任內政大臣。泰晤士水務公司國有化與北海油氣鑽探政策方向尚未拍板。）（[LabourList](https://labourlist.org/2026/07/andy-burnham-first-speech-pm-transcript/)、[HNGN](https://www.hngn.com/articles/272188/20260720/andy-burnham-becomes-uks-7th-pm-decade-starmer-resigns-cabinet-named-later-today.htm)、[PBS NewsHour](https://www.pbs.org/newshour/world/andy-burnham-is-declared-leader-of-uks-labour-party-pledges-to-restore-hope)、[The National](https://www.thenationalnews.com/news/uk/2026/07/20/burnham-set-to-revamp-uk-government-with-energy-and-ai-boost/)、[Perspective Media](https://www.perspectivemedia.com/burnham-to-promise-breathing-room-as-he-takes-over-as-pm/)）
 - （更新 2026-07-19：伯納姆就任前夕，前首相蘇納克在《星期日泰晤士報》撰文建議他「充分把握初到唐寧街的每一秒」、盡快鎖定「兩三項」核心優先政策；前首相強森在天空新聞節目提醒伯納姆「時間不多」，需重振投資人信心、思考稅收政策。工黨籍的施凱爾則表態不會公開對外提供交接建議。）（[Enfield Independent](https://www.enfieldindependent.co.uk/news/national/26292058.boris-johnsons-rishi-sunaks-advice-incoming-pm-andy-burnham/)、[Yahoo News UK](https://uk.news.yahoo.com/boris-johnson-rishi-sunak-advice-173600788.html)）
 - （更新 2026-07-18：伯納姆本週末啟動搬入唐寧街10號流程，內閣名單訂於他7月20日正式就任當天公布；財政大臣人選傳於工黨左翼屬意的米勒班與現任內政大臣馬哈穆德間二選一，接替現任財政大臣里夫斯。伯納姆並表示施政將優先推動社會照護改革，地方分權工作將由設在曼徹斯特的「10號北方辦公室」主導，預計上任第一週造訪。）（[Barrhead News](https://www.barrheadnews.com/news/national/26291389.burnham-finalising-plans-government-becoming-prime-minister-monday/)、[MyJoyOnline](https://www.myjoyonline.com/burnham-says-he-is-finalising-cabinet-ahead-of-becoming-pm-on-monday/)）
 - （更新 2026-07-16：工黨黨魁提名7月16日截止，伯納姆到7月15日已取得逾九成國會黨團連署及足額地方黨部提名，等同無競爭當選黨魁，預計7月20日接任首相。他接受萊內克專訪，拒絕排除開徵財富稅，允諾以「非常坦率」的態度與川普互動；保守黨黨魁貝德諾克批評他「已在談加稅」，預言「混亂之夏」。）（[Yahoo Finance UK](https://uk.finance.yahoo.com/news/andy-burnham-declines-rule-wealth-163156908.html)、[Barrhead News](https://www.barrheadnews.com/news/national/26284089.andy-burnham-declines-rule-wealth-tax-will-upfront-trump/)、[Wikipedia](https://en.wikipedia.org/wiki/2026_Labour_Party_leadership_crisis)）

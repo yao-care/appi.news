@@ -320,52 +320,52 @@
 <style>
   .ip-overlay {
     position: fixed; inset: 0; z-index: 60;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--overlay-backdrop);
     display: flex; align-items: center; justify-content: center;
     padding: 1rem;
   }
   .ip-panel {
     background: white; border-radius: var(--radius-md, 8px);
     width: min(720px, 100%); max-height: 90vh; overflow: auto;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-modal);
   }
-  .ip-head { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1rem; border-bottom: 1px solid var(--color-fog, #e5e5e5); }
+  .ip-head { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1rem; border-bottom: 1px solid var(--color-fog); }
   .ip-head strong { font-family: var(--font-ui); }
   .ip-tabs { display: flex; gap: 0.25rem; flex: 1; }
-  .ip-tabs button { font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); padding: 0.3rem 0.7rem; border: 1px solid var(--color-fog, #e5e5e5); border-radius: 20px; background: white; cursor: pointer; }
-  .ip-tabs button.active { background: var(--color-ink, #1a2a3a); color: white; border-color: var(--color-ink, #1a2a3a); }
-  .ip-x { border: none; background: none; font-size: 1.1rem; cursor: pointer; color: var(--color-ink, #333); }
+  .ip-tabs button { font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); padding: 0.3rem 0.7rem; border: 1px solid var(--color-fog); border-radius: 20px; background: white; cursor: pointer; }
+  .ip-tabs button.active { background: var(--color-ink); color: white; border-color: var(--color-ink); }
+  .ip-x { border: none; background: none; font-size: 1.1rem; cursor: pointer; color: var(--color-ink); }
   .ip-gen { padding: 1rem; display: flex; flex-direction: column; gap: 0.8rem; }
   .ip-field { display: flex; flex-direction: column; gap: 0.3rem; }
   .ip-field span, .ip-model span { font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); font-weight: 600; }
-  .ip-gen textarea { width: 100%; box-sizing: border-box; font-family: var(--font-ui); font-size: var(--text-body, 1rem); border: 1px solid var(--color-fog, #ccc); border-radius: var(--radius-sm, 4px); padding: 0.5rem 0.65rem; resize: vertical; }
+  .ip-gen textarea { width: 100%; box-sizing: border-box; font-family: var(--font-ui); font-size: var(--text-body, 1rem); border: 1px solid var(--color-fog); border-radius: var(--radius-sm, 4px); padding: 0.5rem 0.65rem; resize: vertical; }
   .ip-controls { display: flex; align-items: end; gap: 0.75rem; flex-wrap: wrap; }
   .ip-model { display: flex; flex-direction: column; gap: 0.3rem; }
-  .ip-model select { font-family: var(--font-ui); padding: 0.45rem 0.6rem; border: 1px solid var(--color-fog, #ccc); border-radius: var(--radius-sm, 4px); }
-  .ip-gen-btn { font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.1rem; border: none; border-radius: var(--radius-sm, 4px); background: var(--appi-brand, #1a3a5a); color: white; cursor: pointer; }
+  .ip-model select { font-family: var(--font-ui); padding: 0.45rem 0.6rem; border: 1px solid var(--color-fog); border-radius: var(--radius-sm, 4px); }
+  .ip-gen-btn { font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.1rem; border: none; border-radius: var(--radius-sm, 4px); background: var(--appi-brand); color: white; cursor: pointer; }
   .ip-gen-btn:disabled { opacity: 0.6; cursor: default; }
-  .ip-count { font-family: var(--font-ui); font-size: var(--text-xs, 0.75rem); color: var(--color-ink-2, #666); }
-  .ip-error { color: var(--color-coral, #c0392b); font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); margin: 0; white-space: pre-wrap; }
-  .ip-relogin { align-self: flex-start; font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.1rem; border: 1px solid var(--appi-brand, #1a3a5a); border-radius: var(--radius-sm, 4px); background: var(--appi-brand, #1a3a5a); color: white; cursor: pointer; }
+  .ip-count { font-family: var(--font-ui); font-size: var(--text-xs, 0.75rem); color: var(--color-ink-2); }
+  .ip-error { color: var(--color-coral); font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); margin: 0; white-space: pre-wrap; }
+  .ip-relogin { align-self: flex-start; font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.1rem; border: 1px solid var(--appi-brand); border-radius: var(--radius-sm, 4px); background: var(--appi-brand); color: white; cursor: pointer; }
   .ip-strip { display: flex; gap: 0.5rem; flex-wrap: wrap; }
   .ip-thumb { border: 2px solid transparent; border-radius: var(--radius-sm, 4px); padding: 0; cursor: pointer; background: none; line-height: 0; overflow: hidden; }
-  .ip-thumb.sel { border-color: var(--appi-accent, #a87515); }
+  .ip-thumb.sel { border-color: var(--appi-accent); }
   .ip-thumb img { width: 140px; height: 94px; object-fit: cover; display: block; }
   .ip-actions { display: flex; justify-content: flex-end; }
-  .ip-use { font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.4rem; border: none; border-radius: var(--radius-sm, 4px); background: var(--appi-accent, #a87515); color: white; cursor: pointer; }
+  .ip-use { font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.4rem; border: none; border-radius: var(--radius-sm, 4px); background: var(--appi-accent); color: white; cursor: pointer; }
   .ip-use:disabled { opacity: 0.5; cursor: default; }
 
   /* AI 找圖庫 */
   .ip-grow { flex: 1; min-width: 0; }
-  .ip-tag-btn { font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.1rem; border: 1px solid var(--appi-brand, #1a3a5a); border-radius: var(--radius-sm, 4px); background: white; color: var(--appi-brand, #1a3a5a); cursor: pointer; }
+  .ip-tag-btn { font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.1rem; border: 1px solid var(--appi-brand); border-radius: var(--radius-sm, 4px); background: white; color: var(--appi-brand); cursor: pointer; }
   .ip-tag-btn:disabled { opacity: 0.6; cursor: default; }
-  .ip-hint { margin: 0; font-family: var(--font-ui); font-size: var(--text-xs, 0.72rem); color: var(--color-ink-2, #777); }
+  .ip-hint { margin: 0; font-family: var(--font-ui); font-size: var(--text-xs, 0.72rem); color: var(--color-ink-2); }
   .ip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; max-height: 50vh; overflow: auto; }
   .ip-cell { position: relative; border: 2px solid transparent; border-radius: var(--radius-sm, 4px); padding: 0; background: none; cursor: pointer; line-height: 0; overflow: hidden; }
-  .ip-cell.sel { border-color: var(--appi-accent, #a87515); }
+  .ip-cell.sel { border-color: var(--appi-accent); }
   .ip-cell img { width: 100%; height: 110px; object-fit: cover; display: block; }
-  .ip-credit { position: absolute; left: 0; right: 0; bottom: 0; padding: 2px 6px; font-family: var(--font-ui); font-size: 0.62rem; line-height: 1.3; color: white; background: linear-gradient(transparent, rgba(0,0,0,0.7)); text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .ip-up-preview { width: 100%; max-height: 300px; object-fit: contain; border: 1px solid var(--color-fog, #e5e5e5); border-radius: var(--radius-sm, 4px); background: var(--bg-soft, #f5f5f5); }
+  .ip-credit { position: absolute; left: 0; right: 0; bottom: 0; padding: 2px 6px; font-family: var(--font-ui); font-size: 0.62rem; line-height: 1.3; color: white; background: linear-gradient(transparent, var(--credit-scrim)); text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ip-up-preview { width: 100%; max-height: 300px; object-fit: contain; border: 1px solid var(--color-fog); border-radius: var(--radius-sm, 4px); background: var(--bg-soft); }
   /* 生成後的大圖預覽 */
-  .ip-big { width: 100%; max-height: 46vh; object-fit: contain; border: 1px solid var(--color-fog, #e5e5e5); border-radius: var(--radius-sm, 4px); background: var(--bg-soft, #f5f5f5); }
+  .ip-big { width: 100%; max-height: 46vh; object-fit: contain; border: 1px solid var(--color-fog); border-radius: var(--radius-sm, 4px); background: var(--bg-soft); }
 </style>

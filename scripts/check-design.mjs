@@ -10,12 +10,14 @@
 //
 // ── appi.news 遷移期凍結（2026-07-20 接軌 v2 時的存量豁免；禁再擴充） ──
 // （/choice 風格實驗室已於 2026-07-20 整區刪除，原 a) 整檔跳掃豁免同步移除。）
-// b) LEGACY_COLOR_FILES：存量「token 外硬編顏色」65 處（多為 var(--x, #hex)
-//    fallback、rgba 疊層、canvas JS 色字串、theme-color meta），超過機械修門檻
-//    且部分 fallback 指向未定義 token（--color-surface-alt/--color-accent/
-//    --color-text-muted/--color-border），移除會變視覺——僅豁免「顏色」一條，
-//    px 字級/!important/CDN 照掃。TODO：逐檔把 fallback 色收斂進 variables.css
-//    後自本清單移除；新檔案一律不得加入。
+// b) LEGACY_COLOR_FILES：原存量 17 檔「token 外硬編顏色」，2026-07-20 已逐檔把
+//    fallback 色與 rgba 疊層收斂進 variables.css（含補定義 --color-surface-alt/
+//    --color-accent/--color-text-muted/--color-border/--color-ink-2 等 token），清單
+//    只准變短、新檔一律不得加入。現僅剩 2 檔為「技術性不可轉」而保留：
+//    - HeroNetwork.astro：canvas JS 以 rgb(${r},${g},${b}) 動態組色字串（色源本就讀
+//      自 --appi-brand/--appi-accent，非硬編視覺）。
+//    - SEOHead.astro：<meta name="theme-color"> 需字面 hex，CSS var 在 meta 屬性無效。
+//    僅豁免「顏色」一條，px 字級/!important/CDN 照掃。
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join, extname, relative, basename } from "node:path";
 
@@ -28,23 +30,8 @@ const SKIP_FILES = new Set([]);
 const SKIP_DIRS = new Set([]);
 // 僅豁免「顏色」規則（遷移期凍結，禁再擴充；理由見檔頭 b)）
 const LEGACY_COLOR_FILES = new Set([
-  join("src", "components", "blocks", "CTAJoinAuthor.astro"),
-  join("src", "components", "blocks", "HeroNetwork.astro"),
-  join("src", "components", "blocks", "SiteFooter.astro"),
-  join("src", "components", "blocks", "SiteHeader.astro"),
-  join("src", "components", "blocks", "TopicCard.astro"),
-  join("src", "components", "editor", "AuthorSelect.svelte"),
-  join("src", "components", "editor", "BodyEditor.svelte"),
-  join("src", "components", "editor", "CoverField.svelte"),
-  join("src", "components", "editor", "EditorPanel.svelte"),
-  join("src", "components", "editor", "ImagePicker.svelte"),
-  join("src", "components", "editor", "SeoFields.svelte"),
-  join("src", "components", "seo", "SEOHead.astro"),
-  join("src", "pages", "[category]", "index.astro"),
-  join("src", "pages", "articles", "[slug].astro"),
-  join("src", "pages", "join.astro"),
-  join("src", "pages", "sports", "submit.astro"),
-  join("src", "pages", "submit.astro"),
+  join("src", "components", "blocks", "HeroNetwork.astro"), // canvas JS 動態 rgb() 色字串
+  join("src", "components", "seo", "SEOHead.astro"), // <meta theme-color> 需字面 hex
 ]);
 const exts = new Set([".css", ".astro", ".svelte"]);
 const violations = [];

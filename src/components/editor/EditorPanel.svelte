@@ -399,16 +399,16 @@
   .et-keep { position: absolute; inset: 0; z-index: 70; background: oklch(0 0 0 / 0.4); display: flex; align-items: center; justify-content: center; padding: 1rem; }
   .et-keep-card { background: white; border-radius: 8px; padding: 1.25rem; width: 100%; max-width: 680px; max-height: 85vh; overflow: auto; }
   .et-keep-card h3 { margin: 0 0 0.5rem; font-family: var(--font-ui); }
-  .et-keep-card p { margin: 0 0 0.75rem; font-family: var(--font-ui); font-size: var(--text-meta); color: var(--color-ink-2, #666); }
+  .et-keep-card p { margin: 0 0 0.75rem; font-family: var(--font-ui); font-size: var(--text-meta); color: var(--color-ink-2); }
   .et-keep-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
   .et-keep-cell { position: relative; border: 2px solid transparent; border-radius: 4px; overflow: hidden; cursor: pointer; line-height: 0; }
-  .et-keep-cell.on { border-color: var(--appi-accent, #a87515); }
+  .et-keep-cell.on { border-color: var(--appi-accent); }
   .et-keep-cell img { width: 100%; height: 110px; object-fit: cover; display: block; }
   .et-keep-cell input { position: absolute; top: 6px; left: 6px; width: 18px; height: 18px; }
-  .et-keep-err { color: var(--color-coral, #c0392b); font-family: var(--font-ui); font-size: var(--text-meta); }
+  .et-keep-err { color: var(--color-coral); font-family: var(--font-ui); font-size: var(--text-meta); }
   .et-keep-actions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1rem; }
-  .et-keep-discard { font-family: var(--font-ui); padding: 0.5rem 1rem; border: 1px solid var(--color-fog, #ccc); border-radius: 4px; background: white; cursor: pointer; }
-  .et-keep-save { font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.2rem; border: none; border-radius: 4px; background: var(--appi-brand, #1a3a5a); color: white; cursor: pointer; }
+  .et-keep-discard { font-family: var(--font-ui); padding: 0.5rem 1rem; border: 1px solid var(--color-fog); border-radius: 4px; background: white; cursor: pointer; }
+  .et-keep-save { font-family: var(--font-ui); font-weight: 600; padding: 0.5rem 1.2rem; border: none; border-radius: 4px; background: var(--appi-brand); color: white; cursor: pointer; }
   .et-keep-save:disabled, .et-keep-discard:disabled { opacity: 0.6; cursor: default; }
   .et-panel {
     background: color-mix(in oklch, var(--color-paper) 55%, white);

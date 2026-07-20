@@ -146,18 +146,18 @@
   /* 整體填滿左欄高度：預覽撐開 (flex:1)，按鈕與 alt 固定在下 */
   .cf { display: flex; flex-direction: column; gap: 0.4rem; height: 100%; }
   .cf-label { font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); font-weight: 600; color: var(--color-ink); }
-  .cf-preview { flex: 1 1 auto; width: 100%; min-height: 150px; object-fit: cover; border-radius: var(--radius-sm, 4px); border: 1px solid var(--color-fog, #e5e5e5); background: var(--bg-soft, #f5f5f5); }
-  .cf-empty { display: flex; align-items: center; justify-content: center; border-style: dashed; color: var(--color-ink-2, #888); font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); }
+  .cf-preview { flex: 1 1 auto; width: 100%; min-height: 150px; object-fit: cover; border-radius: var(--radius-sm, 4px); border: 1px solid var(--color-fog); background: var(--bg-soft); }
+  .cf-empty { display: flex; align-items: center; justify-content: center; border-style: dashed; color: var(--color-ink-2); font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); }
   .cf-btns { display: flex; gap: 0.5rem; }
-  .cf-choose { font-family: var(--font-ui); font-weight: 600; padding: 0.45rem 1rem; border: none; border-radius: var(--radius-sm, 4px); background: var(--appi-brand, #1a3a5a); color: white; cursor: pointer; }
+  .cf-choose { font-family: var(--font-ui); font-weight: 600; padding: 0.45rem 1rem; border: none; border-radius: var(--radius-sm, 4px); background: var(--appi-brand); color: white; cursor: pointer; }
   .cf-choose:disabled { opacity: 0.6; cursor: default; }
-  .cf-remove { font-family: var(--font-ui); padding: 0.45rem 0.8rem; border: 1px solid var(--color-fog, #ccc); border-radius: var(--radius-sm, 4px); background: white; cursor: pointer; }
+  .cf-remove { font-family: var(--font-ui); padding: 0.45rem 0.8rem; border: 1px solid var(--color-fog); border-radius: var(--radius-sm, 4px); background: white; cursor: pointer; }
   .cf-alt { display: flex; flex-direction: column; gap: 0.25rem; }
-  .cf-alt span { font-family: var(--font-ui); font-size: var(--text-xs, 0.75rem); font-weight: 600; color: var(--color-ink-2, #555); }
+  .cf-alt span { font-family: var(--font-ui); font-size: var(--text-xs, 0.75rem); font-weight: 600; color: var(--color-ink-2); }
   .cf-alt-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
-  .cf-alt-ai { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; padding: 0.12rem 0.5rem; border: 1px solid var(--appi-brand, #1a3a5a); border-radius: 20px; background: white; color: var(--appi-brand, #1a3a5a); cursor: pointer; }
+  .cf-alt-ai { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; padding: 0.12rem 0.5rem; border: 1px solid var(--appi-brand); border-radius: 20px; background: white; color: var(--appi-brand); cursor: pointer; }
   .cf-alt-ai:disabled { opacity: 0.6; cursor: default; }
-  .cf-credit { margin: 0; font-family: var(--font-ui); font-size: var(--text-xs, 0.72rem); color: var(--color-ink-2, #777); }
-  .cf-alt input { width: 100%; box-sizing: border-box; font-family: var(--font-ui); border: 1px solid var(--color-fog, #ccc); border-radius: var(--radius-sm, 4px); padding: 0.45rem 0.6rem; }
-  .cf-err { color: var(--color-coral, #c0392b); font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); margin: 0; }
+  .cf-credit { margin: 0; font-family: var(--font-ui); font-size: var(--text-xs, 0.72rem); color: var(--color-ink-2); }
+  .cf-alt input { width: 100%; box-sizing: border-box; font-family: var(--font-ui); border: 1px solid var(--color-fog); border-radius: var(--radius-sm, 4px); padding: 0.45rem 0.6rem; }
+  .cf-err { color: var(--color-coral); font-family: var(--font-ui); font-size: var(--text-meta, 0.85rem); margin: 0; }
 </style>

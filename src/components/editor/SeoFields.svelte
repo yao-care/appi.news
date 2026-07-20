@@ -169,7 +169,7 @@
     background: white; border: 1px solid var(--color-fog); border-radius: var(--radius-sm); padding: 0.5rem 0.65rem;
   }
   .ef textarea { min-height: 4rem; resize: vertical; }
-  .ef small { font-size: var(--text-xs, 0.72rem); color: var(--color-ink-2, #777); }
+  .ef small { font-size: var(--text-xs, 0.72rem); color: var(--color-ink-2); }
   .ef-err { color: var(--color-coral); }
 
   /* 左右兩欄；左欄封面高度由右欄撐開（stretch） */
@@ -178,7 +178,7 @@
   .ef-right { display: flex; flex-direction: column; gap: 0.6rem; }
 
   .ef-tags-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
-  .ef-tag-ai { font-family: var(--font-ui); font-size: var(--text-xs, 0.72rem); font-weight: 600; padding: 0.2rem 0.6rem; border: 1px solid var(--appi-brand, #1a3a5a); border-radius: 20px; background: white; color: var(--appi-brand, #1a3a5a); cursor: pointer; }
+  .ef-tag-ai { font-family: var(--font-ui); font-size: var(--text-xs, 0.72rem); font-weight: 600; padding: 0.2rem 0.6rem; border: 1px solid var(--appi-brand); border-radius: 20px; background: white; color: var(--appi-brand); cursor: pointer; }
   .ef-tag-ai:disabled { opacity: 0.6; cursor: default; }
 
   .ef-checks { display: flex; gap: 1.25rem; align-items: center; margin-top: 0.2rem; }

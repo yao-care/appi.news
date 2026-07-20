@@ -109,3 +109,37 @@
   --space-page-x: clamp(1rem, 5vw, 2rem);
   --space-page-y: clamp(1.5rem, 4vw, 3rem);
 }
+
+/* ── 遷移期收斂 token（2026-07-20 從 LEGACY_COLOR_FILES 抽出的硬編色）──
+   原則：值＝原檔 fallback，保證零視覺變動；純色（accent 綠、危險紅、白/黑疊層）
+   刻意不轉 oklch 近似值以免色偏，直接沿用原 hex/rgba。 */
+:root {
+  /* 原以 fallback 硬撐、未定義的 token，補正式定義（對齊既有調色盤） */
+  --color-surface-alt: var(--bg-soft);   /* 原 #f4f6f8 ≈ --bg-soft */
+  --color-text-muted: var(--ink-2);      /* 次要正文 */
+  --color-border: var(--line);           /* 一般邊框 */
+  --color-ink-2: var(--ink-3);           /* 編輯器次要文字（原 fallback #777~#999，統一為 --ink-3） */
+  --color-accent: #11aa66;               /* 運動投稿 CTA 綠；與品牌金 --appi-accent 不同，遷移期保留原視覺 */
+
+  /* 品牌深底上的白色疊層 */
+  --on-brand-border: rgba(255, 255, 255, 0.5);
+  --on-brand-fill: rgba(255, 255, 255, 0.12);
+  --header-scrim: rgba(255, 255, 255, 0.96);
+
+  /* 卡片封面上的漸層 scrim（TopicCard） */
+  --card-scrim-from: rgba(15, 25, 45, 0.85);
+  --card-scrim-to: rgba(15, 25, 45, 0.15);
+
+  /* 編輯器 overlay / 陰影 / hover */
+  --overlay-backdrop: rgba(0, 0, 0, 0.5);
+  --credit-scrim: rgba(0, 0, 0, 0.7);
+  --shadow-dropdown: 0 6px 20px rgba(0, 0, 0, 0.12);
+  --shadow-modal: 0 10px 40px rgba(0, 0, 0, 0.3);
+  --hover-soft: #f4f4f4;                  /* BodyEditor 工具列 hover 底 */
+  --hover-border: #e5e5e5;                /* BodyEditor 工具列 hover 邊 */
+
+  /* 危險 / 錯誤框（submit 表單） */
+  --danger-bg: #fdecec;
+  --danger-border: #f3c2c2;
+  --danger-text: #a12a2a;
+}

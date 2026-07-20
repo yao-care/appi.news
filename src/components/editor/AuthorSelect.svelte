@@ -56,11 +56,11 @@
 
 <style>
   .as { position: relative; }
-  .as-input { width: 100%; box-sizing: border-box; font-family: var(--font-ui); font-size: var(--text-body, 1rem); color: var(--color-ink); background: white; border: 1px solid var(--color-fog, #ccc); border-radius: var(--radius-sm, 4px); padding: 0.5rem 0.65rem; }
-  .as-list { position: absolute; z-index: 10; top: calc(100% + 2px); left: 0; right: 0; margin: 0; padding: 0.25rem; list-style: none; background: white; border: 1px solid var(--color-fog, #ccc); border-radius: var(--radius-sm, 4px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); max-height: 220px; overflow: auto; }
+  .as-input { width: 100%; box-sizing: border-box; font-family: var(--font-ui); font-size: var(--text-body, 1rem); color: var(--color-ink); background: white; border: 1px solid var(--color-fog); border-radius: var(--radius-sm, 4px); padding: 0.5rem 0.65rem; }
+  .as-list { position: absolute; z-index: 10; top: calc(100% + 2px); left: 0; right: 0; margin: 0; padding: 0.25rem; list-style: none; background: white; border: 1px solid var(--color-fog); border-radius: var(--radius-sm, 4px); box-shadow: var(--shadow-dropdown); max-height: 220px; overflow: auto; }
   .as-opt { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; width: 100%; text-align: left; background: none; border: none; border-radius: var(--radius-sm, 4px); padding: 0.4rem 0.55rem; cursor: pointer; font-family: var(--font-ui); }
-  .as-opt:hover { background: var(--bg-soft, #f3f3f3); }
-  .as-opt.sel { background: var(--bg-tint, #eef3f7); }
+  .as-opt:hover { background: var(--bg-soft); }
+  .as-opt.sel { background: var(--bg-tint); }
   .as-name { font-size: var(--text-body, 1rem); color: var(--color-ink); }
-  .as-id { font-size: var(--text-xs, 0.72rem); color: var(--color-ink-2, #999); font-family: ui-monospace, monospace; }
+  .as-id { font-size: var(--text-xs, 0.72rem); color: var(--color-ink-2); font-family: ui-monospace, monospace; }
 </style>

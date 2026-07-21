@@ -78,10 +78,10 @@ originalContribution: "本文把『模型發布日期被開成賭盤』這個新
 
 ## 常見問題
 
-<p><strong>GPT-5.6 現在到底能不能用？</strong><br>還不能一般使用。OpenAI 六月底只發了有限預覽，[在美國政府要求下先給少數已報備的合作夥伴](https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/)，官方說會在「未來幾週內」對 ChatGPT、Codex 和 API 使用者更廣開放，但沒有給確定日期。這也正是賭盤有得押的原因。</p>
+<p><strong>GPT-5.6 現在到底能不能用？</strong><br>還不能一般使用。OpenAI 六月底只發了有限預覽，<a href="https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/">在美國政府要求下先給少數已報備的合作夥伴</a>，官方說會在「未來幾週內」對 ChatGPT、Codex 和 API 使用者更廣開放，但沒有給確定日期。這也正是賭盤有得押的原因。</p>
 
-<p><strong>Polymarket 上 79% 的賠率代表 GPT-5.6 很可能那天發嗎？</strong><br>不能這樣直接讀。那個數字反映的是[下注者對謠言與敘事的共識，不是 OpenAI 的內部行事曆](https://cryptoslate.com/predictions/market/gpt-5pt6-released-onptptpt-20260623051439980/)。這類市場可能很薄、容易被少數大戶推動，[遠期或需要內部知識的題目群眾也常錯得離譜](https://en.wikipedia.org/wiki/Prediction_market)；加上「怎樣才算公開發布」定義模糊，賠率看起來精確，底層卻站在不確定的定義上。</p>
+<p><strong>Polymarket 上 79% 的賠率代表 GPT-5.6 很可能那天發嗎？</strong><br>不能這樣直接讀。那個數字反映的是<a href="https://cryptoslate.com/predictions/market/gpt-5pt6-released-onptptpt-20260623051439980/">下注者對謠言與敘事的共識，不是 OpenAI 的內部行事曆</a>。這類市場可能很薄、容易被少數大戶推動，<a href="https://en.wikipedia.org/wiki/Prediction_market">遠期或需要內部知識的題目群眾也常錯得離譜</a>；加上「怎樣才算公開發布」定義模糊，賠率看起來精確，底層卻站在不確定的定義上。</p>
 
 <p><strong>我該不該等 GPT-5.6 公開再決定用哪個模型？</strong><br>不建議把選型綁在發布日上。正確順序是先定義你要解的問題、資料來源與驗證機制，再回頭評估現有模型夠不夠用。只要把提示、評測集和資料介面跟特定模型解耦，新版一發你幾天內做 A／B 比較就好，沒有理由停在原地等賭盤揭曉。</p>
 
-<p><strong>連私人公司估值都能下注，這對開發者有影響嗎？</strong><br>直接影響不大，但它是同一個訊號：AI 產業的不確定性正在被大規模商品化。[Polymarket 已經開盤讓人賭 Anthropic 與 OpenAI 的估值和 IPO 時程](https://mlq.ai/news/polymarket-expands-into-private-company-bets-as-anthropic-and-openai-valuations-become-tradable/)。對開發者來說，重點是別把這些投機價格當成技術決策依據，選型該看你自己的問題定義，不是市場的下注熱度。</p>
+<p><strong>連私人公司估值都能下注，這對開發者有影響嗎？</strong><br>直接影響不大，但它是同一個訊號：AI 產業的不確定性正在被大規模商品化。<a href="https://mlq.ai/news/polymarket-expands-into-private-company-bets-as-anthropic-and-openai-valuations-become-tradable/">Polymarket 已經開盤讓人賭 Anthropic 與 OpenAI 的估值和 IPO 時程</a>。對開發者來說，重點是別把這些投機價格當成技術決策依據，選型該看你自己的問題定義，不是市場的下注熱度。</p>

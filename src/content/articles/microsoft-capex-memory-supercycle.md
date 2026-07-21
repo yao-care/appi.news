@@ -74,12 +74,12 @@ AI 記憶體超級循環的第一張大帳單，先砸到出錢蓋機房的雲�
 
 ## 常見問題
 
-<p><strong>微軟 2026 年資本支出為什麼衝到 1900 億美元？</strong><br>因為它要繼續為 AI 擴建資料中心，同時記憶體與零組件價格大漲。財務長 Amy Hood 在第三季財報說明，這 1900 億裡有約 [250 億美元純粹是記憶體與晶片漲價墊上去的](https://www.theregister.com/2026/04/30/microsoft_q3_2026/)，不是買了更多設備，而是同樣的料變更貴。</p>
+<p><strong>微軟 2026 年資本支出為什麼衝到 1900 億美元？</strong><br>因為它要繼續為 AI 擴建資料中心，同時記憶體與零組件價格大漲。財務長 Amy Hood 在第三季財報說明，這 1900 億裡有約 <a href="https://www.theregister.com/2026/04/30/microsoft_q3_2026/">250 億美元純粹是記憶體與晶片漲價墊上去的</a>，不是買了更多設備，而是同樣的料變更貴。</p>
 
-<p><strong>記憶體為什麼突然漲這麼多，是一般的景氣循環嗎？</strong><br>比較像結構性供需失衡，不是單純的循環高點。AI 加速器需要的 HBM 大量吃掉 DRAM 晶圓產能，原廠又把八成以上產能轉向高階產品，供給端被抽走，[TrendForce 估 2026 年 DRAM 價格還會再漲超過七成](https://www.trendforce.com/insights/memory-wall)。</p>
+<p><strong>記憶體為什麼突然漲這麼多，是一般的景氣循環嗎？</strong><br>比較像結構性供需失衡，不是單純的循環高點。AI 加速器需要的 HBM 大量吃掉 DRAM 晶圓產能，原廠又把八成以上產能轉向高階產品，供給端被抽走，<a href="https://www.trendforce.com/insights/memory-wall">TrendForce 估 2026 年 DRAM 價格還會再漲超過七成</a>。</p>
 
-<p><strong>記憶體漲價會讓我買筆電、手機變貴嗎？</strong><br>會，而且已經在發生。記憶體占筆電與手機物料成本已升到[一到兩成](https://money.udn.com/money/story/11162/9195263)，華碩已預告[台灣 PC 第二季售價估漲 25% 到 30%](https://finance.technews.tw/2026/03/23/asus-pc-pricing/)。TrendForce 也把今年筆電與手機出貨量往下修。想換機的話，這波短期內不容易等到大幅降價。</p>
+<p><strong>記憶體漲價會讓我買筆電、手機變貴嗎？</strong><br>會，而且已經在發生。記憶體占筆電與手機物料成本已升到<a href="https://money.udn.com/money/story/11162/9195263">一到兩成</a>，華碩已預告<a href="https://finance.technews.tw/2026/03/23/asus-pc-pricing/">台灣 PC 第二季售價估漲 25% 到 30%</a>。TrendForce 也把今年筆電與手機出貨量往下修。想換機的話，這波短期內不容易等到大幅降價。</p>
 
-<p><strong>這波記憶體超級循環，台灣是受惠還是受害？</strong><br>兩者同時發生，要看你指的是哪一段。有記憶體與封測籌碼的[南亞科、華邦電、模組廠與群聯等台廠帳面受惠](https://money.cmoney.tw/article/30203)；純做 PC 品牌與代工組裝、對上游沒有議價權的那一段則被成本壓縮。關鍵是看清自己卡在供應鏈的哪個位置。</p>
+<p><strong>這波記憶體超級循環，台灣是受惠還是受害？</strong><br>兩者同時發生，要看你指的是哪一段。有記憶體與封測籌碼的<a href="https://money.cmoney.tw/article/30203">南亞科、華邦電、模組廠與群聯等台廠帳面受惠</a>；純做 PC 品牌與代工組裝、對上游沒有議價權的那一段則被成本壓縮。關鍵是看清自己卡在供應鏈的哪個位置。</p>
 </content>
 </invoke>

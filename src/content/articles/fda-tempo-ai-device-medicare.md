@@ -85,10 +85,10 @@ TEMPO 真正值得台灣看的，不是它鬆綁了多少關，而是它把「�
 
 <h2>常見問題</h2>
 
-<p><strong>TEMPO 是不是代表這些 AI 醫材已經通過 FDA 核准了？</strong><br>不是。TEMPO 用的是「執法裁量」，意思是 FDA 在試辦期間選擇不去追究這台醫材尚未取得核准，不代表 FDA 已認定它安全有效。[這種狀態是暫時的、可撤回的，最終仍要走完正式核准](https://www.morganlewis.com/blogs/asprescribed/2025/12/new-fda-digital-health-pilot-same-fda-enforcement-discretion)。把它讀成「已認證」會誤判風險。</p>
+<p><strong>TEMPO 是不是代表這些 AI 醫材已經通過 FDA 核准了？</strong><br>不是。TEMPO 用的是「執法裁量」，意思是 FDA 在試辦期間選擇不去追究這台醫材尚未取得核准，不代表 FDA 已認定它安全有效。<a href="https://www.morganlewis.com/blogs/asprescribed/2025/12/new-fda-digital-health-pilot-same-fda-enforcement-discretion">這種狀態是暫時的、可撤回的，最終仍要走完正式核准</a>。把它讀成「已認證」會誤判風險。</p>
 
-<p><strong>哪些病患、哪些病會用到 TEMPO 醫材？</strong><br>限傳統 Medicare（不含 Medicare Advantage）病患，且只在四個慢性病領域：早期與進階的心腎代謝（高血壓、糖尿病、慢性腎臟病等）、肌肉骨骼慢性疼痛、以及憂鬱與焦慮等行為健康。[每個領域 FDA 最多選約 10 家美國廠商](https://www.alston.com/en/insights/publications/2026/02/tempo-access-digital-health-device-manufacturers)，而且醫材只能在 ACCESS 給付模式內使用。</p>
+<p><strong>哪些病患、哪些病會用到 TEMPO 醫材？</strong><br>限傳統 Medicare（不含 Medicare Advantage）病患，且只在四個慢性病領域：早期與進階的心腎代謝（高血壓、糖尿病、慢性腎臟病等）、肌肉骨骼慢性疼痛、以及憂鬱與焦慮等行為健康。<a href="https://www.alston.com/en/insights/publications/2026/02/tempo-access-digital-health-device-manufacturers">每個領域 FDA 最多選約 10 家美國廠商</a>，而且醫材只能在 ACCESS 給付模式內使用。</p>
 
-<p><strong>TEMPO 具體鬆綁了哪些要求？</strong><br>[FDA 暫時不執行三類規定](https://www.gtlaw.com/en/insights/2026/1/cms-and-fda-unveil-a-digital-health-pilot-for-chronic-conditions)：上市前核准（510(k)／PMA）、臨床試驗用的試驗醫材豁免（IDE）、以及知情同意與 IRB 規範（21 CFR Part 50、56）。但廠商仍要維持品質管理系統、通報不良事件、遵守 HIPAA，病患端也要取得加強版同意。</p>
+<p><strong>TEMPO 具體鬆綁了哪些要求？</strong><br><a href="https://www.gtlaw.com/en/insights/2026/1/cms-and-fda-unveil-a-digital-health-pilot-for-chronic-conditions">FDA 暫時不執行三類規定</a>：上市前核准（510(k)／PMA）、臨床試驗用的試驗醫材豁免（IDE）、以及知情同意與 IRB 規範（21 CFR Part 50、56）。但廠商仍要維持品質管理系統、通報不良事件、遵守 HIPAA，病患端也要取得加強版同意。</p>
 
-<p><strong>台灣有沒有類似 TEMPO 的制度？</strong><br>沒有對應的「先用＋給付」雙門。台灣的醫材上市由食藥署依《醫療器材管理法》審查，健保給付由健保署另外決定，[健保 2023 年底才首次給付一款 AI 醫材](https://news.gbimonthly.com/tw/article/show.php?num=82821&kind=1)。TEMPO 的特點是把上市與給付綁在一起，這正是台灣目前分開走、較缺乏的接線機制。</p>
+<p><strong>台灣有沒有類似 TEMPO 的制度？</strong><br>沒有對應的「先用＋給付」雙門。台灣的醫材上市由食藥署依《醫療器材管理法》審查，健保給付由健保署另外決定，<a href="https://news.gbimonthly.com/tw/article/show.php?num=82821&kind=1">健保 2023 年底才首次給付一款 AI 醫材</a>。TEMPO 的特點是把上市與給付綁在一起，這正是台灣目前分開走、較缺乏的接線機制。</p>

@@ -71,10 +71,10 @@ OpenAI 當然知道這件事，所以才立「答案獨立」原則，把廣告�
 
 <h2>常見問題</h2>
 
-<p><strong>ChatGPT 現在會在回答裡放廣告嗎？</strong><br>會，但目前只出現在免費的 Free 與低價的 Go 方案，而且只投給美國、加拿大、澳洲、紐西蘭的使用者。廣告[放在回答下方、標示清楚並與正文分開](https://www.webfx.com/blog/ai/chatgpt-ads-manager/)，OpenAI 立了「答案獨立」原則，聲稱廣告關係不會影響回答內容。要注意這是它自訂、外部無法驗證的承諾。</p>
+<p><strong>ChatGPT 現在會在回答裡放廣告嗎？</strong><br>會，但目前只出現在免費的 Free 與低價的 Go 方案，而且只投給美國、加拿大、澳洲、紐西蘭的使用者。廣告<a href="https://www.webfx.com/blog/ai/chatgpt-ads-manager/">放在回答下方、標示清楚並與正文分開</a>，OpenAI 立了「答案獨立」原則，聲稱廣告關係不會影響回答內容。要注意這是它自訂、外部無法驗證的承諾。</p>
 
-<p><strong>付費的 ChatGPT Plus 或 Enterprise 會看到廣告嗎？</strong><br>目前不會。依 OpenAI 的[方案設計，Plus、Pro、Business、Enterprise 這些付費方案維持沒有廣告](https://www.webfx.com/blog/ai/chatgpt-ads-manager/)，廣告只投給 Free 與 Go 的使用者。是否長期維持，要看它後續的商業壓力。</p>
+<p><strong>付費的 ChatGPT Plus 或 Enterprise 會看到廣告嗎？</strong><br>目前不會。依 OpenAI 的<a href="https://www.webfx.com/blog/ai/chatgpt-ads-manager/">方案設計，Plus、Pro、Business、Enterprise 這些付費方案維持沒有廣告</a>，廣告只投給 Free 與 Go 的使用者。是否長期維持，要看它後續的商業壓力。</p>
 
-<p><strong>台灣的品牌現在可以買 ChatGPT 廣告嗎？</strong><br>還不行。自助廣告後台先開放給美國廣告主，之後擴到英國、墨西哥、日本、巴西、南韓，[試投階段已有超過 600 家廣告主進場](https://thetechportal.com/2026/04/09/openai-projects-100bn-in-ad-revenue-by-2030-around-2-5bn-in-2026-report)，名單裡還沒有台灣。進場前先確認你的客戶是不是真的在 ChatGPT 裡做購買決策，別因為它新就跟。</p>
+<p><strong>台灣的品牌現在可以買 ChatGPT 廣告嗎？</strong><br>還不行。自助廣告後台先開放給美國廣告主，之後擴到英國、墨西哥、日本、巴西、南韓，<a href="https://thetechportal.com/2026/04/09/openai-projects-100bn-in-ad-revenue-by-2030-around-2-5bn-in-2026-report">試投階段已有超過 600 家廣告主進場</a>，名單裡還沒有台灣。進場前先確認你的客戶是不是真的在 ChatGPT 裡做購買決策，別因為它新就跟。</p>
 
-<p><strong>廣告會不會影響 ChatGPT 給我的答案？</strong><br>OpenAI 說不會，並用「答案獨立」原則把廣告和回答切開。但這是承諾不是保證，你無法從外部驗證。它的[廣告營收被設定要從今年約 25 億美元長到 2030 年 1000 億美元](https://thetechportal.com/2026/04/09/openai-projects-100bn-in-ad-revenue-by-2030-around-2-5bn-in-2026-report)，依賴愈深，維持這條界線的壓力就愈大。涉及健康、財務等重要決定，建議回到一手來源再查證一次。</p>
+<p><strong>廣告會不會影響 ChatGPT 給我的答案？</strong><br>OpenAI 說不會，並用「答案獨立」原則把廣告和回答切開。但這是承諾不是保證，你無法從外部驗證。它的<a href="https://thetechportal.com/2026/04/09/openai-projects-100bn-in-ad-revenue-by-2030-around-2-5bn-in-2026-report">廣告營收被設定要從今年約 25 億美元長到 2030 年 1000 億美元</a>，依賴愈深，維持這條界線的壓力就愈大。涉及健康、財務等重要決定，建議回到一手來源再查證一次。</p>

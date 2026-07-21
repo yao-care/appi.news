@@ -92,10 +92,10 @@ SK 海力士 AI 基礎設施負責人 Justin Kim 講這段合作時說，期待�
 
 <h2>常見問題</h2>
 
-<p><strong>SK 海力士花 19 兆韓元蓋的 P&T7 到底是什麼廠？</strong><br>是一座專做 HBM 先進封裝的後段廠，不是做 DRAM 晶圓的前段廠。它負責把前段做好的晶粒堆疊、封裝、測試成可交付的 HBM 模組，蓋在南韓清州、[4 月動工、2027 年底完工、2028 年全產](https://www.kedglobal.com/korean-chipmakers/newsView/ked202601130007)，號稱全球最大的 HBM 封裝設施。</p>
+<p><strong>SK 海力士花 19 兆韓元蓋的 P&T7 到底是什麼廠？</strong><br>是一座專做 HBM 先進封裝的後段廠，不是做 DRAM 晶圓的前段廠。它負責把前段做好的晶粒堆疊、封裝、測試成可交付的 HBM 模組，蓋在南韓清州、<a href="https://www.kedglobal.com/korean-chipmakers/newsView/ked202601130007">4 月動工、2027 年底完工、2028 年全產</a>，號稱全球最大的 HBM 封裝設施。</p>
 
-<p><strong>為什麼 AI 記憶體的瓶頸是封裝，不是晶圓產能？</strong><br>因為 HBM 是好幾顆 DRAM 晶粒疊起來、再跟 GPU 接在一起的模組，做出晶圓只是第一步。[如果封裝、堆疊、測試、控熱的後段產能不夠，前段晶圓開好開滿也幫不上忙](https://www.igorslab.de/en/sk-hynix-invests-19-trillion-won-advanced-packaging-becomes-the-bottleneck-of-the-ai-memory-boom/)，客戶拿到的還是缺貨。</p>
+<p><strong>為什麼 AI 記憶體的瓶頸是封裝，不是晶圓產能？</strong><br>因為 HBM 是好幾顆 DRAM 晶粒疊起來、再跟 GPU 接在一起的模組，做出晶圓只是第一步。<a href="https://www.igorslab.de/en/sk-hynix-invests-19-trillion-won-advanced-packaging-becomes-the-bottleneck-of-the-ai-memory-boom/">如果封裝、堆疊、測試、控熱的後段產能不夠，前段晶圓開好開滿也幫不上忙</a>，客戶拿到的還是缺貨。</p>
 
-<p><strong>SK 海力士跟台積電合作 HBM4 是做什麼？</strong><br>兩家簽了備忘錄，[HBM4 的基礎裸晶改用台積電的邏輯製程來做，並跟台積電的 CoWoS 封裝整合](https://news.skhynix.com/sk-hynix-partners-with-tsmc-to-strengthen-hbm-technological-leadership/)。等於記憶體廠、代工廠、晶片設計三方綁在一起，HBM4 預計 2026 年量產。</p>
+<p><strong>SK 海力士跟台積電合作 HBM4 是做什麼？</strong><br>兩家簽了備忘錄，<a href="https://news.skhynix.com/sk-hynix-partners-with-tsmc-to-strengthen-hbm-technological-leadership/">HBM4 的基礎裸晶改用台積電的邏輯製程來做，並跟台積電的 CoWoS 封裝整合</a>。等於記憶體廠、代工廠、晶片設計三方綁在一起，HBM4 預計 2026 年量產。</p>
 
-<p><strong>台積電 CoWoS 產能吃緊對台灣是好是壞？</strong><br>短期是訂單滿載的好事，但吃緊也在把客戶推向替代方案。SK 海力士已經[去測 Intel 的 EMIB 封裝，Google、Meta 也在採用](https://www.trendforce.com/news/2026/05/11/news-sk-hynix-reportedly-tests-intel-emib-2-5d-packaging-with-hbm-amid-tsmc-cowos-tightness/)，代表台積電在先進封裝的獨佔開始有實質競爭，台灣得看緊自己在後段封測的位置有沒有被補上。</p>
+<p><strong>台積電 CoWoS 產能吃緊對台灣是好是壞？</strong><br>短期是訂單滿載的好事，但吃緊也在把客戶推向替代方案。SK 海力士已經<a href="https://www.trendforce.com/news/2026/05/11/news-sk-hynix-reportedly-tests-intel-emib-2-5d-packaging-with-hbm-amid-tsmc-cowos-tightness/">去測 Intel 的 EMIB 封裝，Google、Meta 也在採用</a>，代表台積電在先進封裝的獨佔開始有實質競爭，台灣得看緊自己在後段封測的位置有沒有被補上。</p>

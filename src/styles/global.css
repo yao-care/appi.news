@@ -177,6 +177,14 @@ h4 {
   font-size: 1.25rem; /* 20px — 文章正文固定，不跟 token 縮小 */
   line-height: 1.85;
   color: var(--ink-2);
+  /* 手機安全網：長網址/英文長字不得撐破版面（見 docs/lessons）。 */
+  overflow-wrap: break-word;
+}
+/* 寬表格在自己的容器內橫向捲動，不讓整頁水平溢出（站規：頁面 body 不得水平捲動）。 */
+.article-body :is(table) {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
 }
 .article-body > * {
   margin-block: 1.1em;

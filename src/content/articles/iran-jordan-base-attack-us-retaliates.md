@@ -1,17 +1,18 @@
 ---
-title: "伊朗飛彈無人機襲約旦美軍基地　2美軍陣亡1失蹤　美軍報復空襲伊朗革命衛隊目標"
+title: "美軍連10夜空襲伊朗　伊拉克再添1死累計17人陣亡　科威特電廠淡化廠遇襲起火、巴林機場系統遭無人機攻擊"
 slug: "iran-jordan-base-attack-us-retaliates"
-description: "美軍中央司令部證實，伊朗7月17日以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地，造成2名美軍陣亡、1人失蹤、4人送醫；這是10天前停火瓦解以來美軍首見陣亡。川普下令美軍18日晚間對伊朗革命衛隊目標展開報復空襲，德黑蘭南部多處遭擊中，伊朗最高領袖警告將給予「永誌不忘的教訓」。"
-excerpt: "美軍中央司令部證實，伊朗7月17日以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地，造成2名美軍陣亡、1人失蹤、4人送醫；這是10天前停火瓦解以來美軍首見陣亡。川普下令美軍18日晚間對伊朗革命衛隊目標展開報復空襲，德黑蘭南部多處遭擊中，伊朗最高領袖警告將給予「永誌不忘的教訓」。"
+description: "美軍中央司令部證實，對伊朗空襲已連續進行10個夜晚，鎖定大不里士附近、班達爾伊瑪目霍梅尼、錫里克、傑斯克、科納拉克與恰巴哈爾等地，伊朗官媒稱大不里士附近至少1人喪生。五角大廈證實一名陸軍中士7月19日在伊拉克埃爾比勒基地執行無人機處置任務時陣亡，美軍陣亡人數累計達17人。伊朗革命衛隊宣稱已報復性攻擊科威特與巴林，科威特電力部門證實遭連續4天攻擊、多座電廠與海水淡化廠受損起火；伊朗內政部長已赴巴基斯坦斡旋兩天會談。"
+excerpt: "美軍中央司令部證實，對伊朗空襲已連續進行10個夜晚，鎖定大不里士附近、班達爾伊瑪目霍梅尼、錫里克、傑斯克、科納拉克與恰巴哈爾等地，伊朗官媒稱大不里士附近至少1人喪生。五角大廈證實一名陸軍中士7月19日在伊拉克埃爾比勒基地執行無人機處置任務時陣亡，美軍陣亡人數累計達17人。伊朗革命衛隊宣稱已報復性攻擊科威特與巴林，科威特電力部門證實遭連續4天攻擊、多座電廠與海水淡化廠受損起火；伊朗內政部長已赴巴基斯坦斡旋兩天會談。"
 publishDate: "2026-07-19T15:18:08.284Z"
+updatedDate: "2026-07-21T15:12:40.117Z"
 category: "international"
 subcategory: "middle-east"
-tags: ["伊朗", "約旦", "美伊衝突", "中央司令部", "革命衛隊", "荷莫茲海峽", "中東情勢", "美軍"]
+tags: ["伊朗", "約旦", "美伊衝突", "中央司令部", "革命衛隊", "荷莫茲海峽", "中東情勢", "美軍", "科威特", "巴林", "巴基斯坦"]
 highlights:
-  - "美軍中央司令部證實，伊朗7月17日（週五）以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地（MSAB），造成2名美軍陣亡、1人失蹤、4人送醫；這是10天前停火瓦解以來美軍首見陣亡"
-  - "川普下令美軍18日晚間對伊朗革命衛隊目標展開報復空襲，鎖定伊朗南部錫里克、哈吉亞巴德、班達爾阿巴斯、格什姆島一帶，旨在削弱伊朗威脅荷莫茲海峽航運的能力"
-  - "伊朗最高領袖警告將給予美方「永誌不忘的教訓」，副外長宣布暫停履行一個月前簽署的臨時協議；伊朗稱過去三週美軍空襲已造成該國至少50人死亡、逾500人受傷"
-  - "這是美伊戰事自2月28日爆發以來的最新升級：美軍陣亡人數累計達16人、逾430人受傷；戰事10天前一度停火，但隨後瓦解"
+  - "美軍中央司令部證實，對伊朗空襲已連續進行至第10個夜晚（7月20日晚間），最新鎖定大不里士附近、班達爾伊瑪目霍梅尼、錫里克、傑斯克、科納拉克與恰巴哈爾等地；伊朗官方通訊社IRNA稱大不里士附近攻擊至少造成1人喪生"
+  - "五角大廈證實，陸軍中士史溫頓（Michael Emmanuel Swinton，30歲）7月19日在伊拉克埃爾比勒基地執行無人機處置任務時陣亡，美軍陣亡人數累計達至少17人、逾500人受傷；伊朗稱美軍空襲已致該國至少50人死亡、517人受傷"
+  - "伊朗革命衛隊宣稱已報復性攻擊科威特與巴林：科威特電力部門證實遭連續4天攻擊，多座發電廠與海水淡化廠受損起火，當局預防性關閉部分機組；巴林指無人機攻擊瞄準機場空中交通系統，危及民航安全；約旦則擊落3枚來襲飛彈，無傷亡"
+  - "外交仍未完全熄火：伊朗內政部長已赴巴基斯坦伊斯蘭馬巴德進行兩天會談尋求斡旋；白宮則表示空襲將持續進行，直到川普決定停止"
 references:
   - title: "2 troops are dead, 1 is missing after Iranian attacks on base in Jordan, US military says"
     url: "https://www.mysuncoast.com/2026/07/18/2-troops-are-dead-1-is-missing-after-iranian-attacks-base-jordan-us-military-says/"
@@ -25,6 +26,18 @@ references:
   - title: "Two US troops killed and one missing following Iranian attack on Jordan"
     url: "https://www.thenationalnews.com/news/us/2026/07/18/two-us-troops-killed-and-one-missing-following-iranian-attack-in-jordan/"
     publisher: "The National"
+  - title: "US attacks Iran for 10th consecutive night"
+    url: "https://www.aljazeera.com/news/2026/7/21/us-launches-tenth-consecutive-night-of-attacks-on-iran"
+    publisher: "Al Jazeera"
+  - title: "All-out war edges closer with 10th consecutive night of US strikes on Iran"
+    url: "https://www.irishtimes.com/world/middle-east/2026/07/20/us-carry-out-10th-consecutive-night-of-strikes-on-iran-bringing-all-out-war-closer/"
+    publisher: "The Irish Times"
+  - title: "Expansion of U.S. strikes on Iran leads to more retaliation across the Gulf"
+    url: "https://www.pbs.org/newshour/world/expansion-of-u-s-strikes-on-iran-leads-to-more-retaliation-across-the-gulf"
+    publisher: "PBS NewsHour"
+  - title: "Iran live updates: Pentagon names soldier killed in Iraq by downed Iranian drone"
+    url: "https://abcnews.com/International/live-updates/iran-live-updates-kuwait-attacked-bahrain-sounds-sirens/?id=134907987"
+    publisher: "ABC News"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"
@@ -36,7 +49,7 @@ coverAlt: "約旦穆瓦法克薩爾蒂空軍基地內的美軍與約旦F-16戰�
 coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 ---
 
-美伊戰事再度升級。美軍中央司令部證實，伊朗7月17日（週五）以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地（Muwaffaq Salti Air Base，簡稱MSAB），造成2名美軍陣亡、1人失蹤、4人送醫；這是10天前停火瓦解以來，美軍首度傳出陣亡。美國總統川普隨即下令，美軍18日晚間對伊朗革命衛隊目標展開報復空襲，鎖定伊朗南部沿海多處據點。伊朗最高領袖警告將給予美方「永誌不忘的教訓」，並暫停履行一個月前簽署的臨時協議。
+美伊戰事持續升級。美軍中央司令部證實，伊朗7月17日（週五）以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地（Muwaffaq Salti Air Base，簡稱MSAB），造成2名美軍陣亡、1人失蹤、4人送醫；這是10天前停火瓦解以來，美軍首度傳出陣亡。美國總統川普隨即下令，美軍18日晚間對伊朗革命衛隊目標展開報復空襲，鎖定伊朗南部沿海多處據點。伊朗最高領袖警告將給予美方「永誌不忘的教訓」，並暫停履行一個月前簽署的臨時協議。截至7月20日晚間，美軍空襲已連續進行到第10個夜晚，戰線同時延燒到伊拉克、科威特與巴林，五角大廈也證實一名美軍士官在伊拉克陣亡。
 
 ## 約旦基地遇襲：2死1失蹤4送醫
 
@@ -60,3 +73,24 @@ coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 這波交火發生在美伊戰事持續近5個月的背景下。美伊自今年2月28日爆發軍事衝突以來，雙方一度於三週前簽署臨時協議、約定荷莫茲海峽對船隻開放通行（詳見[本站先前報導](/articles/hormuz-tankers-oman-route-iran-threats/)），但停火於10天前瓦解，衝突隨即再度升溫。[原文報導](https://www.mysuncoast.com/2026/07/18/2-troops-are-dead-1-is-missing-after-iranian-attacks-base-jordan-us-military-says/)指出，伊朗稱過去三週美軍空襲已造成該國至少50人死亡、逾500人受傷；美方則統計，自戰事爆發以來，美軍已有16人陣亡、逾430人受傷。
 
 哈梅內伊今年2月28日的美以聯合空襲中身亡後（詳見[本站先前報導](/articles/iran-khamenei-state-funeral/)），由其子莫賈塔巴接掌伊朗最高領袖一職；此次對美方發出強硬警告的「最高領袖」發言，即出自莫賈塔巴之口。伊朗與美方在荷莫茲海峽航運通行權、伊朗濃縮鈾庫存等議題上的談判，隨著戰事再度升級陷入停滯。
+
+## 美軍連10夜空襲　伊拉克再添1死　陣亡累計17人
+
+美軍中央司令部表示，週一（7月20日）晚間的空襲是連續第10個夜晚對伊朗發動攻擊。[半島電視台報導](https://www.aljazeera.com/news/2026/7/21/us-launches-tenth-consecutive-night-of-attacks-on-iran)指出，中央司令部聲明目的是「進一步削弱伊朗用於攻擊商業船運的軍事能力」，鎖定伊朗軍事指揮中心、防空與沿岸監視站點、海事能力、飛彈與無人機發射點及通訊網路。據[愛爾蘭時報引述伊朗國營通訊社IRNA報導](https://www.irishtimes.com/world/middle-east/2026/07/20/us-carry-out-10th-consecutive-night-of-strikes-on-iran-bringing-all-out-war-closer/)，這波空襲地點包括距德黑蘭約520公里的大不里士（Tabriz）附近、胡齊斯坦省的班達爾伊瑪目霍梅尼（Bandar Imam Khomeini）、荷莫茲甘省的錫里克（Sirik）與傑斯克（Jask），以及錫斯坦與俾路支斯坦省的科納拉克（Konarak）與恰巴哈爾（Chabahar）；IRNA稱大不里士附近的攻擊至少造成1人喪生。
+
+美軍傷亡同步攀升。[ABC新聞報導](https://abcnews.com/International/live-updates/iran-live-updates-kuwait-attacked-bahrain-sounds-sirens/?id=134907987)指出，五角大廈7月21日公布，陸軍中士史溫頓（Michael Emmanuel Swinton，30歲，來自北卡羅來納州費耶特維爾）7月19日（週六）在伊拉克埃爾比勒空軍基地執行無人機處置任務時陣亡，他隸屬駐布拉格堡第108防空砲兵旅第2營第55防空砲兵團D連。加上約旦攻擊的2死1失蹤，美軍自2月28日戰事爆發以來，陣亡人數累計達至少17人、逾500人受傷。[半島電視台報導](https://www.aljazeera.com/news/2026/7/21/us-launches-tenth-consecutive-night-of-attacks-on-iran)則指出，伊朗官方統計，美軍空襲已造成該國至少50人死亡、517人受傷，較稍早通報的500人受傷再上修。
+
+## 戰火波及科威特、巴林　電廠淡化廠遇襲起火
+
+伊朗革命衛隊宣稱已展開報復。[愛爾蘭時報報導](https://www.irishtimes.com/world/middle-east/2026/07/20/us-carry-out-10th-consecutive-night-of-strikes-on-iran-bringing-all-out-war-closer/)指出，革命衛隊聲稱已攻擊科威特境內的美軍海馬士（HIMARS）飛彈系統與雷達設施，並稱摧毀了巴林境內的雷達與防空系統；[半島電視台報導](https://www.aljazeera.com/news/2026/7/21/us-launches-tenth-consecutive-night-of-attacks-on-iran)指出，巴林遭無人機攻擊瞄準的是該國空中交通系統，巴林外交部表示此舉「危害民航安全」。
+
+科威特當地受損情形則由官方證實。據[PBS新聞時刻報導](https://www.pbs.org/newshour/world/expansion-of-u-s-strikes-on-iran-leads-to-more-retaliation-across-the-gulf)與[ABC新聞報導](https://abcnews.com/International/live-updates/iran-live-updates-kuwait-attacked-bahrain-sounds-sirens/?id=134907987)，科威特電力部門表示，伊朗已連續4天對該國發動攻擊，多座發電廠與海水淡化設施遭擊中起火，當局已預防性關閉部分發電機組，以保護設備並維持電力與供水系統穩定，目前未公布具體傷亡人數。約旦則相對有驚無險：[愛爾蘭時報報導](https://www.irishtimes.com/world/middle-east/2026/07/20/us-carry-out-10th-consecutive-night-of-strikes-on-iran-bringing-all-out-war-closer/)指出，約旦週一晚間擊落3枚來襲的伊朗飛彈，未造成財物損害或人員傷亡。
+
+## 外交仍未熄火：巴基斯坦斡旋　白宮稱空襲將持續至川普喊停
+
+戰事升溫的同時，外交管道並未完全關閉。[ABC新聞報導](https://abcnews.com/International/live-updates/iran-live-updates-kuwait-attacked-bahrain-sounds-sirens/?id=134907987)指出，伊朗內政部長週一已抵達巴基斯坦首都伊斯蘭馬巴德，展開為期兩天的會談，巴基斯坦作為斡旋要角，該國內政部長對外表態樂觀，稱「上帝保佑，我們會有好消息」。不過[愛爾蘭時報報導](https://www.irishtimes.com/world/middle-east/2026/07/20/us-carry-out-10th-consecutive-night-of-strikes-on-iran-bringing-all-out-war-closer/)指出，白宮同時表態，空襲將持續進行，直到川普總統決定停止；戰事升溫也牽動油價，布倫特原油交易價已升破每桶88美元，美國國內汽油平均價來到每加侖4美元。
+
+## 更新時間軸
+
+- （更新 2026-07-21：美軍空襲伊朗已連續進行到第10個夜晚，鎖定大不里士附近、班達爾伊瑪目霍梅尼、錫里克、傑斯克、科納拉克、恰巴哈爾等地，伊朗官媒稱大不里士附近至少1人喪生；五角大廈證實陸軍中士史溫頓7月19日在伊拉克埃爾比勒基地執行無人機處置任務時陣亡，美軍陣亡累計達17人；伊朗革命衛隊宣稱已報復性攻擊科威特與巴林，科威特電力部門證實多座電廠與海水淡化廠遭擊中起火；伊朗內政部長已赴巴基斯坦斡旋兩天會談，白宮則稱空襲將持續至川普決定停止。）（[Al Jazeera](https://www.aljazeera.com/news/2026/7/21/us-launches-tenth-consecutive-night-of-attacks-on-iran)、[The Irish Times](https://www.irishtimes.com/world/middle-east/2026/07/20/us-carry-out-10th-consecutive-night-of-strikes-on-iran-bringing-all-out-war-closer/)、[PBS NewsHour](https://www.pbs.org/newshour/world/expansion-of-u-s-strikes-on-iran-leads-to-more-retaliation-across-the-gulf)、[ABC News](https://abcnews.com/International/live-updates/iran-live-updates-kuwait-attacked-bahrain-sounds-sirens/?id=134907987)）
+- （2026-07-19）美軍中央司令部證實，伊朗7月17日以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地，造成2名美軍陣亡、1人失蹤、4人送醫；川普下令美軍18日晚間對伊朗革命衛隊目標展開報復空襲，伊朗最高領袖警告將給予「永誌不忘的教訓」。（[WWSB/AP](https://www.mysuncoast.com/2026/07/18/2-troops-are-dead-1-is-missing-after-iranian-attacks-base-jordan-us-military-says/)、[Military Times](https://www.militarytimes.com/flashpoints/2026/07/18/2-us-troops-killed-1-missing-after-iranian-missile-drone-attack-in-jordan/)、[Air & Space Forces Magazine](https://www.airandspaceforces.com/2-americans-killed-one-missing-as-iran-attacks-u-s-base-in-jordan/)、[The National](https://www.thenationalnews.com/news/us/2026/07/18/two-us-troops-killed-and-one-missing-following-iranian-attack-in-jordan/)）

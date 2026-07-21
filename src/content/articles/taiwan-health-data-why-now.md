@@ -124,7 +124,7 @@ coverImageCredit: ""
 
 <p><strong>政府有份、五家上市大廠背書，是不是就比較可信？</strong><br>信任的依據是動機不是背景。政府自己推十年沒解，證明有政府不是保證；[連 IBM 投入巨資的 Watson 醫療事業，最後也因為做不到臨床落地而賤賣收場](https://slate.com/technology/2022/01/ibm-watson-health-failure-artificial-intelligence.html)。體量越大、越能讓資料變現，資料被當成資產的壓力反而越大，所以要盯的是退出與二次利用的界線，不是股東名單。</p>
 
-<p><strong>台灣健康網路平台會不會像 23andMe 那樣，公司出事資料就被賣？</strong><br>這正是最該盯的風險。[23andMe 破產後，1,500 萬人的基因資料在破產程序中變成可出售資產](https://www.npr.org/2025/03/24/nx-s1-5338622/23andme-bankruptcy-genetic-data-privacy)。要防這種事，靠的不是公司承諾，是事前把二次利用界線、破產時資料如何處置、以及你的退出權，用制度和契約先寫死。</p>
+<p><strong>台灣健康網路平台會不會像 23andMe 那樣，公司出事資料就被賣？</strong><br>這正是最該盯的風險。[23andMe 破產後，1,500 萬人的基因資料在破產程序中變成可出售資產](https://www.npr.org/2025/03/24/nx-s1-5338622/23andme-bankruptcy-genetic-data-privacy)。要防這種事，靠的不是公司承諾，是事前把二次利用界線、破產時資料如何處置、以及你的退出權，用制度和契約先鎖定。</p>
 
 ---
 

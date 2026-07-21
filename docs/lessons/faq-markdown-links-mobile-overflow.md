@@ -28,7 +28,8 @@
 
 ## 怎麼避免重犯 / 相關
 
-- **寫 FAQ 一律 `<a href>`**：newsroom SKILL 的 FAQ 樣板本來就是 `<a href>`；產線/agent 若改用 Markdown 連結就會中這個坑。審稿時檢查 FAQ 區有沒有 `](http`。
+- **寫 FAQ 一律 `<a href>`**：newsroom SKILL 的 FAQ 樣板本來就是 `<a href>`；產線/agent 若改用 Markdown 連結就會中這個坑。
+- **已加機械 gate（2026-07-21）**：`scripts/validate-content.mjs`（prebuild 硬 gate）會掃每篇文章的原生 `<p>` 行，發現 `[文字](url)` 就 **exit 1 擋 build**，並指出檔案:行號。以後產線再犯會被擋下，不靠人記得審。
 - **手機版面驗收用真實寬度量 `scrollWidth`**，不要只靠肉眼；元凶常在摺疊線下（表格/裸網址/長字）。
 - **潛在擴散**：其它文章的 FAQ 若也用 Markdown 連結，會有同樣的「露裸網址」問題（連結仍可被 CSS 斷行、不再破版，但顯示不美）。要根治可全站掃 `<h2>常見問題` 區段內的 `](http` 批次轉 `<a>`。
 - 相關：`PERFORMANCE.md`（效能鐵則）、站規「頁面 body 不得水平捲動、寬內容各自 overflow-x:auto」。

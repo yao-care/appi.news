@@ -214,6 +214,22 @@ for (const { file, data, error, slug } of articleParsed) {
   if (!slugOwners.has(slug)) slugOwners.set(slug, []);
   slugOwners.get(slug).push(rel(file));
 
+  // 原生 <p>（FAQ 答案）內不得用 Markdown 連結：[文字](url) 寫在 <p> 行內不會被 Markdown
+  // 渲染，會露出裸網址、在手機撐破版面。一律改 <a href="url">文字</a>。
+  // 為什麼＝docs/lessons/faq-markdown-links-mobile-overflow.md
+  readFileSync(file, 'utf8')
+    .split('\n')
+    .forEach((line, i) => {
+      if (!/<p[ >]/.test(line)) return;
+      const m = line.match(/\[[^\]]+\]\((?:https?:\/\/|\/)[^)]+\)/);
+      if (m) {
+        err(
+          file,
+          `L${i + 1}：原生 <p>（FAQ）內用了 Markdown 連結「${m[0].slice(0, 36)}…」，不會渲染且露裸網址。改成 <a href="網址">文字</a>`,
+        );
+      }
+    });
+
   // A. 必填欄位
   for (const f of ['title', 'description', 'publishDate', 'category']) {
     if (data[f] == null || (typeof data[f] === 'string' && data[f].trim() === '')) {

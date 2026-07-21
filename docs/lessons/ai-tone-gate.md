@@ -53,3 +53,12 @@
 - **盤點存量**：`node scripts/check-ai-tone.mjs --all`（report-only，永不擋）。想清 123 篇破折號存量就照這份逐篇清、清一篇少一篇。
 - **其他自動線尚未接**（phase 2）：`international-write` / `lifestyle-civic` / `lifestyle-police` / `focus-esg` 各有自己的 commit 路徑，還沒串 `check-ai-tone`；要接就在各自 commit 前加一行 `spawnSync('node',['scripts/check-ai-tone.mjs', 檔])`、非 0 就 die。
 - 相關：`content-refs-and-local-build-parity.md`（本機只跑 `astro build` 會跳過 prebuild 硬 gate）、`link-and-content-validation.md`（另一類內容假陽性）。
+
+## 追記（2026-07-21）：frontmatter 的 title／description 才是最大盲點
+
+同一批三部曲，站長最後爆的點不是內文，是**標題**：「健康資料平台的信任，是一行行做出來的：…」這種文青副標，是自動產線生的、掛在最顯眼的位置，卻**連跑三輪去 AI 腔都沒被看到**。原因跟本文主旨同源、但更尖：
+
+- **`title`／`description`／`highlights`／`coverAlt` 全是 AI 生成的散文，卻沒有任何東西掃它們。** `check-ai-tone.mjs` 明文**剝掉 frontmatter**（避免 `---`、URL 假陽性），人工去 AI 腔又只盯內文。結果整頁最多人先看到的字（標題）反而是唯一沒查的。
+- **教訓一**：去 AI 腔複查（SKILL 步驟三.7）與任何人工 review，**第一個看 title，不是內文**。標題的 AI 味＝冒號文青副標（「X，是……的：正題」）、「從 A 看 B」、évocative 排比。
+- **教訓二**：標題／description 沒法用機械 gate 硬擋（冒號副標在正當標題也常見，誤判高），只能靠 prompt 自檢＋人眼。所以自動產線的 title 品質，是目前**沒有安全網**的一段，要當它天生不可信、逐篇人工看過再上。
+- **教訓三（立場不只是文風）**：站長真正要的不是「把破折號拿掉」，是**立場**——分享幫忙而非評論打壓、邀請參與而非旁觀「該不該」、樂觀看待台灣進步。去 AI 腔到位、立場錯了照樣被打回。標題定調要先問「這篇是站在什麼位置對誰說話」，再遣詞。

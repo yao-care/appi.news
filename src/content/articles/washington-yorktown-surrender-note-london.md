@@ -41,7 +41,7 @@ coverImageCredit: "John Trumbull《康沃利斯投降》— 公眾領域，引�
 
 <figure>
   <img src="/images/washington-yorktown-surrender-note-london-s1.webp" width="960" height="1165" loading="lazy" decoding="async" alt="吉爾伯特·斯圖爾特繪喬治·華盛頓肖像（1803年）">
-  <figcaption>喬治·華盛頓肖像。Gilbert Stuart 繪（1803年）— 公眾領域，引用自 <a href="https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg">Wikimedia Commons</a>。</figcaption>
+  <figcaption>喬治·華盛頓肖像。Gilbert Stuart 繪（1803年），公眾領域，引用自 <a href="https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg">Wikimedia Commons</a>。</figcaption>
 </figure>
 
 策劃這次展覽的英國國家檔案館策展人康寧漢博士（Dr Sean Cunningham）形容這封信分量十足。據[《愛爾蘭新聞報》](https://www.irishnews.com/news/uk/george-washington-note-accepting-british-surrender-to-go-on-display-in-london-UCA3VAPZWNJOLDPJJSQN227AOA/)，他表示：「對一封如此簡短、扼要、直指重點的訊息來說，這封信對後世世世代代帶來了巨大的後果。」他並指出，這代表「英國意識到他們將不得不放棄那將成為美利堅合眾國的十三個殖民地的時刻」。

@@ -30,7 +30,7 @@ draft: false
 ---
 很多人在談手機 AI 的時候，第一個想到的是「語音助理變聰明了」或者「可以問它問題」。但 Google 在 2026 年 6 月隨 Android 17 一起發布的 Gemini Intelligence，要解決的問題不在這裡。
 
-這件事要先把問題定義清楚。手機 AI 過去的角色是「工具」，用戶下指令，系統執行一個動作，完成。Gemini Intelligence 想往前走一層——讓 AI 從被動回應轉換為主動感知情境、跨應用協調並代理執行。這個轉換背後牽涉到系統整合層次、硬體門檻和落地能力的真實邊界，是這篇文章要拆解的核心。
+這件事要先把問題定義清楚。手機 AI 過去的角色是「工具」，用戶下指令，系統執行一個動作，完成。Gemini Intelligence 想往前走一層，讓 AI 從被動回應轉換為主動感知情境、跨應用協調並代理執行。這個轉換背後牽涉到系統整合層次、硬體門檻和落地能力的真實邊界，是這篇文章要拆解的核心。
 
 ![Android 手機展示 Gemini Intelligence 主動代理介面示意圖](/images/appi-news-194-1.webp)
 
@@ -58,7 +58,7 @@ Gemini Intelligence 要把這個循環擴展成「感知情境→規劃步驟→
 
 Rambler 整合在 Gboard 鍵盤內，解決的是語音輸入長期存在的落差問題：口語表達和書面訊息之間的距離。用戶可以用口語方式說出想法，包含猶豫、自我修正和贅詞，Rambler 提取核心意圖並整理成可直接傳送的文字。
 
-特別值得注意的是多語言支援：即便在單次說話中混用中文和英文，Rambler 仍然可以生成完整連貫的訊息。這對多語言日常使用者而言，是實用性明顯提升的功能。
+多語言支援也是這項功能的亮點：即便在單次說話中混用中文和英文，Rambler 仍然可以生成完整連貫的訊息。這對多語言日常使用者而言，是實用性明顯提升的功能。
 
 ### Create My Widget：自然語言建立主畫面小工具
 
@@ -109,7 +109,7 @@ Google 還要求裝置承諾至少 5 年作業系統更新，確保 Gemini Intel
 
 但這個設計有技術代價：需要更高規格的晶片和更大的 RAM，才能在不影響手機其他正常功能的前提下，讓本地模型常駐並即時推論。這解釋了為什麼 Gemini Intelligence 的硬體門檻比一般軟體功能高出許多。
 
-「Gemini 在用戶的指示下行動，任務完成時就停下，最後的確認永遠保留在用戶手中。」— Google Gemini Intelligence 官方說明，2026 年 5 月
+「Gemini 在用戶的指示下行動，任務完成時就停下，最後的確認永遠保留在用戶手中。」（Google Gemini Intelligence 官方說明，2026 年 5 月）
 
 在強調個人資料使用透明度的監管環境下，裝置端 AI 推論的設計取向預計會是未來幾年高端 Android 裝置的主要競爭維度，不只是 Google 的策略方向，也會影響其他 Android OEM 的硬體規格走向。
 
@@ -123,7 +123,7 @@ Google 還要求裝置承諾至少 5 年作業系統更新，確保 Gemini Intel
 
 第三個限制是第三方 App 整合深度。目前跨應用自動化在 Google 自家服務（Gmail、Calendar、Chrome、Gboard）的效果最好，第三方 App 的整合需要開發者配合支援對應的 API，短期內仍會有明顯落差。這個問題不是 Gemini Intelligence 本身的能力限制，而是生態整合成熟度的問題，需要時間累積。
 
-「Pixel 9 之所以無法支援 Gemini Intelligence，根本原因不在晶片速度不夠，而在於 Gemini Nano v3 需要特定的記憶體架構才能在裝置端載入並運行，這是硬體設計層面的差異，軟體更新無法補足。」— How-To Geek 技術分析，2026 年 5 月
+「Pixel 9 之所以無法支援 Gemini Intelligence，根本原因不在晶片速度不夠，而在於 Gemini Nano v3 需要特定的記憶體架構才能在裝置端載入並運行，這是硬體設計層面的差異，軟體更新無法補足。」（How-To Geek 技術分析，2026 年 5 月）
 
 - Gemini Intelligence 是 Google 把 Gemini AI 整合進 Android OS 底層的套件，包含五項核心功能：跨應用任務自動化、Rambler 語音精修、Create My Widget、智慧 Autofill、Magic Cue
 - 完整功能需要同時滿足：旗艦級晶片（Tensor G5 或同等）、12GB 以上 RAM、支援 Gemini Nano v3；Pixel 9 系列和多數 2025 旗艦不在名單內

@@ -51,7 +51,7 @@ draft: false
 
 唯一被各方點名為進展的，是正義轉型機制。[據環境議題媒體 Down To Earth 報導](https://www.downtoearth.org.in/climate-change/bonn-climate-conference-2026-countries-push-for-un-led-just-transition-mechanism-but-finance-remains-a-sticking-point)，這項機制在 2025 年的 COP30 已於巴西貝倫決議設立，波昂談判聚焦於把它的範疇、目的與治理方式落實到可運作的程度，各國至少八度就不同環節交鋒。報導指出，開發中國家希望它能為各國的正義轉型路徑導入高度優惠性的資金，非洲集團主張採無償補助與非債務工具；已開發國家則傾向把它定位為知識交流的平台，雙方對機制定位的根本歧異仍未解。
 
-最終波昂留下一份交付 COP31 的文本套件。[氣候行動網絡歐洲分部（CAN Europe）的整理](https://caneurope.org/news/sb64/)也將「貝倫—安塔利亞機制」列為 COP31 的關鍵預期成果，但同時提醒，這套文本尚未把機制的資金來源與運作細節談定，能否在年底前真正可用，取決於後續政治意願。
+最終波昂留下一份交付 COP31 的文本套件。[氣候行動網絡歐洲分部（CAN Europe）的整理](https://caneurope.org/news/sb64/)也將「貝倫－安塔利亞機制」列為 COP31 的關鍵預期成果，但同時提醒，這套文本尚未把機制的資金來源與運作細節談定，能否在年底前真正可用，取決於後續政治意願。
 
 <img src="/images/bonn-climate-talks-2026-stall-road-to-cop31-s1.webp" width="960" height="639" loading="lazy" decoding="async" alt="太陽能板與電力設施，象徵能源轉型與正義轉型議題">
 

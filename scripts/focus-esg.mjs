@@ -120,7 +120,7 @@ function main() {
       continue;
     }
     // 去 AI 腔硬 gate：命中機械可判的簽名句就剔除這篇，不拖垮整批。為什麼＝docs/lessons/ai-tone-gate.md。
-    const _tone = spawnSync('node', ['scripts/check-ai-tone.mjs', file], { encoding: 'utf8' });
+    const _tone = spawnSync('node', ['scripts/check-content.mjs', file], { encoding: 'utf8' });
     if (_tone.status !== 0) {
       console.log(`  ⚠️ 剔除 ${v.slug}：去 AI 腔硬 tell，不發這篇、不拖垮整批\n${_tone.stdout || _tone.stderr || ''}`);
       if (existsSync(file)) rmSync(file);

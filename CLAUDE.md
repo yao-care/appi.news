@@ -88,7 +88,12 @@
 ## 內容紀律（文章產出）
 
 - **全文繁體中文 + 台灣用語**（軟體 / 程式 / 網路 / 演算法 / 人工智慧…），禁中國用語（軟件 / 程序 / 網絡 / 算法 / 人工智能…）。標題、正文、frontmatter 皆適用。
-- **去 AI 腔**：禁破折號（`—`/`--`）、禁 AI 套語（「不僅…更…」「值得注意的是」「總而言之」自問自答等）、禁空泛升華與翻譯腔。完整守則見 `.claude/skills/newsroom/SKILL.md` 與 persona。
+- **去 AI 腔（機械守門＝統一引擎）**：禁破折號（`—`/`--`）、禁 AI 套語（「不僅…更…」「值得注意的是」「總而言之」自問自答等）、禁空泛升華與翻譯腔。完整守則見 `.claude/skills/newsroom/SKILL.md` 與 persona。
+  - **內容守門 gate＝`scripts/check-content.mjs`**（2026-07-21 起，取代已移除的 `check-ai-tone.mjs`；接在 `pnpm build` 的 `check-design` 之後，`pnpm check:content` 可單獨跑、`pnpm check:content:all` 盤點存量、五條產線 `spawnSync` 產文後自檢）。它是**跨站統一引擎**：核心規則在 `.claude/skills/new-astro-site/templates/check-content.mjs`（跨站共識：不僅…更／值得注意的是／換句話說／模糊引用／模板化開頭…），appi 特化規則在本 repo 檔頭 `SITE_ERROR_TELLS`／`SITE_WARN_LAYERS`（破折號升 ERROR、自我辯白 meta 旁白家族）。
+  - **兩級判定**：ERROR（單一命中即 exit 1 擋 build）；WARN（軟訊號分詞彙/句式/結構/語氣四層，**單檔跨 ≥3 層才升 ERROR**，否則只印）。
+  - **grandfather**：預設只掃「相對 `origin/main` 的變動檔」中的 `src/**/*.md(x)`，存量 465 篇不受硬 gate 約束；抓不到 git base（CI 淺 checkout）→ 掃 0 檔 exit 0，永不誤擋。
+  - **維護分工**：跨站規則改核心模板（一處全站生效，改完同步各站）；appi 專屬只改 `scripts/check-content.mjs` 檔頭 SITE 區塊，**別動核心**。新增硬 tell 只加零誤判的，語氣類留 WARN。
+  - **⚠️ 統一核心比舊 appi gate 嚴，對 cron 新產文有過嚴風險（待觀察）**：核心把多條 appi 舊版沒有／只列 WARN 的句型升為 **ERROR**，實測存量命中量大＝appi 新聞體常態用語：`不是X而是Y`（673 行）、`模糊引用`（研究顯示/專家認為，144）、`不只是…更是/而是`（68）、`換句話說`（64）、`並非…而是`（29）。**存量靠 grandfather 不受影響，但每日 cron 產的新文會走這關**——若這幾條（尤以 `不是X而是Y`、`研究顯示`）開始頻繁擋掉合理新聞稿，處置順序：①先在 newsroom persona/SKILL 步驟三.7 教模型避開（首選，正本清源）；②SITE 擴充點只能「加嚴」或用 `ALLOW` 整行白名單，**無法**把核心 ERROR 降級為 WARN——真要放寬得改核心模板（影響全站，需跨站權衡）。目前**預設不動核心**，先觀察 cron 命中情形再議（脈絡見 `docs/lessons/ai-tone-gate.md` 2026-07-21 追記）。
 - **所有資料附 inline 來源超連結**，且**全文每條超連結逐條查證可連線**，不留死連結。
 - 日更走 `/newsroom` skill；作者人格與跨文記憶在 `.claude/skills/newsroom/persona.md`、`author-memory.json`。
 - 新文必填 `tags`（餵 keywords / RSS / llms 索引）；文章規格與欄位以 `src/content.config.ts` 為唯一準據。

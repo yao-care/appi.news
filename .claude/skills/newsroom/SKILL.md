@@ -53,10 +53,10 @@ description: APPI News 科技類日更引擎。輸入 /newsroom 後找議題，�
 5. 封面圖：同法 `node scripts/get-image.mjs --topic "<本篇主題>" --context "<摘要>" --query "<英文關鍵字>" --out public/covers/<slug>.webp`（封面多為概念圖，預設走圖庫優先；若封面主體是人物才加 `--people`，並同樣帶 `--caption/--alt/--article-context`）。frontmatter 填 `coverImage: "covers/<slug>.webp"` + `coverAlt`；**若回傳 `mode:"stock"`，另填 `coverImageCredit: "<回傳的 credit>"`**（圖庫署名）。
 6. frontmatter：`slug / title / description / category / subcategory / tags / highlights / references / author: "lightman" / sourceType: "ai-assisted" / disclaimerType`。先設 `status: "draft"`（排程待步驟四）。
    - **slug 規範（鐵律）**：必為**語意化英文 kebab-case**（小寫、`a-z0-9`、連字號），3～6 個單字、一眼看得出主題；專有名詞用通用英文（台積電=`tsmc`、輝達/NVIDIA=`nvidia`、鴻海=`foxconn`、世界盃=`world-cup`、聯準會=`fed`、歐盟=`eu`、健保=`nhi`、中職=`cpbl`）。**禁止** `post-NNN`、流水號、中文、拼音、`article`/`news` 這類無意義 slug。frontmatter 的 `slug` 與檔名 `<slug>.md` 必須一致。先用 `ls src/content/articles/ | grep <slug>` 確認不撞既有 slug，撞了就換角度。
-7. **去 AI 腔文風複查**（產檔前必過，違反即改；`node scripts/check-ai-tone.mjs <檔>` 是機械守門，硬 tell 會 exit 1 擋 build，但它只擋機械可判的那幾條，語氣類仍靠這份清單自檢）：
-   - 禁破折號（— / ── / --），改句號、逗號、冒號或拆句。**（check-ai-tone 硬擋）**
+7. **去 AI 腔文風複查**（產檔前必過，違反即改；`node scripts/check-content.mjs <檔>` 是統一內容守門引擎，兩級判定：ERROR 硬 tell 會 exit 1 擋 build、WARN 軟訊號單檔跨 ≥3 層才升 ERROR，語氣類多屬 WARN 仍靠這份清單自檢）：
+   - 禁破折號（— / ── / --），改句號、逗號、冒號或拆句。**（check-content 硬擋，appi SITE 特化 ERROR）**
    - 禁 AI 套語：「不僅…更…」「不只是…而是…」「從 A 到 B 到 C」排比、「值得注意的是」「事實上」「總而言之」「歸根結底」、自問自答「那麼…呢？」。
-   - **禁自我辯白式 meta 旁白**（這次踩坑的家族，最像 AI）：「先講清楚我為什麼有資格…」「先揭露，免得你覺得我在夾帶」「這不是我危言聳聽」「說實話／老實承認／坦白講」當自證旁白、「不怕你笑」。要揭露利害關係就**直接一句講完**，不要替自己辯護或預設讀者的懷疑。**（check-ai-tone 硬擋「免得你」「我在夾帶」「不怕你笑」等簽名句）**
+   - **禁自我辯白式 meta 旁白**（這次踩坑的家族，最像 AI）：「先講清楚我為什麼有資格…」「先揭露，免得你覺得我在夾帶」「這不是我危言聳聽」「說實話／老實承認／坦白講」當自證旁白、「不怕你笑」。要揭露利害關係就**直接一句講完**，不要替自己辯護或預設讀者的懷疑。**（check-content 硬擋「免得你」「我在夾帶」「不怕你笑」等簽名句，見 SITE 特化）**
    - **禁模板感結構**：每節結尾都用同一句式拔高／「放大到○○」（整篇讀起來像填空模板）、「這是一個 X，也是一個 Y」、「其實是同一件事的不同切面」這種空泛收束、跨篇重複同一句金句（例：兩篇都收在「判斷權在你，不在平台的新聞稿」）。
    - 禁 AI 語氣：過度正向、四平八穩無立場、空泛升華、結尾硬拔高、翻譯腔。
    - 禁 buzzword：賦能、解鎖、釋放潛力、顆粒度、閉環。

@@ -118,7 +118,7 @@ async function main() {
     if (missing.length) die(`引用的本地圖檔不存在（${missing.join('、')}），不發佈（改動留工作區）`);
     // 去 AI 腔硬 gate：機械可判的簽名句（破折號／自我辯白旁白）命中就不發，留工作區待改。
     // 為什麼＝docs/lessons/ai-tone-gate.md。
-    const _tone = spawnSync('node', ['scripts/check-ai-tone.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
+    const _tone = spawnSync('node', ['scripts/check-content.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
     if (_tone.status !== 0) die(`去 AI 腔 gate 未過，不發佈（改動留工作區待改）：\n${_tone.stdout || _tone.stderr || ''}`);
   }
 

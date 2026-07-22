@@ -6,7 +6,9 @@ import {
   getPublishedArticles,
   getAuthorMap,
   byCategory,
+  articleSlug,
 } from '@/utils/content';
+import { itemListLd } from '@/utils/jsonld';
 
 const PAGE_SIZE = 18;
 
@@ -39,12 +41,19 @@ const authorNames = new Map(
 const inCat = byCategory(all, category.slug);
 const start = (page - 1) * PAGE_SIZE;
 const pageArticles = inCat.slice(start, start + PAGE_SIZE);
+
+const ld = itemListLd(
+  Astro.site,
+  pageArticles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
+  { name: `${category.name}最新文章（第 ${page} 頁）` },
+);
 ---
 <BaseLayout
   title={`${category.name}（第 ${page} 頁）`}
   description={category.description}
   path={`/${category.slug}/page/${page}/`}
   ogImage={`og/${category.slug}.png`}
+  jsonld={ld}
 >
   <CategoryChannel
     category={category}

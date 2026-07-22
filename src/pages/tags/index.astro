@@ -1,0 +1,102 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
+import {
+  getPublishedArticles,
+  tagStats,
+  slugify,
+  isIndexableTag,
+} from '@/utils/content';
+import { url } from '@/utils/url';
+import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
+
+const all = await getPublishedArticles();
+// 只列出達可索引門檻的標籤（單篇薄標籤頁為 noindex，不從索引頁連過去）。
+const tags = tagStats(all).filter((t) => isIndexableTag(t.count));
+
+const ld = [
+  breadcrumbLd(Astro.site, [
+    { name: '首頁', path: '/' },
+    { name: '標籤', path: '/tags/' },
+  ]),
+  itemListLd(
+    Astro.site,
+    tags.map((t) => ({ name: `#${t.tag}`, path: `/tags/${slugify(t.tag)}/` })),
+    { name: 'APPI News 標籤' },
+  ),
+];
+---
+<BaseLayout
+  title="標籤"
+  description={`APPI News 的文章標籤索引，共 ${tags.length} 個常用標籤，可依主題快速找到相關報導。`}
+  path="/tags/"
+  jsonld={ld}
+>
+  <div class="container tags-index">
+    <Breadcrumbs items={[{ name: '標籤' }]} />
+    <header class="page-head">
+      <h1>標籤</h1>
+      <p class="tags-lead">依主題瀏覽 APPI News 的文章，共 {tags.length} 個常用標籤。</p>
+    </header>
+
+    <ul class="tag-cloud">
+      {
+        tags.map((t) => (
+          <li>
+            <a href={url(`/tags/${slugify(t.tag)}/`)}>
+              <span class="tag-name">#{t.tag}</span>
+              <span class="tag-count">{t.count}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .tags-index {
+    padding-top: 28px;
+  }
+  .page-head {
+    margin: 18px 0 24px;
+  }
+  .tags-lead {
+    margin: 10px 0 0;
+    font-size: var(--text-sm);
+    color: var(--ink-2);
+    line-height: 1.7;
+  }
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .tag-cloud a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--text-sm);
+    color: var(--ink-2);
+    background: var(--bg-soft);
+    border: 1px solid var(--line-2);
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: var(--font-sans);
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .tag-cloud a:hover {
+    background: var(--bg-tint);
+    color: var(--appi-brand);
+    border-color: var(--appi-brand);
+  }
+  .tag-count {
+    font-size: var(--text-xs);
+    color: var(--ink-3);
+    font-weight: 600;
+  }
+</style>

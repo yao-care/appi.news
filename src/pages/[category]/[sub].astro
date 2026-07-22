@@ -9,7 +9,9 @@ import {
   getAuthorMap,
   byCategory,
   bySubcategory,
+  articleSlug,
 } from '@/utils/content';
+import { itemListLd } from '@/utils/jsonld';
 
 export async function getStaticPaths() {
   const all = await getPublishedArticles();
@@ -36,12 +38,19 @@ const authorNames = new Map(
   [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
 );
 const articles = bySubcategory(byCategory(all, category.slug), sub.slug);
+
+const ld = itemListLd(
+  Astro.site,
+  articles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
+  { name: `${sub.name}（${category.name}）` },
+);
 ---
 <BaseLayout
   title={`${sub.name}｜${category.name}`}
   description={`APPI News「${category.name}」頻道中所有「${sub.name}」的文章，共 ${articles.length} 篇。`}
   path={`/${category.slug}/${sub.slug}/`}
   ogImage={`og/${category.slug}.png`}
+  jsonld={ld}
 >
   <div class="container" style="padding-top:28px;">
     <Breadcrumbs items={[{ name: category.name, path: `/${category.slug}/` }, { name: sub.name }]} />

@@ -83,6 +83,57 @@ function articleLastmods() {
 const lastmods = articleLastmods();
 
 /**
+ * 未達可索引門檻（被少於 TAG_INDEX_MIN 篇文章使用）的標籤頁路徑集合。
+ * 這些薄標籤頁在 tags/[slug].astro 仍會產出（掛 noindex，避免文章 TagList 連結 404），
+ * 但**不可進 sitemap**（否則等於鼓勵爬蟲抓一堆近乎重複的單篇薄頁、稀釋爬取預算）。
+ * 與 src/utils/content.ts 的 TAG_INDEX_MIN / isIndexableTag 同一門檻與 slugify 規則，
+ * 這裡於 build 期以純 fs 計算給 sitemap filter 用；改門檻兩邊要同步。
+ */
+const TAG_INDEX_MIN = 2; // 對齊 src/utils/content.ts 的 TAG_INDEX_MIN
+function tagSlugify(s) {
+  return s
+    .trim()
+    .toLowerCase()
+    .replace(/[\\/:*?"<>#%|]+/g, '-')
+    .replace(/\s+/g, '-')
+    .replace(/-{2,}/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+function thinTagPaths() {
+  const dir = new URL('./src/content/articles/', import.meta.url);
+  const now = Date.now();
+  const counts = new Map();
+  for (const f of readdirSync(dir)) {
+    if (!f.endsWith('.md') && !f.endsWith('.mdx')) continue;
+    const raw = readFileSync(new URL(f, dir), 'utf-8');
+    const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if (!m) continue;
+    let parsed;
+    try {
+      parsed = yaml.load(m[1]);
+    } catch {
+      continue;
+    }
+    if (!parsed || typeof parsed !== 'object') continue;
+    const d = /** @type {Record<string, any>} */ (parsed);
+    // 與 getPublishedArticles 同樣的公開判斷：draft/archived 或未到 publishDate 者不計入
+    if (d.draft || d.status === 'draft' || d.status === 'archived') continue;
+    if (!d.publishDate || new Date(d.publishDate).getTime() > now) continue;
+    const tags = Array.isArray(d.tags) ? d.tags : [];
+    for (const t of tags) {
+      if (typeof t !== 'string') continue;
+      counts.set(t, (counts.get(t) ?? 0) + 1);
+    }
+  }
+  const paths = new Set();
+  for (const [tag, count] of counts) {
+    if (count < TAG_INDEX_MIN) paths.add(`/tags/${tagSlugify(tag)}/`);
+  }
+  return paths;
+}
+const thinTags = thinTagPaths();
+
+/**
  * ── 換網域只需改這裡 ──────────────────────────────────────────────
  * 目前：自訂網域 → https://appi.news/（DNS 已切到 GitHub Pages、public/CNAME 已就位）
  * 若要退回 GitHub 專案頁 https://yao-care.github.io/appi.news/：
@@ -151,10 +202,20 @@ export default defineConfig({
   integrations: [
     svelte(),
     sitemap({
-      // 排除 admin，以及排程草稿預覽頁（noindex，不可進 sitemap）。
-      filter: (page) =>
-        !page.includes('/admin') &&
-        ![...previewPaths].some((p) => page.endsWith(p)),
+      // 排除 admin、排程草稿預覽頁（noindex），以及未達門檻的薄標籤頁（noindex）。
+      filter: (page) => {
+        if (page.includes('/admin')) return false;
+        if ([...previewPaths].some((p) => page.endsWith(p))) return false;
+        // 標籤 slug 含 CJK，sitemap 給的 URL 可能是 percent-encoded，解碼後才對得上 thinTags。
+        let pathname;
+        try {
+          pathname = decodeURIComponent(new URL(page).pathname);
+        } catch {
+          pathname = page;
+        }
+        if (thinTags.has(pathname)) return false;
+        return true;
+      },
       // 為文章頁補 lastmod（updatedDate ?? publishDate），幫爬蟲分配抓取預算。
       // 不設 priority/changefreq —— Google 已明說忽略，加了只是雜訊。
       serialize(item) {

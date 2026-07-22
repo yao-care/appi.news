@@ -41,7 +41,7 @@ originalContribution: "以『解對題 vs 解錯題』框架，把 Claude Design
 
 AI 設計工具能不能用，先看的不是它做的圖多漂亮，是你花錢買的那份額度撐不撐得住一次正常工作。Claude Design 六月的改版，修的正是這一格：把「25 分鐘就燒掉 80% 週額度」這種沒人敢用的成本結構壓下來。這不是把設計功能做更炫，是把單位成本從不可預期改成可預期。對任何靠訂閱制賣 AI 的產品，這一格才是命門。
 
-先講清楚那個把問題引爆的場景。PCWorld 的記者拿 Claude Pro 方案試用，[花大約 25 分鐘做出一個網頁原型的三個變體，就燒掉了 80% 的週額度](https://www.pcworld.com/article/3117811/i-tried-claude-design-for-half-an-hour-im-already-locked-out-for-a-week.html)，接著一個操作失誤要重建檔案，再五分鐘週額度直接歸零。他的結論很直接：這是又一個吃 token 吃到 Pro 用戶「還沒開始用就用完」的 Claude 產品。
+先講清楚那個把問題引爆的場景。PCWorld 的記者拿 Claude Pro 方案試用，[花大約 25 分鐘做出一個網頁原型的三個變體，就燒掉了 80% 的週額度](https://www.pcworld.com/article/3117811/i-tried-claude-design-for-half-an-hour-im-already-locked-out-for-a-week.html)，接著一個操作失誤要重建檔案，再五分鐘週額度直接歸零。他的結論很直接：這是又一個吃 token 吃到 Pro 使用者「還沒開始用就用完」的 Claude 產品。
 
 <img src="/images/claude-design-cost-predictability-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="電量或進度條快速見底，象徵週用量額度迅速耗盡">
 
@@ -57,7 +57,7 @@ AI 設計工具能不能用，先看的不是它做的圖多漂亮，是你花�
 
 <img src="/images/claude-design-cost-predictability-s4.webp" width="867" height="1300" loading="lazy" decoding="async" alt="計算機與預算規劃文件，象徵單位成本可預期性">
 
-這件事對台灣做 AI 產品的團隊有直接的參考價值。很多本地團隊在包 SaaS、包 AI 工具，定價時最容易漏算的就是「單位動作的真實算力成本」，尤其是這種每一步都重跑一次的生成式功能。訂閱制一旦把成本估歪，要嘛自己流血補貼，要嘛像 Claude Design 一開始那樣，把限制轉嫁到用戶身上、逼出一堆「還沒用就鎖住」的抱怨。這股張力不只發生在設計工具。[Anthropic 六月就被告上法院](https://www.engadget.com/2194626/anthropic-hit-with-lawsuit-over-its-claude-max-usage-limits/)，一位 Max 20x 用戶主張廣告說的 5x、20x 用量根本兌現不了，他一次五小時的 coding session 就吃掉 15% 週額度。[官方的用量說明也只叫你到設定裡看進度條、每週重置](https://support.claude.com/en/articles/9797557-usage-limit-best-practices)，把「這次動作會花多少」留給用戶自己猜。我先前寫過[開源 coding agent 反過來壓過商業工具](/articles/opencode-overtakes-commercial-ide/)，背後其實是同一條線：當商業工具的成本結構讓人不敢放手用，可預期、可控的替代方案就有空間。
+這件事對台灣做 AI 產品的團隊有直接的參考價值。很多本地團隊在包 SaaS、包 AI 工具，定價時最容易漏算的就是「單位動作的真實算力成本」，尤其是這種每一步都重跑一次的生成式功能。訂閱制一旦把成本估歪，要嘛自己流血補貼，要嘛像 Claude Design 一開始那樣，把限制轉嫁到使用者身上、逼出一堆「還沒用就鎖住」的抱怨。這股張力不只發生在設計工具。[Anthropic 六月就被告上法院](https://www.engadget.com/2194626/anthropic-hit-with-lawsuit-over-its-claude-max-usage-limits/)，一位 Max 20x 使用者主張廣告說的 5x、20x 用量根本兌現不了，他一次五小時的 coding session 就吃掉 15% 週額度。[官方的用量說明也只叫你到設定裡看進度條、每週重置](https://support.claude.com/en/articles/9797557-usage-limit-best-practices)，把「這次動作會花多少」留給使用者自己猜。我先前寫過[開源 coding agent 反過來壓過商業工具](/articles/opencode-overtakes-commercial-ide/)，背後其實是同一條線：當商業工具的成本結構讓人不敢放手用，可預期、可控的替代方案就有空間。
 
 <img src="/images/claude-design-cost-predictability-s5.webp" width="960" height="640" loading="lazy" decoding="async" alt="訂閱方案與付款示意，象徵 AI SaaS 的定價與成本結構">
 

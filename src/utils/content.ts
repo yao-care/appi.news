@@ -221,6 +221,20 @@ export interface TagStat {
   count: number;
 }
 
+/**
+ * 標籤頁可索引門檻：只有被「至少這麼多篇」文章使用的標籤，其彙整頁才值得進索引。
+ * 低於門檻的單篇標籤頁仍會產出（避免文章 TagList 連結 404、擋 check:links），
+ * 但掛 noindex 且不進 sitemap —— 這些近乎重複的薄頁若全進索引會稀釋爬取預算、
+ * 拉低全站品質評價。與 astro.config.mjs 的 thinTagPaths()（sitemap 排除）同一門檻，
+ * 改這裡務必同步改那邊。
+ */
+export const TAG_INDEX_MIN = 2;
+
+/** 標籤是否達到可索引門檻 */
+export function isIndexableTag(count: number): boolean {
+  return count >= TAG_INDEX_MIN;
+}
+
 export function tagStats(articles: Article[]): TagStat[] {
   const map = new Map<string, number>();
   for (const a of articles) {

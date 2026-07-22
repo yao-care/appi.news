@@ -20,6 +20,25 @@ highlights:
   - "高雄鹽埕分局員警趕赴大港橋，耐心勸說協助跨坐橋梁護欄的女子返回安全處所"
   - "臺北內湖分局康寧派出所員警察覺癱坐車內的計程車駕駛低血糖不適，即時通報救護送醫"
   - "臺北捷運警察隊調閱監視器，半小時內尋回一路漂流20站、從象山站到北投站的男童手機"
+references:
+  - title: "橫山警冒巴威颱風徒步涉水救出坍方受困11人新聞稿"
+    url: "https://www.hchpb.gov.tw/Tw/Common/BulletinDetail?filter=0EC3F79A-710D-4986-A51B-D9AA24862C8C&id=079aab51-f8bd-4169-89f6-e7f042cfd2b1&SiteID=6d0e3b6b-4623-45b4-ba6e-395e3b79eae0"
+    publisher: "新竹縣政府警察局"
+  - title: "屏東社皮警颱風天護送迷途七旬翁返家新聞稿"
+    url: "https://www.pthg.gov.tw/pcpb/News_Content.aspx?n=A58BECEB18B19997&sms=B37B36F2CFEB3E64&s=632942BD52354093"
+    publisher: "屏東縣政府警察局"
+  - title: "高雄福德二路派出所接手CPR救回無心跳婦人新聞稿"
+    url: "https://kcpd.kcg.gov.tw/News_Content.aspx?n=3FAEF3DDE4DD3CD0&sms=4ED7718667AAD9B5&s=B1157CE5912BFCC3"
+    publisher: "高雄市政府警察局"
+  - title: "高雄鹽埕警大港橋耐心勸阻跨坐護欄女子新聞稿"
+    url: "https://kcpd.kcg.gov.tw/News_Content.aspx?n=3FAEF3DDE4DD3CD0&sms=4ED7718667AAD9B5&s=9A8F1F81A926C8D0"
+    publisher: "高雄市政府警察局"
+  - title: "臺北內湖康寧派出所察覺駕駛低血糖即時救援新聞稿"
+    url: "https://police.gov.taipei/News_Content.aspx?n=0B762199E50C4AB2&sms=72544237BBE4C5F6&s=AC265AFE9974CE23"
+    publisher: "臺北市政府警察局"
+  - title: "臺北捷運警察隊半小時尋回漂流20站男童手機新聞稿"
+    url: "https://police.gov.taipei/News_Content.aspx?n=0B762199E50C4AB2&sms=72544237BBE4C5F6&s=E46EAE3D807BD36F"
+    publisher: "臺北市政府警察局"
 ---
 
 這一週正值巴威颱風襲台，各地警局公布的暖心案例裡，有不少是風雨中的即時救援。新竹縣員警冒著坍方徒步涉水，救出受困山區的十一人；屏東員警在風雨裡護送迷途老翁返家。也有與天氣無關的日常守護：高雄員警接手施作CPR救回無心跳的婦人、耐心勸下跨坐橋梁護欄的女子，臺北員警察覺駕駛突發低血糖、捷運警半小時內尋回漂流二十站的手機。本篇整理其中六則具代表性的好人好事，內容均依各地警察局對外公開的新聞稿，並附上原文出處。

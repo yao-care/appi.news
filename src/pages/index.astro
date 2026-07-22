@@ -16,6 +16,7 @@ import {
 } from '@/utils/content';
 import { url } from '@/utils/url';
 import { formatDate } from '@/utils/date';
+import { itemListLd } from '@/utils/jsonld';
 
 const all = await getPublishedArticles();
 const authorMap = await getAuthorMap();
@@ -43,9 +44,16 @@ const latest = dedupe.take(all, 12, false);
 
 const heroCover = hero ? coverImageFor(hero) : '';
 const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
+
+// 首頁精選＋最新文章的 ItemList，讓答案引擎能列舉本站當前的重點內容（依畫面順序）。
+const homeListItems = [...(hero ? [hero] : []), ...secondary, ...latest].map((a) => ({
+  name: a.data.title,
+  path: `/articles/${articleSlug(a)}/`,
+}));
+const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選與最新文章' });
 ---
 
-<BaseLayout title="首頁" path="/" ogImage="og/home.png">
+<BaseLayout title="首頁" path="/" ogImage="og/home.png" jsonld={homeLd}>
   <!-- 網站介紹 Hero 區：承接從 header 移下來的中文定位 + 站台介紹 -->
   <section class="intro">
     <HeroNetwork />

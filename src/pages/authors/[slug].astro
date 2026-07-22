@@ -13,10 +13,11 @@ import {
   authorHasPage,
   authorHasColumnPage,
   authorAvatar,
+  articleSlug,
 } from '@/utils/content';
 import { getColumns } from '@/utils/content';
 import { url, asset } from '@/utils/url';
-import { personLd, breadcrumbLd } from '@/utils/jsonld';
+import { personLd, breadcrumbLd, itemListLd } from '@/utils/jsonld';
 
 export async function getStaticPaths() {
   const authors = await getAuthors();
@@ -74,6 +75,18 @@ const ld = [
     { name: '作者群', path: '/authors/' },
     { name: author.data.name, path },
   ]),
+  ...(articles.length > 0
+    ? [
+        itemListLd(
+          Astro.site,
+          articles.map((a) => ({
+            name: a.data.title,
+            path: `/articles/${articleSlug(a)}/`,
+          })),
+          { name: `${author.data.name}的文章` },
+        ),
+      ]
+    : []),
 ];
 ---
 <BaseLayout

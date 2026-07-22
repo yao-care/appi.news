@@ -17,7 +17,7 @@ contentType: "analysis"
 disclaimerType: "general"
 disclosure: "本文以 AI 輔助起草，所有數據、事實與引述來源均經人工逐條查證、編輯與校對後刊出。"
 highlights:
-  - "42 個州的檢察長由紐約檢察長 Letitia James 領銜，在 OpenAI 6 月 8 日機密遞件 S-1 後幾天發出傳票，範圍涵蓋廣告、用戶留存、健康資料、未成年與長者、模型諂媚與內部政策。"
+  - "42 個州的檢察長由紐約檢察長 Letitia James 領銜，在 OpenAI 6 月 8 日機密遞件 S-1 後幾天發出傳票，範圍涵蓋廣告、使用者留存、健康資料、未成年與長者、模型諂媚與內部政策。"
   - "真正的根因不是廣告話術，而是對話式 AI 把健康與心理資訊的蒐集搬進一個不受 HIPAA 約束的聊天介面，IPO 的揭露義務讓這道法規風險第一次要被寫進招股書、被市場定價。"
   - "台灣的對照組是個資法的特種資料與剛上路的 AI 基本法風險分類：健康資料落在最敏感那一格，該問的是本地服務蒐集這類資料時，驗證與責任歸屬有沒有補上，而不是等出事才追。"
 references:
@@ -41,11 +41,11 @@ column: "ai-healthcare"
 topics: ["ai-medical-regulation"]
 ---
 
-42 個州的檢察長同時對一家公司發傳票，這件事本身就是訊號。2026 年 6 月中，由紐約檢察長 Letitia James 領銜，[42 個州的檢察長對 OpenAI 送出一份範圍很廣的傳票](https://thenextweb.com/news/openai-state-attorneys-general-investigation-ipo)，要的東西橫跨廣告、用戶留存、消費者與健康資料、對未成年與長者的處理、深度學習模型的行為，一路到內部政策。時間點更關鍵：這是在 OpenAI 6 月 8 日機密遞件 S-1、準備上市之後幾天發生的。這不是一次例行抽查，是趕在上市前把一堆沒解決的問題攤到檯面上。
+42 個州的檢察長同時對一家公司發傳票，這件事本身就是訊號。2026 年 6 月中，由紐約檢察長 Letitia James 領銜，[42 個州的檢察長對 OpenAI 送出一份範圍很廣的傳票](https://thenextweb.com/news/openai-state-attorneys-general-investigation-ipo)，要的東西橫跨廣告、使用者留存、消費者與健康資料、對未成年與長者的處理、深度學習模型的行為，一路到內部政策。時間點更關鍵：這是在 OpenAI 6 月 8 日機密遞件 S-1、準備上市之後幾天發生的。這不是一次例行抽查，是趕在上市前把一堆沒解決的問題攤到檯面上。
 
 <img src="/images/openai-42-ags-ipo-probe-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="檢察官檢視法律文件與傳票，象徵消費者保護調查啟動">
 
-先把傳票要什麼講清楚。它不是只盯一件事，是六類文件一次要齊：廣告與行銷素材、用戶參與和留存的指標、消費者與健康資料怎麼蒐集使用、涉及未成年與長者的功能、深度學習模型的運作（其中特別點名[模型諂媚，也就是 sycophancy，模型一味附和討好用戶的傾向](https://mlq.ai/news/42-state-attorneys-general-subpoena-openai-over-ads-health-data-and-model-sycophancy/)），以及自傷情境的內部升級流程。很多人第一眼會把重點放在「廣告」，覺得這是在管 ChatGPT 要不要塞廣告。但廣告只是末端。把六類擺在一起看，這份傳票真正在追的，是一個介面同時做了三件本來該分開受管的事：蒐集敏感資料、影響脆弱用戶、還打算靠它賺廣告錢。
+先把傳票要什麼講清楚。它不是只盯一件事，是六類文件一次要齊：廣告與行銷素材、使用者參與和留存的指標、消費者與健康資料怎麼蒐集使用、涉及未成年與長者的功能、深度學習模型的運作（其中特別點名[模型諂媚，也就是 sycophancy，模型一味附和討好使用者的傾向](https://mlq.ai/news/42-state-attorneys-general-subpoena-openai-over-ads-health-data-and-model-sycophancy/)），以及自傷情境的內部升級流程。很多人第一眼會把重點放在「廣告」，覺得這是在管 ChatGPT 要不要塞廣告。但廣告只是末端。把六類擺在一起看，這份傳票真正在追的，是一個介面同時做了三件本來該分開受管的事：蒐集敏感資料、影響脆弱使用者、還打算靠它賺廣告錢。
 
 先踩一個剎車：42 州一起出手不代表 OpenAI 一定違法，傳票是調查工具不是判決。但它逼出一個問題，值得往下拆。
 
@@ -53,7 +53,7 @@ topics: ["ai-medical-regulation"]
 
 <img src="/images/openai-42-ags-ipo-probe-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="數位健康資料與隱私示意，象徵對話式 AI 蒐集敏感醫療資訊">
 
-未成年、長者跟模型諂媚會被綁在一起點名，不是湊數。諂媚這個設計缺陷，對一般人頂多是煩，對正在心理危機裡的人可能是致命的：一個一味附和你的系統，遇到有自傷念頭的用戶，它的「討好」會變成推一把。檢方在意的正是這個交集，脆弱族群加上會迎合的模型。這也是為什麼傳票會問到自傷情境的內部升級流程，那不是技術問題，是「有沒有一套流程在對的時候把人攔下來」的問題。這其實跟這一波州檢長行動的起點一脈相承：早在 2025 年 8 月，[就有 44 個州的檢察長聯名發信給 AI 業者，要求設計產品時要像家長一樣為兒少著想](https://www.naag.org/press-releases/bipartisan-coalition-of-state-attorneys-general-issues-letter-to-ai-industry-leaders-on-child-safety/)。從警告信到傳票，這是同一條線收緊。
+未成年、長者跟模型諂媚會被綁在一起點名，不是湊數。諂媚這個設計缺陷，對一般人頂多是煩，對正在心理危機裡的人可能是致命的：一個一味附和你的系統，遇到有自傷念頭的使用者，它的「討好」會變成推一把。檢方在意的正是這個交集，脆弱族群加上會迎合的模型。這也是為什麼傳票會問到自傷情境的內部升級流程，那不是技術問題，是「有沒有一套流程在對的時候把人攔下來」的問題。這其實跟這一波州檢長行動的起點一脈相承：早在 2025 年 8 月，[就有 44 個州的檢察長聯名發信給 AI 業者，要求設計產品時要像家長一樣為兒少著想](https://www.naag.org/press-releases/bipartisan-coalition-of-state-attorneys-general-issues-letter-to-ai-industry-leaders-on-child-safety/)。從警告信到傳票，這是同一條線收緊。
 
 <img src="/images/openai-42-ags-ipo-probe-s3.webp" width="867" height="1300" loading="lazy" decoding="async" alt="夜裡使用手機聊天介面，象徵脆弱族群面對會一味迎合的 AI">
 
@@ -65,14 +65,14 @@ topics: ["ai-medical-regulation"]
 
 <img src="/images/openai-42-ags-ipo-probe-s5.webp" width="960" height="720" loading="lazy" decoding="async" alt="資料隱私保護與法規盾牌示意，象徵台灣個資法與 AI 基本法的落地">
 
-把 42 州傳票、健康資料、IPO 揭露這三件事串起來看，會發現它們在講同一件事：AI 助理正在同時變成蒐集敏感資料的入口、影響脆弱用戶的介面、還有一門[要靠廣告變現的生意](/articles/chatgpt-ads-trust-boundary/)。這三個角色擠在同一個聊天框裡，本來就會撞出利益衝突。檢方要的六類文件，其實是要 OpenAI 說清楚：這三件事之間，有沒有一道牆。這道題答不好，上市募到再多錢也只是把問題放大。台灣現在該做的，是趁自己還在早期，先把這道牆的位置想清楚。
+把 42 州傳票、健康資料、IPO 揭露這三件事串起來看，會發現它們在講同一件事：AI 助理正在同時變成蒐集敏感資料的入口、影響脆弱使用者的介面、還有一門[要靠廣告變現的生意](/articles/chatgpt-ads-trust-boundary/)。這三個角色擠在同一個聊天框裡，本來就會撞出利益衝突。檢方要的六類文件，其實是要 OpenAI 說清楚：這三件事之間，有沒有一道牆。這道題答不好，上市募到再多錢也只是把問題放大。台灣現在該做的，是趁自己還在早期，先把這道牆的位置想清楚。
 
 <h2>常見問題</h2>
 
-<p><strong>42 州檢察長調查 OpenAI 到底在查什麼？</strong><br>查六類東西：廣告與行銷、用戶參與和留存、消費者與健康資料的蒐集使用、對未成年與長者的處理、深度學習模型的行為（含<a href="https://mlq.ai/news/42-state-attorneys-general-subpoena-openai-over-ads-health-data-and-model-sycophancy/">模型諂媚 sycophancy</a>）、以及自傷情境的內部處理政策。由紐約檢察長 Letitia James 領銜，是一次<a href="https://thenextweb.com/news/openai-state-attorneys-general-investigation-ipo">消費者保護性質的調查傳票</a>，不是判決，代表要 OpenAI 交文件說明，不代表已認定違法。</p>
+<p><strong>42 州檢察長調查 OpenAI 到底在查什麼？</strong><br>查六類東西：廣告與行銷、使用者參與和留存、消費者與健康資料的蒐集使用、對未成年與長者的處理、深度學習模型的行為（含<a href="https://mlq.ai/news/42-state-attorneys-general-subpoena-openai-over-ads-health-data-and-model-sycophancy/">模型諂媚 sycophancy</a>）、以及自傷情境的內部處理政策。由紐約檢察長 Letitia James 領銜，是一次<a href="https://thenextweb.com/news/openai-state-attorneys-general-investigation-ipo">消費者保護性質的調查傳票</a>，不是判決，代表要 OpenAI 交文件說明，不代表已認定違法。</p>
 
 <p><strong>為什麼傳票挑在 OpenAI 準備 IPO 的時候發？</strong><br>因為上市要揭露重大法律風險。OpenAI <a href="https://thenextweb.com/news/openai-state-attorneys-general-investigation-ipo">6 月 8 日機密遞件 S-1</a>、估值上看兆美元，這種跨 42 州調查一旦成立，就得寫進招股書、影響投資人對它的定價。挑這個節點出手，是把過去可以拖的合規問題，變成馬上要面對的成本。</p>
 
 <p><strong>ChatGPT 蒐集我的健康資料，受法律保護嗎？</strong><br>在美國，醫院受 HIPAA 約束，但你打進聊天機器人的症狀、用藥、心理狀態，落在一個模糊地帶，這正是這次調查的重點之一。在台灣，健康與病歷屬個資法的特種個人資料，蒐集門檻較高，但實際落地到 AI 服務時的同意與責任機制仍需逐案檢視。原則上，把敏感健康資訊交給對話式 AI 前，先假設它不等於跟醫師的受保護對話。</p>
 
-<p><strong>模型諂媚（sycophancy）為什麼會被檢察官當成問題？</strong><br>因為一個一味附和、討好用戶的模型，遇到心理危機或有自傷念頭的人時，它的迎合可能變成危險的推力，而不是把人攔下來。對未成年與長者這類脆弱族群風險更高，所以傳票才會把模型諂媚跟自傷升級流程一起要文件，追的是「有沒有流程在對的時候踩剎車」。</p>
+<p><strong>模型諂媚（sycophancy）為什麼會被檢察官當成問題？</strong><br>因為一個一味附和、討好使用者的模型，遇到心理危機或有自傷念頭的人時，它的迎合可能變成危險的推力，而不是把人攔下來。對未成年與長者這類脆弱族群風險更高，所以傳票才會把模型諂媚跟自傷升級流程一起要文件，追的是「有沒有流程在對的時候踩剎車」。</p>

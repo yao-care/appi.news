@@ -164,6 +164,31 @@ export function isGoogleNewsEligible(contentType: string, sourceType?: string): 
   return true;
 }
 
+/**
+ * 列表頁（首頁精選、分類、標籤、專題、作者、全部文章）用的 ItemList 結構化資料。
+ * 採 Google「摘要頁」格式：每個 ListItem 只帶 position + url + name，指向各自的內頁，
+ * 讓搜尋／答案引擎能乾淨列舉本頁彙整的文章，補上原本列表頁只有 WebSite/Org 的缺口。
+ * items 依畫面顯示順序給入（position 由此決定）。
+ */
+export function itemListLd(
+  site: SiteUrl,
+  items: { name: string; path: string }[],
+  opts?: { name?: string },
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    ...(opts?.name ? { name: opts.name } : {}),
+    numberOfItems: items.length,
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: absoluteUrl(it.path, site),
+      name: it.name,
+    })),
+  };
+}
+
 export function faqLd(items: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',

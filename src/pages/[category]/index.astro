@@ -6,8 +6,10 @@ import {
   getPublishedArticles,
   getAuthorMap,
   byCategory,
+  articleSlug,
 } from '@/utils/content';
 import { url } from '@/utils/url';
+import { itemListLd } from '@/utils/jsonld';
 
 const PAGE_SIZE = 18;
 
@@ -29,6 +31,12 @@ const authorNames = new Map(
 const inCat = byCategory(all, category.slug);
 const totalPages = Math.max(1, Math.ceil(inCat.length / PAGE_SIZE));
 const pageArticles = inCat.slice(0, PAGE_SIZE);
+
+const ld = itemListLd(
+  Astro.site,
+  pageArticles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
+  { name: `${category.name}最新文章` },
+);
 ---
 <BaseLayout
   title={`${category.name}｜${category.nameEn}`}
@@ -37,6 +45,7 @@ const pageArticles = inCat.slice(0, PAGE_SIZE);
   ogImage={`og/${category.slug}.png`}
   rssHref={`/${category.slug}/rss.xml`}
   rssTitle={`${category.name} RSS`}
+  jsonld={ld}
 >
   {category.slug === 'sports' && (
     <section class="sports-submit-cta">

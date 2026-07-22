@@ -14,6 +14,25 @@ sourceType: author
 contentType: column
 disclaimerType: general
 readingTime: 16
+references:
+  - title: "世界盃季軍戰的由來與英法對戰賽制背景說明"
+    url: "https://www.aljazeera.com/sports/2026/7/16/world-cup-why-is-there-a-third-place-playoff-between-france-and-england"
+    publisher: "半島電視台"
+  - title: "英法季軍戰兩隊爭取的名次與獎金分析"
+    url: "https://www.aljazeera.com/sports/2026/7/17/world-cup-third-place-playoff-what-are-france-and-england-playing-for"
+    publisher: "半島電視台"
+  - title: "FIFA面臨取消季軍戰呼聲的報導"
+    url: "https://sports.yahoo.com/articles/fifa-facing-calls-cancel-third-030000571.html"
+    publisher: "Yahoo 運動"
+  - title: "季軍戰存廢爭議的評論分析"
+    url: "https://www.football365.com/news/opinion-world-cup-third-place-play-off-morocco-croatia-nonsense"
+    publisher: "Football365"
+  - title: "借勢行銷（Newsjacking）的定義與成功案例"
+    url: "https://www.searchenginejournal.com/newsjacking-examples/476182/"
+    publisher: "Search Engine Journal"
+  - title: "Google『以讀者為優先』實用內容建立指引"
+    url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+    publisher: "Google 搜尋中心"
 draft: false
 ---
 世界盃季軍戰，英格蘭對法國這場比賽都還沒開踢，「季軍戰到底有沒有存在必要」的討論就已經在網路上吵起來。這不是新鮮事，通常啦，每屆世界盃四強賽一結束，這個話題就會被重新翻出來吵一輪。這篇整理季軍戰引發爭議的原因、球員普遍不想踢的理由、支持取消的論點，以及賽制未來是否可能調整，最後也順便聊聊，這種全民都在討論的話題，中小企業能怎麼借勢操作內容行銷。

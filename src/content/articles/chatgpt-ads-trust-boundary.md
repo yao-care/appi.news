@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT 開賣廣告位：OpenAI 上線自助 Ads Manager，AI 助理正式變成廣告載體"
 slug: "chatgpt-ads-trust-boundary"
-description: "OpenAI 五月開放 ChatGPT 自助廣告後台，加入 CPC 競價、取消 5 萬美元門檻，廣告投向美加澳紐的免費用戶。真正的重點不是視窗底下那格廣告，而是 AI 助理過去被信任的理由被裝上了一個相反的動機。"
+description: "OpenAI 五月開放 ChatGPT 自助廣告後台，加入 CPC 競價、取消 5 萬美元門檻，廣告投向美加澳紐的免費使用者。真正的重點不是視窗底下那格廣告，而是 AI 助理過去被信任的理由被裝上了一個相反的動機。"
 excerpt: "AI 助理原本值得信，不是因為它聰明，是因為機制上沒有騙你的理由。廣告生意種下的，正好是那個相反的理由。要盯的是誘因，不是那格 banner。"
 publishDate: "2026-07-10T08:00:00+08:00"
 category: "tech"
@@ -17,7 +17,7 @@ contentType: "analysis"
 disclaimerType: "general"
 disclosure: "本文以 AI 輔助起草，所有數據、事實與引述來源均經人工逐條查證、編輯與校對後刊出。"
 highlights:
-  - "OpenAI 五月開放 ChatGPT 自助廣告後台（Ads Manager）beta，加入 CPC 競價、取消先前 5 萬美元的最低投放門檻，廣告投向美加澳紐的 Free 與 Go 免費用戶，Plus/Pro/Enterprise 付費方案維持無廣告。"
+  - "OpenAI 五月開放 ChatGPT 自助廣告後台（Ads Manager）beta，加入 CPC 競價、取消先前 5 萬美元的最低投放門檻，廣告投向美加澳紐的 Free 與 Go 免費使用者，Plus/Pro/Enterprise 付費方案維持無廣告。"
   - "真正的風險不是聊天視窗底下那格標示清楚的廣告，而是廣告生意替 AI 裝上一個把答案往某方向偏的結構性動機；AI 原本被信任，靠的正是機制上沒有騙你的理由。"
   - "「答案獨立」是 OpenAI 自畫自守、外部無法驗證的承諾而非保證；在今年約 25 億、2030 年衝上 1000 億美元的廣告營收階梯壓力下，這條自律界線的漂移風險只會升高。"
 references:
@@ -55,7 +55,7 @@ OpenAI 當然知道這件事，所以才立「答案獨立」原則，把廣告�
 
 <img src="/images/chatgpt-ads-trust-boundary-s3.webp" width="960" height="640" loading="lazy" decoding="async" alt="抽象的數位信任與連線示意，象徵 AI 的信任基礎在於機制上沒有隱瞞的理由">
 
-而且這個承諾要頂住的壓力，只會愈來愈大。OpenAI 給投資人的數字是[今年廣告收入約 25 億美元，2030 年衝到 1000 億美元](https://thetechportal.com/2026/04/09/openai-projects-100bn-in-ad-revenue-by-2030-around-2-5bn-in-2026-report)，中間 2027 年 110 億、2028 年 250 億、2029 年 530 億一路往上爬，前提是 ChatGPT 週活躍用戶要到 27.5 億。廣告不是副業，是被寫進核心財務模型的主引擎。[光是二月開跑的試投，不到兩個月就做出約 1 億美元的年化營收](https://futurism.com/artificial-intelligence/openai-money-chatgpt-ads)。當一家公司愈來愈依賴廣告收入，維持那條「答案不受廣告影響」的自律界線，成本就愈來愈高，而想去模糊它的誘因就愈來愈強。自己畫、自己守的界線，在商業壓力下會漂移，這在靠廣告養大的媒體史上看過太多次。對照組很清楚：[Anthropic 在超級盃打廣告，主打 Claude 不放廣告](https://futurism.com/artificial-intelligence/openai-money-chatgpt-ads)，把「不靠廣告」直接當成信任賣點。這不是誰對誰錯，是兩種不同的信任結構在分岔。
+而且這個承諾要頂住的壓力，只會愈來愈大。OpenAI 給投資人的數字是[今年廣告收入約 25 億美元，2030 年衝到 1000 億美元](https://thetechportal.com/2026/04/09/openai-projects-100bn-in-ad-revenue-by-2030-around-2-5bn-in-2026-report)，中間 2027 年 110 億、2028 年 250 億、2029 年 530 億一路往上爬，前提是 ChatGPT 週活躍使用者要到 27.5 億。廣告不是副業，是被寫進核心財務模型的主引擎。[光是二月開跑的試投，不到兩個月就做出約 1 億美元的年化營收](https://futurism.com/artificial-intelligence/openai-money-chatgpt-ads)。當一家公司愈來愈依賴廣告收入，維持那條「答案不受廣告影響」的自律界線，成本就愈來愈高，而想去模糊它的誘因就愈來愈強。自己畫、自己守的界線，在商業壓力下會漂移，這在靠廣告養大的媒體史上看過太多次。對照組很清楚：[Anthropic 在超級盃打廣告，主打 Claude 不放廣告](https://futurism.com/artificial-intelligence/openai-money-chatgpt-ads)，把「不靠廣告」直接當成信任賣點。這不是誰對誰錯，是兩種不同的信任結構在分岔。
 
 <img src="/images/chatgpt-ads-trust-boundary-s4.webp" width="960" height="540" loading="lazy" decoding="async" alt="向上攀升的營收成長示意，象徵廣告變成核心生意後自律界線承受的壓力">
 

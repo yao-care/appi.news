@@ -8,7 +8,10 @@ import {
   byTag,
   tagStats,
   slugify,
+  isIndexableTag,
+  articleSlug,
 } from '@/utils/content';
+import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
 
 export async function getStaticPaths() {
   const all = await getPublishedArticles();
@@ -26,16 +29,42 @@ const authorNames = new Map(
   [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
 );
 const articles = byTag(all, tag);
+const path = `/tags/${slugify(tag)}/`;
+
+// 未達門檻的單篇標籤頁：noindex（薄頁不進索引），且由 astro.config.mjs 排除於 sitemap。
+const indexable = isIndexableTag(count);
+
+const ld = [
+  breadcrumbLd(Astro.site, [
+    { name: '首頁', path: '/' },
+    { name: '標籤', path: '/tags/' },
+    { name: `#${tag}`, path },
+  ]),
+  ...(indexable
+    ? [
+        itemListLd(
+          Astro.site,
+          articles.map((a) => ({
+            name: a.data.title,
+            path: `/articles/${articleSlug(a)}/`,
+          })),
+          { name: `標籤：${tag}` },
+        ),
+      ]
+    : []),
+];
 ---
 <BaseLayout
   title={`#${tag}`}
   description={`所有標記「${tag}」的 APPI News 文章，共 ${count} 篇。`}
-  path={`/tags/${slugify(tag)}/`}
+  path={path}
+  noindex={!indexable}
+  jsonld={ld}
 >
   <div class="container" style="padding-top:28px;">
-    <Breadcrumbs items={[{ name: '標籤' }, { name: `#${tag}` }]} />
+    <Breadcrumbs items={[{ name: '標籤', path: '/tags/' }, { name: `#${tag}` }]} />
     <header class="section-head" style="margin-top:18px;">
-      <h2>#{tag}</h2>
+      <h1>#{tag}</h1>
       <span class="more-link">{count} 篇文章</span>
     </header>
     <div class="card-grid card-grid--4">

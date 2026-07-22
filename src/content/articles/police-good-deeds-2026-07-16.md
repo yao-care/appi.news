@@ -18,6 +18,19 @@ highlights:
   - "高雄前鎮分局復興路派出所徹夜調閱上百支監視器，結合線上警網及鄰近分局協尋，尋回跨越4個行政區走失的八旬老婦"
   - "臺北中正第二分局南海派出所員警發現腳部受傷、疑似失蹤人口的老婦，通知救護評估後協助與家屬團聚"
   - "臺北大安分局和平東路派出所員警攙扶徘徊街頭、體力不支的八旬翁，確認身分後親自護送返家"
+references:
+  - title: "高雄楠梓警徹夜追查失聯家屬並媒合社福急難救助新聞稿"
+    url: "https://kcpd.kcg.gov.tw/News_Content.aspx?n=3FAEF3DDE4DD3CD0&sms=4ED7718667AAD9B5&s=5C82A279CFB60FD3"
+    publisher: "高雄市政府警察局"
+  - title: "高雄前鎮警徹夜協尋跨4行政區尋回八旬走失婦新聞稿"
+    url: "https://kcpd.kcg.gov.tw/News_Content.aspx?n=3FAEF3DDE4DD3CD0&sms=4ED7718667AAD9B5&s=161D4B255FB98EE8"
+    publisher: "高雄市政府警察局"
+  - title: "臺北中正二分局南海所助腳傷失蹤老婦與家屬團聚新聞稿"
+    url: "https://police.gov.taipei/News_Content.aspx?n=0B762199E50C4AB2&sms=72544237BBE4C5F6&s=8BAB3C7FD859253B"
+    publisher: "臺北市政府警察局"
+  - title: "臺北大安分局和平東路所護送街頭徘徊八旬翁返家新聞稿"
+    url: "https://police.gov.taipei/News_Content.aspx?n=0B762199E50C4AB2&sms=72544237BBE4C5F6&s=42523AF9261F3DB9"
+    publisher: "臺北市政府警察局"
 ---
 
 這幾天警局公布的暖心案例，多半不是驚險的即時搶救，而是靠耐心一路追查到底：高雄員警為了尋人徹夜調閱監視器，找到人後還接著聯繫社福資源；臺北員警則在街頭一次次確認身分，把迷途的長者安全送回家人身邊。本篇整理其中四則具代表性的好人好事，內容均依各地警察局對外公開的新聞稿，並附上原文出處。

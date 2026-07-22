@@ -21,6 +21,15 @@ describe('classifyImageSource — 白名單把關', () => {
     expect(isAllowedImageSource('https://media.defense.gov/x.jpg')).toBe(true);
   });
 
+  it('台灣政府網站命中（政府網站資料開放宣告，逐頁確認）', () => {
+    const r = classifyImageSource('https://www.cwa.gov.tw/Data/typhoon/x.jpg');
+    expect(r.allowed).toBe(true);
+    expect(r.source.id).toBe('tw-gov-open');
+    expect(r.source.perFile).toBe(true);
+    // 不能誤放非政府網域的相似字尾
+    expect(classifyImageSource('https://fakegov.tw/x.jpg').allowed).toBe(false);
+    expect(classifyImageSource('https://gov.tw.evil.com/x.jpg').allowed).toBe(false);
+  });
   it('外媒原圖一律擋（reuters / nytimes / 一般新聞站）', () => {
     expect(isAllowedImageSource('https://www.reuters.com/x.jpg')).toBe(false);
     expect(isAllowedImageSource('https://static01.nytimes.com/x.jpg')).toBe(false);

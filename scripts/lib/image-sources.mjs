@@ -47,6 +47,16 @@ export const EMBED_SOURCES = [
     perFile: false,
   },
   {
+    // 2026-07 站長核可擴充：台灣政府網站多適用「政府網站資料開放宣告」（CC BY 4.0 相容），
+    // 用於本地新聞（停班停課、防疫、警政、交通）的官方照片/圖資。perFile=true：
+    // 頁面上標示「版權為第三方所有」或另有授權聲明的照片不適用，起草端須確認該頁宣告。
+    id: 'tw-gov-open',
+    match: (h) => h === 'gov.tw' || h.endsWith('.gov.tw'),
+    license: '政府網站資料開放宣告（CC BY 4.0 相容）',
+    creditHint: '<機關全銜>（政府網站資料開放宣告）',
+    perFile: true,
+  },
+  {
     id: 'unsplash',
     match: (h) => h.endsWith('unsplash.com'),
     license: 'Unsplash License（免費可商用）',

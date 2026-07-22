@@ -28,6 +28,14 @@ export const PHOTO_HARD_CLAUSES =
   + 'no revealing or suggestive outfits. The setting MUST look like Taiwan. '
   + 'Absolutely NO text, NO captions, NO logos, NO watermarks anywhere in the image.';
 
+/** 反套版硬條款（2026-07 站長回饋：AI 概念拼貼「同一女生＋飄浮元素＋色塊分割」套版感太重）
+ *  —— 一律機械附加：整張圖必須是「一個鏡頭拍下的單一真實場景」，禁止拼貼/蒙太奇。 */
+export const PHOTO_ANTI_TEMPLATE =
+  'The image MUST look like ONE single coherent real-world scene captured in a single camera frame, '
+  + 'exactly like a professional news photograph. Absolutely NO collage, NO photo montage, '
+  + 'NO split-color background panels, NO floating icons or objects, NO conceptual diagram elements, '
+  + 'NO repeated stock-template composition.';
+
 /** Avoid 清單（等價於 negative prompt，寫進 prompt 末尾） */
 export const PHOTO_AVOID =
   'Avoid: low quality, blurry, noise, over-processed plastic skin, over-smoothed skin, '
@@ -52,9 +60,65 @@ export function detailOk(text) {
   return String(text ?? '').split(/\s+/).filter(Boolean).length >= MIN_DETAIL_WORDS;
 }
 
-/** 展開後的細節 ＋ 固定技術規格 ＋ 硬性條款 ＋ Avoid 清單 → 最終 gpt-image prompt */
+/** 展開後的細節 ＋ 固定技術規格 ＋ 硬性條款 ＋ 反套版 ＋ Avoid 清單 → 最終 gpt-image prompt */
 export function composePhotoPrompt(detail) {
-  return `${PHOTO_TECH_SPEC}\n\n${String(detail ?? '').trim()}\n\n${PHOTO_HARD_CLAUSES}\n\n${PHOTO_AVOID}`;
+  return `${PHOTO_TECH_SPEC}\n\n${String(detail ?? '').trim()}\n\n${PHOTO_HARD_CLAUSES}\n\n${PHOTO_ANTI_TEMPLATE}\n\n${PHOTO_AVOID}`;
+}
+
+/* ── 多樣性輪轉（2026-07 站長回饋：不能十篇文章都同一個短髮女生＋課桌椅） ──
+   以 seed（建議用輸出檔路徑或 slug）決定本張圖的預設構圖/光線/人選/色調組合：
+   同一張圖重跑結果穩定（可重現），不同文章/不同張自然輪開。展開寫手可在與主題
+   衝突時覆寫（例如主題明確是長者健康就不硬套 20 代人選），但預設必須採用。 */
+export const VARIETY_POOLS = {
+  shot: [
+    'a tight waist-up shot with shallow depth of field',
+    'a full-length environmental shot that shows the real surroundings',
+    'an over-the-shoulder documentary angle',
+    'an eye-level candid medium shot',
+    'a slightly elevated three-quarter view of the scene',
+    'a close-up on hands and objects with the person softly out of focus behind',
+  ],
+  light: [
+    'soft window daylight from one side',
+    'warm late-afternoon golden light',
+    'bright even daylight',
+    'overcast diffused soft light',
+    'clean indoor ambient light with subtle warm accents',
+  ],
+  person: [
+    'a Taiwanese woman in her late 20s',
+    'a Taiwanese man in his 30s',
+    'a Taiwanese woman in her 40s',
+    'a Taiwanese man in his 50s',
+    'a Taiwanese woman in her early 30s',
+    'a Taiwanese man in his early 20s',
+    'a Taiwanese senior around 60, energetic and well-groomed',
+  ],
+  palette: [
+    'neutral tones with one muted accent color',
+    'warm earthy tones',
+    'cool clean tones',
+    'natural saturated daylight colors',
+  ],
+};
+
+/** djb2 字串雜湊（純函式；同 seed 恆同值） */
+export function seedHash(str) {
+  let h = 5381;
+  for (const c of String(str ?? '')) h = ((h * 33) + c.charCodeAt(0)) >>> 0;
+  return h;
+}
+
+/** 由 seed 決定本張圖的多樣性組合。回 {shot, light, person, palette}。 */
+export function varietyHints(seed) {
+  const h = seedHash(seed);
+  const pick = (arr, salt) => arr[(h >>> salt) % arr.length];
+  return {
+    shot: pick(VARIETY_POOLS.shot, 0),
+    light: pick(VARIETY_POOLS.light, 3),
+    person: pick(VARIETY_POOLS.person, 6),
+    palette: pick(VARIETY_POOLS.palette, 9),
+  };
 }
 
 /**
@@ -72,13 +136,22 @@ export function buildWriterPrompt(ctx, retryHint = false) {
   const message = (ctx.caption && ctx.caption.trim()) || ctx.brief;
   const topic = ctx.articleContext && ctx.articleContext.trim();
   const alt = (ctx.alt && ctx.alt.trim()) || '';
-  return `你是商業攝影與圖像生成的 prompt 專家。這是一篇文章要用的照片，把拍攝需求展開成一段可直接餵給圖像生成模型的**英文**攝影 prompt。${retry}
+  const v = ctx.variety;
+  const varietyBlock = v
+    ? `\n多樣性輪轉（本張圖指定的預設組合，避免每篇文章長得一樣；除非與主題明顯衝突，否則必須採用）：
+- 景別構圖：${v.shot}
+- 光線：${v.light}
+- 若畫面有人物，預設人選：${v.person}
+- 色調：${v.palette}\n`
+    : '';
+  return `你是資深**新聞攝影**與圖像生成的 prompt 專家。這是專業新聞網站文章的配圖，成品必須像**新聞媒體攝影記者實地拍下的照片**——真實可信的單一場景、紀實感的取景，讓讀者一眼看懂這段內容在講什麼。把拍攝需求展開成一段可直接餵給圖像生成模型的**英文**攝影 prompt。${retry}
 
-最高原則：照片裡**每一個具體細節**（人物的表情神態、動作、手上與周邊的物件、服裝、場景）都必須**服務「這張圖要傳達的訊息」與文章主題**，用來幫讀者看懂內容，不是為了畫面好看而堆砌。與主題無關的細節寧可不寫。
+最高原則：照片裡**每一個具體細節**（人物的表情神態、動作、手上與周邊的物件、服裝、場景）都必須**服務「這張圖要傳達的訊息」與文章主題**，用來幫讀者看懂內容，不是為了畫面好看而堆砌。與主題無關的細節寧可不寫。**整張圖是一個鏡頭拍下的一個真實場景**——嚴禁把主題元素拼貼堆疊（禁止飄浮的分子/圖示/時鐘沙漏、禁止色塊分割背景、禁止蒙太奇）。
 ${topic ? `\n文章主題：${topic}` : ''}
 這張圖要傳達的訊息（最重要，所有細節都要呼應它）：${message}
 拍攝需求（構圖起點）：${ctx.brief}
 畫面描述：${alt}
+${varietyBlock}
 
 選角與造型基準（最重要的品質分水嶺）：人物是**保養得宜、有造型感的現代台灣人**——像高質感生活雜誌的受訪者，不是圖庫衛教照裡憔悴、素顏、穿鬆垮舊衣的路人。年齡跟文章讀者群走，但中年要寫成「優雅輕熟、保養得宜」（elegant, well-maintained, youthful-looking for their age），絕不是疲憊大嬸大叔。
 
@@ -95,6 +168,8 @@ ${topic ? `\n文章主題：${topic}` : ''}
 - 圖內任何文字、招牌字樣、logo、浮水印。
 - 明顯歐美的場景（西文招牌、歐式街景）。
 - 「AI generated」等字樣。
+- 拼貼／蒙太奇／色塊分割背景／飄浮的概念元素（分子、圖示、時鐘、沙漏之類）——只能是一個真實場景。
+- 冒充特定真實事件現場（例如指名某地災害現場）；生成照只能是通用情境，不做假新聞照。
 只輸出英文 prompt 本文，不要說明、標題、條列編號或 markdown 圍欄。`;
 }
 

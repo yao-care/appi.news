@@ -35,6 +35,44 @@ export function buildCheckPrompt(file, prompt, alt) {
 輸出格式：第一行只寫 ok 或 no；若 no，第二行用一句中文說明原因。不要其他文字。`;
 }
 
+/** 組圖庫照審查指令（相關度＋外國臉孔＋歐美場景＋浮水印）。純函式，供測試。
+ *  2026-07 站長裁示：圖庫命中的人物若明顯是外國人形象，一律不用（改走生成）；
+ *  「真實但不相關」比「生成但精準」更傷專業感，相關度不合格也淘汰。 */
+export function buildStockCheckPrompt(file, topic, context) {
+  return `用 Read 工具讀取圖片檔 ${file}，判斷這張「圖庫真實照片」適不適合當台灣新聞網站的文章配圖。
+
+配圖主題：${topic}
+文章脈絡：${context || ''}
+
+只要符合下列任一即為「不合格」：
+- 照片內容與主題無關、或關聯太牽強（讀者看圖聯想不到主題）
+- 照片中有清楚可辨的人物，且明顯不是東亞面孔（本站讀者為台灣人，外國人像會失真）
+- 主題是台灣本地情境，畫面卻明顯是歐美場景（西文招牌、外國街景建築）
+- 圖上有浮水印、疊字、明顯過度修圖
+
+構圖普通、色調樸素不算不合格；人物只是背景小殘影、辨識不出族裔也不算。
+輸出格式：第一行只寫 ok 或 no；若 no，第二行用一句中文說明原因。不要其他文字。`;
+}
+
+/**
+ * 審查一張圖庫候選照（相關度＋臉孔）。imagePath 需為 PNG/JPG。
+ * 回 {ok, reason?}；CLI 錯誤時回 {ok:true}（fail-open，不阻斷配圖流程）。
+ */
+export async function stockPhotoCheck(imagePath, topic, context) {
+  const dir = path.dirname(imagePath);
+  const file = path.basename(imagePath);
+  try {
+    const out = await runClaudeAgentText(dir, buildStockCheckPrompt(file, topic, context), {
+      model: 'haiku',
+      tools: 'Read',
+      timeoutMs: 120_000,
+    });
+    return parseVerdict(out.trim());
+  } catch {
+    return { ok: true }; // 檢查失敗不阻斷流程
+  }
+}
+
 /**
  * 檢查一張人物擬真照。imagePath 需為 Read 可視覺讀取的點陣圖（PNG/JPG）。
  * 回 {ok, reason?}；CLI 錯誤時回 {ok:true}（不阻斷出圖）。

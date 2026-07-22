@@ -1,50 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
-  <style>
-    .title{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:34px;font-weight:700;fill:#1B5E4B;}
-    .sub{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:17px;fill:#6B7B77;}
-    .label{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:22px;font-weight:700;fill:#1F2A28;text-anchor:middle;}
-    .desc{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:15px;fill:#6B7B77;text-anchor:middle;}
-  </style>
-  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
-  <text x="480" y="58" class="title" text-anchor="middle">為什麼球員不想踢季軍戰？</text>
-  <text x="480" y="88" class="sub" text-anchor="middle">四個常見原因（無先後順序）</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="季軍戰球員普遍不想上場的四個原因：四強落敗心理難調適、整月賽事體能透支、教練大幅輪換陣容、多踢一場增加受傷風險">
+<style>
+text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
+.title{font-size:26px;font-weight:700;fill:#1e2030;}
+.deck{font-size:15px;fill:#6e7276;}
+.abbr{font-size:14px;font-weight:700;fill:#ffffff;letter-spacing:.5px;}
+.name{font-size:20px;font-weight:700;fill:#1e2030;}
+.stance{font-size:22px;font-weight:700;fill:#1e2030;}
+.desc{font-size:14px;fill:#6e7276;}
+.foot{font-size:13px;fill:#6e7276;}
+</style>
+<rect width="960" height="600" fill="#ffffff"/>
 
-  <!-- Card 1: 士氣受挫 -->
-  <rect x="30" y="140" width="210" height="380" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
-  <circle cx="135" cy="212" r="40" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
-  <circle cx="120" cy="204" r="4" fill="#1B5E4B"/>
-  <circle cx="150" cy="204" r="4" fill="#1B5E4B"/>
-  <path d="M115 232 Q135 216 155 232" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linecap="round"/>
-  <text x="135" y="292" class="label">士氣受挫</text>
-  <text x="135" y="322" class="desc">準決賽落敗後</text>
-  <text x="135" y="344" class="desc">心理難以調適</text>
+<!-- 標題列 -->
+<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="58" y="60" class="title">為什麼球員不想踢季軍戰</text>
+<text x="58" y="90" class="deck">心理、體能、輪替、傷病風險，四個原因疊加，沒有人想上這一場</text>
 
-  <!-- Card 2: 體力透支 -->
-  <rect x="260" y="140" width="210" height="380" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
-  <rect x="335" y="180" width="60" height="34" rx="5" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
-  <rect x="395" y="190" width="8" height="14" fill="#1B5E4B"/>
-  <rect x="339" y="184" width="18" height="26" fill="#C9A227"/>
-  <text x="365" y="292" class="label">體力透支</text>
-  <text x="365" y="322" class="desc">連續征戰一個月</text>
-  <text x="365" y="344" class="desc">賽事後精疲力竭</text>
+<!-- 欄位分隔線 -->
+<line x1="260" y1="152" x2="260" y2="494" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="480" y1="152" x2="480" y2="494" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="700" y1="152" x2="700" y2="494" stroke="#e8e9ed" stroke-width="1"/>
 
-  <!-- Card 3: 板凳輪替 -->
-  <rect x="490" y="140" width="210" height="380" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
-  <circle cx="595" cy="212" r="40" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
-  <path d="M578 198 A20 20 0 0 1 614 202" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M610 194 L616 202 L607 205" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M612 226 A20 20 0 0 1 576 222" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M580 230 L574 222 L583 219" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linejoin="round"/>
-  <text x="595" y="292" class="label">板凳輪替</text>
-  <text x="595" y="322" class="desc">教練派替補球員</text>
-  <text x="595" y="344" class="desc">上場累積經驗</text>
+<!-- ── 原因一：心理層面 ── -->
+<g>
+  <rect x="112" y="166" width="76" height="30" rx="15" fill="#1f3a5f"/>
+  <text x="150" y="187" text-anchor="middle" class="abbr">原因一</text>
+  <text x="150" y="234" text-anchor="middle" class="name">心理層面</text>
+  <circle cx="150" cy="300" r="30" fill="#a87515"/>
+  <g transform="translate(150 300)">
+    <path d="M0 11 C-11 1 -15 -9 -7 -13 C-3 -15 0 -11 0 -7 C0 -11 3 -15 7 -13 C15 -9 11 1 0 11 Z" fill="#ffffff"/>
+  </g>
+  <text x="150" y="380" text-anchor="middle" class="stance">決賽夢碎</text>
+  <text x="150" y="448" text-anchor="middle" class="desc">四強落敗衝擊大</text>
+  <text x="150" y="472" text-anchor="middle" class="desc">幾天內難重新投入</text>
+</g>
 
-  <!-- Card 4: 受傷風險 -->
-  <rect x="720" y="140" width="210" height="380" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
-  <circle cx="825" cy="212" r="40" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
-  <rect x="811" y="196" width="28" height="8" rx="2" fill="#C9A227"/>
-  <rect x="821" y="186" width="8" height="28" rx="2" fill="#C9A227"/>
-  <text x="825" y="292" class="label">受傷風險</text>
-  <text x="825" y="322" class="desc">身心負荷加重</text>
-  <text x="825" y="344" class="desc">增加運動傷害機率</text>
-<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>
+<!-- ── 原因二：體能層面 ── -->
+<g>
+  <rect x="332" y="166" width="76" height="30" rx="15" fill="#1f3a5f"/>
+  <text x="370" y="187" text-anchor="middle" class="abbr">原因二</text>
+  <text x="370" y="234" text-anchor="middle" class="name">體能層面</text>
+  <circle cx="370" cy="300" r="30" fill="#a87515"/>
+  <g transform="translate(370 300)" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <rect x="-14" y="-8" width="24" height="16" rx="2" stroke-width="3"/>
+    <path d="M12 -4 L12 4" stroke-width="4"/>
+    <rect x="-10" y="-4" width="5" height="8" fill="#ffffff" stroke="none"/>
+  </g>
+  <text x="370" y="380" text-anchor="middle" class="stance">早已透支</text>
+  <text x="370" y="448" text-anchor="middle" class="desc">整月高強度賽事</text>
+  <text x="370" y="472" text-anchor="middle" class="desc">身體接近極限</text>
+</g>
+
+<!-- ── 原因三：陣容輪替 ── -->
+<g>
+  <rect x="552" y="166" width="76" height="30" rx="15" fill="#1f3a5f"/>
+  <text x="590" y="187" text-anchor="middle" class="abbr">原因三</text>
+  <text x="590" y="234" text-anchor="middle" class="name">陣容輪替</text>
+  <circle cx="590" cy="300" r="30" fill="#a87515"/>
+  <g transform="translate(590 300)" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M-11 -6 L11 -6 M5 -12 L11 -6 L5 0"/>
+    <path d="M11 6 L-11 6 M-5 0 L-11 6 L-5 12"/>
+  </g>
+  <text x="590" y="380" text-anchor="middle" class="stance">大幅換人</text>
+  <text x="590" y="448" text-anchor="middle" class="desc">二號門將先發</text>
+  <text x="590" y="472" text-anchor="middle" class="desc">三號門將末段上場</text>
+</g>
+
+<!-- ── 原因四：傷病風險 ── -->
+<g>
+  <rect x="772" y="166" width="76" height="30" rx="15" fill="#1f3a5f"/>
+  <text x="810" y="187" text-anchor="middle" class="abbr">原因四</text>
+  <text x="810" y="234" text-anchor="middle" class="name">傷病風險</text>
+  <circle cx="810" cy="300" r="30" fill="#a87515"/>
+  <g transform="translate(810 300)" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" fill="none">
+    <path d="M0 -13 L0 4"/>
+  </g>
+  <circle cx="810" cy="312" r="3" fill="#ffffff"/>
+  <text x="810" y="380" text-anchor="middle" class="stance">多一分風險</text>
+  <text x="810" y="448" text-anchor="middle" class="desc">多踢一場比賽</text>
+  <text x="810" y="472" text-anchor="middle" class="desc">增加受傷機率</text>
+</g>
+
+<!-- 頁尾 -->
+<line x1="40" y1="526" x2="920" y2="526" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="556" class="foot">製圖：APPI News</text>
+<text x="920" y="556" text-anchor="end" class="foot">2026 年 7 月・整理自 Al Jazeera、Football365 報導</text>
+</svg>

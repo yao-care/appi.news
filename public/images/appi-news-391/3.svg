@@ -1,37 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
-  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
-  <text x="480" y="52" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#1B5E4B">季軍戰賽制對照</text>
-  <text x="480" y="80" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#6B7B77">五大賽事是否保留「殿軍之爭」（純類別對照，非排名）</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="世界盃與主要職業聯盟賽制對照：世界盃自 1954 年起固定舉辦季軍戰，歐洲國家盃 1980 年取消，NBA、NFL 沒有季軍戰，NCAA 1981 年後取消">
+<style>
+text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
+.title{font-size:26px;font-weight:700;fill:#1e2030;}
+.deck{font-size:15px;fill:#6e7276;}
+.head{font-size:14px;fill:#6e7276;}
+.name{font-size:20px;font-weight:700;fill:#1e2030;}
+.mark{font-size:16px;font-weight:700;}
+.note{font-size:14px;fill:#6e7276;}
+.foot{font-size:13px;fill:#6e7276;}
+</style>
+<rect width="960" height="600" fill="#ffffff"/>
 
-  <rect x="40" y="112" width="880" height="78" rx="10" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="1.5"/>
-  <text x="70" y="158" font-family="sans-serif" font-size="22" font-weight="bold" fill="#1B5E4B">世界盃足球賽</text>
-  <circle cx="430" cy="151" r="22" fill="#C9A227"/>
-  <text x="430" y="158" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1F2A28">有</text>
-  <text x="480" y="158" font-family="sans-serif" font-size="15" fill="#6B7B77">自1954年起設有季軍戰，至今保留</text>
+<!-- 標題列 -->
+<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="58" y="60" class="title">主要賽事還有沒有季軍戰</text>
+<text x="58" y="90" class="deck">翻遍主要職業賽事與聯盟，只剩世界盃還留著這場比賽</text>
 
-  <rect x="40" y="200" width="880" height="78" rx="10" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="1.5"/>
-  <text x="70" y="246" font-family="sans-serif" font-size="22" font-weight="bold" fill="#1B5E4B">歐洲國家盃</text>
-  <circle cx="430" cy="239" r="22" fill="#6B7B77"/>
-  <text x="430" y="246" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">無</text>
-  <text x="480" y="246" font-family="sans-serif" font-size="15" fill="#6B7B77">1980年起廢止季軍戰</text>
+<!-- 表頭 -->
+<text x="64" y="134" class="head">賽事／聯盟</text>
+<text x="470" y="134" text-anchor="middle" class="head">季軍戰</text>
+<text x="560" y="134" class="head">備註</text>
 
-  <rect x="40" y="288" width="880" height="78" rx="10" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="1.5"/>
-  <text x="70" y="334" font-family="sans-serif" font-size="22" font-weight="bold" fill="#1B5E4B">NBA 職業籃球聯盟</text>
-  <circle cx="430" cy="327" r="22" fill="#6B7B77"/>
-  <text x="430" y="334" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">無</text>
-  <text x="480" y="334" font-family="sans-serif" font-size="15" fill="#6B7B77">賽制中未設季軍戰</text>
+<!-- 本文焦點列（世界盃）底色 -->
+<rect x="40" y="147" width="880" height="64" rx="12" fill="#eaf0f8"/>
+<rect x="52" y="147" width="856" height="3" rx="1.5" fill="#a87515"/>
 
-  <rect x="40" y="376" width="880" height="78" rx="10" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="1.5"/>
-  <text x="70" y="422" font-family="sans-serif" font-size="22" font-weight="bold" fill="#1B5E4B">NFL 美式足球聯盟</text>
-  <circle cx="430" cy="415" r="22" fill="#6B7B77"/>
-  <text x="430" y="422" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">無</text>
-  <text x="480" y="422" font-family="sans-serif" font-size="15" fill="#6B7B77">賽制中未設季軍戰</text>
+<!-- 列分隔線 -->
+<line x1="40" y1="218" x2="920" y2="218" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="40" y1="290" x2="920" y2="290" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="40" y1="362" x2="920" y2="362" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="40" y1="434" x2="920" y2="434" stroke="#e8e9ed" stroke-width="1"/>
 
-  <rect x="40" y="464" width="880" height="78" rx="10" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="1.5"/>
-  <text x="70" y="510" font-family="sans-serif" font-size="22" font-weight="bold" fill="#1B5E4B">NCAA 大學籃球錦標賽</text>
-  <circle cx="430" cy="503" r="22" fill="#6B7B77"/>
-  <text x="430" y="510" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">無</text>
-  <text x="480" y="510" font-family="sans-serif" font-size="15" fill="#6B7B77">賽制中未設季軍戰</text>
+<!-- 列 1：世界盃足球賽（有） -->
+<text x="64" y="189" class="name">世界盃足球賽</text>
+<circle cx="470" cy="182" r="20" fill="#a87515"/>
+<text x="470" y="188" text-anchor="middle" class="mark" fill="#ffffff">有</text>
+<text x="560" y="188" class="note">1954 年起固定舉辦，近年存廢討論持續</text>
 
-  <text x="480" y="576" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6B7B77">世界盃足球賽 ｜ 歐洲國家盃 ｜ NBA ｜ NFL ｜ NCAA 大學籃球錦標賽</text>
-<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>
+<!-- 列 2：歐洲國家盃（無） -->
+<text x="64" y="261" class="name">歐洲國家盃</text>
+<circle cx="470" cy="254" r="20" fill="#eef0f3" stroke="#d5d6da" stroke-width="1"/>
+<text x="470" y="260" text-anchor="middle" class="mark" fill="#5e6070">無</text>
+<text x="560" y="260" class="note">1980 年正式取消</text>
+
+<!-- 列 3：NBA（無） -->
+<text x="64" y="333" class="name">NBA</text>
+<circle cx="470" cy="326" r="20" fill="#eef0f3" stroke="#d5d6da" stroke-width="1"/>
+<text x="470" y="332" text-anchor="middle" class="mark" fill="#5e6070">無</text>
+<text x="560" y="332" class="note">無第三名排名賽</text>
+
+<!-- 列 4：NFL（無） -->
+<text x="64" y="405" class="name">NFL</text>
+<circle cx="470" cy="398" r="20" fill="#eef0f3" stroke="#d5d6da" stroke-width="1"/>
+<text x="470" y="404" text-anchor="middle" class="mark" fill="#5e6070">無</text>
+<text x="560" y="404" class="note">無第三名排名賽</text>
+
+<!-- 列 5：NCAA 大學籃球錦標賽（無） -->
+<text x="64" y="477" class="name">NCAA 大學籃球錦標賽</text>
+<circle cx="470" cy="470" r="20" fill="#eef0f3" stroke="#d5d6da" stroke-width="1"/>
+<text x="470" y="476" text-anchor="middle" class="mark" fill="#5e6070">無</text>
+<text x="560" y="476" class="note">1981 年後取消季軍戰</text>
+
+<!-- 頁尾 -->
+<line x1="40" y1="526" x2="920" y2="526" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="556" class="foot">製圖：APPI News</text>
+<text x="920" y="556" text-anchor="end" class="foot">2026 年 7 月・整理自 Al Jazeera、Yahoo Sports、Football365 報導</text>
+</svg>

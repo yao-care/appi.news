@@ -1,65 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
-<defs><style>text{font-family:'Noto Sans TC','Microsoft JhengHei','PingFang TC',sans-serif}</style></defs>
-<rect width="960" height="600" fill="#F2F7F5"/>
-<rect width="960" height="70" fill="#1B5E4B"/>
-<text x="480" y="34" font-size="24" font-weight="bold" fill="#fff" text-anchor="middle">台灣食品三色標示制度</text>
-<text x="480" y="58" font-size="13" fill="#C9A227" text-anchor="middle">糖・鈉・飽和脂肪　三色分級閾值（固體每100g ／ 液體每100mL）</text>
-<rect x="20" y="78" width="290" height="490" fill="#fff" rx="8" stroke="#2E7D32" stroke-width="2.5"/>
-<rect x="20" y="78" width="290" height="64" fill="#2E7D32" rx="8"/>
-<rect x="20" y="120" width="290" height="22" fill="#2E7D32"/>
-<circle cx="55" cy="110" r="13" fill="#A5D6A7"/>
-<text x="185" y="107" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">綠燈・低含量</text>
-<text x="185" y="131" font-size="12" fill="rgba(255,255,255,.9)" text-anchor="middle">較健康選擇</text>
-<text x="165" y="168" font-size="14" font-weight="bold" fill="#1B5E4B" text-anchor="middle">糖（Sugars）</text>
-<text x="165" y="190" font-size="14" fill="#2E7D32" text-anchor="middle">固體：≤ 5g</text>
-<text x="165" y="210" font-size="14" fill="#2E7D32" text-anchor="middle">液體：≤ 2.5g</text>
-<line x1="40" y1="224" x2="290" y2="224" stroke="#E8F5E9" stroke-width="1.5"/>
-<text x="165" y="248" font-size="14" font-weight="bold" fill="#1B5E4B" text-anchor="middle">鈉（Sodium）</text>
-<text x="165" y="270" font-size="14" fill="#2E7D32" text-anchor="middle">固體：≤ 120mg</text>
-<text x="165" y="290" font-size="14" fill="#2E7D32" text-anchor="middle">液體：≤ 120mg</text>
-<line x1="40" y1="304" x2="290" y2="304" stroke="#E8F5E9" stroke-width="1.5"/>
-<text x="165" y="328" font-size="14" font-weight="bold" fill="#1B5E4B" text-anchor="middle">飽和脂肪（Sat. Fat）</text>
-<text x="165" y="350" font-size="14" fill="#2E7D32" text-anchor="middle">固體：≤ 1.5g</text>
-<text x="165" y="370" font-size="14" fill="#2E7D32" text-anchor="middle">液體：≤ 0.75g</text>
-<rect x="65" y="430" width="200" height="34" fill="#E8F5E9" rx="17"/>
-<text x="165" y="453" font-size="13" fill="#2E7D32" font-weight="bold" text-anchor="middle">推薦優先選擇</text>
-<rect x="335" y="78" width="290" height="490" fill="#fff" rx="8" stroke="#B8860B" stroke-width="2.5"/>
-<rect x="335" y="78" width="290" height="64" fill="#D4940A" rx="8"/>
-<rect x="335" y="120" width="290" height="22" fill="#D4940A"/>
-<circle cx="370" cy="110" r="13" fill="#FFE082"/>
-<text x="500" y="107" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">黃燈・中含量</text>
-<text x="500" y="131" font-size="12" fill="rgba(255,255,255,.9)" text-anchor="middle">適量攝取</text>
-<text x="480" y="168" font-size="14" font-weight="bold" fill="#7B5800" text-anchor="middle">糖（Sugars）</text>
-<text x="480" y="190" font-size="14" fill="#B8860B" text-anchor="middle">固體：5 ～ 15g</text>
-<text x="480" y="210" font-size="14" fill="#B8860B" text-anchor="middle">液體：2.5 ～ 7.5g</text>
-<line x1="355" y1="224" x2="605" y2="224" stroke="#FFF8E1" stroke-width="1.5"/>
-<text x="480" y="248" font-size="14" font-weight="bold" fill="#7B5800" text-anchor="middle">鈉（Sodium）</text>
-<text x="480" y="270" font-size="14" fill="#B8860B" text-anchor="middle">固體：120 ～ 600mg</text>
-<text x="480" y="290" font-size="14" fill="#B8860B" text-anchor="middle">液體：120 ～ 300mg</text>
-<line x1="355" y1="304" x2="605" y2="304" stroke="#FFF8E1" stroke-width="1.5"/>
-<text x="480" y="328" font-size="14" font-weight="bold" fill="#7B5800" text-anchor="middle">飽和脂肪（Sat. Fat）</text>
-<text x="480" y="350" font-size="14" fill="#B8860B" text-anchor="middle">固體：1.5 ～ 5g</text>
-<text x="480" y="370" font-size="14" fill="#B8860B" text-anchor="middle">液體：0.75 ～ 2.5g</text>
-<rect x="380" y="430" width="200" height="34" fill="#FFF8E1" rx="17"/>
-<text x="480" y="453" font-size="13" fill="#9A6800" font-weight="bold" text-anchor="middle">留意攝取頻率</text>
-<rect x="650" y="78" width="290" height="490" fill="#fff" rx="8" stroke="#C62828" stroke-width="2.5"/>
-<rect x="650" y="78" width="290" height="64" fill="#C62828" rx="8"/>
-<rect x="650" y="120" width="290" height="22" fill="#C62828"/>
-<circle cx="685" cy="110" r="13" fill="#EF9A9A"/>
-<text x="815" y="107" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">紅燈・高含量</text>
-<text x="815" y="131" font-size="12" fill="rgba(255,255,255,.9)" text-anchor="middle">注意攝取量</text>
-<text x="795" y="168" font-size="14" font-weight="bold" fill="#7F0000" text-anchor="middle">糖（Sugars）</text>
-<text x="795" y="190" font-size="14" fill="#C62828" text-anchor="middle">固體：&gt; 15g</text>
-<text x="795" y="210" font-size="14" fill="#C62828" text-anchor="middle">液體：&gt; 7.5g</text>
-<line x1="670" y1="224" x2="920" y2="224" stroke="#FFEBEE" stroke-width="1.5"/>
-<text x="795" y="248" font-size="14" font-weight="bold" fill="#7F0000" text-anchor="middle">鈉（Sodium）</text>
-<text x="795" y="270" font-size="14" fill="#C62828" text-anchor="middle">固體：&gt; 600mg</text>
-<text x="795" y="290" font-size="14" fill="#C62828" text-anchor="middle">液體：&gt; 300mg</text>
-<line x1="670" y1="304" x2="920" y2="304" stroke="#FFEBEE" stroke-width="1.5"/>
-<text x="795" y="328" font-size="14" font-weight="bold" fill="#7F0000" text-anchor="middle">飽和脂肪（Sat. Fat）</text>
-<text x="795" y="350" font-size="14" fill="#C62828" text-anchor="middle">固體：&gt; 5g</text>
-<text x="795" y="370" font-size="14" fill="#C62828" text-anchor="middle">液體：&gt; 2.5g</text>
-<rect x="695" y="430" width="200" height="34" fill="#FFEBEE" rx="17"/>
-<text x="795" y="453" font-size="13" fill="#C62828" font-weight="bold" text-anchor="middle">建議減少攝取</text>
-<text x="480" y="586" font-size="11" fill="#6B7B77" text-anchor="middle">資料依據：衛生福利部食品藥物管理署　|　此圖僅供健康教育參考，非醫療建議</text>
-<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="台灣食品紅黃綠三色標示閾值：綠燈為低含量（糖≤5g、鈉≤120mg、飽和脂肪≤1.5g），黃燈為中含量，紅燈為高含量（糖≥15g、鈉≥500mg、飽和脂肪≥4.5g），皆以固體每 100 公克為基準">
+<style>
+text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
+.title{font-size:26px;font-weight:700;fill:#1e2030;}
+.deck{font-size:15px;fill:#6e7276;}
+.name{font-size:20px;font-weight:700;fill:#1e2030;}
+.sub{font-size:14px;fill:#6e7276;}
+.nut{font-size:15px;font-weight:700;fill:#1e2030;}
+.val{font-size:15px;fill:#1e2030;}
+.act{font-size:14px;font-weight:700;fill:#1e2030;}
+.note{font-size:13px;fill:#6e7276;}
+.foot{font-size:13px;fill:#6e7276;}
+</style>
+<rect width="960" height="600" fill="#ffffff"/>
+
+<!-- 標題列 -->
+<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="58" y="60" class="title">食品紅黃綠標示：三色分級閾值</text>
+<text x="58" y="90" class="deck">糖、鈉、飽和脂肪各分三級，貨架前 3 秒看懂含量是高是低</text>
+
+<!-- 欄位分隔線 -->
+<line x1="333" y1="150" x2="333" y2="498" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="626" y1="150" x2="626" y2="498" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- ── 綠燈 ── -->
+<g>
+  <circle cx="186" cy="168" r="15" fill="#11aa66"/>
+  <path d="M179 168 L184 173 L193 163" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="186" y="216" text-anchor="middle" class="name">綠燈・低含量</text>
+  <text x="186" y="240" text-anchor="middle" class="sub">較健康的選擇</text>
+  <text x="66" y="296" class="nut">糖</text>
+  <text x="307" y="296" text-anchor="end" class="val">≤ 5g</text>
+  <line x1="66" y1="312" x2="307" y2="312" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="66" y="344" class="nut">鈉</text>
+  <text x="307" y="344" text-anchor="end" class="val">≤ 120mg</text>
+  <line x1="66" y1="360" x2="307" y2="360" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="66" y="392" class="nut">飽和脂肪</text>
+  <text x="307" y="392" text-anchor="end" class="val">≤ 1.5g</text>
+  <text x="186" y="452" text-anchor="middle" class="act">可優先選擇</text>
+</g>
+
+<!-- ── 黃燈 ── -->
+<g>
+  <circle cx="480" cy="168" r="15" fill="#a87515"/>
+  <line x1="472" y1="168" x2="488" y2="168" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="480" y="216" text-anchor="middle" class="name">黃燈・中含量</text>
+  <text x="480" y="240" text-anchor="middle" class="sub">適量攝取</text>
+  <text x="360" y="296" class="nut">糖</text>
+  <text x="600" y="296" text-anchor="end" class="val">5 – 15g</text>
+  <line x1="360" y1="312" x2="600" y2="312" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="360" y="344" class="nut">鈉</text>
+  <text x="600" y="344" text-anchor="end" class="val">120 – 500mg</text>
+  <line x1="360" y1="360" x2="600" y2="360" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="360" y="392" class="nut">飽和脂肪</text>
+  <text x="600" y="392" text-anchor="end" class="val">1.5 – 4.5g</text>
+  <text x="480" y="452" text-anchor="middle" class="act">留意攝取頻率</text>
+</g>
+
+<!-- ── 紅燈 ── -->
+<g>
+  <circle cx="773" cy="168" r="15" fill="#a12a2a"/>
+  <line x1="773" y1="161" x2="773" y2="170" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="773" cy="175" r="1.6" fill="#ffffff"/>
+  <text x="773" y="216" text-anchor="middle" class="name">紅燈・高含量</text>
+  <text x="773" y="240" text-anchor="middle" class="sub">注意攝取量</text>
+  <text x="652" y="296" class="nut">糖</text>
+  <text x="894" y="296" text-anchor="end" class="val">≥ 15g</text>
+  <line x1="652" y1="312" x2="894" y2="312" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="652" y="344" class="nut">鈉</text>
+  <text x="894" y="344" text-anchor="end" class="val">≥ 500mg</text>
+  <line x1="652" y1="360" x2="894" y2="360" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="652" y="392" class="nut">飽和脂肪</text>
+  <text x="894" y="392" text-anchor="end" class="val">≥ 4.5g</text>
+  <text x="773" y="452" text-anchor="middle" class="act">建議減少攝取</text>
+</g>
+
+<!-- 液體註記 -->
+<text x="480" y="494" text-anchor="middle" class="note">閾值以固體食品每 100 公克為基準；液體食品每 100 毫升的閾值按比例折半</text>
+
+<!-- 頁尾 -->
+<line x1="40" y1="520" x2="920" y2="520" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="550" class="foot">製圖：APPI News</text>
+<text x="920" y="550" text-anchor="end" class="foot">資料：衛福部食藥署、國健署・2026 年下半年自願制上路</text>
+</svg>

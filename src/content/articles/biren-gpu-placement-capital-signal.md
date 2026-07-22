@@ -68,10 +68,10 @@ originalContribution: "本文把壁仞這次配股放進『上市半年、IPO �
 
 <h2>常見問題</h2>
 
-<p><strong>壁仞科技這次配股募了多少錢、拿去做什麼？</strong><br>壁仞科技以每股 46.2 港元、折讓 9.94% 配售 1.53 億股新 H 股，[募資總額近 70.7 億港元、淨額約 70.4 億港元](https://www.finet.hk/newscenter/news_content/6a4b517e2308294e8a0c3a19)。用途約六成投下一代 GPGPU 的商業化與量產、兩成研發、一成戰略投資與收購、一成營運資金。</p>
+<p><strong>壁仞科技這次配股募了多少錢、拿去做什麼？</strong><br>壁仞科技以每股 46.2 港元、折讓 9.94% 配售 1.53 億股新 H 股，<a href="https://www.finet.hk/newscenter/news_content/6a4b517e2308294e8a0c3a19">募資總額近 70.7 億港元、淨額約 70.4 億港元</a>。用途約六成投下一代 GPGPU 的商業化與量產、兩成研發、一成戰略投資與收購、一成營運資金。</p>
 
-<p><strong>上市才半年就再融資，是不是公司缺錢？</strong><br>比較像主動搶時間，不像被迫救急。公告時壁仞[全球發售的營運資金已用逾七成、還剩約 42.8 億港元沒動用](https://www.thestandard.com.hk/finance/article/336455/Biren-Technology-plans-to-raise-nearly-707-billion-through-first-placing)，口袋裡還有錢卻折價再抽，反映的是管理層想把國產 GPU 商轉的速度往前推，願意用股權稀釋換備滿的彈藥。</p>
+<p><strong>上市才半年就再融資，是不是公司缺錢？</strong><br>比較像主動搶時間，不像被迫救急。公告時壁仞<a href="https://www.thestandard.com.hk/finance/article/336455/Biren-Technology-plans-to-raise-nearly-707-billion-through-first-placing">全球發售的營運資金已用逾七成、還剩約 42.8 億港元沒動用</a>，口袋裡還有錢卻折價再抽，反映的是管理層想把國產 GPU 商轉的速度往前推，願意用股權稀釋換備滿的彈藥。</p>
 
-<p><strong>壁仞累計虧損 212 億人民幣，是不是很危險？</strong><br>那個數字大半是帳面幻覺。[2025 年 164.93 億的虧損絕大部分是優先股公允價值變動的紙面帳，掛牌後不再出現](https://finance.sina.com.cn/tech/roll/2026-06-17/doc-inicsrqv7196112.shtml)，經調整的核心經營虧損只有 8.74 億。真正要盯的是營收才 10 億、研發吃掉七到八成開支，商轉離損益平衡還遠。</p>
+<p><strong>壁仞累計虧損 212 億人民幣，是不是很危險？</strong><br>那個數字大半是帳面幻覺。<a href="https://finance.sina.com.cn/tech/roll/2026-06-17/doc-inicsrqv7196112.shtml">2025 年 164.93 億的虧損絕大部分是優先股公允價值變動的紙面帳，掛牌後不再出現</a>，經調整的核心經營虧損只有 8.74 億。真正要盯的是營收才 10 億、研發吃掉七到八成開支，商轉離損益平衡還遠。</p>
 
 <p><strong>國產 GPU 崛起對台灣半導體是好事還是威脅？</strong><br>兩面都是。短期這些晶片要代工、先進封裝與 HBM 記憶體，台灣有底子會吃到訂單外溢；但國產替代的長期目標，正是把原本靠台灣與美系供應鏈的環節換掉。台廠該把籌碼壓在一時繞不過去的製程、封裝、記憶體，而不是容易被追上的通用環節。</p>

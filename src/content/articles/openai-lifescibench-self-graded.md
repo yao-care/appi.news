@@ -82,9 +82,9 @@ LifeSciBench 不是那種「請問這個基因的功能是什麼」的問答題�
 
 <h2>常見問題</h2>
 
-<p><strong>LifeSciBench 是什麼？AI 真的只過三成嗎？</strong><br>LifeSciBench 是 OpenAI 2026 年 6 月發布的生命科學研究評測，由 173 位博士級科學家出 750 道真實研究任務，用專家寫的評分量表打分。最強的模型 GPT-Rosalind 只過 36.1%，[等於失敗近六成四](https://science.slashdot.org/story/26/06/20/202204/openai-announces-benchmarks-for-ai-life-sciences-research-its-best-model-failed-639-of-the-test)，GPT-5.5 更只有 25.7%，全場沒有一個模型過半。</p>
+<p><strong>LifeSciBench 是什麼？AI 真的只過三成嗎？</strong><br>LifeSciBench 是 OpenAI 2026 年 6 月發布的生命科學研究評測，由 173 位博士級科學家出 750 道真實研究任務，用專家寫的評分量表打分。最強的模型 GPT-Rosalind 只過 36.1%，<a href="https://science.slashdot.org/story/26/06/20/202204/openai-announces-benchmarks-for-ai-life-sciences-research-its-best-model-failed-639-of-the-test">等於失敗近六成四</a>，GPT-5.5 更只有 25.7%，全場沒有一個模型過半。</p>
 
-<p><strong>為什麼說「裁判是自家」是個問題？</strong><br>因為這份[評測由 OpenAI 出題、OpenAI 評分，還拿來展示 OpenAI 自己的模型](https://labcritics.com/blog/2026/06/19/lifescibench-openais-hard-new-life-science-benchmark-and-how-gpt-rosalind-stacks-up/)，同時把常被科學工具使用的 Claude 排除在比較外、也沒放人類科學家的基準線。這不代表數字造假，而是當出題、選手、改考卷都在同一家手上，這份東西的性質就會從中立評測滑向產品行銷，讀的時候要打折。</p>
+<p><strong>為什麼說「裁判是自家」是個問題？</strong><br>因為這份<a href="https://labcritics.com/blog/2026/06/19/lifescibench-openais-hard-new-life-science-benchmark-and-how-gpt-rosalind-stacks-up/">評測由 OpenAI 出題、OpenAI 評分，還拿來展示 OpenAI 自己的模型</a>，同時把常被科學工具使用的 Claude 排除在比較外、也沒放人類科學家的基準線。這不代表數字造假，而是當出題、選手、改考卷都在同一家手上，這份東西的性質就會從中立評測滑向產品行銷，讀的時候要打折。</p>
 
 <p><strong>這代表 AI 不能用在生命科學研究了嗎？</strong><br>不是。它代表 AI 現在能協助、還不能取代研究判斷。訊號最清楚的是：模型處理純文字題有 45.1%，一碰到真實圖表、序列檔就掉到 28.1%，弱點在讀真實研究資料。真正該投入的，是把實驗資料乾淨可驗證地接進模型的那條流程，而不是追排行榜分數。</p>
 

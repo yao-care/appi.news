@@ -77,10 +77,10 @@ Together AI 這輪 8 億美元、估值衝上 83 億，真正的訊號不是金�
 
 <h2>常見問題</h2>
 
-<p><strong>Together AI 到底是做什麼的公司？</strong><br>它是一家 neocloud，租下 Nvidia 的 GPU 叢集蓋成雲端平台，讓企業把開源模型（如 DeepSeek、Llama、Qwen）拿來訓練、微調與跑推論，價格比呼叫 OpenAI、Anthropic 這類閉源 API 便宜。它自己不練一個大模型去打 GPT，而是專門把別人的開源模型跑起來、賣算力。過去一季它的[年度預約金額已超過 11.5 億美元](https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/)。</p>
+<p><strong>Together AI 到底是做什麼的公司？</strong><br>它是一家 neocloud，租下 Nvidia 的 GPU 叢集蓋成雲端平台，讓企業把開源模型（如 DeepSeek、Llama、Qwen）拿來訓練、微調與跑推論，價格比呼叫 OpenAI、Anthropic 這類閉源 API 便宜。它自己不練一個大模型去打 GPT，而是專門把別人的開源模型跑起來、賣算力。過去一季它的<a href="https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/">年度預約金額已超過 11.5 億美元</a>。</p>
 
-<p><strong>模型都開源免費了，為什麼還有人願意付錢給代管平台？</strong><br>因為「下載模型」和「把模型穩定、便宜、合規地跑給整間公司用」是兩件事。企業要的是機房、電力、把 GPU 調到高利用率的推論優化，還有把資料留在自己這邊不上共享 API 的合規保障。這些[稀缺能力才是收費的地方](https://enterprisedna.co/resources/news/together-ai-800m-series-c-open-source-enterprise-2026/)，模型本身反而變成免費的原料。</p>
+<p><strong>模型都開源免費了，為什麼還有人願意付錢給代管平台？</strong><br>因為「下載模型」和「把模型穩定、便宜、合規地跑給整間公司用」是兩件事。企業要的是機房、電力、把 GPU 調到高利用率的推論優化，還有把資料留在自己這邊不上共享 API 的合規保障。這些<a href="https://enterprisedna.co/resources/news/together-ai-800m-series-c-open-source-enterprise-2026/">稀缺能力才是收費的地方</a>，模型本身反而變成免費的原料。</p>
 
-<p><strong>估值 83 億、年度預約 11.5 億，這樣算貴嗎？</strong><br>要先看懂「預約金額」是簽下來的合約總額，不等於已認列、收到現金的營收，中間隔著履約與收款的時間差。加上 neocloud 是重資產生意，GPU 會折舊、電費機房持續燒，毛利比賣軟體薄。83 億賭的是[未來五年約 50 倍的產能擴張](https://enterprisedna.co/resources/news/together-ai-800m-series-c-open-source-enterprise-2026/)會照曲線長上去，那還沒發生，估值要這樣冷靜看。</p>
+<p><strong>估值 83 億、年度預約 11.5 億，這樣算貴嗎？</strong><br>要先看懂「預約金額」是簽下來的合約總額，不等於已認列、收到現金的營收，中間隔著履約與收款的時間差。加上 neocloud 是重資產生意，GPU 會折舊、電費機房持續燒，毛利比賣軟體薄。83 億賭的是<a href="https://enterprisedna.co/resources/news/together-ai-800m-series-c-open-source-enterprise-2026/">未來五年約 50 倍的產能擴張</a>會照曲線長上去，那還沒發生，估值要這樣冷靜看。</p>
 
-<p><strong>台灣的和碩投這家公司，對台灣產業代表什麼？</strong><br>代表台灣硬體業看得到價值正從「組裝伺服器」往「推論營運、機房交付」這層移。組裝的毛利薄又容易被取代，往上走的機房工程、推論優化、穩定合規交付才是稀缺處。和碩用[投資卡進一家 neocloud](https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/)，等於買一張往營運層靠的門票，而不只是等訂單。</p>
+<p><strong>台灣的和碩投這家公司，對台灣產業代表什麼？</strong><br>代表台灣硬體業看得到價值正從「組裝伺服器」往「推論營運、機房交付」這層移。組裝的毛利薄又容易被取代，往上走的機房工程、推論優化、穩定合規交付才是稀缺處。和碩用<a href="https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/">投資卡進一家 neocloud</a>，等於買一張往營運層靠的門票，而不只是等訂單。</p>

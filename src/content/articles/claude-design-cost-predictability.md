@@ -65,10 +65,10 @@ Claude Design 這次改版把數字修回到能用的範圍，是對的方向。
 
 <h2>常見問題</h2>
 
-<p><strong>Claude Design 為什麼這麼快就把週額度用完？</strong><br>因為生成式設計每一輪都在產出一份完整的可互動網頁，比一問一答的聊天重很多，加上[對話脈絡會整包重送回模型](https://www.mindstudio.ai/blog/claude-design-token-management-usage-limit)，愈聊愈貴。早期它還有一個獨立又較小的額度池，所以 PCWorld 記者[25 分鐘做三個變體就用掉 80% 週額度](https://www.pcworld.com/article/3117811/i-tried-claude-design-for-half-an-hour-im-already-locked-out-for-a-week.html)。</p>
+<p><strong>Claude Design 為什麼這麼快就把週額度用完？</strong><br>因為生成式設計每一輪都在產出一份完整的可互動網頁，比一問一答的聊天重很多，加上<a href="https://www.mindstudio.ai/blog/claude-design-token-management-usage-limit">對話脈絡會整包重送回模型</a>，愈聊愈貴。早期它還有一個獨立又較小的額度池，所以 PCWorld 記者<a href="https://www.pcworld.com/article/3117811/i-tried-claude-design-for-half-an-hour-im-already-locked-out-for-a-week.html">25 分鐘做三個變體就用掉 80% 週額度</a>。</p>
 
-<p><strong>六月改版之後 Claude Design 還會燒很快嗎？</strong><br>會比以前省。[官方六月更新](https://releasebot.io/updates/anthropic/claude)讓每輪平均少用 token、錯誤率大幅下降，並把額度改成跟聊天、Claude Code 共用一個大池；新畫布編輯器讓拖拉、對齊這類微調不必每次跑一個模型輪次。重度使用者仍要留意用量，但單次工作的成本比先前可預期得多。</p>
+<p><strong>六月改版之後 Claude Design 還會燒很快嗎？</strong><br>會比以前省。<a href="https://releasebot.io/updates/anthropic/claude">官方六月更新</a>讓每輪平均少用 token、錯誤率大幅下降，並把額度改成跟聊天、Claude Code 共用一個大池；新畫布編輯器讓拖拉、對齊這類微調不必每次跑一個模型輪次。重度使用者仍要留意用量，但單次工作的成本比先前可預期得多。</p>
 
-<p><strong>Claude Design 的額度是跟聊天和 Claude Code 分開算的嗎？</strong><br>現在是共用。早期它有獨立額度，[Anthropic 五月底先把它併進聊天與 Claude Code 的共用限制](https://pasqualepillitteri.it/en/news/3673/claude-design-shares-usage-limits-claude-ai-claude-code)，六月改版延續這個設計。好處是設計工作能動用整個大池、比較不容易一下鎖死，代價是設計會直接吃掉你聊天與寫程式的額度。</p>
+<p><strong>Claude Design 的額度是跟聊天和 Claude Code 分開算的嗎？</strong><br>現在是共用。早期它有獨立額度，<a href="https://pasqualepillitteri.it/en/news/3673/claude-design-shares-usage-limits-claude-ai-claude-code">Anthropic 五月底先把它併進聊天與 Claude Code 的共用限制</a>，六月改版延續這個設計。好處是設計工作能動用整個大池、比較不容易一下鎖死，代價是設計會直接吃掉你聊天與寫程式的額度。</p>
 
-<p><strong>我用 Claude Pro，適合拿 Claude Design 做正式設計工作嗎？</strong><br>改版後比先前可行，但 Pro 的週額度仍有限，做大量變體或反覆重生容易見底。若要把它排進正式流程，先在小範圍測出「一次典型工作大概吃多少額度」，再決定夠不夠；很多人一次五小時的重度使用就會[吃掉相當比例的週額度](https://www.engadget.com/2194626/anthropic-hit-with-lawsuit-over-its-claude-max-usage-limits/)。</p>
+<p><strong>我用 Claude Pro，適合拿 Claude Design 做正式設計工作嗎？</strong><br>改版後比先前可行，但 Pro 的週額度仍有限，做大量變體或反覆重生容易見底。若要把它排進正式流程，先在小範圍測出「一次典型工作大概吃多少額度」，再決定夠不夠；很多人一次五小時的重度使用就會<a href="https://www.engadget.com/2194626/anthropic-hit-with-lawsuit-over-its-claude-max-usage-limits/">吃掉相當比例的週額度</a>。</p>

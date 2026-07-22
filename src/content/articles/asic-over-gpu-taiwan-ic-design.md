@@ -65,10 +65,10 @@ AI 的錢正在換跑道。摩根大通（小摩）估 2026 年客製化 ASIC �
 
 ## 常見問題
 
-<p><strong>ASIC 跟 GPU 到底差在哪？為什麼雲端公司要自己做 ASIC？</strong><br>GPU 是通用加速器，什麼 AI 工作都能算，彈性高但為了通用會犧牲效率；ASIC 是為單一任務量身打造，只做一件事、但又快又省電。雲端巨頭那幾樣固定的訓練與推論工作量夠大，自己設計專用晶片能把每瓦效能和成本壓下來，這在[電力已成資料中心擴張瓶頸](https://news.cnyes.com/news/id/6506040)的當下就是關鍵優勢。</p>
+<p><strong>ASIC 跟 GPU 到底差在哪？為什麼雲端公司要自己做 ASIC？</strong><br>GPU 是通用加速器，什麼 AI 工作都能算，彈性高但為了通用會犧牲效率；ASIC 是為單一任務量身打造，只做一件事、但又快又省電。雲端巨頭那幾樣固定的訓練與推論工作量夠大，自己設計專用晶片能把每瓦效能和成本壓下來，這在<a href="https://news.cnyes.com/news/id/6506040">電力已成資料中心擴張瓶頸</a>的當下就是關鍵優勢。</p>
 
-<p><strong>小摩說 ASIC 2027 年超車 GPU，是說輝達要被取代了嗎？</strong><br>不是。小摩講的是[出貨數量](https://www.kucoin.com/news/flash/jpmorgan-ai-asic-shipments-to-surpass-gpus-by-2027)：2027 年 ASIC／XPU 占約 1,240 萬顆、GPU 1,090 萬顆。通用運算需求還在成長，只是成長最快的那塊換成客製晶片。市場更像是形成「輝達主攻通用、博通主攻客製」的雙寡頭，不是誰把誰趕出場。</p>
+<p><strong>小摩說 ASIC 2027 年超車 GPU，是說輝達要被取代了嗎？</strong><br>不是。小摩講的是<a href="https://www.kucoin.com/news/flash/jpmorgan-ai-asic-shipments-to-surpass-gpus-by-2027">出貨數量</a>：2027 年 ASIC／XPU 占約 1,240 萬顆、GPU 1,090 萬顆。通用運算需求還在成長，只是成長最快的那塊換成客製晶片。市場更像是形成「輝達主攻通用、博通主攻客製」的雙寡頭，不是誰把誰趕出場。</p>
 
-<p><strong>台灣哪些公司受惠這波 ASIC 轉向？</strong><br>主要是 IC 設計服務族群：世芯-KY（拿亞馬遜 Trainium）、創意（微軟與 CSP 案子），加上智原、晶心科。法人給[世芯目標價 6,200 元、創意 6,800 元](https://tw.stock.yahoo.com/news/asic%E5%8F%96%E4%BB%A3gpu-%E4%BB%8A%E5%B9%B4%E5%B8%82%E5%8D%A0%E8%A1%9D3%E6%88%90-%E5%89%B5%E6%84%8F-%E4%B8%96%E8%8A%AF%E8%82%89%E5%A4%9A%E5%A4%9A-%E9%87%8D%E9%87%8F%E7%B4%9A%E6%B3%95%E4%BA%BA%E6%9B%9D%E6%9C%80%E6%96%B0%E7%9B%AE%E6%A8%99%E5%83%B9eps-024742851.html)，DIGITIMES 估[台灣 IC 設計業第二季營收年增 11.8%](https://www.digitimes.com.tw/research/report/?v=20260630-199)。</p>
+<p><strong>台灣哪些公司受惠這波 ASIC 轉向？</strong><br>主要是 IC 設計服務族群：世芯-KY（拿亞馬遜 Trainium）、創意（微軟與 CSP 案子），加上智原、晶心科。法人給<a href="https://tw.stock.yahoo.com/news/asic%E5%8F%96%E4%BB%A3gpu-%E4%BB%8A%E5%B9%B4%E5%B8%82%E5%8D%A0%E8%A1%9D3%E6%88%90-%E5%89%B5%E6%84%8F-%E4%B8%96%E8%8A%AF%E8%82%89%E5%A4%9A%E5%A4%9A-%E9%87%8D%E9%87%8F%E7%B4%9A%E6%B3%95%E4%BA%BA%E6%9B%9D%E6%9C%80%E6%96%B0%E7%9B%AE%E6%A8%99%E5%83%B9eps-024742851.html">世芯目標價 6,200 元、創意 6,800 元</a>，DIGITIMES 估<a href="https://www.digitimes.com.tw/research/report/?v=20260630-199">台灣 IC 設計業第二季營收年增 11.8%</a>。</p>
 
 <p><strong>看到 ASIC 概念股是不是可以直接買？</strong><br>題材熱不等於每家都吃到肉。先問三件事：這家到底拿到哪個 CSP 的哪個專案、量產排程在哪；客戶集中度多高（綁單一大客戶，轉單就斷崖）；位置在先進製程的高階案還是成熟製程的雜項訂單。這波是贏者全拿，把題材當基本面最容易踩雷。</p>

@@ -287,7 +287,7 @@ function main() {
   // 去 AI 腔硬性 gate（只擋機械可判的簽名句：破折號／自我辯白 meta 旁白）。
   // 語氣類 tell 靠 SKILL 步驟三.7 自檢，這關只兜住模型漏掉的那幾條硬 tell。
   // 為什麼＝docs/lessons/ai-tone-gate.md（「先揭露，免得你覺得我在夾帶」上線事件）。
-  const tone = spawnSync('node', ['scripts/check-ai-tone.mjs', articleFile], { encoding: 'utf8' });
+  const tone = spawnSync('node', ['scripts/check-content.mjs', articleFile], { encoding: 'utf8' });
   if (tone.status !== 0) {
     die(`去 AI 腔 gate 未過，不發佈（改動留工作區待改）：\n${(tone.stdout || '') + (tone.stderr || '')}`);
   }

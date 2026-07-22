@@ -72,10 +72,10 @@ originalContribution: "本文把 Cognizant 六月兩則分開發佈的公告（6
 
 ## 常見問題
 
-<p><strong>AI agent 的「單一編排層」到底在解決什麼問題？</strong><br>解決的是跨廠牌 agent 各自為政的整合問題。企業常常同時用 ServiceNow、第三方平台和自建系統的 agent，過去每接一個都要寫專屬連接器、靠人工協調。編排層的目標是把這些孤島串成能一起跑的工作流程，[Cognizant 六月就是這樣把 ServiceNow agent 接進自家 Neuro 加速器](https://news.cognizant.com/2026-06-18-Cognizant-expands-cross-platform-agentic-AI-with-new-ServiceNow-AI-Agent-interoperability)。它解的是整合與治理，不是讓單一 agent 變聰明。</p>
+<p><strong>AI agent 的「單一編排層」到底在解決什麼問題？</strong><br>解決的是跨廠牌 agent 各自為政的整合問題。企業常常同時用 ServiceNow、第三方平台和自建系統的 agent，過去每接一個都要寫專屬連接器、靠人工協調。編排層的目標是把這些孤島串成能一起跑的工作流程，<a href="https://news.cognizant.com/2026-06-18-Cognizant-expands-cross-platform-agentic-AI-with-new-ServiceNow-AI-Agent-interoperability">Cognizant 六月就是這樣把 ServiceNow agent 接進自家 Neuro 加速器</a>。它解的是整合與治理，不是讓單一 agent 變聰明。</p>
 
 <p><strong>有了 AI Control Tower，agent 的治理就算做好了嗎？</strong><br>沒有。Control Tower 讓你「看得到」企業裡所有 AI 系統與 agent，但看得到不等於授權設計對了。Gartner 提醒，對所有 agent 套同一套治理反而會出事，關鍵是把「agent 能做什麼動作」和「能碰什麼資料、什麼系統」分成兩層授權。治理的重點是角色、資料權限與責任歸屬，中控台是必要條件不是充分條件。</p>
 
-<p><strong>為什麼那麼多企業 agent 專案最後被砍掉？</strong><br>因為卡點多半在落地設計，不在模型能力。Gartner 預測[到 2027 年底超過四成 agentic AI 專案會被取消](https://www.forbes.com/sites/robertszczerba/2026/07/07/why-40-of-agentic-ai-projects-may-be-canceled-by-2027/)，主因是成本失控、商業價值講不清、風險控制不到位。分析師也指出，把編排器、治理層和多個 agent 疊上去，[成本會很快膨脹](https://www.cio.com/article/4132031/why-most-agentic-ai-projects-stall-before-they-scale.html)，這筆帳要在導入前先算清楚。</p>
+<p><strong>為什麼那麼多企業 agent 專案最後被砍掉？</strong><br>因為卡點多半在落地設計，不在模型能力。Gartner 預測<a href="https://www.forbes.com/sites/robertszczerba/2026/07/07/why-40-of-agentic-ai-projects-may-be-canceled-by-2027/">到 2027 年底超過四成 agentic AI 專案會被取消</a>，主因是成本失控、商業價值講不清、風險控制不到位。分析師也指出，把編排器、治理層和多個 agent 疊上去，<a href="https://www.cio.com/article/4132031/why-most-agentic-ai-projects-stall-before-they-scale.html">成本會很快膨脹</a>，這筆帳要在導入前先算清楚。</p>
 
 <p><strong>台灣企業導入多代理 agent 前，第一步該做什麼？</strong><br>先定義問題再選工具，順序不能倒。先想清楚要編排哪些流程、哪個 agent 該有權碰哪些資料、出錯誰負責，再去挑中控與編排平台，最後才比較選哪家。先被某家的單一編排層框住、再回頭硬套自己的流程，是選型最常見的失敗模式。</p>

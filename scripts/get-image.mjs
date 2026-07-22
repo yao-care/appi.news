@@ -1,9 +1,11 @@
 // 取得文章配圖（整合：圖庫優先 / AI 生成）。
 //
 // 規則（見 .claude/skills/newsroom/SKILL.md 與記憶 newsroom-image-stock-first-taiwanese-people）：
-//   - 概念/物件/場景圖（無人物）：先搜圖庫（Unsplash/Pexels），命中合適圖才用；
-//     找不到、無金鑰或下載失敗 → 退回 AI 生成。
+//   - 概念/物件/場景圖（無人物）：先搜圖庫（Unsplash/Pexels），每張候選過 Haiku 審查
+//     （相關度＋外國臉孔淘汰＋歐美場景，2026-07 站長裁示）；全淘汰/無金鑰/下載失敗
+//     → 退回 AI 生成（超寫實新聞攝影單一場景＋多樣性輪轉，不再是插畫拼貼）。
 //   - 人物圖（--people）：直接 AI 生成，由模組強制「台灣人」鐵律（圖庫難保證台灣人臉孔）。
+//   - 圖說紀律：圖庫照與生成照的圖說一律尾註「（示意圖）」；embed 可授權真實照寫 credit 不加。
 //
 // 用法:
 //   node scripts/get-image.mjs --topic "段落主題" --context "文章脈絡" \
@@ -16,7 +18,7 @@
 //   mode=embedded 時 credit 為必填（嵌入原圖一律署名），license/source 記錄授權與來源。
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
-import { generateImage, generatePersonImage, imgTag, toWebp } from './lib/ai-image.mjs';
+import { generatePhotoRealImage, generatePersonImage, imgTag, toWebp, checkStockPhotoBuffer } from './lib/ai-image.mjs';
 import { searchStock } from './lib/stock.mjs';
 import { classifyImageSource } from './lib/image-sources.mjs';
 
@@ -57,16 +59,25 @@ if (!Number.isFinite(width)) {
 out = out.replace(/\.(jpe?g|png|webp)$/i, '') + '.webp';
 const src = '/' + out.replace(/^public\//, '');
 
-/** AI 生成（人物鐵律由模組強制）→ 寫檔 → 回 result。 */
+/** AI 生成（超寫實攝影產線：sonnet 展開＋多樣性輪轉＋haiku 自檢；台灣人鐵律由模組強制）
+ *  2026-07 起概念/封面生成不再走插畫拼貼，一律新聞攝影感單一場景。 */
 async function generate(reason) {
   if (dryRun) return { mode: 'generated', reason, file: out, src, dry: true };
-  const { buffer, width: w, height: h } = await generateImage({ topic, context, width });
+  const r = await generatePhotoRealImage({
+    topic, context, caption, alt: altText, articleContext, width, seed: out,
+  });
   mkdirSync(dirname(out), { recursive: true });
-  writeFileSync(out, buffer);
-  return { mode: 'generated', reason, file: out, src, width: w, height: h, tag: imgTag({ src, width: w, height: h, alt: '' }) };
+  writeFileSync(out, r.buffer);
+  return {
+    mode: 'generated', reason, file: out, src, width: r.width, height: r.height,
+    tag: imgTag({ src, width: r.width, height: r.height, alt: altText || '' }),
+    expanded: r.expanded, checked: r.checked, regenerated: r.regenerated,
+    ...(r.checkReason ? { checkReason: r.checkReason } : {}),
+  };
 }
 
-/** 下載一張圖庫候選 → webp → 寫檔。失敗回 null。 */
+/** 下載一張圖庫候選 → Haiku 審查（相關度＋外國臉孔，2026-07 站長裁示）→ webp → 寫檔。
+ *  審查不合格回 null 換下一張候選；claude-appi 不可用時 fail-open 放行（維持舊行為）。 */
 async function tryStock(cand) {
   if (dryRun) return { mode: 'stock', file: out, src, credit: cand.credit, source: cand.source, pageUrl: cand.pageUrl, description: cand.description, dry: true };
   let raw;
@@ -76,6 +87,11 @@ async function tryStock(cand) {
     raw = Buffer.from(await res.arrayBuffer());
     if (raw.length < 5000) return null; // 過小 = 多半不是真圖
   } catch {
+    return null;
+  }
+  const verdict = await checkStockPhotoBuffer(raw, topic, context);
+  if (!verdict.ok) {
+    console.error(`  圖庫候選淘汰（${cand.source ?? 'stock'}）：${verdict.reason ?? '未過審查'}`);
     return null;
   }
   let webp;

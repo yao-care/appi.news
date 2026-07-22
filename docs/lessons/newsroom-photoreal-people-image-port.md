@@ -27,7 +27,7 @@ appi 的人物生圖（`get-image.mjs --people`）原本很樸素：`ai-image.mj
 - `get-image.mjs --people` 新增 `--caption/--alt/--article-context` 讓展開扣題；SKILL.md / newsroom-write.mjs 指示帶入。
 
 **幾個刻意的取捨（後人別誤改）**：
-- **人物 photoreal、概念圖插畫**是刻意混用（同 writer：photo/scene 走真實、infographic/diagram 走插畫）。別把概念圖也改成 photoreal（成本↑、且概念示意不需要）。
+- ~~**人物 photoreal、概念圖插畫**是刻意混用~~ **（2026-07-22 已改）**：站長裁示概念圖插畫拼貼「套版感太重、不像專業新聞網站」，生成路徑全面改超寫實新聞攝影單一場景＋多樣性輪轉。見 [`image-realism-system.md`](./image-realism-system.md)。
 - **全程 fail-open**：展開失敗退回短 detail（仍 photoreal）、驗圖失敗放行、只重生一次。這套是「只加分、不新增故障點」；別把驗圖改成硬 gate 擋出圖。
 - **成本**：每張人物圖 = +1 sonnet（展開）+1 haiku（驗圖）+ 可能 1 次重生 + quality medium。走 claude-appi 共用 5h 額度視窗，注意與其他自動線的額度競用。
 

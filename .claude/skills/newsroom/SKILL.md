@@ -46,10 +46,12 @@ description: APPI News 科技類日更引擎。輸入 /newsroom 後找議題，�
 3. **超連結查證迴路**：對全文每一條超連結（inline + references），用 WebFetch 逐條確認「連得上（2xx）且內容真的支持那句」。失效/連不上/對不上 → 換真實來源；找不到佐證 → 改寫或刪該論點。迴圈到全綠。不留死連結。
 4. **每段必配圖（先圖庫、沒有合適圖才 AI 生成）**：每段呼叫一次
    `node scripts/get-image.mjs --topic "<該段重點>" --context "<文章脈絡>" --query "<英文圖庫關鍵字>" --out public/images/<slug>-s<N>.webp`
-   - **先判斷該段配圖主體**：若主體是「人物」（人臉/人像是畫面重點）→ 加 `--people`，走**擬真攝影生成**（sonnet 展開完整攝影 prompt → 生圖 → haiku 視覺自檢手指/文字/AI 破綻/台灣人臉，不合格自動重生一次；模組強制台灣人）。**人物圖務必多帶三個脈絡旗標讓展開扣題**：`--caption "<這張圖要傳達的訊息，最重要>"` `--alt "<中文畫面描述>"` `--article-context "<本篇文章主題>"`（缺了會退回只用 topic，品質較差）。否則**不要**加 `--people` → 先搜圖庫，命中合適圖才用，找不到/無金鑰/下載失敗會自動退回 AI 生成（概念圖維持既有插畫風）。
+   - **先判斷該段配圖主體**：若主體是「人物」（人臉/人像是畫面重點）→ 加 `--people`，走**擬真攝影生成**（sonnet 展開完整攝影 prompt → 生圖 → haiku 視覺自檢手指/文字/AI 破綻/台灣人臉，不合格自動重生一次；模組強制台灣人）。否則**不要**加 `--people` → 先搜圖庫（候選會自動過 Haiku 審查：主題相關度＋**外國臉孔淘汰**＋歐美場景；不合格自動換下一張），全淘汰/找不到/無金鑰才退回 AI 生成——生成一律是**超寫實新聞攝影單一場景**（多樣性輪轉＋反拼貼硬條款，2026-07 起不再是插畫拼貼）。**每張圖都務必帶三個脈絡旗標讓展開與審查扣題**：`--caption "<這張圖要傳達的訊息，最重要>"` `--alt "<中文畫面描述>"` `--article-context "<本篇文章主題>"`（缺了品質與審查準度都會變差）。
    - `--query` 給精準的**英文**圖庫關鍵字（提高命中率）；省略時以 topic 當查詢。
    - 取回 JSON 的 `tag`，把其中 `alt=""` 換成你寫的**中文 alt** 後，把 `<img>` 貼在該段之後。人物鐵律（台灣人）已由模組強制，無須自行加。
-   - 回傳 `mode` 會是 `stock`（圖庫）或 `generated`（AI）；不需因此改寫法，照貼 `tag` 即可（圖庫授權允許免署名，內文圖不必加 credit）。
+   - 回傳 `mode` 會是 `stock`（圖庫）或 `generated`（AI）；照貼 `tag` 即可（圖庫授權允許免署名，內文圖不必加 credit）。
+   - **圖說紀律**：`stock` 與 `generated` 的圖，圖說句尾一律加「（示意圖）」（會顯示在圖下 figcaption）；`embedded` 可授權真實照不加、但必寫 credit。
+   - **資料圖表**（有數字/比較/流程才畫）：依 [`docs/design/chart-spec.md`](../../../docs/design/chart-spec.md) 手繪原生 SVG，**嚴禁用生圖模型畫圖表**（畫不準繁中字與數字）。
 5. 封面圖：同法 `node scripts/get-image.mjs --topic "<本篇主題>" --context "<摘要>" --query "<英文關鍵字>" --out public/covers/<slug>.webp`（封面多為概念圖，預設走圖庫優先；若封面主體是人物才加 `--people`，並同樣帶 `--caption/--alt/--article-context`）。frontmatter 填 `coverImage: "covers/<slug>.webp"` + `coverAlt`；**若回傳 `mode:"stock"`，另填 `coverImageCredit: "<回傳的 credit>"`**（圖庫署名）。
 6. frontmatter：`slug / title / description / category / subcategory / tags / highlights / references / author: "lightman" / sourceType: "ai-assisted" / disclaimerType`。先設 `status: "draft"`（排程待步驟四）。
    - **slug 規範（鐵律）**：必為**語意化英文 kebab-case**（小寫、`a-z0-9`、連字號），3～6 個單字、一眼看得出主題；專有名詞用通用英文（台積電=`tsmc`、輝達/NVIDIA=`nvidia`、鴻海=`foxconn`、世界盃=`world-cup`、聯準會=`fed`、歐盟=`eu`、健保=`nhi`、中職=`cpbl`）。**禁止** `post-NNN`、流水號、中文、拼音、`article`/`news` 這類無意義 slug。frontmatter 的 `slug` 與檔名 `<slug>.md` 必須一致。先用 `ls src/content/articles/ | grep <slug>` 確認不撞既有 slug，撞了就換角度。

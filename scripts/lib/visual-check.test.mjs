@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseVerdict, buildCheckPrompt } from './visual-check.mjs';
+import { parseVerdict, buildCheckPrompt, buildStockCheckPrompt } from './visual-check.mjs';
 
 describe('parseVerdict', () => {
   it('第一行 ok → 合格', () => {
@@ -26,5 +26,22 @@ describe('buildCheckPrompt', () => {
     expect(p).toContain('中年女性');
     expect(p).toContain('東亞）面孔'); // 驗族裔
     expect(p).toContain('浮水印'); // 驗圖內文字
+  });
+});
+
+describe('buildStockCheckPrompt（圖庫照審查）', () => {
+  it('帶檔名/主題/脈絡，判準含相關度、外國臉孔淘汰、歐美場景、浮水印', () => {
+    const p = buildStockCheckPrompt('stock.jpg', '居家量血壓', '722 量測原則');
+    expect(p).toContain('stock.jpg');
+    expect(p).toContain('居家量血壓');
+    expect(p).toContain('722 量測原則');
+    expect(p).toContain('無關'); // 相關度
+    expect(p).toContain('不是東亞面孔'); // 外國臉孔淘汰
+    expect(p).toContain('歐美場景');
+    expect(p).toContain('浮水印');
+    expect(p).toContain('ok 或 no'); // 輸出格式與 parseVerdict 對齊
+  });
+  it('context 可省略', () => {
+    expect(buildStockCheckPrompt('s.jpg', '主題')).toContain('主題');
   });
 });

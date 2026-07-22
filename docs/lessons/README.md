@@ -49,6 +49,7 @@
 | [deterministic-fetch-llm-only-writes.md](./deterministic-fetch-llm-only-writes.md) | 自動線抓資料別交給 LLM agent（慢/發散翻頁/燒額度）；改固定抓→LLM 只寫；exit124 是逾時非額度、cron 別擠同一 5h session 視窗 |
 | [article-draft-consumer.md](./article-draft-consumer.md) | /admin 寫作任務有生產端沒消費端：`article-draft` issue 靜默孤兒化；補消費端用 newsroom `--stage` 開 PR、kind=factual 待審、放寬分類白名單給真人下單 |
 | [newsroom-photoreal-people-image-port.md](./newsroom-photoreal-people-image-port.md) | newsroom 人物圖移植 agent.writer 的擬真攝影流程（sonnet 展開 prompt + haiku 視覺自檢 + 不合格重生）；概念圖刻意維持插畫、全程 fail-open、每張多 1 sonnet+1 haiku，worker quality 待部署 |
+| [image-realism-system.md](./image-realism-system.md) | 拼貼概念封面套版被點名：生成全面改超寫實新聞攝影（反拼貼硬條款＋seed 多樣性輪轉）、圖庫過 Haiku 審查（相關度＋外國臉孔淘汰）、圖說「（示意圖）」、圖表統一 chart-spec 原生 SVG 禁生圖模型、白名單擴充 gov.tw |
 
 **內容 / 查證**
 | 篇目 | 一句話 |

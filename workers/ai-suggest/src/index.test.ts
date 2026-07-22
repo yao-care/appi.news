@@ -267,7 +267,7 @@ describe('/generate', () => {
     expect(await res.json()).toEqual({ b64: 'AAAA', mime: 'image/png' });
     const [url, init] = fetchMock.mock.calls[1];
     expect(url).toBe('https://api.openai.com/v1/images/generations');
-    expect(JSON.parse((init as RequestInit).body as string)).toMatchObject({ model: 'gpt-image-1', size: '1536x1024' });
+    expect(JSON.parse((init as RequestInit).body as string)).toMatchObject({ model: 'gpt-image-2', size: '1536x1024' });
   });
 
   it('Flux：fal 回 URL → worker 抓圖轉 b64', async () => {

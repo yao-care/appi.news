@@ -3,8 +3,8 @@ import { readFileSync, writeFileSync, unlinkSync, mkdtempSync } from 'node:fs';
 import { join } from 'node:path';
 import { homedir, tmpdir } from 'node:os';
 import { execFileSync } from 'node:child_process';
-import { expandPhotoPrompt, composePhotoPrompt } from './photo-prompt.mjs';
-import { visualCheck } from './visual-check.mjs';
+import { expandPhotoPrompt, composePhotoPrompt, varietyHints } from './photo-prompt.mjs';
+import { visualCheck, stockPhotoCheck } from './visual-check.mjs';
 
 // 生圖專門機制：Cloudflare Worker（與前端 src/utils/editor/ai-worker.ts 同一個，
 // OpenAI/Fal 金鑰已設在 worker 上）。換網域時兩邊一起改。
@@ -126,24 +126,30 @@ async function checkWebp(webpBuffer, prompt, alt) {
 }
 
 /**
- * 人物 photoreal 生圖（newsroom --people 路徑，移植自 writer 的優化流程）：
- *   ① sonnet 展開 detail →②composePhotoPrompt 組完整攝影 prompt →③生圖（quality medium）
+ * 超寫實攝影生圖（人物與非人物場景通用；移植自 writer 的優化流程，2026-07 依站長回饋
+ * 擴為全生成路徑的標準——概念/封面生成不再走插畫拼貼，改走新聞攝影感）：
+ *   ① sonnet 展開 detail（帶 seed 多樣性輪轉：構圖/光線/人選/色調逐篇輪開，反套版）
+ *   →②composePhotoPrompt 組完整攝影 prompt（含反拼貼硬條款）→③生圖（quality medium）
  *   →④haiku 視覺自檢（手指/文字/AI 破綻/東亞面孔）→⑤不合格用同 prompt 重生一次（第二張無條件採用）
  * 全程「失敗即退回、不阻斷」：展開失敗退短 detail；驗圖失敗放行。
  * 回 {buffer,width,height, expanded, checked, ok, regenerated, checkReason?}
  */
-export async function generatePersonImage({
+export async function generatePhotoRealImage({
   topic,
   context = '',
   caption = '',
   alt = '',
   articleContext = '',
   width = 1200,
-  quality = 'medium', // 人物擬真照：low 會糊，升 medium
+  quality = 'medium', // 擬真照：low 會糊，升 medium
+  seed = '', // 多樣性輪轉種子（建議傳輸出檔路徑/slug）；空字串退 topic
 }) {
   if (!topic || !String(topic).trim()) throw new Error('topic is required');
 
-  const detail = await expandPhotoPrompt({ brief: topic, alt, caption, articleContext: articleContext || context });
+  const variety = varietyHints(seed || topic);
+  const detail = await expandPhotoPrompt({
+    brief: topic, alt, caption, articleContext: articleContext || context, variety,
+  });
   const finalDetail = detail || [topic, caption || context || alt].filter(Boolean).join('. ').trim();
   const prompt = composePhotoPrompt(finalDetail);
 
@@ -156,4 +162,24 @@ export async function generatePersonImage({
   // 不合格：同 prompt 重擲一次，第二張無條件採用（不再驗、不阻斷）。
   const second = await generateImage({ topic, context, width, quality, prompt });
   return { ...second, expanded: !!detail, checked: true, ok: false, regenerated: true, checkReason: verdict.reason };
+}
+
+/** 相容別名（--people 路徑沿用舊名）。 */
+export const generatePersonImage = generatePhotoRealImage;
+
+/**
+ * 圖庫候選照審查（相關度＋外國臉孔）：raw buffer 轉暫存 jpg → Haiku 讀圖判定。
+ * 檢查環節失敗（CLI 錯）回 {ok:true} 放行，不阻斷出圖。
+ */
+export async function checkStockPhotoBuffer(rawBuffer, topic, context = '') {
+  const dir = mkdtempSync(join(tmpdir(), 'appi-stockchk-'));
+  const jpg = join(dir, 'stock.jpg');
+  try {
+    await sharp(rawBuffer).resize(1024, null, { withoutEnlargement: true }).jpeg({ quality: 85 }).toFile(jpg);
+    return await stockPhotoCheck(jpg, topic, context);
+  } catch {
+    return { ok: true }; // 檢查本身失敗不阻斷
+  } finally {
+    try { unlinkSync(jpg); } catch { /* 忽略 */ }
+  }
 }

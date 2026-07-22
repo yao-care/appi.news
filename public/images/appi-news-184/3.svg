@@ -1,76 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
-<rect width="960" height="600" fill="#fff"/>
-<rect width="960" height="68" fill="#1B5E4B"/>
-<text x="480" y="26" text-anchor="middle" fill="#C9A227" font-size="11" font-family="sans-serif" letter-spacing="2">ABOUT BLACK PEPPER</text>
-<text x="480" y="52" text-anchor="middle" fill="#fff" font-size="22" font-family="sans-serif" font-weight="bold">黑胡椒 5 件事整理</text>
-<rect x="20" y="80" width="296" height="210" rx="8" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
-<circle cx="51" cy="108" r="16" fill="#C9A227"/>
-<text x="51" y="115" text-anchor="middle" font-size="14" font-family="sans-serif" font-weight="bold" fill="#fff">1</text>
-<text x="76" y="104" font-size="13" font-family="sans-serif" font-weight="bold" fill="#1B5E4B">胡椒鹼（Piperine）</text>
-<text x="76" y="119" font-size="10" font-family="sans-serif" fill="#6B7B77">主要活性成分</text>
-<line x1="28" y1="130" x2="308" y2="130" stroke="#2E8B6F" stroke-width="0.8" opacity="0.4"/>
-<text x="28" y="150" font-size="11" font-family="sans-serif" fill="#1F2A28">· 占乾重約 5–9%</text>
-<text x="28" y="168" font-size="11" font-family="sans-serif" fill="#1F2A28">· 黑胡椒辛辣感的主要來源</text>
-<text x="28" y="186" font-size="11" font-family="sans-serif" fill="#1F2A28">· 研究關注的核心生物活性物質</text>
-<text x="28" y="254" font-size="28" font-family="sans-serif" font-weight="bold" fill="#C9A227">5–9%</text>
-<text x="28" y="272" font-size="10" font-family="sans-serif" fill="#6B7B77">占黑胡椒乾重比例</text>
-<rect x="332" y="80" width="296" height="210" rx="8" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
-<circle cx="363" cy="108" r="16" fill="#C9A227"/>
-<text x="363" y="115" text-anchor="middle" font-size="14" font-family="sans-serif" font-weight="bold" fill="#fff">2</text>
-<text x="388" y="104" font-size="13" font-family="sans-serif" font-weight="bold" fill="#1B5E4B">動物實驗研究</text>
-<text x="388" y="119" font-size="10" font-family="sans-serif" fill="#6B7B77">減重與腸道效應</text>
-<line x1="340" y1="130" x2="620" y2="130" stroke="#2E8B6F" stroke-width="0.8" opacity="0.4"/>
-<text x="340" y="150" font-size="11" font-family="sans-serif" fill="#1F2A28">· 動物研究顯示可能抑制脂肪吸收</text>
-<text x="340" y="168" font-size="11" font-family="sans-serif" fill="#1F2A28">· 有助修復腸道屏障功能</text>
-<text x="340" y="186" font-size="11" font-family="sans-serif" fill="#1F2A28">· 人體研究尚不充分，結論待確認</text>
-<rect x="340" y="242" width="272" height="34" rx="6" fill="#2E8B6F" opacity="0.12"/>
-<text x="476" y="263" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#1B5E4B" font-weight="bold">注意：目前多為動物研究，人體數據有限</text>
-<rect x="644" y="80" width="296" height="210" rx="8" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
-<circle cx="675" cy="108" r="16" fill="#C9A227"/>
-<text x="675" y="115" text-anchor="middle" font-size="14" font-family="sans-serif" font-weight="bold" fill="#fff">3</text>
-<text x="700" y="104" font-size="13" font-family="sans-serif" font-weight="bold" fill="#1B5E4B">礦物質含量</text>
-<text x="700" y="119" font-size="10" font-family="sans-serif" fill="#6B7B77">每 100g 分析數據</text>
-<line x1="652" y1="130" x2="932" y2="130" stroke="#2E8B6F" stroke-width="0.8" opacity="0.4"/>
-<text x="652" y="150" font-size="11" font-family="sans-serif" fill="#1F2A28">· 含鐵、錳、鉀、鈣等礦物質</text>
-<text x="652" y="168" font-size="11" font-family="sans-serif" fill="#1F2A28">· 每 100g 數據豐富可觀</text>
-<text x="652" y="186" font-size="11" font-family="sans-serif" fill="#1F2A28">· 日常料理用量極少（約 1–2g）</text>
-<text x="652" y="204" font-size="11" font-family="sans-serif" fill="#1F2A28">· 實際礦物質攝取量相當有限</text>
-<rect x="20" y="306" width="450" height="270" rx="8" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
-<circle cx="51" cy="334" r="16" fill="#C9A227"/>
-<text x="51" y="341" text-anchor="middle" font-size="14" font-family="sans-serif" font-weight="bold" fill="#fff">4</text>
-<text x="76" y="330" font-size="13" font-family="sans-serif" font-weight="bold" fill="#1B5E4B">提升吸收力機制</text>
-<text x="76" y="346" font-size="10" font-family="sans-serif" fill="#6B7B77">協同生物利用率</text>
-<line x1="28" y1="357" x2="462" y2="357" stroke="#2E8B6F" stroke-width="0.8" opacity="0.4"/>
-<text x="28" y="377" font-size="11" font-family="sans-serif" fill="#1F2A28">· 抑制 CYP3A4 代謝酵素</text>
-<text x="28" y="395" font-size="11" font-family="sans-serif" fill="#1F2A28">· 顯著提升薑黃素的生物利用率</text>
-<text x="28" y="413" font-size="11" font-family="sans-serif" fill="#1F2A28">· 促進脂溶性維生素（A、D、E、K）吸收</text>
-<text x="28" y="431" font-size="11" font-family="sans-serif" fill="#1F2A28">· 建議薑黃補充品搭配少量黑胡椒使用</text>
-<rect x="38" y="452" width="110" height="30" rx="6" fill="#1B5E4B"/>
-<text x="93" y="471" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#fff">薑黃素</text>
-<text x="162" y="472" text-anchor="middle" font-size="20" font-family="sans-serif" fill="#C9A227">+</text>
-<rect x="184" y="452" width="110" height="30" rx="6" fill="#2E8B6F"/>
-<text x="239" y="471" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#fff">胡椒鹼</text>
-<text x="308" y="472" text-anchor="middle" font-size="20" font-family="sans-serif" fill="#C9A227">→</text>
-<rect x="328" y="452" width="128" height="30" rx="6" fill="#C9A227"/>
-<text x="392" y="471" text-anchor="middle" font-size="11" font-family="sans-serif" font-weight="bold" fill="#fff">吸收率大幅提升</text>
-<text x="235" y="510" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#6B7B77">透過抑制 CYP3A4 延緩代謝，提高生物可用率</text>
-<rect x="488" y="306" width="452" height="270" rx="8" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
-<circle cx="519" cy="334" r="16" fill="#C9A227"/>
-<text x="519" y="341" text-anchor="middle" font-size="14" font-family="sans-serif" font-weight="bold" fill="#fff">5</text>
-<text x="544" y="330" font-size="13" font-family="sans-serif" font-weight="bold" fill="#1B5E4B">需注意的族群</text>
-<text x="544" y="346" font-size="10" font-family="sans-serif" fill="#6B7B77">使用補充品前請諮詢醫師</text>
-<line x1="496" y1="357" x2="932" y2="357" stroke="#2E8B6F" stroke-width="0.8" opacity="0.4"/>
-<rect x="500" y="368" width="198" height="70" rx="6" fill="#fff" stroke="#C9A227" stroke-width="1.5"/>
-<text x="599" y="392" text-anchor="middle" font-size="12" font-family="sans-serif" font-weight="bold" fill="#1B5E4B">胃潰瘍患者</text>
-<text x="599" y="410" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#6B7B77">可能刺激胃黏膜</text>
-<text x="599" y="427" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#6B7B77">建議減少用量</text>
-<rect x="714" y="368" width="218" height="70" rx="6" fill="#fff" stroke="#C9A227" stroke-width="1.5"/>
-<text x="823" y="392" text-anchor="middle" font-size="12" font-family="sans-serif" font-weight="bold" fill="#1B5E4B">孕婦（大量使用）</text>
-<text x="823" y="410" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#6B7B77">大劑量補充品建議先</text>
-<text x="823" y="427" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#6B7B77">諮詢婦產科醫師</text>
-<rect x="500" y="452" width="432" height="70" rx="6" fill="#fff" stroke="#C9A227" stroke-width="1.5"/>
-<text x="716" y="476" text-anchor="middle" font-size="12" font-family="sans-serif" font-weight="bold" fill="#1B5E4B">特定藥物使用者</text>
-<text x="716" y="494" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#6B7B77">胡椒鹼可能影響藥物代謝速率</text>
-<text x="716" y="511" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#6B7B77">使用補充品前，請主動告知醫師目前用藥情況</text>
-<text x="480" y="592" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#6B7B77">本圖表為衛教資訊，不構成醫療建議</text>
-<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="黑胡椒 5 件事整理：一、核心成分胡椒鹼占乾重 5–9%；二、動物減重研究可能抑制脂肪吸收但人體證據不足；三、礦物質含量可觀但日常用量極少；四、抑制 CYP3A4 提升薑黃素吸收力；五、注意族群使用補充品前先諮詢醫師">
+<style>
+text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
+.title{font-size:26px;font-weight:700;fill:#1e2030;}
+.deck{font-size:15px;fill:#6e7276;}
+.num{font-size:15px;font-weight:700;fill:#ffffff;}
+.item{font-size:18px;font-weight:700;fill:#1e2030;}
+.sub{font-size:13px;fill:#6e7276;}
+.li{font-size:14px;fill:#1e2030;}
+.chip{font-size:13px;font-weight:700;fill:#ffffff;}
+.chipd{font-size:13px;font-weight:700;fill:#1f3a5f;}
+.tag{font-size:12px;fill:#6e7276;}
+.foot{font-size:13px;fill:#6e7276;}
+.note{font-size:13px;fill:#6e7276;}
+</style>
+<rect width="960" height="600" fill="#ffffff"/>
+
+<!-- 標題列 -->
+<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="58" y="60" class="title">黑胡椒：5 件事整理</text>
+<text x="58" y="90" class="deck">從胡椒鹼、減重研究到吸收力，一次看懂這罐每天轉幾下的香料</text>
+
+<!-- 中線 -->
+<line x1="480" y1="118" x2="480" y2="548" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- 1 胡椒鹼 -->
+<circle cx="64" cy="140" r="15" fill="#1f3a5f"/>
+<text x="64" y="145" text-anchor="middle" class="num">1</text>
+<text x="90" y="137" class="item">胡椒鹼（Piperine）</text>
+<text x="90" y="156" class="sub">核心活性成分</text>
+<line x1="48" y1="170" x2="460" y2="170" stroke="#e8e9ed" stroke-width="1"/>
+<text x="48" y="196" class="li">・占乾重約 5–9%，辛辣感的主要來源</text>
+<text x="48" y="220" class="li">・研究關注的核心生物活性物質</text>
+
+<!-- 2 動物減重研究 -->
+<circle cx="64" cy="290" r="15" fill="#1f3a5f"/>
+<text x="64" y="295" text-anchor="middle" class="num">2</text>
+<text x="90" y="287" class="item">動物減重研究</text>
+<text x="90" y="306" class="sub">減重與腸道效應</text>
+<line x1="48" y1="320" x2="460" y2="320" stroke="#e8e9ed" stroke-width="1"/>
+<text x="48" y="346" class="li">・動物研究：可能抑制腸道脂肪吸收</text>
+<text x="48" y="370" class="li">・有助修復腸道屏障、降低發炎</text>
+<text x="48" y="394" class="li">・人體研究尚不充分，效果不宜過度期待</text>
+<rect x="48" y="410" width="412" height="28" rx="6" fill="#eef0f3"/>
+<text x="60" y="429" class="tag">大鼠試驗：高劑量 27 mg/kg 使體重下降約 5.7%</text>
+
+<!-- 3 礦物質含量 -->
+<circle cx="64" cy="470" r="15" fill="#1f3a5f"/>
+<text x="64" y="475" text-anchor="middle" class="num">3</text>
+<text x="90" y="467" class="item">礦物質含量</text>
+<text x="90" y="486" class="sub">每 100g 分析數據，日常用量約 1–2g</text>
+<line x1="48" y1="500" x2="460" y2="500" stroke="#e8e9ed" stroke-width="1"/>
+<text x="48" y="524" class="li">・每 100g：鐵 9.7mg・鈣 443mg・鉀 1329mg</text>
+
+<!-- 4 提升吸收力 -->
+<circle cx="514" cy="140" r="15" fill="#1f3a5f"/>
+<text x="514" y="145" text-anchor="middle" class="num">4</text>
+<text x="540" y="137" class="item">提升吸收力機制</text>
+<text x="540" y="156" class="sub">最有實用依據的功效</text>
+<line x1="498" y1="170" x2="920" y2="170" stroke="#e8e9ed" stroke-width="1"/>
+<text x="498" y="196" class="li">・抑制 CYP3A4 與 P-glycoprotein 代謝酵素</text>
+<text x="498" y="220" class="li">・顯著提升薑黃素的生物利用率</text>
+<text x="498" y="244" class="li">・促進脂溶性維生素 A、D、E、K 吸收</text>
+<rect x="498" y="262" width="94" height="30" rx="6" fill="#1f3a5f"/>
+<text x="545" y="282" text-anchor="middle" class="chip">薑黃素</text>
+<text x="600" y="283" text-anchor="middle" font-size="18" font-weight="700" fill="#a87515">+</text>
+<rect x="614" y="262" width="94" height="30" rx="6" fill="#a87515"/>
+<text x="661" y="282" text-anchor="middle" class="chip">胡椒鹼</text>
+<text x="716" y="283" text-anchor="middle" font-size="18" font-weight="700" fill="#a87515">→</text>
+<rect x="730" y="262" width="130" height="30" rx="6" fill="#eaf0f8"/>
+<text x="795" y="282" text-anchor="middle" class="chipd">吸收率提升</text>
+
+<!-- 5 注意族群 -->
+<circle cx="514" cy="352" r="15" fill="#1f3a5f"/>
+<text x="514" y="357" text-anchor="middle" class="num">5</text>
+<text x="540" y="349" class="item">注意族群</text>
+<text x="540" y="368" class="sub">使用補充品前先諮詢醫師</text>
+<line x1="498" y1="382" x2="920" y2="382" stroke="#e8e9ed" stroke-width="1"/>
+<path d="M506 401 L514 415 L498 415 Z" fill="#a12a2a"/>
+<text x="508" y="412.5" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">!</text>
+<text x="524" y="415" class="li">胃潰瘍／胃食道逆流：可能刺激胃黏膜</text>
+<path d="M506 425 L514 439 L498 439 Z" fill="#a12a2a"/>
+<text x="508" y="436.5" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">!</text>
+<text x="524" y="439" class="li">孕婦：不建議額外補充高劑量胡椒鹼萃取物</text>
+<path d="M506 449 L514 463 L498 463 Z" fill="#a12a2a"/>
+<text x="508" y="460.5" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">!</text>
+<text x="524" y="463" class="li">服用特定藥物者：影響肝臟代謝酵素</text>
+<path d="M506 473 L514 487 L498 487 Z" fill="#a12a2a"/>
+<text x="508" y="484.5" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">!</text>
+<text x="524" y="487" class="li">陰虛體質者：辛熱之品不宜過量</text>
+
+<!-- 衛教聲明 -->
+<text x="480" y="548" text-anchor="middle" class="note">本圖為衛教資訊，不構成醫療建議</text>
+
+<!-- 頁尾 -->
+<line x1="40" y1="564" x2="920" y2="564" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="586" class="foot">製圖：APPI News</text>
+<text x="920" y="586" text-anchor="end" class="foot">資料來源：胡椒鹼藥理研究（2021–2022 動物試驗與系統性回顧）</text>
+</svg>

@@ -27,7 +27,7 @@ export interface Env {
   GITHUB_REPO: string;
   // 生圖 secrets（wrangler secret put）；缺 FAL_KEY 時 Flux 端點回 502，OpenAI 不受影響。
   OPENAI_API_KEY?: string;
-  OPENAI_IMAGE_MODEL?: string; // 'gpt-image-1'（需組織驗證）或 'dall-e-3'（免驗證）；預設 gpt-image-1
+  OPENAI_IMAGE_MODEL?: string; // 'gpt-image-2'（本專案標準，wrangler.toml [vars] 已設）／'dall-e-3'（免驗證退路）；預設 gpt-image-2
   OPENAI_IMAGE_QUALITY?: string; // gpt-image-* 畫質 low|medium|high|auto；預設 low（壓低延遲避免逾時）
   FAL_KEY?: string;
   // 圖庫 secrets（Phase 2）
@@ -87,12 +87,12 @@ function bytesToBase64(bytes: Uint8Array): string {
 /** 合法的 gpt-image quality（防呆：只放行這幾個，其餘退回 env/預設）。 */
 const VALID_QUALITY = new Set(['low', 'medium', 'high', 'auto']);
 
-/** OpenAI gpt-image-1：同步回 b64_json。quality 可 per-request 覆寫（人物 photoreal 用 medium）。 */
+/** OpenAI gpt-image-2：同步回 b64_json。quality 可 per-request 覆寫（人物 photoreal 用 medium）。 */
 async function genOpenAI(env: Env, prompt: string, size: GenSize, quality?: string): Promise<GenResult> {
   if (!env.OPENAI_API_KEY) throw new Error('未設定 OPENAI_API_KEY');
-  const model = env.OPENAI_IMAGE_MODEL || 'gpt-image-1';
-  // gpt-image-1 與 dall-e-3 的尺寸與回傳格式不同：dall-e-3 橫式為 1792x1024 且需 response_format
-  // 取 b64；gpt-image-1 橫式 1536x1024 且一律回 b64_json（不接受 response_format 參數）。
+  const model = env.OPENAI_IMAGE_MODEL || 'gpt-image-2';
+  // gpt-image-* 與 dall-e-3 的尺寸與回傳格式不同：dall-e-3 橫式為 1792x1024 且需 response_format
+  // 取 b64；gpt-image-2 橫式 1536x1024 且一律回 b64_json（不接受 response_format 參數）。
   const dalle = model === 'dall-e-3';
   const size3: Record<GenSize, string> = dalle
     ? { landscape: '1792x1024', square: '1024x1024', portrait: '1024x1792' }
@@ -274,7 +274,7 @@ export async function handle(request: Request, env: Env, ctx?: CtxLike): Promise
 
   if (request.method === 'GET' && url.pathname === '/config') {
     return json({
-      openaiImageModel: env.OPENAI_IMAGE_MODEL || 'gpt-image-1',
+      openaiImageModel: env.OPENAI_IMAGE_MODEL || 'gpt-image-2',
       hasOpenAI: !!env.OPENAI_API_KEY,
       hasFal: !!env.FAL_KEY,
     }, 200, env);

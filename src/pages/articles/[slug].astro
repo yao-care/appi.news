@@ -86,6 +86,10 @@ const topicTitle = new Map((await getTopics()).map((t) => [t.id, t.data.title]))
 const aboutNames = article.data.topics
   .map((s) => topicTitle.get(s))
   .filter((x): x is string => Boolean(x));
+// topics 原本只餵 JSON-LD about、頁面上沒有可見連結，讀者與爬蟲都無法從文章頁走到專題頁。
+const topicLinks = article.data.topics
+  .map((id) => ({ id, title: topicTitle.get(id) }))
+  .filter((t): t is { id: string; title: string } => Boolean(t.title));
 const authorImageAbs = author
   ? new URL(authorAvatar(author), Astro.site).toString()
   : undefined;
@@ -260,6 +264,21 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
         }
 
         <TagList tags={article.data.tags} title="標籤" plain={preview} />
+
+        {
+          !preview && topicLinks.length > 0 && (
+            <div class="topic-links">
+              <span class="topic-links-title">相關專題</span>
+              <ul>
+                {topicLinks.map((t) => (
+                  <li>
+                    <a href={url(`/topics/${t.id}/`)}>{t.title} →</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
 
         <ShareButtons url={shareUrl} title={article.data.title} />
 
@@ -440,6 +459,41 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
   .risks ul {
     margin: 0;
     padding-left: 1.2em;
+  }
+  .topic-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .topic-links-title {
+    font-size: var(--text-xs);
+    color: var(--ink-3);
+    font-weight: 600;
+    margin-right: 4px;
+  }
+  .topic-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .topic-links a {
+    display: inline-block;
+    font-size: var(--text-xs);
+    color: var(--appi-brand);
+    background: var(--bg-tint);
+    padding: 4px 11px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-weight: 600;
+  }
+  .topic-links a:hover {
+    text-decoration: underline;
   }
   .prevnext {
     display: grid;

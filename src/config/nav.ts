@@ -26,6 +26,7 @@ export const FOOTER_COLUMNS = [
       { label: '運動', href: '/sports/' },
       { label: '生活', href: '/lifestyle/' },
       { label: '專欄', href: '/columns/' },
+      { label: '專題', href: '/topics/' },
     ],
   },
   {

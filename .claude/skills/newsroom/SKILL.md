@@ -53,6 +53,7 @@ description: APPI News 科技類日更引擎。輸入 /newsroom 後找議題，�
    - **圖說紀律**：`stock` 與 `generated` 的圖，圖說句尾一律加「（示意圖）」（會顯示在圖下 figcaption）；`embedded` 可授權真實照不加、但必寫 credit。
    - **資料圖表**（有數字/比較/流程才畫）：依 [`docs/design/chart-spec.md`](../../../docs/design/chart-spec.md) 手繪原生 SVG，**嚴禁用生圖模型畫圖表**（畫不準繁中字與數字）。
 5. 封面圖：同法 `node scripts/get-image.mjs --topic "<本篇主題>" --context "<摘要>" --query "<英文關鍵字>" --out public/covers/<slug>.webp`（封面多為概念圖，預設走圖庫優先；若封面主體是人物才加 `--people`，並同樣帶 `--caption/--alt/--article-context`）。frontmatter 填 `coverImage: "covers/<slug>.webp"` + `coverAlt`；**若回傳 `mode:"stock"`，另填 `coverImageCredit: "<回傳的 credit>"`**（圖庫署名）。
+   - **封面必須是「獨立的一張圖」，不得與內文任何一張圖相同**（絕不可把內文第一張圖直接拿來當封面，或反過來）。封面用本篇整體主題取材、內文圖各配各段——重複會被配圖 gate 擋下不發佈。
 6. frontmatter：`slug / title / description / category / subcategory / tags / highlights / references / author: "lightman" / sourceType: "ai-assisted" / disclaimerType`。先設 `status: "draft"`（排程待步驟四）。
    - **slug 規範（鐵律）**：必為**語意化英文 kebab-case**（小寫、`a-z0-9`、連字號），3～6 個單字、一眼看得出主題；專有名詞用通用英文（台積電=`tsmc`、輝達/NVIDIA=`nvidia`、鴻海=`foxconn`、世界盃=`world-cup`、聯準會=`fed`、歐盟=`eu`、健保=`nhi`、中職=`cpbl`）。**禁止** `post-NNN`、流水號、中文、拼音、`article`/`news` 這類無意義 slug。frontmatter 的 `slug` 與檔名 `<slug>.md` 必須一致。先用 `ls src/content/articles/ | grep <slug>` 確認不撞既有 slug，撞了就換角度。
 7. **去 AI 腔文風複查**（產檔前必過，違反即改；`node scripts/check-content.mjs <檔>` 是統一內容守門引擎，兩級判定：ERROR 硬 tell 會 exit 1 擋 build、WARN 軟訊號單檔跨 ≥3 層才升 ERROR，語氣類多屬 WARN 仍靠這份清單自檢）：

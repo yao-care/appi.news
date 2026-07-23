@@ -10,13 +10,18 @@
 
 ## 每天自動發到 Slack dev 頻道（一個地方看完）
 
-crontab 一條:`40 21 * * *`(台北 05:40)跑 `scripts/cron/heartbeat.sh`,依序發**三則**:
+**維運心跳** `scripts/cron/heartbeat.sh`（crontab `40 21 * * *`＝台北 05:40），發**兩則確定性數據**（皆無 LLM、純讀、必發）:
 
-1. **📊 數據心跳** `data-heartbeat.mjs` — 純讀本地內容存量(文章數/排程/作者),無 LLM、必發。
-2. **📊 數據總覽** `dashboard-post.mjs` — GA 統整:8 區塊中文人流 + 受眾 + 漏斗 + AEO + 連結,純讀 GA、無 LLM、必發。**建議在 Slack 釘選這則。**
-3. **🤖 大腦優化** `brain-checkup.mjs` — claude-appi(Sonnet)判讀 SEO/內容機會,LLM 放最後(較慢/可能撞週限,撞限額退化成只報事實)。
+1. **📊 數據心跳** `data-heartbeat.mjs` — 純讀本地內容存量(文章數/排程/作者)。
+2. **📊 數據總覽** `dashboard-post.mjs` — GA 統整:8 區塊中文人流 + 受眾 + 漏斗 + AEO + 連結。**建議在 Slack 釘選這則。**
 
-> 前兩則是確定性數據(無 LLM),故相鄰;AI 分析放最後。
+> **2026-07-23 變更**:原步驟③🤖大腦優化(`brain-checkup.mjs`,報告型 LLM 判讀)已從 heartbeat 移除——由 **seo-ops 大腦層**(`/root/seo-ops/bin/seo-brain.sh --site appi.news`,crontab 在 `/etc/cron.d/seo-ops`,UTC 22:20)取代且升級:不只出建議,會**實際改單篇內容、跑 gate、commit、push 上線**。兩者同 dev 頻道並存會重複甚至矛盾,故 heartbeat 只留①②純數據。`brain-checkup.mjs` 腳本本身保留(seo-ops 大腦仍會間接參考其邏輯/可手動跑),只是不再由 cron 自動發。
+
+**AEO 學習環**（2026-07-23 站長指示啟用排程,原本只手動跑）:
+
+- **🛰 AEO 能見度探針** `scripts/cron/aeo-radar.sh`(crontab `0 12 * * *`＝台北 20:00)— claude-appi Sonnet 用自身 web search 逐題問 AI 引擎,量 appi 被引用/輸給誰 → 寫 `geo-citation-ledger`(git 外)+ 發 dev 摘要。純讀不碰 git。
+- **🔧 學被引用內容** `scripts/cron/cited-teardown.sh`(crontab `30 13 * * *`＝台北 21:30)— 按星期輪 7 beat 各週一次,拆競品被引用頁 → 寫 `.claude/skills/newsroom/geo-insights/<beat>.md`(newsroom 起草前讀)+ 發 dev 摘要。**會寫 repo** → 走 `_worktree.sh` 隔離 + push origin/main。
+- 兩者刻意排在 claude-appi 午後空窗(避清晨 tech-radar/seo-ops reflect·brain 與傍晚 international·arthurs 尖峰);撞週限額 regex 偵測、當日 no-op、可回滾。
 
 ## 腳本清單（職責）
 

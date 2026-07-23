@@ -96,11 +96,15 @@ pnpm test
 | 颱風停班課 | lifestyle-typhoon.sh | 每 15 分鐘（5–11 月） | */15 * * 5-11 * | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
 | 新文章送 Indexing API | indexing-submit.sh | 06:00 | 14:00 | 線上 sitemap | n/a（送 Google 收錄）| 有送才報 **dev 台** |
 | 數據報告 | weekly-report.sh | 00:17（每 3 天） | 08:17 | GA4+GSC | n/a（數據）| ✅報告到**作者群** |
-| 維運心跳 | heartbeat.sh | 21:40 | 05:40 | 本地內容/狀態 + GSC（seo-opportunities）| n/a（維運）| ✅📊數據心跳＋🤖大腦優化到 **dev 台**（排在 tech-radar 05:20 後 20 分，brain 撞額度會退化不出錯）|
+| 維運心跳 | heartbeat.sh | 21:40 | 05:40 | 本地內容存量 + GA（8 區塊儀表板）| n/a（維運）| ✅📊數據心跳＋📊數據總覽兩則到 **dev 台**（皆無 LLM。2026-07-23 移除原步驟③🤖大腦優化，改由 seo-ops 大腦層 UTC 22:20 取代升級）|
+| AEO 能見度探針 | aeo-radar.sh | 12:00 | 20:00 | claude-appi 自身 web search 問 AI 引擎 | n/a（寫 geo-citation 帳本，git 外）| ✅🛰摘要到 **dev 台**（純讀不碰 git。2026-07-23 站長指示啟用排程，原只手動）|
+| 學被引用內容 | cited-teardown.sh | 13:30 | 21:30 | 競品被引用頁（WebFetch）| 寫 `geo-insights/<beat>.md`→push（newsroom 起草前讀）| ✅🔧摘要到 **dev 台**（按星期輪 7 beat；**會寫 repo**→走 worktree。2026-07-23 站長指示啟用）|
 
 - **內容線排程刻意攤開，別再併回早上（2026-07-03；2026-07-20 更新）**：焦點/ESG 01:30、警消好人好事 04:45、連假優惠 **07:30**、便民市政 10:00、國際編譯台 15:00、科技選題雷達 21:20（UTC）。各喚 claude-appi Sonnet；claude-appi 的 session 額度是**每 5 小時一個共用視窗**，原本全擠在 01:30–03:50 → 同一視窗搶額度，排最後的警消每天餓死（先撞 weekly limit、再 session limit）。原則：任兩條相隔 ≥5h 或跨 04:30 reset 邊界，一個視窗最多落一條。**⚠️例外（站長 2026-07-20 指定）**：連假優惠從 10:00 移到 **07:30**，與警消 04:45 僅差 2h45、落同一視窗——但連假優惠**只有臨近國定連假才實發**（平日靜默），撞期風險僅限連假前數日，故接受此例外。**代價**＝國際編譯台仍在台北深夜；連假優惠改台北午後。要再調時間，日更線（焦點/警消/國際/雷達/便民）務必維持 ≥5h 間隔，別看「都在白天比較整齊」就併回去。（另一個常態吸額度點是 agent.writer 每小時 :40 的 cron-write，跨專案，未動。）
 - **並發保護（重要）**：已從「全域 flock + 共用工作目錄」改為**每支 cron 各開自己的臨時 detached worktree**（`scripts/cron/_worktree.sh` 的 `cron_enter_worktree`，off `origin/main`）→ 互不洗檔、可**真正並行**；寫稿端最後用 `pushToMain`（push `HEAD:main`，撞拒就 fetch+rebase 重試）安全上線。新增這類 cron 一律 `source _worktree.sh` 並 `cron_enter_worktree "<slug>"`。背景見 [`docs/lessons/`](./lessons/)（自動線多工不序列化）。
-  - **例外**：`indexing-submit.sh`、`heartbeat.sh` 是**純資料/唯讀腳本**（不碰 git 工作區、不喚 Claude 或只在最後喚一次），故**不走 worktree**，與其他 cron 無洗檔競態。背景見 [`docs/lessons/google-indexing-api-gray-area.md`](./lessons/google-indexing-api-gray-area.md)。
+  - **例外**：`indexing-submit.sh`、`heartbeat.sh`、`aeo-radar.sh` 是**純資料/唯讀腳本**（不碰 git 工作區、不喚 Claude 或只喚一次且只寫 git 外帳本），故**不走 worktree**，與其他 cron 無洗檔競態。背景見 [`docs/lessons/google-indexing-api-gray-area.md`](./lessons/google-indexing-api-gray-area.md)。
+  - **`cited-teardown.sh` 會寫 repo**（`geo-insights/<beat>.md`）→ 照內容線走 `_worktree.sh` 隔離 + `push HEAD:main` rebase 重試。
+- **AEO 學習環也吃 claude-appi 額度（2026-07-23 啟用排程）**：`aeo-radar.sh`（UTC 12:00）與 `cited-teardown.sh`（UTC 13:30）皆喚 claude-appi Sonnet，刻意排在 claude-appi 午後空窗——避開清晨 tech-radar(21:20 前一日)/seo-ops appi reflect·brain(21:45·22:20) 與傍晚 international(15:00)/arthurs 尖峰；兩者間隔 1.5h。撞週限額 regex 偵測、當日 no-op、可回滾（同其他 claude-appi cron）。
 - **維運/系統訊號改發 dev 台（2026-06-30）**：原本「cron 一律不發 dev、dev 只給 @bot」的政策放寬——**非內容的維運訊號**（`heartbeat.sh` 的 📊 數據心跳＋🤖 大腦優化、`indexing-submit.sh` 的索引提交回報）改走 **dev 台**（`cron-report.mjs --dev` → `DEV_CHANNEL`），與內容/值勤回報（作者群、分類台）分流，維運訊號不再吵作者群。內容類 cron 仍照舊發作者群/分類台。🤖 大腦優化是**報告型**（claude-appi Sonnet 判讀 SEO/內容機會，撞週限會退化成只報確定性事實、不沉默），不自動改碼。
 - **國際是長跑**（最多 8 區×3 篇、逐篇 Claude 撰寫）；各 cron 各自 worktree 並行，不再彼此卡鎖。要降國際耗時就調 `international-write.mjs` 的 `--max` 或 `INTL_TIME_BUDGET_MS`。
 - **颱風前置 gate（省用量）**：`lifestyle-typhoon.sh` 在建 worktree／喚 Claude **之前**，先用 `curl -4` 抓人事行政總處 `nds.html`，含「無停班停課訊息」就**安靜結束、完全不動用 Claude／worktree**（颱風季沒颱風的時段每 15 分鐘跑一次、用量＝0）。抓取失敗／非 200／找不到該字串一律 **fail-open** 照走完整流程，絕不漏報。要改 gate 字串或來源就動這支 `.sh` 開頭（改後記得 publisher pull）。

@@ -26,6 +26,7 @@ import yaml from 'js-yaml';
 import { validateJob, normalizeJob } from './lib/newsroom-job.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { nextOpenPublishDate, takenDatesFromContents } from './lib/publish-slot.mjs';
+import { coverDuplicatesInline } from './lib/image-dedupe.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
 
@@ -42,7 +43,25 @@ function sh(cmd, args, opts = {}) {
   return (r.stdout || '').trim();
 }
 
-/** 解析文章 frontmatter + 內文圖數；回傳 { data, body, inlineImages } 或 null。 */
+/** 從內文抽「站內本地圖」的 public/ 路徑（markdown 與 <img> 皆收；外部 URL 如 unsplash 略過）。
+ *  支援 root-relative（/images/…）與本站絕對網址（https://appi.news/images/…）。 */
+export function extractInlineImagePaths(body) {
+  const srcs = [];
+  const md = body.matchAll(/!\[[^\]]*\]\(\s*([^)\s]+)/g);
+  for (const m of md) srcs.push(m[1]);
+  const html = body.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["']/gi);
+  for (const m of html) srcs.push(m[1]);
+  const out = [];
+  for (let s of srcs) {
+    s = s.replace(/^https?:\/\/appi\.news/, ''); // 本站絕對網址 → root-relative
+    if (s.startsWith('/images/') || s.startsWith('/covers/')) {
+      out.push('public' + s);
+    }
+  }
+  return out;
+}
+
+/** 解析文章 frontmatter + 內文圖數；回傳 { data, body, inlineImages, inlineImagePaths } 或 null。 */
 function parseArticle(file) {
   const rawTxt = readFileSync(file, 'utf8');
   const m = rawTxt.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
@@ -55,7 +74,7 @@ function parseArticle(file) {
   }
   const body = m[2] || '';
   const inlineImages = (body.match(/!\[[^\]]*\]\(|<img\b/g) || []).length;
-  return { data: data || {}, body, inlineImages };
+  return { data: data || {}, body, inlineImages, inlineImagePaths: extractInlineImagePaths(body) };
 }
 
 // 待審草稿用的「遠未來」排程日：讓事實稿產出後只建 noindex 預覽頁、永不自動上線，
@@ -156,6 +175,7 @@ export function buildDraftPrompt(job, schedule = null, opts = {}) {
     '1a. 每段必配圖，一律用 `node scripts/get-image.mjs`（不要用 gen-image.mjs）：概念/物件/場景圖**不要**加 --people（先搜圖庫，圖庫候選會自動過相關度＋外國臉孔審查；全淘汰才 AI 生成，生成一律是**超寫實新聞攝影單一場景**，已內建多樣性輪轉與反拼貼）；人物為主體的圖才加 --people（擬真攝影生成：sonnet 展開＋haiku 視覺自檢＋不合格自動重生、模組強制台灣人）。**每張圖都務必帶** `--caption "<這張圖要傳達的訊息>"` `--alt "<中文畫面描述>"` `--article-context "<本篇主題>"` 讓展開與審查扣題。封面同法且**最重要**：縮圖要讓讀者一眼看出文章主題，像新聞攝影記者拍的照片。',
     '1a-1. **圖說（markdown 圖片 title）紀律**：mode:"generated" 與 mode:"stock" 的圖，圖說句尾一律加「（示意圖）」；mode:"stock" 的封面把 credit 寫進 frontmatter coverImageCredit；mode:"embedded" 可授權真實照不加示意圖、但 credit 必寫。圖說會顯示在圖片下方（figcaption），要寫成給讀者看的編輯圖說。',
     '1a-2. **資料圖表**（有數字/比較/流程才畫）：依 `docs/design/chart-spec.md` 手繪原生 SVG 存 `public/images/<slug>/`，**嚴禁用生圖模型畫圖表**（畫不準繁中字與數字）。',
+    '1a-3. **封面必須是獨立的一張圖，不得與內文任一張圖相同**（不可把內文第一張直接當封面）。封面用本篇整體主題另取一張；重複會被配圖 gate 擋下不發佈。',
     isUpdate
       ? `2. frontmatter：**status 與 publishDate 一律沿用原檔現值、不要改**（滾動更新不得改變排程）；category/subcategory/author/contentType/sourceType 維持原檔；新增或更新 updatedDate（見步驟 3a）。disclosure 揭露「以 AI 輔助起草、經人工查證編輯」。`
       : `2. frontmatter：status: "${status}"、publishDate: "${pubDate}"、category: "${job.category}"${job.subcategory ? `、subcategory: "${job.subcategory}"` : ''}、author: "${author}"、contentType: "${contentType}"、sourceType: "editorial"（須為 src/content.config.ts 的 enum 合法值），並用 disclosure 欄位揭露「以 AI 輔助起草、經人工查證編輯」。`,
@@ -209,7 +229,7 @@ function checkViewpointReflected(viewpoint, body) {
   return parseViewpointVerdict(r.stdout);
 }
 
-function main() {
+async function main() {
   const args = process.argv.slice(2);
   const go = args.includes('--go');
   const stage = args.includes('--stage');
@@ -282,6 +302,14 @@ function main() {
   if (!cover) imgProblems.push('缺 coverImage（每篇必須有封面）');
   else if (!existsSync(join('public', cover))) imgProblems.push(`coverImage 檔不存在：public/${cover}`);
   if (parsed.inlineImages < 1) imgProblems.push('內文 0 張圖（每篇至少要有一張內文配圖）');
+  // 封面不得與內文任一張圖重複（舊產線常把封面直接當內文第一張，見 docs/lessons/image-realism-system.md）。
+  // 感知雜湊比對：同源不同編碼（webp/jpg）也擋得住。讀不到檔則略過（交上面「檔案存在」檢查）。
+  if (cover && existsSync(join('public', cover)) && parsed.inlineImagePaths.length) {
+    const dup = await coverDuplicatesInline(join('public', cover), parsed.inlineImagePaths);
+    if (dup.duplicate) {
+      imgProblems.push(`封面與內文圖重複（封面必須是獨立的一張圖）：與 ${dup.match} 近似（距離 ${dup.distance}）。請把封面換成不同的圖，或把該張內文圖換掉。`);
+    }
+  }
   if (imgProblems.length) {
     die(`配圖 gate 未過，不發佈（改動留工作區待補圖）：\n  - ${imgProblems.join('\n  - ')}`);
   }
@@ -386,5 +414,8 @@ function main() {
 
 // 只有「直接執行」才跑；被 import（測試）時不執行、零副作用。
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  main();
+  main().catch((e) => {
+    console.error(e?.stack || e?.message || String(e));
+    process.exit(1);
+  });
 }

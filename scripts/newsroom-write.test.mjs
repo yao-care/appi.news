@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseViewpointVerdict, buildDraftPrompt } from './newsroom-write.mjs';
+import { parseViewpointVerdict, buildDraftPrompt, extractInlineImagePaths } from './newsroom-write.mjs';
 import { normalizeJob } from './lib/newsroom-job.mjs';
 
 describe('parseViewpointVerdict — 觀點 gate 判定解析', () => {
@@ -70,5 +70,29 @@ describe('buildDraftPrompt — 多分類 / 內容形態', () => {
     expect(p).not.toContain('persona.md');
     expect(p).toContain('事實稿不需追加 author-memory.json');
     expect(p).toContain('contentType: "guide"');
+  });
+});
+
+describe('extractInlineImagePaths', () => {
+  it('markdown 與 <img>、root-relative 與本站絕對網址都轉成 public/ 路徑', () => {
+    const body = [
+      '![alt](/images/foo-s1.webp "圖說")',
+      '![alt2](https://appi.news/images/appi-news-392/1.jpg)',
+      '<img src="/images/bar-s2.webp" width="960" height="640">',
+      '<img src="https://appi.news/covers/x.webp">',
+    ].join('\n\n');
+    expect(extractInlineImagePaths(body)).toEqual([
+      'public/images/foo-s1.webp',
+      'public/images/appi-news-392/1.jpg',
+      'public/images/bar-s2.webp',
+      'public/covers/x.webp',
+    ]);
+  });
+  it('外部圖庫 URL（unsplash 等）不算站內本地圖', () => {
+    const body = '![alt](https://images.unsplash.com/photo-123?w=1920)';
+    expect(extractInlineImagePaths(body)).toEqual([]);
+  });
+  it('無圖回空陣列', () => {
+    expect(extractInlineImagePaths('純文字沒有圖')).toEqual([]);
   });
 });

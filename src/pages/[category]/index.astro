@@ -9,7 +9,7 @@ import {
   articleSlug,
 } from '@/utils/content';
 import { url } from '@/utils/url';
-import { itemListLd } from '@/utils/jsonld';
+import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
 
 const PAGE_SIZE = 18;
 
@@ -32,11 +32,17 @@ const inCat = byCategory(all, category.slug);
 const totalPages = Math.max(1, Math.ceil(inCat.length / PAGE_SIZE));
 const pageArticles = inCat.slice(0, PAGE_SIZE);
 
-const ld = itemListLd(
-  Astro.site,
-  pageArticles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
-  { name: `${category.name}最新文章` },
-);
+const ld = [
+  breadcrumbLd(Astro.site, [
+    { name: '首頁', path: '/' },
+    { name: category.name, path: `/${category.slug}/` },
+  ]),
+  itemListLd(
+    Astro.site,
+    pageArticles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
+    { name: `${category.name}最新文章` },
+  ),
+];
 ---
 <BaseLayout
   title={`${category.name}｜${category.nameEn}`}

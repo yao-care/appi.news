@@ -11,7 +11,7 @@ import {
   bySubcategory,
   articleSlug,
 } from '@/utils/content';
-import { itemListLd } from '@/utils/jsonld';
+import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
 
 export async function getStaticPaths() {
   const all = await getPublishedArticles();
@@ -39,11 +39,18 @@ const authorNames = new Map(
 );
 const articles = bySubcategory(byCategory(all, category.slug), sub.slug);
 
-const ld = itemListLd(
-  Astro.site,
-  articles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
-  { name: `${sub.name}（${category.name}）` },
-);
+const ld = [
+  breadcrumbLd(Astro.site, [
+    { name: '首頁', path: '/' },
+    { name: category.name, path: `/${category.slug}/` },
+    { name: sub.name, path: `/${category.slug}/${sub.slug}/` },
+  ]),
+  itemListLd(
+    Astro.site,
+    articles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
+    { name: `${sub.name}（${category.name}）` },
+  ),
+];
 ---
 <BaseLayout
   title={`${sub.name}｜${category.name}`}

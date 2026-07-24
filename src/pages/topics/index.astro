@@ -4,6 +4,7 @@ import TopicCard from '@/components/blocks/TopicCard.astro';
 import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
 import EmptyState from '@/components/ui/EmptyState.astro';
 import { getTopics, getPublishedArticles, byTopic } from '@/utils/content';
+import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
 
 const topics = await getTopics();
 const all = await getPublishedArticles();
@@ -11,11 +12,28 @@ const cards = topics.map((t) => ({
   topic: t,
   count: byTopic(all, t.id).length + t.data.articles.length,
 }));
+
+const ld = [
+  breadcrumbLd(Astro.site, [
+    { name: '首頁', path: '/' },
+    { name: '專題', path: '/topics/' },
+  ]),
+  ...(cards.length > 0
+    ? [
+        itemListLd(
+          Astro.site,
+          cards.map((c) => ({ name: c.topic.data.title, path: `/topics/${c.topic.id}/` })),
+          { name: '專題' },
+        ),
+      ]
+    : []),
+];
 ---
 <BaseLayout
   title="專題"
   description="APPI News 專題：整理系列文章，深入特定議題。"
   path="/topics/"
+  jsonld={ld}
 >
   <div class="container" style="padding-top:28px;">
     <Breadcrumbs items={[{ name: '專題' }]} />

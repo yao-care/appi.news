@@ -5,12 +5,15 @@ import HeroNetwork from '@/components/blocks/HeroNetwork.astro';
 import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
 import CategoryTag from '@/components/ui/CategoryTag.astro';
 import { SITE } from '@/config/site';
+import { CATEGORIES } from '@/config/categories';
 import {
   getPublishedArticles,
   getAuthorMap,
   featuredArticles,
   makeDeduper,
   articleSlug,
+  byCategory,
+  bySubcategory,
   coverImageFor,
   coverAltFor,
 } from '@/utils/content';
@@ -41,6 +44,21 @@ const secondary = dedupe.take([...featuredArticles(all), ...all], 5);
 
 // 最新文章：單一等高大圖網格（補滿空間）
 const latest = dedupe.take(all, 12, false);
+
+// 分類主題導覽：首頁過去只連到 7 個分類本身，分類底下的細分主題頁（如「科技／AI」）
+// 完全沒有首頁內鏈入口，只能靠分類頁內部或站內搜尋找到，內鏈密度偏低。
+// 這裡只列「有文章」的子分類（與 [category]/[sub].astro 建頁條件一致），不會產生死連結。
+const topicGroups = CATEGORIES.filter((c) => c.slug !== 'columns')
+  .map((c) => {
+    const inCat = byCategory(all, c.slug);
+    const subs = c.subcategories
+      .map((s) => ({ ...s, count: bySubcategory(inCat, s.slug).length }))
+      .filter((s) => s.count > 0)
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 4);
+    return { category: c, subs };
+  })
+  .filter((g) => g.subs.length > 0);
 
 const heroCover = hero ? coverImageFor(hero) : '';
 const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
@@ -146,6 +164,30 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
               showExcerpt={false}
               authorName={authorNames.get(a.data.author)}
             />
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section home-topics">
+      <div class="section-head">
+        <h2>分類主題導覽</h2>
+      </div>
+      <div class="topic-groups">
+        {
+          topicGroups.map(({ category, subs }) => (
+            <div class="topic-group">
+              <a class="topic-group-title" href={url(`/${category.slug}/`)}>
+                {category.name}
+              </a>
+              <div class="topic-chips">
+                {subs.map((s) => (
+                  <a class="topic-chip" href={url(`/${category.slug}/${s.slug}/`)}>
+                    {s.name}
+                  </a>
+                ))}
+              </div>
+            </div>
           ))
         }
       </div>
@@ -341,6 +383,44 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
   /* ---------- 最新文章：恢復至先前較大的卡片標題字級 ---------- */
   .home-latest :global(.acard--medium .acard-title) {
     font-size: 1.375rem; /* 22px */
+  }
+
+  /* ---------- 分類主題導覽：補齊首頁到細分主題頁的內鏈入口 ---------- */
+  .topic-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+  }
+  .topic-group-title {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  .topic-group-title:hover {
+    color: var(--appi-brand);
+  }
+  .topic-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .topic-chip {
+    font-size: var(--text-xs);
+    font-family: var(--font-sans);
+    color: var(--ink-2);
+    background: var(--bg-soft);
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .topic-chip:hover {
+    background: var(--appi-brand);
+    color: var(--white);
   }
 
   @media (max-width: 1100px) {

@@ -1,19 +1,21 @@
 ---
-title: "伯納姆就任英國首相：唐寧街首場演說允民眾『喘息空間』　廢數位身分證、馬哈穆德掌財政"
+title: "伯納姆內閣人事翻盤：財政大臣改由希利出任　智庫示警『喘息空間』承諾壓縮財政餘裕至80億英鎊"
 slug: "uk-starmer-resigns-pm"
-description: "大曼徹斯特市長伯納姆7月20日正式就任英國首相，先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街10號外發表首場首相演說，承諾在生活成本上給民眾『喘息空間』，並宣布廢除前朝施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，把資源轉向紓困。內閣名單同日公布，財政大臣一職由馬哈穆德出任，可望成為英國史上首位穆斯林女性財政大臣；原被看好接掌財政的米勒班傳將轉任外交大臣，庫珀回任內政大臣。伯納姆延續先前規劃，將在曼徹斯特設立『10號北方辦公室』推動地方分權；泰晤士水務公司國有化與北海油氣鑽探政策方向則尚未拍板。"
-excerpt: "伯納姆7月20日正式就任英國首相，唐寧街首場演說承諾給民眾『喘息空間』、廢除數位身分證計畫；內閣同日公布，馬哈穆德掌財政、米勒班傳轉任外交大臣。"
+description: "大曼徹斯特市長伯納姆7月20日正式就任英國首相，先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街10號外發表首場首相演說，承諾在生活成本上給民眾『喘息空間』，並宣布廢除前朝施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，把資源轉向紓困。內閣名單同日公布，財政大臣一職最終出人意表由前國防大臣希利出任，原被看好的馬哈穆德、米勒班雙雙落空；伯納姆延續先前規劃，將在曼徹斯特設立『10號北方辦公室』推動地方分權。智庫決議基金會（Resolution Foundation）7月底估算，伯納姆一連串『喘息空間』紓困承諾加上伊朗戰爭相關成本，已把財政餘裕從3月的236億英鎊壓縮至僅80億英鎊，警告希利恐須在預算中找到更多財源、或調漲能源帳單因應。"
+excerpt: "伯納姆內閣財政大臣人事出人意表改由希利出任；智庫決議基金會警告，伯納姆『喘息空間』紓困承諾已將財政餘裕壓縮至80億英鎊，希利恐須加稅或調漲能源帳單因應。"
 publishDate: "2026-06-23T12:00:00+08:00"
-updatedDate: "2026-07-20T15:17:08.264Z"
+updatedDate: "2026-07-25T15:17:55.963Z"
 category: "international"
 subcategory: "europe"
-tags: ["英國", "施凱爾", "工黨", "改革黨", "伯納姆", "唐寧街", "財富稅", "川普", "內閣改組", "馬哈穆德", "數位身分證"]
+tags: ["英國", "施凱爾", "工黨", "改革黨", "伯納姆", "唐寧街", "財富稅", "川普", "內閣改組", "希利", "馬哈穆德", "數位身分證", "決議基金會", "財政餘裕"]
 highlights:
   - "伯納姆7月20日先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街10號外發表首場首相演說，承諾給民眾『喘息空間、對生活成本的一些協助』"
   - "演說中他自稱是『10年內第7位』首相，將此刻定位為英國的『斷路器』時刻，稱『這需要我這一代政治人物拿出更高水準、迎接新的挑戰』"
   - "伯納姆宣布廢除施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，將資源轉向生活成本協助"
-  - "內閣同日公布：馬哈穆德（Shabana Mahmood）出任財政大臣，可望成為英國史上首位穆斯林女性財政大臣；原傳出可能接掌財政的米勒班（Ed Miliband）轉任外交大臣，庫珀（Yvette Cooper）回任內政大臣"
-  - "工黨左翼對財政大臣人選『相當不滿』，黨內人士稱此舉是向市場壓力『屈服』的訊號"
+  - "內閣人事最終翻盤：財政大臣一職由西敏寺普遍不看好的前國防大臣希利（John Healey）出任，原傳出熱門的馬哈穆德、米勒班雙雙落空；市場示警此舉是伯納姆政府偏好『忠誠而非政策專長』用人風格的訊號"
+  - "英國公債殖利率在人事公布後一度升至5月底以來新高、英鎊走貶，反映投資人對政府借貸方向的疑慮"
+  - "智庫決議基金會估算，伯納姆一系列生活成本紓困加上伊朗戰爭相關成本，已把財政餘裕從3月的236億英鎊壓縮至僅80億英鎊，執行長Curtice警告希利『須在預算中找到更多資金，否則得把能源帳單調漲5%』"
+  - "保守黨黨魁貝德諾克批評伯納姆『把一項物價上限的帳單轉嫁到別處』，要求他排除加稅"
   - "泰晤士水務公司（Thames Water，背負逾200億英鎊債務）暫時國有化、北海油氣鑽探政策方向均尚未拍板"
   - "地方分權工作延續先前規劃，由設在曼徹斯特的『10號北方辦公室』主導"
 references:
@@ -62,6 +64,15 @@ references:
   - title: "Burnham to promise 'breathing room' as he takes over as PM"
     url: "https://www.perspectivemedia.com/burnham-to-promise-breathing-room-as-he-takes-over-as-pm/"
     publisher: "Perspective Media"
+  - title: "'Breathing room' promises have squeezed fiscal headroom, says think tank"
+    url: "https://www.barrheadnews.com/news/national/26409168.breathing-room-promises-squeezed-fiscal-headroom-says-think-tank/"
+    publisher: "Barrhead News"
+  - title: "Who is Britain's new chancellor John Healey?"
+    url: "https://www.irishtimes.com/business/2026/07/21/who-is-britains-new-chancellor-john-healey/"
+    publisher: "The Irish Times"
+  - title: "John Healey is the UK's chancellor: what Burnham's surprise pick says about his style of government"
+    url: "https://theconversation.com/john-healey-is-the-uks-chancellor-what-burnhams-surprise-pick-says-about-his-style-of-government-287896"
+    publisher: "The Conversation"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"
@@ -73,7 +84,7 @@ coverAlt: "英國首相施凱爾抵達唐寧街10號（資料照）"
 coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commons"
 ---
 
-英國正式完成政權交接。大曼徹斯特市長伯納姆（Andy Burnham）7月20日先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街10號外發表首場首相演說，正式接替同日稍早遞出辭呈的施凱爾（Sir Keir Starmer）。據[LabourList刊出的演說全文](https://labourlist.org/2026/07/andy-burnham-first-speech-pm-transcript/)，伯納姆在演說中承諾「給民眾一些喘息空間、對生活成本的一些協助」，並自稱是「10年內第7位」走上唐寧街的首相，將此刻定位為英國的「斷路器」時刻。他同日宣布廢除施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，把資源轉向生活成本協助；內閣名單也同步公布，財政大臣一職由馬哈穆德（Shabana Mahmood）出任，可望成為英國史上首位穆斯林女性財政大臣，原被看好接掌財政的米勒班（Ed Miliband）傳將轉任外交大臣，庫珀（Yvette Cooper）回任內政大臣。伯納姆確定接班後曾接受球評萊內克（Gary Lineker）專訪，首度就財富稅與對美關係表態，拒絕排除開徵財富稅，也允諾會以「非常坦率」的態度與美國總統川普互動；就任前夕，前首相蘇納克（Rishi Sunak）與強森（Boris Johnson）也分別透過報章與電視節目公開向他建言。
+英國正式完成政權交接。大曼徹斯特市長伯納姆（Andy Burnham）7月20日先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街10號外發表首場首相演說，正式接替同日稍早遞出辭呈的施凱爾（Sir Keir Starmer）。據[LabourList刊出的演說全文](https://labourlist.org/2026/07/andy-burnham-first-speech-pm-transcript/)，伯納姆在演說中承諾「給民眾一些喘息空間、對生活成本的一些協助」，並自稱是「10年內第7位」走上唐寧街的首相，將此刻定位為英國的「斷路器」時刻。他同日宣布廢除施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，把資源轉向生活成本協助；內閣名單也同步公布，財政大臣一職最終出人意表由前國防大臣希利（John Healey）出任，原被看好接掌財政的馬哈穆德（Shabana Mahmood）、米勒班（Ed Miliband）雙雙落空，米勒班改任外交大臣，庫珀（Yvette Cooper）回任內政大臣。伯納姆確定接班後曾接受球評萊內克（Gary Lineker）專訪，首度就財富稅與對美關係表態，拒絕排除開徵財富稅，也允諾會以「非常坦率」的態度與美國總統川普互動；就任前夕，前首相蘇納克（Rishi Sunak）與強森（Boris Johnson）也分別透過報章與電視節目公開向他建言。
 
 ## 「該面對現實了」：回顧請辭導火線
 
@@ -83,7 +94,7 @@ coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commo
 
 黨內壓力也持續累積。據[英文維基百科整理的「2026年工黨黨魁危機」](https://en.wikipedia.org/wiki/2026_Labour_Party_leadership_crisis)，到5月中旬已有103名工黨議員正式要求施凱爾下台；衛生大臣史崔廷（Wes Streeting）、國防大臣希利（John Healey）等多名閣員與部會首長相繼請辭。同一份整理指出，工黨在威爾斯只拿下11%選票，終結了該黨在當地長達百年的執政地位。
 
-蘇格蘭首席部長、蘇格蘭民族黨黨魁史溫尼（John Swinney）對施凱爾請辭給出直接評價。據[Barrhead News報導](https://www.barrheadnews.com/news/national/26216635.starmer-right-go-failing-deliver-change-john-swinney-says/)，史溫尼說施凱爾「做出了正確的決定。他早該面對現實」，並指這位首相「未能交付他所承諾的改變、轉型，以及人們期待的生活水準提升」。不過史溫尼也強調：「需要的不只是換人，而是路線的根本改變。」他另稱在個人層面上祝福施凱爾與家人一切安好。
+蘇格蘭首席部長、蘇格蘭民族黨黨魁史溫尼（John Swinney）對施凱爾請辭給出直接評價。據[Barrhead News報導](https://www.barrheadnews.com/news/national/26216635.starmer-right-go-failing-deliver-change-john-swinney-says/)，史溫尼說施凱爾「做出了正確的決定。他早該面對現實」，並指這位首相「未能交付他所承諾的改變、轉型，以及人們期待的生活水準提升」。不過史溫尼也強調：「換人還不夠，真正需要的是路線的根本改變。」他另稱在個人層面上祝福施凱爾與家人一切安好。
 
 [Barrhead News](https://www.barrheadnews.com/news/national/26216635.starmer-right-go-failing-deliver-change-john-swinney-says/)指出，施凱爾是英國10年來第六位下台的首相，凸顯英國政壇近年的高度動盪。
 
@@ -135,7 +146,19 @@ coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commo
 
 伯納姆同日宣布廢除前朝政策、並公布新內閣人事。據[PBS NewsHour報導](https://www.pbs.org/newshour/world/andy-burnham-is-declared-leader-of-uks-labour-party-pledges-to-restore-hope)，他取消了施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，將原本編列的資源轉向生活成本協助；[Perspective Media報導](https://www.perspectivemedia.com/burnham-to-promise-breathing-room-as-he-takes-over-as-pm/)補充，泰晤士水務公司（背負逾200億英鎊債務）暫時國有化，以及北海油氣鑽探的政策方向，伯納姆政府則尚未拍板。
 
-內閣人事同日底定，財政大臣一職由現任內政大臣馬哈穆德（Shabana Mahmood）出任，落幕了先前傳出的懸念。據[The National報導](https://www.thenationalnews.com/news/uk/2026/07/20/burnham-set-to-revamp-uk-government-with-energy-and-ai-boost/)，馬哈穆德掌財政有望成為英國史上首位穆斯林女性財政大臣；原本傳出可能接掌財政的米勒班（Ed Miliband）改任外交大臣，取代回任內政大臣的庫珀（Yvette Cooper）。同一篇報導指出，米勒班原本負責的能源業務將延續推動，政府並新設「AI大臣」職位；工黨左翼陣營對財政大臣人選「相當不滿」，黨內人士稱此舉是向市場壓力「屈服」的訊號，並示警「若由左翼人士出任財政大臣，英國公債（gilt）市場恐劇烈波動」。
+內閣人事同日底定，但結果跌破西敏寺眾人眼鏡：外界原本看好馬哈穆德或米勒班接掌財政部，最終由前國防大臣希利（John Healey）出線出任財政大臣，米勒班改任外交大臣，取代回任內政大臣的庫珀（Yvette Cooper）。據[The National報導](https://www.thenationalnews.com/news/uk/2026/07/20/burnham-set-to-revamp-uk-government-with-energy-and-ai-boost/)，米勒班原本負責的能源業務將延續推動，政府並新設「AI大臣」職位；工黨左翼陣營對財政大臣人選「相當不滿」，黨內人士稱此舉是向市場壓力「屈服」的訊號，並示警「若由左翼人士出任財政大臣，英國公債（gilt）市場恐劇烈波動」。
+
+66歲的希利曾於2002至2007年擔任財政部初級部長，之後長年主管國防政策，卻因與前財政大臣里夫斯（Rachel Reeves）在國防預算上意見不合，上月才剛請辭國防大臣一職。據[《愛爾蘭時報》報導](https://www.irishtimes.com/business/2026/07/21/who-is-britains-new-chancellor-john-healey/)，希利對經濟政策的立場外界所知有限，普遍被視為「安全牌」；彭博社針對市場人士的調查顯示，他原本只排在人選預測的第二位。人事公布後，英國公債殖利率一度升至5月底以來新高，英鎊同步走貶，反映投資人對伯納姆政府舉債方向的疑慮。[《The Conversation》分析](https://theconversation.com/john-healey-is-the-uks-chancellor-what-burnhams-surprise-pick-says-about-his-style-of-government-287896)指出，這項出人意表的任命，透露伯納姆用人偏好「忠誠度勝過政策專長」的實用主義風格，希利屬於較易配合首相路線的人選，但其具體財經立場仍待觀察。
+
+## 智庫示警：「喘息空間」承諾壓縮財政餘裕至80億英鎊
+
+伯納姆上任後陸續推出的生活成本紓困措施，如今面臨財政現實的檢驗。據[Barrhead News報導](https://www.barrheadnews.com/news/national/26409168.breathing-room-promises-squeezed-fiscal-headroom-says-think-tank/)，獨立智庫決議基金會（Resolution Foundation）估算，伯納姆政府本週宣布的一系列新政策，2029/30年度合計將耗資逾20億英鎊，加上先前伊朗戰爭相關成本的衝擊，已把英國財政餘裕從3月初估算的236億英鎊，大舉壓縮至僅剩80億英鎊。
+
+具體政策方面，該報導指出，伯納姆政府計畫2027年全年把公車票價上限從3英鎊降至2英鎊，財源來自把一筆國際氣候援助贈款轉為貸款、籌得4億英鎊，加上能源部門預算刪減5,400萬英鎊；10月1日起，英格蘭、蘇格蘭與威爾斯家庭電費將免徵加值稅，2026至27年度成本約8.5億英鎊，由取消施凱爾政府原規劃、預估耗資18億英鎊的數位身分證計畫來抵銷；另外明年4月起，酒吧、俱樂部與音樂展演場館的商業地稅將調降20%，成本1億英鎊，官方估計約3.2萬家業者受惠，一般酒吧每年可省下1,100英鎊。
+
+決議基金會執行長Curtice對財源安排提出質疑。同一篇[Barrhead News報導](https://www.barrheadnews.com/news/national/26409168.breathing-room-promises-squeezed-fiscal-headroom-says-think-tank/)引述她的說法：「這場財源辯論的焦點，一是資金來源細節薄弱，二是這些措施是否為永久性存在模糊地帶。」她進一步警告：「結果就是，希利要嘛得在預算中找到更多資金，要嘛得把能源帳單調漲5%。」
+
+在野的保守黨隨即出手批評。[Barrhead News報導](https://www.barrheadnews.com/news/national/26409168.breathing-room-promises-squeezed-fiscal-headroom-says-think-tank/)引述保守黨黨魁貝德諾克（Kemi Badenoch）的說法：「伯納姆的答案就是把一項物價設上限，然後把帳單轉嫁到別的地方去。」她並要求「伯納姆必須排除加稅來支付他的這波支出狂潮」。這是繼財政大臣人事意外之後，伯納姆政府財政路線再度受到市場與在野黨雙重檢視。
 
 ## 對台灣讀者的關注點
 
@@ -143,7 +166,8 @@ coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commo
 
 ## 更新時間軸
 
-- （更新 2026-07-20：伯納姆正式就任英國首相，先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街發表首場首相演說，承諾給民眾「喘息空間、對生活成本的一些協助」，並自稱是「10年內第7位」首相、將此刻定位為英國的「斷路器」時刻。他同日宣布廢除施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫；內閣名單同步公布，馬哈穆德出任財政大臣、可望成為英國史上首位穆斯林女性財政大臣，米勒班轉任外交大臣、庫珀回任內政大臣。泰晤士水務公司國有化與北海油氣鑽探政策方向尚未拍板。）（[LabourList](https://labourlist.org/2026/07/andy-burnham-first-speech-pm-transcript/)、[HNGN](https://www.hngn.com/articles/272188/20260720/andy-burnham-becomes-uks-7th-pm-decade-starmer-resigns-cabinet-named-later-today.htm)、[PBS NewsHour](https://www.pbs.org/newshour/world/andy-burnham-is-declared-leader-of-uks-labour-party-pledges-to-restore-hope)、[The National](https://www.thenationalnews.com/news/uk/2026/07/20/burnham-set-to-revamp-uk-government-with-energy-and-ai-boost/)、[Perspective Media](https://www.perspectivemedia.com/burnham-to-promise-breathing-room-as-he-takes-over-as-pm/)）
+- （更新 2026-07-25：智庫決議基金會估算，伯納姆政府一系列「喘息空間」生活成本紓困措施（公車票價上限降至2英鎊、電費免徵加值稅、酒吧商業地稅調降20%）2029/30年度合計耗資逾20億英鎊，加上伊朗戰爭相關成本，已把財政餘裕從3月的236億英鎊壓縮至僅80億英鎊；執行長Curtice警告財政大臣希利「須在預算中找到更多資金，否則得把能源帳單調漲5%」，保守黨黨魁貝德諾克批評此舉是「把帳單轉嫁他處」、要求政府排除加稅。）（[Barrhead News](https://www.barrheadnews.com/news/national/26409168.breathing-room-promises-squeezed-fiscal-headroom-says-think-tank/)）
+- （更新 2026-07-20：伯納姆正式就任英國首相，先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街發表首場首相演說，承諾給民眾「喘息空間、對生活成本的一些協助」，並自稱是「10年內第7位」首相、將此刻定位為英國的「斷路器」時刻。他同日宣布廢除施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫；內閣名單同步公布，財政大臣一職出人意表由前國防大臣希利出任，原被看好的馬哈穆德、米勒班雙雙落空，米勒班轉任外交大臣、庫珀回任內政大臣。泰晤士水務公司國有化與北海油氣鑽探政策方向尚未拍板。）（[LabourList](https://labourlist.org/2026/07/andy-burnham-first-speech-pm-transcript/)、[HNGN](https://www.hngn.com/articles/272188/20260720/andy-burnham-becomes-uks-7th-pm-decade-starmer-resigns-cabinet-named-later-today.htm)、[PBS NewsHour](https://www.pbs.org/newshour/world/andy-burnham-is-declared-leader-of-uks-labour-party-pledges-to-restore-hope)、[The National](https://www.thenationalnews.com/news/uk/2026/07/20/burnham-set-to-revamp-uk-government-with-energy-and-ai-boost/)、[Perspective Media](https://www.perspectivemedia.com/burnham-to-promise-breathing-room-as-he-takes-over-as-pm/)、[愛爾蘭時報](https://www.irishtimes.com/business/2026/07/21/who-is-britains-new-chancellor-john-healey/)）
 - （更新 2026-07-19：伯納姆就任前夕，前首相蘇納克在《星期日泰晤士報》撰文建議他「充分把握初到唐寧街的每一秒」、盡快鎖定「兩三項」核心優先政策；前首相強森在天空新聞節目提醒伯納姆「時間不多」，需重振投資人信心、思考稅收政策。工黨籍的施凱爾則表態不會公開對外提供交接建議。）（[Enfield Independent](https://www.enfieldindependent.co.uk/news/national/26292058.boris-johnsons-rishi-sunaks-advice-incoming-pm-andy-burnham/)、[Yahoo News UK](https://uk.news.yahoo.com/boris-johnson-rishi-sunak-advice-173600788.html)）
 - （更新 2026-07-18：伯納姆本週末啟動搬入唐寧街10號流程，內閣名單訂於他7月20日正式就任當天公布；財政大臣人選傳於工黨左翼屬意的米勒班與現任內政大臣馬哈穆德間二選一，接替現任財政大臣里夫斯。伯納姆並表示施政將優先推動社會照護改革，地方分權工作將由設在曼徹斯特的「10號北方辦公室」主導，預計上任第一週造訪。）（[Barrhead News](https://www.barrheadnews.com/news/national/26291389.burnham-finalising-plans-government-becoming-prime-minister-monday/)、[MyJoyOnline](https://www.myjoyonline.com/burnham-says-he-is-finalising-cabinet-ahead-of-becoming-pm-on-monday/)）
 - （更新 2026-07-16：工黨黨魁提名7月16日截止，伯納姆到7月15日已取得逾九成國會黨團連署及足額地方黨部提名，等同無競爭當選黨魁，預計7月20日接任首相。他接受萊內克專訪，拒絕排除開徵財富稅，允諾以「非常坦率」的態度與川普互動；保守黨黨魁貝德諾克批評他「已在談加稅」，預言「混亂之夏」。）（[Yahoo Finance UK](https://uk.finance.yahoo.com/news/andy-burnham-declines-rule-wealth-163156908.html)、[Barrhead News](https://www.barrheadnews.com/news/national/26284089.andy-burnham-declines-rule-wealth-tax-will-upfront-trump/)、[Wikipedia](https://en.wikipedia.org/wiki/2026_Labour_Party_leadership_crisis)）

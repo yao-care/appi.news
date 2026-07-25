@@ -10,12 +10,11 @@ export const personId = (site: SiteUrl, path: string) =>
   `${absoluteUrl(path, site)}#person`;
 
 export function orgLd(site: SiteUrl) {
-  const configured = (SITE.org.sameAs ?? []).filter(Boolean);
-  // sameAs 來源稀疏：appi.news 目前無任何機構級社群帳號（footer／about／contact 僅 email），
-  // 文章頁的 sameAs 實為各作者個人 socialLinks（Person），不宜挪用為機構身分。
-  // 退而求其次，以官方 canonical 網址作為機構的權威自我參照，讓搜尋／生成引擎至少能綁定實體。
-  // 一旦有真實官方帳號，填入 SITE.org.sameAs 即自動覆蓋此後備值。
-  const sameAs = configured.length ? configured : [absoluteUrl('/', site)];
+  // sameAs 的語意是「本機構在**其他**權威平台的身分」（維基百科／Wikidata／官方社群）。
+  // ⚠️ 絕不以自站 canonical 網址充當後備：指向自己等於宣告「我＝我」，零價值，
+  // 且日後有真實官方帳號時會混淆搜尋／生成引擎的實體判定。無真實外部身分就整個不輸出。
+  // 文章頁的 sameAs 是各作者個人 socialLinks（Person），亦不得挪用為機構身分。
+  const sameAs = (SITE.org.sameAs ?? []).filter(Boolean);
   const contactEmail = SITE.org.contactEmail?.trim();
   return {
     '@context': 'https://schema.org',

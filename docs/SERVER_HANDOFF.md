@@ -93,6 +93,7 @@ pnpm test
 | 國際編譯台 | international-desk.sh | 15:00 | 23:00 | **GDELT Events 原始檔**（international-select/international-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 警消好人好事 | lifestyle-police.sh | 04:45（每日） | 12:45 | 各地警局新聞稿（lifestyle-police.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 便民市政 | lifestyle-civic.sh | 10:00（每日） | 18:00 | 各縣市政府 RSS（civic-feeds.mjs；本機日本 IP 可抓 ~10 站，餘待台灣 proxy）+ civic-ledger 去重 | **全自動上架**（跨縣市統整一篇、有新資料才寫）| ✅有新資料發**生活**台/失敗哨兵 |
+| 影片線索整理 | lifestyle-video.sh | 18:30（每日） | 02:30 | 訂閱 YouTube 頻道 RSS（video-feeds.mjs `VIDEO_FEEDS`）+ video-ledger 依 videoId 去重；**抓不到逐字稿**，影片只當線索、事實靠 LLM 上網交叉查證 | **全自動上架**（一片一篇、≥2 個獨立來源才寫，否則 SKIP）| ✅有上架發**生活**台/失敗哨兵 |
 | 颱風停班課 | lifestyle-typhoon.sh | 每 15 分鐘（5–11 月） | */15 * * 5-11 * | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
 | 新文章送 Indexing API | indexing-submit.sh | 06:00 | 14:00 | 線上 sitemap | n/a（送 Google 收錄）| 有送才報 **dev 台** |
 | 數據報告 | weekly-report.sh | 00:17（每 3 天） | 08:17 | GA4+GSC | n/a（數據）| ✅報告到**作者群** |
@@ -100,7 +101,7 @@ pnpm test
 | AEO 能見度探針 | aeo-radar.sh | 12:00 | 20:00 | claude-appi 自身 web search 問 AI 引擎 | n/a（寫 geo-citation 帳本，git 外）| ✅🛰摘要到 **dev 台**（純讀不碰 git。2026-07-23 站長指示啟用排程，原只手動）|
 | 學被引用內容 | cited-teardown.sh | 13:30 | 21:30 | 競品被引用頁（WebFetch）| 寫 `geo-insights/<beat>.md`→push（newsroom 起草前讀）| ✅🔧摘要到 **dev 台**（按星期輪 7 beat；**會寫 repo**→走 worktree。2026-07-23 站長指示啟用）|
 
-- **內容線排程刻意攤開，別再併回早上（2026-07-03；2026-07-20 更新）**：焦點/ESG 01:30、警消好人好事 04:45、連假優惠 **07:30**、便民市政 10:00、國際編譯台 15:00、科技選題雷達 21:20（UTC）。各喚 claude-appi Sonnet；claude-appi 的 session 額度是**每 5 小時一個共用視窗**，原本全擠在 01:30–03:50 → 同一視窗搶額度，排最後的警消每天餓死（先撞 weekly limit、再 session limit）。原則：任兩條相隔 ≥5h 或跨 04:30 reset 邊界，一個視窗最多落一條。**⚠️例外（站長 2026-07-20 指定）**：連假優惠從 10:00 移到 **07:30**，與警消 04:45 僅差 2h45、落同一視窗——但連假優惠**只有臨近國定連假才實發**（平日靜默），撞期風險僅限連假前數日，故接受此例外。**代價**＝國際編譯台仍在台北深夜；連假優惠改台北午後。要再調時間，日更線（焦點/警消/國際/雷達/便民）務必維持 ≥5h 間隔，別看「都在白天比較整齊」就併回去。（另一個常態吸額度點是 agent.writer 每小時 :40 的 cron-write，跨專案，未動。）
+- **內容線排程刻意攤開，別再併回早上（2026-07-03；2026-07-20 更新；2026-07-26 加影片線）**：焦點/ESG 01:30、警消好人好事 04:45、連假優惠 **07:30**、便民市政 10:00、國際編譯台 15:00、影片線索整理 **18:30**、科技選題雷達 21:20（UTC）。影片線挑 18:30 是因為 15:00→21:20 是當時最大的空窗（前後各隔 3.5h／2.8h）。各喚 claude-appi Sonnet；claude-appi 的 session 額度是**每 5 小時一個共用視窗**，原本全擠在 01:30–03:50 → 同一視窗搶額度，排最後的警消每天餓死（先撞 weekly limit、再 session limit）。原則：任兩條相隔 ≥5h 或跨 04:30 reset 邊界，一個視窗最多落一條。**⚠️例外（站長 2026-07-20 指定）**：連假優惠從 10:00 移到 **07:30**，與警消 04:45 僅差 2h45、落同一視窗——但連假優惠**只有臨近國定連假才實發**（平日靜默），撞期風險僅限連假前數日，故接受此例外。**代價**＝國際編譯台仍在台北深夜；連假優惠改台北午後。要再調時間，日更線（焦點/警消/國際/雷達/便民）務必維持 ≥5h 間隔，別看「都在白天比較整齊」就併回去。（另一個常態吸額度點是 agent.writer 每小時 :40 的 cron-write，跨專案，未動。）
 - **並發保護（重要）**：已從「全域 flock + 共用工作目錄」改為**每支 cron 各開自己的臨時 detached worktree**（`scripts/cron/_worktree.sh` 的 `cron_enter_worktree`，off `origin/main`）→ 互不洗檔、可**真正並行**；寫稿端最後用 `pushToMain`（push `HEAD:main`，撞拒就 fetch+rebase 重試）安全上線。新增這類 cron 一律 `source _worktree.sh` 並 `cron_enter_worktree "<slug>"`。背景見 [`docs/lessons/`](./lessons/)（自動線多工不序列化）。
   - **例外**：`indexing-submit.sh`、`heartbeat.sh`、`aeo-radar.sh` 是**純資料/唯讀腳本**（不碰 git 工作區、不喚 Claude 或只喚一次且只寫 git 外帳本），故**不走 worktree**，與其他 cron 無洗檔競態。背景見 [`docs/lessons/google-indexing-api-gray-area.md`](./lessons/google-indexing-api-gray-area.md)。
   - **`cited-teardown.sh` 會寫 repo**（`geo-insights/<beat>.md`）→ 照內容線走 `_worktree.sh` 隔離 + `push HEAD:main` rebase 重試。
@@ -116,5 +117,6 @@ pnpm test
 - **國際**：來源是 GDELT **原始檔**（搜尋 API 會被擋）；選題用「來源家數」相對統計挑每區突出題；撰寫嚴格基於事實、附原文連結、圖片可授權否則跳過（不用 AI 圖）、同事件有進展則更新原文（故事線、30 天窗）。詳見記憶 `international-desk-gdelt`。
 - **生活·颱風／優惠**：事實稿，`kind: factual` → 產「待審草稿」（status:scheduled+遠未來日）+ Slack 發佈鈕，**人工核可才上線**（`newsroom-publish.mjs` 轉正）。
 - **生活·警消**：跟官方原稿具名、不轉載版權照、附原文連結驗活、圖庫示意圖、全自動上架。境外 IP 約 13–14 家警局可抓、8 家被地理/WAF 擋（當次略過）。
+- **生活·影片線索**：訂閱頻道 RSS 是**唯一沒被擋的入口**——本機 IP 被 YouTube 標記，yt-dlp 五種 player_client 全數 `Sign in to confirm you're not a bot`，台灣媒體站（如 ftvnews）對境外 IP 連首頁都 403/404。所以**拿不到逐字稿**，設計前提就是「看不到影片」：影片當線索，事實一律靠 LLM 用 WebSearch/WebFetch 找 **≥2 個獨立於該頻道的來源**交叉查證，查不到就 SKIP（防洗稿）。影片以「本地縮圖 + 連出去」的 facade 呈現（`save-video-thumb.mjs`），**不嵌 iframe**（保 TBT 0/CLS 0）；縮圖**不可當封面**（版權）。新增訂閱頻道＝在 `scripts/lib/video-feeds.mjs` 的 `VIDEO_FEEDS` 加一列 `channelId`（取法：開該頻道任一影片頁，抓 HTML 裡的 `"channelId":"UC..."`），並檢查 `LIFESTYLE_HINTS`/`OFF_BEAT` 不會搶到 civic／police／typhoon 的題。背景見 [`docs/lessons/youtube-video-digest.md`](./lessons/youtube-video-digest.md)。
 - **運動**：**純拉式**（學生賽事），無 cron、無自動產文。投稿＝`workers/sports-submission`（**待部署**：建 Slack webhook→`wrangler deploy`→填 `submit.astro` 的 WORKER_URL）+ `/sports/submit/`（運動分類頁有入口）。邀請＝`docs/sports-student-invite-windows.md`（7 官方機構窗口）+ `sports-invite-draft`（只起草、人工送）。
 - **樂齡/長照**：暫不做（無可靠結構化資料源）。

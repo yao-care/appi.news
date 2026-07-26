@@ -243,6 +243,51 @@ h4 {
   color: var(--ink-3);
   text-align: center;
 }
+/* 影片出處卡：本地縮圖 + 連出去 YouTube 的 facade（不嵌 iframe，見 scripts/lib/video-embed.mjs）。
+   播放鈕純 CSS 疊上去，零第三方請求、零 JS；img 帶 width/height 故 CLS 0。 */
+.article-body .video-embed a {
+  position: relative;
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.article-body .video-embed img {
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+}
+.article-body .video-embed a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: var(--appi-brand);
+  border: 3px solid var(--white);
+  box-shadow: var(--shadow-md);
+  opacity: 0.92;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.article-body .video-embed a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.85rem 0 0.85rem 1.4rem;
+  border-color: transparent transparent transparent var(--white);
+  transform: translateX(0.2rem);
+}
+.article-body .video-embed a:hover::after,
+.article-body .video-embed a:focus-visible::after {
+  opacity: 1;
+  transform: scale(1.06);
+}
 .article-body code {
   background: var(--bg-soft);
   padding: 0.15em 0.4em;

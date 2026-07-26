@@ -47,6 +47,7 @@
 | [commit-hygiene-shared-checkout.md](./commit-hygiene-shared-checkout.md) | 共用 checkout 別把別人 WIP 掃進 commit：只 stage 文章產物 / 用 pathspec |
 | [weekly-report-mobile-layout.md](./weekly-report-mobile-layout.md) | 週報手機排版崩掉：模型手刻多欄塞一行；版面收歸決定論渲染器，模型只填數據+notes |
 | [deterministic-fetch-llm-only-writes.md](./deterministic-fetch-llm-only-writes.md) | 自動線抓資料別交給 LLM agent（慢/發散翻頁/燒額度）；改固定抓→LLM 只寫；exit124 是逾時非額度、cron 別擠同一 5h session 視窗 |
+| [youtube-video-digest.md](./youtube-video-digest.md) | 「影片變文章」拿不到逐字稿：主機 IP 被 YouTube 擋（yt-dlp 五種 client 全掛）、台灣媒體站對境外 403；改用官方頻道 RSS 當線索＋≥2 個獨立來源交叉查證才寫（否則 SKIP＝洗稿防線），影片用本地縮圖 facade 不嵌 iframe 保 CLS 0；「我已經有某工具」要在主機驗證 |
 | [article-draft-consumer.md](./article-draft-consumer.md) | /admin 寫作任務有生產端沒消費端：`article-draft` issue 靜默孤兒化；補消費端用 newsroom `--stage` 開 PR、kind=factual 待審、放寬分類白名單給真人下單 |
 | [newsroom-photoreal-people-image-port.md](./newsroom-photoreal-people-image-port.md) | newsroom 人物圖移植 agent.writer 的擬真攝影流程（sonnet 展開 prompt + haiku 視覺自檢 + 不合格重生）；概念圖刻意維持插畫、全程 fail-open、每張多 1 sonnet+1 haiku，worker quality 待部署 |
 | [image-realism-system.md](./image-realism-system.md) | 拼貼概念封面套版被點名：生成全面改超寫實新聞攝影（反拼貼硬條款＋seed 多樣性輪轉）、圖庫過 Haiku 審查（相關度＋外國臉孔淘汰）、圖說「（示意圖）」、圖表統一 chart-spec 原生 SVG 禁生圖模型、白名單擴充 gov.tw |

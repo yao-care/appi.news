@@ -12,6 +12,7 @@ import {
   byCategory,
 } from '@/utils/content';
 import { getCategory } from '@/config/categories';
+import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
 
 const columns = await getColumns();
 const all = await getPublishedArticles();
@@ -35,12 +36,25 @@ const cards = columns.map((c) => ({
   ownerName: authorMap.get(c.data.ownerAuthor)?.data.name,
   count: columnCount(c),
 }));
+
+const ld = [
+  breadcrumbLd(Astro.site, [
+    { name: '首頁', path: '/' },
+    { name: '專欄', path: '/columns/' },
+  ]),
+  itemListLd(
+    Astro.site,
+    columns.map((c) => ({ name: c.data.title, path: `/columns/${c.id}/` })),
+    { name: '專欄列表' },
+  ),
+];
 ---
 <BaseLayout
   title="專欄｜Columns"
   description={cat.description}
   path="/columns/"
   ogImage="og/columns.png"
+  jsonld={ld}
 >
   <div class="container" style="padding-top:28px;">
     <Breadcrumbs items={[{ name: '專欄' }]} />

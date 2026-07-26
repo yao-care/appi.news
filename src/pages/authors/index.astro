@@ -4,18 +4,32 @@ import AuthorCard from '@/components/blocks/AuthorCard.astro';
 import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
 import CTAJoinAuthor from '@/components/blocks/CTAJoinAuthor.astro';
 import { getAuthors, getPublishedArticles, byAuthor } from '@/utils/content';
+import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
 
 const authors = (await getAuthors()).filter((a) => a.data.active);
 const all = await getPublishedArticles();
 const cards = authors
   .map((a) => ({ author: a, count: byAuthor(all, a.id).length }))
   .sort((x, y) => y.count - x.count);
+
+const ld = [
+  breadcrumbLd(Astro.site, [
+    { name: '首頁', path: '/' },
+    { name: '作者群', path: '/authors/' },
+  ]),
+  itemListLd(
+    Astro.site,
+    cards.map((c) => ({ name: c.author.data.name, path: `/authors/${c.author.id}/` })),
+    { name: '作者群列表' },
+  ),
+];
 ---
 <BaseLayout
   title="作者群"
   description="APPI News 的作者群：醫師、藥師、營養師、科技顧問、財經研究者等各領域專業者。"
   path="/authors/"
   ogImage="og/author.png"
+  jsonld={ld}
 >
   <div class="container" style="padding-top:28px;">
     <Breadcrumbs items={[{ name: '作者群' }]} />

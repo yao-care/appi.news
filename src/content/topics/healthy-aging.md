@@ -6,7 +6,7 @@ coverImage: "og/health.png"
 tags: ["高齡者骨骼健康", "肌少症", "骨質疏鬆", "預防醫學"]
 featured: true
 status: "active"
-articles: ["osteoarthritis-nonsurgical-prp", "hip-pain-symptoms-causes-treatment"]
+articles: ["osteoarthritis-nonsurgical-prp", "hip-pain-symptoms-causes-treatment", "hip-pain-which-specialist", "hip-pcp-regenerative-therapy", "knee-injection-ha-prp-steroid-comparison"]
 ---
 
 台灣已是高齡社會，骨骼、肌肉、關節與營養的整體照護，成為愈來愈多家庭必須面對的課題。

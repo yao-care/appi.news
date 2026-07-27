@@ -93,7 +93,7 @@ pnpm test
 | 國際編譯台 | international-desk.sh | 15:00 | 23:00 | **GDELT Events 原始檔**（international-select/international-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 警消好人好事 | lifestyle-police.sh | 04:45（每日） | 12:45 | 各地警局新聞稿（lifestyle-police.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 便民市政 | lifestyle-civic.sh | 10:00（每日） | 18:00 | 各縣市政府 RSS（civic-feeds.mjs；本機日本 IP 可抓 ~10 站，餘待台灣 proxy）+ civic-ledger 去重 | **全自動上架**（跨縣市統整一篇、有新資料才寫）| ✅有新資料發**生活**台/失敗哨兵 |
-| 影片線索整理 | lifestyle-video.sh | 18:30（每日） | 02:30 | 訂閱 YouTube 頻道 RSS（video-feeds.mjs `VIDEO_FEEDS`）+ video-ledger 依 videoId 去重；**抓不到逐字稿**，影片只當線索、事實靠 LLM 上網交叉查證 | **全自動上架**（一片一篇、≥2 個獨立來源才寫，否則 SKIP）| ✅有上架發**生活**台/失敗哨兵 |
+| 影片線索整理 | lifestyle-video.sh | 18:30（每日） | 02:30 | 訂閱 YouTube 頻道 RSS（video-feeds.mjs `VIDEO_FEEDS`）+ video-ledger 依 videoId 去重；**抓不到逐字稿**，影片只當線索、事實靠 LLM 上網交叉查證 | **全自動上架**（一片一篇、無篇數上限、≥2 個獨立來源才寫，否則 SKIP）| ✅有上架發**生活**台（列出每一篇，等線上 200 才發）/失敗哨兵；**無產出＝完全靜默**（站長 2026-07-27 明確裁示：只要有文章發就好，**不要**加靜默日心跳，別再提議）|
 | 颱風停班課 | lifestyle-typhoon.sh | 每 15 分鐘（5–11 月） | */15 * * 5-11 * | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
 | 新文章送 Indexing API | indexing-submit.sh | 06:00 | 14:00 | 線上 sitemap | n/a（送 Google 收錄）| 有送才報 **dev 台** |
 | 數據報告 | weekly-report.sh | 00:17（每 3 天） | 08:17 | GA4+GSC | n/a（數據）| ✅報告到**作者群** |

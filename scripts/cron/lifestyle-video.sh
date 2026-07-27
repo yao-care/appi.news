@@ -16,18 +16,21 @@ ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
 out="$(node scripts/lifestyle-video.mjs --go 2>&1)"; rc=$?
 printf '%s\n' "$out"
 if [ "$rc" -eq 0 ]; then
-  # PUBLISHED 行格式：PUBLISHED=<url> ｜ <title>
-  pub=$(grep '^PUBLISHED=' <<<"$out" | sed 's/^PUBLISHED=//' | head -1)
+  # PUBLISHED 行格式：PUBLISHED=<url> ｜ <title>。
+  # ⚠️ 篇數無上限後**一輪可能多篇**，這裡不可以 head -1（會只回報第一篇、其餘悄悄消失）。
+  pub=$(grep '^PUBLISHED=' <<<"$out" | sed 's/^PUBLISHED=//')
   if [ -n "$pub" ]; then
-    u=$(awk -F' ｜ ' '{print $1}' <<<"$pub")
-    # 送 Slack 前，先等部署完成、文章線上讀得到（HTTP 200）再發，避免點連結還是 404。最多等 10 分鐘，逾時仍發。
+    n=$(wc -l <<<"$pub")
+    # 送 Slack 前，先等部署完成、文章線上讀得到（HTTP 200）再發，避免點連結還是 404。
+    # 同一批是同一次部署，等最後一篇 200 即代表整批都上線了。最多等 10 分鐘，逾時仍發。
+    u=$(tail -1 <<<"$pub" | awk -F' ｜ ' '{print $1}')
     deadline=$(( $(date +%s) + 600 ))
     until [ "$(curl -s -4 -o /dev/null -w '%{http_code}' "$u")" = "200" ]; do
       [ "$(date +%s)" -ge "$deadline" ] && { echo "⚠️ 等逾時，$u 仍非 200，仍照常發 Slack"; break; }
       sleep 20
     done
-    list=$(awk -F' ｜ ' '{printf "• %s\n  %s", $2, $1}' <<<"$pub")
-    node scripts/cron-report.mjs --category lifestyle --text "$(printf '🎬 影片線索整理已上架（%s）：\n%s' "$ts" "$list")" || true
+    list=$(awk -F' ｜ ' '{printf "• %s\n  %s\n", $2, $1}' <<<"$pub")
+    node scripts/cron-report.mjs --category lifestyle --text "$(printf '🎬 影片線索整理已上架 %s 篇（%s）：\n%s' "$n" "$ts" "$list")" || true
   else
     echo "（本次無新片或無通過查證的題，安靜不報）"
   fi

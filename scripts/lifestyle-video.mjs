@@ -9,7 +9,7 @@
 //
 // 「有新片才寫」：候選經帳本濾掉近 60 天看過的；濾完為 0 → 不呼叫 LLM、安靜結束。
 
-import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync, existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
@@ -22,6 +22,12 @@ import { buildCheckWithResync } from './lib/build-check.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
 const has = (n) => process.argv.includes(`--${n}`);
+/** `--max N`：**只給手動除錯用**的候選上限（省額度）。cron 不帶 → 無上限（站長 2026-07-27 指示）。 */
+function maxCandidates() {
+  const i = process.argv.indexOf('--max');
+  const n = i >= 0 ? Number(process.argv[i + 1]) : NaN;
+  return Number.isFinite(n) && n > 0 ? n : Infinity;
+}
 function die(m) { console.error(`✖ ${m}`); process.exit(1); }
 function sh(cmd, args, opts = {}) {
   const r = spawnSync(cmd, args, { encoding: 'utf8', ...opts });
@@ -48,6 +54,22 @@ function frontmatter(file) {
 
 function articleTitle(slug) {
   return (frontmatter(join(ARTICLES_DIR, `${slug}.md`)) || {}).title || '';
+}
+
+/**
+ * 丟掉本輪剛產出、但沒過逐篇 gate 的一篇（不連累同批其他篇）。
+ * **只刪 git 眼中未追蹤的檔**——確保絕不會誤刪既有內容，最壞情況是留幾個孤兒檔（無害，worktree 用完即丟）。
+ */
+function dropArticle(slug) {
+  let untracked = [];
+  try {
+    untracked = sh('git', ['ls-files', '--others', '--exclude-standard', '--', ARTICLES_DIR, 'public/covers', 'public/images'])
+      .split('\n').filter(Boolean);
+  } catch { return; }
+  const mine = untracked.filter((p) => p.includes(`/${slug}.md`) || p.includes(`/${slug}-`));
+  for (const p of mine) {
+    try { rmSync(p, { force: true }); console.error(`     已移除 ${p}`); } catch { /* 留著也無妨 */ }
+  }
 }
 
 /**
@@ -78,16 +100,20 @@ async function main() {
   console.log('→ 固定抓取訂閱頻道的 YouTube RSS 候選中（零 LLM）…');
   const { candidates, stats } = await fetchVideoCandidates({ days: 2, log: (m) => console.log(m) });
   const seen = loadSeen();
-  const fresh = filterNew(candidates, seen);
+  const all = filterNew(candidates, seen);
+  const cap = maxCandidates();
+  const fresh = all.slice(0, cap);
+  if (all.length > fresh.length) console.log(`（--max ${cap}：${all.length} 支只處理前 ${fresh.length} 支，其餘留在帳本外、下輪再看）`);
   console.log(`抓到 ${stats.reached} 個頻道（${stats.channels.join('、') || '無'}）；生活線候選 ${candidates.length} 支，濾掉已看過後新候選 ${fresh.length} 支。`);
   for (const c of fresh) console.log(`CANDIDATE=${c.source}｜${c.title}｜${c.url}`);
-  const prompt = buildVideoPrompt(fresh, recent);
 
   if (!go && !stage) {
     console.log('— DRY RUN（零副作用）—');
-    console.log(`近 14 天已發：${recent.length} 篇；新候選：${fresh.length} 支`);
-    console.log('\n===== Claude 寫作指令 =====\n');
-    console.log(prompt);
+    console.log(`近 14 天已發：${recent.length} 篇；新候選：${fresh.length} 支（每支各喚一次 Claude，無篇數上限）`);
+    if (fresh.length) {
+      console.log('\n===== Claude 寫作指令（第 1 支示例）=====\n');
+      console.log(buildVideoPrompt(fresh[0], recent));
+    }
     return;
   }
 
@@ -96,52 +122,67 @@ async function main() {
 
   if (sh('git', ['status', '--porcelain'])) die('工作區不乾淨，請先清乾淨再跑');
   const branch = sh('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
-  console.log(`→ 影片心得整理（分支 ${branch}，${go ? '上架' : 'stage 不 push'}）`);
-  const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
-  // claude-appi 撞用量上限時 exit 0 只印限額訊息 → 必須查 stdout（infra 失敗，不記帳本、下輪重試）。
-  if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) {
-    die(`claude 失敗：${(r.stderr || r.stdout || r.error?.message || '').slice(-200)}`);
+  console.log(`→ 影片線索整理（分支 ${branch}，${fresh.length} 支候選逐支處理，${go ? '上架' : 'stage 不 push'}）`);
+
+  // 站長 2026-07-27 拿掉「一天一篇」上限：逐支候選各喚一次 Claude，過 gate 的都寫。
+  // 撞用量上限就 break 中止整批（別再空打剩下的，見 lessons/automation-model-and-account-split.md）。
+  const written = [];
+  let quotaHit = false;
+  for (const [i, c] of fresh.entries()) {
+    console.log(`\n[${i + 1}/${fresh.length}] ${c.source}｜${c.title}`);
+    const prompt = buildVideoPrompt(c, [...recent, ...written.map((w) => w.title)]);
+    const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+    // claude-appi 撞用量上限時 exit 0 只印限額訊息 → 必須查 stdout。
+    if (/API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) {
+      console.error(`  ✖ 撞用量上限，中止整批（已寫 ${written.length} 篇）：${(r.stdout || '').slice(-200)}`);
+      quotaHit = true;
+      break;
+    }
+    if (r.error || r.status !== 0) {
+      console.error(`  ✖ claude 失敗（exit ${r.status}），跳過這支：${(r.stderr || r.error?.message || '').slice(-200)}`);
+      continue;
+    }
+    const v = parseVideoResult(r.stdout);
+    console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
+    if (v.action !== 'new' || !v.slug) continue;
+
+    const file = join(ARTICLES_DIR, `${v.slug}.md`);
+    if (!existsSync(file)) { console.error(`  ✖ 回報 NEW 但檔案不存在（${file}），跳過`); continue; }
+    // 用系統時間蓋掉模型寫的 publishDate（模型無可靠時鐘，常把「現在」填成未來 → 變排程稿）。
+    writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${new Date().toISOString()}"`));
+
+    // 逐篇自己的 gate：不合格的**只丟這一篇**，不連累同批其他篇。
+    const missing = missingLocalAssets(v.slug);
+    if (missing.length) { console.error(`  ✖ 引用的本地圖檔不存在（${missing.join('、')}），丟棄這篇`); dropArticle(v.slug); continue; }
+    const tone = spawnSync('node', ['scripts/check-content.mjs', file], { encoding: 'utf8' });
+    if (tone.status !== 0) { console.error(`  ✖ 去 AI 腔 gate 未過，丟棄這篇：\n${(tone.stdout || tone.stderr || '').slice(-400)}`); dropArticle(v.slug); continue; }
+    written.push({ slug: v.slug, title: articleTitle(v.slug) || v.slug });
+    console.log(`  ✓ 通過逐篇 gate`);
   }
-  const v = parseVideoResult(r.stdout);
-  console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
 
   const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
-  if (v.action !== 'new' || !produced) {
-    // Claude 判定沒有通得過查證 gate 的題：把這批候選記進帳本（已判過、不再重覆提供）——僅 --go。
-    if (go) recordSeen(fresh);
-    console.log('✓ 本次無產出（無合適題目或未寫檔）。');
+  if (!written.length || !produced) {
+    // 沒有任何一支通得過：把這批候選記進帳本（已判過、不再重覆提供）——僅 --go 且非額度問題。
+    if (go && !quotaHit) recordSeen(fresh);
+    console.log(`\n✓ 本次無產出（${quotaHit ? '撞用量上限，候選保留下輪重試' : '無合適題目或未寫檔'}）。`);
     return;
   }
-
-  // 用系統時間蓋掉模型寫的 publishDate（模型無可靠時鐘，常把「現在」填成未來 → 變排程稿）。
-  if (v.slug) {
-    const file = join(ARTICLES_DIR, `${v.slug}.md`);
-    if (existsSync(file)) writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${new Date().toISOString()}"`));
-  }
-
-  if (v.slug) {
-    // 缺圖驗證：引用了卻沒存到檔 → 不發（避免 check:links 壞連結）。
-    const missing = missingLocalAssets(v.slug);
-    if (missing.length) die(`引用的本地圖檔不存在（${missing.join('、')}），不發佈（改動留工作區）`);
-    // 去 AI 腔硬 gate（為什麼＝docs/lessons/ai-tone-gate.md）。
-    const tone = spawnSync('node', ['scripts/check-content.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
-    if (tone.status !== 0) die(`去 AI 腔 gate 未過，不發佈（改動留工作區待改）：\n${tone.stdout || tone.stderr || ''}`);
-  }
+  console.log(`\n→ 本輪通過 ${written.length} 篇，進 build/check:links`);
 
   // worktree 無殘留 dist → 先 build 再 check:links；失敗同步最新 main 自癒重試一次（並發防護）。
   try { buildCheckWithResync(); }
   catch (e) { die(`build/check:links 未過（已自癒重試），不發佈（改動留工作區）：${e.message}`); }
   sh('git', ['add', '--', ARTICLES_DIR, 'public/covers', 'public/images']);
-  sh('git', ['commit', '-m', 'feat(article): 影片線索整理\n\n線索來自訂閱 YouTube 頻道，事實經公開來源交叉查證、附出處，編輯部署名。']);
+  sh('git', ['commit', '-m', `feat(article): 影片線索整理 ${written.length} 篇\n\n線索來自訂閱 YouTube 頻道，事實經公開來源交叉查證、附出處，編輯部署名。\n\n${written.map((w) => `- ${w.title}`).join('\n')}`]);
   if (go) {
     const pr = pushToMain({ cwd: process.cwd() });
     if (!pr.ok) die(`推送 main 失敗：${pr.err}`);
     recordSeen(fresh); // 上架成功才記帳本（發佈失敗則保留、下輪重試）
-    console.log('✓ 已上架。');
-    if (v.slug) console.log(`PUBLISHED=https://appi.news/articles/${v.slug}/ ｜ ${articleTitle(v.slug) || v.slug}`);
+    console.log(`✓ 已上架 ${written.length} 篇。`);
+    for (const w of written) console.log(`PUBLISHED=https://appi.news/articles/${w.slug}/ ｜ ${w.title}`);
   } else {
-    console.log('✓ 已 stage（未 push、未記帳本）。');
-    if (v.slug) console.log(`STAGED=${v.slug} ｜ ${articleTitle(v.slug) || v.slug}`);
+    console.log(`✓ 已 stage ${written.length} 篇（未 push、未記帳本）。`);
+    for (const w of written) console.log(`STAGED=${w.slug} ｜ ${w.title}`);
   }
 }
 

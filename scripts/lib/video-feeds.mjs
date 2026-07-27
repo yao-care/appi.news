@@ -42,8 +42,13 @@ export const VIDEO_FEEDS = [
     handle: '@TVBSNEWS01',
     // 健康/醫療題多，適合本站車道。
   },
-  // 待補（handle 解錯或頻道近期無片，2026-07-27 查過一輪未果）：公視、台視、三立、東森、中天、鏡新聞。
-  // 要加時照上面的 externalId 流程解，並先驗 RSS <title>。
+  // ── 2026-07-27 第二批：handle 猜不到，改從各台官網挖 YouTube 連結再解 externalId，全部驗過 RSS <title> ──
+  { name: '公視新聞網', channelId: 'UCexpzYDEnfmAvPSfG4xbcjA', handle: 'channel/UCexpzYDEnfmAvPSfG4xbcjA' },
+  { name: '三立新聞網', channelId: 'UCIU8ha-NHmLjtUwU7dFiXUA', handle: 'channel/UCIU8ha-NHmLjtUwU7dFiXUA' },
+  { name: '東森新聞', channelId: 'UCR3asjvr_WAaxwJYEDV_Bfw', handle: 'user/newsebc' },
+  { name: '台視新聞', channelId: 'UC8ROUUjHzEQm-ndb69CX8Ww', handle: 'user/ttvnewsview' },
+  { name: '中天新聞', channelId: 'UCpu3bemTQwAU8PqM4kJdoEQ', handle: '@中天新聞CtiNews' },
+  // 鏡新聞：官網沒放 YouTube 連結、handle 也猜不到，待補。
 ];
 
 /** 由 channelId 組 RSS 網址（YouTube 官方 feed，無需金鑰）。 */
@@ -75,6 +80,8 @@ const OFF_BEAT = [
   // 社會案件／事故（2026-07-27 補事故詞：「十分放天燈空中解體下火焰雨」曾靠景點詞漏進來）
   '命案', '凶', '槍', '毒品', '詐騙', '車禍', '死亡', '身亡', '墜樓', '性侵', '虐', '起訴', '判刑', '通緝', '火警', '爆炸',
   '解體', '翻覆', '失事', '罹難', '傷者', '送醫', '搜救',
+  // 2026-07-27 二次補：同一則天燈事故換標題再溜進來（「天燈秒變火球墜鐵軌險遭燙傷」）
+  '燙傷', '灼傷', '火球', '驚魂', '險遭', '受困', '墜',
   // 財經股市
   '股', '台積電', '匯率', '央行', '關稅', '財報',
   // 體育賽事（另有運動線）

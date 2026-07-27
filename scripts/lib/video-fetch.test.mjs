@@ -79,6 +79,12 @@ describe('isLifestyleVideo', () => {
   it('與生活無關且無關鍵字者不納入', () => {
     expect(isLifestyleVideo('行政院會後記者會')).toBe(false);
   });
+  it('選戰題不因為提到美食就漏進來（2026-07-27 實測漏網）', () => {
+    expect(isLifestyleVideo('鹽埔鄉長選戰掀話題　參選人拋「爭取知名漢堡進駐」')).toBe(false);
+  });
+  it('景點事故題不因為提到景點就漏進來（2026-07-27 實測漏網）', () => {
+    expect(isLifestyleVideo('十分放天燈「空中解體」　下火焰雨遊客尖叫四起')).toBe(false);
+  });
   it('警消好人好事屬 lifestyle-police 線，即使提到餐廳也不搶題', () => {
     expect(isLifestyleVideo(
       '休假遇兄分隊出勤 桃機消防員加入救援搶回一命',

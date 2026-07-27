@@ -4,7 +4,7 @@ import ArticleCard from '@/components/blocks/ArticleCard.astro';
 import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
 import Pagination from '@/components/ui/Pagination.astro';
 import { getPublishedArticles, getAuthorMap, articleSlug } from '@/utils/content';
-import { itemListLd } from '@/utils/jsonld';
+import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
 
 const PAGE_SIZE = 18;
 
@@ -17,11 +17,17 @@ const authorNames = new Map(
 const totalPages = Math.max(1, Math.ceil(all.length / PAGE_SIZE));
 const pageArticles = all.slice(0, PAGE_SIZE);
 
-const ld = itemListLd(
-  Astro.site,
-  pageArticles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
-  { name: 'APPI News 所有文章' },
-);
+const ld = [
+  breadcrumbLd(Astro.site, [
+    { name: '首頁', path: '/' },
+    { name: '所有文章', path: '/articles/' },
+  ]),
+  itemListLd(
+    Astro.site,
+    pageArticles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
+    { name: 'APPI News 所有文章' },
+  ),
+];
 ---
 <BaseLayout
   title="所有文章"

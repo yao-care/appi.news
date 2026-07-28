@@ -10,7 +10,14 @@ import { rehypeFigcaption } from './src/utils/rehype-figcaption.mjs';
 /**
  * 舊 post-NNN 文章網址 → 語意化 slug 的轉址表（由 src/redirects.json 維護）。
  * GitHub Pages 為純靜態、無法回真 301，Astro 於 build 時為每個來源網址產生
- * 一頁 meta-refresh + rel=canonical 的轉址頁，爬蟲與 LLM 皆會跟隨、權重幾乎全傳遞。
+ * 一頁 meta-refresh + rel=canonical 的轉址頁。
+ *
+ * ⚠️ 這裡原本寫「爬蟲與 LLM 皆會跟隨、權重幾乎全傳遞」——**2026-07-28 已由 GSC 資料否證**：
+ * 131 個轉址空殼在三個月後仍持有 2,208 曝光（全站 15%）、部分排在 pos 5-8 比正本還前面。
+ * 根因是 Astro 內建轉址模板同時寫死 noindex 與 canonical，兩個訊號互相矛盾。
+ * 現由 postbuild 的 scripts/fix-redirect-pages.mjs 把 noindex 拿掉、只留 meta-refresh +
+ * canonical。**改動轉址機制前請先讀 docs/lessons/duplicate-topic-gate.md §轉址殘骸**，
+ * 並用 GSC page 維度實測殘骸還吃多少曝光，不要再憑假設下結論。
  */
 const articleRedirects = JSON.parse(
   readFileSync(new URL('./src/redirects.json', import.meta.url), 'utf-8'),

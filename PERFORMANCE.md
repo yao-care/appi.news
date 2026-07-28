@@ -42,7 +42,7 @@
 
 ## 2. 不要破壞 postbuild 五腳本（首頁與內頁效能達標的關鍵）
 
-`package.json` 的 `postbuild` 依序跑這五支，**順序不可換、不可拿掉**：
+`package.json` 的 `postbuild` 依序跑下面這些，**前五支的順序不可換、不可拿掉**：
 
 ```
 node scripts/subset-fonts.mjs            # ① unicode-range 切塊子集化 + font-display:optional
@@ -50,7 +50,12 @@ node scripts/optimize-home-images.mjs    # ② 首頁 cover 圖縮成顯示尺�
 node scripts/optimize-article-images.mjs # ③ 內頁文章封面縮成 900px webp
 node scripts/inline-css.mjs              # ④ 全站 critical CSS 內聯、移除 render-blocking link
 npx pagefind ...                         # ⑤ 搜尋索引
+node scripts/fix-redirect-pages.mjs      # ⑥ SEO（非效能）：轉址空殼頁拿掉 noindex
 ```
+
+⑥ 是 2026-07-28 加的 **SEO 修正、與效能無關**，刻意接在鏈尾不干擾前五支。它只改「確實是
+Astro 轉址空殼」的頁，全站另外 1,581 個該保留 `noindex` 的頁（薄標籤/admin/搜尋/排程草稿）
+一律不碰。為什麼＝[`docs/lessons/duplicate-topic-gate.md`](./docs/lessons/duplicate-topic-gate.md) §轉址殘骸。
 
 | 腳本 | 做什麼 | 為何不能拿掉 |
 |---|---|---|

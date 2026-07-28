@@ -12,6 +12,7 @@ import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildFocusEsgPrompt, parseFocusEsgResult } from './lib/focus-esg.mjs';
+import { salvageArticle } from './lib/changed-articles.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
 
@@ -79,24 +80,48 @@ function main() {
   console.log(`→ 焦點/ESG 整理（分支 ${branch}，${go ? '上架' : 'stage 不 push'}）`);
 
   // 一輪多篇（比照國際）：每次寫一篇 → 把已寫的加進去重清單再寫下一篇，直到 claude 回 SKIP（沒更多
-  // 夠新夠強的題）或時間預算用盡。時間預算須讓「預算 + 一篇最久耗時 + build(~126s) + push」< 外層 1200s，
-  // 故預設 540s（env FOCUS_TIME_BUDGET_MS 可調）；MAX 為安全上限。最後整批一次 build/check/commit/push。
-  const budgetMs = Number(process.env.FOCUS_TIME_BUDGET_MS || 540_000);
+  // 夠新夠強的題）或寫滿 FOCUS_MAX。
+  // 時間預算預設「不限」：原本的 540s 是為了塞進 cron 外層 `timeout 1200`，而該 timeout 已於
+  // 2026-07-09（1e2a901）移除——護欄的對象消失，只剩把快完成的工作砍掉的副作用（同國際線
+  // 2026-07-27 事故，見 docs/lessons/auto-publish-pipeline-traps.md §E、§G）。
+  // FOCUS_TIME_BUDGET_MS 保留當緊急手煞車（設 >0 才生效）。
+  const budgetMs = Number(process.env.FOCUS_TIME_BUDGET_MS || 0);
   const maxArticles = Number(process.env.FOCUS_MAX || 4);
   const start = Date.now();
   const excludeTitles = [...recent]; // 去重清單，每寫一篇就加入，避免下一篇撞題
   const wrote = [];
+  // 基礎設施級失敗（模型沒吐出可解析的 FOCUS_RESULT）＝故障，不是「沒更多題了」，不可當終止條件。
+  let wastedMs = 0;
+  let infraFails = 0;
+  const MAX_INFRA_FAILS = 2;
   for (let i = 0; i < maxArticles; i++) {
-    if (i > 0 && Date.now() - start > budgetMs) {
-      console.log(`\n⏳ 時間預算（${Math.round(budgetMs / 1000)}s）用盡：本批已寫 ${wrote.length} 篇，其餘留下次。`);
+    if (i > 0 && budgetMs > 0 && Date.now() - start - wastedMs > budgetMs) {
+      console.log(`\n⏳ 手煞車 FOCUS_TIME_BUDGET_MS（${Math.round(budgetMs / 1000)}s）用盡：本輪已寫 ${wrote.length} 篇，其餘不處理。`);
       break;
     }
+    const t0 = Date.now();
     const prompt = buildFocusEsgPrompt(excludeTitles, 7);
     console.log(`\n→ 第 ${i + 1} 篇…`);
     const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
     // claude-appi 撞「每週用量上限」時會 exit 0 但只印限額訊息 → 必須查 stdout，否則被誤判成「無題、安靜」。
     if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) { console.log(`  ⚠️ claude 失敗，停止本批：${(r.stderr || r.stdout || r.error?.message || '').slice(-200)}`); break; }
     const v = parseFocusEsgResult(r.stdout);
+    // 解析不出 FOCUS_RESULT＝故障，不是「沒更多題」：舊碼在這裡 break，等於一次漏印就收工，
+    // 而且模型可能已經把稿寫好在工作區、隨 worktree 被刪掉。→ 撿回稿、不計時間、續跑下一篇。
+    if (v.infra) {
+      wastedMs += Date.now() - t0;
+      infraFails += 1;
+      const found = salvageArticle(ARTICLES_DIR, wrote.map((w) => w.slug).filter(Boolean));
+      if (found && found.action === 'new') {
+        console.log(`  ⚠️ 無 FOCUS_RESULT，但工作區有寫好的 ${found.slug} → 撿回，續走既有關卡`);
+        wrote.push({ ...v, action: 'new', slug: found.slug });
+        excludeTitles.push(articleTitle(found.slug) || found.slug);
+      } else {
+        console.log(`  ⚠️ ${v.note}（工作區沒有可歸屬的稿）`);
+      }
+      if (infraFails >= MAX_INFRA_FAILS) { console.log(`  ⛔ 基礎設施級失敗累計 ${infraFails} 次，停止本輪，不空燒。`); break; }
+      continue;
+    }
     console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
     if (v.action !== 'new' || !v.slug) { console.log('  本輪無更多夠新夠強的題，停止。'); break; }
     wrote.push(v);

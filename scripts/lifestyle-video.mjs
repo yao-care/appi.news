@@ -17,6 +17,7 @@ import yaml from 'js-yaml';
 import { buildVideoPrompt, parseVideoResult } from './lib/lifestyle-video.mjs';
 import { fetchVideoCandidates } from './lib/video-fetch.mjs';
 import { loadSeen, filterNew, recordSeen } from './lib/video-ledger.mjs';
+import { salvageArticle } from './lib/changed-articles.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
 
@@ -128,6 +129,8 @@ async function main() {
   // 撞用量上限就 break 中止整批（別再空打剩下的，見 lessons/automation-model-and-account-split.md）。
   const written = [];
   let quotaHit = false;
+  // 因故障（API error／解析不出結果）而沒拿到判斷的候選：不可記進帳本，留給下輪重試。
+  const failed = new Set();
   for (const [i, c] of fresh.entries()) {
     console.log(`\n[${i + 1}/${fresh.length}] ${c.source}｜${c.title}`);
     const prompt = buildVideoPrompt(c, [...recent, ...written.map((w) => w.title)]);
@@ -140,10 +143,21 @@ async function main() {
     }
     if (r.error || r.status !== 0) {
       console.error(`  ✖ claude 失敗（exit ${r.status}），跳過這支：${(r.stderr || r.error?.message || '').slice(-200)}`);
+      failed.add(c);
       continue;
     }
     const v = parseVideoResult(r.stdout);
     console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
+    // 解析不出 VIDEO_RESULT＝故障，不是「這支不值得寫」：不可記進帳本（記了就永遠不再被提），
+    // 且模型可能已把稿寫好在工作區 → 先撿回來走既有 gate。
+    if (v.infra) {
+      failed.add(c);
+      const found = salvageArticle(ARTICLES_DIR, written.map((w) => w.slug));
+      if (!found || found.action !== 'new') { console.error(`  ✖ ${v.note}：不記帳本、下輪重試`); continue; }
+      console.log(`  ⚠️ 無 VIDEO_RESULT，但工作區有寫好的 ${found.slug} → 撿回，續走既有關卡`);
+      v.action = 'new';
+      v.slug = found.slug;
+    }
     if (v.action !== 'new' || !v.slug) continue;
 
     const file = join(ARTICLES_DIR, `${v.slug}.md`);
@@ -163,7 +177,7 @@ async function main() {
   const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
   if (!written.length || !produced) {
     // 沒有任何一支通得過：把這批候選記進帳本（已判過、不再重覆提供）——僅 --go 且非額度問題。
-    if (go && !quotaHit) recordSeen(fresh);
+    if (go && !quotaHit) recordSeen(fresh.filter((c) => !failed.has(c)));
     console.log(`\n✓ 本次無產出（${quotaHit ? '撞用量上限，候選保留下輪重試' : '無合適題目或未寫檔'}）。`);
     return;
   }
@@ -177,7 +191,8 @@ async function main() {
   if (go) {
     const pr = pushToMain({ cwd: process.cwd() });
     if (!pr.ok) die(`推送 main 失敗：${pr.err}`);
-    recordSeen(fresh); // 上架成功才記帳本（發佈失敗則保留、下輪重試）
+    // 上架成功才記帳本（發佈失敗則保留、下輪重試）；因故障沒拿到判斷的那幾支同樣不記。
+    recordSeen(fresh.filter((c) => !failed.has(c)));
     console.log(`✓ 已上架 ${written.length} 篇。`);
     for (const w of written) console.log(`PUBLISHED=https://appi.news/articles/${w.slug}/ ｜ ${w.title}`);
   } else {

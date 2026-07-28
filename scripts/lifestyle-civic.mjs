@@ -17,6 +17,7 @@ import yaml from 'js-yaml';
 import { buildCivicPrompt, parseCivicResult } from './lib/lifestyle-civic.mjs';
 import { fetchCivicCandidates } from './lib/civic-fetch.mjs';
 import { loadSeen, filterNew, recordSeen } from './lib/civic-ledger.mjs';
+import { salvageArticle } from './lib/changed-articles.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
 
@@ -99,7 +100,20 @@ async function main() {
   console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
 
   const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
-  if (v.action !== 'new' || !produced) {
+  // 解析不出 CIVIC_RESULT＝故障，不是 Claude 的判斷。舊碼在這裡照樣 recordSeen(fresh)，
+  // 等於**一次故障就把當天整批候選永久記成「已判過」**，那些題再也不會被提；而且模型可能
+  // 已經把稿寫好在工作區，會隨 worktree 被刪掉。→ 先撿稿，撿不到就不記帳本、留給下輪重試。
+  if (v.infra) {
+    const found = salvageArticle(ARTICLES_DIR);
+    if (found && found.action === 'new') {
+      console.log(`  ⚠️ 無 CIVIC_RESULT，但工作區有寫好的 ${found.slug} → 撿回，續走既有關卡`);
+      v.action = 'new';
+      v.slug = found.slug;
+    } else {
+      console.log(`✗ ${v.note}：不記帳本、候選保留下輪重試（故障不等於判斷）。`);
+      return;
+    }
+  } else if (v.action !== 'new' || !produced) {
     // Claude 判定無合適便民措施：把這批新候選記進帳本（已判過、不再重覆提供）——僅 --go。
     if (go) recordSeen(fresh);
     console.log('✓ 本次無產出（無合適便民措施或未寫檔）。');

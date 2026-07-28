@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # 每日 cron：健康紀念日 T-2 寫稿（抓當年度最新素材 → 排 當天台北 06:17 上線）。台北 11:00 = UTC 03:00。
 #
-# 前置 gate 是純資料判斷（node 讀年曆，不動用 Claude）：兩天後沒紀念日就安靜 exit 0。
+# 前置 gate 是純資料判斷（node 讀年曆，不動用 Claude）：未來兩天內沒紀念日就安靜 exit 0。
+# 掃「區間」而非剛好第 2 天：某天寫失敗時，隔天該篇仍在區間內 → 配合帳本天然重試一次。
 # 一年 51 天真的會寫，其餘 300 多天這支只花不到一秒。
 #
 # 上線由另一支 scripts/cron/health-days-publish.sh（UTC 22:17 = 台北 06:17）觸發 deploy 轉正。
@@ -11,12 +12,12 @@ REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
 
 # ── 純資料前置 gate：不建 worktree、不叫 Claude，先確認兩天後真的有紀念日 ──────────
 if ! node -e '
-  import("./scripts/lib/health-days.mjs").then(({ healthDaysAhead }) => {
+  import("./scripts/lib/health-days.mjs").then(({ healthDaysWithin }) => {
     const taipeiToday = new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10);
     const lead = Number(process.env.HEALTH_DAYS_LEAD || 2);
-    const hits = healthDaysAhead(taipeiToday, lead);
+    const hits = healthDaysWithin(taipeiToday, lead);
     if (!hits.length) process.exit(9);
-    console.error(`T+${lead}（${hits[0].date}）：${hits.map((h) => h.entry.name).join("、")}`);
+    console.error(`T+1..T+${lead} 內：${hits.map((h) => h.date + " " + h.entry.name).join("、")}`);
   }).catch((e) => { console.error(e); process.exit(1); });
 '; then
   rc=$?

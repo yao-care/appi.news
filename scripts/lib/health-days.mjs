@@ -715,6 +715,22 @@ export function healthDaysAhead(fromDate, offsetDays) {
   return healthDaysOn(dateStr).map((entry) => ({ entry, date: dateStr }));
 }
 
+/**
+ * 掃 fromDate 起算 T+1 … T+leadDays 這個**區間**內的所有紀念日，由近到遠排序。
+ *
+ * 為什麼是區間而不是「剛好第 leadDays 天」：那樣寫失敗就永遠補不回來。以 8/31 為例，
+ * 8/29 跑（T+2）失敗後，8/30 跑的是 9/2，8/31 那篇再也不會被看到。改掃區間後，
+ * 8/30 仍會看到 8/31（T+1），配合協調器的「已寫過就跳過」帳本，天然形成一次重試機會。
+ *
+ * 不含 T+0（當天）：上線 cron 在台北 06:17 跑、寫稿 cron 在 11:00，當天才寫已經來不及。
+ * @returns {Array<{entry:object, date:string}>}
+ */
+export function healthDaysWithin(fromDate, leadDays) {
+  const out = [];
+  for (let i = 1; i <= leadDays; i++) out.push(...healthDaysAhead(fromDate, i));
+  return out;
+}
+
 /** 該篇在該年度的文章 slug（每年一篇，年份入 slug）。 */
 export function articleSlugFor(entry, year) {
   return `${entry.slug}-${year}`;

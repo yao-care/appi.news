@@ -24,7 +24,7 @@ import yaml from 'js-yaml';
 import {
   HEALTH_DAYS,
   resolveHealthDate,
-  healthDaysAhead,
+  healthDaysWithin,
   healthDaysOn,
   articleSlugFor,
   ledgerKey,
@@ -165,44 +165,50 @@ async function main() {
     return;
   }
 
-  // 目標日：預設今天（台北）往後 LEAD_DAYS 天；--date 可指定（補寫／測試用）。
+  // 掃 T+1 … T+LEAD_DAYS 的區間（不是剛好第 LEAD_DAYS 天）——這樣某天寫失敗，隔天還會被撿起來
+  // 重試（配合下面的「已寫過就跳過」帳本）。--date 可指定單日（補寫／測試用）。
   const explicit = argOf('date');
   const targets = explicit
     ? healthDaysOn(explicit).map((entry) => ({ entry, date: explicit }))
-    : healthDaysAhead(taipeiToday(), LEAD_DAYS);
-  const targetDate = explicit || (targets[0]?.date ?? '');
+    : healthDaysWithin(taipeiToday(), LEAD_DAYS);
+  const scope = explicit || `${taipeiToday()} 起 ${LEAD_DAYS} 天內`;
 
   if (targets.length === 0) {
-    console.log(`（${explicit || `${taipeiToday()} 往後 ${LEAD_DAYS} 天`} 沒有健康紀念日，安靜結束）`);
+    console.log(`（${scope} 沒有健康紀念日，安靜結束）`);
     return;
   }
 
-  const year = Number(targets[0].date.slice(0, 4));
   const ledger = loadLedger();
 
-  // 過濾掉「這一年已經寫過」的：帳本有紀錄，或文章檔已存在（帳本掉了也不會重寫）。
-  const todo = targets.filter(({ entry }) => {
-    const slug = articleSlugFor(entry, year);
-    if (ledger[ledgerKey(entry, year)]) {
-      console.log(`  ⏭ ${entry.name}：帳本記錄 ${year} 年已寫過，跳過`);
+  // 過濾掉「該年度已經寫過」的：帳本有紀錄，或文章檔已存在（帳本掉了也不會重寫）。
+  // 年份逐筆取自各自的日期——區間可能跨年（12/31 往後 2 天落在隔年）。
+  const todo = targets.filter(({ entry, date }) => {
+    const y = Number(date.slice(0, 4));
+    const slug = articleSlugFor(entry, y);
+    if (ledger[ledgerKey(entry, y)]) {
+      console.log(`  ⏭ ${entry.name}（${date}）：帳本記錄 ${y} 年已寫過，跳過`);
       return false;
     }
     if (existsSync(join(ARTICLES_DIR, `${slug}.md`))) {
-      console.log(`  ⏭ ${entry.name}：${slug}.md 已存在，跳過`);
+      console.log(`  ⏭ ${entry.name}（${date}）：${slug}.md 已存在，跳過`);
       return false;
     }
     return true;
   });
 
   if (todo.length === 0) {
-    console.log(`（${targetDate} 的紀念日都已寫過，安靜結束）`);
+    console.log(`（${scope} 的紀念日都已寫過，安靜結束）`);
     return;
   }
 
+  const targetDate = [...new Set(todo.map((t) => t.date))].sort().join('、');
+
   if (!go && !stage) {
     console.log('— DRY RUN（零副作用）—');
-    console.log(`目標日 ${targetDate}，待寫 ${todo.length} 篇：`);
-    for (const { entry } of todo) console.log(`  · ${entry.name}（${articleSlugFor(entry, year)}）`);
+    console.log(`範圍 ${scope}，待寫 ${todo.length} 篇：`);
+    for (const { entry, date } of todo) {
+      console.log(`  · ${date} ${entry.name}（${articleSlugFor(entry, Number(date.slice(0, 4)))}）`);
+    }
     for (const { entry, date } of todo) {
       console.log(`\n===== Claude 寫作指令：${entry.name} =====\n`);
       console.log(buildHealthDayPrompt(entry, date, { priorTitles: priorTitlesFor(entry) }));
@@ -217,7 +223,7 @@ async function main() {
 
   const wrote = [];
   for (const { entry, date } of todo) {
-    const slug = articleSlugFor(entry, year);
+    const slug = articleSlugFor(entry, Number(date.slice(0, 4)));
     console.log(`\n→ 寫「${entry.name}」（${slug}）…`);
     const prompt = buildHealthDayPrompt(entry, date, { priorTitles: priorTitlesFor(entry) });
     const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], {
@@ -289,7 +295,7 @@ async function main() {
     }
 
     // 跨年撞圖：只警告不剔除（文章是好的，換張圖就好；排程稿還有兩天可人工處理）。
-    const clash = await priorYearCoverClash(w.entry, year);
+    const clash = await priorYearCoverClash(w.entry, Number(w.date.slice(0, 4)));
     if (clash) {
       console.log(`  ⚠️ ${w.slug} 的封面與往年（${clash}）視覺重複，建議換圖`);
     }
@@ -311,7 +317,7 @@ async function main() {
   if (go) {
     const pr = pushToMain({ cwd: process.cwd() });
     if (!pr.ok) die(`推送 main 失敗：${pr.err}`);
-    recordLedger(kept.map((k) => ledgerKey(k.entry, year)));
+    recordLedger(kept.map((k) => ledgerKey(k.entry, Number(k.date.slice(0, 4)))));
     console.log(`✓ 已排程 ${kept.length} 篇（${targetDate} 06:17 上線）。`);
     // 給 cron .sh 解析回報 Slack 用。
     for (const k of kept) {

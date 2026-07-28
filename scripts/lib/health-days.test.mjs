@@ -4,6 +4,7 @@ import {
   resolveHealthDate,
   healthDaysOn,
   healthDaysAhead,
+  healthDaysWithin,
   articleSlugFor,
   ledgerKey,
   buildHealthDayPrompt,
@@ -252,5 +253,39 @@ describe('parseHealthDayResult', () => {
     expect(parseHealthDayResult('模型胡言亂語').action).toBe('skip');
     expect(parseHealthDayResult('').action).toBe('skip');
     expect(parseHealthDayResult(undefined).action).toBe('skip');
+  });
+});
+
+describe('healthDaysWithin — 區間掃描（讓寫失敗能重試）', () => {
+  it('T+1..T+lead 都涵蓋，所以隔天仍看得到同一篇', () => {
+    // 8/31 國際藥物過量意識日：8/29 是 T+2、8/30 是 T+1，兩天都該看得到
+    expect(healthDaysWithin('2026-08-29', 2).map((h) => h.date)).toEqual(['2026-08-31']);
+    expect(healthDaysWithin('2026-08-30', 2).map((h) => h.date)).toEqual(['2026-08-31']);
+  });
+
+  it('舊的單日版會漏掉，這正是改成區間的原因', () => {
+    expect(healthDaysAhead('2026-08-29', 2).map((h) => h.date)).toEqual(['2026-08-31']);
+    expect(healthDaysAhead('2026-08-30', 2)).toEqual([]); // ← 漏掉
+  });
+
+  it('不含 T+0（當天寫已經來不及，上線 cron 06:17 早就跑過）', () => {
+    // 7/28 當天是世界肝炎日，掃 7/28 起的區間不該把它算進來
+    expect(healthDaysWithin('2026-07-28', 2).some((h) => h.date === '2026-07-28')).toBe(false);
+  });
+
+  it('由近到遠排序', () => {
+    // 11/12 有兩篇、11/14 一篇：11/11 起算 3 天內應先 11/12 再 11/14
+    const dates = healthDaysWithin('2026-11-11', 3).map((h) => h.date);
+    expect(dates).toEqual(['2026-11-12', '2026-11-12', '2026-11-14']);
+  });
+
+  it('區間跨年也成立', () => {
+    // 1/14 醫事檢驗師節：1/12 起算 2 天內看得到
+    expect(healthDaysWithin('2027-01-12', 2).map((h) => h.date)).toEqual(['2027-01-14']);
+    expect(healthDaysWithin('2026-12-31', 2)).toEqual([]); // 1/1、1/2 沒紀念日，但不該炸
+  });
+
+  it('沒撞到就回空陣列', () => {
+    expect(healthDaysWithin('2027-08-10', 2)).toEqual([]);
   });
 });

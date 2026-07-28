@@ -10,6 +10,8 @@
 // 用法:
 //   node scripts/get-image.mjs --topic "段落主題" --context "文章脈絡" \
 //        --out public/images/<slug>-s<N>.webp [--width 960] [--query "english stock query"] [--people] [--dry-run]
+//   跳過圖庫、一律 OpenAI 生圖（健康紀念日線用；--query 在此模式下無作用）:
+//   node scripts/get-image.mjs --topic "..." --out public/covers/x-cover.webp --generate
 //   國際線「嵌入可授權原圖」（只接受白名單來源，否則 fail-closed 退非零）:
 //   node scripts/get-image.mjs --topic "..." --out public/images/x.webp \
 //        --embed-url "https://upload.wikimedia.org/...jpg" --credit "作者 — CC BY-SA 4.0, Wikimedia Commons" --page-url "https://commons.wikimedia.org/..."
@@ -37,6 +39,9 @@ const isCover = /(^|\/)covers\//.test(String(out ?? ''));
 const width = Number(arg('width', isCover ? '1200' : '960'));
 const query = arg('query', topic);
 const wantPeople = has('people');
+// --generate：跳過圖庫，直接走 OpenAI 生圖（gpt-image-2）。給「圖庫命中率低或要求全站生成風格統一」
+// 的產線用（健康紀念日線，站長 2026-07-28 指定）。預設仍是圖庫優先，不影響其餘產線。
+const forceGenerate = has('generate');
 const dryRun = has('dry-run');
 const embedUrl = arg('embed-url');
 const credit = arg('credit');
@@ -198,6 +203,10 @@ async function main() {
   // 人物圖：photoreal 生成（保證台灣人＋展開＋自檢重生）。
   if (wantPeople) {
     return generatePerson();
+  }
+  // 明確要求生圖（--generate）：不碰圖庫，直接 OpenAI 生成。
+  if (forceGenerate) {
+    return generate('forced');
   }
   // 概念圖：先圖庫。無金鑰 / 搜尋失敗 / 無候選 / 下載失敗 → 退回生成。
   let candidates = [];

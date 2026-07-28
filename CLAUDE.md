@@ -117,6 +117,8 @@
 
 整條鏈每天自動跑，是「內容情境」的主力產線；操作細節在各 skill，本段只給全貌與鐵則。
 
+> **健康紀念日（每年 51 天，2026-07-28 新增）**：與所有其他產線不同，這條是**日期驅動**而非題材驅動——年曆表（`scripts/lib/health-days.mjs`，51 筆逐條查證過）決定哪天要寫什麼，T-2 天抓當年度素材寫成**排程稿**（`status: scheduled` + `publishDate <當日>T06:17+08:00`），當天台北 06:17 由**另一支純 shell cron** 戳 `workflow_dispatch` 觸發 deploy 才真正上線。**兩支 cron 不可合併**，也不要以為排程稿會自己上線——`isPublic()` 比對的是 build 當下時間，`deploy.yml` 的 6 小時 cron 對不上 06:17。配圖依站長指定**一律 OpenAI 生圖**（`get-image.mjs --generate`，其餘四線維持圖庫優先）。為什麼＝[`docs/lessons/annual-observance-scheduling.md`](./docs/lessons/annual-observance-scheduling.md)。
+>
 > **多分類自動內容（國際/生活/運動）**：科技以外的頻道**各有各的萃取邏輯與來源**（GDELT、政府開放資料、各地警局、學生賽事投稿…），**不是同一套雷達**。完整 cron 總表、各頻道來源/上線方式/Slack 行為、並發保護，見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §子專案 3；設計脈絡見記憶 `new-verticals-automation-plan` / `international-desk-gdelt` / `slack-appi-news-workspace`。下面這條是科技日更（最早的那條）。
 
 ```
@@ -133,6 +135,7 @@ tech-radar（cron 每日 UTC 21:20＝台北 05:20；2026-07-07 曾停用、2026-
 | 自動產文 | `scripts/newsroom-write.mjs` | headless 起草＋**配圖硬性 gate**（缺 coverImage／封面檔不存在／內文 0 圖 → 中止不發），完成寫 `result.json` |
 | Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文，回報摘要/重點/預覽連結；也收 GitHub webhook（dev-bot 開發、`article-draft` 寫作） |
 | /admin 寫作任務消費端 | `scripts/article-write.mjs`＋`scripts/lib/article-issue.mjs`（webhook `article-draft` → newsroom `--stage` → PR） | /admin 開的 `article-draft` issue → 走 newsroom 正規產線（配圖 gate 保留）寫成 **kind=factual 待審草稿** → 開 PR；merge 後仍待審，用編輯器／發佈鈕轉正。為什麼＝[`docs/lessons/article-draft-consumer.md`](./docs/lessons/article-draft-consumer.md) |
+| 健康紀念日 | `scripts/lib/health-days.mjs`（年曆表＋解析器）＋`scripts/health-days.mjs`＋`scripts/cron/health-days{,-publish}.sh` | 日期驅動、每年 51 篇；排程稿＋準點觸發 deploy 兩段式，見上方說明 |
 | 去重帳本 | `scripts/topic-ledger.mjs`、`/root/.local/state/appi-news/suggested-topics.json` | 雷達與週報共用，避免撞題 |
 | 發佈隔離 checkout | `/root/appi.news-publisher`（`PUBLISH_ISOLATED=1`） | 自動產文在此跑，每篇 reset 到 `origin/main`；dev 目錄未提交改動不受影響 |
 

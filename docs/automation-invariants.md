@@ -19,6 +19,8 @@
 - 改 `.sh` 包裝或發佈端程式（`slack-actions-server.mjs` 等）：**push → `/root/appi.news-publisher` `git pull` →（server 端）`pm2 restart appinews-slack-actions`**。只 push 不 pull，cron 跑的還是舊 `.sh`；只 restart 不 pull，server 載到舊碼。
 - **配圖硬性 gate 不可繞過**：缺 `coverImage`／封面檔不存在／內文 0 圖 → 中止不發、留工作區待補。
 - 自動線 `publishDate` **用系統時間蓋**，別讓模型填（模型無可靠時鐘，會排到未來變排程稿）。
+  - **唯一例外＝健康紀念日線**：它是刻意排程的，`publishDate` 用**年曆表算出的目標日 06:17** 蓋掉模型寫的（同樣不信任模型，只是蓋成排程時間而非現在）。
+- **排程稿不會自己上線**：`isPublic()` 比對 **build 當下時間**，靜態站沒有 runtime。要在非整點時刻上線，必須另排一支 cron 在那一刻 `gh workflow run deploy.yml`（`deploy.yml` 的 6 小時 cron 只落台北 02/08/14/20）。從觸發到線上可讀約 3-5 分鐘，「時間戳準」與「可見時刻準」二選一。為什麼＝[`lessons/annual-observance-scheduling.md`](./lessons/annual-observance-scheduling.md)。
 
 ## 對外抓取的省用量前置 gate
 - 像颱風線那種「先便宜判斷再決定要不要動用 Claude」的 gate（`lifestyle-typhoon.sh` 抓 `nds.html`）一律 **fail-open**：抓不到／非 200／格式不符就**照走完整流程**，絕不因抓取失敗而漏報。

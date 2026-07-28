@@ -45,6 +45,7 @@
 | [automation-model-and-account-split.md](./automation-model-and-account-split.md) | 帳號切換洗掉排程行＋全 Opus 燒爆週額度＋claude-appi 撞限額會 exit 0：cron 一律帶 --model、判成功不能只看 exit code；續：偵測到限額只 continue → 逐項批次變 24 次空打，須遇限額即 break 中止整批 |
 | [automation-runtime-staleness.md](./automation-runtime-staleness.md) | 改了卻沒生效：程式從 publisher checkout 跑、cron 一律 UTC、.sh/server 改完要 pull |
 | [auto-publish-pipeline-traps.md](./auto-publish-pipeline-traps.md) | 發佈正確性坑：worktree 要先 build、publishDate 用系統時間蓋、多工不序列化用自癒重試、持續事件滾動更新同一篇；§F 一篇缺封面 webp 會讓 check:links 擋掉整條共用部署佇列、連累別線排程文，要在進 main 前攔（validate-content 升 error） |
+| [annual-observance-scheduling.md](./annual-observance-scheduling.md) | 年度紀念日產線：`status: scheduled` 不會自己上線（`isPublic` 比對 build 當下時間，6 小時 cron 對不上 06:17，要另排一支準點戳 deploy 的 cron）；「時間戳準」與「可見時刻準」二選一；坊間紀念日對照表三筆過期/錯誤（癲癇日、高血壓日、肥胖日），照抄會每年錯一次；浮動日期要寫成規則不能寫死 |
 | [commit-hygiene-shared-checkout.md](./commit-hygiene-shared-checkout.md) | 共用 checkout 別把別人 WIP 掃進 commit：只 stage 文章產物 / 用 pathspec |
 | [weekly-report-mobile-layout.md](./weekly-report-mobile-layout.md) | 週報手機排版崩掉：模型手刻多欄塞一行；版面收歸決定論渲染器，模型只填數據+notes |
 | [deterministic-fetch-llm-only-writes.md](./deterministic-fetch-llm-only-writes.md) | 自動線抓資料別交給 LLM agent（慢/發散翻頁/燒額度）；改固定抓→LLM 只寫；exit124 是逾時非額度、cron 別擠同一 5h session 視窗 |

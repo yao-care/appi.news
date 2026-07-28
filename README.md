@@ -173,7 +173,7 @@ topics: ["drug-repurposing"]     # 可選，對應 src/content/topics/
 正文（Markdown）…
 ```
 
-> **排程發佈**：`publishDate` 設未來時間 + `status: scheduled`，文章會在該時間後由每 6 小時的 GitHub Actions 重建自動上線。
+> **排程發佈**：`publishDate` 設未來時間 + `status: scheduled`，文章會在該時間**之後的下一次 build** 才上線。注意上線時機取決於 build，不是時鐘——`isPublic()` 比對的是 build 當下的時間，靜態站沒有 runtime 會在 `publishDate` 那一刻自己翻牌。GitHub Actions 每 6 小時重建一次（台北 02、08、14、20），所以排在非這些整點的時間最多會延遲近 6 小時。要**準點**上線就得另外在那一刻觸發一次部署（健康紀念日線就是這樣做的，見下方 §自動發文流程）。細節與取捨見 [`docs/lessons/annual-observance-scheduling.md`](./docs/lessons/annual-observance-scheduling.md)。
 > **內文圖**：直接寫 `<img src="/images/檔名.webp">`，build 時 `rehypeBaseImages` 自動補 base 與 `loading="lazy"`。封面放 `public/covers/`、內文圖放 `public/images/`。
 
 ### 用 `/newsroom` 日更（科技類）
@@ -196,6 +196,7 @@ tech-radar（cron 每日一次）→ 發候選題到 Slack（帶「我要寫這�
 | 選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選；排程／模型見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §cron 總表 |
 | 自動產文 | `scripts/newsroom-write.mjs` | headless 起草＋**配圖硬性 gate**（缺封面/內文 0 圖即中止不發），完成寫 `result.json` |
 | Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文，回報摘要/重點/預覽連結 |
+| 健康紀念日（每年 51 天） | `scripts/lib/health-days.mjs`（年曆表）＋`scripts/health-days.mjs`＋`scripts/cron/health-days{,-publish}.sh` | **日期驅動**（不是題材驅動）：年曆表決定哪天寫什麼，T-2 天抓當年度素材寫成排程稿，當天台北 06:17 由另一支純 shell cron 觸發部署才上線。配圖一律 OpenAI 生圖 |
 | 發佈隔離 checkout | `/root/appi.news-publisher`（`PUBLISH_ISOLATED=1`） | 自動產文在此跑，每篇 reset 到 `origin/main`，不動開發目錄未提交改動 |
 
 > **改發佈端程式**（`slack-actions-server.mjs` 等）：push → 在 `/root/appi.news-publisher` `git pull` → `pm2 restart appinews-slack-actions`；只 restart 會載到舊碼。

@@ -43,7 +43,7 @@ if [ "$rc" -eq 0 ]; then
     n=$(grep -c . <<<"$sched")
     # 排程稿尚未上線（status: scheduled），線上只有 noindex 預覽頁，故不做 200 等待——
     # 直接報「已排程」，附預覽連結供站長先看先改。真正上線由 health-days-publish.sh 負責。
-    list=$(awk -F' ｜ ' '{printf "• %s\n  排 %s 上線｜預覽 %s\n", $2, $3, $1}' <<<"$sched")
+    list=$(awk -F' ｜ ' '{printf "• %s\n  排 %s 上線｜預覽 %s%s\n", $2, $3, $1, ($4 != "" ? "\n  " $4 : "")}' <<<"$sched")
     node scripts/cron-report.mjs --category health --text "$(printf '📅 %s 已排程 %s 篇（%s）：\n%s\n（尚未公開，到時間才上線；預覽頁可從 /admin 編輯）' "$TASK" "$n" "$ts" "$list")" || true
   else
     echo "（本次無產出，安靜不報）"

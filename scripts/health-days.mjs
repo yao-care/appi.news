@@ -103,7 +103,7 @@ function priorTitlesFor(entry) {
  * 刻意只警告不剔除：文章本身是好的，換張圖就好；排程稿還有兩天，站長可從 /admin 預覽頁換圖。
  * 為此把警告帶進 Slack 回報，不要只留在 log 裡。
  */
-async function priorYearCoverClash(entry, year) {
+export async function priorYearCoverClash(entry, year) {
   const cover = join('public/covers', `${articleSlugFor(entry, year)}-cover.webp`);
   if (!existsSync(cover)) return '';
   let hash;
@@ -156,7 +156,7 @@ function printCalendar(year) {
   }
 }
 
-function main() {
+async function main() {
   const go = has('go');
   const stage = has('stage');
 
@@ -288,7 +288,13 @@ function main() {
       continue;
     }
 
-    kept.push({ ...w, title: fm.title });
+    // 跨年撞圖：只警告不剔除（文章是好的，換張圖就好；排程稿還有兩天可人工處理）。
+    const clash = await priorYearCoverClash(w.entry, year);
+    if (clash) {
+      console.log(`  ⚠️ ${w.slug} 的封面與往年（${clash}）視覺重複，建議換圖`);
+    }
+
+    kept.push({ ...w, title: fm.title, coverClash: clash });
   }
 
   if (kept.length === 0) { console.log('\n✓ 本批全被 gate 剔除，無發佈。'); return; }
@@ -309,7 +315,8 @@ function main() {
     console.log(`✓ 已排程 ${kept.length} 篇（${targetDate} 06:17 上線）。`);
     // 給 cron .sh 解析回報 Slack 用。
     for (const k of kept) {
-      console.log(`SCHEDULED=https://appi.news/articles/${k.slug}/ ｜ ${k.title} ｜ ${k.date} 06:17`);
+      const warn = k.coverClash ? ` ｜ ⚠️ 封面與往年（${k.coverClash}）視覺重複，建議換圖` : '';
+      console.log(`SCHEDULED=https://appi.news/articles/${k.slug}/ ｜ ${k.title} ｜ ${k.date} 06:17${warn}`);
     }
   } else {
     console.log(`✓ 已 stage ${kept.length} 篇（未 push、未記帳本）。`);
@@ -318,5 +325,5 @@ function main() {
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  try { main(); } catch (e) { die(e.message); }
+  main().catch((e) => die(e.message));
 }

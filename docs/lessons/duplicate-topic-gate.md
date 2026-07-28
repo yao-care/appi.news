@@ -64,7 +64,29 @@ GSC 資料否證了這個假設：三個月後仍有 131 個殘骸頁在排名�
 - **釘目標關鍵字前先用 GSC 驗有沒有曝光**，否則反思層會對著幻覺優化整整數月。
 - 相關：[ai-tone-gate.md](./ai-tone-gate.md)（兩級 ERROR/WARN 判定的由來）、`docs/automation-invariants.md`（產線 gate 清單）。
 
-## 未處理（待站長決定）
+## 轉址殘骸的處置（2026-07-28 同日完成）
 
-- **內容整併**：髖關節 4 篇、美顏針 2 篇、膝關節 PRP 2 篇、`appi-news-82`／`desk-worker-neck-pain-habits` 100% 同標題那組，都還沒併。
-- **轉址殘骸**：131 個殘骸頁的處置方式（是否改為只留 canonical 不帶 noindex）未定。
+`scripts/fix-redirect-pages.mjs` 接在 postbuild 鏈尾，把 **251 個轉址空殼的 `noindex` 拿掉**，只留 meta-refresh + canonical。只改「同時含 meta-refresh 與 Astro 模板固定字樣」的頁；全站另外 **1,581 個該保留 noindex 的頁**（薄標籤頁、`/admin`、`/search`、排程草稿預覽）不碰。`astro.config.mjs` 那句被否證的註解也已改掉。
+
+**內容整併只做了 GSC 實證有競食的 3 組**（清單掃出 6 組，但資料否掉其中 2 組）：
+
+| 組 | 處置 |
+|---|---|
+| `appi-news-91` → `hip-pain-which-specialist` | 轉址（同題相隔 81 天） |
+| `appi-news-82` → `desk-worker-neck-pain-habits` | 轉址（100% 同標題） |
+| `wp-559` | 退掉 `PRP`／`玻尿酸注射` tag、內鏈到比較篇，讓 `knee-injection-...-comparison` 獨佔「prp 玻尿酸 比較」 |
+
+**沒做的兩組，理由是資料**：6 個美顏針查詢**全部**只對到 `appi-news-178`，`appi-news-177` 沒在競爭——pos 72-81 是權威不足不是重複；綠色金融兩篇在 GSC 無任何共同排名。**教訓：相似度 gate 會誤報，GSC 的共同排名才是競食的裁判**，不要照清單硬做滿。
+
+## 驗收（效果要數週）
+
+`scripts/gsc-audit.mjs` 是本次比對的可重跑版本，`--verify` 出對基準的比較。基準（2026-07-28 修正前讀數，**各窗長分開比**）：**90 天窗 16.7%、14 天窗 8.0%**。
+
+⚠️ **窗長會騙人**：90 天窗每天只位移 1/90，修正後第 7 天只換掉約 8% 的資料，看不出變化屬正常；早期訊號要看短窗。第一版 `--verify` 就是拿 14 天的值去比 90 天的基準，得到假的「🟢 下降」——不同窗長的殘骸佔比本來就不同（短窗只含近期曝光，舊網址比重天生較低）。
+
+7 天後（2026-08-04 台北 09:00）由一次性 cron `scripts/cron/gsc-audit-followup.sh` 自動發 dev 頻道，跑完自我移除排程。
+
+## 其他仍未處理
+
+- 髖關節仍有 `hip-pain-symptoms-causes-treatment`（症狀）與 `hip-pain-which-specialist`（看哪一科）兩篇同主題詞，判定為不同搜尋意圖故保留，但兩者都還在 pos 46-79，需要的是提權威而非整併。
+- **grandfather 邊界效應**：動任何存量頁就會脫離 465 篇 AI 腔豁免、被完整掃描。本次改 `wp-559.md` 即被一句既有的「不是X，而是Y」擋掉 build。反思層想修存量頁都會撞上這道牆（brain 層 2026-07-27 log 已記錄同一現象），每碰一篇都要順手清該篇存量 AI 腔。

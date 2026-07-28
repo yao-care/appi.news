@@ -137,6 +137,7 @@ tech-radar（cron 每日 UTC 21:20＝台北 05:20；2026-07-07 曾停用、2026-
 | /admin 寫作任務消費端 | `scripts/article-write.mjs`＋`scripts/lib/article-issue.mjs`（webhook `article-draft` → newsroom `--stage` → PR） | /admin 開的 `article-draft` issue → 走 newsroom 正規產線（配圖 gate 保留）寫成 **kind=factual 待審草稿** → 開 PR；merge 後仍待審，用編輯器／發佈鈕轉正。為什麼＝[`docs/lessons/article-draft-consumer.md`](./docs/lessons/article-draft-consumer.md) |
 | 健康紀念日 | `scripts/lib/health-days.mjs`（年曆表＋解析器）＋`scripts/health-days.mjs`＋`scripts/cron/health-days{,-publish}.sh` | 日期驅動、每年 51 篇；排程稿＋準點觸發 deploy 兩段式，見上方說明 |
 | 去重帳本 | `scripts/topic-ledger.mjs`、`/root/.local/state/appi-news/suggested-topics.json` | 雷達與週報共用，避免撞題 |
+| 國際寫作前閘門 | `scripts/lib/international-gate.mjs`＋`/root/.local/state/appi-news/international-seen.json` | 同批同事件去重 → 跨日 seen 帳本 → 一次 Haiku 批次篩選，砍掉注定被判 SKIP 的題才動用寫作（實測 24→10）。**壞掉一律 fail-open**。為什麼＝[`docs/lessons/auto-publish-pipeline-traps.md`](./docs/lessons/auto-publish-pipeline-traps.md) §G |
 | 發佈隔離 checkout | `/root/appi.news-publisher`（`PUBLISH_ISOLATED=1`） | 自動產文在此跑，每篇 reset 到 `origin/main`；dev 目錄未提交改動不受影響 |
 
 **鐵則（完整 checklist 見 [`docs/automation-invariants.md`](./docs/automation-invariants.md)）**：

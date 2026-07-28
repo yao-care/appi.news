@@ -7,12 +7,15 @@
 //
 // 一天一次由 cron 呼叫。
 
-import { readFileSync, readdirSync, writeFileSync, existsSync, rmSync } from 'node:fs';
-import { join } from 'node:path';
+import { readFileSync, readdirSync, writeFileSync, existsSync, rmSync, mkdirSync } from 'node:fs';
+import { homedir } from 'node:os';
+import { basename, dirname, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildIntlPrompt, parseIntlResult } from './lib/international-write.mjs';
+import { dedupeByEvent, filterSeen, mergeSeen, buildTriagePrompt, parseTriage } from './lib/international-gate.mjs';
+import { runClaudeOnce } from './lib/claude-cli.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
 
@@ -73,6 +76,113 @@ function dropArticle(slug, action) {
   else if (existsSync(file)) { try { rmSync(file); } catch { /* 刪不掉就算了 */ } }
 }
 
+/** 跨日 seen 帳本路徑（放 git 工作區外，避免弄髒 repo 踩到「工作區乾淨」檢查）。 */
+function seenPath() {
+  return (
+    process.env.INTL_SEEN_PATH ||
+    join(process.env.XDG_STATE_HOME || join(homedir(), '.local', 'state'), 'appi-news', 'international-seen.json')
+  );
+}
+function readSeen() {
+  try { return JSON.parse(readFileSync(seenPath(), 'utf8')); } catch { return []; }
+}
+function writeSeen(entries) {
+  try {
+    mkdirSync(dirname(seenPath()), { recursive: true });
+    writeFileSync(seenPath(), JSON.stringify(entries, null, 2) + '\n');
+  } catch (e) { console.log(`  ⚠️ seen 帳本寫入失敗（不致命）：${e.message}`); }
+}
+
+const UA = 'Mozilla/5.0 (appi-news intl-radar)';
+const ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
+/** 解 HTML 實體：具名（&amp;）＋十進位（&#39;）＋十六進位（&#x27;）。標題常見三種都有。 */
+function decodeEntities(s) {
+  return String(s).replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (full, name) => {
+    const n = name.toLowerCase();
+    if (n.startsWith('#x')) { const c = Number.parseInt(n.slice(2), 16); return Number.isFinite(c) ? String.fromCodePoint(c) : full; }
+    if (n.startsWith('#')) { const c = Number(n.slice(1)); return Number.isFinite(c) ? String.fromCodePoint(c) : full; }
+    return ENTITIES[n] ?? full;
+  });
+}
+
+/**
+ * 抓每則候選原文的 <title>。閘門要判「這是什麼新聞」就得先知道標題——選題端只給了
+ * 一個 URL 與 GDELT 標地（而標地經常是錯的）。抓不到就留空，後續各層一律放行不錯殺。
+ */
+async function fetchTitles(stories, { timeoutMs = 12_000, concurrency = 8 } = {}) {
+  const queue = stories.slice();
+  const worker = async () => {
+    while (queue.length) {
+      const s = queue.shift();
+      try {
+        const res = await fetch(s.sourceUrl, { redirect: 'follow', signal: AbortSignal.timeout(timeoutMs), headers: { 'user-agent': UA } });
+        const html = (await res.text()).slice(0, 200_000);
+        const m = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+        s.title = m ? decodeEntities(m[1]).replace(/\s+/g, ' ').trim().slice(0, 300) : '';
+      } catch { s.title = ''; }
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(concurrency, queue.length) }, worker));
+  return stories;
+}
+
+/**
+ * 寫作前三層閘門：同批同事件去重 → 跨日 seen 帳本 → 一次 Haiku 批次篩選。
+ * 為什麼＝lib/international-gate.mjs 檔頭（三分之二的寫作呼叫注定產出 SKIP）。
+ * 任何一層自己壞掉一律 fail-open，寧可多寫也不要因為閘門讓整晚 0 篇。
+ */
+async function runGate(stories, recent, today) {
+  const total = stories.length;
+  console.log(`\n→ 寫作前閘門（候選 ${total} 則）`);
+  await fetchTitles(stories);
+  const noTitle = stories.filter((s) => !s.title).length;
+  if (noTitle) console.log(`  · 抓不到標題 ${noTitle} 則（一律放行）`);
+
+  const d1 = dedupeByEvent(stories);
+  for (const { story, dupOf } of d1.dropped) console.log(`  ✂ 同事件重複：${story.title || story.sourceUrl}\n      └ 併入：${dupOf.title || dupOf.sourceUrl}`);
+
+  const d2 = filterSeen(d1.kept, readSeen(), { today });
+  for (const { story, seenOn } of d2.dropped) console.log(`  ✂ ${seenOn} 已處理過：${story.title || story.sourceUrl}`);
+
+  let kept = d2.kept;
+  if (kept.length) {
+    try {
+      const verdicts = parseTriage(await runClaudeOnce(buildTriagePrompt(kept, recent), 'haiku', 180_000), kept.length);
+      if (!verdicts) {
+        console.log('  ⚠️ 批次篩選無法解析 → 全部放行（fail-open）');
+      } else {
+        const survivors = [];
+        kept.forEach((s, i) => {
+          const v = verdicts.get(i);
+          if (v && v.verdict === 'skip') console.log(`  ✂ 篩選：${s.title || s.sourceUrl}\n      └ ${v.reason}`);
+          else survivors.push(s);
+        });
+        kept = survivors;
+      }
+    } catch (e) {
+      console.log(`  ⚠️ 批次篩選失敗 → 全部放行（fail-open）：${e.message.slice(0, 160)}`);
+    }
+  }
+  console.log(`  ⇒ 通過閘門 ${kept.length}/${total} 則（同事件 ${d1.dropped.length}、已處理過 ${d2.dropped.length}、篩選 ${d2.kept.length - kept.length}）`);
+  return kept;
+}
+
+/**
+ * 工作區目前有變動的文章檔 → [{slug, action}]（未追蹤＝new、已追蹤有改＝update）。
+ * 用來在「模型漏報 INTL_RESULT」時把它其實已經寫好的稿撿回來（見寫作迴圈註解）。
+ */
+function changedArticles() {
+  const out = [];
+  for (const line of sh('git', ['status', '--porcelain', '--', ARTICLES_DIR]).split('\n')) {
+    const m = line.trim().match(/^(\?\?|[AMR]+)\s+(.+)$/);
+    if (!m) continue;
+    const path = m[2].replace(/^"(.*)"$/, '$1');
+    if (!path.endsWith('.md')) continue;
+    out.push({ slug: basename(path, '.md'), action: m[1] === '??' ? 'new' : 'update' });
+  }
+  return out;
+}
+
 /** 跑選題引擎，回 picks {region:[stories]}。 */
 function runSelection(hours, maxPer) {
   const r = spawnSync('node', ['scripts/international-select.mjs', '--hours', String(hours), '--max', String(maxPer), '--json'], {
@@ -122,7 +232,7 @@ function flattenPicks(picks) {
   return out;
 }
 
-function main() {
+async function main() {
   const hours = Number(arg('hours', '24'));
   const maxPer = Number(arg('max', '3'));
   const limit = Number(arg('limit', '0')); // >0 時只處理前 N 則（測試用）
@@ -133,10 +243,19 @@ function main() {
   let stories = flattenPicks(picks);
   if (limit > 0) stories = stories.slice(0, limit);
   const recent = recentActiveIntl(30);
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' });
+  // 安全前置提到閘門之前：工作區不乾淨反正寫不了，別先白燒一次批次篩選呼叫。
+  // （隔離模式由 cron 先 reset 到 origin/main；避免把無關改動掃進發佈 commit。）
+  if ((go || stage) && sh('git', ['status', '--porcelain'])) die('工作區不乾淨，請先清乾淨再跑（避免把無關改動掃進發佈 commit）');
+  stories = await runGate(stories, recent, today);
+  if (!stories.length) {
+    console.log('\n✓ 閘門後無題可寫（全部重複／已處理過／非國際新聞），本次不動用寫作。');
+    return;
+  }
 
   if (!go && !stage) {
     console.log(`— DRY RUN（零副作用）—`);
-    console.log(`選到 ${stories.length} 則熱題（近 ${hours}h，每區最多 ${maxPer}）：`);
+    console.log(`閘門後 ${stories.length} 則熱題（近 ${hours}h，每區最多 ${maxPer}）：`);
     for (const s of stories) {
       console.log(`  [${s.region}] ${s.numSources}家/${s.numArticles}篇 | ${s.fullName}`);
       console.log(`     ${s.sourceUrl}`);
@@ -149,27 +268,37 @@ function main() {
     return;
   }
 
-  // --go / --stage：真正寫作。安全前置：工作區乾淨（隔離模式由 cron 先 reset 到 origin/main）。
-  if (sh('git', ['status', '--porcelain'])) die('工作區不乾淨，請先清乾淨再跑（避免把無關改動掃進發佈 commit）');
+  // --go / --stage：真正寫作（工作區乾淨已在閘門前檢查過）。
   const branch = sh('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
   console.log(`→ 國際編譯：${stories.length} 則，分支 ${branch}（${go ? '寫作後 push 上線' : 'stage 不 push'}）`);
 
-  // 時間預算：每則寫作約 6~7 分鐘，cron 外層 timeout 1200s。預設只在「開新題前」still 在
-  // 預算內才續寫，故必須讓「預算 + 一則最久耗時 + 尾段(build~126s + check:links + push)」< 1200s，
-  // 否則會像之前那樣被 timeout 砍在迴圈中途、整批 0 上架。預設 540s（含 build 後仍留足尾段；env 可調）。
-  const budgetMs = Number(process.env.INTL_TIME_BUDGET_MS || 540_000);
+  // 時間預算：預設「不限」，選到的題全部跑完。
+  // 歷史：這個預算原本（2026-06-23 fa9d4f1）只是為了閃避 cron 外層的 `timeout 1200s`——被砍在
+  // 迴圈中途會整批 0 上架。那個外層 timeout 已於 2026-07-09（1e2a901）移除，護欄的對象消失，
+  // 預算卻留著，變成純粹的減產器：每則要 6~9 分，540s 等於每晚只跑得動 1~2 則，第一則失手
+  // 就整天 0 篇（2026-07-27 事故）。站長 2026-07-28 裁示拿掉。
+  // 仍留 INTL_TIME_BUDGET_MS 當緊急手煞車（>0 才生效），失控時不必改碼就能收斂。
+  const budgetMs = Number(process.env.INTL_TIME_BUDGET_MS || 0);
   const start = Date.now();
   const results = [];
   let skipped = 0;
+  // 基礎設施級失敗（模型沒吐出可解析的 INTL_RESULT）耗掉的時間不計入預算——那不是產出，
+  // 讓它吃掉預算等於「單則失手＝整天 0 篇」（2026-07-27 事故）。但整體壞掉（帳號/網路）時
+  // 也不能無限空燒，故設總次數上限。
+  let wastedMs = 0;
+  let infraFails = 0;
+  const MAX_INFRA_FAILS = 3;
   for (let i = 0; i < stories.length; i++) {
     const s = stories[i];
-    if (i > 0 && Date.now() - start > budgetMs) {
+    if (i > 0 && budgetMs > 0 && Date.now() - start - wastedMs > budgetMs) {
       skipped = stories.length - i;
-      console.log(`\n⏳ 時間預算（${Math.round(budgetMs / 1000)}s）用盡：本批處理 ${i} 則，其餘 ${skipped} 則留下次 cron 接續（避免被外層 timeout 砍在中途）。`);
+      // 註：沒有「接續」這回事——下一輪是重新抓一個新視窗重選，未處理的題若仍夠熱才會再出現。
+      console.log(`\n⏳ 手煞車 INTL_TIME_BUDGET_MS（${Math.round(budgetMs / 1000)}s）用盡：本輪處理 ${i} 則，其餘 ${skipped} 則不處理（下輪重新選題）。`);
       break;
     }
     const prompt = buildIntlPrompt(s, recent);
     console.log(`\n→ [${s.region}] ${s.numSources}家 | ${s.fullName}`);
+    const t0 = Date.now();
     const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
     const stdout = r.stdout || '';
     // 撞用量上限是「帳號層級」：這則被擋，本批剩下每則都會被擋。限流訊息秒回（吃不到時間預算），
@@ -183,9 +312,37 @@ function main() {
     // 其餘（單則 API error / 拒答）才跳過這一則、續跑下一則。
     if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond/i.test(stdout)) { console.log(`  ⚠️ claude 失敗（跳過此則）：${(r.stderr || stdout || r.error?.message || '').slice(-200)}`); results.push({ s, action: 'error' }); continue; }
     const v = parseIntlResult(r.stdout);
+    // 沒有可解析的 INTL_RESULT＝基礎設施級失敗，不是「編輯判斷跳過」，兩件事要分開處理：
+    //  ① 模型很可能已經把稿寫進工作區（讀原文/交叉查證的 token 早就燒完了），照舊碼會隨
+    //     worktree 一起被丟掉 → 這裡撿回來，一樣走底下的缺圖／去 AI 腔／check:links 各關。
+    //  ② 這一則耗掉的時間不算進預算，續跑下一則，別讓單則失手變成整批 0 篇。
+    if (v.infra) {
+      wastedMs += Date.now() - t0;
+      infraFails += 1;
+      const known = new Set(results.map((x) => x.slug).filter(Boolean));
+      const found = changedArticles().filter((c) => !known.has(c.slug));
+      if (found.length === 1) {
+        console.log(`  ⚠️ 無 INTL_RESULT，但工作區有寫好的 ${found[0].slug}（${found[0].action}）→ 撿回，續走既有關卡`);
+        results.push({ s, action: found[0].action, slug: found[0].slug, note: '模型漏報 INTL_RESULT，由工作區撿回' });
+      } else {
+        console.log(`  SKIP｜${v.note}${found.length > 1 ? `（工作區 ${found.length} 個未歸屬變動檔，不撿）` : '（工作區也沒有稿）'}`);
+        results.push({ s, ...v });
+      }
+      if (infraFails >= MAX_INFRA_FAILS) {
+        skipped = stories.length - i - 1;
+        console.log(`\n⛔ 基礎設施級失敗累計 ${infraFails} 次，中止本輪（剩 ${skipped} 則不處理，下輪重新選題），不空燒。`);
+        break;
+      }
+      continue;
+    }
     console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
     results.push({ s, ...v });
   }
+
+  // 記進 seen 帳本：只記「真的走完寫作端、拿到明確結論」的題（寫了／模型判定跳過）。
+  // 基礎設施級失敗與 API error 不記，明天才會重試——那不是結論，是故障。
+  const decided = results.filter((x) => x.action !== 'error' && !x.infra).map((x) => x.s);
+  if (decided.length) writeSeen(mergeSeen(readSeen(), decided, today));
 
   // 有產出才往下（check:links → 一次 commit → push）。一天一批一個 commit、一次部署。
   const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
@@ -239,10 +396,8 @@ function main() {
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  try {
-    main();
-  } catch (e) {
+  main().catch((e) => {
     console.error(`✖ ${e.message}`);
     process.exit(1);
-  }
+  });
 }

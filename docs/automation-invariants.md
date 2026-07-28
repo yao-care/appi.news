@@ -22,8 +22,17 @@
   - **唯一例外＝健康紀念日線**：它是刻意排程的，`publishDate` 用**年曆表算出的目標日 06:17** 蓋掉模型寫的（同樣不信任模型，只是蓋成排程時間而非現在）。
 - **排程稿不會自己上線**：`isPublic()` 比對 **build 當下時間**，靜態站沒有 runtime。要在非整點時刻上線，必須另排一支 cron 在那一刻 `gh workflow run deploy.yml`（`deploy.yml` 的 6 小時 cron 只落台北 02/08/14/20）。從觸發到線上可讀約 3-5 分鐘，「時間戳準」與「可見時刻準」二選一。為什麼＝[`lessons/annual-observance-scheduling.md`](./lessons/annual-observance-scheduling.md)。
 
+## 故障不等於模型的判斷
+- 每條撰寫產線都靠「模型最後印一行 `XXX_RESULT=…`」回報結果，parser 解析不出來時會標 `infra: true`。**那是故障，不是編輯判斷**，兩者絕不可走同一條路。逐項檢查你的分支：
+  - **不可記進去重帳本**：記了等於把故障固化成「已判過、不再重覆提供」，那些題再也不會被提，而且不會自己復原（`lifestyle-civic` 出過，見 [§G](./lessons/auto-publish-pipeline-traps.md)）。帳本只記**真的拿到判斷**的候選。
+  - **不可當終止條件**：解析失敗 `break` 整輪＝「一次漏印就收工」（`focus-esg` 出過）。應續跑下一則，另設**次數上限**防整體故障空燒。
+  - **不可吃掉時間預算／額度**：故障耗掉的時間不是產出，不計入預算。
+  - **已寫好的稿要撿回來**：模型可能漏印結果行但稿已寫好（讀原文／交叉查證的 token 早燒完），照舊碼會隨 cron worktree 的 `trap` 一起刪掉。用 `scripts/lib/changed-articles.mjs` 的 `salvageArticle()` 撿回，再走該線既有的缺圖／去 AI 腔／`check:links` 各關。
+- 判準＝**「這個 break／return／記帳本的分支，故障和判斷會不會走到同一條路？」** 會 → 拆開。
+
 ## 對外抓取的省用量前置 gate
 - 像颱風線那種「先便宜判斷再決定要不要動用 Claude」的 gate（`lifestyle-typhoon.sh` 抓 `nds.html`）一律 **fail-open**：抓不到／非 200／格式不符就**照走完整流程**，絕不因抓取失敗而漏報。
+- **選題前置閘門同一條規則**（國際線 `scripts/lib/international-gate.mjs`：同批同事件去重 → 跨日 seen 帳本 → 一次 Haiku 批次篩選）：任何一層自己壞掉（抓不到標題、篩選輸出無法解析、模型呼叫失敗）一律**全部放行**。閘門是用來省錢的，**絕不可變成新的「整晚 0 篇」來源**。代價要講清楚：fail-open 時會回到「候選全跑」（國際約 24 則、~3 小時），這是刻意選的——寧可多花額度，不要漏發。
 
 ## 日誌
 - 集中 `/var/log/appi-news/<job>.log`（**不放 `/tmp`**），已設 `/etc/logrotate.d/appi-news`（每週切、留 4 份）。

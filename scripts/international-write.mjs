@@ -291,7 +291,7 @@ async function main() {
     // claude-appi 撞上限時會 exit 0 只印限額訊息 → 必須查 stdout，不能只看 exit code。
     if (/hit your .*limit|weekly limit|usage limit/i.test(stdout)) {
       skipped = stories.length - i;
-      console.log(`  ⛔ 撞用量上限，中止本批（剩 ${skipped} 則待額度重置後下次 cron 接續）：${stdout.slice(-160)}`);
+      console.log(`  ⛔ 撞用量上限，中止本輪（剩 ${skipped} 則不處理；額度重置後由下輪重新選題）：${stdout.slice(-160)}`);
       break;
     }
     // 其餘（單則 API error / 拒答）才跳過這一則、續跑下一則。

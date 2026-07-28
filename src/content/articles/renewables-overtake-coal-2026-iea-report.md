@@ -5,7 +5,12 @@ description: "國際能源署（IEA）7月22日發布《Electricity Mid-Year Upd
 publishDate: "2026-07-27T01:47:12.435Z"
 category: "focus"
 subcategory: "trend-watch"
-tags: ["IEA", "國際能源署", "再生能源", "燃煤發電", "電力需求", "太陽光電", "荷莫茲海峽", "天然氣價格", "能源轉型", "台灣電力結構"]
+tags:
+  - "能源政策"
+  - "經濟部"
+  - "再生能源"
+  - "中東情勢"
+  - "淨零轉型"
 author: "appi-editorial"
 coverImage: "covers/renewables-overtake-coal-2026-iea-cover.webp"
 coverAlt: "電力輸電鐵塔於夕陽下的天際線，象徵全球電力供應版圖轉變（示意圖）"

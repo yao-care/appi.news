@@ -6,7 +6,10 @@ excerpt: "AI 拿奧數金牌很亮眼，但那是自然語言、靠人工評審�
 publishDate: "2026-07-12T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["AI 數學證明", "Lean 4", "形式化驗證", "AI 可信度", "台灣半導體"]
+tags:
+  - "生成式AI"
+  - "AI治理"
+  - "半導體"
 coverImage: "covers/ai-theorem-proving-lean-verifiable.webp"
 coverAlt: "AI 產出的數學證明被機器逐行驗證的示意"
 coverImageCredit: "Photo by Vitaly Gariev on Pexels"

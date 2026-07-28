@@ -6,7 +6,12 @@ excerpt: "整理臺北市政府警察局公開新聞稿的好人好事：中正�
 publishDate: "2026-07-08T04:47:46.405Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "臺北市", "獨居長者", "護鈔", "防詐"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "台北市"
+  - "高齡健康"
+  - "防詐"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

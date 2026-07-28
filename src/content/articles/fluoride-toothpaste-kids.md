@@ -5,7 +5,8 @@ description: "含氟牙膏正確用量不會讓孩子氟中毒。中毒門檻是
 publishDate: 2026-07-14T20:00:00+08:00
 category: health
 subcategory: preventive
-tags: ["含氟牙膏", "兒童防蛀", "氟中毒", "塗氟", "氟斑齒"]
+tags:
+  - "口腔健康"
 author: "luo-yang"
 coverImage: "covers/fluoride-toothpaste-kids.webp"
 coverAlt: "家長協助幼兒擠豌豆大小含氟牙膏刷牙的示意"

@@ -5,7 +5,14 @@ description: "經濟部6月18日公布114年度全國電力資源供需報告，
 publishDate: "2026-06-24T01:45:17.280Z"
 category: "focus"
 subcategory: "trend-watch"
-tags: ["電力供需", "用電需求", "能源轉型", "AI資料中心", "半導體", "再生能源", "燃氣發電", "經濟部", "能源署", "電網"]
+tags:
+  - "能源政策"
+  - "淨零轉型"
+  - "AI基礎建設"
+  - "半導體"
+  - "再生能源"
+  - "經濟部"
+  - "電網"
 author: "appi-editorial"
 coverImage: "covers/taiwan-power-demand-forecast-2035-cover.webp"
 coverAlt: "高壓輸電鐵塔與電網，象徵台灣未來十年的用電需求與供電規劃"

@@ -6,7 +6,11 @@ excerpt: "整理臺東各地警察局公開新聞稿的好人好事：關山警�
 publishDate: "2026-06-25T03:59:01.030Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "救援", "臺東", "助人", "獨居長者"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "台東縣"
+  - "高齡健康"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

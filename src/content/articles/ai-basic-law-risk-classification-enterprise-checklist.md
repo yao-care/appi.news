@@ -6,7 +6,10 @@ excerpt: "《人工智慧基本法》把高風險應用交給數位部訂分類�
 publishDate: "2026-06-19T08:00:00+08:00"
 category: "tech"
 subcategory: "tech-policy"
-tags: ["人工智慧基本法", "AI 風險分類框架", "數位發展部", "ISO/IEC 42001", "企業 AI 治理"]
+tags:
+  - "AI治理"
+  - "科技政策"
+  - "企業經營"
 coverImage: "covers/ai-basic-law-risk-classification-enterprise-checklist.webp"
 coverAlt: "象徵 AI 基本法上路、企業治理與風險分類框架的政策與合規氛圍"
 author: "appi-editorial"

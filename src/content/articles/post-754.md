@@ -6,7 +6,10 @@ excerpt: "2026年春節9天連假，台灣零售餐飲消費升溫，momo、PCho
 publishDate: "2026-02-14T10:00:00+08:00"
 category: "lifestyle"
 subcategory: "consumer"
-tags: ["春節消費", "電商物流", "年節採購", "即時配送", "momo", "台灣零售"]
+tags:
+  - "消費趨勢"
+  - "節慶"
+  - "電商"
 highlights:
   - "momo購物春節期間照常出貨，PChome維持春節不停擺，電商年節不打烊成為新常態"
   - "2026春節9天連假，台灣餐飲業年增4.6%，批發業年增20.1%，年節消費動能強勁"

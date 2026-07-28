@@ -44,7 +44,7 @@ description: APPI News「影片線索整理」每日產線。掃訂閱的 YouTub
 
 ## frontmatter
 
-`category: "lifestyle"`、`subcategory: "life"`、`author: "appi-editorial"`、`contentType: "news"`、`sourceType: "wire"`、`status: "published"`、`publishDate` 現在；slug 用能描述主題的 kebab-case 英文（**不要**用 videoId 或日期流水號），檔名＝slug；title 講清楚在講什麼、可被搜尋；tags 帶主題詞。disclosure 揭露「線索來自 <頻道名> YouTube 影片，內容經公開資料查證整理、附原始出處」。
+`category: "lifestyle"`、`subcategory: "life"`、`author: "appi-editorial"`、`contentType: "news"`、`sourceType: "wire"`、`status: "published"`、`publishDate` 現在；slug 用能描述主題的 kebab-case 英文（**不要**用 videoId 或日期流水號），檔名＝slug；title 講清楚在講什麼、可被搜尋；tags **只能取自 `src/config/tags.ts` 的受控詞彙表**（寫檔前先讀它，挑 3～5 個、上限 8；挑不到就少掛，不可自己發明近義詞，表外標籤會被 `scripts/check-tags.mjs` 擋下不發佈）。disclosure 揭露「線索來自 <頻道名> YouTube 影片，內容經公開資料查證整理、附原始出處」。
 
 ## 輸出
 

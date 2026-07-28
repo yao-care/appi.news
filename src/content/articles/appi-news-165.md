@@ -6,7 +6,12 @@ publishDate: 2026-06-18
 updatedDate: 2026-06-18
 category: health
 subcategory: preventive
-tags: ["性健康", "衛教創新", "宗教活動", "社區教育", "文化融合"]
+tags:
+  - "男性健康"
+  - "數位健康"
+  - "節慶"
+  - "教育"
+  - "消費趨勢"
 author: "appi-editorial"
 coverImage: "covers/appi-news-165.webp"
 coverAlt: "大甲媽遶境沿線的性健康問事處攤位，結合傳統廟會元素吸引信眾互動"

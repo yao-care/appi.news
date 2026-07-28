@@ -6,7 +6,13 @@ excerpt: "環境部7月7日預告修正「溫室氣體管理基金收支保管�
 publishDate: "2026-07-11T01:38:43.866Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["碳費", "溫室氣體管理基金", "綠色金融", "環境部", "氣候變遷署", "淨零轉型", "信用保證", "ESG"]
+tags:
+  - "碳費"
+  - "綠色金融"
+  - "環境部"
+  - "氣候變遷"
+  - "淨零轉型"
+  - "ESG"
 author: "appi-editorial"
 coverImage: "covers/carbon-fee-fund-loan-guarantee-subsidy-cover.webp"
 coverAlt: "工廠廠房與生產設備，象徵製造業減碳轉型與資金需求"

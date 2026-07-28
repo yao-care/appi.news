@@ -6,7 +6,9 @@ excerpt: "Worldpanel 2025年第三季數據顯示，台灣FMCG市場整體年增
 publishDate: "2025-11-15T10:00:00+08:00"
 category: "lifestyle"
 subcategory: "consumer"
-tags: ["FMCG", "電商", "酷澎", "民生消費", "零售趨勢"]
+tags:
+  - "消費趨勢"
+  - "電商"
 highlights:
   - "Worldpanel 2025 Q3：台灣FMCG市場整體年增6.2%，個人及居家用品成長最快達8.6%"
   - "酷澎FMCG銷售額年增87%，WOW會員方案搭配價格優勢驅動成長，市佔逼近網購市場一成"

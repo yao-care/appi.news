@@ -5,7 +5,9 @@ description: "選益生菌不是比菌數高低。益生菌的效果具『菌株
 publishDate: 2026-07-25T20:00:00+08:00
 category: health
 subcategory: supplement-regulation
-tags: ["益生菌", "腸道健康", "保健食品", "菌株", "廣告合規", "保健食品聰明選"]
+tags:
+  - "保健食品"
+  - "營養"
 author: "luo-yang"
 coverImage: "covers/probiotics-how-to-choose.webp"
 coverAlt: "益生菌菌株、菌數與標籤選購的示意"

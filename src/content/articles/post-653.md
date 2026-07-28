@@ -6,7 +6,10 @@ excerpt: "2025年9月，ENTRA1 Energy與田納西河流域管理局（TVA）達�
 publishDate: "2025-10-26T08:00:00+08:00"
 category: "international"
 subcategory: "global-trends"
-tags: ["小型模組化反應爐", "SMR", "NuScale", "AI資料中心電力", "核能回歸", "台灣能源政策"]
+tags:
+  - "核能"
+  - "AI基礎建設"
+  - "能源政策"
 highlights:
   - "2025年9月3日，ENTRA1 Energy與TVA簽署協議，計畫在七州服務區部署最多6 GW NuScale SMR，是美國史上最大SMR部署承諾"
   - "NuScale是美國唯一獲得NRC設計認證的SMR技術商，77 MWe上調功率版本及462 MWe標準設計均已通過審查"

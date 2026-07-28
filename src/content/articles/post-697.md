@@ -6,7 +6,12 @@ excerpt: "TrendForce與業界數據同步指向相同結論：在AI算力建置�
 publishDate: "2025-12-01T10:00:00+08:00"
 category: "tech"
 subcategory: "semiconductor"
-tags: ["台積電", "CoWoS", "先進封裝", "SoIC", "AI晶片", "半導體供應鏈"]
+tags:
+  - "台積電"
+  - "先進封裝"
+  - "半導體"
+  - "AI基礎建設"
+  - "供應鏈"
 highlights:
   - "TrendForce估計台積電CoWoS月產能預計2025年底達6.5萬片，輝達鎖定超過70%CoWoS-L產能"
   - "CoWoS封裝晶圓平均售價已逼近1萬美元，與7奈米製程晶圓並駕齊驅"

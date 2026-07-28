@@ -5,7 +5,9 @@ description: "葉黃素不是 3C 眼救星。AREDS2 只證明它能替『已有�
 publishDate: 2026-07-24T20:00:00+08:00
 category: health
 subcategory: supplement-regulation
-tags: ["葉黃素", "護眼", "AREDS2", "保健食品", "廣告合規", "保健食品聰明選"]
+tags:
+  - "保健食品"
+  - "眼睛健康"
 author: "luo-yang"
 coverImage: "covers/lutein-eye-health-areds2.webp"
 coverAlt: "葉黃素護眼保健食品與 AREDS2 實證的示意"

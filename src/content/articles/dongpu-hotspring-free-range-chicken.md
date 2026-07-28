@@ -6,7 +6,11 @@ excerpt: "南投東埔溫泉近日因觀光界人士帶路的影片再受關注�
 publishDate: "2026-07-26T14:55:34.516Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["東埔溫泉", "南投", "溫泉", "放山雞", "美食", "信義鄉", "泡湯"]
+tags:
+  - "旅遊"
+  - "南投縣"
+  - "營養"
+  - "美食"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

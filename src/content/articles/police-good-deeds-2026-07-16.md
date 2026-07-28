@@ -6,7 +6,13 @@ excerpt: "整理高雄市、臺北市警察局公開新聞稿的好人好事：�
 publishDate: "2026-07-16T04:48:42.761Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "高雄市", "臺北市", "走失", "急難救助"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "高雄市"
+  - "台北市"
+  - "協尋"
+  - "急救常識"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

@@ -5,7 +5,11 @@ description: "環境部長彭啓明6月19日出席碳定價國際研討會，揭
 publishDate: "2026-06-23T11:53:18.541Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["碳定價", "碳費", "排放交易", "ETS", "總量管制", "淨零", "歐洲能源交易所", "巴黎協定第6條"]
+tags:
+  - "碳費"
+  - "碳市場"
+  - "淨零轉型"
+  - "歐盟"
 author: "appi-editorial"
 coverImage: "covers/taiwan-carbon-market-ets-three-track-cover.webp"
 coverAlt: "工業區煙囪排放，象徵碳定價與溫室氣體管制議題"

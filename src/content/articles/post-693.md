@@ -6,7 +6,12 @@ excerpt: "鴻海2026年宣告增資墨西哥子公司1.68億美元（約新台�
 publishDate: "2026-02-01T08:00:00+08:00"
 category: "tech"
 subcategory: "industry-tech"
-tags: ["鴻海", "墨西哥", "AI伺服器", "NVIDIA", "供應鏈", "EMS"]
+tags:
+  - "製造業"
+  - "地緣政治"
+  - "AI基礎建設"
+  - "供應鏈"
+  - "復健治療"
 highlights:
   - "鴻海增資墨西哥FII AMC子公司1.68億美元（約新台幣51.2億元），擴充AI伺服器產能"
   - "鴻海與NVIDIA合作打造AI工廠，運用Omniverse平台在台灣、墨西哥同步建廠"

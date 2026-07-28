@@ -6,7 +6,10 @@ excerpt: "20 億美元砸進 AI 藥物研發，聽起來像是新藥要量產了
 publishDate: "2026-08-04T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["AI 藥物研發", "AI新藥", "FDA核准", "臨床試驗", "藥物再定位"]
+tags:
+  - "藥物研發"
+  - "醫療政策"
+  - "AI"
 coverImage: "covers/ai-drug-discovery-fda-approval-gap.webp"
 coverAlt: "藥廠實驗室裡研究人員在電腦螢幕前檢視分子結構模型，一旁擺放試管與培養皿"
 coverImageCredit: "Photo by Artem Podrez on Pexels"

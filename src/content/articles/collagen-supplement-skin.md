@@ -5,7 +5,10 @@ description: "口服膠原不會原封不動貼到臉上，但也不是一吃就
 publishDate: 2026-07-23T20:00:00+08:00
 category: health
 subcategory: nutrition
-tags: ["膠原蛋白", "保健食品", "美容保健", "資助偏誤", "保健食品聰明選"]
+tags:
+  - "保健食品"
+  - "中醫"
+  - "AI治理"
 author: "luo-yang"
 coverImage: "covers/collagen-supplement-skin.webp"
 coverAlt: "口服膠原蛋白與皮膚、實證的示意"

@@ -6,7 +6,10 @@ excerpt: "為什麼一個還沒公開發布的模型，賭盤能開到六十幾�
 publishDate: "2026-07-08T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["GPT-5.6", "預測市場", "AI 選型", "Polymarket", "OpenAI"]
+tags:
+  - "生成式AI"
+  - "資本市場"
+  - "AI治理"
 coverImage: "covers/ai-model-release-prediction-markets.webp"
 coverAlt: "象徵模型發布日期變成預測市場賭盤標的的抽象金融示意"
 coverImageCredit: "Photo by Kanchanara on Unsplash"

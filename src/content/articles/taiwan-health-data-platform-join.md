@@ -6,11 +6,9 @@ publishDate: 2026-07-20T12:00:00.000Z
 category: health
 subcategory: health-policy
 tags:
-  - 台灣健康網路平台
-  - 健康存摺
-  - 個人健康資料
-  - 醫療AI
-  - 資料隱私
+  - "數位健康"
+  - "醫療AI"
+  - "資料治理"
 author: lightman
 coverImage: covers/taiwan-health-data-platform-join.webp
 coverAlt: 許多小方塊拼成一個更大的結構，象徵每人一份健康資料匯成台灣醫療 AI 的地基

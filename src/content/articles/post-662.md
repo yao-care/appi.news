@@ -6,7 +6,11 @@ excerpt: "PwC與IRPMA聯合報告確認台灣臨床試驗具備國際競爭力�
 publishDate: "2026-03-31T09:00:00+08:00"
 category: "health"
 subcategory: "medtech"
-tags: ["臨床試驗", "腫瘤研發", "IRPMA", "PwC", "生技醫藥"]
+tags:
+  - "藥物研發"
+  - "癌症防治"
+  - "醫療政策"
+  - "生技產業"
 highlights:
   - "PwC與IRPMA報告顯示台灣2024年IND申請中47%屬腫瘤試驗，腫瘤領域主導試驗結構"
   - "在台設站的跨國多中心試驗中，近70%企業反映台灣在站點啟動速度上排名前25%國家"

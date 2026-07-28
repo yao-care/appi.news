@@ -5,7 +5,10 @@ description: "糖化血色素 HbA1c 反映近 2-3 個月平均血糖。5.7% 到 
 publishDate: 2026-07-17T20:00:00+08:00
 category: health
 subcategory: preventive
-tags: ["糖化血色素", "HbA1c", "糖尿病前期", "血糖", "健檢報告", "看懂健檢報告"]
+tags:
+  - "健檢報告"
+  - "糖尿病"
+  - "代謝健康"
 author: "luo-yang"
 coverImage: "covers/hba1c-prediabetes.webp"
 coverAlt: "健檢血糖與糖化血色素報告示意"

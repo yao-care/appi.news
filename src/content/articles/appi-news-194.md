@@ -6,7 +6,9 @@ publishDate: 2026-06-18
 updatedDate: 2026-06-18
 category: tech
 subcategory: ai
-tags: ["Android 17", "Gemini Intelligence", "Pixel AI 功能", "手機 AI 能力", "on-device AI"]
+tags:
+  - "AI基礎建設"
+  - "生成式AI"
 author: "appi-editorial"
 coverImage: "covers/appi-news-194.webp"
 coverAlt: "Android 手機展示 Gemini Intelligence 主動代理介面示意圖"

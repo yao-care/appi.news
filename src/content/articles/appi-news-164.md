@@ -5,7 +5,12 @@ description: "兒童事故傷害高比例發生在家中，跌倒、燒燙傷、
 publishDate: 2026-06-24
 category: health
 subcategory: preventive
-tags: ["兒童安全", "居家安全", "預防意外", "親子教育", "安全意識"]
+tags:
+  - "育兒健康"
+  - "居家安全"
+  - "育兒"
+  - "教育"
+  - "資安"
 author: "appi-editorial"
 coverImage: "covers/appi-news-164.webp"
 coverAlt: "兒童居家五大危險區域示意圖，包含廚房、浴室、樓梯、藥物收納處與地板散落小物"

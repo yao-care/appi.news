@@ -6,7 +6,13 @@ excerpt: "整理臺東縣警察局、新竹縣政府警察局公開新聞稿的�
 publishDate: "2026-07-24T04:47:11.675Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "臺東縣", "新竹縣", "路倒協助", "交通疏導"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "台東縣"
+  - "新竹縣"
+  - "急救常識"
+  - "交通"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

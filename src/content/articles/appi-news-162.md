@@ -6,7 +6,8 @@ publishDate: 2026-06-18
 updatedDate: 2026-06-18
 category: health
 subcategory: preventive
-tags: ["禽流感", "人畜共通傳染病", "職業暴露", "H7N7", "禽農防護"]
+tags:
+  - "傳染病防治"
 author: "appi-editorial"
 coverImage: "covers/appi-news-162.webp"
 coverAlt: "彰化鴨農穿戴 N95 口罩與手套在鴨場巡視，背景可見候鳥的職業防護示意圖"

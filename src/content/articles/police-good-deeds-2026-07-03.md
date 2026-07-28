@@ -6,7 +6,14 @@ excerpt: "整理屏東與臺北各地警察局公開新聞稿的好人好事：�
 publishDate: "2026-07-03T05:34:54.000Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "協尋", "屏東", "臺北", "獨居長者", "外籍旅客"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "協尋"
+  - "屏東縣"
+  - "台北市"
+  - "高齡健康"
+  - "交通"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

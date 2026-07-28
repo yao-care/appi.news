@@ -3,7 +3,7 @@ title: "高齡健康與預防醫學"
 description: "骨質疏鬆、肌少症、關節退化與營養照護——從預防醫學角度，整理台灣老化社會最該理解的健康議題。"
 category: "health"
 coverImage: "og/health.png"
-tags: ["高齡者骨骼健康", "肌少症", "骨質疏鬆", "預防醫學"]
+tags: ["高齡健康", "肌少症", "骨骼關節", "預防醫學"]
 featured: true
 status: "active"
 articles: ["osteoarthritis-nonsurgical-prp", "hip-pain-symptoms-causes-treatment", "hip-pain-which-specialist", "hip-pcp-regenerative-therapy", "knee-injection-ha-prp-steroid-comparison"]

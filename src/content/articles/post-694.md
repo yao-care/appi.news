@@ -6,7 +6,11 @@ excerpt: "DIGITIMES最新報告揭示，2025年全球前20大EMS/ODM業者合計
 publishDate: "2026-01-15T10:00:00+08:00"
 category: "tech"
 subcategory: "industry-tech"
-tags: ["AI伺服器", "EMS廠", "台灣供應鏈", "緯創", "鴻海", "產業結構"]
+tags:
+  - "AI基礎建設"
+  - "復健治療"
+  - "製造業"
+  - "供應鏈"
 highlights:
   - "2025年全球前20大EMS/ODM業者合計營收7,201億美元，年成長率從6.5%跳升至23.4%"
   - "緯創（含緯穎）年增率116.2%，超越廣達躍居全球第二大業者"

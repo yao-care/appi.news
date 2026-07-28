@@ -5,7 +5,9 @@ description: "門診量一次不算數。2022 年台灣指引改以居家 722 �
 publishDate: 2026-08-01T20:00:00+08:00
 category: health
 subcategory: preventive
-tags: ["高血壓", "722量血壓", "居家血壓", "白袍高血壓", "代謝健康"]
+tags:
+  - "心血管健康"
+  - "代謝健康"
 author: "luo-yang"
 coverImage: "covers/home-blood-pressure-722.webp"
 coverAlt: "民眾在家坐著、上臂綁著臂式電子血壓計、袖帶與心臟同高進行居家血壓量測"

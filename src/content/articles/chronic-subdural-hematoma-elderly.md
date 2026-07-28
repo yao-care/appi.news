@@ -5,7 +5,11 @@ description: "老人頭部撞到當下看起來沒事，最怕的是拖一到兩
 publishDate: 2026-07-20T14:00:00+08:00
 category: health
 subcategory: aging-health
-tags: ["慢性硬腦膜下血腫", "老人跌倒", "腦出血", "抗凝血劑", "頭部外傷", "熟齡健康"]
+tags:
+  - "急救常識"
+  - "高齡健康"
+  - "骨骼關節"
+  - "心血管健康"
 coverImage: "covers/chronic-subdural-hematoma-elderly.webp"
 coverAlt: "醫師在診間向家屬解說長輩腦部電腦斷層影像示意"
 status: published

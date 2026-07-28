@@ -6,7 +6,9 @@ publishDate: 2026-06-18
 updatedDate: 2026-06-18
 category: health
 subcategory: tcm-integrative
-tags: ["新冠疫苗追加劑", "65歲以上疫苗", "免疫衰老", "疾管署COVID疫苗", "老年人疫苗接種"]
+tags:
+  - "傳染病防治"
+  - "高齡健康"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-187.webp"
 coverAlt: "長者在診所接受新冠疫苗追加劑接種"

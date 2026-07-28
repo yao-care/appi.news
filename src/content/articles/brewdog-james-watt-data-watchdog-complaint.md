@@ -6,7 +6,13 @@ excerpt: "BrewDog共同創辦人華特提出買回要約，自稱獲4.3萬名投
 publishDate: "2026-07-18T15:18:21.808Z"
 category: "international"
 subcategory: "europe"
-tags: ["BrewDog", "James Watt", "Tilray", "英國", "資料保護", "ICO", "精釀啤酒", "股權龐克"]
+tags:
+  - "菸酒檳榔"
+  - "英國"
+  - "藥物研發"
+  - "資料治理"
+  - "個資保護"
+  - "新創"
 highlights:
   - "BrewDog共同創辦人華特（James Watt）7月15日（週三）透過新公司Second Best提出收購要約，自稱已獲4.3萬名「股權龐克」（Equity Punk）投資人支持買回公司"
   - "《衛報》7月17日（週五）報導，部分遭華特聯繫的前股東表示不清楚他如何取得自己的聯絡資料，已向英國資訊專員辦公室（ICO）投訴"

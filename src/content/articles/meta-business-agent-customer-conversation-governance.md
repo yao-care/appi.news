@@ -6,7 +6,11 @@ excerpt: "Meta Business Agent 平台的賣點是拿海量顧客對話養出幫�
 publishDate: "2026-06-26T08:00:00+08:00"
 category: "tech"
 subcategory: "software-products"
-tags: ["Meta Business Agent", "顧客對話資料", "訓練資料隱私", "個資法跨境傳輸", "企業資料治理"]
+tags:
+  - "AI agent"
+  - "資料治理"
+  - "個資保護"
+  - "企業經營"
 coverImage: "covers/meta-business-agent-customer-conversation-governance.webp"
 coverAlt: "抽象的對話泡泡與資料連線網路，象徵 Meta 把海量顧客對話變成企業 agent"
 coverImageCredit: "Photo by kuu akura on Unsplash"

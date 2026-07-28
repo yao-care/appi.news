@@ -6,7 +6,9 @@ excerpt: "健保只給付過一款 AI 醫材，靠六篇臨床試驗過關。CT 
 publishDate: "2026-08-03T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["AI 診斷工具", "健保給付", "AI 影像判讀", "健保署", "醫療 AI 效益評估"]
+tags:
+  - "醫療AI"
+  - "健保"
 coverImage: "covers/nhi-ai-diagnostic-tool-evaluation.webp"
 coverAlt: "醫師在螢幕前檢視 AI 輔助判讀的腦部電腦斷層影像"
 coverImageCredit: "Photo by Vitaly Gariev on Unsplash"

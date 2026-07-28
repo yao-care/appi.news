@@ -5,7 +5,10 @@ description: "躁鬱症（雙向情緒障礙）因情緒起伏劇烈常被誤認
 publishDate: 2026-06-18
 category: health
 subcategory: tcm-integrative
-tags: ["躁鬱症", "雙向情緒障礙", "雙極性情感疾患", "誤診", "情緒管理", "心情穩定劑", "心理健康"]
+tags:
+  - "心理健康"
+  - "醫病關係"
+  - "心血管健康"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-192.webp"
 coverAlt: "雙向情緒障礙情緒週期示意圖，呈現躁狂、穩定與憂鬱三種狀態循環交替的過程"

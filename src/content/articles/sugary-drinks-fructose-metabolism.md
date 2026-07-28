@@ -5,7 +5,8 @@ description: "手搖飲最傷代謝的不是甜，是果糖走的那條肝臟捷
 publishDate: 2026-07-30T20:00:00+08:00
 category: health
 subcategory: nutrition
-tags: ["果糖", "含糖飲料", "手搖飲", "血糖", "代謝健康"]
+tags:
+  - "代謝健康"
 author: "luo-yang"
 coverImage: "covers/sugary-drinks-fructose-metabolism.webp"
 coverAlt: "手搖飲料店櫃檯排滿封膜的珍珠奶茶與含糖飲料"

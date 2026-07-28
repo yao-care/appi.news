@@ -6,7 +6,10 @@ excerpt: "KPMG 6/9 把 Copilot 與 Agent 365 推給全球 27.6 萬名員工。�
 publishDate: "2026-06-23T08:00:00+08:00"
 category: "tech"
 subcategory: "industry-tech"
-tags: ["KPMG Agent 365", "Microsoft Agent 365", "企業 AI agent 治理", "大規模 agent 部署", "agent 權限與責任歸屬"]
+tags:
+  - "AI agent"
+  - "數位轉型"
+  - "企業經營"
 coverImage: "covers/kpmg-agent-365-workforce-governance.webp"
 coverAlt: "KPMG 與微軟把 AI agent 治理層 Agent 365 與 Copilot 推給全球 27.6 萬名員工的大規模部署示意"
 author: "appi-editorial"

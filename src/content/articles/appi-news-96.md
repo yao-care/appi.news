@@ -6,11 +6,10 @@ publishDate: 2026-06-21T00:00:00.000Z
 category: health
 subcategory: tcm-integrative
 tags:
-  - 深臀症候群
-  - 梨狀肌症候群
-  - 臀部疼痛
-  - 乾針治療
-  - 針灸
+  - "骨骼關節"
+  - "疼痛治療"
+  - "復健治療"
+  - "中醫"
 author: huang-ziyan
 coverImage: https://images.pexels.com/photos/8401147/pexels-photo-8401147.jpeg?auto=compress&cs=tinysrgb&h=650&w=940
 coverAlt: 骨盆與髖關節 X 光影像，藍色色調清楚呈現骨盆、股骨頭與腰椎結構

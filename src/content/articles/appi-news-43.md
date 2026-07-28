@@ -5,7 +5,10 @@ description: "疼痛不只是「不舒服」，而是身體發出的系統性警
 publishDate: 2026-07-13
 category: health
 subcategory: tcm-integrative
-tags: ["疼痛觀念", "身體失衡", "整合醫學", "中醫物理治療", "慢性疼痛"]
+tags:
+  - "疼痛治療"
+  - "中醫"
+  - "復健治療"
 author: "huang-ziyan"
 coverImage: "https://images.unsplash.com/photo-1767972463825-96eaa9e0766b?w=1920&q=80"
 coverAlt: "女性手捂頸部，橙紅色熱感疊圖呈現頸部疼痛部位，黑白基調"

@@ -6,7 +6,9 @@ excerpt: "2026台北國際自行車展TAIPEI CYCLE於3月25至28日在南港展�
 publishDate: "2025-07-14T08:00:00+08:00"
 category: "sports"
 subcategory: "sports-industry"
-tags: ["TAIPEI CYCLE", "自行車展", "E-bike", "永續移動", "低碳"]
+tags:
+  - "製造業"
+  - "淨零轉型"
 highlights:
   - "2026台北國際自行車展3月25至28日在南港展覽館舉行，以永續、創新、文化三大主軸策展"
   - "E-bike電動輔助系統與低碳都市移動首度躍升為最大招商重點，供應鏈整合成核心展示"

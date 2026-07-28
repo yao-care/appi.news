@@ -6,7 +6,11 @@ excerpt: "整理臺北市政府警察局捷運警察隊公開新聞稿的好人�
 publishDate: "2026-07-27T04:47:13.267Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "臺北市", "失物協尋", "捷運警察隊"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "台北市"
+  - "協尋"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

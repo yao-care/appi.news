@@ -6,7 +6,11 @@ excerpt: "德國FIBO 2026於4月16至19日在科隆盛大舉行，吸引136個�
 publishDate: "2026-03-01T08:00:00+08:00"
 category: "sports"
 subcategory: "fitness-training"
-tags: ["FIBO", "健身產業", "全人健康", "長壽科技", "身心整合"]
+tags:
+  - "健身"
+  - "預防醫學"
+  - "高齡健康"
+  - "中醫"
 highlights:
   - "FIBO 2026吸引136個國家、17.5萬名訪客、逾1,000家參展商，規模創近年新高"
   - "健身產業核心主題從器材銷售轉向longevity長壽科學與身心整合健康管理"

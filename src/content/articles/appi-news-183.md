@@ -5,7 +5,9 @@ description: "納豆激酶真的能降血壓嗎？從作用機轉、臨床數據
 publishDate: 2026-07-13
 category: health
 subcategory: tcm-integrative
-tags: ["納豆", "高血壓", "納豆激酶", "血壓控制", "維生素K2"]
+tags:
+  - "保健食品"
+  - "心血管健康"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-183.webp"
 coverAlt: "用筷子拉起納豆絲，傳統日式納豆的黏絲質感，背景為木質桌面"

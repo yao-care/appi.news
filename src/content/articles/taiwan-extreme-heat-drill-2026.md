@@ -5,7 +5,13 @@ description: "環境部氣候變遷署 6 月 23 日宣布，將於 6 月 29 日�
 publishDate: "2026-06-25T01:42:15.683Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["極端高溫", "熱浪", "氣候調適", "兵棋推演", "環境部", "氣候變遷署", "災害防救法", "熱傷害"]
+tags:
+  - "極端高溫"
+  - "氣候調適"
+  - "資安"
+  - "環境部"
+  - "氣候變遷"
+  - "天然災害"
 author: "appi-editorial"
 coverImage: "covers/taiwan-extreme-heat-drill-2026-cover.webp"
 coverAlt: "烈日下的城市景象，象徵極端高溫與熱浪衝擊"

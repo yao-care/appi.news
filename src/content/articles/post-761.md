@@ -6,7 +6,11 @@ excerpt: "臺北音樂博覽會TMEX 2025於8月底在北流舉辦，以「Tune i
 publishDate: "2025-09-01T10:00:00+08:00"
 category: "lifestyle"
 subcategory: "reading-leisure"
-tags: ["音樂產業", "版權授權", "台灣音樂", "亞洲市場", "TMEX"]
+tags:
+  - "藝術市場"
+  - "開發工具"
+  - "亞太"
+  - "運動科技"
 highlights:
   - "TMEX 2025於8月28-31日在臺北流行音樂中心舉辦，匯聚近50家音樂產業上中下游品牌"
   - "邀請近百位國際音樂節策展人與節目買家來台，舉辦近百場媒合會與國際論壇"

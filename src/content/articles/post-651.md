@@ -6,7 +6,11 @@ excerpt: "Wood Mackenzie於2026年1月9日發布氫能產業展望：2026年是�
 publishDate: "2026-01-09T09:00:00+08:00"
 category: "international"
 subcategory: "global-trends"
-tags: ["氫能", "Wood Mackenzie", "全球供應鏈", "能源轉型", "台灣"]
+tags:
+  - "再生能源"
+  - "能源政策"
+  - "供應鏈"
+  - "淨零轉型"
 highlights:
   - "Wood Mackenzie氫能副總裁Murray Douglas指出2026年是氫能產業的基本面重新評估年，項目能否推進取決於政策支持與採購協議是否同時到位"
   - "中東至少3個大規模氫能項目預計取消或大幅縮減，主因是在採購方確認前即啟動的800千噸/年產能設計遠超實際需求"

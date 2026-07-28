@@ -6,7 +6,10 @@ excerpt: "微軟願意在毛利被壓的情況下砸 1900 億、含淚吞 250 �
 publishDate: "2026-07-11T08:00:00+08:00"
 category: "tech"
 subcategory: "semiconductor"
-tags: ["記憶體超級循環", "微軟資本支出", "HBM", "DRAM 漲價", "台灣供應鏈"]
+tags:
+  - "半導體"
+  - "AI基礎建設"
+  - "供應鏈"
 coverImage: "covers/microsoft-capex-memory-supercycle.webp"
 coverAlt: "堆疊的電腦記憶體晶片與電路板，象徵 AI 記憶體超級循環墊高的資本支出帳單"
 coverImageCredit: "Photo by IT services EU on Pexels"

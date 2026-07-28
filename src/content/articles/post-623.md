@@ -6,7 +6,11 @@ excerpt: "BloombergNEF最新預測，全球儲能累計容量到2035年將達2�
 publishDate: "2026-06-14T21:17:44+08:00"
 category: "focus"
 subcategory: "trend-watch"
-tags: ["儲能", "BNEF", "電池產業", "能源轉型", "電網韌性"]
+tags:
+  - "儲能"
+  - "能源政策"
+  - "淨零轉型"
+  - "電網"
 highlights:
   - "BNEF預測2035年全球累計儲能容量達2太瓦（7.3太瓦時），約為2025年的八倍"
   - "2025年全球儲能新增裝置達112GW/307GWh，超越BNEF原本預期"

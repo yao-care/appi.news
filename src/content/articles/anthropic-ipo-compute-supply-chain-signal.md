@@ -6,7 +6,12 @@ excerpt: "多數人看到的是估值排名。我看到的是：前沿模型公�
 publishDate: "2026-07-10T08:00:00+08:00"
 category: "tech"
 subcategory: "startup"
-tags: ["Anthropic 估值", "Anthropic IPO", "AI 算力供應鏈", "CoWoS 先進封裝", "單一供應商集中度風險"]
+tags:
+  - "生成式AI"
+  - "新創"
+  - "AI基礎建設"
+  - "供應鏈"
+  - "先進封裝"
 author: "appi-editorial"
 coverImage: "covers/anthropic-ipo-compute-supply-chain-signal.webp"
 coverAlt: "象徵前沿 AI 大廠估值與算力資本訊號的資料中心與成長示意"

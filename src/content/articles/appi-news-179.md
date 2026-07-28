@@ -5,7 +5,11 @@ description: "瘦瘦針（GLP-1）效果顯著，但停藥後體重容易反彈�
 publishDate: 2026-06-21
 category: health
 subcategory: tcm-integrative
-tags: ["瘦瘦針", "GLP-1", "減重管理", "營養管控", "健康管理"]
+tags:
+  - "藥物研發"
+  - "減重管理"
+  - "營養"
+  - "預防醫學"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-179.webp"
 coverAlt: "瘦瘦針（GLP-1）與中醫整合減重概念示意圖"

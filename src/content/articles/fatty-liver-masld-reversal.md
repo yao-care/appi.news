@@ -5,7 +5,9 @@ description: "BMI 正常的『瘦型脂肪肝』纖維化程度不輸胖子，�
 publishDate: 2026-07-29T20:00:00+08:00
 category: health
 subcategory: medical
-tags: ["脂肪肝", "MASLD", "非酒精性脂肪肝", "肝臟健康", "代謝健康"]
+tags:
+  - "代謝健康"
+  - "肝腎健康"
 author: "luo-yang"
 coverImage: "covers/fatty-liver-masld-reversal.webp"
 coverAlt: "腹部超音波檢查中，醫師手持探頭在受檢者右上腹掃描肝臟"

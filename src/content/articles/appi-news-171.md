@@ -6,7 +6,9 @@ publishDate: 2026-06-18
 updatedDate: 2026-06-18
 category: health
 subcategory: preventive
-tags: ["泳池衛生", "夏季防感染", "水質安全", "皮膚保護", "傳染病預防"]
+tags:
+  - "食品安全"
+  - "傳染病防治"
 author: "appi-editorial"
 coverImage: "covers/appi-news-171.webp"
 coverAlt: "泳池消毒效果比較：標準加氯可殺滅大腸桿菌與病毒，但隱孢子蟲卵囊與腺病毒仍可存活"

@@ -6,7 +6,11 @@ excerpt: "國科會 2026 科技預算 1800 億，三主軸是數位基磐、關�
 publishDate: "2026-06-24T08:00:00+08:00"
 category: "tech"
 subcategory: "tech-policy"
-tags: ["AI 新十大建設", "科技預算 1800 億", "五大信賴產業", "主權 AI 算力", "台灣半導體產值"]
+tags:
+  - "AI基礎建設"
+  - "科技政策"
+  - "ESG"
+  - "半導體"
 coverImage: "covers/ai-new-infrastructure-compute-trusted-industries.webp"
 coverAlt: "台灣 AI 新十大建設與 1800 億科技預算，算力中心與半導體產業布局示意"
 author: "appi-editorial"

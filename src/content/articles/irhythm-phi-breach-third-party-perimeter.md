@@ -6,7 +6,10 @@ excerpt: "iRhythm 的臨床與醫材系統都沒事，被攻破的是第三方�
 publishDate: "2026-06-19T01:11:10.088Z"
 category: "tech"
 subcategory: "security"
-tags: ["醫療資料外洩", "第三方應用資安", "社交工程", "PHI 受保護健康資訊", "供應商存取治理"]
+tags:
+  - "醫病關係"
+  - "資安"
+  - "數位健康"
 coverImage: "covers/irhythm-phi-breach-third-party-perimeter.webp"
 coverAlt: "心臟監測商 iRhythm 第三方代管商業應用遭未授權存取、病患 PHI 外洩遭勒索的示意"
 coverImageCredit: "Photo by Joshua Chehov on Unsplash"

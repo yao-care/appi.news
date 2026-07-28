@@ -6,7 +6,12 @@ excerpt: "為什麼是 42 個州同時出手，而且挑在 IPO 遞件後？因�
 publishDate: "2026-07-23T08:00:00+08:00"
 category: "tech"
 subcategory: "tech-policy"
-tags: ["OpenAI", "AI 監管", "健康資料", "個資保護", "IPO"]
+tags:
+  - "生成式AI"
+  - "AI治理"
+  - "數位健康"
+  - "個資保護"
+  - "新創"
 coverImage: "covers/openai-42-ags-ipo-probe.webp"
 coverAlt: "象徵州檢察長對 AI 公司發出法律傳票、展開消費者保護調查的示意"
 coverImageCredit: "Photo by Sora Shimazaki on Pexels"

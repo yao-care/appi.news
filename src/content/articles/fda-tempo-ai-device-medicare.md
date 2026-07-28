@@ -6,7 +6,11 @@ excerpt: "FDA 不是發給 AI 醫材一張通行證，是選擇『暫時不追�
 publishDate: "2026-08-07T08:00:00+08:00"
 category: "tech"
 subcategory: "tech-policy"
-tags: ["FDA", "AI 醫材", "數位健康", "Medicare", "醫療法規", "健保給付"]
+tags:
+  - "醫療政策"
+  - "數位健康"
+  - "健保"
+  - "AI"
 coverImage: "covers/fda-tempo-ai-device-medicare.webp"
 coverAlt: "象徵 FDA 以執法裁量讓 AI 數位醫材未完整核准即進入 Medicare 慢性病照護的監理示意"
 author: "lightman"

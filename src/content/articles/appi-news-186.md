@@ -5,7 +5,9 @@ description: "蓮霧含水量超過九成、碳水化合物相對偏低，屬低
 publishDate: 2026-06-18
 category: health
 subcategory: tcm-integrative
-tags: ["蓮霧糖尿病", "蓮霧血糖", "蓮霧GI值", "糖尿病可以吃蓮霧嗎", "糖友水果選擇"]
+tags:
+  - "糖尿病"
+  - "代謝健康"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-186.webp"
 coverAlt: "新鮮粉紅蓮霧排列在木質桌面上，光澤飽滿，呈現台灣夏日常見水果樣貌"

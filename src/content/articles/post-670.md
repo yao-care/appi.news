@@ -6,7 +6,11 @@ excerpt: "從健保資料奠基到HIMSS Stage 7認證，台灣AI醫療在2025年
 publishDate: "2026-02-10T00:00:00+08:00"
 category: "health"
 subcategory: "medtech"
-tags: ["AI醫療", "智慧醫療", "健保資料", "數位健康", "醫療體系"]
+tags:
+  - "醫療AI"
+  - "數位健康"
+  - "健保"
+  - "醫療政策"
 highlights:
   - "台灣連續8年蟬聯NUMBEO全球醫療指數第一，2024年AI醫療研究論文全球排名第10"
   - "健保資料庫涵蓋2,300萬筆、逾20年縱向紀錄，是台灣AI醫療研發的核心基礎設施"

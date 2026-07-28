@@ -6,7 +6,8 @@ publishDate: "2026-06-23T17:05:00+08:00"
 status: "published"
 category: "tech"
 subcategory: "security"
-tags: ["Passkey", "通行密鑰", "無密碼登入", "FIDO", "資安", "生物辨識", "TW FidO"]
+tags:
+  - "資安"
 author: "appi-editorial"
 sourceType: "editorial"
 contentType: "guide"

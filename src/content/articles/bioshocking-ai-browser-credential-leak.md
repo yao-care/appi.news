@@ -6,7 +6,10 @@ excerpt: "只要讓 AI 相信自己在玩遊戲，它就會套用遊戲邏輯、
 publishDate: "2026-08-01T08:00:00+08:00"
 category: "tech"
 subcategory: "security"
-tags: ["AI 瀏覽器", "提示注入", "代理式 AI", "資安", "憑證外洩"]
+tags:
+  - "生成式AI"
+  - "AI agent"
+  - "資安"
 coverImage: "covers/bioshocking-ai-browser-credential-leak.webp"
 coverAlt: "象徵 AI 瀏覽器代理被惡意網頁挾持、交出使用者帳密的資安威脅示意"
 coverImageCredit: "Photo by cottonbro studio on Pexels"

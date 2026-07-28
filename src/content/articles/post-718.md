@@ -6,7 +6,11 @@ excerpt: "Goldman Sachs 2026年展望報告預測台灣科技股2026年每股盈
 publishDate: "2025-11-01T08:00:00+08:00"
 category: "finance"
 subcategory: "market"
-tags: ["Goldman Sachs", "台股展望", "AI科技股", "台積電", "亞洲股市"]
+tags:
+  - "資本市場"
+  - "台積電"
+  - "亞太"
+  - "AI"
 highlights:
   - "Goldman Sachs預測台灣科技股2026年每股盈餘成長45%、2027年成長28%，均高於市場共識估值"
   - "Goldman Sachs將S&P 500年底目標上調至8,000點，AI基礎設施受益標的佔2026年全年盈餘成長約50%"

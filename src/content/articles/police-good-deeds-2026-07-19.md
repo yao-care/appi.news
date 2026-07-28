@@ -6,7 +6,15 @@ excerpt: "整理高雄市、屏東縣、臺北市、臺東縣警察局公開新�
 publishDate: "2026-07-19T04:48:19.327Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "高雄市", "屏東縣", "臺北市", "臺東縣", "走失", "失智", "颱風"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "高雄市"
+  - "屏東縣"
+  - "台北市"
+  - "台東縣"
+  - "協尋"
+  - "失智症"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

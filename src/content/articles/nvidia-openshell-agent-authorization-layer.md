@@ -6,7 +6,11 @@ excerpt: "NVIDIA 把安全、網路、隱私護欄做成 runtime（OpenShell）�
 publishDate: "2026-06-27T08:00:00+08:00"
 category: "tech"
 subcategory: "digital-tools"
-tags: ["NVIDIA OpenShell", "Nemotron 3 Ultra", "AI agent 授權治理", "agent 護欄 runtime", "MCP 對照"]
+tags:
+  - "AI基礎建設"
+  - "生成式AI"
+  - "AI agent"
+  - "資安"
 coverImage: "covers/nvidia-openshell-agent-authorization-layer.webp"
 coverAlt: "象徵 AI agent 安全護欄與授權治理被做進開源平台 runtime 層"
 coverImageCredit: "Photo by Markus Winkler on Pexels"

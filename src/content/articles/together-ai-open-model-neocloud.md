@@ -6,7 +6,11 @@ excerpt: "為什麼投資人搶的不是下一個大模型，而是一個租 GPU
 publishDate: "2026-07-10T08:00:00+08:00"
 category: "tech"
 subcategory: "startup"
-tags: ["Together AI", "開源模型", "AI 基礎建設", "neocloud", "台灣供應鏈"]
+tags:
+  - "AI基礎建設"
+  - "生成式AI"
+  - "開源"
+  - "供應鏈"
 coverImage: "covers/together-ai-open-model-neocloud.webp"
 coverAlt: "資料中心機房伺服器陣列，象徵開源模型代管與 AI 基礎建設吸金"
 coverImageCredit: "Photo by panumas nikhomkhai on Pexels"

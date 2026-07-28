@@ -6,7 +6,10 @@ excerpt: "2025年全球AI科技ETF平均報酬超過40%，台灣ETF投資人卻�
 publishDate: "2025-11-30T08:00:00+08:00"
 category: "finance"
 subcategory: "investing-literacy"
-tags: ["ETF投資", "AI科技股", "台灣ETF", "資產配置", "結構性成長"]
+tags:
+  - "投資理財"
+  - "資本市場"
+  - "AI"
 highlights:
   - "2025年主要AI相關UCITS ETF年化報酬達36%至90%，遠超傳統大盤指數，顯示結構性成長已脫離短期題材階段"
   - "台灣半導體佔MSCI台灣指數65%市值，在全球AI ETF持倉中TSM ADR平均佔比3%至6%，曝險高度集中"

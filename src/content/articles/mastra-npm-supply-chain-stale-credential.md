@@ -6,7 +6,10 @@ excerpt: "一個放了 16 個月、沒人記得的舊帳號，撬開了週下載
 publishDate: "2026-07-01T08:00:00+08:00"
 category: "tech"
 subcategory: "security"
-tags: ["npm 供應鏈攻擊", "Mastra 套件投毒", "貢獻者權限殘留", "AI 開發供應鏈", "lockfile 版本鎖定"]
+tags:
+  - "資安"
+  - "供應鏈"
+  - "AI人才"
 coverImage: "covers/mastra-npm-supply-chain-stale-credential.webp"
 coverAlt: "Mastra AI 框架的 npm 套件遭大規模供應鏈投毒，相依套件被植入惡意程式的示意"
 coverImageCredit: "Photo by FlyD on Unsplash"

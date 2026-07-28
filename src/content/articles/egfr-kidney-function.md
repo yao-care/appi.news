@@ -5,7 +5,9 @@ description: "台灣透析率世界前段、慢性腎臟病九成初期沒症狀
 publishDate: 2026-07-19T20:00:00+08:00
 category: health
 subcategory: medical
-tags: ["eGFR", "腎功能", "慢性腎臟病", "洗腎", "健檢報告", "看懂健檢報告"]
+tags:
+  - "健檢報告"
+  - "肝腎健康"
 author: "luo-yang"
 coverImage: "covers/egfr-kidney-function.webp"
 coverAlt: "健檢腎功能報告與 eGFR 數值示意"

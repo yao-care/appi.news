@@ -6,7 +6,11 @@ excerpt: "2026年TAIPEI CYCLE以「Cycling to Wellness」為主題吸引900家�
 publishDate: "2026-03-01T08:00:00+08:00"
 category: "sports"
 subcategory: "sports-industry"
-tags: ["TAIPEI CYCLE", "E-bike", "電動自行車", "低碳移動", "台灣出口"]
+tags:
+  - "製造業"
+  - "科技政策"
+  - "淨零轉型"
+  - "貿易政策"
 highlights:
   - "2026 TAIPEI CYCLE於3月25至28日在台北南港展覽館舉行，900家廠商使用3,450個攤位"
   - "E-bike與Drive Units設有獨立展區，Acer、美利達、巨大等指標品牌均深度展示電動化產品"

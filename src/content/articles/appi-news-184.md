@@ -5,7 +5,9 @@ description: "黑胡椒不只是調味料。從胡椒鹼的抗脂肪機制、提
 publishDate: 2026-07-13
 category: health
 subcategory: tcm-integrative
-tags: ["黑胡椒功效", "黑胡椒減肥", "胡椒鹼", "黑胡椒營養價值", "黑胡椒吃法"]
+tags:
+  - "營養"
+  - "減重管理"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-184.webp"
 coverAlt: "整粒黑胡椒與手動研磨器放在木碗旁，光線自然溫暖"

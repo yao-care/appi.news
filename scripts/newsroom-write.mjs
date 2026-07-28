@@ -331,6 +331,13 @@ async function main() {
     die(`去 AI 腔 gate 未過，不發佈（改動留工作區待改）：\n${(tone.stdout || '') + (tone.stderr || '')}`);
   }
 
+  // 標籤 gate：tags 必須落在 src/config/tags.ts 的受控詞彙表內。
+  // 為什麼＝docs/lessons/tag-taxonomy.md（1,883 個自由標籤、85.9% 只出現一次的碎片化事故）。
+  const tagGate = spawnSync('node', ['scripts/check-tags.mjs', articleFile], { encoding: 'utf8' });
+  if (tagGate.status !== 0) {
+    die(`標籤 gate 未過，不發佈（改動留工作區待改）：\n${(tagGate.stdout || '') + (tagGate.stderr || '')}`);
+  }
+
   // 真人觀點硬性 gate（只擋觀點稿 kind: column）：Q3 作者觀點必須真的反映在內文，
   // 否則中止不發佈——避免產出「讀不出作者想法」的中性稿（過去作者反映看不到自己的觀點）。
   // 事實稿（kind: factual，颱風/樂齡/優惠等服務型）無個人觀點，略過此 gate。

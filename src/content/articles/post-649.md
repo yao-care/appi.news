@@ -6,7 +6,9 @@ excerpt: "ICAP《2026年全球排放交易現況》4月14日發布：G20已有14
 publishDate: "2026-03-11T09:00:00+08:00"
 category: "international"
 subcategory: "global-trends"
-tags: ["碳交易", "ETS", "ICAP", "碳市場", "氣候政策"]
+tags:
+  - "碳市場"
+  - "氣候變遷"
 highlights:
   - "ICAP 2026年報顯示G20中已有14國實施排放交易體系，較歐盟ETS 2005年啟動時多出五倍，2026年再新增3個國家級系統"
   - "中國ETS發布指引準備2027年轉型為絕對總量上限制，並擴大覆蓋所有主要工業排放源，是全球規模最大的碳市場重組"

@@ -5,7 +5,12 @@ description: "環境部 7 月 21 日預告修正「碳費收費辦法」與「�
 publishDate: "2026-07-22T02:00:00.000Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["碳費", "碳費收費辦法", "自主減量計畫管理辦法", "先期專案額度", "老碳權", "高碳洩漏風險", "環境部", "氣候變遷署", "碳定價"]
+tags:
+  - "碳費"
+  - "碳市場"
+  - "碳盤查"
+  - "環境部"
+  - "氣候變遷"
 author: "appi-editorial"
 coverImage: "covers/taiwan-carbon-fee-old-credits-buffer-cover.webp"
 coverAlt: "工廠煙囪排放示意，象徵碳費徵收與高碳洩漏風險產業"

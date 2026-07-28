@@ -6,7 +6,12 @@ excerpt: "台灣新創代表團於2026年NVIDIA GTC展示數位孿生、邊緣AI
 publishDate: "2026-06-03T10:00:00+08:00"
 category: "tech"
 subcategory: "startup"
-tags: ["台灣新創", "NVIDIA GTC", "智慧製造", "AI供應鏈", "InnoVEX"]
+tags:
+  - "新創"
+  - "AI基礎建設"
+  - "科技政策"
+  - "機器人"
+  - "供應鏈"
 highlights:
   - "台灣新創代表團由國發會支持，攜數位孿生、機器人、AI代理人與智慧醫療方案亮相GTC"
   - "MetAI與Spingence獲選NVIDIA Inception計畫精選展示，六家新創進入GTC海報展廊"

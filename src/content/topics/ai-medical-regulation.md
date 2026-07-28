@@ -3,7 +3,7 @@ title: "AI 醫材法規與健康資料治理"
 description: "AI 醫材怎麼審、健康資料怎麼管、出錯了誰負責？追蹤台灣 TFDA 與美歐 FDA 的監管路線，以及健康資料外洩與跨境研究的治理難題。"
 category: "tech"
 coverImage: "og/health.png"
-tags: ["食藥署", "醫療法規", "機器學習", "數位健康"]
+tags: ["醫療政策", "醫療AI", "數位健康"]
 featured: false
 status: "active"
 articles: []

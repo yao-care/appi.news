@@ -6,7 +6,12 @@ excerpt: "新加坡資通媒體發展局（IMDA）於2026年1月22日在世界�
 publishDate: "2026-01-22T09:00:00+08:00"
 category: "international"
 subcategory: "asia"
-tags: ["AI治理", "新加坡", "主體型AI", "IMDA", "亞太"]
+tags:
+  - "AI治理"
+  - "新加坡"
+  - "AI agent"
+  - "科技政策"
+  - "亞太"
 highlights:
   - "MGF於2026年1月22日世界經濟論壇由部長Josephine Teo發布，是全球第一個專為可自主規劃、推理、行動的主體型AI系統設計的治理框架"
   - "框架四大維度：事前風險邊界評估、人類對AI行為保有實質責任、技術控制流程、終端使用者明確承擔使用責任"

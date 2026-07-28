@@ -3,7 +3,7 @@ title: "口腔照護"
 description: "從健保洗牙、牙周病與全身健康、含氟牙膏，到缺牙與失智，把口腔健康最常見的迷思與實證一次整理清楚。"
 category: "health"
 coverImage: "og/health.png"
-tags: ["口腔保健", "牙周病", "洗牙"]
+tags: ["口腔健康", "預防醫學"]
 featured: false
 status: "active"
 articles: ["dental-scaling-myths", "gum-disease-whole-body", "fluoride-toothpaste-kids", "tooth-loss-dementia"]

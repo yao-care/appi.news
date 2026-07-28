@@ -6,7 +6,10 @@ excerpt: "為什麼雲端巨頭寧可自己設計晶片也不多買 GPU？答案
 publishDate: "2026-07-12T08:00:00+08:00"
 category: "tech"
 subcategory: "semiconductor"
-tags: ["ASIC", "AI 晶片", "台灣 IC 設計", "摩根大通", "世芯-KY", "每瓦效能"]
+tags:
+  - "半導體"
+  - "AI基礎建設"
+  - "資本市場"
 coverImage: "covers/asic-over-gpu-taiwan-ic-design.webp"
 coverAlt: "象徵 AI 資本從通用 GPU 轉向客製化 ASIC 晶片的半導體示意"
 coverImageCredit: "Photo by Ivan Chumak on Pexels"

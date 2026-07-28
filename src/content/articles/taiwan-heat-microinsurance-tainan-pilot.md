@@ -5,7 +5,15 @@ description: "環境部 7 月 20 日攜手金管會、衛福部社家署、台�
 publishDate: "2026-07-21T01:47:39.655Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["高溫調適", "氣候變遷署", "微型保險", "南山人壽", "台南市", "獨居長者", "金管會", "Cool Map", "酷齡氣候關懷行動"]
+tags:
+  - "極端高溫"
+  - "氣候變遷"
+  - "綠色金融"
+  - "保險"
+  - "資本市場"
+  - "台南市"
+  - "高齡健康"
+  - "金管會"
 author: "appi-editorial"
 coverImage: "covers/taiwan-heat-microinsurance-tainan-pilot-cover.webp"
 coverAlt: "艷陽下的城市街景，象徵台灣夏季持續攀升的高溫與熱浪風險"

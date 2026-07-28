@@ -5,7 +5,10 @@ description: "健檢 TSH 偏高不一定是生病。多數是亞臨床甲狀腺�
 publishDate: 2026-07-20T20:00:00+08:00
 category: health
 subcategory: medical
-tags: ["甲狀腺", "TSH", "亞臨床甲狀腺低下", "補碘", "健檢報告", "看懂健檢報告"]
+tags:
+  - "甲狀腺"
+  - "健檢報告"
+  - "營養"
 author: "luo-yang"
 coverImage: "covers/thyroid-tsh-subclinical.webp"
 coverAlt: "健檢甲狀腺功能報告與 TSH 數值示意"

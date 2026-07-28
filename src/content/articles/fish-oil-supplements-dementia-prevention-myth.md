@@ -6,7 +6,11 @@ excerpt: "南加大凱克醫學中心一項為期2年、365人參與的雙盲臨
 publishDate: "2026-07-27T18:52:00.725Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["魚油", "失智預防", "Omega-3", "認知功能", "健康飲食", "熟齡健康"]
+tags:
+  - "保健食品"
+  - "失智症"
+  - "高齡健康"
+  - "營養"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

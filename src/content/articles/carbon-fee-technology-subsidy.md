@@ -6,7 +6,12 @@ excerpt: "環境部7月14日發布施行「溫室氣體減量技術及氣候變�
 publishDate: "2026-07-18T02:00:00.000Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["碳費", "溫室氣體管理基金", "環境部", "氣候變遷署", "減碳補助", "CBAM", "CCUS", "淨零轉型"]
+tags:
+  - "碳費"
+  - "環境部"
+  - "氣候變遷"
+  - "淨零轉型"
+  - "碳盤查"
 author: "appi-editorial"
 coverImage: "covers/carbon-fee-technology-subsidy-cover.webp"
 coverAlt: "工業廠房與排放設施，象徵企業投入減碳技術轉型"

@@ -6,7 +6,10 @@ excerpt: "苯駢芘是一級致癌物，但風險建立在長期、反覆、累�
 publishDate: "2026-07-03T11:23:00+08:00"
 category: "health"
 subcategory: "preventive"
-tags: ["苯駢芘", "沙拉油食安", "中聯油脂", "一級致癌物", "食用油安全"]
+tags:
+  - "食品安全"
+  - "營養"
+  - "癌症防治"
 coverImage: "covers/benzo-pyrene-oil-long-term-exposure.webp"
 coverAlt: "廚房層架上排列的食用油瓶，示意大豆沙拉油苯駢芘超標食安事件"
 coverImageCredit: "Photo by Uliana Kopanytsia on Unsplash"

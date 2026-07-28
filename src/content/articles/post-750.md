@@ -6,7 +6,9 @@ excerpt: "2026年618購物節，台灣電商從單純價格戰轉向會員訂閱
 publishDate: "2026-06-01T09:00:00+08:00"
 category: "lifestyle"
 subcategory: "consumer"
-tags: ["618購物節", "台灣電商", "momo", "蝦皮", "FMCG", "快速物流"]
+tags:
+  - "電商"
+  - "消費趨勢"
 highlights:
   - "資策會MIC調查顯示，台灣消費者618購物節參與度較前一年成長12.2%，列全年電商節第三大"
   - "Worldpanel預估2026年台灣FMCG線上銷額佔整體市場兩成，年成長率達10%，酷澎表現最突出"

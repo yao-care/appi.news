@@ -6,7 +6,11 @@ excerpt: "Databricks 6/16 發表 Genie One，把 agent 講成能跑重複工作�
 publishDate: "2026-06-20T08:00:00+08:00"
 category: "tech"
 subcategory: "software-products"
-tags: ["Databricks Genie One", "AI agent 同事", "vibe coding", "Unity Catalog 資料治理", "企業 AI 權限邊界"]
+tags:
+  - "AI agent"
+  - "開發工具"
+  - "資料治理"
+  - "企業經營"
 coverImage: "covers/databricks-genie-one-agent-governance.webp"
 coverAlt: "Databricks 把 AI agent 做成企業同事，背後靠 Unity Catalog 治理層守住資料權限邊界的示意"
 author: "appi-editorial"

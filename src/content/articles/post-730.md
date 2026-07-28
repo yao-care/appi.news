@@ -6,7 +6,10 @@ excerpt: "台灣籃球傳奇「野獸」林志傑於2026年1月宣布本季結�
 publishDate: "2026-01-17T08:00:00+08:00"
 category: "sports"
 subcategory: "basketball"
-tags: ["林志傑", "台灣職籃", "PLG", "富邦勇士", "本土球星"]
+tags:
+  - "籃球"
+  - "新創"
+  - "中職"
 highlights:
   - "林志傑宣告本季結束後退役，職業生涯橫跨SBL、CBA、ABL與PLG共23年"
   - "引退賽定於2026年4月11至12日台北小巨蛋，兩日合計吸引2.7萬名球迷見證"

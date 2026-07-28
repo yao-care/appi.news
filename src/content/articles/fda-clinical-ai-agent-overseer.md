@@ -6,7 +6,11 @@ excerpt: "把行動 agent 配上監督 agent，等於把企業治理的 Maker-Ch
 publishDate: "2026-07-07T08:00:00+08:00"
 category: "tech"
 subcategory: "tech-policy"
-tags: ["醫療 AI agent", "ADVOCATE 計畫", "ARPA-H", "AI 責任歸屬", "監督 agent"]
+tags:
+  - "醫療AI"
+  - "AI agent"
+  - "藥物研發"
+  - "AI治理"
 coverImage: "covers/fda-clinical-ai-agent-overseer.webp"
 coverAlt: "醫療資料與人工智慧示意，象徵 FDA 授權的臨床 AI agent 接手治療決策"
 coverImageCredit: "Photo by Markus Winkler on Unsplash"

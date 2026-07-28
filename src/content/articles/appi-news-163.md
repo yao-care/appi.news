@@ -5,7 +5,10 @@ description: "衛生福利部自2025年起將成人免費健檢擴大至30歲，
 publishDate: 2026-06-24
 category: health
 subcategory: preventive
-tags: ["成人健康檢查", "代謝症候群", "慢性病早期發現", "二段預防", "篩檢切點"]
+tags:
+  - "健檢報告"
+  - "代謝健康"
+  - "預防醫學"
 author: "appi-editorial"
 coverImage: "covers/appi-news-163.webp"
 coverAlt: "成人預防保健服務年齡切點示意圖：30歲起每5年一次，40歲起每3年一次，65歲起每年一次，各年齡層健檢頻率比較"

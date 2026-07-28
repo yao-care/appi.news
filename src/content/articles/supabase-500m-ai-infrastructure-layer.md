@@ -6,7 +6,11 @@ excerpt: "Supabase 募 5 億美元、估值 105 億，熱錢從模型移到 AI �
 publishDate: "2026-06-22T08:00:00+08:00"
 category: "tech"
 subcategory: "startup"
-tags: ["Supabase 募資", "AI 基建層", "vibe coding", "AI 新創估值", "資料治理成本"]
+tags:
+  - "新創"
+  - "AI基礎建設"
+  - "開發工具"
+  - "資料治理"
 coverImage: "covers/supabase-500m-ai-infrastructure-layer.webp"
 coverAlt: "資本熱錢從 AI 模型流向應用基建層，資料庫與部署平台成為新焦點的示意"
 author: "appi-editorial"

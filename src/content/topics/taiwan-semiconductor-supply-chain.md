@@ -3,7 +3,7 @@ title: "台灣半導體供應鏈"
 description: "台積電、先進封裝、HBM 與記憶體、設備材料到地緣政治與貿易戰，追蹤台灣半導體供應鏈的關鍵動態與產業結構變化。"
 category: "tech"
 coverImage: "og/tech.png"
-tags: ["台積電", "先進封裝", "HBM", "半導體"]
+tags: ["台積電", "先進封裝", "半導體", "供應鏈"]
 featured: true
 status: "active"
 articles: ["tsmc-q3-profit-ai-record", "tsmc-cowos-nvidia-capacity-booking", "tsmc-arizona-first-half-profit", "tsmc-wei-ai-demand-high-na-euv", "tsmc-three-site-overseas-fabs", "pingtung-semiconductor-zone-groundbreaking", "imd-digital-competitiveness-ranking", "amd-mext-memory-wall", "sk-hynix-packaging-hbm-tsmc"]

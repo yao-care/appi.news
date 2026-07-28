@@ -6,7 +6,10 @@ excerpt: "一項針對859名60歲以上長者的3年追蹤研究發現，習慣�
 publishDate: "2026-07-27T18:48:08.262Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["早餐", "失智預防", "認知退化", "健康飲食", "加工肉品", "熟齡健康"]
+tags:
+  - "營養"
+  - "失智症"
+  - "高齡健康"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

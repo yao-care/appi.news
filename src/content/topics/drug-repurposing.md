@@ -3,7 +3,7 @@ title: "老藥新用與 AI 藥物再利用"
 description: "從二甲雙胍的黃斑保護潛力到 AI 驅動的藥物再利用，拆解從研究訊號到臨床落地之間的系統性落差。"
 category: "tech"
 coverImage: "og/tech.png"
-tags: ["老藥新用", "藥物再利用", "AI醫療", "TxGNN"]
+tags: ["藥物研發", "醫療AI"]
 featured: true
 status: "active"
 articles: []

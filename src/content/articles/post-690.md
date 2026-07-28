@@ -6,7 +6,11 @@ excerpt: "高通（Qualcomm）2026年台灣創新挑戰賽（QITC 2026）以AI P
 publishDate: "2026-02-20T08:00:00+08:00"
 category: "tech"
 subcategory: "startup"
-tags: ["Qualcomm", "高通", "AI PC", "邊緣AI", "台灣新創", "QITC"]
+tags:
+  - "半導體"
+  - "AI基礎建設"
+  - "新創"
+  - "科技政策"
 highlights:
   - "QITC 2026聚焦AI PC與邊緣AI，報名截止2026年3月31日，台灣本土公司皆可申請"
   - "高通以Snapdragon與Dragonwing晶片平台為核心，涵蓋Windows PC、無人機、機器人、智慧城市等應用場景"

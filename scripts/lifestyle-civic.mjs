@@ -134,6 +134,8 @@ async function main() {
     // 為什麼＝docs/lessons/ai-tone-gate.md。
     const _tone = spawnSync('node', ['scripts/check-content.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
     if (_tone.status !== 0) die(`去 AI 腔 gate 未過，不發佈（改動留工作區待改）：\n${_tone.stdout || _tone.stderr || ''}`);
+    const _tags = spawnSync('node', ['scripts/check-tags.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
+    if (_tags.status !== 0) die(`標籤 gate 未過，不發佈（改動留工作區待改）：\n${_tags.stdout || _tags.stderr || ''}`);
   }
 
   // worktree 無殘留 dist → 先 build 再 check:links；失敗同步最新 main 自癒重試一次（並發防護）。

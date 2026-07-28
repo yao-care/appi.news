@@ -8,7 +8,8 @@ category: "sports"
 coverImage: "covers/wp-6.jpg"
 coverAlt: "2026 米蘭冬季奧運賽場雪景，選手在冰雪競技場上馳騁"
 subcategory: "events"
-tags: ["中藥", "食療"]
+tags:
+  - "中醫"
 author: "huang-ziyan"
 status: "published"
 sourceType: "editorial"

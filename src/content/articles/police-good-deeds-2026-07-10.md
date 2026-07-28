@@ -6,7 +6,15 @@ excerpt: "整理高雄市、屏東縣、臺北市警察局公開新聞稿的好�
 publishDate: "2026-07-10T04:47:30.887Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "高雄市", "屏東縣", "臺北市", "失智長者", "走失"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "高雄市"
+  - "屏東縣"
+  - "台北市"
+  - "高齡健康"
+  - "失智症"
+  - "協尋"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

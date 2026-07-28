@@ -6,7 +6,10 @@ excerpt: "GPT-5 Pro 幫免疫學家解開卡三年的 T 細胞謎題，還預測
 publishDate: "2026-07-18T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["GPT-5", "醫療 AI", "免疫學", "科學研究自動化", "假說生成"]
+tags:
+  - "生成式AI"
+  - "醫療AI"
+  - "藥物研發"
 coverImage: "covers/gpt5-immunology-hypothesis-engine.webp"
 coverAlt: "象徵 AI 協助免疫學家分析 T 細胞資料、生成研究假說的抽象示意"
 coverImageCredit: "Photo by turek on Pexels"

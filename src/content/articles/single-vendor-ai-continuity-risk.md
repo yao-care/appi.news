@@ -6,7 +6,13 @@ excerpt: "把模型關掉的不是 Anthropic 的商業決定，是它頭上的�
 publishDate: "2026-07-06T08:00:00+08:00"
 category: "tech"
 subcategory: "tech-policy"
-tags: ["出口管制", "Claude Fable 5", "單一供應商風險", "營運連續性", "模型備援"]
+tags:
+  - "半導體"
+  - "貿易政策"
+  - "生成式AI"
+  - "供應鏈"
+  - "資安"
+  - "AI治理"
 coverImage: "covers/single-vendor-ai-continuity-risk.webp"
 coverAlt: "紅色緊急停止按鈕，象徵單一 AI 雲模型可能被一紙命令一夕關閉"
 coverImageCredit: "Photo by Jason Leung on Unsplash"

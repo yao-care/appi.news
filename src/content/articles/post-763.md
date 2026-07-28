@@ -6,7 +6,9 @@ excerpt: "WEF《Future of Jobs Report 2025》預測2030年前59%勞動力需再�
 publishDate: "2025-07-01T10:00:00+08:00"
 category: "lifestyle"
 subcategory: "workplace"
-tags: ["技能缺口", "再培訓", "WEF未來就業", "人工智慧", "職場轉型"]
+tags:
+  - "AI人才"
+  - "職場趨勢"
 highlights:
   - "WEF 2025報告：2030年前59%全球勞動力需再培訓，39%核心技能將改變或過時"
   - "2030年創造1.7億個新職位，但同步消除9,200萬個職位，淨增7,800萬個新機會"

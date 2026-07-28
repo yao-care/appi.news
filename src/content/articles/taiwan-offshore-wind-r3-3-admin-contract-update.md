@@ -5,7 +5,15 @@ description: "經濟部7月2日召開離岸風電產業溝通平台會議，說�
 publishDate: "2026-07-03T01:46:12.259Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["離岸風電", "3-3期", "能源轉型", "經濟部能源署", "行政契約", "ESG", "再生能源", "區塊開發"]
+tags:
+  - "離岸風電"
+  - "中職"
+  - "淨零轉型"
+  - "能源政策"
+  - "經濟部"
+  - "企業經營"
+  - "ESG"
+  - "再生能源"
 author: "appi-editorial"
 coverImage: "covers/taiwan-offshore-wind-r3-3-admin-contract-update-cover.webp"
 coverAlt: "海面上的離岸風力發電機組，象徵台灣離岸風電區塊開發"

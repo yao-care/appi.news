@@ -6,7 +6,11 @@ excerpt: "UpDoc 靠「LLM 只負責蒐集資料、醫師預設規則才做決策
 publishDate: "2026-08-02T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["UpDoc FDA 核准", "病人對話 LLM 醫材", "510(k) 醫材許可", "AI 診斷工具給付", "醫療 AI 決策權邊界"]
+tags:
+  - "醫療AI"
+  - "醫療政策"
+  - "生成式AI"
+  - "健保"
 coverImage: "covers/updoc-fda-clearance-llm-interface.webp"
 coverAlt: "美國 FDA 核准首個病人對話 LLM 醫材 UpDoc 的示意圖，象徵醫材審查與 AI 介面設計"
 coverImageCredit: "Photo by Brecht Corbeel on Unsplash"

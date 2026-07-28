@@ -1,6 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { CATEGORY_SLUGS } from './config/categories';
+import { TAG_VOCABULARY, MAX_TAGS_PER_ARTICLE } from './config/tags';
 
 /* ------------------------------------------------------------------ */
 /*  共用 schema                                                        */
@@ -67,7 +68,9 @@ const articles = defineCollection({
     updatedDate: z.coerce.date().optional(),
     category: z.enum(CATEGORY_SLUGS),
     subcategory: z.string().optional(),
-    tags: z.array(z.string()).default([]),
+    // 標籤是受控詞彙表（src/config/tags.ts），不是自由關鍵詞欄位。
+    // 表外的標籤會讓 build 直接失敗——這是刻意的，見 docs/lessons/tag-taxonomy.md。
+    tags: z.array(z.enum(TAG_VOCABULARY)).max(MAX_TAGS_PER_ARTICLE).default([]),
     author: z.string().default('appi-editorial'),
     coAuthors: z.array(z.string()).default([]),
     coverImage: z.string().optional(),
@@ -167,7 +170,7 @@ const topics = defineCollection({
     description: z.string().default(''),
     coverImage: z.string().optional(),
     category: z.enum(CATEGORY_SLUGS).optional(),
-    tags: z.array(z.string()).default([]),
+    tags: z.array(z.enum(TAG_VOCABULARY)).max(MAX_TAGS_PER_ARTICLE).default([]),
     /** 手動指定核心文章 slug；其餘文章由 article.topics 反向關聯 */
     articles: z.array(z.string()).default([]),
     featured: z.boolean().default(false),

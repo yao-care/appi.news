@@ -6,7 +6,13 @@ excerpt: "大部分人看到 74 億美元。我看到的是投資人結構變了
 publishDate: "2026-06-28T08:00:00+08:00"
 category: "tech"
 subcategory: "startup"
-tags: ["DeepSeek 募資", "中國 AI 資本", "寧德時代 CATL", "台廠供應鏈", "AI 算力需求"]
+tags:
+  - "生成式AI"
+  - "新創"
+  - "中國"
+  - "儲能"
+  - "供應鏈"
+  - "AI基礎建設"
 coverImage: "covers/deepseek-capital-taiwan-supply-chain.webp"
 coverAlt: "象徵中國 AI 龍頭 DeepSeek 募資與戰略資本進場的資本市場示意"
 coverImageCredit: "Photo by Growtika on Unsplash"

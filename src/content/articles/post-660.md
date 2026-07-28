@@ -6,7 +6,13 @@ excerpt: "Numbeo 2026全球醫療保健指數以87.1分將台灣列為全球第�
 publishDate: "2026-04-15T09:00:00+08:00"
 category: "health"
 subcategory: "health-policy"
-tags: ["全民健保", "醫療品質", "數位健康", "預防照護", "Numbeo"]
+tags:
+  - "健保"
+  - "醫病關係"
+  - "數位健康"
+  - "預防醫學"
+  - "長照"
+  - "總體經濟"
 highlights:
   - "Numbeo 2026全球醫療保健指數台灣以87.1分居世界第一，高雄與台北更包辦全球城市前兩名"
   - "健保數位化涵蓋我的健康存摺、NHI MediCloud雲端病歷，大幅減少重複檢查與用藥衝突"

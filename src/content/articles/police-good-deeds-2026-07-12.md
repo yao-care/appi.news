@@ -6,7 +6,13 @@ excerpt: "整理臺北市、臺東縣警察局公開新聞稿的好人好事：�
 publishDate: "2026-07-12T04:47:43.404Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "臺北市", "臺東縣", "颱風", "長者"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "台北市"
+  - "台東縣"
+  - "颱風"
+  - "高齡健康"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

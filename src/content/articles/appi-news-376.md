@@ -5,7 +5,8 @@ description: "雨後為什麼登革熱風險升高？從積水容器孳生病媒
 publishDate: 2026-07-13
 category: health
 subcategory: preventive
-tags: ["登革熱防治", "病媒蚊孳生源", "雨後防蚊", "巡倒清刷", "登革熱社區防治"]
+tags:
+  - "傳染病防治"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-376.webp"
 coverAlt: "雨後社區居民在陽台巡查花盆與容器中的積水"

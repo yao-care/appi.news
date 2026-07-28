@@ -6,7 +6,9 @@ excerpt: "亞太地區ETF市場2026年持續擴張，主動式ETF過去十年以
 publishDate: "2026-04-01T09:00:00+08:00"
 category: "finance"
 subcategory: "investing-literacy"
-tags: ["ETF", "主動式管理", "固定收益", "亞太市場", "資產配置"]
+tags:
+  - "投資理財"
+  - "亞太"
 highlights:
   - "亞太地區主動式ETF過去十年複合年增率達54%，遠超被動式ETF的40%整體成長率"
   - "iShares 2026春季展望指出固定收益ETF2025年全年吸引創紀錄的3,840億美元資金流入"

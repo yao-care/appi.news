@@ -6,7 +6,11 @@ excerpt: "IPO 才過半年、募資還沒花完就折價再抽 70 億，管理�
 publishDate: "2026-07-08T08:00:00+08:00"
 category: "tech"
 subcategory: "semiconductor"
-tags: ["壁仞科技", "國產GPU", "港股配股", "半導體資本", "台灣供應鏈"]
+tags:
+  - "AI基礎建設"
+  - "資本市場"
+  - "半導體"
+  - "供應鏈"
 coverImage: "covers/biren-gpu-placement-capital-signal.webp"
 coverAlt: "象徵國產 GPU 壁仞科技以港股配股募資、加速晶片商轉的抽象示意"
 coverImageCredit: "Photo by Umberto on Unsplash"

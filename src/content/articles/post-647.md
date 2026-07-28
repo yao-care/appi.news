@@ -6,7 +6,8 @@ excerpt: "2026年3月14日，NASA委由Blue Origin New Glenn火箭發射ESCAPADE
 publishDate: "2026-03-14T09:00:00+08:00"
 category: "international"
 subcategory: "global-focus"
-tags: ["火星探測", "ESCAPADE", "JAXA", "太空科學", "衛星產業"]
+tags:
+  - "太空科技"
 highlights:
   - "ESCAPADE由Blue與Gold兩顆衛星組成，2026年3月14日搭乘Blue Origin New Glenn升空，預計2027年9月抵達火星軌道"
   - "Rocket Lab USA負責衛星本體製造，UC Berkeley提供科學儀器，任務目標是釐清太陽風驅動火星大氣逃逸的物理機制"

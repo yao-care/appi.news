@@ -24,7 +24,7 @@ description: APPI News「全台便民市政」每日整理。掃各縣市政府 
 
 ## frontmatter
 
-`category: "lifestyle"`、`subcategory: "life"`、`author: "appi-editorial"`、`contentType: "news"`、`sourceType: "wire"`、`status: "published"`、`publishDate` 現在；slug 固定 `civic-services-YYYY-MM-DD`（檔名＝slug）；title 如「各地便民措施整理（YYYY-MM-DD）」；tags 帶「便民措施」「市政服務」與涵蓋縣市。disclosure 揭露整理自各縣市政府公開新聞稿/公告、附原文出處。
+`category: "lifestyle"`、`subcategory: "life"`、`author: "appi-editorial"`、`contentType: "news"`、`sourceType: "wire"`、`status: "published"`、`publishDate` 現在；slug 固定 `civic-services-YYYY-MM-DD`（檔名＝slug）；title 如「各地便民措施整理（YYYY-MM-DD）」；tags 固定帶「便民措施」「市政服務」與涵蓋縣市（如「台北市」「新北市」）；tags **只能取自 `src/config/tags.ts` 的受控詞彙表**（寫檔前先讀它，挑 3～5 個、上限 8；挑不到就少掛，不可自己發明近義詞，表外標籤會被 `scripts/check-tags.mjs` 擋下不發佈）。disclosure 揭露整理自各縣市政府公開新聞稿/公告、附原文出處。
 
 ## 輸出
 

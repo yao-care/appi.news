@@ -6,7 +6,12 @@ excerpt: "臺北市政府警察局文山第一分局萬芳派出所公開新聞�
 publishDate: "2026-07-20T04:47:52.662Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "臺北市", "走失", "身心障礙"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "台北市"
+  - "協尋"
+  - "身心障礙"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

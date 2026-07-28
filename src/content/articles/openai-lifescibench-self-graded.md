@@ -6,7 +6,11 @@ excerpt: "AI 連自家出的生命科學考卷都只過三成，這件事該怎�
 publishDate: "2026-07-15T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["LifeSciBench", "OpenAI", "AI 評測基準", "生命科學 AI", "台灣生技"]
+tags:
+  - "藥物研發"
+  - "生成式AI"
+  - "AI治理"
+  - "生技產業"
 coverImage: "covers/openai-lifescibench-self-graded.webp"
 coverAlt: "象徵 AI 進入生命科學實驗室、接受真實研究任務評測的示意"
 coverImageCredit: "Photo by Pavel Danilyuk on Pexels"

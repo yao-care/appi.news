@@ -5,7 +5,15 @@ description: "環境權保障基金會與台灣氣候行動網絡研究中心 6 
 publishDate: "2026-07-02T01:42:20.806Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["碳費", "ETS", "排放交易制度", "碳定價", "環境部", "氣候變遷署", "自主減量計畫", "南韓碳市場", "日本GX", "碳洩漏"]
+tags:
+  - "碳費"
+  - "碳市場"
+  - "環境部"
+  - "氣候變遷"
+  - "韓國"
+  - "淨零轉型"
+  - "日本"
+  - "碳盤查"
 author: "appi-editorial"
 coverImage: "covers/carbon-fee-ets-taiwan-japan-korea-forum-2026-cover.webp"
 coverAlt: "工業廠區煙囪排放濃煙，象徵碳排放與碳定價政策"

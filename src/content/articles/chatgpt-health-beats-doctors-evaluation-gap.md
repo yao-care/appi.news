@@ -6,7 +6,10 @@ excerpt: "OpenAI 說新模型的健康答案贏過醫師，但分數全在它自
 publishDate: "2026-07-03T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["ChatGPT 健康", "AI 醫療諮詢", "Evaluation Gap", "OpenAI GPT-5.5", "AI 健康答案判讀"]
+tags:
+  - "醫療AI"
+  - "AI治理"
+  - "生成式AI"
 coverImage: "covers/chatgpt-health-beats-doctors-evaluation-gap.webp"
 coverAlt: "OpenAI 自評 GPT-5.5 Instant 健康回答勝過醫師、每週逾 2.3 億人用 ChatGPT 問健康的示意"
 coverImageCredit: "Photo by National Cancer Institute on Unsplash"

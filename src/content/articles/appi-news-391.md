@@ -5,7 +5,8 @@ description: "英格蘭對法國的世界盃季軍戰開踢前，「季軍戰該
 publishDate: 2026-07-17
 category: sports
 subcategory: events
-tags: ["世界盃季軍戰", "季軍戰存在必要性", "英格蘭 法國 季軍戰", "世界盃四強賽", "世界盃賽制改革", "季軍戰爭議", "世界盃季軍戰有必要嗎"]
+tags:
+  - "足球"
 author: "chou-jingyan"
 coverImage: "covers/appi-news-391.webp"
 coverAlt: "世界盃四強賽落敗後，球員坐在球場上顯露疲態的畫面"

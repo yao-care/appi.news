@@ -6,11 +6,8 @@ publishDate: 2026-07-20T13:00:00.000Z
 category: health
 subcategory: health-policy
 tags:
-  - 台灣健康網路平台
-  - 醫療大數據
-  - 電子病歷交換
-  - 台生科
-  - 智抗糖
+  - "數位健康"
+  - "醫療AI"
 author: lightman
 coverImage: covers/taiwan-health-data-why-now.webp
 coverAlt: 多家規模不一的公司試圖打通醫院之間的資料高牆，象徵台灣醫療大數據整合十年磨一劍的歷程

@@ -6,7 +6,12 @@ excerpt: "健保署與Google Cloud 2024年6月合作啟動「AI-on-DM」計畫�
 publishDate: "2025-12-20T00:00:00+08:00"
 category: "health"
 subcategory: "medtech"
-tags: ["糖尿病", "AI醫療", "健保署", "Google", "預防醫學"]
+tags:
+  - "糖尿病"
+  - "醫療AI"
+  - "健保"
+  - "生成式AI"
+  - "預防醫學"
 highlights:
   - "健保署與Google Cloud 2024年6月啟動AI-on-DM計畫，為台灣首個以NHI資料訓練AI模型的政府合作"
   - "風險評估速度從每人20分鐘壓縮至25秒，40名專業人員原需3週的篩查工作縮短至90分鐘以內"

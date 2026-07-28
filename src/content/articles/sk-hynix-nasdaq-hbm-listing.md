@@ -6,7 +6,11 @@ excerpt: "HBM 龍頭季賺 40 兆韓元還要掛牌募 294 億美元，為什麼
 publishDate: "2026-07-09T08:00:00+08:00"
 category: "tech"
 subcategory: "semiconductor"
-tags: ["SK 海力士", "HBM", "那斯達克", "台積電", "先進封裝"]
+tags:
+  - "先進封裝"
+  - "半導體"
+  - "資本市場"
+  - "台積電"
 coverImage: "covers/sk-hynix-nasdaq-hbm-listing.webp"
 coverAlt: "象徵 SK 海力士赴那斯達克掛牌募資、把 HBM 產能軍備競賽壓上資本市場的示意"
 coverImageCredit: "Photo by Markus Spiske on Pexels"

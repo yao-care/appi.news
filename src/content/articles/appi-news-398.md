@@ -5,7 +5,10 @@ description: "台灣2025年正式邁入超高齡社會，65歲以上人口占比
 publishDate: 2026-07-27
 category: finance
 subcategory: consumer-finance
-tags: ["老人養老人", "超高齡社會", "退休金", "扶養壓力", "老老照顧", "退休金不足", "隔代扶養"]
+tags:
+  - "高齡健康"
+  - "超高齡社會"
+  - "退休規劃"
 author: "wu-fang-jun"
 coverImage: "covers/appi-news-398.webp"
 coverAlt: "一位台灣年長女性獨自坐在餐桌前，低頭查看存摺與帳單，神情凝重"

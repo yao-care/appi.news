@@ -5,7 +5,10 @@ description: "全球約6億人習慣性嚼食檳榔，台灣男性口腔癌發�
 publishDate: 2026-06-18
 category: health
 subcategory: tcm-integrative
-tags: ["檳榔致癌", "口腔癌風險", "檳榔成癮", "戒檳榔", "arecoline"]
+tags:
+  - "癌症防治"
+  - "菸酒檳榔"
+  - "口腔健康"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-193.webp"
 coverAlt: "市場中的新鮮檳榔果實，部分切開顯示白色果肉截面"

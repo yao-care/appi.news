@@ -6,7 +6,10 @@ excerpt: "澤倫斯基7月21日解除敘爾斯基三軍總司令職務，改由�
 publishDate: "2026-07-22T15:11:42.941Z"
 category: "international"
 subcategory: "europe"
-tags: ["烏克蘭", "澤倫斯基", "敘爾斯基", "德拉帕蒂", "俄烏戰爭", "軍事人事"]
+tags:
+  - "烏克蘭"
+  - "中東情勢"
+  - "地緣政治"
 highlights:
   - "澤倫斯基7月21日解除敘爾斯基（Oleksandr Syrskyi）烏克蘭武裝部隊總司令職務，改由43歲少將德拉帕蒂（Mykhailo Drapatyi）接任"
   - "人事案發生在基輔及全國多城市連日抗議之後，抗議者不滿敘爾斯基延續蘇聯式高層微觀管理、不顧人員傷亡堅守陣地"

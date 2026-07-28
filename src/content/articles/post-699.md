@@ -6,7 +6,9 @@ excerpt: "廣達集團旗下達明機器人於2025年8月台北國際自動化�
 publishDate: "2025-10-01T10:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["達明機器人", "人形機器人", "具身智慧", "智慧工廠", "廣達", "台灣機器人"]
+tags:
+  - "機器人"
+  - "製造業"
 highlights:
   - "達明機器人於台北國際自動化展發布TM Xplore I，搭載輝達Jetson Orin平台與22個關節自由度"
   - "TM Xplore I採輪式移動底盤而非雙足步行，鎖定工廠產線高精度作業場景"

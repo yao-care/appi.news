@@ -6,7 +6,10 @@ excerpt: "世界母乳哺育週不是一天、是一週。今年主題要各國�
 publishDate: "2026-08-01T06:17:00+08:00"
 category: "health"
 subcategory: "nutrition"
-tags: ["母乳哺育", "婦幼健康", "育兒", "世界母乳哺育週", "育嬰留職停薪", "哺集乳室"]
+tags:
+  - "女性健康"
+  - "育兒"
+  - "職場趨勢"
 coverImage: "covers/world-breastfeeding-week-2026-cover.webp"
 coverAlt: "哺乳相關器材與育嬰空間示意，象徵世界母乳哺育週對支持系統的關注"
 author: "appi-editorial"

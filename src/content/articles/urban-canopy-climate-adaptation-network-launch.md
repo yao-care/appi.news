@@ -5,7 +5,12 @@ description: "環境部氣候變遷署 7 月 20 日在臺北舉行第 4 場「�
 publishDate: "2026-07-21T01:47:39.655Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["國土綠蔭氣候調適計畫", "都市林", "氣候調適", "環境部氣候變遷署", "極端高溫", "綠色生活圈"]
+tags:
+  - "氣候調適"
+  - "氣候變遷"
+  - "環境部"
+  - "極端高溫"
+  - "循環經濟"
 author: "appi-editorial"
 coverImage: "covers/urban-canopy-climate-adaptation-network-launch-cover.webp"
 coverAlt: "樹蔭茂密的行道樹人行道，象徵都市林與氣候調適"

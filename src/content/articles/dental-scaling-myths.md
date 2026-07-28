@@ -5,7 +5,9 @@ description: "健保洗牙不會把牙齒洗壞。超音波是把牙結石震碎
 publishDate: 2026-07-12
 category: health
 subcategory: preventive
-tags: ["洗牙", "牙結石", "牙周病", "健保給付", "口腔保健"]
+tags:
+  - "口腔健康"
+  - "健保"
 author: "luo-yang"
 coverImage: "covers/dental-scaling-myths.webp"
 coverAlt: "牙醫師以超音波器械為民眾清除牙結石的洗牙示意"

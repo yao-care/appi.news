@@ -6,7 +6,12 @@ excerpt: "整理臺北市政府警察局公開新聞稿的好人好事：大同�
 publishDate: "2026-07-23T04:47:06.766Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "臺北市", "旅客協助", "走失", "高溫"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "台北市"
+  - "協尋"
+  - "極端高溫"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

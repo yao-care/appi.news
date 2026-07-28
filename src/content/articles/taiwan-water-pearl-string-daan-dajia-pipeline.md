@@ -5,7 +5,10 @@ description: "經濟部水利署7月25日宣布大安大甲溪聯通管正式通
 publishDate: "2026-07-26T01:42:27.000Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["珍珠串計畫", "水資源韌性", "經濟部水利署", "大安大甲溪聯通管", "中部水資源", "供水基礎建設"]
+tags:
+  - "貿易政策"
+  - "水資源"
+  - "經濟部"
 author: "appi-editorial"
 coverImage: "covers/taiwan-water-pearl-string-daan-dajia-pipeline-cover.webp"
 coverAlt: "水庫與供水基礎建設景觀，象徵台灣跨區域調度水資源韌性（示意圖）"

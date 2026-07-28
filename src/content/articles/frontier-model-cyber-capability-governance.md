@@ -6,7 +6,10 @@ excerpt: "前沿模型攻防同源、能力是真的，技術上擋不掉；缺�
 publishDate: "2026-06-30T08:00:00+08:00"
 category: "tech"
 subcategory: "tech-policy"
-tags: ["前沿 AI 模型", "網路攻防能力", "AI 模型治理", "Capability-Based Access", "AI 基本法風險分類"]
+tags:
+  - "資安"
+  - "AI治理"
+  - "AI agent"
 coverImage: "covers/frontier-model-cyber-capability-governance.webp"
 coverAlt: "前沿 AI 模型附帶網路攻防能力，引發企業與政府對釋出治理的疑慮"
 coverImageCredit: "Photo by Adi Goldstein on Unsplash"

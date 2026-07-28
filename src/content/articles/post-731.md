@@ -6,7 +6,10 @@ excerpt: "World Gym Corporation（2762.TW）2025年全年淨利達新台幣4.09�
 publishDate: "2026-02-01T08:00:00+08:00"
 category: "sports"
 subcategory: "sports-industry"
-tags: ["World Gym", "健身產業", "台灣健身", "東亞消費", "運動產業股"]
+tags:
+  - "健身"
+  - "消費趨勢"
+  - "運動產業"
 highlights:
   - "World Gym 2025全年淨利年增16.3%至新台幣4.09億元，全年每股股利5.95元"
   - "第四季單季營收年增13.2%至29億元，淨利幾乎三倍成長，毛利率顯著擴張"

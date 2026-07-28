@@ -5,7 +5,10 @@ description: "純化學合成的 NMN 在台灣被食藥署列為『未確認安�
 publishDate: 2026-07-21T20:00:00+08:00
 category: health
 subcategory: supplement-regulation
-tags: ["NMN", "抗老", "保健食品", "食藥署", "廣告合規", "保健食品聰明選"]
+tags:
+  - "保健食品"
+  - "高齡健康"
+  - "醫療政策"
 author: "luo-yang"
 coverImage: "covers/nmn-anti-aging-taiwan.webp"
 coverAlt: "NMN 抗老保健食品與法規、實證的示意"

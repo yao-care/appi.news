@@ -6,7 +6,9 @@ excerpt: "金管會公布，截至2026年5月底，台灣綠色投融資規模�
 publishDate: "2026-07-12T01:41:32.767Z"
 category: "focus"
 subcategory: "trend-watch"
-tags: ["綠色金融", "永續投融資", "金管會", "轉型金融", "永續發展債券"]
+tags:
+  - "綠色金融"
+  - "金管會"
 author: "appi-editorial"
 contentType: "news"
 sourceType: "wire"

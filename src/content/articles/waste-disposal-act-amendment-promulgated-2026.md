@@ -5,7 +5,12 @@ description: "總統賴清德7月15日以華總一義字第11500064491號令，�
 publishDate: "2026-07-17T01:44:52.721Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["廢棄物清理法", "資源循環推動法", "循環經濟", "光電板回收", "風機葉片", "環境部資源循環署", "環境正義"]
+tags:
+  - "循環經濟"
+  - "環境汙染"
+  - "再生能源"
+  - "環境部"
+  - "氣候變遷"
 author: "appi-editorial"
 coverImage: "covers/waste-disposal-act-amendment-promulgated-2026-cover.webp"
 coverAlt: "資源回收處理設施，象徵廢棄物清理與循環經濟管理"

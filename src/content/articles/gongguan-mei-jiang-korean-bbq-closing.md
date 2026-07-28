@@ -6,7 +6,12 @@ excerpt: "台北公館商圈經營逾30年的平價韓式銅盤烤肉吃到飽�
 publishDate: "2026-07-27T19:10:09.149Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["公館美食", "梅江烤肉", "韓式料理", "台北美食", "老店", "吃到飽"]
+tags:
+  - "美食"
+  - "台北市"
+  - "營養"
+  - "韓國"
+  - "消費趨勢"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

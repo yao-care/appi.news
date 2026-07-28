@@ -6,7 +6,10 @@ excerpt: "MCP 月下載破 9,700 萬、被捐給 Linux Foundation 旗下的 Agen
 publishDate: "2026-06-17T06:02:25.023Z"
 category: "tech"
 subcategory: "digital-tools"
-tags: ["MCP", "Model Context Protocol", "AI agent 治理", "Agentic AI Foundation", "MCP server 資安"]
+tags:
+  - "資安"
+  - "開發工具"
+  - "AI agent"
 coverImage: "covers/mcp-de-facto-standard-agent-governance.webp"
 coverAlt: "AI agent 透過統一標準協定連接企業內部多個系統與工具，象徵 MCP 成為事實標準後的治理課題"
 author: "appi-editorial"

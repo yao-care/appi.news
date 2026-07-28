@@ -5,7 +5,9 @@ description: "台灣保健食品認證標章看似很多，其實分三種功能
 publishDate: 2026-07-08
 category: health
 subcategory: supplement-regulation
-tags: ["保健食品認證", "小綠人標章", "SNQ", "潔淨標章", "Clean Label"]
+tags:
+  - "保健食品"
+  - "食品安全"
 author: "appi-editorial"
 coverImage: "covers/supplement-labels-explained.webp"
 coverAlt: "保健食品瓶罐排列在貨架上，示意台灣市面上各種認證標章"

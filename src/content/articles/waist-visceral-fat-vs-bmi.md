@@ -5,7 +5,9 @@ description: "體重機和 BMI 給的安全感可能是假的。BMI 正常也可
 publishDate: 2026-07-31T20:00:00+08:00
 category: health
 subcategory: preventive
-tags: ["內臟脂肪", "腰圍", "BMI", "代謝症候群", "代謝健康"]
+tags:
+  - "代謝健康"
+  - "健檢報告"
 author: "luo-yang"
 coverImage: "covers/waist-visceral-fat-vs-bmi.webp"
 coverAlt: "健檢中心護理師用軟尺替民眾量測腰圍的實景"

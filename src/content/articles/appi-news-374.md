@@ -5,7 +5,9 @@ description: "新青安上路後房價不降反升，青年購屋壓力未減。
 publishDate: 2026-07-08
 category: finance
 subcategory: real-estate
-tags: ["新青安", "房市政策", "青年購屋", "2026房市", "少子化"]
+tags:
+  - "房市"
+  - "少子化"
 author: "wu-fang-jun"
 coverImage: "covers/appi-news-374.webp"
 coverAlt: "年輕上班族深夜在家中計算新青安房貸月付金額的情境畫面"

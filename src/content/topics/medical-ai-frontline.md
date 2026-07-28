@@ -3,7 +3,7 @@ title: "醫療 AI 的信任與落地"
 description: "AI 走進醫療，最難的往往不是技術，而是信任與流程：為什麼先從行政落地、病人先問 AI 後信任怎麼分配、精準判斷能不能被支付，一次看懂。"
 category: "tech"
 coverImage: "og/tech.png"
-tags: ["數位健康", "老藥新用", "藥物再利用"]
+tags: ["數位健康", "醫療AI", "藥物研發"]
 featured: true
 status: "active"
 articles: []

@@ -6,7 +6,11 @@ excerpt: "微軟 Work IQ 把 email、會議、聊天與協作模式做成語意�
 publishDate: "2026-06-25T08:00:00+08:00"
 category: "tech"
 subcategory: "digital-tools"
-tags: ["微軟 Work IQ", "語意索引", "組織知識治理", "AI agent 權限邊界", "資料治理"]
+tags:
+  - "數位轉型"
+  - "搜尋與內容策略"
+  - "資料治理"
+  - "AI agent"
 coverImage: "covers/work-iq-semantic-index-org-governance.webp"
 coverAlt: "抽象數位網路節點與連線，象徵 Work IQ 把組織協作行為做成語意索引"
 coverImageCredit: "Photo by Shubham Dhage on Unsplash"

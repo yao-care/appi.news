@@ -36,7 +36,7 @@ export const HEALTH_DAYS = [
     angle: '紀念民國 89 年 1 月 14 日《醫事檢驗師法》三讀通過。寫醫檢師在診斷鏈中的角色、人力與健保給付現況、檢驗自動化與 AI 判讀帶來的變化。',
     category: 'health',
     sub: 'medical',
-    tags: ['醫事檢驗師', '醫療人力', '檢驗醫學'],
+    tags: ['醫事人力', '健檢報告'],
     img: 'medical laboratory test tubes analyzer',
   },
   {
@@ -48,7 +48,7 @@ export const HEALTH_DAYS = [
     angle: '紀念《藥師暫行條例》確立「藥師」職業名稱。寫社區藥局角色、分級醫療與慢箋、藥事照護與用藥安全的最新政策。',
     category: 'health',
     sub: 'medical',
-    tags: ['藥師', '用藥安全', '醫療人力'],
+    tags: ['醫事人力', '醫病關係'],
     img: 'pharmacy shelves medicine boxes dispensing',
   },
   {
@@ -60,7 +60,7 @@ export const HEALTH_DAYS = [
     angle: '提高認識、消除歧視。台灣視角務必寫樂生療養院與漢生病患者人權補償的後續。用語鐵則：一律「漢生病」，不得用污名化的「痲瘋」。',
     category: 'health',
     sub: 'health-policy',
-    tags: ['漢生病', '醫療人權', '傳染病'],
+    tags: ['傳染病防治', '醫療政策'],
     img: 'community clinic outreach bandaged hands',
   },
 
@@ -74,7 +74,7 @@ export const HEALTH_DAYS = [
     angle: 'UICC 每年有三年一期的主題，務必抓當年度主題。台灣素材：國健署最新癌症登記報告、四癌／五癌篩檢涵蓋率、標靶與免疫治療給付進展。',
     category: 'health',
     sub: 'medical',
-    tags: ['癌症', '癌症篩檢', '癌症登記'],
+    tags: ['癌症防治', '預防醫學'],
     img: 'oncology infusion clinic chemotherapy equipment',
   },
   {
@@ -86,7 +86,7 @@ export const HEALTH_DAYS = [
     angle: '具宗教性質（2/11 為露德聖母顯現日），寫作宜以「關懷病患、醫療中的靈性照顧」為軸，帶到台灣安寧緩和、醫院牧靈關懷與病人自主權利法。避免傳教語氣。',
     category: 'health',
     sub: 'medical',
-    tags: ['病人關懷', '安寧緩和', '醫病關係'],
+    tags: ['醫病關係', '長照'],
     img: 'hospital bedside hands care blanket',
   },
   {
@@ -98,7 +98,7 @@ export const HEALTH_DAYS = [
     angle: '提高認識、改善患者生活。台灣素材：癲癇患者就學就業歧視、駕照規範、新型抗癲癇藥物給付與難治型癲癇手術。注意日期是浮動的 2 月第二個星期一。',
     category: 'health',
     sub: 'medical',
-    tags: ['癲癇', '神經醫學', '病友權益'],
+    tags: ['醫療政策', '身心障礙'],
     img: 'eeg brain scan neurology electrodes',
   },
   {
@@ -110,7 +110,7 @@ export const HEALTH_DAYS = [
     angle: '222 諧音「餓餓餓」，1999 年起。寫營養師在醫院、長照、學校營養午餐與運動營養的角色，帶到最新國民營養健康狀況變遷調查。',
     category: 'health',
     sub: 'nutrition',
-    tags: ['營養師', '飲食營養', '醫療人力'],
+    tags: ['營養', '醫事人力'],
     img: 'balanced meal plate vegetables nutrition',
   },
 
@@ -124,7 +124,7 @@ export const HEALTH_DAYS = [
     angle: '⚠️ 2020 年起由 10/11 改為 3/4，勿沿用舊日期。每年有官方主題。台灣素材：國健署成人與兒童肥胖盛行率、減重藥物（GLP-1）給付與濫用爭議、代謝手術。',
     category: 'health',
     sub: 'preventive',
-    tags: ['肥胖', '代謝健康', '體重管理'],
+    tags: ['代謝健康', '減重管理'],
     img: 'weighing scale measuring tape health',
   },
   {
@@ -136,7 +136,7 @@ export const HEALTH_DAYS = [
     angle: '每年有官方主題。台灣是洗腎盛行率長年名列世界前段的國家，務必帶健保透析支出、慢性腎臟病早期篩檢、SGLT2 抑制劑等腎臟保護用藥給付。',
     category: 'health',
     sub: 'medical',
-    tags: ['腎臟病', '透析', '慢性病'],
+    tags: ['肝腎健康', '預防醫學'],
     img: 'dialysis machine hospital ward',
   },
   {
@@ -148,7 +148,7 @@ export const HEALTH_DAYS = [
     angle: '紀念中醫界反制「廢止舊醫案」的全國抗議。寫中醫在台灣醫療體系的定位、中醫健保給付、中西醫合療與科學中藥的實證進展。',
     category: 'health',
     sub: 'tcm-integrative',
-    tags: ['中醫', '中西醫合療', '醫療政策'],
+    tags: ['中醫', '醫療政策'],
     img: 'traditional chinese medicine herbs wooden drawers',
   },
   {
@@ -160,7 +160,7 @@ export const HEALTH_DAYS = [
     angle: '本站切入點為女性健康而非泛論性別議題：性別醫療落差、女性心血管疾病被低估、更年期照護、乳癌與子宮頸癌篩檢、女性醫師與護理人力處境。聯合國每年有官方主題。',
     category: 'health',
     sub: 'preventive',
-    tags: ['女性健康', '性別醫療落差', '篩檢'],
+    tags: ['女性健康', '預防醫學'],
     img: 'womens health clinic examination room',
   },
   {
@@ -172,7 +172,7 @@ export const HEALTH_DAYS = [
     angle: 'FDI 每年有官方主題。台灣素材：兒童塗氟與窩溝封填給付、成人牙周病統合照護、口腔癌與檳榔防制、長者假牙補助。',
     category: 'health',
     sub: 'medical',
-    tags: ['口腔健康', '牙周病', '牙醫'],
+    tags: ['口腔健康', '醫事人力'],
     img: 'dental clinic instruments toothbrush',
   },
   {
@@ -184,7 +184,7 @@ export const HEALTH_DAYS = [
     angle: '呼應國際驗光與光學聯盟訂的世界驗光日。寫台灣兒童近視盛行率、驗光師法上路後的職權分工、高度近視併發症與護眼政策。',
     category: 'health',
     sub: 'medical',
-    tags: ['驗光師', '近視防治', '眼睛健康'],
+    tags: ['眼睛健康', '醫事人力'],
     img: 'optometry phoropter eye examination',
   },
   {
@@ -196,7 +196,7 @@ export const HEALTH_DAYS = [
     angle: '紀念 1882 年柯霍（Robert Koch）發表發現結核桿菌。台灣素材：疾管署最新結核病發生率、潛伏結核感染治療、抗藥性結核與移工／原鄉防治。',
     category: 'health',
     sub: 'medical',
-    tags: ['結核病', '傳染病防治', '疾管署'],
+    tags: ['傳染病防治', '公共衛生'],
     img: 'chest x-ray lungs radiology lightbox',
   },
   {
@@ -208,7 +208,7 @@ export const HEALTH_DAYS = [
     angle: 'IFSW 每年有官方主題。台灣素材：醫務社工在出院準備與長照銜接的角色、社工人力荒與薪資結構、兒少保護與心理衛生社區服務。',
     category: 'health',
     sub: 'health-policy',
-    tags: ['社工', '醫務社工', '社會安全網'],
+    tags: ['醫事人力', '醫療政策'],
     img: 'social worker home visit living room',
   },
   {
@@ -220,7 +220,7 @@ export const HEALTH_DAYS = [
     angle: '注意這是美國起源的紀念日，與台灣 11/12 醫師節不同，寫作要交代清楚。可寫麻醉醫學一百八十年來的演進、台灣麻醉人力短缺與無痛醫療的普及。',
     category: 'health',
     sub: 'medical',
-    tags: ['醫師', '麻醉', '醫學史'],
+    tags: ['醫事人力', '醫病關係'],
     img: 'anesthesia machine operating room monitor',
   },
 
@@ -234,7 +234,7 @@ export const HEALTH_DAYS = [
     angle: '聯合國正式名稱為「意識日」而非「關懷日」。台灣素材：早療資源與等待期、成人自閉症者就業支持、特教與融合教育現況。用「自閉症光譜」，避免「患者」以外的污名詞。',
     category: 'health',
     sub: 'mental-health',
-    tags: ['自閉症', '早期療育', '身心障礙權益'],
+    tags: ['身心障礙', '育兒健康'],
     img: 'wooden blocks therapy room children toys',
   },
   {
@@ -246,7 +246,7 @@ export const HEALTH_DAYS = [
     angle: '紀念 WHO 於 1948 年成立，每年有官方主題（務必抓當年度）。台灣視角：我國參與 WHA 的處境、全民健保在全球健康覆蓋（UHC）評比中的位置。國內同日亦為衛福部核定的「衛生節」。',
     category: 'health',
     sub: 'health-policy',
-    tags: ['世界衛生組織', '公共衛生', '全民健保'],
+    tags: ['公共衛生', '健保'],
     img: 'public health clinic waiting area',
   },
   {
@@ -258,7 +258,7 @@ export const HEALTH_DAYS = [
     angle: '取 James Parkinson 生日。台灣素材：帕金森氏症盛行率與人口老化、深部腦刺激術（DBS）給付、早期症狀辨識與復健。用語一律「帕金森氏症」。',
     category: 'health',
     sub: 'aging-health',
-    tags: ['帕金森氏症', '神經退化', '高齡健康'],
+    tags: ['高齡健康', '失智症'],
     img: 'elderly hands walking cane support',
   },
   {
@@ -270,7 +270,7 @@ export const HEALTH_DAYS = [
     angle: '取聯盟創辦人 Frank Schnabel 生日。WFH 每年有官方主題。台灣素材：凝血因子預防性治療給付、基因治療進展、罕病照護網絡。',
     category: 'health',
     sub: 'medical',
-    tags: ['血友病', '罕見疾病', '基因治療'],
+    tags: ['再生醫療', '醫療政策'],
     img: 'blood sample vials hematology laboratory',
   },
   {
@@ -282,7 +282,7 @@ export const HEALTH_DAYS = [
     angle: '本站切入點是環境與人類健康的關聯，不是泛論環保：空污與心肺疾病、極端高溫的健康衝擊與熱急症、醫療體系本身的碳足跡與綠色醫院。每年有官方主題。',
     category: 'health',
     sub: 'preventive',
-    tags: ['環境健康', '空氣污染', '氣候變遷'],
+    tags: ['環境汙染', '氣候變遷', '公共衛生'],
     img: 'city skyline haze air pollution',
   },
 
@@ -296,7 +296,7 @@ export const HEALTH_DAYS = [
     angle: '寫台灣牙醫人力城鄉分布、偏鄉巡迴醫療、牙醫健保總額與自費項目界線、數位牙科技術導入。日期由來的諧音典故本身就是好開場。',
     category: 'health',
     sub: 'medical',
-    tags: ['牙醫師', '口腔健康', '醫療人力'],
+    tags: ['口腔健康', '醫事人力'],
     img: 'dentist chair clinic equipment light',
   },
   {
@@ -308,7 +308,7 @@ export const HEALTH_DAYS = [
     angle: '台灣助產制度一度幾乎消失後的復甦：助產所接生、友善生產與醫療化生產的拉鋸、少子化下的產科人力。ICM 每年有官方主題。',
     category: 'health',
     sub: 'medical',
-    tags: ['助產師', '生產照護', '婦幼健康'],
+    tags: ['女性健康', '醫事人力'],
     img: 'newborn baby hospital nursery blanket',
   },
   {
@@ -320,7 +320,7 @@ export const HEALTH_DAYS = [
     angle: 'ICN 每年有官方主題。台灣素材是重頭戲：護病比、護理人力流失與缺工、三班護病比獎勵計畫成效、夜班費與職場暴力。台灣官方名稱為「護師節」。',
     category: 'health',
     sub: 'medical',
-    tags: ['護理師', '護病比', '醫療人力'],
+    tags: ['醫事人力', '醫療政策'],
     img: 'hospital nursing station stethoscope clipboard',
   },
   {
@@ -332,7 +332,7 @@ export const HEALTH_DAYS = [
     angle: '寫心理治療的可近性：健保給付心理治療的限制、年輕族群心理健康支持方案、企業與校園心理服務、臨床心理師與諮商心理師的分工。',
     category: 'health',
     sub: 'mental-health',
-    tags: ['臨床心理師', '心理治療', '心理健康'],
+    tags: ['心理健康', '醫事人力'],
     img: 'counseling room armchairs quiet therapy',
   },
   {
@@ -344,7 +344,7 @@ export const HEALTH_DAYS = [
     angle: '⚠️ 2006 年起固定為 5/17，坊間流傳的「5 月第二個星期六」是 2005 年首屆舊制，勿沿用。每年有官方主題。台灣素材：國健署高血壓盛行率與控制率、居家血壓量測 722 原則、新版治療指引。',
     category: 'health',
     sub: 'preventive',
-    tags: ['高血壓', '心血管疾病', '慢性病'],
+    tags: ['心血管健康', '預防醫學'],
     img: 'blood pressure monitor cuff measurement',
   },
   {
@@ -356,7 +356,7 @@ export const HEALTH_DAYS = [
     angle: '甲狀腺疾病好發於女性且易被誤認為壓力或更年期。寫甲狀腺機能亢進／低下的辨識、甲狀腺結節與過度診斷爭議、健檢超音波的取捨。',
     category: 'health',
     sub: 'medical',
-    tags: ['甲狀腺', '內分泌', '健康檢查'],
+    tags: ['甲狀腺', '健檢報告'],
     img: 'thyroid ultrasound neck examination probe',
   },
   {
@@ -368,7 +368,7 @@ export const HEALTH_DAYS = [
     angle: 'WHO 每年有官方主題。台灣素材：《菸害防制法》修法後的電子煙全面禁止與加熱菸審查、青少年使用率、戒菸服務給付。與 6/3 禁菸節相隔三天，兩篇角度必須明確區隔（本篇走國際主題與菸品管制）。',
     category: 'health',
     sub: 'preventive',
-    tags: ['菸害防制', '電子煙', '戒菸'],
+    tags: ['菸酒檳榔', '公共衛生'],
     img: 'cigarette ashtray quit smoking',
   },
 
@@ -382,7 +382,7 @@ export const HEALTH_DAYS = [
     angle: '從虎門銷煙的歷史事件延伸到當代菸品危害。與 5/31 世界無菸日相隔三天，本篇走歷史縱深與台灣本土菸害防制史，不要重複國際主題。',
     category: 'health',
     sub: 'preventive',
-    tags: ['菸害防制', '公共衛生史', '成癮'],
+    tags: ['菸酒檳榔', '公共衛生'],
     img: 'broken cigarettes no smoking sign',
   },
   {
@@ -394,7 +394,7 @@ export const HEALTH_DAYS = [
     angle: 'WHO 每年有官方主題。台灣素材：血液基金會最新庫存與捐血率、人口老化下的血荒結構性問題、捐血資格規範（如男男性行為者限制）的爭議與修訂。',
     category: 'health',
     sub: 'medical',
-    tags: ['捐血', '血液安全', '公共衛生'],
+    tags: ['公共衛生', '醫療政策'],
     img: 'blood donation bag donor chair',
   },
 
@@ -408,7 +408,7 @@ export const HEALTH_DAYS = [
     angle: 'WHO 每年有官方主題，並訂有 2030 消除病毒性肝炎目標。台灣素材：新生兒 B 肝疫苗接種成果、C 肝口服新藥全面給付後的根除進度、肝癌發生率變化。',
     category: 'health',
     sub: 'medical',
-    tags: ['肝炎', 'B型肝炎', 'C型肝炎'],
+    tags: ['肝腎健康', '傳染病防治'],
     img: 'liver blood test tubes laboratory',
   },
 
@@ -422,7 +422,7 @@ export const HEALTH_DAYS = [
     angle: '注意這是一「週」（8/1-8/7）而非單日，寫作要交代。每年有官方主題。台灣素材：母嬰親善醫院認證的檢討、職場哺集乳室與育嬰假、母乳庫運作。',
     category: 'health',
     sub: 'nutrition',
-    tags: ['母乳哺育', '婦幼健康', '育兒'],
+    tags: ['女性健康', '育兒健康'],
     img: 'baby bottle breast pump nursery',
   },
   {
@@ -434,7 +434,7 @@ export const HEALTH_DAYS = [
     angle: '每年有官方主題。台灣素材：鎮靜安眠藥與 FM2 濫用、新興毒品（依托咪酯、彩虹菸）、納洛酮（naloxone）取得管道、成癮治療與減害政策。避免獵奇與污名化用語。',
     category: 'health',
     sub: 'mental-health',
-    tags: ['藥物濫用', '成癮', '減害'],
+    tags: ['心理健康', '公共衛生'],
     img: 'prescription pill bottle scattered tablets',
   },
 
@@ -448,7 +448,7 @@ export const HEALTH_DAYS = [
     angle: '世界物理治療日同日。台灣素材：《物理治療師法》修法後可不經醫囑提供健康促進服務的影響、長照與運動傷害復健需求、物理治療所開業潮。',
     category: 'health',
     sub: 'medical',
-    tags: ['物理治療師', '復健', '長照'],
+    tags: ['復健治療', '醫事人力'],
     img: 'physical therapy rehabilitation equipment gym',
   },
   {
@@ -460,7 +460,7 @@ export const HEALTH_DAYS = [
     angle: '每三年一期的官方主題。台灣素材：衛福部最新自殺死亡統計、青少年與長者兩個高風險族群、1925 安心專線量能。⚠️ 報導守則硬性要求：不描述自殺方法與地點、不美化、文末必附求助管道（1925、1995、1980）。',
     category: 'health',
     sub: 'mental-health',
-    tags: ['自殺防治', '心理健康', '安心專線'],
+    tags: ['心理健康', '公共衛生'],
     img: 'sunrise through window quiet hopeful',
   },
   {
@@ -472,7 +472,7 @@ export const HEALTH_DAYS = [
     angle: 'WHO 每年有官方主題。台灣素材：醫療品質及病人安全年度目標、病人安全通報系統（TPR）資料、給藥錯誤與手術部位辨識、醫療事故預防及爭議處理法上路後的影響。',
     category: 'health',
     sub: 'health-policy',
-    tags: ['病人安全', '醫療品質', '醫療糾紛'],
+    tags: ['醫病關係', '醫療政策'],
     img: 'hospital patient wristband safety checklist',
   },
   {
@@ -484,7 +484,7 @@ export const HEALTH_DAYS = [
     angle: '9 月整月為國際失智症月，ADI 每年有官方主題與年度報告。台灣素材：失智人口推估、長照 2.0 失智照護服務、抗類澱粉蛋白新藥（如 lecanemab）在台審查與給付爭議。用語一律「失智症／阿茲海默症」。',
     category: 'health',
     sub: 'aging-health',
-    tags: ['失智症', '阿茲海默症', '長照'],
+    tags: ['失智症', '長照'],
     img: 'elderly hands jigsaw puzzle memory care',
   },
   {
@@ -496,7 +496,7 @@ export const HEALTH_DAYS = [
     angle: 'FIP 每年有官方主題。與 1/15 台灣藥師節角度必須區隔：本篇走國際視野（藥師執業範圍擴張、疫苗接種授權、藥品短缺全球現象），台灣同日另有衛福部的「用藥安全日」可帶。',
     category: 'health',
     sub: 'medical',
-    tags: ['藥師', '藥品短缺', '國際醫療'],
+    tags: ['醫事人力', '藥物研發'],
     img: 'pharmacist counter prescription dispensing',
   },
   {
@@ -508,7 +508,7 @@ export const HEALTH_DAYS = [
     angle: 'WHF 每年有官方主題。台灣素材：心臟病長年居國人死因前段、國健署三高防治、心衰竭照護網、到院前心跳停止（OHCA）存活率與 AED 佈建。',
     category: 'health',
     sub: 'preventive',
-    tags: ['心血管疾病', '三高', '急救'],
+    tags: ['心血管健康', '急救常識'],
     img: 'stethoscope heart rate monitor ecg',
   },
 
@@ -522,7 +522,7 @@ export const HEALTH_DAYS = [
     angle: '聯合國每年有官方主題。台灣素材：2025 年起邁入超高齡社會的實質衝擊、長照 3.0 規劃、高齡就業與年齡歧視、獨居長者與社會孤立。',
     category: 'health',
     sub: 'aging-health',
-    tags: ['高齡社會', '長照', '銀髮健康'],
+    tags: ['超高齡社會', '長照', '高齡健康'],
     img: 'elderly community activity park bench',
   },
   {
@@ -534,7 +534,7 @@ export const HEALTH_DAYS = [
     angle: 'WFMH 每年有官方主題。台灣素材：年輕族群心理健康支持方案的使用與續辦、職場心理健康與過勞、社區心理衛生中心佈建、精神科病床與社區復健銜接。同日為國慶日，寫作不要誤觸節慶語境。',
     category: 'health',
     sub: 'mental-health',
-    tags: ['心理健康', '職場心理', '精神醫療'],
+    tags: ['心理健康', '職場健康'],
     img: 'calm quiet room window plant',
   },
   {
@@ -546,7 +546,7 @@ export const HEALTH_DAYS = [
     angle: 'IMS 每年有官方主題。台灣素材：更年期症狀被輕忽與誤診、荷爾蒙治療的風險再評估、職場更年期支持、男性更年期。與 3/8 婦女節角度區隔（本篇聚焦更年期醫療本身）。',
     category: 'health',
     sub: 'aging-health',
-    tags: ['更年期', '女性健康', '荷爾蒙治療'],
+    tags: ['女性健康', '高齡健康'],
     img: 'womens wellness clinic consultation desk',
   },
   {
@@ -558,7 +558,7 @@ export const HEALTH_DAYS = [
     angle: 'IOF 每年有官方主題。台灣素材：髖骨骨折後一年死亡率、骨密度檢測給付範圍、骨鬆藥物順從性、長者跌倒防治與肌少症的交互作用。',
     category: 'health',
     sub: 'aging-health',
-    tags: ['骨質疏鬆', '骨折', '高齡健康'],
+    tags: ['骨骼關節', '高齡健康'],
     img: 'bone density scan spine x-ray',
   },
   {
@@ -570,7 +570,7 @@ export const HEALTH_DAYS = [
     angle: '世界職能治療日同日。台灣素材：職能治療在兒童早療、精神復健、失智照護與長照的角色，以及與物理治療的分工誤解（讀者最常混淆的一點，值得寫清楚）。',
     category: 'health',
     sub: 'medical',
-    tags: ['職能治療師', '早期療育', '復健'],
+    tags: ['復健治療', '醫事人力'],
     img: 'occupational therapy hand exercise tools',
   },
   {
@@ -582,7 +582,7 @@ export const HEALTH_DAYS = [
     angle: 'WSO 每年有官方主題。台灣素材：中風為國人主要死因與失能主因、FAST 辨識口訣的本土化（微笑、舉手、說你好）、急性中風血栓溶解與取栓的黃金時間與醫院量能、年輕型中風上升。',
     category: 'health',
     sub: 'preventive',
-    tags: ['腦中風', '急救', '心血管疾病'],
+    tags: ['心血管健康', '急救常識'],
     img: 'brain ct scan emergency room',
   },
 
@@ -596,7 +596,7 @@ export const HEALTH_DAYS = [
     angle: '紀念侖琴發現 X 光。台灣素材：影像檢查量能與健保支出、輻射劑量安全與不必要的重複檢查、AI 影像判讀輔助對放射師工作的改變。',
     category: 'health',
     sub: 'medtech',
-    tags: ['醫事放射師', '醫學影像', 'AI醫療'],
+    tags: ['醫療AI', '醫事人力'],
     img: 'radiology ct scanner control room',
   },
   {
@@ -608,7 +608,7 @@ export const HEALTH_DAYS = [
     angle: '注意這是台灣的醫師節，與 3/30 美國起源的國際醫師節不同，寫作要交代。台灣素材：五大科招募困境與內外婦兒急的人力斷層、醫師勞動權益與工時、醫療暴力、偏鄉醫療。',
     category: 'health',
     sub: 'medical',
-    tags: ['醫師', '醫療人力', '醫療勞動權益'],
+    tags: ['醫事人力', '醫療政策'],
     img: 'hospital corridor white coat stethoscope',
   },
   {
@@ -620,7 +620,7 @@ export const HEALTH_DAYS = [
     angle: '⚠️ 與台灣醫師節同日，兩篇角度務必完全不同（本篇談疾病，不談醫事人力）。台灣素材：肺炎長年居國人死因前段、長者肺炎鏈球菌與流感疫苗公費接種範圍、抗生素抗藥性。',
     category: 'health',
     sub: 'medical',
-    tags: ['肺炎', '疫苗', '呼吸道感染'],
+    tags: ['傳染病防治', '預防醫學'],
     img: 'chest x-ray lungs respiratory ward',
   },
   {
@@ -632,7 +632,7 @@ export const HEALTH_DAYS = [
     angle: 'IDF 每年有三年一期的官方主題。台灣素材：糖尿病人口與年輕化、糖尿病共同照護網成效、連續血糖監測（CGM）與 GLP-1 藥物給付、糖尿病腎病變與洗腎的關聯。',
     category: 'health',
     sub: 'preventive',
-    tags: ['糖尿病', '血糖控制', '慢性病'],
+    tags: ['糖尿病', '代謝健康'],
     img: 'blood glucose meter test strips',
   },
 
@@ -646,7 +646,7 @@ export const HEALTH_DAYS = [
     angle: 'UNAIDS 每年有官方主題與年度報告。台灣素材：疾管署最新感染通報數、U=U（測不到＝不具傳染力）觀念普及、PrEP 暴露前預防用藥可近性、就學就業與就醫歧視。用語鐵則：「感染者」而非「病患」，避免污名。',
     category: 'health',
     sub: 'medical',
-    tags: ['愛滋病', 'HIV', '醫療人權'],
+    tags: ['傳染病防治', '醫療政策'],
     img: 'red ribbon awareness hiv testing kit',
   },
   {
@@ -658,7 +658,7 @@ export const HEALTH_DAYS = [
     angle: '紀念《呼吸治療師法》三讀通過。台灣素材：呼吸器依賴病人的照護體系、呼吸照護病房與居家呼吸照護、COVID-19 之後呼吸治療師的能見度與人力缺口。',
     category: 'health',
     sub: 'medical',
-    tags: ['呼吸治療師', '重症照護', '醫療人力'],
+    tags: ['醫事人力', '急救常識'],
     img: 'ventilator icu respiratory equipment',
   },
 ];
@@ -804,7 +804,7 @@ export function buildHealthDayPrompt(entry, date, opts = {}) {
     '  status: "scheduled"',
     `  publishDate: "${date}T06:17:00+08:00"`,
     '  topics: ["health-days"]',
-    `  tags: 至少含 ${entry.tags.map((t) => `"${t}"`).join('、')}，可再補當年度主題相關的字`,
+    `  tags: 只能填 ${entry.tags.map((t) => `"${t}"`).join('、')}（受控詞彙表，見 src/config/tags.ts；不得自行新增或改寫）`,
     '  disclosure: 說明本文整理自官方與權威組織公開資料、附原文出處',
     '',
     `寫入 src/content/articles/${slug}.md，**不要 git add/commit/push**（外層處理）。`,

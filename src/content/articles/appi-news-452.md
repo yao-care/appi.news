@@ -5,7 +5,10 @@ description: "中華民國桌球協會公布2026年達卡青年奧運選拔賽�
 publishDate: 2026-07-28
 category: sports
 subcategory: events
-tags: ["桌球", "青年奧運", "選拔賽", "台灣代表隊", "國際競賽"]
+tags:
+  - "桌球"
+  - "學生賽事"
+  - "國際賽事"
 author: "appi-editorial"
 coverImage: "covers/appi-news-452.webp"
 coverAlt: "一位台灣桌球選手在室內賽事中專注發球的畫面"

@@ -5,7 +5,11 @@ description: "最強 AI 模型被比照核彈等級管制禁用，加上各版�
 publishDate: 2026-06-22
 category: tech
 subcategory: ai
-tags: ["AI服務中斷", "AI管制趨勢", "備援方案設計", "容錯工作流", "Claude Fable 5", "跨模型Prompt設計"]
+tags:
+  - "AI基礎建設"
+  - "AI治理"
+  - "資安"
+  - "生成式AI"
 author: "appi-editorial"
 coverImage: "covers/appi-news-195.webp"
 coverAlt: "單點依賴與分散韌性工作流的結構對比示意"

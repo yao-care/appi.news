@@ -168,7 +168,18 @@ function targetFiles() {
   ];
   const files = [...new Set(sets.filter(Boolean).join("\n").split("\n"))]
     .filter((f) => /^src\/.*\.mdx?$/.test(f));
-  return files;
+  // 只留「正文真的變動」的檔：純 frontmatter 改動（批次改 tags／category／封面欄位）
+  // 不會引入任何新散文，卻會把整批存量文章拖進硬 gate，把 grandfather 保護整個破掉。
+  // 2026-07-28 標籤受控詞彙表遷移一次改 449 檔 frontmatter 時踩到，見 docs/lessons/tag-taxonomy.md。
+  const body = (s) => { const m = s.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/); return m ? s.slice(m[0].length) : s; };
+  return files.filter((f) => {
+    let before;
+    try { before = execSync(`git show ${base}:${f}`, { stdio: ["ignore", "pipe", "ignore"] }).toString(); }
+    catch { return true; } // base 沒有這個檔＝新增，一定要掃
+    let after;
+    try { after = readFileSync(f, "utf8"); } catch { return false; } // 已刪除
+    return body(before) !== body(after);
+  });
 }
 
 const files = targetFiles();

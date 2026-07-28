@@ -6,7 +6,10 @@ excerpt: "Gartner 估 2026 年底 40% 企業 app 內建 agent，市場焦點從�
 publishDate: "2026-06-29T08:00:00+08:00"
 category: "tech"
 subcategory: "industry-tech"
-tags: ["企業 AI agent", "Gartner 預測", "agent 化部門排序", "AI 治理落差", "agent 權限問責"]
+tags:
+  - "AI agent"
+  - "企業經營"
+  - "AI治理"
 coverImage: "covers/enterprise-app-agents-department-order.webp"
 coverAlt: "企業軟體內建任務型 AI agent 的趨勢轉折，市場開始排序哪個部門先被 agent 化"
 coverImageCredit: "Photo by Luke Chesser on Unsplash"

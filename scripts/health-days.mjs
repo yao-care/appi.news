@@ -280,6 +280,12 @@ async function main() {
       continue;
     }
 
+    const tagGate = spawnSync('node', ['scripts/check-tags.mjs', file], { encoding: 'utf8' });
+    if (tagGate.status !== 0) {
+      console.log(`  ⚠️ 剔除 ${w.slug}：標籤不在受控詞彙表\n${tagGate.stdout || tagGate.stderr || ''}`);
+      rmSync(file);
+      continue;
+    }
     const tone = spawnSync('node', ['scripts/check-content.mjs', file], { encoding: 'utf8' });
     if (tone.status !== 0) {
       console.log(`  ⚠️ 剔除 ${w.slug}：去 AI 腔硬 tell\n${tone.stdout || tone.stderr || ''}`);

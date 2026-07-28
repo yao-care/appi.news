@@ -6,7 +6,10 @@ excerpt: "台積電董事長魏哲家於2026年6月4日股東會後公開表示A
 publishDate: "2026-06-04T16:00:00+08:00"
 category: "tech"
 subcategory: "semiconductor"
-tags: ["台積電", "魏哲家", "High-NA EUV", "AI晶片", "晶圓代工"]
+tags:
+  - "台積電"
+  - "半導體"
+  - "AI基礎建設"
 highlights:
   - "魏哲家在股東會後表示「客戶需求極高，我們已竭盡所能」，確認AI算力需求仍無緩和跡象"
   - "台積電已購入ASML高數值孔徑EUV設備並進行研發，評估降低此類設備（每台造價高達4億美元）的使用成本"

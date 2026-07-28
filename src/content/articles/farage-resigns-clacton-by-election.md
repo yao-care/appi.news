@@ -6,7 +6,8 @@ excerpt: "英國改革黨黨魁法拉吉7月7日辭去克拉克頓下議院議�
 publishDate: "2026-07-09T01:53:07.000Z"
 category: "international"
 subcategory: "europe"
-tags: ["法拉吉", "改革黨", "英國政治", "克拉克頓", "國會補選", "政治獻金"]
+tags:
+  - "英國"
 highlights:
   - "英國改革黨（Reform UK）黨魁法拉吉7月7日宣布辭去克拉克頓（Clacton）下議院議員、逼出一場補選，並表明會再參選，稱要讓選民「當我行為的裁判」、打一場「人民對抗權勢集團」的補選"
   - "辭職正值他面臨兩起國會標準調查：一筆來自加密貨幣富豪哈本（Christopher Harborne）的500萬英鎊未申報捐款，以及《星期日泰晤士報》揭露、由已定罪詐欺犯柯特爾（George Cottrell）提供的未申報人事與住所利益"

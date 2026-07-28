@@ -3,7 +3,7 @@ title: "數位健康與高齡照護"
 description: "超高齡社會的照護人力補不上，數位健康工具與 AI 該放在哪個位置才真的有用？從長照 3.0、智慧輔具到陪伴機器人的實務盤點。"
 category: "tech"
 coverImage: "og/health.png"
-tags: ["超高齡社會", "長照3.0", "數位健康", "智慧照顧"]
+tags: ["超高齡社會", "長照", "數位健康"]
 featured: false
 status: "active"
 articles: []

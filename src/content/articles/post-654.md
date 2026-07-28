@@ -6,7 +6,10 @@ excerpt: "2025年9月，Insilico Medicine公布史上首個由AI發現靶點、A
 publishDate: "2025-10-01T08:00:00+08:00"
 category: "international"
 subcategory: "global-focus"
-tags: ["AI藥物設計", "Insilico Medicine", "特發性肺纖維化", "臨床試驗", "生技AI", "藥物研發"]
+tags:
+  - "藥物研發"
+  - "生技產業"
+  - "AI"
 highlights:
   - "Rentosertib（ISM001-055）Phase IIa GENESIS-IPF研究顯示劑量依賴性肺功能改善，是AI全程主導藥物設計的首個二期正面數據"
   - "Insilico Medicine 2025年管線有28個臨床前候選、10個臨床項目，其中2個已進入Phase II階段"

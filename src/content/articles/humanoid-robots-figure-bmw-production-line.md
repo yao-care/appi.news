@@ -6,7 +6,10 @@ excerpt: "過去看人形機器人都是後空翻、疊積木的展示影片。�
 publishDate: "2026-07-05T08:00:00+08:00"
 category: "tech"
 subcategory: "industry-tech"
-tags: ["人形機器人", "Figure 03", "BMW 產線", "實體 AI 落地", "台灣製造業"]
+tags:
+  - "機器人"
+  - "製造業"
+  - "AI"
 coverImage: "covers/humanoid-robots-figure-bmw-production-line.webp"
 coverAlt: "人形機器人站在工廠產線旁，象徵人形機器人從展示影片走進真實量產現場"
 coverImageCredit: "Photo by Simon Kadula on Unsplash"

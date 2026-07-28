@@ -5,7 +5,9 @@ description: "抽血尿酸紅字不等於痛風，也不等於要馬上吃藥。
 publishDate: 2026-07-27T20:00:00+08:00
 category: health
 subcategory: preventive
-tags: ["尿酸", "痛風", "高尿酸血症", "普林飲食", "代謝健康"]
+tags:
+  - "代謝健康"
+  - "營養"
 author: "luo-yang"
 coverImage: "covers/uric-acid-gout-treatment.webp"
 coverAlt: "診間桌上的抽血生化報告，尿酸欄位被紅筆圈起，醫師正與病人討論數值"

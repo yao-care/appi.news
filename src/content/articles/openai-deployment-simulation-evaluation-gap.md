@@ -6,7 +6,10 @@ excerpt: "OpenAI 拿約 130 萬則真實對話重放、餵給待上線的新模�
 publishDate: "2026-06-21T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["OpenAI Deployment Simulation", "evaluation gap", "AI 上線前驗收", "模型行為漂移", "企業 AI 導入"]
+tags:
+  - "生成式AI"
+  - "AI治理"
+  - "企業經營"
 coverImage: "covers/openai-deployment-simulation-evaluation-gap.webp"
 coverAlt: "OpenAI 用真實使用者對話重放，餵給還沒上線的新模型做上線前測試的示意"
 author: "appi-editorial"

@@ -6,7 +6,8 @@ excerpt: "Parker太陽探測器在距太陽表面614萬公里處首度記錄太�
 publishDate: "2025-07-11T08:00:00+08:00"
 category: "international"
 subcategory: "global-focus"
-tags: ["太空科技", "太陽風", "太空天氣", "衛星通訊", "NASA"]
+tags:
+  - "太空科技"
 highlights:
   - "Parker探測器在距太陽表面614萬公里處，以時速約69.5萬公里完成人類史上最近日飛行，打破自身保持的速度紀錄"
   - "首度直接記錄太陽風的兩種生成來源：非阿爾芬尼克風來自頭盔狀磁流體區域，阿爾芬尼克風來自日冕洞"

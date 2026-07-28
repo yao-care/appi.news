@@ -5,7 +5,9 @@ description: "別再用『天然 vs 加工』二分法看食物。NOVA 分的是
 publishDate: 2026-07-28T20:00:00+08:00
 category: health
 subcategory: preventive
-tags: ["超加工食品", "NOVA分類", "加工食品", "飲食健康", "代謝健康"]
+tags:
+  - "營養"
+  - "代謝健康"
 author: "luo-yang"
 coverImage: "covers/ultra-processed-food-nova.webp"
 coverAlt: "手搖飲料店櫃台上排列著幾杯剛做好的含糖冰飲"

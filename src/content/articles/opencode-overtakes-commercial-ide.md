@@ -6,7 +6,10 @@ excerpt: "LogRocket 六月榜單上，開源的 OpenCode 把 Cursor 擠下第一
 publishDate: "2026-06-16T23:27:12.751Z"
 category: "tech"
 subcategory: "digital-tools"
-tags: ["OpenCode", "coding agent", "Cursor", "Claude Code", "開發工具選型"]
+tags:
+  - "開發工具"
+  - "AI agent"
+  - "生成式AI"
 coverImage: "covers/opencode-overtakes-commercial-ide.webp"
 coverAlt: "一個開源終端機工具超車商業 IDE，衝上開發工具排行榜第一"
 author: "appi-editorial"

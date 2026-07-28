@@ -5,7 +5,12 @@ description: "日圓兌美元貶破163，創四十年新低，日本貿易逆差
 publishDate: 2026-07-24
 category: finance
 subcategory: investing-literacy
-tags: ["日圓貶值", "海外資產配置", "外幣保單", "日本置產", "換匯成本"]
+tags:
+  - "總體經濟"
+  - "資本市場"
+  - "投資理財"
+  - "房市"
+  - "日本"
 author: "wu-fang-jun"
 coverImage: "covers/appi-news-397.webp"
 coverAlt: "台灣讀者在家中檢視日圓保單文件與匯率走勢的情境照"

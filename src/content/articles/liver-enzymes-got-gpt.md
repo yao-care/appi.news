@@ -5,7 +5,10 @@ description: "肝指數 GOT、GPT 是『肝發炎指標』而不是『肝功能�
 publishDate: 2026-07-16T20:00:00+08:00
 category: health
 subcategory: medical
-tags: ["肝指數", "GOT", "GPT", "肝癌", "健檢報告", "看懂健檢報告"]
+tags:
+  - "健檢報告"
+  - "生成式AI"
+  - "癌症防治"
 author: "luo-yang"
 coverImage: "covers/liver-enzymes-got-gpt.webp"
 coverAlt: "民眾拿著健康檢查血液報告，肝功能欄位示意"

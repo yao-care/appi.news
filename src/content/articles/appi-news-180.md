@@ -5,7 +5,11 @@ description: "想嘗試 GLP-1 瘦瘦針？抽血評估肝腎功能、監測副�
 publishDate: 2026-06-21
 category: health
 subcategory: tcm-integrative
-tags: ["瘦瘦針", "GLP-1", "副作用評估", "肝腎功能", "抽血檢查"]
+tags:
+  - "藥物研發"
+  - "醫病關係"
+  - "健檢報告"
+  - "肝腎健康"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-180.webp"
 coverAlt: "GLP-1 受體促效劑三大作用機制：促進胰島素分泌、抑制食慾、延遲胃排空"

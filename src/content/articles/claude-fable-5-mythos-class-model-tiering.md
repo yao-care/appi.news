@@ -6,7 +6,11 @@ excerpt: "Anthropic 6 月 9 日把 Fable 5 推上「Mythos 級」，一個比 Op
 publishDate: "2026-06-16T22:56:27.649Z"
 category: "tech"
 subcategory: "ai"
-tags: ["Claude Fable 5", "Mythos 5", "AI 模型分層", "模型選型", "agentic coding"]
+tags:
+  - "生成式AI"
+  - "AI治理"
+  - "AI agent"
+  - "開發工具"
 coverImage: "covers/claude-fable-5-mythos-class-model-tiering.webp"
 coverAlt: "AI 模型能力一層疊一層往上分層，最頂端是新開出的層級"
 author: "appi-editorial"

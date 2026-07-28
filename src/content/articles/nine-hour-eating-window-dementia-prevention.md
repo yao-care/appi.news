@@ -6,7 +6,11 @@ excerpt: "美國羅格斯大學一項小型臨床試驗發現，將每日進食�
 publishDate: "2026-07-27T18:38:05.245Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["限時進食", "失智預防", "認知衰退", "健康飲食", "熟齡健康", "羅格斯大學"]
+tags:
+  - "營養"
+  - "失智症"
+  - "高齡健康"
+  - "教育"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

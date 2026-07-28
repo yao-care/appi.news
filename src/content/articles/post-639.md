@@ -6,7 +6,9 @@ excerpt: "NASA於2026年6月9日宣布Artemis III任務組員，包括ESA義大�
 publishDate: "2026-06-15T00:23:33+08:00"
 category: "international"
 subcategory: "global-focus"
-tags: ["NASA", "Artemis計畫", "月球探索", "太空產業", "台灣太空"]
+tags:
+  - "太空科技"
+  - "科技政策"
 highlights:
   - "6月9日NASA宣布Artemis III組員：指揮官Bresnik、駕駛帕米塔諾（ESA）、任務專家Rubio與Douglas"
   - "帕米塔諾成為首位被分配至Artemis任務的歐洲太空人，延續ISS國際合作模式"

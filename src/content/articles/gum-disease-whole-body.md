@@ -6,11 +6,12 @@ publishDate: 2026-07-13T12:00:00.000Z
 category: health
 subcategory: medical
 tags:
-  - 牙周病
-  - 糖尿病
-  - 心血管疾病
-  - 慢性發炎
-  - 健保牙周照護
+  - "口腔健康"
+  - "糖尿病"
+  - "心血管健康"
+  - "代謝健康"
+  - "長照"
+  - "健保"
 author: luo-yang
 coverImage: /covers/gum-disease-whole-body-1784040711430.webp
 coverAlt: 牙齦發炎與全身健康關聯的醫療示意圖

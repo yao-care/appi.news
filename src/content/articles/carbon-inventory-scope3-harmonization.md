@@ -5,7 +5,12 @@ description: "環境部6月17日發布新聞稿，宣布與金管會調和企業
 publishDate: "2026-06-24T01:45:17.280Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["碳盤查", "範疇三", "永續揭露", "反漂綠", "金管會", "環境部", "IFRS", "ESG", "綠色金融"]
+tags:
+  - "碳盤查"
+  - "ESG"
+  - "金管會"
+  - "環境部"
+  - "綠色金融"
 author: "appi-editorial"
 coverImage: "covers/carbon-inventory-scope3-harmonization-cover.webp"
 coverAlt: "工廠煙囪排放白煙，象徵企業溫室氣體盤查與碳排放管理"

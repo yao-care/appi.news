@@ -7,11 +7,9 @@ publishDate: "2026-06-14T21:37:47+08:00"
 category: focus
 subcategory: trend-watch
 tags:
-  - 儲能
-  - 電力交易平台
-  - 調頻備轉
-  - dReg
-  - E-dReg
+  - "儲能"
+  - "能源政策"
+  - "電網"
 highlights:
   - 2025年10月29日dReg合格交易容量達810.7MW，遠超台電500MW需求目標，市場出現過熱信號
   - dReg競標價格長期維持在零元，顯示供給過剩，E-dReg的複合儲能服務成為新的收益核心

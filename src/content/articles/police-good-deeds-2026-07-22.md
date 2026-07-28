@@ -6,7 +6,12 @@ excerpt: "整理臺北市與臺東縣警察局公開新聞稿的好人好事：�
 publishDate: "2026-07-22T04:47:16.772Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "臺北市", "臺東縣", "失智", "旅客協助"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "台北市"
+  - "台東縣"
+  - "失智症"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

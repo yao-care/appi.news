@@ -5,7 +5,10 @@ description: "衛福部推動的食品紅黃綠三色分級標示，預計2026�
 publishDate: 2026-06-18
 category: health
 subcategory: tcm-integrative
-tags: ["食品紅黃綠標示", "前端警示標示", "慢性病預防", "食品標示制度", "衛福部食藥署"]
+tags:
+  - "食品安全"
+  - "預防醫學"
+  - "醫療政策"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-188.webp"
 coverAlt: "台灣食品紅黃綠標示制度：糖、鈉、飽和脂肪三色分級閾值說明圖"

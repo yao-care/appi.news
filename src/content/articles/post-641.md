@@ -6,7 +6,10 @@ excerpt: "剛果民主共和國與烏干達爆發Bundibugyo型伊波拉疫情，
 publishDate: "2026-06-15T00:23:33+08:00"
 category: "international"
 subcategory: "international-organizations"
-tags: ["伊波拉", "WHO", "傳染病防控", "公共衛生緊急事態", "亞太公衛網路"]
+tags:
+  - "傳染病防治"
+  - "公共衛生"
+  - "亞太"
 highlights:
   - "5月15日DRC確認Bundibugyo病毒（伊波拉亞型），致死率歷史紀錄30%至50%，無已核准疫苗"
   - "WHO 5月17日宣告PHEIC，是自COVID-19以來最受關注的跨境傳染病緊急應變"

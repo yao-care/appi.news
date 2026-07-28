@@ -5,7 +5,8 @@ description: "雨停之後，陽台的積水最快九天就能孵出會飛的蚊
 publishDate: 2026-07-13
 category: health
 subcategory: preventive
-tags: ["雨後防蚊", "雨後積水怎麼清", "家庭防蚊方法", "登革熱家庭防護", "小孩被蚊子咬", "防蚊生活習慣"]
+tags:
+  - "傳染病防治"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-377.webp"
 coverAlt: "雨後家長與孩子在陽台一起檢查花盆底盤積水的情境"

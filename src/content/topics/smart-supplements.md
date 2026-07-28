@@ -3,7 +3,7 @@ title: "保健食品聰明選"
 description: "保健食品廣告話術多、法規紅線也多。這個主題用實證與法規把最熱門的品項一個個講清楚：NMN、綜合維他命、膠原蛋白、葉黃素、益生菌、紅麴，教你看穿誇大宣稱、認明標章，把錢花在真正有根據的地方。"
 category: "health"
 coverImage: "og/health.png"
-tags: ["保健食品", "廣告合規"]
+tags: ["保健食品", "食品安全"]
 featured: true
 status: "active"
 articles: ["nmn-anti-aging-taiwan", "multivitamin-worth-taking", "collagen-supplement-skin", "lutein-eye-health-areds2", "probiotics-how-to-choose", "red-yeast-rice-monacolin-safety", "supplement-labels-explained", "supplement-lab-report", "precision-nutrition", "supplements-five-buying-principles", "functional-food-ad-compliance-ai"]

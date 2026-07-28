@@ -6,7 +6,9 @@ excerpt: "看到「高溫警告」「極端高溫警告」到底有多嚴重、�
 publishDate: "2026-07-01T09:00:00.000Z"
 category: "health"
 subcategory: "preventive"
-tags: ["高溫", "極端高溫", "高溫警告", "熱傷害", "中暑", "熱衰竭", "中央氣象署", "熱傷害預防"]
+tags:
+  - "極端高溫"
+  - "天然災害"
 author: "appi-editorial"
 coverImage: "https://images.unsplash.com/photo-1598935893720-1f5ee04fd552?ixid=M3w4ODgwMzN8MHwxfHNlYXJjaHwxfHxleHRyZW1lJTIwaGVhdCUyMHN1biUyMGNpdHklMjBoZWF0d2F2ZXxlbnwwfHx8fDE3ODI5NDk5MTZ8MA&ixlib=rb-4.1.0&w=1080&q=80&fm=jpg&fit=max"
 coverAlt: "烈日高掛的城市天空，象徵極端高溫來襲"

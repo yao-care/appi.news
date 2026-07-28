@@ -5,7 +5,9 @@ description: "2026年台灣首例境外移入萊姆病來自瑞典森林活動�
 publishDate: 2026-06-18
 category: health
 subcategory: tcm-integrative
-tags: ["萊姆病", "蜱蟲", "歐美旅遊防護", "遊走性紅斑", "境外移入傳染病", "防蟲措施"]
+tags:
+  - "傳染病防治"
+  - "旅遊"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-189.webp"
 coverAlt: "萊姆病傳播路徑示意圖：蜱蟲在野生動物宿主與人類之間的傳染循環，並顯示幼蜱、若蜱、成蜱的大小比較"

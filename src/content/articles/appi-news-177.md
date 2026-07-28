@@ -6,10 +6,9 @@ publishDate: "2026-06-22"
 category: health
 subcategory: tcm-integrative
 tags:
-  - 美顏針
-  - 奈米銀離子
-  - 微針貼片
-  - 術後修復
+  - "中醫"
+  - "傳染病防治"
+  - "復健治療"
 author: huang-ziyan
 coverImage: covers/appi-news-177.webp
 coverAlt: 美顏針三階段照護流程圖：術前準備、施作中、術後修復

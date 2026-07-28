@@ -5,7 +5,11 @@ description: "經濟部水利署宣布，大用水戶耗水費 3 年減半徵收
 publishDate: "2026-06-25T01:42:15.683Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["耗水費", "水資源", "用水大戶", "節水", "水利署", "經濟部", "用水正義", "再生水", "半導體用水"]
+tags:
+  - "碳費"
+  - "水資源"
+  - "經濟部"
+  - "半導體"
 author: "appi-editorial"
 coverImage: "covers/taiwan-water-consumption-fee-2026-cover.webp"
 coverAlt: "水庫與供水設施，象徵水資源管理與用水大戶節水政策"

@@ -6,7 +6,15 @@ excerpt: "整理新竹縣、屏東縣、高雄市、臺北市警察局公開新�
 publishDate: "2026-07-15T00:00:00.000Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "新竹縣", "屏東縣", "高雄市", "臺北市", "颱風", "CPR", "走失"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "新竹縣"
+  - "屏東縣"
+  - "高雄市"
+  - "台北市"
+  - "颱風"
+  - "急救常識"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

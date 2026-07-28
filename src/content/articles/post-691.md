@@ -6,7 +6,10 @@ excerpt: "2026年1月，TTA帶領57家台灣AI新創與83家供應鏈夥伴登�
 publishDate: "2026-01-08T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["CES 2026", "TTA", "台灣新創", "AI", "國科會", "邊緣AI"]
+tags:
+  - "科技政策"
+  - "新創"
+  - "AI基礎建設"
 highlights:
   - "TTA帶57家AI新創與83家供應鏈夥伴前進CES 2026，為台灣第9年參展，規模創歷年最大"
   - "DeCloak Intelligences、Epic Tech Taiwan、HUA TEC International、Memorence AI四家摘下CES創新獎"

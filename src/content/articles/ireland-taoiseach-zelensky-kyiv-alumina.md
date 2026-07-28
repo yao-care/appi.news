@@ -6,7 +6,12 @@ excerpt: "愛爾蘭總理馬丁7月23日訪基輔會澤倫斯基，雙方確認�
 publishDate: "2026-07-23T15:10:31.224Z"
 category: "international"
 subcategory: "europe"
-tags: ["愛爾蘭", "烏克蘭", "澤倫斯基", "米海爾·馬丁", "歐盟制裁", "Aughinish Alumina", "俄烏戰爭", "歐盟輪值主席國"]
+tags:
+  - "愛爾蘭"
+  - "烏克蘭"
+  - "貿易政策"
+  - "歐盟"
+  - "環境汙染"
 highlights:
   - "愛爾蘭總理馬丁（Micheál Martin）7月23日在基輔馬里因斯基宮與澤倫斯基會談，是愛爾蘭接任歐盟輪值主席國後首次訪烏"
   - "愛爾蘭企業部對利默里克Aughinish Alumina煉油廠的調查沒有敲定：未發現具體證據證明鋁土礦流向俄羅斯軍工業者，但同樣無法排除"

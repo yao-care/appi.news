@@ -5,7 +5,13 @@ description: "經濟部能源署公布2026至2039年離岸風電中長程發展�
 publishDate: "2026-07-26T01:50:24.834Z"
 category: "focus"
 subcategory: "trend-watch"
-tags: ["離岸風電", "能源轉型", "經濟部能源署", "再生能源", "浮動式風電", "國家氣候變遷對策委員會", "綠電"]
+tags:
+  - "離岸風電"
+  - "淨零轉型"
+  - "能源政策"
+  - "經濟部"
+  - "再生能源"
+  - "氣候變遷"
 author: "appi-editorial"
 coverImage: "covers/taiwan-offshore-wind-blueprint-2039-cover.webp"
 coverAlt: "海上離岸風力發電機組，象徵台灣離岸風電裝置容量持續擴增（示意圖）"

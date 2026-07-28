@@ -7,14 +7,10 @@ publishDate: "2026-07-01"
 category: health
 subcategory: aging-health
 tags:
-  - 肌少症
-  - 高齡健康
-  - 阻力訓練
-  - 蛋白質
-  - 維生素D
-  - AWGS
-  - 預防醫學
-  - 肌力
+  - "肌少症"
+  - "高齡健康"
+  - "保健食品"
+  - "預防醫學"
 author: appi-editorial
 coverImage: https://images.unsplash.com/photo-1658314755811-73c806249f31?w=1080&q=80&fm=jpg&fit=max
 coverAlt: 高齡者進行肌力訓練,象徵以運動預防肌少症

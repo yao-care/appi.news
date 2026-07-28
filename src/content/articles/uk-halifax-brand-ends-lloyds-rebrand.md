@@ -6,7 +6,8 @@ excerpt: "英國勞埃德銀行集團宣布，旗下擁有173年歷史的Halifax
 publishDate: "2026-07-02T02:41:35.109Z"
 category: "international"
 subcategory: "europe"
-tags: ["英國", "Halifax", "Lloyds Banking Group", "銀行品牌整併", "HBOS", "英國銀行業"]
+tags:
+  - "英國"
 highlights:
   - "勞埃德銀行集團7月1日宣布，擁有173年歷史的Halifax品牌將全面整併為Lloyds，成為英格蘭、威爾斯與北愛爾蘭唯一的消費銀行品牌"
   - "全英190間Halifax分行預計自2027年起陸續換上Lloyds招牌，或就近併入鄰近的Lloyds分行；整併後集團在英格蘭、威爾斯、北愛爾蘭合計約531間分行"

@@ -6,7 +6,12 @@ excerpt: "全球最大資產管理公司BlackRock在2026年展望中持續超配
 publishDate: "2026-01-01T08:00:00+08:00"
 category: "finance"
 subcategory: "investing-literacy"
-tags: ["BlackRock", "AI科技股", "資產配置", "台灣半導體", "新興市場"]
+tags:
+  - "資本市場"
+  - "投資理財"
+  - "半導體"
+  - "地緣政治"
+  - "AI"
 highlights:
   - "BlackRock將美國股票升級為超配，核心理由是AI驅動的企業獲利動能，IT類股2026年每股盈餘預期成長38%"
   - "BlackRock旗下iShares研究指出台灣股市中半導體佔65%市值，是亞洲AI硬體週期最直接的投資標的"

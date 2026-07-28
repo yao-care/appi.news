@@ -5,7 +5,10 @@ description: "缺牙又不補，與失智風險升高有『相關』（觀察性
 publishDate: 2026-07-15T20:00:00+08:00
 category: health
 subcategory: aging-health
-tags: ["缺牙", "失智", "口腔衰弱", "假牙", "高齡健康"]
+tags:
+  - "口腔健康"
+  - "失智症"
+  - "高齡健康"
 author: "luo-yang"
 coverImage: "covers/tooth-loss-dementia.webp"
 coverAlt: "高齡長者口腔檢查與咀嚼功能評估的示意"

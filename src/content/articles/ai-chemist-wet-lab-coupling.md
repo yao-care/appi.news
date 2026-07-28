@@ -6,7 +6,11 @@ excerpt: "AI 真的自己做出化學發現了嗎？讀準一點：GPT-5.4 提�
 publishDate: "2026-07-16T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["AI 科學發現", "GPT-5.4", "藥物研發", "自動化實驗室", "醫療 AI", "台灣生技"]
+tags:
+  - "生成式AI"
+  - "藥物研發"
+  - "醫療AI"
+  - "生技產業"
 coverImage: "covers/ai-chemist-wet-lab-coupling.webp"
 coverAlt: "自動化化學實驗室裡的實驗器材與試劑，象徵 AI 從答題走進濕實驗室做實驗"
 coverImageCredit: "Photo by ZHENYU LUO on Unsplash"

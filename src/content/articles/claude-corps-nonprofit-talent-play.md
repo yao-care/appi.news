@@ -6,7 +6,11 @@ excerpt: "為什麼一家前沿模型公司要花 1.5 億去教非營利組織�
 publishDate: "2026-07-10T08:00:00+08:00"
 category: "tech"
 subcategory: "industry-tech"
-tags: ["Anthropic", "Claude Corps", "AI 人才", "非營利組織", "台灣視角"]
+tags:
+  - "生成式AI"
+  - "AI人才"
+  - "人才競爭"
+  - "企業經營"
 coverImage: "covers/claude-corps-nonprofit-talent-play.webp"
 coverAlt: "象徵 AI 大廠出資培育人才、把工具帶進非營利組織的抽象示意"
 coverImageCredit: "Photo by Steve A Johnson on Unsplash"

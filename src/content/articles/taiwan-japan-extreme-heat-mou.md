@@ -5,7 +5,11 @@ description: "環境部7月4日在高雄科工館促成台灣防災產業協會�
 publishDate: "2026-07-07T01:35:27.120Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["極端高溫", "氣候調適", "城市韌性", "台日合作", "涼適地圖", "環境部"]
+tags:
+  - "極端高溫"
+  - "氣候調適"
+  - "地緣政治"
+  - "環境部"
 author: "appi-editorial"
 coverImage: "covers/taiwan-japan-extreme-heat-mou-cover.webp"
 coverAlt: "夏日城市街道與行道樹樹蔭，象徵都市降溫與高溫調適"

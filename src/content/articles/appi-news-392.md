@@ -5,7 +5,11 @@ description: "紐西蘭央行三年來首度升息至2.50%，全球利率環境�
 publishDate: 2026-07-18
 category: finance
 subcategory: investing-literacy
-tags: ["央行升息", "海外資產配置", "利率環境", "退休規劃", "外幣配置"]
+tags:
+  - "總體經濟"
+  - "資本市場"
+  - "投資理財"
+  - "退休規劃"
 author: "wu-fang-jun"
 coverImage: "covers/appi-news-392.webp"
 coverAlt: "財務規劃桌面情境，多國貨幣與利率圖表並陳，象徵全球資產配置決策"

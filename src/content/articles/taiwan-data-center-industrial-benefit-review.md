@@ -5,7 +5,13 @@ description: "經濟部能源署 7 月 1 日預告修正《能源開發及使用
 publishDate: "2026-07-03T01:46:12.259Z"
 category: "focus"
 subcategory: "trend-watch"
-tags: ["資料中心", "能源署", "能源開發及使用評估準則", "AI用電", "電網", "產業效益評估", "資通安全", "經濟部"]
+tags:
+  - "AI基礎建設"
+  - "能源政策"
+  - "經濟部"
+  - "電網"
+  - "供應鏈"
+  - "資安"
 author: "appi-editorial"
 coverImage: "covers/taiwan-data-center-industrial-benefit-review-cover.webp"
 coverAlt: "資料中心伺服器機房內的機櫃與線路，象徵能源密集的資料中心設施"

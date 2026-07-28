@@ -6,7 +6,11 @@ excerpt: "2026台北國際自行車展與TaiSPO於3月25日南港展覽館同步
 publishDate: "2026-03-25T10:00:00+08:00"
 category: "sports"
 subcategory: "sports-industry"
-tags: ["台北自行車展", "TaiSPO", "運動科技", "健康生態系", "自行車產業"]
+tags:
+  - "製造業"
+  - "台北市"
+  - "運動科技"
+  - "數位健康"
 highlights:
   - "兩展合計1,100家企業參展，使用3,950個攤位，其中215家為國際廠商，展現台灣全球運動樞紐地位"
   - "TAIPEI CYCLE以「Cycling to Wellness」為核心主軸，從整車、電動輔助到智慧騎乘完整展出"

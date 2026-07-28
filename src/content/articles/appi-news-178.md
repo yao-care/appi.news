@@ -5,7 +5,10 @@ description: "中醫美顏針源自顏面神經治療，本文從中醫針傷科
 publishDate: 2026-06-21
 category: health
 subcategory: tcm-integrative
-tags: ["美顏針", "針傷科", "中醫整合", "中西醫美容", "筋膜張力", "過敏性鼻炎"]
+tags:
+  - "中醫"
+  - "骨骼關節"
+  - "過敏"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-178.webp"
 coverAlt: "美顏針穴位分布示意圖，呈現臉部穴位與頸肩經絡的連動關係"

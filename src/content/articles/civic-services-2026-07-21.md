@@ -8,7 +8,7 @@ subcategory: "life"
 tags:
   - "便民措施"
   - "市政服務"
-  - "臺北市"
+  - "台北市"
   - "新北市"
   - "高雄市"
 author: "appi-editorial"

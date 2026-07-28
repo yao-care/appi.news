@@ -7,11 +7,10 @@ updatedDate: 2026-07-21T00:00:00.000Z
 category: health
 subcategory: health-policy
 tags:
-  - 醫療AI
-  - 合規
-  - 個資保護
-  - 去識別化
-  - 健康資料治理
+  - "醫療AI"
+  - "個資保護"
+  - "資料治理"
+  - "數位健康"
 author: lightman
 coverImage: covers/medical-ai-compliance-lessons.webp
 coverAlt: 一道由許多細節磚塊堆疊而成的信任高牆，象徵健康資料平台的信任由無數細節做成

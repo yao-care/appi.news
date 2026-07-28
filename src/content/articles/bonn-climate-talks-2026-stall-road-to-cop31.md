@@ -5,7 +5,11 @@ description: "聯合國 2026 年波昂氣候會議（SB64）於 6 月 18 日閉�
 publishDate: "2026-06-23T13:05:35.237Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["波昂氣候會議", "SB64", "COP31", "正義轉型", "全球適應目標", "氣候資金", "淨零", "NDC"]
+tags:
+  - "氣候變遷"
+  - "美國"
+  - "淨零轉型"
+  - "綠色金融"
 author: "appi-editorial"
 coverImage: "covers/bonn-climate-talks-2026-stall-road-to-cop31-cover.webp"
 coverAlt: "風力發電機組與天空，象徵能源轉型與全球氣候治理議題"

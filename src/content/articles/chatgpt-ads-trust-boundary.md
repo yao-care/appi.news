@@ -6,7 +6,11 @@ excerpt: "AI 助理原本值得信，不是因為它聰明，是因為機制上�
 publishDate: "2026-07-10T08:00:00+08:00"
 category: "tech"
 subcategory: "industry-tech"
-tags: ["ChatGPT 廣告", "OpenAI", "AI 信任", "廣告商業模式", "對話式 AI"]
+tags:
+  - "消費趨勢"
+  - "生成式AI"
+  - "AI治理"
+  - "企業經營"
 coverImage: "covers/chatgpt-ads-trust-boundary.webp"
 coverAlt: "象徵 AI 對話介面加入廣告商業模式、AI 助理變成廣告載體的抽象科技示意"
 coverImageCredit: "Photo by Growtika on Unsplash"

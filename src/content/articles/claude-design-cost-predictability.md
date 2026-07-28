@@ -6,7 +6,10 @@ excerpt: "PCWorld 記者拿 Claude Pro 試用 Claude Design，25 分鐘做出三
 publishDate: "2026-07-13T08:00:00+08:00"
 category: "tech"
 subcategory: "software-products"
-tags: ["Claude Design", "AI 設計工具", "用量額度", "成本可預期性", "訂閱制", "Anthropic"]
+tags:
+  - "生成式AI"
+  - "企業經營"
+  - "消費趨勢"
 coverImage: "covers/claude-design-cost-predictability.webp"
 coverAlt: "象徵 AI 設計工具用量成本與可預期性的抽象示意"
 coverImageCredit: "Photo by Tima Miroshnichenko on Pexels"

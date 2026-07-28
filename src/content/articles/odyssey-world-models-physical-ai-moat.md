@@ -6,7 +6,12 @@ excerpt: "為什麼 Amazon 和 AMD 投的不是下一個 ChatGPT？答案可能�
 publishDate: "2026-07-02T08:00:00+08:00"
 category: "tech"
 subcategory: "industry-tech"
-tags: ["世界模型", "實體 AI", "Odyssey 募資", "AI 基礎建設", "台灣供應鏈"]
+tags:
+  - "生成式AI"
+  - "機器人"
+  - "新創"
+  - "AI基礎建設"
+  - "供應鏈"
 coverImage: "covers/odyssey-world-models-physical-ai-moat.webp"
 coverAlt: "象徵創投資金從聊天機器人轉向世界模型與實體 AI 基礎層的抽象示意"
 coverImageCredit: "Photo by Conny Schneider on Unsplash"

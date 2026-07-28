@@ -5,7 +5,10 @@ description: "沙拉油苯駢芘超標事件引發關注，本文解析苯駢芘
 publishDate: 2026-07-26
 category: health
 subcategory: preventive
-tags: ["苯駢芘", "沙拉油", "食品污染物", "油脂選購", "廚房安全"]
+tags:
+  - "食品安全"
+  - "營養"
+  - "環境汙染"
 author: "luo-yang"
 coverImage: "covers/appi-news-396.webp"
 coverAlt: "廚房料理台上放著食用油瓶與新鮮食材，呈現日常用油情境"

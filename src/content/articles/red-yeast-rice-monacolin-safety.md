@@ -5,7 +5,11 @@ description: "紅麴常被當成『天然無害的降血脂藥替代品』，但
 publishDate: 2026-07-26T20:00:00+08:00
 category: health
 subcategory: supplement-regulation
-tags: ["紅麴", "降血脂", "monacolin K", "保健食品", "食品安全", "保健食品聰明選"]
+tags:
+  - "保健食品"
+  - "健檢報告"
+  - "心血管健康"
+  - "食品安全"
 author: "luo-yang"
 coverImage: "covers/red-yeast-rice-monacolin-safety.webp"
 coverAlt: "紅麴保健食品、monacolin K 與 statin 安全性的示意"

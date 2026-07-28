@@ -6,7 +6,11 @@ excerpt: "企業手上不缺 agent，缺的是有人把它們統一中控。但�
 publishDate: "2026-07-11T08:00:00+08:00"
 category: "tech"
 subcategory: "digital-tools"
-tags: ["AI agent", "多代理編排", "企業 AI 治理", "Cognizant", "ServiceNow"]
+tags:
+  - "AI agent"
+  - "AI治理"
+  - "企業經營"
+  - "數位轉型"
 coverImage: "covers/enterprise-agent-orchestration-control-tower.webp"
 coverAlt: "象徵企業把跨廠牌 AI agent 匯進單一編排層與中控台的網路操作中心示意"
 coverImageCredit: "Photo by Fernando Narvaez on Pexels"

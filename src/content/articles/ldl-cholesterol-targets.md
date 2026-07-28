@@ -5,7 +5,9 @@ description: "LDL 壞膽固醇沒有全民統一標準，落在健檢參考值�
 publishDate: 2026-07-18T20:00:00+08:00
 category: health
 subcategory: preventive
-tags: ["膽固醇", "LDL", "血脂", "紅麴", "健檢報告", "看懂健檢報告"]
+tags:
+  - "健檢報告"
+  - "保健食品"
 author: "luo-yang"
 coverImage: "covers/ldl-cholesterol-targets.webp"
 coverAlt: "健檢血脂報告與膽固醇欄位示意"

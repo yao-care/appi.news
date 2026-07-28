@@ -6,7 +6,13 @@ excerpt: "整理6月中下旬各地警察局公開新聞稿的好人好事：屏
 publishDate: "2026-06-24T03:58:01.010Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "尋人", "防詐", "山區救援", "失智症"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "協尋"
+  - "防詐"
+  - "急救常識"
+  - "失智症"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

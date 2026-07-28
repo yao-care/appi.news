@@ -6,7 +6,12 @@ excerpt: "以前一家公司配一顆模型：Google 是 Gemini、OpenAI 是 GPT
 publishDate: "2026-07-04T08:00:00+08:00"
 category: "tech"
 subcategory: "software-products"
-tags: ["微軟 Foundry", "MAI-Code-1-Flash", "多模型平台", "模型商品化", "企業 AI 選型"]
+tags:
+  - "數位轉型"
+  - "生成式AI"
+  - "消費趨勢"
+  - "AI治理"
+  - "企業經營"
 coverImage: "covers/microsoft-foundry-multi-model-optionality.webp"
 coverAlt: "象徵雲端平台同時上架上萬個 AI 模型、走向去單一供應商的抽象網絡示意"
 coverImageCredit: "Photo by Conny Schneider on Unsplash"

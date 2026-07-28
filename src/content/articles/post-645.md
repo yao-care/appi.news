@@ -6,7 +6,10 @@ excerpt: "泛美衛生組織局長Jarbas Barbosa於2026年3月26日紐約第三�
 publishDate: "2026-03-26T09:00:00+08:00"
 category: "international"
 subcategory: "international-organizations"
-tags: ["疫情防備", "PAHO", "初級衛生保健", "全球衛生", "PPPR", "地方衛生系統"]
+tags:
+  - "傳染病防治"
+  - "公共衛生"
+  - "預防醫學"
 highlights:
   - "PAHO 2025年監測分析逾180萬個信號，辨識出128起公衛事件，顯示地方即時監測能量的戰略價值"
   - "Barbosa局長在紐約明確點名：缺乏社區實驗室與基層醫療人力，防疫將永遠仰賴事後應急而非預防"

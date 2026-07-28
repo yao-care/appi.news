@@ -6,7 +6,11 @@ excerpt: "根據ION Analytics Mergermarket數據，2025年北美資安併購市�
 publishDate: "2025-07-01T10:00:00+08:00"
 category: "tech"
 subcategory: "security"
-tags: ["資安", "併購", "AI", "估值", "北美市場", "台灣資安"]
+tags:
+  - "資安"
+  - "新創"
+  - "地緣政治"
+  - "AI"
 highlights:
   - "2025年北美資安M&A交易金額達629億美元，Google以320億美元收購Wiz創下單筆資安交易紀錄"
   - "2026年Q1交易活動急速降溫，買家重新評估AI顛覆下資安資產的防禦性"

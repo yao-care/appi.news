@@ -6,7 +6,10 @@ excerpt: "柯達承認外部人士短暫存取有限資料，ShinyHunters 卻喊
 publishDate: "2026-07-12T08:00:00+08:00"
 category: "tech"
 subcategory: "security"
-tags: ["ShinyHunters", "柯達資料外洩", "第三方整合資安", "OAuth 供應鏈攻擊", "企業資安應變"]
+tags:
+  - "資安"
+  - "供應鏈"
+  - "企業經營"
 coverImage: "covers/kodak-shinyhunters-third-party-integration-breach.webp"
 coverAlt: "柯達遭駭客入侵、勒索集團 ShinyHunters 聲稱握有逾 220 萬筆顧客資料，第三方平台整合成資料外洩破口的示意"
 coverImageCredit: "Photo by FlyD on Unsplash"

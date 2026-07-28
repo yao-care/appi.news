@@ -5,7 +5,9 @@ description: "「少添加」「無添加」和「沒有殘留」是兩回事。
 publishDate: 2026-07-08
 category: health
 subcategory: supplement-regulation
-tags: ["保健食品檢驗報告", "少添加", "重金屬殘留", "農藥殘留", "第三方檢驗"]
+tags:
+  - "保健食品"
+  - "食品安全"
 author: "appi-editorial"
 coverImage: "covers/supplement-lab-report.webp"
 coverAlt: "實驗室檢驗人員判讀保健食品品質分析報告的畫面"

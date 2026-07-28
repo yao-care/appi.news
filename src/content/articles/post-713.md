@@ -6,7 +6,12 @@ excerpt: "根據CB Insights《State of Venture 2025》報告，2025年全球AI�
 publishDate: "2026-01-08T09:00:00+08:00"
 category: "finance"
 subcategory: "investing-literacy"
-tags: ["創投", "AI投資", "CB Insights", "供應鏈", "企業創投"]
+tags:
+  - "創投"
+  - "新創"
+  - "供應鏈"
+  - "企業經營"
+  - "AI"
 highlights:
   - "2025年全球AI創投達2,258億美元，佔整體4,693億美元的48.12%，為有紀錄以來最高比例"
   - "OpenAI、Anthropic、Scale AI、xAI四家公司年度累計募資均破百億美元，AI資金高度集中"

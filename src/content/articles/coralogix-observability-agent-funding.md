@@ -6,7 +6,11 @@ excerpt: "資本正在賭一件事：AI agent 進生產環境後，需要有人�
 publishDate: "2026-07-09T08:00:00+08:00"
 category: "tech"
 subcategory: "startup"
-tags: ["可觀測性", "AI agent", "Coralogix 募資", "AI 基礎建設", "台灣軟體"]
+tags:
+  - "資安"
+  - "AI agent"
+  - "新創"
+  - "AI基礎建設"
 coverImage: "covers/coralogix-observability-agent-funding.webp"
 coverAlt: "象徵資本流入可觀測性基礎建設、可觀測性成為 AI 時代吸金基建的抽象網路示意"
 coverImageCredit: "Photo by Conny Schneider on Unsplash"

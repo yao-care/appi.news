@@ -6,7 +6,11 @@ excerpt: "一套信箱系統同時服務六家 ISP，一個第三方軟體的未
 publishDate: "2026-07-13T08:00:00+08:00"
 category: "tech"
 subcategory: "security"
-tags: ["KDDI 外洩", "資安", "供應鏈風險", "撞庫攻擊", "個資保護"]
+tags:
+  - "資安"
+  - "韓國"
+  - "供應鏈"
+  - "個資保護"
 coverImage: "covers/kddi-email-breach-shared-infrastructure.webp"
 coverAlt: "資料中心機房伺服器與網路線，象徵多家 ISP 共用的信箱基礎設施"
 coverImageCredit: "Photo by Brett Sayles on Pexels"

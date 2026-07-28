@@ -7,14 +7,11 @@ publishDate: "2026-07-01"
 category: health
 subcategory: medical
 tags:
-  - 玻尿酸
-  - PRP
-  - 類固醇
-  - 膝關節注射
-  - 退化性關節炎
-  - 再生醫療
-  - 健保給付
-  - 增生療法
+  - "代謝健康"
+  - "復健治療"
+  - "骨骼關節"
+  - "再生醫療"
+  - "健保"
 author: appi-editorial
 coverImage: https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1080&q=80&fm=jpg&fit=max
 coverAlt: 醫療人員準備注射針劑,示意膝關節注射治療

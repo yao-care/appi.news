@@ -6,7 +6,9 @@ publishDate: 2026-06-18
 updatedDate: 2026-06-18
 category: health
 subcategory: preventive
-tags: ["熱傷害", "中暑", "熱衰竭", "戶外安全", "高溫危害", "預防"]
+tags:
+  - "極端高溫"
+  - "居家安全"
 author: "appi-editorial"
 coverImage: "covers/appi-news-170.webp"
 coverAlt: "戶外工作者在高溫環境下的休息補水場景"

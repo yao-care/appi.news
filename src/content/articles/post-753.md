@@ -6,7 +6,10 @@ excerpt: "Worldpanel by Numerator發布《2026台灣民生消費十大趨勢》�
 publishDate: "2026-02-09T09:00:00+08:00"
 category: "lifestyle"
 subcategory: "consumer"
-tags: ["FMCG", "消費趨勢", "Worldpanel", "一次購足", "電商通路", "台灣消費"]
+tags:
+  - "消費趨勢"
+  - "食品安全"
+  - "電商"
 highlights:
   - "Worldpanel預估2026年台灣FMCG市場銷額年增4.8%，高價化與產品升級為主要驅動力"
   - "過去三年消費者單趟購買金額正成長、購買頻率下降，「一次購足」成為主流購物模式"

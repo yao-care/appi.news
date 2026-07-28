@@ -5,7 +5,10 @@ description: "老年跌倒每年奪走全球逾68萬條生命。骨質疏鬆讓�
 publishDate: 2026-06-18
 category: health
 subcategory: tcm-integrative
-tags: ["老年跌倒預防", "骨質疏鬆", "居家安全", "跌倒風險", "老人骨折"]
+tags:
+  - "高齡健康"
+  - "骨骼關節"
+  - "居家安全"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-191.webp"
 coverAlt: "長者在設有扶手的明亮居家環境中安全行走"

@@ -5,7 +5,10 @@ description: "精準營養（個人化營養）指依飲食、生活型態與檢
 publishDate: 2026-07-08
 category: health
 subcategory: preventive
-tags: ["精準營養", "個人化營養", "保健食品趨勢", "營養檢測", "預防醫學"]
+tags:
+  - "營養"
+  - "保健食品"
+  - "預防醫學"
 author: "appi-editorial"
 coverImage: "covers/precision-nutrition.webp"
 coverAlt: "一桌色彩豐富的原型食物與蔬果，象徵依個人需求量身搭配的精準營養概念"

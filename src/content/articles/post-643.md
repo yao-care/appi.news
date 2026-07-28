@@ -6,7 +6,11 @@ excerpt: "2026年ASCO年會上，Revolution Medicines的daraxonrasib三期RASolu
 publishDate: "2026-06-15T00:23:33+08:00"
 category: "international"
 subcategory: "global-focus"
-tags: ["胰臟癌", "RAS抑制劑", "精準醫療", "ASCO2026", "台灣生技"]
+tags:
+  - "癌症防治"
+  - "心血管健康"
+  - "藥物研發"
+  - "生技產業"
 highlights:
   - "RASolute 302三期試驗：daraxonrasib組中位存活期13.2個月對比化療組6.7個月，風險比0.40"
   - "無疾病進展存活期7.3個月對比化療3.5個月，客觀緩解率33.2%對比11.8%"

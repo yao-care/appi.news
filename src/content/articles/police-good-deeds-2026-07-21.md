@@ -6,7 +6,12 @@ excerpt: "整理臺北市政府警察局公開新聞稿的好人好事：中正�
 publishDate: "2026-07-21T04:47:42.212Z"
 category: "lifestyle"
 subcategory: "life"
-tags: ["好人好事", "警察", "暖聞", "臺北市", "走失", "失智"]
+tags:
+  - "好人好事"
+  - "警察"
+  - "台北市"
+  - "協尋"
+  - "失智症"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"

@@ -6,7 +6,10 @@ excerpt: "台灣證券交易所與證券櫃買中心7月3日、17日舉辦「永
 publishDate: "2026-07-23T01:42:54.046Z"
 category: "focus"
 subcategory: "trend-watch"
-tags: ["永續揭露", "IFRS S1", "IFRS S2", "綠色證券認證", "確信機構", "證交所", "ESG"]
+tags:
+  - "ESG"
+  - "綠色金融"
+  - "資本市場"
 author: "appi-editorial"
 contentType: "news"
 sourceType: "wire"

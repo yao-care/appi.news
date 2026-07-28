@@ -6,7 +6,9 @@ excerpt: "8/2 真正長出牙齒的是 GPAI 執法權，高風險義務則被緩
 publishDate: "2026-06-19T00:57:51.695Z"
 category: "tech"
 subcategory: "tech-policy"
-tags: ["歐盟 AI 法", "GPAI 通用型 AI", "AI Act 執法", "高風險 AI 系統", "台灣 AI 基本法"]
+tags:
+  - "AI治理"
+  - "歐盟"
 coverImage: "covers/eu-ai-act-gpai-enforcement-taiwan-alignment.webp"
 coverAlt: "象徵歐盟 AI 法執法權上路、對通用型 AI 監管的政策氛圍"
 coverImageCredit: "Photo by Christian Lue on Unsplash"

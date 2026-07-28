@@ -55,6 +55,7 @@ description: APPI News 科技類日更引擎。輸入 /newsroom 後找議題，�
 5. 封面圖：同法 `node scripts/get-image.mjs --topic "<本篇主題>" --context "<摘要>" --query "<英文關鍵字>" --out public/covers/<slug>.webp`（封面多為概念圖，預設走圖庫優先；若封面主體是人物才加 `--people`，並同樣帶 `--caption/--alt/--article-context`）。frontmatter 填 `coverImage: "covers/<slug>.webp"` + `coverAlt`；**若回傳 `mode:"stock"`，另填 `coverImageCredit: "<回傳的 credit>"`**（圖庫署名）。
    - **封面必須是「獨立的一張圖」，不得與內文任何一張圖相同**（絕不可把內文第一張圖直接拿來當封面，或反過來）。封面用本篇整體主題取材、內文圖各配各段——重複會被配圖 gate 擋下不發佈。
 6. frontmatter：`slug / title / description / category / subcategory / tags / highlights / references / author: "lightman" / sourceType: "ai-assisted" / disclaimerType`。先設 `status: "draft"`（排程待步驟四）。
+   - **tags 規範（鐵律）**：`tags` 是**受控詞彙表**，不是自由關鍵詞欄位。**寫 frontmatter 前先讀 `src/config/tags.ts`**，只能從裡面的 `name` 挑，挑 3～5 個（上限 8）。**挑不到就少掛，絕不可自己發明近義詞**（「醫療AI」已經存在就不要寫「AI醫療」「醫療 AI 風險」）。具體關鍵詞交給 title／description／內文承載，不要塞進 tags。表外的標籤會被 `scripts/check-tags.mjs` 當場擋下、整篇不發佈。為什麼＝`docs/lessons/tag-taxonomy.md`。
    - **slug 規範（鐵律）**：必為**語意化英文 kebab-case**（小寫、`a-z0-9`、連字號），3～6 個單字、一眼看得出主題；專有名詞用通用英文（台積電=`tsmc`、輝達/NVIDIA=`nvidia`、鴻海=`foxconn`、世界盃=`world-cup`、聯準會=`fed`、歐盟=`eu`、健保=`nhi`、中職=`cpbl`）。**禁止** `post-NNN`、流水號、中文、拼音、`article`/`news` 這類無意義 slug。frontmatter 的 `slug` 與檔名 `<slug>.md` 必須一致。先用 `ls src/content/articles/ | grep <slug>` 確認不撞既有 slug，撞了就換角度。
 7. **去 AI 腔文風複查**（產檔前必過，違反即改；`node scripts/check-content.mjs <檔>` 是統一內容守門引擎，兩級判定：ERROR 硬 tell 會 exit 1 擋 build、WARN 軟訊號單檔跨 ≥3 層才升 ERROR，語氣類多屬 WARN 仍靠這份清單自檢）：
    - 禁破折號（— / ── / --），改句號、逗號、冒號或拆句。**（check-content 硬擋，appi SITE 特化 ERROR）**
@@ -98,4 +99,4 @@ description: APPI News 科技類日更引擎。輸入 /newsroom 後找議題，�
 - 全文繁中 + 台灣用語；去 AI 腔；每段必配圖（概念圖先圖庫、人物圖直接生成）且人物=台灣人。
 - 所有資料附 inline 來源超連結；全文超連結逐條查證可連線，不留死連結。
 - 結論是使用者給的，不得稀釋成中性；保持 CΛ 的人格與跨文一致。
-- AEO：每篇務必填 `tags`（餵 keywords 與 RSS／llms 索引）；正文第一段前 2～3 句先給可獨立成立的結論（步驟三 2）；health／finance／tech 標配「常見問題」區段，格式須與 `extractFaq` 100% 相符（原生 HTML `<h2>常見問題</h2>` + `<p><strong>問句？</strong><br>答案</p>`，步驟三 8.5）以觸發 FAQPage 結構化資料。
+- AEO：每篇務必填 `tags`，且**只能取自 `src/config/tags.ts` 的受控詞彙表**（餵 keywords、RSS／llms 索引與標籤 hub 頁；步驟三 6 有完整規範）；正文第一段前 2～3 句先給可獨立成立的結論（步驟三 2）；health／finance／tech 標配「常見問題」區段，格式須與 `extractFaq` 100% 相符（原生 HTML `<h2>常見問題</h2>` + `<p><strong>問句？</strong><br>答案</p>`，步驟三 8.5）以觸發 FAQPage 結構化資料。

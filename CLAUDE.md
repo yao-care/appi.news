@@ -23,7 +23,7 @@
 | 你要做的事 | 情境 | 依序讀（事實來源） |
 |---|---|---|
 | 優化/更新專案本體：效能、版面、schema、build、部署 | 🛠 開發 | 本檔 §動手前驗證＋§效能鐵則 → [`PERFORMANCE.md`](./PERFORMANCE.md)（動字型/CSS/圖/build 前必讀）→ [`README.md`](./README.md) §開發 |
-| 手動新增內容：文章、作者、專欄、分類 | ✍ 內容 | [`README.md`](./README.md) §新增內容 → `src/content.config.ts`、`src/config/categories.ts`（schema/分類唯一準據） |
+| 手動新增內容：文章、作者、專欄、分類 | ✍ 內容 | [`README.md`](./README.md) §新增內容 → `src/content.config.ts`、`src/config/categories.ts`、`src/config/tags.ts`（schema/分類/標籤唯一準據） |
 | 自動發文：選題雷達 → Slack → 自動產文 → 排程上線 | 🤖 自動化 | 本檔 §自動發文 pipeline → `.claude/skills/tech-radar/`＋`.claude/skills/newsroom/` |
 | 了解網路曝光量：流量、搜尋曝光、AI 轉介、週報 | 📊 數據 | 本檔 §數據與網路曝光量 → `.claude/skills/weekly-report/SKILL.md` → [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
 
@@ -38,6 +38,7 @@
 
 - 改 schema / 文章欄位前，先看 `src/content.config.ts`（四個 collection 的 zod schema、enum 與預設值的唯一事實來源）。
 - 改分類 / 子分類前，先看 `src/config/categories.ts`（`CATEGORY_SLUGS` 是 `category` 的型別約束源；新增 slug 後文章才能用）。
+- **標籤是受控詞彙表，不是自由關鍵詞欄位**：`src/config/tags.ts` 的 `TAG_VOCABULARY` 是 `tags` 的 `z.enum` 約束源（同 `CATEGORY_SLUGS` 的機制），表外標籤會讓 build 直接失敗。要掛標籤先讀它、只能從裡面挑，挑不到就少掛，**不要發明近義詞**；真要新增看該檔檔頭流程。為什麼＝[`docs/lessons/tag-taxonomy.md`](./docs/lessons/tag-taxonomy.md)。
 - 連結一律走 `src/utils/url.ts` 的 `url()` / `absoluteUrl()` / `asset()`，**不要逐檔硬寫網址**（換網域才不會散落）。
 - 報告現況前先跑 CLI 取得最新結果，不要憑記憶；CLI 輸出直接貼，不要重排成表格。
 
@@ -169,6 +170,7 @@ tech-radar（cron 每日 UTC 21:20＝台北 05:20；2026-07-07 曾停用、2026-
 |---|---|
 | 文章/作者/專欄/專題 schema、enum | `src/content.config.ts` |
 | 分類 / 子分類 | `src/config/categories.ts` |
+| 標籤（受控詞彙表） | `src/config/tags.ts`（gate＝`scripts/check-tags.mjs`，接在 build 與七條產線自檢） |
 | 站名 / 品牌 / OG 預設 | `src/config/site.ts` |
 | 網址 / base / 換網域 | `src/utils/url.ts` + `astro.config.mjs`（`SITE` / `BASE`） |
 | 效能規則 | `PERFORMANCE.md` |

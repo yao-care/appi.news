@@ -6,7 +6,10 @@ excerpt: "ART TAIPEI 2025第32屆台北國際藝術博覽會10月23-27日於世�
 publishDate: "2025-10-10T10:00:00+08:00"
 category: "lifestyle"
 subcategory: "reading-leisure"
-tags: ["藝術博覽會", "藝術收藏", "台北藝術週", "當代藝術", "藝術市場"]
+tags:
+  - "藝術市場"
+  - "文化藝術"
+  - "台北市"
 highlights:
   - "ART TAIPEI 2025第32屆，10月23-27日台北世貿一館，127家來自六國畫廊參展"
   - "台北藝術週Taipei Art Week橫跨10月18日至11月2日，串聯全台藝術場館活動"

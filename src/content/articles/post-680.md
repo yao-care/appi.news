@@ -6,7 +6,12 @@ excerpt: "NVIDIA執行長黃仁勳於2026年6月1日GTC台北主題演講中宣�
 publishDate: "2026-06-03T09:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["NVIDIA", "GTC台北", "代理人AI", "AI工廠", "台灣供應鏈"]
+tags:
+  - "AI基礎建設"
+  - "科技政策"
+  - "台北市"
+  - "AI agent"
+  - "供應鏈"
 highlights:
   - "黃仁勳在台北音樂中心宣告「代理人AI已到來，實用AI已到來」，標誌AI從實驗走入商業落地"
   - "NVIDIA發布DSX AI工廠平台，主張算力直接等同於營收，AI工廠成全球新型基礎設施"

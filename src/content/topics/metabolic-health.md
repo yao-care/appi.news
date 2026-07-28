@@ -3,7 +3,7 @@ title: "代謝與生活習慣病"
 description: "尿酸、血壓、脂肪肝、內臟脂肪、含糖飲料、超加工食品，這些代謝與生活習慣病的題目，網路上迷思特別多。這個主題用實證與台灣在地數據把它們一個個講清楚：什麼時候該吃藥、什麼時候該量、什麼時候是自己嚇自己。"
 category: "health"
 coverImage: "og/health.png"
-tags: ["代謝健康", "代謝症候群"]
+tags: ["代謝健康", "糖尿病"]
 featured: true
 status: "active"
 articles: ["uric-acid-gout-treatment", "ultra-processed-food-nova", "fatty-liver-masld-reversal", "sugary-drinks-fructose-metabolism", "waist-visceral-fat-vs-bmi", "home-blood-pressure-722", "intermittent-fasting-168-science", "hypertension-dash-diet-menu", "metabolic-syndrome-diet-strategy", "sweeteners-safety-label-guide"]

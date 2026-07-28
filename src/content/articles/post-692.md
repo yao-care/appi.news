@@ -6,7 +6,12 @@ excerpt: "全球最大IT基礎架構服務商Kyndryl基金會2026年4月宣布�
 publishDate: "2026-01-15T08:00:00+08:00"
 category: "tech"
 subcategory: "security"
-tags: ["資安", "AI", "人才培育", "Kyndryl", "台灣資安", "供應鏈安全"]
+tags:
+  - "資安"
+  - "人才競爭"
+  - "數位轉型"
+  - "供應鏈"
+  - "AI"
 highlights:
   - "Kyndryl基金會2026年補助計畫擴展至13國、14家非營利組織，預計影響全球逾10萬人次"
   - "補助重點聚焦資安與AI技能培育，涵蓋弱勢族群、青年就業與政府級數位技能計畫"

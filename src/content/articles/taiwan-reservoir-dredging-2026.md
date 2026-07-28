@@ -5,7 +5,9 @@ description: "經濟部水利署公布，115年上半年全台主要供水水庫
 publishDate: "2026-07-25T01:44:01.770Z"
 category: "focus"
 subcategory: "policy-watch"
-tags: ["水庫清淤", "水資源", "水利署", "供水韌性", "防洪", "曾文水庫", "高屏溪攔河堰", "抗旱"]
+tags:
+  - "水資源"
+  - "經濟部"
 author: "appi-editorial"
 coverImage: "covers/taiwan-reservoir-dredging-2026-cover.webp"
 coverAlt: "抽泥船在水庫進行清淤作業，象徵台灣水庫維持庫容的工程手段（示意圖）"

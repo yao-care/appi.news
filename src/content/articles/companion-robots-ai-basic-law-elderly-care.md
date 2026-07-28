@@ -6,7 +6,12 @@ excerpt: "CES 2026 把居家與陪伴機器人推上主角，但要不要交給�
 publishDate: "2026-06-16T20:09:20+08:00"
 category: "tech"
 subcategory: "industry-tech"
-tags: ["居家陪伴機器人", "人工智慧基本法", "長者照護", "AI 風險分類", "資料治理"]
+tags:
+  - "長照"
+  - "機器人"
+  - "AI治理"
+  - "高齡健康"
+  - "資料治理"
 coverImage: "covers/companion-robots-ai-basic-law-elderly-care.webp"
 coverAlt: "高齡長者在溫暖明亮的居家客廳，旁邊有一台居家陪伴機器人"
 author: "lightman"

@@ -6,7 +6,9 @@ excerpt: "200 萬 token 是量產最長脈絡，但廣告脈絡不等於可用�
 publishDate: "2026-07-12T08:00:00+08:00"
 category: "tech"
 subcategory: "ai"
-tags: ["長脈絡視窗", "Gemini 3.5 Pro", "RAG", "AI 選型", "lost in the middle"]
+tags:
+  - "生成式AI"
+  - "AI治理"
 coverImage: "covers/long-context-landing-scenarios.webp"
 coverAlt: "象徵超長脈絡 AI 模型把大量資料串流進單一視窗的抽象示意"
 coverImageCredit: "Photo by Pachon in Motion on Pexels"

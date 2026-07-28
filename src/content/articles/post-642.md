@@ -6,7 +6,11 @@ excerpt: "NOAA最新數據顯示，2026年4月全球海洋熱浪覆蓋率達27%�
 publishDate: "2026-06-15T00:23:33+08:00"
 category: "international"
 subcategory: "global-trends"
-tags: ["海洋熱浪", "氣候變遷", "台灣漁業", "颱風", "聖嬰現象"]
+tags:
+  - "氣候變遷"
+  - "極端高溫"
+  - "寵物與動物"
+  - "颱風"
 highlights:
   - "2026年4月全球海洋熱浪覆蓋率27%，超越同期預測23%，Climate Impact Company估計年底前可達45%"
   - "北太平洋海洋熱浪NEP25A延伸近5,000英里，與2013至2015年「Blob」規模相當甚至更大"

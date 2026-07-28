@@ -344,6 +344,12 @@ async function main() {
     }
     // 去 AI 腔硬 gate：命中機械可判的簽名句（破折號／自我辯白旁白）就剔除這篇，不拖垮整批。
     // 為什麼＝docs/lessons/ai-tone-gate.md。
+    const _tags = spawnSync('node', ['scripts/check-tags.mjs', join(ARTICLES_DIR, `${x.slug}.md`)], { encoding: 'utf8' });
+    if (_tags.status !== 0) {
+      console.log(`  ⚠️ 剔除 ${x.slug}：標籤不在受控詞彙表，不發這篇、不拖垮整批\n${_tags.stdout || _tags.stderr || ''}`);
+      dropArticle(x.slug, x.action);
+      continue;
+    }
     const _tone = spawnSync('node', ['scripts/check-content.mjs', join(ARTICLES_DIR, `${x.slug}.md`)], { encoding: 'utf8' });
     if (_tone.status !== 0) {
       console.log(`  ⚠️ 剔除 ${x.slug}：去 AI 腔硬 tell，不發這篇、不拖垮整批\n${_tone.stdout || _tone.stderr || ''}`);

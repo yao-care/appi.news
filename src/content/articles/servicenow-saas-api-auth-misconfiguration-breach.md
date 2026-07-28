@@ -6,7 +6,11 @@ excerpt: "ServiceNow 6/9 揭露一個 Scripted REST 端點因預設不需驗證�
 publishDate: "2026-06-18T08:00:00+08:00"
 category: "tech"
 subcategory: "security"
-tags: ["SaaS 資安", "API 認證設定錯誤", "ServiceNow 漏洞", "企業資料外洩", "AI agent 權限治理"]
+tags:
+  - "資安"
+  - "數位轉型"
+  - "企業經營"
+  - "AI agent"
 coverImage: "covers/servicenow-saas-api-auth-misconfiguration-breach.webp"
 coverAlt: "SaaS API 認證設定錯誤成為企業資料外洩主流管道，ServiceNow 未驗證端點外洩客戶資料的示意"
 author: "appi-editorial"

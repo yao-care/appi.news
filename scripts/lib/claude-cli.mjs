@@ -3,7 +3,7 @@
 //   · runClaudeAgentText   — 帶工具（Read/vision）的 agent（生成圖視覺自檢，Haiku）
 //
 // 移植自 /root/agent.writer/scripts/lib/claude-cli.ts。差異：
-//   - appi 一律用 `claude-appi`（營運帳號，與全站自動化一致）；不解析 usage 入帳。
+//   - appi 一律用 `claude-appi`（2026-07-28 起全站唯一帳號，互動與自動化共用）；不解析 usage 入帳。
 //   - 模型 id 由呼叫端明確帶入（'claude-sonnet-5' / 'haiku'），不做別名解析。
 //   - 巢狀防呆：get-image.mjs 可能被外層 claude 會話（newsroom-write）以 Bash 叫起，
 //     這裡再 spawn claude-appi ＝巢狀；刪掉 CLAUDECODE 讓子進程當獨立會話（同 writer）。

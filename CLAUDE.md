@@ -98,12 +98,14 @@
 - 日更走 `/newsroom` skill；作者人格與跨文記憶在 `.claude/skills/newsroom/persona.md`、`author-memory.json`。
 - 新文必填 `tags`（餵 keywords / RSS / llms 索引）；文章規格與欄位以 `src/content.config.ts` 為唯一準據。
 
-## 雙帳號與模型政策（自動化必讀）
+## 帳號與模型政策（自動化必讀）
 
-兩個 CLI 帳號分工，**別混用**：
+**單一帳號：`claude-appi`（`CLAUDE_CONFIG_DIR=~/.claude-appi`）。**（2026-07-28 起）互動開發、commit、改 crontab、cron／自動產文，全部走同一個帳號；原本的「dev 用 `claude`／營運用 `claude-appi`」雙帳號分工**已取消**。
 
-- **`claude`（開發）**：人在 dev 目錄 `/root/appi.news` 互動開發、commit、改 crontab。
-- **`claude-appi`（營運，`CLAUDE_CONFIG_DIR=~/.claude-appi`）**：所有 cron／自動產文走它（在 publisher checkout 跑）。
+因此有兩個推論要記著：
+
+- **用量池共用**：互動開發花掉的額度會直接吃到自動產線的配額。撞週限時 cron 會整批空跑（且 exit 0 靜默，見下），所以大批量互動作業前先想一下當日還有沒有產線要跑。
+- **憑證是單點**：`~/.claude-appi/.credentials.json` 失效＝互動與自動化一起啞掉（2026-07-26 出過事，四站同時掛）。無備份，只能 `CLAUDE_CONFIG_DIR=/root/.claude-appi claude` → `/login` 重新登入。
 
 **模型**：Opus 已退場。所有 `claude-appi` 呼叫**一律明確帶 `--model`**——產文／選題／週報用 **Sonnet 5（`claude-sonnet-5`）**、newsroom 觀點查核 gate 用 **Haiku**。全域預設仍是 Opus，**不帶 `--model` 就會默默吃 Opus 燒爆週額度**（出過事，見 [`docs/lessons/automation-model-and-account-split.md`](./docs/lessons/automation-model-and-account-split.md)）。
 

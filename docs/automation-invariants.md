@@ -5,7 +5,7 @@
 > - **排程／模型總表** → [`docs/SERVER_HANDOFF.md`](./SERVER_HANDOFF.md) §cron 總表（時間與模型的唯一正本）。
 
 ## 帳號與模型
-- 自動化一律用 **`claude-appi`**（營運帳號，`CLAUDE_CONFIG_DIR=~/.claude-appi`）；人在 dev 互動開發才用 `claude`。
+- **全站單一帳號 `claude-appi`**（`CLAUDE_CONFIG_DIR=~/.claude-appi`）：cron／自動產文與人的互動開發都走它（2026-07-28 起取消雙帳號分工）。用量池與憑證因此共用——互動作業會吃到產線配額，憑證失效則兩邊一起啞。
 - 每個 `claude-appi -p` 呼叫**必帶 `--model`**：產文／選題／週報 → `claude-sonnet-5`、newsroom viewpoint 查核 gate → `haiku`。**不帶就會吃全域預設 Opus、燒爆週用量上限**（出過事 → [`automation-model-and-account-split.md`](./lessons/automation-model-and-account-split.md)）。
 - **判斷成功不能只看 exit code**：`claude-appi` 撞用量上限／拒答會 **exit 0** 且只印 stdout。`.sh` 用失敗 regex（含 `weekly limit|usage limit`）、`.mjs` 掃 `stdout` 限額字樣，才算失敗。
 

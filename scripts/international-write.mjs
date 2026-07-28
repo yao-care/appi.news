@@ -9,13 +9,14 @@
 
 import { readFileSync, readdirSync, writeFileSync, existsSync, rmSync, mkdirSync } from 'node:fs';
 import { homedir } from 'node:os';
-import { basename, dirname, join } from 'node:path';
+import { dirname, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildIntlPrompt, parseIntlResult } from './lib/international-write.mjs';
 import { dedupeByEvent, filterSeen, mergeSeen, buildTriagePrompt, parseTriage } from './lib/international-gate.mjs';
 import { runClaudeOnce } from './lib/claude-cli.mjs';
+import { salvageArticle } from './lib/changed-articles.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
 
@@ -167,22 +168,6 @@ async function runGate(stories, recent, today) {
   return kept;
 }
 
-/**
- * 工作區目前有變動的文章檔 → [{slug, action}]（未追蹤＝new、已追蹤有改＝update）。
- * 用來在「模型漏報 INTL_RESULT」時把它其實已經寫好的稿撿回來（見寫作迴圈註解）。
- */
-function changedArticles() {
-  const out = [];
-  for (const line of sh('git', ['status', '--porcelain', '--', ARTICLES_DIR]).split('\n')) {
-    const m = line.trim().match(/^(\?\?|[AMR]+)\s+(.+)$/);
-    if (!m) continue;
-    const path = m[2].replace(/^"(.*)"$/, '$1');
-    if (!path.endsWith('.md')) continue;
-    out.push({ slug: basename(path, '.md'), action: m[1] === '??' ? 'new' : 'update' });
-  }
-  return out;
-}
-
 /** 跑選題引擎，回 picks {region:[stories]}。 */
 function runSelection(hours, maxPer) {
   const r = spawnSync('node', ['scripts/international-select.mjs', '--hours', String(hours), '--max', String(maxPer), '--json'], {
@@ -319,13 +304,12 @@ async function main() {
     if (v.infra) {
       wastedMs += Date.now() - t0;
       infraFails += 1;
-      const known = new Set(results.map((x) => x.slug).filter(Boolean));
-      const found = changedArticles().filter((c) => !known.has(c.slug));
-      if (found.length === 1) {
-        console.log(`  ⚠️ 無 INTL_RESULT，但工作區有寫好的 ${found[0].slug}（${found[0].action}）→ 撿回，續走既有關卡`);
-        results.push({ s, action: found[0].action, slug: found[0].slug, note: '模型漏報 INTL_RESULT，由工作區撿回' });
+      const found = salvageArticle(ARTICLES_DIR, results.map((x) => x.slug).filter(Boolean));
+      if (found) {
+        console.log(`  ⚠️ 無 INTL_RESULT，但工作區有寫好的 ${found.slug}（${found.action}）→ 撿回，續走既有關卡`);
+        results.push({ s, action: found.action, slug: found.slug, note: '模型漏報 INTL_RESULT，由工作區撿回' });
       } else {
-        console.log(`  SKIP｜${v.note}${found.length > 1 ? `（工作區 ${found.length} 個未歸屬變動檔，不撿）` : '（工作區也沒有稿）'}`);
+        console.log(`  SKIP｜${v.note}（工作區沒有可歸屬的稿）`);
         results.push({ s, ...v });
       }
       if (infraFails >= MAX_INFRA_FAILS) {

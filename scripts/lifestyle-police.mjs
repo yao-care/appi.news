@@ -13,6 +13,7 @@ import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildPolicePrompt, parsePoliceResult } from './lib/lifestyle-police.mjs';
 import { fetchPoliceCandidates } from './lib/police-fetch.mjs';
+import { salvageArticle } from './lib/changed-articles.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
 
@@ -95,7 +96,19 @@ async function main() {
   console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
 
   const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
-  if (v.action !== 'new' || !produced) { console.log('✓ 本次無產出（各家抓不到或無合格好人好事）。'); return; }
+  // 解析不出 POLICE_RESULT＝故障，不是「無合格好人好事」：模型可能已把稿寫好在工作區，
+  // 舊碼會讓它隨 worktree 被刪掉（已燒的查證 token 全白費）。→ 撿回來走既有 gate。
+  if (v.infra) {
+    const found = salvageArticle(ARTICLES_DIR);
+    if (found && found.action === 'new') {
+      console.log(`  ⚠️ 無 POLICE_RESULT，但工作區有寫好的 ${found.slug} → 撿回，續走既有關卡`);
+      v.action = 'new';
+      v.slug = found.slug;
+    } else {
+      console.log(`✗ ${v.note}（工作區沒有可歸屬的稿），本次無產出。`);
+      return;
+    }
+  } else if (v.action !== 'new' || !produced) { console.log('✓ 本次無產出（各家抓不到或無合格好人好事）。'); return; }
 
   // 用系統時間蓋掉模型寫的 publishDate（模型無可靠時鐘，常把「現在」填成未來整點 → 變排程稿、
   // 不立即上線）。警消是全自動即時發，必須當下上線（同 international-write 的處理）。

@@ -5,7 +5,7 @@ description: "36歲的周天成在中國羽球公開賽奪下生涯第2座超級
 publishDate: 2026-07-28
 category: sports
 subcategory: events
-tags: ["周天成", "羽球", "奪冠", "超級1000", "年長紀錄", "中國羽球公開賽", "台灣羽球"]
+tags: ["國際賽事", "中國"]
 author: "appi-editorial"
 coverImage: "covers/appi-news-453.webp"
 coverAlt: "周天成穿著中華台北隊紅色球衣，在羽球館內高舉獎盃慶祝奪冠，背景有彩帶與場館燈光"

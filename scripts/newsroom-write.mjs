@@ -314,6 +314,15 @@ async function main() {
     die(`配圖 gate 未過，不發佈（改動留工作區待補圖）：\n  - ${imgProblems.join('\n  - ')}`);
   }
 
+  // 選題重複 gate：擋「站上已有一篇幾乎同標題」的新文（ERROR），同主題只警告不擋
+  // （新聞追蹤報導是正當的，硬擋會誤傷離岸風電那種續報）。WARN 會印進 log 供作者判斷。
+  // 為什麼＝docs/lessons/duplicate-topic-gate.md（髖關節痛被 5 個 URL 瓜分、全卡 pos 76-83）。
+  const dup = spawnSync('node', ['scripts/check-duplicate-topic.mjs', articleFile], { encoding: 'utf8' });
+  if (dup.stdout) console.log(dup.stdout);
+  if (dup.status !== 0) {
+    die(`選題重複 gate 未過，不發佈（改動留工作區待處理）：\n${(dup.stdout || '') + (dup.stderr || '')}`);
+  }
+
   // 去 AI 腔硬性 gate（只擋機械可判的簽名句：破折號／自我辯白 meta 旁白）。
   // 語氣類 tell 靠 SKILL 步驟三.7 自檢，這關只兜住模型漏掉的那幾條硬 tell。
   // 為什麼＝docs/lessons/ai-tone-gate.md（「先揭露，免得你覺得我在夾帶」上線事件）。

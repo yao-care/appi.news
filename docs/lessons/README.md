@@ -33,6 +33,7 @@
 |---|---|
 | [topical-authority-concentration.md](./topical-authority-concentration.md) | 512 篇/7 分類卡排名 18：主題權威靠「收斂」賺不是「多產」堆，具名作者+高產量≠權威（權威站外賺）；把作者收攏回打得贏的窄利基、選題從「獵熱度」改「獵可贏性」四項 gate，別再跑平行商品科技產線 |
 | [high-impression-zero-click-bot-queries.md](./high-impression-zero-click-bot-queries.md) | 高曝光零點擊不一定是 SEO 問題：氣象 App／通知的模板化查詢（非人類），改標題永遠 0 點擊，該「滅燈」不是優化；附裝置別查證法＋兩消費端 mute 機制 |
+| [duplicate-topic-gate.md](./duplicate-topic-gate.md) | `髖關節痛` 被自家 5 個 URL 瓜分全卡 pos 76-83：去重下在選題端（14 天窗、單一產線）蓋不到跨月與跨產線的重複，改下在寫入端；另查出 131 個 meta-refresh 轉址殘骸仍吃 15% 站台曝光，「轉址已處理」≠「權重已傳遞」 |
 | [google-indexing-api-gray-area.md](./google-indexing-api-gray-area.md) | 「有 GSC key 就能催收錄」是誤解；Indexing API 對新聞站非官方、200 不保證收錄 |
 | [google-news-surfaces-and-cover-image.md](./google-news-surfaces-and-cover-image.md) | Google News 2025-03 起不吃提交的 feed/section（自動抓取）；JSON-LD/og 圖指原圖非 900 顯示圖，封面 ≥1200 從來源端解 |
 | [wordpress-date-permalink-404.md](./wordpress-date-permalink-404.md) | 舊 WordPress 日期網址漏接轉址變 404，仍在流失 Google 曝光 |

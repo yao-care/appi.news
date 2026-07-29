@@ -4,6 +4,7 @@ slug: "appi-news-97"
 description: "髖關節疼痛久治不癒？張家誠醫師解析整合治療思路：從鑑別診斷、超音波導引針刀與幹針，到磁波震波協同修復，6–12週療程如何降低手術風險。"
 publishDate: 2026-06-21
 category: health
+topics: ["tcm-acupuncture-pain"]
 subcategory: tcm-integrative
 tags:
   - "復健治療"

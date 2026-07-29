@@ -9,6 +9,7 @@ tags:
   - "糖尿病"
   - "代謝健康"
 author: "huang-ziyan"
+column: "herbal-cuisine"
 coverImage: "covers/appi-news-186.webp"
 coverAlt: "新鮮粉紅蓮霧排列在木質桌面上，光澤飽滿，呈現台灣夏日常見水果樣貌"
 status: published

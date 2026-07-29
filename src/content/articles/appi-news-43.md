@@ -4,6 +4,7 @@ slug: "appi-news-43"
 description: "疼痛不只是「不舒服」，而是身體發出的系統性警訊。從疼痛觀念、身體失衡到整合醫學，了解中醫與物理治療如何共同找回平衡，而不是單純壓制訊號。"
 publishDate: 2026-07-13
 category: health
+topics: ["tcm-acupuncture-pain"]
 subcategory: tcm-integrative
 tags:
   - "疼痛治療"

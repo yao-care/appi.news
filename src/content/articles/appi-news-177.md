@@ -1,13 +1,13 @@
 ---
-title: 關於美顏針，你需要知道的 6 件事：從術前到術後修復
+title: 美顏針術後怎麼照顧？修復期禁忌與術前準備完整整理
 slug: appi-news-177
-description: 美顏針的成效，三分靠施作，七分靠前後配套。奈米銀離子噴霧、微針貼片在術前、術中、術後各有不同角色，本文完整梳理三階段照護重點。
+description: 美顏針的成效，三分靠施作，七分靠前後配套。術後 72 小時該做什麼、一週內什麼不能碰、奈米銀離子噴霧與微針貼片各自負責哪一段，本文按術前、施作中、術後三階段整理照護重點與禁忌。
 publishDate: "2026-06-22"
 category: health
+topics: ["tcm-acupuncture-pain"]
 subcategory: tcm-integrative
 tags:
   - "中醫"
-  - "傳染病防治"
   - "復健治療"
 author: huang-ziyan
 coverImage: covers/appi-news-177.webp

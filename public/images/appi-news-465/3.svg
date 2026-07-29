@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <style>
+    .title { font: bold 28px "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; fill: #1B5E4B; }
+    .subtitle { font: 16px "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; fill: #6B7B77; }
+    .label { font: bold 20px "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; fill: #1F2A28; }
+    .desc { font: 14px "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; fill: #6B7B77; }
+    .icon { font: bold 26px "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; fill: #FFFFFF; }
+    .center { font: bold 22px "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; fill: #FFFFFF; }
+  </style>
+
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+
+  <text x="480" y="50" text-anchor="middle" class="title">飛迅南市文化國小‧紅隊 團隊支援結構</text>
+  <text x="480" y="80" text-anchor="middle" class="subtitle">教練、校長、贊助商與選手陣容，並列協力共同支持</text>
+
+  <g>
+    <rect x="40"  y="140" width="160" height="230" rx="12" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+    <circle cx="120" cy="200" r="32" fill="#1B5E4B"/>
+    <text x="120" y="209" text-anchor="middle" class="icon">教</text>
+    <text x="120" y="270" text-anchor="middle" class="label">總教練</text>
+    <text x="120" y="300" text-anchor="middle" class="desc">訓練規劃</text>
+    <text x="120" y="320" text-anchor="middle" class="desc">技術指導</text>
+  </g>
+
+  <g>
+    <rect x="220" y="140" width="160" height="230" rx="12" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+    <circle cx="300" cy="200" r="32" fill="#1B5E4B"/>
+    <text x="300" y="209" text-anchor="middle" class="icon">校</text>
+    <text x="300" y="270" text-anchor="middle" class="label">校長</text>
+    <text x="300" y="300" text-anchor="middle" class="desc">行政支持</text>
+    <text x="300" y="320" text-anchor="middle" class="desc">資源整合</text>
+  </g>
+
+  <g>
+    <rect x="400" y="140" width="160" height="230" rx="12" fill="#F2F7F5" stroke="#C9A227" stroke-width="2"/>
+    <circle cx="480" cy="200" r="32" fill="#C9A227"/>
+    <text x="480" y="209" text-anchor="middle" class="icon">贊</text>
+    <text x="480" y="270" text-anchor="middle" class="label">贊助商</text>
+    <text x="480" y="300" text-anchor="middle" class="desc">經費挹注</text>
+    <text x="480" y="320" text-anchor="middle" class="desc">裝備支援</text>
+  </g>
+
+  <g>
+    <rect x="580" y="140" width="160" height="230" rx="12" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+    <circle cx="660" cy="200" r="32" fill="#2E8B6F"/>
+    <text x="660" y="209" text-anchor="middle" class="icon">男</text>
+    <text x="660" y="270" text-anchor="middle" class="label">男子隊</text>
+    <text x="660" y="300" text-anchor="middle" class="desc">選手陣容</text>
+  </g>
+
+  <g>
+    <rect x="760" y="140" width="160" height="230" rx="12" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+    <circle cx="840" cy="200" r="32" fill="#2E8B6F"/>
+    <text x="840" y="209" text-anchor="middle" class="icon">女</text>
+    <text x="840" y="270" text-anchor="middle" class="label">女子隊</text>
+    <text x="840" y="300" text-anchor="middle" class="desc">選手陣容</text>
+  </g>
+
+  <line x1="120" y1="370" x2="120" y2="430" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="300" y1="370" x2="300" y2="430" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="480" y1="370" x2="480" y2="430" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="660" y1="370" x2="660" y2="430" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="840" y1="370" x2="840" y2="430" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="120" y1="430" x2="840" y2="430" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="480" y1="430" x2="480" y2="470" stroke="#2E8B6F" stroke-width="2"/>
+
+  <rect x="360" y="470" width="240" height="70" rx="12" fill="#1B5E4B" stroke="#C9A227" stroke-width="3"/>
+  <text x="480" y="513" text-anchor="middle" class="center">冠軍隊伍</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

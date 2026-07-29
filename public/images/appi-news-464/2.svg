@@ -1,47 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
   <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
-  <text x="480" y="60" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="30" fill="#1B5E4B">全國中等學校運動會 桌球團體賽冠軍對照</text>
-  <line x1="80" y1="86" x2="880" y2="86" stroke="#C9A227" stroke-width="3"/>
+  <text x="480" y="55" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#1B5E4B">全國中等學校桌球錦標賽 團體組冠軍一覽</text>
+  <line x1="80" y1="80" x2="880" y2="80" stroke="#C9A227" stroke-width="3"/>
 
-  <rect x="70" y="140" width="380" height="180" rx="14" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
-  <rect x="70" y="140" width="380" height="46" rx="14" fill="#1B5E4B"/>
-  <rect x="70" y="168" width="380" height="18" fill="#1B5E4B"/>
-  <text x="260" y="169" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="20" fill="#FFFFFF">高中男子團體組</text>
-  <circle cx="130" cy="240" r="26" fill="#C9A227"/>
-  <text x="130" y="248" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="20" fill="#1F2A28">冠</text>
-  <text x="180" y="232" font-family="sans-serif" font-weight="700" font-size="22" fill="#1F2A28">冠軍學校</text>
-  <text x="180" y="262" font-family="sans-serif" font-size="16" fill="#6B7B77">依成績公告為準</text>
-  <text x="90" y="300" font-family="sans-serif" font-size="15" fill="#2E8B6F">團體賽　男子組</text>
+  <!-- 高中男生組 -->
+  <g>
+    <rect x="70" y="130" width="380" height="190" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+    <rect x="70" y="130" width="380" height="46" rx="16" fill="#1B5E4B"/>
+    <rect x="70" y="160" width="380" height="16" fill="#1B5E4B"/>
+    <text x="260" y="160" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF">高中男生團體組</text>
+    <text x="260" y="215" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#6B7B77">冠軍學校</text>
+    <text x="260" y="260" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#C9A227">第一銀行高中</text>
+    <circle cx="260" cy="295" r="6" fill="#2E8B6F"/>
+  </g>
 
-  <rect x="510" y="140" width="380" height="180" rx="14" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
-  <rect x="510" y="140" width="380" height="46" rx="14" fill="#1B5E4B"/>
-  <rect x="510" y="168" width="380" height="18" fill="#1B5E4B"/>
-  <text x="700" y="169" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="20" fill="#FFFFFF">高中女子團體組</text>
-  <circle cx="570" cy="240" r="26" fill="#C9A227"/>
-  <text x="570" y="248" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="20" fill="#1F2A28">冠</text>
-  <text x="620" y="232" font-family="sans-serif" font-weight="700" font-size="22" fill="#1F2A28">冠軍學校</text>
-  <text x="620" y="262" font-family="sans-serif" font-size="16" fill="#6B7B77">依成績公告為準</text>
-  <text x="530" y="300" font-family="sans-serif" font-size="15" fill="#2E8B6F">團體賽　女子組</text>
+  <!-- 高中女生組 -->
+  <g>
+    <rect x="510" y="130" width="380" height="190" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+    <rect x="510" y="130" width="380" height="46" rx="16" fill="#1B5E4B"/>
+    <rect x="510" y="160" width="380" height="16" fill="#1B5E4B"/>
+    <text x="700" y="160" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF">高中女生團體組</text>
+    <text x="700" y="215" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#6B7B77">冠軍學校</text>
+    <text x="700" y="260" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#C9A227">臺南桌委高中</text>
+    <circle cx="700" cy="295" r="6" fill="#2E8B6F"/>
+  </g>
 
-  <rect x="70" y="360" width="380" height="180" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
-  <rect x="70" y="360" width="380" height="46" rx="14" fill="#2E8B6F"/>
-  <rect x="70" y="388" width="380" height="18" fill="#2E8B6F"/>
-  <text x="260" y="389" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="20" fill="#FFFFFF">國中男子團體組</text>
-  <circle cx="130" cy="460" r="26" fill="#C9A227"/>
-  <text x="130" y="468" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="20" fill="#1F2A28">冠</text>
-  <text x="180" y="452" font-family="sans-serif" font-weight="700" font-size="22" fill="#1F2A28">冠軍學校</text>
-  <text x="180" y="482" font-family="sans-serif" font-size="16" fill="#6B7B77">依成績公告為準</text>
-  <text x="90" y="520" font-family="sans-serif" font-size="15" fill="#1B5E4B">團體賽　男子組</text>
+  <!-- 國中男生組 -->
+  <g>
+    <rect x="70" y="350" width="380" height="190" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+    <rect x="70" y="350" width="380" height="46" rx="16" fill="#2E8B6F"/>
+    <rect x="70" y="380" width="380" height="16" fill="#2E8B6F"/>
+    <text x="260" y="380" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF">國中男生團體組</text>
+    <text x="260" y="435" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#6B7B77">冠軍學校</text>
+    <text x="260" y="480" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#C9A227">介壽國中</text>
+    <circle cx="260" cy="515" r="6" fill="#1B5E4B"/>
+  </g>
 
-  <rect x="510" y="360" width="380" height="180" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
-  <rect x="510" y="360" width="380" height="46" rx="14" fill="#2E8B6F"/>
-  <rect x="510" y="388" width="380" height="18" fill="#2E8B6F"/>
-  <text x="700" y="389" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="20" fill="#FFFFFF">國中女子團體組</text>
-  <circle cx="570" cy="460" r="26" fill="#C9A227"/>
-  <text x="570" y="468" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="20" fill="#1F2A28">冠</text>
-  <text x="620" y="452" font-family="sans-serif" font-weight="700" font-size="22" fill="#1F2A28">冠軍學校</text>
-  <text x="620" y="482" font-family="sans-serif" font-size="16" fill="#6B7B77">依成績公告為準</text>
-  <text x="530" y="520" font-family="sans-serif" font-size="15" fill="#1B5E4B">團體賽　女子組</text>
+  <!-- 國中女生組 -->
+  <g>
+    <rect x="510" y="350" width="380" height="190" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+    <rect x="510" y="350" width="380" height="46" rx="16" fill="#2E8B6F"/>
+    <rect x="510" y="380" width="380" height="16" fill="#2E8B6F"/>
+    <text x="700" y="380" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF">國中女生團體組</text>
+    <text x="700" y="435" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#6B7B77">冠軍學校</text>
+    <text x="700" y="480" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#C9A227">深坑國中</text>
+    <circle cx="700" cy="515" r="6" fill="#1B5E4B"/>
+  </g>
 
-  <text x="480" y="575" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">四組團體賽冠軍學校並列對照</text>
+  <text x="480" y="580" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#6B7B77">資料來源：全國中等學校運動會桌球競賽成績報告表</text>
 <text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

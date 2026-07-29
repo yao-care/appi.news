@@ -2,7 +2,7 @@
 title: "161kV是什麼？台電強韌電網5645億怎麼花，193億電纜標案進度一次看"
 slug: "161kv-taipower-grid-resilience-budget-breakdown"
 description: "台灣輸配電分三級：345kV超高壓、161kV一次輸電、69kV與22.8kV配電。台電10年砸5645億元強化161kV等骨幹線路，193億元電纜標案目標2028年完工，分散式電網讓用電大戶直供、一般用戶少停電。"
-publishDate: "2026-07-29T18:30:00+08:00"
+publishDate: "2026-07-29T12:05:31.188Z"
 category: "focus"
 subcategory: "trend-watch"
 tags:

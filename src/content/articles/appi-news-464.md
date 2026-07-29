@@ -5,7 +5,7 @@ description: "115年全國中等學校運動會桌球項目會內賽於嘉義縣
 publishDate: 2026-07-29
 category: sports
 subcategory: events
-tags: ["全中運", "桌球", "會內賽", "冠軍", "成績", "松山家商", "淡江高中"]
+tags: ["桌球", "學生賽事"]
 author: "appi-editorial"
 coverImage: "covers/appi-news-464.webp"
 coverAlt: "全中運桌球會內賽比賽現場示意圖，選手在體育館內揮拍對戰"

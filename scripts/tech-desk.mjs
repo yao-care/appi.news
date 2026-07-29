@@ -1,0 +1,211 @@
+// 科技台協調器：GSC 訊號 → Claude 寫科技稿（兩條 track）→ 自動上架（tech 分類）。
+// 純寫作邏輯與選題判準在 scripts/lib/tech-desk.mjs。每日由 cron 呼叫。
+//
+// 為什麼要有這條線：tech 原本只有 tech-radar（產候選 → Slack 按鈕 → 人挑 → newsroom-write），
+// 沒有自動產文線。兩條 track 由站長指定：
+//   --track editorial  APPI 編輯部：事實型概念解釋（是什麼／怎麼運作／台灣現況）
+//   --track lightman   張饒輝《AI 醫療現場》專欄：AI×健康觀點
+// 不帶 --track 時**兩條都跑各一篇**（cron 預設）。
+//
+// 安全：預設 dry-run（只印寫作指令）。--stage 寫+commit 不 push；--go 寫+commit+push 上架。
+//   node scripts/tech-desk.mjs                                  # dry-run（兩 track）
+//   node scripts/tech-desk.mjs --track lightman                 # dry-run（單 track）
+//   node scripts/tech-desk.mjs --track editorial --topic "…" --go   # 指定題目並上架
+//
+// --topic：跳過自動選題，照指定方向寫（補寫既有缺口用）。
+
+import { readFileSync, readdirSync, writeFileSync, existsSync, rmSync } from 'node:fs';
+import { join } from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { pathToFileURL } from 'node:url';
+import yaml from 'js-yaml';
+import { buildTechDeskPrompt, parseTechDeskResult, TECH_TRACKS } from './lib/tech-desk.mjs';
+import { salvageArticle } from './lib/changed-articles.mjs';
+import { pushToMain } from './lib/git-publish.mjs';
+import { buildCheckWithResync } from './lib/build-check.mjs';
+
+const ARTICLES_DIR = 'src/content/articles';
+const has = (n) => process.argv.includes(`--${n}`);
+const arg = (n) => {
+  const i = process.argv.indexOf(`--${n}`);
+  return i >= 0 ? process.argv[i + 1] : '';
+};
+function die(m) { console.error(`✖ ${m}`); process.exit(1); }
+function sh(cmd, args, opts = {}) {
+  const r = spawnSync(cmd, args, { encoding: 'utf8', ...opts });
+  if (r.status !== 0) throw new Error(`指令失敗（exit ${r.status}）：${cmd} ${args.join(' ')}\n${r.stderr || r.stdout || ''}`);
+  return (r.stdout || '').trim();
+}
+
+/** 該篇引用了、但 public/ 下不存在的本地圖檔。空陣列＝都在。 */
+function missingLocalAssets(slug) {
+  const file = join(ARTICLES_DIR, `${slug}.md`);
+  if (!existsSync(file)) return ['（文章檔不存在）'];
+  const raw = readFileSync(file, 'utf8');
+  const refs = new Set();
+  for (const m of raw.matchAll(/(covers|images)\/[A-Za-z0-9._-]+\.(?:webp|png|jpe?g|avif)/gi)) refs.add(m[0]);
+  return [...refs].filter((r) => !existsSync(join('public', r)));
+}
+
+function articleTitle(slug) {
+  try {
+    const m = readFileSync(join(ARTICLES_DIR, `${slug}.md`), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    return (m && (yaml.load(m[1]) || {}).title) || '';
+  } catch { return ''; }
+}
+
+/** 近 N 天已發的 tech 文章標題，給去重。 */
+function recentTechTitles(days = 30) {
+  const cutoff = Date.now() - days * 86400 * 1000;
+  let files = [];
+  try { files = readdirSync(ARTICLES_DIR).filter((f) => f.endsWith('.md')); } catch { return []; }
+  const out = [];
+  for (const f of files) {
+    try {
+      const m = readFileSync(join(ARTICLES_DIR, f), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (!m) continue;
+      const d = yaml.load(m[1]);
+      if (d.category !== 'tech') continue;
+      if (new Date(d.publishDate || 0).getTime() >= cutoff) out.push(d.title || f);
+    } catch { /* skip */ }
+  }
+  return out;
+}
+
+/**
+ * GSC 訊號：差一步的 tech 頁（pos 10.5~20.5）＋有需求沒吃到點擊的 query。
+ * **fail-open**：缺金鑰／無網路／解析失敗一律回空，選題退回判準一與四，不讓訊號變單點故障。
+ */
+function techSignals() {
+  try {
+    const env = { ...process.env };
+    const key = `${process.env.HOME}/.config/appi-news/ga4-sa.json`;
+    if (!env.GOOGLE_APPLICATION_CREDENTIALS && existsSync(key)) env.GOOGLE_APPLICATION_CREDENTIALS = key;
+    const r = spawnSync('node', ['scripts/seo-opportunities.mjs'], { encoding: 'utf8', env, maxBuffer: 16 * 1024 * 1024 });
+    if (r.status !== 0) return { striking: [], demand: [] };
+    const out = JSON.parse(r.stdout);
+    const striking = (out.pageOpportunities || [])
+      .filter((p) => p.category === 'tech')
+      .slice(0, 6)
+      .map((p) => `${decodeURIComponent(p.page).replace(/^https?:\/\/[^/]+/, '')}（曝光 ${p.impressions}、pos ${p.position}）`);
+    const demand = (out.searchDemandTopics || [])
+      .slice(0, 12)
+      .map((q) => `${q.query}（曝光 ${q.impressions}、目前最好 pos ${q.bestPosition}）`);
+    return { striking, demand };
+  } catch {
+    return { striking: [], demand: [] };
+  }
+}
+
+function runTrack(track, { go, topic, recent, signals, wrote }) {
+  const prompt = buildTechDeskPrompt({
+    track,
+    recentTitles: recent,
+    striking: signals.striking,
+    demand: signals.demand,
+    topic,
+  });
+  console.log(`\n→ ${TECH_TRACKS[track].label}…`);
+  const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+  // claude-appi 撞用量上限時會 exit 0 只印限額訊息 → 必須查 stdout，否則被誤判成「無題、安靜」。
+  if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) {
+    console.log(`  ⚠️ claude 失敗：${(r.stderr || r.stdout || r.error?.message || '').slice(-200)}`);
+    return false;
+  }
+  const v = parseTechDeskResult(r.stdout);
+  if (v.infra) {
+    // 解析不出＝故障，不是「沒題」：模型可能已把稿寫在工作區，撿回來走既有關卡。
+    const found = salvageArticle(ARTICLES_DIR, wrote.map((w) => w.slug).filter(Boolean));
+    if (found && found.action === 'new') {
+      console.log(`  ⚠️ 無 TECH_RESULT，但工作區有寫好的 ${found.slug} → 撿回`);
+      wrote.push({ action: 'new', slug: found.slug, track });
+      return true;
+    }
+    console.log(`  ⚠️ ${v.note}（工作區沒有可歸屬的稿）`);
+    return false;
+  }
+  console.log(`  ${v.action.toUpperCase()}｜${v.note}`);
+  if (v.action !== 'new' || !v.slug) return false;
+  wrote.push({ ...v, track });
+  return true;
+}
+
+function main() {
+  const go = has('go');
+  const stage = has('stage');
+  const topic = arg('topic');
+  const only = arg('track');
+  if (only && !TECH_TRACKS[only]) die(`未知的 --track ${only}（可用：${Object.keys(TECH_TRACKS).join(' / ')}）`);
+  const tracks = only ? [only] : Object.keys(TECH_TRACKS);
+  if (topic && tracks.length > 1) die('--topic 需搭配 --track 指定單一 track');
+
+  const recent = recentTechTitles(30);
+  const signals = techSignals();
+
+  if (!go && !stage) {
+    console.log('— DRY RUN（零副作用）—');
+    console.log(`近 30 天已發科技文：${recent.length} 篇；差一步的 tech 頁：${signals.striking.length} 個；需求 query：${signals.demand.length} 個`);
+    for (const t of tracks) {
+      console.log(`\n===== ${TECH_TRACKS[t].label}｜Claude 寫作指令 =====\n`);
+      console.log(buildTechDeskPrompt({ track: t, recentTitles: recent, striking: signals.striking, demand: signals.demand, topic }));
+    }
+    return;
+  }
+
+  if (sh('git', ['status', '--porcelain'])) die('工作區不乾淨，請先清乾淨再跑');
+  const branch = sh('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
+  console.log(`→ 科技台（分支 ${branch}，${go ? '上架' : 'stage 不 push'}，track：${tracks.join(' + ')}）`);
+
+  const wrote = [];
+  for (const t of tracks) runTrack(t, { go, topic, recent, signals, wrote });
+
+  const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
+  if (!produced || wrote.length === 0) { console.log('\n✓ 本次無產出。'); return; }
+
+  // 用系統時間蓋掉模型寫的 publishDate；逐篇過圖／標籤／去 AI 腔三關，不合格的整篇剔除（不拖垮整批）。
+  const nowIso = new Date().toISOString();
+  const kept = [];
+  for (const v of wrote) {
+    const file = join(ARTICLES_DIR, `${v.slug}.md`);
+    if (existsSync(file)) writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${nowIso}"`));
+    const missing = missingLocalAssets(v.slug);
+    if (missing.length) {
+      console.log(`  ⚠️ 剔除 ${v.slug}：缺本地圖檔（${missing.join('、')}）`);
+      if (existsSync(file)) rmSync(file);
+      continue;
+    }
+    const tagGate = spawnSync('node', ['scripts/check-tags.mjs', file], { encoding: 'utf8' });
+    if (tagGate.status !== 0) {
+      console.log(`  ⚠️ 剔除 ${v.slug}：標籤不在受控詞彙表\n${tagGate.stdout || tagGate.stderr || ''}`);
+      if (existsSync(file)) rmSync(file);
+      continue;
+    }
+    const toneGate = spawnSync('node', ['scripts/check-content.mjs', file], { encoding: 'utf8' });
+    if (toneGate.status !== 0) {
+      console.log(`  ⚠️ 剔除 ${v.slug}：去 AI 腔硬 tell\n${toneGate.stdout || toneGate.stderr || ''}`);
+      if (existsSync(file)) rmSync(file);
+      continue;
+    }
+    kept.push(v);
+  }
+  if (kept.length === 0) { console.log('\n✓ 本批全部被關卡剔除，無發佈。'); return; }
+
+  try { buildCheckWithResync(); }
+  catch (e) { die(`build/check:links 未過（已自癒重試），不發佈（改動留工作區）：${e.message}`); }
+
+  sh('git', ['add', '--', ARTICLES_DIR, 'public/covers', 'public/images']);
+  sh('git', ['commit', '-m', `feat(article): 科技台自動產文（${kept.length} 篇）\n\n${kept.map((k) => `${TECH_TRACKS[k.track].label}：${articleTitle(k.slug) || k.slug}`).join('\n')}`]);
+  if (go) {
+    const pr = pushToMain({ cwd: process.cwd() });
+    if (!pr.ok) die(`推送 main 失敗：${pr.err}`);
+    console.log(`✓ 已上架 ${kept.length} 篇。`);
+    for (const v of kept) console.log(`PUBLISHED=https://appi.news/articles/${v.slug}/ ｜ ${articleTitle(v.slug) || v.slug}`);
+  } else {
+    console.log(`✓ 已 stage ${kept.length} 篇（未 push）。`);
+    for (const v of kept) console.log(`STAGED=${v.slug} ｜ ${articleTitle(v.slug) || v.slug}`);
+  }
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  try { main(); } catch (e) { die(e.message); }
+}

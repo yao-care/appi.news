@@ -18,6 +18,7 @@ import { buildCheckWithResync } from './lib/build-check.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
 const has = (n) => process.argv.includes(`--${n}`);
+const arg = (n) => { const i = process.argv.indexOf(`--${n}`); return i >= 0 ? process.argv[i + 1] : ''; };
 function die(m) { console.error(`✖ ${m}`); process.exit(1); }
 function sh(cmd, args, opts = {}) {
   const r = spawnSync(cmd, args, { encoding: 'utf8', ...opts });
@@ -92,8 +93,9 @@ function main() {
   const go = has('go');
   const stage = has('stage');
   const recent = recentFocusTitles(30);
+  const topic = arg('topic'); // 指定題目：跳過自動選題，補寫既有缺口用
   const striking = focusStrikingDistance();
-  const prompt = buildFocusEsgPrompt(recent, 7, striking);
+  const prompt = buildFocusEsgPrompt(recent, 7, striking, topic);
 
   if (!go && !stage) {
     console.log('— DRY RUN（零副作用）—');
@@ -114,7 +116,7 @@ function main() {
   // 2026-07-27 事故，見 docs/lessons/auto-publish-pipeline-traps.md §E、§G）。
   // FOCUS_TIME_BUDGET_MS 保留當緊急手煞車（設 >0 才生效）。
   const budgetMs = Number(process.env.FOCUS_TIME_BUDGET_MS || 0);
-  const maxArticles = Number(process.env.FOCUS_MAX || 4);
+  const maxArticles = topic ? 1 : Number(process.env.FOCUS_MAX || 4); // 指定題目時只寫那一篇
   const start = Date.now();
   const excludeTitles = [...recent]; // 去重清單，每寫一篇就加入，避免下一篇撞題
   const wrote = [];
@@ -128,7 +130,7 @@ function main() {
       break;
     }
     const t0 = Date.now();
-    const prompt = buildFocusEsgPrompt(excludeTitles, 7, striking);
+    const prompt = buildFocusEsgPrompt(excludeTitles, 7, striking, topic);
     console.log(`\n→ 第 ${i + 1} 篇…`);
     const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
     // claude-appi 撞「每週用量上限」時會 exit 0 但只印限額訊息 → 必須查 stdout，否則被誤判成「無題、安靜」。

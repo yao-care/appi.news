@@ -61,15 +61,43 @@ function recentFocusTitles(days = 30) {
   return out;
 }
 
+/**
+ * 站上「差一步」的焦點頁（GSC pos 10.5~20.5，補深度就能進第一頁）。
+ *
+ * 為什麼餵給選題：focus 是全站每篇曝光最高的分類（90 天 38.5／篇），瓶頸不是題不夠，
+ * 而是已經半排名的政策字沒人回頭補（`離岸風電 3-3` 83 曝光卡 pos 25.3、`cbam申報`
+ * pos 75）。補一篇深度稿的投報率遠高於再開一個新題。
+ *
+ * **fail-open**：缺金鑰／無網路／解析失敗一律回空陣列，選題退回原本的「掃新進展」，
+ * 不讓 SEO 訊號變成產線的單點故障。
+ */
+function focusStrikingDistance() {
+  try {
+    const env = { ...process.env };
+    const key = `${process.env.HOME}/.config/appi-news/ga4-sa.json`;
+    if (!env.GOOGLE_APPLICATION_CREDENTIALS && existsSync(key)) env.GOOGLE_APPLICATION_CREDENTIALS = key;
+    const r = spawnSync('node', ['scripts/seo-opportunities.mjs'], { encoding: 'utf8', env, maxBuffer: 16 * 1024 * 1024 });
+    if (r.status !== 0) return [];
+    const out = JSON.parse(r.stdout);
+    return (out.pageOpportunities || [])
+      .filter((p) => p.category === 'focus')
+      .slice(0, 8)
+      .map((p) => `${p.page.replace(/^https?:\/\/[^/]+/, '')}（曝光 ${p.impressions}、pos ${p.position}）`);
+  } catch {
+    return [];
+  }
+}
+
 function main() {
   const go = has('go');
   const stage = has('stage');
   const recent = recentFocusTitles(30);
-  const prompt = buildFocusEsgPrompt(recent, 7);
+  const striking = focusStrikingDistance();
+  const prompt = buildFocusEsgPrompt(recent, 7, striking);
 
   if (!go && !stage) {
     console.log('— DRY RUN（零副作用）—');
-    console.log(`近 30 天已發焦點文：${recent.length} 篇`);
+    console.log(`近 30 天已發焦點文：${recent.length} 篇；差一步的焦點頁：${striking.length} 個`);
     console.log('\n===== Claude 寫作指令 =====\n');
     console.log(prompt);
     return;
@@ -100,7 +128,7 @@ function main() {
       break;
     }
     const t0 = Date.now();
-    const prompt = buildFocusEsgPrompt(excludeTitles, 7);
+    const prompt = buildFocusEsgPrompt(excludeTitles, 7, striking);
     console.log(`\n→ 第 ${i + 1} 篇…`);
     const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
     // claude-appi 撞「每週用量上限」時會 exit 0 但只印限額訊息 → 必須查 stdout，否則被誤判成「無題、安靜」。

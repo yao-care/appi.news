@@ -72,3 +72,38 @@ tech 曝光第一名是〈Passkey 通行密鑰**是什麼**：無密碼登入的
 - **有反證就在站內資料裡**：新開一條產線或懷疑成效時，先跑 `node scripts/gsc-audit.mjs`＋逐篇 page 維度，找站上表現最好的那篇，問「它和其他篇差在哪」，通常模式就在裡面。
 - **別把「熱門新聞排第一頁」當目標**：那是 Top Stories 的權威×速度賽道，不是 SEO 賽道。相關脈絡見 [`google-news-surfaces-and-cover-image.md`](./google-news-surfaces-and-cover-image.md)（Google News 已改自動抓取，站上基建才是槓桿）。
 - 相關：[`topical-authority-concentration.md`](./topical-authority-concentration.md)（選題從獵熱度改獵可贏性的前一步）、[`high-impression-zero-click-bot-queries.md`](./high-impression-zero-click-bot-queries.md)（反過來的病灶：高曝光但搜尋者不是人）、[`duplicate-topic-gate.md`](./duplicate-topic-gate.md)（同一次稽核查出的自家頁互打）。
+
+## 2026-07-29 追記：焦點線的病灶不同，處方也不同（別把 tech 那條套過去）
+
+同一批 GSC 資料裡，**focus 是全站每篇曝光最高的分類**（90 天 38.5／篇、63 clicks，皆為七類之冠），
+tech 是倒數第二（13.8／篇）。兩者都在寫「新進展」，差別在需求曲線：
+
+- **tech 的專有名詞會歸零**：`fable 5`、`work iq` 事件過了就沒人搜。
+- **focus 的政策代號不會**：`離岸風電 3-3`（83 曝光）、`161kv`（33）、`資源循環推動法`、`cbam申報`
+  是產業界要反覆查的字，需求持續存在。
+
+所以焦點線**不需要**「事件字→概念字」那條，它的兩個真實瓶頸是：
+
+**一、標題是「公告體」，只接得到一半讀者。** 焦點的讀者有兩種，查的字完全不同：
+
+```
+產業界 → 制度名/代號：161kv (pos 8.5)、離岸風電 3-3、cbam申報
+一般人 → 影響問句：  水費漲價2026 (pos 2.8)、水費一度 (pos 1)、2026水費有漲價嗎
+```
+
+全站表現最好的兩篇正好兩軌都帶到：〈用水大戶**耗水費** 2026 年起恢復全額徵收：**每度最高 3 元、約 1300 家受影響**〉
+（制度名＋金額＋影響範圍）、〈台電**強韌電網計畫**加速：**193億元161kV**電纜標案決標，**目標2028年完成**〉
+（技術代號＋金額＋時程）。純公告體（「某某機關發布某某辦法」）等於丟掉一般讀者那一半。
+
+**二、已經半排名的字沒人回頭補。** `離岸風電 3-3` 83 曝光卡 pos 25.3 是全站最大的單一機會，
+`cbam申報` pos 75、`資源循環推動法` pos 62 都是站上寫過但排不上的。補一篇深度續稿的投報率，
+遠高於再開一個全新題。
+
+**處置**：`scripts/lib/focus-esg.mjs` 的 prompt 加【選題優先序】與【標題】兩段——選題先追擊
+`seo-opportunities.mjs` 的 `pageOpportunities`（pos 10.5~20.5 且 `category: focus`，由
+`scripts/focus-esg.mjs` 的 `focusStrikingDistance()` 注入，**fail-open**：取不到就退回原本掃新進展），
+標題強制雙軌命中。`tech-radar` 步驟 2a 同步改成「先看 pageOpportunities 再看 searchDemandTopics」。
+
+**教訓**：**「每篇曝光」低有兩種完全相反的病灶，處方不能共用。** tech 是瞄準錯字（改下標的瞄準點），
+focus 是瞄準對了但沒吃滿（改標題的涵蓋面＋回頭補深度）。診斷時先看該分類的 query 是「會歸零的事件字」
+還是「持續被查的制度字」，再決定開哪個藥。

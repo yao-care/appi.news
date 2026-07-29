@@ -14,7 +14,8 @@
 - 但全站沒有任何東西撿 `article-draft`：
   - `.github/workflows/` 只有 `deploy.yml`，沒有 `on: issues`。
   - 唯一的「issue → 自動處理」管線是 dev 協作 webhook（`slack-actions-server` + `github-webhook.mjs`），但它只認 **`dev-bot`** label（`SPEC_LABEL`），收到 `article-draft` 直接 `ignore` 丟掉；而且它是**寫程式**不是寫文章。
-  - 另一條會自動寫文章的 `agent.writer`（pm2 `agent-writer`）盯的是**完全不同的 repo**（`weiqi-kids/agent.writer`）+ label `status:pending`，跟 appi.news 無關。
+  - 另一條會自動寫文章的 `agent.writer`（pm2 `agent-writer`）盯的是**完全不同的 repo**（`weiqi-kids/agent.writer`）+ label `status:pending`，當時判定「跟 appi.news 無關」。
+    > ⚠️ **2026-07-29 更正**：這句在當時的脈絡（誰撿 `article-draft`）成立，但別誤讀成「agent.writer 不寫 appi.news」——它其實會，而且已累計 231 個 commit 直推本 repo（commit body 帶 `from agent.writer`）。它走的是自己的 issue 佇列與 `server/lib/astro-publish.ts` 的 `schema: 'appi'` 發佈路徑，**不經過本 repo 任何一條 `.mjs` 產線的 gate**。這個落差讓自由標籤兩度打爆本站建置，處置見 [`tag-taxonomy.md`](./tag-taxonomy.md) §2026-07-29。
 
 教訓：**一個「建立了東西」的功能，若沒人消費，會靜默孤兒化**——沒有 exit code、沒有 log、沒有 Slack 警示，最難查。任何「產生待辦（issue/檔案/佇列訊息）」的生產端，都要能指出**具體的消費端 + 兩端共用的 label/路徑契約**，否則就是半成品。
 

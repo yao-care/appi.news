@@ -93,3 +93,44 @@ unique tag  1,883 → 179     每篇平均 5.27 → 3.37
 - **fail-open 與 fail-closed 的分界**：`docs/automation-invariants.md` 的「閘門 fail-open」講的是**閘門自己故障**要放行（故障不等於模型的判斷）。標籤不合法是**模型的判斷錯誤**，該 fail-closed 硬擋。`check-tags.mjs` 兩者都實作了——解析不到 `tags.ts` 就 exit 0 放行，標籤不在表內就 exit 1 擋下。
 - **加標籤前先問會不會累積到 3 篇**。詞彙表的價值在收斂，每多開一個近義詞就少一個 hub。流程見 `src/config/tags.ts` 檔頭。
 - 相關：[topical-authority-concentration.md](./topical-authority-concentration.md)（主題權威靠收斂賺不是多產堆，同一個病理的另一面）、[duplicate-topic-gate.md](./duplicate-topic-gate.md)（去重該下在寫入端不是選題端，同樣是「gate 位置決定有沒有效」）。
+
+## 2026-07-29 追記：L1 擋得住，但擋的位置是「全站部署」——跨 repo 的寫入端漏了
+
+上面那張四層表有個沒寫明的前提：**L2 產線自檢覆蓋所有寫入端**。實際上不是。
+
+2026-07-28（`appi-news-450` 熊本強震）與 07-29（`appi-news-461` 桌球世團賽，帶了
+`世團賽／台灣桌球隊／銅牌／林昀儒／世界桌球團體錦標賽` 五個表外值）兩度讓 `main` 無法建置，
+連續兩次 deploy failure，期間**全站無法發佈**，都要人工改標籤才解除。
+
+**原因**：這兩篇不是本 repo 任何一條 `.mjs` 產線寫的，而是同機的另一個專案
+`/root/agent.writer`（pm2 `agent-writer`）直推進來的——它已累計 231 個 commit
+（commit body 帶 `from agent.writer`）。它的 `server/lib/astro-publish.ts` 在
+`buildAppiMdx()` 裡把 Writer 自由產生的 SEO `keywords` **原樣併進** appi.news 的 `tags`：
+
+```ts
+const tagsCombined = Array.from(new Set([...(astro.tags ?? []), ...parsed.frontmatter.keywords]));
+```
+
+`keywords`（自由關鍵詞）與 `tags`（受控主題 hub）是性質完全不同的兩個欄位，直接對接必然出事。
+L2 的七條產線自檢一條都碰不到它。
+
+**這裡的 L1 不是「擋住壞資料」，是「擋住整個網站」。** `z.enum` 在 content collection 驗證期失敗，
+炸掉的是 `pnpm build` 本身，不是單篇。fail-closed 的代價落在全站可用性上——這是設計時沒算到的。
+
+**處置（在 agent.writer 端，2026-07-29）**：
+
+1. **發佈端硬過濾**（`server/lib/appi-tags.ts`）：`filterAppiTags()` 把候選過成表內合法值＋套 8 個上限。
+   詞彙表**執行期讀本 repo 的 `src/config/tags.ts`**，不在對面複製一份——對照組是同目錄的
+   `appi-categories.ts`，那份是複製的、靠檔頭「⚠️ 兩邊都要改」的人工紀律維持；標籤有 179 個且增修頻繁，
+   複製必然漂移。路徑可用 `APPI_REPO` 覆寫。
+   **讀不到詞彙表時回傳空陣列，不是原樣放行**——`tags` 預設就是 `[]`，空的頂多少一組主題連結（事後可補），
+   放行未驗證的值則會再次打爆整站部署。這一格刻意 fail-closed，與上面那條 fail-open 分界並不矛盾：
+   分界看的是「代價落在誰身上」，這裡的代價是全站。
+2. **寫作端指引**（`renderTagGuidance()`）：只過濾會把訊號整批丟掉（461 七個值只剩兩個）。
+   把詞彙表注入「文章需求」文件，Writer 才挑得到對的標籤，並明寫「挑不到就少掛、不要填人名／賽事名／獎牌名／型號」。
+
+**教訓**：**受控欄位的 gate 要下在「所有寫入端」，而盤點寫入端不能只看自己 repo。**
+本 repo 的七條產線是完整的，但寫進 `src/content/articles/` 的來源有八個——第八個在另一個 repo、
+另一個 pm2 process、另一套 schema 對接邏輯。`docs/lessons/article-draft-consumer.md` 當時記的
+「agent.writer 跟 appi.news 無關」在它自己的脈絡（誰撿 `article-draft`）成立，但被後人讀成
+「不必納入盤點」，剛好蓋住了這個破口。

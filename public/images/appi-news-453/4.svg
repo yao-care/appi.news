@@ -1,55 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="台灣羽球選手國際頂級賽事成就對照圖，並列呈現陳鋒、戴資穎、李洋與王齊麟、周天成四項代表性成就">
-  <style>
-    .title{font-family:"Noto Sans CJK TC","Noto Sans TC",sans-serif;font-size:28px;font-weight:700;fill:#1B5E4B;}
-    .sub{font-family:"Noto Sans CJK TC","Noto Sans TC",sans-serif;font-size:14px;fill:#6B7B77;}
-    .year{font-family:"Noto Sans CJK TC","Noto Sans TC",sans-serif;font-size:22px;font-weight:700;fill:#FFFFFF;}
-    .name{font-family:"Noto Sans CJK TC","Noto Sans TC",sans-serif;font-size:19px;font-weight:700;fill:#1B5E4B;}
-    .desc{font-family:"Noto Sans CJK TC","Noto Sans TC",sans-serif;font-size:14px;fill:#1F2A28;}
-    .tag{font-family:"Noto Sans CJK TC","Noto Sans TC",sans-serif;font-size:12px;fill:#6B7B77;}
-  </style>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
   <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="46" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#1B5E4B">台灣羽球選手國際頂級賽事四大里程碑</text>
+  <line x1="330" y1="62" x2="630" y2="62" stroke="#C9A227" stroke-width="3"/>
 
-  <text x="480" y="46" text-anchor="middle" class="title">台灣羽球四大國際頂級賽事成就</text>
-  <text x="480" y="70" text-anchor="middle" class="sub">四項各自獨立的代表性里程碑</text>
-  <line x1="330" y1="86" x2="630" y2="86" stroke="#C9A227" stroke-width="3"/>
+  <g>
+    <rect x="40" y="90" width="430" height="215" rx="14" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+    <circle cx="90" cy="140" r="26" fill="#2E8B6F"/>
+    <line x1="80" y1="150" x2="100" y2="130" stroke="#FFFFFF" stroke-width="3"/>
+    <circle cx="100" cy="130" r="5" fill="#FFFFFF"/>
+    <text x="130" y="135" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1B5E4B">1996年</text>
+    <text x="130" y="160" font-family="sans-serif" font-size="15" fill="#6B7B77">中國公開賽 男子單打冠軍</text>
+    <text x="65" y="205" font-family="sans-serif" font-size="17" fill="#1F2A28">台灣歸化選手</text>
+    <text x="65" y="232" font-family="sans-serif" font-size="17" fill="#1F2A28">奪下頂級賽事男單冠軍</text>
+    <text x="65" y="270" font-family="sans-serif" font-size="26" font-weight="bold" fill="#C9A227">歷史首例</text>
+  </g>
 
-  <rect x="50" y="120" width="410" height="200" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
-  <circle cx="100" cy="160" r="30" fill="#1B5E4B"/>
-  <text x="100" y="167" text-anchor="middle" class="year">1996</text>
-  <text x="150" y="165" class="name">陳鋒</text>
-  <text x="150" y="188" class="tag">中國公開賽・男子單打</text>
-  <text x="80" y="230" class="desc">歸化選手身分</text>
-  <text x="80" y="255" class="desc">奪得男子單打冠軍</text>
-  <text x="80" y="280" class="desc">台灣羽球史上代表性一頁</text>
+  <g>
+    <rect x="490" y="90" width="430" height="215" rx="14" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+    <circle cx="540" cy="140" r="26" fill="#2E8B6F"/>
+    <line x1="530" y1="150" x2="550" y2="130" stroke="#FFFFFF" stroke-width="3"/>
+    <circle cx="550" cy="130" r="5" fill="#FFFFFF"/>
+    <text x="580" y="135" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1B5E4B">戴資穎</text>
+    <text x="580" y="160" font-family="sans-serif" font-size="15" fill="#6B7B77">超級1000 女子單打</text>
+    <text x="515" y="205" font-family="sans-serif" font-size="17" fill="#1F2A28">締造女單勝場</text>
+    <text x="515" y="232" font-family="sans-serif" font-size="17" fill="#1F2A28">歷史新高紀錄</text>
+    <text x="515" y="270" font-family="sans-serif" font-size="26" font-weight="bold" fill="#C9A227">紀錄保持人</text>
+  </g>
 
-  <rect x="500" y="120" width="410" height="200" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
-  <circle cx="550" cy="160" r="30" fill="#2E8B6F"/>
-  <text x="550" y="167" text-anchor="middle" class="year">紀錄</text>
-  <text x="600" y="165" class="name">戴資穎</text>
-  <text x="600" y="188" class="tag">超級1000系列・女子單打</text>
-  <text x="530" y="230" class="desc">締造女子單打</text>
-  <text x="530" y="255" class="desc">超級1000賽事最多冠軍紀錄</text>
-  <text x="530" y="280" class="desc">長年穩坐世界頂尖之列</text>
+  <g>
+    <rect x="40" y="330" width="430" height="215" rx="14" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+    <circle cx="90" cy="380" r="26" fill="#2E8B6F"/>
+    <line x1="80" y1="390" x2="100" y2="370" stroke="#FFFFFF" stroke-width="3"/>
+    <circle cx="100" cy="370" r="5" fill="#FFFFFF"/>
+    <text x="130" y="375" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1B5E4B">李洋／王齊麟</text>
+    <text x="130" y="400" font-family="sans-serif" font-size="15" fill="#6B7B77">2020東京奧運 男子雙打</text>
+    <text x="65" y="445" font-family="sans-serif" font-size="17" fill="#1F2A28">奪得奧運男雙</text>
+    <text x="65" y="472" font-family="sans-serif" font-size="17" fill="#1F2A28">金牌</text>
+    <text x="65" y="510" font-family="sans-serif" font-size="26" font-weight="bold" fill="#C9A227">奧運金牌</text>
+  </g>
 
-  <rect x="50" y="345" width="410" height="200" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
-  <circle cx="100" cy="385" r="30" fill="#C9A227"/>
-  <text x="100" y="392" text-anchor="middle" class="year">2020</text>
-  <text x="150" y="382" class="name">李洋・王齊麟</text>
-  <text x="150" y="405" class="tag">東京奧運・男子雙打</text>
-  <text x="80" y="455" class="desc">奪得男子雙打金牌</text>
-  <text x="80" y="480" class="desc">台灣羽球奧運史上首面</text>
-  <text x="80" y="505" class="desc">男雙金牌</text>
-
-  <rect x="500" y="345" width="410" height="200" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
-  <circle cx="550" cy="385" r="30" fill="#1B5E4B"/>
-  <text x="550" y="392" text-anchor="middle" class="year">2026</text>
-  <text x="600" y="382" class="name">周天成</text>
-  <text x="600" y="405" class="tag">中國公開賽・男子單打</text>
-  <text x="530" y="455" class="desc">封王中國公開賽</text>
-  <text x="530" y="480" class="desc">成為超級1000系列</text>
-  <text x="530" y="505" class="desc">年紀最長男單冠軍</text>
-
-  <rect x="0" y="570" width="960" height="30" fill="#1B5E4B"/>
-  <text x="480" y="590" text-anchor="middle" class="tag" fill="#FFFFFF">台灣羽球 ‧ 頂級賽事成就時間軸</text>
+  <g>
+    <rect x="490" y="330" width="430" height="215" rx="14" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+    <circle cx="540" cy="380" r="26" fill="#2E8B6F"/>
+    <line x1="530" y1="390" x2="550" y2="370" stroke="#FFFFFF" stroke-width="3"/>
+    <circle cx="550" cy="370" r="5" fill="#FFFFFF"/>
+    <text x="580" y="375" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1B5E4B">周天成</text>
+    <text x="580" y="400" font-family="sans-serif" font-size="15" fill="#6B7B77">2026中國公開賽 男子單打</text>
+    <text x="515" y="445" font-family="sans-serif" font-size="17" fill="#1F2A28">最年長超級1000</text>
+    <text x="515" y="472" font-family="sans-serif" font-size="17" fill="#1F2A28">男單冠軍</text>
+    <text x="515" y="510" font-family="sans-serif" font-size="26" font-weight="bold" fill="#C9A227">年齡新紀錄</text>
+  </g>
 <text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

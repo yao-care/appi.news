@@ -158,8 +158,13 @@ function main() {
     excludeTitles.push(articleTitle(v.slug) || v.slug);
   }
 
-  const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
-  if (!produced || wrote.length === 0) { console.log('\n✓ 本次無產出（無夠新夠強的題／各源抓不到）。'); return; }
+  // 只看 wrote，**不要**用 `git status` 當「有沒有產出」的判準。
+  // 2026-07-29 在科技台實測到：模型有時無視「不要 commit」的指示自行 commit，此時
+  // porcelain 為空，舊寫法會誤判「無產出」而跳過標籤／去 AI 腔／build／check:links 全部關卡。
+  if (wrote.length === 0) { console.log('\n✓ 本次無產出（無夠新夠強的題／各源抓不到）。'); return; }
+  if (!sh('git', ['status', '--porcelain', ARTICLES_DIR])) {
+    console.log('  ℹ️ 工作區乾淨但有產出＝模型自行 commit 過；照常跑完所有關卡。');
+  }
 
   // 用系統時間蓋掉模型寫的 publishDate（模型常把「現在」填成未來整點）；並逐篇驗證引用的本地圖檔存在，
   // 缺圖的整篇剔除（不讓一篇壞圖用 check:links 拖垮整批）。
@@ -196,7 +201,12 @@ function main() {
   catch (e) { die(`build/check:links 未過（已自癒重試），不發佈（改動留工作區）：${e.message}`); }
 
   sh('git', ['add', '--', ARTICLES_DIR, 'public/covers', 'public/images']);
-  sh('git', ['commit', '-m', `feat(article): 焦點/ESG 自動產文（${kept.length} 篇）\n\n整理自主管機關／權威來源公開資料、附原文出處、編輯部署名。`]);
+  // 模型可能已自行 commit（見上）；空 commit 會讓 git 回非 0 而誤判失敗。
+  if (sh('git', ['diff', '--cached', '--name-only'])) {
+    sh('git', ['commit', '-m', `feat(article): 焦點/ESG 自動產文（${kept.length} 篇）\n\n整理自主管機關／權威來源公開資料、附原文出處、編輯部署名。`]);
+  } else {
+    console.log('  ℹ️ 無待 commit 變更（模型已自行 commit），直接進入發佈。');
+  }
   if (go) {
     const _pr = pushToMain({ cwd: process.cwd() });
     if (!_pr.ok) die(`推送 main 失敗：${_pr.err}`);

@@ -159,8 +159,14 @@ function main() {
   const wrote = [];
   for (const t of tracks) runTrack(t, { go, topic, recent, signals, wrote });
 
-  const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
-  if (!produced || wrote.length === 0) { console.log('\n✓ 本次無產出。'); return; }
+  // 只看 wrote，**不要**用 `git status` 當「有沒有產出」的判準。
+  // 2026-07-29 實測：模型有時會無視「不要 commit」的指示，自己把稿 commit 掉；此時
+  // ARTICLES_DIR 的 porcelain 是空的，舊寫法會誤判成「無產出」而**跳過標籤／去 AI 腔／
+  // build／check:links 全部關卡**，還印出誤導的「本次無產出」。稿子照樣在 commit 裡。
+  if (wrote.length === 0) { console.log('\n✓ 本次無產出。'); return; }
+  if (!sh('git', ['status', '--porcelain', ARTICLES_DIR])) {
+    console.log('  ℹ️ 工作區乾淨但有產出＝模型自行 commit 過；照常跑完所有關卡（關卡吃的是檔案，不是 diff）。');
+  }
 
   // 用系統時間蓋掉模型寫的 publishDate；逐篇過圖／標籤／去 AI 腔三關，不合格的整篇剔除（不拖垮整批）。
   const nowIso = new Date().toISOString();
@@ -194,7 +200,13 @@ function main() {
   catch (e) { die(`build/check:links 未過（已自癒重試），不發佈（改動留工作區）：${e.message}`); }
 
   sh('git', ['add', '--', ARTICLES_DIR, 'public/covers', 'public/images']);
-  sh('git', ['commit', '-m', `feat(article): 科技台自動產文（${kept.length} 篇）\n\n${kept.map((k) => `${TECH_TRACKS[k.track].label}：${articleTitle(k.slug) || k.slug}`).join('\n')}`]);
+  // 模型可能已自行 commit（見上），此時沒有 staged 變更；空 commit 會讓 git 回非 0 而誤判失敗。
+  const staged = sh('git', ['diff', '--cached', '--name-only']);
+  if (staged) {
+    sh('git', ['commit', '-m', `feat(article): 科技台自動產文（${kept.length} 篇）\n\n${kept.map((k) => `${TECH_TRACKS[k.track].label}：${articleTitle(k.slug) || k.slug}`).join('\n')}`]);
+  } else {
+    console.log('  ℹ️ 無待 commit 變更（模型已自行 commit），直接進入發佈。');
+  }
   if (go) {
     const pr = pushToMain({ cwd: process.cwd() });
     if (!pr.ok) die(`推送 main 失敗：${pr.err}`);

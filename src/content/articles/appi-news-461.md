@@ -5,7 +5,7 @@ description: "台灣桌球男團在2026倫敦世界桌球團體錦標賽準決�
 publishDate: 2026-07-29
 category: sports
 subcategory: events
-tags: ["桌球", "世團賽", "台灣桌球隊", "銅牌", "國際賽事", "林昀儒", "世界桌球團體錦標賽"]
+tags: ["桌球", "國際賽事"]
 author: "appi-editorial"
 coverImage: "covers/appi-news-461.webp"
 coverAlt: "倫敦世界桌球團體錦標賽比賽場館外觀，多座藍色球檯與觀眾席"

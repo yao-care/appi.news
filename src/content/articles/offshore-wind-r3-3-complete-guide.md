@@ -1,0 +1,108 @@
+---
+title: "離岸風電3-3完整解析：3.6GW容量分配、保底價2.29元、2030至2031年併網總整理"
+slug: "offshore-wind-r3-3-complete-guide"
+description: "離岸風電區塊開發第三期（3-3）行政契約7月23日正式公告：取消零元競標改採底價競標、保底收購價每度2.29元、取消強制國產化改ESG評分，3.6GW容量分配細節、開發實績35分／財務能力30分／專案執行能力35分評分機制、70分門檻、2030至2031年併網時程一次看懂。"
+excerpt: "離岸風電區塊開發第三期（3-3）行政契約7月23日正式公告：取消零元競標改採底價競標、保底收購價每度2.29元、取消強制國產化改ESG評分，3.6GW容量分配細節、評分機制、2030至2031年併網時程一次看懂。"
+publishDate: "2026-07-29T10:43:56.890Z"
+category: "focus"
+subcategory: "policy-watch"
+tags:
+  - "離岸風電"
+  - "能源政策"
+  - "ESG"
+  - "再生能源"
+  - "淨零轉型"
+  - "經濟部"
+author: "appi-editorial"
+coverImage: "covers/offshore-wind-r3-3-complete-guide-cover.webp"
+coverAlt: "海面上離岸風力發電機組群，象徵離岸風電區塊開發第三期"
+coverImageCredit: "Photo by Nicholas Doherty on Unsplash"
+status: "published"
+sourceType: "wire"
+contentType: "news"
+disclaimerType: "general"
+disclosure: "本文整理自經濟部能源署行政契約公告及中央社、經濟日報、工商時報、NOWnews、TechNews、今周刊ESG、遠見ESG、鉅亨網等媒體公開報導，選商規則與時程以能源署正式公告為準，皆附原文出處連結。"
+highlights:
+  - "行政契約7月23日正式公告：保底收購價每度2.29元，開發商洽簽企業購電協議（CPPA）出現空窗期時，由台電按此價格收購。"
+  - "評分機制百分制，開發實績35分、財務能力30分、專案執行能力35分（含ESG規劃15分、能源韌性5分），總分達70分以上才具獲配資格。"
+  - "取消強制國產化，改以ESG承諾（在地產業效益、環境永續、企業社會責任）與能源韌性評分；違反承諾者按採購或投資差額20%計收違約金，情節重大再加10%。"
+  - "單一申請案容量介於300MW至1GW，全期規劃釋出3.6GW，並納入海峽一、海峽二、海鼎二等已解約場址供業者擴充，上限為獲選容量的一半；預計2030至2031年完工併網。"
+references:
+  - title: "離岸風電3之3行政契約公告 2026年完成選商"
+    url: "https://www.nownews.com/news/6859530"
+    publisher: "NOWnews今日新聞"
+  - title: "離岸風電第三期契約上路，保底收購價定為每度 2.29 元"
+    url: "https://technews.tw/2026/07/23/offshore-wind-phase-3-contracts-launch-guaranteed-purchase-price-nt2-29-kwh/"
+    publisher: "TechNews 科技新報"
+  - title: "離岸風電第三期契約出爐！納2.29元保底價 ESG沒做到恐吃違約金"
+    url: "https://www.chinatimes.com/realtimenews/20260723003777-260410"
+    publisher: "中時新聞網"
+  - title: "風電3-3期選商 Q3完成 選商機制強調履約能力"
+    url: "https://money.udn.com/money/story/7307/9253877"
+    publisher: "經濟日報"
+  - title: "離岸風電3-3選商規則擬大鬆綁！取消零元競標、不再強制要求國產化"
+    url: "https://esg.businesstoday.com.tw/article/category/180692/post/202506230036/"
+    publisher: "今周刊ESG"
+  - title: "台灣離岸風電3-3選商啟動！不再強制國產化，釋出3.6GW拼能源轉型"
+    url: "https://esg.gvm.com.tw/article/113360"
+    publisher: "遠見ESG"
+  - title: "離岸風電3-3選商倒數 納2.29元保底價、擴充風場也適用延長獎勵"
+    url: "https://news.cnyes.com/news/id/6544165"
+    publisher: "鉅亨網"
+  - title: "臺灣正式公告離岸風電區塊開發第三期選商 釋出3.6 GW開發容量"
+    url: "https://www.reccessary.com/zh-tw/news/Taiwan-offshore-wind-Round-3-3-officially-announced"
+    publisher: "RECCESSARY"
+  - title: "離岸風電3-3期調整 經部：解約場址將納擴充容量範圍"
+    url: "https://www.cna.com.tw/news/afe/202607020354.aspx"
+    publisher: "中央社"
+  - title: "風電3-3首納開放式ESG評分項 經部拚第3季完成選商"
+    url: "https://www.cna.com.tw/news/afe/202601080358.aspx"
+    publisher: "中央社"
+  - title: "風電3-3期選商機制賞罰分明 經部拚年底完成選商"
+    url: "https://www.cna.com.tw/news/afe/202602260300.aspx"
+    publisher: "中央社"
+---
+
+離岸風電區塊開發第三期，業界簡稱「離岸風電3-3」，是台灣繼3-1、3-2期之後，第三輪大規模釋出離岸風場容量的選商機制。經濟部能源署[7月23日正式公告行政契約範本](https://www.nownews.com/news/6859530)，選商規則走向與前兩期明顯不同：零元競標消失，強制國產化退場，取而代之的是保底收購價與ESG百分制評分。這篇整理3-3從容量分配、選商規則到時程的完整輪廓，也回應開發商與供應鏈最關心的幾個問題。
+
+## 3.6GW怎麼分：容量規劃與擴充機制
+
+3-3期原則規劃釋出3.6GW容量，[單一申請案容量介於300MW至1GW之間](https://money.udn.com/money/story/7307/9253877)，這個上限較3-1、3-2期的1GW單一風場裝置容量限制略有調整，實際工程配置業界解讀為留給業者依自身能力規劃的空間更大。
+
+擴充容量是3-3期的新設計。[能源署副署長陳崇憲7月2日在離岸風電產業溝通平台會議說明](https://www.cna.com.tw/news/afe/202607020354.aspx)，已完成解約程序的海峽一、海峽二、海鼎二風場，將納入業者擴充容量的可選擇範圍，擴充容量上限為獲選容量的一半，且擴充場址不得與獲配場址重疊。[鉅亨網報導指出](https://news.cnyes.com/news/id/6544165)，原始風場與擴充風場將分別獨立簽訂行政契約，原風場的履約保證金可對擴充風場提供擔保，但擔保上限設定為擴充風場履保金額度。經濟部並將給予業者充足時間辦理擴充場址備查與環境影響評估。
+
+## 選商規則轉向：底價競標取代零元競標
+
+3-2期投標金額全數掛零，[TechNews報導分析](https://technews.tw/2026/07/23/offshore-wind-phase-3-contracts-launch-guaranteed-purchase-price-nt2-29-kwh/)，這種零元競標模式讓開發商後續售電高度不確定，銀行端對專案融資信心受損，是3-3期改弦更張的主因。新制改採底價競標，行政契約明定保底收購價每度2.29元：開發商原則上仍須自行洽簽企業購電協議（CPPA），但若出現CPPA空窗期，這段期間台電會按每度2.29元收購，讓開發商在還沒談定長期售電合約前，也有基本現金流可以計算融資風險。
+
+[今周刊ESG報導指出](https://esg.businesstoday.com.tw/article/category/180692/post/202506230036/)，價格機制還與併網時程掛鉤，早鳥獎勵設計是併網年度愈早，保底價格愈高，用誘因鼓勵開發商加速完工。行政契約同時納入一年彈性併網機制，[中時新聞網報導](https://www.chinatimes.com/realtimenews/20260723003777-260410)，只要完成全部風力機水下基礎設置、或已完成總裝置容量50%併聯任一條件，業者就能申請延後一年完工併網。
+
+## 取消強制國產化，改ESG評分接棒
+
+3-1、3-2期都設有強制國產化採購比例，3-3期正式取消這項要求。[遠見ESG報導](https://esg.gvm.com.tw/article/113360)，改由ESG承諾，包括在地採購、在地產業效益等項目取代國產化義務，理論上仍能引導業者考慮本土供應鏈，但不再是強制門檻。
+
+配套的違約機制同樣寫進行政契約。[中時新聞網報導](https://www.chinatimes.com/realtimenews/20260723003777-260410)，開發商若未達成在地產業效益、在地經濟效益或能源韌性等承諾，經濟部將按「承諾採購或投資金額」與「實際採購或投資金額」差額的20%計收違約金，經查核認定情節重大者，最高再加計差額10%。簽約業者須在融資到位或完工併聯後六個月內提出落實計畫，並定期繳交執行報告，能源署會在完工併聯後及併聯滿五年時兩度查核；履約保證金則採分階段返還，完工併聯後先保留承諾金額約20%，待查核完成才全數返還。
+
+<img src="/images/offshore-wind-r3-3-complete-guide-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="電力輸電塔與電網線路，象徵離岸風電併網與電網韌性（示意圖）">
+
+## 評分機制細節：70分門檻怎麼算
+
+3-3期選商評分採百分制，[經濟日報報導](https://money.udn.com/money/story/7307/9253877)，總分須達70分以上才具獲配資格，評分項目分三大類：
+
+- **開發實績（35分）**：涵蓋開發商國內外離岸風電開發經驗，過往在台灣風場表現優良者可加分。
+- **財務能力（30分）**：檢視開發商及其股東公司淨值、可運用資金與自有資本規模，設有加減分機制。
+- **專案執行能力（35分）**：以申請案執行進度為主體，其中內含ESG規劃15分（在地產業效益／在地經濟效益10分、環境友善永續3分、企業社會責任2分）與能源韌性5分。
+
+[RECCESSARY報導](https://www.reccessary.com/zh-tw/news/Taiwan-offshore-wind-Round-3-3-officially-announced)，能源署強調不希望把ESG定義過度狹隘，保留業者依風場特性提出差異化方案的空間，同分者則依專案執行能力、開發商實績排序。
+
+## 時程：從收件到併網
+
+[中央社1月報導](https://www.cna.com.tw/news/afe/202601080358.aspx)，能源署當時規劃第一季公告遴選辦法，目標第三季完成選商；[中央社2月報導](https://www.cna.com.tw/news/afe/202602260300.aspx)進一步說明賞罰機制底定，能源署拚年底前完成選商。3月下旬選商機制正式公告，收件期間為4月1日至9月30日，備標期約六個月。7月2日產業溝通平台會議與7月23日行政契約範本公告，則把擴充容量範圍與違約金計算方式最終拍板。全期目標2030至2031年完工併網。
+
+<img src="/images/offshore-wind-r3-3-complete-guide-s2.webp" width="960" height="720" loading="lazy" decoding="async" alt="離岸風力發電機組海上施工作業，象徵風場建置與供應鏈參與（示意圖）">
+
+## 對開發商與供應鏈的影響
+
+國產化義務解除，對開發商而言降低了採購彈性上的限制，也讓國際開發商評估台灣市場時多一分成本優勢；但對本土供應鏈來說，少了政策強制保障的訂單量，能否從ESG評分的「在地產業效益」項目中拿到足夠誘因，變成接下來要觀察的重點。保底價與彈性併網機制則直接回應了3-2期融資卡關的教訓，讓銀行端評估專案現金流時有更明確的基準可用。
+
+3-3期的選商結果與後續執行，將牽動台灣2030年再生能源占比與半導體等產業RE100綠電需求能否如期銜接。相關進度延伸閱讀：[離岸風電R3.3改革：強制國產化退場，ESG評分成選商核心](/articles/offshore-wind-r3-3-esg-scoring/)整理了ESG評分制度轉向的政策辯論；[離岸風電3-3期行政契約敲定：解約場址納擴充容量，違約金採差額20%起罰](/articles/taiwan-offshore-wind-r3-3-admin-contract-update/)則是7月2日產業溝通平台會議的即時報導，本篇為兩篇報導後續發展的完整彙整版。

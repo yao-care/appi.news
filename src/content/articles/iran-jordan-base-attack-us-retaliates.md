@@ -1,10 +1,10 @@
 ---
-title: "美軍空襲伊朗連13夜　伊拉克埃爾比勒基地驚傳爆炸　伊朗稱死亡數增至55人逾600傷、葉門胡塞攻擊沙國油輪"
+title: "停火5天再開戰：約旦攔截5枚伊朗飛彈、美沙聯手空襲伊拉克民兵至少20死　沙國兩煉油設施遇襲、油價彈升3.1%"
 slug: "iran-jordan-base-attack-us-retaliates"
-description: "美軍完成對伊朗第13個夜晚的空襲後，伊拉克庫德自治區首府埃爾比勒一處駐有美軍的基地附近傳出至少7聲爆炸、4股黑煙，當地安全官員稱聯軍擊落5架無人機，巴林同時響起警報。伊朗衛生部通報，近期轟炸死亡人數已達55人（另有報導指上修至59人）、逾600人受傷。戰線同時延燒至紅海，伊朗盟友葉門胡塞武裝攻擊沙烏地阿拉伯油輪，川普揚言將以美方持有的伊朗資金支付船隻損失，並警告對胡塞祭出「重大軍事懲罰」；伊朗外長警告資產遭沒收將引發混亂。荷莫茲海峽約6000名海員受困400艘船隻，布蘭特原油衝破每桶100美元。"
-excerpt: "美軍完成對伊朗第13個夜晚的空襲後，伊拉克庫德自治區首府埃爾比勒一處駐有美軍的基地附近傳出至少7聲爆炸、4股黑煙，當地安全官員稱聯軍擊落5架無人機，巴林同時響起警報。伊朗衛生部通報，近期轟炸死亡人數已達55人（另有報導指上修至59人）、逾600人受傷。戰線同時延燒至紅海，伊朗盟友葉門胡塞武裝攻擊沙烏地阿拉伯油輪，川普揚言將以美方持有的伊朗資金支付船隻損失，並警告對胡塞祭出「重大軍事懲罰」；伊朗外長警告資產遭沒收將引發混亂。荷莫茲海峽約6000名海員受困400艘船隻，布蘭特原油衝破每桶100美元。"
+description: "美軍完成連續13夜空襲伊朗、戰事一度趨緩5天後再度升溫。約旦軍方攔截5枚瞄準美軍基地與中央司令部的伊朗飛彈；美國與沙烏地阿拉伯聯手空襲伊拉克7省份親伊朗民兵據點，官方民兵聯盟PMF通報至少20死32傷。沙國指控過去72小時逾30架伊朗革命衛隊相關無人機攻擊沙國油田設施，阿布蓋格、賈贊兩處煉油設施受損，布蘭特原油單日彈升3.1%至每桶84.58美元；伊拉克總統、總理齊聲譴責攻擊侵犯主權並召開緊急國安會議，伊朗並拒絕阿曼提出的荷莫茲海峽共管提案。"
+excerpt: "美軍完成連續13夜空襲伊朗、戰事一度趨緩5天後再度升溫。約旦軍方攔截5枚瞄準美軍基地與中央司令部的伊朗飛彈；美國與沙烏地阿拉伯聯手空襲伊拉克7省份親伊朗民兵據點，官方民兵聯盟PMF通報至少20死32傷。沙國指控過去72小時逾30架伊朗革命衛隊相關無人機攻擊沙國油田設施，阿布蓋格、賈贊兩處煉油設施受損，布蘭特原油單日彈升3.1%至每桶84.58美元；伊拉克總統、總理齊聲譴責攻擊侵犯主權並召開緊急國安會議，伊朗並拒絕阿曼提出的荷莫茲海峽共管提案。"
 publishDate: "2026-07-19T15:18:08.284Z"
-updatedDate: "2026-07-24T15:13:35.640Z"
+updatedDate: "2026-07-29T16:30:08.380Z"
 category: "international"
 subcategory: "middle-east"
 tags:
@@ -17,6 +17,9 @@ highlights:
   - "伊朗衛生部通報，近期轟炸死亡人數已達55人（波士頓環球報另指上修至59人），受傷人數均逾600人"
   - "戰線延燒紅海：伊朗盟友葉門胡塞武裝攻擊沙烏地阿拉伯油輪，川普揚言以美方持有的伊朗資金支付船隻損失，並警告對胡塞祭出「重大軍事懲罰」；伊朗外長阿拉格奇警告，一旦各國政府將資產沒收正常化，「沒有人的資產是安全的，隨之而來的混亂不會太平」"
   - "荷莫茲海峽壅塞：約6000名海員受困400艘船隻，布蘭特原油衝破每桶100美元，美國汽油均價來到每加侖4.11美元"
+  - "戰事在美軍完成13夜空襲伊朗、暫緩5天後再度升溫：約旦攔截5枚瞄準美軍基地與中央司令部的伊朗飛彈，美沙聯手空襲伊拉克7省份親伊朗民兵，官方民兵聯盟PMF通報至少20死32傷"
+  - "沙國指控過去72小時逾30架伊朗革命衛隊相關無人機攻擊油田設施，阿布蓋格（全球最大原油穩定廠，日處理700萬桶）、賈贊煉油廠（日產40萬桶）雙雙受損，賈贊預計8月中旬復工；布蘭特原油單日彈升3.1%至每桶84.58美元"
+  - "伊拉克總統阿米迪、總理扎伊迪齊聲譴責空襲侵犯主權，召開緊急國安會議；PMF與伊拉克伊斯蘭抵抗組織同聲批「危險升級」；伊朗並拒絕阿曼提出的荷莫茲海峽共管提案，稱海峽「永遠不會回到戰前狀態」"
 references:
   - title: "2 troops are dead, 1 is missing after Iranian attacks on base in Jordan, US military says"
     url: "https://www.mysuncoast.com/2026/07/18/2-troops-are-dead-1-is-missing-after-iranian-attacks-base-jordan-us-military-says/"
@@ -54,6 +57,21 @@ references:
   - title: "Yemen's Houthis attack Saudi tankers in the Red Sea, threatening to widen Iran war"
     url: "https://www.bostonglobe.com/2026/07/24/world/iran-us-war/"
     publisher: "The Boston Globe (AP)"
+  - title: "Jordan intercepts Iranian missiles as U.S. and Saudi Arabia strike militias in Iraq"
+    url: "https://www.wglt.org/2026-07-29/jordan-intercepts-iranian-missiles-as-u-s-and-saudi-arabia-strike-militias-in-iraq"
+    publisher: "WGLT (NPR)"
+  - title: "Jordan intercepts Iranian missiles as US and Saudi Arabia launch strikes against militias in Iraq"
+    url: "https://www.yahoo.com/news/world/articles/jordan-says-intercepted-missiles-launched-050901324.html"
+    publisher: "Yahoo News (AP)"
+  - title: "Jordan intercepts Iranian missiles as Saudi Arabia, US launch strikes"
+    url: "https://www.washingtontimes.com/news/2026/jul/29/jordan-intercepts-iranian-missiles-saudi-arabia-us-launch-strikes/"
+    publisher: "The Washington Times"
+  - title: "Saudi Arabia, US carry out strikes on Iran-backed groups in Iraq"
+    url: "https://www.aljazeera.com/news/2026/7/29/saudi-arabia-us-carry-out-strikes-on-iran-backed-groups-in-iraq"
+    publisher: "Al Jazeera"
+  - title: "Iraq govt calls emergency meeting after US-Saudi airstrikes kill 20"
+    url: "https://www.dailysabah.com/world/mid-east/iraq-govt-calls-emergency-meeting-after-us-saudi-airstrikes-kill-20"
+    publisher: "Daily Sabah"
 author: "appi-editorial"
 status: "published"
 sourceType: "wire"
@@ -126,8 +144,31 @@ coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 
 戰事持續衝擊全球航運與能源市場。[Military.com報導](https://www.military.com/explosions-are-heard-near-a-us-base-in-northern-iraq-as-us-iran-fighting-escalates)指出，全球約五分之一的石油與天然氣經荷莫茲海峽運輸，全球貿易約12%、四分之一的貨櫃運輸則經過曼德海峽；[波士頓環球報報導](https://www.bostonglobe.com/2026/07/24/world/iran-us-war/)指出，荷莫茲海峽目前約有6000名海員受困在400艘船隻上動彈不得。能源價格同步飆升：[波士頓環球報報導](https://www.bostonglobe.com/2026/07/24/world/iran-us-war/)指出，布蘭特原油已觸及每桶100美元，美國國內汽油平均價則來到每加侖4.11美元，較7月20日通報的每桶88美元、每加侖4美元進一步攀升。
 
+## 停火5天再開戰：約旦攔截5枚伊朗飛彈　美沙聯手空襲伊拉克民兵
+
+美軍7月24日完成連續第13夜空襲伊朗後，戰事一度趨緩。據[WGLT轉引NPR報導](https://www.wglt.org/2026-07-29/jordan-intercepts-iranian-missiles-as-u-s-and-saudi-arabia-strike-militias-in-iraq)，約旦軍方7月29日（週三）清晨表示，防空系統攔截了5枚伊朗飛彈，目標鎖定駐有美軍的穆瓦法克薩爾蒂空軍基地，以及美軍中央司令部在約旦境內的總部，未造成人員傷亡或財物損失。伊朗革命衛隊隨後透過官方通訊社IRNA證實，已對約旦境內美軍目標發動飛彈攻擊。
+
+幾乎同一時間，美國與沙烏地阿拉伯聯手出擊。據[Yahoo新聞轉發美聯社報導](https://www.yahoo.com/news/world/articles/jordan-says-intercepted-missiles-launched-050901324.html)與[半島電視台報導](https://www.aljazeera.com/news/2026/7/29/saudi-arabia-us-carry-out-strikes-on-iran-backed-groups-in-iraq)，美軍中央司令部證實，美沙戰機聯合空襲伊拉克境內親伊朗武裝團體的多處後勤與武器據點，攻擊範圍遍及伊拉克7個省份，包括首都巴格達、北部尼尼微省與南部巴斯拉省，其中尼尼微與中部迪亞拉省傷亡最重。伊拉克官方民兵聯盟「人民動員部隊」（PMF）通報，初步統計至少20名成員陣亡、32人受傷。[半島電視台報導](https://www.aljazeera.com/news/2026/7/29/saudi-arabia-us-carry-out-strikes-on-iran-backed-groups-in-iraq)指出，這是美軍完成連續13夜空襲伊朗、暫緩軍事行動後，在中東採取的首度重大軍事行動。
+
+## 沙國兩處煉油設施遇襲　油價單日彈升3.1%
+
+據[華盛頓時報報導](https://www.washingtontimes.com/news/2026/jul/29/jordan-intercepts-iranian-missiles-saudi-arabia-us-launch-strikes/)，美軍中央司令部聲明指出，這次對伊拉克民兵的空襲，是回應過去72小時內逾30架伊朗革命衛隊相關無人機對美軍基地與沙烏地阿拉伯基礎設施發動的攻擊。沙烏地國防部證實，該國防空系統攔截並摧毀多架企圖攻擊東部省份與利雅得地區石油設施的無人機；其中，全球最大原油穩定化工廠阿布蓋格（Abqaiq，日處理量約700萬桶）遭波及，衛星影像業者Planet Labs PBC拍到廠區冒煙畫面，紅海沿岸的賈贊（Jazan）煉油廠（日產能40萬桶）則受損「相對顯著」，據能源顧問公司IIR Energy評估，需數日搶修，預計8月中旬才能恢復運作。[戴利沙巴報導](https://www.dailysabah.com/world/mid-east/iraq-govt-calls-emergency-meeting-after-us-saudi-airstrikes-kill-20)指出，遭指控發動無人機攻擊的親伊朗團體否認涉案。
+
+沙烏地國防部聲明強調：「王國不尋求升級，但將回應面臨的任何侵略。」[華盛頓時報報導](https://www.washingtontimes.com/news/2026/jul/29/jordan-intercepts-iranian-missiles-saudi-arabia-us-launch-strikes/)指出，國際油價應聲反彈：布蘭特原油7月29日單日上漲3.1%，來到每桶84.58美元，較7月24日一度衝破每桶100美元的高點已明顯回落，此次是在短暫回落後再度彈升。
+
+## 伊拉克總統總理齊聲抗議　PMF批「危險升級」
+
+[半島電視台報導](https://www.aljazeera.com/news/2026/7/29/saudi-arabia-us-carry-out-strikes-on-iran-backed-groups-in-iraq)指出，PMF發表聲明，稱美沙這次攻擊是「極度危險的升級」，且違反伊拉克主權；伊拉克另一武裝聯盟「伊拉克伊斯蘭抵抗組織」也同聲譴責。[戴利沙巴報導](https://www.dailysabah.com/world/mid-east/iraq-govt-calls-emergency-meeting-after-us-saudi-airstrikes-kill-20)指出，伊拉克總統尼扎爾·阿米迪辦公室發表聲明，稱空襲是「不可接受的攻擊」、「公然違反伊拉克主權」，並表示伊拉克「不應成為對鄰國發動攻擊、或解決地區與國際紛爭的發射台或舞台」。
+
+伊拉克總理阿里·扎伊迪隨即召開部長級國家安全委員會緊急會議，因應這次空襲後的安全局勢；[半島電視台報導](https://www.aljazeera.com/news/2026/7/29/saudi-arabia-us-carry-out-strikes-on-iran-backed-groups-in-iraq)指出，伊拉克軍方則表態，將「致力防止伊拉克領土被用作對任何兄弟或友邦國家發動攻擊的路線或發射點」。
+
+## 荷莫茲海峽外交觸礁：伊朗拒絕阿曼斡旋提案
+
+據[WGLT轉引NPR報導](https://www.wglt.org/2026-07-29/jordan-intercepts-iranian-missiles-as-u-s-and-saudi-arabia-strike-militias-in-iraq)，伊朗副外長加里巴巴迪在伊朗國營電視台專訪中證實，德黑蘭已拒絕阿曼提出、由雙方共同管理荷莫茲海峽的提案，理由是「未能解決德黑蘭的疑慮」。他重申伊朗立場，海峽通行「永遠不會回到戰前狀態」。
+
 ## 更新時間軸
 
+- （更新 2026-07-29：戰事在美軍完成13夜空襲伊朗、暫緩5天後再度升溫。約旦軍方攔截5枚瞄準美軍基地與中央司令部的伊朗飛彈；美國與沙烏地阿拉伯聯手空襲伊拉克7省份親伊朗民兵據點，PMF通報至少20死32傷。沙國指控過去72小時逾30架伊朗革命衛隊相關無人機攻擊沙國油田設施，阿布蓋格、賈贊兩處煉油設施受損，賈贊預計8月中旬復工；布蘭特原油單日彈升3.1%至每桶84.58美元。伊拉克總統阿米迪、總理扎伊迪齊聲譴責攻擊侵犯主權並召開緊急國安會議；伊朗並拒絕阿曼提出的荷莫茲海峽共管提案。）（[WGLT/NPR](https://www.wglt.org/2026-07-29/jordan-intercepts-iranian-missiles-as-u-s-and-saudi-arabia-strike-militias-in-iraq)、[Yahoo/AP](https://www.yahoo.com/news/world/articles/jordan-says-intercepted-missiles-launched-050901324.html)、[Washington Times](https://www.washingtontimes.com/news/2026/jul/29/jordan-intercepts-iranian-missiles-saudi-arabia-us-launch-strikes/)、[Al Jazeera](https://www.aljazeera.com/news/2026/7/29/saudi-arabia-us-carry-out-strikes-on-iran-backed-groups-in-iraq)、[Daily Sabah](https://www.dailysabah.com/world/mid-east/iraq-govt-calls-emergency-meeting-after-us-saudi-airstrikes-kill-20)）
 - （更新 2026-07-24：美軍完成對伊朗連續第13個夜晚的空襲，伊拉克埃爾比勒一處駐有美軍的基地附近傳出至少7聲爆炸、4股黑煙，庫德安全官員稱聯軍擊落5架無人機，巴林同時響起警報；空襲鎖定伊朗革命衛隊北部海軍基地、格什姆島、伊斯法罕省、庫齊斯坦省與法爾斯省。伊朗衛生部通報死亡人數已達55人（另有報導指上修至59人）、逾600人受傷。戰線延燒紅海，葉門胡塞武裝攻擊沙烏地油輪，川普揚言以伊朗資金支付船隻損失、警告對胡塞祭出「重大軍事懲罰」，伊朗外長阿拉格奇警告資產沒收將引發混亂。荷莫茲海峽約6000名海員受困400艘船隻，布蘭特原油衝破每桶100美元。）（[Swindon Advertiser](https://www.swindonadvertiser.co.uk/news/national/26406094.explosions-american-base-iraq-us-forces-strike-iran-13th-night/)、[WIBW/AP](https://www.wibw.com/2026/07/24/explosions-break-out-near-military-base-hosting-us-troops-iraq/)、[Military.com/AP](https://www.military.com/explosions-are-heard-near-a-us-base-in-northern-iraq-as-us-iran-fighting-escalates)、[The Boston Globe/AP](https://www.bostonglobe.com/2026/07/24/world/iran-us-war/)）
 - （更新 2026-07-21：美軍空襲伊朗已連續進行到第10個夜晚，鎖定大不里士附近、班達爾伊瑪目霍梅尼、錫里克、傑斯克、科納拉克、恰巴哈爾等地，伊朗官媒稱大不里士附近至少1人喪生；五角大廈證實陸軍中士史溫頓7月19日在伊拉克埃爾比勒基地執行無人機處置任務時陣亡，美軍陣亡累計達17人；伊朗革命衛隊宣稱已報復性攻擊科威特與巴林，科威特電力部門證實多座電廠與海水淡化廠遭擊中起火；伊朗內政部長已赴巴基斯坦斡旋兩天會談，白宮則稱空襲將持續至川普決定停止。）（[Al Jazeera](https://www.aljazeera.com/news/2026/7/21/us-launches-tenth-consecutive-night-of-attacks-on-iran)、[The Irish Times](https://www.irishtimes.com/world/middle-east/2026/07/20/us-carry-out-10th-consecutive-night-of-strikes-on-iran-bringing-all-out-war-closer/)、[PBS NewsHour](https://www.pbs.org/newshour/world/expansion-of-u-s-strikes-on-iran-leads-to-more-retaliation-across-the-gulf)、[ABC News](https://abcnews.com/International/live-updates/iran-live-updates-kuwait-attacked-bahrain-sounds-sirens/?id=134907987)）
 - （2026-07-19）美軍中央司令部證實，伊朗7月17日以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地，造成2名美軍陣亡、1人失蹤、4人送醫；川普下令美軍18日晚間對伊朗革命衛隊目標展開報復空襲，伊朗最高領袖警告將給予「永誌不忘的教訓」。（[WWSB/AP](https://www.mysuncoast.com/2026/07/18/2-troops-are-dead-1-is-missing-after-iranian-attacks-base-jordan-us-military-says/)、[Military Times](https://www.militarytimes.com/flashpoints/2026/07/18/2-us-troops-killed-1-missing-after-iranian-missile-drone-attack-in-jordan/)、[Air & Space Forces Magazine](https://www.airandspaceforces.com/2-americans-killed-one-missing-as-iran-attacks-u-s-base-in-jordan/)、[The National](https://www.thenationalnews.com/news/us/2026/07/18/two-us-troops-killed-and-one-missing-following-iranian-attack-in-jordan/)）

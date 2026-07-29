@@ -5,10 +5,10 @@ description: "115年全國中等學校運動會桌球項目會內賽於嘉義縣
 publishDate: 2026-07-29
 category: sports
 subcategory: events
-tags: ["桌球", "學生賽事"]
+tags: ["桌球"]
 author: "appi-editorial"
 coverImage: "covers/appi-news-464.webp"
-coverAlt: "全中運桌球會內賽比賽現場示意圖，選手在體育館內揮拍對戰"
+coverAlt: "全中運桌球會內賽比賽現場示意圖"
 status: published
 sourceType: editorial
 contentType: news
@@ -23,7 +23,7 @@ references:
     url: "https://sport115.cyc.edu.tw/Module/Pages/Index.php?ID=16"
 draft: false
 ---
-![全中運桌球會內賽比賽現場示意圖，選手在體育館內揮拍對戰](https://appi.news/images/appi-news-464/1.jpg "四組團體賽在嘉義縣義竹國中同場較勁，四天賽程決定誰能封王")
+![全中運桌球會內賽比賽現場示意圖](https://appi.news/images/appi-news-464/1.jpg "四組團體賽在嘉義縣義竹國中激烈開打,冠軍名單就此揭曉（圖／蕃新聞）")
 
 ## 一、115全中運桌球會內賽落幕，四組冠軍出爐
 
@@ -50,7 +50,7 @@ draft: false
 | 國男組 | 臺北市誠正國中 | 彰化縣彰德國中 | 臺南市忠孝國中 | 臺北市至善國中 |
 | 國女組 | 新北市淡江高中 | 臺北市南門國中 | 新北市海山高中 | 臺南市忠孝國中 |
 
-![四組桌球團體賽冠軍學校並列對照資訊圖](https://appi.news/images/appi-news-464/2.svg "四個組別各自封王，新北市淡江高中是唯一橫跨兩組奪冠的學校")
+![四組桌球團體賽冠軍學校對照資訊圖](https://appi.news/images/appi-news-464/2.svg "四組團體賽由三所學校分食冠軍,新北市淡江高中一次拿下兩座")
 
 ### 高男組：臺北市松山家商封王
 
@@ -60,7 +60,7 @@ draft: false
 
 淡江高中同時拿下高女組與國女組兩座團體冠軍，是本屆唯一在兩個組別都站上團體賽冠軍位置的學校。高女組的亞軍同樣是臺南市長榮中學，國女組亞軍則是臺北市南門國中。一所學校同時掌握兩個年齡層的女子團體賽最高名次，代表這所學校在高中部與國中部的選手實力都達到本屆前段班水準。
 
-![新北市淡江高中同時拿下高女組與國女組冠軍示意圖](https://appi.news/images/appi-news-464/3.png "同一所學校拿下兩個年齡層的女子團體冠軍，代表這所學校選手深度貫穿高中部與國中部")
+![新北市淡江高中雙料稱霸示意圖](https://appi.news/images/appi-news-464/3.png "同一所學校同時掌握兩個年齡層的女子團體冠軍,是本屆最鮮明的一條主線")
 
 ### 國男組：臺北市誠正國中奪冠
 
@@ -91,7 +91,7 @@ draft: false
 
 混合雙打賽（國中組）第一名是高雄市鼓山高中的周妤霏、簡雅各。四個單打冠軍分別來自四所不同學校，顯示本屆單打項目的競爭較團體賽分散，沒有單一學校同時包辦多個組別的單打冠軍。
 
-![國中組雙打賽冠軍選手手持獎盃慶祝畫面](https://appi.news/images/appi-news-464/4.jpg "個人賽冠軍分散在四所不同學校，雙打賽的勝利同樣得來不易")
+![國中組雙打賽冠軍選手慶祝畫面示意](https://appi.news/images/appi-news-464/4.jpg "團體戰之外,個人賽同樣是這屆賽事不能忽略的另一條戰線")
 
 ## 五、結語：本屆會內賽成績總覽
 

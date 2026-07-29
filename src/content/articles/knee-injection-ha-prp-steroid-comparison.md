@@ -5,6 +5,7 @@ description: 膝蓋退化想打針,主要有三種:類固醇快速消炎、玻�
 excerpt: 膝蓋退化打針到底打什麼?玻尿酸、PRP、類固醇的效果、費用與健保給付差在哪、又該怎麼選,一次比清楚。
 publishDate: "2026-07-01"
 category: health
+topics: ["healthy-aging"]
 subcategory: medical
 tags:
   - "代謝健康"

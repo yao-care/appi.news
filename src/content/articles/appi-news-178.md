@@ -1,13 +1,13 @@
 ---
-title: "美顏針和醫美注射差在哪？中醫針傷科的整體平衡觀點"
+title: "中醫美顏針有效嗎？和醫美注射差在哪、什麼人適合做"
 slug: "appi-news-178"
-description: "中醫美顏針源自顏面神經治療，本文從中醫針傷科觀點出發，說明如何從肩頸張力、睡眠、體質全方位評估，讓臉部改善更自然持久。"
+description: "中醫美顏針源自顏面神經治療，和肉毒、玻尿酸走的是兩套思路。本文從中醫針傷科觀點說明它實際改變了什麼、隨機對照試驗看到多少效果，以及怎麼從肩頸張力、睡眠、體質判斷自己適不適合。"
 publishDate: 2026-06-21
 category: health
+topics: ["tcm-acupuncture-pain"]
 subcategory: tcm-integrative
 tags:
   - "中醫"
-  - "骨骼關節"
   - "過敏"
 author: "huang-ziyan"
 coverImage: "covers/appi-news-178.webp"

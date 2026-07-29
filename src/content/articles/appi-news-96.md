@@ -4,6 +4,7 @@ slug: appi-news-96
 description: 深臀症候群常被誤診為坐骨神經痛或腰椎問題，本文彙整王威鵬醫師臨床觀點，說明深層臀肌疼痛的辨識重點、針灸乾針的差異，以及前期止痛到後期功能重建的整合治療策略。
 publishDate: 2026-06-21T00:00:00.000Z
 category: health
+topics: ["tcm-acupuncture-pain"]
 subcategory: tcm-integrative
 tags:
   - "骨骼關節"

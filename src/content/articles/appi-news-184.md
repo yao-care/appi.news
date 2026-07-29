@@ -9,6 +9,7 @@ tags:
   - "營養"
   - "減重管理"
 author: "huang-ziyan"
+column: "herbal-cuisine"
 coverImage: "covers/appi-news-184.webp"
 coverAlt: "整粒黑胡椒與手動研磨器放在木碗旁，光線自然溫暖"
 status: published

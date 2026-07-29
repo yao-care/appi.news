@@ -32,6 +32,7 @@
 | 篇目 | 一句話 |
 |---|---|
 | [topical-authority-concentration.md](./topical-authority-concentration.md) | 512 篇/7 分類卡排名 18：主題權威靠「收斂」賺不是「多產」堆，具名作者+高產量≠權威（權威站外賺）；把作者收攏回打得贏的窄利基、選題從「獵熱度」改「獵可贏性」四項 gate，別再跑平行商品科技產線 |
+| [query-targeting-event-vs-concept.md](./query-targeting-event-vs-concept.md) | tech 93 篇排在 pos 4~10 卻每篇只有 13.8 曝光：主標瞄準 `figure 03 bmw`、`fable 5` 這種只活一週的事件字（90 天各 2~11 曝光），同期唯一一篇「是什麼／運作原理」概念文拿 177 曝光、差 16 倍；選題 gate 管不到下標，另加 `targetQuery` 三檢查；附「熱門新聞第一頁＝Top Stories 權威×速度賽道、非 SEO」的實測 |
 | [high-impression-zero-click-bot-queries.md](./high-impression-zero-click-bot-queries.md) | 高曝光零點擊不一定是 SEO 問題：氣象 App／通知的模板化查詢（非人類），改標題永遠 0 點擊，該「滅燈」不是優化；附裝置別查證法＋兩消費端 mute 機制 |
 | [tag-taxonomy.md](./tag-taxonomy.md) | `tags` 是全站唯一沒做 enum 約束的分類欄位，481 篇長出 1,883 個標籤、85.9% 只出現一次、1,618 個 noindex 死頁；唯一被指定固定詞的產線是唯一沒爛的產線；改成受控詞彙表＋schema enum 硬擋，unique 1,883→179 |
 | [duplicate-topic-gate.md](./duplicate-topic-gate.md) | `髖關節痛` 被自家 5 個 URL 瓜分全卡 pos 76-83：去重下在選題端（14 天窗、單一產線）蓋不到跨月與跨產線的重複，改下在寫入端；另查出 131 個 meta-refresh 轉址殘骸仍吃 15% 站台曝光，「轉址已處理」≠「權重已傳遞」 |

@@ -138,4 +138,5 @@ draft: false
 
 ### 延伸閱讀
 
+- [中醫美顏針完整指南：有效嗎、幾次有感、誰不適合、和醫美差在哪](/articles/tcm-facial-acupuncture-guide/)
 - [美顏針的中醫整合評估：從全身狀態看臉部問題](/articles/appi-news-178/)

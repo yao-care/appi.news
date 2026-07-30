@@ -1,11 +1,14 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import CategoryChannel from '@/components/blocks/CategoryChannel.astro';
+import TopicCard from '@/components/blocks/TopicCard.astro';
 import { CATEGORIES } from '@/config/categories';
 import {
   getPublishedArticles,
   getAuthorMap,
+  getTopics,
   byCategory,
+  byTopic,
   articleSlug,
 } from '@/utils/content';
 import { url } from '@/utils/url';
@@ -32,6 +35,11 @@ const inCat = byCategory(all, category.slug);
 const totalPages = Math.max(1, Math.ceil(inCat.length / PAGE_SIZE));
 const pageArticles = inCat.slice(0, PAGE_SIZE);
 
+// 分類頁補「相關專題」內鏈入口：只列同分類、已上線的專題，沒有就不顯示（不留空區塊）
+const relatedTopics = (await getTopics())
+  .filter((t) => t.data.category === category.slug)
+  .map((t) => ({ topic: t, count: byTopic(all, t.id).length + t.data.articles.length }));
+
 const ld = [
   breadcrumbLd(Astro.site, [
     { name: '首頁', path: '/' },
@@ -42,6 +50,15 @@ const ld = [
     pageArticles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
     { name: `${category.name}最新文章` },
   ),
+  ...(relatedTopics.length > 0
+    ? [
+        itemListLd(
+          Astro.site,
+          relatedTopics.map((r) => ({ name: r.topic.data.title, path: `/topics/${r.topic.id}/` })),
+          { name: `${category.name}相關專題` },
+        ),
+      ]
+    : []),
 ];
 ---
 <BaseLayout
@@ -70,9 +87,22 @@ const ld = [
     totalPages={totalPages}
     showHero={true}
   />
+  {
+    relatedTopics.length > 0 && (
+      <div class="container">
+        <section class="section related-topics">
+          <div class="section-head"><h2>相關專題</h2></div>
+          <div class="card-grid card-grid--3">
+            {relatedTopics.map((r) => <TopicCard topic={r.topic} articleCount={r.count} />)}
+          </div>
+        </section>
+      </div>
+    )
+  }
 </BaseLayout>
 
 <style>
+  .related-topics { margin-top: 8px; }
   .sports-submit-cta { background: var(--color-surface-alt); border-radius: 10px; margin: 1rem auto 0; }
   .sports-submit-cta .container { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; padding: 0.8rem 1rem; }
   .sports-submit-cta span { font-weight: 600; }

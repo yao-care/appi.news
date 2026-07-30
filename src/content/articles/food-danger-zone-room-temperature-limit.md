@@ -4,6 +4,7 @@ slug: "food-danger-zone-room-temperature-limit"
 description: "食藥署與衛福部將攝氏7度至60度定義為食物「危險溫度帶」，細菌在此區間可快速增殖；熟食調製後於室溫下建議不超過2小時，氣溫達32度以上要縮短為1小時。外帶便當、自助餐與隔夜炒飯都在食藥署列管的3至8月高風險名單上，本文整理沙門氏桿菌、金黃色葡萄球菌、仙人掌桿菌各自的潛伏期與症狀，並附官方原文出處。"
 publishDate: "2026-07-30T12:14:35.344Z"
 category: "health"
+topics: ["food-safety-storage"]
 subcategory: "medical"
 tags:
   - "食品安全"
@@ -69,6 +70,8 @@ draft: false
 這個問題的答案，其實就寫在危險溫度帶與加熱標準這兩條規則裡。如果便當沒辦法在2小時（天熱1小時）內吃完，正確做法是趁食物還在安全溫度時盡快冷藏，而不是等它整個放涼、在室溫的危險溫度帶裡多待一段時間。[依食藥署對仙人掌桿菌的預防建議](https://www.fda.gov.tw/tc/sitecontent.aspx?sid=1938)，熟食若無法立即食用，短期（兩天內）應存放於5度以下冷藏，超過兩天則務必冷凍保存；要吃之前復熱，[依衛福部五要原則的加熱標準](https://www.mohw.gov.tw/cp-3250-29716-1.html)，中心溫度須超過70度，細菌才容易被消滅。
 
 <img src="/images/food-danger-zone-room-temperature-limit-s2.webp" width="867" height="1300" loading="lazy" decoding="async" alt="白飯裝入保鮮盒放進冰箱冷藏，象徵熟食室溫存放與冷藏保存（示意圖）">
+
+冷藏之後能放幾天、復熱要熱到什麼程度，以及「隔夜菜亞硝酸鹽會不會飆高」這個流傳最廣的說法站不站得住腳，另一篇有逐條查證：〈[隔夜菜可以吃嗎](/articles/leftover-food-myths-2026/)〉。
 
 ## 夏天最常見的三種食物中毒菌
 

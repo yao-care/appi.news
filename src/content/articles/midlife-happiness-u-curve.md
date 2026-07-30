@@ -1,0 +1,53 @@
+---
+title: "中年幸福感為何最低？跨國研究揭「U型曲線」：40至50歲谷底、晚年反超年輕人"
+description: "跨國研究發現人的幸福感會呈U型曲線，40至50歲跌到谷底、跌幅堪比失業或喪偶，但晚年會回升甚至超越年輕時期，心理學家解析原因與因應方法。"
+publishDate: "2026-07-30T18:45:36.011Z"
+category: "lifestyle"
+subcategory: "life"
+author: "appi-editorial"
+coverImage: "/covers/midlife-happiness-u-curve-cover.webp"
+coverAlt: "一位中年人望向窗外沉思"
+coverImageCredit: "Photo by Rainier Ridao on Unsplash"
+contentType: "news"
+sourceType: "wire"
+status: "published"
+tags: ["心理健康", "睡眠與疲勞", "職場健康"]
+disclosure: "線索來自 TVBS NEWS YouTube 影片，內容經公開資料查證整理、附原始出處。"
+---
+
+四十歲前後突然覺得提不起勁、對工作跟生活都沒有以前有感，不是只有你這樣。跨國研究發現，人一生的幸福感呈現一條「U型曲線」，年輕時偏高，中年跌到谷底，過了五十歲後又慢慢回升，甚至超過年輕時的水準。
+
+<figure class="video-embed">
+  <a href="https://www.youtube.com/watch?v=OrxiRRTxGh0" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：中年幸福感跌谷底! 研究揭「U型曲線」 專家:非危機是轉換期">
+    <img src="/images/midlife-happiness-u-curve-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="中年幸福感跌谷底! 研究揭「U型曲線」 專家:非危機是轉換期">
+  </a>
+  <figcaption>影片來源：TVBS NEWS（YouTube）　<a href="https://www.youtube.com/watch?v=OrxiRRTxGh0" target="_blank" rel="noopener nofollow">觀看原影片</a></figcaption>
+</figure>
+
+## 145個國家的數據，谷底落在40至50歲
+
+[刊登於《社會指標研究》（Social Indicators Research）期刊的一份大規模統計](https://www.businessweekly.com.tw/careers/blog/3021762)，分析了145個國家、數百萬人的主觀幸福感數據，結果一致浮現同一條曲線：幸福感從年輕時的高點一路下滑，在40至50歲跌到最低，之後才逐漸回升。同一份分析指出，從年輕到中年谷底的幸福感跌幅，衝擊程度不亞於「面臨失業或喪偶」，谷底期間壓力、失眠與憂鬱感也同步升到高峰。
+
+這條曲線不是單一研究的孤例。[另一路調查涵蓋149個國家的數據](https://udn.com/news/story/6812/9555312)也得出相近結論：20至34歲的幸福感相對較高，進入中年後明顯下滑，大約從51歲起才重新往上走，一路延續到80多歲，而且晚年的幸福感有機會超越年輕族群當年的水準。2022年一項德國研究找來1597名、年齡介於10至99歲的受試者做長期追蹤，同樣印證了這個U型模式。
+
+## 谷底不是挫敗，是「期中考」
+
+[心理學家瑪吉．拉赫曼（Margie Lachman）的研究](https://www.managertoday.com.tw/articles/view/72347)提出另一種解讀：與其把中年低潮當成危機，不如看成一場「期中考」，是失去與獲得同時發生的階段。身體機能開始走下坡沒錯，但資源、經驗與知識仍在持續累積，這段時期反而在替後半段人生打底，具體會累積三種能力：
+
+- **情緒調節能力**：經歷過足夠多的挫折與失敗後，過去會讓人崩潰的事情逐漸失去破壞力，這種韌性只能靠真實跌倒才練得出來。
+- **智慧（晶體智力）**：反應速度等流體智力會隨年齡衰退，但涵蓋專業知識與語言能力的晶體智力仍持續成長，中年反而是認知能力表現最好的階段之一。
+- **掌控感**：相信自己能透過行動達成預期結果的信念，在中年期達到一生的高峰。
+
+拉赫曼的團隊也發現，發明家在中年早期最為活躍，不少人是到了五十多歲才申請人生第一項專利，佐證中年階段的產出力並不亞於青壯年。
+
+## 晚年為何反而更快樂
+
+[根據《The Happiness Curve: Why Life Gets Better After 50》一書整理的數據](https://udn.com/news/story/6812/9555312)，研究者把幸福感拆成兩種：當下的快樂感受，以及對整體人生的滿意度。隨年齡增長而提升的主要是後者，也就是生活滿意度。年長者比較會把重心放在人生的意義與價值，不再只追求瞬間的愉悅，這也是晚年幸福感回升、甚至反超年輕族群的關鍵。
+
+## 卡在谷底時，可以怎麼做
+
+如果正處在這段低潮，幾個方向可以參考：
+
+- 不急著把低潮當成需要「解決」的問題，先承認這是人生階段的正常現象，跨國數據顯示這不是個人特有的挫敗。
+- 留意壓力、失眠與情緒低落是否同時出現且持續多週，若明顯影響生活作息，建議尋求專業心理諮商或就醫評估，而不是單靠意志力硬撐。
+- 把這段時期當成盤點人生方向的機會，而不是等危機自己過去；研究指出中年正是掌控感與晶體智力的高峰，適合重新規劃下一階段的工作與生活重心。

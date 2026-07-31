@@ -1,6 +1,7 @@
 ---
 import { SITE } from '@/config/site';
 import { absoluteUrl, asset } from '@/utils/url';
+import { ogImageSize } from '@/utils/og-image-size';
 
 interface Props {
   title: string;
@@ -47,6 +48,9 @@ const ogImagePath = ogImage ?? SITE.defaultOgImage;
 const ogImageAbs = /^https?:\/\//.test(ogImagePath)
   ? ogImagePath
   : new URL(asset(ogImagePath), Astro.site).toString();
+// og:image 尺寸讀實際檔案，不寫死。讀不到（外部網址／檔案不存在）就不輸出這兩個 tag，
+// 宣告錯的尺寸比不宣告更糟——爬蟲會據此預留版位而裁錯圖。
+const ogSize = await ogImageSize(ogImagePath);
 
 // 與 JSON-LD keywords 一致：過濾空字串
 const keywordList = (keywords ?? []).filter(Boolean);
@@ -83,8 +87,8 @@ const keywordList = (keywords ?? []).filter(Boolean);
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={ogImageAbs} />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+{ogSize && <meta property="og:image:width" content={String(ogSize.width)} />}
+{ogSize && <meta property="og:image:height" content={String(ogSize.height)} />}
 {publishedTime && <meta property="article:published_time" content={publishedTime} />}
 {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
 {authorPath && <meta property="article:author" content={absoluteUrl(authorPath, Astro.site)} />}

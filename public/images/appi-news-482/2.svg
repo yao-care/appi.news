@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="52" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="700" fill="#1B5E4B">社區健康站協作網絡</text>
+  <line x1="480" y1="330" x2="260" y2="190" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="480" y1="330" x2="700" y2="190" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="480" y1="330" x2="260" y2="470" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="480" y1="330" x2="700" y2="470" stroke="#2E8B6F" stroke-width="2"/>
+
+  <circle cx="480" cy="330" r="72" fill="#F2F7F5" stroke="#C9A227" stroke-width="3"/>
+  <path d="M480 300 L500 318 L493 318 L493 350 L467 350 L467 318 L460 318 Z" fill="#1B5E4B"/>
+  <text x="480" y="372" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#1B5E4B">社區健康站</text>
+
+  <g>
+    <rect x="150" y="120" width="220" height="130" rx="12" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+    <circle cx="185" cy="155" r="14" fill="#1B5E4B"/>
+    <text x="260" y="162" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#1B5E4B">健保署</text>
+    <text x="260" y="196" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">政策協調</text>
+    <text x="260" y="218" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">與過程見證</text>
+  </g>
+
+  <g>
+    <rect x="590" y="120" width="220" height="130" rx="12" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+    <circle cx="625" cy="155" r="14" fill="#2E8B6F"/>
+    <text x="700" y="162" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#1B5E4B">藥師公會</text>
+    <text x="700" y="196" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">社區第一線</text>
+    <text x="700" y="218" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">民眾接觸</text>
+  </g>
+
+  <g>
+    <rect x="150" y="410" width="220" height="130" rx="12" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+    <circle cx="185" cy="445" r="14" fill="#2E8B6F"/>
+    <text x="260" y="452" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#1B5E4B">診所</text>
+    <text x="260" y="486" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">專業醫療評估</text>
+    <text x="260" y="508" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">與後續轉介</text>
+  </g>
+
+  <g>
+    <rect x="590" y="410" width="220" height="130" rx="12" fill="#F2F7F5" stroke="#C9A227" stroke-width="2"/>
+    <circle cx="625" cy="445" r="14" fill="#C9A227"/>
+    <text x="700" y="452" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="700" fill="#1B5E4B">企業夥伴</text>
+    <text x="700" y="486" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">場地與資源</text>
+    <text x="700" y="508" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">支持</text>
+  </g>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

@@ -37,6 +37,7 @@
 | [tag-taxonomy.md](./tag-taxonomy.md) | `tags` 是全站唯一沒做 enum 約束的分類欄位，481 篇長出 1,883 個標籤、85.9% 只出現一次、1,618 個 noindex 死頁；唯一被指定固定詞的產線是唯一沒爛的產線；改成受控詞彙表＋schema enum 硬擋，unique 1,883→179 |
 | [duplicate-topic-gate.md](./duplicate-topic-gate.md) | `髖關節痛` 被自家 5 個 URL 瓜分全卡 pos 76-83：去重下在選題端（14 天窗、單一產線）蓋不到跨月與跨產線的重複，改下在寫入端；另查出 131 個 meta-refresh 轉址殘骸仍吃 15% 站台曝光，「轉址已處理」≠「權重已傳遞」 |
 | [google-indexing-api-gray-area.md](./google-indexing-api-gray-area.md) | 「有 GSC key 就能催收錄」是誤解；Indexing API 對新聞站非官方、200 不保證收錄 |
+| [discover-image-and-meta-signals.md](./discover-image-and-meta-signals.md) | Discover 0 曝光但技術前置全齊：破口是 20 篇直式封面（worker 搜圖沒帶 orientation）、og:image 尺寸寫死 1200×630 與實際不符、4 篇熱連結封面且 3 篇低於 1200px；附「標題不用為 Discover 另訂規則」的實測結論 |
 | [google-news-surfaces-and-cover-image.md](./google-news-surfaces-and-cover-image.md) | Google News 2025-03 起不吃提交的 feed/section（自動抓取）；JSON-LD/og 圖指原圖非 900 顯示圖，封面 ≥1200 從來源端解 |
 | [wordpress-date-permalink-404.md](./wordpress-date-permalink-404.md) | 舊 WordPress 日期網址漏接轉址變 404，仍在流失 Google 曝光 |
 | [domain-change-worker-cors.md](./domain-change-worker-cors.md) | 換網域漏改 Cloudflare Worker 的 ALLOWED_ORIGIN → 編輯器「Failed to fetch」 |

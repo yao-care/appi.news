@@ -53,7 +53,14 @@ export const SITE = {
      *   'https://x.com/...', 'https://www.threads.net/@...', 維基百科條目等。
      * 留空陣列則不輸出 sameAs。
      */
-    sameAs: [] as string[],
+    sameAs: [
+      // 官方 Facebook 粉專「亞太專業觀點」（2026-07-31 加入；實測公開可存取、
+      // 301 轉到 /people/亞太專業觀點/61592748088774/）。用 profile.php?id= 這個形式是
+      // 因為數字 ID 不會因改名而變動，比帶顯示名稱的 /people/ 網址穩定。
+      'https://www.facebook.com/profile.php?id=61592748088774',
+      // TODO：Instagram 與 Threads 帳號建好後補公開網址（不要填登入信箱，
+      // sameAs 要的是「本機構在其他平台的身分頁」）。
+    ] as string[],
     /** 機構聯絡信箱（給 schema.org contactPoint 用；留空則不輸出） */
     contactEmail: 'appi.newsdesk@gmail.com',
   },

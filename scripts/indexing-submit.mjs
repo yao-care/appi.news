@@ -18,7 +18,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { loadServiceAccount, getAccessToken } from './lib/google-data.mjs';
-import { SA_KEY_PATH } from './lib/report-config.mjs';
+import { SA_KEY_PATH, INDEXING_SA_KEY_PATH } from './lib/report-config.mjs';
 
 const SITEMAP_INDEX = 'https://appi.news/sitemap-index.xml';
 const LEDGER = `${process.env.HOME}/.local/state/appi-news/indexing-submitted.json`;
@@ -73,7 +73,13 @@ async function main() {
     return;
   }
 
-  const sa = loadServiceAccount(SA_KEY_PATH);
+  // 優先用 appi.news 專屬專案的金鑰（獨立 200/天配額）；沒放上來就退回共用那把。
+  const useDedicated = existsSync(INDEXING_SA_KEY_PATH);
+  const keyPath = useDedicated ? INDEXING_SA_KEY_PATH : SA_KEY_PATH;
+  const sa = loadServiceAccount(keyPath);
+  console.log(useDedicated
+    ? `🔑 使用 appi.news 專屬 Indexing 金鑰（${sa.clientEmail}）`
+    : `🔑 專屬金鑰不存在（${INDEXING_SA_KEY_PATH}），退回共用金鑰 ${sa.clientEmail}；配額與 folk.tw/sutta.io/twdro.net 共用`);
   const token = await getAccessToken({ clientEmail: sa.clientEmail, privateKey: sa.privateKey, scopes: [INDEXING_SCOPE] });
 
   const nowIso = new Date().toISOString();

@@ -35,6 +35,20 @@ export const GSC_SCOPE = 'https://www.googleapis.com/auth/webmasters.readonly';
 export const SA_KEY_PATH =
   process.env.GOOGLE_APPLICATION_CREDENTIALS || `${process.env.HOME}/.config/appi-news/ga4-sa.json`;
 
+/**
+ * Indexing API 專用服務帳號金鑰（appi.news 專屬 Google Cloud 專案）。
+ *
+ * 為什麼要跟 GA4/GSC 那把分開：Indexing API 的配額是 **200/天、per Google Cloud 專案**，
+ * 不是 per 網站也不是 per 金鑰。原本共用 `ga4-sa.json`（專案 `yaocare`），該專案同時被
+ * folk.tw、sutta.io、twdro.net 使用，appi 每天搶不到額度、待送一路累積到 84 篇卻沒人發現
+ * （腳本 exit 0、設計成有送才報）。給 appi 自己的專案才有獨立配額。
+ * 完整排錯見 docs/lessons/google-indexing-api-gray-area.md 2026-07-31 追記。
+ *
+ * **fallback 到 SA_KEY_PATH**：專屬金鑰還沒放上來時照舊用共用那把（功能不中斷，只是繼續搶配額）。
+ */
+export const INDEXING_SA_KEY_PATH =
+  process.env.INDEXING_SA_KEY || `${process.env.HOME}/.config/appi-news/indexing-sa.json`;
+
 const iso = (d) => d.toISOString().slice(0, 10);
 
 /** 回「截至 today 前一天」的本週 7 天與上週 7 天（不重疊）。today 為 Date。 */

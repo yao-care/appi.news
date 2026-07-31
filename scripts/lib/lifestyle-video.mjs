@@ -7,6 +7,8 @@
 // 影片只是「線索」，事實一律靠公開文字來源交叉查證；查不到就不寫。
 
 /** 把一支候選影片格式化成 prompt 素材區塊。 */
+import { renderTitleTargeting } from './title-targeting.mjs';
+
 function formatCandidate(c) {
   if (!c) return '（無候選）';
   const d = c.published ? `（${c.published.slice(0, 10)}）` : '';
@@ -64,6 +66,8 @@ export function buildVideoPrompt(candidate, recentTitles = []) {
     '它會把縮圖存成 `public/images/<slug>-video.webp` 並印出一段 `<figure class="video-embed">…</figure>`，**原封不動貼進文章正文**（建議放在開頭第一段之後）。指令失敗就不要硬貼、改用純文字連結標明出處。',
     '',
     '【封面】用 `node scripts/get-image.mjs --out public/covers/<slug>-cover.webp`（圖庫真實照片、主題示意，不要 --people、不要 AI 生圖）。**設了 coverImage 就一定要確認該檔真的存在**；拿不到圖就不要設 coverImage。影片縮圖**不可**拿來當封面（版權）。',
+    '',
+    ...renderTitleTargeting('video'),
     '',
     '【去重】近 14 天這條線已發過：',
     recent,

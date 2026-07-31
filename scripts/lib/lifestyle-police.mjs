@@ -9,6 +9,8 @@
 // session 額度、凌晨多線疊加撞 rate limit hang→timeout(exit124)。改成「固定抓→LLM 只寫」。
 
 // 站點清單保留供測試/文件參考；實際運行的站配置在 ./police-fetch.mjs 的 POLICE_SITES。
+import { renderTitleTargeting } from './title-targeting.mjs';
+
 export const POLICE_SOURCES = [
   { area: '高雄市', url: 'https://kcpd.kcg.gov.tw/News.aspx?n=3FAEF3DDE4DD3CD0&sms=4ED7718667AAD9B5', priority: true, note: '獨立「好人好事」頻道' },
   { area: '宜蘭縣', url: 'https://www.ilcpb.gov.tw/News.aspx?n=16343&sms=16080', priority: true, note: '「警馨錄」專欄' },
@@ -63,6 +65,8 @@ export function buildPolicePrompt(candidates = [], recentTitles = [], days = 7) 
     '- 繁中台灣用語、去 AI 腔（統一禁用清單見下）、編輯部中性語氣、不加個人評論。',
     '- 【去 AI 腔·統一禁用清單，違反即改】禁破折號（——）下定義；禁「不是X，而是Y」下定義與「不僅…更/還」「不只是…而是/更是」「並非…而是」排比；禁「值得注意的是」「值得一提的是」「換句話說」；禁空泛收束（總的來說／綜上所述／總而言之／歸根結底／整體而言）；禁「真正的問題/關鍵是…」拔高與「隨著…的發展/普及」「在…的今天」開場公式；禁「至關重要/不可或缺/舉足輕重」；禁模糊引用（研究顯示／有研究指出／專家認為／學者認為／普遍認為——要嘛當下附具體可點來源、要嘛不寫）；禁模板化第一人稱開場（以「我」起句、老實說、最近有讀者/朋友…）。正向：長短句交錯、每段換開法、每段至少一個具體事實、台灣口語。',
     '- **不要轉載官方頁或 FB 的版權照片**；封面可有可無，用 `node scripts/get-image.mjs --out public/covers/<slug>-cover.webp`（圖庫真實照片、警民互助/警車等示意，不要 --people、不要 AI 生圖）。**設了 coverImage 就一定要確認該檔真的存在；拿不到圖就不要設 coverImage**（暖聞 roundup 可無封面），絕不可設了卻沒存到檔（會變壞連結、整篇發不出）。',
+    '',
+    ...renderTitleTargeting('police'),
     '',
     '【去重】比對近 30 天已發的好人好事整理，不要重複同一事件：',
     recent,

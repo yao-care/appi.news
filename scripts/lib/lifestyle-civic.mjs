@@ -6,6 +6,8 @@
 // 抓取＝固定程式（見 civic-fetch.mjs），LLM 不上網、只讀備妥清單挑選＋寫作。
 
 /** 把候選清單格式化成 prompt 素材區塊（依縣市分組，讀起來像編輯桌上的線索表）。 */
+import { renderTitleTargeting } from './title-targeting.mjs';
+
 function formatCandidates(candidates = []) {
   if (!candidates.length) return '（無候選）';
   const byArea = new Map();
@@ -53,6 +55,8 @@ export function buildCivicPrompt(candidates = [], recentTitles = []) {
     '- 繁中台灣用語、去 AI 腔（統一禁用清單見下）、編輯部中性語氣、不加個人評論。',
     '- 【去 AI 腔·統一禁用清單，違反即改】禁破折號（——）下定義；禁「不是X，而是Y」下定義與「不僅…更/還」「不只是…而是/更是」「並非…而是」排比；禁「值得注意的是」「值得一提的是」「換句話說」；禁空泛收束（總的來說／綜上所述／總而言之／歸根結底／整體而言）；禁「真正的問題/關鍵是…」拔高與「隨著…的發展/普及」「在…的今天」開場公式；禁「至關重要/不可或缺/舉足輕重」；禁模糊引用（研究顯示／有研究指出／專家認為／學者認為／普遍認為——要嘛當下附具體可點來源、要嘛不寫）；禁模板化第一人稱開場（以「我」起句、老實說、最近有讀者/朋友…）。正向：長短句交錯、每段換開法、每段至少一個具體事實、台灣口語。',
     '- **封面可有可無**：用 `node scripts/get-image.mjs --out public/covers/<slug>-cover.webp`（圖庫真實照片、市政/生活服務示意，不要 --people、不要 AI 生圖）。**設了 coverImage 就一定要確認該檔真的存在；拿不到圖就不要設 coverImage**，絕不可設了卻沒存到檔（會變壞連結、整篇發不出）。內文不必配圖。',
+    '',
+    ...renderTitleTargeting('civic'),
     '',
     '【去重】比對近 14 天已發的便民整理，不要與同一天/同型內容重覆：',
     recent,

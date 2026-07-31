@@ -25,6 +25,8 @@
  * 原因見檔頭。這串刻意寫死在表裡而非讓模型每年自由發揮：51 篇 × 每年一輪，模型自由下主題會漂移成
  * 全站都是同幾張聽診器；寫死才能讓同一個紀念日歷年維持同一視覺主軸，年度差異交給 --context/--caption。
  */
+import { renderTitleTargeting } from './title-targeting.mjs';
+
 export const HEALTH_DAYS = [
   // ── 1 月 ────────────────────────────────────────────────────────────
   {
@@ -793,8 +795,10 @@ export function buildHealthDayPrompt(entry, date, opts = {}) {
     '- 圖說一律尾註「（示意圖）」。全部是生成圖，沒有圖庫授權問題，**不要**填 `coverImageCredit`。',
     '- **鐵則：設了 coverImage 就一定要先確認該檔真的存在；拿不到圖就不要設 coverImage**（會變壞連結、整篇發不出）。',
     '',
+    ...renderTitleTargeting('health-days'),
+    '',
     '【frontmatter（照抄，只填空）】',
-    `  title: 帶上「${year}」與當年度重點的具體標題，不要只寫「${entry.name}」五個字（每年一篇，標題必須能互相區分）`,
+    `  title: **主標寫健康主題本身、用一般人會搜的說法**（症狀／標準值／怎麼辦／看哪一科），把「${entry.name}」與「${year}」放括號或副標；不要拿「${entry.name}」當主標（紀念日名稱本身幾乎沒人搜）。每年一篇，標題必須能互相區分`,
     `  slug: "${slug}"（檔名也是 ${slug}.md）`,
     `  category: "health"`,
     `  subcategory: "${entry.sub}"`,

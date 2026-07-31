@@ -10,6 +10,8 @@
 //   - 去重/更新（故事線）：同一進行中事件已寫過且有新進展 → 更新原文；無進展 → 跳過；全新 → 新文。
 //   - 全自動上架（status: published），編輯部署名。
 
+import { renderTitleTargeting } from './title-targeting.mjs';
+
 const SUBCATS = ['global-focus', 'asia', 'americas', 'europe', 'middle-east', 'global-trends', 'cross-strait', 'international-organizations'];
 
 /** GDELT 分區 → 預設 international 子分類（寫作可依實際內容覆寫）。 */
@@ -64,6 +66,8 @@ export function buildIntlPrompt(story, recentActive = []) {
     '',
     '【近 30 天進行中國際文（去重/更新比對用）】',
     recent,
+    '',
+    ...renderTitleTargeting('international'),
     '',
     '【最後輸出】先一行 `INTL_RESULT=NEW｜<slug>` 或 `UPDATE｜<slug>` 或 `SKIP｜<原因>`；若有寫作，再附查證報告（每條超連結 + HTTP 狀態 + 是否支持該句）。',
     `（預設子分類建議 ${subcat}，但以你判定為準。）`,

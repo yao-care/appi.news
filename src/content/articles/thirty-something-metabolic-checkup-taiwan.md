@@ -1,0 +1,39 @@
+---
+title: 三高不是中老年病！30歲免費健康檢查資格、項目與風險評估工具整理
+description: 30至39歲三高盛行率逐年上升，國健署自2025年起把成人預防保健年齡下修至30歲，整理免費健檢資格、項目與慢性疾病風險評估工具用法。
+publishDate: "2026-07-31T18:51:12.082Z"
+category: "lifestyle"
+subcategory: "life"
+author: "appi-editorial"
+contentType: "news"
+sourceType: "wire"
+status: "published"
+coverImage: "/covers/thirty-something-metabolic-checkup-taiwan-cover.webp"
+coverAlt: "醫護人員為民眾量血壓，示意圖"
+coverImageCredit: "Photo by Mockup Graphics on Unsplash"
+tags: ["預防醫學", "健檢報告", "心血管健康", "代謝健康"]
+disclosure: "線索來自 TVBS NEWS YouTube 影片，內容經公開資料查證整理、附原始出處。"
+---
+
+三十歲出頭、還沒感覺身體有異狀，健檢通知卻已經該收了。[衛福部公布的資料](https://www.mohw.gov.tw/cp-7171-84856-1.html)顯示，根據2019至2023年國民營養健康狀況變遷調查，30至39歲國人的三高盛行率為高血脂18.7%、高血壓9.7%、高血糖2.5%，比例逐年上升，是政府把成人預防保健服務年齡從40歲下修到30歲的直接原因。
+
+<figure class="video-embed">
+  <a href="https://www.youtube.com/watch?v=ElEkTBTdCPg" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：年輕不是健康保證! 30~39歲高血脂.高血壓比例曝光...禍首是它｜十點不一樣20260731">
+    <img src="/images/thirty-something-metabolic-checkup-taiwan-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="年輕不是健康保證! 30~39歲高血脂.高血壓比例曝光...禍首是它｜十點不一樣20260731">
+  </a>
+  <figcaption>影片來源：TVBS NEWS（YouTube）　<a href="https://www.youtube.com/watch?v=ElEkTBTdCPg" target="_blank" rel="noopener nofollow">觀看原影片</a></figcaption>
+</figure>
+
+## 30到39歲免費健檢：誰能用、怎麼預約
+
+[衛福部說明](https://www.mohw.gov.tw/cp-7171-84856-1.html)，成人預防保健服務自民國114年（2025年）1月1日起新增30至39歲級距，每5年可接受一次免費健檢；截至114年11月，已有逾30萬名30至39歲民眾使用人生第一次成人健檢。40至64歲維持每3年一次、65歲以上則每年一次。檢查項目涵蓋健康行為調查、身體檢查、抽血與尿液檢查，篩檢血壓、血糖、血脂、腎功能、肝功能及身體質量指數六大項，114年起衛教諮詢再加入慢性疾病風險評估與腎病期別提示。民眾可持健保卡到全國近7千家特約醫事機構預約，無須額外掛號費。
+
+## 血壓年輕化：每7人就有1人超標
+
+[聯合新聞網報導](https://udn.com/news/story/7266/9503871)引述國健署最新血壓監測數據與台灣高血壓學會理事長林彥宏的說法指出，30至39歲青壯年血壓異常率達15.1%，等於每7人就有1人血壓超標；報導同時列出與衛福部一致的數字：同年齡層高血脂占18.7%、高血壓9.7%、高血糖2.5%。國健署署長沈靜芬提醒，高血壓早期多半沒有明顯症狀，不少人是等到中風或心臟病發作才發現自己血壓已經異常多年，外食、飲食過鹹與長期壓力是常見危險因子。
+
+## 慢性疾病風險評估工具怎麼用
+
+除了實體健檢，國健署也和國家衛生研究院合作，用累積約1,350萬筆的國民營養健康調查串聯健保資料，建立[「臺灣慢性病風險評估」模型](https://www.mohw.gov.tw/cp-5014-58821-1.html)，開放35至70歲民眾線上預測未來10年罹患冠心病、腦中風、糖尿病、高血壓及心血管不良事件的機率。使用方式是上網搜尋「慢性疾病風險評估」或直接連到[平台網站](https://cdrc.hpa.gov.tw/)，輸入年齡、性別、身體質量指數、腰圍、血壓、血糖、膽固醇、三酸甘油脂與吸菸習慣等健檢數據，系統會以紅、黃、綠燈號分級呈現各項疾病風險，供使用者對照自己的健檢報告後續追蹤。這項工具鎖定35歲以上族群，30至34歲民眾若想預先掌握趨勢，可待健檢報告出爐、年滿35歲後再上網試算。
+
+三高不再是等退休後才需要留意的問題。30多歲的族群不一定有明顯症狀，但免費健檢資格已經開放，善用每5年一次的額度，加上線上風險評估工具對照自己的抽血數據，是目前查得到、成本最低的自我掌握方式。

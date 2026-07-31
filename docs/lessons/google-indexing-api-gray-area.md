@@ -43,3 +43,14 @@
 - **「配額用盡」不一定是量太大，可能是時間排錯或跟別人共用。** 查之前先確認配額的重置時區與計費邊界（per-專案 vs per-金鑰 vs per-網站）。
 - **同一把服務帳號跨站共用，等於把彼此的配額綁在一起。** 這裡是 5 個站共用一個 200/天。要根治得給每站自己的 Google Cloud 專案——**同專案再開一把新金鑰沒有用**，配額算在專案上。
 - **這類「成功但沒做事」的故障最難發現**：腳本 exit 0、Slack 沒有告警（設計成「有送才報」），只有讀 log 才看得出來。呼應 `docs/automation-invariants.md`「成功不等於 exit code」。
+
+**2026-07-31 後續**：已為 appi.news 開專屬 Google Cloud 專案 `appi-news-504107`，服務帳號
+`appi-indexing@appi-news-504107.iam.gserviceaccount.com`，金鑰 `~/.config/appi-news/indexing-sa.json`。
+設定過程踩到一個順序問題值得記：**建好專案、建好服務帳號、GSC 也加成擁有者之後，若沒有在 Console
+「啟用 Indexing API」，publish 會回 403 且訊息是「has not been used in project ... or it is disabled」**，
+容易被誤讀成權限問題。判別方式：能取得 access token 就代表金鑰與服務帳號沒問題；403 訊息若提到
+`has not been used in project` 是 API 未啟用，若提到 `Failed to verify the URL ownership` 才是 GSC 權限。
+Console 裡它的顯示名稱是 **Web Search Indexing API**，搜尋「Indexing API」不一定找得到。
+
+另外 `getMetadata` 對新聞文章回 **404 屬正常**（本篇上半已述：官方只支援 JobPosting/BroadcastEvent），
+publish 回 200 就是這條管道能做到的全部，不要拿 404 當設定失敗的證據。

@@ -219,7 +219,10 @@ export function stockImageId(url: string): string | null {
 
 async function searchUnsplash(env: Env, query: string): Promise<StockPhoto[]> {
   if (!env.UNSPLASH_ACCESS_KEY) return [];
-  const res = await fetch(`https://api.unsplash.com/search/photos?per_page=20&query=${encodeURIComponent(query)}`, {
+  // orientation=landscape：封面與內文圖都要橫式。Discover／Top Stories 的大卡片是橫式版位，
+  // 直式封面會被裁切或降級成小圖；2026-07-31 盤點 7 月 181 篇，有 20 篇是直式封面
+  // （集中在 civic／police 兩條線），源頭就是這裡沒帶 orientation。
+  const res = await fetch(`https://api.unsplash.com/search/photos?per_page=20&orientation=landscape&query=${encodeURIComponent(query)}`, {
     headers: { Authorization: `Client-ID ${env.UNSPLASH_ACCESS_KEY}`, 'Accept-Version': 'v1' },
   });
   if (!res.ok) return [];
@@ -237,7 +240,8 @@ async function searchUnsplash(env: Env, query: string): Promise<StockPhoto[]> {
 
 async function searchPexels(env: Env, query: string): Promise<StockPhoto[]> {
   if (!env.PEXELS_API_KEY) return [];
-  const res = await fetch(`https://api.pexels.com/v1/search?per_page=20&query=${encodeURIComponent(query)}`, {
+  // orientation=landscape：理由同 searchUnsplash。
+  const res = await fetch(`https://api.pexels.com/v1/search?per_page=20&orientation=landscape&query=${encodeURIComponent(query)}`, {
     headers: { Authorization: env.PEXELS_API_KEY },
   });
   if (!res.ok) return [];

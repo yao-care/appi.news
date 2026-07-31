@@ -14,7 +14,7 @@ tags:
   - "再生醫療"
   - "健保"
 author: appi-editorial
-coverImage: https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1080&q=80&fm=jpg&fit=max
+coverImage: "covers/knee-injection-ha-prp-steroid-comparison-cover.webp"
 coverAlt: 醫療人員準備注射針劑,示意膝關節注射治療
 coverImageCredit: Photo by CDC on Unsplash
 status: published

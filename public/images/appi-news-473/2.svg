@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="55" text-anchor="middle" font-size="30" font-weight="700" fill="#1B5E4B">傳統健康檢查 vs 功能性健康評估</text>
+  <line x1="480" y1="90" x2="480" y2="560" stroke="#C9A227" stroke-width="2" stroke-dasharray="6,8"/>
+
+  <!-- 左側面板：傳統健康檢查 -->
+  <rect x="60" y="100" width="360" height="440" rx="18" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <text x="240" y="150" text-anchor="middle" font-size="24" font-weight="700" fill="#1B5E4B">傳統健康檢查</text>
+
+  <!-- 抽血檢驗管 icon -->
+  <rect x="140" y="200" width="46" height="110" rx="23" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="3"/>
+  <path d="M140 268 a23 23 0 0 0 46 0 z" fill="#2E8B6F"/>
+  <rect x="132" y="192" width="62" height="14" rx="4" fill="#2E8B6F"/>
+  <text x="163" y="335" text-anchor="middle" font-size="18" fill="#1F2A28">抽血檢驗</text>
+  <circle cx="255" cy="240" r="16" fill="#C9A227"/>
+  <path d="M247 240 l6 7 l12 -15" stroke="#FFFFFF" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 檢查表 clipboard icon -->
+  <rect x="290" y="200" width="90" height="115" rx="8" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="3"/>
+  <rect x="313" y="192" width="44" height="16" rx="4" fill="#2E8B6F"/>
+  <line x1="304" y1="230" x2="366" y2="230" stroke="#6B7B77" stroke-width="3"/>
+  <line x1="304" y1="255" x2="366" y2="255" stroke="#6B7B77" stroke-width="3"/>
+  <line x1="304" y1="280" x2="345" y2="280" stroke="#6B7B77" stroke-width="3"/>
+  <circle cx="368" cy="255" r="16" fill="#C9A227"/>
+  <path d="M360 255 l6 7 l12 -15" stroke="#FFFFFF" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="335" y="335" text-anchor="middle" font-size="18" fill="#1F2A28">數值檢核表</text>
+
+  <text x="240" y="400" text-anchor="middle" font-size="17" fill="#6B7B77">項目：血液數值報告</text>
+  <rect x="100" y="440" width="280" height="70" rx="12" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="1.5"/>
+  <text x="240" y="470" text-anchor="middle" font-size="16" fill="#1F2A28">著重「數字是否落在標準區間」</text>
+  <text x="240" y="495" text-anchor="middle" font-size="16" fill="#1F2A28">單向評估、以檢驗報告為主</text>
+
+  <!-- 右側面板：功能性健康評估 -->
+  <rect x="540" y="100" width="360" height="440" rx="18" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <text x="720" y="150" text-anchor="middle" font-size="24" font-weight="700" fill="#1B5E4B">功能性健康評估</text>
+
+  <!-- 三個等重 icon：握力、走路速度、社交對話 -->
+  <circle cx="610" cy="240" r="42" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="3"/>
+  <path d="M596 226 q14 -14 28 0 q6 8 0 22 q-14 14 -28 0 q-6 -14 0 -22 z" fill="#2E8B6F"/>
+  <text x="610" y="305" text-anchor="middle" font-size="17" fill="#1F2A28">握力</text>
+
+  <circle cx="720" cy="240" r="42" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="3"/>
+  <circle cx="720" cy="212" r="9" fill="#2E8B6F"/>
+  <path d="M720 224 v22 M708 236 h24 M720 246 l-10 20 M720 246 l10 20" stroke="#2E8B6F" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <text x="720" y="305" text-anchor="middle" font-size="17" fill="#1F2A28">走路速度</text>
+
+  <circle cx="830" cy="240" r="42" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="3"/>
+  <path d="M810 225 h28 a8 8 0 0 1 8 8 v14 a8 8 0 0 1 -8 8 h-10 l-8 10 v-10 h-10 a8 8 0 0 1 -8 -8 v-14 a8 8 0 0 1 8 -8 z" fill="#2E8B6F"/>
+  <text x="830" y="305" text-anchor="middle" font-size="17" fill="#1F2A28">社交對話</text>
+
+  <text x="720" y="360" text-anchor="middle" font-size="17" fill="#6B7B77">三面向並重、無先後順序</text>
+  <rect x="580" y="440" width="280" height="70" rx="12" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="1.5"/>
+  <text x="720" y="470" text-anchor="middle" font-size="16" fill="#1F2A28">著重「生活功能是否維持良好」</text>
+  <text x="720" y="495" text-anchor="middle" font-size="16" fill="#1F2A28">多面向評估、以日常表現為主</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

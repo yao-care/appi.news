@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="55" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="700" fill="#1B5E4B">高齡周全性評估與中醫體質辨識的整合比較</text>
+
+  <circle cx="380" cy="330" r="190" fill="#2E8B6F" fill-opacity="0.55"/>
+  <circle cx="580" cy="330" r="190" fill="#C9A227" fill-opacity="0.45"/>
+
+  <text x="290" y="185" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#1F2A28">高齡周全性評估</text>
+  <text x="290" y="215" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="700" fill="#1F2A28">（CGA）</text>
+  <text x="270" y="270" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#1F2A28">‧ 日常功能評估</text>
+  <text x="270" y="305" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#1F2A28">‧ 認知功能評估</text>
+  <text x="270" y="340" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#1F2A28">‧ 營養狀態評估</text>
+  <text x="270" y="375" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#1F2A28">‧ 跌倒風險評估</text>
+
+  <text x="670" y="185" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#1F2A28">中醫體質辨識</text>
+  <text x="690" y="270" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#1F2A28">‧ 陽虛體質</text>
+  <text x="690" y="305" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#1F2A28">‧ 陰虛體質</text>
+  <text x="690" y="340" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#1F2A28">‧ 血瘀體質</text>
+
+  <text x="480" y="430" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="700" fill="#1B5E4B">整合照護</text>
+  <text x="480" y="460" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="700" fill="#1B5E4B">共同基礎</text>
+
+  <text x="480" y="565" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#6B7B77">兩套評估系統並行參照，作為高齡照護規劃的參考資訊</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

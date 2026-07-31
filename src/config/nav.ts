@@ -12,6 +12,7 @@ export const FOOTER_COLUMNS = [
     links: [
       { label: '關於 APPI', href: '/about/' },
       { label: '編輯方針', href: '/editorial-policy/' },
+      { label: '更正政策', href: '/corrections/' },
       { label: '聯絡我們', href: '/contact/' },
     ],
   },

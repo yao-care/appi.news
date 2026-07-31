@@ -36,7 +36,7 @@ export function orgLd(site: SiteUrl) {
     // 供 Google News 與生成式引擎判斷媒體可信度（頁面內容見對應 route）。
     publishingPrinciples: absoluteUrl('/editorial-policy/', site),
     ethicsPolicy: absoluteUrl('/editorial-policy/', site),
-    correctionsPolicy: absoluteUrl('/editorial-policy/', site),
+    correctionsPolicy: absoluteUrl('/corrections/', site),
     actionableFeedbackPolicy: absoluteUrl('/contact/', site),
     ownershipFundingInfo: absoluteUrl('/about/', site),
     // 以下三個同屬 Google News 的發布者透明度欄位，都有站上實際頁面內容支撐才掛：

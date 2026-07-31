@@ -15,11 +15,21 @@ import { url } from '@/utils/url';
   </p>
 
   <h2>聯絡方式</h2>
-  <p>電子郵件：<a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
-  <p>
-    這是 APPI 目前的主要聯絡窗口。為加速處理，建議在信件主旨標明需求類別
-    （例如「投稿」「商業合作」「內容指正」），並於內文附上相關連結或說明。
-  </p>
+  {SITE.email ? (
+    <>
+      <p>電子郵件：<a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+      <p>
+        這是 APPI 目前的主要聯絡窗口。為加速處理，建議在信件主旨標明需求類別
+        （例如「投稿」「商業合作」「內容指正」），並於內文附上相關連結或說明。
+      </p>
+    </>
+  ) : (
+    <p>
+      目前請透過<a href={url('/submit/')}>線上表單</a>與我們聯繫，
+      並在內容開頭標明需求類別（例如「投稿」「商業合作」「內容指正」）、附上相關連結或說明。
+      專屬編輯信箱開通後會在本頁公布。
+    </p>
+  )}
 
   <h2>不同需求，對應窗口</h2>
   <ul>
@@ -54,6 +64,6 @@ import { url } from '@/utils/url';
   </p>
 
   <p style="color:var(--ink-3);font-size: var(--text-xs);">
-    註：投稿與作者申請建議直接使用<a href={url('/submit/')}>投稿頁面</a>的表單，其他需求歡迎以電子郵件聯繫。
+    註：所有需求目前都請走<a href={url('/submit/')}>投稿頁面</a>的表單，我們會依主旨分流處理。
   </p>
 </PolicyLayout>

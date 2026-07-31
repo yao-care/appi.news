@@ -139,11 +139,13 @@ const steps = [
         <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
       </form>
 
-      <p class="mail-fallback">
-        不方便使用表單，或文章內容較長？也可以直接寄信到
-        <a href={`mailto:${SITE.email}?subject=${encodeURIComponent('APPI 投稿／作者申請')}`}>{SITE.email}</a>，
-        並附上姓名、身份／職業與投稿內容或作品連結。
-      </p>
+      {SITE.email && (
+        <p class="mail-fallback">
+          不方便使用表單，或文章內容較長？也可以直接寄信到
+          <a href={`mailto:${SITE.email}?subject=${encodeURIComponent('APPI 投稿／作者申請')}`}>{SITE.email}</a>，
+          並附上姓名、身份／職業與投稿內容或作品連結。
+        </p>
+      )}
     </section>
   </div>
 </BaseLayout>

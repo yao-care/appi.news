@@ -39,6 +39,15 @@ export function orgLd(site: SiteUrl) {
     correctionsPolicy: absoluteUrl('/editorial-policy/', site),
     actionableFeedbackPolicy: absoluteUrl('/contact/', site),
     ownershipFundingInfo: absoluteUrl('/about/', site),
+    // 以下三個同屬 Google News 的發布者透明度欄位，都有站上實際頁面內容支撐才掛：
+    //   verificationFactCheckingPolicy ← /editorial-policy/ 的「三、查證與更正」「七、AI 輔助與人工查核責任」
+    //   missionCoveragePrioritiesPolicy ← /about/ 的「我們的定位」「我們的編輯立場」
+    //   masthead ← /authors/ 作者總覽（等同編輯台名單）
+    // **刻意不掛 diversityPolicy 與 unnamedSourcesPolicy**：站上沒有這兩份政策，
+    // 掛了等於宣稱不存在的東西，是捏造信任訊號（同 reviewedBy 那次的判斷）。
+    verificationFactCheckingPolicy: absoluteUrl('/editorial-policy/', site),
+    missionCoveragePrioritiesPolicy: absoluteUrl('/about/', site),
+    masthead: absoluteUrl('/authors/', site),
     ...(sameAs.length ? { sameAs } : {}),
     ...(contactEmail
       ? {

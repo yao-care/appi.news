@@ -22,7 +22,7 @@ export const SITE = {
   /** 對外聯絡信箱。**留空則全站不顯示 email、schema 亦不輸出 contactPoint**（條件式渲染）。
    * 2026-07-31 清空：原值是 evidencetoday.news 的信箱（2026-06-17 815c1b2 複製設定時誤帶），
    * 掛別站品牌的 Gmail 當本站編輯窗口，對讀者與 Google 都是實體矛盾。待專屬信箱開通後填回。 */
-  email: '',
+  email: 'appi.newsdesk@gmail.com',
   /** 預設社群分享圖（相對 BASE_URL） */
   defaultOgImage: 'og/default.png',
   /**
@@ -55,7 +55,7 @@ export const SITE = {
      */
     sameAs: [] as string[],
     /** 機構聯絡信箱（給 schema.org contactPoint 用；留空則不輸出） */
-    contactEmail: '',
+    contactEmail: 'appi.newsdesk@gmail.com',
   },
 } as const;
 

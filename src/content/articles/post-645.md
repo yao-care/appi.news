@@ -26,6 +26,10 @@ references:
     url: "https://www.utmb.edu/spectre/news-events/all-news/categories/relevant-articles/2026/04/03/paho-local-capacity-key-to-ensure-global-pandemic-preparedness--paho-director-says-in-new-york"
     publisher: "UTMB SPECTRE"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

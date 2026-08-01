@@ -12,6 +12,10 @@ tags:
   - "新北市"
   - "高雄市"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 sourceType: "wire"
 contentType: "news"
 status: "published"

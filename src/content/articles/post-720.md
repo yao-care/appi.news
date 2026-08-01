@@ -28,6 +28,10 @@ references:
     url: "https://www.bloomberg.com/news/articles/2026-04-16/tsmc-s-profit-beats-estimates-after-war-failed-to-dent-ai-demand"
     publisher: "Bloomberg"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

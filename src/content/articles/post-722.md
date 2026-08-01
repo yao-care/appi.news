@@ -27,6 +27,10 @@ references:
     url: "https://www.bicycleretailer.com/announcements/2026/03/25/taipei-cycle-show-2026-officially-opens"
     publisher: "Bicycle Retailer and Industry News"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

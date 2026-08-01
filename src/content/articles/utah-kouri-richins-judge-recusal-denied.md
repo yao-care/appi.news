@@ -10,6 +10,10 @@ tags:
   - "美國"
   - "司法"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

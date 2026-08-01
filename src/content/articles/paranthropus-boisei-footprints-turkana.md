@@ -29,6 +29,10 @@ references:
     url: "https://www.nbcnews.com/science/science-news/footprints-two-species-ancient-human-relatives-same-time-rcna181806"
     publisher: "NBC News"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

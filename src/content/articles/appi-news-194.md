@@ -10,6 +10,10 @@ tags:
   - "AI基礎建設"
   - "生成式AI"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-194.webp"
 coverAlt: "Android 手機展示 Gemini Intelligence 主動代理介面示意圖"
 status: published

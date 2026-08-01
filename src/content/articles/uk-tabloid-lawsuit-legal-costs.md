@@ -23,6 +23,10 @@ references:
     url: "https://www.newsweek.com/entertainment/celebrity-news/prince-harry-costs-daily-mail-lawsuit-hearing-12257835"
     publisher: "Newsweek"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

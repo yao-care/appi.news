@@ -28,6 +28,10 @@ references:
     url: "https://www.asisonline.org/security-management-magazine/latest-news/today-in-security/2026/january/natural-disaster-costs-2025"
     publisher: "ASIS Security Management"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

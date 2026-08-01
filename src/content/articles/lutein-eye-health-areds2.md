@@ -9,6 +9,10 @@ tags:
   - "保健食品"
   - "眼睛健康"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/lutein-eye-health-areds2.webp"
 coverAlt: "葉黃素護眼保健食品與 AREDS2 實證的示意"
 status: scheduled

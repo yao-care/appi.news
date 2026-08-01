@@ -15,6 +15,10 @@ coverImage: "covers/fda-ai-medical-device-taiwan-eu.webp"
 coverAlt: "AI 醫療影像診斷軟體在螢幕上分析掃描影像，象徵各國對 AI 醫材的監管路線"
 coverImageCredit: "Photo by Charlss GonzHu on Pexels"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

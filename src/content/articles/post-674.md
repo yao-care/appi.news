@@ -28,6 +28,10 @@ references:
     url: "https://www.nature.com/articles/s41586-025-08000-0"
     publisher: "Nature"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "medical"

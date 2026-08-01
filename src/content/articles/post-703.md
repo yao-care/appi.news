@@ -25,6 +25,10 @@ references:
     url: "https://www.cier.edu.tw/economic-indicator"
     publisher: "中華經濟研究院"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

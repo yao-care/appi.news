@@ -26,6 +26,10 @@ references:
     url: "https://finance.yahoo.com/news/tta-showcases-taiwans-ai-strength-100800684.html"
     publisher: "Yahoo Finance"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

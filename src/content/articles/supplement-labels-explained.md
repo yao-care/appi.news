@@ -9,6 +9,10 @@ tags:
   - "保健食品"
   - "食品安全"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/supplement-labels-explained.webp"
 coverAlt: "保健食品瓶罐排列在貨架上，示意台灣市面上各種認證標章"
 coverImageCredit: "Photo by Supliful - Supplements On Demand on Unsplash"

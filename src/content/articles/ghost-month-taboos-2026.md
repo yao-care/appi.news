@@ -7,6 +7,10 @@ category: lifestyle
 subcategory: life
 tags: ["節慶"]
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/ghost-month-taboos-2026-cover.webp"
 coverAlt: "台灣廟宇夜晚燈籠與香爐，象徵農曆七月鬼月民俗氛圍（示意圖）"
 coverImageCredit: "Photo by Daniel Gregoire on Unsplash"

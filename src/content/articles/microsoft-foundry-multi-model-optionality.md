@@ -16,6 +16,10 @@ coverImage: "covers/microsoft-foundry-multi-model-optionality-cover.webp"
 coverAlt: "數位轉型相關情境（示意圖）"
 coverImageCredit: "Photo by Conny Schneider on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

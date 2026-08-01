@@ -37,6 +37,10 @@ references:
     url: "https://securityaffairs.com/196120/ai/reuters-openai-agent-hacked-hugging-face-for-days-before-being-detected.html"
     publisher: "Security Affairs (Reuters)"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

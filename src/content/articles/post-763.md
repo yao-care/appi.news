@@ -25,6 +25,10 @@ references:
     url: "https://www.muchskills.com/blog/the-future-of-work-is-your-business-ready-for-the-reskilling-revolution"
     publisher: "MuchSkills"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

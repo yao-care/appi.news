@@ -15,6 +15,10 @@ tags:
   - "基隆市"
   - "宜蘭縣"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 sourceType: "wire"
 contentType: "news"
 status: "published"

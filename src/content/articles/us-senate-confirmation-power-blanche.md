@@ -11,6 +11,10 @@ tags:
   - "司法"
 author: "appi-editorial"
 coAuthors: []
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/us-senate-confirmation-power-blanche-cover.webp"
 coverImageCredit: "Ryan M. Biller / U.S. Department of Justice（公有領域）"
 featured: false

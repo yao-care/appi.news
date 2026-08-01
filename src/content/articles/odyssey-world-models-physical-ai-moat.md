@@ -16,6 +16,10 @@ coverImage: "covers/odyssey-world-models-physical-ai-moat-cover.webp"
 coverAlt: "生成式AI相關情境（示意圖）"
 coverImageCredit: "Photo by Aerps.com on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

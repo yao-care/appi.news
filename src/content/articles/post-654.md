@@ -26,6 +26,10 @@ references:
     url: "https://disruptive-concepts.com/predictions/ai-drug-phase3"
     publisher: "Disruptive Concepts"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

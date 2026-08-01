@@ -27,6 +27,10 @@ references:
     url: "https://www.taiwan-healthcare.org/en/news-detail?id=0sf1oo5yrei7mrt0"
     publisher: "Taiwan Healthcare+ B2B"
 author: "lightman"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "medical"

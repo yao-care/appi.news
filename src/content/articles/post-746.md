@@ -26,6 +26,10 @@ references:
     url: "https://premium.parenting.com.tw/article/6001788"
     publisher: "親子天下Premium"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

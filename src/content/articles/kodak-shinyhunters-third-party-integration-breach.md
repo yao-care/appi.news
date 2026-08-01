@@ -14,6 +14,10 @@ coverImage: "covers/kodak-shinyhunters-third-party-integration-breach-cover.webp
 coverAlt: "資安相關情境（示意圖）"
 coverImageCredit: "Photo by panumas nikhomkhai on Pexels"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

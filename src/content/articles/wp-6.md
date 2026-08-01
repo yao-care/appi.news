@@ -11,6 +11,10 @@ subcategory: "events"
 tags:
   - "中醫"
 author: "huang-ziyan"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "medical"

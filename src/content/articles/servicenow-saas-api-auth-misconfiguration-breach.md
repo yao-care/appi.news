@@ -14,6 +14,10 @@ tags:
 coverImage: "covers/servicenow-saas-api-auth-misconfiguration-breach.webp"
 coverAlt: "SaaS API 認證設定錯誤成為企業資料外洩主流管道，ServiceNow 未驗證端點外洩客戶資料的示意"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

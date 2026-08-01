@@ -9,6 +9,10 @@ subcategory: "security"
 tags:
   - "資安"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 sourceType: "editorial"
 contentType: "guide"
 disclaimerType: "general"

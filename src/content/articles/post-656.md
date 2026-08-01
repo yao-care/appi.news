@@ -30,6 +30,10 @@ references:
     publisher: "JD Supra"
     note: "IMO投票推遲對全球航運業的影響分析"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "legal"

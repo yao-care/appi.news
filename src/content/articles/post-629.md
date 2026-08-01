@@ -26,6 +26,10 @@ references:
     url: "https://tcan2050.org.tw/20260121"
     publisher: "台灣氣候行動網路"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

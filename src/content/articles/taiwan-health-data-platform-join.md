@@ -10,6 +10,10 @@ tags:
   - "醫療AI"
   - "資料治理"
 author: lightman
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: covers/taiwan-health-data-platform-join.webp
 coverAlt: 許多小方塊拼成一個更大的結構，象徵每人一份健康資料匯成台灣醫療 AI 的地基
 status: published

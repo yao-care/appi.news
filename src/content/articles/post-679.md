@@ -27,6 +27,10 @@ references:
     url: "https://taiwaninsight.org/2025/11/03/redefining-super-aged-taiwans-path-in-an-ageing-era"
     publisher: "Taiwan Insight"
 author: "lightman"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "medical"

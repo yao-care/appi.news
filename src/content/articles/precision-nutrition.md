@@ -10,6 +10,10 @@ tags:
   - "保健食品"
   - "預防醫學"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/precision-nutrition.webp"
 coverAlt: "一桌色彩豐富的原型食物與蔬果，象徵依個人需求量身搭配的精準營養概念"
 coverImageCredit: "Photo by Brooke Lark on Unsplash"

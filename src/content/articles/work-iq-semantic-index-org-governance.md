@@ -15,6 +15,10 @@ coverImage: "covers/work-iq-semantic-index-org-governance-cover.webp"
 coverAlt: "數位轉型相關情境（示意圖）"
 coverImageCredit: "Photo by Israel Andrade on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 disclaimerType: "general"

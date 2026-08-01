@@ -7,6 +7,10 @@ category: lifestyle
 subcategory: life
 tags: ["節慶"]
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/qixi-2026-guide-cover.webp"
 coverAlt: "民眾在廟宇焚香祭拜的場景（示意圖）"
 coverImageCredit: "Photo by Chinh Le Duc on Unsplash"

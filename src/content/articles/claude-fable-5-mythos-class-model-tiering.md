@@ -14,6 +14,10 @@ tags:
 coverImage: "covers/claude-fable-5-mythos-class-model-tiering.webp"
 coverAlt: "AI 模型能力一層疊一層往上分層，最頂端是新開出的層級"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 contentType: "analysis"

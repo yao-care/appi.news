@@ -10,6 +10,10 @@ tags:
   - "淨零轉型"
   - "能源政策"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taipower-grid-resilience-161kv-cable-cover.webp"
 coverAlt: "電網相關情境（示意圖）"
 coverImageCredit: "Photo by Matthew Henry on Unsplash"

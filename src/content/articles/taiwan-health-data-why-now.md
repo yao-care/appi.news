@@ -9,6 +9,10 @@ tags:
   - "數位健康"
   - "醫療AI"
 author: lightman
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: covers/taiwan-health-data-why-now.webp
 coverAlt: 多家規模不一的公司試圖打通醫院之間的資料高牆，象徵台灣醫療大數據整合十年磨一劍的歷程
 status: published

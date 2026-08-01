@@ -14,6 +14,10 @@ tags:
 coverImage: "covers/chatgpt-health-nhi-sdk-accountability.webp"
 coverAlt: "健檢報告攤在桌上，一旁手機顯示AI健康助理對話畫面，象徵兩種健康資料開放模式的抉擇"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "news"

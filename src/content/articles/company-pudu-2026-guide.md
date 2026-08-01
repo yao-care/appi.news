@@ -7,6 +7,10 @@ category: lifestyle
 subcategory: life
 tags: ["節慶"]
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/company-pudu-2026-guide-cover.webp"
 coverAlt: "台灣商辦大樓外觀，象徵企業辦公環境（示意圖）"
 coverImageCredit: "Photo by Bingqian Li on Pexels"

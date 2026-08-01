@@ -12,6 +12,10 @@ tags:
   - "環境部"
   - "氣候變遷"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/waste-disposal-act-amendment-promulgated-2026-cover.webp"
 coverAlt: "資源回收處理設施，象徵廢棄物清理與循環經濟管理"
 coverImageCredit: "Photo by Elbert Lora on Unsplash"

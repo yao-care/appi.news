@@ -24,6 +24,10 @@ references:
     url: "http://www.pakistantelegraph.com/news/279213743/india-must-widen-access-to-ai-top-scientist"
     publisher: "Pakistan Telegraph（轉載RT.com）"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

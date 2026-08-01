@@ -7,6 +7,10 @@ category: health
 subcategory: preventive
 tags: ["預防醫學", "健檢報告", "肌少症", "高齡健康", "公共衛生"]
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-473.webp"
 coverAlt: "一位中年人在家中客廳從椅子上起身,呈現日常活動能力的畫面"
 status: published

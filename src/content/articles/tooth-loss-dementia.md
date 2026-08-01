@@ -10,6 +10,10 @@ tags:
   - "失智症"
   - "高齡健康"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/tooth-loss-dementia.webp"
 coverAlt: "高齡長者口腔檢查與咀嚼功能評估的示意"
 status: scheduled

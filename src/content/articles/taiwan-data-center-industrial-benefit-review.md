@@ -13,6 +13,10 @@ tags:
   - "供應鏈"
   - "資安"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-data-center-industrial-benefit-review-cover.webp"
 coverAlt: "資料中心伺服器機房內的機櫃與線路，象徵能源密集的資料中心設施"
 coverImageCredit: "Photo by Taylor Vick on Unsplash"

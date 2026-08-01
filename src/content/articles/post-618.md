@@ -27,6 +27,10 @@ references:
     url: "https://info.poxa.io/report/20260518"
     publisher: "POXA Energy"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

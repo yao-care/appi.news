@@ -10,6 +10,10 @@ tags:
   - "澳洲"
   - "亞太"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

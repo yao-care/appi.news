@@ -32,6 +32,10 @@ references:
     url: "https://sundayguardianlive.com/world/russia-ukraine-war-latest-news-zelensky-thanks-ireland-for-solidarity-as-taoiseach-michel-martin-honors-fallen-ukrainian-soldiers-244496/"
     publisher: "Sunday Guardian Live"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

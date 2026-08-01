@@ -14,6 +14,10 @@ tags:
   - "經濟部"
   - "電網"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-power-demand-forecast-2035-cover.webp"
 coverAlt: "能源政策相關情境（示意圖）"
 coverImageCredit: "Photo by Matthew Henry on Unsplash"

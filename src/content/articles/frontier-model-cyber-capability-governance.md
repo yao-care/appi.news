@@ -14,6 +14,10 @@ coverImage: "covers/frontier-model-cyber-capability-governance-cover.webp"
 coverAlt: "資安相關情境（示意圖）"
 coverImageCredit: "Photo by Adi Goldstein on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

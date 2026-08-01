@@ -14,6 +14,10 @@ coverImage: "covers/kpmg-agent-365-workforce-governance-cover.webp"
 coverImageCredit: "Photo by Igor Omilaev on Unsplash"
 coverAlt: "AI agent相關情境（示意圖）"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

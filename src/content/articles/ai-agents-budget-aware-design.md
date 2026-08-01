@@ -14,6 +14,10 @@ coverImage: "covers/ai-agents-budget-aware-design.webp"
 coverAlt: "象徵 AI agent 花錢與預算監控的成本儀表板示意"
 coverImageCredit: "Photo by Luke Chesser on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

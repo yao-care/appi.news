@@ -14,6 +14,10 @@ tags:
   - "宜蘭縣"
   - "南投縣"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 sourceType: "wire"
 contentType: "news"
 status: "published"

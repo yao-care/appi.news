@@ -7,6 +7,10 @@ category: sports
 subcategory: events
 tags: ["學生賽事", "國際賽事"]
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-484.webp"
 coverAlt: "長條圖比較謝明君新紀錄與原大會紀錄的分數差距，雙局676分對668分、單局339分對338分"
 status: published

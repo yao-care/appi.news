@@ -11,6 +11,10 @@ tags:
   - "資安"
   - "生成式AI"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-195.webp"
 coverAlt: "單點依賴與分散韌性工作流的結構對比示意"
 status: published

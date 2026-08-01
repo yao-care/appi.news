@@ -26,6 +26,10 @@ references:
     url: "https://tvca-summit.tvca.org.tw/2024/press/2vA2AlFEHDwn5D0D6w7rsEBoRFV"
     publisher: "台灣創投公會年會"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

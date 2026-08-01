@@ -13,6 +13,10 @@ tags:
 coverImage: "covers/world-breastfeeding-week-2026-cover.webp"
 coverAlt: "哺乳相關器材與育嬰空間示意，象徵世界母乳哺育週對支持系統的關注"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "feature"

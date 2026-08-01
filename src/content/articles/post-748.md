@@ -27,6 +27,10 @@ references:
     url: "https://www.vogue.com.tw/article/dragon-boat-festival-gift-box"
     publisher: "Vogue Taiwan"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

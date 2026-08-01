@@ -12,6 +12,10 @@ tags:
   - "環境部"
   - "綠色金融"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/carbon-inventory-scope3-harmonization-cover.webp"
 coverAlt: "工廠煙囪排放白煙，象徵企業溫室氣體盤查與碳排放管理"
 coverImageCredit: "Photo by Andreas Felske on Unsplash"

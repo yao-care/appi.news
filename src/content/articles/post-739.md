@@ -25,6 +25,10 @@ references:
     url: "https://events.taiwantrade.com/TTCycle2026"
     publisher: "台灣貿易發展協會"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

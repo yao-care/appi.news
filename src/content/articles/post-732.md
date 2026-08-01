@@ -29,6 +29,10 @@ references:
     url: "https://www.taitra.org.tw/News_Content.aspx?n=109&s=125916"
     publisher: "中華民國對外貿易發展協會 TAITRA"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

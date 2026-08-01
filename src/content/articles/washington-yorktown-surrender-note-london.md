@@ -26,6 +26,10 @@ references:
     url: "https://www.irvinetimes.com/news/national/26218447.george-washington-note-accepting-british-surrender-go-display-london/"
     publisher: "Irvine Times"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

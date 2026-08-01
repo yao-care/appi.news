@@ -13,6 +13,10 @@ tags:
 coverImage: "covers/opencode-overtakes-commercial-ide.webp"
 coverAlt: "一個開源終端機工具超車商業 IDE，衝上開發工具排行榜第一"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 contentType: "analysis"

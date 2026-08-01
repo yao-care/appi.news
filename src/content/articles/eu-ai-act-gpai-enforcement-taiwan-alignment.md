@@ -13,6 +13,10 @@ coverImage: "covers/eu-ai-act-gpai-enforcement-taiwan-alignment.webp"
 coverAlt: "象徵歐盟 AI 法執法權上路、對通用型 AI 監管的政策氛圍"
 coverImageCredit: "Photo by Christian Lue on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 contentType: "analysis"

@@ -26,6 +26,10 @@ references:
     url: "https://www.kpbs.org/news/politics/2026/06/22/a-federal-judge-finds-a-trump-data-system-to-verify-voters-is-unlawful"
     publisher: "KPBS"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

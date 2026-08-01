@@ -31,6 +31,10 @@ references:
     url: "https://www.irishnews.com/news/northern-ireland/cross-border-bomb-suspect-works-for-irish-government-funded-body-KNUBWUEEE5GFZCRRWGPA5H4NQE/"
     publisher: "The Irish News"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

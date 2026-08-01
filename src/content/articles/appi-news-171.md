@@ -10,6 +10,10 @@ tags:
   - "食品安全"
   - "傳染病防治"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-171.webp"
 coverAlt: "泳池消毒效果比較：標準加氯可殺滅大腸桿菌與病毒，但隱孢子蟲卵囊與腺病毒仍可存活"
 status: published

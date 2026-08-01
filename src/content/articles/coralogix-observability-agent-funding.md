@@ -15,6 +15,10 @@ coverImage: "covers/coralogix-observability-agent-funding.webp"
 coverAlt: "象徵資本流入可觀測性基礎建設、可觀測性成為 AI 時代吸金基建的抽象網路示意"
 coverImageCredit: "Photo by Conny Schneider on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

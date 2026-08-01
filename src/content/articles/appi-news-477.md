@@ -7,6 +7,10 @@ category: finance
 subcategory: investing-literacy
 tags: ["投資理財", "退休規劃", "總體經濟", "資本市場", "房市", "地緣政治", "中東情勢", "美國"]
 author: "wu-fang-jun"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-477.webp"
 coverAlt: "長條圖比較美國10年期公債殖利率4.63%、30年期房貸利率6.55%與聯邦資金利率3.63%三項數據"
 status: published

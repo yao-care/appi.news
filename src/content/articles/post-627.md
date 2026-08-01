@@ -25,6 +25,10 @@ references:
     url: "https://vos.tier.org.tw/Viewpoint03More.aspx?DGUID=e647c86a-8f75-4921-9094-23bab5839817"
     publisher: "台灣經濟研究院永續學院"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

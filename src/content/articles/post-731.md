@@ -26,6 +26,10 @@ references:
     url: "https://www.skis.com.tw/Doc/Report/B/1027000_0.PDF"
     publisher: "新光投顧投資研究報告"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

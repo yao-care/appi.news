@@ -7,6 +7,10 @@ category: sports
 subcategory: events
 tags: ["桌球"]
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-464-cover.webp"
 coverImageCredit: "Photo by Lisa Keffer on Unsplash"
 coverAlt: "桌球相關情境（示意圖）"

@@ -11,6 +11,10 @@ tags:
   - "健檢報告"
   - "肝腎健康"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-180.webp"
 coverAlt: "GLP-1 受體促效劑三大作用機制：促進胰島素分泌、抑制食慾、延遲胃排空"
 status: published

@@ -10,6 +10,10 @@ tags:
   - "能源政策"
   - "房市"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/rooftop-solar-mandate-phase-in-cover.webp"
 coverAlt: "商辦大樓屋頂設置太陽光電板（示意圖）"
 coverImageCredit: "Photo by Nova lv on Pexels"

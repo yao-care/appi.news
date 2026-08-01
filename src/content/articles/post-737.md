@@ -26,6 +26,10 @@ references:
     url: "https://www.businessresearchinsights.com/market-reports/wearable-technology-market-119131"
     publisher: "Business Research Insights"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

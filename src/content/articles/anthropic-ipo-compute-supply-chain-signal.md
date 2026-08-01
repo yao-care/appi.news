@@ -13,6 +13,10 @@ tags:
   - "供應鏈"
   - "先進封裝"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/anthropic-ipo-compute-supply-chain-signal-cover.webp"
 coverAlt: "生成式AI相關情境（示意圖）"
 coverImageCredit: "Photo by Aerps.com on Unsplash"

@@ -27,6 +27,10 @@ references:
     url: "https://esg.tsmc.com/articles/401"
     publisher: "台積電永續報告"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

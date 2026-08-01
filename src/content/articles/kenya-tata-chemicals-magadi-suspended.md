@@ -27,6 +27,10 @@ references:
     url: "https://capitalfm.africa/govt-suspends-tata-chemicals-magadi-mining-operations-over-compliance-breaches/"
     publisher: "Capital FM Kenya"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

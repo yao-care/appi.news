@@ -11,6 +11,10 @@ tags:
   - "韓國"
   - "退休規劃"
 author: "wu-fang-jun"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-401.webp"
 coverAlt: "首爾證交所交易大廳畫面，電子看板顯示三星電子與SK海力士股價劇烈震盪的走勢圖，交易員神情專注緊盯螢幕"
 status: published

@@ -25,6 +25,10 @@ references:
     url: "https://www.accupass.com/event/2506051015204913339400"
     publisher: "ACCUPASS"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

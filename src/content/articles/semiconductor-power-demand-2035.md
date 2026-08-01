@@ -13,6 +13,10 @@ tags:
   - "台積電"
   - "淨零轉型"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/semiconductor-power-demand-2035-cover.webp"
 coverAlt: "高壓電力設施與工業廠房，象徵半導體產業用電需求快速成長（示意圖）"
 coverImageCredit: "Photo by Constantin Chernishov on Pexels"

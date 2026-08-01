@@ -25,6 +25,10 @@ references:
     url: "https://northeastbylines.co.uk/news/brexit/rejoin-march-to-mark-10-years-since-eu-referendum/"
     publisher: "North East Bylines"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

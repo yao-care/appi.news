@@ -27,6 +27,10 @@ references:
     url: "https://www.irpma.org.tw/web/upload/20260331170753KMxrN9e.pdf"
     publisher: "IRPMA"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "medical"

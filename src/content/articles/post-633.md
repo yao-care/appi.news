@@ -25,6 +25,10 @@ references:
     url: "https://www.trackingstandard.org/wp-content/uploads/ITSF_Taiwan-Country-Report_January-2026_Public.pdf"
     publisher: "ITSF"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

@@ -27,6 +27,10 @@ references:
     url: "https://money.udn.com/money/story/5607/9182513"
     publisher: "經濟日報"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

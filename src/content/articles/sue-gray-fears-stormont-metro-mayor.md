@@ -29,6 +29,10 @@ references:
     url: "https://en.wikipedia.org/wiki/Sue_Gray"
     publisher: "Wikipedia"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

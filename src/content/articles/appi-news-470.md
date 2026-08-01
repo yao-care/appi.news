@@ -7,6 +7,10 @@ category: sports
 subcategory: events
 tags: ["學生賽事", "新竹縣", "教育", "運動產業"]
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-470-cover.webp"
 coverImageCredit: "Photo by Hữu Phú on Unsplash"
 coverAlt: "學生賽事相關情境（示意圖）"

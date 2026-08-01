@@ -14,6 +14,10 @@ coverImage: "covers/irhythm-phi-breach-third-party-perimeter.webp"
 coverAlt: "心臟監測商 iRhythm 第三方代管商業應用遭未授權存取、病患 PHI 外洩遭勒索的示意"
 coverImageCredit: "Photo by Joshua Chehov on Unsplash"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 contentType: "analysis"

@@ -28,6 +28,10 @@ references:
     url: "https://www.whathifi.com/headphones/the-headphones-world-cup-from-beats-to-bose-which-audio-brands-are-winning-over-footballs-elite"
     publisher: "What Hi-Fi?"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

@@ -15,6 +15,10 @@ tags:
   - "ESG"
   - "再生能源"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-offshore-wind-r3-3-admin-contract-update-cover.webp"
 coverAlt: "海面上的離岸風力發電機組，象徵台灣離岸風電區塊開發"
 coverImageCredit: "Photo by P Hsuan Wang on Pexels"

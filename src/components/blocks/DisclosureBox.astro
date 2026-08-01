@@ -1,23 +1,50 @@
 ---
 import { DISCLOSURES, type SourceType } from '@/config/disclaimers';
 
+interface Reviewer {
+  name: string;
+  /** 作者頁連結；沒有作者頁時省略，只出名字 */
+  href?: string;
+}
+
 interface Props {
   sourceType?: SourceType;
   /** frontmatter 自訂 disclosure 文字，優先於預設 */
   custom?: string;
+  /**
+   * 專業審閱者。呼叫端須先排除「審閱者就是署名作者本人」的情形
+   * （那種情況資歷已由 AuthorBioBox 呈現，再寫一次「經自己審閱」是廢話）。
+   */
+  reviewers?: Reviewer[];
 }
-const { sourceType = 'editorial', custom } = Astro.props;
+const { sourceType = 'editorial', custom, reviewers = [] } = Astro.props;
 const preset = DISCLOSURES[sourceType];
 // 來源揭露：editorial / author / contributor / expert / press-release / sponsored / partner / wire。
-// AI 為內部工具，不在前台揭露。
-const text = custom ?? preset?.text;
+const raw = custom ?? preset?.text;
 const label = preset?.label ?? '揭露';
+
+// 預設句用 {REVIEW} 標出審閱句該插在哪；自訂 disclosure 沒有佔位符，審閱資訊獨立成句附在其後。
+const inline = Boolean(raw?.includes('{REVIEW}'));
+const [head, tail] = inline ? raw!.split('{REVIEW}') : [raw ?? '', ''];
+const hasReviewers = reviewers.length > 0;
 ---
 {
-  text && (
+  (head || tail) && (
     <aside class="disclosure" role="note">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12.01" y2="8" /></svg>
-      <p><strong>{label}：</strong>{text}</p>
+      <p>
+        <strong>{label}：</strong>{head}
+        {hasReviewers && (inline ? '，經' : '經')}
+        {hasReviewers &&
+          reviewers.map((r, i) => (
+            <>
+              {i > 0 && '、'}
+              {r.href ? <a href={r.href}>{r.name}</a> : r.name}
+            </>
+          ))}
+        {hasReviewers && (inline ? '專業審閱' : '專業審閱。')}
+        {tail}
+      </p>
     </aside>
   )
 }
@@ -45,5 +72,10 @@ const label = preset?.label ?? '揭露';
   }
   .disclosure strong {
     color: var(--appi-brand);
+  }
+  .disclosure a {
+    color: var(--appi-brand);
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 </style>

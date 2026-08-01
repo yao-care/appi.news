@@ -27,6 +27,10 @@ references:
     url: "https://moda.gov.tw/press/press-releases/17790"
     publisher: "數位發展部"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

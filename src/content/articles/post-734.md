@@ -27,6 +27,10 @@ references:
     url: "https://www.bike-eu.com/49675/%E5%8F%B0%E7%81%A3%E9%9B%BB%E5%8B%95%E8%87%AA%E8%A1%8C%E8%BB%8A%E5%87%BA%E5%8F%A3q1%E5%87%BA%E7%8F%BE%E5%9B%9E%E5%8D%87"
     publisher: "Bike Europe"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

@@ -16,6 +16,10 @@ coverImage: "covers/openai-42-ags-ipo-probe-cover.webp"
 coverAlt: "生成式AI相關情境（示意圖）"
 coverImageCredit: "Photo by Andrew Neel on Unsplash"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

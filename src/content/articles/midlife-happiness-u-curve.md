@@ -5,6 +5,10 @@ publishDate: "2026-07-30T18:45:36.011Z"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "/covers/midlife-happiness-u-curve-cover.webp"
 coverAlt: "一位中年人望向窗外沉思"
 coverImageCredit: "Photo by Rainier Ridao on Unsplash"

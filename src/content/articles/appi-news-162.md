@@ -9,6 +9,10 @@ subcategory: preventive
 tags:
   - "傳染病防治"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-162.webp"
 coverAlt: "彰化鴨農穿戴 N95 口罩與手套在鴨場巡視，背景可見候鳥的職業防護示意圖"
 status: published

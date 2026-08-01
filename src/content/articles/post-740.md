@@ -26,6 +26,10 @@ references:
     url: "https://udn.com/news/story/7001/8988249"
     publisher: "聯合新聞網"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

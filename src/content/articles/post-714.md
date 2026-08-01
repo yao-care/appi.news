@@ -28,6 +28,10 @@ references:
     url: "https://meet.bnext.com.tw/topic/view/269/article/view/52925"
     publisher: "Meet創業小聚"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

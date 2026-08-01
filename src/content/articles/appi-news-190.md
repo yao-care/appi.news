@@ -9,6 +9,10 @@ subcategory: tcm-integrative
 tags:
   - "傳染病防治"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-190.webp"
 coverAlt: "在昏暗儲藏室用掃帚清掃鼠糞時，塵埃微粒在密閉空間中飄散，顯示乾掃的氣膠風險"
 status: published

@@ -9,6 +9,10 @@ tags:
   - "健檢報告"
   - "保健食品"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/ldl-cholesterol-targets.webp"
 coverAlt: "健檢血脂報告與膽固醇欄位示意"
 status: scheduled

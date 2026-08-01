@@ -25,6 +25,10 @@ references:
     url: "https://tnf.org.tw/archives/49262"
     publisher: "台灣自然保育基金會"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

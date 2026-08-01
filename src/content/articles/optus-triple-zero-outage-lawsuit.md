@@ -16,6 +16,10 @@ highlights:
   - "ACMA主席歐洛林（Nerida O'Loughlin）表示「澳洲人有理由期待撥打000電話會接通」，這不是選項而是基本法律義務；每次違規最高可罰25萬澳元，若以逾千次計算，潛在罰款上看2.5億澳元（約合8.5億元新台幣）"
   - "這是Optus兩年內第二度因000故障挨罰：2023年11月的類似事件已致Optus旗下公司支付逾1200萬澳元罰款，ACMA認為短時間內再度發生「是重大隱憂」，因此決定訴諸法院"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

@@ -26,6 +26,10 @@ references:
     url: "https://www.reccessary.com/zh-tw/news/5mw-ai-data-center-taipower"
     publisher: "RECCESSARY"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

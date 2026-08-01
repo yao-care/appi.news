@@ -11,6 +11,10 @@ tags:
   - "中醫"
   - "復健治療"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "https://images.unsplash.com/photo-1767972463825-96eaa9e0766b?w=1920&q=80"
 coverAlt: "女性手捂頸部，橙紅色熱感疊圖呈現頸部疼痛部位，黑白基調"
 status: published

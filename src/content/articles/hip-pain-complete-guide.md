@@ -12,6 +12,10 @@ tags:
   - "復健治療"
   - "高齡健康"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 contentType: "guide"
 sourceType: "editorial"

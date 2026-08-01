@@ -11,6 +11,10 @@ tags:
   - "經濟部"
   - "半導體"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-water-consumption-fee-2026-cover.webp"
 coverAlt: "水庫與供水設施，象徵水資源管理與用水大戶節水政策"
 coverImageCredit: "Photo by Tejj on Unsplash"

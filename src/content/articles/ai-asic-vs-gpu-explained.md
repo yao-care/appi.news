@@ -15,6 +15,10 @@ coverImage: "covers/ai-asic-vs-gpu-explained-cover.webp"
 coverAlt: "半導體晶圓與晶片特寫，象徵 AI 運算從通用 GPU 走向客製化 ASIC"
 coverImageCredit: "Photo by Jonas Svidras on Pexels"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "analysis"

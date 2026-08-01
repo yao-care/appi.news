@@ -14,6 +14,10 @@ coverImage: "covers/ai-model-release-prediction-markets.webp"
 coverAlt: "象徵模型發布日期變成預測市場賭盤標的的抽象金融示意"
 coverImageCredit: "Photo by Kanchanara on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

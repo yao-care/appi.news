@@ -11,6 +11,10 @@ tags:
   - "預防醫學"
   - "肝腎健康"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 contentType: "guide"
 sourceType: "editorial"

@@ -31,6 +31,10 @@ references:
     url: "https://www.washingtontimes.com/news/2026/jul/30/raul-torrez-new-mexico-ag-sues-return-teen-forced-cross-border-foster/"
     publisher: "The Washington Times"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

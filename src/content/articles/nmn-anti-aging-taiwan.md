@@ -10,6 +10,10 @@ tags:
   - "高齡健康"
   - "醫療政策"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/nmn-anti-aging-taiwan.webp"
 coverAlt: "NMN 抗老保健食品與法規、實證的示意"
 status: scheduled

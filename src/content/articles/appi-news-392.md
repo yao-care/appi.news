@@ -11,6 +11,10 @@ tags:
   - "投資理財"
   - "退休規劃"
 author: "wu-fang-jun"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-392.webp"
 coverAlt: "財務規劃桌面情境，多國貨幣與利率圖表並陳，象徵全球資產配置決策"
 status: published

@@ -7,6 +7,10 @@ category: health
 subcategory: preventive
 tags: ["預防醫學", "健檢報告", "醫療政策", "健保", "公共衛生", "醫病關係"]
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-482.webp"
 coverAlt: "藥師在社區藥局的健康篩檢櫃檯，為一位中年顧客量血壓，一旁擺放骨密度檢測儀器"
 status: published

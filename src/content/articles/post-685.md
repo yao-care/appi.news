@@ -26,6 +26,10 @@ references:
     url: "https://www.trade.gov/country-commercial-guides/taiwan-cybersecurity"
     publisher: "美國國際貿易署（ITA）"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "general"

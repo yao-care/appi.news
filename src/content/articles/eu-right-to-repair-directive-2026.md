@@ -13,6 +13,10 @@ tags:
   - "製造業"
   - "貿易政策"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/eu-right-to-repair-directive-2026-cover.webp"
 coverAlt: "維修技師在工作檯上修理電子產品，示意圖"
 coverImageCredit: "Photo by insung yoon on Unsplash"

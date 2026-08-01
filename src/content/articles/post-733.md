@@ -25,6 +25,10 @@ references:
     url: "https://www.mnd.gov.tw/en/informationservices/publication/84934"
     publisher: "中華民國國防部全球資訊網"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

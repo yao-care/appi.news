@@ -10,6 +10,10 @@ tags:
   - "中醫"
   - "復健治療"
 author: huang-ziyan
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: covers/appi-news-177.webp
 coverAlt: 美顏針三階段照護流程圖：術前準備、施作中、術後修復
 status: published

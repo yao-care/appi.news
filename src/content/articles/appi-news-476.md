@@ -7,6 +7,10 @@ category: finance
 subcategory: investing-literacy
 tags: ["投資理財", "退休規劃", "半導體", "台積電", "總體經濟"]
 author: "wu-fang-jun"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-476.webp"
 coverAlt: "股市電子看板顯示台積電股價與其他個股漲跌數字，紅綠數字交錯排列"
 status: published

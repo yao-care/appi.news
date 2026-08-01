@@ -26,6 +26,10 @@ references:
     url: "https://www.scinopharm.com/news-detail/141"
     publisher: "ScinoPharm Taiwan"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "medical"

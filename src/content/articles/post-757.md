@@ -28,6 +28,10 @@ references:
     url: "https://www.pwc.com/gx/en/issues/workforce/hopes-and-fears.html"
     publisher: "PwC"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

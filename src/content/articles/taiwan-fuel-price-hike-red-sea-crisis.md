@@ -12,6 +12,10 @@ tags:
   - "中東情勢"
   - "地緣政治"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-fuel-price-hike-cover.webp"
 coverAlt: "加油站油槍與車輛加油畫面，象徵中油汽柴油價格調漲（示意圖）"
 coverImageCredit: "Photo by Kenzo Tu on Unsplash"

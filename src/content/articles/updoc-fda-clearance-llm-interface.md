@@ -15,6 +15,10 @@ coverImage: "covers/updoc-fda-clearance-llm-interface.webp"
 coverAlt: "美國 FDA 核准首個病人對話 LLM 醫材 UpDoc 的示意圖，象徵醫材審查與 AI 介面設計"
 coverImageCredit: "Photo by Brecht Corbeel on Unsplash"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "news"

@@ -13,6 +13,10 @@ tags:
 coverImage: "covers/openai-deployment-simulation-evaluation-gap.webp"
 coverAlt: "OpenAI 用真實使用者對話重放，餵給還沒上線的新模型做上線前測試的示意"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

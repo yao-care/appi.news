@@ -26,6 +26,10 @@ references:
     url: "https://tw.stock.yahoo.com/news/spacex%E5%B0%87%E4%B8%8A%E5%B8%82%E8%82%A1%E5%83%B9%E5%8D%BB%E7%BF%BB%E9%BB%91-%E9%80%99%E6%AA%94%E4%BD%8E%E8%BB%8C%E8%A1%9B%E6%98%9F-%E9%81%AD%E5%A4%96%E8%B3%87%E6%8F%90%E6%AC%BE%E9%80%BE42%E5%84%84%E5%85%83-%E5%8A%9B%E7%A9%8D%E9%9B%BB%E4%B9%9F%E8%A2%AB%E5%87%BA%E6%B8%852-2%E8%90%AC%E5%BC%B5-122400665.html"
     publisher: "Yahoo財經"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

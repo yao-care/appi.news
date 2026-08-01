@@ -10,6 +10,10 @@ tags:
   - "骨骼關節"
   - "居家安全"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-191.webp"
 coverAlt: "長者在設有扶手的明亮居家環境中安全行走"
 status: published

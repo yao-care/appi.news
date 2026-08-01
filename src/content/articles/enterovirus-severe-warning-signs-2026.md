@@ -10,6 +10,10 @@ tags:
   - "育兒健康"
   - "公共衛生"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/enterovirus-severe-warning-signs-2026-cover.webp"
 coverAlt: "小兒科診間候診區，示意腸病毒門急診就診人次上升（示意圖）"
 coverImageCredit: "Photo by Los Muertos Crew on Pexels"

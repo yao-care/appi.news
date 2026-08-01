@@ -27,6 +27,10 @@ references:
     url: "https://www.reccessary.com/zh-tw/news/carbon-fee-2026"
     publisher: "RECCESSARY"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

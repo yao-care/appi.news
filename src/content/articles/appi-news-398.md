@@ -10,6 +10,10 @@ tags:
   - "超高齡社會"
   - "退休規劃"
 author: "wu-fang-jun"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-398.webp"
 coverAlt: "一位台灣年長女性獨自坐在餐桌前，低頭查看存摺與帳單，神情凝重"
 status: published

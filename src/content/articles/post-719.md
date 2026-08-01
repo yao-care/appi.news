@@ -25,6 +25,10 @@ references:
     url: "https://www.fsc.gov.tw/en/home.jsp?id=54&parentpath=0%2C2&mcustomize=multimessage_view.jsp&dataserno=202602120005&dtable=News"
     publisher: "金融監督管理委員會"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

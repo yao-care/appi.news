@@ -10,6 +10,10 @@ tags:
   - "水資源"
   - "經濟部"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-water-pearl-string-daan-dajia-pipeline-cover.webp"
 coverAlt: "水庫與供水基礎建設景觀，象徵台灣跨區域調度水資源韌性（示意圖）"
 coverImageCredit: "Photo by Tejj on Unsplash"

@@ -13,6 +13,10 @@ tags:
   - "企業經營"
   - "職場趨勢"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/fsc-financial-social-trust-guideline-cover.webp"
 coverAlt: "金融辦公大樓外觀，象徵金融業公司治理與社會信任（示意圖）"
 coverImageCredit: "Photo by Joshua Hoehne on Unsplash"

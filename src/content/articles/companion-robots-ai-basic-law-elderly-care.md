@@ -15,6 +15,10 @@ tags:
 coverImage: "covers/companion-robots-ai-basic-law-elderly-care.webp"
 coverAlt: "高齡長者在溫暖明亮的居家客廳，旁邊有一台居家陪伴機器人"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

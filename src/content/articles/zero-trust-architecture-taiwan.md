@@ -12,6 +12,10 @@ tags:
   - "科技政策"
   - "金融科技"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "analysis"

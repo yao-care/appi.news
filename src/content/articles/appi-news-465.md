@@ -7,6 +7,10 @@ category: sports
 subcategory: events
 tags: ["學生賽事", "苗栗縣"]
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-465.webp"
 coverAlt: "決賽關鍵局比分長條圖，呈現飛迅南市文化國小-紅隊男團與女團決賽各局比分"
 status: published

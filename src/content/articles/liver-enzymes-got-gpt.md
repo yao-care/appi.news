@@ -10,6 +10,10 @@ tags:
   - "生成式AI"
   - "癌症防治"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/liver-enzymes-got-gpt.webp"
 coverAlt: "民眾拿著健康檢查血液報告，肝功能欄位示意"
 status: scheduled

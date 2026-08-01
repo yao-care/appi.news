@@ -11,6 +11,10 @@ tags:
   - "水資源"
   - "天然災害"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 sourceType: "editorial"
 contentType: "guide"
 status: "scheduled"

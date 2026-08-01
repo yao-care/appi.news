@@ -9,6 +9,10 @@ tags:
   - "保健食品"
   - "心血管健康"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 column: "herbal-cuisine"
 coverImage: "covers/appi-news-183-cover.webp"
 coverImageCredit: "Photo by Madara on Unsplash"

@@ -24,6 +24,10 @@ references:
     url: "https://science.nasa.gov/blogs/parker-solar-probe/2025/12/18/nasas-parker-solar-probe-completes-26th-closest-approach-to-sun"
     publisher: "NASA Science"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

@@ -14,6 +14,10 @@ coverImage: "covers/ai-theorem-proving-lean-verifiable.webp"
 coverAlt: "AI 產出的數學證明被機器逐行驗證的示意"
 coverImageCredit: "Photo by Vitaly Gariev on Pexels"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

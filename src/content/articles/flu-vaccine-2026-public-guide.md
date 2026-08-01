@@ -7,6 +7,10 @@ category: health
 subcategory: medical
 tags: ["傳染病防治", "公共衛生", "預防醫學", "高齡健康"]
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/flu-vaccine-2026-public-guide-cover.webp"
 coverAlt: "醫護人員準備流感疫苗與注射器，診間接種情境（示意圖）"
 coverImageCredit: "Photo by Mufid Majnun on Unsplash"

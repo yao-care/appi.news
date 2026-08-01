@@ -26,6 +26,10 @@ references:
     url: "https://www.institutmontaigne.org/en/publications/chips-diplomacy-support-initiative"
     publisher: "Institut Montaigne / EU Commission"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

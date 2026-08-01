@@ -28,6 +28,10 @@ references:
     url: "https://taipeiecon.taipei/Topics/more?id=f1155a9d353e4d499808444760d06d3e"
     publisher: "臺北產經資訊網"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

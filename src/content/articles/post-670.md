@@ -27,6 +27,10 @@ references:
     url: "https://iclg.com/practice-areas/digital-health-laws-and-regulations/taiwan"
     publisher: "ICLG"
 author: "lightman"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "medical"

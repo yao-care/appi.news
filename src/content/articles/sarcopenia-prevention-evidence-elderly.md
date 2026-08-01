@@ -12,6 +12,10 @@ tags:
   - "保健食品"
   - "預防醫學"
 author: appi-editorial
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/sarcopenia-prevention-evidence-elderly-cover.webp"
 coverAlt: 高齡者進行肌力訓練,象徵以運動預防肌少症
 coverImageCredit: Photo by Centre for Ageing Better on Unsplash

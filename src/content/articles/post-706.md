@@ -25,6 +25,10 @@ references:
     url: "https://www.ishares.com/us/insights/inside-the-market/2026-market-outlook-investment-directions"
     publisher: "iShares / BlackRock"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

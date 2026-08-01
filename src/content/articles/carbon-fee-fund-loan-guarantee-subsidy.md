@@ -14,6 +14,10 @@ tags:
   - "淨零轉型"
   - "ESG"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/carbon-fee-fund-loan-guarantee-subsidy-cover.webp"
 coverAlt: "工廠廠房與生產設備，象徵製造業減碳轉型與資金需求"
 coverImageCredit: "Photo by Nopparuj Lamaikul on Unsplash"

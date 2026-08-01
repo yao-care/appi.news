@@ -11,6 +11,10 @@ tags:
   - "心血管健康"
   - "食品安全"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/red-yeast-rice-monacolin-safety.webp"
 coverAlt: "紅麴保健食品、monacolin K 與 statin 安全性的示意"
 status: scheduled

@@ -10,6 +10,10 @@ tags:
   - "醫病關係"
   - "心血管健康"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-192.webp"
 coverAlt: "雙向情緒障礙情緒週期示意圖，呈現躁狂、穩定與憂鬱三種狀態循環交替的過程"
 status: published

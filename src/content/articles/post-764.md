@@ -37,6 +37,10 @@ references:
     url: "https://www.enca.com/news-top-stories/mediators-report-progress-iran-us-talks-end-war"
     publisher: "eNCA"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

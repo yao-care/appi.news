@@ -10,6 +10,10 @@ tags:
   - "極端高溫"
   - "天然災害"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/extreme-heat-warning-guide-cover.webp"
 coverAlt: "烈日高掛的城市天空，象徵極端高溫來襲"
 coverImageCredit: "Photo by Timo Volz on Unsplash"

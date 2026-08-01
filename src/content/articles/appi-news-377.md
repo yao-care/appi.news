@@ -8,6 +8,10 @@ subcategory: preventive
 tags:
   - "傳染病防治"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-377.webp"
 coverAlt: "雨後家長與孩子在陽台一起檢查花盆底盤積水的情境"
 status: published

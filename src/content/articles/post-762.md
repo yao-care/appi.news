@@ -26,6 +26,10 @@ references:
     url: "https://artemperor.tw/focus/6836"
     publisher: "非池中藝術網"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

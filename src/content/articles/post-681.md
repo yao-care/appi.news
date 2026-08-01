@@ -28,6 +28,10 @@ references:
     url: "https://www.nvidia.com/en-tw/gtc/taipei"
     publisher: "NVIDIA"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

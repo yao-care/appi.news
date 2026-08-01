@@ -9,6 +9,10 @@ tags:
   - "口腔健康"
   - "健保"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/dental-scaling-myths.webp"
 coverAlt: "牙醫師以超音波器械為民眾清除牙結石的洗牙示意"
 status: published

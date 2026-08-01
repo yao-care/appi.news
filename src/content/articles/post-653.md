@@ -26,6 +26,10 @@ references:
     url: "https://introl.com/blog/smr-nuclear-power-ai-data-centers-2025"
     publisher: "Introl"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

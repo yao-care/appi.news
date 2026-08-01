@@ -15,6 +15,10 @@ coverImage: "covers/sk-hynix-nasdaq-hbm-listing-cover.webp"
 coverAlt: "先進封裝相關情境（示意圖）"
 coverImageCredit: "Photo by ed br on Pexels"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

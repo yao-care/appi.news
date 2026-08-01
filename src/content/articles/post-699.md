@@ -25,6 +25,10 @@ references:
     url: "https://www.marketsandmarkets.com/Market-Reports/taiwan-humanoid-robot-market-130022038.html"
     publisher: "MarketsandMarkets"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "general"

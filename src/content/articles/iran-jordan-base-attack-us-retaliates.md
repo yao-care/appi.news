@@ -107,6 +107,10 @@ references:
     url: "https://sundayguardianlive.com/business/brent-crude-oil-price-today-july-30-brent-falls-to-8730-wti-slips-near-84-as-us-iran-conflict-intensifies-check-latest-brent-crude-wti-oil-rates-today-249417/"
     publisher: "Sunday Guardian Live"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

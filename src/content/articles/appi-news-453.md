@@ -8,6 +8,10 @@ category: sports
 subcategory: events
 tags: []
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-453-cover.webp"
 coverAlt: "運動賽事相關情境（示意圖）"
 status: published

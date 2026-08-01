@@ -16,6 +16,10 @@ highlights:
   - "報告提出三A治理框架：預期性、適應性、敏捷性，強調資料利用、參與式預算與創新融資"
   - "台灣城鎮面臨颱風、地震、熱島效應三重氣候壓力，疊加人口老化後治理難度倍增"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

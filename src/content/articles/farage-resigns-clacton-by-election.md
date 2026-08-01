@@ -14,6 +14,10 @@ highlights:
   - "首相施凱爾批評此舉是「絕望的作秀」、稱法拉吉「渾身都是醜聞」；法拉吉則堅稱「我沒有以任何方式違法」，副黨魁提斯預測他將以大幅增加的多數勝出"
   - "工黨與自由民主黨表明不會在這場補選派出候選人，批評是為閃避調查的政治操作；保守黨與 Restore Britain 則說要等調查結束後的「真正補選」再上場"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 coverImage: "covers/farage-resigns-clacton-by-election-cover.webp"

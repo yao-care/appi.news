@@ -26,6 +26,10 @@ references:
     url: "https://tw.news.yahoo.com/%E9%A3%9F%E5%93%81%E5%B8%82%E5%A0%B4%E5%B0%87%E5%9B%9E%E6%AD%B8%E7%A9%A9%E5%81%A5%E6%88%90%E9%95%B7-2025%E5%B9%B4%E6%B0%91%E7%94%9F%E5%BF%AB%E6%B6%88%E5%93%8110%E5%A4%A7%E9%97%9C%E9%8D%B5%E8%B6%A8%E5%8B%A2-%E6%AC%A1%E7%9C%8B-064719187.html"
     publisher: "Yahoo新聞 食力"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

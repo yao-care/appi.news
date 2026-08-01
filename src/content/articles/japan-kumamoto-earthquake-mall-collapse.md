@@ -32,6 +32,10 @@ references:
     url: "https://japan.kantei.go.jp/105/speech/202607/28press.html"
     publisher: "首相官邸（Prime Minister's Office of Japan）"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

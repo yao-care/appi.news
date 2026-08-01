@@ -26,6 +26,10 @@ references:
     url: "https://tsna.com/article/125022"
     publisher: "TSNA體育新聞團隊"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

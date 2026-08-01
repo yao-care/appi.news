@@ -16,6 +16,10 @@ tags:
   - "新竹市"
   - "新竹縣"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 sourceType: "editorial"
 contentType: "guide"
 status: "scheduled"

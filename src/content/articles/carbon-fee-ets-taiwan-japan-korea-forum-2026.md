@@ -15,6 +15,10 @@ tags:
   - "日本"
   - "碳盤查"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/carbon-fee-ets-taiwan-japan-korea-forum-2026-cover.webp"
 coverAlt: "工業廠區煙囪排放濃煙，象徵碳排放與碳定價政策"
 coverImageCredit: "Photo by Chris LeBoutillier on Unsplash"

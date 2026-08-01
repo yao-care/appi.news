@@ -27,6 +27,10 @@ references:
     url: "https://www.seftb.org/cp-4-2465-425d9-1.html"
     publisher: "兩岸經貿網"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

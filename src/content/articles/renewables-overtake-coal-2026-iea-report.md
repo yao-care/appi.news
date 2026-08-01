@@ -12,6 +12,10 @@ tags:
   - "中東情勢"
   - "淨零轉型"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/renewables-overtake-coal-2026-iea-cover.webp"
 coverAlt: "電力輸電鐵塔於夕陽下的天際線，象徵全球電力供應版圖轉變（示意圖）"
 coverImageCredit: "Photo by Matthew Henry on Unsplash"

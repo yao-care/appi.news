@@ -9,6 +9,10 @@ tags:
   - "保健食品"
   - "營養"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/probiotics-how-to-choose.webp"
 coverAlt: "益生菌菌株、菌數與標籤選購的示意"
 status: scheduled

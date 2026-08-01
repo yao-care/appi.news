@@ -8,6 +8,10 @@ subcategory: events
 tags:
   - "足球"
 author: "chou-jingyan"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-391.webp"
 coverAlt: "世界盃四強賽落敗後，球員坐在球場上顯露疲態的畫面"
 status: published

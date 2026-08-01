@@ -9,6 +9,10 @@ tags:
   - "水資源"
   - "經濟部"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-reservoir-dredging-2026-cover.webp"
 coverAlt: "抽泥船在水庫進行清淤作業，象徵台灣水庫維持庫容的工程手段（示意圖）"
 coverImageCredit: "Photo by Marcin Jozwiak on Unsplash"

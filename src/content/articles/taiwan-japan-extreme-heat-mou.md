@@ -11,6 +11,10 @@ tags:
   - "地緣政治"
   - "環境部"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-japan-extreme-heat-mou-cover.webp"
 coverAlt: "夏日城市街道與行道樹樹蔭，象徵都市降溫與高溫調適"
 coverImageCredit: "Photo by Iván W. Lui on Unsplash"

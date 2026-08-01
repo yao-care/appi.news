@@ -27,6 +27,10 @@ references:
     url: "https://www.cna.com.tw/business/chinese/422944"
     publisher: "中央社財經訊息平台"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

@@ -38,6 +38,10 @@ references:
     url: "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
     publisher: "Wikipedia"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

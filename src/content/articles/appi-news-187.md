@@ -10,6 +10,10 @@ tags:
   - "傳染病防治"
   - "高齡健康"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-187.webp"
 coverAlt: "長者在診所接受新冠疫苗追加劑接種"
 status: published

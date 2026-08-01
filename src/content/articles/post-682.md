@@ -26,6 +26,10 @@ references:
     url: "https://blogs.nvidia.com/blog/taiwan-ecosystem-ai-infrastructure"
     publisher: "NVIDIA Blog"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

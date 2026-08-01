@@ -14,6 +14,10 @@ tags:
 coverImage: "covers/fda-tempo-ai-device-medicare.webp"
 coverAlt: "象徵 FDA 以執法裁量讓 AI 數位醫材未完整核准即進入 Medicare 慢性病照護的監理示意"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

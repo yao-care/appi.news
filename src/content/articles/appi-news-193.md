@@ -10,6 +10,10 @@ tags:
   - "菸酒檳榔"
   - "口腔健康"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-193.webp"
 coverAlt: "市場中的新鮮檳榔果實，部分切開顯示白色果肉截面"
 status: published

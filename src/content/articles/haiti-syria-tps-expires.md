@@ -32,6 +32,10 @@ references:
     url: "https://www.govinfo.gov/content/pkg/FR-2025-09-22/html/2025-18322.htm"
     publisher: "U.S. Federal Register / govinfo.gov"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

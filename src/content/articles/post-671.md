@@ -28,6 +28,10 @@ references:
     url: "https://blog.google/company-news/inside-google/around-the-globe/google-asia/type-2-diabetes-taiwan"
     publisher: "Google Blog"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "medical"

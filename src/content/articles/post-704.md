@@ -27,6 +27,10 @@ references:
     url: "https://estate.ltn.com.tw/article/28147"
     publisher: "自由電子報地產天下"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

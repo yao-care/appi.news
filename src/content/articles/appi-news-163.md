@@ -10,6 +10,10 @@ tags:
   - "代謝健康"
   - "預防醫學"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-163.webp"
 coverAlt: "成人預防保健服務年齡切點示意圖：30歲起每5年一次，40歲起每3年一次，65歲起每年一次，各年齡層健檢頻率比較"
 status: published

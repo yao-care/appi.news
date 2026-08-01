@@ -13,6 +13,10 @@ tags:
   - "再生能源"
   - "氣候變遷"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-offshore-wind-blueprint-2039-cover.webp"
 coverAlt: "海上離岸風力發電機組，象徵台灣離岸風電裝置容量持續擴增（示意圖）"
 coverImageCredit: "Photo by Winston Chen on Unsplash"

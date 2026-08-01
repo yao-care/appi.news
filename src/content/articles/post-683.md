@@ -27,6 +27,10 @@ references:
     url: "https://www.seftb.org/cp-4-2643-049f5-1.html"
     publisher: "海基會兩岸經貿網"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

@@ -27,6 +27,10 @@ references:
     url: "https://communityrecmag.com/takeaways-on-the-top-fitness-trends-of-2026"
     publisher: "Community Recreation Magazine"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

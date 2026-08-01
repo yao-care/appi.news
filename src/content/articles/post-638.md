@@ -25,6 +25,10 @@ references:
     url: "https://www.cbsnews.com/news/world-cup-2026-schedule-how-to-watch"
     publisher: "CBS News"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

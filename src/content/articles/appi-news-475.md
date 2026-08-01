@@ -7,6 +7,10 @@ category: health
 subcategory: preventive
 tags: ["長照", "肌少症", "高齡健康", "預防醫學"]
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-475-cover.webp"
 coverAlt: "長照相關情境（示意圖）"
 status: published

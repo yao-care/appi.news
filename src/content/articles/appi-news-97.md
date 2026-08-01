@@ -12,6 +12,10 @@ tags:
   - "骨骼關節"
   - "疼痛治療"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "https://images.unsplash.com/photo-1763198302745-57cb94135f11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODgwMzN8MHwxfHNlYXJjaHwzfHxoaXAlMjBqb2ludCUyMHBoeXNpY2FsJTIwdGhlcmFweSUyMHJlaGFiaWxpdGF0aW9ufGVufDB8MHx8fDE3NzY5NDY3MTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "骨盆與兩側髖關節的X光影像，清楚呈現股骨頭與髖臼的骨骼結構"
 status: published

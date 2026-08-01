@@ -27,6 +27,10 @@ references:
     url: "https://findit.org.tw/tw/Res/2397"
     publisher: "台灣經濟研究院FINDIT"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

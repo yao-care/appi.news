@@ -28,6 +28,10 @@ references:
     url: "https://blog.104.com.tw/104data-2026-salary-increase"
     publisher: "104職場力"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

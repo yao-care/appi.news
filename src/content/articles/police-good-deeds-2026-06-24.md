@@ -14,6 +14,10 @@ tags:
   - "急救常識"
   - "失智症"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

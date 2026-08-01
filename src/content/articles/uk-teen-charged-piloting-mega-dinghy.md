@@ -31,6 +31,10 @@ references:
     url: "https://www.chesterstandard.co.uk/news/national/26410532.teenager-accused-channel-crossing-was-piloting-mega-dinghy/"
     publisher: "Chester and District Standard (PA Media)"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

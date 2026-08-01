@@ -26,6 +26,10 @@ references:
     url: https://www.billionwatts.com.tw/taipower-ancillary-service
     publisher: 盛齊綠能
 author: appi-editorial
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: published
 sourceType: editorial
 disclaimerType: general

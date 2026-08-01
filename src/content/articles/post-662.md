@@ -27,6 +27,10 @@ references:
     url: "https://www.fiercepharma.com/manufacturing/taiwan-earmarks-754m-multi-year-drug-supply-resilience-program"
     publisher: "Fierce Pharma"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "medical"

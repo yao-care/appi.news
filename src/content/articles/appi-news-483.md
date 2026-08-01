@@ -7,6 +7,10 @@ category: sports
 subcategory: events
 tags: ["桌球", "國際賽事", "中國", "日本"]
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-483.webp"
 coverAlt: "林昀儒／高承睿男雙世界排名在世錦賽奪銀後從第11名躍升至第4名的長條圖"
 status: published

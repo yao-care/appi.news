@@ -25,6 +25,10 @@ references:
     url: "https://today.line.me/tw/v3/article/kE8WqZ1"
     publisher: "LINE TODAY 食力 foodNEXT"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

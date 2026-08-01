@@ -27,6 +27,10 @@ references:
     url: "https://ionanalytics.com/insights/mergermarket/megadeals-fuel-ma-surge-to-usd-3-39-trillion"
     publisher: "ION Analytics / Mergermarket"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "general"

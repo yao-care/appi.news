@@ -10,6 +10,10 @@ tags:
   - "極端高溫"
   - "居家安全"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-170.webp"
 coverAlt: "戶外工作者在高溫環境下的休息補水場景"
 status: published

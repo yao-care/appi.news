@@ -7,6 +7,10 @@ category: health
 subcategory: tcm-integrative
 tags: ["高齡健康", "中醫", "預防醫學", "健檢報告", "肌少症", "睡眠與疲勞"]
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-474.webp"
 coverAlt: "一位年長女性與老年醫學科醫師在診間討論健康評估報告"
 status: published

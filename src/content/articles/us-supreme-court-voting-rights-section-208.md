@@ -28,6 +28,10 @@ references:
     url: "https://en.wikipedia.org/wiki/Voting_Rights_Act_of_1965"
     publisher: "Wikipedia"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

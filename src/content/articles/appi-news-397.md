@@ -12,6 +12,10 @@ tags:
   - "房市"
   - "日本"
 author: "wu-fang-jun"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-397.webp"
 coverAlt: "台灣讀者在家中檢視日圓保單文件與匯率走勢的情境照"
 status: published

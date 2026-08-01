@@ -27,6 +27,10 @@ references:
     url: "https://www.ttv.com.tw/finance/view/02202602131948F0CE6BD8E74FBC98D0FD73995E37BEFD9D/588"
     publisher: "台視財經"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

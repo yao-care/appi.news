@@ -14,6 +14,10 @@ tags:
   - "淨零轉型"
   - "經濟部"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/offshore-wind-r3-3-complete-guide-cover.webp"
 coverAlt: "海面上離岸風力發電機組群，象徵離岸風電區塊開發第三期"
 coverImageCredit: "Photo by Nicholas Doherty on Unsplash"

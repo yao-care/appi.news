@@ -27,6 +27,10 @@ references:
     url: "https://www.researchnester.com/reports/car-t-cell-therapy-market/2441"
     publisher: "Research Nester"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "medical"

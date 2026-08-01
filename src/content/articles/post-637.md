@@ -26,6 +26,10 @@ references:
     url: "https://www.cca.gov.tw/affairs/cbam/regulations/25850.html"
     publisher: "環境部氣候變遷署"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

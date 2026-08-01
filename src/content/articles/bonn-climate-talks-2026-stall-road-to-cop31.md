@@ -11,6 +11,10 @@ tags:
   - "淨零轉型"
   - "綠色金融"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/bonn-climate-talks-2026-stall-road-to-cop31-cover.webp"
 coverAlt: "氣候變遷相關情境（示意圖）"
 coverImageCredit: "Photo by Md Shakib on Pexels"

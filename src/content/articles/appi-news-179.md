@@ -11,6 +11,10 @@ tags:
   - "營養"
   - "預防醫學"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-179.webp"
 coverAlt: "瘦瘦針（GLP-1）與中醫整合減重概念示意圖"
 status: published

@@ -14,6 +14,10 @@ coverImage: "covers/enterprise-app-agents-department-order-cover.webp"
 coverAlt: "AI agent相關情境（示意圖）"
 coverImageCredit: "Photo by Igor Omilaev on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

@@ -14,6 +14,10 @@ coverImage: "covers/benzo-pyrene-oil-long-term-exposure.webp"
 coverAlt: "廚房層架上排列的食用油瓶，示意大豆沙拉油苯駢芘超標食安事件"
 coverImageCredit: "Photo by Uliana Kopanytsia on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 contentType: "guide"

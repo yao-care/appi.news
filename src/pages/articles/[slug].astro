@@ -28,6 +28,7 @@ import {
   authorAvatar,
 } from '@/utils/content';
 import { getCategory, getSubcategoryName } from '@/config/categories';
+import { reviewerFor, FACT_CHECKER_ID } from '@/config/reviewers';
 import { formatDate, isoDate } from '@/utils/date';
 import { absoluteUrl, url } from '@/utils/url';
 import { articleLd, breadcrumbLd, faqLd, articleSchemaType } from '@/utils/jsonld';
@@ -56,6 +57,36 @@ const cat = getCategory(article.data.category);
 const subName = getSubcategoryName(article.data.category, article.data.subcategory);
 const author = authorMap.get(article.data.author);
 const authorName = author?.data.name ?? 'APPI 編輯部';
+
+// 專業審閱者：frontmatter 優先；沒填就退回分類對照表（src/config/reviewers.ts），
+// 讓自動產線新產出的文章不必逐支腳本改也會帶到審閱者。
+const reviewerIds =
+  article.data.reviewedBy.length > 0
+    ? article.data.reviewedBy
+    : [reviewerFor(article.data.category)].filter((v): v is string => Boolean(v));
+const factCheckerIds =
+  article.data.factCheckedBy.length > 0 ? article.data.factCheckedBy : [FACT_CHECKER_ID];
+const reviewers = reviewerIds
+  .map((id) => ({ id, a: authorMap.get(id) }))
+  .filter((r) => r.a)
+  .map((r) => ({
+    id: r.id,
+    name: r.a!.data.name,
+    href: authorHasPage(r.a) ? url(`/authors/${r.id}/`) : undefined,
+    path: authorHasPage(r.a) ? `/authors/${r.id}/` : undefined,
+    jobTitle: r.a!.data.displayTitle,
+  }));
+// 審閱者就是署名作者本人時不重複顯示（資歷已由 AuthorBioBox 呈現）
+const shownReviewers = reviewers.filter((r) => r.id !== article.data.author);
+const factCheckers = factCheckerIds
+  .map((id) => ({ id, a: authorMap.get(id) }))
+  .filter((r) => r.a)
+  .map((r) => ({
+    name: r.a!.data.name,
+    path: authorHasPage(r.a) ? `/authors/${r.id}/` : undefined,
+    isOrganization: r.a!.data.isOrganization,
+  }));
+
 const rt = readingTime(article);
 const cover = coverImageFor(article);
 const path = `/articles/${articleSlug(article)}/`;
@@ -126,6 +157,8 @@ const ld = [
       url: r.url,
       publisher: r.publisher,
     })),
+    reviewedBy: reviewers.map((r) => ({ name: r.name, path: r.path, jobTitle: r.jobTitle })),
+    factCheckedBy: factCheckers,
   }),
   breadcrumbLd(Astro.site, [{ name: '首頁', path: '/' }, ...crumbItems]),
 ];
@@ -216,7 +249,11 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
 
     <div class="container article-main">
       <div class="article-content">
-        <DisclosureBox sourceType={article.data.sourceType} custom={article.data.disclosure} />
+        <DisclosureBox
+          sourceType={article.data.sourceType}
+          custom={article.data.disclosure}
+          reviewers={shownReviewers}
+        />
 
         {
           article.data.highlights.length > 0 && (

@@ -28,6 +28,10 @@ references:
     url: "https://www.ibtimes.co.uk/uk-heatwave-school-closures-rail-delays-1804478"
     publisher: "IBTimes UK"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

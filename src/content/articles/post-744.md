@@ -24,6 +24,10 @@ references:
     url: "https://www.ey.gov.tw/Page/9277F759E41CCD91/91ddae63-58dc-428b-9b9f-23891cefa7da"
     publisher: "行政院全球資訊網"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

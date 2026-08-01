@@ -7,6 +7,10 @@ category: sports
 subcategory: events
 tags: ["學生賽事", "國際賽事", "嘉義市", "運動科技"]
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-480.webp"
 coverAlt: "長條圖比較張雅佳100公尺、50公尺與200公尺仰式的比賽成績"
 status: published

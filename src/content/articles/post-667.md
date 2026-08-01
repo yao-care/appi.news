@@ -27,6 +27,10 @@ references:
     url: "https://www.biotech-edu.com/20260224-regenerative-medicine-act"
     publisher: "台灣光鹽生物科技學苑"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "medical"

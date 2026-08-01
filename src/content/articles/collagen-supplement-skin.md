@@ -10,6 +10,10 @@ tags:
   - "中醫"
   - "AI治理"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/collagen-supplement-skin.webp"
 coverAlt: "口服膠原蛋白與皮膚、實證的示意"
 status: scheduled

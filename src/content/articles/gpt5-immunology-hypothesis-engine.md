@@ -14,6 +14,10 @@ coverImage: "covers/gpt5-immunology-hypothesis-engine.webp"
 coverAlt: "象徵 AI 協助免疫學家分析 T 細胞資料、生成研究假說的抽象示意"
 coverImageCredit: "Photo by turek on Pexels"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

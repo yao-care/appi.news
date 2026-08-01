@@ -15,6 +15,10 @@ tags:
 coverImage: "covers/tcm-ai-credibility-checklist-cover.webp"
 coverAlt: "中醫師在診間運用數位設備輔助問診，象徵中醫 AI 導入臨床的信任議題"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 contentType: "column"

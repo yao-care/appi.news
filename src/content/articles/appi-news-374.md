@@ -9,6 +9,10 @@ tags:
   - "房市"
   - "少子化"
 author: "wu-fang-jun"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-374.webp"
 coverAlt: "年輕上班族深夜在家中計算新青安房貸月付金額的情境畫面"
 status: published

@@ -10,6 +10,10 @@ tags:
   - "能源政策"
   - "淨零轉型"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/161kv-taipower-grid-resilience-budget-breakdown-cover.webp"
 coverAlt: "高壓輸電鐵塔與電力線路，象徵台灣161kV輸電骨幹（示意圖）"
 coverImageCredit: "Photo by Lisanto 李奕良 on Unsplash"

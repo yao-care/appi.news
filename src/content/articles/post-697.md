@@ -28,6 +28,10 @@ references:
     url: "https://www.trendforce.com/presscenter/news/20250305-12504.html"
     publisher: "TrendForce"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

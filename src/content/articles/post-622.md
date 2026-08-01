@@ -27,6 +27,10 @@ references:
     url: "https://environment.ec.europa.eu/news/commission-holds-high-level-talks-circular-economy-act-2026-04-30_en"
     publisher: "European Commission – DG Environment"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

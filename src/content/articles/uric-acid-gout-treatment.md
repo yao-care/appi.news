@@ -9,6 +9,10 @@ tags:
   - "代謝健康"
   - "營養"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/uric-acid-gout-treatment.webp"
 coverAlt: "診間桌上的抽血生化報告，尿酸欄位被紅筆圈起，醫師正與病人討論數值"
 status: scheduled

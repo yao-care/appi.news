@@ -24,6 +24,10 @@ references:
     url: "https://zh.wikipedia.org/zh-hant/%E7%B5%B1%E4%B8%807-ELEVEn%E7%8D%85"
     publisher: "維基百科"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

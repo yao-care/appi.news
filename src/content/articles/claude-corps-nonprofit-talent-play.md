@@ -15,6 +15,10 @@ coverImage: "covers/claude-corps-nonprofit-talent-play.webp"
 coverAlt: "象徵 AI 大廠出資培育人才、把工具帶進非營利組織的抽象示意"
 coverImageCredit: "Photo by Steve A Johnson on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

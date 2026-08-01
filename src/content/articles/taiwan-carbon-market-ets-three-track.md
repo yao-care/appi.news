@@ -11,6 +11,10 @@ tags:
   - "淨零轉型"
   - "歐盟"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-carbon-market-ets-three-track-cover.webp"
 coverAlt: "工業區煙囪排放，象徵碳定價與溫室氣體管制議題"
 coverImageCredit: "Photo by Andreas Felske on Unsplash"

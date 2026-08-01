@@ -10,6 +10,10 @@ tags:
   - "中醫"
   - "過敏"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-178.webp"
 coverAlt: "美顏針穴位分布示意圖，呈現臉部穴位與頸肩經絡的連動關係"
 status: published

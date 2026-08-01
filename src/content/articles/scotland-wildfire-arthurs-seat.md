@@ -31,6 +31,10 @@ references:
     url: "https://uk.news.yahoo.com/edinburgh-fire-near-arthurs-seat-151410328.html"
     publisher: "Yahoo News UK"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

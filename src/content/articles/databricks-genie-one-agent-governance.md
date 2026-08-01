@@ -14,6 +14,10 @@ tags:
 coverImage: "covers/databricks-genie-one-agent-governance.webp"
 coverAlt: "Databricks 把 AI agent 做成企業同事，背後靠 Unity Catalog 治理層守住資料權限邊界的示意"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

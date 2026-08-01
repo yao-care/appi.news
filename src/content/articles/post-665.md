@@ -26,6 +26,10 @@ references:
     url: "https://www.precisionformedicine.com/blog/taiwans-clinical-trial-landscape-fast-efficient-and-high-quality-research"
     publisher: "Precision for Medicine"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "medical"

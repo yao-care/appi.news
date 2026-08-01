@@ -14,6 +14,10 @@ tags:
 coverImage: "covers/supabase-500m-ai-infrastructure-layer.webp"
 coverAlt: "資本熱錢從 AI 模型流向應用基建層，資料庫與部署平台成為新焦點的示意"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

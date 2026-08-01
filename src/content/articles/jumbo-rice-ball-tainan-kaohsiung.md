@@ -5,6 +5,10 @@ publishDate: "2026-07-30T18:39:02.335Z"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "/covers/jumbo-rice-ball-tainan-kaohsiung-cover.webp"
 coverAlt: "加大版飯糰示意圖"
 coverImageCredit: "Photo by Jimmy Liao on Pexels"

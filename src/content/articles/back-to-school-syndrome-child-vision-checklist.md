@@ -13,6 +13,10 @@ tags:
   - "眼睛健康"
   - "心理健康"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/back-to-school-syndrome-child-vision-checklist-cover.webp"
 coverAlt: "一群小學生揹著書包走向校園，象徵開學情境"
 coverImageCredit: "Photo by note thanun on Unsplash"

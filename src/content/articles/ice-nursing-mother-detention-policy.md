@@ -29,6 +29,10 @@ references:
     url: "https://newschannel9.com/news/local/guatemalan-mother-detained-by-ice-in-nashville-files-legal-challenge-to-detention-while-breastfeeding-10-month-old-and-caring-for-child-with-down-syndrome"
     publisher: "NewsChannel 9（Sinclair聯播網）"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

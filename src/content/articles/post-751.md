@@ -28,6 +28,10 @@ references:
     url: "https://blog.shopline.tw/2026-retail-and-marketing-trend-insight"
     publisher: "SHOPLINE"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

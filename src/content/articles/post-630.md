@@ -27,6 +27,10 @@ references:
     url: "https://ddpp.ntu.edu.tw/selected-articles/domestic-news/3267-2025-12-26-02-30-49.html"
     publisher: "擁抱低碳世（台大）"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "legal"

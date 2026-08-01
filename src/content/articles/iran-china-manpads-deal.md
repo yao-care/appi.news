@@ -11,6 +11,10 @@ tags:
   - "中國"
   - "地緣政治"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

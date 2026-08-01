@@ -8,6 +8,10 @@ subcategory: nutrition
 tags:
   - "代謝健康"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/sugary-drinks-fructose-metabolism.webp"
 coverAlt: "手搖飲料店櫃檯排滿封膜的珍珠奶茶與含糖飲料"
 status: scheduled

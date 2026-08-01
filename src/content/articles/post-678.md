@@ -26,6 +26,10 @@ references:
     url: "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030106"
     publisher: "全國法規資料庫"
 author: "lightman"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "medical"

@@ -12,6 +12,10 @@ tags:
   - "女性健康"
   - "健保"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/tcm-facial-acupuncture-guide-cover.webp"
 coverAlt: "中醫師為受術者施作美顏針，細針刺入臉頰穴位（示意圖）"
 status: published

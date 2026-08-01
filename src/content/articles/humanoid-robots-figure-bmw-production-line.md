@@ -14,6 +14,10 @@ coverImage: "covers/humanoid-robots-figure-bmw-production-line-cover.webp"
 coverAlt: "機器人相關情境（示意圖）"
 coverImageCredit: "Photo by Homa Appliances on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

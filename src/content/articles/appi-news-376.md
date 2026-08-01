@@ -8,6 +8,10 @@ subcategory: preventive
 tags:
   - "傳染病防治"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-376.webp"
 coverAlt: "雨後社區居民在陽台巡查花盆與容器中的積水"
 status: published

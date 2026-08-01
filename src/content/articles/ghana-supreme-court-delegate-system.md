@@ -26,6 +26,10 @@ references:
     url: "https://abcnewsgh.com/supreme-court-rules-political-parties-delegate-system-unconstitutional/"
     publisher: "abcnewsgh"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

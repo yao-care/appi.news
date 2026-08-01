@@ -7,6 +7,10 @@ category: sports
 subcategory: events
 tags: ["桌球", "國際賽事"]
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-461.webp"
 coverAlt: "台灣男團晉級路線圖，依序擊敗塞爾維亞、丹麥、瑞典後於準決賽不敵日本"
 status: published

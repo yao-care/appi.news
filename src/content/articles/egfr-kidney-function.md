@@ -9,6 +9,10 @@ tags:
   - "健檢報告"
   - "肝腎健康"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/egfr-kidney-function.webp"
 coverAlt: "健檢腎功能報告與 eGFR 數值示意"
 status: scheduled

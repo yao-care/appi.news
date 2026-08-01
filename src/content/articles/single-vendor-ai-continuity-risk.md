@@ -17,6 +17,10 @@ coverImage: "covers/single-vendor-ai-continuity-risk-cover.webp"
 coverAlt: "半導體相關情境（示意圖）"
 coverImageCredit: "Photo by Jason Leung on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

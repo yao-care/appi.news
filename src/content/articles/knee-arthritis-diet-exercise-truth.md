@@ -12,6 +12,10 @@ tags:
   - "營養"
   - "疼痛治療"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

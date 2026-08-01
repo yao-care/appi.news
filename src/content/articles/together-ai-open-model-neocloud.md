@@ -15,6 +15,10 @@ coverImage: "covers/together-ai-open-model-neocloud.webp"
 coverAlt: "資料中心機房伺服器陣列，象徵開源模型代管與 AI 基礎建設吸金"
 coverImageCredit: "Photo by panumas nikhomkhai on Pexels"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

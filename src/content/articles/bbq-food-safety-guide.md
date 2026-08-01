@@ -8,6 +8,10 @@ topics: ["food-safety-storage"]
 subcategory: life
 tags: ["食品安全", "美食"]
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/bbq-food-safety-guide-cover.webp"
 coverAlt: "手持探針溫度計插入烤肉架上的肉塊測量中心溫度"
 coverImageCredit: "Photo by Quaritsch Photography on Unsplash"

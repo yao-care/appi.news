@@ -15,6 +15,10 @@ coverImage: "covers/meta-business-agent-customer-conversation-governance-cover.w
 coverAlt: "AI agent相關情境（示意圖）"
 coverImageCredit: "Photo by Pavel Danilyuk on Pexels"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 disclaimerType: "general"

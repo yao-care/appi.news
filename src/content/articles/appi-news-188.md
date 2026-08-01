@@ -10,6 +10,10 @@ tags:
   - "預防醫學"
   - "醫療政策"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-188.webp"
 coverAlt: "台灣食品紅黃綠標示制度：糖、鈉、飽和脂肪三色分級閾值說明圖"
 status: published

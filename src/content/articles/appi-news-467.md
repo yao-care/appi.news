@@ -7,6 +7,10 @@ category: health
 subcategory: preventive
 tags: ["預防醫學", "育兒健康", "公共衛生", "基隆市"]
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-467.webp"
 coverAlt: "家長帶著學齡前兒童在衛生所準備接受兒童發展篩檢的情境"
 status: published

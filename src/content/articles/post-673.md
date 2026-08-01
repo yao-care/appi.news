@@ -27,6 +27,10 @@ references:
     url: "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=5006"
     publisher: "衛生福利部國民健康署"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "medical"

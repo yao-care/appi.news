@@ -26,6 +26,10 @@ references:
     url: "https://wellness.girlskintw.com/1013"
     publisher: "瑞士人的健康筆記"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

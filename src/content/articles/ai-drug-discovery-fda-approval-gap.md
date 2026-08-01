@@ -14,6 +14,10 @@ coverImage: "covers/ai-drug-discovery-fda-approval-gap.webp"
 coverAlt: "藥廠實驗室裡研究人員在電腦螢幕前檢視分子結構模型，一旁擺放試管與培養皿"
 coverImageCredit: "Photo by Artem Podrez on Pexels"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "news"

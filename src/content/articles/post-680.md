@@ -28,6 +28,10 @@ references:
     url: "https://tspasemiconductor.substack.com/p/nvidia-gtc-taiwan-2026-the-ai-factory"
     publisher: "TSPA Semiconductor"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "general"

@@ -15,6 +15,10 @@ coverImage: "covers/chatgpt-ads-trust-boundary.webp"
 coverAlt: "象徵 AI 對話介面加入廣告商業模式、AI 助理變成廣告載體的抽象科技示意"
 coverImageCredit: "Photo by Growtika on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

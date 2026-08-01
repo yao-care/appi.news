@@ -12,6 +12,10 @@ tags:
   - "高齡健康"
   - "教育"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

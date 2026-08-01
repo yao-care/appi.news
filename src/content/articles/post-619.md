@@ -26,6 +26,10 @@ references:
     url: "https://dset.tw/wp-content/uploads/2025/02/%E6%B0%A3%E5%80%99%E8%AE%8A%E9%81%B7%E8%88%87%E5%9F%BA%E7%A4%8E%E8%A8%AD%E6%96%BD%E9%9F%8C%E6%80%A7%EF%BC%9A%E8%87%BA%E7%81%A3%E5%8D%8A%E5%B0%8E%E9%AB%94%E7%94%A2%E6%A5%AD%E6%B0%B4%E8%B3%87%E6%BA%90%E8%88%87%E9%9B%BB%E5%8A%9B%E4%BD%BF%E7%94%A8%E5%88%86%E6%9E%90%E5%A0%B1%E5%91%8A-1.pdf"
     publisher: "科技民主與社會研究中心（DSET）"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

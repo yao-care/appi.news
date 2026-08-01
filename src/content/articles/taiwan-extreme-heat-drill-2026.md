@@ -13,6 +13,10 @@ tags:
   - "氣候變遷"
   - "天然災害"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-extreme-heat-drill-2026-cover.webp"
 coverAlt: "烈日下的城市景象，象徵極端高溫與熱浪衝擊"
 coverImageCredit: "Photo by Rajiv Bajaj on Unsplash"

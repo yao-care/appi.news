@@ -16,6 +16,10 @@ coverImage: "covers/fhir-ai-medical-data-taiwan-cover.webp"
 coverAlt: "醫療人員在電腦螢幕前檢視數位病歷資料介面"
 coverImageCredit: "Photo by Tima Miroshnichenko on Pexels"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 contentType: "column"

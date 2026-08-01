@@ -26,6 +26,10 @@ references:
     url: "https://www.ctee.com.tw/news/20260502700006-430503"
     publisher: "工商時報"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

@@ -26,6 +26,10 @@ references:
     url: "https://www.cheers.com.tw/article/article.action?id=5105550"
     publisher: "Cheers快樂工作人"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

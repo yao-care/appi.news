@@ -14,6 +14,10 @@ coverImage: "covers/bioshocking-ai-browser-credential-leak.webp"
 coverAlt: "象徵 AI 瀏覽器代理被惡意網頁挾持、交出使用者帳密的資安威脅示意"
 coverImageCredit: "Photo by cottonbro studio on Pexels"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

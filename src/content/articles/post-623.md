@@ -27,6 +27,10 @@ references:
     url: "https://www.energy-storage.news/bloombergnef-ups-bess-forecast-as-renewables-add-resilience-from-fossil-fuel-price-shocks"
     publisher: "Energy Storage News"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

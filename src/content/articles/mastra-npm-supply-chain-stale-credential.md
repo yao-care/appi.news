@@ -14,6 +14,10 @@ coverImage: "covers/mastra-npm-supply-chain-stale-credential-cover.webp"
 coverAlt: "資安相關情境（示意圖）"
 coverImageCredit: "Photo by FlyD on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

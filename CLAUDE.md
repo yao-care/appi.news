@@ -172,6 +172,7 @@ tech-radar（cron 每日 UTC 21:20＝台北 05:20；2026-07-07 曾停用、2026-
 | 文章/作者/專欄/專題 schema、enum | `src/content.config.ts` |
 | 分類 / 子分類 | `src/config/categories.ts` |
 | 標籤（受控詞彙表） | `src/config/tags.ts`（gate＝`scripts/check-tags.mjs`，接在 build 與七條產線自檢） |
+| 專業審閱者（分類 → 誰審） | `src/config/reviewers.ts`（`reviewedBy`＝專業判斷、`factCheckedBy`＝編輯部事實查核；文章頁 frontmatter 優先、沒填退回本表，所以**新增分類要同步補一列**）。為什麼＝[`docs/lessons/provenance-disclosure.md`](./docs/lessons/provenance-disclosure.md) |
 | 站名 / 品牌 / OG 預設 | `src/config/site.ts` |
 | 網址 / base / 換網域 | `src/utils/url.ts` + `astro.config.mjs`（`SITE` / `BASE`） |
 | 效能規則 | `PERFORMANCE.md` |

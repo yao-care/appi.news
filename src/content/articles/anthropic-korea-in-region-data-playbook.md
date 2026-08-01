@@ -11,6 +11,10 @@ tags:
   - "資料治理"
   - "地緣政治"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 sourceType: "editorial"
 contentType: "analysis"
 status: "scheduled"

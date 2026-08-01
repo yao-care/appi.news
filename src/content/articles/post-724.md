@@ -27,6 +27,10 @@ references:
     url: "https://www.patentica.com/news-publications/sports-industry-sees-strong-growth-in-patents-trademarks-and-designs"
     publisher: "Patentica"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

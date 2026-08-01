@@ -11,6 +11,10 @@ tags:
   - "公共衛生"
   - "傳染病防治"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/food-danger-zone-room-temperature-limit-cover.webp"
 coverAlt: "外帶便當與食物溫度計，象徵食物室溫存放與危險溫度帶（示意圖）"
 status: "published"

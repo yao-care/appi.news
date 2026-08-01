@@ -28,6 +28,10 @@ references:
     url: "https://www.winnipegfreepress.com/world/2026/07/30/us-cites-unauthorized-travel-to-end-daca-status-for-a-mother-of-3-deported-to-mexico"
     publisher: "Winnipeg Free Press（美聯社供稿）"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

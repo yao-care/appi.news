@@ -10,6 +10,10 @@ tags:
   - "健檢報告"
   - "營養"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/thyroid-tsh-subclinical.webp"
 coverAlt: "健檢甲狀腺功能報告與 TSH 數值示意"
 status: scheduled

@@ -11,6 +11,10 @@ tags:
   - "旅遊"
   - "身心障礙"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

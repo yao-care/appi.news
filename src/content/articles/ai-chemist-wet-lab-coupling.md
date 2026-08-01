@@ -15,6 +15,10 @@ coverImage: "covers/ai-chemist-wet-lab-coupling.webp"
 coverAlt: "自動化化學實驗室裡的實驗器材與試劑，象徵 AI 從答題走進濕實驗室做實驗"
 coverImageCredit: "Photo by ZHENYU LUO on Unsplash"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

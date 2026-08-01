@@ -13,6 +13,10 @@ tags:
   - "教育"
   - "消費趨勢"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-165.webp"
 coverAlt: "大甲媽遶境沿線的性健康問事處攤位，結合傳統廟會元素吸引信眾互動"
 status: published

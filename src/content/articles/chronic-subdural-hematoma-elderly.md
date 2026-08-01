@@ -36,6 +36,10 @@ references:
   - title: "Middle meningeal artery embolization for chronic subdural hematoma: meta-analysis of three randomized controlled trials（PMC）"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12152056/"
 draft: false
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 ---
 
 老人頭部撞到，當下看起來沒事，最該擔心的不是當場的急性出血，而是一種會拖上一到兩個月才發作的「慢性硬腦膜下血腫」。它好發於腦部萎縮的長輩，尤其是有在吃抗凝血藥的人。血不是一次噴出來，而是慢慢滲、慢慢積，等到頭痛、走路不穩、單側手腳無力、人變得像失智才被發現。好消息是，這個病多數靠一個小手術就能治好，關鍵在於你有沒有及早警覺。

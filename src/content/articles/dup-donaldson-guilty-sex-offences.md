@@ -27,6 +27,10 @@ references:
     url: "https://www.thejournal.ie/jeffrey-donaldson-newry-crown-court-2-7074857-Jun2026/"
     publisher: "TheJournal.ie"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

@@ -7,6 +7,10 @@ category: finance
 subcategory: investing-literacy
 tags: ["投資理財", "退休規劃", "司法", "超高齡社會", "保險"]
 author: "wu-fang-jun"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-471.webp"
 coverAlt: "一家人與財務規劃顧問在客廳討論遺產規劃文件"
 status: published

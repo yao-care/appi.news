@@ -36,6 +36,10 @@ references:
     url: "https://euromaidanpress.com/2025/06/01/ukrainian-ground-forces-commander-quits-after-training-base-attack-kills-12-and-injures-60-troops/"
     publisher: "Euromaidan Press"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

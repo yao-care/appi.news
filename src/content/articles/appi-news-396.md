@@ -10,6 +10,10 @@ tags:
   - "營養"
   - "環境汙染"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-396.webp"
 coverAlt: "廚房料理台上放著食用油瓶與新鮮食材，呈現日常用油情境"
 status: published

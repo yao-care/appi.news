@@ -15,6 +15,10 @@ coverImage: "covers/kddi-email-breach-shared-infrastructure.webp"
 coverAlt: "資料中心機房伺服器與網路線，象徵多家 ISP 共用的信箱基礎設施"
 coverImageCredit: "Photo by Brett Sayles on Pexels"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

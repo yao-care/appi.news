@@ -27,6 +27,10 @@ references:
     url: "https://money.udn.com/money/story/11074/9429807"
     publisher: "經濟日報"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

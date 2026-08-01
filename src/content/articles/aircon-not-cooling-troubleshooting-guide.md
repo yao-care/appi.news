@@ -5,6 +5,10 @@ publishDate: "2026-07-30T12:16:24.817Z"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 contentType: "guide"
 sourceType: "wire"
 status: "published"

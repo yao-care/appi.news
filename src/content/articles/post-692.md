@@ -28,6 +28,10 @@ references:
     url: "https://www.kyndryl.com/nz/en/about-us/news/2026/04/kyndryl-foundation-global-skills-development"
     publisher: "Kyndryl New Zealand"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "general"

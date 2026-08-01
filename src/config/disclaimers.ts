@@ -43,14 +43,35 @@ export type SourceType =
   | 'partner'
   | 'wire';
 
-/** 依 sourceType 顯示的來源揭露文字（DisclosureBox）；null 表示前台不另外顯示揭露框 */
+/**
+ * 依 sourceType 顯示的來源揭露文字（DisclosureBox）；null 表示前台不另外顯示揭露框。
+ *
+ * 2026-08-01 起 editorial / author / contributor / expert 由 null 改為有值。
+ * 原本的分界線是「只有非自產內容才需要警示讀者」，自產內容靠署名承擔即可；
+ * 但站上 570/574 篇屬這四種，等於七成文章頁面上看不到任何產製資訊，
+ * 專業審閱這道實際做了的工序也沒有前台出口。改為一律揭露產製方式與審閱者。
+ * 為什麼＝docs/lessons/provenance-disclosure.md
+ *
+ * `{REVIEW}` 是佔位符，由 DisclosureBox 依 reviewedBy 替換成「，經○○○專業審閱」；
+ * 無審閱者（或審閱者就是署名作者本人，資歷已由 AuthorBioBox 呈現）時替換成空字串。
+ */
 export const DISCLOSURES: Record<SourceType, { label: string; text: string } | null> = {
-  // editorial / author / contributor / expert 為一般編輯部與作者內容，
-  // 前台不另外顯示揭露框，避免干擾閱讀（仍由作者署名與文末免責承擔內容責任）。
-  editorial: null,
-  author: null,
-  contributor: null,
-  expert: null,
+  editorial: {
+    label: '編輯部',
+    text: '本文由 APPI News 編輯部產製{REVIEW}；文中數據與引述均附原始出處供查證。',
+  },
+  author: {
+    label: '作者',
+    text: '本文由具名作者撰稿{REVIEW}，並由 APPI News 編輯部事實查核；文中數據與引述均附原始出處供查證。',
+  },
+  contributor: {
+    label: '特約作者',
+    text: '本文由特約作者供稿{REVIEW}，並由 APPI News 編輯部事實查核；文中數據與引述均附原始出處供查證。',
+  },
+  expert: {
+    label: '專家來稿',
+    text: '本文為專家來稿{REVIEW}，並由 APPI News 編輯部事實查核；文中數據與引述均附原始出處供查證。',
+  },
   'press-release': {
     label: '新聞稿',
     text: '本文為新聞稿內容，相關資訊由發布方提供，APPI 保留基本刊登規範。',

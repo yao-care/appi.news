@@ -24,6 +24,10 @@ references:
     url: "https://www.mmx.jaxa.jp/en/mission/"
     publisher: "JAXA MMX官方網站"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

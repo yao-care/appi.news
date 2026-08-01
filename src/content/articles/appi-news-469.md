@@ -7,6 +7,10 @@ category: sports
 subcategory: events
 tags: ["國際賽事", "日本"]
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-469.webp"
 coverAlt: "韓安齊在200公尺混合式比賽中奮力游泳的畫面"
 status: published

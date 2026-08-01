@@ -13,6 +13,10 @@ tags:
   - "韓國"
   - "消費趨勢"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

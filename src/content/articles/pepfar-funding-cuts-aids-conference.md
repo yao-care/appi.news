@@ -28,6 +28,10 @@ references:
     url: "https://www.washingtonblade.com/2026/07/23/2026-international-aids-conference-to-take-place-in-rio/"
     publisher: "Washington Blade"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

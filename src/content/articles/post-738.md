@@ -27,6 +27,10 @@ references:
     url: "https://www.cna.com.tw/postwrite/chi/419471"
     publisher: "中央社"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

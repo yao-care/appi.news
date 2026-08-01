@@ -30,6 +30,10 @@ references:
     url: "https://www.plataformamedia.com/en/2026/07/27/typhoon-noul-china-flood-warnings-inland/"
     publisher: "Plataforma Media"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

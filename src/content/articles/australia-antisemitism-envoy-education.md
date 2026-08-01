@@ -36,6 +36,10 @@ references:
     url: "https://www.yahoo.com/news/articles/albanese-establishes-national-anti-semitism-094808835.html"
     publisher: "Yahoo News (AAP)"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

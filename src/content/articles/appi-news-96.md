@@ -12,6 +12,10 @@ tags:
   - "復健治療"
   - "中醫"
 author: huang-ziyan
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: https://images.pexels.com/photos/8401147/pexels-photo-8401147.jpeg?auto=compress&cs=tinysrgb&h=650&w=940
 coverAlt: 骨盆與髖關節 X 光影像，藍色色調清楚呈現骨盆、股骨頭與腰椎結構
 status: published

@@ -8,6 +8,10 @@ topics: ["food-safety-storage"]
 subcategory: medical
 tags: ["食品安全", "營養", "公共衛生"]
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/leftover-food-myths-2026-cover.webp"
 coverAlt: "廚房裡整理保存容器裝盛的熟食，象徵隔夜菜正確冷藏保存（示意圖）"
 coverImageCredit: "Photo by Darrien Staton on Unsplash"

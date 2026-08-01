@@ -9,6 +9,10 @@ tags:
   - "營養"
   - "代謝健康"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/ultra-processed-food-nova.webp"
 coverAlt: "手搖飲料店櫃台上排列著幾杯剛做好的含糖冰飲"
 status: scheduled

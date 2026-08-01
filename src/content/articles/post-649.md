@@ -25,6 +25,10 @@ references:
     url: "https://icapcarbonaction.com/node/836"
     publisher: "ICAP官方新聞"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "legal"

@@ -26,6 +26,10 @@ references:
     url: "https://money.udn.com/money/story/5621/9197841"
     publisher: "經濟日報"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

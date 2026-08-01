@@ -29,6 +29,10 @@ references:
     url: "https://www.npr.org/2026/02/28/nx-s1-5730158/israel-iran-strikes-trump-us"
     publisher: "NPR"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

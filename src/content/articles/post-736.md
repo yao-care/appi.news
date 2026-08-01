@@ -27,6 +27,10 @@ references:
     url: "https://tsga.org.tw/9757"
     publisher: "台北市體育用品商業同業公會"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

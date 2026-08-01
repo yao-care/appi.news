@@ -28,6 +28,10 @@ references:
     url: "https://naipnews.naipo.com/39842"
     publisher: "北美智權報"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

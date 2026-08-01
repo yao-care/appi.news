@@ -13,6 +13,10 @@ tags:
   - "淨零轉型"
   - "碳盤查"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/carbon-fee-technology-subsidy-cover.webp"
 coverAlt: "工業廠房與排放設施，象徵企業投入減碳技術轉型"
 coverImageCredit: "Photo by Alex Simpson on Unsplash"

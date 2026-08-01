@@ -26,6 +26,10 @@ references:
     url: "https://www.iea.org/reports/renewables-2025/renewable-electricity"
     publisher: "IEA"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

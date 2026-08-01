@@ -15,6 +15,10 @@ coverImage: "covers/ai-new-infrastructure-compute-trusted-industries-cover.webp"
 coverImageCredit: "Photo by Taylor Vick on Unsplash"
 coverAlt: "台灣 AI 新十大建設與 1800 億科技預算，算力中心與半導體產業布局示意"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

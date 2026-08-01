@@ -26,6 +26,10 @@ references:
     url: "https://www.blackrock.com/us/financial-professionals/insights/fed-rate-cuts-and-potential-portfolio-implications"
     publisher: "BlackRock"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

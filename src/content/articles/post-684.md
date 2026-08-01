@@ -27,6 +27,10 @@ references:
     url: "https://www.president.gov.tw/News/40128"
     publisher: "中華民國總統府"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

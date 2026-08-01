@@ -8,6 +8,10 @@ subcategory: preventive
 tags:
   - "口腔健康"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/fluoride-toothpaste-kids.webp"
 coverAlt: "家長協助幼兒擠豌豆大小含氟牙膏刷牙的示意"
 status: scheduled

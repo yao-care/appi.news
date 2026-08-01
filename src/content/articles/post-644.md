@@ -26,6 +26,10 @@ references:
     url: "https://ember-energy.org/latest-insights/global-electricity-review-2026"
     publisher: "Ember"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

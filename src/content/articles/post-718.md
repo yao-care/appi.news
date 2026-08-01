@@ -27,6 +27,10 @@ references:
     url: "https://www.goldmansachs.com/insights/articles/us-stocks-forecast-to-rise-in-2026"
     publisher: "Goldman Sachs"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

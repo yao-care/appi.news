@@ -13,6 +13,10 @@ coverImage: "covers/nhi-ai-diagnostic-tool-evaluation.webp"
 coverAlt: "醫師在螢幕前檢視 AI 輔助判讀的腦部電腦斷層影像"
 coverImageCredit: "Photo by Vitaly Gariev on Unsplash"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "news"

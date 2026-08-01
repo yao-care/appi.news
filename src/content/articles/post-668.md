@@ -27,6 +27,10 @@ references:
     url: "https://www.peoplenews.tw/articles/hot-news/8868"
     publisher: "民報"
 author: "lightman"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "medical"

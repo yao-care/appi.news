@@ -27,6 +27,10 @@ references:
     url: "https://www.qualcomm.com/ai-program-for-innovators/apac"
     publisher: "Qualcomm Technologies"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

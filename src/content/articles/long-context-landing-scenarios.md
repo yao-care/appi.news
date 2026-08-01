@@ -13,6 +13,10 @@ coverImage: "covers/long-context-landing-scenarios.webp"
 coverAlt: "象徵超長脈絡 AI 模型把大量資料串流進單一視窗的抽象示意"
 coverImageCredit: "Photo by Pachon in Motion on Pexels"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

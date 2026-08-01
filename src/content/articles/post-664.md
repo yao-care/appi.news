@@ -28,6 +28,10 @@ references:
     url: "https://www.elitepco.com.tw/event/%E7%AC%AC57%E5%B1%86%E4%BA%9E%E5%A4%AA%E5%85%AC%E5%85%B1%E8%A1%9B%E7%94%9F%E5%AD%B8%E8%A1%93%E8%81%AF%E7%9B%9F-apacph-2026"
     publisher: "艾力得國際會議顧問"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "medical"

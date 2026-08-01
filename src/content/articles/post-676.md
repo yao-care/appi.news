@@ -27,6 +27,10 @@ references:
     url: "https://tcr.cph.ntu.edu.tw/main.php?Page=A4"
     publisher: "台大公衛學院台灣癌症登錄中心"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "medical"

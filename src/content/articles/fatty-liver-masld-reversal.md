@@ -9,6 +9,10 @@ tags:
   - "代謝健康"
   - "肝腎健康"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/fatty-liver-masld-reversal.webp"
 coverAlt: "腹部超音波檢查中，醫師手持探頭在受檢者右上腹掃描肝臟"
 status: scheduled

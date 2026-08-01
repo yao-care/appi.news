@@ -25,6 +25,10 @@ references:
     url: "https://caratweekly.com/2024/10/25/%E5%8F%B0%E7%81%A3%E4%BA%8C%E6%89%8B%E5%95%86%E5%93%81%E5%B8%82%E5%A0%B4%E6%8C%81%E7%BA%8C%E5%8D%87%E6%BA%AB%EF%BC%8C%E9%AB%94%E7%8F%BE%E9%80%9A%E8%86%A8%E6%99%82%E4%BB%A3%E7%9A%84%E6%B6%88%E8%B2%BB"
     publisher: "凱絡媒體週報"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

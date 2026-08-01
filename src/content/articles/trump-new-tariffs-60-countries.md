@@ -30,6 +30,10 @@ references:
     url: "https://www.manilatimes.net/2026/07/24/world/americas-emea/trump-imposes-double-digit-tariffs-on-dozens-of-countries-as-his-10-levies-are-set-to-expire-friday/2390886"
     publisher: "The Manila Times"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

@@ -28,6 +28,10 @@ references:
     url: "https://www.trustnet.com/news/13476734/blackrock-goes-overweight-developed-market-stocks"
     publisher: "Trustnet"
 author: "appi-editorial"
+reviewedBy:
+  - "wu-fang-jun"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "financial"

@@ -12,6 +12,10 @@ tags:
   - "環境部"
   - "氣候變遷"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-carbon-fee-old-credits-buffer-cover.webp"
 coverAlt: "工廠煙囪排放示意，象徵碳費徵收與高碳洩漏風險產業"
 coverImageCredit: "Photo by Ella Ivanescu on Unsplash"

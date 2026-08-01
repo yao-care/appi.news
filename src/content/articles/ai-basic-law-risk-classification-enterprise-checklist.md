@@ -13,6 +13,10 @@ tags:
 coverImage: "covers/ai-basic-law-risk-classification-enterprise-checklist.webp"
 coverAlt: "象徵 AI 基本法上路、企業治理與風險分類框架的政策與合規氛圍"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 disclaimerType: "general"

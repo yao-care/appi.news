@@ -26,6 +26,10 @@ references:
     url: "https://www.fsc.gov.tw/websitedowndoc?file=chfsc%2F202602121436010.pdf&filedisplay=%E7%B6%A0%E8%89%B2%E5%8F%8A%E8%BD%89%E5%9E%8B%E9%87%91%E8%9E%8D%E8%A1%8C%E5%8B%95%E6%96%B9%E6%A1%88114Q4%E6%8E%A8%E5%8B%95%E6%88%90%E6%9E%9C%28%E4%B8%8A%E7%B6%B2%29.pdf"
     publisher: "金融監督管理委員會"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

@@ -27,6 +27,10 @@ references:
     url: "https://thebulletin.org/2026/05/how-a-monster-ocean-heatwave-could-fuel-a-super-el-nino"
     publisher: "Bulletin of the Atomic Scientists"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

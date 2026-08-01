@@ -9,6 +9,10 @@ tags:
   - "能源政策"
   - "經濟部"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taipower-summer-electricity-rate-2026-cover.webp"
 coverAlt: "電力設施與電表，象徵台灣夏月電價與用電高峰"
 coverImageCredit: "Photo by Andrew Hall on Unsplash"

@@ -27,6 +27,10 @@ references:
     url: "https://www.tmc.taipei/tw/news/announcement/C1E3a64eaA52"
     publisher: "臺北流行音樂中心"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

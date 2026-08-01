@@ -33,6 +33,10 @@ references:
     url: "https://vt.co/news/uk/police-launch-murder-investigation-into-ann-widdecombe-death"
     publisher: "vt.co"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

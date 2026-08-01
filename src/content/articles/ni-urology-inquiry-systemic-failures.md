@@ -32,6 +32,10 @@ references:
     url: "https://www.itv.com/news/utv/2026-06-24/urology-inquiry-finds-patients-seriously-harmed"
     publisher: "UTV / ITV News"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

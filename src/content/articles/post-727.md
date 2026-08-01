@@ -24,6 +24,10 @@ references:
     url: "https://www.cna.com.tw/news/aspt/202605290286.aspx"
     publisher: "中央社"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

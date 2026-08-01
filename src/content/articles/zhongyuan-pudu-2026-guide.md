@@ -7,6 +7,10 @@ category: lifestyle
 subcategory: life
 tags: ["節慶"]
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/zhongyuan-pudu-2026-guide-cover.webp"
 coverAlt: "戶外供桌擺放祭品與香爐，象徵台灣中元普渡祭拜場景（示意圖）"
 coverImageCredit: "Photo by Stefano Huang on Unsplash"

@@ -14,6 +14,10 @@ coverImage: "covers/asic-over-gpu-taiwan-ic-design.webp"
 coverAlt: "象徵 AI 資本從通用 GPU 轉向客製化 ASIC 晶片的半導體示意"
 coverImageCredit: "Photo by Ivan Chumak on Pexels"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

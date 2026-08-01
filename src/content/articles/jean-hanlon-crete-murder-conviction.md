@@ -31,6 +31,10 @@ references:
     url: "https://www.perspectivemedia.com/infuriating-that-jean-hanlons-killer-still-free-after-murder-conviction-son/"
     publisher: "Perspective Media"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

@@ -10,6 +10,10 @@ tags:
   - "綠色金融"
   - "金管會"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 contentType: "news"
 sourceType: "wire"
 status: "published"

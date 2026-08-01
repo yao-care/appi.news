@@ -14,6 +14,10 @@ coverImage: "covers/microsoft-capex-memory-supercycle.webp"
 coverAlt: "堆疊的電腦記憶體晶片與電路板，象徵 AI 記憶體超級循環墊高的資本支出帳單"
 coverImageCredit: "Photo by IT services EU on Pexels"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

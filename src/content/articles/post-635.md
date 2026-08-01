@@ -25,6 +25,10 @@ references:
     url: "https://www.weforum.org/stories/2025/08/global-plastics-treaty-inc-5-2-explainer"
     publisher: "World Economic Forum"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "legal"

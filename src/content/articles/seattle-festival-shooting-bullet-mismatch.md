@@ -34,6 +34,10 @@ references:
     url: "https://www.pbs.org/newshour/nation/police-say-bullets-that-killed-2-at-seattle-festival-were-not-fired-from-arrested-teens-gun"
     publisher: "PBS NewsHour"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

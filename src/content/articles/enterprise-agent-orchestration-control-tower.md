@@ -15,6 +15,10 @@ coverImage: "covers/enterprise-agent-orchestration-control-tower.webp"
 coverAlt: "象徵企業把跨廠牌 AI agent 匯進單一編排層與中控台的網路操作中心示意"
 coverImageCredit: "Photo by Fernando Narvaez on Pexels"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

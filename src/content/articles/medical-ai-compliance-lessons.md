@@ -12,6 +12,10 @@ tags:
   - "資料治理"
   - "數位健康"
 author: lightman
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: covers/medical-ai-compliance-lessons.webp
 coverAlt: 一道由許多細節磚塊堆疊而成的信任高牆，象徵健康資料平台的信任由無數細節做成
 status: published

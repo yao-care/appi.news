@@ -15,6 +15,10 @@ coverImage: "covers/fda-clinical-ai-agent-overseer-cover.webp"
 coverAlt: "醫療AI相關情境（示意圖）"
 coverImageCredit: "Photo by Natanael Melchor on Unsplash"
 author: "lightman"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

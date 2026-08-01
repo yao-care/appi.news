@@ -27,6 +27,10 @@ references:
     url: "https://www.coherentmarketinsights.com/market-insight/wearable-technology-market-4771"
     publisher: "Coherent Market Insights"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

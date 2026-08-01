@@ -12,6 +12,10 @@ tags:
   - "教育"
   - "資安"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-164.webp"
 coverAlt: "兒童居家五大危險區域示意圖，包含廚房、浴室、樓梯、藥物收納處與地板散落小物"
 status: published

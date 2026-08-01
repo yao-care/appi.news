@@ -240,6 +240,10 @@ export function articleLd(
     about?: string[];
     /** 文章參考來源 → 輸出 schema.org citation，強化可溯源性與 AI 引用信任 */
     citations?: { title: string; url?: string; publisher?: string }[];
+    /** 專業審閱者 → schema.org reviewedBy（E-E-A-T：誰為這篇的專業判斷背書） */
+    reviewedBy?: { name: string; path?: string; jobTitle?: string }[];
+    /** 事實查核者 → schema.org ClaimReview 之外的輕量署名，統一輸出為 Organization/Person */
+    factCheckedBy?: { name: string; path?: string; isOrganization?: boolean }[];
   },
 ) {
   return {
@@ -273,6 +277,34 @@ export function articleLd(
               ...(c.publisher
                 ? { publisher: { '@type': 'Organization', name: c.publisher } }
                 : {}),
+            })),
+          }
+        : {};
+    })(),
+    ...(() => {
+      const rv = (a.reviewedBy ?? []).filter((r) => r && r.name);
+      return rv.length
+        ? {
+            reviewedBy: rv.map((r) => ({
+              '@type': 'Person',
+              ...(r.path ? { '@id': personId(site, r.path) } : {}),
+              name: r.name,
+              ...(r.path ? { url: absoluteUrl(r.path, site) } : {}),
+              ...(r.jobTitle ? { jobTitle: r.jobTitle } : {}),
+            })),
+          }
+        : {};
+    })(),
+    ...(() => {
+      const fc = (a.factCheckedBy ?? []).filter((f) => f && f.name);
+      return fc.length
+        ? {
+            // schema.org 無專屬 factCheckedBy 欄位，用 contributor 帶出查核方，
+            // 與 reviewedBy 分開表達「事實查核」與「專業審閱」兩道不同工序。
+            contributor: fc.map((f) => ({
+              '@type': f.isOrganization ? 'Organization' : 'Person',
+              name: f.name,
+              ...(f.path ? { url: absoluteUrl(f.path, site) } : {}),
             })),
           }
         : {};

@@ -13,6 +13,10 @@ tags:
   - "高齡健康"
   - "防詐"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

@@ -29,6 +29,10 @@ references:
     url: "https://worldpopulationreview.com/country-rankings/best-healthcare-in-the-world"
     publisher: "World Population Review"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "medical"

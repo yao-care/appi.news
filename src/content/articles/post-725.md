@@ -25,6 +25,10 @@ references:
     url: "https://www.twtrend.com/trend-detail/sports-activities-2025"
     publisher: "TTR台灣趨勢研究"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

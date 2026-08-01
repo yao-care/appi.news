@@ -9,6 +9,10 @@ tags:
   - "傳染病防治"
   - "旅遊"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-189.webp"
 coverAlt: "萊姆病傳播路徑示意圖：蜱蟲在野生動物宿主與人類之間的傳染循環，並顯示幼蜱、若蜱、成蜱的大小比較"
 status: published

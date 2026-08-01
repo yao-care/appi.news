@@ -10,6 +10,10 @@ tags:
   - "開源"
   - "AI治理"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 sourceType: "editorial"
 contentType: "analysis"
 status: "scheduled"

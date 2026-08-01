@@ -12,6 +12,10 @@ tags:
   - "製造業"
   - "供應鏈"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/resource-circulation-act-two-year-buffer-cover.webp"
 coverAlt: "回收工廠內堆置待處理的資源物料，示意圖"
 coverImageCredit: "Photo by Alfonso Navarro on Unsplash"

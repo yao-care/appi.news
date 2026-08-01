@@ -27,6 +27,10 @@ references:
     url: "https://www.easterneye.biz/halifax-name-to-disappear-after-173-years-lloyds/"
     publisher: "Eastern Eye"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

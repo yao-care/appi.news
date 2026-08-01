@@ -9,6 +9,10 @@ tags:
   - "保健食品"
   - "預防醫學"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/multivitamin-worth-taking.webp"
 coverAlt: "綜合維他命與證據、官方指引對照的示意"
 status: scheduled

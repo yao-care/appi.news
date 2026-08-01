@@ -25,6 +25,10 @@ references:
     url: "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-software-medical-device"
     publisher: "US FDA"
 author: "lightman"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "author"
 disclaimerType: "medical"

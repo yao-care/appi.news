@@ -13,6 +13,10 @@ tags:
   - "長照"
   - "健保"
 author: luo-yang
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: /covers/gum-disease-whole-body-1784040711430.webp
 coverAlt: 牙齦發炎與全身健康關聯的醫療示意圖
 status: published

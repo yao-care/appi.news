@@ -10,6 +10,10 @@ tags:
   - "糖尿病"
   - "代謝健康"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/hba1c-prediabetes.webp"
 coverAlt: "健檢血糖與糖化血色素報告示意"
 status: scheduled

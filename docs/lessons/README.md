@@ -65,6 +65,7 @@
 | [content-refs-and-local-build-parity.md](./content-refs-and-local-build-parity.md) | 主題/專欄 `articles:` 反查 frontmatter slug 非檔名；本機只跑 astro build 會跳過 prebuild 的 validate:content 硬 gate、錯誤等 CI 才爆；validate-content.mjs 原在 Windows（反斜線路徑）噴滿江紅假錯、已改 split(/[\\/]/) |
 | [tag-and-terminology-hygiene.md](./tag-and-terminology-hygiene.md) | 標籤 86% 是碎標籤、重點是把同義／英文縮寫（TSMC→台積電、TFDA→食藥署…）收斂到 canonical 別稀釋集群；掃中國用語一律 context-aware，代碼/用戶/激活/網絡多為合法，全域 sed 會改錯，全站真錯只有存儲/美聯儲 |
 | [faq-markdown-links-mobile-overflow.md](./faq-markdown-links-mobile-overflow.md) | FAQ 用 Markdown `[](url)` 寫在原生 `<p>` 裡不渲染、露裸網址，長網址在手機撐破版面；改 `<a href>` ＋ `.article-body` overflow-wrap/表格橫捲安全網；驗收用 chromium 量 scrollWidth |
+| [provenance-disclosure.md](./provenance-disclosure.md) | 做了審閱卻沒人看得見：`reviewedBy`/`factCheckedBy`/`editor` 三欄存在但使用數 0，`DISCLOSURES` 又把 editorial/author 設成 `null`，570/574 篇前台查不到任何產製資訊；根因是「沒有前台出口的欄位不會有人填」，解法＝分類→審閱者單一來源＋渲染退回機制（產線不必逐支改）＋揭露句重點放流程與具名審閱者而非「用了 AI」 |
 | [ai-tone-gate.md](./ai-tone-gate.md) | 去 AI 腔一直只是寫作 prompt 的自檢指示、全站三道硬 gate 沒一道讀正文，「免得你覺得我在夾帶」才會上線；正文文風 regex 誤判極高（破折號 123 篇存量），解法＝只掃改動檔＋ERROR 只擋零誤判簽名句／語氣類留 WARN，build 與 newsroom-write 兩點各接 |
 
 > 更早的一次性遷移紀錄另見 [`../../MIGRATION_NOTES.md`](../../MIGRATION_NOTES.md)（WordPress → Astro，2026-06-09 當時快照）。

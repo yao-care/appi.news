@@ -27,6 +27,10 @@ references:
     url: "https://nzero.com/blog/global-energy-transition-investment-reaches-2-3-trillion-in-2025-as-corporate-decarbonization-pressure-intensifies"
     publisher: "NZero能源分析"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

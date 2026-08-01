@@ -25,6 +25,10 @@ references:
     url: "https://theaviationist.com/2026/06/10/parmitano-first-european-artemis-program"
     publisher: "The Aviationist"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

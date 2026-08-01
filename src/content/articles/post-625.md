@@ -27,6 +27,10 @@ references:
     url: "https://www.sme.gov.tw/caas/article-caas-3064-19749"
     publisher: "中小企業署"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

@@ -28,6 +28,10 @@ references:
     url: "https://www.wri.org/technical-perspectives/6-opportunities-sustainable-finance-2026"
     publisher: "World Resources Institute"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

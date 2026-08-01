@@ -9,6 +9,10 @@ tags:
   - "營養"
   - "減重管理"
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 column: "herbal-cuisine"
 coverImage: "covers/appi-news-184-cover.webp"
 coverImageCredit: "Photo by Brooke Lark on Unsplash"

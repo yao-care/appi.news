@@ -9,6 +9,10 @@ tags:
   - "心血管健康"
   - "代謝健康"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/home-blood-pressure-722.webp"
 coverAlt: "民眾在家坐著、上臂綁著臂式電子血壓計、袖帶與心臟同高進行居家血壓量測"
 status: scheduled

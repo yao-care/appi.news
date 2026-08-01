@@ -13,6 +13,10 @@ tags:
   - "協尋"
   - "極端高溫"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

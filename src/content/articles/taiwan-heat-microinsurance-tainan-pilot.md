@@ -15,6 +15,10 @@ tags:
   - "高齡健康"
   - "金管會"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/taiwan-heat-microinsurance-tainan-pilot-cover.webp"
 coverAlt: "艷陽下的城市街景，象徵台灣夏季持續攀升的高溫與熱浪風險"
 coverImageCredit: "Photo by Liana S on Unsplash"

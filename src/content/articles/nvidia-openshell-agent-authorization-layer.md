@@ -15,6 +15,10 @@ coverImage: "covers/nvidia-openshell-agent-authorization-layer-cover.webp"
 coverAlt: "AI基礎建設相關情境（示意圖）"
 coverImageCredit: "Photo by İsmail Enes Ayhan on Unsplash"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "scheduled"
 sourceType: "editorial"
 contentType: "analysis"

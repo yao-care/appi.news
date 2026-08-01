@@ -9,6 +9,10 @@ tags:
   - "資安"
   - "供應鏈"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 contentType: "news"
 sourceType: "editorial"
 status: "published"

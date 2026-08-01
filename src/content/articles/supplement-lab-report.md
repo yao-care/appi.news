@@ -9,6 +9,10 @@ tags:
   - "保健食品"
   - "食品安全"
 author: "appi-editorial"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/supplement-lab-report.webp"
 coverAlt: "實驗室檢驗人員判讀保健食品品質分析報告的畫面"
 coverImageCredit: "Photo by Trnava University on Unsplash"

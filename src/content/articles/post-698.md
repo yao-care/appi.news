@@ -27,6 +27,10 @@ references:
     url: "https://finance.yahoo.com/sectors/technology/articles/tsmc-likely-book-fourth-straight-030901124.html"
     publisher: "Yahoo Finance / Reuters"
 author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"

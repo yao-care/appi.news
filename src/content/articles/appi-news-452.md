@@ -10,6 +10,10 @@ tags:
   - "學生賽事"
   - "國際賽事"
 author: "appi-editorial"
+reviewedBy:
+  - "chou-jingyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-452-cover.webp"
 coverImageCredit: "Photo by Lisa Keffer on Unsplash"
 coverAlt: "桌球相關情境（示意圖）"

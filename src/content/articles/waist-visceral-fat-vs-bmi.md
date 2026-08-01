@@ -9,6 +9,10 @@ tags:
   - "代謝健康"
   - "健檢報告"
 author: "luo-yang"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/waist-visceral-fat-vs-bmi.webp"
 coverAlt: "健檢中心護理師用軟尺替民眾量測腰圍的實景"
 status: scheduled

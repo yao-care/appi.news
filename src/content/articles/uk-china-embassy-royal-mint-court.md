@@ -43,6 +43,10 @@ references:
     url: "https://www.localgovernmentlawyer.co.uk/planning/318-planning-features/99602-the-planning-permission-for-the-new-chinese-embassy"
     publisher: "Local Government Lawyer"
 author: "appi-editorial"
+reviewedBy:
+  - "luo-yang"
+factCheckedBy:
+  - "appi-editorial"
 status: "published"
 sourceType: "wire"
 contentType: "news"

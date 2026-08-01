@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+
+  <text x="480" y="55" text-anchor="middle" font-size="30" font-weight="700" fill="#003A93">存續期間與利率敏感度：蹺蹺板效應</text>
+  <text x="480" y="86" text-anchor="middle" font-size="17" fill="#6B7280">同樣的利率變動，天期愈長，債券價格波動愈大</text>
+
+  <!-- 左：短天期債券 -->
+  <rect x="30" y="115" width="420" height="410" rx="18" fill="#F4F4F4"/>
+  <text x="240" y="160" text-anchor="middle" font-size="24" font-weight="700" fill="#003A93">短天期債券</text>
+  <text x="240" y="188" text-anchor="middle" font-size="15" fill="#6B7280">利率敏感度較低</text>
+
+  <polygon points="240,405 213,458 267,458" fill="#3D6BB5"/>
+  <rect x="205" y="458" width="70" height="12" rx="4" fill="#3D6BB5"/>
+
+  <g transform="translate(240,405) rotate(-8)">
+    <line x1="-135" y1="0" x2="135" y2="0" stroke="#003A93" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="-135" cy="0" r="26" fill="#3D6BB5"/>
+    <text x="-135" y="6" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">利率</text>
+    <circle cx="135" cy="0" r="26" fill="#D1482A"/>
+    <text x="135" y="6" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">價格</text>
+  </g>
+  <text x="240" y="500" text-anchor="middle" font-size="16" fill="#1F1F1F">傾斜幅度小</text>
+  <text x="240" y="524" text-anchor="middle" font-size="15" fill="#6B7280">利率變動時，價格波動較小</text>
+
+  <!-- 右：長天期債券 -->
+  <rect x="510" y="115" width="420" height="410" rx="18" fill="#F4F4F4"/>
+  <text x="720" y="160" text-anchor="middle" font-size="24" font-weight="700" fill="#003A93">長天期債券</text>
+  <text x="720" y="188" text-anchor="middle" font-size="15" fill="#6B7280">利率敏感度較高</text>
+
+  <polygon points="720,405 693,458 747,458" fill="#3D6BB5"/>
+  <rect x="685" y="458" width="70" height="12" rx="4" fill="#3D6BB5"/>
+
+  <g transform="translate(720,405) rotate(-30)">
+    <line x1="-135" y1="0" x2="135" y2="0" stroke="#003A93" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="-135" cy="0" r="26" fill="#3D6BB5"/>
+    <text x="-135" y="6" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">利率</text>
+    <circle cx="135" cy="0" r="26" fill="#D1482A"/>
+    <text x="135" y="6" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">價格</text>
+  </g>
+  <text x="720" y="500" text-anchor="middle" font-size="16" font-weight="700" fill="#D1482A">傾斜幅度大</text>
+  <text x="720" y="524" text-anchor="middle" font-size="15" fill="#6B7280">利率變動時，價格波動較大</text>
+
+  <line x1="480" y1="115" x2="480" y2="525" stroke="#6B7280" stroke-width="1" stroke-dasharray="4,6" opacity="0.5"/>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>

@@ -10,8 +10,9 @@ tags:
   - "學生賽事"
   - "國際賽事"
 author: "appi-editorial"
-coverImage: "covers/appi-news-452.webp"
-coverAlt: "一位台灣桌球選手在室內賽事中專注發球的畫面"
+coverImage: "covers/appi-news-452-cover.webp"
+coverImageCredit: "Photo by Lisa Keffer on Unsplash"
+coverAlt: "桌球相關情境（示意圖）"
 status: published
 sourceType: editorial
 contentType: news

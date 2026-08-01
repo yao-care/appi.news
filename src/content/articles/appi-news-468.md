@@ -7,8 +7,9 @@ category: health
 subcategory: medtech
 tags: ["醫療AI", "AI治理", "AI", "數位健康", "藥物研發", "醫病關係", "醫療政策", "心理健康"]
 author: "appi-editorial"
-coverImage: "covers/appi-news-468.webp"
-coverAlt: "醫師在診間查看AI輔助診斷系統畫面，畫面顯示決策推論流程"
+coverImage: "covers/appi-news-468-cover.webp"
+coverImageCredit: "Photo by Natanael Melchor on Unsplash"
+coverAlt: "醫療AI相關情境（示意圖）"
 status: published
 sourceType: editorial
 contentType: news

@@ -36,8 +36,8 @@ contentType: "news"
 disclaimerType: "general"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/trump-new-tariffs-60-countries-cover.webp"
-coverAlt: "美國貿易代表葛里爾（Jamieson Greer）官方肖像"
-coverImageCredit: "Office of the United States Trade Representative — Public Domain, Wikimedia Commons"
+coverAlt: "美國相關情境（示意圖）"
+coverImageCredit: "Photo by Zifeng Xiong on Pexels"
 ---
 
 美國總統川普（Donald Trump）新一波關稅措施7月25日（週五）凌晨12:01正式生效，對占美國進口總額99%、多達60個貿易夥伴課徵10%至12.5%不等的關稅，理由是這些國家未充分執行禁止進口強迫勞動商品的規定。據[PBS NewsHour報導](https://www.pbs.org/newshour/politics/trump-imposes-double-digit-tariffs-on-dozens-of-countries-as-stopgap-10-levies-expire-friday)，新關稅上路的同一時刻，正是他先前祭出的臨時10%全球關稅到期失效之際。

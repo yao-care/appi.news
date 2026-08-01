@@ -30,8 +30,8 @@ contentType: "news"
 disclaimerType: "general"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯國際媒體公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/india-ai-democratize-access-cover.webp"
-coverAlt: "印度已故總統卡蘭生前顧問、科學家Srijan Pal Singh（資料照）"
-coverImageCredit: "Preksha30 — CC BY-SA 4.0, 引用自 Wikimedia Commons"
+coverAlt: "AI相關情境（示意圖）"
+coverImageCredit: "Photo by Growtika on Unsplash"
 ---
 
 印度要在人工智慧領域急起直追，得先解決「太依賴少數名校」的政策問題。印度已故總統卡蘭（A.P.J. Abdul Kalam）生前顧問、科學家Srijan Pal Singh接受[RT India節目「In Conversation」訪問](https://www.rt.com/india/643583-india-ai-kalam-srijanpal/)時表示，印度需要讓AI「普及化」（democratize），才能在這個快速變動的領域站穩腳步；他也點出印度理工學院（IIT）獨大的問題，主張把政策資源分散到更多高等教育機構，並讓私部門一起加入競爭。

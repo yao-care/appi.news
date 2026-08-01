@@ -8,8 +8,8 @@ category: sports
 subcategory: events
 tags: []
 author: "appi-editorial"
-coverImage: "covers/appi-news-453.webp"
-coverAlt: "周天成身著中華台北隊紅色戰袍，在羽球場上高舉中國羽球公開賽男單冠軍獎盃，背景有五彩紙花與場館燈光"
+coverImage: "covers/appi-news-453-cover.webp"
+coverAlt: "運動賽事相關情境（示意圖）"
 status: published
 sourceType: editorial
 contentType: news

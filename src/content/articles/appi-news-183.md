@@ -10,8 +10,9 @@ tags:
   - "心血管健康"
 author: "huang-ziyan"
 column: "herbal-cuisine"
-coverImage: "covers/appi-news-183.webp"
-coverAlt: "用筷子拉起納豆絲，傳統日式納豆的黏絲質感，背景為木質桌面"
+coverImage: "covers/appi-news-183-cover.webp"
+coverImageCredit: "Photo by Madara on Unsplash"
+coverAlt: "保健食品相關情境（示意圖）"
 status: published
 sourceType: author
 contentType: column

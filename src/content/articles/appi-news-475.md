@@ -7,8 +7,8 @@ category: health
 subcategory: preventive
 tags: ["長照", "肌少症", "高齡健康", "預防醫學"]
 author: "appi-editorial"
-coverImage: "covers/appi-news-475.webp"
-coverAlt: "長者在社區據點由教練帶領進行彈力帶肌力訓練的實景照片"
+coverImage: "covers/appi-news-475-cover.webp"
+coverAlt: "長照相關情境（示意圖）"
 status: published
 sourceType: editorial
 contentType: news

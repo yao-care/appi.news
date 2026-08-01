@@ -7,8 +7,9 @@ category: sports
 subcategory: events
 tags: ["學生賽事", "新竹縣", "教育", "運動產業"]
 author: "appi-editorial"
-coverImage: "covers/appi-news-470.webp"
-coverAlt: "新竹縣全中運代表隊授旗典禮，選手與縣府官員合影"
+coverImage: "covers/appi-news-470-cover.webp"
+coverImageCredit: "Photo by Hữu Phú on Unsplash"
+coverAlt: "學生賽事相關情境（示意圖）"
 status: published
 sourceType: editorial
 contentType: news

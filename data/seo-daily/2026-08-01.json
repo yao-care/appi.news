@@ -1,0 +1,485 @@
+{
+  "date": "2026-08-01",
+  "generatedAt": "2026-07-31T21:20:07.065Z",
+  "ga4": {
+    "range": "7daysAgo..yesterday",
+    "sessions": 353,
+    "users": 310,
+    "views": 410,
+    "avgDurationSec": 106,
+    "engagedSessions": 109,
+    "taiwanOrganicSessions": 162,
+    "channels": [
+      {
+        "channel": "Organic Search",
+        "sessions": 194,
+        "engaged": 79
+      },
+      {
+        "channel": "Direct",
+        "sessions": 72,
+        "engaged": 11
+      },
+      {
+        "channel": "Referral",
+        "sessions": 63,
+        "engaged": 17
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 37,
+        "engaged": 0
+      },
+      {
+        "channel": "Organic Social",
+        "sessions": 7,
+        "engaged": 2
+      },
+      {
+        "channel": "Cross-network",
+        "sessions": 2,
+        "engaged": 0
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/",
+        "views": 48
+      },
+      {
+        "path": "/articles/gum-disease-whole-body/",
+        "views": 47
+      },
+      {
+        "path": "/articles/taipei-tong-yu-home-child-longterm-care-guide/",
+        "views": 40
+      },
+      {
+        "path": "/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "views": 25
+      },
+      {
+        "path": "/articles/scotland-wildfire-arthurs-seat/",
+        "views": 16
+      },
+      {
+        "path": "/articles/jiuzhaigou-mudslide-tourists-evacuated/",
+        "views": 13
+      },
+      {
+        "path": "/articles/jumbo-rice-ball-tainan-kaohsiung/",
+        "views": 12
+      },
+      {
+        "path": "/articles/dongpu-hotspring-free-range-chicken/",
+        "views": 10
+      },
+      {
+        "path": "/articles/油甘果功效一次看懂：抗氧化、降血脂、護肝與改/",
+        "views": 10
+      },
+      {
+        "path": "/authors/",
+        "views": 9
+      },
+      {
+        "path": "/articles/thyroid-tsh-subclinical/",
+        "views": 8
+      },
+      {
+        "path": "/health/",
+        "views": 8
+      },
+      {
+        "path": "/articles/iron-deficiency-cognition-performance/",
+        "views": 7
+      },
+      {
+        "path": "/articles/天麻功效與副作用完整解析：5大保健用途、正確吃/",
+        "views": 7
+      },
+      {
+        "path": "/articles/benzo-pyrene-oil-long-term-exposure/",
+        "views": 6
+      }
+    ],
+    "daily": [
+      {
+        "date": "2026-06-16",
+        "sessions": 26,
+        "avgDurationSec": 531,
+        "engaged": 7,
+        "taiwanOrganic": 1
+      },
+      {
+        "date": "2026-06-17",
+        "sessions": 31,
+        "avgDurationSec": 116,
+        "engaged": 9,
+        "taiwanOrganic": 7
+      },
+      {
+        "date": "2026-06-18",
+        "sessions": 24,
+        "avgDurationSec": 406,
+        "engaged": 13,
+        "taiwanOrganic": 3
+      },
+      {
+        "date": "2026-06-19",
+        "sessions": 15,
+        "avgDurationSec": 10,
+        "engaged": 3,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-06-20",
+        "sessions": 27,
+        "avgDurationSec": 76,
+        "engaged": 6,
+        "taiwanOrganic": 3
+      },
+      {
+        "date": "2026-06-21",
+        "sessions": 24,
+        "avgDurationSec": 197,
+        "engaged": 7,
+        "taiwanOrganic": 1
+      },
+      {
+        "date": "2026-06-22",
+        "sessions": 38,
+        "avgDurationSec": 440,
+        "engaged": 26,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-06-23",
+        "sessions": 29,
+        "avgDurationSec": 154,
+        "engaged": 11,
+        "taiwanOrganic": 8
+      },
+      {
+        "date": "2026-06-24",
+        "sessions": 42,
+        "avgDurationSec": 333,
+        "engaged": 20,
+        "taiwanOrganic": 8
+      },
+      {
+        "date": "2026-06-25",
+        "sessions": 83,
+        "avgDurationSec": 73,
+        "engaged": 25,
+        "taiwanOrganic": 14
+      },
+      {
+        "date": "2026-06-26",
+        "sessions": 36,
+        "avgDurationSec": 178,
+        "engaged": 13,
+        "taiwanOrganic": 8
+      },
+      {
+        "date": "2026-06-27",
+        "sessions": 10,
+        "avgDurationSec": 33,
+        "engaged": 4,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-06-28",
+        "sessions": 38,
+        "avgDurationSec": 3,
+        "engaged": 3,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-06-29",
+        "sessions": 28,
+        "avgDurationSec": 152,
+        "engaged": 18,
+        "taiwanOrganic": 14
+      },
+      {
+        "date": "2026-06-30",
+        "sessions": 21,
+        "avgDurationSec": 108,
+        "engaged": 13,
+        "taiwanOrganic": 8
+      },
+      {
+        "date": "2026-07-01",
+        "sessions": 28,
+        "avgDurationSec": 174,
+        "engaged": 14,
+        "taiwanOrganic": 5
+      },
+      {
+        "date": "2026-07-02",
+        "sessions": 24,
+        "avgDurationSec": 167,
+        "engaged": 9,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-07-03",
+        "sessions": 22,
+        "avgDurationSec": 124,
+        "engaged": 9,
+        "taiwanOrganic": 5
+      },
+      {
+        "date": "2026-07-04",
+        "sessions": 11,
+        "avgDurationSec": 21,
+        "engaged": 4,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-07-05",
+        "sessions": 17,
+        "avgDurationSec": 73,
+        "engaged": 4,
+        "taiwanOrganic": 7
+      },
+      {
+        "date": "2026-07-06",
+        "sessions": 33,
+        "avgDurationSec": 160,
+        "engaged": 10,
+        "taiwanOrganic": 9
+      },
+      {
+        "date": "2026-07-07",
+        "sessions": 31,
+        "avgDurationSec": 50,
+        "engaged": 9,
+        "taiwanOrganic": 10
+      },
+      {
+        "date": "2026-07-08",
+        "sessions": 34,
+        "avgDurationSec": 323,
+        "engaged": 15,
+        "taiwanOrganic": 8
+      },
+      {
+        "date": "2026-07-09",
+        "sessions": 14,
+        "avgDurationSec": 50,
+        "engaged": 6,
+        "taiwanOrganic": 3
+      },
+      {
+        "date": "2026-07-10",
+        "sessions": 51,
+        "avgDurationSec": 113,
+        "engaged": 23,
+        "taiwanOrganic": 6
+      },
+      {
+        "date": "2026-07-11",
+        "sessions": 26,
+        "avgDurationSec": 77,
+        "engaged": 4,
+        "taiwanOrganic": 3
+      },
+      {
+        "date": "2026-07-12",
+        "sessions": 29,
+        "avgDurationSec": 64,
+        "engaged": 11,
+        "taiwanOrganic": 2
+      },
+      {
+        "date": "2026-07-13",
+        "sessions": 17,
+        "avgDurationSec": 107,
+        "engaged": 6,
+        "taiwanOrganic": 5
+      },
+      {
+        "date": "2026-07-14",
+        "sessions": 31,
+        "avgDurationSec": 154,
+        "engaged": 18,
+        "taiwanOrganic": 11
+      },
+      {
+        "date": "2026-07-15",
+        "sessions": 47,
+        "avgDurationSec": 62,
+        "engaged": 8,
+        "taiwanOrganic": 6
+      },
+      {
+        "date": "2026-07-16",
+        "sessions": 22,
+        "avgDurationSec": 28,
+        "engaged": 6,
+        "taiwanOrganic": 7
+      },
+      {
+        "date": "2026-07-17",
+        "sessions": 13,
+        "avgDurationSec": 122,
+        "engaged": 5,
+        "taiwanOrganic": 3
+      },
+      {
+        "date": "2026-07-18",
+        "sessions": 26,
+        "avgDurationSec": 179,
+        "engaged": 13,
+        "taiwanOrganic": 10
+      },
+      {
+        "date": "2026-07-19",
+        "sessions": 22,
+        "avgDurationSec": 84,
+        "engaged": 13,
+        "taiwanOrganic": 14
+      },
+      {
+        "date": "2026-07-20",
+        "sessions": 51,
+        "avgDurationSec": 38,
+        "engaged": 27,
+        "taiwanOrganic": 12
+      },
+      {
+        "date": "2026-07-21",
+        "sessions": 46,
+        "avgDurationSec": 99,
+        "engaged": 20,
+        "taiwanOrganic": 17
+      },
+      {
+        "date": "2026-07-22",
+        "sessions": 27,
+        "avgDurationSec": 111,
+        "engaged": 9,
+        "taiwanOrganic": 17
+      },
+      {
+        "date": "2026-07-23",
+        "sessions": 48,
+        "avgDurationSec": 205,
+        "engaged": 22,
+        "taiwanOrganic": 15
+      },
+      {
+        "date": "2026-07-24",
+        "sessions": 34,
+        "avgDurationSec": 106,
+        "engaged": 14,
+        "taiwanOrganic": 14
+      },
+      {
+        "date": "2026-07-25",
+        "sessions": 63,
+        "avgDurationSec": 74,
+        "engaged": 18,
+        "taiwanOrganic": 9
+      },
+      {
+        "date": "2026-07-26",
+        "sessions": 20,
+        "avgDurationSec": 20,
+        "engaged": 4,
+        "taiwanOrganic": 6
+      },
+      {
+        "date": "2026-07-27",
+        "sessions": 46,
+        "avgDurationSec": 182,
+        "engaged": 15,
+        "taiwanOrganic": 21
+      },
+      {
+        "date": "2026-07-28",
+        "sessions": 58,
+        "avgDurationSec": 205,
+        "engaged": 29,
+        "taiwanOrganic": 31
+      },
+      {
+        "date": "2026-07-29",
+        "sessions": 49,
+        "avgDurationSec": 82,
+        "engaged": 23,
+        "taiwanOrganic": 26
+      },
+      {
+        "date": "2026-07-30",
+        "sessions": 46,
+        "avgDurationSec": 104,
+        "engaged": 20,
+        "taiwanOrganic": 26
+      },
+      {
+        "date": "2026-07-31",
+        "sessions": 71,
+        "avgDurationSec": 44,
+        "engaged": 0,
+        "taiwanOrganic": 43
+      }
+    ]
+  },
+  "gsc": {
+    "error": "GSC API：User does not have sufficient permission for site 'sc-domain:appi.news'. See also: https://support.google.com/webmasters/answer/2451999."
+  },
+  "index": {
+    "error": "Sitemaps：User does not have sufficient permission for site 'sc-domain:appi.news'. See also: https://support.google.com/webmasters/answer/2451999."
+  },
+  "targetTrend": {
+    "error": "GSC API：User does not have sufficient permission for site 'sc-domain:appi.news'. See also: https://support.google.com/webmasters/answer/2451999."
+  },
+  "geo": {
+    "site": "appi.news",
+    "sampleUrl": "https://appi.news/articles/ai-basic-law-risk-classification-enterprise-checklist/",
+    "checks": {
+      "ai": {
+        "s": "✅"
+      },
+      "sitemap": {
+        "s": "✅"
+      },
+      "llms": {
+        "s": "✅"
+      },
+      "llmsFull": {
+        "s": "✅"
+      },
+      "org": {
+        "s": "✅"
+      },
+      "sameAs": {
+        "s": "✅"
+      },
+      "content": {
+        "s": "✅"
+      },
+      "faq": {
+        "s": "✅"
+      },
+      "cite": {
+        "s": "✅"
+      },
+      "expect": {
+        "s": "—"
+      },
+      "targetQ": {
+        "s": "❌",
+        "note": "AI 目標問句未納入追蹤（2/2）：亞太 新聞、專業觀點 評論"
+      }
+    },
+    "gaps": [
+      "AI 目標問句未納入追蹤（2/2）：亞太 新聞、專業觀點 評論"
+    ],
+    "warns": [],
+    "ok": false
+  }
+}

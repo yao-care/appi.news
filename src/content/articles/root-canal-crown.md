@@ -23,6 +23,11 @@ highlights:
   - 一般根管有健保給付，牙科顯微鏡與牙冠多屬自費；費用是各院所自費行情區間、非官方公定價，由牙醫師評估
 readingTime: 11
 originalContribution: 以 AAE 官方衛教、台灣醫院衛教單張與多篇同儕研究，把抽神經還原成搶救自然牙的治療，逐條拆解變脆、再蛀、要不要牙套與根管對植牙的迷思，並嚴格區分保留率與成功率、關聯與因果，對照台灣健保給付現況與費用行情。
+risksAndLimits:
+  - "文中成功率、存留率數據多來自美國特定保險保戶或特定研究族群，台灣臨床情形未必相同"
+  - "抽神經是否需做牙套、能否保留自然牙，取決於個別牙位與剩餘齒質，須由牙醫師臨床判斷"
+  - "顯微根管自費行情約1到3萬元為市場資訊，非官方公定價，實際費用依院所與牙況而異"
+  - "文中部分證據來自體外實驗或回顧性研究，非隨機對照試驗，僅能佐證方向而非鐵律"
 references:
   - title: What Is a Root Canal?（American Association of Endodontists）
     url: https://www.aae.org/patients/root-canal-treatment/what-is-a-root-canal/

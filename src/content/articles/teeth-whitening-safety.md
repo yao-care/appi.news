@@ -23,6 +23,11 @@ highlights:
   - 真正不可逆傷牙的是小蘇打加檸檬、活性碳粉這類強酸與高研磨偏方，看似省錢反而蝕壞琺瑯質
 readingTime: 11
 originalContribution: 依ADA實證資料與台灣食藥署、衛福部法規，把美白的化學漂白與研磨去漬機轉分清楚，正面回應琺瑯質會不會被磨掉或腐蝕，並標明體外研究與臨床顯著的證據等級分寸。
+risksAndLimits:
+  - "這篇比較的離體研究以人工唾液泡14天觀察硬度回升,無法代表真實口腔長期使用的狀況"
+  - "冷光、居家托盤、噴砂等費用為單一診所自費報價,實際金額依院所與齒況落差可能很大"
+  - "四環黴素牙美白療程約需三到四個月,且引用資料顯示可能仍無法完全變白"
+  - "文中美白牙膏RDA安全值等規範資訊來自美國ADA,與台灣現行查驗登記規範未必完全對應"
 references:
   - title: "Whitening（American Dental Association, Oral Health Topics）"
     url: https://www.ada.org/resources/ada-library/oral-health-topics/whitening

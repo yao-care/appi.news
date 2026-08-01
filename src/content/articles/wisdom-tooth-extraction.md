@@ -23,6 +23,11 @@ highlights:
   - 健保給付困難拔牙本身，自費主要是舒眠或全身麻醉與加速癒合材料；費用是市場行情、非官方公定價
 readingTime: 11
 originalContribution: 用 AAOMS、NICE、Cochrane 三份國際實證把智齒「該拔、可留、拖不得」拆成可操作的判斷框架，嚴格以區間呈現神經損傷與乾性齒槽炎風險、破除瘦臉與擠歪等迷思，費用只給框架不列個別報價。
+risksAndLimits:
+  - "NICE 建議屬英國指引,健保給付範圍與部分負擔以台灣現況為準,兩者不宜混用"
+  - "自費金額約 3,000 到 10,000 元為網路衛教常見區間,非官方公定價,實際依院所而異"
+  - "Cochrane 回顧承認無症狀阻生智齒該拔或留證據不足,保留與鄰牙牙周炎的關聯僅屬低品質觀察性證據"
+  - "神經損傷與乾性齒槽炎發生率區間來自不同研究,實際風險受術者經驗與手術難度影響而異"
 references:
   - title: "AAOMS White Paper Discusses Why, When and How to Treat Third Molar Teeth（美國口腔顎面外科學會）"
     url: https://www.prnewswire.com/news-releases/aaoms-white-paper-discusses-why-when-and-how-to-treat-third-molar-teeth-135889358.html

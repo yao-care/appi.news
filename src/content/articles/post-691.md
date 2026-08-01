@@ -15,6 +15,10 @@ highlights:
   - "DeCloak Intelligences、Epic Tech Taiwan、HUA TEC International、Memorence AI四家摘下CES創新獎"
   - "台灣代表團吸引日本、法國、瑞士、荷蘭、以色列、義大利等多國館主動洽談合作"
   - "TTA自2018年成立以來已培育逾1069支新創團隊，累計吸引近4億美元投資"
+risksAndLimits:
+  - "四家創新獎與四項國家館競賽冠軍為現場結果，能否轉為北美實際訂單尚無定論"
+  - "鳳凰城與新創的媒合僅為現場接觸，尚未有具體合作或採購合約成立"
+  - "TTA累計培育逾1069支新創、近4億美元投資為自2018年成立以來的累計數字，非CES 2026單場成果"
 references:
   - title: "TTA Showcases Taiwan's AI Strength at CES 2026, Bridging Everyday AI and Enterprise-Ready Innovation"
     url: "https://www.prnewswire.com/news-releases/tta-showcases-taiwans-ai-strength-at-ces-2026-bridging-everyday-ai-and-enterprise-ready-innovation-302655073.html"

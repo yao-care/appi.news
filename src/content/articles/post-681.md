@@ -17,6 +17,9 @@ highlights:
   - "MetAI與Spingence獲選NVIDIA Inception計畫精選展示，六家新創進入GTC海報展廊"
   - "台灣新創與華碩、研華、聯發科等大廠同台，展現從算力基礎設施到AI應用的垂直整合生態"
   - "GTC台北期間COMPUTEX同步展出1500家廠商，確立台灣為全球AI與新創生態系核心節點"
+risksAndLimits:
+  - "方案多集中海報展廊與Inception精選展示，實際導入企業採購的具體訂單與客戶數未提及"
+  - "文中列舉的獲選新創與展出方向僅涵蓋數位孿生、邊緣AI等特定領域，未涉及台灣新創整體概況"
 references:
   - title: "Taiwan Startups Showcase AI Capabilities at NVIDIA GTC 2026"
     url: "https://www.prnewswire.com/news-releases/taiwan-startups-showcase-ai-capabilities-at-nvidia-gtc-2026-highlighting-strategic-role-in-global-ai-supply-chain-302721827.html"

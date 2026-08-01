@@ -18,6 +18,10 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 14
+risksAndLimits:
+  - "兩屆名次對照僅回溯至114年，更早期戰績變化目前無公開資料可查證"
+  - "地區分佈僅列隊名可辨識縣市者，未含地域標示的隊伍不在統計之列"
+  - "選手個人名單僅飛迅南市文化國小經媒體報導揭露，其餘組別未見公開個人資料"
 references:
   - title: "中華民國羽球協會 (2026). 115年全國羽球團體錦標賽 成績紀錄"
     url: "https://www.ctb.org.tw/upload/files/中華民國115年全國羽球團體錦標賽_成績紀錄_0511.xlsx"

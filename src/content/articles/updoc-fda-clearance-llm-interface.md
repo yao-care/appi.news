@@ -28,6 +28,11 @@ highlights:
   - "UpDoc 的 K253281 是美國史上第一張病人對話 LLM 醫材許可證，核准關鍵不在模型能力，在把 LLM 限制在資料蒐集層、決策權留給醫師預設的規則引擎。"
   - "UpDoc 套用既有的 d-Nav 胰島素劑量計算器前例過關，避免要從零證明一個 LLM 系統能獨立安全有效地做臨床決策，這是條省力但邊界極窄的路。"
   - "台灣衛福部指引與 TFDA 的 PCCP 申請要點已經有類似的邊界工具，但健保署評估 AI 診斷工具給付時，該問的是這條決策權邊界畫在哪、誰來驗證沒跨線，不只是準不準。"
+risksAndLimits:
+  - "核准的是胰島素劑量管理軟體，適用第2型糖尿病成人，非通用醫療聊天機器人"
+  - "文中所述85天審查、K253281核准內容為2025年底資訊，後續規範細節可能調整"
+  - "健保署對AI診斷工具給付的評估仍在進行中，尚未有定案時程"
+  - "衛福部指引與PCCP申請要點屬既有制度工具，本文未提及台灣是否已有業者實際套用"
 references:
   - title: "A 'historic' FDA clearance raises the question: Is the LLM an interface or the decision-maker?"
     url: "https://www.statnews.com/2026/07/02/fda-clearance-raises-questions-updoc-use-generative-ai-diabetes-treatment/"

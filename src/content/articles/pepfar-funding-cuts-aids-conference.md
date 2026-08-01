@@ -17,6 +17,10 @@ highlights:
   - "全球已有逾1700處愛滋防治診所、服務據點被迫關閉；尚比亞基特韋一間由美國援助署（USAID）資助、提供免費HIV用藥的診所，2025年1月說關就關"
   - "尚比亞全國約130萬名HIV患者原本規律服藥，經費中斷後約10萬人一度停藥、其中4萬人至今未重新接回治療；姆龐威地區AIDS病例從去年每月1至2例，暴增到今年1、2月各28例"
   - "UNAIDS執行主任比恩伊瑪示警：「防治一旦消失，感染就會回升；治療一旦中斷，病人就會死去」；聯合國秘書長已提議年底前關閉UNAIDS這個機構本身"
+risksAndLimits:
+  - "PEPFAR資金追蹤與整體防治斷炊統計以NPR、Washington Blade等單一報導為主，尚未見獨立查證數字"
+  - "尚比亞現場數據與死亡個案來自76 Crimes追蹤報導，屬單一媒體觀察未見官方統計佐證"
+  - "UNAIDS存續與聯合國提議關閉一事仍屬提案階段，非已定案結果"
 references:
   - title: "Amid U.S. funding cuts, the international AIDS conference faces an uncertain future"
     url: "https://www.wknofm.org/news-from-npr/2026-07-28/amid-u-s-funding-cuts-the-international-aids-conference-faces-an-uncertain-future"

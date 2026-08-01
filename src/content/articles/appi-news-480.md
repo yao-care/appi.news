@@ -18,6 +18,10 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 9
+risksAndLimits:
+  - "100公尺與50公尺仰式的舊紀錄秒數未見於查證來源，兩項對照數字暫缺"
+  - "是否正式代表台灣參賽仍待中華游泳協會選拔與報名程序確認"
+  - "200公尺仰式尚未刷新紀錄，能否達標亞運門檻要看6月中正盃表現"
 references:
   - title: "中央社（2026年4月18日）。台日混血張雅佳全中運100仰摘金 開心再破全國紀錄。中央社"
     url: "https://www.cna.com.tw/news/aspt/202604180213.aspx"

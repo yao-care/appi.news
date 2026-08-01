@@ -16,6 +16,11 @@ highlights:
   - "台灣健保資料庫涵蓋逾2,300萬筆、超過23年縱向追蹤記錄，是加方企業主要目標資產"
   - "合作對象涵蓋中小企業、跨國企業、研究機構與學術單位，申請截止日為2026年4月26日"
   - "重點領域包括智慧醫療器材、AI驅動照護、遠距醫療、手術機器人與醫療物聯網資安"
+risksAndLimits:
+  - "加拿大企業員工500人以下的申請門檻，代表團規模與實際洽談成效仍待8月4至7日活動後驗證"
+  - "健保資料用於國際研究合作的具體審查與去識別化流程，內文未說明細節"
+  - "衛福部與FDA的數位健康合作備忘錄僅涉及監管接軌，不保證個別企業產品能通過FDA審查"
+  - "文中「智慧醫院推動計畫」等政策時程與健保AI輔助診斷給付試辦進度，可能隨衛福部後續公告調整"
 references:
   - title: "Canadian AI in MedTech and Digital Health R&D Partnering Delegation to Taiwan"
     url: "https://www.tradecommissioner.gc.ca/en/our-solutions/support-programs/canadian-international-innovation-program/canadian-ai-medtech-digital-health-taiwan-partnering-delegation-taiwan.html"

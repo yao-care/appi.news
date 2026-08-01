@@ -28,6 +28,11 @@ highlights:
   - "SK 海力士預計 7 月 10 日在那斯達克掛牌 ADR、代號 SKHY，發行約 1,779 萬股新股募約 294 億美元，若成局將超越阿里巴巴 2014 年的美股上市，改寫史上最大 ADR 紀錄。"
   - "它單季淨利 40 兆韓元、營業利益率 72%，掛牌不是為了救急，是把 HBM 產能軍備競賽的資本提前壓上桌；錢要去用地叢集與 M15X 產線，還有青州的封裝廠。"
   - "台灣的讀法不是這個數字，而是 HBM4 的邏輯基礎裸晶改交台積電先進製程代工、再走 CoWoS 封裝，SK 海力士這筆資本會有一段回頭變成台積電的訂單；但它同時在用 Intel EMIB 與美國自建封裝廠分散這條依賴。"
+risksAndLimits:
+  - "這篇談的是產能與供應鏈布局的推論，不是已確定的訂單金額或分配比例"
+  - "SK 海力士赴美掛牌能否成局、募資金額能否達 294 億美元仍待 7 月 10 日實際掛牌結果確認"
+  - "台積電接單比例屬作者推論，內文並未揭露 SK 海力士與台積電間的實際合約金額或分工佔比"
+  - "Intel EMIB 測試與美國封裝廠屬 SK 海力士分散布局的既定計畫，能否如期量產替代台積電產能仍待觀察"
 references:
   - title: "SK Hynix posts $26B profit in Q1 2026, plans NASDAQ listing that could raise $29.4B"
     url: "https://cryptobriefing.com/sk-hynix-q1-2026-profit-nasdaq-listing/"

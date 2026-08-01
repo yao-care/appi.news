@@ -15,6 +15,10 @@ highlights:
   - "訴訟由新愛國黨(NPP)三名資深黨員提出：弗林蓬博阿滕教授、紐亞霍塔馬克盧博士、阿莫阿科努阿馬博士"
   - "全國民主大會(NDC)副選舉主任坦科、新愛國黨副秘書長穆罕默德分別表態歡迎判決，稱已掌握黨員資料、將著手因應"
   - "案件被告涵蓋新愛國黨、全國民主大會(NDC)、人民大會黨(CPP)三大政黨，迦納總檢察長辦公室則支持廢除代表制的主張"
+risksAndLimits:
+  - "最高法院8月5日才公布完整判決理由，代表制違憲的具體論證細節目前未定"
+  - "一年修法期限為法院裁定的上限，各政黨實際完成新制的時間可能提前或延後"
+  - "報導引述迦納總檢察長辦公室與兩黨幹部的立場說法，未見反對聲音或異議意見"
 references:
   - title: "SC landmark ruling: All card-bearing members can vote • NDC, NPP welcome decision"
     url: "https://ghanaiantimes.com.gh/sc-landmark-ruling-all-card-bearing-members-can-vote-ndc-npp-welcome-decision/"

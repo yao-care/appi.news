@@ -22,6 +22,10 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 9
+risksAndLimits:
+  - "文中提到的央行決議與利率數據皆為2026年7月中旬前資訊，之後可能已變動"
+  - "本文為一般配置觀念說明，個人資金部位調整仍需視實際財務目標與風險承受度而定"
+  - "文中提及的市場解讀與分析多引用單一報導來源，尚未見多方獨立驗證"
 references:
   - title: "Interest.co.nz (2026). Reserve Bank raises OCR to 2.50% from 2.25%, hints at more hikes"
     url: "https://www.interest.co.nz/economy/139310/rbnz-raises-official-cash-rate-25-basis-points-250-external-and-internal-monetary"

@@ -28,6 +28,11 @@ highlights:
   - "OpenAI 五月開放 ChatGPT 自助廣告後台（Ads Manager）beta，加入 CPC 競價、取消先前 5 萬美元的最低投放門檻，廣告投向美加澳紐的 Free 與 Go 免費使用者，Plus/Pro/Enterprise 付費方案維持無廣告。"
   - "真正的風險不是聊天視窗底下那格標示清楚的廣告，而是廣告生意替 AI 裝上一個把答案往某方向偏的結構性動機；AI 原本被信任，靠的正是機制上沒有騙你的理由。"
   - "「答案獨立」是 OpenAI 自畫自守、外部無法驗證的承諾而非保證；在今年約 25 億、2030 年衝上 1000 億美元的廣告營收階梯壓力下，這條自律界線的漂移風險只會升高。"
+risksAndLimits:
+  - "廣告目前僅投放美加澳紐的 Free／Go 用戶，台灣使用者尚未受影響"
+  - "「答案獨立」原則為 OpenAI 自訂承諾，外部無法驗證是否確實不影響回答內容"
+  - "2030 年千億美元廣告營收為 OpenAI 對投資人的財測目標，非已實現數字"
+  - "付費方案目前無廣告，但此設計是否長期維持仍取決於後續商業壓力"
 references:
   - title: "OpenAI Launches Self-Serve Ads Manager for ChatGPT"
     url: "https://www.searchenginejournal.com/openai-launches-self-serve-ads-manager-for-chatgpt/573971/"

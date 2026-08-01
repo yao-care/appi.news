@@ -30,6 +30,10 @@ highlights:
   - 關鍵不在政府有沒有份、錢夠不夠，而在退出、獨立監理與二次利用的界線有沒有先畫好
 readingTime: 9
 originalContribution: 把台灣健康網路平台與健保署健康存摺 SDK 的能與不能逐層拆開，釐清民眾在兩者中「使用者」與「供給者」的角色差異，並將個人便利與集體效益分開誠實盤點，對照可查證的官方與媒體來源。
+risksAndLimits:
+  - "集體效益是否兌現，取決於願意提供資料的人數與代表性，短期內無法驗證"
+  - "轉診免重做檢查僅是平台目標，能否落地取決於醫師端是否採信，內文未給保證"
+  - "文中退出機制、獨立監理與二次利用界線是否明確，尚待官方公告確認"
 references:
   - title: 台灣健康網路平台今啟航，打破資料孤島建立 AI 主權（GeneOnline News）
     url: https://geneonline.news/twhealthnexus-start-2026/

@@ -20,6 +20,8 @@ sourceType: "editorial"
 disclaimerType: "medical"
 legacyAuthor: "asignbio"
 legacyCategory: "預防醫學"
+risksAndLimits:
+  - "賽程與轉播時間為出稿時資訊，實際播出如遇官方賽事調整可能異動"
 references:
   - title: "2026 Winter Olympics"
     url: "https://en.wikipedia.org/wiki/2026_Winter_Olympics"

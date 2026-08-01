@@ -16,6 +16,10 @@ highlights:
   - "警方週五下午在紐頓阿伯特（Newton Abbot）逮捕一名26歲英國籍白人男子，但隔日（週六）上午即將他釋放，稱其已「不再是調查對象」，警方仍在追查另一名相信是白人男性的嫌疑人"
   - "德文與康沃爾郡警方表示，沒有跡象顯示案件與恐怖主義或政治動機有關，也不相信社會大眾有更廣泛風險；重案督察羅森（Ilona Rosson）呼籲民眾提供海托爾維爾地區監視器、門鈴與行車紀錄器畫面"
   - "首相施凱爾呼籲各界「超越政治分歧」，內政大臣馬哈茂德稱死亡情況「極度令人痛心」；改革英國黨黨魁法拉吉稱自己「深感悲痛」，副黨魁提斯讚維德康是「傑出的演說家」"
+risksAndLimits:
+  - "警方逮捕又釋放26歲男子，真正嫌疑人身分與涉案動機至今未公布"
+  - "案發與遺體發現間隔近24小時，現場證據狀況與案發細節官方尚未說明"
+  - "報導引用英美媒體，警方調查仍屬早期階段，後續事實可能隨案情更新而修正"
 references:
   - title: "Man arrested on suspicion of Ann Widdecombe's murder released and no longer part of investigation"
     url: "https://www.irishtimes.com/world/uk/2026/07/11/police-investigating-ann-widdecombe-death-release-man-from-custody/"

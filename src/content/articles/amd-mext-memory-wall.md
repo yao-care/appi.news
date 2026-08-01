@@ -27,6 +27,10 @@ highlights:
   - "AMD 六月中旬併購記憶體最佳化新創 MEXT，未公布金額；MEXT 的預測式記憶體引擎用 AI 預測資料存取，把便宜的快閃記憶體當高速 DRAM 的延伸，減少資料中心對昂貴 DRAM 的依賴。"
   - "這筆小案子的訊號在於：AI 加速器的競爭正從堆算力，轉到記憶體牆。算力兩年成長三倍、記憶體頻寬只增一點六倍，晶片再快也常卡在等資料，錢再砸在 FLOPS 上是解錯題。"
   - "但要踩剎車：MEXT 解的是容量與成本，不是頻寬。分析師直言軟體分層取代不了對延遲敏感的 DRAM，破不了頻寬牆；HBM 仍是主戰場，台灣的卡位點在成熟製程 DRAM 與 CoWoS 封裝。"
+risksAndLimits:
+  - "MEXT 交易未公布金額，實際財務效益與整合進度目前無法查證"
+  - "文中記憶體漲價與廠商營收數字為 2026 年第一季資訊，後續走勢可能變動"
+  - "預測式分層對延遲敏感應用的實際表現，內文僅引分析師觀點，未見獨立測試數據"
 references:
   - title: "AMD acquires MEXT to add predictive memory optimization to its AI stack"
     url: "https://www.networkworld.com/article/4186201/amd-acquires-mext-to-add-predictive-memory-optimization-to-its-ai-stack.html"

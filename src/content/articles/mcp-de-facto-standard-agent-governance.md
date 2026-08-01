@@ -25,6 +25,11 @@ highlights:
   - "MCP 月下載破 9,700 萬、較發布初期成長約 970 倍，2025 年底被 Anthropic 捐給 Linux Foundation 旗下的 Agentic AI Foundation，成為廠商中立標準。"
   - "標準底定降低整合成本，但 NIST 已啟動 AI agent 標準、把 agent 串接外部工具的攻擊面攤開來談；每個 MCP server 都是一個新的權限治理對象。"
   - "這對上台灣新修的《人工智慧基本法》：法令到位不等於意識到位，企業和政府若沒先建立治理意識，再多框架也接不住這波浪潮。"
+risksAndLimits:
+  - "Agent SDK 額度政策原訂上路又喊停，現況可能隨官方公告再變動"
+  - "MCP server 註冊數與下載量為特定月份數字，非長期穩定值"
+  - "NIST 治理倡議 2026 年 2 月才啟動，具體規範尚未定案"
+  - "風險案例多來自單一資安廠商部落格，未見獨立稽核數據佐證"
 references:
   - title: "Donating the Model Context Protocol and establishing the Agentic AI Foundation"
     url: "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation"

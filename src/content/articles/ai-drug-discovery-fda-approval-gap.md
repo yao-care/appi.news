@@ -27,6 +27,11 @@ highlights:
   - "AI 藥物研發近期吸引超過 20 億美元投資，業界宣稱把開發時程從 4-5 年壓到 12-18 個月、臨床試驗成功率翻倍，但自 2019 年至今累計約 600 億美元、175 個 AI 起源藥物進入人體試驗，至今仍沒有一款拿到 FDA 核准。"
   - "AI 目前真正兌現的價值集中在篩選與試驗設計：Pfizer 用 AI 在 30 天內掃過數百萬個化合物找出候選分子，AI 設計的藥物在第一期臨床的成功率明顯高於傳統藥物；但這個優勢進入第二期之後不一定守得住，Verge Genomics 的 AI 候選藥物 VRG50635 就卡在早期試驗過不了關。"
   - "判讀這波熱潮該看的是核准數字而非募資金額，因為 AI 目前解決的是「篩選階段」的問題，臨床驗證這一關的科學時程沒有被壓縮，跟台灣老藥新用（drug repurposing）碰到的訊號到建議之間的系統性落差，是同一個結構。"
+risksAndLimits:
+  - "業界宣稱的時程壓縮多指篩選階段，臨床驗證期至今未見縮短證據"
+  - "Verge Genomics 案例顯示第一期優勢未必能延續到後期試驗"
+  - "現階段結論以個案報導為主，尚待 2026至2028中後期試驗結果驗證"
+  - "文中投資與試驗數字僅截至報導當下，後續進度可能已有變動"
 references:
   - title: "AI Drug Discovery Investment Surges to $2+ Billion as Technology Cuts Development Timelines by 70%, Driven by Breakthrough Clinical Success Rates"
     url: "https://www.globenewswire.com/news-release/2026/07/14/3327157/0/en/ai-drug-discovery-investment-surges-to-2-billion-as-technology-cuts-development-timelines-by-70-driven-by-breakthrough-clinical-success-rates.html"

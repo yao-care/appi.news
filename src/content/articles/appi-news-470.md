@@ -19,6 +19,11 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 13
+risksAndLimits:
+  - "「場地整修帶動獎牌成長」是本文推論比對，非官方認定的因果關係"
+  - "桃園市人口規模達新竹縣三倍以上，總獎牌數不宜與新竹縣直接比較"
+  - "115年度15校場地工程仍在招標施工，能否如期年底完工尚未確定"
+  - "新竹市、桃園市、苗栗縣的入列前八項次數字未公布，無法逐項對照"
 references:
   - title: "新竹縣政府 (2026). 竹縣小將全中運戰力炸裂 48面獎牌、127項次入前八創史上最強"
     url: "https://www.hsinchu.gov.tw/News_Content.aspx?n=153&s=283266"

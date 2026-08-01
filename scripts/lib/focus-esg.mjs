@@ -4,6 +4,8 @@
 // 決策（站長定）：焦點分類的 ESG/環境/能源/永續題「自動發佈上線」（比照國際/警消，非待審）。
 // 涵蓋 6 個議題群；跟主管機關與權威來源走，連結逐條驗活，數字照官方、零杜撰。
 
+import { RISKS_PROMPT } from "./risks-prompt.mjs";
+
 // 6 個議題群 + 權威來源（claude 以 WebSearch/WebFetch 在這些範圍內找近期新進展）。
 export const FOCUS_ESG_THEMES = [
   {
@@ -108,6 +110,7 @@ export function buildFocusEsgPrompt(recentTitles = [], days = 7, strikingPages =
     recent,
     '',
     '【frontmatter】category: "focus"、subcategory（依議題群選 focus 合法子分類：法規/政策→policy-watch；能源市場/數據/綠色金融趨勢→trend-watch；跨領域重大→major-issues）、author: "appi-editorial"、contentType: "news"、sourceType: "wire"、status: "published"、publishDate 現在；slug 語意化英文 kebab（避免 post-NNN，檔名＝slug）；disclosure 揭露「整理自主管機關／權威來源公開資料，附原文出處」。寫入 src/content/articles/<slug>.md，**不要 git add/commit/push**（外層處理）。',
+    RISKS_PROMPT,
     '',
     '【最後輸出】一行：`FOCUS_RESULT=NEW｜<slug>`（有寫）或 `FOCUS_RESULT=SKIP｜<原因>`（無夠新夠強可查證的題）；若有寫，再附查證報告（每條超連結＋HTTP 狀態＋是否支持該句）。',
   ].join('\n');

@@ -18,6 +18,8 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 9
+risksAndLimits:
+  - "本文所述選拔與集訓計畫（爭取亞青賽代表隊資格）尚未定案，實際入選結果需以主辦單位公告為準"
 references:
   - title: "中華民國115年全國中等學校運動會．會內賽成績系統－破紀錄查詢"
     url: "https://sport115.cyc.edu.tw/Module/Score/Record.php"

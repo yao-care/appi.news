@@ -19,6 +19,9 @@ highlights:
   - "西格爾7月9日出席另一場聽證時，曾主張成立獨立監督委員會審查澳洲廣播公司（ABC）是否落實其憲章義務，並指ABC的中東報導對「反以色列」觀點著墨過多"
   - "委員會源於2025年12月14日晚間雪梨邦迪海灘阿徹公園（Archer Park）光明節（Hanukkah）活動槍擊案：兩名伊斯蘭國意識形態驅動的父子檔持長槍掃射約千人聚會，造成15人罹難（含1名10歲女童）、逾40人受傷，是澳洲史上最致命恐怖攻擊"
   - "總理艾班尼斯2026年1月8日宣布成立聯邦級皇家調查委員會，由前最高法院法官貝爾（Virginia Bell）主持，除追查反猶太主義成因與邦迪案經過外，並須提出治安與社會凝聚力建議，報告須於2026年底前提交"
+risksAndLimits:
+  - "委員會報告須今年底前提交，教育政策具體內容仍待確認"
+  - "西格爾對ABC報導立場的主張出自另一場7月9日聽證，非本場作證內容"
 references:
   - title: "Anti-Semitism envoy to return to royal commission"
     url: "https://www.muswellbrookchronicle.com.au/story/9320396/anti-semitism-envoy-to-return-to-royal-commission/"

@@ -18,6 +18,11 @@ highlights:
   - "亞太佔全球47%，但中國再生能源投資首度出現下滑，印度以15%成長成為最亮眼的新興市場"
   - "歐盟成長18%至4550億美元，顯示能源安全政策驅動下歐洲資本加速動員的格局"
   - "台灣在離岸風電、半導體製程脫碳與儲能三個切入點上具備競爭潛力，但政策確定性仍是最大瓶頸"
+risksAndLimits:
+  - "數據主要引用BloombergNEF單一機構報告，未見其他機構交叉驗證"
+  - "中國再生能源投資下滑原因為文中推測性解讀，非官方證實結論"
+  - "台灣離岸風電、半導體購電、儲能三項切入點屬本文分析判斷，非既定政策成果"
+  - "國產化條款、電業法規等法規現況可能隨時調整，影響實際投資條件"
 references:
   - title: "BloombergNEF Finds Global Energy Transition Investment Reached Record $2.3 Trillion in 2025"
     url: "https://about.bnef.com/insights/clean-energy/bloombergnef-finds-global-energy-transition-investment-reached-record-2-3-trillion-in-2025-up-8-from-2024"

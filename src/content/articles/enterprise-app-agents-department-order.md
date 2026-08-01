@@ -27,6 +27,10 @@ highlights:
   - "市場 2026 年中換了問題：從『agent 是不是真的』變成『哪個部門先被 agent 化』；Gartner 估 2026 年底 40% 企業 app 內建任務型 agent，2025 還不到 5%。"
   - "作者排序先被 agent 化的部門：客服、IT Service Desk、業務支援、人資、法務、財務，邏輯是這些部門本來就在接收請求、查資料、執行流程，本質就是 agent 工作。"
   - "對照 KPMG 全員部署與 Databricks 把 agent 當同事，真正的落差不是技術而是治理跟不上部署速度；每個 agent 都是新的權限與問責對象，先定義情境再開放。"
+risksAndLimits:
+  - "先被 agent 化的部門排序是作者判斷，非正式研究結果，未附驗證數據"
+  - "KPMG、Databricks 兩例僅為個案，不代表所有企業導入 agent 皆已完成治理配套"
+  - "Gartner 與市場規模數字為預估值，實際 2026 年底落地比例可能有落差"
 references:
   - title: "40% of Enterprise Apps Will Embed AI Agents by End of 2026, According to Gartner"
     url: "https://finance.yahoo.com/news/40-enterprise-apps-embed-ai-181310288.html"

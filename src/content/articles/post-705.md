@@ -16,6 +16,11 @@ highlights:
   - "黃金卡制度提供合格外籍專業人士所得稅優惠，是台灣吸引全球AI與金融人才的重要工具"
   - "AI科技與再生能源為台灣2026年FDI最受關注的兩大戰略領域，獲政策優先支持"
   - "台灣半導體生態系的國際整合程度高，為境外投資人提供難以複製的協作機會"
+risksAndLimits:
+  - "投資審議司審查以國安、公共秩序、道德標準、公共衛生為準，個案核准與否仍有行政裁量空間"
+  - "中資適用正面表列而非負面表列，本文分析的自由化幅度不適用於中國大陸資金"
+  - "離岸風電建設進度落後於目標，綠能投資的實際時程存在不確定性"
+  - "AI資本支出年複合成長率25%為外資投行預期數字，非已實現數據"
 references:
   - title: "Taiwan's FDI Opportunities and Regulatory Considerations"
     url: "https://taiwan.acclime.com/guides/fdi-opportunities-regulatory-considerations"

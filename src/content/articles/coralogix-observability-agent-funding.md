@@ -28,6 +28,10 @@ highlights:
   - "Coralogix 6/3 拿到 2 億美元 Series F、總募資達 5.5 億、估值 16 億美元（比前輪 +60%），距上一輪 1.15 億 Series E 只隔 11 個月；資本賭的是可觀測性正從工程師工具升格為 AI 進生產的必要基建。"
   - "這不是個案：Grafana 在 GrafanaCON 2026 主打補「AI 盲區」、Datadog 的 AI 監控模組加收 30% 費用，光是 agent 可觀測性市場 2026 年就約 16.8 億美元、預估 2031 年衝到 86.2 億（CAGR 38.69%）。"
   - "要踩剎車：監控不等於治理。可觀測性讓你看見 agent 出包，攔不攔得住是驗證機制與責任歸屬的問題；台灣軟體團隊上 agent 前，該把這層當前置條件，不是事後才補的成本。"
+risksAndLimits:
+  - "這篇聚焦以色列與美國創投市場，Coralogix 客戶結構與定價變動未必適用台灣中小型團隊"
+  - "可觀測性市場成長預估（2031 年 86.2 億美元）為市調機構推估，非已實現數字"
+  - "文中監控與治理分工的論點為作者分析判斷，非 Coralogix 官方立場或獨立驗證結果"
 references:
   - title: "Coralogix raises $200M on bet that someone needs to watch the AI agents"
     url: "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/"

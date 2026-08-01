@@ -19,6 +19,10 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 11
+risksAndLimits:
+  - "文中登革熱防治成效數據來自單一系統性回顧研究，非本站原始調查"
+  - "防蚊藥劑濃度與年齡限制以產品許可證標示為準，本文僅列一般參考範圍"
+  - "中醫養生段落為生活空間管理概念，不能取代孳生源清除或防蚊液"
 references:
   - title: "Montenegro-Quiñonez CA, Louis VR, Horstick O, et al. (2023). Interventions against Aedes/dengue at the household level: a systematic review and meta-analysis. *eBioMedicine"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10333437/"

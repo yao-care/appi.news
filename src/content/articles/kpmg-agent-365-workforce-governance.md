@@ -27,6 +27,10 @@ highlights:
   - "KPMG 6/9 宣布與微軟擴大合作，把 Microsoft 365 Copilot 鋪給全球逾 27.6 萬名員工，並導入 Agent 365 來部署、監控與保護組織內的 AI agent。"
   - "Agent 365 被微軟定位成 AI agent 的「控制層」，靠註冊表、唯一 agent ID 與存取控制，把 agent 當成像員工一樣的治理對象來管。"
   - "真正難的不是導入，是 27 萬人同時用 agent 時權限、稽核與責任歸屬要一次到位；治理不是部署完再補的附加題，是這場部署本身的考題。"
+risksAndLimits:
+  - "Agent 365 於 2025 年 11 月才發布，KPMG 這次是首批大規模部署案例，長期成效仍待觀察"
+  - "文中三格盤點與治理建議為作者觀點整理，非 KPMG 或微軟官方公布的檢核清單"
+  - "本文引用內容多來自微軟與 Enterprise DNA 的官方發布稿，尚未見獨立第三方查核"
 references:
   - title: "KPMG and Microsoft scale trusted, enterprise AI agents globally through deployment of Agent 365 and Copilot"
     url: "https://news.microsoft.com/source/2026/06/09/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally-through-deployment-of-agent-365-and-copilot/"

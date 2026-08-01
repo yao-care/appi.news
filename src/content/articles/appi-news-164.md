@@ -23,6 +23,10 @@ sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 13
+risksAndLimits:
+  - "文中護欄間距、圍欄高度、熱水溫度等數值為一般建議，各國標準與家中實際條件可能不同"
+  - "親子共學遊戲成效未附具體數據，成效因孩子年齡與個別發展狀況而異"
+  - "文中提及的安全鎖認證標準（ASTM、EN）為國際規範，台灣在地產品是否皆符合須自行查證"
 references:
   - title: "World Health Organization. (2021). Falls. *WHO Fact Sheets"
     url: "https://www.who.int/news-room/fact-sheets/detail/falls"

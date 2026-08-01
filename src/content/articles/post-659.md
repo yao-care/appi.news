@@ -16,6 +16,11 @@ highlights:
   - "新協定聚焦基因細胞療法等高價創新療法的HTA框架建立，解決長期臨床效益不確定性問題"
   - "癌症治療數位治理列入合作重點，推動FHIR國際標準加速事前審查並建立動態真實世界評估系統"
   - "台灣正推動健康科技評估中心轉型為行政法人，與英國模式接軌以強化機構獨立性"
+risksAndLimits:
+  - "合作聚焦四大領域，但基因細胞療法給付機制的具體條件與時程本文未載明"
+  - "真實世界數據登錄格式尚未標準化，再評估機制實際成效仍待觀察"
+  - "HTA中心法人化立法進度未定，制度改革能否如期落地仍是未知數"
+  - "協定內容以衛福部與NICE公告為本，執行細節與後續調整需另行查證"
 references:
   - title: "Taiwan and NICE Renew Partnership Agreement to Deepen Taiwan–UK Healthcare Policy Collaboration"
     url: "https://firstwordpharma.com/story/7425468"

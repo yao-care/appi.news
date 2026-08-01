@@ -21,6 +21,11 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 12
+risksAndLimits:
+  - "糖鈉飽和脂肪三色標示為2026年下半年自願制，尚未正式上路，實際標示率待觀察"
+  - "厄瓜多研究顯示的慢性病死亡率下降幅度為0.1至0.3個百分點，屬小幅統計效果"
+  - "加拿大研究的11,715例死亡預防數為建模推算的樂觀情境，非實測結果"
+  - "三項指標無法反映膳食纖維、微量元素與加工程度，三燈全綠不等於健康食品"
 references:
   - title: "衛生福利部食品藥物管理署 (2025). 食品標示升級！食藥署與健康署攜手推動「紅黃綠」制度"
     url: "https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=31511"

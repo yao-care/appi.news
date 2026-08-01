@@ -15,6 +15,10 @@ highlights:
   - "當地工會與官員將這波越境潮，連結到西班牙最高法院本月稍早一項裁決；該裁決規定海上攔截到、企圖抵達休達或梅利利亞的移民不得立即遣返摩洛哥，須經正當程序，批評者指人口販運網路正利用這項裁決煽動偷渡"
   - "義大利總理梅洛尼在X平台表示「義大利不會袖手旁觀」，揚言採取「非常措施」介入，並提議討論暫停西班牙的申根資格；歐洲人民黨要求歐盟委員會就此向西班牙總理桑切斯究責"
   - "休達與梅利利亞是歐盟僅有的非洲陸地邊界，2021年5月也曾發生約1萬名摩洛哥與撒哈拉以南青年數日內集體越境的類似事件"
+risksAndLimits:
+  - "當地兩組越境人數統計（1,500至2,000人與6萬人）差距懸殊，實際規模尚無定論"
+  - "法院裁決細節與人口販運集團關聯僅為官方說法，尚未見獨立調查證實"
+  - "事件發展中，死亡人數與軍隊部署規模可能隨後續報導更新"
 references:
   - title: "At least 18 die as thousands cross from Morocco into enclave of Ceuta"
     url: "https://www.aljazeera.com/news/2026/7/30/spanish-enclave-of-ceuta-raises-alarm-as-thousands-cross-morocco-border"

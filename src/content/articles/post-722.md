@@ -16,6 +16,9 @@ highlights:
   - "TAIPEI CYCLE以「Cycling to Wellness」為核心主軸，從整車、電動輔助到智慧騎乘完整展出"
   - "TaiSPO聚焦全齡體適能與運動科技新創，並首度引入台灣專利超級站展示運動科技專利成果"
   - "四天展期吸引3,100名買主與10,200名國內業者觀展，促進亞太大健康平台的商機媒合"
+risksAndLimits:
+  - "兩展展區目前相對獨立，跨展商機媒合機制尚未建立，僅為外貿協會表態將深化合作"
+  - "文中買主與觀展人數為四天展期合計數字，非單日規模"
 references:
   - title: "串聯全球運動科技產業　打造健康生活新未來（TaiSPO官網）"
     url: "https://www.taispo.com.tw/zh-tw/news/FC61D7F77775D5BE/info.html?lt=grid&cid=news"

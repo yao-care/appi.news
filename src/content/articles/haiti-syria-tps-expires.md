@@ -18,6 +18,10 @@ highlights:
   - "普林斯頓大學研究者估計，約5萬名美國出生兒童的父母持有海地TPS，面臨帶孩子返回海地或忍痛分離的抉擇"
   - "海地總統2021年遇刺後，武裝幫派控制大片領土、基礎設施與經濟，美國國務院強烈建議國民勿前往海地"
   - "敘利亞方面，2024年12月阿薩德政權垮台後，國土安全部認定當地已從全面內戰轉為零星暴力，加上美國大使館自2012年起關閉、難以審查申請人背景，成為終止依據"
+risksAndLimits:
+  - "最高法院裁決僅認定TPS存廢不受司法審查，未處理個別移民其他合法身份申請的效力"
+  - "家庭分離人數為普林斯頓大學研究者估計值，非官方普查數字"
+  - "海地治安與國務院旅遊警示反映7月現況，後續可能變動"
 references:
   - title: "What's next for immigrants with TPS status after Supreme Court ruling"
     url: "https://www.pbs.org/newshour/politics/whats-next-for-immigrants-with-tps-status-after-supreme-court-ruling"

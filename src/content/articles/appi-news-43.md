@@ -23,6 +23,10 @@ contentType: column
 disclaimerType: medical
 readingTime: 11
 draft: false
+risksAndLimits:
+  - "文中觀點多引自 Moseley《Explain Pain》與中醫古籍，未附具體臨床試驗數據佐證"
+  - "2017 年 39 項試驗回顧與 2018 年統合分析針對特定慢性痛症，未必適用所有疼痛類型"
+  - "健保給付範圍與物理治療轉介規定可能隨地區與時間調整，需另行確認"
 ---
 你有沒有發現，很多人對疼痛的第一個反應，是想辦法「讓它消失」？止痛藥、熱敷貼、按摩，這些都是應急的方式。但痛消了，問題真的解決了嗎？
 

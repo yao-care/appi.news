@@ -29,6 +29,11 @@ highlights:
   - "台灣65歲以上平均只剩19.77顆牙、約50萬長者全口無牙，離日本8020的目標仍有差距"
 readingTime: 12
 originalContribution: "把缺牙與失智的日本世代研究、統合分析與臺北榮總本土研究，依證據等級（觀察性、樣本大小）誠實排比，並串起『口腔衰弱』概念與台灣缺牙現況、假牙補助，說明為何缺牙不補是可介入的高齡風險。"
+risksAndLimits:
+  - "日本AGES研究追蹤4年，1.85倍風險數字來自單一世代、非台灣族群"
+  - "北榮研究僅81人且為橫斷面設計，10倍數字參考性遠低於大型世代研究"
+  - "動物實驗顯示的咀嚼與腦部關聯，尚未證實能外推到人類或裝假牙可逆轉衰退"
+  - "假牙補助金額以台南市為例，各縣市金額與資格不同，須以戶籍地公告為準"
 references:
   - title: "Association between self-reported dental health status and onset of dementia（AGES cohort, Yamamoto et al., Psychosomatic Medicine 2012）"
     url: "https://pubmed.ncbi.nlm.nih.gov/22408130/"

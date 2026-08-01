@@ -18,6 +18,11 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 10
+risksAndLimits:
+  - "這次修法只刪兄弟姊妹的特留分，配偶、子女、父母、祖父母比例不變，適用範圍有限"
+  - "沒有遺囑完全不受影響，兄弟姊妹仍是第三順位法定繼承人，本文建議只對已立或打算立遺囑者有意義"
+  - "修正案須公布滿六個月才施行，正式生效日以官方公告為準，非立法院三讀當下"
+  - "酌給請求權須向法院聲請、非自動適用，實際能拿到多少仍待個案認定"
 references:
   - title: "全國法規資料庫（法務部）(2026). 民法第1223條"
     url: "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1223"

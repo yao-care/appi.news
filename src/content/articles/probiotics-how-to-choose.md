@@ -28,6 +28,11 @@ highlights:
   - "台灣小綠人只能就『胃腸功能改善』宣稱，排毒、消滅壞菌、七天瘦腸都是違規詞"
 readingTime: 12
 originalContribution: "把益生菌選購從『比菌數』導回『菌株＋人體試驗劑量』的正確框架：整合 ISAPP 共識定義、WGO 2023 指引與台灣法規（胃腸功能改善、違規裁罰案例），做成消費者可存手機的檢查清單，並揭露作者的業者利益。"
+risksAndLimits:
+  - "文中B. longum 35624每天1億CFU改善腸躁症的例子僅適用該菌株與該適應症，不能套用其他菌株"
+  - "罰則金額與十大違規名單為衛福部111年度資料，其後年度公告基準可能已調整"
+  - "作者為保健食品業者（樂地滋負責人），本文角度來自產業內部，非獨立第三方研究"
+  - "文中引用的人體試驗與指引多來自國際文獻，未必涵蓋台灣本地族群或臨床資料"
 references:
   - title: "ISAPP 共識定義：益生菌／益生元／合生元／後生元／發酵食品"
     url: "https://isappscience.org/a-roundup-of-the-isapp-consensus-definitions-probiotics-prebiotics-synbiotics-postbiotics-and-fermented-foods/"

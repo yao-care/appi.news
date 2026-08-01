@@ -16,6 +16,11 @@ highlights:
   - "廣達引進德國蔡司3D X光掃描儀進行無損PCB與液冷管路檢測，良率提升至少20%"
   - "CT掃描可在一至兩天內找出根本原因，傳統目視檢測需耗費數週"
   - "緯創、英業達跟進建立共同品質標準，品質競爭正取代交期競爭成為台廠新護城河"
+risksAndLimits:
+  - "良率提升至少20%為蔡司主管顏克立單方說法，非獨立稽核或官方統計數字"
+  - "數億元月損失節省為文中以1億元、5%良率假設推算，非廠商公佈財報數字"
+  - "電路板層間對位精度等品質標準仍由廣達、緯創、英業達共同研議中，尚未定案"
+  - "金像電子股價漲幅與CT檢測效益屬個案描述，未涵蓋其他供應鏈廠商成效"
 references:
   - title: "How Non-destructive Testing Boosts AI Server Yields in Taiwan by 20%"
     url: "https://english.cw.com.tw/article/article.action?id=4304"

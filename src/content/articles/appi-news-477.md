@@ -18,6 +18,10 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 12
+risksAndLimits:
+  - "殖利率與債市連動受地緣政治、聯準會轉向等多重變數影響，方向未必持續"
+  - "文中數據為特定時點市場快照，含7月底FOMC決議與Freddie Mac房貸利率，僅適用當下"
+  - "存續期間檢視建議以持有海外債券或退休帳戶部位者為主，未涵蓋其他資產類別"
 references:
   - title: "Board of Governors of the Federal Reserve System (2026). Federal Reserve issues FOMC statement"
     url: "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"

@@ -26,6 +26,10 @@ highlights:
   - "8/2 真正補上的是執法機器：GPAI 義務 2025 年 8 月就生效，2026 年 8 月歐盟 AI 辦公室才取得能查文件、能評估模型、能要求改善、能開罰的權力，罰至全球營收 3% 或 1,500 萬歐元。"
   - "很多人以為高風險義務也同日上路，其實 Digital Omnibus 已把 Annex III 高風險義務暫緩到 2027 年 12 月 2 日；但這只是臨時政治協議、尚未正式公布，法定日在公布前仍是 8/2，賭它一定會緩有風險。"
   - "歐盟與台灣的治理框架其實在問同一組問題：AI 在哪、用途是什麼、誰負責、風險多高、如何監督。骨架共通，所以該用一套盤點同時對接，而不是各做一次。"
+risksAndLimits:
+  - "高風險義務延後至 2027 年僅是臨時協議，須待 Digital Omnibus 正式刊登官方公報後才生效"
+  - "文中歐盟與台灣風險框架的具體條文與時程仍在研議或待核定，實際規範以正式立法為準"
+  - "台灣人工智慧基本法風險分類框架尚未定案，各主管機關細則預計 2026 年後續公布"
 references:
   - title: "CSA Research Note: EU AI Act GPAI Enforcement"
     url: "https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-gpai-enforcement-20260509-csa-st/"

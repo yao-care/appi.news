@@ -28,6 +28,11 @@ highlights:
   - "台灣人最大宗的 UPF 是含糖手搖飲與隱藏鈉：一杯全糖大杯手搖飲含糖 40 到 54 公克，已超過每日建議上限一倍"
 readingTime: 12
 originalContribution: "把 NOVA 四組分類、BMJ 2024 近千萬人統合分析的證據等級與『關聯非因果』分寸、加工肉一級致癌物最常被誤讀的兩個點，以及台灣青少年 UPF 趨勢與含糖飲料、鈉、脂肪肝的在地數據，整理成破除『天然 vs 加工』二分法、務實減量的衛教指南，並由保健食品業者主動揭露利益、不製造恐慌。"
+risksAndLimits:
+  - "BMJ 2024 傘狀回顧為觀察性研究整合，僅顯示關聯而非因果，作者也強調殘餘干擾未能完全排除"
+  - "唯一的因果實驗僅20人、為期兩週、在住院代謝病房進行，無法代表長期日常飲食"
+  - "台灣本土 UPF 攝取趨勢資料來自16至18歲青少年橫斷比較，不能直接套用到成人或最新現況"
+  - "肝病防治學術基金會53.3%脂肪肝盛行率為篩檢受檢者數字，非全國代表性抽樣"
 references:
   - title: "Ultra-processed foods: what they are and how to identify them（Monteiro CA et al., Public Health Nutrition 2019）"
     url: "https://pubmed.ncbi.nlm.nih.gov/30744710/"

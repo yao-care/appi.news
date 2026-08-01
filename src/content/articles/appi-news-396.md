@@ -21,6 +21,11 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 14
+risksAndLimits:
+  - "台灣限量標準為苯（a）駢芘2.0微克／公斤，其他國家或地區規範可能不同"
+  - "一般消費者低劑量長期暴露的健康風險，目前缺乏大規模量化研究可精確估算"
+  - "致癌等級評估多來自動物實驗與職業高劑量暴露族群研究，不等同一般飲食暴露的風險程度"
+  - "文中提及的中聯油脂事件為特定違規案例，個別批次超標不代表市售沙拉油普遍不安全"
 references:
   - title: "衛生福利部（2026）。食藥署說明大豆沙拉油超標油品回收處置情形"
     url: "https://www.mohw.gov.tw/cp-16-87084-1.html"

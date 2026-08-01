@@ -16,6 +16,11 @@ highlights:
   - "過去十年累計獲投超過3.67億美元，2023年單年8,600萬美元為近年峰值，2024年回落至6,850萬美元"
   - "台灣金融科技監理環境嚴格但可預期，催生以支付、加密資產和監理科技為主的差異化應用場景"
   - "台北金融科技新創2019年創辦家數最高達19家，此後逐年趨緩，反映市場走向深化而非廣撒"
+risksAndLimits:
+  - "本文數據全部來自Tracxn單一機構統計，未見其他資料源交叉驗證"
+  - "175家中僅62家曾獲外部融資，結論不適用尚未進入市場驗證的六成公司"
+  - "金管會數位資產監管框架截至發文時尚未底定，2026年規則仍可能生變"
+  - "2024年為文中最新年度數據，2025年後募資與排名走向未涵蓋"
 references:
   - title: "FinTech Startups in Taipei, Taiwan — Market Trends and Funding Data"
     url: "https://tracxn.com/d/explore/fintech-startups-in-taipei-taiwan/__oCMndCpbKpdNfDL7ohG7PpD8AnLNlJ2inemItr30NeE"

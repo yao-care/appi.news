@@ -16,6 +16,10 @@ highlights:
   - "食藥署2020年核准台灣第一套AI輔助診斷系統，AI醫材審查件數此後逐年持續成長"
   - "再生醫療雙法2026年正式施行，細胞治療新藥完成二期臨床後可申請5年暫時性藥證"
   - "衛福部推動FHIR標準採用，SaMD（醫療軟體）監管框架持續完備，提供外資法規確定性"
+risksAndLimits:
+  - "暫時性藥證有效期5年，屬有條件商業化，非完整三期試驗後的正式核准"
+  - "AI醫材目前仍套用傳統醫材臨床試驗框架，缺乏版本更新報備與後市場監控的專屬規範"
+  - "文中對法規缺口的評估為作者觀點，非官方定論"
 references:
   - title: "Digital Health Laws and Regulations Report 2026 Taiwan"
     url: "https://iclg.com/practice-areas/digital-health-laws-and-regulations/taiwan"

@@ -18,6 +18,11 @@ sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 12
+risksAndLimits:
+  - "篩檢與轉介仍需家長主動聯繫各單位，衛生所名額與流程各縣市不同，非全國統一標準"
+  - "早療補助金額與申請文件以戶籍地社會局公告為準，可能隨時間調整"
+  - "文中引用的兩篇研究均提及觀察期偏短、隨機對照試驗數量仍少，長期成效尚未定論"
+  - "國外臨床指引數據套用在台灣情境時，篩檢工具與轉介制度存在差異，需保留解讀空間"
 references:
   - title: "基隆市政府衛生局 (2026). 講話慢別慌！基隆第2處「語言治療中心」落腳七堵！卡位學齡前兒童黃金期"
     url: "https://keelunghihi.com.tw/95650"

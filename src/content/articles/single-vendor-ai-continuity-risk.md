@@ -30,6 +30,11 @@ highlights:
   - "Fable 5、Mythos 5 六月九號上線，三天後被美國商務部一紙出口管制令要求對外國人停用，Anthropic 因無法即時辨識國籍，乾脆對全世界所有人關掉；到六月十八號仍未恢復、也沒有確定日期。"
   - "真正的風險不在價格與 API：按下開關的是供應商頭上的政府，理由跟你的合約與用途無關，你連談判桌都坐不上去。這次示範了把關鍵流程綁死單一前沿模型有多脆弱。"
   - "備援不是多買一顆模型放著，是把『換得掉』做進設計：供應商介面抽成獨立一層、關鍵路徑備好已比對過的 fallback、保留能換掉能踩剎車的可組合工作流。"
+risksAndLimits:
+  - "文中恢復進度只到六月十八號「有信心這幾天恢復」，實際何時恢復未有下文"
+  - "停用範圍僅 Fable 5 與 Mythos 5，其餘 Claude 模型如 Opus 4.8 不受影響"
+  - "「視同出口」的風險提醒出自 Greenberg Traurig 一家事務所，非官方明確認定"
+  - "越獄手法是否真的「很窄、不通用」，僅為 Anthropic 單方說法，未經獨立驗證"
 references:
   - title: "Anthropic Disables Claude Fable 5 and Mythos 5 After US Government Order"
     url: "https://www.marktechpost.com/2026/06/13/anthropic-disables-claude-fable-5-and-mythos-5-after-us-government-order/"

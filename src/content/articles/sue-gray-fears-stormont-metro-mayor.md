@@ -15,6 +15,9 @@ highlights:
   - "她以曾任斯托蒙特財政部常務次長的經驗批評協作不足：新政策常是「一通電話」通知撥款，而非事前找自治政府坐下來討論"
   - "她主張在英國各權力下放地區推行「都會市長」制，北愛爾蘭可在貝爾法斯特與德里設都會市長，給城市更多決策權"
   - "格雷力挺大曼徹斯特市長伯納姆若接任首相、把部分唐寧街運作遷往曼徹斯特的構想，稱此舉是「非常強烈的訊號」"
+risksAndLimits:
+  - "格雷的主張目前僅是活動發言，貝爾法斯特與德里設都會市長尚未進入立法程序"
+  - "伯納姆遷部分唐寧街運作至曼徹斯特為外傳構想，尚未獲施凱爾或政府正式證實"
 references:
   - title: "Baroness Sue Gray says she fears for Stormont"
     url: "https://www.eastlothiancourier.com/news/national/26229116.baroness-sue-gray-says-fears-stormont/"

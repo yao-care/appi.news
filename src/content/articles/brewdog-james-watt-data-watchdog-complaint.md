@@ -20,6 +20,11 @@ highlights:
   - "收購方Tilray今年稍早以約3,300萬英鎊完成救援收購，取得BrewDog品牌、智慧財產權、英國釀酒廠及11間酒吧，導致36間酒吧關閉、近500人失業、約20萬名群眾募資投資人股份歸零"
   - "Tilray否認外流任何資料，並澄清「股權龐克」股東名冊仍由破產中的BrewDog plc掌控、未隨此次收購轉手，公司未參與或協助華特的聯繫行動"
   - "Tilray強調品牌並非待售，即便華特已展開新一輪買回攻勢"
+risksAndLimits:
+  - "ICO僅證實正在評估投訴，尚未展開正式調查或做出裁罰決定"
+  - "4.3萬名股東支持買回計畫為華特單方說法，未見獨立來源證實"
+  - "Tilray否認提供資料的說法同樣未經第三方查證"
+  - "華特買回要約與ICO調查結果均尚未有定論，仍在進行中"
 references:
   - title: "BrewDog co-founder James Watt faces complaints to UK data watchdog"
     url: "https://www.irvinetimes.com/news/national/26290665.brewdog-co-founder-james-watt-faces-complaints-uk-data-watchdog/"

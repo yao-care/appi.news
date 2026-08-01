@@ -15,6 +15,11 @@ highlights:
   - "台灣半導體佔MSCI台灣指數65%市值，在全球AI ETF持倉中TSM ADR平均佔比3%至6%，曝險高度集中"
   - "AMD估計AI資料中心TAM將從2025年的2,000億美元成長至2030年的1兆美元，ETF投資可捕捉整條價值鏈"
   - "AI ETF配置的核心誤區：以主題純粹度衡量好壞，卻忽略費用率、流動性與底層持倉重疊度的結構性問題"
+risksAndLimits:
+  - "台積電ADR在多篇AI主題ETF中重複現身，實際分散效果因人持股結構而異"
+  - "持有成本估算(匯兌、扣稅)為文中概算，各券商與複委託實際費用不同"
+  - "2026年資料中心資本支出為業者預估數字，非已實現結果"
+  - "半導體與AI基礎建設ETF報酬差距達70個百分點，個別標的表現波動仍大"
 references:
   - title: "The Best Artificial Intelligence ETFs 2025-2026 Performance Comparison"
     url: "https://www.justetf.com/en/how-to/invest-in-artificial-intelligence.html"

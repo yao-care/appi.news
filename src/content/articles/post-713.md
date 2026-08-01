@@ -17,6 +17,10 @@ highlights:
   - "OpenAI、Anthropic、Scale AI、xAI四家公司年度累計募資均破百億美元，AI資金高度集中"
   - "AI基礎建設次領域雖只有12筆鉅額投資，但金額達474億美元，占AI領域整體的83%"
   - "台灣在晶片製造、AI伺服器、散熱系統等AI基礎建設關鍵節點具供應鏈護城河，吸引國際CVC關注"
+risksAndLimits:
+  - "投資數字為2025年統計，2026年AI基礎建設支出走向尚未有定論"
+  - "OpenAI、Anthropic等估值是否合理仍是市場爭論中，非本文結論"
+  - "供應鏈訂單效益屬產業趨勢推論，非個別廠商財報已證實數字"
 references:
   - title: "【全球創投風向掃描】AI驅動的資金集中與市場分化"
     url: "https://findit.org.tw/tw/Res/2538"

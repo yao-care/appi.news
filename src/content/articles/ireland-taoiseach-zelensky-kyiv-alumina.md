@@ -18,6 +18,10 @@ highlights:
   - "馬丁提替代方案：與歐盟執委會合作確保鋁土礦不流向俄羅斯，未必直接制裁該產品；法國敦克爾克煉油廠7成鋁土礦仰賴這座愛爾蘭工廠"
   - "澤倫斯基盼歐盟層級制裁並感謝愛爾蘭的支持；馬丁悼念陣亡烏克蘭軍人，並晤新任總理科列茨基與國會議長談歐盟入盟談判"
   - "愛爾蘭迄今對烏克蘭雙邊援助累計超過5億歐元；歐盟下一輪對俄制裁預計9月討論"
+risksAndLimits:
+  - "調查結論尚未確定，愛爾蘭官方稱既無決定性證據證明鋁土礦流向俄羅斯軍工業者，也無法排除"
+  - "替代做法僅是馬丁提出的方向，尚未與歐盟執委會敲定具體方案"
+  - "歐盟下一輪對俄制裁方案要到9月才討論，鋁土礦爭議短期內不會有定案"
 references:
   - title: "Irish premier Micheál Martin to meet Ukraine's Volodymyr Zelensky in Kyiv"
     url: "https://www.northwichguardian.co.uk/news/national/26402033.irish-premier-micheal-martin-meet-ukraines-volodymyr-zelensky-kyiv/"

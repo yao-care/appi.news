@@ -29,6 +29,10 @@ highlights:
   - "Anthropic 新一輪募約 650 億美元、投後估值約 9,650 億美元，並機密遞件 IPO，估值超車 OpenAI 三月的 8,520 億美元。"
   - "真正的訊號不是估值排名，而是估值撐起的算力長約：3.5 GW 客製 TPU、500 億美元美國算力投資，把前沿大廠變成算力與供應鏈的金融槓桿體。"
   - "台廠封裝、伺服器、記憶體的能見度上升，但 CoWoS 配額被少數大廠鎖住逾 85%，能見度與綁單一供應商的集中度風險同步上升。"
+risksAndLimits:
+  - "這篇是產業訊號解讀，非投資建議，估值排名不代表模型能力優劣"
+  - "CoWoS 產能配額數字為文中引用第三方報導，未見台積電官方數字佐證"
+  - "算力長約與供應鏈集中度風險為作者研判，非台廠已公開證實的具體衝擊"
 references:
   - title: "Anthropic confidentially files for IPO after raising $65 billion in a funding round at a $965 billion valuation"
     url: "https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/"

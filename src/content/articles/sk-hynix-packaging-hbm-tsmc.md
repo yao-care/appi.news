@@ -27,6 +27,11 @@ highlights:
   - "SK 海力士要投 19 兆韓元（約 130 億美元）在南韓清州蓋 P&T7 先進封裝廠，4 月動工、2027 年底完工、2028 年全產，號稱全球最大的 HBM 封裝設施，是韓國半導體後段製程史上數一數二的單筆投入。"
   - "同一時間 SK 海力士跟台積電簽備忘錄，HBM4 的基礎裸晶（base die）改用台積電邏輯製程、並與台積電 CoWoS 封裝整合；蓋自家封裝廠與綁台積電封裝是同一題的兩手，都在補後段。"
   - "台積電 CoWoS 產能吃緊，已逼得 SK 海力士去測 Intel 的 EMIB 封裝，Google、Meta 也在採用；台積電這道封裝咽喉是台灣的位置，也是正在被撬動的位置。"
+risksAndLimits:
+  - "SK海力士測試Intel EMIB封裝屬TrendForce報導的傳聞，尚未證實會實際採用或量產"
+  - "P&T7廠2027年底才完工、2028年全產，目前後段封裝產能與效益仍未實現"
+  - "HBM市場年複合33%成長率為產業預估數字，非已發生的實際結果"
+  - "SK海力士與台積電合作細節多來自雙方新聞稿，實際良率與量產進度尚待第三方查證"
 references:
   - title: "SK Hynix to build $13 bn new advanced chip packaging plant to bolster HBM lead"
     url: "https://www.kedglobal.com/korean-chipmakers/newsView/ked202601130007"

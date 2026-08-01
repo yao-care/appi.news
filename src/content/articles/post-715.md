@@ -17,6 +17,11 @@ highlights:
   - "BlackRock旗下iShares研究指出台灣股市中半導體佔65%市值，是亞洲AI硬體週期最直接的投資標的"
   - "BlackRock同步超配新興市場股票，偏好AI受益者與大宗商品出口國，台灣與韓國列核心部位"
   - "BlackRock警告AI建設支出高度前置、回報後置，使金融體系槓桿升高，須以主動式管理應對波動風險"
+risksAndLimits:
+  - "BlackRock 的超配立場是法人配置框架，2026 年展望的具體數字會隨市況調整"
+  - "文中資本支出、獲利成長等預估數字來自 BlackRock 自身研究機構，尚未經獨立第三方驗證"
+  - "台灣半導體佔市值 65% 屬高度集中曝險，單押台積電或台灣 ETF 無法分散主題風險"
+  - "AI 貨幣化進度與利率走向存在不確定性，可能影響超大型科技公司獲利修正幅度"
 references:
   - title: "BlackRock Investment Institute Q2 2026 Investment Outlook"
     url: "https://www.blackrock.com/corporate/insights/blackrock-investment-institute/publications/outlook"

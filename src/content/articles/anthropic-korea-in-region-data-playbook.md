@@ -28,6 +28,10 @@ highlights:
   - "拿下一個國家的企業市場，靠的不是模型跑分高一點，而是在地辦公室、資料主權、國家級安全合作、in-region data 四件事一起打包。"
   - "Hanwha 走 AWS Bedrock、滿足境內資料落地要求，是它願意把 Claude 給全球員工用的前提；in-region data 解資料落地，解不了地緣政治一夜斷供。"
   - "台廠導入前沿 AI，該把 in-region 資料控管當談判桌上的關鍵籌碼，並先盤資料邊界、可換性、主權對齊三格。"
+risksAndLimits:
+  - "韓國個案的整套打法，是否適用台灣法規與採購環境尚無定論"
+  - "出口管制是否影響三星、SK 等已簽約韓廠的實際使用，報導當下仍在觀察中"
+  - "文中對台廠的建議屬作者立場延伸，非本文個案研究的直接結論"
 references:
   - title: "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem"
     url: "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem"

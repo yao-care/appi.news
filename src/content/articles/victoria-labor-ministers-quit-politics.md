@@ -25,6 +25,10 @@ highlights:
   - "迪安布羅西奧自2002年起代表米爾帕克（Mill Park）選區，是澳洲任職最久的能源部長；辛則是2014年當選的維州國會首位公開同志身分議員"
   - "兩人退場為卡羅爾下週一核心小組會議後的內閣改組騰出空間，卡羅爾承諾組成「強大、紀律嚴明且團結」的新內閣"
   - "維州工黨政局動盪源於前總理傑辛塔．艾倫（Jacinta Allan）本週遭黨內政變下台，卡羅爾在她辭職後接任，距離11月州選僅剩約四個月"
+risksAndLimits:
+  - "兩位部長辭去內閣後續動向與艾倫本人去留，內文未提供進一步公開說明"
+  - "報導引自 Scone Advocate、The Nightly、Yahoo News Australia 與 OUTinPerth 等澳媒，尚未見獨立第三方查證"
+  - "內閣改組人事僅稱預計於下週一核心小組會議拍板，實際名單尚未公布"
 references:
   - title: "Jacinta Allan allies to quit politics after Labor coup"
     url: "https://www.sconeadvocate.com.au/story/9321010/jacinta-allan-allies-to-quit-politics-after-labor-coup/"

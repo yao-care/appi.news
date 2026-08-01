@@ -24,6 +24,8 @@ coverImage: "covers/civic-services-2026-07-29-cover.webp"
 coverAlt: "市政服務窗口示意圖"
 coverImageCredit: "Photo by Lucas Chizzali on Unsplash"
 disclosure: "本文整理自各縣市政府公開新聞稿與公告，附原文出處，未加入編輯部個人觀點。"
+risksAndLimits:
+  - "本文僅整理台北市、新北市、台中市、嘉義市四地措施，其他縣市便民資訊未涵蓋在內"
 ---
 
 今天整理台北市、新北市、台中市、嘉義市政府公告的便民市政措施，涵蓋道路施工改道與路口新路型、風災泡水車慰助申請、育兒補助線上申辦、颱風農損現金救助、食用油品健康諮詢門診，以及非營利幼兒園新生登記，方便讀者掌握申辦期限與生活提醒重點。

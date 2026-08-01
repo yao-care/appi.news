@@ -27,6 +27,9 @@ highlights:
   - "微軟 6/2 Build 端出 Work IQ、6/16 API 正式上線；它持續處理 email、行事曆、會議、聊天、檔案、人員與協作模式，建出『組織如何運作的即時模型』。"
   - "被治理的東西變了：從資料安全延伸到組織行為的可觀測性與存取邊界；當行為被語意化建立索引，權力會轉移到索引結構與它的設計方式。"
   - "微軟用使用者範圍權限、Rego 政策引擎、全程稽核與租戶信任邊界把關，但需要這整套防線，正說明『誰能查到誰的工作軌跡』已是要被治理的真問題。"
+risksAndLimits:
+  - "Work IQ 是 2026 年 6 月上線的新產品，權限治理實際運作成效尚無獨立驗證"
+  - "文中所述權限設計與稽核機制依據微軟官方部落格說法，未經第三方稽核"
 references:
   - title: "Announcing the new Work IQ APIs"
     url: "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/"

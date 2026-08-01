@@ -17,6 +17,11 @@ highlights:
   - "研究發表於Nature期刊，識別出逾38萬8千個其他亞洲生物資料庫未收錄的新型遺傳變異"
   - "整合16家醫院電子病歷，涵蓋逾10年縱向追蹤資料，建立265種疾病的多基因風險預測模型"
   - "台灣健保資料庫與基因資料結合，打造東亞精準醫療研究最完整的基礎設施之一"
+risksAndLimits:
+  - "族群基因分析涵蓋閩南、客家、漢族與原住民，結論未必適用於非漢人族裔"
+  - "PRS模型AUC最高0.86，部分疾病或性狀預測仍未達可臨床單獨依賴的水準"
+  - "招募與資料整合以台灣本地醫院為主，不同醫療體系或健保制度地區未必能複製此模式"
+  - "資料治理框架與存取規範仍在演進中，尚未定案"
 references:
   - title: "Taiwan builds one of the world's largest precision medicine cohorts"
     url: "https://www.eurekalert.org/news-releases/1103946"

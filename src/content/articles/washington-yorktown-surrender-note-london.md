@@ -15,6 +15,9 @@ highlights:
   - "這封信開啟了通往1783年《巴黎條約》的談判，英國正式承認美國獨立"
   - "原信戰後交給英軍中將康沃利斯，留在艾塞克斯郡奧德利莊園家族檔案，1880年才捐給英國公共檔案局"
   - "展覽「Revolution 250」6月24日至11月29日於邱園免費展出，紀念美國獨立宣言250週年"
+risksAndLimits:
+  - "這封信的內容與流轉過程來自英國國家檔案館與愛爾蘭媒體報導，尚未見獨立第三方史料查證"
+  - "展覽時效為2026年6月24日至11月29日，過後展品安排未知"
 references:
   - title: "Revolution 250: America's Independence Story, 1763–1783"
     url: "https://www.nationalarchives.gov.uk/whats-on/exhibitions/revolution-250-americas-independence-story-1763-1783/"

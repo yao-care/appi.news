@@ -17,6 +17,10 @@ highlights:
   - "洛杉磯野火造成530億美元總損失、400億美元投保損失，是2025年上半年最嚴重單一災害事件"
   - "2025年3月緬甸與泰國7.7級地震造成120億美元損失、逾4500人死亡，保險覆蓋率卻接近零，凸顯亞太保護缺口"
   - "近八年中有七年全球天氣相關投保損失超過1000億美元，氣候極端化已從偶發事件演變為系統性財務風險"
+risksAndLimits:
+  - "緬甸地震投保損失數字為概估，實際重建成本仍高度仰賴政府與國際援助後續統計"
+  - "文中2026年再保費調整幅度與颱風季觀察均為未來待驗證項目，非既成事實"
+  - "法規追蹤僅提及CSRD、SEC框架與台灣可能跟進，實際立法時程尚未確定"
 references:
   - title: "Natural disasters caused $131 billion in damage in the first half of 2025"
     url: "https://www.cbsnews.com/news/natural-disasters-damage-losses-2025"

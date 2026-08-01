@@ -28,6 +28,11 @@ highlights:
   - "脂肪肝最常見的死因其實是心血管疾病，它從來不只是肝的事"
 readingTime: 12
 originalContribution: "把 NAFLD 更名 MASLD 的代謝框架、瘦型脂肪肝的證據、抽血盲區、進展與心血管風險，以及『沒有特效藥、減重才是核心』的逆轉路徑整理成可判讀的衛教指南，並由保健食品業者主動揭露利益、守不推銷不誇大的分際。"
+risksAndLimits:
+  - "瘦型脂肪肝風險HR 2.14、2.31為觀察性研究相對風險,非個人絕對風險或因果證據"
+  - "resmetirom僅限非肝硬化、中重度纖維化(F2至F3)患者,台灣尚未上市"
+  - "減重7%至10%改善、逾10%逆轉纖維化為族群平均與研究上限值,個體差異大"
+  - "台灣53.3%脂肪肝盛行率為自願受檢者比例,非全民代表性數據"
 references:
   - title: "The New MASLD Nomenclature（美國肝病研究學會 AASLD）"
     url: "https://www.aasld.org/new-masld-nomenclature"

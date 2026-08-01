@@ -22,6 +22,11 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 14
+risksAndLimits:
+  - "減重相關研究皆為動物實驗，換算劑量遠高於日常料理用量，人體臨床證據仍不足"
+  - "服用心臟科或免疫抑制類藥物者，胡椒鹼可能影響代謝酵素改變血中濃度，用前應諮詢醫師"
+  - "孕婦不建議額外補充高劑量胡椒鹼萃取物，動物研究顯示極高劑量有潛在子宮收縮疑慮"
+  - "胃潰瘍或胃食道逆流患者大量食用黑胡椒可能刺激胃黏膜，不宜刻意多吃"
 references:
   - title: "Wang W, Zhang Y, Wang X, Che H, Zhang Y. (2021). Piperine Improves Obesity by Inhibiting Fatty Acid Absorption and Repairing Intestinal Barrier Function. *Plant Foods and Human Nutrition*, 76(4)"
     url: "https://pubmed.ncbi.nlm.nih.gov/34591253/"

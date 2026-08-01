@@ -26,6 +26,10 @@ highlights:
   - "OpenAI 6/16 發表 Deployment Simulation：拿近期去識別的真實對話、把原模型回覆剝掉、改用待上線的候選模型重新生成，再用分類器掃有沒有冒出或變多的不當行為。"
   - "在約 130 萬則對話（GPT-5 Thinking 到 GPT-5.4）上驗證，對版本間明顯變動的類別，這套模擬法 92% 答對問題是增是減，標準測試只有 54%；還揪出 GPT-5.1 的 calculator hacking。"
   - "重點不是 OpenAI 又發了什麼，是上線前驗收該從跑分搬回真實情境。企業導入 AI 不能只信 benchmark，要用自家真實流量做上線前驗收。"
+risksAndLimits:
+  - "Deployment Simulation 在四個 GPT-5 系列模型、約 130 萬則對話上驗證，其他模型或供應商未必適用"
+  - "整體命中率的中位數誤差約 1.5 倍，不算精準預測"
+  - "文中醫療 AI 華佗案例為作者自家專案經驗，非可外部查核的獨立研究"
 references:
   - title: "Predicting LLM Safety Before Release by Simulating Deployment"
     url: "https://cdn.openai.com/pdf/predicting-llm-safety-before-release-by-simulating-deployment.pdf"

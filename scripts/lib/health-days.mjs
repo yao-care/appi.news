@@ -26,6 +26,7 @@
  * 全站都是同幾張聽診器；寫死才能讓同一個紀念日歷年維持同一視覺主軸，年度差異交給 --context/--caption。
  */
 import { renderTitleTargeting } from './title-targeting.mjs';
+import { RISKS_PROMPT } from "./risks-prompt.mjs";
 
 export const HEALTH_DAYS = [
   // ── 1 月 ────────────────────────────────────────────────────────────
@@ -810,6 +811,8 @@ export function buildHealthDayPrompt(entry, date, opts = {}) {
     '  topics: ["health-days"]',
     `  tags: 只能填 ${entry.tags.map((t) => `"${t}"`).join('、')}（受控詞彙表，見 src/config/tags.ts；不得自行新增或改寫）`,
     '  disclosure: 說明本文整理自官方與權威組織公開資料、附原文出處',
+    '',
+    RISKS_PROMPT,
     '',
     `寫入 src/content/articles/${slug}.md，**不要 git add/commit/push**（外層處理）。`,
     '',

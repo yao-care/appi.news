@@ -17,6 +17,10 @@ highlights:
   - "RMCRA代表約100戶皇家鑄幣廠住宅業主，已籌得逾22萬英鎊訴訟經費，並獲跨黨派「對華政策跨國議會聯盟」（IPAC）支持，宣布立即上訴，盼上級法院能更有『勇氣』重新考慮這些理由"
   - "中國政府2018年以2.55億英鎊購入倫敦塔對面的皇家鑄幣廠舊址；原始擴大版申請2022年12月、縮小版申請2024年12月兩度遭Tower Hamlets議會否決，決定權其實已於2024年10月由時任住房大臣雷納收回中央"
   - "住房大臣里德2026年1月20日核准約2萬平方公尺（21.5萬平方英呎）建案，由David Chipperfield Architects操刀，落成後將成歐洲最大中國外交機構；同年1月12日外交部已先撤回廣場區域的外交豁免同意，確保該處公眾可及區域不受外交豁免權保護"
+risksAndLimits:
+  - "高等法院僅駁回司法覆核，RMCRA已宣布上訴，最終法律結果尚未確定"
+  - "外交層級救濟手段（不受歡迎人物、斷絕外交關係）為住房大臣提出的理論選項，未經實際測試"
+  - "規劃許可核准細節與FCDO撤回豁免同意等資訊多引自單一媒體報導，尚待其他來源交叉驗證"
 references:
   - title: "Chinese super embassy planning permission decision upheld at High Court"
     url: "https://www.cotswoldjournal.co.uk/news/national/26426552.chinese-super-embassy-planning-permission-decision-upheld-high-court/"

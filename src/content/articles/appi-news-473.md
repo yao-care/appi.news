@@ -18,6 +18,11 @@ sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 11
+risksAndLimits:
+  - "相關研究多為觀察性世代追蹤，只能說明關聯性，無法證明握力或步速下降直接導致死亡風險上升"
+  - "亞健康目前並無統一定義與診斷工具，不同研究採用的判斷標準也不盡相同"
+  - "JAMA 步速研究與廣島握力研究的追蹤對象皆為中高齡族群，年輕族群的參考值證據較少"
+  - "握力與起坐測試的參考值依亞洲肌少症工作小組（AWGS）共識訂定，未必適用其他地區族群"
 references:
   - title: "Studenski S, Perera S, Patel K, et al. (2011). Gait speed and survival in older adults. *JAMA*, 305(1), 50-58"
     url: "https://pubmed.ncbi.nlm.nih.gov/21205966/"

@@ -17,6 +17,11 @@ highlights:
   - "香港於2026年1月擴大可持續金融分類法，將過渡融資與適應類別納入認可範疇，為銀行業承作過渡債券提供監管確定性"
   - "ING亞太永續解決方案主管Martijn Hoogerwerf預測2026年過渡債券發行量回升，亞太區整體永續金融量有望超越2025年創下的歷史高點"
   - "GFMAG 2026亞太永續金融獎項覆蓋台灣、日本、新加坡、印度等11個市場，顯示ESG融資從少數先行者向多市場常態化過渡"
+risksAndLimits:
+  - "香港分類法納入過渡融資才於2026年1月上路，實際採用率與成效尚待年底發行數據驗證"
+  - "過渡債券發行量回升為ING亞太主管的預測，非已確定發生的結果"
+  - "Circulate Capital基金2.2億美元為二期首次關閉金額，4至5億美元為最終目標尚未達成"
+  - "文中對台灣的意涵屬推論分析，非官方政策或金管會已公布之具體規劃"
 references:
   - title: "Sustainable Finance Awards 2026 – Asia Pacific Winners"
     url: "https://gfmag.com/award/award-winners/sustainable-finance-awards-2026-asia-pacific"

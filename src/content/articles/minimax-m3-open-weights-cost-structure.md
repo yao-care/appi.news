@@ -27,6 +27,11 @@ highlights:
   - "標準 API 定價 $0.60／$2.40 per 1M（首週五折），約是西方旗艦的零頭；它和 Qwen 3.7 Max、Kimi K2.7、GLM 5.2 一起把中國開源權重的智慧成本壓到地板。"
   - "真正的訊號不是跑分新王，是自架可行性與選型的成本結構被重寫：開源權重＋低價讓自架、資料不出境變成務實選項。"
   - "但 AI 變便宜本身沒那麼重要，重要的是你原本算錢的方式錯了：成本不是『用多少算多少』，而是『解決一次問題要跑多複雜的流程』。"
+risksAndLimits:
+  - "模型單價與跑分為 2026 年 6 月初資訊，API 折扣與定價可能隨時調整"
+  - "權重與技術報告官方稱約十日內釋出，實際落地時程與授權條款尚未確定"
+  - "SWE-Bench Pro 及輸出單價比較為單一或少數評測整理，未經獨立覆核"
+  - "自架資料不出境的可行性仍需去識別化、權限與驗證機制到位，非模型本身保證"
 references:
   - title: "MiniMax M3: Open-Weight Frontier Model with 1M Context"
     url: "https://datanorth.ai/news/minimax-launches-m3"

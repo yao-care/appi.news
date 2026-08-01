@@ -21,6 +21,11 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 10
+risksAndLimits:
+  - "扶養比推估以國發會人口模型為準，實際變化受出生率與移民政策影響"
+  - "退休生態調查為問卷式社會調查，反映現象普遍性而非個案精算結果"
+  - "長照津貼與服務項目金額為現行規定，實際核定依個案評估與未來政策調整而異"
+  - "照顧者離職與扶養年數統計來自民間調查，非全國普查數字"
 references:
   - title: "中央社 (2026). 2025年台灣正式邁入超高齡社會 新生兒數再創新低"
     url: "https://www.cna.com.tw/news/ahel/202601090067.aspx"

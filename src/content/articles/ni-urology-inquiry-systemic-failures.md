@@ -18,6 +18,10 @@ highlights:
   - "爭議核心歐布萊恩在克雷加文醫院執業28年、2020年7月退休；逾千名病患病歷遭召回檢視，其中9件達「嚴重不良事件」門檻"
   - "調查主席史密斯御用大律師認定歐布萊恩是技術純熟、無意傷害病患的外科醫師，卻是信託未能妥善管理的「陷入困境的醫師」"
   - "報告提出三項核心建議：把病患安全列為醫療首要目的、強化領導養成、投資資料系統及早辨識風險；衛生部長奈斯比特致上「無條件道歉」"
+risksAndLimits:
+  - "調查針對特定信託與單一醫師，其他院所或地區的泌尿科服務未必存在同樣問題"
+  - "報告聚焦2019至2020年病歷召回情形，現行監督措施是否已改善尚待後續追蹤驗證"
+  - "三項建議屬調查提出的方向，實際落實進度與成效目前尚無定論"
 references:
   - title: "Patients failed amid systemic governance failures, Urology Inquiry finds"
     url: "https://www.eastlothiancourier.com/news/national/26225034.patients-failed-amid-systemic-governance-failures-urology-inquiry-finds/"

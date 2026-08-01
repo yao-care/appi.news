@@ -19,6 +19,10 @@ highlights:
   - "孟加拉政府已正式向印度提出引渡請求，新德里回應稱該請求「正在審查中」；哈希娜則說印度當局並未與她討論此事，目前她住在印度境內一處秘密地點"
   - "孟加拉今年2月12日舉行2024年起義後首次大選，孟加拉民族主義黨（BNP）拿下299席中的212席，黨魁塔里克．拉赫曼2月17日就任總理，本人也是結束17年英國流亡後才於去年12月返國參選"
   - "人權觀察（Human Rights Watch）批評審判未達國際公平審判標準；孟加拉政府則承諾若哈希娜返國，將確保她獲得合法程序"
+risksAndLimits:
+  - "死刑判決由達卡國際罪行法庭缺席審理做出，人權觀察指審判未達國際公平標準"
+  - "孟加拉向印度提出的引渡請求截至報導時仍在審查中，尚無明確結果"
+  - "約1,400人死亡為聯合國估計數字，非官方最終認定人數"
 references:
   - title: "Bangladesh ex-premier Hasina vows to return despite fearing for life"
     url: "https://www.hurriyetdailynews.com/bangladesh-ex-premier-hasina-vows-to-return-despite-fearing-for-life-224954"

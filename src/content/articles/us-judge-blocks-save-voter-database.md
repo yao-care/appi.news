@@ -15,6 +15,10 @@ highlights:
   - "法官認定相關機構無法定職權改造 SAVE，違反《隱私法》《社會安全法》與《行政程序法》"
   - "自2025年4月以來逾6千萬筆選民登記被比對，約2.1萬人（不到1%）被標為疑似非公民，至少25州曾使用"
   - "原告為婦女選民聯盟與電子隱私資訊中心等，國土安全部表明將上訴"
+risksAndLimits:
+  - "聯邦政府已表明將上訴，這項違法認定尚未定讞，後續走向可能翻轉"
+  - "裁定禁止的是SAVE系統現行用法，並非全面終結選民資格查核措施本身"
+  - "約2.1萬名遭標記者是否確為非公民，報導未逐一查證，個案如尼爾外仍可能有誤判"
 references:
   - title: "A federal judge finds a Trump data system to verify voters is unlawful"
     url: "https://www.wvxu.org/news-from-npr/2026-06-22/a-federal-judge-finds-a-trump-data-system-to-verify-voters-is-unlawful"

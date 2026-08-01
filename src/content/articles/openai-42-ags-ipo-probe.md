@@ -29,6 +29,11 @@ highlights:
   - "42 個州的檢察長由紐約檢察長 Letitia James 領銜，在 OpenAI 6 月 8 日機密遞件 S-1 後幾天發出傳票，範圍涵蓋廣告、使用者留存、健康資料、未成年與長者、模型諂媚與內部政策。"
   - "真正的根因不是廣告話術，而是對話式 AI 把健康與心理資訊的蒐集搬進一個不受 HIPAA 約束的聊天介面，IPO 的揭露義務讓這道法規風險第一次要被寫進招股書、被市場定價。"
   - "台灣的對照組是個資法的特種資料與剛上路的 AI 基本法風險分類：健康資料落在最敏感那一格，該問的是本地服務蒐集這類資料時，驗證與責任歸屬有沒有補上，而不是等出事才追。"
+risksAndLimits:
+  - "傳票是調查工具，OpenAI 尚未被認定違法，六類文件細節目前未完全公開"
+  - "IPO 估值上看兆美元為報導引述數字，尚未經 OpenAI 正式申報確認"
+  - "加州檢方讓步案例來自 2025 年非營利轉型案，與本次 42 州傳票非同一案件"
+  - "台灣個資法與 AI 基本法的對照屬類比參考，非兩地法規已直接對應適用"
 references:
   - title: "42 state attorneys general probe OpenAI days after IPO filing"
     url: "https://thenextweb.com/news/openai-state-attorneys-general-investigation-ipo"

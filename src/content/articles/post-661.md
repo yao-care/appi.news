@@ -15,6 +15,9 @@ highlights:
   - "專場匯集台灣、歐盟、日本、美國監管機構與醫療系統代表，共同探討關鍵藥品國際協調路徑"
   - "台灣政府已宣布4年240億元新台幣（約7.55億美元）藥品備援計畫，聚焦國內產製與智慧調配"
   - "政策框架從缺藥管理轉型為供應韌性治理，強調主動備援而非被動應急"
+risksAndLimits:
+  - "240億元計畫成效需4年後才能驗證,目前僅為規劃階段的政策承諾"
+  - "本土產製比率提升與跨境預警機制皆屬未來觀察項目,尚無具體時程或條文"
 references:
   - title: "Taiwan Town Hall: Strategies to Promote Medicine Supply Resilience — DIA 2026 Global Annual Meeting"
     url: "https://www.diaglobal.org/en/conference-listing/meetings/2026/06/dia-2026-global-annual-meeting/agenda/16/taiwan-town-hall-strategies-to-promote-medicine-supply-resilience"

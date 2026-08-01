@@ -26,6 +26,11 @@ highlights:
   - "Gemini 3.5 Pro 帶 200 萬 token 脈絡與 Deep Think 推理逼近 GA，是量產前沿模型最長的脈絡視窗；但官方定價未公布，超過 20 萬 token 的長脈絡段是估算加價區。"
   - "廣告脈絡長度不等於可用脈絡：RULER 基準顯示宣稱 32K 以上的模型只有一半能在 32K 撐住，資訊埋在中段還會出現 lost in the middle 的注意力衰退。"
   - "長脈絡真正划算的是單一長文件整體理解、整包程式碼跨檔推理、長時程 agent 記憶這幾類；知識庫問答這種要精準檢索又要引用出處的活，RAG 或混合架構更省更準。"
+risksAndLimits:
+  - "長脈絡加價門檻與定價為企業預覽估算，Google 官方定價尚未公布，正式上線後可能調整"
+  - "三類適用場景與知識庫改用 RAG 的判斷，僅適用於單一長文件理解、跨檔程式碼推理與長時程 agent 記憶，其餘任務類型未討論"
+  - "RULER 與 Lost in the Middle 為既有基準研究，未必反映 Gemini 3.5 Pro 本身的實測表現"
+  - "文中脈絡長度衰退幅度依模型而異，未提供 Gemini 3.5 Pro 專屬的衰退門檻數字"
 references:
   - title: "Gemini 3.5 Pro Developer Guide: 2M Context Window and Deep Think Mode"
     url: "https://www.developersdigest.tech/blog/gemini-3-5-pro-developer-guide-2026"

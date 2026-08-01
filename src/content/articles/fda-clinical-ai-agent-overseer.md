@@ -28,6 +28,11 @@ highlights:
   - "ARPA-H 的 ADVOCATE 計畫要做第一個 FDA 授權、會自己行動的臨床 AI agent：能自主調整門診、用藥、飲食，連處方都能自己開自己改，鎖定心臟衰竭與心肌梗塞康復病人，預計六個月內（約二〇二六年六月）選定團隊，39 個月內含 FDA 授權。"
   - "計畫另外做一個監督用的 overseer agent 即時盯著行動 agent，等於把企業治理的 Maker-Checker 雙人覆核搬進 AI；但這套覆核裡，會出錯的執行者和負責把關的監督者，這次都是 AI。"
   - "當 AI 不只回答而是真的做事，責任誰負就成了硬問題。台灣導入要先答的不是模型準不準，而是哪些動作可以自主、哪些一定要真人核准、出錯時責任歸屬寫清楚沒有。"
+risksAndLimits:
+  - "ADVOCATE 目前僅鎖定心臟衰竭與心肌梗塞康復病人，非全面適用所有慢性病照護"
+  - "計畫預計 6 個月內選團隊、39 個月分三階段做完 FDA 授權，實際落地時程未定"
+  - "出錯時開發商、監督醫師與醫療體系的責任分配，目前尚無明確定論"
+  - "獨立評估的逾 500 億美元省下金額為預估數字，非已驗證的實際成效"
 references:
   - title: "ARPA-H to revolutionize cardiovascular disease management with clinical agentic AI"
     url: "https://arpa-h.gov/news-and-events/arpa-h-revolutionize-cardiovascular-disease-management-clinical-agentic-ai"

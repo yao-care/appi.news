@@ -13,6 +13,11 @@ highlights:
   - "Rocket Lab USA負責衛星本體製造，UC Berkeley提供科學儀器，任務目標是釐清太陽風驅動火星大氣逃逸的物理機制"
   - "JAXA MMX任務太空船已於2026年3月31日抵達種子島，計畫在日本財政年度2026年以H3火箭發射，目標採集Phobos表面10克樣本"
   - "MMX為多國合作計畫，NASA、法國CNES、德國DLR與ESA均提供儀器或技術支援，預計2031年攜帶樣本返回地球"
+risksAndLimits:
+  - "ESCAPADE要到2027年9月才進入火星軌道，任務成敗現階段尚無結果"
+  - "MMX的H3發射窗口與2031年返地時程仍待兌現，日本2023年H3首飛曾失敗過"
+  - "Phobos起源之謎（捕獲說或撞擊說）需採樣返回地球分析後才能定論，現階段無答案"
+  - "台灣供應鏈能否進入相關分包仍屬推論方向，文中未提及具體合作案或訂單"
 references:
   - title: "NASA and Blue Origin Launch Two Spacecraft to Study Mars Solar Wind"
     url: "https://www.nasa.gov/news-release/nasa-blue-origin-launch-two-spacecraft-to-study-mars-solar-wind"

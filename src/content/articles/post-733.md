@@ -14,6 +14,10 @@ highlights:
   - "2025年9月9日「運動部」正式成立，成為獨立一級行政機關，組織架構為1部1署3中心"
   - "248億元包含運動部本部、全民運動署、運動發展基金及地方補助款等多層預算結構"
   - "資源挹注優先項目包括舉辦國際大型賽事、體育班正常化、身障運動與全民健身基礎建設"
+risksAndLimits:
+  - "248億元含地方一般性補助款54億元，實際分配比例與時程未於文中列出"
+  - "國際賽事主辦與體育班改革成效仍待數年後才能觀察"
+  - "運動產業實際受益比例未有具體數字，僅為文中推估方向"
 references:
   - title: "Taiwan's Sports Diplomacy: Expanding Nation Branding Beyond Politics and Technology"
     url: "https://www.isdp.eu/wp-content/uploads/2025/12/Brief-Taiwan-Sports-Dec-2-2025-final.pdf"

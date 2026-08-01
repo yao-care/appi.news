@@ -16,6 +16,10 @@ highlights:
   - "健身產業核心主題從器材銷售轉向longevity長壽科學與身心整合健康管理"
   - "AI智慧訓練分析、穿戴裝置與個人化健康數據成為各大品牌主力展示項目"
   - "恢復市場、女性健身與跨界醫療合作被視為產業下一輪成長的三大動能"
+risksAndLimits:
+  - "文中健康數據與訓練分析技術降本的說法來自主辦方與媒體展後分析，未附獨立產業數據佐證"
+  - "恢復市場、AI訓練分析等趨勢描述僅反映本屆展會展品與廠商說法，實際市場滲透率未提供"
+  - "台灣業者適用性為文章推論，非本文引用來源中的實地調查結論"
 references:
   - title: "Health is the future: FIBO 2026 wraps up with strong results"
     url: "https://rxglobal.com/health-future-fibo-2026-wraps-strong-results"

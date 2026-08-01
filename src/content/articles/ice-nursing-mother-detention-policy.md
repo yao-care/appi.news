@@ -18,6 +18,11 @@ highlights:
   - "律師團隊已向聯邦法院提出人身保護令聲請，主張逮捕本身即違反ICE自訂政策；同時併行申請庇護與多項人道假釋"
   - "國土安全部反駁：她2022年5月18日經南部邊境非法入境，另涉嫌謊報美國公民身分而遭聯邦通緝，但拒絕公開具體罪名細節"
   - "法院已排定8月下旬開庭審理"
+risksAndLimits:
+  - "逮捕理由與『例外情況』認定依國土安全部與律師各執一詞，尚無法院裁定"
+  - "國土安全部指控謊報公民身分之具體罪名與逮捕令內容未公開，真偽待查"
+  - "案件排定8月下旬開庭，人身保護令結果尚未確定"
+  - "當事人為化名，細節依三家媒體報導轉述,未經獨立查核"
 references:
   - title: "Guatemalan mother detained by ICE in Nashville files legal challenge to detention while breastfeeding 10-month-old and caring for child with Down syndrome"
     url: "https://kfdm.com/news/nation-world/guatemalan-mother-detained-by-ice-in-nashville-files-legal-challenge-to-detention-while-breastfeeding-10-month-old-and-caring-for-child-with-down-syndrome"

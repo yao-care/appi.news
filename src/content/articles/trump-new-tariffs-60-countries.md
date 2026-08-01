@@ -19,6 +19,10 @@ highlights:
   - "美國貿易代表葛里爾（Jamieson Greer）表示：「美國近一世紀來嚴格執行強迫勞動進口禁令，貿易夥伴早該跟進」"
   - "巴西政府批評此舉「武斷且無根據」、將啟動報復性關稅；智利官員則指措施與該國勞動標準「不一致」；美國眾院民主黨高層批評強迫勞動理由「太方便」，難以認真對待"
   - "石油天然氣、肥料及符合美墨加協議（USMCA）免稅資格的商品獲豁免；分析指進口商品價格上漲風險恐波及美國消費者，時機正值期中選舉前"
+risksAndLimits:
+  - "新關稅同時對逾60個貿易夥伴課徵，各國稅率不一，本文僅列印度、巴西、智利數字"
+  - "16國「過度生產」調查仍在進行中，未來稅率可能再調整"
+  - "物價衝擊尚無具體數據公布，轉嫁幅度屬報導推測非已證實結果"
 references:
   - title: "Trump imposes double-digit tariffs on dozens of countries as stopgap 10% levies expire Friday"
     url: "https://www.pbs.org/newshour/politics/trump-imposes-double-digit-tariffs-on-dozens-of-countries-as-stopgap-10-levies-expire-friday"

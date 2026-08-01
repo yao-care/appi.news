@@ -15,6 +15,11 @@ highlights:
   - "NuScale是美國唯一獲得NRC設計認證的SMR技術商，77 MWe上調功率版本及462 MWe標準設計均已通過審查"
   - "Amazon投入5億美元於X-energy、Google簽約Kairos Power 500 MW，AI資料中心24小時無碳基載需求成為SMR商業化的主要驅動力"
   - "台灣目前沒有SMR相關法規框架，6 GW協議提供的不是立即解方，而是衡量台灣能源選擇機會成本的國際基準"
+risksAndLimits:
+  - "6 GW為部署框架協議，非完工保證，實際建成規模可能調整"
+  - "文中未提及SMR成本數據，無法評估其相對傳統核電或再生能源的經濟效益"
+  - "台灣缺乏SMR法規框架為現況描述，何時建立、是否建立尚無時間表"
+  - "NuScale以外SMR業者（X-energy、Kairos、Terrestrial）進展僅列資金與簽約金額，未包含實際發電數據"
 references:
   - title: "The SMR Surge: Nuclear's Quiet Comeback Is Now A Commercial Race"
     url: "https://www.forbes.com/sites/rrapier/2025/10/26/the-smr-surge-nuclears-quiet-comeback-is-now-a-commercial-race"

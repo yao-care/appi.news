@@ -15,6 +15,10 @@ highlights:
   - "Barbosa局長在紐約明確點名：缺乏社區實驗室與基層醫療人力，防疫將永遠仰賴事後應急而非預防"
   - "現行全球衛生融資水準遠低於建立可持續防備體系的最低門檻，形成結構性缺口"
   - "2026年PPPR高層會議將是各國政府能否把初級衛生保健納入防疫核心承諾的關鍵節點"
+risksAndLimits:
+  - "文中未說明PAHO 180萬信號與128起事件的統計口徑與地區分布細節"
+  - "初級衛生保健比較僅以台灣、印度、東南亞為例，未涵蓋全球其他地區"
+  - "2026年PPPR高層會議尚未召開，融資承諾與談判結果仍未定"
 references:
   - title: "Local capacity key to ensure global pandemic preparedness, PAHO Director says in New York"
     url: "https://www.paho.org/en/news/26-3-2026-local-capacity-key-ensure-global-pandemic-preparedness-paho-director-says-new-york"

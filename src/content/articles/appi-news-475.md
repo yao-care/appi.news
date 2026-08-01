@@ -18,6 +18,11 @@ sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 11
+risksAndLimits:
+  - "研究對象與介入方案差異大，效果不宜過度類推到所有長者"
+  - "三高、心血管疾病或服用影響平衡藥物者，訓練前應先經專業評估"
+  - "肌力訓練效果多需10週以上、平均約23週的持續介入才觀察得到"
+  - "社區據點補助與費用依各縣市規定而異，非全國統一標準"
 references:
   - title: "Talar K, et al. (2021). Benefits of Resistance Training in Early and Late Stages of Frailty and Sarcopenia: A Systematic Review and Meta-Analysis of Randomized Controlled Studies. *Journal of Clinical Medicine*, 10(8), 1630"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8070531/"

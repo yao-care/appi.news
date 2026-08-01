@@ -14,6 +14,10 @@ highlights:
   - "E-bike電動輔助系統與低碳都市移動首度躍升為最大招商重點，供應鏈整合成核心展示"
   - "台灣自行車業同業公會成立BAS永續聯盟，ESG認證與碳足跡計算已成國際買主採購門檻"
   - "政府D&I設計獎徵件聚焦E-bike、永續材料與創新移動場景，接受來自全球廠商投件"
+risksAndLimits:
+  - "CCPA通訊協定與BAS永續聯盟等成效仍待國際品牌與買主實際採納驗證"
+  - "展會意向能否轉化為實際訂單、認證機制成效如何，內文僅列為後續觀察重點，尚無結論"
+  - "相關敘述引用單一新聞稿與展會官方說明，未見獨立第三方數據佐證"
 references:
   - title: "2026 Taipei Cycle Show: MOEA and CHC Spearhead Dual Transition Toward Smart Connectivity and Net-Zero Sustainability"
     url: "https://www.prnewswire.com/news-releases/2026-taipei-cycle-show-moea-and-chc-spearhead-dual-transition-toward-smart-connectivity-and-net-zero-sustainability-302726897.html"

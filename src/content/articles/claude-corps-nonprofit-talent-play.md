@@ -28,6 +28,10 @@ highlights:
   - "Anthropic 6/18 宣布 Claude Corps，初期投入 1.5 億美元、招 1000 名 fellow，年薪 8.5 萬美元加福利，全職進駐至少 400 家美國非營利組織一年；首梯 100 人 2026 年 10 月開跑，申請 7/17 截止。"
   - "這筆錢一半是公益、一半是通路：把「會用 Claude」的人嵌進組織一年，等於在數百家 NPO 內部長出對 Claude 的日常依賴，也替勞動市場養一批以 Claude 為工具母語的早期職涯人才。"
   - "台灣要學的不是照抄撒錢，而是先問這些組織的瓶頸到底是不是缺 AI；fellowship 限美國工作授權，台灣進不去，但『先定義問題再導工具』的順序值得抄。"
+risksAndLimits:
+  - "Claude Corps 門檻要求美國工作授權、駐點美國組織，台灣申請者與非營利組織皆不適用"
+  - "文中對「行銷通路」效果的判讀為作者推論，Anthropic 官方未如此定性"
+  - "計畫成效與長期維護結果如何，內文未提供追蹤數據，僅為推論"
 references:
   - title: "Introducing Claude Corps"
     url: "https://www.anthropic.com/news/claude-corps"

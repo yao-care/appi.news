@@ -27,6 +27,10 @@ highlights:
   - "OpenAI 的 ChatGPT Health 走「自建連結」：使用者自行把病歷、穿戴裝置、健康App資料接進一個獨立分艙的對話空間，責任集中在 OpenAI 一家公司身上。"
   - "台灣健保健康存摺SDK 走完全不同的路：31家單位、64款App已完成介接上架，每一家能介接的業者都得先通過數位發展部APP資安檢測L2以上、排除陸資企業，出錯了衛福部與健保署可以撤照。"
   - "民眾該先確認的不是「AI解讀準不準」，是「資料連去哪、出錯找誰負責、有沒有人可以稽核」這三件事；工具再準，判讀能力練不起來，遇到下一個沒被驗證過的工具一樣沒轍。"
+risksAndLimits:
+  - "31家單位、64款App的名單為2026年1月時的介接數字，實際數量可能已再增加"
+  - "GPT-5、Claude Opus 4.7對台灣醫療術語解讀能力的評價來自單一實測觀察，未經其他機構獨立驗證"
+  - "ChatGPT Health跨境監理與究責機制目前無明確答案，本文對申訴管道的比較僅止於現有條款揭露"
 references:
   - title: "OpenAI unveils ChatGPT Health, says 230 million users ask about health each week"
     url: "https://techcrunch.com/2026/01/07/openai-unveils-chatgpt-health-says-230-million-users-ask-about-health-each-week/"

@@ -17,6 +17,9 @@ highlights:
   - "補助重點聚焦資安與AI技能培育，涵蓋弱勢族群、青年就業與政府級數位技能計畫"
   - "台灣數位部帶9家資安廠商赴日參展，在零信任、AI資安與後量子加密領域展示自主研發成果"
   - "Kyndryl全球資安調查顯示64%主管認為IT尚未具備AI導入所需技能，人才缺口成最大風險"
+risksAndLimits:
+  - "補助對象與課程內容以計畫官方公告為準，本文未列出台灣受訓名額或課程細節"
+  - "日本市場合作進展與供應鏈資安護城河成效目前尚無具體成果數據可查證"
 references:
   - title: "Kyndryl Foundation Expands Grants to 13 Countries, Deepens Support for Cybersecurity and AI Skills Development"
     url: "https://www.prnewswire.com/news-releases/kyndryl-foundation-expands-grants-to-13-countries-deepens-support-for-cybersecurity-and-ai-skills-development-302735171.html"

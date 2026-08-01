@@ -20,6 +20,10 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 15
+risksAndLimits:
+  - "此案為單一個案，感染來源初步研判自野鳥污染環境，尚無法推論其他農場的暴露路徑"
+  - "義大利研究抽測 93 名接觸者血清，5.4% 陽性率不代表全台禽農的普遍暴露程度"
+  - "患者出現肺炎而非典型結膜炎與其慢性病史相關，不宜以此案推論 H7N7 臨床表現已改變"
 references:
   - title: "衛生福利部疾病管制署（2026）。國內檢出首例本土 H7 新型 A 型流感病例，農衛啟動防疫一體聯合行動，合作調查防治"
     url: "https://www.cdc.gov.tw/Bulletin/Detail/bZE85LXA9ZGdCvEJKZe6Cg?typeId=9"

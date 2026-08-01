@@ -22,6 +22,10 @@ sourceType: author
 contentType: analysis
 disclaimerType: general
 readingTime: 19
+risksAndLimits:
+  - "備援設計三層次與容錯閾值僅為建議框架，未附實測數據佐證效果"
+  - "文中援引 EU AI Act 第9條與 NIST AI RMF 1.0，條文解讀未經法律或標準專業查核"
+  - "各 LLM 供應商的服務條款與管制範圍持續變動，實際適用以官方公告為準"
 references:
   - title: "European Parliament and Council (2024). Regulation (EU) 2024/1689 on Artificial Intelligence (EU AI Act), Article 9: Risk management system. *Official Journal of the European Union"
     url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"

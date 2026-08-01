@@ -13,6 +13,10 @@ highlights:
   - "川普稱問題肇因於人為破壞，指有人用利刃在池底割出長達350英尺的裂痕，但未提出影像或證據"
   - "美國內政部稱已就破壞案立14份報案紀錄、5人被捕、5人遭聯邦傳票，並把藻華歸因於供水管線殘留物"
   - "多名科學家指出，淺水、戶外、夏季高溫的水體本就容易長藻，變綠並不令人意外"
+risksAndLimits:
+  - "這次整修爭議與調查仍在進行中，被捕人數與破壞認定可能隨程序推進而變動"
+  - "川普所稱的割痕與化學物質說法，截至報導時內政部尚未公布可佐證的照片或物證"
+  - "池水變綠是否與破壞有關，內政部與科學家的說法並不一致，屬未定論之處"
 references:
   - title: "Trump tries to blame Reflecting Pool woes on vandalism, without offering substantiation"
     url: "https://www.pbs.org/newshour/politics/trump-tries-to-blame-reflecting-poll-woes-on-vandalism-without-offering-substantiation"

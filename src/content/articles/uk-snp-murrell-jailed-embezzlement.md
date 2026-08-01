@@ -15,6 +15,10 @@ highlights:
   - "他承認2010年8月至2022年10月間，利用掌控的黨帳戶侵吞40萬310.65英鎊，並在會計軟體中以不實摘要掩飾"
   - "侵吞款項用於採購一輛12萬4550英鎊豪華露營車、汽車、名錶與高級文具等私人用品"
   - "案件源於2021年「樹枝行動」調查；莫雷爾的前妻、前蘇格蘭首席部長施特金稱自己「遭蒙蔽、誤導與背叛」，未遭起訴"
+risksAndLimits:
+  - "莫雷爾的判刑細節與侵吞金額以愛丁堡高等法院6月23日認定為準，後續上訴可能影響刑期"
+  - "施特金遭蒙蔽、誤導與背叛的說法為其個人陳述，尚未見獨立調查報告佐證"
+  - "本案聚焦莫雷爾個人刑責，與66萬英鎊獨立公投募款去向的樹枝行動調查是否有其他人涉案尚無定論"
 references:
   - title: "Former SNP chief Peter Murrell jailed for embezzling more than £400,000 of party funds"
     url: "https://www.euronews.com/my-europe/2026/06/23/former-snp-chief-peter-murrell-jailed-for-embezzling-more-than-400000-of-party-funds"

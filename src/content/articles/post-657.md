@@ -23,6 +23,10 @@ factCheckedBy:
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
+risksAndLimits:
+  - "三個城市案例集中在曼谷、北京、艾哈邁達巴德、洛伊洛，是否適用台灣中小型城市尚待驗證"
+  - "報告數據為2025年10月發布，人口與氣候風險推估以2023至2050年為區間"
+  - "新加坡、首爾經驗奠基於各自財政與行政體制,能否移植台灣制度尚無定論"
 references:
   - title: "Rethinking Urban Governance for Tomorrow's Cities in Asia-Pacific（UNDP與Arup合作報告）"
     url: "https://www.undp.org/asia-pacific/publications/rethinking-urban-governance-tomorrows-cities-asia-pacific"

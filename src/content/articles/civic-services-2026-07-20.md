@@ -26,6 +26,10 @@ coverImage: "covers/civic-services-2026-07-20-cover.webp"
 coverAlt: "市政服務櫃檯示意，象徵各縣市便民措施"
 coverImageCredit: "Photo by JIWON KANG on Unsplash"
 disclosure: "本文整理自各縣市政府公開新聞稿與公告，附原文出處，未加入編輯部個人觀點。"
+risksAndLimits:
+  - "各項措施僅限臺北、新北、臺中、高雄、宜蘭、南投指定範圍，其他縣市無此服務"
+  - "交通管制、申辦開放與徵才活動皆訂有特定起訖日期，逾期後個別措施即不再適用"
+  - "疫苗接種與喘息服務等補助設有年齡、戶籍或身分資格門檻，未符合條件者無法申請"
 references:
   - title: "臺北文山區福興路路面更新工程交通管制與公車改道公告"
     url: "https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=5DC49D262402EBD5"

@@ -25,6 +25,9 @@ highlights:
   - "丈夫過世後她出版童書《你和我在一起嗎？》談喪親悲傷，審判證詞卻揭露該書實為代筆作家所寫"
   - "宣判後律師團隊聲請新審判並要求主審法官迴避，指控法官在陪審團面前只針對辯方表現不耐煩、批評、敵意；梅拉齊克隨後自行迴避該迴避聲請的審理"
   - "代理法官佩蒂特7月底裁定：辯方逾21天期限才提出迴避聲請、且證據不足以證明法官有應迴避的偏見程度，駁回迴避聲請；新審判動議本身尚未裁決，里欽斯仍堅稱無罪"
+risksAndLimits:
+  - "法院僅就迴避聲請裁定，新審判動議尚未有結果，最終能否重審仍待法院後續裁決"
+  - "報導引用單一媒體來源，法官裁定書原文與完整內容未經其他管道獨立查證"
 references:
   - title: "Court rejects request to disqualify judge in Kouri Richins murder case"
     url: "https://wgme.com/news/nation-world/court-rejects-request-to-disqualify-judge-in-kouri-richins-murder-case"

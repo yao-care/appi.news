@@ -20,6 +20,10 @@ sourceType: author
 contentType: column
 disclaimerType: general
 readingTime: 13
+risksAndLimits:
+  - "個案為70多歲有慢性病史男性，年輕健康族群感染後的病程與死亡風險未必相同"
+  - "台灣2017年迄今累計44例屬個位數到十餘例的罕見病，清掃SOP的風險量化未涵蓋大規模鼠患情境"
+  - "人傳人證據引用的是系統性文獻回顧，且限南美洲少數長期密切同住案例，其他地區資料未提及"
 references:
   - title: "Nuzum EO, Rossi CA, Stephenson EH, LeDuc JW. (1988). Aerosol transmission of Hantaan and related viruses to laboratory rats. *American Journal of Tropical Medicine and Hygiene*, 38(3), 636-640"
     url: "https://pubmed.ncbi.nlm.nih.gov/2908582/"

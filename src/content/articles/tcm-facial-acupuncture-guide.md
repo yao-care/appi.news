@@ -24,6 +24,11 @@ contentType: guide
 disclaimerType: medical
 disclosure: "本文整理自公開臨床研究（PubMed 收錄之隨機對照試驗與系統性回顧）與衛生福利部、台灣顏面針灸醫學會等公開資料，附原文出處；不構成醫療建議，實際適應症與禁忌請由合格醫師當面評估。"
 readingTime: 14
+risksAndLimits:
+  - "該 2025 年 RCT 靜態紋改善在第 12 週追蹤點回落，動態表情紋效果未必持久"
+  - "療效試驗規模仍偏小，現有系統性回顧本身也指出方法學尚待加強"
+  - "禁忌症判斷需醫師當面問診把脈，本文清單僅供事前參考不能自行對照"
+  - "費用區間與健保給付狀態依當前法規與市場行情，未來可能調整"
 references:
   - title: "Haghir H, Yazdanpanah MJ, Farahmand SK, Khadem-Rezaiyan M, Azizi H (2025). Is Acupuncture Effective in Diminishing Frown Lines? Evidence From a Randomized Controlled Trial. *Journal of Cosmetic Dermatology*, 24(4)"
     url: "https://pubmed.ncbi.nlm.nih.gov/40193060/"

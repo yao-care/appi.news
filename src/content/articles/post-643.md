@@ -16,6 +16,11 @@ highlights:
   - "無疾病進展存活期7.3個月對比化療3.5個月，客觀緩解率33.2%對比11.8%"
   - "結果於ASCO Plenary Session發表，同步刊登《新英格蘭醫學期刊》，現場引發42秒起立鼓掌"
   - "daraxonrasib為多選擇性非共價GTP態RAS抑制劑，覆蓋G12、G13、Q61突變及野生型RAS"
+risksAndLimits:
+  - "試驗中位追蹤僅8.5個月，長期安全性與存活數據仍待更多時間驗證"
+  - "數據來自RAS G12突變亞組，非所有轉移性胰臟癌患者皆適用"
+  - "藥物尚未獲FDA核准，僅預計2026至2027年申請，台灣患者現仍無法取得"
+  - "早期臨床取得計畫僅為文中建議方向，非台灣已拍板的政策"
 references:
   - title: "Daraxonrasib Extends Median Survival in Previously Treated Pancreatic Cancer - ASCO Post"
     url: "https://ascopost.com/issues/june-10-2026/daraxonrasib-nearly-doubles-survival-in-previously-treated-metastatic-pancreatic-cancer"

@@ -14,6 +14,10 @@ highlights:
   - "前工黨黨魁金諾克勳爵稱脫歐是「空前且持續的災難」、「經濟損害巨大、驚人」"
   - "主辦單位全國重返遊行（NRM）訴求「完全重返」，遊行隊伍從聖殿站走到國會廣場"
   - "首相施凱爾正推動英歐關係重整，但官方並未表態重返歐盟"
+risksAndLimits:
+  - "脫歐十年來的經濟損害僅為金諾克勳爵個人主張，未附具體統計數據佐證"
+  - "文中受訪者立場皆傾向重返歐盟，未呈現支持脫歐一方的觀點"
+  - "官方路線為與歐盟重整關係而非重返，街頭訴求與政府政策方向並不一致"
 references:
   - title: "Brexit branded ‘unprecedented continuing disaster’ as marchers call to rejoin EU"
     url: "https://www.irishnews.com/news/uk/brexit-branded-unprecedented-continuing-disaster-as-marchers-call-to-rejoin-eu-4ID6SP6SDRPWLBOEPVRWXFTEHU/"

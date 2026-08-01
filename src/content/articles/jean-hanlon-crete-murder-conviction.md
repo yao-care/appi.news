@@ -17,6 +17,11 @@ highlights:
   - "案件6月30日開庭，經四天審理，法院7月3日（週五）一致裁定被告謀殺罪成立；因希臘法律禁止曝光被告身分，姓名並未公開"
   - "法院採認被告因精神狀態符合希臘刑法「減輕責任能力」規定（第36條），僅判10年徒刑，且依希臘司法程序須等上訴終結才須入獄，宣判當下他仍是自由身"
   - "漢隆之子波特（Michael Porter）向BBC表示終於定罪讓家屬「非常感激」，但凶手仍逍遙法外「令人難以想像、非常憤怒」，並質疑當初警方調查「並未確實執行」"
+risksAndLimits:
+  - "希臘上訴程序尚未終結，最終是否入獄與刑期仍可能因上訴結果變動"
+  - "依希臘法規定被告身分保密，其精神鑑定與犯案動機僅見檢方庭審說法"
+  - "家屬波特的評論為單方陳述，內文未見被告或辯方回應"
+  - "報導來源集中於蘇格蘭媒體轉述，未見希臘官方判決書或當地媒體佐證"
 references:
   - title: "Greek man found guilty of murdering Scots mum Jean Hanlon in Crete 17 years ago"
     url: "https://news.stv.tv/west-central/greek-man-found-guilty-of-murdering-scots-mum-jean-hanlon-in-crete-17-years-ago"

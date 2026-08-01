@@ -21,6 +21,10 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 14
+risksAndLimits:
+  - "風險統計以7.9倍相對風險與30.8%全球歸因估算為主，屬群體層級，個人風險受嚼食量與年數影響而不同"
+  - "台灣男性嚼食率6.2%為2018年數據，現況可能已隨政策再變動"
+  - "中醫「久服傷正」與滋陰潤燥觀點屬傳統詮釋與輔助調養概念，非臨床療效證據，不能取代篩檢與正式治療"
 references:
   - title: "Warnakulasuriya S, Chen THH (2022). Areca Nut and Oral Cancer: Evidence from Studies Conducted in Humans. *Journal of Dental Research*, 101(10), 1139–1146"
     url: "https://pubmed.ncbi.nlm.nih.gov/35459408/"

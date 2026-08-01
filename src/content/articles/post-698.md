@@ -16,6 +16,11 @@ highlights:
   - "高效能運算（HPC）部門佔Q3總營收57%，成為台積電最大單一業務"
   - "7奈米及以下先進製程佔Q3晶圓收益74%，3奈米佔23%、5奈米佔37%"
   - "台積電上調2025年全年營收成長至中段30%水準，並將資本支出下限提升至400億美元"
+risksAndLimits:
+  - "N2製程尚未量產，良率與產能爬坡速度僅是市場預期，非已驗證數據"
+  - "全年及Q4營收預測為執行長財報電話發言，屬公司預估非保證數字"
+  - "CoWoS封裝產能能否跟上輝達Rubin訂單，內文列為待觀察風險，尚無定論"
+  - "3奈米產能吃緊延伸至2026年之說法引自單一分析師報導，未見獨立驗證"
 references:
   - title: "TSMC profit surges 39% to beat estimates and hit record on AI demand"
     url: "https://www.cnbc.com/2025/10/16/tsmc-hits-yet-another-record-as-profit-surges-39percent-beating-estimates-on-ai-chip-demand-surge.html"

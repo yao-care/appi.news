@@ -21,6 +21,11 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 13
+risksAndLimits:
+  - "該項臉部針灸試驗僅六週療程，改善皺紋數據未說明樣本數與年齡層"
+  - "針灸鼻炎的統合分析納入 21 項試驗共 1889 人，但未說明地區與年齡分布"
+  - "肩頸張力改善氣色屬臨床觀察，文中未提供對照試驗數據佐證"
+  - "效果因人而異，3至6次見穩定效果為經驗描述，非試驗統計結果"
 references:
   - title: "Haghir H, Yazdanpanah MJ, Farahmand SK, Khadem-Rezaiyan M, Azizi H (2025). Is Acupuncture Effective in Diminishing Frown Lines? Evidence From a Randomized Controlled Trial. *Journal of Cosmetic Dermatology*, 24(4)"
     url: "https://pubmed.ncbi.nlm.nih.gov/40193060/"

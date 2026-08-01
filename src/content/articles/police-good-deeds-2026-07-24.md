@@ -26,6 +26,8 @@ disclosure: "本篇整理自臺東縣警察局、新竹縣政府警察局對外�
 highlights:
   - "臺東警察分局馬蘭派出所所長詹富元、警員林煜凱獲報後,協助體力不支倒臥路旁的男子確認身體狀況,並以巡邏車護送返家"
   - "新竹縣警局竹北分局六家派出所員警於上班尖峰時段,趁短短數十秒左轉綠燈,合力將離合器線斷裂拋錨的自小客車推離車道"
+risksAndLimits:
+  - "返家與拋錨後續處置屬個案，實際協助方式視現場情況與各警局勤務量而定"
 references:
   - title: "體力不支倒臥路旁 馬蘭暖警即時伸援護送平安返家"
     url: "https://www.ttcpb.gov.tw/chinese/home.jsp?serno=201105170013&contlink=ap/news_view.jsp&dataserno=202607240002"

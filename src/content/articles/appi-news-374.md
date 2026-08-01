@@ -20,6 +20,11 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 14
+risksAndLimits:
+  - "房價鑑估值與貸款額度數據為聯徵中心統計，未涵蓋所有銀行與非公股房貸案件"
+  - "新青安2.0年齡、收入上限與額度調整仍屬研議階段，尚未經行政院拍板"
+  - "房貸負擔率與生育率的負向關聯屬相關性研究，該研究本身已註明不代表因果關係"
+  - "30%房貸負擔率門檻為國際慣例通則，未考慮個別家庭資產與收入結構差異"
 references:
   - title: "聯合新聞網(2026)。新青安害年輕人更苦了？房貸族較三年前多扛180萬！"
     url: "https://udn.com/news/story/7241/9582341"

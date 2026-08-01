@@ -12,6 +12,10 @@ highlights:
   - "足跡尺寸換算顯示這批個體身高最高達183公分（6英尺）、體重約75公斤（165磅），遠超過去以骨骼化石推估的矮小體型，逼近同時期人屬近親直立人的水準"
   - "8個足跡多數研判為成年雄性所留，且像是集體同行，暗示南方古猿粗壯種存在雄性成群移動、不帶女性與幼兒的複雜社會結構"
   - "遺址1978年由史密森尼學會地質學家Kay Behrensmeyer首度發現，2016、2023年再兩度挖掘；同一區域2024年也曾出土直立人與南方古猿粗壯種足跡並存的證據，證實兩物種曾共域生活數十萬年"
+risksAndLimits:
+  - "身高與體重估算來自足跡尺寸反推，非直接骨骼量測，與傳統化石推估方法有出入"
+  - "8個個體是否清一色成年雄性為研究團隊依足跡型態的研判，未附遺傳或形態學直接證據"
+  - "結論僅基於GaJi10單一遺址、143萬年前單一時間點的足跡群，未必代表南方古猿粗壯種全體特徵"
 references:
   - title: "Footprints reshape what scientists know about extinct human relative"
     url: "https://www.gjsentinel.com/news/national/footprints-reshape-what-scientists-know-about-extinct-human-relative/article_9783d6db-b330-5961-9085-7b0d5c5486b4.html"

@@ -17,6 +17,10 @@ highlights:
   - "CoWoS封裝晶圓平均售價已逼近1萬美元，與7奈米製程晶圓並駕齊驅"
   - "先進封裝在台積電整體營收的比重2025年達約10%，預期持續攀升"
   - "SoIC三維堆疊技術加速演進，A14-on-A14 SoIC預計2029年投產，I/O密度較前代提升1.8倍"
+risksAndLimits:
+  - "CoWoS-L超過七成產能為輝達預訂之數字來自TrendForce報導，尚未經台積電官方證實"
+  - "毛利率逼近先進製程的說法屬產業推估，實際財報數據未在文中揭露"
+  - "A14-on-A14 SoIC於2029年投產為現階段規劃，實際時程可能因技術良率調整"
 references:
   - title: "TSMC CoWoS Wafer ASP Reportedly Nears 7nm; Advanced Packaging to Become a Key Profit Driver"
     url: "https://www.trendforce.com/news/2026/04/28/news-tsmc-cowos-wafer-asp-reportedly-nears-7nm-levels-advanced-packaging-poised-to-become-a-key-profit-driver"

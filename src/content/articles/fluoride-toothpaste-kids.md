@@ -27,6 +27,10 @@ highlights:
   - "台灣兒童免費塗氟補助2026年9月起放寬到『進入國小前』，每半年一次別忘了用"
 readingTime: 11
 originalContribution: "把『含氟牙膏會不會害孩子氟中毒』的疑慮，用WHO與Cochrane的防蛀實證、ADA的毫克換算、以及每公斤5毫克的中毒門檻實際算給家長看，並釐清氟斑齒與高氟暴露的真正成因，對照台灣塗氟補助新制與事實查核。"
+risksAndLimits:
+  - "中毒門檻計算以20公斤孩童為例，體重不同的孩子換算後的實際公克數會不同"
+  - "塗氟補助放寬至入學前的政策自2026年9月起實施，實際上路日期以官方公告為準"
+  - "氟錠等全身性補氟屬個別評估項目，本文未列出明確適用條件，須由牙醫判斷"
 references:
   - title: "Fluoride toothpastes of different concentrations for preventing dental caries（Cochrane Review, Walsh et al. 2019）"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6398117/"

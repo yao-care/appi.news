@@ -18,6 +18,10 @@ highlights:
   - "健保數位化涵蓋我的健康存摺、NHI MediCloud雲端病歷，大幅減少重複檢查與用藥衝突"
   - "CEOWORLD 2025醫療保健指數台灣同樣排名第一，評分78.72分超越南韓的77.7分"
   - "分級轉診推動下基層診所承接慢性病管理，讓大型醫院專注急重症，有助減少醫療資源浪費"
+risksAndLimits:
+  - "健保住院自付比例文中僅稱通常七至九成，實際依病房等級與項目而異"
+  - "篩檢率偏低與慢性病負擔屬文中描述的既有問題，未附具體統計數字"
+  - "分級轉診與數位病歷成效引自台灣單一體系經驗，非跨國比較驗證結果"
 references:
   - title: "Health Care Index by Country 2026 — Numbeo"
     url: "https://www.numbeo.com/health-care/rankings_by_country.jsp"

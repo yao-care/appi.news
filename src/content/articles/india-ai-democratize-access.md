@@ -16,6 +16,10 @@ highlights:
   - "他肯定印度AI訓練量能「近2500萬小時」的成績，以及半導體、硬體佈局與國際合作進展，但坦言「我不是說我們已經接近中國、台灣或美國，但至少我們有正確的企圖心」"
   - "Singh提醒印度不能滿足於統一支付介面（UPI）的成功，「那不是我們的終點目標，我們對數位印度的企圖心，應該遠高於一個UPI」"
   - "Singh以已故總統卡蘭促成「布拉莫斯」（BrahMos）超音速巡弋飛彈計畫的軼事，說明印度過去如何靠因地制宜的整合創新起步"
+risksAndLimits:
+  - "Singh的說法出自單一媒體訪談，未見IIT或印度政府正式回應"
+  - "近2500萬小時訓練時數與半導體進展為受訪者片面說法，未附獨立數據佐證"
+  - "比較對象限中國、台灣、美國，未涵蓋其他AI發展國家"
 references:
   - title: "India must widen access to AI top scientist"
     url: "https://www.rt.com/india/643583-india-ai-kalam-srijanpal/"

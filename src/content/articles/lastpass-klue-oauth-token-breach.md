@@ -26,6 +26,10 @@ highlights:
   - "這些長期權杖等於各家 Salesforce 的萬能鑰匙，攻擊者用合法授權跑了約 24 小時的自動化查詢，把 CRM 客戶資料整批搬走，外洩限於聯絡與業務資料、未及密碼庫。"
   - "受影響的反而多是資安廠：HackerOne、Snyk、Tanium、Recorded Future、Huntress、Jamf、OneTrust 等逾十餘家。"
   - "企業真正該補的不是這次的攻擊手法，而是「給了多少第三方整合長期權杖」這筆沒人在盤的爛帳：盤點、最小權限、授權到期一起收。"
+risksAndLimits:
+  - "這篇整理受害名單以外部報導為主，個別廠商是否全數官方證實仍待各自公告確認"
+  - "攻擊鏈細節（如 24 小時掃描行為）出自 ReliaQuest 單方研究，尚未見獨立驗證"
+  - "三步驟建議（盤點、收斂權限、設到期）為通用資安做法，未經本文提及的實測成效驗證"
 references:
   - title: "Klue hack results in data breach at several cybersecurity firms"
     url: "https://techcrunch.com/2026/06/22/klue-hack-results-in-data-breach-at-several-cybersecurity-firms/"

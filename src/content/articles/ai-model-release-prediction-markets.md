@@ -27,6 +27,11 @@ highlights:
   - "OpenAI 的 GPT-5.6（Sol／Terra／Luna）六月底才發有限預覽、只給少數合作夥伴，公開發布日還沒定；Polymarket 卻已為「哪天公開上線」開盤，單一市場押進約 68 萬美元，7 月 9 日一度喊到 79% 賠率。"
   - "賭盤賠率反映的是謠言與敘事的共識，不是 OpenAI 的內部路線圖；薄市場、噪音交易者、以及『怎樣才算公開發布』的結算定義模糊，都讓那個數字比它看起來的更不可靠。"
   - "台灣團隊真正該問的不是『下一個更強的模型什麼時候發』，而是『我要解的問題是什麼、驗證機制在哪』；把選型綁在發布謠言上，是解錯題。"
+risksAndLimits:
+  - "賠率、成交金額與利益數字均為文中特定時間點快照，Polymarket 市場狀態隨時變動"
+  - "文中「公開發布未來幾週內」為 OpenAI 官方六月底說法，實際日期本文成稿時仍未確定"
+  - "「怎樣才算公開發布」定義本身模糊，賠率所反映的事件邊界並無業界共識"
+  - "選型建議基於作者個人主張，非特定實證研究或案例數據支持"
 references:
   - title: "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn't be the norm"
     url: "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/"

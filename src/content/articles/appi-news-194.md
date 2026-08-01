@@ -21,6 +21,11 @@ sourceType: author
 contentType: analysis
 disclaimerType: general
 readingTime: 17
+risksAndLimits:
+  - "完整功能僅 2026 年旗艦支援，Pixel 9、OnePlus 13、Z Fold 7 等 2025 機種不適用"
+  - "推出採分波上線，美國市場先上 Pixel 10 與 Galaxy S26，台灣上線時間尚未公告"
+  - "第三方 App 整合深度不足，僅 Gmail、Calendar、Chrome、Gboard 等 Google 自家服務效果最好"
+  - "官方說明與 How-To Geek 技術分析各僅一則引言為單一來源，未見其他獨立查證"
 references:
   - title: "Google (2026, May 12). A smarter, more proactive Android with Gemini Intelligence. *Google Blog"
     url: "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/"

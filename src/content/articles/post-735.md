@@ -16,6 +16,10 @@ highlights:
   - "亞太區預計以最高速率成長，中產健身消費族群快速擴大帶動需求"
   - "台灣在光電感測器、電池管理IC、藍牙無線模組等關鍵零件具全球競爭地位"
   - "AI健康平台興起讓穿戴裝置從硬體轉型為數據服務訂閱，台廠需加速軟硬整合能力"
+risksAndLimits:
+  - "產業比重與供應鏈定位為市場研究機構估算，非台廠公開財報數字"
+  - "4至5%本土健身滲透率為文中引用數字，未說明統計方式與來源機構"
+  - "台灣廠商技術地位為整體概述，個別公司實際競爭力可能差異很大"
 references:
   - title: "Sports Wearable Tracking System Market Size, Share, Growth and Industry Analysis to 2035"
     url: "https://www.marketgrowthreports.com/market-reports/sports-wearable-tracking-system-market-105678"

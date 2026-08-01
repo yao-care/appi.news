@@ -27,6 +27,10 @@ highlights:
   - "iRhythm 6/8 偵測到第三方代管的商業應用遭未授權存取、入口是社交工程，6/9 收到勒索要脅公開病患 PHI 與專有資料；但臨床、醫材、製造與財報系統都未受影響。"
   - "這跟六月的 ServiceNow、Nintendo、Novo Nordisk 是同一個模式：被攻破的不是核心系統，而是串接出去的那層邊界服務與供應商存取。"
   - "醫院資安過去聚焦 HIS、PACS、EHR，現在真正要盤的是哪些 SaaS 能碰 PHI、哪些供應商有帳號、哪些 API 能讀資料、AI 工具看不看得到病患資訊。"
+risksAndLimits:
+  - "受影響病患人數與外洩資料種類尚未公布，實際衝擊範圍待官方後續說明"
+  - "事件仍在調查中，目前沒有勒索軟體集團出面宣稱犯案，攻擊者身分未經證實"
+  - "HIPAA Journal 2025 年度統計為美國資料，與台灣醫療體系規範不直接對應"
 references:
   - title: "iRhythm Confirms Data Stolen in Hack"
     url: "https://www.securityweek.com/irhythm-confirms-data-stolen-in-hack/"

@@ -15,6 +15,10 @@ highlights:
   - "當局估計僅德黑蘭一地就有1,500萬至2,000萬人參加，逾百國政要與會，含巴基斯坦總理夏巴茲・謝里夫、陸軍參謀長穆尼爾"
   - "哈梅內伊今年2月28日的美以聯合空襲中身亡，享壽86歲；伊朗紅新月會統計當日全國空襲逾200人死亡，官方隨後宣布全國哀悼40天"
   - "由已故領袖之子莫賈塔巴接掌最高領袖一職，戰爭期間僅發書面聲明、鮮少公開露面，此次國葬是他首度可能的公開亮相"
+risksAndLimits:
+  - "德黑蘭1,500萬至2,000萬人與逾百國政要出席為官方與媒體估計，未見獨立來源查核"
+  - "抗議死亡「至少7,000人」引自伊朗人權組織統計，非官方數字，未經獨立驗證"
+  - "莫賈塔巴戰後是否公開露面，內文僅稱「可能」，屬報導當下尚未確定之事"
 references:
   - title: "Iran begins dayslong funeral for the late Supreme Leader Ayatollah Ali Khamenei"
     url: "https://www.ksut.org/2026-07-03/iran-begins-dayslong-funeral-for-the-late-supreme-leader-ayatollah-ali-khamenei"

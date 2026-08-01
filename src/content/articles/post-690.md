@@ -16,6 +16,10 @@ highlights:
   - "高通以Snapdragon與Dragonwing晶片平台為核心，涵蓋Windows PC、無人機、機器人、智慧城市等應用場景"
   - "QITC自2019年起延續至第8屆，是高通在台深耕ICT生態系的持續性投資，而非單次活動"
   - "高通COMPUTEX 2026同步發布Snapdragon Dragonfly，把台灣定位為全球AI落地能力的驗證場域"
+risksAndLimits:
+  - "申請對象限台灣設立登記公司，海外新創或個人不適用"
+  - "入圍名單預計4至5月公布，實際評選結果尚未出爐"
+  - "AI PC市場滲透率仍在個位數，商業效益屬預期而非已驗證"
 references:
   - title: "Qualcomm Innovate in Taiwan Challenge Application and Selection"
     url: "https://www.qualcomm.com/innovate-in-taiwan-challenge/application-selection"

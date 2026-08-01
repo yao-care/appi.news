@@ -28,6 +28,11 @@ highlights:
   - "傷腎地雷是長期止痛藥 NSAIDs、來路不明黑藥丸、以及三高控制不良，不是所有中藥"
 readingTime: 12
 originalContribution: "把台灣洗腎盛行率的背景、eGFR 與 CKD 分期怎麼看、為何一次紅字先別慌、以及傷腎地雷整理成健檢報告判讀指南，並嚴格區分早期腎病『延緩惡化』與『逆轉』，提醒尿蛋白與 eGFR 要並看。"
+risksAndLimits:
+  - "2019年透析盛行率與2008年腎病知曉率調查皆為十多年前數據，實際現況可能已隨篩檢政策改變"
+  - "eGFR在慢性腎臟病第1、2期敏感度不足，需搭配尿蛋白（ACR）才能及早發現異常"
+  - "止痛藥與中藥腎毒性風險因人而異，實際傷腎程度取決於原有腎功能與服用劑量、時間長短"
+  - "早期慢性腎臟病目前僅能延緩惡化，無法透過飲食或保健品逆轉恢復"
 references:
   - title: "台灣末期腎病與透析政策現況（未來醫 Med Times）"
     url: "https://medtimes.com.tw/article/ageing-society/taiwan-ckd-dialysis-policy/"

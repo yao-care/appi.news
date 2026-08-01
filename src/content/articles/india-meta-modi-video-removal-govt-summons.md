@@ -22,6 +22,10 @@ disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家印度媒體�
 coverImage: "covers/india-meta-modi-video-removal-govt-summons-cover.webp"
 coverAlt: "手機畫面顯示多款社群媒體應用程式圖示"
 coverImageCredit: "Photo by Sanket Mishra on Pexels"
+risksAndLimits:
+  - "Meta的說法是自動過濾系統技術錯誤，實際下架原因未經MeitY獨立驗證"
+  - "MeitY與Meta會面時限為7到10天，具體日期與會後結論本文尚未涵蓋"
+  - "NEET-UG洩題案調查與逮捕行動仍在進行，責任歸屬尚無最終定論"
 ---
 
 印度總理莫迪一支談論考試洩題問題的Facebook影片，7月28日凌晨一度遭Meta下架，數小時後才恢復上線；Meta將原因歸咎為自動內容過濾系統的「技術錯誤」並公開致歉，但印度電子與資訊科技部（MeitY）認為這個說法「不能令人滿意」，已要求Meta在7到10天內派出公司最高層代表到部會，當面說明政策與技術層面的細節。這起事件發生在印度NEET-UG 2026醫學院入學考試洩題爭議延燒超過50天、教育部長已在抗爭壓力下辭職的敏感時刻，也讓外界重新關注社群平台對政府要員帳號的內容審核機制。

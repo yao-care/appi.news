@@ -14,6 +14,11 @@ highlights:
   - "再生能源2024年連續第23年創裝置容量新高，太陽能單年新增540GW，主導所有情境下的成長"
   - "全球電力需求2035年前將上升40%，AI資料中心貢獻不到10%的需求成長，但在美國比例顯著偏高"
   - "台灣電力市場自由化提速，企業透過CPPA與RE30取得綠電的管道持續擴大，搶先布局成競爭優勢"
+risksAndLimits:
+  - "STEPS情境是「政策不變」的推算工具，非保證結果，去年天然氣預測今年已大幅修正"
+  - "台灣35TWh綠電缺口與資料中心用電數字未附原始出處，估算基礎不明"
+  - "文中2.5度暖化推估僅來自STEPS情境，報告其他情境的結果未列入本文"
+  - "電業法修正僅止於行政院通過的草案，尚未見完成立法或實際上路的時程"
 references:
   - title: "World Energy Outlook 2025 Executive Summary"
     url: "https://www.iea.org/reports/world-energy-outlook-2025/executive-summary"

@@ -15,6 +15,11 @@ highlights:
   - "逾41%新發布穿戴裝置搭載AI驅動分析功能，AI健身推薦提升使用者運動一致性達29%"
   - "醫療機構與穿戴裝置廠商的策略合作在2025年增加22%，遠端監測成為主要驅動力"
   - "企業健康計畫採用穿戴裝置擴張26%，保險、醫療與科技業引領導入趨勢"
+risksAndLimits:
+  - "調查涵蓋2025年全球數據，台灣本地滲透率與採用速度未見數字佐證"
+  - "智慧戒指24%成長與醫療合作22%成長來自單一產業報告，尚未見獨立來源覆核"
+  - "消費級裝置量測精準度與臨床設備的差距，內文未提供具體數據"
+  - "工研院75億產值案例為特定計畫成果，不代表台灣ICT供應鏈全面轉型"
 references:
   - title: "Wearable Technology Market Size, Share, Forecast Report 2026"
     url: "https://www.businessresearchinsights.com/market-reports/wearable-technology-market-119131"

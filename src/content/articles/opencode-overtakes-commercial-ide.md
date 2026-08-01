@@ -26,6 +26,10 @@ highlights:
   - "OpenCode 在 LogRocket 六月榜單衝上第一、把 Cursor 擠下，160K+ GitHub stars、7.5M 月活；真正的訊號不是功能多，是開發者用腳投票要可組合、不被單一 IDE 綁死的工作流。"
   - "三條路線的設計前提不同：OpenCode 賭可組合、Cursor 賭全 IDE 體驗、Claude Code 賭品質領先（盲測 67% 被偏好）。選型該先選 agent、再選殼，而不是比功能清單。"
   - "會用 AI 的 PM 像坐了火箭，但拐點來了：展示很快，落地很難，而且沒人有辦法把速度降下來，這正是該先把『要不要可組合』這個前提想清楚的時候。"
+risksAndLimits:
+  - "OpenCode 的可組合路線需要團隊有人熟終端機並自行接驗證流程，非現成開箱體驗"
+  - "盲測 67% 偏好與 160K stars／750 萬月活為六月當下數字，排名與採用量會隨版本迭代變動"
+  - "三條路線比較基於 LogRocket 六月榜單與各家官方揭露資訊，非作者獨立測試結果"
 references:
   - title: "AI dev tool power rankings & comparison [June 2026]"
     url: "https://blog.logrocket.com/ai-dev-tool-power-rankings/"

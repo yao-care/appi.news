@@ -27,6 +27,11 @@ highlights:
   - "6 月 17 日凌晨，攻擊者用一個沒被收回的前貢獻者帳號，在 88 分鐘內（UTC 01:12–02:39）把 142 個 @mastra 套件重新發佈、塞進同一個惡意相依，連同 mastra、create-mastra 共 144 個套件受影響。"
   - "破口不是零時差漏洞，而是離職貢獻者的 scope 發佈權限從沒被撤掉；npm 不會因閒置就收回權限，一個放了約 16 個月的舊憑證就足以推送整個 scope。"
   - "防禦三件事：定期盤點 scope 與 token 權限、離職即撤；鎖版本而非用浮動範圍、CI 開 provenance／lockfile 稽核；出事輪換 npm／GitHub／雲端／LLM API 等所有憑證。"
+risksAndLimits:
+  - "攻擊者身分連結北韓相關團體僅是廠商推測，Snyk 明言歸因尚未確認"
+  - "事件時間軸與技術細節皆引自資安廠商部落格，未見官方或第三方逐項覆核"
+  - "範圍限於 Mastra 這個 npm scope，其他套件生態的權限管理現況未必相同"
+  - "文中鎖版本、盤點權限等建議屬一般治理原則，未附實際導入後的成效數字"
 references:
   - title: "144 Mastra npm Packages Compromised via Supply Chain Attack"
     url: "https://orca.security/resources/blog/mastra-npm-supply-chain-attack/"

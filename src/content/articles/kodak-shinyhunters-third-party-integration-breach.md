@@ -27,6 +27,10 @@ highlights:
   - "柯達 6 月 17 日證實未授權第三方短暫存取了有限資料，此前 ShinyHunters 已於 6 月 15 日把柯達掛上外洩網站、聲稱握有逾 220 萬筆顧客個資與內部資料，並設下 6 月 18 日的外洩期限。"
   - "柯達說「有限」、攻擊者喊「220 萬筆」，兩個數字對不起來，且 ShinyHunters 並未公開佐證樣本，這是勒索集團的常見手法。"
   - "ShinyHunters 一年來的代表作幾乎都打在同一條線上：企業串接出去的第三方平台整合。攻擊面不在城牆中央，在那些被外包出去的接縫。"
+risksAndLimits:
+  - "柯達與 ShinyHunters 對外洩規模說法不一，「有限資料」與「220 萬筆」尚未對齊，範圍未定"
+  - "ShinyHunters 未公開佐證樣本，其宣稱的資料筆數與內容目前無法獨立驗證"
+  - "柯達是否與 Salesloft/Drift、Salesforce、Snowflake 等平台整合遭同類手法入侵，文中屬推測而非柯達證實"
 references:
   - title: "Kodak confirms data breach claimed by ShinyHunters extortion gang"
     url: "https://www.bleepingcomputer.com/news/security/kodak-confirms-data-breach-claimed-by-shinyhunters-extortion-gang/"

@@ -19,6 +19,9 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 11
+risksAndLimits:
+  - "奧運三度止步男單8強，未突破獎牌關卡，長壽競技力不等於奧運成績突破"
+  - "樣本為周天成個人案例，其長壽競技表現能否複製到其他選手仍未有定論"
 references:
   - title: "中央社 (2026). 周天成中國羽球賽決賽擊敗波波夫 奪生涯第2座超級1000冠軍"
     url: "https://www.cna.com.tw/news/aspt/202607260151.aspx"

@@ -30,6 +30,11 @@ highlights:
   - "DeepSeek 傳募約 74 億美元、估值上看 590 億美元，騰訊評估約 100 億人民幣、寧德時代約 50 億人民幣，可能成為最大外部股東；創辦人梁文鋒以 200 億人民幣保住控制權。"
   - "真正的訊號不在金額，而在名單：當電池廠寧德時代和平台公司騰訊一起進場，代表 AI 不再只是網路產業，而開始變成能源、製造、平台共同投資的基礎設施。"
   - "台灣讀這條新聞的重點是供應鏈與市場連動，不是模型跑分；戰略資本要把 AI 當跨產業基建養，對應的是算力、記憶體、先進封裝的需求往哪流。"
+risksAndLimits:
+  - "這輪募資仍在洽談階段，74 億美元與估值區間可能隨最終協議調整"
+  - "文中戰略資金與財務資金的判讀框架為作者個人觀點，非既定定論"
+  - "供應鏈需求連動的推論尚未有具體訂單或財報數據佐證"
+  - "投資人名單與金額引用自單一媒體報導，尚未見官方公告證實"
 references:
   - title: "DeepSeek Eyes $7.4 Billion Funding Round At Up To $59 Billion Valuation As Tencent, CATL Back China's AI Champion"
     url: "https://finance.yahoo.com/sectors/technology/articles/deepseek-eyes-7-4-billion-123039218.html"

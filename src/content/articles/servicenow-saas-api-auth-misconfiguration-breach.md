@@ -27,6 +27,10 @@ highlights:
   - "ServiceNow 6/9 揭露一個 Scripted REST 端點因 requires_authentication 預設 false，讓未授權請求以 Guest 身分直接查到客戶資料表，且資料在 6/5 修補前就已被查走。"
   - "這是八個月內又一起認證相關漏洞；八個月前的 CVE-2025-12420 同樣是未驗證冒用，但那次修在被利用之前，這次卻是修補前資料就被觸及。"
   - "搭配六月的 Novo Nordisk、Nintendo 外洩，共通破口都不在核心系統，而在串接出去那個服務的認證與權限設定。"
+risksAndLimits:
+  - "未驗證身分即可存取的具體資料範圍，內文未列出受影響客戶數或資料筆數"
+  - "6月10日後續說明稱異常活動「可能」與資安研究者或漏洞獎金回報有關，非確定為惡意攻擊"
+  - "Novo Nordisk與Nintendo案例的破口成因與ServiceNow不同，僅為同月趨勢佐證非同一漏洞"
 references:
   - title: "ServiceNow discloses security incident exposing customer data"
     url: "https://www.bleepingcomputer.com/news/security/servicenow-discloses-security-incident-exposing-customer-data/"

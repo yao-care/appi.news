@@ -17,6 +17,11 @@ highlights:
   - "NVIDIA發布DSX AI工廠平台，主張算力直接等同於營收，AI工廠成全球新型基礎設施"
   - "NVIDIA在台供應鏈合作夥伴超過150家，涵蓋晶片、封裝、伺服器、散熱、電源與機械結構"
   - "台灣從高效率代工基地升格為AI工廠共同設計夥伴，供應鏈角色發生結構性轉變"
+risksAndLimits:
+  - "代理人AI已實用化的說法僅以GitHub提交數據佐證，缺乏獨立第三方研究驗證"
+  - "150家供應鏈夥伴數字出自黃仁勳演講本人說法，未見第三方查核"
+  - "電力供應與台積電2奈米產能影響仍屬待觀察指標，非文中已有定論"
+  - "內容基於2026年6月1日單場演講，後續平台與供應鏈細節可能調整"
 references:
   - title: "Five thoughts from Nvidia CEO Jensen Huang's GTC Taipei 2026 keynote"
     url: "https://siliconangle.com/2026/06/01/five-thoughts-nvidia-ceo-jensen-huangs-gtc-taipei-2026-keynote"

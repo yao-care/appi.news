@@ -29,6 +29,11 @@ highlights:
   - "每天服用2000毫克DHA魚油補充劑，6個月後腦脊髓液中DHA濃度平均增加17%，但記憶力與認知測驗表現與安慰劑組沒有顯著差異，腦部掃描也未見海馬迴萎縮趨緩"
   - "研究6月18日刊登於期刊《eBioMedicine》，主持人強調沒有證據支持魚油補充劑能預防阿茲海默症相關退化"
   - "多倫多大學營養學教授與多篇報導都指出，直接吃魚等天然食物與大腦健康有關，但補充劑「走捷徑」似乎得不到同樣效果；規律運動、充足睡眠與均衡飲食才是目前公認最有效的做法"
+risksAndLimits:
+  - "試驗對象為55至80歲且平時很少吃魚的人，其他年齡與飲食習慣族群未必適用"
+  - "結論限於2年追蹤期內的認知測驗與海馬迴影像結果，更長期效果研究未提及"
+  - "結果來自單一臨床試驗，尚未見獨立重複驗證"
+  - "研究以每天2000毫克DHA為劑量，其他劑量或魚油種類的效果未經測試"
 references:
   - title: "Fish oil supplements may not prevent Alzheimer's-related decline"
     url: "https://news.keckmedicine.org/fish-oil-supplements-may-not-prevent-alzheimers-related-decline/"

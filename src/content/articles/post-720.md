@@ -17,6 +17,11 @@ highlights:
   - "TSMC在美國研討會發表A14（1.4奈米）製程，預計2028年量產，中台科學園區新廠已啟動建設，產值上看500億元台幣"
   - "鴻海、力成等台資企業已在印度投入數十億美元製造與晶片合作案，台印半導體產業鏈連結正在快速深化"
   - "台灣目前製造全球92%的5奈米以下先進邏輯晶片，TSMC晶圓代工佔全球收入60%以上，技術護城河仍難以超越"
+risksAndLimits:
+  - "台印出口翻倍為台灣貿易主管機構的預測，非已實現數字，實際成長速度可能受各國政策變動影響"
+  - "印度本土晶圓廠量產時程為2026至2027年估計值，實際進度可能延後"
+  - "1.4奈米製程2028年量產為TSMC公布計畫，實際良率與時程可能調整"
+  - "文中TSMC用電佔比與資本支出數字分別引自EE Times Asia與Bloomberg單一報導，未見獨立數據源交叉驗證"
 references:
   - title: "Taiwan seeks bigger tech presence in India as US demand rises, trade body chief says"
     url: "https://www.reuters.com/world/asia-pacific/taiwan-seeks-bigger-tech-presence-india-us-demand-rises-trade-body-chief-says-2025-09-26"

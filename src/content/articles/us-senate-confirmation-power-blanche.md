@@ -33,6 +33,10 @@ highlights:
   - "佛羅里達南區聯邦法院法官威廉斯（Kathleen Williams）7月13日裁定，這起訴訟『係為不當目的提起』，是為了讓一項『在法律或事實上都站不住腳』的和解取得『司法正當性的外衣』；她將布蘭奇本人與副司法部長伍德沃德的裁定副本分別寄交紐約州、哥倫比亞特區律師公會，另有兩名川普律師遭轉介懲戒或限制在該區執業一年"
   - "柯尼恩已於5月26日的德州共和黨參議員初選複選中，在川普背書對手佩克斯頓（Ken Paxton）後落敗，成為德州首位在黨內初選失利的現任共和黨參議員；提利斯則早於2025年6月29日宣布不再尋求連任，兩人任期均將於2027年1月屆滿"
   - "美國總統提名內閣閣員須經參議院同意；即便同黨掌握參議院多數，只要委員會或院會中有同黨議員跑票，過去『同黨鐵板一塊』的預期就可能失靈，柯尼恩、提利斯的案例正是這種制度設計下的具體展現"
+risksAndLimits:
+  - "布蘭奇提名案的表決延期是否為最終結果，尚待司法委員會重新排定時程確認"
+  - "反武器化基金是否真正永久終止，目前僅有布蘭奇口頭承諾，未見書面文件"
+  - "柯尼恩、提利斯以外是否有更多共和黨參議員反對，內文僅柯尼恩片面稱『不只兩人』"
 references:
   - title: "Trump says he may pull Blanche's attorney general nomination, looking to avoid concessions"
     url: "https://www.clickondetroit.com/news/politics/2026/07/30/trump-says-he-may-pull-blanches-attorney-general-nomination-looking-to-avoid-concessions/"

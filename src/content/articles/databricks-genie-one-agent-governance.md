@@ -27,6 +27,9 @@ highlights:
   - "Databricks 6/16 在 Data + AI Summit 發表 Genie One，定位成跨結構化與非結構化資料、能自動跑工作的 agentic coworker；Genie Agents、Genie Code 同步正式上線，Genie App Builder 進私測。"
   - "Genie App Builder 是給業務用的 vibe coding 環境，讓最貼近業務問題的人自己用自然語言生出連到企業資料的應用，官方主打全程由 Unity Catalog 的權限與存取控制收住。"
   - "話術很性感，但真正的門檻不在介面好不好用，而在每個會自己動作的 agent 動得到哪些資料、用誰的權限，這一關靠治理層守，不是靠模型更聰明。"
+risksAndLimits:
+  - "Genie App Builder 與背景維運 agent ZeroOps 6 月發表時僅私人預覽，尚未正式上線"
+  - "文中治理設計成效仍是官方一面之詞，尚無真實企業使用後的獨立驗證案例"
 references:
   - title: "Databricks' new agentic coworker Genie One brings AI automation to every part of the business"
     url: "https://siliconangle.com/2026/06/16/databricks-new-agentic-coworker-genie-one-brings-ai-automation-every-part-business/"

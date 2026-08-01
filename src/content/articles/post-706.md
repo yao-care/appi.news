@@ -14,6 +14,11 @@ highlights:
   - "iShares 2026春季展望指出固定收益ETF2025年全年吸引創紀錄的3,840億美元資金流入"
   - "韓國與澳洲分別佔亞太主動式ETF資產的31%與16%，台灣與日本正在追趕"
   - "AI科技股集中度過高疑慮促使法人轉向兼顧收益的策略，如CMBS殖利率約4.7%的資產"
+risksAndLimits:
+  - "韓國、澳洲主動式ETF占比數據來自亞太地區，台灣、日本採用程度仍在早期階段"
+  - "AI科技股集中度疑慮為法人普遍觀點，非單一定論的市場預測"
+  - "文中殖利率與利差數據為2026年春季展望時點，市況變動快速可能已有落差"
+  - "主動式ETF費用率較高的取捨,文中未提供具體數字可供比較"
 references:
   - title: "Spring 2026 Investment Directions | iShares"
     url: "https://www.ishares.com/us/insights/inside-the-market/spring-2026-investment-outlook-inflation-ai-markets"

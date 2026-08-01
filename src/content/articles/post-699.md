@@ -14,6 +14,10 @@ highlights:
   - "TM Xplore I採輪式移動底盤而非雙足步行，鎖定工廠產線高精度作業場景"
   - "達明機器人2025年9月底在台灣證交所掛牌，協作機器人全球累計出貨超過1.8萬台"
   - "預計2026年下半年若量產順利則商用上市，目前優先在公司自有廠房測試應用"
+risksAndLimits:
+  - "TM Xplore I尚未量產，2026年下半年商用是廠方規劃時程，實際進度可能調整"
+  - "文中「調機時間縮短至一至兩週」是協作手臂的既有成果，不代表人形機器人已達到同等效率"
+  - "台灣市場規模預估與宇樹科技等競品比較，均為單一機構或報導的估算，未經獨立驗證"
 references:
   - title: "Techman shows off new AI robot TM Xplore I at Taiwan Automation Show"
     url: "https://www.taipeitimes.com/News/biz/archives/2025/08/22/2003842443"

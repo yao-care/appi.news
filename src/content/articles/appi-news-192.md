@@ -21,6 +21,11 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 19
+risksAndLimits:
+  - "WHO 的 3,700 萬人統計為全球數字，未反映台灣或特定地區的盛行率與診斷延誤情形"
+  - "2023 年第一型與第二型比較研究為回顧性分析，非隨機對照試驗，無法確認因果關係"
+  - "光照治療的隨機對照試驗回顧僅涵蓋 19 項研究，效應量屬中至大型,不代表對每位患者皆有效"
+  - "中醫情志觀點屬傳統理論對應,文中未提供臨床試驗證據,不能取代精神科系統評估與治療"
 references:
   - title: "World Health Organization. (2023). Bipolar disorder. WHO Fact Sheets"
     url: "https://www.who.int/news-room/fact-sheets/detail/bipolar-disorder"

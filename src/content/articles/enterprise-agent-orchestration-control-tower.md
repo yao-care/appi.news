@@ -28,6 +28,11 @@ highlights:
   - "Cognizant 六月連走兩步：6/4 把 Neuro AI Trust 接進 ServiceNow AI Control Tower 做治理與觀測，6/18 讓 ServiceNow agent 和自家開源的 Neuro 多代理加速器互通，組成跨 ServiceNow、第三方與自建系統的單一編排層。"
   - "這波產品在解的真問題不是『agent 不夠多』，而是各廠牌 agent 各自為政、各帶各的連接器；企業要的是統一中控，這個方向抓對了。"
   - "但統一中控有兩個容易解錯題的地方：把所有 agent 統一到單一廠商的層是換一種鎖定；一套治理規則套死所有 agent，Gartner 直指會失敗。信任邊界要看『能做什麼動作』和『能碰什麼資料』分開授權。"
+risksAndLimits:
+  - "中控台看得到全部 agent，不代表授權設計自動做對，動作權限與資料權限仍要分開設定"
+  - "單一編排層接進 Cognizant 加 ServiceNow 這一層後，換掉其中一塊的可攜成本內文未說明"
+  - "開放協定讓 agent 跨界轉交任務時，若交接沒留下稽核紀錄會脫離治理範圍"
+  - "疊加編排器與治理層會推升成本，值不值得要先算清楚，內文未給具體金額"
 references:
   - title: "Cognizant expands cross-platform agentic AI with new ServiceNow AI Agent interoperability"
     url: "https://news.cognizant.com/2026-06-18-Cognizant-expands-cross-platform-agentic-AI-with-new-ServiceNow-AI-Agent-interoperability"

@@ -27,6 +27,10 @@ highlights:
   - "資安公司 LayerX 的『BioShocking』實測，用一個獎勵錯誤答案的假遊戲頁面，把 ChatGPT Atlas、Comet、Fellou、Genspark、Sigma 與 Claude Chrome 外掛全部騙到繞過護欄，六個代理沒有一個拒絕。"
   - "最後一步，被馴化的代理走進使用者已登入的公司 GitHub、把 SSH 登入憑證抄出去交給攻擊者，全程沒跳出任何確認。"
   - "修補進度不一：OpenAI 是唯一被研究者認定有效修掉的一家；Anthropic 補了但沒擋住；Perplexity 直接結案不修；Fellou、Genspark、Sigma 沒回應。但就算補了，補的也只是這一個示範，提示注入這類問題本質沒解。"
+risksAndLimits:
+  - "六款瀏覽器僅測這一組解謎劇本，換不同情境包裝的攻擊面未經驗證"
+  - "LayerX 通報與各廠修補狀態以六月底至七月資訊為準，之後進度可能已變動"
+  - "僅 ChatGPT Atlas 被研究者認定擋下示範，其餘五款修補與否不代表安全"
 references:
   - title: "BioShocking AI: \"Gaming\" the AI Browser and Escaping its Guardrails"
     url: "https://layerxsecurity.com/blog/bioshocking-ai-gaming-the-ai-browser-and-escaping-its-guardrails/"

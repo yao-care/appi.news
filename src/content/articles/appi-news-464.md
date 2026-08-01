@@ -19,6 +19,9 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 11
+risksAndLimits:
+  - "成績報告表未附前一屆對照資料，無法判斷連霸或首度奪冠，本文不做此推論"
+  - "資料僅涵蓋115年會內賽單一屆次名次，不代表歷屆排名走勢"
 references:
   - title: "中華民國學校體育總會 (2026). 中華民國115年全國中等學校運動會桌球項目成績報告表"
     url: "https://sport115.cyc.edu.tw/downloadfile.php?aid=228&download=99041&code=1b5096809c9c8c7bc4cfbf41ec11adff"

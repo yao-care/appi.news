@@ -17,6 +17,10 @@ highlights:
   - "監視畫面顯示奧唐納文7月22日攜黑色袋子離開博物館，隨後於戰爭紀念花園與另一名嫌疑人碰面"
   - "25歲實習大律師伊莎貝拉·佩里·蘇利文遭控持有爆炸物，獲准附條件保釋：15,000歐元擔保金、上繳護照、每日到那斯警局簽到、宵禁及禁止接觸新愛爾蘭共和軍或薩奧拉德黨成員"
   - "警方助理總監賈斯汀·凱利稱此為「極其重大的查獲」；案情被指與主張以暴力反對北愛和平進程的新愛爾蘭共和軍有關"
+risksAndLimits:
+  - "兩名被告的具體共謀關係與武器來源，警方調查與法院程序仍在進行中，尚未有最終結論"
+  - "蘇利文「被要求運送包裹、不知情」為辯護律師庭上說法，尚未經法院採認或獨立查證"
+  - "本文法庭資訊以《愛爾蘭時報》與TheJournal.ie報導為準，尚無官方起訴後判決結果可供對照"
 references:
   - title: "Law student (25) granted bail and man (40) charged over car bomb seized in Co Monaghan"
     url: "https://www.irishtimes.com/crime-law/2026/07/24/law-student-25-charged-over-explosives-seized-near-border/"

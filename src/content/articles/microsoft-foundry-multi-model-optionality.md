@@ -29,6 +29,11 @@ highlights:
   - "微軟六月推自研程式碼模型 MAI-Code-1-Flash，明講是為了降低對 OpenAI 的依賴、替開發者壓低成本；同時把 Foundry 模型目錄做到逾一萬一千個，含 Claude Opus 4.8 與上萬個開源模型。"
   - "三大雲（Azure Foundry、AWS Bedrock、Vertex AI）全往 multi-model 走，模型正在商品化，單一一顆模型很難再是你選平台的理由；企業未來買的不是模型，而是切換模型的能力。"
   - "同月 Cursor 被 SpaceX 以六百億美元收購、Gemini CLI 消費版退場，正好是押單一供應商被綁死的反例；選型該對齊可換性與成本，並在模型層先留好換家餘地。"
+risksAndLimits:
+  - "「效率比GPT-5.5高十倍」是微軟自家說法，未見獨立測試證實"
+  - "逾一萬一千個模型多數來自Hugging Face開源匯入，品質與維護程度未逐一查核"
+  - "目錄規模與上架模型為2026年6月資訊，供應商組合可能隨時變動"
+  - "Cursor收購與Gemini CLI收攤屬個案事件，不代表所有企業工具鏈都面臨相同風險"
 references:
   - title: "Microsoft unveils MAI models to cut OpenAI reliance"
     url: "https://www.resultsense.com/news/2026-06-03-microsoft-mai-models-build/"

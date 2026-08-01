@@ -27,6 +27,11 @@ coverImage: "covers/optus-triple-zero-outage-lawsuit-cover.webp"
 coverAlt: "行動通訊基地台天線"
 coverImageCredit: "Photo by Mario Caruso on Unsplash"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
+risksAndLimits:
+  - "訴訟仍處聯邦法院程序初期，Optus尚未答辯，最終罰款與判決結果尚未確定"
+  - "2.5億澳元（約新台幣8.5億元）為法定最高罰款上限，非法院已裁定金額"
+  - "故障影響僅北領地、南澳、西澳與新州部分地區，非全澳電信網路皆受影響"
+  - "疏失細節與通報時間點多引自獨立調查報告與媒體轉述，Optus內部調查尚未完整公布"
 references:
   - title: "Optus sued by watchdog over triple-zero network outage"
     url: "https://www.perthnow.com.au/news/technology/optus-sued-by-watchdog-over-triple-zero-network-outage-c-22650623"

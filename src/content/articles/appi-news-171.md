@@ -21,6 +21,10 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 12
+risksAndLimits:
+  - "文中隱孢子蟲存活數天、腺病毒 93% 佔比等數據來自特定研究與地區統計，非普世通用比例"
+  - "足癬帶菌率 63.6%、鬚毛癬菌佔比 85% 出自 1997 年日本研究，年代久遠且限單一地區學生族群"
+  - "文中防護建議未取代醫療診斷，腹瀉、結膜炎等症狀是否為感染需臨床判斷，非自行對照文中描述即可確定"
 references:
   - title: "Sanborn M, Takaro T. (2013). Recreational water-related illness: office management and prevention. *Can Fam Physician*, 59(5), 491–495"
     url: "https://pubmed.ncbi.nlm.nih.gov/23673583/"

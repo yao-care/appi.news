@@ -17,6 +17,11 @@ highlights:
   - "英國六月歷史高溫紀錄35.6°C（1976年南安普敦／1957年倫敦坎登廣場）極可能被打破；威爾斯六月紀錄33.7°C同樣岌岌可危"
   - "鐵路因軌道受熱膨脹祭出降速與調整時刻表，籲紅色警戒區「非必要勿搭車」，且此期間不安排接駁巴士；服務倫敦與東南部的路線受影響最深"
   - "英國衛生安全局發布史上第二次紅色高溫健康警示（首次為2022年7月氣溫破40°C），示警「對健康族群亦構成生命風險」；學校提前放學、夜間恐維持20°C以上「熱帶夜」"
+risksAndLimits:
+  - "紅色警告僅涵蓋中南部英格蘭與威爾斯大部，範圍外地區不適用同等級警戒"
+  - "警戒時段限週三上午9時至週四晚間9時，非整週皆為紅色等級"
+  - "鐵路降速與時刻表調整因路線而異，倫敦東南部路線受影響最深"
+  - "英國並無法定最高工作溫度，職場是否停工仍由雇主自行評估"
 references:
   - title: "Red Extreme Heat Warning issued with June temperature records forecast to break"
     url: "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/red-extreme-heat-warning-issued-with-june-temperature-records-forecast-to-break"

@@ -21,6 +21,10 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 15
+risksAndLimits:
+  - "文中提到的補助方案以特定縣市為例,實際補助資格與金額各縣市規定不同"
+  - "居家改善降低26%跌倒風險的研究對象為高風險長者,一般族群效果可能不同"
+  - "鈣質補充建議依台灣衛福部標準,其他國家或地區指引可能不同"
 references:
   - title: "World Health Organization (2021). Falls. WHO Fact Sheet"
     url: "https://www.who.int/news-room/fact-sheets/detail/falls"

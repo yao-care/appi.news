@@ -28,6 +28,10 @@ highlights:
   - "OpenAI GPT-5.4 與 Molecule.one 的 Maria 在自動化濕實驗室跑了 10,080 筆反應，找出穩定自由基 TEMPO 能提升初級磺醯胺 Chan-Lam 偶聯反應的產率，平均產率從 16.6% 升到 25.2%、清過 30% 門檻的比例從 15.6% 翻到 37.5%。"
   - "被打破的不是智力瓶頸，是通量瓶頸：一位化學家一天做 3 個反應要花十年才能跑完一萬次，AI 加自動化把『便宜地搜索一大片反應空間』變成可能，TEMPO 這個線索本來就散在文獻裡，只是沒人系統性試過。"
   - "這是 near-autonomous 不是全自動：人類化學家把關實驗、手工複驗 14 組其中 11 組有改善，四位外部化學家審過。可信度靠的是濕實驗室驗證迴路與人工守門，不是模型大小。"
+risksAndLimits:
+  - "文中產率提升為相對改善，25.2% 平均產率仍偏低，不代表反應已解決到位"
+  - "人工複核僅涵蓋 14 組代表性反應，未涵蓋全部 10,080 筆結果"
+  - "OpenAI 與 Molecule.one 為此成果的發布方，成果細節尚未見獨立第三方研究覆核"
 references:
   - title: "OpenAI and Molecule.one report a near-autonomous AI chemist that improved a stubborn coupling reaction"
     url: "https://www.rdworldonline.com/openai-and-molecule-one-report-a-near-autonomous-ai-chemist-that-improved-a-stubborn-coupling-reaction/"

@@ -16,6 +16,11 @@ highlights:
   - "中東至少3個大規模氫能項目預計取消或大幅縮減，主因是在採購方確認前即啟動的800千噸/年產能設計遠超實際需求"
   - "印度SIGHT計畫中約285千噸/年的標案面臨高風險，Oriana Power、Jakson Green、NTPC RE等業者在未鎖定足夠採購方的情況下面臨財務困境"
   - "歐盟對RED III合規執行態度的不確定性，正在拖累以歐洲市場為目標的出口導向綠氫項目，政策清晰度成為項目存亡的前提條件"
+risksAndLimits:
+  - "核心判斷僅引自Wood Mackenzie單一機構2026年1月9日的展望，未見其他機構交叉驗證"
+  - "中東取消案數量、印度SIGHT標案285千噸/年風險為當時評估，後續可能隨談判進展變動"
+  - "台灣應建立採購代理機制等建議屬本文分析推論，非官方政策公告或既定措施"
+  - "未來12至18個月的供應鏈切入機會屬展望性推測，實際成效尚待後續驗證"
 references:
   - title: "Hydrogen Faces Year of Reckoning in 2026, Says Wood Mackenzie"
     url: "https://www.pv-magazine.com/2026/01/09/hydrogen-faces-year-of-reckoning-in-2026-says-wood-mackenzie"

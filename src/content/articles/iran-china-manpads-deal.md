@@ -25,6 +25,11 @@ highlights:
   - "交易由香港註冊的中青寶尚國際投資有限公司牽線，飛彈預計從中國烏魯木齊空運、經巴基斯坦轉運至伊朗"
   - "中國外交部稱報導「完全毫無根據」，中國國防部發言人稱「不熟悉相關情況」，巴基斯坦軍方否認涉入為「完全捏造」"
   - "美國國防部長赫格塞斯7月21日已證實中俄正以多種方式協助伊朗；川普稱此事「令人驚訝」、指習近平曾承諾不會介入"
+risksAndLimits:
+  - "交易細節僅出自路透社三名匿名消息人士，中國外交部、國防部與巴基斯坦軍方均否認涉入，尚未獨立驗證"
+  - "首批貨最快數週內才會送達，實際交易規模與細節是否如報導所述仍待後續證實"
+  - "伊朗官方目前並未就這筆交易本身公開表態，缺乏當事方對照說法"
+  - "赫格塞斯僅證實中俄「以多種方式」協助伊朗，並未鬆口是否即指這批MANPADS交易"
 references:
   - title: "REPORT | Iran to buy $60M-$70M in Chinese shoulder-fired air defense missiles"
     url: "https://local12.com/news/nation-world/report-iran-to-buy-60m-70m-in-chinese-shoulder-fired-air-defense-missiles-oil-strait-hormuz-pete-hegseth-nato-president-xi-jinping"

@@ -16,6 +16,10 @@ highlights:
   - "亞洲在體育專利申請佔全球63%、工業設計達76%，已成為體育科技創新的主要驅動力"
   - "全球體育科技市場預計從目前300億美元成長至2030年代初期的1,400億美元，成長超過四倍"
   - "台灣智慧財產局首度在TaiSPO設「臺灣專利超級站」，展示運動科技專利吸引國際買主關注"
+risksAndLimits:
+  - "體育專利成長率為WIPO全球統計，個別國家或項目差異未逐一列出"
+  - "台灣廠商智財能見度偏低為文中觀察，未附具體申請數字佐證"
+  - "市場規模預測時間跨度到2030年代初期，實際成長速度可能受景氣影響"
 references:
   - title: "IP and Sports: Ready, Set, Innovate - WIPO Magazine"
     url: "https://www.wipo.int/en/web/wipo-magazine/articles/ip-and-sports-ready-set-innovate-93241"

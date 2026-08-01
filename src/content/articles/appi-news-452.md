@@ -22,6 +22,10 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 9
+risksAndLimits:
+  - "林晉霆與六位備取選手的就學與過往戰績，目前查無可查證公開資料，本文未做推測"
+  - "選拔賽規模、參賽總人數、比賽日期與賽制，成績表未載明，以協會後續公告為準"
+  - "正取與備取名單仍須經協會與中華奧會報名確認程序，尚非正式參賽名單"
 references:
   - title: "中華民國桌球協會 (2026). 2026年青年奧林匹克運動會選拔賽成績紀錄表"
     url: "https://www.cttta.org.tw/files/News/20266412470.pdf"

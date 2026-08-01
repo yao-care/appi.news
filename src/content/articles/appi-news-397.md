@@ -23,6 +23,11 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 10
+risksAndLimits:
+  - "日圓保單解約門檻與違約金金額因保單條款而異，本文未列出具體數字"
+  - "東京置產風險僅以都心六區短期轉手比例為例，其他地區狀況本文未涵蓋"
+  - "美元兌日圓165的12個月預測為市場機構觀點，非確定走勢"
+  - "兩成資產集中門檻為一般規劃實務參考值，非個別狀況的精算結果"
 references:
   - title: "經濟日報 (2026). 日圓貶破163、近40年新低 國銀估恐有續貶可能"
     url: "https://money.udn.com/money/story/5613/9643303"

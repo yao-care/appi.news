@@ -16,6 +16,11 @@ highlights:
   - "亞利桑那第一廠4奈米良率已達台灣竹科同等水準，Q1 2026單季盈餘超過全年2025總和"
   - "台積電2025上半年合計取得美、德、日、中四國政府補貼共22.1億美元，補貼用於抵扣廠房設備成本"
   - "台積電日本熊本廠同步在2026年Q1首度轉盈，兩廠並行獲利挑戰「海外必虧」慣性論述"
+risksAndLimits:
+  - "「良率約92%」為外界估計非台積電官方公布數字，僅供參考"
+  - "2026年Q1獲利數字引用TechTimes報導，未見台積電財報獨立佐證"
+  - "亞利桑那第二廠2027年下半年才達高量產，時程能否兌現尚無定論"
+  - "轉盈仰賴22.1億美元多國政府補貼，補貼政策未來是否延續尚未確定"
 references:
   - title: "TSMC's Arizona factory turns a profit"
     url: "https://www.aztechcouncil.org/tsmcs-arizona-fab-generates-first-profit"

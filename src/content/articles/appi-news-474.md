@@ -18,6 +18,11 @@ sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 11
+risksAndLimits:
+  - "研究樣本為高雄榮總收治的一百名長者，結論是否適用其他地區或院所尚待驗證"
+  - "案例中林女士的膝痛改善為個別分享，未附具體治療週期或量化數據，不能推估自身成效"
+  - "目前整合評估證據多為觀察性研究，缺乏大型隨機對照試驗支持"
+  - "體質辨識量表信效度雖有本土驗證，但跨族群與長期追蹤資料仍不足"
 references:
   - title: "Lin WL, et al. (2025). Implications of comprehensive geriatric assessment and Traditional Chinese Medicine constitution types for integrative geriatric care. *Archives of Gerontology and Geriatrics*, 129, 105697"
     url: "https://pubmed.ncbi.nlm.nih.gov/39602981/"

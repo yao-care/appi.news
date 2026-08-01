@@ -27,6 +27,11 @@ highlights:
   - "含糖飲料與第 2 型糖尿病、痛風風險上升有關（觀察性研究），完整水果反而與風險下降有關"
 readingTime: 12
 originalContribution: "把果糖代謝機轉、含糖飲料與代謝疾病的關聯證據、台灣標示新制與『微糖無糖』真相，整理成消費者可判讀的指南，並守住關聯非因果、業者不導購的分際。"
+risksAndLimits:
+  - "Stanhope 2009 試驗劑量達總熱量25%，遠高於一般飲用量，屬機轉驗證非日常推論"
+  - "糖尿病、代謝症候群、痛風相關世代研究皆屬關聯性非因果，且為國外族群數據"
+  - "手搖飲含糖量係業者示例與個案數字，非全台統一標準，各店配方杯型不同"
+  - "脂肪肝「54%檢出率」為主動篩檢族群數字，非全國盛行率，兩者不可等同看待"
 references:
   - title: "WHO 呼籲成人與兒童減少糖攝取（世界衛生組織, 2015）"
     url: "https://www.who.int/news/item/04-03-2015-who-calls-on-countries-to-reduce-sugars-intake-among-adults-and-children"

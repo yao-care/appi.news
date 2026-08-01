@@ -13,6 +13,10 @@ highlights:
   - "全英190間Halifax分行預計自2027年起陸續換上Lloyds招牌，或就近併入鄰近的Lloyds分行；整併後集團在英格蘭、威爾斯、北愛爾蘭合計約531間分行"
   - "集團強調客戶帳戶號碼、分行代碼（sort code）與FSCS存款保障皆不變、不須採取任何行動；此次公告不涉及分行計畫變動，也沒有裁員"
   - "Halifax於1853年在西約克郡創立，1928年成為全球最大建築協會，2001年與蘇格蘭銀行合併為HBOS，2009年金融海嘯期間由勞埃德在英國政府支持下收購；蘇格蘭銀行品牌不受影響、繼續獨立運作"
+risksAndLimits:
+  - "190間分行僅公布2027年起分批換招牌，個別分行確切完成時程尚未公布"
+  - "App介面轉換僅稱未來數月起逐步進行，確切啟動日期未明"
+  - "帳戶號碼與分行代碼不變的說明僅適用英格蘭、威爾斯與北愛爾蘭，蘇格蘭銀行體系不在此列"
 references:
   - title: "Lloyds Banking Group announces Halifax to rebrand to Lloyds"
     url: "https://www.lloydsbankinggroup.com/media/press-releases/2026/lloyds-banking-group/halifax-rebrand-to-lloyds.html"

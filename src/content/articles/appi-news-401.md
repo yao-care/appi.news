@@ -22,6 +22,10 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 15
+risksAndLimits:
+  - "台積電41.6%、勞退基金台積電53%等權重數字為特定時點快照，會隨股價與調整而變動"
+  - "南韓與台灣的集中結構僅為對照類比，兩地產業組成與監管環境不同，程度不可直接等同"
+  - "文中未揭露南韓退休金體系對集中度的曝險數字，兩地比較僅限公開的指數與退休金片段資料"
 references:
   - title: "Bloomberg (2026年7月20日). South Korea Stock Boom: Why Kospi Is World's Most Volatile Benchmark Stock Index. 內容交叉驗證來源: Korean Stock Volatility Surpasses Bitcoin as Samsung, SK Hynix Concentration Fuels Swings. BiggingBit (2026年7月21日)"
     url: "https://en.bloomingbit.io/feed/news/116650"

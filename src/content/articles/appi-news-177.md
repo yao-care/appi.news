@@ -21,6 +21,11 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 11
+risksAndLimits:
+  - "文中引用的膠原蛋白誘導機制研究涵蓋 64 篇試驗，但未說明是否含美顏針專用機型與參數"
+  - "銀奈米粒子傷口癒合綜述談的是一般傷口修復，非直接針對美顏針術後族群驗證"
+  - "居家版與醫療級奈米銀濃度、粒徑差異未列出具體數值，效果差異無法量化比較"
+  - "4至6週回診週期與各階段照護時程為一般建議，個人修復速度受體質與生活習慣影響而不同"
 references:
   - title: Chen W, Jian X, Yu B. (2025). Review of Applications of Microneedling in Melasma. *Journal of Cosmetic Dermatology*, 24(1):e16707
     url: https://pubmed.ncbi.nlm.nih.gov/39731267/

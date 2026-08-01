@@ -18,6 +18,10 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 10
+risksAndLimits:
+  - "股價下跌三個層面原因為綜合多家媒體分析，並非台積電官方逐項證實的因果說明"
+  - "CPI 2.60%與定存利率1.3%至1.8%為2026年6月當時資訊，之後可能變動"
+  - "風險承受度判斷架構僅為原則性參考，未涵蓋個人稅務與保險等具體規劃細節"
 references:
   - title: "經理人 (2026). 台積電第二季法說會:營收1.27兆元、EPS為27.25元創歷史新高"
     url: "https://www.managertoday.com.tw/articles/view/72538"

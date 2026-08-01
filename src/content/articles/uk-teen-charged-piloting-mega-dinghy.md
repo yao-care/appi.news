@@ -17,6 +17,10 @@ highlights:
   - "Atak已被還押候審，將於7月27日（週一）在肯特郡馬蓋特治安法院出庭"
   - "內政部資料顯示，事發當天天氣溫暖晴朗、海況平靜，共366人分乘三艘小船抵英；今年至今已有13,007人以小船方式抵達英國，較去年同期下降45%，但前一週紀錄已被本次刷新"
   - "慈善機構Care4Calais營運部門負責人批評，英法兩國政府多年來聚焦邊境安全部署，結果卻是讓海峽偷渡變得更危險"
+risksAndLimits:
+  - "內容基於英國國家犯罪局與媒體報導，Atak仍待審，指控尚未經法院認定有罪"
+  - "165人載客數為媒體估計，非官方最終核實數字"
+  - "13,007人與較去年下降45%為7月25日當時統計，隨後續事件可能上修"
 references:
   - title: "Teenager charged with piloting small boat from France to UK"
     url: "https://www.lynnnews.co.uk/national/teenager-charged-with-piloting-small-boat-from-france-to-uk-169798/"

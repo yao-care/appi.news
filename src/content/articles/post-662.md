@@ -16,6 +16,11 @@ highlights:
   - "在台設站的跨國多中心試驗中，近70%企業反映台灣在站點啟動速度上排名前25%國家"
   - "健保資料庫涵蓋逾30年縱貫性全民就醫紀錄，是吸引藥廠選擇台灣設站的獨特資產"
   - "報告建議優化IRB審查、合約行政流程及CRO品質認證，以在日本、澳洲、南韓間維持競爭優勢"
+risksAndLimits:
+  - "台英合作協定與HTA給付機制屬政策層級進展，實際給付範圍與時程未在文中明確"
+  - "13.6億元節省效益為單一藥物估算,不代表整體臨床試驗產業的普遍效益"
+  - "IRB審查一致性不足、合約流程繁瑣等問題報告中列為待解,尚未有具體改善時程"
+  - "70%企業評為前25%快速啟動站點為業界調查意見,非官方審查時效統計"
 references:
   - title: "Building a Globally Competitive Clinical-Trial Ecosystem（PwC × IRPMA）"
     url: "https://www.irpma.org.tw/web/upload/20260331170753KMxrN9e.pdf"

@@ -15,6 +15,10 @@ highlights:
   - "台積電已購入ASML高數值孔徑EUV設備並進行研發，評估降低此類設備（每台造價高達4億美元）的使用成本"
   - "魏哲家坦言台積電正努力確保自身不成為供應鏈瓶頸，供應鏈全鏈均面臨交期壓力"
   - "魏哲家表示有意調漲代工價格，但不會效仿記憶體廠商的急漲作法，以維護客戶長期信任"
+risksAndLimits:
+  - "High-NA EUV設備研發成本目前仍在評估階段，能否商業量產尚無時間表"
+  - "2奈米製程2025年底量產為規劃目標，實際進度可能調整"
+  - "代工漲價幅度與時程未定，魏哲家僅表態有調漲意向"
 references:
   - title: "TSMC working hard to meet chip demand, would 'like' to hike prices"
     url: "https://www.reuters.com/world/china/tsmc-boss-upbeat-outlook-ai-boom-shows-no-sign-easing-2026-06-04"

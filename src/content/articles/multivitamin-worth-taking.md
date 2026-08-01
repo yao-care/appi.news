@@ -28,6 +28,11 @@ highlights:
   - "台灣人鈣、維生素 D 攝取普遍不足是真的，但首選是飲食與日曬，補充劑是補位不是主角"
 readingTime: 10
 originalContribution: "把綜合維他命『該不該吃』的爭議，用 COSMOS 隨機對照試驗、USPSTF 指引與懷疑派社論三方對照，並區分綜合維他命與單方高劑量補充劑、族群攝取缺口與補充劑療效，整理成消費者可判讀的聰明選指南。"
+risksAndLimits:
+  - "COSMOS 追蹤約 3.6 年，屬中老年族群，較年輕或短期使用者的效果未必相同"
+  - "認知效益屬次要終點且效果量僅 0.06 至 0.07 個標準差，非人人有感"
+  - "COSMOS 由 Mars Edge 補助、藥錠由 Pfizer 消費保健捐贈，正向結果宜留意資金來源"
+  - "鈣與維生素 D 攝取數據為台灣族群平均，不代表個人一定缺乏或需要補充"
 references:
   - title: "COSMOS multivitamin main trial: no significant effect on cancer or CVD（AJCN, 2022）"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9170475/"

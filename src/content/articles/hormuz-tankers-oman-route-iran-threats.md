@@ -15,6 +15,10 @@ highlights:
   - "英國海事貿易行動中心（UKMTO）證實遇襲；路透社引述消息人士稱伊朗革命衛隊發射至少兩枚飛彈，德黑蘭官媒暗示是伊朗所為，但未正式承認"
   - "卡達外交部發言人稱此舉是「對國際航行與全球能源安全不可接受的攻擊」；事件恐撕毀三週前簽署、讓海峽對所有船隻開放60天的備忘錄"
   - "美國總統川普警告伊朗「要嘛達成協議、要嘛我們把任務做完」，國際油價聞訊走揚；此前，油輪「Stoic Warrior」號6月25日曾領頭改走阿曼沿岸新航道，通行量一度回升至單週125艘"
+risksAndLimits:
+  - "備忘錄能否維持仍在未定之數，伊朗官方迄未正式承認涉入這波攻擊"
+  - "通行量數據來自Lloyd's List Intelligence與Kpler兩家不同商業機構，統計口徑未必一致"
+  - "伊朗與阿曼／IMO對「合法航道」各執一詞，本文未呈現獨立第三方裁定"
 references:
   - title: "British military says second ship hit in Strait of Hormuz"
     url: "https://www.local10.com/business/2026/07/07/british-military-says-second-ship-hit-in-strait-of-hormuz/"

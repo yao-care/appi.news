@@ -19,6 +19,9 @@ contentType: news
 disclaimerType: general
 readingTime: 10
 draft: false
+risksAndLimits:
+  - "準決賽三點單打皆先盤領先卻遭逆轉，逆轉原因文中未說明，僅為賽果紀錄"
+  - "隊史對照僅列2014、2024、2026三屆，其餘年份成績未提供，無法判斷長期趨勢"
 ---
 ## 一、賽事概況：世界桌球團體錦標賽是什麼
 

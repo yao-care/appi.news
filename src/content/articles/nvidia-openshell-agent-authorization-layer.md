@@ -28,6 +28,10 @@ highlights:
   - "NVIDIA 開源 agent 平台的重點不是功能多，而是把安全、網路、隱私護欄從提示詞改寫成 runtime 層強制執行的 OpenShell，治理被往工具層下沉。"
   - "搭配為長任務調過的 Nemotron 3 Ultra（開源 550B MoE、推理快 5 倍、agentic 任務成本降約 30%），Adobe、Salesforce、SAP、ServiceNow 等 17 家軟體大廠採用。"
   - "MCP 解決連接、OpenShell 解決授權，是兩種治理哲學；企業導入前要先問護欄的政策由誰定義、會不會被綁進另一套生態。"
+risksAndLimits:
+  - "17 家軟體大廠採用名單與吞吐量、成本等效能數據均出自 NVIDIA 官方發佈，尚無第三方獨立驗證"
+  - "OpenShell 護欄的政策定義與治理權綁在 NVIDIA 自家 runtime 與 Nemotron 生態，換平台的可攜性文中未說明"
+  - "deny-by-default 攔截效果與稽核軌跡完整性僅見官方說法，缺乏獨立滲透測試或第三方案例佐證"
 references:
   - title: "NVIDIA Ignites the Next Industrial Revolution in Knowledge Work With Open Agent Development Platform"
     url: "https://nvidianews.nvidia.com/news/ai-agents"

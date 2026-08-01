@@ -14,6 +14,11 @@ highlights:
   - "中國ETS發布指引準備2027年轉型為絕對總量上限制，並擴大覆蓋所有主要工業排放源，是全球規模最大的碳市場重組"
   - "歐盟CBAM已進入合規階段，英國跟進推出類似機制，台灣鋼鐵、鋁業、水泥及部分化學品出口商直接面對碳邊境關稅成本"
   - "碳市場收益創歷史新高，各國正將資金投入潔淨能源轉型，碳定價從氣候政策配角升格為製造業競爭力核心變數"
+risksAndLimits:
+  - "台灣目前無涵蓋工業部門的全國性排放交易體系，內文對台灣碳費費率與適用產業未列出具體數字"
+  - "歐盟CBAM分階段擴大覆蓋範圍的品項與時程，內文未列出，實際衝擊面隨政策公告調整"
+  - "中國ETS轉為絕對總量上限訂於2027年，屬官方規劃尚未實施，制度細節可能變動"
+  - "內文分析僅涵蓋鋼鐵、鋁業、水泥及部分化學品等CBAM相關品項，非台灣全體出口產業適用"
 references:
   - title: "Emissions Trading Worldwide: ICAP Status Report 2026"
     url: "https://icapcarbonaction.com/en/publications/emissions-trading-worldwide-icap-status-report-2026"

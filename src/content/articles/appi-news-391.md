@@ -19,6 +19,11 @@ sourceType: author
 contentType: column
 disclaimerType: general
 readingTime: 16
+risksAndLimits:
+  - "國際足總尚未正式表態取消季軍戰，賽制未來是否調整仍無定論"
+  - "球員與教練發言為賽前受訪個人意見，不代表整體球員或官方立場"
+  - "獎金金額為本屆世界盃資訊，未來屆別數字可能調整"
+  - "借勢行銷建議屬一般操作原則，實際成效因品牌與產業而異"
 references:
   - title: "世界盃季軍戰的由來與英法對戰賽制背景說明"
     url: "https://www.aljazeera.com/sports/2026/7/16/world-cup-why-is-there-a-third-place-playoff-between-france-and-england"

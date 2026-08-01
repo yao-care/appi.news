@@ -14,6 +14,10 @@ highlights:
   - "此舉讓第八巡迴上訴法院2025年裁定維持有效：阿肯色、愛荷華、明尼蘇達、密蘇里、內布拉斯加、北達科他、南達科他7州的私人團體，不得依《投票權法》第208條提告"
   - "第208條保障身障或無法讀寫的選民，可請自己選擇的人協助投票；本案源於阿肯色限制非選務人員協助投票不得逾6人的法律"
   - "阿肯色州檢察長葛里芬稱這是「州的勝利」；代理移民團體的MALDEF表示將續推密蘇里州的訴訟"
+risksAndLimits:
+  - "第八巡迴上訴法院的裁定僅適用轄下7州，其他州第208條私人訴權未受此案影響"
+  - "本案僅處理私人訴權，司法部長仍可依第208條提告，執行管道未完全消失"
+  - "MALDEF在密蘇里州的訴訟尚未有結果，第208條私人訴權的最終存廢仍待後續司法程序"
 references:
   - title: "Supreme Court allows a ruling that ends a tool to protect minority voters in 7 states"
     url: "https://www.kazu.org/npr-news/2026-06-22/supreme-court-allows-a-ruling-that-ends-a-tool-to-protect-minority-voters-in-7-states"

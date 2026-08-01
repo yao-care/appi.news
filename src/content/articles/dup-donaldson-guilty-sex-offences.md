@@ -16,6 +16,9 @@ highlights:
   - "兩名受害女性指控在兒童時期遭性侵，犯行橫跨1985至2008年；唐納森原本否認所有指控"
   - "法官藍西指監禁「無可避免」且將是「長期」，唐納森（63歲）當庭收押、列入性犯罪者名冊，9月25日量刑"
   - "其妻埃莉諾·唐納森經「事實審」被認定協助與教唆其犯行；DUP現任黨魁羅賓森稱唐納森「卑劣」、辜負黨的信任"
+risksAndLimits:
+  - "本案指控涵蓋1985至2008年間，法官量刑訂於9月25日，最終刑度尚未確定"
+  - "報導引自RTÉ、TheJournal.ie、Lynn News等外媒，事實細節以三方陳述為準"
 references:
   - title: "Former DUP leader Jeffrey Donaldson found guilty of all charges including rape"
     url: "https://www.rte.ie/news/courts/2026/0622/1579576-jeffrey-donaldson-court/"

@@ -28,6 +28,10 @@ highlights:
   - "OpenAI 的 LifeSciBench 由 173 位 PhD 科學家出 750 題真實研究任務，最強的自家模型 GPT-Rosalind 只過 36.1%，等於失敗近六成四；GPT-5.5 更只有 25.7%。"
   - "真正的訊號不是分數低，是崩跌的位置：純文字題還有 45.1%，一旦要讀真實圖表、序列檔或連結就掉到 28.1%。研究不是問答，是對雜亂真實資料下判斷。"
   - "出題、評分、拿來當範例秀成績的都是 OpenAI 自己，還把 Claude 排除在比較之外、沒放人類基準線；不管分數高低，自己握尺的成績單先天少一層可信度。"
+risksAndLimits:
+  - "LifeSciBench 由 OpenAI 自行出題、評分並展示自家模型成績，比較中未納入 Claude 等常用工具，也無人類科學家基準線可對照"
+  - "純文字題正確率 45.1%，一旦涉及真實圖表、序列檔等研究資料即降至 28.1%，此落差反映的是資料處理弱點而非整體能力"
+  - "全部參賽模型皆未通過半數題目，36.1% 為目前最高分，評測所指出的能力落差目前尚無模型解決"
 references:
   - title: "OpenAI Releases LifeSciBench, a 750-Task Benchmark Grading AI Models on Real Life-Science Research With Expert-Written Rubric"
     url: "https://www.marktechpost.com/2026/06/17/openai-releases-lifescibench-a-750-task-benchmark-grading-ai-models-on-real-life-science-research-with-expert-written-rubric/"

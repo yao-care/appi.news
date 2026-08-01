@@ -17,6 +17,11 @@ highlights:
   - "風險評估速度從每人20分鐘壓縮至25秒，40名專業人員原需3週的篩查工作縮短至90分鐘以內"
   - "計畫涵蓋台灣130萬名第二型糖尿病患者，目標2026年擴及200萬人，整合至家庭醫師2.0計畫"
   - "所有健保資料去識別化後存放於Google在彰化的本地資料中心，資料主權由台灣政府掌控"
+risksAndLimits:
+  - "目前公布數據以效率提升為主，AI風險分層對血糖控制率、住院率等臨床效益尚未經量化驗證"
+  - "2026年擴及200萬人的目標，能否達成取決於基層診所系統相容性與醫師使用率，仍是未定之數"
+  - "擴展至高血壓、高血脂、癌症篩查等領域目前僅是規劃，尚未實際執行"
+  - "效率提升20分鐘縮至25秒的數字來自Google官方說明，屬單一來源，尚未見獨立研究驗證"
 references:
   - title: "Taiwan NHIA Partners with Google for AI-Powered Healthcare Initiative 'AI-on-DM'"
     url: "https://www.taiwan-healthcare.org/en/news-detail?id=0sf1oo5yrei7mrt0"

@@ -15,6 +15,10 @@ highlights:
   - "整合入受監管產品（如電梯、玩具）的AI系統，期限再延至2028年8月2日"
   - "第6(3)條高風險系統自評後的資料庫登錄義務獲保留，僅形式簡化"
   - "台灣輸歐AI系統廠商獲得額外16個月緩衝，但現在即可確定合規基準線"
+risksAndLimits:
+  - "合規期限延至2027年12月屬臨時政治協議，尚待歐洲議會與理事會正式背書通過"
+  - "供應者身分認定涉及OEM/ODM合約細節，台灣廠商是否承擔完整合規義務需個案判斷"
+  - "文中2027年底集中合規壓力的時程推估為作者研判，非官方公告的強制期程"
 references:
   - title: "Artificial intelligence: Council and Parliament agree to simplify and streamline rules"
     url: "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules"

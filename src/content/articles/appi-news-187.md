@@ -21,6 +21,11 @@ sourceType: author
 contentType: column
 disclaimerType: general
 readingTime: 14
+risksAndLimits:
+  - "Communicable Diseases Intelligence研究數據來自澳洲2021至2022年Omicron流行期，且以50歲以上為分析對象"
+  - "Scientific Reports研究僅分析152位接種者的抗體動態，样本規模有限，結果未必適用所有族群"
+  - "文中黃帝內經引文為類比詮釋，用以呼應免疫衰老概念，並非臨床實證或醫學建議"
+  - "WHO接種頻率建議與疾管署開放對象範圍可能隨疫情與疫苗株更新而調整"
 references:
   - title: "Reina-Alfonso I, Álvarez-Heredia P, et al. (2026). Immunosenescence and cytomegalovirus-associated immune signatures on severe acute respiratory syndrome coronavirus 2 booster responses. *Journal of Gerontology: Biological Sciences and Medical Sciences*, 81(5):glag095"
     url: "https://pubmed.ncbi.nlm.nih.gov/41999211/"

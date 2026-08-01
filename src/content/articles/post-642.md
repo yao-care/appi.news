@@ -16,6 +16,11 @@ highlights:
   - "北太平洋海洋熱浪NEP25A延伸近5,000英里，與2013至2015年「Blob」規模相當甚至更大"
   - "聖嬰現象2026年7月前發生機率超過80%，熱浪與聖嬰重疊可能形成「超級」暖化效應"
   - "海表升溫提供颱風更多熱能，西北太平洋颱風強化速率與路徑偏移的風險同步升高"
+risksAndLimits:
+  - "45%為Climate Impact Company單方推估，NOAA官方原估僅40%，兩者有落差"
+  - "超級聖嬰與颱風增強屬疊加效應推論，7月前聖嬰是否成形尚待驗證"
+  - "台灣漁業、珊瑚白化衝擊為既有規律類推，非本次熱浪事件的實測數據"
+  - "聖嬰發生機率80%出自單一分析來源，未見其他機構獨立驗證"
 references:
   - title: "Global Marine Heatwave Aerial Coverage is 27% and Forecast to Reach 40% Q3/2026"
     url: "https://climateimpactcompany.com/april-2026-harine-heatwave-outlook-global-marine-heatwave-aerial-coverage-is-27-and-forecast-to-reach-40-2-2"

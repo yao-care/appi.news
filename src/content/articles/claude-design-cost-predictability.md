@@ -27,6 +27,10 @@ highlights:
   - "PCWorld 記者拿 Claude Pro 試用 Claude Design，約 25 分鐘做出一個網頁原型的三個變體就燒掉 80% 週額度，一個失誤要重建檔案，再五分鐘週額度直接歸零。"
   - "六月改版官方講的三件事都對著成本：每輪平均少用 token、錯誤率大幅下降、額度改成跟聊天與 Claude Code 共用一個大池；新畫布編輯器讓微調不再每次跑一個 model turn。"
   - "真正致命的不是貴，是不可預期。做 AI 工具的團隊要抄的不是它改了哪幾個設定，是把『單位成本可不可預期』放到跟『功能夠不夠強』一樣前面的位置。"
+risksAndLimits:
+  - "文中 25 分鐘燒 80% 週額度為 PCWorld 記者單一實測案例，非官方統計，實際耗用速度因帳號與操作而異"
+  - "五月併入共用額度池與六月改版細節皆為第三方報導與官方發布彙整，未有獨立第三方測試覆核改版後的實際省量幅度"
+  - "Claude Max 訴訟為六月提出的單一使用者主張，尚待司法認定，非已判定之事實"
 references:
   - title: "I tried Claude Design for half an hour. I'm already locked out for a week"
     url: "https://www.pcworld.com/article/3117811/i-tried-claude-design-for-half-an-hour-im-already-locked-out-for-a-week.html"

@@ -27,6 +27,11 @@ highlights:
   - "Mythos 級是 Anthropic 開在 Opus 之上的一層，Fable 5 定價約為 Opus 4.8 的兩倍；真正的訊號不是跑分高，是它在難題上領先得更多。"
   - "選型要先把任務難度分清楚再決定用哪一階：短而規則明確的任務 Opus 4.8 就夠，長鏈、跨檔案、要自我驗證的 agentic 任務才值得貴一倍。"
   - "越強的 AI 被套上越多限制，碰到高風險題目會被悄悄降一階回答，加上不少動作改成手動確認，這是『變笨』論述的一部分來源，也是便利與安全的取捨。"
+risksAndLimits:
+  - "SWE-Bench Pro 的 80.3% 分數是廠商自有測試框架跑出，非中立評測環境，數字應打折看待"
+  - "官方稱安全分類器僅影響不到 5% 對話，此比例出自廠商聲明，未見獨立驗證"
+  - "逾千小時滲透測試未找到通用越獄破口，同樣是廠商單方說法，非第三方查核結果"
+  - "難度越高領先越大的規律僅來自 SWE-Bench Pro 與 FrontierCode Diamond 兩項比較，未涵蓋所有任務類型"
 references:
   - title: "Claude Fable 5 and Claude Mythos 5"
     url: "https://www.anthropic.com/news/claude-fable-5-mythos-5"

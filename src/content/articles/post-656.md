@@ -16,6 +16,10 @@ highlights:
   - "框架若2026年10月通過，最早2028年3月1日生效，目標2035年降排放強度30%、2040年降65%"
   - "美國、中國、沙烏地阿拉伯等57國主導推遲，歐盟與小島嶼國反對"
   - "台灣長榮、陽明、萬海已承受歐盟ETS成本，IMO延遲是投資不確定性，不是緩衝"
+risksAndLimits:
+  - "IMO最快2028年3月生效，若批准與立法內化延遲，實際執行恐拖到2029年後"
+  - "歐盟ETS已對停靠歐盟港口船舶課碳權費，不受IMO延遲影響，兩套標準將並行"
+  - "2026年MEPC特別大會能否通過淨零框架尚未定論，本文推估奠基於現有草案文本"
 references:
   - title: "IMO Net-Zero Shipping Talks to Resume in 2026"
     url: "https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-net-zero-shipping-talks-to-resume-in-2026.aspx"

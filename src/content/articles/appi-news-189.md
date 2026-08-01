@@ -20,6 +20,10 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 13
+risksAndLimits:
+  - "個案為單一境外移入病例，非台灣本土流行病學數據"
+  - "24小時移除降低風險為機制推論，非本文提供之臨床試驗數字"
+  - "DEET／picaridin／permethrin濃度與用法為一般建議，未附本文query之比較試驗"
 references:
   - title: "Ho BM, Davis HE, Forrester JD, et al. (2021). Wilderness Medical Society Clinical Practice Guidelines for the Prevention and Management of Tick-Borne Illness in the United States. *Wilderness & Environmental Medicine*, 32(4), 554–572"
     url: "https://pubmed.ncbi.nlm.nih.gov/34642107/"

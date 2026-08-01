@@ -17,6 +17,10 @@ highlights:
   - "美國企業對AI公司的CVC投資在2025年創下歷史紀錄，Anthropic獲微軟與NVIDIA共投150億美元為Q4最大單筆"
   - "亞洲AI投資在Q4'25出現多筆億美元以上交易：澳洲Firmus 5.41億美元、中國滴滴自動駕駛2.8億美元、日本Mujin 2.35億美元"
   - "台灣新創CVC參與率在2025年第一季達72.3%創歷史高點，整體CVC主導格局在AI浪潮下更形加速"
+risksAndLimits:
+  - "台灣CVC參與早期投資比例72.3%為2025年第一季單季數據,非全年趨勢"
+  - "文中亞洲AI交易案例為KPMG當季列舉個案,未涵蓋亞洲整體CVC市場全貌"
+  - "微軟與NVIDIA投資Anthropic的150億美元屬單一超大型交易,可能拉高整體規模數字的代表性"
 references:
   - title: "Venture Pulse Q4 2025 — Global Analysis of Venture Funding"
     url: "https://kpmg.com/kpmg-us/content/dam/kpmg/pdf/2026/venture-pulse-q4-2025.pdf"

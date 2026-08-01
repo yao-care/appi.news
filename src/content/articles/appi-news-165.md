@@ -24,6 +24,10 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 12
+risksAndLimits:
+  - "現場篩檢族群分布不代表全國比例，女性占多數可能與活動宣傳對象有關"
+  - "保險套無法完全預防梅毒等皮膚接觸傳染，98.5%認同率非等同實際防護效果"
+  - "免費快速篩檢機構家數與適用年齡為2026年政策資訊，實際據點應以疾管署公告為準"
 references:
   - title: "墨新聞 MORE News（2026年4月）。「辣媽祖」降臨彰化保性福！全國首創大甲媽遶境「性健康問事處」翻轉千人衛教觀念"
     url: "https://more-news.tw/591138/"

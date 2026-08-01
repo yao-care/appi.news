@@ -14,6 +14,11 @@ sourceType: "wire"
 status: "published"
 tags: ["房市", "消費趨勢", "台北市", "台中市"]
 disclosure: "本文線索來自 TVBS NEWS YouTube 影片，內容經公開資料查證整理、附原始出處。"
+risksAndLimits:
+  - "文中坪數與交易占比為2025年統計，未來房市走向與價格可能持續變動"
+  - "南北六都購屋偏好差異明顯，單一地區數據不能套用到其他縣市"
+  - "小宅總價漲幅資料以新竹縣市等特定區域為例，非全台普遍情形"
+  - "家庭規模統計反映全國平均，個別家庭需求仍需依實際成員數評估"
 references:
   - title: "兩房小宅制霸全台 北市套房最熱、中南部反倒以「小二房」交易居冠"
     url: "https://www.fbs168.com/news/10284-small-apartments-dominate-taiwan"

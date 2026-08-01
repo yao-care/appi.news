@@ -19,6 +19,10 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 11
+risksAndLimits:
+  - "「巡、倒、清、刷」與孵化天數為疾管署與昆蟲學一般描述，非本文獨立驗證的數據"
+  - "訊息疲勞與社區參與研究為特定調查結果，未必適用所有地區與族群"
+  - "發燒就醫的天數門檻為原則性建議，實際病程請以當下症狀變化為準"
 references:
   - title: "衛生福利部疾病管制署 (2026). 防範登革熱 梅雨季節期間請民眾加強清除積水容器 落實「巡、倒、清、刷」"
     url: "https://www.cdc.gov.tw/Bulletin/Detail/fvUjKT2AhWh1ts4cYyK9mQ?typeid=9"

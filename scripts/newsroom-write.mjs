@@ -27,6 +27,7 @@ import { validateJob, normalizeJob } from './lib/newsroom-job.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { nextOpenPublishDate, takenDatesFromContents } from './lib/publish-slot.mjs';
 import { coverDuplicatesInline } from './lib/image-dedupe.mjs';
+import { RISKS_PROMPT } from "./lib/risks-prompt.mjs";
 
 const ARTICLES_DIR = 'src/content/articles';
 
@@ -179,6 +180,7 @@ export function buildDraftPrompt(job, schedule = null, opts = {}) {
     isUpdate
       ? `2. frontmatter：**status 與 publishDate 一律沿用原檔現值、不要改**（滾動更新不得改變排程）；category/subcategory/author/contentType/sourceType 維持原檔；新增或更新 updatedDate（見步驟 3a）。disclosure 揭露「以 AI 輔助起草、經人工查證編輯」。`
       : `2. frontmatter：status: "${status}"、publishDate: "${pubDate}"、category: "${job.category}"${job.subcategory ? `、subcategory: "${job.subcategory}"` : ''}、author: "${author}"、contentType: "${contentType}"、sourceType: "editorial"（須為 src/content.config.ts 的 enum 合法值），並用 disclosure 欄位揭露「以 AI 輔助起草、經人工查證編輯」。`,
+    RISKS_PROMPT,
     memoryStep,
     noFabricate,
     '5. **不要 git add / commit / push**——版控與發佈由外層腳本在 check:links gate 後處理。',

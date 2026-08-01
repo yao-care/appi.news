@@ -14,6 +14,10 @@ highlights:
   - "2030年創造1.7億個新職位，但同步消除9,200萬個職位，淨增7,800萬個新機會"
   - "63%雇主認為技能缺口是業務轉型最大障礙，排名高於文化、法規和資本限制"
   - "台灣AI相關職缺年增38%達9.9萬個，技能半衰期縮短至12至18個月"
+risksAndLimits:
+  - "技能半衰期12至18個月為WEF報告推估，各產業實際落差未提供分行業數據"
+  - "台灣AI職缺年增38%為半導體與電子零組件業數據，非全產業通用"
+  - "中小企業再培訓投入受景氣預期影響，文中未提供具體投資金額或補助門檻"
 references:
   - title: "The Future of Jobs Report 2025 | World Economic Forum"
     url: "https://www.weforum.org/publications/the-future-of-jobs-report-2025"

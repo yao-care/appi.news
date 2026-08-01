@@ -17,6 +17,10 @@ highlights:
   - "夫妻兩人現居墨西哥馬塔莫羅斯（布朗斯維爾對岸）；三名美籍子女留在美國一側與親屬同住，下個月即將開學"
   - "律師David Rozas本週向布朗斯維爾聯邦法院提出請願，主張驅逐違法，要求法官命政府協助特雷維尼奧返美並維持DACA身分有效"
   - "截至2月的國土安全部信函顯示，川普政府已驅逐86名DACA受益人、逮捕241人；國土安全部尚未回應置評請求"
+risksAndLimits:
+  - "終止DACA身分的認定依據來自單一律師與美聯社報導，國土安全部尚未回應置評請求"
+  - "86名遭驅逐、241人遭逮捕為2月國安部信函數字，與3月本案時序不完全同期"
+  - "案件仍在布朗斯維爾聯邦法院審理中，驅逐是否違法尚待判決"
 references:
   - title: "US cites 'unauthorized travel' to end DACA status for a mother of 3 deported to Mexico"
     url: "https://abcnews.com/US/wireStory/us-cites-unauthorized-travel-end-daca-status-mother-135244210"

@@ -17,6 +17,10 @@ highlights:
   - "霍利路德公園部分區域與女王大道封閉，警方籲民眾避開該區、居民關窗防煙，煙塵一路飄到東邊的達基斯（Dalkeith），車上發現落灰，無人員傷亡"
   - "凱恩戈姆國家公園格倫莫爾地區野火已燒逾五天（自7月15日起），消防隊仍在現場，預計還要再待數天"
   - "受兩場野火牽動，蘇格蘭消防救援隊與蘇格蘭野火論壇把中部高地、南部與東部蘇格蘭的「極高」野火風險警告從原訂五天延長至本週五（24日）"
+risksAndLimits:
+  - "「極高」野火警告效期至7月24日（週五），讀者查閱時可能已解除或變動"
+  - "亞瑟座山週一疑似重燃僅為目擊回報，官方尚未證實起火原因與範圍"
+  - "「極高」警告涵蓋中部高地、南部與東部蘇格蘭，非全境適用"
 references:
   - title: "Firefighters battle blaze on Arthur's Seat in the heart of Edinburgh"
     url: "https://kvia.com/news/us-world/cnn-world/2026/07/20/firefighters-battle-blaze-on-arthurs-seat-in-the-heart-of-edinburgh/"

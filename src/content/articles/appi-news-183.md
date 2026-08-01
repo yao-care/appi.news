@@ -22,6 +22,11 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 9
+risksAndLimits:
+  - "補充品試驗多在 8 週內完成，長期食用一年以上的效果與安全性未見說明"
+  - "文中研究對象與台灣飲食習慣的落差未提及，實際降壓幅度可能因人而異"
+  - "服用抗凝血藥、術前兩週、孕婦屬明確禁忌族群，其餘慢性病患者風險未討論"
+  - "傍晚食用較佳一說僅為推論，內文明確指出尚需更多研究支持"
 references:
   - title: "Kim JY, et al. (2008). Effects of nattokinase on blood pressure: a randomized, controlled trial. *Hypertens Res*, 31(8), 1583–1588"
     url: "https://pubmed.ncbi.nlm.nih.gov/18971533/"

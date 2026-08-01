@@ -14,6 +14,11 @@ highlights:
   - "沙烏地阿拉伯為首的油產國與高雄心聯盟之間的對峙，讓公約INC-5.3前途充滿不確定性"
   - "世界經濟論壇估計2060年全球塑膠廢棄物將達17億噸、累計成本28.1兆美元，需求端管控已是市場共識"
   - "台灣包材業者面對的是歐盟PPWR包裝法規、品牌商減塑承諾與供應鏈循環設計要求的三重壓力"
+risksAndLimits:
+  - "INC-5.3會期、地點、資金來源均未定，公約後續走向目前無法預測"
+  - "2060年17億噸廢棄物與28.1兆美元成本為世界經濟論壇估算，非已發生數據"
+  - "文中歐盟PPWR規範與品牌採購要求為報導整理，讀者仍應查證官方最新條文"
+  - "台廠因應建議屬產業趨勢研判，非針對個別企業的法遵或投資意見"
 references:
   - title: "Road to Geneva | Plastic Pollution INC-5.2"
     url: "https://www.genevaenvironmentnetwork.org/resources/updates/road-to-geneva-plastic-pollution-inc-5-2"

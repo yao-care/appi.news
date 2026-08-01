@@ -16,6 +16,10 @@ highlights:
   - "2025年全球儲能新增裝置達112GW/307GWh，超越BNEF原本預期"
   - "台灣能源管理法修正草案強制用電大戶配置儲能，預計帶動工商用戶端需求"
   - "台灣本土儲能廠在系統整合能力上存在缺口，關鍵材料、BMS軟體與長時儲能技術是三大待補短板"
+risksAndLimits:
+  - "文中「能源管理法修正草案若正式通過」顯示該法規截至發文時尚未正式生效，用電大戶納管門檻可能調整"
+  - "5,000瓎以上為用電大戶第一波納管對象之市場普遍預估，非官方最終公告數字"
+  - "全球儲能與資料中心用電成長數據為BNEF模型預測，非已發生的實際統計"
 references:
   - title: "Global Energy Storage Boom: Three Things to Know"
     url: "https://about.bnef.com/insights/clean-energy/global-energy-storage-boom-three-things-to-know"

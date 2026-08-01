@@ -27,6 +27,10 @@ highlights:
   - "Peregrine 完成 2.5 億美元 D 輪募資、估值 68 億美元，對照 2025 年 3 月 D 輪前的 25 億，15 個月翻近三倍。"
   - "投資人這輪賭的不是更大的模型，是把分散在各系統的營運資料統一、打通孤島的營運軟體，創辦團隊出身 Palantir。"
   - "資料統一是 AI 落地前的基建題：agent 要先有乾淨、權限分明的統一資料才動得了，落地設計比模型強弱更關鍵。"
+risksAndLimits:
+  - "估值、覆蓋機構數與世界盃合作等數字均出自Peregrine官方公告與投資人說法，尚無第三方查核"
+  - "本文以單一公司募資案例為據，不代表所有資料整合類新創都適用同一套邏輯"
+  - "68億美元估值為2026年6月時點資訊，未上市公司估值可能隨後續募資或市況變動"
 references:
   - title: "Peregrine Technologies Raises $250 Million Series D at $6.8 Billion Valuation"
     url: "https://www.prnewswire.com/news-releases/peregrine-technologies-raises-250-million-series-d-at-6-8-billion-valuation-302808115.html"

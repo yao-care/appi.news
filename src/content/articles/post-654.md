@@ -15,6 +15,11 @@ highlights:
   - "Insilico Medicine 2025年管線有28個臨床前候選、10個臨床項目，其中2個已進入Phase II階段"
   - "Phase 2正面讀出帶動AI藥物設計板塊升溫，Insilico Medicine同年12月港股IPO融資3.93億美元"
   - "AI藥物設計縮短研發周期從傳統10年以上壓縮至3至4年，台灣生技廠商的導入機會集中在臨床前篩選與適應症擴張兩個節點"
+risksAndLimits:
+  - "Phase IIa為小規模早期試驗，Phase III大型確效試驗結果尚未出爐"
+  - "IPF領域過去十年已有多個候選藥物在後期試驗失敗，Rentosertib能否複製成功仍未知"
+  - "Rentosertib的Phase III設計、終點指標與入組標準目前尚未公開"
+  - "文中對台灣生技切入點的建議屬推論分析，非已驗證的產業結論"
 references:
   - title: "AI Drug Discovery Breakthroughs Move from Promise to Proof in 2025"
     url: "https://empowerswiss.org/en/blog/ai-drug-discovery-breakthroughs-move-from-promise-to-proof-in-2025"

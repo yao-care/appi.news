@@ -24,6 +24,11 @@ highlights:
   - "戰線首度燒進埃及：無人機擊中地中海達米埃塔港美籍浮式儲存氣化裝置「Energos Winter」號，火勢波及另一船「Gaslog Salem」號，埃及官方確認零傷亡；科威特國防部通報1名工人在伊朗攻擊中喪生"
   - "伊拉克空襲除PMF通報的至少20死32傷外，另有6名伊朗顧問喪生；伊朗革命衛隊海軍在荷莫茲海峽攔停3艘「違規」油輪，警告外部介入「不會被容忍」"
   - "川普誓言「這次輪到我們狠狠反擊」，稱伊朗以時速8000英里飛彈攻擊約旦基地、事後已致歉；國際油價單日暴漲7.9%至每桶90.74美元，創數週最大漲幅，30日小幅回落至87.3美元"
+risksAndLimits:
+  - "空襲傷亡數字來自伊朗官方與PMF等單方通報，尚未經獨立機構查證"
+  - "科威特、埃及港口損害情形僅有官方初步說法，具體傷亡與損失金額未定論"
+  - "油價單日暴漲7.9%為特定時點數字，戰事變化下可能隨時再劇烈波動"
+  - "文中傷亡與地點資訊多轉引外電，原始事件細節尚待後續證實"
 references:
   - title: "2 troops are dead, 1 is missing after Iranian attacks on base in Jordan, US military says"
     url: "https://www.mysuncoast.com/2026/07/18/2-troops-are-dead-1-is-missing-after-iranian-attacks-base-jordan-us-military-says/"

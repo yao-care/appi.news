@@ -15,6 +15,10 @@ highlights:
   - "Q4單季即貢獻全年40%融資金額，大型晚期交易主導，Revolut單年籌資逾40億美元"
   - "Pitchbook 2026 Q1報告顯示Q1 FinTech融資年增近50%，估值已達歷史高點"
   - "KPMG統計顯示亞太區創投僅75億美元、十年最低，台灣金科新創面臨早期資金更難取得的挑戰"
+risksAndLimits:
+  - "台灣段落屬情境推論而非報告原始數據，Pitchbook與KPMG報告本身未針對台灣做分析"
+  - "2026年Q1融資季比下滑近25%的短期波動，能否代表全年趨勢尚無定論"
+  - "Revolut等頭部案例規模龐大，不代表中小型FinTech募資環境同步改善"
 references:
   - title: "2025 Fintech Funding Saw Fewer But Bigger Deals"
     url: "https://www.americanbanker.com/news/2025-fintech-funding-saw-fewer-but-bigger-deals"

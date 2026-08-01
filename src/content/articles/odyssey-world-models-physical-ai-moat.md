@@ -29,6 +29,11 @@ highlights:
   - "Odyssey 6/17 拿到 3.1 億美元 B 輪、投後估值 14.5 億美元，投資人含 Amazon、AMD Ventures、GV、EQT 與 In-Q-Tel；這份名單裡沒有一個是衝著下一個 ChatGPT 來的。"
   - "世界模型跟聊天 LLM 學的東西不同：前者建一個能預測物理世界的內部模型、餵給機器人與模擬，護城河在真實世界資料、感測器、機器人與模擬環境，比已在商品化的聊天模型更深。"
   - "台灣在實體 AI 這層的卡位點是感測、機構件、邊緣運算這些會碰到真實世界的零組件，而不是只守在雲端 GPU 代工那一格等單。"
+risksAndLimits:
+  - "Odyssey 尚在早期，創辦人自陳距離世界模型的『GPT-3 時刻』還早，技術能否成熟未有定論"
+  - "Amazon 對 Trainium 晶片為優先而非獨家使用，實際成效與是否延續仍待觀察"
+  - "四月實體 AI 吸金 53 億美元為單月數據，不代表長期趨勢會持續"
+  - "文中對台灣供應鏈機會的推論屬作者觀點分析，非產業界已達成的共識結論"
 references:
   - title: "Odyssey raises $310 million at $1.45 billion valuation to build AI that simulates the real world"
     url: "https://techstartups.com/2026/06/17/odyssey-raises-310-million-at-1-45-billion-valuation-to-build-ai-that-simulates-the-real-world/"

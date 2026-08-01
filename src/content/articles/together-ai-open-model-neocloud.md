@@ -28,6 +28,11 @@ highlights:
   - "Together AI 7/1 宣布 8 億美元 C 輪、估值衝上 83 億美元，由沙烏地 Aramco Ventures 領投，Nvidia、和碩（Pegatron）與 Vista、General Catalyst 跟投；16 個月前的 B 輪估值還只有 33 億。"
   - "這輪賭的不是『做哪個模型最聰明』，而是『誰能把開源模型跑得便宜又穩』：開源模型把模型本身商品化，價值往推論與代管這層基礎建設移，護城河從演算法變成算力、容量與交付。"
   - "台灣的和碩已經用真金白銀進場，但值得問的是台灣要停在硬體組裝，還是往 neocloud 與推論營運這層更靠近終端價值的位置走。"
+risksAndLimits:
+  - "投後估值 83 億美元是投資人出價，不等於公司實際市場價值或未來獲利保證"
+  - "年度預約金額 11.5 億美元為簽約合約總額，非已認列或已收現的營收"
+  - "五年產能擴張 50 倍為公司規劃目標，尚未實現，需求能否照曲線成長仍未知"
+  - "Nvidia 既是供應商又是投資人，此循環結構在資金退潮時的影響尚無定論"
 references:
   - title: "Neocloud Together AI raises $800M, leaps to $8.3B valuation"
     url: "https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/"

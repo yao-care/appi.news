@@ -27,6 +27,11 @@ highlights:
   - "2026年世界母乳哺育週主題為「Breastfeeding for a Sustainable Start in Life: Strengthen What Works」，進入WBW-SDG運動第三週期，聚焦營養、糧食安全與貧窮削減。"
   - "台灣育嬰留職停薪彈性化新制2026年1月1日上路，首度可用「日」為單位請假，最短1日、雙親合計最多60日，期間仍領8成薪資補貼。"
   - "台北市百人以上企業哺集乳室設置率達93.11%，但性別工作平等法對未設置者仍無罰則，僅能以鼓勵代替強制。"
+risksAndLimits:
+  - "台灣哺育率數據為2022年出生世代調查，2023年8月公布，非最新年度"
+  - "哺集乳室93.11%設置比例僅台北市統計，非全國數據"
+  - "育嬰留停彈性新制與獎勵金額度可能隨勞動部後續修法調整"
+  - "哺集乳室無罰則屬現況，修法動向尚未定案"
 references:
   - title: "World Breastfeeding Week 2026 - Breastfeeding for a Sustainable Start in Life: Strengthen What Works"
     url: "https://www.fhs.gov.hk/wbw2026/index.html"

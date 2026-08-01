@@ -23,6 +23,10 @@ sourceType: "wire"
 coverImage: "covers/farage-resigns-clacton-by-election-cover.webp"
 coverAlt: "英國倫敦西敏宮與大笨鐘外觀"
 coverImageCredit: "Photo by Peter Kostov on Unsplash"
+risksAndLimits:
+  - "兩起國會標準調查尚未有結論，法拉吉是否違規仍待專員審查"
+  - "500萬英鎊捐款來源與用途說明僅為法拉吉單方說法，未經獨立查證"
+  - "保守黨與Restore Britain參選與否取決於調查結果，補選最終對戰名單未定"
 references:
   - title: "Why has UK Reform's Nigel Farage resigned as MP? What happens next?"
     url: "https://www.aljazeera.com/news/2026/7/8/why-has-uk-reforms-nigel-farage-resigned-as-mp-what-happens-next"

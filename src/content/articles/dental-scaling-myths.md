@@ -28,6 +28,10 @@ highlights:
   - "洗牙會痛、會流血，多半代表牙齦本來就在發炎，不是洗牙造成的傷害"
 readingTime: 10
 originalContribution: "把健保洗牙的官方給付規則（一般每半年、特殊族群每90天）與坊間三大迷思，對照健保署114年度計畫、牙醫師公會與事實查核平台的資料逐一拆解，並釐清『糖尿病每3個月』常被混淆的塗氟與洗牙差別。"
+risksAndLimits:
+  - "洗牙頻率與資格需牙醫依個人狀況判斷，糖尿病族群的3個月洗牙資格未經診所自動觸發"
+  - "高風險族群90天給付與孕婦、糖尿病適用範圍依健保公告而定，實際申報以就診當下規定為準"
+  - "文中價格為掛號費150至200元、自費400至1000元之參考行情，各院所實際收費不同"
 references:
   - title: "健保洗牙、自費洗牙的差異？費用多少？（Hello醫師）"
     url: "https://helloyishi.com.tw/healthy-habits/general-hygiene/difference-fee-between-nhi-and-self-pay/"

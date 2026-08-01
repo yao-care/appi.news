@@ -15,6 +15,10 @@ highlights:
   - "五年前的2021年4月，天然氣發電量與現在相同，但風光合計僅245TWh，如今已翻倍"
   - "全球風光發電年成長13%，中國+14%、英國+35%、澳洲+17%、台灣所在的亞太地區普遍加速"
   - "Ember指出此為長期趨勢而非能源危機反應，風光已在2025年承接全部全球電力需求成長量"
+risksAndLimits:
+  - "4月數據來自36個已公布國家、其餘估算補足，非全數實測"
+  - "4月為春季日照與風力偏高月份，夏冬天然氣需求峰值優勢未計入"
+  - "Ember明言此里程碑不代表風光對天然氣的角色已永久轉換"
 references:
   - title: "For the first time, wind and solar generated more electricity than gas worldwide in April 2026"
     url: "https://ember-energy.org/latest-updates/for-the-first-time-wind-and-solar-generated-more-electricity-than-gas-worldwide-in-april-2026"

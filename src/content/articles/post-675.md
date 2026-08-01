@@ -14,6 +14,11 @@ highlights:
   - "台灣TFDA已核准約50款本土製造及116款進口AI/ML醫療設備，涵蓋超音波AI判讀、放射影像分析等應用"
   - "FDA於2024年12月定案「AI設備預定變更控制計畫」指引，標誌全球監管從一次性審查走向演算法生命週期管理"
   - "各國共同挑戰在於演算法透明度不足、上市後監控機制不完整，以及生成式AI帶來的新型監管空白"
+risksAndLimits:
+  - "現行框架多屬事前審查與自主通報，實際上市後性能追蹤機制尚未系統化建立"
+  - "生成式AI於醫療問答等場景的監管空白，內文未提出具體解決時程"
+  - "TFDA核准數量為2024年12月資訊，之後核准件數可能已異動"
+  - "各國監管互認空間屬原則性描述，實際申請仍需個案確認審查結果"
 references:
   - title: "A decade of review in global regulation and research of artificial intelligence medical devices (2015–2025)"
     url: "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1630408/full"

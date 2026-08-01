@@ -15,6 +15,10 @@ highlights:
   - "中國網軍攻擊四大手法：硬體軟體漏洞利用、DDoS、社交工程、供應鏈攻擊，漏洞利用佔超過半數"
   - "台灣資安市場2026年達13億美元，預測以11.21% CAGR成長至2031年22億美元"
   - "台灣2025年啟動第七期國家資安發展計畫，編列88億元台幣推動AI驅動防禦與零信任架構"
+risksAndLimits:
+  - "國安局揭露的攻擊次數與手法比例為官方彙整數字，未附原始統計方法可供外部驗證"
+  - "市場規模與成長率預測引自單一民間研究機構，實際成長可能受景氣或政策變動影響"
+  - "88億元資安預算與零信任架構時程為現行規劃，執行進度與最終編列可能調整"
 references:
   - title: "China launched 2.63 million daily cyberattacks against Taiwan in 2025: NSB"
     url: "https://www.ocac.gov.tw/OCAC/Pages/Detail.aspx?nodeid=329&pid=82609858"

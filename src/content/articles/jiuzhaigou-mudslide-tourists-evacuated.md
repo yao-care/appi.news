@@ -16,6 +16,10 @@ highlights:
   - "諾爾是今年登陸中國最強的颱風，也是本月第3個颱風，週日凌晨3時50分於廣東惠東平海登陸，最大風速每秒45公尺，中國隨後對江西、湖南、廣東、四川、陝西、甘肅及新疆東南部發布山洪紅色預警"
   - "同一波豪雨已在甘肅定西市渭源縣釀成山洪暴發，造成10人死亡、23人受傷，部分傷亡者是在景區紮營時遭洪水沖襲受困"
   - "本月以來中國多地天災頻傳：廣西因颱風梅莎克相關雨災至少39人死亡、甘肅稍早另一起山崩造成21人死亡、湖北暴雨與龍捲風釀11人死亡"
+risksAndLimits:
+  - "7月27日僅暫時關閉箭竹海以上區域與則查窪溝全區，其餘區域開放情形與復開時間官方尚未公布"
+  - "甘肅定西10死23傷與九寨溝土石流屬同一波降雨系統，但為不同地點事件，非同一起意外"
+  - "傷亡與疏散人數為報導當時統計，後續是否增加或更新未在原始報導中說明"
 references:
   - title: "Stranded tourists evacuated from China's famed Jiuzhaigou World Heritage site after mudslides, heavy rain"
     url: "https://www.inkl.com/news/stranded-tourists-evacuated-from-chinas-famed-jiuzhaigou-world-heritage-site-after-mudslides-heavy-rain"

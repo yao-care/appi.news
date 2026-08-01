@@ -27,6 +27,10 @@ highlights:
   - "AlphaProof 2024 年在奧數拿相當於銀牌的 28 分，且整份證明跑在 Lean 形式化環境裡逐步驗證；2026 年初 AxiomProver 更用 Lean/Mathlib 解掉四個過去沒人解出來的猜想，外加 Putnam 全部十二題。"
   - "2025 年 Gemini Deep Think 拿的奧數金牌是端到端自然語言、靠人工評審判對錯，沒經 Lean 驗證；金牌證明 AI 寫得出對的數學，可驗證才證明不用人幫忙也知道它是對的。"
   - "真正的突破是 AI 產物第一次有了『能被機器查證』這個結構；台灣的切入點不是搶著訓練證明模型，而是把可驗證產物的方法用進晶片與關鍵軟體驗證。"
+risksAndLimits:
+  - "Gemini Deep Think 的金牌成績未經 Lean 機器驗證，是由 IMO 評審人工判對錯"
+  - "可被 Lean 形式化查證的目前僅限命題明確、對錯二分的數學，整篇論文全面形式化仍是大工程"
+  - "形式化只加速了證明的生成與驗證，人類理解背後數學的消化端未被加速"
 references:
   - title: "AI achieves silver-medal standard solving International Mathematical Olympiad problems"
     url: "https://deepmind.google/blog/ai-solves-imo-problems-at-silver-medal-level/"

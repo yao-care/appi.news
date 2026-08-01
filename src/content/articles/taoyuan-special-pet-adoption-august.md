@@ -17,6 +17,10 @@ coverAlt: "柯爾鴨特寫，示意圖"
 coverImageCredit: "Photo by Ross Sokolovski on Unsplash"
 tags: ["寵物與動物", "桃園市"]
 disclosure: "線索來自 東森新聞 CH51 YouTube 影片，內容經公開資料查證整理、附原始出處。"
+risksAndLimits:
+  - "認養資格限設籍桃園市且年滿18歲，外縣市或未成年民眾不適用"
+  - "紅腿象龜與花背箱龜採指定認養方式，須經資格審核，非現場先到先得"
+  - "活動場次與動物數量為單次公告，實際到場後品項或有變動需以現場為準"
 ---
 
 桃園市動物保護處將在8月1日辦理一場特殊寵物認養活動，鬃獅蜥、鵪鶉、蜜袋鼯、紅腿象龜、花背箱龜、和尚鸚鵡、小太陽鸚鵡、柯爾鴨、鼠及兔，共15隻等待新飼主，[聯合新聞網](https://udn.com/news/story/7324/9660844)、[中央社](https://www.cna.com.tw/news/aloc/202607300204.aspx)與[桃園電子報](https://www.scooptw.com/tyenews/506498/%E6%A1%83%E5%9C%92%E5%8B%95%E4%BF%9D%E8%99%95%E7%89%B9%E5%AF%B5%E8%AA%8D%E9%A4%8A8-1%E7%99%BB%E5%A0%B4-%E8%B1%A1%E9%BE%9C%E3%80%81%E6%9F%AF%E7%88%BE%E9%B4%A8%E5%B0%8B%E6%89%BE%E6%84%9B%E5%BF%83/)皆已報導這場活動的時間、地點與認養規則。

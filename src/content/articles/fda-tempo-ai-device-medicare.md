@@ -27,6 +27,11 @@ highlights:
   - "TEMPO 讓 AI 數位醫材免走完 510(k)／PMA、免申請 IDE、也免整套知情同意與 IRB（21 CFR Part 50、56），就能先用在傳統 Medicare 病患身上；但只限在 CMS 的 ACCESS 給付模式內、只選 4 大慢性病領域、每領域至多約 10 家美國廠商。"
   - "這不是新核准，是 FDA 的『執法裁量』：暫時不追究、可撤回、綁記錄與標示條件，目的是換一批真實世界資料回去支持正式送件。看成永久鬆綁會誤判它的信任邊界。"
   - "台灣沒有這種『先用＋給付』雙門：醫療器材管理法 2021 上路、食藥署設智慧醫材專案辦公室，健保 2023 年底才首次給付一款 AI 醫材。TEMPO 值得台灣看的不是鬆綁多少，而是它把『上市』和『給付』綁在同一條路上。"
+risksAndLimits:
+  - "試辦限傳統 Medicare 病患，Medicare Advantage 與其他保險族群不適用"
+  - "每個臨床領域最多約 10 家美國廠商入選，非普遍開放給所有醫材業者"
+  - "僅涵蓋四類慢性病領域，其他疾病或用途的 AI 醫材不在此鬆綁範圍"
+  - "執法裁量狀態可被撤回，廠商仍須走完正式核准，非最終保證"
 references:
   - title: "CMS and FDA Unveil a Digital Health Pilot for Chronic Conditions"
     url: "https://www.gtlaw.com/en/insights/2026/1/cms-and-fda-unveil-a-digital-health-pilot-for-chronic-conditions"

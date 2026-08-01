@@ -24,6 +24,11 @@ highlights:
   - "Passkey 以裝置端的公私鑰取代密碼，私密金鑰不離開裝置、不傳輸，擋得掉釣魚與伺服器外洩。"
   - "Google、Apple、Microsoft 帳號都已支援，建立後用指紋、臉部或螢幕鎖即可登入。"
   - "台灣政府的行動自然人憑證（TW FidO）與露天市集、可樂旅遊、智冠科技等民間服務已陸續導入。"
+risksAndLimits:
+  - "跨生態系搬移 passkey 目前仍需掃 QR code 的跨裝置流程，不是無痛直接搬"
+  - "使用 iCloud 鑰匙圈須先開雙重認證，未開者註冊時會被要求補設定"
+  - "裝置遺失須靠雲端同步或備援登入取回，未同步的 passkey 恐無法救回"
+  - "目前多數服務仍保留密碼當備援，passkey 尚非唯一登入入口"
 references:
   - title: "FIDO Passkeys：Passwordless Authentication"
     url: "https://fidoalliance.org/passkeys/"

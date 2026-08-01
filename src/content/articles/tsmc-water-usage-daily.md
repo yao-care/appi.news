@@ -29,6 +29,11 @@ highlights:
 coverImage: "covers/tsmc-water-usage-daily-cover.webp"
 coverAlt: "半導體廠區工業用水與冷卻設施，象徵台積電用水量與水資源管理議題"
 coverImageCredit: "Photo by Crystal Kwok on Unsplash"
+risksAndLimits:
+  - "高雄楠梓、橋頶再生水廠要到2029、2030年才分期完工滿載，2030年全用再生水承諾能否兌現待驗證"
+  - "耗水費2023至2025年為減半徵收，2026年度起才恢復全額計徵，實際課徵結果尚待觀察"
+  - "台積電適用最低耗水費率是因回收優於行業基準，此基準未來可能隨產業表現調高"
+  - "文中數字分別引自不同媒體與政府單位報導，未見單一官方彙整版本可交叉核對"
 references:
   - title: "直擊全台首座晶圓用再生水廠，搭配一條地下9.5公里的輸水命脈，如何解台積電、聯電的渴？"
     url: "https://money.udn.com/money/story/5612/9534169"

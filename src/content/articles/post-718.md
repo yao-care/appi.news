@@ -16,6 +16,10 @@ highlights:
   - "Goldman Sachs將S&P 500年底目標上調至8,000點，AI基礎設施受益標的佔2026年全年盈餘成長約50%"
   - "Goldman Sachs分析師Bruce Lu將TSMC台股目標價上調至2,330元，ADR目標約370至375美元，隱含上漲空間16%至17%"
   - "Goldman Sachs同步警告市場動能過熱、集中度偏高，歷史上這類信號往往預示短期波動風險上升"
+risksAndLimits:
+  - "45%與28%的盈餘成長為Goldman Sachs單一機構預測，高於市場共識，尚待實際財報驗證"
+  - "TSMC目標價上調與資本支出數字來自單一分析師評估，未經其他機構獨立驗證"
+  - "報告點出動能倉位偏高與AI支出集中度風險，預測前提若改變，數字可能失效"
 references:
   - title: "Korea's Stock Market Is Forecast to Set Fresh Highs: Taiwan Tech at 45% Earnings Growth"
     url: "https://www.goldmansachs.com/insights/articles/koreas-stock-market-is-forecast-to-set-fresh-highs"

@@ -27,6 +27,11 @@ highlights:
   - "OpenAI 自評 GPT-5.5 Instant 健康答案在五項評比勝過醫師、指令遵循達 89.9%、錯誤率降 71%，但結果全在自家內部跑、未公開外審。"
   - "真正的重點不是分數，是每週逾 2.3 億人已拿 ChatGPT 問健康；它取代的不是醫師，而是 Google 搜尋。"
   - "用四層框架讀 AI 健康答案：知識正確、適用這個病人、知道自己不知道、知道何時轉醫師。最難的是後兩層。"
+risksAndLimits:
+  - "自評數字全由 OpenAI 內部產生，未經外部審查公開結果"
+  - "評測比的是寫一段文字答案，非真實看診與臨床處置表現"
+  - "HealthBench 類評測分數高不保證能轉成更準診斷或更好病人安全結果"
+  - "文中提及的評測落差案例來自另一篇報導，尚待獨立驗證"
 references:
   - title: "ChatGPT's new health upgrade beats doctor-written answers, OpenAI says"
     url: "https://the-decoder.com/chatgpts-new-health-upgrade-beats-doctor-written-answers-openai-says/"

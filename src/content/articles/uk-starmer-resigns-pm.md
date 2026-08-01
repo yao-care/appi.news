@@ -24,6 +24,10 @@ highlights:
   - "保守黨黨魁貝德諾克批評伯納姆『把一項物價上限的帳單轉嫁到別處』，要求他排除加稅"
   - "泰晤士水務公司（Thames Water，背負逾200億英鎊債務）暫時國有化、北海油氣鑽探政策方向均尚未拍板"
   - "地方分權工作延續先前規劃，由設在曼徹斯特的『10號北方辦公室』主導"
+risksAndLimits:
+  - "伯納姆就任演說與內閣消息以英國媒體7月20日前後報導為準，後續組閣或政策細節可能調整"
+  - "財政大臣改由希利出任等人事安排引自報導，尚未見伯納姆本人或唐寧街官方逐一證實"
+  - "財富稅、對美關係等表態均為受訪片段，未排除選項不等於已定案政策"
 references:
   - title: "Starmer right to go after failing to deliver change, John Swinney says"
     url: "https://www.barrheadnews.com/news/national/26216635.starmer-right-go-failing-deliver-change-john-swinney-says/"

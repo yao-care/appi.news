@@ -16,6 +16,10 @@ highlights:
   - "2026年Q1交易活動急速降溫，買家重新評估AI顛覆下資安資產的防禦性"
   - "Nasdaq資安指數從2025年10月高點下跌14%，私募機構減少新平台投資"
   - "部分資安新創從峰期估值8億美元暴跌至5,000萬美元，折扣超過90%仍難找到買家"
+risksAndLimits:
+  - "該推論主要基於SecurityScorecard執行長單一訪談案例，不代表整體資安新創的普遍估值走勢"
+  - "文中引用之併購與投融資數據截至2025年，2026年後續走向以ION Analytics與Momentum Cyber最新報告為準"
+  - "台灣資安廠商出海機會的評估屬產業趨勢推論，未附具體台廠案例或數據佐證"
 references:
   - title: "Cybersecurity M&A stalls after 2025 surge as AI resets valuations – Dealspeak North America"
     url: "https://ionanalytics.com/insights/mergermarket/cybersecurity-ma-stalls-after-2025-surge-as-ai-resets-valuations-dealspeak-north-america"

@@ -15,6 +15,11 @@ highlights:
   - "研究確認肌肉增長主要驅動因素是每週總訓練量，負荷重量的重要性低於一般認知"
   - "功能性訓練（Functional Fitness Training）在ACSM 2026趨勢調查中排名從第12攀升至第10"
   - "一致性、接近力竭的訓練組數，比追求最大強度或複雜計畫更能帶來長期適應效果"
+risksAndLimits:
+  - "低負荷與高負荷增肌效果相近，前提是每組都要練到接近力竭，並非隨意輕鬆訓練即可達到同等效果"
+  - "功能性訓練排名數據來自ACSM另一份年度趨勢調查，非阻力訓練指引本身的研究結果"
+  - "台灣65歲以上人口比例與健身市場現況為文章延伸推論，非ACSM指引原文內容"
+  - "指引2026年3月才發布，教練教育普及與臨床長期應用成效目前尚無追蹤數據"
 references:
   - title: "New ACSM Resistance Training Guidelines Explained"
     url: "https://www.moveyourbonespt.com/blog/2026-acsm-resistance-training-guidelines"

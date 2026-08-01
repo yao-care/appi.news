@@ -16,6 +16,11 @@ highlights:
   - "健保資料庫涵蓋2,300萬筆、逾20年縱向紀錄，是台灣AI醫療研發的核心基礎設施"
   - "中國醫藥大學附設醫院2025年取得HIMSS Stage 7認證，成為亞洲首家通過的醫院"
   - "衛福部推動FHIR標準採用，食藥署AI醫療器材審查件數持續成長，法規生態系趨於完備"
+risksAndLimits:
+  - "健保資料庫涵蓋率與AI診斷模型訓練成效之間的因果關係，文中未提供實證數據佐證"
+  - "FHIR標準採用率與基層診所普及情形僅為現況觀察，缺乏具體統計數字"
+  - "健保署2026年AI輔助診斷給付試辦方案仍在推進中，最終給付範圍與時程可能調整"
+  - "國際認證於境外市場的採認效力，依各國FDA、CE等審查機關規定而異，非台灣單方可決定"
 references:
   - title: "Taiwan's Smart Healthcare Value Chain: AI Innovation from R&D to Industry Deployment"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12786189"

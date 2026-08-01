@@ -21,6 +21,10 @@ sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 14
+risksAndLimits:
+  - "篩檢效率數據來自中國成人樣本研究，與台灣人口的適用性未經驗證"
+  - "代謝症候群前驅期積累速度因人而異，本文年齡切點為群體流行病學推估非個人診斷依據"
+  - "邊界值生活型態介入效益引用整體研究趨勢，未列出具體樣本規模"
 references:
   - title: "衛生福利部（2025）。成人預防保健升級 30歲開啟健康檢查新里程"
     url: "https://mohw.gov.tw/cp-16-81240-1.html"

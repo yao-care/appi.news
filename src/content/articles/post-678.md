@@ -15,6 +15,11 @@ highlights:
   - "截至2024年12月已核准約50款本土製造及116款進口AI/ML醫療設備，涵蓋超音波AI判讀等多類應用"
   - "台灣《醫療器材管理法》界定「醫療器材」涵蓋軟體，為AI醫療應用提供明確的法律定性基礎"
   - "監管方向從靜態核准走向生命週期管理，對應FDA 2024年12月定案的預定變更控制計畫指引趨勢"
+risksAndLimits:
+  - "台灣核准的AI醫材以超音波與放射影像判讀為主，其他應用類型尚未涵蓋在核准規模內"
+  - "數字截至2024年12月，之後新增核准件數未反映在此"
+  - "FDA變更控制計畫指引為美國制度，台灣是否跟進尚未定案"
+  - "文中監管對齊程度與執行面評估來自Chambers單一分析，未見獨立驗證數據"
 references:
   - title: "Healthcare AI 2025 — Taiwan: Trends and Developments"
     url: "https://practiceguides.chambers.com/practice-guides/healthcare-ai-2025/taiwan/trends-and-developments"

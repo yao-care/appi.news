@@ -15,6 +15,11 @@ highlights:
   - "WHO 5月17日宣告PHEIC，是自COVID-19以來最受關注的跨境傳染病緊急應變"
   - "6月初確診與疑似病例突破550例，疫情已擴及伊圖里省多個衛生區及烏干達境內"
   - "世界盃期間全球人流激增，美國CDC已升級DRC入境旅行健康警示至第三級"
+risksAndLimits:
+  - "Bundibugyo型伊波拉目前無已核准疫苗，Ervebo（Zaire型疫苗）對此病毒株無效"
+  - "歐洲風險評估「極低」是基於無直飛航班，未涵蓋轉機或世界盃人流分散的情境"
+  - "文中致死率30%至50%引自2007與2012年歷史疫情數據，非本次疫情的實際統計"
+  - "確診與疑似病例數為6月8日的階段性統計，疫情仍在發展中可能已有變動"
 references:
   - title: "DR Congo/Uganda: Ebola Outbreak - May 2026"
     url: "https://reliefweb.int/disaster/ep-2026-000071-cod"

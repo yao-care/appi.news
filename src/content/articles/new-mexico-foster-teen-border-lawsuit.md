@@ -17,6 +17,10 @@ highlights:
   - "訴狀要求法院命CYFD協助少年返美，並核發臨時限制令，禁止該部門未經法院核准就把兒童安置到國外"
   - "CYFD回應稱少年安全、與持續保持聯繫的母親同住，機構曾做兩次視訊家訪確認環境安全"
   - "新墨西哥司法部今年4月才發布逾200頁報告，指CYFD長年把家庭團聚看得比兒童安全更重要，此案讓外界質疑機構是否真的記取教訓"
+risksAndLimits:
+  - "訴狀指控與CYFD官方說法互有出入，法院尚未對安置是否安全做出裁定"
+  - "是否違反新墨西哥州法律仍待釐清，該州法律並未明文禁止跨國安置"
+  - "報導僅引述雙方聲明與訴狀內容，CYFD兩次視訊家訪的具體細節未經獨立查證"
 references:
   - title: "New Mexico AG sues for return of teen forced to cross border by foster care"
     url: "https://www.wboc.com/news/national/new-mexico-ag-sues-for-return-of-teen-forced-to-cross-border-by-foster-care/article_c50e5e5c-77a7-5480-ba5c-68fdbede70f8.html"

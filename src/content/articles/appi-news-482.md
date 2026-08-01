@@ -18,6 +18,11 @@ sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 10
+risksAndLimits:
+  - "「亞健康」為民間協會倡議概念，非健保或醫學會認定的疾病診斷"
+  - "篩查涵蓋族群比例為協會宣導性說法，非流行病學調查或政府統計數字"
+  - "此模式屬新興實務案例，長期成效如能否降低特定疾病發生率仍缺乏大規模追蹤數據佐證"
+  - "篩查項目與費用以各參與院所或活動公告為準，部分延伸服務可能自費"
 references:
   - title: "蕃新聞（2026）．諾貝爾眼科攜手美聯健康診所 共創全人健康 健保署與北市藥師公會亞健康協會三方見證．"
     url: "https://n.yam.com/Article/20260729167451"

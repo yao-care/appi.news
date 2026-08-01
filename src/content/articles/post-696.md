@@ -17,6 +17,11 @@ highlights:
   - "日本熊本JASM廠由台積電、索尼與電裝三方合資，聚焦車用半導體供應"
   - "德國德勒斯登歐洲半導體製造公司2024年9月動工，預計2027年底投產，主攻16/12奈米車用製程"
   - "海外廠的毛利率稀釋問題與在地化生產成本壓力，是台積電接下來面對的核心財務挑戰"
+risksAndLimits:
+  - "美台建廠成本差20%至30%及約高一倍的數字，引自美商會與業界說法，非台積電官方公告數據"
+  - "2030年台灣先進製程佔比降至58%為TrendForce預測，屬推估而非既定結果"
+  - "技術外溢風險「短期可控」是台灣業界普遍看法，並非台積電官方保證或獨立查核結論"
+  - "德勒斯登廠2027年量產等時程為現行規劃，可能因景氣或地緣政治變化調整"
 references:
   - title: "TSMC Navigates Choppy Waters in Global Expansion Push"
     url: "https://topics.amcham.com.tw/2025/09/tsmc-navigates-choppy-waters-in-global-expansion-push"

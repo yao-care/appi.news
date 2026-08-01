@@ -16,6 +16,8 @@
  *   走的是本站唯一有真實資歷、且對手不寫的窄車道。
  */
 
+import { RISKS_PROMPT } from "./risks-prompt.mjs";
+
 /** 兩條 track 的設定。key 即 --track 參數值。 */
 export const TECH_TRACKS = {
   editorial: {
@@ -144,6 +146,7 @@ export function buildTechDeskPrompt({ track, recentTitles = [], striking = [], d
     '內文圖改 `--out public/images/<slug>-s<N>.webp`。**設了 coverImage 就一定要先確認該檔真的存在**；拿不到圖就不要設 coverImage。',
     '',
     `【frontmatter】category: "tech"、subcategory（合法 tech slug：ai / security / digital-tools / software-products / startup / semiconductor / industry-tech / tech-policy）、author: "${t.author}"、contentType: "${t.contentType}"、sourceType: "${t.sourceType}"${t.column ? `、column: "${t.column}"` : ''}、status: "published"、publishDate 現在；slug 語意化英文 kebab（避免 post-NNN，檔名＝slug）。寫入 src/content/articles/<slug>.md，**不要 git add/commit/push**（外層處理）。`,
+    RISKS_PROMPT,
     '',
     '【去重】不要重複下列近期已發的題：',
     recent,

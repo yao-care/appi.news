@@ -24,6 +24,10 @@ coverImage: "covers/edinburgh-woman-athens-suitcase-death-cover.webp"
 coverAlt: "希臘雅典市區街景（示意圖，不代表實際案發地點）"
 coverImageCredit: "Photo by Ivan Karpov on Unsplash"
 originalContribution: "本文整合 STV News、The Irish Times、Press Association（經 Yahoo News 轉載）對這起雅典行李箱陳屍案的報導，梳理死者身分確認過程、生前在希臘的行蹤時間線、警方追查死後手機遭使用發送訊息的疑點，並補充英國與希臘當局協作辦案的細節，供台灣讀者理解事件全貌。"
+risksAndLimits:
+  - "死因與死亡時間尚無定論，僅為警方初步研判，驗屍結果對死亡時間推估已有5至7天與8天的落差"
+  - "案件仍列刑事調查、未定調謀殺，手機遭死後使用等疑點皆待警方後續證實"
+  - "她抵達希臘後同行者與完整移動路線尚未確認，報導僅呈現目前已知的目擊紀錄"
 ---
 
 希臘警方7月29日確認，7月18日在雅典基普塞利區（Kypseli）一棟廢棄建築內、被一名遊民發現裝在行李箱中的女性遺體，身分為出生於愛丁堡（Edinburgh）的38歲英國女子伊麗莎白珍．羅斯（Elisabeth-Jane Ross）。案件目前列為刑事調查，警方表示尚未正式定調為謀殺案。（[STV News](https://news.stv.tv/scotland/scottish-woman-found-dead-inside-suitcase-in-athens-named)）

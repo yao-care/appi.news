@@ -26,6 +26,10 @@ highlights:
   - "Google 與 Apple 的聯合聲明把話說白：下一代 Apple Foundation Models 建立在 Gemini 模型與雲端技術上，連 Apple 都得借對手的腦。"
   - "新 Siri AI 不在歐盟與中國上線，歐盟卡在 DMA 與其他語音助理互通、中國卡在法規，落地範圍是治理問題不是技術問題。"
   - "給台灣企業的提醒：別幻想一次選對模型就永遠不用換，選型要先定義情境，並保留切換、治理與持續營運的空間。"
+risksAndLimits:
+  - "Apple 對隱私與資料保護的說法目前僅來自官方聲明，尚未經第三方獨立驗證"
+  - "歐盟 DMA 互通爭議與中國法規細節仍在協商中，最終能否上線及條件可能改變"
+  - "文中談的是 Apple 這類具全球規模企業的取捨，中小型企業的成本與風險結構不必然相同"
 references:
   - title: "Joint statement from Google and Apple"
     url: "https://blog.google/company-news/inside-google/company-announcements/joint-statement-google-apple/"

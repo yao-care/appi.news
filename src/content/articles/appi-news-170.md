@@ -21,6 +21,9 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 10
+risksAndLimits:
+  - "7 到 14 天熱適應期為一般經驗法則，未附試驗數據，個人耐熱速度可能不同"
+  - "降溫與補水建議未區分不同慢性病、用藥情況下的個別禁忌，實際處置仍需視現場狀況調整"
 references:
   - title: "衛生福利部 (2023). 夏天高溫氣候 熟記「三要訣」遠離熱傷害"
     url: "https://www.mohw.gov.tw/cp-5269-70116-1.html"

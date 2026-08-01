@@ -18,6 +18,9 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 11
+risksAndLimits:
+  - "4秒差距是韓安齊現有2分11秒72與亞洲紀錄2分07秒41的比較，非同屆賽事直接對戰結果"
+  - "亞運參賽標準達標與能否奪牌是兩回事，內文未提及亞運選拔或報名是否已正式確定"
 references:
   - title: "中央社 (2026). 韓安齊200混合式女泳破高懸17年全國紀錄 目標名古屋亞運奪牌"
     url: "https://www.cna.com.tw/news/aspt/202606150239.aspx"

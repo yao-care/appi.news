@@ -16,6 +16,11 @@ highlights:
   - "「IT與媒體股票市場資本額GDP占比」持續蟬聯榜首，反映半導體與科技股市值的全球地位"
   - "「未來整備度」構面台灣排名全球第3，較2024年進步3名，企業反應速度與大數據決策能力稱冠"
   - "台灣在2000萬人以上經濟體中，IMD世界競爭力年報已連續5年排名第1，AI與半導體為主因"
+risksAndLimits:
+  - "台灣總排名仍為第10，8項細項前3不代表整體數位競爭力全球最頂尖"
+  - "數位部坦承女性研究員比例與AI政策法制化仍是弱勢指標，尚未改善"
+  - "《AI基本法》草案仍在立法院審議中，尚未三讀通過，法制化時程可能生變"
+  - "研發支出佔GDP比率約3.4%為現況數字，是否需要提高尚待政策討論"
 references:
   - title: "2025 IMD World Digital Competitiveness Ranking: Taiwan Ranks Top 3 Globally in 8 Indicators"
     url: "https://moda.gov.tw/en/press/press-releases/17790"

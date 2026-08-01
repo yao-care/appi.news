@@ -28,6 +28,10 @@ highlights:
   - "正義轉型機制是少數亮點，留下交付 COP31 的文本套件；全球適應目標（GGA）無法達成共識，依議事規則第 16 條原封不動推給 COP31。"
   - "氣候資金成最大爭點：已開發與開發中國家分歧加深，部分歐盟成員削減氣候與發展資金；下一站是 11 月 9 至 20 日在土耳其安塔利亞登場的 COP31。"
   - "台灣非氣候公約締約方，仍以 2025 年核定的 NDC 3.0（2030 年較 2005 年減 28±2%、2035 年減 38±2%）自主接軌，國際談判走向牽動台灣出口產業面對的碳規範。"
+risksAndLimits:
+  - "適應目標（GGA）與正義轉型機制的資金安排均未定案，最終樣貌需待COP31結果"
+  - "文中國際談判進展多引自單一媒體整理，尚未見多方交叉查證"
+  - "NDC 3.0之38±2%為台灣自主設定目標，非受氣候公約締約方身分約束"
 references:
   - title: "Bonn Climate Change Conference 2026: Latest UN climate talks end with little progress amid deep political tensions"
     url: "https://www.resilience.org/stories/2026-06-23/bonn-climate-change-conference-2026-latest-un-climate-talks-end-with-little-progress-amid-deep-political-tensions/"

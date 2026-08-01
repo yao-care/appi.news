@@ -18,6 +18,10 @@ highlights:
   - "管理者投入度從2024年的27%降至2025年的22%，五點降幅是近年最大，帶動整體投入度下行"
   - "AI採用成效與管理者主動支持度高度相關：管理者積極支持的員工比未受支持者高出8.7倍認為AI改變工作方式"
   - "表現最佳的組織中有79%的管理者處於高投入狀態，比全球均值高出近四倍，管理能力可逆轉頹勢"
+risksAndLimits:
+  - "管理者投入度數據來自Gallup美國職場調查，未明確涵蓋台灣本地樣本"
+  - "AI採用與管理者引導的8.7倍相關性來自單一問卷調查，尚未經獨立研究驗證"
+  - "文中對台灣企業的建議屬推論延伸，非Gallup報告直接針對台灣市場的結論"
 references:
   - title: "State of the Global Workplace 2026 Report"
     url: "https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx"

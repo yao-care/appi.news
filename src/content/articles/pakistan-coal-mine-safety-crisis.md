@@ -15,6 +15,10 @@ highlights:
   - "俾路支省礦業部長米爾．紹伊布．諾舍萬尼（Mir Shoaib Nosherwani）表示清理坍塌廢墟與改善坑內通風的工作進展迅速，並承諾向每戶罹難者家屬提供50萬巴基斯坦盧比（約合台幣4.5萬元）補償"
   - "這是俾路支省2026年以來第三起致命礦坑事故：3月兩名阿富汗籍礦工死於甲烷中毒、4月三人死於毒氣洩漏、6月兩人死於礦坑坍塌"
   - "俾路支省是巴基斯坦面積最大、發展最落後的省份，煤礦業普遍缺乏通風系統與瓦斯監測設備，數千名工人仍仰賴採礦維生"
+risksAndLimits:
+  - "索蘭日煤田今年已是俾路支省第三起礦災，其他省份或全國煤礦安全狀況本文未涵蓋"
+  - "罹難人數34人為報導截稿時統計，搜救仍在進行，最終數字可能再變動"
+  - "制度性疏忽為報導引述說法，尚無官方調查報告佐證起火原因"
 references:
   - title: "At least 32 dead in Pakistan coal mine explosion"
     url: "https://www.maitlandmercury.com.au/story/9321190/at-least-32-dead-in-pakistan-coal-mine-explosion/"

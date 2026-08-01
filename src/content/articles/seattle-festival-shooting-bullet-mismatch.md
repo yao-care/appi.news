@@ -17,6 +17,11 @@ highlights:
   - "威爾森任命資歷逾20年的副局長沙爾斯（Andre Sayles）代理局長；巴恩斯是西雅圖史上第2位非裔局長，該市3年內已歷經4任局長，此前社區團體與部分市議員曾出面聲援慰留"
   - "巴恩斯回應稱服務這座城市是一種榮幸，盼交接有助警局聚焦處理青少年槍枝暴力問題"
   - "案發於7月26日美食節（Bite of Seattle）尾聲，3人死亡（2名旁觀者、1名19歲嫌犯）、至少4人受傷（含一名幼童）；警方7月29日提交法庭文件指彈道鑑定顯示，兩命案子彈並非來自被捕15歲少年持有的槍，現場疑4槍齊發、2槍下落不明，嫌犯遭控一級持槍傷人罪等，檢方求送成人法庭"
+risksAndLimits:
+  - "彈道鑑定為初步結果，非最終結論，案件仍在調查中"
+  - "警方研判與幫派衝突有關，但其餘涉案槍手身分尚未確認"
+  - "檢方僅提出移送成人法庭之請求，少年是否移送尚未定讞"
+  - "第8名傷者身分至今未確認，相關細節有待警方進一步釐清"
 references:
   - title: "Seattle mayor says police chief has resigned after criticism of festival shooting response"
     url: "https://www.pbs.org/newshour/nation/seattle-mayor-says-police-chief-has-resigned-after-criticism-of-festival-shooting-response"

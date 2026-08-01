@@ -15,6 +15,11 @@ highlights:
   - "第四季單季營收年增13.2%至29億元，淨利幾乎三倍成長，毛利率顯著擴張"
   - "2025全年累計營收突破109.8億元，年增11.9%，再創歷史新高"
   - "2026年計畫新增12至15個直營據點，並推出AI健康管理平台與皮拉提斯課程"
+risksAndLimits:
+  - "2026年泰國展店與AI健康管理平台皆為公司規劃，尚未有實際營運數據可驗證成效"
+  - "台灣健身滲透率與市占數字引自新光投顧報告，原始報告未附樣本規模與計算方式"
+  - "2030年台灣健身市場破千億元屬文中推估說法，非官方機構或第三方正式預測"
+  - "財報數據轉引自Yahoo Finance報導，文中未提及獨立會計師查核意見"
 references:
   - title: "World Gym Corp Posts 16% Surge in 2025 Profit, Declares Dividend"
     url: "https://finance.yahoo.com/news/world-gym-corp-posts-16-123530379.html"

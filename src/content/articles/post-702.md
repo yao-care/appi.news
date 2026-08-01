@@ -15,6 +15,11 @@ highlights:
   - "台股6月12日收漲1,019.58點至44,169點，成交金額達1.11兆元，外資單日買超286.9億元"
   - "三大法人同步回補，外資、投信、自營商全面轉多，市場出現罕見「全面翻多」格局"
   - "華通、晶技、昇達科等低軌衛星台灣供應鏈個股，受SpaceX掛牌題材帶動持續受到市場關注"
+risksAndLimits:
+  - "外資買超與台股千點反彈同日發生但屬相關性觀察，內文未證明兩者存在因果關係"
+  - "低軌衛星訂單能見度引用昇達科單一公司數字，不代表整體供應鏈廠商表現"
+  - "華通盤中遭外資大砍逾1.5萬張翻黑，顯示題材熱度與籌碼實際流向可能背離"
+  - "數據截至2026年6月12日掛牌當日，後續資金回流是否持續尚待觀察"
 references:
   - title: "SpaceX IPO: SPCX Debuts At $150 — Surging 20% After Largest IPO Ever"
     url: "https://www.forbes.com/sites/tylerroush/2026/06/12/spacex-opens-at-150-surging-17-after-largest-ipo-ever-live-updates"

@@ -16,6 +16,9 @@ highlights:
   - "公司須提交完整文件證明全面遵守《採礦法》Cap. 306等法規，才能恢復採礦"
   - "塔塔化學Magadi為印度塔塔集團子公司，2005年起在卡建多郡馬格迪湖開採純鹼，供玻璃製造、清潔劑、工業化學品等產業使用"
   - "霍霍表示，此決定源自採礦部門與該公司多年來就其法定義務的持續磋商"
+risksAndLimits:
+  - "塔塔化學集團尚未公開回應暫停令，違規事項細節與整改進度以肯亞採礦部單方說法為準"
+  - "復工門檻僅要求提交文件證明守法，未說明採礦部審核時程或是否會實地查核"
 references:
   - title: "Kenya: Govt Suspends Tata Chemicals Magadi Mining Operations Over Compliance Breaches"
     url: "https://allafrica.com/stories/202607290300.html"

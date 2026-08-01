@@ -14,6 +14,10 @@ highlights:
   - "帕米塔諾成為首位被分配至Artemis任務的歐洲太空人，延續ISS國際合作模式"
   - "任務2027年執行，重點在低地球軌道測試Blue Origin與SpaceX登月系統對接，不直接登月"
   - "ESA提供第三具歐洲服務艙，歐洲硬體深度整合成為Artemis架構的核心組成"
+risksAndLimits:
+  - "文中2027年低軌測試與2028年登月時程為NASA/ESA目前規劃，過往Artemis任務屢次延期，實際時間可能再調整"
+  - "台灣廠商切入Artemis供應鏈的機會為本文推論分析，非NASA或ESA官方已宣布的採購計畫"
+  - "文中提及ITAR、AS9100D認證等進入門檻，未列出台灣廠商實際通過認證的具體案例或數據"
 references:
   - title: "ESA astronaut Luca Parmitano joins NASA's Artemis III mission as pilot"
     url: "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/ESA_astronaut_Luca_Parmitano_joins_NASA_s_Artemis_III_mission_as_pilot"

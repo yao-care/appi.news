@@ -27,6 +27,11 @@ highlights:
   - "放著不管的 AI agent 會直接違反硬性預算上限，二月一篇《Budget-Constrained Agentic LLMs》實驗證實，光在提示裡塞成本回饋（叫它「省一點」）不足以保證守得住預算。"
   - "多花算力不等於做得好：Holistic Agent Leaderboard 發現提高推理努力在多數情況下反而讓準確率下降，《Spend Less, Reason Better》的預算感知搜尋在低預算下還贏過對手四倍資源的版本。"
   - "台灣企業導入 AI coding 助手前該做三件事：設每人／每專案／每次任務的硬性用量上限、把成本記帳做到逐任務看得見、把省下的成本和任務完成率一起放進驗收。"
+risksAndLimits:
+  - "這篇引用的《Budget-Constrained Agentic Large Language Models》為2026年2月研究，實驗細節與樣本規模未在原文列出"
+  - "Uber、微軟等帳單案例出自TechCrunch單篇報導，屬個案彙整而非系統性調查"
+  - "Goldman Sachs對2030年token用量成長24倍為推估數字，實際走勢可能隨技術與價格結構改變"
+  - "效率研究（如Efficient Agents的28.4%省成本）數據對應特定任務與評測集，換到其他場景效果可能不同"
 references:
   - title: "The token bill comes due: Inside the industry scramble to manage AI's runaway costs"
     url: "https://techcrunch.com/2026/06/05/the-token-bill-comes-due-inside-the-industry-scramble-to-manage-ais-runaway-costs/"

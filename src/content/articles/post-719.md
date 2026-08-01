@@ -14,6 +14,11 @@ highlights:
   - "電子支付帳戶2025年10月達3,481萬筆，年增15.8%，LINE Pay單家2025年交易額即達7,560億元台幣"
   - "遠端支付佔台灣行動支付市場67.72%，隨電商與一鍵驗證應用擴張，預計以18.73%年複合成長率持續擴張至2031年"
   - "台灣行政院設定2025年90%民眾至少完成一次行動支付的目標，政策推力加速終端普及但「習慣養成」才是下一關"
+risksAndLimits:
+  - "電子支付帳戶數與實際交易量存在落差，數字反映開戶普及而非使用頻率"
+  - "LINE Pay數據未納入金管會官方統計，與其他業者數字基礎不同"
+  - "1,881億美元市場規模與18.3億美元行動支付預測為機構估算，非官方確定數字"
+  - "台北捷運信用卡感應搭乘為2026年宣布之規劃，實際上路時程可能調整"
 references:
   - title: "Taiwan Mobile Payments Market Size and Share Analysis"
     url: "https://www.mordorintelligence.com/industry-reports/taiwan-mobile-payments-market"

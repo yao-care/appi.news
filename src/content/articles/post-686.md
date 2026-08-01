@@ -15,6 +15,10 @@ highlights:
   - "報告指出台灣2026年生產全球90%的七奈米以下先進製程晶片，在AI基礎設施中具不可替代地位"
   - "TSMC德勒斯登10億歐元工廠計畫是歐台半導體關係的具體錨點，顯示台灣企業對歐洲的主動投入"
   - "ASML、法國液化空氣、德國默克等歐洲企業已深度嵌入台灣生產網路，形成相互依存的關係結構"
+risksAndLimits:
+  - "報告論點來自蒙田研究院CHIPDIPLO計畫，屬歐盟資助的政策研究，非歐盟官方立場"
+  - "台積電德勒斯登廠是否順利量產尚未有結果，仍是待驗證的假設"
+  - "歐盟第二版晶片法案要到2026年底才公布，實際政策方向未定"
 references:
   - title: "Semiconductors in EU–Taiwan Relations: Bridging Gaps, Building Trust"
     url: "https://www.institutmontaigne.org/en/publications/semiconductors-eu-taiwan-relations-bridging-gaps-building-trust"

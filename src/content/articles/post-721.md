@@ -15,6 +15,10 @@ highlights:
   - "台灣創新板3.0大幅降低上市門檻，新創從創立到上市平均期間可從15年縮短至5至10年，加速資本循環"
   - "金管會2026年擴大保險公司可投資新創類別，涵蓋半導體、AI、國防安全與下一代通訊，制度面開放步伐加快"
   - "台灣過去10年C/CVC投資佔新創交易63%，顯示資金過度集中在硬體製造，早期軟體與AI應用新創仍嚴重缺乏種子資本"
+risksAndLimits:
+  - "三項建議需金管會與立法配合，能否落實仍待觀察"
+  - "創新板3.0效果尚待實際上市案例驗證"
+  - "AppWorks等加速成果為累積數字，非近期單年表現"
 references:
   - title: "Will Taiwan's Startup Fundraising Reach US$5 Billion by 2027? Chiu Te-cheng on Building Asia's Innovation Hub"
     url: "https://www.twse.com.tw/market_insights/en/detail/8a8216d69a3d6cf9019b11c70c7a0482"

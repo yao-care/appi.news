@@ -14,6 +14,10 @@ highlights:
   - "史上首次三國共辦，美、墨、加橫跨16城市104場賽事，比2022年增加24場"
   - "FOX Sports單賽事播出時數達340小時，較2022年多出100小時，為轉播史上最大規模"
   - "台灣需透過境外授權管道取得收視權，IPTV與MOD付費訂閱模式受到考驗"
+risksAndLimits:
+  - "賽程與轉播安排以文中所引FOX Sports及Wikipedia資訊為準，實際播出時段可能異動"
+  - "台灣轉播授權與訂閱方案屬市場推測，尚未有電信平台正式公告"
+  - "2030年六國共辦賽制為FIFA規劃階段資訊，細節可能調整"
 references:
   - title: "FOX Sports Unveils Historic FIFA World Cup 2026 Broadcast Schedule"
     url: "https://www.foxcorporation.com/news/corp-press-releases/2026/fox-sports-unveils-historic-fifa-world-cup-2026-broadcast-schedule"

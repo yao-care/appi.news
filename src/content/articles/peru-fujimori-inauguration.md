@@ -14,6 +14,10 @@ highlights:
   - "藤森是祕魯前總統阿爾貝托．藤森之女，其父1990年代因擊敗光輝道路叛軍受讚譽，後因貪腐與危害人道罪入獄16年；受害者家屬在她就職當天上街抗議"
   - "她承諾仿效薩爾瓦多總統布克萊的鐵腕治安路線，興建超級監獄、以匿名法官保護人身安全、強制受刑人勞動，因應祕魯數十年來最嚴重的治安危機"
   - "藤森所屬政黨將掌控參議院半數席次；她19歲即投身政壇，批評者憂心其鐵腕政策恐侵蝕公民自由"
+risksAndLimits:
+  - "她以不到5萬票差距險勝，選舉正當性仍受落選陣營質疑"
+  - "仿效薩爾瓦多鐵腕治安模式的成效與人權爭議在當地本身仍有分歧"
+  - "治安新政的具體法案內容與執行細節尚未公布，實際效果待觀察"
 references:
   - title: "Peru's Fujimori takes power after narrow election win"
     url: "https://www.crookwellgazette.com.au/story/9320233/perus-fujimori-takes-power-after-narrow-election-win/"

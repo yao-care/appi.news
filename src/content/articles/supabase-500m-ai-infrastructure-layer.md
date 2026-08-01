@@ -27,6 +27,10 @@ highlights:
   - "Supabase 完成 5 億美元 Series F、GIC 領投、估值站上 105 億美元，對照七個月前的 50 億，大半年內翻倍。"
   - "同一週 Ramp 募 7.5 億、Suno 募 4 億，AI agent 是現在成長最快的軟體類別；熱錢追的不再只是更大的模型，是讓人快速做 AI 應用的基建層。"
   - "估值翻倍反映 vibe coding 下的真實需求，但基建層放大的不只是『會建構』的能力，連維運與資料治理的長期成本也一起放大。"
+risksAndLimits:
+  - "這篇是單一併購事件的觀點分析，Supabase 估值翻倍主要反映需求成長，但市場預期不保證後續維運與治理成本會被業界普遍重視"
+  - "文中醫療資料治理成熟度較高的判斷，是作者依本業經驗做的類比推論，非本文引用的獨立研究結論"
+  - "中小團隊選型建議偏一般性方向，實際維運與資料治理成本因應用規模與資料敏感度而異，本文未提供具體換算"
 references:
   - title: "Supabase Raises $500M at $10.5B to Accelerate Lead in Agentic Infrastructure"
     url: "https://www.prnewswire.com/news-releases/supabase-raises-500m-at-10-5b-to-accelerate-lead-in-agentic-infrastructure-302791787.html"

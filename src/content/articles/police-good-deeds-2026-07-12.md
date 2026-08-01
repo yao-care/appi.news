@@ -29,6 +29,9 @@ coverImageCredit: "Photo by shot ed on Unsplash"
 highlights:
   - "臺北內湖分局港墘派出所警員張玉群、林雅筠颱風天及時救助血糖過低路倒的七旬老翁，並協助送返住處"
   - "臺東警察分局中興派出所警員李庠寬、徐祥紘自掏腰包買車票、親自駕車送迷途老翁前往轉運站返家"
+risksAndLimits:
+  - "內文為警局公開新聞稿彙整，員警姓名與案情細節未經第三方查證"
+  - "颱風天外出建議適用於行動不便或高齡長者，非一般民眾通則"
 references:
   - title: "颱風天七旬翁身體不適路倒 內湖警即時救援"
     url: "https://police.gov.taipei/News_Content.aspx?n=0B762199E50C4AB2&sms=72544237BBE4C5F6&s=24446F2EE865EF54"

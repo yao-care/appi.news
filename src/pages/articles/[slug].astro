@@ -88,9 +88,11 @@ const factCheckers = factCheckerIds
   }));
 
 // 「○○○的判讀」：署名為個人時帶本名；組織署名（編輯部）退回通稱。
+// 名字結尾是拉丁字（如「張饒輝 Lightman Chang」）時補一個空格，否則會擠成
+// 「…Chang的判讀」。純中文名不補，避免「羅揚 的判讀」多出突兀的空隙。
 const expertNoteHeading = author?.data.isOrganization
   ? '編輯部判讀'
-  : `${authorName}的判讀`;
+  : `${authorName}${/[A-Za-z]$/.test(authorName) ? ' ' : ''}的判讀`;
 
 const rt = readingTime(article);
 const cover = coverImageFor(article);

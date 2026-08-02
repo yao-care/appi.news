@@ -82,7 +82,7 @@ function techSignals() {
     const key = `${process.env.HOME}/.config/appi-news/ga4-sa.json`;
     if (!env.GOOGLE_APPLICATION_CREDENTIALS && existsSync(key)) env.GOOGLE_APPLICATION_CREDENTIALS = key;
     const r = spawnSync('node', ['scripts/seo-opportunities.mjs'], { encoding: 'utf8', env, maxBuffer: 16 * 1024 * 1024 });
-    if (r.status !== 0) return { striking: [], demand: [] };
+    if (r.status !== 0) return { striking: [], demand: [], evergreen: [] };
     const out = JSON.parse(r.stdout);
     const striking = (out.pageOpportunities || [])
       .filter((p) => p.category === 'tech')
@@ -91,9 +91,13 @@ function techSignals() {
     const demand = (out.searchDemandTopics || [])
       .slice(0, 12)
       .map((q) => `${q.query}（曝光 ${q.impressions}、目前最好 pos ${q.bestPosition}）`);
-    return { striking, demand };
+    // 常青需求：跨窗複現的字。判準一（三個月後還有人搜嗎）本來只能靠模型猜，這是實測答案。
+    const evergreen = (out.evergreenDemandTopics || [])
+      .slice(0, 12)
+      .map((q) => `${q.query}（${q.windows} 個月都有人搜、曝光 ${q.impressions}、目前最好 pos ${q.bestPosition}）`);
+    return { striking, demand, evergreen };
   } catch {
-    return { striking: [], demand: [] };
+    return { striking: [], demand: [], evergreen: [] };
   }
 }
 
@@ -103,6 +107,7 @@ function runTrack(track, { go, topic, recent, signals, wrote }) {
     recentTitles: recent,
     striking: signals.striking,
     demand: signals.demand,
+    evergreen: signals.evergreen,
     topic,
   });
   console.log(`\n→ ${TECH_TRACKS[track].label}…`);
@@ -144,10 +149,10 @@ function main() {
 
   if (!go && !stage) {
     console.log('— DRY RUN（零副作用）—');
-    console.log(`近 30 天已發科技文：${recent.length} 篇；差一步的 tech 頁：${signals.striking.length} 個；需求 query：${signals.demand.length} 個`);
+    console.log(`近 30 天已發科技文：${recent.length} 篇；差一步的 tech 頁：${signals.striking.length} 個；需求 query：${signals.demand.length} 個；常青需求：${signals.evergreen.length} 個`);
     for (const t of tracks) {
       console.log(`\n===== ${TECH_TRACKS[t].label}｜Claude 寫作指令 =====\n`);
-      console.log(buildTechDeskPrompt({ track: t, recentTitles: recent, striking: signals.striking, demand: signals.demand, topic }));
+      console.log(buildTechDeskPrompt({ track: t, recentTitles: recent, striking: signals.striking, demand: signals.demand, evergreen: signals.evergreen, topic }));
     }
     return;
   }

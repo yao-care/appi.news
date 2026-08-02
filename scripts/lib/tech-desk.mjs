@@ -50,7 +50,7 @@ export const TECH_TRACKS = {
 };
 
 /** 共用選題判準（兩條 track 都套）。 */
-function selectionCriteria(striking, demand, directedTopic) {
+function selectionCriteria(striking, demand, evergreen, directedTopic) {
   if (directedTopic) {
     return [
       '【本次選題（已指定，不要自己找題）】',
@@ -75,6 +75,14 @@ function selectionCriteria(striking, demand, directedTopic) {
     '這是唯一一條一票否決的規則。實測資料：本站瞄準事件型專有名詞的文章，排名都很好（pos 4~10）',
     '卻幾乎沒有曝光——`figure 03 bmw` 90 天 11 次、`fable 5` 三次、`work iq` 兩次，因為事件過了就沒人搜。',
     '而唯一一篇「是什麼＋運作原理」的概念文拿到 177 次，是全類第一名。**答不出「三個月後還有人搜」就換題。**',
+    '',
+    evergreen.length
+      ? '**這條判準現在有實測答案，不必再靠猜。** 下列字是把近幾個月切成數個時間窗後，**每個窗都有人搜**的\n' +
+        '字（單一窗爆量的事件字已被剔除）。它們就是「三個月後還有人搜」的實證清單：\n' +
+        evergreen.map((q) => `  - ${q}`).join('\n') +
+        '\n\n  讀法：`pos` 很差（>40）**不是壞消息**，是「有需求但本站還沒吃到」——升級空間最大的位置。\n' +
+        '  同判準三，這份清單是**全站**的，只挑落在你「題材範圍」內的，其餘留給別條產線。'
+      : '（本次取不到常青訊號，判準一改用自行判斷）',
     '',
     '**判準二：先追擊已經半排名的題，再開新題。**',
     striking.length
@@ -106,9 +114,10 @@ function selectionCriteria(striking, demand, directedTopic) {
  * @param {string[]} o.recentTitles 近期已發標題（去重）
  * @param {string[]} o.striking    差一步的 tech 頁（pageOpportunities）
  * @param {string[]} o.demand      有需求沒吃到的 query（searchDemandTopics）
+ * @param {string[]} o.evergreen   跨時間窗都複現的常青需求 query（evergreenDemandTopics）
  * @param {string}  [o.topic]      指定題目（有值時跳過自動選題）
  */
-export function buildTechDeskPrompt({ track, recentTitles = [], striking = [], demand = [], topic = '' }) {
+export function buildTechDeskPrompt({ track, recentTitles = [], striking = [], demand = [], evergreen = [], topic = '' }) {
   const t = TECH_TRACKS[track];
   if (!t) throw new Error(`未知的 track：${track}`);
   const recent = recentTitles.length ? recentTitles.map((x) => `  - ${x}`).join('\n') : '（近期無）';
@@ -119,7 +128,7 @@ export function buildTechDeskPrompt({ track, recentTitles = [], striking = [], d
     `【聲音與角色】${t.voice}`,
     `【題材範圍】${t.topicScope}`,
     '',
-    ...selectionCriteria(striking, demand, topic),
+    ...selectionCriteria(striking, demand, evergreen, topic),
     '【標題鐵則（一票否決，寫完自己回頭檢查一次）】',
     '1. 先決定這篇要吃哪個字（`targetQuery`），**那個字不能只由專有名詞組成**（產品名／公司名／型號／版本號）。',
     '   要是概念詞或問題：`人形機器人 產線`、`ai asic`、`ai 模型 選型`、`passkey 原理`、`fhir 是什麼`。',

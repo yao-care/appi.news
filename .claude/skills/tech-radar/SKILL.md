@@ -37,12 +37,19 @@ description: APPI News 每日科技選題雷達。以「可贏性」而非「熱
 2. 跑 `node scripts/topic-ledger.mjs recent`：近期**已推薦過但還沒被寫**的候選題（含 weekly-report 推過的，共用同一帳本）。把輸出當「最近已經丟過、不要再丟」的清單。
 
 ## 步驟 2a：站內搜尋需求（**主訊號，先做**）
-跑 `export GOOGLE_APPLICATION_CREDENTIALS=~/.config/appi-news/ga4-sa.json && node scripts/seo-opportunities.mjs`，取兩個區塊：
+跑 `export GOOGLE_APPLICATION_CREDENTIALS=~/.config/appi-news/ga4-sa.json && node scripts/seo-opportunities.mjs`，取三個區塊：
 
-**先看 `pageOpportunities` 裡 `category: "tech"` 的頁（差一步，最高投報）。** 這些頁已經排在第 2 頁（pos 10.5~20.5），只差深度就進第一頁。若近期有相關新進展，**優先寫一篇把該題講到底的續稿**（新事實＋概念全貌＋台灣影響），並在文中連回該既有頁——比另開全新題划算得多。焦點線同樣採這個優先序（`scripts/lib/focus-esg.mjs`）。
+**最先看 `evergreenDemandTopics`（S0，優先序高於下面兩者）。** 這裡的 query 是**跨多個時間窗都重複出現**的字＝真實的常年需求，不是一次性事件脈衝。`upsideScore` 已經把「曝光量 × 還有多少排名空間」算進去，直接由高往低看。
 
-**再看 `searchDemandTopics`**（讀者實際在 Google 搜、本站還沒吃到點擊的高曝光 query）。
-- **這是主訊號，不是配料。** 有真實搜尋需求、本站又還沒排上＝真機會（demand-driven、打得贏）。tech 相關的需求 query（AI / 醫療 AI / 數位健康 / 資安 / 軟體工具…）**優先各補一篇對準它**，尤其對口 AI×健康的需求題最優先。
+- **為什麼這區塊要排在最前面**：其他區塊按曝光排序，而事件題的曝光天生就比常青題高——一家餐廳歇業的字一週能拿 157 曝光，把「美顏針」（104 曝光、第 71 名）擠出名單。但事件題寫完就死，常青題會年復一年被搜。**只看曝光等於系統性地獎勵錯的題目**，這正是本站前兩個月的實際情況。
+- `windows` 越大越常青（3＝近三個月每個月都有人搜）。`bestPosition` 很差（>40）不是壞消息，是**還沒吃到**的意思——有需求又沒排上，才是能贏的空間。
+- 這區塊的 query 若不屬 tech 主獵場（例如骨關節、中醫類），**不要硬塞給科技線**，改記進 `topic-ledger` 供對應分類的產線或人工認領。**寧可少丟一題，不要為了湊數把健康題寫成科技題。**
+
+**再看 `pageOpportunities` 裡 `category: "tech"` 的頁（差一步，最高投報）。** 這些頁已經排在第 2 頁（pos 10.5~20.5），只差深度就進第一頁。若近期有相關新進展，**優先寫一篇把該題講到底的續稿**（新事實＋概念全貌＋台灣影響），並在文中連回該既有頁——比另開全新題划算得多。焦點線同樣採這個優先序（`scripts/lib/focus-esg.mjs`）。
+
+**最後看 `searchDemandTopics`**（讀者實際在 Google 搜、本站還沒吃到點擊的高曝光 query）。
+- 這裡**混雜事件題與常青題**，且事件題會排在前面。若某個 query 同時出現在 `evergreenDemandTopics`，以常青區塊的判讀為準；只出現在這裡的高曝光字，先問一句「這個字下個月還有人搜嗎」，答案是否定的就別投產能。
+- 有真實搜尋需求、本站又還沒排上＝真機會（demand-driven、打得贏）。tech 相關的需求 query（AI / 醫療 AI / 數位健康 / 資安 / 軟體工具…）**優先各補一篇對準它**，尤其對口 AI×健康的需求題最優先。
 - 這裡撈到的 query 本身就是合格的 `targetQuery`（見步驟 3.5）——它們是實證有人搜的字，不必再自己猜。
 - 步驟 2b 的「外部熱題」只是**補充**：外部題唯有同時對口主獵場或有強台灣角度、且過步驟 3 gate 才收；與需求題撞同一件事時視為同一候選（仍走步驟 1 去重）。
 - 失敗（缺金鑰/網路/非 JSON）→ 降級成「只靠外部熱題（但 gate 照樣嚴格）」，繼續，不致命。

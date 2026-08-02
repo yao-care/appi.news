@@ -256,12 +256,6 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
 
     <div class="container article-main">
       <div class="article-content">
-        <DisclosureBox
-          sourceType={article.data.sourceType}
-          custom={article.data.disclosure}
-          reviewers={shownReviewers}
-        />
-
         {
           article.data.highlights.length > 0 && (
             <aside class="highlights">
@@ -301,6 +295,15 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
         }
 
         <ReferenceList references={article.data.references} />
+
+        {/* 來源揭露原本在正文之前（封面下第一個框），但它是「這篇稿子怎麼來的」的後設資訊，
+            擋在讀者與正文之間會打斷閱讀。移到正文結束後，與參考資料／免責聲明併成同一區
+            後設區塊：參考資料 → 來源揭露 → 免責聲明。 */}
+        <DisclosureBox
+          sourceType={article.data.sourceType}
+          custom={article.data.disclosure}
+          reviewers={shownReviewers}
+        />
 
         {/* 事實型外部/通訊社新聞（wire）不掛「一般資訊・不構成專業建議」這種給觀點/建議文用的免責聲明
             （已有 wire 來源揭露框）；但顯式標了 medical/financial/legal 等高風險警語仍照常顯示。 */}

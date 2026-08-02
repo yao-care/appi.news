@@ -1,0 +1,59 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg">
+<rect width="960" height="600" fill="#FFFFFF"/>
+<text x="480" y="52" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC',sans-serif" font-size="28" font-weight="700" fill="#1B5E4B">導入智慧照護監測系統．五大準備評估</text>
+<text x="480" y="80" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC',sans-serif" font-size="15" fill="#6B7B77">導入前逐項檢視，降低上線後的風險與落差</text>
+
+<!-- Card 1 -->
+<rect x="30" y="112" width="164" height="428" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+<circle cx="112" cy="162" r="26" fill="#1B5E4B"/>
+<text x="112" y="170" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">1</text>
+<circle cx="112" cy="232" r="34" fill="#FFFFFF" stroke="#C9A227" stroke-width="2"/>
+<path d="M 96,246 L 112,216 L 128,246 Z" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linejoin="round"/>
+<line x1="112" y1="228" x2="112" y2="236" stroke="#1B5E4B" stroke-width="3" stroke-linecap="round"/>
+<circle cx="112" cy="241" r="1.6" fill="#1B5E4B"/>
+<text x="112" y="296" text-anchor="middle" font-family="'Noto Sans TC',sans-serif" font-size="16" font-weight="700" fill="#1F2A28">跌倒風險評估</text>
+<text x="112" y="350" text-anchor="middle" font-family="'Noto Sans TC',sans-serif" font-size="12.5" fill="#6B7B77"><tspan x="112" dy="0">掌握長者跌倒</tspan><tspan x="112" dy="18">風險等級</tspan></text>
+
+<!-- Card 2 -->
+<rect x="214" y="112" width="164" height="428" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+<circle cx="296" cy="162" r="26" fill="#1B5E4B"/>
+<text x="296" y="170" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">2</text>
+<circle cx="296" cy="232" r="34" fill="#FFFFFF" stroke="#C9A227" stroke-width="2"/>
+<circle cx="296" cy="232" r="14" fill="none" stroke="#2E8B6F" stroke-width="3"/>
+<path d="M 290,232 L 295,237 L 303,226" fill="none" stroke="#2E8B6F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="296" y="296" text-anchor="middle" font-family="'Noto Sans TC',sans-serif" font-size="16" font-weight="700" fill="#1F2A28">規格與認證</text>
+<text x="296" y="350" text-anchor="middle" font-family="'Noto Sans TC',sans-serif" font-size="12.5" fill="#6B7B77"><tspan x="296" dy="0">確認產品規格</tspan><tspan x="296" dy="18">與合格認證</tspan></text>
+
+<!-- Card 3 -->
+<rect x="398" y="112" width="164" height="428" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+<circle cx="480" cy="162" r="26" fill="#1B5E4B"/>
+<text x="480" y="170" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">3</text>
+<circle cx="480" cy="232" r="34" fill="#FFFFFF" stroke="#C9A227" stroke-width="2"/>
+<circle cx="480" cy="242" r="2" fill="#1B5E4B"/>
+<path d="M 470,236 A 14,14 0 0 1 490,236" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linecap="round"/>
+<path d="M 462,228 A 24,24 0 0 1 498,228" fill="none" stroke="#1B5E4B" stroke-width="3" stroke-linecap="round"/>
+<text x="480" y="296" text-anchor="middle" font-family="'Noto Sans TC',sans-serif" font-size="16" font-weight="700" fill="#1F2A28">網路基礎設施</text>
+<text x="480" y="350" text-anchor="middle" font-family="'Noto Sans TC',sans-serif" font-size="12.5" fill="#6B7B77"><tspan x="480" dy="0">檢查現場網路</tspan><tspan x="480" dy="18">是否穩定</tspan></text>
+
+<!-- Card 4 -->
+<rect x="582" y="112" width="164" height="428" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+<circle cx="664" cy="162" r="26" fill="#1B5E4B"/>
+<text x="664" y="170" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">4</text>
+<circle cx="664" cy="232" r="34" fill="#FFFFFF" stroke="#C9A227" stroke-width="2"/>
+<path d="M 648,232 L 664,224 L 680,232 L 664,240 Z" fill="#2E8B6F"/>
+<line x1="680" y1="232" x2="680" y2="244" stroke="#2E8B6F" stroke-width="2"/>
+<circle cx="680" cy="247" r="2" fill="#2E8B6F"/>
+<text x="664" y="296" text-anchor="middle" font-family="'Noto Sans TC',sans-serif" font-size="16" font-weight="700" fill="#1F2A28">人員教育訓練</text>
+<text x="664" y="350" text-anchor="middle" font-family="'Noto Sans TC',sans-serif" font-size="12.5" fill="#6B7B77"><tspan x="664" dy="0">安排照護人員</tspan><tspan x="664" dy="18">操作訓練</tspan></text>
+
+<!-- Card 5 -->
+<rect x="766" y="112" width="164" height="428" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+<circle cx="848" cy="162" r="26" fill="#1B5E4B"/>
+<text x="848" y="170" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">5</text>
+<circle cx="848" cy="232" r="34" fill="#FFFFFF" stroke="#C9A227" stroke-width="2"/>
+<path d="M 832,240 A 16,16 0 0 1 864,240" fill="none" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+<line x1="848" y1="240" x2="858" y2="226" stroke="#1B5E4B" stroke-width="3" stroke-linecap="round"/>
+<circle cx="848" cy="240" r="2.5" fill="#1B5E4B"/>
+<text x="848" y="296" text-anchor="middle" font-family="'Noto Sans TC',sans-serif" font-size="16" font-weight="700" fill="#1F2A28">試營運測試</text>
+<text x="848" y="350" text-anchor="middle" font-family="'Noto Sans TC',sans-serif" font-size="12.5" fill="#6B7B77"><tspan x="848" dy="0">監測警示是否</tspan><tspan x="848" dy="18">準確可靠</tspan></text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

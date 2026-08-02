@@ -14,6 +14,11 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 12
+expertNote: "央行連續三年購金逾千公噸，是這波結構最穩定的一環，但這也代表黃金配置的價值在於分散風險，不是拿來賭短線漲跌。真正該顧的是比例紀律：定期檢視是否偏離自己風險屬性對應的區間，而非追高殺低。"
+risksAndLimits:
+  - "結構性支撐與壓抑因素的力道消長屬於總經觀察，非個股或商品投資建議"
+  - "5%至15%的配置區間僅為市場常見參考，未涵蓋所有資產結構與人生階段的家庭"
+  - "文中利率與金價數據反映Fed本次會議後狀況，後續決策方向仍可能改變"
 references:
   - title: "World Gold Council. *Gold Demand Trends: Central Banks, Q1 2026"
     url: "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q1-2026/central-banks"

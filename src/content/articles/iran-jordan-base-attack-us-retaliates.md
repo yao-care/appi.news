@@ -1,10 +1,10 @@
 ---
-title: "美軍再空襲伊朗規模翻倍：格什姆島一家3口罹難　埃及港口首遭無人機波及、油價單日暴漲7.9%"
+title: "美伊戰事急轉：川普喊停對伊朗新攻擊　開出荷莫茲海峽全面開放換停火條件"
 slug: "iran-jordan-base-attack-us-retaliates"
-description: "美伊戰事持續升級：伊朗7月28日飛彈攻擊約旦美軍基地，美沙聯手空襲伊拉克親伊朗民兵，PMF通報至少20死32傷、另有6名伊朗顧問喪生；美軍30日凌晨對伊朗本土發動規模翻倍的新一輪空襲，鎖定格什姆島、基什島、布什爾等地，格什姆島一處民宅遭擊中造成一家3口罹難。戰事外溢埃及與科威特：無人機擊中埃及達米埃塔港美籍液化天然氣儲存船，是本輪衝突以來埃及領土首度遭波及，科威特國防部並通報1名工人喪生。伊朗革命衛隊在荷莫茲海峽攔停3艘油輪，川普誓言「狠狠反擊」，國際油價單日暴漲7.9%至每桶90.74美元，創數週最大漲幅。"
-excerpt: "美伊戰事持續升級：伊朗7月28日飛彈攻擊約旦美軍基地，美沙聯手空襲伊拉克親伊朗民兵，PMF通報至少20死32傷、另有6名伊朗顧問喪生；美軍30日凌晨對伊朗本土發動規模翻倍的新一輪空襲，鎖定格什姆島、基什島、布什爾等地，格什姆島一處民宅遭擊中造成一家3口罹難。戰事外溢埃及與科威特：無人機擊中埃及達米埃塔港美籍液化天然氣儲存船，是本輪衝突以來埃及領土首度遭波及，科威特國防部並通報1名工人喪生。伊朗革命衛隊在荷莫茲海峽攔停3艘油輪，川普誓言「狠狠反擊」，國際油價單日暴漲7.9%至每桶90.74美元，創數週最大漲幅。"
+description: "美伊戰事8月1日晚間急轉：川普在Truth Social宣布，中東盟友已達成協議框架，美方將暫緩原訂對伊朗的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅。這場逆轉來得突然：就在數小時前，川普才誓言對伊朗「狠狠打擊」，革命衛隊聲稱擊中2艘由美軍護航的油輪，美國並在至少10個中東國家發布撤離警示；促成轉折的關鍵是沙烏地王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮，沙國防長隨後赴華府與川普、副總統萬斯會商。半島電視台報導指出，美軍愛國者飛彈庫存告急也是考量之一；卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」，否則將遭「相稱回應」。"
+excerpt: "美伊戰事8月1日晚間急轉：川普宣布中東盟友已達成協議框架，美方暫緩新一輪對伊朗攻擊，換取荷莫茲海峽全面開放及終止伊朗核威脅。逆轉前數小時，川普才誓言對伊朗「狠狠打擊」、美國並在至少10個中東國家發布撤離警示；沙烏地王儲週六致電川普表達對衝突升級的憂慮是關鍵轉折。卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」。"
 publishDate: "2026-07-19T15:18:08.284Z"
-updatedDate: "2026-07-30T16:58:48.148Z"
+updatedDate: "2026-08-02T16:57:24.799Z"
 category: "international"
 subcategory: "middle-east"
 tags:
@@ -12,23 +12,24 @@ tags:
   - "美國"
   - "地緣政治"
 highlights:
-  - "美軍完成對伊朗第13個夜晚的空襲，伊拉克埃爾比勒一處駐有美軍的基地附近傳出至少7聲爆炸、4股黑煙，庫德安全官員稱聯軍擊落5架無人機，巴林同時響起警報"
-  - "美軍空襲鎖定伊朗革命衛隊北部海軍基地、格什姆島海軍無人快艇據點、伊斯法罕省（重要空軍基地與核設施所在地）、庫齊斯坦省與法爾斯省"
-  - "伊朗衛生部通報，近期轟炸死亡人數已達55人（波士頓環球報另指上修至59人），受傷人數均逾600人"
-  - "戰線延燒紅海：伊朗盟友葉門胡塞武裝攻擊沙烏地阿拉伯油輪，川普揚言以美方持有的伊朗資金支付船隻損失，並警告對胡塞祭出「重大軍事懲罰」；伊朗外長阿拉格奇警告，一旦各國政府將資產沒收正常化，「沒有人的資產是安全的，隨之而來的混亂不會太平」"
-  - "荷莫茲海峽壅塞：約6000名海員受困400艘船隻，布蘭特原油衝破每桶100美元，美國汽油均價來到每加侖4.11美元"
-  - "戰事在美軍完成13夜空襲伊朗、暫緩5天後再度升溫：約旦攔截5枚瞄準美軍基地與中央司令部的伊朗飛彈，美沙聯手空襲伊拉克7省份親伊朗民兵，官方民兵聯盟PMF通報至少20死32傷"
-  - "沙國指控過去72小時逾30架伊朗革命衛隊相關無人機攻擊油田設施，阿布蓋格（全球最大原油穩定廠，日處理700萬桶）、賈贊煉油廠（日產40萬桶）雙雙受損，賈贊預計8月中旬復工；布蘭特原油單日彈升3.1%至每桶84.58美元"
-  - "伊拉克總統阿米迪、總理扎伊迪齊聲譴責空襲侵犯主權，召開緊急國安會議；PMF與伊拉克伊斯蘭抵抗組織同聲批「危險升級」；伊朗並拒絕阿曼提出的荷莫茲海峽共管提案，稱海峽「永遠不會回到戰前狀態」"
-  - "美軍中央司令部30日凌晨完成對伊朗新一輪空襲，規模約為前次兩倍，鎖定格什姆島、基什島、布什爾、阿瓦茲、阿布穆薩等地數十處革命衛隊目標；伊朗官方通報格什姆島一處民宅遭擊中，一對夫婦與2歲幼兒罹難，另2名兒童送醫"
-  - "戰線首度燒進埃及：無人機擊中地中海達米埃塔港美籍浮式儲存氣化裝置「Energos Winter」號，火勢波及另一船「Gaslog Salem」號，埃及官方確認零傷亡；科威特國防部通報1名工人在伊朗攻擊中喪生"
-  - "伊拉克空襲除PMF通報的至少20死32傷外，另有6名伊朗顧問喪生；伊朗革命衛隊海軍在荷莫茲海峽攔停3艘「違規」油輪，警告外部介入「不會被容忍」"
-  - "川普誓言「這次輪到我們狠狠反擊」，稱伊朗以時速8000英里飛彈攻擊約旦基地、事後已致歉；國際油價單日暴漲7.9%至每桶90.74美元，創數週最大漲幅，30日小幅回落至87.3美元"
+  - "川普8月1日晚間宣布暫停新一輪對伊朗攻擊，稱中東盟友已達成協議框架，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅，但雙方均未透露具體斡旋細節與條款"
+  - "逆轉來得突然：宣布暫停的數小時前，美伊情勢才衝上最高點，革命衛隊7月31日清晨聲稱擊中2艘由美軍「空中護航」通過荷莫茲海峽的油輪，川普同日誓言對伊朗「狠狠打擊」；8月1日美國在至少10個中東國家的大使館同步發布撤離警示，黎巴嫩使館並進入「強制撤離」狀態"
+  - "同日科威特證實攔截新一波無人機攻擊、無人員傷亡；英國海事貿易行動組織通報1艘油輪在阿曼外海遭不明武器擊中、引擎室受損失去動力"
+  - "促成轉折的關鍵是沙烏地王儲穆罕默德·本·沙爾曼週六致電川普，表達對美方擴大攻擊、伊朗恐報復波灣能源設施的憂慮；沙國防長隨後赴華府與川普、副總統萬斯會商伊朗策略"
+  - "半島電視台報導指出，美軍愛國者防空飛彈庫存已從開戰前2300枚降至不足827枚，彈藥吃緊也是美方考量暫停攻擊的因素之一；戰爭在美國內部民意不受歡迎、距11月期中選舉僅數月，同為政治考量"
+  - "卡達、巴基斯坦持續斡旋，據安納杜魯通訊社引述巴基斯坦政府消息人士，雙方對本週內恢復談判「審慎樂觀」；土耳其、阿聯同步敦促美伊降溫，伊朗外長阿拉格奇分別與三國高階官員通話協商"
+  - "伊朗官方態度強硬：國防部在X平台聲明稱國家「既不驚訝也不被動」、部隊維持高度警戒；外長阿拉格奇警告美方避免「冒險行動」，否則將遭「相稱回應」"
+  - "這並非美伊首度嘗試停火：6月由巴基斯坦、卡達斡旋的臨時協議，就在荷莫茲海峽控制權爭議下數週內瓦解；分析人士警告，若無明確協議開放海峽，這次暫停恐重蹈覆轍"
+  - "美軍中央司令部30日凌晨完成對伊朗新一輪空襲，規模約為前次兩倍，鎖定格什姆島、基什島、布什爾等地數十處革命衛隊目標；伊朗官方通報格什姆島一處民宅遭擊中，一對夫婦與2歲幼兒罹難"
+  - "戰線首度燒進埃及：無人機擊中地中海達米埃塔港美籍浮式儲存氣化裝置「Energos Winter」號；科威特國防部通報1名工人在伊朗攻擊中喪生"
+  - "國際油價因戰事劇烈波動：布蘭特原油7月29日單日暴漲7.9%至每桶90.74美元，創數週最大漲幅，30日回落至87.3美元"
+  - "美伊戰事自2月28日爆發以來已逾5個月：美軍陣亡人數累計至少17人、逾500人受傷，伊朗官方統計死亡人數逾55人、逾600人受傷"
 risksAndLimits:
-  - "空襲傷亡數字來自伊朗官方與PMF等單方通報，尚未經獨立機構查證"
-  - "科威特、埃及港口損害情形僅有官方初步說法，具體傷亡與損失金額未定論"
-  - "油價單日暴漲7.9%為特定時點數字，戰事變化下可能隨時再劇烈波動"
-  - "文中傷亡與地點資訊多轉引外電，原始事件細節尚待後續證實"
+  - "協議框架僅為雙方口頭聲明的「參數」，尚未公布具體條款或簽署文件，能否落實仍有變數"
+  - "伊朗是否確有主動提出暫停請求，各方說法不一，伊朗官方未證實；6月的臨時停火也曾在數週內瓦解"
+  - "美軍愛國者飛彈庫存數字引自媒體引述之防務分析，尚未經美國國防部正式證實"
+  - "先前空襲傷亡數字多來自伊朗官方與PMF等單方通報，尚未經獨立機構查證"
+  - "革命衛隊聲稱擊中2艘美軍護航油輪一事，截至報導當下尚未經美方獨立證實，美軍中央司令部僅否認伊朗掌控海峽的說法"
 references:
   - title: "2 troops are dead, 1 is missing after Iranian attacks on base in Jordan, US military says"
     url: "https://www.mysuncoast.com/2026/07/18/2-troops-are-dead-1-is-missing-after-iranian-attacks-base-jordan-us-military-says/"
@@ -111,6 +112,33 @@ references:
   - title: "Brent Crude Oil Price Today (July 30): Brent Falls to $87.30, WTI Slips Near $84 as US-Iran Conflict Intensifies"
     url: "https://sundayguardianlive.com/business/brent-crude-oil-price-today-july-30-brent-falls-to-8730-wti-slips-near-84-as-us-iran-conflict-intensifies-check-latest-brent-crude-wti-oil-rates-today-249417/"
     publisher: "Sunday Guardian Live"
+  - title: "Saudi crown prince urges Trump not to escalate Iran war as US leader weighs new strikes, AP source says"
+    url: "https://www.yahoo.com/news/politics/articles/saudi-crown-prince-urges-trump-014040218.html"
+    publisher: "Yahoo News (AP)"
+  - title: "Why has Trump halted Iran attacks, and what is the deal he is hinting at?"
+    url: "https://www.aljazeera.com/news/2026/8/2/why-has-trump-halted-iran-attacks-and-what-is-the-deal-he-is-hinting-at"
+    publisher: "Al Jazeera"
+  - title: "Trump backs off from new strikes on Iran, claiming Mideast allies have outlines of an emerging deal to reopen the Strait of Hormuz"
+    url: "https://fortune.com/2026/08/01/trump-iran-strikes-mideast-allies-emerging-strait-of-hormuz/"
+    publisher: "Fortune"
+  - title: "Live Updates: Trump calls off strikes on Iran subject to peace deal being \"rapidly\" reached"
+    url: "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-kuwait-jordan-air-base/"
+    publisher: "CBS News"
+  - title: "Trump says attacks on Iran will continue until Tehran meets his terms: 'We just want to win'"
+    url: "https://www.washingtontimes.com/news/2026/jul/31/trump-says-attacks-iran-continue-tehran-meets-terms-want-win/"
+    publisher: "The Washington Times"
+  - title: "IRGC says it struck two tankers in the Strait of Hormuz that were escorted by U.S. military"
+    url: "https://www.washingtontimes.com/news/2026/jul/31/irgc-says-struck-two-tankers-strait-hormuz-escorted-us-military/"
+    publisher: "The Washington Times"
+  - title: "US embassy Middle East Iran tensions: consider departing"
+    url: "https://www.theweek.in/news/middle-east/2026/08/01/us-embassy-middle-east-iran-tensions.html"
+    publisher: "The Week"
+  - title: "US embassies tell Americans to come home as Iran bombardment looms"
+    url: "https://pjmedia.com/catherinesalgado/2026/08/01/us-embassies-tell-americans-to-come-home-as-iran-bombardment-looms-n4955697"
+    publisher: "PJ Media"
+  - title: "Kuwait's air defences respond to Iranian drone attacks"
+    url: "https://www.thenationalnews.com/news/mena/2026/08/01/kuwaits-air-defences-respond-to-iranian-drone-attacks/"
+    publisher: "The National"
 author: "appi-editorial"
 reviewedBy:
   - "luo-yang"
@@ -126,7 +154,7 @@ coverAlt: "約旦穆瓦法克薩爾蒂空軍基地內的美軍與約旦F-16戰�
 coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 ---
 
-美伊戰事持續升級、已延燒近5個月。這場衝突源於美軍中央司令部證實，伊朗7月17日（週五）以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地（Muwaffaq Salti Air Base，簡稱MSAB），造成2名美軍陣亡、1人失蹤、4人送醫，美國隨即展開報復性空襲，戰事一路升溫。最新一波交火始於7月28日晚間，伊朗再度以飛彈攻擊約旦美軍基地，美國與沙烏地阿拉伯隨即聯手空襲伊拉克境內親伊朗民兵，官方民兵聯盟PMF通報至少20死32傷，另有6名伊朗顧問喪生；美軍中央司令部30日凌晨再對伊朗本土發動新一輪空襲，規模較前次擴大約一倍，鎖定伊朗南部多處革命衛隊目標，伊朗官方通報格什姆島一處民宅遭擊中，造成一家3口罹難。戰事外溢範圍持續擴大：埃及地中海港口達米埃塔29日遭無人機攻擊，一艘美籍液化天然氣儲存船起火，是本輪衝突以來埃及領土首度遭波及；荷莫茲海峽3艘油輪遭伊朗革命衛隊攔停，科威特則通報1名工人在伊朗攻擊中喪生。川普總統誓言將「狠狠反擊」，國際油價單日暴漲7.9%，地緣政治風險同步攀升。
+美伊戰事在近5個月的軍事對抗後，於8月1日晚間出現轉折。美國總統川普宣布，中東盟友已達成結束戰爭的協議框架，美方將暫緩原訂對伊朗發動的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅；促成轉折的關鍵，是沙烏地阿拉伯王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮。這場戰事源於美軍中央司令部證實，伊朗7月17日（週五）以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地（Muwaffaq Salti Air Base，簡稱MSAB），造成2名美軍陣亡、1人失蹤、4人送醫，美國隨即展開報復性空襲，戰事一路升溫。7月28日晚間，伊朗再度以飛彈攻擊約旦美軍基地，美國與沙烏地阿拉伯隨即聯手空襲伊拉克境內親伊朗民兵，官方民兵聯盟PMF通報至少20死32傷，另有6名伊朗顧問喪生；美軍中央司令部30日凌晨再對伊朗本土發動新一輪空襲，規模較前次擴大約一倍，鎖定伊朗南部多處革命衛隊目標，伊朗官方通報格什姆島一處民宅遭擊中，造成一家3口罹難。戰事外溢範圍持續擴大：埃及地中海港口達米埃塔29日遭無人機攻擊，一艘美籍液化天然氣儲存船起火，是本輪衝突以來埃及領土首度遭波及；荷莫茲海峽3艘油輪遭伊朗革命衛隊攔停，科威特則通報1名工人在伊朗攻擊中喪生。國際油價單日暴漲7.9%，地緣政治風險同步攀升。逆轉來得突然：宣布暫停的數小時前，革命衛隊才聲稱擊中2艘由美軍護航的油輪，川普誓言對伊朗「狠狠打擊」，美國更在至少10個中東國家發布撤離警示，直到川普8月1日晚間喊停新攻擊、開出停火條件。
 
 ## 約旦基地遇襲：2死1失蹤4送醫
 
@@ -233,8 +261,38 @@ coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 
 市場反應劇烈。[週日衛報生活報導](https://sundayguardianlive.com/business/brent-crude-oil-price-today-july-30-brent-falls-to-8730-wti-slips-near-84-as-us-iran-conflict-intensifies-check-latest-brent-crude-wti-oil-rates-today-249417/)指出，7月29日布蘭特原油單日大漲7.9%，收在每桶90.74美元，西德州中級原油同步上漲6.6%至每桶84.46美元，創數週來最大單日漲幅；美國商業原油庫存創6月中旬以來最大週跌幅，戰略儲油連續18週下滑，來到1983年以來新低。截至30日，布蘭特原油小幅回落0.9%至每桶87.3美元，市場持續關注荷莫茲海峽任何潛在中斷。
 
+## 逆轉前夕：美使館籲考慮撤離　科威特擊落無人機、荷莫茲海峽油輪再遇襲
+
+就在川普喊停新攻擊的前一天，美伊緊張情勢其實才剛衝上這輪戰事以來的最高點。[華盛頓時報報導](https://www.washingtontimes.com/news/2026/jul/31/trump-says-attacks-iran-continue-tehran-meets-terms-want-win/)指出，川普7月31日（週五）在馬里蘭州坎普戴維主持內閣會議時強硬表態：「我想我們就是想贏。」他強調伊朗「不能擁有核武器，也不會擁有」，並揚言「我們會狠狠打擊他們，打到他們說『我們真的受不了了』為止」，同時批評伊朗一向不誠實、難以打交道。
+
+同一天，伊朗革命衛隊也升高行動。據[華盛頓時報另一篇報導](https://www.washingtontimes.com/news/2026/jul/31/irgc-says-struck-two-tankers-strait-hormuz-escorted-us-military/)，革命衛隊聲稱7月31日清晨擊中2艘正通過荷莫茲海峽、且由美軍「空中護航」的油輪，另有4艘油輪隨即掉頭改道；革命衛隊稱，這2艘船是在美軍中央司令部「唆使」下，經由未經伊朗授權的航線通行。美軍中央司令部堅稱伊朗並未掌控該海峽、美方將持續確保航行自由，這起攻擊事件截至報導當下尚未獨立證實，該報也已向中央司令部求證意見。
+
+情勢在隔天（8月1日）進一步升溫。[The Week報導](https://www.theweek.in/news/middle-east/2026/08/01/us-embassy-middle-east-iran-tensions.html)指出，美國在至少10個中東國家的大使館，包括波灣國家、以色列、約旦、黎巴嫩與埃及，同步發布安全警示，呼籲美國公民「考慮撤離，或在情勢升級前做好撤離準備」；黎巴嫩使館更進入「強制撤離」狀態，約旦使館提醒公民避免前往美軍基地，以色列公民則被告知確認住處附近防空避難所的位置。大使館聲明指出，中東緊張情勢升高使安全環境複雜，存在意外升級的風險，並形容伊朗政權「難以預測」，理由是伊朗近期屢屢在毫無預警下擴大攻擊範圍，首度波及先前未受波及的埃及。[PJ Media報導](https://pjmedia.com/catherinesalgado/2026/08/01/us-embassies-tell-americans-to-come-home-as-iran-bombardment-looms-n4955697)則引述美國駐科威特大使館聲明：「伊朗及其支持的團體可能會鎖定美國在海外的利益。」
+
+同一天，科威特軍方證實遭遇新一波無人機威脅。[The National報導](https://www.thenationalnews.com/news/mena/2026/08/01/kuwaits-air-defences-respond-to-iranian-drone-attacks/)指出，科威特陸軍總參謀部表示，防空系統已攔截「敵對的無人機威脅」，國防部發言人說明損害是由攔截後掉落的殘骸造成，未傳出人員傷亡；同一報導並指出，英國海事貿易行動組織（UKMTO）通報，1艘油輪在阿曼利馬東北方約20公里處遭不明武器擊中，引擎室受損、船隻一度失去動力。
+
+## 戰事急轉：川普喊停新攻擊　開出荷莫茲海峽全面開放換停火條件
+
+就在美國大使館籲民眾考慮撤離、荷莫茲海峽油輪再遇襲的數小時後，美伊戰事在8月1日晚間出現轉折。據[Yahoo新聞轉發美聯社報導](https://www.yahoo.com/news/politics/articles/saudi-crown-prince-urges-trump-014040218.html)，川普當晚在Truth Social發文宣布，中東盟友已就結束這場長達5個月的戰爭達成協議框架，美國將暫緩原訂對伊朗發動的新一輪軍事攻擊。他表示，將「取消攻擊，以換取迅速達成協議的可能性」，協議內容應包括「荷莫茲海峽立即、完全、全面開放」，並終止伊朗的核威脅。[半島電視台報導](https://www.aljazeera.com/news/2026/8/2/why-has-trump-halted-iran-attacks-and-what-is-the-deal-he-is-hinting-at)指出，川普稱是伊朗與其他中東國家提出暫停請求，他在貼文中寫道：「基於這項請求，我已同意……取消攻擊，前提是能迅速達成協議」；但雙方均未透露協議具體條款，也未明確說明由誰居中斡旋。
+
+這是戰略上的急轉彎。[財富雜誌報導](https://fortune.com/2026/08/01/trump-iran-strikes-mideast-allies-emerging-strait-of-hormuz/)指出，就在一天前，川普才向記者表示計畫恢復大規模軍事打擊，回應伊朗稍早飛彈攻擊約旦美軍基地一事（詳見上文）。促成轉折的關鍵，是沙烏地阿拉伯王儲穆罕默德·本·沙爾曼週六與川普通話，表達對美方擴大攻擊伊朗能源目標的憂慮，擔心一旦美軍鎖定伊朗能源基礎設施或發動大規模空襲，德黑蘭可能報復沙國及其他波灣國家的能源設施；[財富雜誌報導](https://fortune.com/2026/08/01/trump-iran-strikes-mideast-allies-emerging-strait-of-hormuz/)並指出，沙國國防部長隨後特地赴華盛頓，與川普及副總統萬斯商討對伊朗策略。[CBS新聞報導](https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-kuwait-jordan-air-base/)指出，沙國官方聲明強調，王儲「強調對話優先、有必要降低衝突升級」。
+
+## 彈藥庫存吃緊、期中選舉壓力　也是川普喊停考量
+
+[半島電視台報導](https://www.aljazeera.com/news/2026/8/2/why-has-trump-halted-iran-attacks-and-what-is-the-deal-he-is-hinting-at)引述防務分析指出，美軍愛國者防空飛彈庫存已從開戰前的2300枚，降至不足827枚，彈藥存量吃緊也是美方考量暫停新一輪攻擊的因素之一。[財富雜誌報導](https://fortune.com/2026/08/01/trump-iran-strikes-mideast-allies-emerging-strait-of-hormuz/)並指出，這場戰爭在美國國內民意並不受歡迎，此時距11月期中選舉僅剩數月，也是政治上的考量。
+
+區域斡旋同步加溫。[半島電視台報導](https://www.aljazeera.com/news/2026/8/2/why-has-trump-halted-iran-attacks-and-what-is-the-deal-he-is-hinting-at)指出，據土耳其安納杜魯通訊社引述巴基斯坦政府消息人士，卡達、巴基斯坦兩國斡旋人士對恢復談判態度「審慎樂觀」，預期本週內會有「正面進展」；土耳其、阿聯則被列為同步敦促美伊降溫的區域大國。[CBS新聞報導](https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-kuwait-jordan-air-base/)指出，伊朗外交部長阿拉格奇分別與土耳其、巴基斯坦、沙烏地阿拉伯高階官員通話協商。
+
+## 伊朗官方否認求和　外長警告勿「冒險行動」
+
+伊朗官方對川普的說法態度強硬。[CBS新聞報導](https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-kuwait-jordan-air-base/)指出，伊朗國防部在X平台發布聲明，稱國家「既不驚訝也不被動」，部隊將維持高度警戒；外交部長阿拉格奇則警告美方避免「冒險行動」，並宣稱伊朗一旦遭受任何攻擊，將祭出「相稱回應」。目前尚無法證實伊朗官方是否確有主動提出暫停請求。
+
+[半島電視台報導](https://www.aljazeera.com/news/2026/8/2/why-has-trump-halted-iran-attacks-and-what-is-the-deal-he-is-hinting-at)引述區域安全分析人士警告，除非雙方達成明確協議開放海峽，否則這次暫停恐難持久。這並非美伊首度嘗試停火：6月由巴基斯坦、卡達斡旋的臨時協議，就在荷莫茲海峽控制權爭議下，短短數週內瓦解，衝突隨即再度升溫（詳見上文）。
+
 ## 更新時間軸
 
+- （更新 2026-08-02：美伊戰事急轉，川普8月1日晚間在Truth Social宣布，中東盟友已達成協議框架，美方將暫緩原訂新一輪對伊朗攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅。促成轉折的關鍵是沙烏地王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮；沙國防長隨後赴華府與川普、副總統萬斯會商。半島電視台報導指出，美軍愛國者飛彈庫存已從開戰前2300枚降至不足827枚，彈藥吃緊、期中選舉壓力也是川普喊停的考量；卡達、巴基斯坦持續斡旋，土耳其、阿聯同步敦促降溫。伊朗官方態度強硬：國防部聲明稱國家「既不驚訝也不被動」，外長阿拉格奇警告美方勿「冒險行動」，否則將遭「相稱回應」。分析人士警告，若無明確協議開放海峽，這次暫停恐重蹈6月停火瓦解的覆轍。）（[Yahoo/AP](https://www.yahoo.com/news/politics/articles/saudi-crown-prince-urges-trump-014040218.html)、[Al Jazeera](https://www.aljazeera.com/news/2026/8/2/why-has-trump-halted-iran-attacks-and-what-is-the-deal-he-is-hinting-at)、[Fortune](https://fortune.com/2026/08/01/trump-iran-strikes-mideast-allies-emerging-strait-of-hormuz/)、[CBS News](https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-kuwait-jordan-air-base/)）
+- （更新 2026-08-01：川普宣布喊停攻擊前，美伊情勢一度衝上這輪戰事以來的最高點。革命衛隊7月31日清晨聲稱擊中2艘由美軍「空中護航」通過荷莫茲海峽的油輪，川普同日在內閣會議喊話「我們就是想贏」、揚言對伊朗「狠狠打擊」；8月1日，美國在至少10個中東國家的大使館同步發布撤離警示，籲公民考慮撤離或做好撤離準備，黎巴嫩使館並進入「強制撤離」狀態。同日科威特證實攔截新一波無人機攻擊、未傳出人員傷亡；英國海事貿易行動組織通報，1艘油輪在阿曼外海遭不明武器擊中、引擎室受損失去動力。）（[Washington Times](https://www.washingtontimes.com/news/2026/jul/31/trump-says-attacks-iran-continue-tehran-meets-terms-want-win/)、[Washington Times](https://www.washingtontimes.com/news/2026/jul/31/irgc-says-struck-two-tankers-strait-hormuz-escorted-us-military/)、[The Week](https://www.theweek.in/news/middle-east/2026/08/01/us-embassy-middle-east-iran-tensions.html)、[PJ Media](https://pjmedia.com/catherinesalgado/2026/08/01/us-embassies-tell-americans-to-come-home-as-iran-bombardment-looms-n4955697)、[The National](https://www.thenationalnews.com/news/mena/2026/08/01/kuwaits-air-defences-respond-to-iranian-drone-attacks/)）
 - （更新 2026-07-30：美軍中央司令部30日凌晨完成對伊朗新一輪空襲，規模約為前次兩倍，鎖定格什姆島、基什島、布什爾、阿瓦茲、班達爾阿巴斯等地數十處革命衛隊目標；伊朗官方通報格什姆島一處民宅遭擊中，一對夫婦與2歲幼兒罹難。戰事外溢埃及與科威特：無人機擊中達米埃塔港美籍液化天然氣儲存船「Energos Winter」號，是本輪衝突以來埃及領土首度遭波及；科威特通報1名工人喪生。伊拉克空襲另添6名伊朗顧問陣亡，伊朗革命衛隊在荷莫茲海峽攔停3艘油輪。川普誓言「這次輪到我們狠狠反擊」，國際油價單日暴漲7.9%至每桶90.74美元，30日回落至87.3美元。）（[路透社/Hawaii Tribune-Herald](https://www.hawaiitribune-herald.com/2026/07/30/nation-world-news/us-strikes-iran-as-widening-war-engulfs-more-countries/)、[Al Jazeera](https://www.aljazeera.com/news/2026/7/30/us-hits-multiple-targets-in-iran-as-irgc-pledges-retaliation-what-we-know)、[The Jerusalem Post](https://www.jpost.com/middle-east/iran-news/article-904062)、[Irish News/AP](https://www.irishnews.com/news/world/iran-launches-missiles-as-20-fighters-killed-by-us-saudi-strikes-on-iraq-EZDFAIZFSVO33MDLGY4ZAWEMZA/)、[Middle East Eye](https://www.middleeasteye.net/live-blog/live-blog-update/three-offending-tankers-targeted-and-stopped-hormuz-strait-irgc-says)）
 - （更新 2026-07-29：戰事在美軍完成13夜空襲伊朗、暫緩5天後再度升溫。約旦軍方攔截5枚瞄準美軍基地與中央司令部的伊朗飛彈；美國與沙烏地阿拉伯聯手空襲伊拉克7省份親伊朗民兵據點，PMF通報至少20死32傷。沙國指控過去72小時逾30架伊朗革命衛隊相關無人機攻擊沙國油田設施，阿布蓋格、賈贊兩處煉油設施受損，賈贊預計8月中旬復工；布蘭特原油單日彈升3.1%至每桶84.58美元。伊拉克總統阿米迪、總理扎伊迪齊聲譴責攻擊侵犯主權並召開緊急國安會議；伊朗並拒絕阿曼提出的荷莫茲海峽共管提案。）（[WGLT/NPR](https://www.wglt.org/2026-07-29/jordan-intercepts-iranian-missiles-as-u-s-and-saudi-arabia-strike-militias-in-iraq)、[Yahoo/AP](https://www.yahoo.com/news/world/articles/jordan-says-intercepted-missiles-launched-050901324.html)、[Washington Times](https://www.washingtontimes.com/news/2026/jul/29/jordan-intercepts-iranian-missiles-saudi-arabia-us-launch-strikes/)、[Al Jazeera](https://www.aljazeera.com/news/2026/7/29/saudi-arabia-us-carry-out-strikes-on-iran-backed-groups-in-iraq)、[Daily Sabah](https://www.dailysabah.com/world/mid-east/iraq-govt-calls-emergency-meeting-after-us-saudi-airstrikes-kill-20)）
 - （更新 2026-07-24：美軍完成對伊朗連續第13個夜晚的空襲，伊拉克埃爾比勒一處駐有美軍的基地附近傳出至少7聲爆炸、4股黑煙，庫德安全官員稱聯軍擊落5架無人機，巴林同時響起警報；空襲鎖定伊朗革命衛隊北部海軍基地、格什姆島、伊斯法罕省、庫齊斯坦省與法爾斯省。伊朗衛生部通報死亡人數已達55人（另有報導指上修至59人）、逾600人受傷。戰線延燒紅海，葉門胡塞武裝攻擊沙烏地油輪，川普揚言以伊朗資金支付船隻損失、警告對胡塞祭出「重大軍事懲罰」，伊朗外長阿拉格奇警告資產沒收將引發混亂。荷莫茲海峽約6000名海員受困400艘船隻，布蘭特原油衝破每桶100美元。）（[Swindon Advertiser](https://www.swindonadvertiser.co.uk/news/national/26406094.explosions-american-base-iraq-us-forces-strike-iran-13th-night/)、[WIBW/AP](https://www.wibw.com/2026/07/24/explosions-break-out-near-military-base-hosting-us-troops-iraq/)、[Military.com/AP](https://www.military.com/explosions-are-heard-near-a-us-base-in-northern-iraq-as-us-iran-fighting-escalates)、[The Boston Globe/AP](https://www.bostonglobe.com/2026/07/24/world/iran-us-war/)）

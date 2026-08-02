@@ -13,7 +13,7 @@
 //   searchDemandTopics ── S1 選題接需求：讀者在搜、本站還沒吃到點擊的高曝光 query（去站名/品牌字），供雷達優先補題
 
 import { loadServiceAccount, getAccessToken, gscQuery } from './lib/google-data.mjs';
-import { GSC_SCOPE } from './lib/report-config.mjs';
+import { GSC_SCOPE, GSC_SA_KEY_PATH } from './lib/report-config.mjs';
 import { articleSlugOf } from './lib/weekly-metrics.mjs';
 import { loadArticleCategoryMap } from './lib/article-category-map.mjs';
 import { isMutedQuery } from './lib/muted-queries.mjs';
@@ -125,7 +125,7 @@ export function searchDemandTopics(queryResp, n = TOP_N) {
 
 export async function run() {
   const range = lookbackRange();
-  const sa = loadServiceAccount();
+  const sa = loadServiceAccount(GSC_SA_KEY_PATH); // GSC 專屬金鑰，非 GA4 那把
   const catMap = loadArticleCategoryMap();
   const token = await getAccessToken({ clientEmail: sa.clientEmail, privateKey: sa.privateKey, scopes: [GSC_SCOPE] });
 

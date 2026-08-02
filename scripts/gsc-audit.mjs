@@ -24,7 +24,7 @@
 
 import { readFileSync, readdirSync } from 'node:fs';
 import { loadServiceAccount, getAccessToken, gscQuery } from './lib/google-data.mjs';
-import { GSC_SCOPE } from './lib/report-config.mjs';
+import { GSC_SCOPE, GSC_SA_KEY_PATH } from './lib/report-config.mjs';
 
 const VERIFY = process.argv.includes('--verify');
 const DAYS = Number(process.argv.find((a) => /^\d+$/.test(a)) || 90);
@@ -42,7 +42,7 @@ const BASELINE = { date: '2026-07-28', d90: 16.7, d14: 8.0 };
 const day = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
 const window = { startDate: day(DAYS + LAG), endDate: day(LAG) };
 
-const sa = loadServiceAccount();
+const sa = loadServiceAccount(GSC_SA_KEY_PATH); // GSC 專屬金鑰，非 GA4 那把
 const token = await getAccessToken({ clientEmail: sa.clientEmail, privateKey: sa.privateKey, scopes: [GSC_SCOPE] });
 
 // 站上正本 slug（用來區分「真文章頁」與「轉址空殼」）——verify 與完整報告共用。

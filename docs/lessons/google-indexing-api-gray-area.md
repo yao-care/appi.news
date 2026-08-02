@@ -54,3 +54,48 @@ Console 裡它的顯示名稱是 **Web Search Indexing API**，搜尋「Indexing
 
 另外 `getMetadata` 對新聞文章回 **404 屬正常**（本篇上半已述：官方只支援 JobPosting/BroadcastEvent），
 publish 回 200 就是這條管道能做到的全部，不要拿 404 當設定失敗的證據。
+
+## 2026-08-02 追記：換金鑰只換了一半 —— GSC 靜默斷線兩天
+
+**問題**：`data/seo-daily/2026-08-01.json` 起，`gsc` 區塊只寫得出
+`{"error": "User does not have sufficient permission for site 'sc-domain:appi.news'"}`，
+連兩天沒有搜尋數據。腳本一樣 exit 0，沒有任何告警（`section()` 設計成單段失敗只記 error、不中斷）。
+
+**原因是兩件事疊在一起：**
+
+1. **舊的共用金鑰 `ga4-insights@yaocare` 對 appi.news 的 GSC 權限沒了。** 實測該帳號的
+   `webmasters/v3/sites` 回傳 10 個站（folk.tw、sutta.io、twdro.net、yao.care、arthurs.tw…），
+   **就是沒有 appi.news**。GA4 完全不受影響——因為 GA4 的權限是另一套後台給的。
+2. **上一則追記建的新金鑰只接了 Indexing API，沒接 GSC**，而且新專案 `appi-news-504107`
+   當時只啟用了 `indexing.googleapis.com`，**沒有啟用 `searchconsole.googleapis.com`**。
+   所以拿新金鑰去查 GSC 一樣 403，訊息是 `has not been used in project 127174618880`。
+
+**判別 403 的三種面孔**（延續上一則的判別法，這次又多一種）：
+
+| 403 訊息關鍵字 | 真正的問題 | 怎麼修 |
+|---|---|---|
+| `has not been used in project ... or it is disabled` | 該 GCP 專案沒啟用這個 API | `gcloud services enable <api> --project=<專案>` |
+| `Failed to verify the URL ownership` | 服務帳號不是 GSC 擁有者 | GSC 後台加使用者 |
+| `User does not have sufficient permission for site` | 服務帳號在該網站**完全沒有身分** | GSC 後台加使用者 |
+
+**處置**：
+- 啟用 `searchconsole.googleapis.com`（專案 `appi-news-504107`）。
+- GSC／URL 檢查／sitemap／Indexing 全部改走 `~/.config/appi-news/indexing-sa.json`
+  （該金鑰在 `sc-domain:appi.news` 是 siteOwner，且只看得到這一站）；
+  **GA4 維持 `ga4-sa.json`**——新金鑰在 GA4 沒有任何身分，整包換過去 GA4 會立刻掛掉。
+- 程式端：本 repo `scripts/lib/report-config.mjs` 新增 `GSC_SA_KEY_PATH`，
+  `weekly-data.mjs`／`gsc-audit.mjs`／`seo-opportunities.mjs` 三支 GSC 消費端改用它；
+  seo-ops 側新增選填欄位 `google.gscSaKeyFile`／`google.indexingSaKeyFile`（不填＝沿用 `saKeyFile`）。
+
+**教訓：**
+
+- **服務帳號的授權是「按 Google 產品」給的，不是一包。** 同一把金鑰可以在 GSC 是擁有者、
+  在 GA4 什麼都不是、在某個 API 因專案沒啟用而完全不能用。因此「幫某站換一把新金鑰」
+  幾乎不會是一次到位的動作——**要逐個 API 驗過**，不能換完就當作好了。
+- **驗收要打 API，不要看設定檔。** 金鑰檔存在、路徑正確、程式讀得到，跟「這把金鑰在這個
+  API 有權限」是三件不同的事。最短的驗證是 `webmasters/v3/sites` 列出它看得到什麼。
+- **站台身分不要寫進共用碼。** seo-ops 是 11 站共用的引擎，金鑰路徑一律留在
+  `sites/<站>.json`，共用碼只做「沒設就沿用上一層」的解析，且註解不點名任何站台或 GCP 專案。
+- 又一次印證「成功不等於 exit code」：`{"error": ...}` 被安靜寫進資料檔兩天，
+  是因為每日收集刻意設計成「單段失敗不影響其他段」。**這個容錯設計是對的，但它需要一個
+  對應的告警**——目前沒有，只能靠人讀檔發現（待補）。

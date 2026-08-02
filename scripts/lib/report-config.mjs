@@ -49,6 +49,20 @@ export const SA_KEY_PATH =
 export const INDEXING_SA_KEY_PATH =
   process.env.INDEXING_SA_KEY || `${process.env.HOME}/.config/appi-news/indexing-sa.json`;
 
+/**
+ * GSC 專用金鑰。與 Indexing API 同一把（都是專案 `appi-news-504107` 的
+ * `appi-indexing@appi-news-504107.iam.gserviceaccount.com`，在 GSC 是 `sc-domain:appi.news`
+ * 的 siteOwner）。**GA4 不能用這把**——它在 GA4 沒有身分，GA4 仍走 SA_KEY_PATH。
+ *
+ * 為什麼要分開（2026-08-02）：共用金鑰 `ga4-insights@yaocare` 於 2026-08-01 起對
+ * appi.news 回 403（該帳號現在看得到其他 10 站、就是沒有 appi），每日 seo-daily 的 gsc
+ * 區塊連兩天只寫得出 {"error"}。新專案金鑰早在 07-31 就放上來了，但當時只接了 Indexing
+ * API，GSC 這條沒切過去，且該專案未啟用 searchconsole.googleapis.com（已於本日啟用）。
+ *
+ * **fallback**：專屬金鑰不存在時退回 SA_KEY_PATH（行為同舊版，不會因缺檔而整條掛掉）。
+ */
+export const GSC_SA_KEY_PATH = process.env.GSC_SA_KEY || INDEXING_SA_KEY_PATH;
+
 const iso = (d) => d.toISOString().slice(0, 10);
 
 /** 回「截至 today 前一天」的本週 7 天與上週 7 天（不重疊）。today 為 Date。 */

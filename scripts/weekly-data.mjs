@@ -1,7 +1,7 @@
 // 抓 GA4 + GSC，輸出週報四區塊 JSON 到 stdout（不含 LLM）。供 /weekly-report 技能讀。
 // 用法：node scripts/weekly-data.mjs   （需 env GOOGLE_APPLICATION_CREDENTIALS）
 import { loadServiceAccount, getAccessToken, ga4RunReport, gscQuery } from './lib/google-data.mjs';
-import { GA_SCOPE, GSC_SCOPE, weekRanges } from './lib/report-config.mjs';
+import { GA_SCOPE, GSC_SCOPE, GSC_SA_KEY_PATH, weekRanges } from './lib/report-config.mjs';
 import {
   topArticles,
   pageTypeBreakdown,
@@ -18,7 +18,9 @@ const sa = loadServiceAccount();
 const catMap = loadArticleCategoryMap();
 
 const gaTok = await getAccessToken({ clientEmail: sa.clientEmail, privateKey: sa.privateKey, scopes: [GA_SCOPE] });
-const gscTok = await getAccessToken({ clientEmail: sa.clientEmail, privateKey: sa.privateKey, scopes: [GSC_SCOPE] });
+// GSC 用專屬金鑰（見 report-config.mjs GSC_SA_KEY_PATH）；GA4 仍用 sa，兩者不是同一把。
+const gscSa = loadServiceAccount(GSC_SA_KEY_PATH);
+const gscTok = await getAccessToken({ clientEmail: gscSa.clientEmail, privateKey: gscSa.privateKey, scopes: [GSC_SCOPE] });
 
 const dr = (range) => [{ startDate: range.start, endDate: range.end }];
 

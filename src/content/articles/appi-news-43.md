@@ -23,6 +23,7 @@ contentType: column
 disclaimerType: medical
 readingTime: 11
 draft: false
+expertNote: "慢性疼痛的根本問題往往在氣血動態與動作力學的雙重失衡，不是單靠止痛藥就能處理。臨床決策上，急性痛先求物理治療評估功能根源，體質性或反覆發作的疼痛再考慮中醫介入，兩者搭配時機比選邊站更關鍵。"
 risksAndLimits:
   - "文中觀點多引自 Moseley《Explain Pain》與中醫古籍，未附具體臨床試驗數據佐證"
   - "2017 年 39 項試驗回顧與 2018 年統合分析針對特定慢性痛症，未必適用所有疼痛類型"

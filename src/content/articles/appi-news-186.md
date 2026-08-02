@@ -21,10 +21,11 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 12
+expertNote: "蓮霧血糖溫和是動物實驗與GI推論的結果，對糖尿病患者最實際的意義是先把它當成「可以放進配額、但仍要秤重的水果」，而非另闢蹊徑的保健品。搭配用藥與監測數值調整份量，比追求成分功效更重要。"
 risksAndLimits:
-  - "粉紅蓮霧的研究為動物實驗,人體臨床數據尚未列出,不能直接套用食用效果"
-  - "文中蓮霧、荔枝、釋迦等營養數值未標明資料出處與年份,實際成分可能因品種與產地略有差異"
-  - "文中未提及糖尿病分型或用藥情況,個人血糖反應仍需自行監測後調整"
+  - "粉紅蓮霧的研究為動物實驗，人體臨床數據尚未列出，不能直接套用食用效果"
+  - "文中蓮霧、荔枝、釋迦等營養數值未標明資料出處與年份，實際成分可能因品種與產地略有差異"
+  - "文中未提及糖尿病分型或用藥情況，個人血糖反應仍需自行監測後調整"
 references:
   - title: "Huang DW, Chang WC, Wu JS, Shih RW, Shen SC. (2016). Vescalagin from Pink Wax Apple [*Syzygium samarangense* (Blume) Merrill and Perry] Alleviates Hepatic Insulin Resistance and Ameliorates Glycemic Metabolism Abnormality in Rats Fed a High-Fructose Diet. *Journal of Agricultural and Food Chemistry*, 64(8), 1722–1730"
     url: "https://pubmed.ncbi.nlm.nih.gov/26800576/"

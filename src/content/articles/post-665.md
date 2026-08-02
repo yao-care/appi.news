@@ -15,6 +15,7 @@ highlights:
   - "日本第四期癌症防治計畫設定2028年前癌症篩檢參與率超過60%、精密檢查追蹤率超過90%的明確目標"
   - "日本2026年2月厚勞省數據：前列腺癌五年存活率92.5%、乳癌88.4%、子宮頸癌71.4%，各癌別整體穩定"
   - "台灣同樣面臨篩檢率偏低與偏遠地區可及性落差的雙重挑戰，日本的數位行政流程改革具參考價值"
+expertNote: "對台灣讀者而言，比起羨慕日本數字，更該注意的是行政流程本身：篩檢異常後有沒有被自動轉介追蹤，往往比篩檢率高低更決定生死。胰臟癌尤其如此，一般篩檢難以觸及，高風險族群(家族史、慢性胰臟炎)的主動監測轉介機制，才是台灣現階段該優先補上的一塊。"
 references:
   - title: "Cancer care innovation is reshaping resilience and well-being in Japan"
     url: "https://www.weforum.org/stories/2026/04/cancer-care-innovation-resilience-well-being-in-japan"

@@ -16,6 +16,7 @@ highlights:
   - "JMIR Aging 2025年系統性回顧指出老年人數位健康採用的三大障礙：數位素養不足、網路取得受限與高成本，以及隱私疑慮與對現有服務的滿足感"
   - "醫療提供者背書、混合式照護模式（數位加人工）以及使用者友善設計是促進採用的三大關鍵驅動因子"
   - "長照3.0首次納入智慧科技輔具租賃補助，2026年7月起補助上限從3年4萬元提升至3年6萬元"
+expertNote: "長照3.0的補助擴大能否轉化為實際照護能量，關鍵不在預算而在導入流程：個管師是否具備推廣數位工具的能力、產品介面是否為高齡使用者設計、以及混合式照護的落地配套是否同步到位。若只把輔具租賃補助當成採購項目處理，缺乏使用訓練與追蹤機制，補助金額提升的效果會被打折扣。"
 references:
   - title: "Barriers to and Facilitators of Digital Health Technology Adoption Among Older Adults With Chronic Diseases: Updated Systematic Review"
     url: "https://aging.jmir.org/2025/1/e80000"

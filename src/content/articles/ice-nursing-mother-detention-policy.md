@@ -22,7 +22,7 @@ risksAndLimits:
   - "逮捕理由與『例外情況』認定依國土安全部與律師各執一詞，尚無法院裁定"
   - "國土安全部指控謊報公民身分之具體罪名與逮捕令內容未公開，真偽待查"
   - "案件排定8月下旬開庭，人身保護令結果尚未確定"
-  - "當事人為化名，細節依三家媒體報導轉述,未經獨立查核"
+  - "當事人為化名，細節依三家媒體報導轉述，未經獨立查核"
 references:
   - title: "Guatemalan mother detained by ICE in Nashville files legal challenge to detention while breastfeeding 10-month-old and caring for child with Down syndrome"
     url: "https://kfdm.com/news/nation-world/guatemalan-mother-detained-by-ice-in-nashville-files-legal-challenge-to-detention-while-breastfeeding-10-month-old-and-caring-for-child-with-down-syndrome"

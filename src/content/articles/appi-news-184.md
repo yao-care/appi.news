@@ -22,6 +22,7 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 14
+expertNote: "胡椒鹼提升薑黃素吸收是目前實證最扎實的一環，想搭配薑黃補充品的人可以放心用，但心臟科或免疫抑制藥物族群在加量前務必先確認交互作用，別把廚房裡的辛香料當成安全無虞的保健品隨意疊加劑量。"
 risksAndLimits:
   - "減重相關研究皆為動物實驗，換算劑量遠高於日常料理用量，人體臨床證據仍不足"
   - "服用心臟科或免疫抑制類藥物者，胡椒鹼可能影響代謝酵素改變血中濃度，用前應諮詢醫師"

@@ -19,6 +19,7 @@ sourceType: author
 contentType: column
 disclaimerType: general
 readingTime: 16
+expertNote: "借勢行銷抓的是「本業關聯性」而非「話題熱度」，這篇文章本身就是示範：把世足爭議寫成給中小企業看的內容操作方法論，而非硬蹭賽果。真正該看的是搜尋引擎怎麼判斷「讀者優先」還是「SEO優先」內容，這條線比賽制怎麼改更值得長期關注。"
 risksAndLimits:
   - "國際足總尚未正式表態取消季軍戰，賽制未來是否調整仍無定論"
   - "球員與教練發言為賽前受訪個人意見，不代表整體球員或官方立場"

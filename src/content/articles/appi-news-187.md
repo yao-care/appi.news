@@ -21,6 +21,7 @@ sourceType: author
 contentType: column
 disclaimerType: general
 readingTime: 14
+expertNote: "65歲以上的長輩與家屬，重點不在追加劑打不打得動，而在間隔對不對：距上次接種或確診滿6個月、無急性症狀就該排入行程，慢性病患者更該優先。真正該盯的環節是保護力隨年齡衰減得比想像快，別等到症狀出現才想到補打。"
 risksAndLimits:
   - "Communicable Diseases Intelligence研究數據來自澳洲2021至2022年Omicron流行期，且以50歲以上為分析對象"
   - "Scientific Reports研究僅分析152位接種者的抗體動態，样本規模有限，結果未必適用所有族群"

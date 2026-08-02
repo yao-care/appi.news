@@ -22,6 +22,7 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 13
+expertNote: "瘦瘦針決定體重掉多少，體質決定效果留不留得住。門診真正該盯的是療程前的抽血與體質評估、腸胃副作用的即時處理，以及停藥前兩三個月要不要提早收線，這三個時間點沒接上，前面的努力就白費。"
 risksAndLimits:
   - "STEP 1 試驗數據來自司美格魯肽單一藥物，其他 GLP-1 藥物或劑量的反彈幅度未必相同"
   - "中醫體質分類與整合方案來自單一診所臨床做法，效果因人而異，尚未見大規模對照研究驗證"

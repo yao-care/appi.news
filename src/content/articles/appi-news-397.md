@@ -23,6 +23,7 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 10
+expertNote: "日圓貶值不是保單或房產出問題，是配置比重被動失衡，該檢視的是整體資產裡日圓占比，而非等匯率反彈。海外資產配置的重點向來是幣別分散，不是賭單一貨幣走勢，這正是重新攤開比重表的時機。"
 risksAndLimits:
   - "日圓保單解約門檻與違約金金額因保單條款而異，本文未列出具體數字"
   - "東京置產風險僅以都心六區短期轉手比例為例，其他地區狀況本文未涵蓋"

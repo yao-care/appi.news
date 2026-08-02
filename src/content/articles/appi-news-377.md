@@ -19,6 +19,7 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 11
+expertNote: "對雨後居家蚊蟲管控來說，重點不在防蚊產品的效力比較，而在孳生源清除是否形成每週固定習慣。花盆底盤與廢棄輪胎因位置隱蔽、清洗頻率低，是最容易被家庭忽略的環節，建議優先納入固定巡檢清單。"
 risksAndLimits:
   - "「巡、倒、清、刷」與孵化天數為疾管署與昆蟲學一般描述，非本文獨立驗證的數據"
   - "訊息疲勞與社區參與研究為特定調查結果，未必適用所有地區與族群"

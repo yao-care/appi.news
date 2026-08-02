@@ -13,9 +13,9 @@ highlights:
   - "原告一方投保的訴訟費保險上限約1620萬英鎊，扣除保險後7人恐需自付上看1820萬英鎊，平均每人負擔逾260萬英鎊"
   - "ANL律師援引哈利王子稱判決是「粉飾太平」的說法，主張應以較嚴苛的「彌償基礎」計算費用；法官尼克林將於8月的書面裁決中，確認初期付款金額與費用計算基準，原告最快8月28日就要付款"
 risksAndLimits:
-  - "原告的訴訟費用保險理賠上限約1620萬英鎊,自付額估算逾此範圍恐再變動"
+  - "原告的訴訟費用保險理賠上限約1620萬英鎊，自付額估算逾此範圍恐再變動"
   - "初期付款與計算基準（標準基礎或彌償基礎）尚待8月法官書面裁決確認"
-  - "完整費用審核要等日後另外聽證才定案,3400萬英鎊為ANL主張總額非最終定案數字"
+  - "完整費用審核要等日後另外聽證才定案，3400萬英鎊為ANL主張總額非最終定案數字"
 references:
   - title: "Harry and others face wait over size of legal fees payment to Mail publisher"
     url: "https://www.irvinetimes.com/news/national/26424398.harry-others-face-wait-size-legal-fees-payment-mail-publisher/"

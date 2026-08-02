@@ -20,6 +20,7 @@ sourceType: "editorial"
 disclaimerType: "medical"
 legacyAuthor: "asignbio"
 legacyCategory: "預防醫學"
+expertNote: "轉播時間以電視台官方公告為準最保險，出賽名單和賽程異動機率不低，建議收看前再確認一次愛爾達當日跑馬燈或官網公告；預防醫學角度提醒，追賽事熬夜看轉播別忘了隔天作息調回來。"
 risksAndLimits:
   - "賽程與轉播時間為出稿時資訊，實際播出如遇官方賽事調整可能異動"
 references:

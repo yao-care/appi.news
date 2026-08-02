@@ -114,6 +114,43 @@ function proseMask(raw) {
   });
 }
 
+/**
+ * frontmatter 裡「會被讀者看到的散文欄位」→ 一併納入掃描。
+ *
+ * 為什麼要另外處理：proseMask 一律把 frontmatter 整段挖掉（第 106 行），而 targetFiles
+ * 又刻意跳過「純 frontmatter 改動」的檔（2026-07-28 為保護標籤遷移加的）。兩者相乘的結果是
+ * expertNote / risksAndLimits / highlights 這些**渲染在文章頁上的散文**完全不受去 AI 腔硬 gate
+ * 約束——2026-08-02 回填 187 段判讀時才發現，一個字都沒被檢查到。
+ *
+ * 只取這三個欄位，不是整份 frontmatter：title/description 之類另有規範，
+ * 而 tags/category 等結構欄位掃了只會製造假陽性。
+ */
+const PROSE_FM_FIELDS = ["expertNote", "risksAndLimits", "highlights"];
+
+export function frontmatterProse(raw) {
+  const m = String(raw).match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!m) return [];
+  const lines = m[1].split("\n");
+  const out = [];
+  let field = null;
+  for (const line of lines) {
+    const kv = line.match(/^([A-Za-z][\w-]*):\s*(.*)$/);
+    if (kv) {
+      field = PROSE_FM_FIELDS.includes(kv[1]) ? kv[1] : null;
+      if (field && kv[2].trim()) out.push(unquote(kv[2]));
+      continue;
+    }
+    if (field && /^\s+-\s/.test(line)) out.push(unquote(line.replace(/^\s+-\s*/, "")));
+    else if (/^\S/.test(line)) field = null;
+  }
+  return out.filter(Boolean);
+}
+
+function unquote(s) {
+  const t = s.trim();
+  try { return JSON.parse(t); } catch { return t.replace(/^["']|["']$/g, ""); }
+}
+
 function firstProseSentence(masked) {
   for (const line of masked) {
     const t = line.trim().replace(/^#+\s*/, "").replace(/^[-*>]\s*/, "");
@@ -122,9 +159,20 @@ function firstProseSentence(masked) {
   return "";
 }
 
-function scanFile(file) {
+/**
+ * scope="all"：正文＋frontmatter 散文都掃（新檔或正文有改動）。
+ * scope="fm" ：**只掃 frontmatter 散文**（正文沒動，只改了 expertNote/risksAndLimits/
+ *   highlights）。這個區分是 grandfather 保護的核心：批次回填 frontmatter 時，不可以
+ *   把那批檔的存量正文一起拖進硬 gate。2026-08-02 第一版沒分 scope，一次把 579 個檔的
+ *   舊正文全掃出來擋掉 build，就是漏了這一刀。
+ */
+function scanFile(file, scope = "all", onlyProse = null) {
   if (!existsSync(file)) return { errors: [], warns: [] };
-  const masked = proseMask(readFileSync(file, "utf8"));
+  const raw = readFileSync(file, "utf8");
+  // onlyProse＝這次相對 base 真的新增/改動的那幾條散文。存量條目（例如既有 highlights）
+  // 不因為同檔另一個欄位被回填就被拖進硬 gate，維持 grandfather 的精神。
+  const fm = onlyProse ?? frontmatterProse(raw);
+  const masked = scope === "fm" ? fm : [...proseMask(raw), ...fm];
   const whole = masked.join("\n");
   const errors = [], warns = [];
   const allowed = (s) => ALLOW.some((re) => re.test(s));
@@ -152,12 +200,13 @@ function scanFile(file) {
   return { errors, warns };
 }
 
+/** 回傳 [{file, scope}]；scope 見 scanFile 的說明（"all" 掃正文＋欄位、"fm" 只掃欄位）。 */
 function targetFiles() {
-  if (fileArgs.length) return fileArgs.filter((f) => /\.mdx?$/.test(f));
+  if (fileArgs.length) return fileArgs.filter((f) => /\.mdx?$/.test(f)).map((file) => ({ file, scope: "all" }));
   const run = (cmd) => { try { return execSync(cmd, { stdio: ["ignore", "pipe", "ignore"] }).toString().trim(); } catch { return null; } };
   if (ALL) {
     const out = run("git ls-files 'src/**/*.md' 'src/**/*.mdx'");
-    return out ? out.split("\n").filter(Boolean) : [];
+    return out ? out.split("\n").filter(Boolean).map((file) => ({ file, scope: "all" })) : [];
   }
   const base = run("git merge-base origin/main HEAD");
   if (!base) { console.log("內容守門：抓不到 git base（origin/main），跳過變動掃描。"); return null; }
@@ -172,14 +221,22 @@ function targetFiles() {
   // 不會引入任何新散文，卻會把整批存量文章拖進硬 gate，把 grandfather 保護整個破掉。
   // 2026-07-28 標籤受控詞彙表遷移一次改 449 檔 frontmatter 時踩到，見 docs/lessons/tag-taxonomy.md。
   const body = (s) => { const m = s.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/); return m ? s.slice(m[0].length) : s; };
-  return files.filter((f) => {
+  const picked = [];
+  for (const f of files) {
     let before;
     try { before = execSync(`git show ${base}:${f}`, { stdio: ["ignore", "pipe", "ignore"] }).toString(); }
-    catch { return true; } // base 沒有這個檔＝新增，一定要掃
+    catch { picked.push({ file: f, scope: "all" }); continue; } // base 沒有這個檔＝新增，全掃
     let after;
-    try { after = readFileSync(f, "utf8"); } catch { return false; } // 已刪除
-    return body(before) !== body(after);
-  });
+    try { after = readFileSync(f, "utf8"); } catch { continue; } // 已刪除
+    if (body(before) !== body(after)) { picked.push({ file: f, scope: "all" }); continue; }
+    // 正文沒變、但 frontmatter 散文欄位變了（expertNote/risksAndLimits/highlights）：
+    // 那些字會渲染在文章頁上，2026-08-02 前是檢查死角，要掃；但**只掃這些欄位**，
+    // 不可連同存量正文一起拖進硬 gate（那正是上面 2026-07-28 修掉的病）。
+    const was = new Set(frontmatterProse(before));
+    const fresh = frontmatterProse(after).filter((x) => !was.has(x));
+    if (fresh.length) picked.push({ file: f, scope: "fm", onlyProse: fresh });
+  }
+  return picked;
 }
 
 const files = targetFiles();
@@ -187,7 +244,7 @@ if (files === null) process.exit(0); // 無 git base，安全放行
 if (!files.length) { console.log("內容守門：無變動的 .md/.mdx 內容檔。"); process.exit(0); }
 
 let errors = [], warns = [];
-for (const f of files) { const r = scanFile(f); errors.push(...r.errors); warns.push(...r.warns); }
+for (const { file, scope, onlyProse } of files) { const r = scanFile(file, scope, onlyProse); errors.push(...r.errors); warns.push(...r.warns); }
 
 if (warns.length) {
   console.error(`內容守門 WARN（軟訊號 ${warns.length}，未達 3 層不擋）：`);

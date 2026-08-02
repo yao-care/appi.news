@@ -21,6 +21,7 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 14
+expertNote: "一般沙拉油的苯駢芘風險，消費者不必逐批緊張，但同一鍋油反覆高溫油炸的家庭與長期外食族群才是實際暴露會累積的一群。與其糾結單一超標新聞，不如把注意力放在自己廚房的用油習慣與油品汰換頻率，這比挑品牌更能實際降低長期攝取量。"
 risksAndLimits:
   - "台灣限量標準為苯（a）駢芘2.0微克／公斤，其他國家或地區規範可能不同"
   - "一般消費者低劑量長期暴露的健康風險，目前缺乏大規模量化研究可精確估算"

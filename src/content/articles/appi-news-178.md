@@ -21,6 +21,7 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 13
+expertNote: "美顏針適合把它當成體質調整的一環，而非快速修臉工具：肩頸緊繃、睡眠差、易鼻過敏的人，效果通常比單純追求局部除紋更明顯。想快速改善單一皺紋找醫美注射，想連同氣色、筋骨一起調理再考慮美顏針，兩者不必二選一，依需求分工即可。"
 risksAndLimits:
   - "該項臉部針灸試驗僅六週療程，改善皺紋數據未說明樣本數與年齡層"
   - "針灸鼻炎的統合分析納入 21 項試驗共 1889 人，但未說明地區與年齡分布"

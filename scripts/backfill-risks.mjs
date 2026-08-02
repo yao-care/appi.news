@@ -23,6 +23,7 @@ import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import yaml from 'js-yaml';
 import { runClaudeOnce } from './lib/claude-cli.mjs';
+import { normalizeCjkPunct, hasContrastTell } from './lib/cjk-punct.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
 const argv = process.argv.slice(2);
@@ -85,7 +86,7 @@ function parseArray(text) {
   try {
     const arr = JSON.parse(s.slice(start, end + 1));
     if (!Array.isArray(arr)) return null;
-    return arr.filter((x) => typeof x === 'string' && x.trim()).map((x) => x.trim()).slice(0, 4);
+    return arr.filter((x) => typeof x === 'string' && x.trim()).map((x) => normalizeCjkPunct(x.trim())).filter((x) => !hasContrastTell(x)).slice(0, 4);
   } catch {
     return null;
   }

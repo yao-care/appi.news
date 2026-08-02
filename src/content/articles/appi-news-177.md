@@ -21,6 +21,7 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 11
+expertNote: "美顏針成敗的關鍵不在針，在術前屏障準備與術後窗口期配套是否落實。奈米銀離子噴霧與微針貼片是輔助工具，不能取代術前一週停用酸類的基本功。若術後修復明顯偏慢，先檢視作息與壓力，別急著加碼保養品。"
 risksAndLimits:
   - "文中引用的膠原蛋白誘導機制研究涵蓋 64 篇試驗，但未說明是否含美顏針專用機型與參數"
   - "銀奈米粒子傷口癒合綜述談的是一般傷口修復，非直接針對美顏針術後族群驗證"

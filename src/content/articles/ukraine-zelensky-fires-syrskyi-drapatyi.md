@@ -17,8 +17,8 @@ highlights:
   - "澤倫斯基聲明肯定敘爾斯基「確保了基輔保衛戰、哈爾科夫反攻與庫斯克行動的成功」"
   - "德拉帕蒂曾於2025年6月一次訓練場遭俄軍飛彈擊中、造成12死60餘傷後主動請辭地面部隊司令，稱「沒有人對損失負責的軍隊會從內部衰亡」"
 risksAndLimits:
-  - "這起人事案僅涵蓋2026年7月中旬至21日的公開報導,後續指揮風格改革能否落實尚未可知"
-  - "抗議規模與參與人數未有具體統計,報導僅以「數千人」「多個城市」描述"
+  - "這起人事案僅涵蓋2026年7月中旬至21日的公開報導，後續指揮風格改革能否落實尚未可知"
+  - "抗議規模與參與人數未有具體統計，報導僅以「數千人」「多個城市」描述"
 references:
   - title: "Ukraine's Zelenskyy fires his army chief after protests and names a replacement"
     url: "https://www.pbs.org/newshour/world/ukraines-zelenskyy-fires-his-army-chief-after-protests-and-names-a-replacement"

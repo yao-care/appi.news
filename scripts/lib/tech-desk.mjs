@@ -17,6 +17,7 @@
  */
 
 import { RISKS_PROMPT } from "./risks-prompt.mjs";
+import { EXPERT_NOTE_PROMPT } from "./expert-note-prompt.mjs";
 
 /** 兩條 track 的設定。key 即 --track 參數值。 */
 export const TECH_TRACKS = {
@@ -147,6 +148,7 @@ export function buildTechDeskPrompt({ track, recentTitles = [], striking = [], d
     '',
     `【frontmatter】category: "tech"、subcategory（合法 tech slug：ai / security / digital-tools / software-products / startup / semiconductor / industry-tech / tech-policy）、author: "${t.author}"、contentType: "${t.contentType}"、sourceType: "${t.sourceType}"${t.column ? `、column: "${t.column}"` : ''}、status: "published"、publishDate 現在；slug 語意化英文 kebab（避免 post-NNN，檔名＝slug）。寫入 src/content/articles/<slug>.md，**不要 git add/commit/push**（外層處理）。`,
     RISKS_PROMPT,
+    EXPERT_NOTE_PROMPT,
     '',
     '【去重】不要重複下列近期已發的題：',
     recent,

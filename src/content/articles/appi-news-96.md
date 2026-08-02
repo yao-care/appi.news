@@ -25,6 +25,7 @@ disclaimerType: medical
 readingTime: 16
 draft: false
 coverImageCredit: RDNE Stock project
+expertNote: "深臀症候群最考驗的是「分型」這一步：短縮與過長兩型處置方向相反，自行拉筋前若無法分辨，很可能越練越糟。實務上該把重心放在後期功能重建與生活型態調整，而非只追求止痛，這才是避免復發的關鍵。"
 risksAndLimits:
   - "前期止痛與後期功能重建屬臨床觀點整理，非隨機對照試驗結果，效果因人而異"
   - "肌肉短縮與過度拉長兩型的判別依賴臨床觸診，非本人可自行準確分辨"

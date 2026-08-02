@@ -18,6 +18,7 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 12
+expertNote: "存續期間曝險是這波最該優先盤點的一步，尤其對已退休、仰賴海外債券配息的族群影響最直接。實務上建議先算出整體加權存續期間，再依風險承受度分批調整，而非等房貸與換匯成本雙雙墊高才回頭檢視資產配置的傳承與稅務規劃是否同步失衡。"
 risksAndLimits:
   - "殖利率與債市連動受地緣政治、聯準會轉向等多重變數影響，方向未必持續"
   - "文中數據為特定時點市場快照，含7月底FOMC決議與Freddie Mac房貸利率，僅適用當下"

@@ -21,10 +21,11 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 15
+expertNote: "老年跌倒的關鍵不在骨頭有多脆，而在骨質疏鬆與居家危險同時存在時，傷害才會失控。真正該優先處理的，是先確認骨密度數字，再回頭改造居家環境，兩者順序顛倒容易白做工。中醫脾胃與腎精的觀點提醒的是，肌肉與骨骼的養護要從日常飲食與作息長期累積，不是靠單一補充品速成。"
 risksAndLimits:
-  - "文中提到的補助方案以特定縣市為例,實際補助資格與金額各縣市規定不同"
-  - "居家改善降低26%跌倒風險的研究對象為高風險長者,一般族群效果可能不同"
-  - "鈣質補充建議依台灣衛福部標準,其他國家或地區指引可能不同"
+  - "文中提到的補助方案以特定縣市為例，實際補助資格與金額各縣市規定不同"
+  - "居家改善降低26%跌倒風險的研究對象為高風險長者，一般族群效果可能不同"
+  - "鈣質補充建議依台灣衛福部標準，其他國家或地區指引可能不同"
 references:
   - title: "World Health Organization (2021). Falls. WHO Fact Sheet"
     url: "https://www.who.int/news-room/fact-sheets/detail/falls"

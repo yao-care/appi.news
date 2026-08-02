@@ -18,6 +18,7 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 10
+expertNote: "股價修正不是台積電基本面轉壞，對一般投資人真正重要的是分清楚「公司好不好」與「股價要不要漲」是兩件事。實務上該做的，是回頭檢視自己的資金停留時間與心理承受度，而不是跟著單季財報數字追高殺低，這個環節最容易被新聞標題牽著走。"
 risksAndLimits:
   - "股價下跌三個層面原因為綜合多家媒體分析，並非台積電官方逐項證實的因果說明"
   - "CPI 2.60%與定存利率1.3%至1.8%為2026年6月當時資訊，之後可能變動"

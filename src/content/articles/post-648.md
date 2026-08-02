@@ -19,8 +19,8 @@ highlights:
   - "2026年2月，總理黃循財宣布成立國家AI委員會，針對四個關鍵行業推進AI部署，顯示MGF是更大治理架構的前導"
 risksAndLimits:
   - "MGF屬自願性框架，本文未提及是否有國家將其法制化或設罰則的時程"
-  - "文中所述合規成本與市場進入效益,來自Baker McKenzie、Bird & Bird、Mayer Brown三家律師事務所的分析,尚無官方或獨立數據佐證"
-  - "台灣業者實際合規改造成本與時程,本文未提供具體數字或案例"
+  - "文中所述合規成本與市場進入效益，來自Baker McKenzie、Bird & Bird、Mayer Brown三家律師事務所的分析，尚無官方或獨立數據佐證"
+  - "台灣業者實際合規改造成本與時程，本文未提供具體數字或案例"
 references:
   - title: "Singapore Launches Governance Framework for Agentic AI"
     url: "https://www.bakermckenzie.com/en/insight/publications/2026/01/singapore-governance-framework-for-agentic-ai-launched"

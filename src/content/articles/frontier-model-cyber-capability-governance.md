@@ -28,10 +28,10 @@ highlights:
   - "真正的治理缺口不是能力是授權：業界已用 MCP、OpenShell 收緊工具與執行層授權，政策圈卻還停在比參數；下一步該走向依模型能力決定存取門檻的 Capability-Based Access。"
   - "企業別等法規：用《人工智慧基本法》風險分類加 ISO/IEC 42001 管理骨架，在能力升級時同步收緊存取門檻、責任歸屬與動態降階。"
 risksAndLimits:
-  - "美國行政命令未建立強制核照或預先許可,全程自願,約束力有限"
-  - "台灣人工智慧基本法風險分類框架仍由數位發展部研議中,細節尚未定案"
-  - "G7 提及的可信夥伴存取機制目前停在峰會政治協商階段,無具體審核辦法"
-  - "文中資安漏洞細節與連署人數等,均來自 Anthropic 官方公告與媒體報導,尚無獨立第三方驗證"
+  - "美國行政命令未建立強制核照或預先許可，全程自願，約束力有限"
+  - "台灣人工智慧基本法風險分類框架仍由數位發展部研議中，細節尚未定案"
+  - "G7 提及的可信夥伴存取機制目前停在峰會政治協商階段，無具體審核辦法"
+  - "文中資安漏洞細節與連署人數等，均來自 Anthropic 官方公告與媒體報導，尚無獨立第三方驗證"
 references:
   - title: "Promoting Advanced Artificial Intelligence Innovation and Security（行政命令）"
     url: "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"

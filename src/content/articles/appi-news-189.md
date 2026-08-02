@@ -20,6 +20,7 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 13
+expertNote: "24 小時黃金窗口是這篇最該記住的一句：叮咬本身不等於感染，能不能在附著早期發現並正確移除，才是決定要不要進入抗生素療程的分水嶺。對計畫赴歐美山林活動者，穿著防護與防蟲劑是預防，活動後全身檢查才是真正攔截感染的最後一關，不該省略。"
 risksAndLimits:
   - "個案為單一境外移入病例，非台灣本土流行病學數據"
   - "24小時移除降低風險為機制推論，非本文提供之臨床試驗數字"

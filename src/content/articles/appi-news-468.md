@@ -20,10 +20,10 @@ contentType: news
 disclaimerType: medical
 readingTime: 16
 risksAndLimits:
-  - "巴瑞替尼案例來自2021年COVID-19研究,非現行常規用藥決策依據"
-  - "普如卡必利用於憂鬱認知功能僅屬早期人體試驗,未經大型隨機對照試驗驗證"
-  - "可解釋性AI對信任度的提升效果因解釋清晰度而異,並非一致有效"
-  - "文中分級信任機制為原則性建議,非現行法規強制標準"
+  - "巴瑞替尼案例來自2021年COVID-19研究，非現行常規用藥決策依據"
+  - "普如卡必利用於憂鬱認知功能僅屬早期人體試驗，未經大型隨機對照試驗驗證"
+  - "可解釋性AI對信任度的提升效果因解釋清晰度而異，並非一致有效"
+  - "文中分級信任機制為原則性建議，非現行法規強制標準"
 references:
   - title: "Smith DP, Oechsle O, Rawling MJ, Savory E, Lacoste AMB, Richardson PJ (2021). Expert-Augmented Computational Drug Repurposing Identified Baricitinib as a Treatment for COVID-19. *Frontiers in Pharmacology*, 12:709856"
     url: "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2021.709856/full"

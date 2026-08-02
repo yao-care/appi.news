@@ -21,11 +21,12 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 19
+expertNote: "雙向情緒障礙的診斷落差往往卡在「輕躁期不被當一回事」，比起等患者自述症狀，家人與職場身邊人若留意到睡眠需求驟降、突然衝動決策等前驅訊號並如實轉述給醫師，比任何單一檢測都更能縮短誤診年數。中醫情志觀點可作為理解身心連動的輔助語言，但用藥與追蹤仍須交給精神科主治醫師定奪。"
 risksAndLimits:
   - "WHO 的 3,700 萬人統計為全球數字，未反映台灣或特定地區的盛行率與診斷延誤情形"
   - "2023 年第一型與第二型比較研究為回顧性分析，非隨機對照試驗，無法確認因果關係"
-  - "光照治療的隨機對照試驗回顧僅涵蓋 19 項研究，效應量屬中至大型,不代表對每位患者皆有效"
-  - "中醫情志觀點屬傳統理論對應,文中未提供臨床試驗證據,不能取代精神科系統評估與治療"
+  - "光照治療的隨機對照試驗回顧僅涵蓋 19 項研究，效應量屬中至大型，不代表對每位患者皆有效"
+  - "中醫情志觀點屬傳統理論對應，文中未提供臨床試驗證據，不能取代精神科系統評估與治療"
 references:
   - title: "World Health Organization. (2023). Bipolar disorder. WHO Fact Sheets"
     url: "https://www.who.int/news-room/fact-sheets/detail/bipolar-disorder"

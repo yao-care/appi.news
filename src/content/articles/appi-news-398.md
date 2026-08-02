@@ -21,6 +21,7 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 10
+expertNote: "退休金規劃若只算自己的餘命，沒算父母的餘命，就是低估風險。實務上該把「扶養上一代」當成獨立的長壽風險變數，及早用保險與長照準備金分開試算，而非等現金流吃緊才發現規劃漏了一代。手足間的分工共識，是財務工具之外最該提前談定的一環。"
 risksAndLimits:
   - "扶養比推估以國發會人口模型為準，實際變化受出生率與移民政策影響"
   - "退休生態調查為問卷式社會調查，反映現象普遍性而非個案精算結果"

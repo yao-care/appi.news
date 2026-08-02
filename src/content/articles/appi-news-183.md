@@ -22,6 +22,7 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 9
+expertNote: "納豆激酶對血壓的助益，建立在「輔助」而非「取代」的前提上，這一點對已服藥的高血壓患者尤其重要，加入飲食前務必主動告知醫師用藥史。維生素 K2 與抗凝血藥的交互作用，是所有效果討論之外最該優先確認的實務環節，寧可先問清楚，不要先吃再說。"
 risksAndLimits:
   - "補充品試驗多在 8 週內完成，長期食用一年以上的效果與安全性未見說明"
   - "文中研究對象與台灣飲食習慣的落差未提及，實際降壓幅度可能因人而異"

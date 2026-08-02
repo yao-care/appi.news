@@ -87,6 +87,11 @@ const factCheckers = factCheckerIds
     isOrganization: r.a!.data.isOrganization,
   }));
 
+// 「○○○的判讀」：署名為個人時帶本名；組織署名（編輯部）退回通稱。
+const expertNoteHeading = author?.data.isOrganization
+  ? '編輯部判讀'
+  : `${authorName}的判讀`;
+
 const rt = readingTime(article);
 const cover = coverImageFor(article);
 const path = `/articles/${articleSlug(article)}/`;
@@ -273,7 +278,10 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
         {
           article.data.expertNote && (
             <aside class="expert-note">
-              <h2>主編判讀</h2>
+              {/* 標題帶署名者本名：原本寫死「主編判讀」，但五位署名作者裡只有羅揚（主編）與
+                  黃子彥（總編輯）擔任編輯職，張饒輝是作者、吳芳圳是財務規劃師、周敬彥是負責人，
+                  一律稱「主編」並不正確。帶名字也比通稱更有辨識度。 */}
+              <h2>{expertNoteHeading}</h2>
               <p>{article.data.expertNote}</p>
             </aside>
           )

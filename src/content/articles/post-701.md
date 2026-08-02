@@ -17,10 +17,10 @@ highlights:
   - "全球資金今年已賣超印度股市近240億美元，同期大幅轉進以台灣為首的AI相關市場"
   - "台灣金融監理機關調高單一股票持股上限至25%，進一步強化台積電在指數的集中效應"
 risksAndLimits:
-  - "市值排名以單日(5/26)數據為準,受股價波動影響,非長期穩定排名"
-  - "台積電漲幅拉動整體市值,個股集中度高使排名易隨其股價劇烈變動"
-  - "AI資本支出成長預測(如瑞銀5,710億美元)為機構預估,非已實現數字"
-  - "印度資金流出與指數表現為同期比較數字,不代表未來趨勢延續"
+  - "市值排名以單日(5/26)數據為準，受股價波動影響，非長期穩定排名"
+  - "台積電漲幅拉動整體市值，個股集中度高使排名易隨其股價劇烈變動"
+  - "AI資本支出成長預測(如瑞銀5,710億美元)為機構預估，非已實現數字"
+  - "印度資金流出與指數表現為同期比較數字，不代表未來趨勢延續"
 references:
   - title: "Taiwan Overtakes India as World's Fifth-Largest Stock Market on TSMC Rally"
     url: "https://www.plindia.com/news/taiwan-overtakes-india-as-worlds-fifth-largest-stock-market-on-tsmc-rally"

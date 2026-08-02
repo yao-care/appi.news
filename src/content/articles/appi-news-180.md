@@ -22,11 +22,12 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 16
+expertNote: "打了瘦瘦針卻沒配蛋白質，體重計數字會騙人：掉的可能是肌肉不是脂肪。真正該盯的不是打了幾公斤，是抽血報告與體組成有沒有跟著追，尤其腎功能與肌肉量這兩項，決定停藥後能不能守住成果。"
 risksAndLimits:
   - "文中禁忌症與交互作用僅列常見情況，實際適用範圍需由醫師依個人病史判斷"
   - "Wegovy 在台灣是否核准為減重用途，使用前須自行確認最新法規狀態"
   - "口服營養補充品改善肌肉流失比例的研究為真實世界研究，非隨機對照試驗"
-  - "停藥後體重反彈幅度因人而異,文中未提供具體統計數字"
+  - "停藥後體重反彈幅度因人而異，文中未提供具體統計數字"
 references:
   - title: "Min JS, Jo SJ, Lee S, Kim DY, Kim DH, Lee CB, Bae SK. (2025). A Comprehensive Review on the Pharmacokinetics and Drug-Drug Interactions of Approved GLP-1 Receptor Agonists and a Dual GLP-1/GIP Receptor Agonist. *Drug Design, Development and Therapy"
     url: "https://pubmed.ncbi.nlm.nih.gov/40330819/"

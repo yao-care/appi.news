@@ -91,7 +91,7 @@ topics: ["ai-medical-regulation"]
 
 <p>問題在於，我在<a href="https://www.fda.gov.tw/tc/siteListContent.aspx?sid=310&id=42528" target="_blank" rel="noopener">衛福部食藥署公開的「核准應用 AI/ML 技術之醫療器材清單」頁面</a>查過，這份維護到 2026 年 6 月的清單裡，看不到脈診儀或任何中醫辨證輔助產品的名字。一項已經在臨床試驗、已經在洗腎病患身上使用的量測設備，跟一份公開的醫材核准清單對不上號，這正是接下來六件事要逐條檢查的理由：不是這類產品沒有價值，是價值有沒有經過該有的把關，現在看不出來。</p>
 
-<h2>第一關：辨證推理能不能被追溯</h2>
+<h3>第一關：辨證推理能不能被追溯</h3>
 
 <p>我在<a href="/articles/%E5%A6%82%E4%BD%95%E8%A9%95%E4%BC%B0%E4%B8%AD%E9%86%AB-ai-%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BF%A1%EF%BC%9A%E8%A8%BA%E6%96%B7%E6%8E%A8%E7%90%86%E3%80%81%E8%97%A5%E6%9D%90%E6%BA%AF%E6%BA%90%E3%80%81/" target="_blank" rel="noopener">先前那篇拆解中醫 AI 辨證推理黑箱的文章</a>談過核心問題：若大型語言模型只學中醫診療紀錄、直接輸出辨證建議，使用者看到的只有結論，看不到「這個結論依據哪些規則推導出來」。這件事在醫療現場特別致命，因為臨床責任追溯要靠推理路徑，不是靠一句「AI 建議如此」。</p>
 
@@ -99,7 +99,7 @@ topics: ["ai-medical-regulation"]
 
 <img src="/images/tcm-ai-credibility-checklist-s2.webp" width="960" height="720" loading="lazy" decoding="async" alt="醫師檢視電腦螢幕上的診斷推理紀錄畫面">
 
-<h2>第二關：訓練資料的典籍出處站不站得住腳</h2>
+<h3>第二關：訓練資料的典籍出處站不站得住腳</h3>
 
 <p>比辨證邏輯更前面一關，是這套邏輯到底從哪裡學來的。中醫的知識體系建立在《黃帝內經》《傷寒雜病論》這類典籍與歷代醫案上，若一個大型語言模型宣稱「懂中醫」，它讀的是這些典籍的原文，還是網路上二手轉述、甚至是其他 AI 生成的內容再被拿去訓練？出處交代不清楚，辨證建議背後的知識來源就是一團模糊。</p>
 
@@ -107,11 +107,11 @@ topics: ["ai-medical-regulation"]
 
 <img src="/images/tcm-ai-credibility-checklist-s3.webp" width="960" height="640" loading="lazy" decoding="async" alt="泛黃的中醫古籍典籍書頁特寫">
 
-<h2>第三關：藥材溯源與炮製，老問題還沒解決</h2>
+<h3>第三關：藥材溯源與炮製，老問題還沒解決</h3>
 
 <p>這一關我在<a href="/articles/%E5%A6%82%E4%BD%95%E8%A9%95%E4%BC%B0%E4%B8%AD%E9%86%AB-ai-%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BF%A1%EF%BC%9A%E8%A8%BA%E6%96%B7%E6%8E%A8%E7%90%86%E3%80%81%E8%97%A5%E6%9D%90%E6%BA%AF%E6%BA%90%E3%80%81/" target="_blank" rel="noopener">前一篇文章</a>拆得比較細，這裡只點重點：AI 能不能辨識藥材真偽，取決於資料採集點設在供應鏈的哪一段。洗產地的造假手法連常規成分檢驗都測不出來，得靠化學指紋比對產地資料庫；「加料通過檢驗」則是針對指標成分濃度的檢驗邏輯設計的規避手段，全光譜化學指紋分析才抓得住。這兩個問題都不是「AI 準不準」能回答的，是供應鏈治理有沒有把可信的採集節點鋪到位。中醫 AI 若只在流通末端做辨識，藥材溯源這一關形同虛設。</p>
 
-<h2>第四關：中醫 AI 該不該被算進醫療器材軟體分級</h2>
+<h3>第四關：中醫 AI 該不該被算進醫療器材軟體分級</h3>
 
 <p>台灣有一套現成的分級架構可以套用。<a href="https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f637443989833238169" target="_blank" rel="noopener">食藥署的「醫用軟體分類分級參考指引」把軟體醫療器材分成三級風險，依臨床影響程度、使用情境與對病患的潛在危害來判斷</a>，AI／機器學習相關軟體因為具有複雜性與黑箱特性，通常需要額外的驗證與確效評估。這份指引最近一次<a href="https://www.mohw.gov.tw/cp-4624-57304-1.html" target="_blank" rel="noopener">大幅修正是把日常健康促進類產品（如量測心率、血氧的穿戴裝置）排除在醫療器材管理範圍之外，讓業者不必為單純健康監測功能走完整查驗登記</a>，用意是替低風險應用鬆綁。</p>
 
@@ -119,7 +119,7 @@ topics: ["ai-medical-regulation"]
 
 <img src="/images/tcm-ai-credibility-checklist-s4.webp" width="960" height="540" loading="lazy" decoding="async" alt="審查人員檢視法規文件的畫面">
 
-<h2>第五關：能不能跟健保與 FHIR 病歷體系互通</h2>
+<h3>第五關：能不能跟健保與 FHIR 病歷體系互通</h3>
 
 <p>中醫如果只在自己的系統裡打轉，跟現代醫學的資料完全兜不起來，臨床上就會出現一個病人、兩套互不對話的紀錄。台灣目前推動病歷互通的主力是衛福部的 FHIR Box 計畫，<a href="https://www.ankecare.com/article/4365-2026-05-21-02-09-32" target="_blank" rel="noopener">把資料轉換、儲存與交換功能整合於單一架構，並建立台灣核心資料標準 TWCDI 與實作指南，已完成逾 4700 項健保檢驗碼對應 LOINC（近 100% 涵蓋）、逾 6 萬 3 千項藥品對應 RxNorm，時程規劃 2025 年底先由長庚、馬偕、中山三大體系示範，2026 年底擴大到全台醫學中心，2027 年底納入區域與地區醫院</a>。</p>
 
@@ -129,7 +129,7 @@ topics: ["ai-medical-regulation"]
 
 <img src="/images/tcm-ai-credibility-checklist-s5.webp" width="960" height="640" loading="lazy" decoding="async" alt="醫療資訊人員檢視資料交換系統畫面">
 
-<h2>第六關：出事了，責任算誰的</h2>
+<h3>第六關：出事了，責任算誰的</h3>
 
 <p>前五關都查完，最後一定會撞到這個問題：中醫 AI 給錯建議、病人因此受害，誰要負責？<a href="https://today.line.me/tw/v3/article/oqKyXxo" target="_blank" rel="noopener">2026 年 7 月 12 日的第 26 屆台灣醫法醫政論壇正式把這個題目搬上檯面，設了「AI 導入中醫診療」專場，台北醫學大學何建志教授探討「AI 輔助診療衍生的法律責任」，政治大學陳俊元教授談「AI 醫療風險管理及責任歸屬」，健保署署長陳亮妤則說明健保正在導入 AI 風險預測與跨域數據整合</a>。這場論壇的存在本身就說明一件事：業界與法界都承認這是個尚待解決的問題，不是已經有答案、只是沒人問。</p>
 

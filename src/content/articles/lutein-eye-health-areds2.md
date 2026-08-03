@@ -68,7 +68,7 @@ draft: false
 
 <img src="/images/lutein-eye-health-areds2-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="AREDS2 主要終點不顯著、25% 來自飲食攝取最低次族群的示意">
 
-## 10 年追蹤怎麼說？幅度其實很小
+### 10 年追蹤怎麼說？幅度其實很小
 
 看最新、追蹤最久的證據。AREDS2 追蹤 10 年的報告顯示，[葉黃素/玉米黃素相對不補充者，長期進展到晚期黃斑部病變的風險比為 0.91](https://pubmed.ncbi.nlm.nih.gov/35653117/)。0.91 代表 10 年下來風險只降約 9%，幅度並不大，而且對象一樣是原本就高風險的人。
 

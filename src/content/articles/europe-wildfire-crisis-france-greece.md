@@ -1,9 +1,10 @@
 ---
-title: "歐洲野火為什麼一年比一年凶猛？　法國22萬人史上最大疏散近九成返家，希臘度假勝地強風助燃、3消防員殉職"
+title: "歐洲野火為什麼一年比一年凶猛？　希臘滅火直升機空中相撞釀2死，野火本週死亡人數增至5人"
 slug: "europe-wildfire-crisis-france-greece"
-description: "歐洲野火危機西線趨緩、東線惡化：法國吉倫特大火燒毀4.2萬公頃、22萬撤離居民逾九成已返家，西班牙葡萄牙火勢仍在延燒；希臘總理坦言風速一度達每小時100公里，度假勝地波爾圖日爾梅諾遭燒到海邊，兩架滅火直升機空中相撞，本週已有3名消防員殉職。"
-excerpt: "歐洲野火危機西線趨緩、東線惡化：法國22萬撤離居民逾九成已返家，希臘度假勝地波爾圖日爾梅諾遭燒到海邊、兩架滅火直升機空中相撞，本週已有3名消防員殉職。"
+description: "歐洲野火危機東線持續惡化：雅典近郊普薩塔（Psatha）野火陣線，兩架貝爾滅火直升機8月2日空中相撞、其中一架墜地，機組員1名希臘籍、1名丹麥籍罹難，另1名希臘籍、1名英國籍生還，總理米佐塔基斯哀悼「希臘協調員與丹麥飛行員」；加計本週稍早殉職的3名消防員，希臘野火本週死亡人數已增至5人。波爾圖日爾梅諾一帶野火延燒面積達40至50平方公里，消防隊已由海路撤離266人；法國吉倫特大火22萬撤離居民逾九成已返家，西班牙、葡萄牙火勢仍在延燒。"
+excerpt: "希臘雅典近郊兩架滅火直升機8月2日空中相撞，1希臘籍、1丹麥籍機組員罹難，加計消防員殉職，希臘野火本週死亡人數增至5人；法國22萬撤離居民逾九成已返家，西班牙、葡萄牙火勢仍未撲滅。"
 publishDate: "2026-08-02T16:57:24.799Z"
+updatedDate: "2026-08-03T16:39:48.586Z"
 category: "international"
 subcategory: "europe"
 tags:
@@ -13,14 +14,15 @@ tags:
   - "歐盟"
   - "旅遊"
 highlights:
+  - "雅典近郊普薩塔（Psatha）野火陣線，兩架貝爾（Bell）滅火直升機8月2日（週日）空中相撞、其中一架墜地：機組員1名希臘籍、1名丹麥籍罹難，另1名希臘籍、1名英國籍生還；總理米佐塔基斯哀悼「希臘協調員與丹麥飛行員」"
+  - "加計本週稍早在克里特島（2人）、伯羅奔尼撒（1人）殉職的3名消防員，希臘野火本週死亡人數已增至5人"
+  - "波爾圖日爾梅諾（Porto Germeno）一帶野火延燒面積達40至50平方公里，強風把火勢吹向坎迪利、聖斯凱皮、圖圖利等社區；消防隊已由海路撤離266人（週五254人、週六12人）"
   - "法國吉倫特（Gironde）大火燒毀4.2萬公頃、摧毀240棟房屋，22萬撤離居民中已有20.8萬人獲准返家，官員稱這是法國承平時期最大規模的民間疏散行動"
-  - "希臘總理米佐塔基斯證實當地風速一度達每小時100公里；度假勝地波爾圖日爾梅諾（Porto Germeno）野火燒到海邊，數百名居民與遊客一度無視撤離令、最終由海路撤離"
-  - "兩架滅火直升機週日在雅典近郊普薩塔（Psatha）空中相撞，搜救隊已出動協助機組員；克里特島雷西姆諾地區宣布進入緊急狀態，8,000人一度緊急疏散"
-  - "希臘本週已有3名消防員殉職（克里特島2人、伯羅奔尼撒1人），西班牙、葡萄牙多處野火仍在延燒或復燃，尚未完全撲滅"
+  - "西班牙、葡萄牙多處野火仍在延燒或復燃，尚未完全撲滅"
 risksAndLimits:
-  - "本文數字為2026年8月1日至2日各國官方通報彙整，野火疏散/返家人數每日變動，讀者查閱時可能已更新"
+  - "希臘直升機相撞事故死傷人數為8月2日當下通報，正式調查與確切死因尚未公布，細節可能隨後續調查更新"
+  - "野火疏散/返家人數與延燒面積為2026年8月1日至3日各國官方通報彙整，每日變動，讀者查閱時可能已更新"
   - "法國吉倫特大火官方稱「受控」但非「撲滅」，地下悶燒熱點與瓦爾地區火勢仍在監控中，有復燃風險"
-  - "希臘直升機相撞事故機組員狀況、克里特島野火面積等細節仍在滾動更新，本文以查證當下最新通報為準"
 references:
   - title: "Europe's wildfires update: two helicopters collide while battling fire in Greece"
     url: "https://www.euronews.com/my-europe/2026/08/02/europes-wildfires-update-greece-still-battling-outbreaks-in-spain"
@@ -40,6 +42,15 @@ references:
   - title: "Hundreds escape Greek wildfire by sea as blazes continue across Europe"
     url: "https://www.nation.com.pk/01-Aug-2026/hundreds-escape-greek-wildfire-sea-blazes-continue-across-europe"
     publisher: "The Nation（巴基斯坦）"
+  - title: "2 killed when firefighting helicopters collide near Athens as Europe's wildfire emergency rages"
+    url: "https://www.pbs.org/newshour/world/2-firefighting-helicopters-collide-midair-near-athens-as-europes-wildfire-emergency-rages"
+    publisher: "PBS NewsHour"
+  - title: "2 killed when firefighting helicopters collide near Athens as Europe's wildfire emergency rages"
+    url: "https://www.bostonglobe.com/2026/08/02/world/2-killed-when-firefighting-helicopters-collide-near-athens-europes-wildfire-emergency-rages/"
+    publisher: "The Boston Globe"
+  - title: "Firefighting helicopters collide mid-air as Europe's wildfire emergency rages"
+    url: "https://www.irishnews.com/news/world/firefighting-helicopters-collide-mid-air-as-europes-wildfire-emergency-rages-MSG7HJ4YVFN37AIL3P62MWSEQQ/"
+    publisher: "Irish News"
 author: "appi-editorial"
 reviewedBy:
   - "luo-yang"
@@ -49,13 +60,13 @@ status: "published"
 sourceType: "wire"
 contentType: "news"
 disclaimerType: "general"
-disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 Euronews、AP、RTÉ News、Times of Israel、PBS NewsHour 等外媒公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
+disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 Euronews、AP、RTÉ News、Times of Israel、PBS NewsHour、Irish News、The Boston Globe 等外媒公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/europe-wildfire-crisis-france-greece-cover.webp"
 coverAlt: "法國朗德省索莫斯（Saumos）野火燒過後的焦黑植被與村莊入口景象"
 coverImageCredit: "Mikani — CC BY-SA 4.0, Wikimedia Commons"
 ---
 
-歐洲野火危機出現東西兩極反差。西線的法國、西班牙、葡萄牙火勢逐漸受控，法國吉倫特（Gironde）大火22萬撤離居民已有逾九成返家；東線的希臘卻急速惡化，強風把火舌一路吹到雅典近郊度假勝地的海邊，兩架滅火直升機週日在空中相撞，本週已有3名消防員殉職。
+歐洲野火危機出現東西兩極反差。西線的法國、西班牙、葡萄牙火勢逐漸受控，法國吉倫特（Gironde）大火22萬撤離居民已有逾九成返家；東線的希臘卻急速惡化，強風把火舌一路吹到雅典近郊度假勝地的海邊，兩架滅火直升機週日在空中相撞，最終造成2死2傷，加計稍早殉職的消防員，希臘野火本週死亡人數已增至5人。
 
 ## 法國吉倫特滅火告一段落，22萬撤離者近九成返家
 
@@ -79,10 +90,15 @@ coverImageCredit: "Mikani — CC BY-SA 4.0, Wikimedia Commons"
 
 <img src="/images/europe-wildfire-crisis-france-greece-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="地中海沿岸小鎮海邊景色，遠方山丘冒出野火濃煙" title="希臘多處沿海度假勝地本週相繼因野火疏散（示意圖）">
 
-災情最嚴峻之處在雅典近郊爆出新變數：Euronews報導指出，兩架滅火直升機週日在雅典近郊普薩塔（Psatha）空中相撞，消防部門已出動搜救隊定位並協助機組員，事故詳情仍在釐清中。與此同時，克里特島雷西姆諾（Rethymno）地區的野火本週稍早已促使當局宣布進入緊急狀態，[RTÉ News報導](https://www.rte.ie/news/2026/0731/1585928-wildfires/)指出，火場一度出現時速超過125公里的強陣風，能見度趨近於零，滅火直升機與水轟機一度完全無法作業；當地約8,000名居民與遊客由希臘海巡署巡邏艇及兩艘民間船隻協助，撤往南岸城鎮阿吉亞加利尼（Agia Galini）。
+災情最嚴峻之處在雅典近郊爆出新變數：兩架貝爾（Bell）滅火直升機週日在雅典近郊普薩塔（Psatha）空中相撞、其中一架墜地，事故最終造成2死2傷。[PBS NewsHour報導](https://www.pbs.org/newshour/world/2-firefighting-helicopters-collide-midair-near-athens-as-europes-wildfire-emergency-rages)與[波士頓環球報報導](https://www.bostonglobe.com/2026/08/02/world/2-killed-when-firefighting-helicopters-collide-near-athens-europes-wildfire-emergency-rages/)證實，罹難機組員為1名希臘籍、1名丹麥籍，生還者為1名希臘籍、1名英國籍；希臘總理米佐塔基斯對外表示，為這場悲劇事故感到悲傷，並哀悼「希臘協調員與丹麥飛行員」。[愛爾蘭新聞報報導](https://www.irishnews.com/news/world/firefighting-helicopters-collide-mid-air-as-europes-wildfire-emergency-rages-MSG7HJ4YVFN37AIL3P62MWSEQQ/)指出，這場野火週五起自聖瓦西里奧斯（Agios Vasileios）附近，往波爾圖日爾梅諾方向延燒，火場估計已影響40至50平方公里，當局已下令坎迪利（Kandili）、聖斯凱皮（Sesklio）、圖圖利（Toutouli）三個社區撤離，消防隊已由海路撤離266人（週五254人、週六12人）。與此同時，克里特島雷西姆諾（Rethymno）地區的野火本週稍早已促使當局宣布進入緊急狀態，[RTÉ News報導](https://www.rte.ie/news/2026/0731/1585928-wildfires/)指出，火場一度出現時速超過125公里的強陣風，能見度趨近於零，滅火直升機與水轟機一度完全無法作業；當地約8,000名居民與遊客由希臘海巡署巡邏艇及兩艘民間船隻協助，撤往南岸城鎮阿吉亞加利尼（Agia Galini）。
 
-這波野火造成的人員傷亡也持續攀升。RTÉ News與Times of Israel均證實，希臘本週已有3名消防員在救災任務中殉職，其中2人在克里特島、1人在伯羅奔尼撒。這讓人聯想起2018年雅典近郊馬蒂（Mati）社區的野火，[AP報導](https://www.click2houston.com/news/world/2026/08/01/europes-wildfire-crisis-shifts-as-some-200000-french-return-but-new-blazes-force-thousands-to-flee/)指出，那場火造成104人死亡，是本世紀歐洲最致命的一場野火。
+這波野火造成的人員傷亡也持續攀升。RTÉ News與Times of Israel均證實，希臘本週已有3名消防員在救災任務中殉職，其中2人在克里特島、1人在伯羅奔尼撒；加計普薩塔直升機事故的2名機組員，希臘本週因野火相關任務死亡人數已增至5人。這讓人聯想起2018年雅典近郊馬蒂（Mati）社區的野火，[AP報導](https://www.click2houston.com/news/world/2026/08/01/europes-wildfire-crisis-shifts-as-some-200000-french-return-but-new-blazes-force-thousands-to-flee/)指出，那場火造成104人死亡，是本世紀歐洲最致命的一場野火。
 
 ## 高溫與野火交織，歐洲暖化速度是全球兩倍
 
 AP報導引述歐盟哥白尼氣候變遷服務（Copernicus Climate Change Service）的資料指出，歐洲自1980年代以來的升溫速度，是全球平均值的兩倍以上，這也是近年南歐夏季野火季節一年比一年提前、延長的氣候背景。目前法國、西班牙、葡萄牙的火勢正朝可控方向發展，但希臘的野火戰線仍在雅典近郊、克里特島與伯羅奔尼撒之間多點延燒，強風何時減弱，將是接下來能否止血的關鍵。
+
+## 更新時間軸
+
+- （更新 2026-08-03：雅典近郊普薩塔野火陣線的直升機空中相撞事故確認死傷情況：2架貝爾滅火直升機其中一架墜地，機組員1名希臘籍、1名丹麥籍罹難，另1名希臘籍、1名英國籍生還；總理米佐塔基斯哀悼「希臘協調員與丹麥飛行員」。加計本週稍早殉職的3名消防員，希臘野火本週死亡人數已增至5人。當地野火延燒面積達40至50平方公里，消防隊已由海路撤離266人。）（[PBS NewsHour](https://www.pbs.org/newshour/world/2-firefighting-helicopters-collide-midair-near-athens-as-europes-wildfire-emergency-rages)、[The Boston Globe](https://www.bostonglobe.com/2026/08/02/world/2-killed-when-firefighting-helicopters-collide-near-athens-europes-wildfire-emergency-rages/)、[Irish News](https://www.irishnews.com/news/world/firefighting-helicopters-collide-mid-air-as-europes-wildfire-emergency-rages-MSG7HJ4YVFN37AIL3P62MWSEQQ/)）
+- （2026-08-02）歐洲野火危機東西兩極反差：法國吉倫特大火22萬撤離居民逾九成已返家，西班牙、葡萄牙火勢仍在延燒；希臘急速惡化，總理米佐塔基斯證實風速一度達每小時100公里，度假勝地波爾圖日爾梅諾遭燒到海邊，兩架滅火直升機在普薩塔空中相撞（事故詳情當時尚未釐清），克里特島雷西姆諾地區宣布緊急狀態，希臘本週已有3名消防員殉職。（[Euronews](https://www.euronews.com/my-europe/2026/08/02/europes-wildfires-update-greece-still-battling-outbreaks-in-spain)、[PBS NewsHour](https://www.pbs.org/newshour/world/new-wildfire-evacuations-ordered-in-france-bringing-total-to-330000-people-displaced-in-southwestern-europe)、[RTÉ News](https://www.rte.ie/news/2026/0731/1585928-wildfires/)、[Times of Israel](https://www.timesofisrael.com/firefighters-in-greece-struggle-to-save-coastal-resort-as-winds-rage/)）

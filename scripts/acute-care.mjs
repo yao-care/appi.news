@@ -83,6 +83,17 @@ function writeOne(topic, recentTitles) {
     return null;
   }
   const v = parseAcuteCareResult(r.stdout);
+
+  // 保底：解析不出 ACUTE_RESULT、或報回來的 slug 對不到檔案時，直接看本題的檔案在不在。
+  // 我們是「指定題目」呼叫的，slug 必然等於 topic.key，不必信模型那行字。
+  // 2026-08-03 實測：首批 11 題有 4 題因為模型把 slug 包在反引號／粗體裡而被誤判成失敗，
+  // 稿子其實都寫好了。**解析失敗不等於沒產出**，這道保底比修 regex 更根本。
+  const expected = join(ARTICLES_DIR, `${topic.key}.md`);
+  if ((v.action !== 'new' || !v.slug || !existsSync(join(ARTICLES_DIR, `${v.slug}.md`))) && existsSync(expected)) {
+    console.log(`  NEW｜${topic.key}（保底撿回：模型回報「${v.note?.slice(0, 40) ?? '無'}」，但檔案存在）`);
+    return { action: 'new', slug: topic.key, note: '保底撿回' };
+  }
+
   if (v.action !== 'new' || !v.slug) {
     console.log(`  ⏭  ${v.note}`);
     return null;

@@ -171,5 +171,22 @@ export function parseAcuteCareResult(stdout) {
   const action = m[1].toLowerCase();
   const rest = (m[2] || '').trim();
   if (action === 'skip') return { action: 'skip', slug: null, note: rest };
-  return { action: 'new', slug: rest.split(/[｜|]/)[0].trim(), note: rest };
+  return { action: 'new', slug: cleanSlug(rest.split(/[｜|]/)[0]), note: rest };
+}
+
+/**
+ * 洗掉模型在 slug 外面包的 markdown 裝飾。
+ *
+ * 2026-08-03 實測：首批 11 題有 4 題「失敗」，其實稿子都寫好了，是這裡沒洗乾淨——
+ * 模型寫成 `ACUTE_RESULT=NEW｜`acute-low-back-48h`` 或 `**doms-after-exercise**`，
+ * 反引號與星號被當成 slug 的一部分，後續 join 出來的路徑不存在，整篇被判定「缺圖檔」剔除。
+ * 剔除時的 rmSync 也指向那個錯路徑，稿子才僥倖沒被刪。**寧可洗過頭也不要漏**：
+ * slug 只可能是小寫英數與連字號。
+ */
+export function cleanSlug(raw) {
+  return String(raw || '')
+    .trim()
+    .replace(/^[`*_"'「『（(\[]+/, '')
+    .replace(/[`*_"'」』）)\]]+$/, '')
+    .trim();
 }

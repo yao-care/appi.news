@@ -57,6 +57,30 @@ if [ "$OK" -eq 0 ]; then
   echo "✖ 沒有任何產出，不進入建置。各題失敗原因見 $LOGDIR/*.log"; exit 1
 fi
 
+# ── 階段一.五：孤兒稿清理（不可省）──────────────────────────────────────────────
+#
+# 為什麼需要這一步：階段一的 ✓ 只是 `[ -f ...md ]`，**檔案存在不代表過了關卡**。
+# 2026-08-03 實測踩到：某個 writer 的模型沒吐出 ACUTE_RESULT，runner 回 null 直接結束，
+# 於是逐篇 gate 從未執行，一份沒有任何配圖的 .md 就這樣留在磁碟上，一路混到階段二才被
+# check:links 擋下，害整批 26 篇一起卡住。孤兒稿要在進 build 前就掃掉。
+echo ""
+echo "→ 孤兒稿檢查（配圖齊全與否）"
+ORPHAN=0
+for f in $(git status --porcelain src/content/articles | grep '^??' | sed 's/^?? //'); do
+  miss=""
+  for i in $(grep -oE '(covers|images)/[A-Za-z0-9._-]+\.(webp|png|jpe?g|avif)' "$f" | sort -u); do
+    [ -f "public/$i" ] || miss="$miss $i"
+  done
+  if [ -n "$miss" ]; then
+    echo "  ✗ 移除 $(basename "$f" .md)：缺圖$miss"
+    rm -f "$f"; ORPHAN=$((ORPHAN+1))
+  fi
+done
+[ "$ORPHAN" -gt 0 ] && echo "  （移除 $ORPHAN 篇，這些題會留在待寫佇列，下次重跑）"
+OK=$(git status --porcelain src/content/articles | grep -c '^??' || true)
+if [ "$OK" -eq 0 ]; then echo "✖ 清理後無產出，不進入建置"; exit 1; fi
+echo "  進入建置的文章：$OK 篇"
+
 # ── 階段二：一次建置 ────────────────────────────────────────────────────────────
 echo ""
 echo "→ 建置＋連結檢查（整批一次）"

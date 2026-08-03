@@ -101,9 +101,8 @@ function gate(wrote) {
     const missing = missingLocalAssets(v.slug);
     if (missing.length) { drop(`缺本地圖檔（${missing.join('、')}）`); continue; }
 
-    // 本線特有的一關：草稿狀態不可被模型改掉。published 會讓未經醫師審閱的內容直接上線。
     const fm = frontmatter(v.slug);
-    if (fm.status !== 'draft') { drop(`status 是 "${fm.status}" 而非 draft（未經醫師審閱不得上線）`); continue; }
+    if (fm.status !== 'published') { drop(`status 是 "${fm.status}" 而非 published`); continue; }
 
     const tagGate = spawnSync('node', ['scripts/check-tags.mjs', file], { encoding: 'utf8' });
     if (tagGate.status !== 0) { drop(`標籤不在受控詞彙表\n${tagGate.stdout || tagGate.stderr || ''}`); continue; }
@@ -145,8 +144,15 @@ function main() {
     return;
   }
 
-  if (sh('git', ['status', '--porcelain'])) die('工作區不乾淨，請先清乾淨再跑');
-  console.log(`→ 急性症狀衛教線（本批 ${queue.length} 題，產出為待審草稿）`);
+  // --write-only：只寫檔＋過逐篇關卡，不 build、不碰 git。給平行批次用。
+  //
+  // 為什麼要有這個模式：這台機器 4 核、可用記憶體 2GB，跑一次 build（600+ 篇 Astro ＋ pagefind）
+  // 就很吃緊，27 篇各跑一次 build 會 OOM。寫作階段幾乎都在等 API、不吃 CPU，適合平行；
+  // build 只需要在整批寫完後做一次。由 scripts/acute-care-batch.sh 驅動。
+  const writeOnly = has('write-only');
+
+  if (!writeOnly && sh('git', ['status', '--porcelain'])) die('工作區不乾淨，請先清乾淨再跑');
+  console.log(`→ 急性症狀衛教線（本批 ${queue.length} 題）`);
 
   const wrote = [];
   for (const t of queue) { const v = writeOne(t, recentTitles); if (v) wrote.push({ ...v, key: t.key }); }
@@ -161,6 +167,13 @@ function main() {
 
   const kept = gate(wrote);
   if (!kept.length) { console.log('\n✓ 本批全部被關卡剔除，無產出。'); return; }
+
+  if (writeOnly) {
+    recordLedger(kept.map((k) => k.key));
+    for (const v of kept) console.log(`WROTE=${v.slug} ｜ ${frontmatter(v.slug).title || v.slug}`);
+    console.log(`✓ 已寫入 ${kept.length} 篇（未 build、未 commit，交由批次收尾）。`);
+    return;
+  }
 
   try { buildCheckWithResync(); }
   catch (e) { die(`build/check:links 未過，不 commit（改動留工作區）：${e.message}`); }

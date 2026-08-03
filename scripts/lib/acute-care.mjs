@@ -6,9 +6,14 @@
  * 沒有一條負責健康常青題——tech-desk 會正確地跳過（不在它車道），health-days 是日期驅動。
  * 本線補這個缺口，主打「現在很不舒服、想知道當下能做什麼」這種高意圖、年年重複的題型。
  *
- * **產出一律 status: draft**。這類內容在醫療法上的界線尚未由醫師確認（站長 2026-08-03 正在
- * 諮詢），draft 不進列表／sitemap／RSS／llms（`src/utils/content.ts` 的 `isPublic()`），
- * 等醫師簽核後再逐篇轉 published。**不要因為想看成效就把預設改成 published。**
+ * 產出狀態：**published，直接上線**。原本設計成 draft 等醫師審閱，站長 2026-08-03 表示醫師
+ * 已同意，改為直接發佈。下方 BOUNDARY 的寫作界線**照舊保留**——那是內容品質控制（不做個別
+ * 診斷、不給劑量、就醫警訊須前置），與發佈與否是兩件事，不要因為改成上線就順手拿掉。
+ *
+ * 註（踩過的坑）：`status: draft` 在本站**不會產出任何頁面**——`[slug].astro` 的
+ * getStaticPaths 只涵蓋 getPublishedArticles ＋ getScheduledPreviewArticles，兩者都排除
+ * draft。所以 draft 不能拿來當「給人審閱的預覽」，真要預覽得用 `status: scheduled`
+ * ＋未來的 publishDate（那才會產 noindex、不進 sitemap 的預覽頁）。
  */
 
 /**
@@ -145,7 +150,7 @@ export function buildAcuteCarePrompt(topic, { recentTitles = [] } = {}) {
     '內文圖改 `--out public/images/<slug>-s<N>.webp`。**設了 coverImage 就一定要先確認該檔真的存在**。',
     '',
     `【frontmatter】category: "health"、author: "appi-editorial"、contentType: "guide"、sourceType: "editorial"、`,
-    `disclaimerType: "medical"、**status: "draft"**（這條不可改成 published，內容待醫師審閱）、`,
+    `disclaimerType: "medical"、status: "published"、`,
     `slug: "${topic.key}"、publishDate 現在。寫入 src/content/articles/${topic.key}.md，`,
     '**不要 git add/commit/push**（外層處理）。',
     '',

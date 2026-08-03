@@ -1,0 +1,111 @@
+---
+title: "過度換氣當下怎麼辦？紙袋摀口鼻已不建議，這些情況要立刻就醫"
+slug: "hyperventilation-response"
+description: "過度換氣發作時，第一件事是找地方坐下、放慢呼吸速度，台灣胸腔暨重症加護醫學會與英國劍橋大學醫院皆建議搭配縮唇吐氣與腹式呼吸；紙袋摀口鼻反覆呼吸因缺氧風險已不再被建議。本文整理居家處置步驟、立刻就醫的警訊，以及兒童與慢性病史者的差異。"
+excerpt: "過度換氣先坐下放慢呼吸、練習縮唇腹式吐氣，紙袋摀口鼻已因缺氧風險不再建議；出現胸痛、意識改變或有心臟病史卻遲遲未緩解，要立刻就醫。"
+publishDate: "2026-08-03T02:40:49.424Z"
+category: "health"
+subcategory: "medical"
+tags:
+  - "急救常識"
+  - "心理健康"
+  - "心血管健康"
+author: "appi-editorial"
+coverImage: "covers/hyperventilation-response-cover.webp"
+coverAlt: "一個人坐著，一手放在胸口，練習放慢呼吸（示意圖）"
+coverImageCredit: "Photo by Danielle Nieuwendyk on Pexels"
+status: "published"
+sourceType: "editorial"
+contentType: "guide"
+disclaimerType: "medical"
+disclosure: "本文為衛教整理，彙整台灣胸腔暨重症加護醫學會「自在呼吸健康網」衛教頁面、衛生福利部心肌梗塞警訊衛教、東元綜合醫院過度換氣症候群衛教資料、英國劍橋大學醫院（Cambridge University Hospitals NHS Foundation Trust）呼吸運動衛教頁、美國凱薩醫療機構（Kaiser Permanente）兒童過度換氣照護說明，以及刊登於《Annals of Emergency Medicine》的紙袋重複呼吸缺氧風險研究，皆附原文出處連結；不能取代醫師對個別狀況的診斷與處置。"
+highlights:
+  - "過度換氣發作當下，最該做的一件事是找地方坐下、放鬆肩頸，把呼吸速度刻意放慢，台灣胸腔暨重症加護醫學會指出多數在安撫情緒後5到10分鐘內症狀就會緩和。"
+  - "紙袋或塑膠袋摀住口鼻反覆呼吸已不再被建議：刊登於《Annals of Emergency Medicine》的研究發現，健康受試者用紙袋重複呼吸3分鐘後血氧平均下降26.6毫米汞柱，且已有心肌梗塞、氣胸、肺栓塞病患被誤判為過度換氣後使用此法而死亡的案例。"
+  - "出現胸痛超過數分鐘、意識改變或失去意識，或本身有心血管疾病、氣喘等肺部疾病病史卻遲遲未緩解，都要立刻就醫，衛生福利部與台灣胸腔暨重症加護醫學會都提醒不能只當作單純的過度換氣處理。"
+  - "居家處置可以練習縮唇吐氣與腹式呼吸：一手放胸口、一手放腹部，吸氣時讓腹部鼓起、吐氣拉長，英國劍橋大學醫院的呼吸運動衛教與美國凱薩醫療機構的兒童照護說明都採用這個方式，且都沒有提到紙袋。"
+  - "兒童的處置原則類似，凱薩醫療機構建議教孩子縮唇呼吸、放慢到每5秒一次，若過度換氣超過30分鐘、頻繁發生或孩子失去意識，要立刻打119；孕婦本身的居家處置查無專門指引，這類族群請先問醫師。"
+risksAndLimits:
+  - "本文為一般居家處置整理，無法取代醫師對個別病情的診斷"
+  - "過度換氣的症狀可能與心肌梗塞、氣胸、肺栓塞、氣喘發作等急症重疊，本文不做個別判斷，僅提供何時該就醫的參考"
+  - "孕婦本身過度換氣的居家處置，查無專門臨床指引，本文不做臆測，請先問醫師"
+references:
+  - title: "過度換氣與氣喘有何不同？"
+    url: "https://asthma-copd.tw/promote_detail.php?id=27"
+    publisher: "台灣胸腔暨重症加護醫學會"
+  - title: "心肌梗塞是沈默的心臟殺手；「救心7行動」從日常做起！"
+    url: "https://www.mohw.gov.tw/cp-2625-19381-1.html"
+    publisher: "衛生福利部"
+  - title: "過度換氣症候群（衛教天地）"
+    url: "https://www.tyh.com.tw/b_health_s.php?new_id=1220"
+    publisher: "東元醫療社團法人東元綜合醫院"
+  - title: "Hypoxic hazards of traditional paper bag rebreathing in hyperventilating patients"
+    url: "https://pubmed.ncbi.nlm.nih.gov/2499228/"
+    publisher: "Annals of Emergency Medicine（PubMed）"
+  - title: "Breathing exercises in the treatment of hyperventilation"
+    url: "https://www.cuh.nhs.uk/patient-information/breathing-exercises-in-the-treatment-of-hyperventilation/"
+    publisher: "Cambridge University Hospitals NHS Foundation Trust"
+  - title: "Hyperventilation in Children: Care Instructions"
+    url: "https://healthy.kaiserpermanente.org/health-wellness/health-encyclopedia/he.hyperventilation-in-children-care-instructions.bu1261"
+    publisher: "Kaiser Permanente"
+---
+
+過度換氣發作的當下，最該做的一件事是找地方坐下來，放鬆肩頸，刻意把呼吸速度放慢。台灣胸腔暨重症加護醫學會的衛教資料指出，先安撫情緒、請對方放慢呼吸，通常5到10分鐘左右症狀就會緩和。本文為衛教整理，不能取代醫師對個別狀況的診斷與處置。
+
+![一個人坐著，一手放在胸口，練習放慢呼吸（示意圖）](/covers/hyperventilation-response-cover.webp)
+
+## 什麼情況要立刻就醫
+
+多數過度換氣安撫情緒、放慢呼吸就能緩解，但出現以下情況不要繼續觀察等待：
+
+- **胸痛持續、擴散到手臂或下巴，或合併冒冷汗、噁心。** 衛生福利部關於心肌梗塞的衛教資料指出，胸悶、胸痛可能擴散至左臂、左肩、頸部、下巴、牙齒、背部或上腹部，合併虛弱、暈眩、冒冷汗、心悸、呼吸困難等症狀時要立即就醫；若胸痛持續超過30分鐘沒有改善，更要儘速送醫。
+- **意識模糊、快要昏倒或已經失去意識。** 美國凱薩醫療機構的兒童過度換氣照護說明把「失去意識」列為要立刻打急救電話的情況，這個原則同樣適用於成人。
+- **本身有心血管疾病危險因子，或氣喘、慢性肺病等病史，症狀卻遲遲沒有緩解。** 台灣胸腔暨重症加護醫學會的衛教資料提醒，這類族群若症狀無法很快緩解，仍應就醫檢查，因為心肌梗塞、氣胸、肺栓塞等致命急症也可能表現出類似過度換氣的症狀。東元綜合醫院的衛教資料同樣強調，即使懷疑是過度換氣，也不應該輕忽患者主訴，需要排除心肌梗塞、肺栓塞等嚴重疾病的可能性。
+- **合併喘鳴聲（呼吸時發出高音調的咻咻聲）。** 台灣胸腔暨重症加護醫學會指出，喘鳴聲是氣道發炎阻塞造成，屬於氣喘的典型表現而非單純過度換氣，出現這個徵象要當作氣喘發作處理並儘速就醫。
+
+如果不確定屬於哪一種情況，先試著坐下放慢呼吸，觀察症狀是否在10分鐘內緩和；一旦出現上面列出的任何一項，就不要再繼續等待，應直接就醫。
+
+![一個人神情擔憂、手扶胸口拿著手機準備求助（示意圖）](/images/hyperventilation-response-s1.webp)
+
+## 居家處置怎麼做
+
+**先找安靜的地方坐下，放鬆上胸部與肩膀。** 英國劍橋大學醫院的呼吸運動衛教資料建議，一手放上胸部、一手放腹部，先感受上胸部是否過度用力，刻意讓它放鬆下來，這是後續調整呼吸節奏的基礎。
+
+**練習縮唇吐氣，把吐氣拉長。** 凱薩醫療機構的兒童照護說明建議透過縮起的嘴唇呼吸，像吹口哨一樣，藉此減少空氣進出的速度；劍橋大學醫院則建議用計數方式練習，吸氣數三秒、吐氣數四秒，讓吐氣時間比吸氣長。
+
+**改用腹式呼吸，讓腹部而不是胸口起伏。** 兩份資料都提到同樣的動作：吸氣時讓腹部像氣球一樣鼓起，胸口盡量保持不動；吐氣時腹部緩緩回縮。凱薩醫療機構建議重複3到10次，並把呼吸速度放慢到大約每5秒一次。
+
+**旁人在一旁陪伴、口頭安撫，不用特別做什麼複雜的事。** 台灣胸腔暨重症加護醫學會的衛教資料指出，多數人在情緒被安撫、呼吸放慢後，5到10分鐘內症狀就會緩和；如果身邊沒有人，自己找一個能坐下的地方、專心練習前面的呼吸節奏，效果是一樣的。
+
+![一個人一手放在胸口、一手放在腹部練習腹式呼吸（示意圖）](/images/hyperventilation-response-s2.webp)
+
+## 常見錯誤做法
+
+**拿紙袋或塑膠袋摀住口鼻反覆呼吸。** 這個做法曾經流傳很廣，但刊登於《Annals of Emergency Medicine》的研究讓20名健康受試者實測後發現，用紙袋重複呼吸30秒後血氧平均下降15.9毫米汞柱，180秒後平均下降26.6毫米汞柱，部分受試者甚至下降超過40毫米汞柱；同一份研究也記錄了心肌梗塞、氣胸、肺栓塞病患被誤判為單純過度換氣、使用紙袋重複呼吸法後死亡的案例。原理是這類病人的過度換氣其實是身體對缺氧或病灶的代償反應，硬把吐出的二氧化碳吸回去，反而會讓原本就偏低的血氧更往下掉。這也是為什麼劍橋大學醫院、凱薩醫療機構、台灣胸腔暨重症加護醫學會最新的居家處置說明，都已經不再列出紙袋這個方法。塑膠袋還多一層風險，密封性比紙袋更好，更容易讓人吸不到足夠的氧氣。
+
+**越慌張越用力大口呼吸，想著要「吸更多空氣」。** 台灣胸腔暨重症加護醫學會與東元綜合醫院的衛教資料都提到，過度換氣時腦部會誤以為自己缺氧，患者因此更用力、更快速地呼吸，但這麼做只會把血中二氧化碳排得更低，讓手腳發麻、頭暈等症狀更明顯，形成惡性循環。這時候該做的是刻意放慢，不是加快。
+
+**明明有心臟病史或氣喘病史，卻自己認定「應該只是緊張」而不就醫。** 前面提到，心血管疾病或肺部疾病病史者若症狀沒有很快緩解，仍應就醫檢查；自行判斷、拖著不去，可能把真正的急症當成單純的情緒反應處理。
+
+![一個紙袋被劃上叉號，代表這個做法已不建議（示意圖）](/images/hyperventilation-response-s3.webp)
+
+## 兒童／孕婦／慢性病或長期服藥者的差異
+
+**兒童。** 凱薩醫療機構的照護說明建議教孩子縮唇吐氣（像吹口哨一樣），並引導呼吸速度放慢到大約每5秒一次；也可以讓孩子一手放肋骨下方腹部、一手放胸部,練習深呼吸讓腹部推動手、胸口盡量不動,重複3到10次。若孩子過度換氣超過30分鐘、頻繁發生，或居家處置後症狀沒有改善，要聯絡醫生；若孩子失去意識，要立刻打119。
+
+**孕婦。** 目前查無專門針對孕婦本身過度換氣居家處置的臨床指引，本文不做臆測。前面提到的坐下放慢呼吸、縮唇吐氣等方式原則上沒有理由不同，但如果症狀持續不緩解或合併前述警訊，這類族群請先問醫師，不要自行判斷。
+
+**心血管疾病、氣喘等慢性病史或長期服藥者。** 台灣胸腔暨重症加護醫學會的衛教資料明確提醒，這類族群出現過度換氣症狀時，不能只當作單純情緒反應處理；若症狀無法很快緩解，應該就醫檢查，因為心肌梗塞、氣胸、肺栓塞等急症的表現可能與過度換氣相似。用藥是否需要調整、症狀該如何區分，請由醫師評估，不要自行增減藥物。
+
+![旁人陪伴在旁，輕拍安撫、引導對方放慢呼吸（示意圖）](/images/hyperventilation-response-s4.webp)
+
+本文為衛教整理，內容彙整自台灣胸腔暨重症加護醫學會「自在呼吸健康網」、衛生福利部心肌梗塞警訊衛教、東元綜合醫院過度換氣症候群衛教資料、英國劍橋大學醫院呼吸運動衛教頁、美國凱薩醫療機構兒童過度換氣照護說明，以及《Annals of Emergency Medicine》刊登的紙袋重複呼吸缺氧風險研究，不能取代醫師對個別狀況的診斷與處置。出現胸痛持續、意識改變，或有心血管疾病與肺部疾病病史卻遲遲未緩解，請直接就醫評估。
+
+## 參考資料
+
+- 台灣胸腔暨重症加護醫學會，[過度換氣與氣喘有何不同？](https://asthma-copd.tw/promote_detail.php?id=27)
+- 衛生福利部，[心肌梗塞是沈默的心臟殺手；「救心7行動」從日常做起！](https://www.mohw.gov.tw/cp-2625-19381-1.html)
+- 東元醫療社團法人東元綜合醫院，[過度換氣症候群](https://www.tyh.com.tw/b_health_s.php?new_id=1220)
+- Callaham M., [Hypoxic hazards of traditional paper bag rebreathing in hyperventilating patients](https://pubmed.ncbi.nlm.nih.gov/2499228/)，Annals of Emergency Medicine（PubMed）
+- Cambridge University Hospitals NHS Foundation Trust，[Breathing exercises in the treatment of hyperventilation](https://www.cuh.nhs.uk/patient-information/breathing-exercises-in-the-treatment-of-hyperventilation/)
+- Kaiser Permanente，[Hyperventilation in Children: Care Instructions](https://healthy.kaiserpermanente.org/health-wellness/health-encyclopedia/he.hyperventilation-in-children-care-instructions.bu1261)

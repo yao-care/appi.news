@@ -58,8 +58,13 @@ export const SITE = {
       // 301 轉到 /people/亞太專業觀點/61592748088774/）。用 profile.php?id= 這個形式是
       // 因為數字 ID 不會因改名而變動，比帶顯示名稱的 /people/ 網址穩定。
       'https://www.facebook.com/profile.php?id=61592748088774',
-      // TODO：Instagram 與 Threads 帳號建好後補公開網址（不要填登入信箱，
-      // sameAs 要的是「本機構在其他平台的身分頁」）。
+      // 官方 Instagram 與 Threads（2026-08-03 加入；四個網址皆實測 200 公開可存取）。
+      // 站長給的是貼文網址（/p/DbkEHkwE6XY/、/post/DbkE4JJE6EA），這裡刻意改填**帳號首頁**：
+      // sameAs 的語意是「本機構在該平台的身分」，貼文是內容不是身分，且單則貼文可被刪除
+      // 或改為不公開，會讓 sameAs 指向死連結。
+      'https://www.instagram.com/appi.news/',
+      // threads.com 與 threads.net 目前都通（皆 200）；用 .com 這個現行網域。
+      'https://www.threads.com/@appi.news',
     ] as string[],
     /** 機構聯絡信箱（給 schema.org contactPoint 用；留空則不輸出） */
     contactEmail: 'appi.newsdesk@gmail.com',

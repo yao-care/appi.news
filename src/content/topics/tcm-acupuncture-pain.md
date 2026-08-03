@@ -6,7 +6,7 @@ coverImage: "og/health.png"
 tags: ["中醫", "疼痛治療", "復健治療"]
 featured: false
 status: "active"
-articles: ["appi-news-97", "appi-news-96", "appi-news-178", "appi-news-177", "appi-news-43"]
+articles: ["tcm-facial-acupuncture-guide", "appi-news-178", "appi-news-177", "appi-news-97", "appi-news-96", "appi-news-43"]
 ---
 
 中醫針法近年愈來愈少單獨使用，而是和物理治療、震波、超音波導引一起編進同一套療程。這讓「該不該做、要做幾次、什麼情況下無效」變得比過去更難判斷。

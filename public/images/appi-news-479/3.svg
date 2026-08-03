@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="50" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#003A93">銀行存款保障 vs 穩定幣儲備透明度比較</text>
+  <text x="480" y="78" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#6B7280">對手方風險缺口：受監管機構與穩定幣發行方的差異</text>
+
+  <!-- Left panel: Bank -->
+  <rect x="60" y="110" width="380" height="430" rx="12" fill="#F4F4F4" stroke="#003A93" stroke-width="2.5"/>
+  <text x="250" y="150" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#003A93">銀行</text>
+
+  <!-- Shield icon -->
+  <path d="M250 185 L300 205 L300 250 Q300 300 250 325 Q200 300 200 250 L200 205 Z" fill="#3D6BB5"/>
+  <path d="M225 250 L242 267 L278 225" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="100" y="355" width="300" height="70" rx="8" fill="#FFFFFF" stroke="#3D6BB5" stroke-width="1.5"/>
+  <text x="250" y="384" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#1F1F1F">存款保險保障</text>
+  <text x="250" y="408" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6B7280">法定保障額度內全額賠付</text>
+
+  <rect x="100" y="440" width="300" height="70" rx="8" fill="#FFFFFF" stroke="#3D6BB5" stroke-width="1.5"/>
+  <text x="250" y="469" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#1F1F1F">央行監管機制</text>
+  <text x="250" y="493" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6B7280">定期查核、資本適足要求</text>
+
+  <!-- Right panel: Stablecoin issuer -->
+  <rect x="520" y="110" width="380" height="430" rx="12" fill="#F4F4F4" stroke="#D1482A" stroke-width="2.5"/>
+  <text x="710" y="150" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#D1482A">穩定幣發行方</text>
+
+  <!-- Reserve box with question mark -->
+  <rect x="655" y="190" width="110" height="90" rx="8" fill="#3D6BB5"/>
+  <text x="710" y="248" text-anchor="middle" font-family="sans-serif" font-size="46" font-weight="700" fill="#FFFFFF">?</text>
+
+  <rect x="560" y="355" width="300" height="70" rx="8" fill="#FFFFFF" stroke="#D1482A" stroke-width="1.5"/>
+  <text x="710" y="384" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#1F1F1F">儲備資產不透明</text>
+  <text x="710" y="408" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6B7280">缺乏強制性即時揭露</text>
+
+  <rect x="560" y="440" width="300" height="70" rx="8" fill="#FFFFFF" stroke="#D1482A" stroke-width="1.5"/>
+  <text x="710" y="469" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#1F1F1F">無存款保障機制</text>
+  <text x="710" y="493" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6B7280">發行方倒閉風險由持有人承擔</text>
+
+  <!-- Center gap indicator -->
+  <line x1="480" y1="150" x2="480" y2="500" stroke="#D1482A" stroke-width="2" stroke-dasharray="6,6"/>
+  <rect x="410" y="305" width="140" height="40" rx="20" fill="#D1482A"/>
+  <text x="480" y="331" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">風險缺口</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>

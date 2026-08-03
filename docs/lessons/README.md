@@ -48,6 +48,7 @@
 | [automation-model-and-account-split.md](./automation-model-and-account-split.md) | 帳號切換洗掉排程行＋全 Opus 燒爆週額度＋claude-appi 撞限額會 exit 0：cron 一律帶 --model、判成功不能只看 exit code；續：偵測到限額只 continue → 逐項批次變 24 次空打，須遇限額即 break 中止整批 |
 | [automation-runtime-staleness.md](./automation-runtime-staleness.md) | 改了卻沒生效：程式從 publisher checkout 跑、cron 一律 UTC、.sh/server 改完要 pull |
 | [auto-publish-pipeline-traps.md](./auto-publish-pipeline-traps.md) | 發佈正確性坑：worktree 要先 build、publishDate 用系統時間蓋、多工不序列化用自癒重試、持續事件滾動更新同一篇；§F 一篇缺封面 webp 會讓 check:links 擋掉整條共用部署佇列、連累別線排程文，要在進 main 前攔（validate-content 升 error）；**§G 過期的護欄（為已移除的 timeout 而設的時間預算）會變減產器、把去重放在最貴的那一端＝整晚燒在 SKIP 上，故障不可當成模型的判斷** |
+| [acute-care-line-traps.md](./acute-care-line-traps.md) | 批次產線三個「失敗訊號長得像成功」的坑：`status: draft` **不會產出任何頁面**（getStaticPaths 兩邊都排除它），要能預覽得用 `scheduled` + 遠未來 publishDate；模型把 slug 包在反引號／粗體裡讓解析器對不到檔案，**解析失敗 ≠ 沒產出**，指定題目時 slug 必等於 topic.key、要有不依賴模型回報的事實查核；孤兒稿繞過逐篇 gate 混到整批 build 才被 check:links 擋下、一顆老鼠屎擋住 26 篇，階段之間要有獨立守門；合規要機械檢查不要人工抽驗，且劑量規則要排除 mg/dL 等濃度單位免誤判 |
 | [annual-observance-scheduling.md](./annual-observance-scheduling.md) | 年度紀念日產線：`status: scheduled` 不會自己上線（`isPublic` 比對 build 當下時間，6 小時 cron 對不上 06:17，要另排一支準點戳 deploy 的 cron）；「時間戳準」與「可見時刻準」二選一；坊間紀念日對照表三筆過期/錯誤（癲癇日、高血壓日、肥胖日），照抄會每年錯一次；「提前 N 天寫」掃單日會沒有重試能力，要掃區間＋冪等帳本；浮動日期要寫成規則不能寫死 |
 | [commit-hygiene-shared-checkout.md](./commit-hygiene-shared-checkout.md) | 共用 checkout 別把別人 WIP 掃進 commit：只 stage 文章產物 / 用 pathspec |
 | [weekly-report-mobile-layout.md](./weekly-report-mobile-layout.md) | 週報手機排版崩掉：模型手刻多欄塞一行；版面收歸決定論渲染器，模型只填數據+notes |

@@ -1,49 +1,49 @@
 ---
-title: "燙傷處理：沖脫泡蓋送正確做法與常見錯誤"
-slug: "burn-first-aid-steps"
-description: "燙傷發生當下最該做的一件事，是立刻用流動冷水沖洗傷處20到30分鐘，而不是冰敷或塗抹醬油、牙膏等偏方。本文整理消防局、教學醫院公開衛教資料的沖脫泡蓋送步驟、什麼情況要立刻就醫，以及兒童、孕婦、慢性病與長期服藥者的處置差異。"
-excerpt: "燙傷當下先沖流動冷水20到30分鐘，不要冰敷、不要塗偏方。本文整理沖脫泡蓋送步驟、就醫警訊，以及兒童等特殊族群的處置差異。"
+title: 燙傷處理：沖脫泡蓋送正確做法與常見錯誤
+slug: burn-first-aid-steps
+description: 燙傷發生當下最該做的一件事，是立刻用流動冷水沖洗傷處20到30分鐘，而不是冰敷或塗抹醬油、牙膏等偏方。本文整理消防局、教學醫院公開衛教資料的沖脫泡蓋送步驟、什麼情況要立刻就醫，以及兒童、孕婦、慢性病與長期服藥者的處置差異。
+excerpt: 燙傷當下先沖流動冷水20到30分鐘，不要冰敷、不要塗偏方。本文整理沖脫泡蓋送步驟、就醫警訊，以及兒童等特殊族群的處置差異。
 publishDate: "2026-08-03T09:40:00.000Z"
-category: "health"
-subcategory: "medical"
+category: health
+subcategory: medical
 tags:
-  - "急救常識"
-  - "居家安全"
-  - "育兒健康"
-author: "appi-editorial"
-coverImage: "covers/burn-first-aid-steps-cover.webp"
-coverAlt: "水龍頭流動的冷水沖洗手部燙傷處"
-coverImageCredit: "Photo by tom Parandyk on Unsplash"
-status: "published"
-sourceType: "editorial"
-contentType: "guide"
-disclaimerType: "medical"
-disclosure: "本文為衛教整理，彙整臺北市政府消防局防災教育雲，以及馬偕紀念醫院、中國醫藥大學附設醫院、高雄醫學大學附設中和紀念醫院、亞洲大學附屬醫院公開衛教資料，皆附原文出處連結；不能取代醫師對個別狀況的診斷與處置。"
+  - 急救常識
+  - 居家安全
+  - 育兒健康
+author: appi-editorial
+coverImage: /covers/burn-first-aid-steps-1785738750803.webp
+coverAlt: 水龍頭流動的冷水沖洗手部燙傷處
+coverImageCredit: ""
+status: published
+sourceType: editorial
+contentType: guide
+disclaimerType: medical
+disclosure: 本文為衛教整理，彙整臺北市政府消防局防災教育雲，以及馬偕紀念醫院、中國醫藥大學附設醫院、高雄醫學大學附設中和紀念醫院、亞洲大學附屬醫院公開衛教資料，皆附原文出處連結；不能取代醫師對個別狀況的診斷與處置。
 highlights:
-  - "燙傷當下最該做的一件事，是立刻用流動冷水小力沖洗傷處，時間抓20到30分鐘，這是消防局與多家教學醫院衛教資料共同的核心建議。"
-  - "意識不清或叫不醒、燙傷波及臉部或生殖器官、合併吸入性灼傷或電擊、二度以上燒燙傷面積成人超過20%或兒童超過15%，都是需要立刻送醫甚至住進燒燙傷病房的警訊。"
-  - "冰敷、塗抹醬油牙膏萬金油等偏方、把水泡弄破、電傷時還先沖水，都是常見的錯誤處置。"
-  - "兒童燙傷不建議長時間泡冷水，面積大或年紀小容易失溫導致休克；孕婦目前查無專門處置指引，居家步驟原則相同但用藥務必問醫師；糖尿病等慢性病或長期服藥者處置前也請先問醫師，不要套用一般成人做法。"
+  - 燙傷當下最該做的一件事，是立刻用流動冷水小力沖洗傷處，時間抓20到30分鐘，這是消防局與多家教學醫院衛教資料共同的核心建議。
+  - 意識不清或叫不醒、燙傷波及臉部或生殖器官、合併吸入性灼傷或電擊、二度以上燒燙傷面積成人超過20%或兒童超過15%，都是需要立刻送醫甚至住進燒燙傷病房的警訊。
+  - 冰敷、塗抹醬油牙膏萬金油等偏方、把水泡弄破、電傷時還先沖水，都是常見的錯誤處置。
+  - 兒童燙傷不建議長時間泡冷水，面積大或年紀小容易失溫導致休克；孕婦目前查無專門處置指引，居家步驟原則相同但用藥務必問醫師；糖尿病等慢性病或長期服藥者處置前也請先問醫師，不要套用一般成人做法。
 risksAndLimits:
-  - "本文為一般居家處置整理，無法取代醫師對個別病情的診斷"
-  - "孕婦燙傷處置目前查無專門臨床指引，止痛用藥選擇務必由醫師評估，不在本文討論範圍"
-  - "糖尿病等慢性病或長期服藥者的燙傷處置差異，查無專門衛教文件細節，本文僅提醒先問醫師，不做個別建議"
+  - 本文為一般居家處置整理，無法取代醫師對個別病情的診斷
+  - 孕婦燙傷處置目前查無專門臨床指引，止痛用藥選擇務必由醫師評估，不在本文討論範圍
+  - 糖尿病等慢性病或長期服藥者的燙傷處置差異，查無專門衛教文件細節，本文僅提醒先問醫師，不做個別建議
 references:
-  - title: "燒燙傷處置：沖脫泡蓋送"
-    url: "https://www.disasterlearning.gov.taipei/tw/Knowledge/ugC_Knowledge_Detail.aspx?ID=120&TID=6"
-    publisher: "臺北市政府消防局防災教育雲"
-  - title: "認識燒燙傷（衛教單張）"
-    url: "https://www.mmh.org.tw/know_health_view.php?docid=364"
-    publisher: "馬偕紀念醫院"
-  - title: "各種燒燙傷急救處理（衛教單張）"
-    url: "https://www.cmuh.cmu.edu.tw/HealthEdus/Detail?no=4735"
-    publisher: "中國醫藥大學附設醫院"
-  - title: "燒傷千萬不要慌，「沖脫泡蓋」先護傷"
-    url: "https://www.kmuh.org.tw/www/kmcj/data/11201/23.htm"
-    publisher: "高雄醫學大學附設中和紀念醫院"
-  - title: "燒燙傷處理"
-    url: "https://www.auh.org.tw/NewsInfo/HealthEducationInfo?docid=1241"
-    publisher: "亞洲大學附屬醫院"
+  - title: 燒燙傷處置：沖脫泡蓋送
+    url: https://www.disasterlearning.gov.taipei/tw/Knowledge/ugC_Knowledge_Detail.aspx?ID=120&TID=6
+    publisher: 臺北市政府消防局防災教育雲
+  - title: 認識燒燙傷（衛教單張）
+    url: https://www.mmh.org.tw/know_health_view.php?docid=364
+    publisher: 馬偕紀念醫院
+  - title: 各種燒燙傷急救處理（衛教單張）
+    url: https://www.cmuh.cmu.edu.tw/HealthEdus/Detail?no=4735
+    publisher: 中國醫藥大學附設醫院
+  - title: 燒傷千萬不要慌，「沖脫泡蓋」先護傷
+    url: https://www.kmuh.org.tw/www/kmcj/data/11201/23.htm
+    publisher: 高雄醫學大學附設中和紀念醫院
+  - title: 燒燙傷處理
+    url: https://www.auh.org.tw/NewsInfo/HealthEducationInfo?docid=1241
+    publisher: 亞洲大學附屬醫院
 ---
 
 燙傷發生的當下，最該做的一件事，是立刻脫掉覆蓋在傷處的衣物、用流動冷水沖洗傷處20到30分鐘，藉此快速降低皮膚表面溫度。臺北市政府消防局防災教育雲與多家教學醫院的衛教資料都把這一步列為第一優先，不是先找藥膏、不是先冰敷。本文為衛教整理，不能取代醫師對個別狀況的診斷與處置。

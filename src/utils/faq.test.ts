@@ -45,6 +45,71 @@ describe('extractFaq', () => {
     expect(extractFaq('<h2>前言</h2><p>沒有問答。</p>')).toEqual([]);
   });
 
+  // 以下三種是新寫文章的 markdown 形態；2026-08-04 之前一律抽不到（全站 92 篇無 FAQPage）。
+  it('extracts markdown ### Q1 headings under a markdown 常見問題 section', () => {
+    const body = `## 四、什麼情況要看醫師
+
+正文段落。
+
+### 常見問題
+
+### Q1: 吃地奧司明，痔瘡就會慢慢不見嗎？
+藥物能緩解急性期的出血與腫脹，但不會讓已經形成的痔瘡組織消失。
+
+### Q2: 痔瘡出血，是不是都要照大腸鏡才安心？
+要看年齡與危險因子，並非每個人都需要。
+
+## 參考資料
+
+- 某篇文獻`;
+    const faq = extractFaq(body);
+    expect(faq).toHaveLength(2);
+    expect(faq[0].question).toBe('吃地奧司明，痔瘡就會慢慢不見嗎？');
+    expect(faq[0].answer).toContain('不會讓已經形成的痔瘡組織消失');
+    expect(faq.some((f) => f.question.includes('參考'))).toBe(false);
+  });
+
+  it('extracts markdown **question** paragraphs under a markdown FAQ section', () => {
+    const body = `## 常見問題
+
+**Anthropic 估值超車 OpenAI，代表 Claude 比較強嗎？**
+
+不能這樣讀。估值是資本市場對成長速度的定價，不是模型能力排行榜。
+
+**那估值完全沒有參考價值？**
+
+有，但它反映的是資金流向，要比能力得看實測表現。
+
+## 結語
+
+收尾段落不該被當成問題。`;
+    const faq = extractFaq(body);
+    expect(faq).toHaveLength(2);
+    expect(faq[0].question).toBe('Anthropic 估值超車 OpenAI，代表 Claude 比較強嗎？');
+    expect(faq[0].answer).toContain('不是模型能力排行榜');
+    expect(faq.some((f) => f.question === '結語')).toBe(false);
+  });
+
+  it('extracts HTML <p><strong> Q&A under a markdown heading (mixed form)', () => {
+    const body = `## 常見問題
+
+<p><strong>ASIC 跟 GPU 最根本的差異是什麼？</strong><br>ASIC 是為單一任務把電路刻死的客製晶片，GPU 則是通用可程式化的平行運算器。</p>`;
+    const faq = extractFaq(body);
+    expect(faq).toHaveLength(1);
+    expect(faq[0].question).toBe('ASIC 跟 GPU 最根本的差異是什麼？');
+  });
+
+  it('strips markdown links and emphasis from answers', () => {
+    const body = `### 常見問題
+
+### Q1: 這個數字可信嗎？
+根據 [疾管署公告](https://www.cdc.gov.tw/x)，單週門診就診數 **破萬**，屬於明顯回升。`;
+    const faq = extractFaq(body);
+    expect(faq[0].answer).toBe(
+      '根據 疾管署公告，單週門診就診數 破萬，屬於明顯回升。',
+    );
+  });
+
   it('extracts <p><strong>Q</strong><br>A</p> Q&A and excludes a trailing 結語', () => {
     const body = `
 <h2>常見問題</h2>

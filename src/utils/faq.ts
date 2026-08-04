@@ -6,6 +6,12 @@
 function stripHtml(s: string): string {
   return s
     .replace(/<[^>]+>/g, '')
+    // markdown 殘留（本檔吃的是原始 body，內文可能是 markdown 而非 HTML）：
+    // 圖片整個丟掉、連結只留文字、粗體/斜體/行內程式碼只留內容。
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
     .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
@@ -13,6 +19,29 @@ function stripHtml(s: string): string {
     .replace(/&#39;/g, "'")
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+/**
+ * 把 markdown 正規化成本抽取器認得的 HTML 形狀。
+ *
+ * 為什麼需要：`extractFaq` 吃的是文章「原始 body」，而三條規則原本只認 HTML 標題。
+ * WordPress 搬過來的舊文內嵌 `<h2>常見問題</h2>` 所以能抽到，但新寫的文章一律是
+ * markdown（`### 常見問題`），區段起點就比對不到 → FAQPage 整個不輸出。
+ * 2026-08-04 盤點：全站 92 篇踩到，等於白寫的常見問題段拿不到 FAQ 結構化資料。
+ */
+function normalizeMarkdown(body: string): string {
+  return (
+    body
+      // 圍欄程式碼先拿掉，避免裡面的 `#` 註解被當成標題。
+      .replace(/^```[\s\S]*?^```/gm, '')
+      // ATX 標題 → 統一輸出 <h3>（抽取器對 h2-h4 一視同仁，只需標題邊界）。
+      .replace(/^[ \t]*#{2,4}[ \t]+(.+?)[ \t]*$/gm, '<h3>$1</h3>')
+      // 獨立粗體行＝問題，其後第一個段落＝答案（日更文章的另一種常見寫法）。
+      .replace(
+        /^[ \t]*\*\*(.+?)\*\*[ \t]*\n[ \t]*\n(.+(?:\n(?![ \t]*\n)[^\n]+)*)/gm,
+        '<p><strong>$1</strong><br>$2</p>',
+      )
+  );
 }
 
 // 非問答的區段標題：用來（a）把它們從問題候選中濾除，（b）標記 FAQ 區段的結尾，
@@ -31,12 +60,21 @@ export interface FaqItem {
  *   (1b) 同區段內的段落粗體式 Q&A（<p><strong>問題？</strong><br>答案</p>）——日更文章主要格式；
  *   (2)  全文中以「Q1 / Q2…」起頭的標題（醫療 AI 系列常用）。
  * 皆以問題文字去重；FAQ 區段在遇到「結語/參考/免責…」等非問答標題時結束。
+ *
+ * markdown 與 HTML 兩種寫法都吃：進來先過 `normalizeMarkdown()` 轉成同一種形狀，
+ * 三條規則本身只需維護 HTML 版本。
  */
-export function extractFaq(body: string): FaqItem[] {
+export function extractFaq(rawBody: string): FaqItem[] {
+  const body = normalizeMarkdown(rawBody);
   const out: FaqItem[] = [];
   const seen = new Set<string>();
   const clean = (raw: string): string =>
-    stripHtml(raw).replace(/^Q\s*\d*\s*[｜|.:：、]?\s*/i, '').trim();
+    stripHtml(raw)
+      .replace(/^Q\s*\d*\s*[｜|.:：、]?\s*/i, '')
+      // 純數字編號開頭（「1.吃成藥可以配咖啡嗎？」）也去掉，結構化資料的問題不該帶編號。
+      // 要求編號後接 . 、 ： 等分隔符，才不會誤砍「1 歲寶寶…」這種以數字開頭的正常問題。
+      .replace(/^\d+\s*[.、:：]\s*/, '')
+      .trim();
   const push = (qRaw: string, aRaw: string) => {
     const q = clean(qRaw);
     const a = stripHtml(aRaw);

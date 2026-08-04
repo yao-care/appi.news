@@ -6,7 +6,7 @@ coverImage: "og/health.png"
 tags: ["保健食品", "預防醫學", "防詐"]
 featured: false
 status: "active"
-articles: ["detox-alkaline-keto-pseudoscience"]
+articles: ["detox-alkaline-keto-pseudoscience", "natural-additive-free-label-claims", "influencer-supplement-endorsement", "medical-endorsement-clinical-patent-claims", "anti-aging-supplement-buzzwords", "verify-health-claim-toolkit"]
 ---
 
 市面上的健康產品，最會賣的往往不是效果，而是話術。「排毒」「鹼性體質」「醫師推薦」「臨床實證」這些詞聽起來很科學，實際上很多經不起查證。

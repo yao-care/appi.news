@@ -1,0 +1,27 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="劉姵吟女子100公尺蝶式全國紀錄從6月全國中正盃到9月亞錦賽的進步幅度長條圖">
+  <style>
+    text { font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; }
+  </style>
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+
+  <text x="480" y="66" text-anchor="middle" font-size="30" font-weight="700" fill="#1B5E4B">劉姵吟 女子100公尺蝶式全國紀錄</text>
+  <text x="480" y="98" text-anchor="middle" font-size="17" fill="#6B7B77">2025年度・兩度刷新全國紀錄</text>
+
+  <rect x="70" y="140" width="820" height="320" rx="20" fill="#F2F7F5"/>
+
+  <text x="105" y="203" font-size="21" font-weight="700" fill="#1F2A28">6月・全國中正盃</text>
+  <rect x="105" y="216" width="730" height="42" rx="21" fill="#FFFFFF"/>
+  <rect x="105" y="216" width="330" height="42" rx="21" fill="#2E8B6F"/>
+  <text x="128" y="243" font-size="17" font-weight="700" fill="#FFFFFF">首度寫下全國紀錄</text>
+
+  <line x1="470" y1="270" x2="470" y2="336" stroke="#6B7B77" stroke-width="2"/>
+  <path d="M 462 328 L 470 340 L 478 328" fill="none" stroke="#6B7B77" stroke-width="2"/>
+  <text x="490" y="308" font-size="15" fill="#6B7B77">約3個月後</text>
+
+  <text x="105" y="368" font-size="21" font-weight="700" fill="#1F2A28">9月・亞洲游泳錦標賽決賽</text>
+  <rect x="105" y="381" width="730" height="42" rx="21" fill="#FFFFFF"/>
+  <rect x="105" y="381" width="690" height="42" rx="21" fill="#C9A227"/>
+  <text x="128" y="408" font-size="17" font-weight="700" fill="#1F2A28">1分00秒07・再度刷新紀錄</text>
+
+  <text x="480" y="500" text-anchor="middle" font-size="14" fill="#6B7B77">註：兩場賽事皆創下當屆女子100公尺蝶式全國紀錄</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

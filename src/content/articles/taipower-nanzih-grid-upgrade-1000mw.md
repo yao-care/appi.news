@@ -1,0 +1,70 @@
+---
+title: "台電雄積三、四線完工：楠梓半導體園區供電翻倍上看1000MW"
+slug: "taipower-nanzih-grid-upgrade-1000mw"
+description: "台電「高雄～雄積三、四線」輸電線路工程8月1日完工送電，是「強化電網韌性建設計畫」的最新進度；南科高雄楠梓園區供電能力從現有約400MW提升到逾1000MW，原訂42個月工期大幅縮減至15個月、提前逾2年完工，線路兼顧161kV現況需求與未來升級345kV的擴充彈性，因應楠梓半導體產業擴產用電需求。"
+publishDate: "2026-08-04T02:33:28.101Z"
+category: "focus"
+subcategory: "trend-watch"
+tags:
+  - "電網"
+  - "半導體"
+  - "能源政策"
+  - "淨零轉型"
+author: "appi-editorial"
+reviewedBy:
+  - "lightman"
+factCheckedBy:
+  - "appi-editorial"
+coverImage: "covers/taipower-nanzih-grid-upgrade-1000mw-cover.webp"
+coverAlt: "高壓輸電鐵塔與電網設施，象徵台電輸電線路升級（示意圖）"
+coverImageCredit: "Photo by Fré Sonneveld on Unsplash"
+status: "published"
+sourceType: "wire"
+contentType: "news"
+disclaimerType: "general"
+disclosure: "本文整理自中央社、聯合新聞網（含經濟日報）、風傳媒對台電「高雄～雄積三、四線」輸電工程完工之公開報導，內容附原文出處連結；工程數字與時程以台電最新公告為準。"
+highlights:
+  - "台電「高雄～雄積三、四線」輸電線路工程8月1日正式竣工送電，全長約9.6公里，施工範圍涵蓋高雄市三民、鼓山及左營區。"
+  - "南科高雄楠梓園區供電能力從現有約400MW提升到逾1000MW，成長逾2倍；線路兼顧現階段161kV輸電需求，並保留未來升級345kV的擴充彈性。"
+  - "工程去年5月動工，原訂42個月工期，台電透過增加工班、延長工時與安全並行施工，大幅縮減至15個月完工，提前逾2年，董事長曾文生、總經理郭天合共同見證啟用。"
+risksAndLimits:
+  - "供電能力「逾1000MW」與需求「約400MW」為台電對外公布的整體數字，報導未附逐年用電曲線或第三方查核資料"
+  - "報導僅稱受惠對象為楠梓園區半導體產業，未具名列出個別廠商，實際用電分配仍待台電後續公告"
+  - "工期由42個月縮減至15個月的做法（增加工班、延長工時、安全並行施工）是否可複製到其他強韌電網子計畫，報導未說明"
+references:
+  - title: "中央社。台電雄積三、四線路竣工 楠梓園區供電提升至逾1000MW"
+    url: "https://www.cna.com.tw/news/afe/202608020028.aspx"
+    publisher: "中央通訊社"
+  - title: "聯合新聞網。點亮半導體園區！台電高雄楠梓「雄積三、四線」完工送電 供電量翻倍"
+    url: "https://udn.com/news/story/7238/9665608"
+    publisher: "聯合新聞網"
+  - title: "經濟日報。台電雄積三、四線路竣工 楠梓園區供電提升至逾1000MW"
+    url: "https://money.udn.com/money/story/5612/9665568"
+    publisher: "經濟日報"
+  - title: "風傳媒。台電「雄積三、四線」提前完工送電 楠梓半導體園區供電能力提升逾2倍"
+    url: "https://www.storm.mg/article/11153430"
+    publisher: "風傳媒"
+draft: false
+---
+
+台電「高雄～雄積三、四線」輸電線路工程8月1日正式竣工送電，[南科高雄楠梓園區供電能力可望從現有約400MW提升到逾1000MW](https://www.cna.com.tw/news/afe/202608020028.aspx)，是台電「強化電網韌性建設計畫」在南部的最新落地進度。這項工程去年5月動工，[原訂42個月工期大幅縮減至15個月，提前逾2年完工](https://udn.com/news/story/7238/9665608)，直接回應的是楠梓半導體園區持續擴產帶來的用電壓力。
+
+## 完工細節：9.6公里線路，工期砍掉三分之二
+
+這項輸電線路工程全長約9.6公里，[施工範圍涵蓋高雄市三民、鼓山及左營區](https://money.udn.com/money/story/5612/9665568)。台電說明，工程能大幅提前完工，靠的是[增加工班、適當延長工時，並採安全並行施工等管理措施](https://udn.com/news/story/7238/9665608)，把原訂42個月的工期壓縮到15個月。8月1日啟用當天，[台電董事長曾文生、總經理郭天合共同見證送電](https://www.storm.mg/article/11153430)。
+
+<img src="/images/taipower-nanzih-grid-upgrade-1000mw-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="電力變電所與高壓輸電設備，象徵雄積三、四線輸電工程（示意圖）">
+
+## 供電能力：從400MW到逾1000MW，兼顧161kV到345kV
+
+新線路的技術設計預留了升級空間。台電指出，[新輸電線路兼顧園區初期161kV的輸電需求，並保留未來升級345kV的擴充彈性](https://www.cna.com.tw/news/afe/202608020028.aspx)。楠梓園區[目前用電需求量約400MW，工程完工後供電能力可提升至逾1000MW](https://udn.com/news/story/7238/9665608)，等於一口氣拉出2倍以上的餘裕。
+
+這個數字之所以重要，是因為它直接對應南科高雄第三園區（楠梓園區）近年的半導體產業擴產速度。[工程配合南部科學園區高雄第三園區半導體產業發展需求](https://money.udn.com/money/story/5612/9665568)，報導並未具名列出個別受惠廠商，但楠梓園區近年持續有半導體業者進駐擴廠，是南台灣半導體供應鏈的重要據點。
+
+<img src="/images/taipower-nanzih-grid-upgrade-1000mw-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="半導體廠房與工業設施外觀，象徵楠梓園區半導體產業用電需求（示意圖）">
+
+## 放進強韌電網計畫的脈絡看
+
+雄積三、四線是台電10年期、[總投資5645億元「強化電網韌性建設計畫」](/articles/taipower-grid-resilience-161kv-cable/)在南部的具體執行項目之一。該計畫今年稍早才完成一筆約193億元的161kV交連PE電纜標案決標，目標2028年完成相關電纜建設；雄積三、四線則是同一套電網韌性升級邏輯下，已經實際完工並開始供電的個案，顯示計畫不只是紙上規劃，部分子項目正陸續落地。
+
+搭配經濟部今年稍早上修的十年用電預估，[2026至2035年全國用電需求年均成長率上修至約2.5%](/articles/taiwan-power-demand-forecast-2035/)，AI資料中心與半導體擴產是最大推力；台電董事長曾文生更在7月底公開推估，[半導體產業用電量將從今年約520億度成長到2035年1100億度](/articles/semiconductor-power-demand-2035/)。雄積三、四線的完工，可以看成是這股全國性用電成長趨勢中，南部半導體產業鏈率先拿到的一筆具體供電保障。

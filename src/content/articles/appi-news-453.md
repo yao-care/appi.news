@@ -6,7 +6,8 @@ publishDate: 2026-07-28
 updatedDate: 2026-07-29
 category: sports
 subcategory: events
-tags: []
+tags:
+  - "國際賽事"
 author: "appi-editorial"
 reviewedBy:
   - "chou-jingyan"

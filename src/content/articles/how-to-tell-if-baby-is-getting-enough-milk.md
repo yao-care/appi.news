@@ -13,7 +13,7 @@ status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
-readingTime: 11
+readingTime: 12
 references:
   - title: "上醫預防醫學發展協會GCM協會編輯部（2026）. 奶量不足怎麼辦？從寶寶攝取判斷，別只看擠乳量"
     url: "https://gcm.org.tw/blog/nfant-intake-based-milk-supply-assessment/"
@@ -25,7 +25,7 @@ references:
     url: "https://www.pampers.com/en-us/baby/diapering/article/how-many-wet-diapers-should-a-newborn-have"
 draft: false
 ---
-![台灣媽媽在明亮居家環境中親餵新生兒，寶寶嘴巴張大、下巴貼緊乳房](https://appi.news/images/how-to-tell-if-baby-is-getting-enough-milk/1.jpg "判斷寶寶吃飽與否，不能只看擠乳量，含乳姿勢與哺乳過程的觀察同樣重要")
+![台灣媽媽在明亮居家環境中親餵新生兒，寶寶嘴巴張大、下巴貼緊乳房](https://appi.news/images/how-to-tell-if-baby-is-getting-enough-milk/1.jpg "圖／who.int")
 
 擠乳瓶上的刻度，是許多新手父母判斷母奶夠不夠的第一個依據，也是最容易誤判的一個。上醫預防醫學發展協會（GCM）在衛教文章中指出，擠乳量與寶寶親餵時的實際攝取量「常常對不上」，兩者受到的生理機制原本就不同，用擠乳量推算親餵奶水是否充足，經常得出錯誤結論。真正能反映寶寶攝取狀況的，是含乳姿勢、吞嚥節律、體重曲線與尿布量這幾項可以客觀觀察與記錄的指標。
 
@@ -43,7 +43,7 @@ draft: false
 
 **觀察嘴巴是否張大、下唇是否外翻、下巴是否貼住乳房，以及餵奶過程是否聽得到規律的吞嚥聲**，這幾項合在一起看，比單一時間點的擠乳量更能反映寶寶有沒有有效吸吮。
 
-![含乳姿勢四個觀察重點資訊圖：嘴巴張大、下唇外翻、下巴貼乳房、可見規律吞嚥動作](https://appi.news/images/how-to-tell-if-baby-is-getting-enough-milk/2.svg "這四個徵兆一起觀察，比單看擠乳瓶上的數字更能判斷寶寶有沒有吃到奶")
+![含乳姿勢四個觀察重點資訊圖：嘴巴張大、下唇外翻、下巴貼乳房、可見規律吞嚥動作](https://appi.news/images/how-to-tell-if-baby-is-getting-enough-milk/2.jpg "圖／Pampers en-us")
 
 ### 嘴型與下巴貼合
 
@@ -92,7 +92,7 @@ draft: false
 
 ## 五、出現哪些警訊該尋求泌乳顧問或兒科協助
 
-![需就醫警訊資訊圖：體重未增加、尿布量偏少、嗜睡難喚醒、乳頭破皮疼痛、乳房紅腫發燒](https://appi.news/images/how-to-tell-if-baby-is-getting-enough-milk/3.svg "出現這些警訊之一，就該儘快找兒科或泌乳顧問協助，不必等到情況惡化")
+![需就醫警訊資訊圖：體重未增加、尿布量偏少、嗜睡難喚醒、乳頭破皮疼痛、乳房紅腫發燒](https://appi.news/images/how-to-tell-if-baby-is-getting-enough-milk/3.jpg "圖／上醫預防醫學發展協會")
 
 **寶寶體重未按曲線增加、尿布量持續偏少、清醒時吃奶次數明顯不足，或出現嗜睡難喚醒，都應儘快尋求兒科評估；媽媽若持續乳頭破皮疼痛，或乳房紅腫合併發燒，也應盡早就醫。**
 
@@ -128,3 +128,7 @@ GCM在衛教文章中建議，家長可先記錄餵食次數、尿布狀況與�
 
 ### Q4: 擠奶量一直很少，是不是代表要放棄親餵改配方奶？
 不需要單靠擠奶量做這個決定。擠乳效率因人、因泵而異，親餵時的實際攝取需另外透過含乳、吞嚥與尿布量觀察。若擔心奶量不足，建議先諮詢國際認證泌乳顧問（IBCLC）找出原因，再決定後續哺餵方式。
+
+## 資料來源
+
+本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[奶量不足怎麼辦？從寶寶攝取判斷，別只看擠乳量](https://gcm.org.tw/blog/nfant-intake-based-milk-supply-assessment/)

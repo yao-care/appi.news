@@ -13,7 +13,7 @@ status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
-readingTime: 10
+readingTime: 11
 references:
   - title: "謝欣庭（醫師撰文）. 不只用在醫美 疼痛治療更受矚目 PLT凍晶治療跨領域專家臨床對談. 上醫預防醫學發展協會"
     url: "https://gcm.org.tw/blog/plt-therapy-expert-clinical-discussion/"
@@ -128,3 +128,7 @@ PLT凍晶治療與PRP同樣來自患者自身血液，差異主要在保存與�
 PLT凍晶治療是從醫美延伸出來的再生醫學應用之一，臨床上已用於疼痛管理、運動傷害修復與退化性關節保養，但現有證據多來自PRP相關研究的延伸推論，實際成效因人因傷而異。
 
 隨著再生醫療雙法於2024年三讀通過，台灣的再生醫療製劑管理制度持續完善中，但血小板相關療程目前多以醫療技術形式在合格院所執行，而非納入藥品查驗登記的再生醫療製劑。對讀者而言，關鍵不在於這項技術是否「新」，而在於是否經過醫師完整評估、由具相關經驗的醫療院所執行。若對PLT凍晶治療是否適合自身狀況有疑問，建議諮詢合格醫療院所進行專業評估，而非自行判斷是否採用。
+
+## 資料來源
+
+本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[不只用在醫美 疼痛治療更受矚目 PLT凍晶治療跨領域專家臨床對談](https://gcm.org.tw/blog/plt-therapy-expert-clinical-discussion/)

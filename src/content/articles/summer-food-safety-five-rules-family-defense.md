@@ -13,7 +13,7 @@ status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
-readingTime: 12
+readingTime: 13
 references:
   - title: "衛生福利部（取用日期：2026年8月）。遵守五要原則，預防食品中毒"
     url: "https://www.mohw.gov.tw/cp-3250-29716-1.html"
@@ -23,7 +23,7 @@ references:
     url: "https://gcm.org.tw/blog/five-summer-food-safety-rules-for-safer-eating/"
 draft: false
 ---
-![夏日餐桌上放置常溫過久的便當與冰品，搭配食物溫度計，暗示溫度與時間是食物中毒的關鍵變因](https://appi.news/images/summer-food-safety-five-rules-family-defense/1.jpg "食物看起來沒有異狀，不代表安全，真正該注意的是離開冷藏或加熱後經過了多久時間")
+![夏日餐桌上放置常溫過久的便當與冰品，搭配食物溫度計，暗示溫度與時間是食物中毒的關鍵變因](https://appi.news/images/summer-food-safety-five-rules-family-defense/1.jpg "圖／who.int")
 
 ## 一、食物中毒的核心：溫度與時間的交互作用
 
@@ -39,7 +39,7 @@ draft: false
 
 這也是為什麼「保存溫度」與「暴露時間」必須一起管理：只顧著把食物放進冰箱、卻沒注意它在常溫下已經放了多久，或者加熱時只顧著把食物加熱到「看起來熟了」、卻沒讓中心溫度真正達到殺菌門檻，都無法有效降低風險。
 
-![危險溫度帶示意圖，標示攝氏7度到60度為細菌快速繁殖區間，並標註室溫放置兩小時後菌數可能翻倍多次](https://appi.news/images/summer-food-safety-five-rules-family-defense/2.png "細菌在攝氏7度到60度之間繁殖最快，食物在這個區間放得越久，風險累積得越明顯")
+![危險溫度帶示意圖，標示攝氏7度到60度為細菌快速繁殖區間，並標註室溫放置兩小時菌數可能翻倍多次](https://appi.news/images/summer-food-safety-five-rules-family-defense/2.jpg "圖／上醫預防醫學發展協會")
 
 ## 二、世界衛生組織「食品安全五要」原則
 
@@ -83,7 +83,7 @@ draft: false
 
 烤肉的風險多半來自生熟食交叉污染，而非烤肉本身的加熱溫度不足。處理生肉與已烤熟食物時，建議各自準備一組夾具、砧板與盤子，避免用夾過生肉的夾子直接夾取已烤熟的食物。判斷熟度時，肉類中心不應仍呈現生紅或半透明狀態，較安全的做法是搭配食物溫度計確認中心溫度，而非僅憑外觀或烤製時間判斷。
 
-![夏季四大高風險食物對照圖，分別標示冰品、海鮮、便當、烤肉的風險點與各自的安全溫度或時間數字](https://appi.news/images/summer-food-safety-five-rules-family-defense/3.svg "冰品、海鮮、便當、烤肉，風險來源各不相同，安全標準也要分開記，不能套用同一套規則")
+![夏季四大高風險食物對照圖，分別標示冰品、海鮮、便當、烤肉的風險點與安全溫度或時間數字](https://appi.news/images/summer-food-safety-five-rules-family-defense/3.jpg "圖／上醫預防醫學發展協會")
 
 ## 四、常見迷思破解：聞起來沒異味＝安全？
 
@@ -116,7 +116,7 @@ draft: false
 6. **留意暴露時間**：任何熟食一旦離開冷藏或加熱狀態，就開始計時，不以外觀或氣味判斷是否過期。
 7. **高風險族群加嚴標準**：家中有孕婦、幼兒、慢性病患者或長期服藥者，前述時間與溫度標準建議從嚴掌握。
 
-![家庭食安五要檢查清單卡片，以圖示列出清潔、生熟分開、澈底加熱、保存溫度、食材新鮮五個檢查項目](https://appi.news/images/summer-food-safety-five-rules-family-defense/4.svg "把五個原則變成看得到、記得住的檢查動作，比背誦抽象規則更容易在備餐時真正做到")
+![家庭食安五要檢查清單卡片，以圖示列出清潔、生熟分開、澈底加熱、保存溫度、食材新鮮五個檢查項目](https://appi.news/images/summer-food-safety-five-rules-family-defense/4.jpg "圖／上醫預防醫學發展協會")
 
 這份清單有助於降低食物中毒風險，可作為家庭日常衛生防護的參考，實際執行仍建議搭配衛生福利部與世界衛生組織的官方衛教指引使用。本文整理之保存溫度、時間與症狀資訊，主要依據公共衛生機構現行衛教指引，屬教育性質而非臨床診療建議；若對特定案例或最新統計數字有疑問，仍應以官方最新公告與醫師診斷為準。
 
@@ -136,3 +136,7 @@ draft: false
 
 ### Q5: 出現什麼症狀應該立即就醫？
 若出現嚴重脫水、血便、發燒達 38.5°C 以上，或腹瀉、嘔吐持續超過 48 小時，合併神經症狀，應盡快就醫。
+
+## 資料來源
+
+本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[夏季食安五要清單：冰品、海鮮、便當與烤肉怎麼吃更安心](https://gcm.org.tw/blog/five-summer-food-safety-rules-for-safer-eating/)

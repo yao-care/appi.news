@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="55" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="700" fill="#1B5E4B">含乳姿勢四個觀察重點</text>
+  <line x1="180" y1="80" x2="780" y2="80" stroke="#C9A227" stroke-width="3"/>
+
+  <!-- Row 1 -->
+  <rect x="80" y="110" width="800" height="105" rx="14" fill="#F2F7F5"/>
+  <circle cx="150" cy="162" r="38" fill="#1B5E4B"/>
+  <ellipse cx="150" cy="168" rx="20" ry="16" fill="#FFFFFF"/>
+  <path d="M130 168 Q150 190 170 168" stroke="#1B5E4B" stroke-width="4" fill="none"/>
+  <text x="215" y="152" font-family="sans-serif" font-size="24" font-weight="700" fill="#1F2A28">嘴巴張大</text>
+  <text x="215" y="184" font-family="sans-serif" font-size="17" fill="#6B7B77">含乳時嘴巴大幅張開，形成寬廣角度</text>
+  <circle cx="820" cy="162" r="18" fill="#C9A227"/>
+  <path d="M811 162 l7 7 l13 -15" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Row 2 -->
+  <rect x="80" y="230" width="800" height="105" rx="14" fill="#F2F7F5"/>
+  <circle cx="150" cy="282" r="38" fill="#2E8B6F"/>
+  <ellipse cx="150" cy="278" rx="18" ry="12" fill="#FFFFFF"/>
+  <path d="M133 292 Q150 306 167 292" stroke="#2E8B6F" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <text x="215" y="272" font-family="sans-serif" font-size="24" font-weight="700" fill="#1F2A28">下唇外翻</text>
+  <text x="215" y="304" font-family="sans-serif" font-size="17" fill="#6B7B77">下唇向外翻開，而非內縮夾住</text>
+  <circle cx="820" cy="282" r="18" fill="#C9A227"/>
+  <path d="M811 282 l7 7 l13 -15" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Row 3 -->
+  <rect x="80" y="350" width="800" height="105" rx="14" fill="#F2F7F5"/>
+  <circle cx="150" cy="402" r="38" fill="#1B5E4B"/>
+  <path d="M132 388 Q150 380 168 388" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M138 418 L150 406 L162 418 Z" fill="#FFFFFF"/>
+  <text x="215" y="392" font-family="sans-serif" font-size="24" font-weight="700" fill="#1F2A28">下巴貼乳房</text>
+  <text x="215" y="424" font-family="sans-serif" font-size="17" fill="#6B7B77">下巴緊貼乳房，鼻子保留呼吸空間</text>
+  <circle cx="820" cy="402" r="18" fill="#C9A227"/>
+  <path d="M811 402 l7 7 l13 -15" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Row 4 -->
+  <rect x="80" y="470" width="800" height="105" rx="14" fill="#F2F7F5"/>
+  <circle cx="150" cy="522" r="38" fill="#2E8B6F"/>
+  <path d="M128 522 Q136 508 144 522 Q152 536 160 522 Q168 508 176 522" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <text x="215" y="512" font-family="sans-serif" font-size="24" font-weight="700" fill="#1F2A28">規律吞嚥聲</text>
+  <text x="215" y="544" font-family="sans-serif" font-size="17" fill="#6B7B77">可聽見有節奏、規律的吞嚥動作</text>
+  <circle cx="820" cy="522" r="18" fill="#C9A227"/>
+  <path d="M811 522 l7 7 l13 -15" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

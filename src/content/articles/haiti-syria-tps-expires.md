@@ -1,9 +1,10 @@
 ---
 title: "美最高法院鬆綁後海地敘利亞TPS到期：近35萬海地人一夕失身份　估5萬美籍子女恐骨肉分離"
 slug: "haiti-syria-tps-expires"
-description: "美國最高法院6月25日以6比3裁定，國土安全部長認定臨時保護身份（TPS）存廢不受司法審查，為川普政府終止海地、敘利亞TPS掃清障礙。敘利亞TPS已於7月17日到期，海地TPS（因2010年強震設立，屆滿近16年）則於7月27日週一正式到期，近35萬名海地人與逾6千名敘利亞人同時失去遣返保護與工作許可。移民倡議團體海地橋樑聯盟示警，恐引發現代美國史上規模數一數二的家庭分離事件；普林斯頓大學研究者估計，約5萬名美國出生兒童的海地籍父母持有TPS，被迫在帶孩子返回幫派橫行的海地與忍痛分離之間抉擇。"
-excerpt: "美國最高法院6比3裁定TPS存廢不受司法審查後，海地TPS於7月27日正式到期，近35萬人失去遣返保護與工作許可，敘利亞TPS則已於7月17日到期。倡議團體警告恐釀大規模家庭分離，估計5萬名美籍子女的海地籍父母首當其衝。"
+description: "美國最高法院6月25日以6比3裁定，國土安全部長認定臨時保護身份（TPS）存廢不受司法審查，為川普政府終止海地、敘利亞TPS掃清障礙。敘利亞TPS已於7月17日到期，海地TPS（因2010年強震設立，屆滿近16年）則於7月27日週一正式到期，近35萬名海地人與逾6千名敘利亞人同時失去遣返保護與工作許可。馬里蘭州東岸的海地社區已可見具體衝擊：教會週日禮拜出席腰斬、社區活動接連取消。移民倡議團體海地橋樑聯盟示警，恐引發現代美國史上規模數一數二的家庭分離事件。"
+excerpt: "美國最高法院6比3裁定TPS存廢不受司法審查後，海地TPS於7月27日正式到期，近35萬人失去遣返保護與工作許可。馬里蘭州東岸海地社區教會出席人數腰斬、社區活動取消，恐懼已從法律風險蔓延到日常生活。"
 publishDate: "2026-07-30T16:58:48.148Z"
+updatedDate: "2026-08-05T16:35:42.395Z"
 category: "international"
 subcategory: "americas"
 tags:
@@ -18,10 +19,13 @@ highlights:
   - "普林斯頓大學研究者估計，約5萬名美國出生兒童的父母持有海地TPS，面臨帶孩子返回海地或忍痛分離的抉擇"
   - "海地總統2021年遇刺後，武裝幫派控制大片領土、基礎設施與經濟，美國國務院強烈建議國民勿前往海地"
   - "敘利亞方面，2024年12月阿薩德政權垮台後，國土安全部認定當地已從全面內戰轉為零星暴力，加上美國大使館自2012年起關閉、難以審查申請人背景，成為終止依據"
+  - "工作許可7月27日未獲延長後，馬里蘭州東岸薩利斯伯里市海地社區教會週日禮拜出席人數腰斬，婚前派對、庭院烤肉義賣、英語課程接連取消"
+  - "薩利斯伯里約3.3萬居民中一成為海地人，多從事家禽加工廠、農場與長照機構工作，是當地經濟重要人力"
 risksAndLimits:
   - "最高法院裁決僅認定TPS存廢不受司法審查，未處理個別移民其他合法身份申請的效力"
   - "家庭分離人數為普林斯頓大學研究者估計值，非官方普查數字"
   - "海地治安與國務院旅遊警示反映7月現況，後續可能變動"
+  - "馬里蘭州東岸社區現況為單一地區個案，全美海地TPS社群受衝擊程度可能因地區產業結構而異"
 references:
   - title: "What's next for immigrants with TPS status after Supreme Court ruling"
     url: "https://www.pbs.org/newshour/politics/whats-next-for-immigrants-with-tps-status-after-supreme-court-ruling"
@@ -35,6 +39,12 @@ references:
   - title: "Termination of the Designation of Syria for Temporary Protected Status (Federal Register)"
     url: "https://www.govinfo.gov/content/pkg/FR-2025-09-22/html/2025-18322.htm"
     publisher: "U.S. Federal Register / govinfo.gov"
+  - title: "Empty pews and fear of ICE grip Maryland's Eastern Shore after TPS ends for Haitians"
+    url: "https://haitiantimes.com/2026/08/05/maryland-haitian-community-fear-after-tps-ends/"
+    publisher: "The Haitian Times（轉載美聯社）"
+  - title: "Empty pews and fear of ICE on Maryland's Eastern Shore after TPS ends for Haitians"
+    url: "https://abcnews.com/Politics/wireStory/empty-pews-fear-ice-marylands-eastern-shore-after-135382907"
+    publisher: "ABC News（美聯社）"
 author: "appi-editorial"
 reviewedBy:
   - "luo-yang"
@@ -76,4 +86,17 @@ TPS到期最直接衝擊的是混合身份家庭。[NPR經WLRN轉載的報導](h
 
 [NPR經WLRN轉載的報導](https://www.wlrn.org/immigration/2026-07-23/families-brace-for-separation-as-haitians-set-to-lose-protected-status-next-week)指出，海地總統2021年遇刺後，武裝幫派已控制當地大片領土、基礎設施與經濟活動，嚴重限制居民的行動自由；美國國務院對海地維持最高等級的旅遊警示，強烈建議國民不要前往，理由包括綁架與幫派暴力事件頻傳。這也是Jozef與多名家長最擔憂的核心：即便失去TPS保護，當地治安狀況仍未改善到足以讓美籍子女安全生活的程度。眾議院民主黨籍議員Sylvia Garcia（德州）也公開表示，TPS保護終止將使海地人直接暴露在遣返風險之下。
 
-海地與敘利亞TPS到期後，兩國移民能否留在美國，將取決於各自是否持有其他合法身份；對缺乏替代身份的數十萬人而言，這場延宕近一年的訴訟攻防，最終仍以驅逐風險畫下句點。
+## 馬里蘭州東岸實況：教會出席腰斬、社區活動接連取消
+
+<figure>
+<img src="/images/haiti-syria-tps-expires-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="教堂內空蕩的木製長椅座位">
+<figcaption>工作許可到期後，馬里蘭州薩利斯伯里市海地社群教會的週日禮拜出席人數銳減。（示意圖／Photo by Karl Raymund Catabas on Unsplash）</figcaption>
+</figure>
+
+工作許可7月27日未獲延長後，恐懼已從法律風險延燒到日常生活。[The Haitian Times轉載的美聯社報導](https://haitiantimes.com/2026/08/05/maryland-haitian-community-fear-after-tps-ends/)指出，馬里蘭州東岸薩利斯伯里市的Word of Life Center教會，長年是當地海地社群的活動中心；自1995年起主持該會的牧師Roosevelt Toussaint說，上週日的禮拜出席人數較平常超過500人的規模腰斬逾半，一場婚前淋浴派對、一場庭院烤肉義賣、以及英語課程都被迫取消。[ABC News轉載的美聯社報導](https://abcnews.com/Politics/wireStory/empty-pews-fear-ice-marylands-eastern-shore-after-135382907)指出，薩利斯伯里約3.3萬居民中一成是海地人，許多人持TPS身份在家禽加工廠、農場與長照機構工作，是當地經濟的重要人力來源；不少人如今不敢輕易離家，擔心一出門就被美國移民及海關執法局（ICE）人員逮捕拘留。Toussaint牧師呼籲：「我們期待你們對我們的人民有同情心，他們沒有做錯任何事，只是想為經濟做出貢獻。」
+
+海地與敘利亞TPS到期後，兩國移民能否留在美國，將取決於各自是否持有其他合法身份；對缺乏替代身份的數十萬人而言，這場延宕近一年的訴訟攻防，最終仍以驅逐風險畫下句點，而馬里蘭州東岸的空蕩座席，已是這場風險落地的第一批具體畫面。
+
+## 更新時間軸
+
+- （2026-08-05）馬里蘭州東岸薩利斯伯里市海地社群現況曝光：工作許可7月27日未延長後，Word of Life Center教會週日禮拜出席人數腰斬，婚前派對、庭院烤肉義賣、英語課程接連取消，當地約一成居民為海地籍、多任職家禽加工廠與長照機構。（[The Haitian Times轉載美聯社](https://haitiantimes.com/2026/08/05/maryland-haitian-community-fear-after-tps-ends/)、[ABC News轉載美聯社](https://abcnews.com/Politics/wireStory/empty-pews-fear-ice-marylands-eastern-shore-after-135382907)）

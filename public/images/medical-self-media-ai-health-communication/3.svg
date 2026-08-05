@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="60" text-anchor="middle" font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" font-size="30" font-weight="700" fill="#1B5E4B">正確健康資訊帶來的三項效益</text>
+
+  <line x1="480" y1="230" x2="480" y2="150" stroke="#2E8B6F" stroke-width="3"/>
+  <line x1="480" y1="230" x2="230" y2="420" stroke="#2E8B6F" stroke-width="3"/>
+  <line x1="480" y1="230" x2="730" y2="420" stroke="#2E8B6F" stroke-width="3"/>
+
+  <circle cx="480" cy="170" r="80" fill="#1B5E4B"/>
+  <text x="480" y="164" text-anchor="middle" font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">正確</text>
+  <text x="480" y="192" text-anchor="middle" font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">健康資訊</text>
+
+  <rect x="110" y="420" width="240" height="150" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="230" cy="470" r="28" fill="#C9A227"/>
+  <path d="M 218 470 L 227 480 L 244 458" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="230" y="525" text-anchor="middle" font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" font-size="22" font-weight="700" fill="#1F2A28">降低偽科學</text>
+  <text x="230" y="552" text-anchor="middle" font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" font-size="15" fill="#6B7B77">減少不實訊息傳播</text>
+
+  <rect x="360" y="420" width="240" height="150" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="480" cy="470" r="28" fill="#C9A227"/>
+  <rect x="466" y="456" width="28" height="24" rx="2" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="480" y1="456" x2="480" y2="480" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="480" y="525" text-anchor="middle" font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" font-size="22" font-weight="700" fill="#1F2A28">提升健康識能</text>
+  <text x="480" y="552" text-anchor="middle" font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" font-size="15" fill="#6B7B77">看懂資訊、做對判斷</text>
+
+  <rect x="610" y="420" width="240" height="150" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="730" cy="470" r="28" fill="#C9A227"/>
+  <path d="M 716 466 L 730 476 L 744 466" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="730" cy="462" r="8" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="730" y="525" text-anchor="middle" font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" font-size="22" font-weight="700" fill="#1F2A28">建立信任</text>
+  <text x="730" y="552" text-anchor="middle" font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" font-size="15" fill="#6B7B77">強化醫病與社會互信</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

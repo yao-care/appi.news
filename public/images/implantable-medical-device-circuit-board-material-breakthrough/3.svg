@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <style>
+    .title{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:30px;font-weight:700;fill:#1B5E4B;}
+    .num{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:34px;font-weight:700;fill:#C9A227;}
+    .label{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:19px;font-weight:700;fill:#1F2A28;}
+    .sub{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:14px;fill:#6B7B77;}
+  </style>
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="52" text-anchor="middle" class="title">四項關鍵數據總覽</text>
+  <line x1="400" y1="66" x2="560" y2="66" stroke="#C9A227" stroke-width="3"/>
+
+  <rect x="40" y="100" width="420" height="200" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="100" cy="160" r="30" fill="#1B5E4B"/>
+  <path d="M104 142 L88 165 H100 L96 180 L114 155 H102 Z" fill="#FFFFFF"/>
+  <text x="150" y="150" class="sub">液態金屬導電率</text>
+  <text x="150" y="188" class="num">1.71×10⁶</text>
+  <text x="150" y="216" class="label">西門子／公尺</text>
+
+  <rect x="500" y="100" width="420" height="200" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="560" cy="160" r="30" fill="#2E8B6F"/>
+  <g fill="#FFFFFF">
+    <rect x="547" y="147" width="8" height="8"/>
+    <rect x="558" y="147" width="8" height="8"/>
+    <rect x="569" y="147" width="8" height="8"/>
+    <rect x="547" y="158" width="8" height="8"/>
+    <rect x="558" y="158" width="8" height="8"/>
+    <rect x="569" y="158" width="8" height="8"/>
+    <rect x="547" y="169" width="8" height="8"/>
+    <rect x="558" y="169" width="8" height="8"/>
+    <rect x="569" y="169" width="8" height="8"/>
+  </g>
+  <text x="610" y="150" class="sub">電晶體密度</text>
+  <text x="610" y="188" class="num">約1萬顆</text>
+  <text x="610" y="216" class="label">每平方公分</text>
+
+  <rect x="40" y="330" width="420" height="200" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="100" cy="390" r="30" fill="#1B5E4B"/>
+  <path d="M86 391 L96 401 L116 378" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="150" y="380" class="sub">心臟波前定位</text>
+  <text x="150" y="418" class="num">99.6%</text>
+  <text x="150" y="446" class="label">運算準確率</text>
+
+  <rect x="500" y="330" width="420" height="200" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="560" cy="390" r="30" fill="#2E8B6F"/>
+  <path d="M545 390 H575 M545 390 L552 383 M545 390 L552 397 M575 390 L568 383 M575 390 L568 397" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="610" y="380" class="sub">可拉伸至</text>
+  <text x="610" y="418" class="num">1.5倍長度</text>
+  <text x="610" y="446" class="label">仍維持效能</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

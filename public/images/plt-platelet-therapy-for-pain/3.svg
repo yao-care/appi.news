@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <style>
+    .title { font-family: "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; font-size: 34px; font-weight: 700; fill: #1B5E4B; }
+    .sub { font-family: "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; font-size: 18px; fill: #6B7B77; }
+    .label { font-family: "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; font-size: 26px; font-weight: 700; fill: #1F2A28; }
+    .en { font-family: "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; font-size: 15px; fill: #6B7B77; }
+  </style>
+
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+
+  <text x="480" y="70" text-anchor="middle" class="title">PLT 凍晶治療常見應用部位</text>
+  <text x="480" y="102" text-anchor="middle" class="sub">四大部位並列示意，適用範圍同等重要</text>
+
+  <rect x="60" y="150" width="195" height="330" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <path d="M 115 250 Q 157 220 200 250 Q 157 280 115 250" fill="none" stroke="#1B5E4B" stroke-width="6" stroke-linecap="round"/>
+  <line x1="100" y1="250" x2="215" y2="250" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/>
+  <text x="157" y="380" text-anchor="middle" class="label">肌腱</text>
+  <text x="157" y="410" text-anchor="middle" class="en">Tendon</text>
+
+  <rect x="275" y="150" width="195" height="330" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="330" y1="225" x2="420" y2="285" stroke="#1B5E4B" stroke-width="7" stroke-linecap="round"/>
+  <line x1="420" y1="225" x2="330" y2="285" stroke="#2E8B6F" stroke-width="7" stroke-linecap="round"/>
+  <text x="372" y="380" text-anchor="middle" class="label">韌帶</text>
+  <text x="372" y="410" text-anchor="middle" class="en">Ligament</text>
+
+  <rect x="490" y="150" width="195" height="330" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <path d="M 545 285 L 580 285 L 600 250 L 620 285 L 640 285" fill="none" stroke="#1B5E4B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="250" r="6" fill="#C9A227"/>
+  <text x="587" y="380" text-anchor="middle" class="label">神經</text>
+  <text x="587" y="410" text-anchor="middle" class="en">Nerve</text>
+
+  <rect x="705" y="150" width="195" height="330" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <rect x="750" y="225" width="40" height="55" rx="10" fill="#1B5E4B"/>
+  <rect x="815" y="225" width="40" height="55" rx="10" fill="#2E8B6F"/>
+  <circle cx="802" cy="252" r="12" fill="none" stroke="#C9A227" stroke-width="4"/>
+  <text x="802" y="380" text-anchor="middle" class="label">關節</text>
+  <text x="802" y="410" text-anchor="middle" class="en">Joint</text>
+
+  <text x="480" y="555" text-anchor="middle" class="sub">四項部位以並列方式呈現，無先後順序之分</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

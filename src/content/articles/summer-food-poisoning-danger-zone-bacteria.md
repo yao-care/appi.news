@@ -8,7 +8,7 @@ subcategory: preventive
 tags: ["食品安全", "公共衛生", "傳染病防治", "預防醫學"]
 author: "appi-editorial"
 coverImage: "covers/summer-food-poisoning-danger-zone-bacteria.webp"
-coverAlt: "聚餐後的菜餚留在餐桌上，於室溫下持續放置的情境照"
+coverAlt: "聚餐後剩菜留在餐桌上的情境照，象徵食物在室溫下持續暴露的風險"
 status: published
 sourceType: editorial
 contentType: news
@@ -35,7 +35,7 @@ draft: false
 
 **關鍵不在單一店家的疏失，而在一個每年夏天都會重演的物理與生物學問題**：食物只要落在特定溫度區間，細菌數量就會以倍數速度失控成長。這個區間有名字，叫「危險溫度帶」。
 
-![聚餐後的菜餚留在餐桌上，於室溫下持續放置的情境照](https://appi.news/images/summer-food-poisoning-danger-zone-bacteria/1.jpg "食物安不安全，關鍵不是看起來如何，而是離開安全溫度後經過了多久。")
+![聚餐後剩菜留在餐桌上的情境照，象徵食物在室溫下持續暴露的風險](https://appi.news/images/summer-food-poisoning-danger-zone-bacteria/1.jpg "圖／上醫預防醫學發展協會")
 
 這篇文章不談恐慌，只談判準。理解危險溫度帶背後的細菌繁殖機制，能把「這個還能吃嗎」這種憑感覺的猜測，轉換成有科學依據的時間與溫度判斷。
 
@@ -55,7 +55,7 @@ draft: false
 
 二分裂是指數成長，不是線性成長，這是多數人低估風險的關鍵。以20分鐘倍增一次計算，2小時(120分鐘)之內會發生120÷20=6次分裂，菌數變化是2的6次方，也就是1翻成64倍。
 
-![細菌二分裂倍增時間軸圖，顯示每20分鐘分裂一次，2小時後菌數從1增加到64倍](https://appi.news/images/summer-food-poisoning-danger-zone-bacteria/2.png "每20分鐘分裂一次，2小時內菌數就能從1暴增到64倍，這正是危險溫度帶危險的核心機制。")
+![細菌二分裂倍增時間軸圖，顯示每20分鐘分裂一次，2小時後菌數從1增加到64倍](https://appi.news/images/summer-food-poisoning-danger-zone-bacteria/2.jpg "圖／食力 foodNEXT")
 
 這個數字之所以重要，是因為食物中毒的發病門檻往往取決於「攝入的活菌總量」。初始污染量可能極少、遠低於致病門檻，但只要放置時間夠長、溫度夠適合，原本微量的污染就可能在幾個小時內累積到足以讓人生病的規模。食藥署把「時間」當成和「溫度」同等重要的變數，用意就在這裡。
 
@@ -69,7 +69,7 @@ draft: false
 
 不是危險溫度帶裡的每一度都同樣危險。以沙門氏菌為例，食藥署資料顯示其可在4°C至48°C間存活，但生長速度在**35°C至37°C達到高峰**；金黃色葡萄球菌的最適生長溫度同樣落在35°C至37°C；仙人掌桿菌雖然生長範圍更寬(10°C至50°C)，最適溫度則落在30°C左右。三者的共同點很清楚：台灣夏天的室溫，幾乎精準命中這些致病菌的「舒適圈」。
 
-![溫度與細菌繁殖速率關係圖，標示危險溫度帶區間與35至37度的繁殖高峰](https://appi.news/images/summer-food-poisoning-danger-zone-bacteria/3.png "危險溫度帶不是每一度都一樣危險，35至37度才是繁殖速率的高峰。")
+![溫度與細菌繁殖速率關係圖，標示危險溫度帶區間與35至37度的繁殖高峰](https://appi.news/images/summer-food-poisoning-danger-zone-bacteria/3.jpg "圖／fda.gov.tw")
 
 高雄春捲案的致病菌正是沙門氏菌，案發於清明連假，業者短時間大量製作後於室溫下販售，時序與溫度條件都與上述機制相符，正是危險溫度帶在現實情境中的具體呈現。
 
@@ -89,7 +89,7 @@ draft: false
 
 ### 室溫、冷藏、冷凍的實用時間表
 
-![食物保存時間對照表資訊圖，顯示室溫2小時、32度以上1小時、冷藏7度以下、冷凍的保存原則](https://appi.news/images/summer-food-poisoning-danger-zone-bacteria/4.svg "室溫2小時、32度以上1小時、冷藏7度以下，記住這幾個數字，就能把猜測換成判斷。")
+![食物保存時間對照表資訊圖，顯示室溫2小時、32度以上1小時、冷藏7度以下、冷凍的保存原則](https://appi.news/images/summer-food-poisoning-danger-zone-bacteria/4.jpg "圖／上醫預防醫學發展協會")
 
 1. **設定倒數計時**：食物一離開加熱或製作完成的狀態，就是危險溫度帶倒數的起點。一般環境設定2小時，盛夏或戶外聚餐設定1小時，時間到了不論看起來如何都不再吃常溫放置的熟食。
 2. **加熱要澈底**：食藥署建議中心溫度應達70°C以上才能有效殺滅多數病原菌；若懷疑已產生毒素(如金黃色葡萄球菌)，加熱也無法完全消除風險，應直接捨棄。
@@ -133,3 +133,7 @@ draft: false
 
 ### Q5: 隔夜菜加熱過就一定安全嗎？
 不一定。加熱能殺死大部分活菌，但像金黃色葡萄球菌釋出的腸毒素對熱穩定，一般家庭復熱難以完全破壞，真正的關鍵是食物在冷藏前，於危險溫度帶累計暴露了多久。
+
+## 資料來源
+
+本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[夏天食物為什麼容易壞？從危險溫度帶看懂細菌繁殖](https://gcm.org.tw/blog/summer-food-spoilage-and-bacterial-danger-zone/)

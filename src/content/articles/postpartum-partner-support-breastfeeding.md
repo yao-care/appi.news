@@ -8,12 +8,12 @@ subcategory: mental-health
 tags: ["心理健康", "女性健康", "育兒健康", "睡眠與疲勞", "公共衛生"]
 author: "appi-editorial"
 coverImage: "covers/postpartum-partner-support-breastfeeding.webp"
-coverAlt: "以媽媽為中心,向外連結伴侶、家人、朋友與專業資源的產後支持網絡示意圖"
+coverAlt: "伴侶在家中一邊備餐一邊查看餵奶時間記錄的居家情境"
 status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
-readingTime: 12
+readingTime: 13
 references:
   - title: "Grattan RE, London SM, Bueno GE. (2024). Perceived pressure to breastfeed negatively impacts postpartum mental health outcomes over time. *Frontiers in Public Health"
     url: "https://pubmed.ncbi.nlm.nih.gov/38638486/"
@@ -46,6 +46,8 @@ draft: false
 ## 伴侶能做的事：從監督者變成分工者
 
 **具體的家務分工與生活支持，比口頭關心奶量更能延續哺乳。** 一篇 2020 年發表於《International Journal of Environmental Research and Public Health》的系統性回顧指出，伴侶協助處理哺乳困難、分擔家務與照顧工作，是提升哺乳持續時間與純哺乳率最有效的支持行動之一。
+
+![伴侶在家中一邊備餐一邊查看餵奶時間記錄的居家情境](https://appi.news/images/postpartum-partner-support-breastfeeding/1.jpg "圖／dep.mohw.gov.tw")
 
 這篇回顧分析了七項相關研究，發現伴侶提供的支持可以分成幾種類型：言語鼓勵、協助處理哺乳困難、分擔家務與育兒工作。其中，家務與育兒工作的分擔，是唯一同時關聯到哺乳持續時間延長與純哺乳率提高的支持方式，效果比單純的口頭鼓勵更明確。這也代表，伴侶想幫忙時，行動比言語更有分量。
 
@@ -86,6 +88,8 @@ draft: false
 
 **與其比較或給建議，先問「妳現在最需要我做什麼」**，讓媽媽自己定義當下最迫切的需求，而不是由伴侶預設答案。
 
+![伴侶專注聆聽產後媽媽說話的居家對話情境](https://appi.news/images/postpartum-partner-support-breastfeeding/2.jpg "圖／上醫預防醫學發展協會")
+
 ### 「問需求」而非「給答案」的溝通方式
 
 「妳現在最需要我幫忙做什麼？」和「奶夠不夠？」看起來都是關心，差別在於誰決定問題的答案。前者把定義權交還給媽媽，讓她可以說出當下真正卡住的地方，可能是想睡覺、想有人聽她說話、或單純想有人把碗洗掉；後者則預設了唯一重要的變數是奶量，把媽媽的注意力拉回一個她可能無法控制、也不一定是當下最困擾她的問題上。
@@ -100,7 +104,7 @@ draft: false
 
 原生家庭的協助（例如長輩幫忙備餐或照顧其他子女）可以有效分擔壓力，但也容易帶入不同世代的育兒觀念差異，例如對哺乳方式、坐月子作息的看法不一致。建議伴侶與媽媽先對外溝通「哪些事歡迎幫忙、哪些決定由父母自己做」，避免額外的協調成本反而增加負擔。
 
-![以媽媽為中心,向外連結伴侶、家人、朋友與專業資源的產後支持網絡示意圖](https://appi.news/images/postpartum-partner-support-breastfeeding/3.svg "伴侶之外,家人、朋友與泌乳顧問、心理諮商都是可以並行動用的支持來源")
+![以媽媽為中心，向外連結伴侶、家人、朋友與專業資源的產後支持網絡示意圖](https://appi.news/images/postpartum-partner-support-breastfeeding/3.jpg "圖／上醫預防醫學發展協會")
 
 上醫預防醫學發展協會在相關衛教文章中提到，真正的哺乳支持，是讓媽媽不必獨自面對這一切，而不是把注意力全部放在奶瓶刻度上。
 
@@ -129,6 +133,8 @@ draft: false
 
 **把「奶夠不夠」換成「妳需要什麼」，把關心變成分工**，是目前研究上最一致支持、也最容易立刻執行的哺乳支持方式。
 
-![伴侶協助照顧寶寶讓媽媽得以休息的家庭日常畫面](https://appi.news/images/postpartum-partner-support-breastfeeding/4.jpg "分工落實之後,媽媽才有機會擁有一段真正屬於自己的休息時間（圖／上醫預防醫學發展協會）")
-
 哺乳能否延續，從來不是媽媽一個人的責任，也不該由奶量這一個數字來決定。家務分工、睡眠安排、看不見的周邊勞動、情緒支持，每一項都在影響哺乳是否能走得下去。這週不妨找一個時間，和伴侶一起看一次目前的分工清單，找出一件可以立刻調整的事，從那裡開始。
+
+## 資料來源
+
+本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[別再只問媽媽「奶夠不夠」：真正的哺乳支持，是讓她不用一個人撐](https://gcm.org.tw/blog/maternal-breastfeeding-support/)

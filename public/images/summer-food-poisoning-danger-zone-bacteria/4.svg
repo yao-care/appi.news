@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="55" text-anchor="middle" font-size="34" font-weight="700" fill="#1B5E4B">食物保存時間對照表</text>
+  <line x1="330" y1="78" x2="630" y2="78" stroke="#C9A227" stroke-width="4"/>
+  <rect x="40" y="120" width="200" height="380" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="140" cy="220" r="55" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="6"/>
+  <line x1="140" y1="220" x2="140" y2="182" stroke="#1B5E4B" stroke-width="6" stroke-linecap="round"/>
+  <line x1="140" y1="220" x2="168" y2="232" stroke="#C9A227" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="140" cy="220" r="6" fill="#1B5E4B"/>
+  <text x="140" y="320" text-anchor="middle" font-size="26" font-weight="700" fill="#1B5E4B">室溫</text>
+  <text x="140" y="360" text-anchor="middle" font-size="38" font-weight="700" fill="#C9A227">2 小時</text>
+  <text x="140" y="400" text-anchor="middle" font-size="18" fill="#6B7B77">內須冷藏或食用</text>
+  <text x="140" y="430" text-anchor="middle" font-size="18" fill="#6B7B77">完畢</text>
+  <rect x="260" y="120" width="200" height="380" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <rect x="345" y="170" width="20" height="110" rx="10" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="5"/>
+  <circle cx="355" cy="300" r="26" fill="#C9A227" stroke="#2E8B6F" stroke-width="5"/>
+  <rect x="349" y="215" width="12" height="75" rx="6" fill="#C9A227"/>
+  <text x="360" y="360" text-anchor="middle" font-size="26" font-weight="700" fill="#2E8B6F">高溫環境</text>
+  <text x="360" y="400" text-anchor="middle" font-size="34" font-weight="700" fill="#C9A227">32°C 以上</text>
+  <text x="360" y="435" text-anchor="middle" font-size="18" fill="#6B7B77">限 1 小時內</text>
+  <rect x="480" y="120" width="200" height="380" rx="16" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <rect x="545" y="165" width="70" height="140" rx="8" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="5"/>
+  <line x1="545" y1="235" x2="615" y2="235" stroke="#1B5E4B" stroke-width="4"/>
+  <circle cx="600" cy="185" r="4" fill="#1B5E4B"/>
+  <circle cx="600" cy="255" r="4" fill="#1B5E4B"/>
+  <text x="580" y="360" text-anchor="middle" font-size="26" font-weight="700" fill="#1B5E4B">冷藏</text>
+  <text x="580" y="400" text-anchor="middle" font-size="34" font-weight="700" fill="#C9A227">7°C 以下</text>
+  <text x="580" y="435" text-anchor="middle" font-size="18" fill="#6B7B77">妥善保鮮</text>
+  <rect x="700" y="120" width="200" height="380" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <rect x="765" y="165" width="70" height="140" rx="8" fill="#FFFFFF" stroke="#2E8B6F" stroke-width="5"/>
+  <line x1="800" y1="185" x2="800" y2="245" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="778" y1="196" x2="822" y2="234" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="822" y1="196" x2="778" y2="234" stroke="#2E8B6F" stroke-width="4"/>
+  <text x="800" y="360" text-anchor="middle" font-size="26" font-weight="700" fill="#2E8B6F">冷凍</text>
+  <text x="800" y="400" text-anchor="middle" font-size="34" font-weight="700" fill="#C9A227">-18°C 以下</text>
+  <text x="800" y="435" text-anchor="middle" font-size="18" fill="#6B7B77">長期保存</text>
+  <text x="480" y="565" text-anchor="middle" font-size="16" fill="#6B7B77">食材保存原則示意，實際保存條件依食品種類調整</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

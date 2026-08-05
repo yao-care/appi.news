@@ -13,7 +13,7 @@ status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
-readingTime: 9
+readingTime: 10
 references:
   - title: "衛生福利部食品藥物管理署（無日期）。食品中毒常見問與答"
     url: "https://www.fda.gov.tw/TC/sitecontent.aspx?sid=2572"
@@ -27,7 +27,7 @@ draft: false
 
 ## 一、手搖飲的隱形風險：冰塊、吸管與封口機
 
-![手搖飲店員以冰鏟盛裝冰塊的日常操作畫面](https://appi.news/images/summer-takeout-food-safety-tips/1.jpg "判斷手搖飲衛不衛生,關鍵藏在冰鏟怎麼拿,不是店面裝潢新舊")
+![手搖飲店員以冰鏟盛裝冰塊的日常操作畫面](https://appi.news/images/summer-takeout-food-safety-tips/1.jpg "圖／上醫預防醫學發展協會")
 
 衛生福利部食品藥物管理署公布「114年度現場調製飲品及冰品稽查專案」結果，稽查389家業者、抽驗430件現場調製飲料與冰品，其中6件檢出腸桿菌科超標，違規業者已依法處辦。這項稽查涵蓋食品業者登錄、良好衛生規範、原料來源文件與衛生標準抽驗，是官方每年例行針對飲冰品業者的把關動作。
 
@@ -45,7 +45,7 @@ draft: false
 
 ## 三、室溫危險帶：為什麼便當不能放整個下午
 
-![溫度區間對照圖，標示冷藏、危險溫度帶與熱藏三個區間及室溫存放建議時限](https://appi.news/images/summer-takeout-food-safety-tips/2.png "便當落在7至60度之間就進入危險帶,夏天超過32度時安全存放時間還要再打對折")
+![食物保存溫度對照圖，標示7至60度危險溫度帶](https://appi.news/images/summer-takeout-food-safety-tips/2.jpg "圖／上醫預防醫學發展協會")
 
 **官方建議室溫下不超過兩小時，夏天氣溫超過三十二度時應縮短在一小時內食用完畢。**
 
@@ -70,7 +70,7 @@ draft: false
 
 ## 五、上班族自保清單：訂餐、取餐與食用的時間掌握
 
-![上班族外食時間掌握流程圖，依序為訂餐、取餐、食用與剩食回鍋四個步驟](https://appi.news/images/summer-takeout-food-safety-tips/3.png "從訂餐到吃下肚,每一步都在跟時間賽跑,掌握順序才是最簡單的自保方法")
+![上班族外食自保清單資訊圖，涵蓋訂餐、取餐、食用與剩食處理四個時間節點](https://appi.news/images/summer-takeout-food-safety-tips/3.jpg "圖／上醫預防醫學發展協會")
 
 **把訂餐、取餐、食用三個時間點都掌握在安全範圍內，是外食族最簡單可行的自保方法。**
 
@@ -103,3 +103,7 @@ draft: false
 
 ### Q5: 哪些族群要特別小心外食衛生風險？
 孕婦、兒童、慢性病患者與長期服藥者，因免疫或代謝狀況相對敏感，暴露於同樣的污染食物時出現腸胃不適的風險可能較高，這幾類族群在外食保存時間的拿捏上，建議比一般建議再保守一些，若出現不適也應及早就醫。
+
+## 資料來源
+
+本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[一杯冰飲、一盒便當：炎夏外食族最常忽略的腸胃風險](https://gcm.org.tw/blog/five-safety-checks-for-summer-takeout-foods/)

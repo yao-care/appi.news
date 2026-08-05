@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <style>
+    .title { font-family: "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; font-size: 30px; font-weight: 700; fill: #1B5E4B; text-anchor: middle; }
+    .node-label { font-family: "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; font-size: 15px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; dominant-baseline: middle; }
+    .center-label { font-family: "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; font-size: 22px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; dominant-baseline: middle; }
+    .caption { font-family: "Noto Sans CJK TC","Microsoft JhengHei",sans-serif; font-size: 14px; fill: #6B7B77; text-anchor: middle; }
+    .link { stroke: #C9A227; stroke-width: 3; }
+  </style>
+
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF" />
+  <rect x="30" y="20" width="900" height="560" rx="20" fill="#F2F7F5" />
+
+  <text x="480" y="70" class="title">產後支持網絡</text>
+
+  <line x1="480" y1="330" x2="480" y2="150" class="link" />
+  <line x1="480" y1="330" x2="700" y2="230" class="link" />
+  <line x1="480" y1="330" x2="700" y2="440" class="link" />
+  <line x1="480" y1="330" x2="260" y2="440" class="link" />
+  <line x1="480" y1="330" x2="260" y2="230" class="link" />
+
+  <circle cx="480" cy="150" r="52" fill="#2E8B6F" stroke="#1B5E4B" stroke-width="3" />
+  <text x="480" y="150" class="node-label">伴侶</text>
+
+  <circle cx="700" cy="230" r="52" fill="#2E8B6F" stroke="#1B5E4B" stroke-width="3" />
+  <text x="700" y="230" class="node-label">家人</text>
+
+  <circle cx="700" cy="440" r="52" fill="#2E8B6F" stroke="#1B5E4B" stroke-width="3" />
+  <text x="700" y="440" class="node-label">朋友</text>
+
+  <circle cx="260" cy="440" r="56" fill="#2E8B6F" stroke="#1B5E4B" stroke-width="3" />
+  <text x="260" y="432" class="node-label">哺乳</text>
+  <text x="260" y="452" class="node-label">諮詢師</text>
+
+  <circle cx="260" cy="230" r="56" fill="#2E8B6F" stroke="#1B5E4B" stroke-width="3" />
+  <text x="260" y="222" class="node-label">心理健康</text>
+  <text x="260" y="242" class="node-label">專線</text>
+
+  <circle cx="480" cy="330" r="70" fill="#1B5E4B" stroke="#C9A227" stroke-width="4" />
+  <text x="480" y="330" class="center-label">媽媽</text>
+
+  <text x="480" y="555" class="caption">以媽媽為中心，連結家庭、朋友與專業資源，共同陪伴產後這段路</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

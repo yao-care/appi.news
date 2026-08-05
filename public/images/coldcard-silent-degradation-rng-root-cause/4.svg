@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="56" text-anchor="middle" font-size="30" font-weight="700" fill="#1B5E4B">安全檢查三要點</text>
+  <text x="480" y="86" text-anchor="middle" font-size="16" fill="#6B7B77">三者為並列項目，無先後順序</text>
+
+  <rect x="80" y="130" width="240" height="330" rx="14" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <rect x="360" y="130" width="240" height="330" rx="14" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <rect x="640" y="130" width="240" height="330" rx="14" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+
+  <circle cx="200" cy="200" r="6" fill="#C9A227"/>
+  <circle cx="480" cy="200" r="6" fill="#C9A227"/>
+  <circle cx="760" cy="200" r="6" fill="#C9A227"/>
+
+  <path d="M200,175 L235,192 L235,232 Q235,258 200,278 Q165,258 165,232 L165,192 Z" fill="#2E8B6F" stroke="#1B5E4B" stroke-width="2"/>
+  <line x1="183" y1="215" x2="217" y2="245" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <line x1="217" y1="215" x2="183" y2="245" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+
+  <circle cx="480" cy="230" r="38" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="4"/>
+  <line x1="480" y1="230" x2="480" y2="202" stroke="#1B5E4B" stroke-width="4" stroke-linecap="round"/>
+  <line x1="480" y1="230" x2="500" y2="238" stroke="#1B5E4B" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="507" cy="256" r="15" fill="#C9A227"/>
+  <path d="M499,256 L505,262 L516,247" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="733" y="193" width="50" height="70" rx="5" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="4"/>
+  <line x1="743" y1="210" x2="773" y2="210" stroke="#6B7B77" stroke-width="3"/>
+  <line x1="743" y1="223" x2="773" y2="223" stroke="#6B7B77" stroke-width="3"/>
+  <line x1="743" y1="236" x2="765" y2="236" stroke="#6B7B77" stroke-width="3"/>
+  <circle cx="787" cy="252" r="15" fill="none" stroke="#C9A227" stroke-width="5"/>
+  <line x1="798" y1="263" x2="812" y2="277" stroke="#C9A227" stroke-width="5" stroke-linecap="round"/>
+
+  <text x="200" y="322" text-anchor="middle" font-size="21" font-weight="700" fill="#1F2A28">拒絕靜默降級</text>
+  <text x="200" y="352" text-anchor="middle" font-size="14" fill="#6B7B77">偵測異常時明確報錯</text>
+  <text x="200" y="372" text-anchor="middle" font-size="14" fill="#6B7B77">不悄悄退回不安全模式</text>
+
+  <text x="480" y="322" text-anchor="middle" font-size="21" font-weight="700" fill="#1F2A28">開機熵值自我測試</text>
+  <text x="480" y="352" text-anchor="middle" font-size="14" fill="#6B7B77">系統啟動時自動驗證</text>
+  <text x="480" y="372" text-anchor="middle" font-size="14" fill="#6B7B77">亂數來源品質</text>
+
+  <text x="760" y="322" text-anchor="middle" font-size="21" font-weight="700" fill="#1F2A28">建置組態安全審查</text>
+  <text x="760" y="352" text-anchor="middle" font-size="14" fill="#6B7B77">上線前檢查編譯</text>
+  <text x="760" y="372" text-anchor="middle" font-size="14" fill="#6B7B77">與部署組態設定</text>
+
+  <line x1="140" y1="420" x2="260" y2="420" stroke="#1B5E4B" stroke-width="2" stroke-dasharray="3,4"/>
+  <line x1="420" y1="420" x2="540" y2="420" stroke="#1B5E4B" stroke-width="2" stroke-dasharray="3,4"/>
+  <line x1="700" y1="420" x2="820" y2="420" stroke="#1B5E4B" stroke-width="2" stroke-dasharray="3,4"/>
+  <text x="200" y="440" text-anchor="middle" font-size="13" fill="#6B7B77">檢查點一</text>
+  <text x="480" y="440" text-anchor="middle" font-size="13" fill="#6B7B77">檢查點二</text>
+  <text x="760" y="440" text-anchor="middle" font-size="13" fill="#6B7B77">檢查點三</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

@@ -1,0 +1,77 @@
+---
+title: "白蟻跟螞蟻怎麼分？家裡出現蟻道、落翅代表什麼，防治重點一次看懂"
+slug: "termite-vs-ant-signs-prevention-guide"
+description: "家裡出現會飛的小蟲或木頭家具異常，很多人分不出是螞蟻還是白蟻。整理專家判斷徵兆、白蟻愛往哪裡鑽、居家除濕補縫的預防重點，以及該自己處理還是找專業公司的判斷標準。"
+excerpt: "家裡出現會飛的小蟲或木頭家具異常，很多人分不出是螞蟻還是白蟻。整理專家判斷徵兆、白蟻愛往哪裡鑽、居家除濕補縫的預防重點，以及該自己處理還是找專業公司的判斷標準。"
+publishDate: "2026-08-05T18:42:03.695Z"
+category: "lifestyle"
+subcategory: "life"
+tags:
+  - "居家安全"
+author: "appi-editorial"
+status: "published"
+sourceType: "wire"
+contentType: "news"
+disclaimerType: "general"
+disclosure: "線索來自 TVBS NEWS 的 YouTube 影片，內容經公開資料查證整理、附原始出處。"
+coverImage: "covers/termite-vs-ant-signs-prevention-guide-cover.webp"
+coverAlt: "牆角木作裂縫特寫示意圖"
+coverImageCredit: "Photo by Lana Kravchenko on Pexels"
+highlights:
+  - "白蟻與螞蟻外觀差異在觸角、腰身與翅膀：白蟻觸角呈念珠狀、粗腰、四片翅膀等長易脫落，螞蟻觸角呈膝狀彎曲、細腰"
+  - "白蟻偏好高溫潮濕環境，室內濕度長期超過60%、牆面裂縫、漏水積水都是常見誘因"
+  - "泥土蟻道、砂粒狀糞便、木作敲擊有空洞聲、大量落翅是四大入侵警訊，出現任一項就該提高警覺"
+  - "台灣林業試驗所指出全球白蟻約2,200種、台灣已發現15種，高溫多濕的地理環境讓危害特別嚴重"
+risksAndLimits:
+  - "文中除蟲費用（局部處理約8,000至15,000元、30坪全室處理15,000至30,000元以上）為市場行情參考，實際報價依坪數、蟲害程度與地區而異"
+  - "DIY餌劑僅建議試用一個月，若蟻道範圍持續擴大或承重結構已出現空心，應改請專業除蟲公司評估，不宜自行拖延"
+  - "植物精油等天然防蟲方式效果依濃度、白蟻種類與使用環境而異，屬林業試驗所整理的趨勢作法，非家戶實測保證有效"
+references:
+  - title: "白蟻出現在家裡怎麼辦？除白蟻方法與專家5招防白蟻入侵"
+    url: "https://edh.tw/articles/muwEfEi"
+    publisher: "edh.tw"
+  - title: "白蟻防治專家教你6大防治攻略｜2026 白蟻習性、藥劑挑選、預防步驟"
+    url: "https://www.byebyebugs.com.tw/termite-prevention/"
+    publisher: "智慧防蟲研究所"
+  - title: "白蟻防治資料"
+    url: "https://www.tfri.gov.tw/News_Content.aspx?n=7481&s=4964"
+    publisher: "行政院農業部林業試驗所"
+---
+
+家裡牆角突然冒出一條泥土通道，或是木頭家具敲起來有空洞聲，很多人第一反應是「螞蟻又跑進來了」，但這些跡象其實更可能是白蟻。兩種蟲害處理方式完全不同，判斷錯誤不只除不掉，還可能讓蟻害在牆壁、地板裡默默擴大。
+
+<figure class="video-embed">
+  <a href="https://www.youtube.com/watch?v=A3qLIf6kUKQ" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：通膨吃掉薪水! 數字後的報稅陷阱 教你從源頭徹底滅蟻防白蟻｜十點不一樣 20260805">
+    <img src="/images/termite-vs-ant-signs-prevention-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="通膨吃掉薪水! 數字後的報稅陷阱 教你從源頭徹底滅蟻防白蟻｜十點不一樣 20260805">
+  </a>
+  <figcaption>影片來源：TVBS NEWS（YouTube）　<a href="https://www.youtube.com/watch?v=A3qLIf6kUKQ" target="_blank" rel="noopener nofollow">觀看原影片</a></figcaption>
+</figure>
+
+## 螞蟻跟白蟻，肉眼怎麼分
+
+兩種蟲外型接近，但仔細看有幾個明顯差異。白蟻觸角呈念珠狀一節一節，螞蟻的觸角則是膝狀彎曲；白蟻腰部粗厚，螞蟻有明顯的細腰身；有翅膀的個體中，白蟻四片翅膀長度相等且容易脫落，螞蟻前翅較長、後翅較短。食性也不同，白蟻吃木材纖維，螞蟻主要找糖分與蛋白質類食物，這也是為什麼白蟻專挑木作家具、門框、地板下手（[edh.tw](https://edh.tw/articles/muwEfEi)）。
+
+## 白蟻為什麼會找上家裡
+
+行政院農業部林業試驗所指出，白蟻是世界性昆蟲，全球約有2,200種，台灣已發現15種；台灣地處熱帶與亞熱帶交界，高溫多濕的氣候條件特別適合白蟻生長繁殖，因此危害相對嚴重（[林業試驗所](https://www.tfri.gov.tw/News_Content.aspx?n=7481&s=4964)）。具體來說，白蟻偏好溫暖潮濕、陰暗的環境，牆角裂縫、地下室、壁癌漏水處都是牠們入侵與築巢的入口；室內相對濕度長期超過60%、冷氣或冰箱凝結水沒清理、雨水潑濕木門窗框，都會提供白蟻存活必要的水源（[智慧防蟲研究所](https://www.byebyebugs.com.tw/termite-prevention/)、[edh.tw](https://edh.tw/articles/muwEfEi)）。
+
+## 四個入侵警訊，看到一個就該留意
+
+- **泥土蟻道**：牆角或地面出現泥製通道，是白蟻往返巢穴與食物來源的保護管道。
+- **砂粒狀糞便**：堆積在巢穴附近，顆粒細小、無明顯味道。
+- **木作變空心**：門框、地板、家具被啃食內部，敲擊會發出空洞聲。
+- **大量落翅**：春夏繁殖季節，飛蟻交配後翅膀會大片脫落，常見於窗溝、地面。
+
+這四項跡象只要出現一項，就代表白蟻可能已經在附近活動，建議進一步檢查周邊木作與牆面（[edh.tw](https://edh.tw/articles/muwEfEi)、[智慧防蟲研究所](https://www.byebyebugs.com.tw/termite-prevention/)）。
+
+## 預防重點：先斷水源，再補裂縫
+
+白蟻防治的第一步是控制濕度與水源。修繕漏水與壁癌、保持室內相對濕度在60%以下、及時擦乾冷氣與冰箱的凝結水，都能降低白蟻聚集的誘因。牆面、地板、門窗周邊的裂縫要盡快修補，避免成為入侵通道；戶外堆放的廢棄木材也要清掉，減少白蟻的食物與棲息來源。部分建議還提到，戶外照明改用黃光取代白光可以降低飛蟻的趨光聚集（[edh.tw](https://edh.tw/articles/muwEfEi)、[智慧防蟲研究所](https://www.byebyebugs.com.tw/termite-prevention/)）。
+
+林業試驗所也提到，由於化學藥劑容易造成環境污染與人畜中毒疑慮，近年業界開始研究楝樹抽出物、山胡椒精油、肉桂精油等天然植物成分的防蟻效果，作為化學藥劑之外的替代方向（[林業試驗所](https://www.tfri.gov.tw/News_Content.aspx?n=7481&s=4964)）。
+
+## 自己處理還是找專業公司
+
+發現單隻飛蟻，第一時間應立即撲殺並關窗，避免其他個體跟著飛入室內。要注意的是，噴灑一般殺蟲劑可能驚動蟻群、讓牠們往其他角落擴散，反而更難清除。合法餌劑型藥劑可以試用，但建議以一個月為觀察期；漂白水、小蘇打這類民間偏方對白蟻沒有實質效果。
+
+如果蟻道範圍密集、木屑大量掉落，或承重結構已經出現空心現象，DIY處理一個月後仍沒有改善，就該考慮請專業除蟲公司評估。費用方面，局部處理行情約在8,000元到15,000元，30坪左右的全室處理則落在15,000元到30,000元以上，實際報價會依蟲害嚴重程度與坪數調整（[edh.tw](https://edh.tw/articles/muwEfEi)）。

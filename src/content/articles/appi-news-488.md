@@ -7,8 +7,6 @@ category: finance
 subcategory: market
 tags: ["資本市場", "投資理財", "總體經濟", "保險", "日本", "韓國", "美國", "亞太"]
 author: "wu-fang-jun"
-coverImage: "covers/appi-news-488.webp"
-coverAlt: "外匯交易看板同時顯示日圓、韓元與美元匯率變動的畫面"
 status: published
 sourceType: author
 contentType: column

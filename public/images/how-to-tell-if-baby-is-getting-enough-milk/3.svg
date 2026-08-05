@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="960" height="90" fill="#1B5E4B"/>
+  <text x="480" y="40" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">需就醫警訊檢核表</text>
+  <text x="480" y="70" text-anchor="middle" font-size="15" fill="#F2F7F5">出現以下任一情形，請儘速尋求專業協助</text>
+
+  <rect x="50" y="120" width="410" height="440" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <text x="255" y="160" text-anchor="middle" font-size="20" font-weight="700" fill="#1B5E4B">寶寶警訊</text>
+
+  <g>
+    <polygon points="90,205 108,235 72,235" fill="none" stroke="#C9A227" stroke-width="3" stroke-linejoin="round"/>
+    <text x="90" y="228" text-anchor="middle" font-size="14" font-weight="700" fill="#C9A227">!</text>
+    <rect x="130" y="197" width="300" height="60" rx="10" fill="#FFFFFF" stroke="#C9A227" stroke-width="1.5"/>
+    <text x="150" y="222" font-size="16" font-weight="700" fill="#1F2A28">體重未增加</text>
+    <text x="150" y="244" font-size="12.5" fill="#6B7B77">追蹤生長曲線持續無成長</text>
+  </g>
+
+  <g>
+    <polygon points="90,285 108,315 72,315" fill="none" stroke="#C9A227" stroke-width="3" stroke-linejoin="round"/>
+    <text x="90" y="308" text-anchor="middle" font-size="14" font-weight="700" fill="#C9A227">!</text>
+    <rect x="130" y="277" width="300" height="60" rx="10" fill="#FFFFFF" stroke="#C9A227" stroke-width="1.5"/>
+    <text x="150" y="302" font-size="16" font-weight="700" fill="#1F2A28">尿布量偏少</text>
+    <text x="150" y="324" font-size="12.5" fill="#6B7B77">每日濕尿布明顯少於正常次數</text>
+  </g>
+
+  <g>
+    <polygon points="90,365 108,395 72,395" fill="none" stroke="#C9A227" stroke-width="3" stroke-linejoin="round"/>
+    <text x="90" y="388" text-anchor="middle" font-size="14" font-weight="700" fill="#C9A227">!</text>
+    <rect x="130" y="357" width="300" height="60" rx="10" fill="#FFFFFF" stroke="#C9A227" stroke-width="1.5"/>
+    <text x="150" y="382" font-size="16" font-weight="700" fill="#1F2A28">嗜睡難喚醒</text>
+    <text x="150" y="404" font-size="12.5" fill="#6B7B77">餵奶時間難以喚醒進食</text>
+  </g>
+
+  <rect x="80" y="440" width="350" height="90" rx="10" fill="#1B5E4B"/>
+  <text x="255" y="475" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">出現以上任一狀況</text>
+  <text x="255" y="500" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">請立即聯繫醫療院所</text>
+
+  <rect x="500" y="120" width="410" height="440" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <text x="705" y="160" text-anchor="middle" font-size="20" font-weight="700" fill="#1B5E4B">媽媽警訊</text>
+
+  <g>
+    <polygon points="540,205 558,235 522,235" fill="none" stroke="#C9A227" stroke-width="3" stroke-linejoin="round"/>
+    <text x="540" y="228" text-anchor="middle" font-size="14" font-weight="700" fill="#C9A227">!</text>
+    <rect x="580" y="197" width="300" height="60" rx="10" fill="#FFFFFF" stroke="#C9A227" stroke-width="1.5"/>
+    <text x="600" y="222" font-size="16" font-weight="700" fill="#1F2A28">乳頭破皮疼痛</text>
+    <text x="600" y="244" font-size="12.5" fill="#6B7B77">哺乳時劇痛或傷口未癒合</text>
+  </g>
+
+  <g>
+    <polygon points="540,285 558,315 522,315" fill="none" stroke="#C9A227" stroke-width="3" stroke-linejoin="round"/>
+    <text x="540" y="308" text-anchor="middle" font-size="14" font-weight="700" fill="#C9A227">!</text>
+    <rect x="580" y="277" width="300" height="60" rx="10" fill="#FFFFFF" stroke="#C9A227" stroke-width="1.5"/>
+    <text x="600" y="302" font-size="16" font-weight="700" fill="#1F2A28">乳房紅腫發燒</text>
+    <text x="600" y="324" font-size="12.5" fill="#6B7B77">局部紅腫合併發燒或畏寒</text>
+  </g>
+
+  <rect x="530" y="365" width="350" height="165" rx="10" fill="#2E8B6F"/>
+  <text x="705" y="405" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">本表僅供初步自我檢視</text>
+  <text x="705" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">不能取代專業診斷</text>
+  <text x="705" y="465" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">如有疑慮</text>
+  <text x="705" y="490" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">請儘速諮詢醫師或泌乳顧問</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

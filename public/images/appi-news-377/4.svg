@@ -1,79 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="親子雨後巡檢任務分工三步驟：孩子負責找積水、大人倒掉並記錄、全家把成果貼冰箱當作每週小紀錄">
-<style>
-text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
-.title{font-size:26px;font-weight:700;fill:#1e2030;}
-.deck{font-size:15px;fill:#6e7276;}
-.badge{font-size:14px;font-weight:700;fill:#ffffff;}
-.name{font-size:20px;font-weight:700;fill:#1e2030;}
-.note{font-size:14px;fill:#6e7276;}
-.take{font-size:15px;font-weight:700;fill:#1e2030;}
-.foot{font-size:13px;fill:#6e7276;}
-</style>
-<rect width="960" height="600" fill="#ffffff"/>
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="62" text-anchor="middle" font-family="sans-serif" font-size="34" font-weight="bold" fill="#1B5E4B">陽台防蚊：親子共同清空花盆底盤</text>
+  <text x="480" y="96" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#6B7B77">雨後隨手清除積水，降低病媒蚊孳生風險</text>
 
-<!-- 標題列 -->
-<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
-<text x="58" y="60" class="title">親子雨後巡檢，分工當防蚊隊員</text>
-<text x="58" y="90" class="deck">把巡檢變成小任務：孩子找積水、大人倒掉並記錄，習慣比叮嚀更持久</text>
+  <rect x="80" y="130" width="800" height="410" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
 
-<!-- 節點 1：孩子 找積水 -->
-<rect x="48" y="150" width="240" height="228" rx="12" fill="#ffffff" stroke="#e8e9ed" stroke-width="1"/>
-<rect x="118" y="170" width="100" height="28" rx="14" fill="#1f3a5f"/>
-<text x="168" y="189" text-anchor="middle" class="badge">孩子</text>
-<circle cx="168" cy="248" r="30" fill="#eaf0f8"/>
-<circle cx="163" cy="243" r="12" fill="none" stroke="#1f3a5f" stroke-width="2.6"/>
-<line x1="172" y1="252" x2="182" y2="262" stroke="#1f3a5f" stroke-width="2.6" stroke-linecap="round"/>
-<text x="168" y="316" text-anchor="middle" class="name">找積水</text>
-<text x="168" y="344" text-anchor="middle" class="note">走一圈陽台、頂樓、後院</text>
-<text x="168" y="364" text-anchor="middle" class="note">負責找出所有積水點</text>
+  <line x1="110" y1="175" x2="850" y2="175" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="160" y1="175" x2="160" y2="215" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="300" y1="175" x2="300" y2="215" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="440" y1="175" x2="440" y2="215" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="580" y1="175" x2="580" y2="215" stroke="#2E8B6F" stroke-width="4"/>
+  <line x1="720" y1="175" x2="720" y2="215" stroke="#2E8B6F" stroke-width="4"/>
 
-<!-- 箭頭 1→2 -->
-<g stroke="#6e7276" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <line x1="300" y1="264" x2="346" y2="264"/>
-  <path d="M340 258 L348 264 L340 270"/>
-</g>
+  <rect x="84" y="480" width="792" height="56" fill="#2E8B6F" fill-opacity="0.12"/>
 
-<!-- 節點 2：大人 倒掉並記錄 -->
-<rect x="360" y="150" width="240" height="228" rx="12" fill="#ffffff" stroke="#e8e9ed" stroke-width="1"/>
-<rect x="430" y="170" width="100" height="28" rx="14" fill="#1f3a5f"/>
-<text x="480" y="189" text-anchor="middle" class="badge">大人</text>
-<circle cx="480" cy="248" r="30" fill="#eaf0f8"/>
-<path d="M466 234 L488 234 L484 246 L470 246 Z" fill="none" stroke="#1f3a5f" stroke-width="2.5" stroke-linejoin="round" transform="rotate(38 480 240)"/>
-<path d="M492 250 Q500 258 494 264" fill="none" stroke="#a87515" stroke-width="2.4" stroke-linecap="round"/>
-<line x1="490" y1="262" x2="490" y2="266" stroke="#a87515" stroke-width="2.4" stroke-linecap="round"/>
-<line x1="497" y1="262" x2="497" y2="266" stroke="#a87515" stroke-width="2.4" stroke-linecap="round"/>
-<text x="480" y="316" text-anchor="middle" class="name">倒掉並記錄</text>
-<text x="480" y="344" text-anchor="middle" class="note">看到積水立刻倒掉</text>
-<text x="480" y="364" text-anchor="middle" class="note">記下找到幾處、倒了幾次</text>
+  <path d="M395,375 L465,375 L452,435 L408,435 Z" fill="#C9A227" stroke="#1B5E4B" stroke-width="2"/>
+  <ellipse cx="430" cy="440" rx="46" ry="11" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <ellipse cx="430" cy="438" rx="30" ry="5" fill="#2E8B6F" fill-opacity="0.5"/>
 
-<!-- 箭頭 2→3 -->
-<g stroke="#6e7276" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <line x1="612" y1="264" x2="658" y2="264"/>
-  <path d="M652 258 L660 264 L652 270"/>
-</g>
+  <path d="M460,443 Q520,470 560,500" fill="none" stroke="#2E8B6F" stroke-width="3" stroke-dasharray="6,6"/>
+  <circle cx="490" cy="455" r="4" fill="#2E8B6F"/>
+  <circle cx="522" cy="472" r="4" fill="#2E8B6F"/>
+  <circle cx="548" cy="490" r="4" fill="#2E8B6F"/>
 
-<!-- 節點 3：全家 貼冰箱小紀錄 -->
-<rect x="672" y="150" width="240" height="228" rx="12" fill="#eaf0f8" stroke="#e8e9ed" stroke-width="1"/>
-<rect x="684" y="150" width="216" height="3" rx="1.5" fill="#a87515"/>
-<rect x="742" y="170" width="100" height="28" rx="14" fill="#1f3a5f"/>
-<text x="792" y="189" text-anchor="middle" class="badge">全家</text>
-<circle cx="792" cy="248" r="30" fill="#ffffff"/>
-<rect x="778" y="232" width="28" height="34" rx="3" fill="none" stroke="#1f3a5f" stroke-width="2.5"/>
-<line x1="784" y1="242" x2="800" y2="242" stroke="#1f3a5f" stroke-width="1.8"/>
-<line x1="784" y1="249" x2="800" y2="249" stroke="#1f3a5f" stroke-width="1.8"/>
-<line x1="784" y1="256" x2="794" y2="256" stroke="#1f3a5f" stroke-width="1.8"/>
-<circle cx="792" cy="230" r="3.4" fill="#a87515"/>
-<text x="792" y="316" text-anchor="middle" class="name">貼冰箱小紀錄</text>
-<text x="792" y="344" text-anchor="middle" class="note">當成這週的防蚊小成績</text>
-<text x="792" y="364" text-anchor="middle" class="note">在遊戲中養成觀察習慣</text>
+  <rect x="545" y="505" width="40" height="10" rx="3" fill="#1B5E4B" fill-opacity="0.7"/>
+  <line x1="551" y1="505" x2="551" y2="515" stroke="#F2F7F5" stroke-width="2"/>
+  <line x1="565" y1="505" x2="565" y2="515" stroke="#F2F7F5" stroke-width="2"/>
+  <line x1="579" y1="505" x2="579" y2="515" stroke="#F2F7F5" stroke-width="2"/>
 
-<!-- 重點提醒條 -->
-<rect x="48" y="420" width="864" height="58" rx="12" fill="#eaf0f8"/>
-<rect x="48" y="420" width="864" height="3" rx="1.5" fill="#a87515"/>
-<text x="80" y="456" class="take">重點不在買更多防蚊產品，在養成每週巡一次陽台的習慣。</text>
+  <path d="M628,375 Q580,395 465,425" fill="none" stroke="#1B5E4B" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="650" cy="340" r="22" fill="#1B5E4B"/>
+  <path d="M628,360 Q650,350 672,360 L668,440 Q650,450 632,440 Z" fill="#2E8B6F"/>
+  <rect x="636" y="440" width="12" height="50" fill="#1B5E4B"/>
+  <rect x="656" y="440" width="12" height="50" fill="#1B5E4B"/>
 
-<!-- 頁尾 -->
-<line x1="40" y1="526" x2="920" y2="526" stroke="#e8e9ed" stroke-width="1"/>
-<text x="40" y="556" class="foot">製圖：APPI News</text>
-<text x="920" y="556" text-anchor="end" class="foot">資料來源：衛福部疾病管制署．巡倒清刷</text>
-</svg>
+  <path d="M715,392 Q685,405 600,415" fill="none" stroke="#2E8B6F" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="730" cy="365" r="16" fill="#2E8B6F"/>
+  <path d="M715,380 Q730,373 745,380 L742,435 Q730,442 718,435 Z" fill="#C9A227"/>
+  <rect x="720" y="435" width="8" height="35" fill="#1B5E4B"/>
+  <rect x="734" y="435" width="8" height="35" fill="#1B5E4B"/>
+
+  <text x="430" y="475" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1F2A28">花盆底盤積水</text>
+  <text x="565" y="530" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1F2A28">倒掉積水，避免孳生病媒蚊</text>
+  <text x="685" y="475" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1F2A28">親子同心，定期巡檢</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

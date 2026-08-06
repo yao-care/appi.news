@@ -178,7 +178,7 @@ export function buildDraftPrompt(job, schedule = null, opts = {}) {
     '【務必照做】',
     '1. 完整執行 newsroom 步驟三：查料、擴寫、超連結逐條查證（每條 2xx 且內容支持該句，死連結一律換或刪），去 AI 腔複查、繁中台灣用語複查。',
     noAiImage
-      ? '1a. 每段必配圖。**本批禁止 AI 生圖**（`NO_AI_IMAGE=1` 已在環境變數硬性擋下，走到生圖會直接失敗）。取圖順序**一定要照這個**：①**先看站內既有圖能不能重用**——`ls public/images/` 找主題相近的既有圖（例如信用卡、超商、機場、健身房、手機這類通用場景），能扣題就直接在內文引用該路徑，不必重新取圖；②既有圖都不合用，才 `node scripts/get-image.mjs`（**不要**加 `--people`、**不要**加 `--generate`）搜圖庫；③圖庫搜不到就**換一組英文 `--query` 再試**（換更通用的詞，例如 "airport departure board"、"gym interior"），連試幾組都不行就減少該段配圖，**絕對不要**改用生圖。**每張新取的圖都務必帶** `--caption "<這張圖要傳達的訊息>"` `--alt "<中文畫面描述>"` `--article-context "<本篇主題>"` 讓圖庫審查扣題。封面同法且**最重要**：縮圖要讓讀者一眼看出文章主題。'
+      ? '1a. 每段必配圖。**本批禁止 AI 生圖**（`NO_AI_IMAGE=1` 已在環境變數硬性擋下，走到生圖會直接失敗）。取圖順序**一定要照這個**：①**先看站內既有圖能不能重用**——`ls public/images/` 找主題相近的既有圖（例如信用卡、超商、機場、健身房、手機這類通用場景），能扣題就直接在內文引用該路徑，不必重新取圖；②既有圖都不合用，才 `node scripts/get-image.mjs`（**不要**加 `--people`、**不要**加 `--generate`）搜圖庫；③圖庫搜不到就**換一組英文 `--query` 再試**（換更通用的詞，例如 "airport departure board"、"gym interior"），連試幾組都不行就減少該段配圖，**絕對不要**改用生圖。**每張新取的圖都務必帶** `--caption "<這張圖要傳達的訊息>"` `--alt "<中文畫面描述>"` `--article-context "<本篇主題>"` 讓圖庫審查扣題。封面同法且**最重要**：縮圖要讓讀者一眼看出文章主題。**④封面的 `--query` 必須與每一張內文圖都明顯不同**——禁生圖後只能用圖庫，同一組 query 圖庫會回同一張照片，封面與內文圖就會一模一樣被配圖 gate 擋下（實測距離 0）。封面請另挑一個代表全篇的場景詞，取完用肉眼確認檔案不同。'
       : '1a. 每段必配圖，一律用 `node scripts/get-image.mjs`（不要用 gen-image.mjs）：概念/物件/場景圖**不要**加 --people（先搜圖庫，圖庫候選會自動過相關度＋外國臉孔審查；全淘汰才 AI 生成，生成一律是**超寫實新聞攝影單一場景**，已內建多樣性輪轉與反拼貼）；人物為主體的圖才加 --people（擬真攝影生成：sonnet 展開＋haiku 視覺自檢＋不合格自動重生、模組強制台灣人）。**每張圖都務必帶** `--caption "<這張圖要傳達的訊息>"` `--alt "<中文畫面描述>"` `--article-context "<本篇主題>"` 讓展開與審查扣題。封面同法且**最重要**：縮圖要讓讀者一眼看出文章主題，像新聞攝影記者拍的照片。',
     '1a-1. **圖說（markdown 圖片 title）紀律**：mode:"generated" 與 mode:"stock" 的圖，圖說句尾一律加「（示意圖）」；mode:"stock" 的封面把 credit 寫進 frontmatter coverImageCredit；mode:"embedded" 可授權真實照不加示意圖、但 credit 必寫。圖說會顯示在圖片下方（figcaption），要寫成給讀者看的編輯圖說。',
     '1a-2. **資料圖表**（有數字/比較/流程才畫）：依 `docs/design/chart-spec.md` 手繪原生 SVG 存 `public/images/<slug>/`，**嚴禁用生圖模型畫圖表**（畫不準繁中字與數字）。',
@@ -190,7 +190,7 @@ export function buildDraftPrompt(job, schedule = null, opts = {}) {
     EXPERT_NOTE_PROMPT,
     memoryStep,
     noFabricate,
-    '5. **不要 git add / commit / push**——版控與發佈由外層腳本在 check:links gate 後處理。',
+    '5. **不要 git add / commit / push，也不要跑 `pnpm build` 或 `pnpm check:links`**——版控、建置與發佈全部由外層腳本在 gate 後統一處理。平行批次時多個進程同時 build 會搶同一個 `dist/`，產生 ENOENT 競態、白白耗時（實測 6 篇有 5 篇自己跑了 build）。你只要把文章與圖寫好即可。',
     '6. 完成後，最後輸出一段「查證報告」：條列文中每一條超連結 + 其 HTTP 狀態 + 是否支持該句。',
   ].join('\n');
 }

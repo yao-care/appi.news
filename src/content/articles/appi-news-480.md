@@ -3,14 +3,11 @@ title: "張雅佳全中運游泳奪3金雙破全國紀錄，你需要知道的5�
 slug: "appi-news-480"
 description: "18歲張雅佳在115全中運仰式項目連兩天刷新全國紀錄，100公尺仰式游出1分00秒95、50公尺仰式28秒50，加上200公尺仰式奪金，同步達標名古屋亞運參賽標準。"
 publishDate: 2026-07-31
+updatedDate: 2026-08-06
 category: sports
 subcategory: events
 tags: ["學生賽事", "國際賽事", "嘉義市", "運動科技"]
 author: "appi-editorial"
-reviewedBy:
-  - "chou-jingyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-480.webp"
 coverAlt: "長條圖比較張雅佳100公尺、50公尺與200公尺仰式的比賽成績"
 status: published
@@ -18,10 +15,6 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 9
-risksAndLimits:
-  - "100公尺與50公尺仰式的舊紀錄秒數未見於查證來源，兩項對照數字暫缺"
-  - "是否正式代表台灣參賽仍待中華游泳協會選拔與報名程序確認"
-  - "200公尺仰式尚未刷新紀錄，能否達標亞運門檻要看6月中正盃表現"
 references:
   - title: "中央社（2026年4月18日）。台日混血張雅佳全中運100仰摘金 開心再破全國紀錄。中央社"
     url: "https://www.cna.com.tw/news/aspt/202604180213.aspx"
@@ -88,8 +81,6 @@ draft: false
 張雅佳已獲美國密西根大學安娜堡分校錄取，畢業後將以NCAA第一級選手身分持續訓練。
 
 這也是台灣青少年游泳選手近年常見的路徑之一：先在國內賽事累積成績與紀錄，站穩全國紀錄保持人的位置，再透過美國大學體系銜接更高強度的訓練與比賽環境，為國際賽事做準備。對照她目前同時持有女子100公尺與50公尺仰式全國紀錄的位置，這條路徑等於是把國內累積的成績，實際帶到亞運與NCAA兩個更高層級的舞台檢驗。
-
-![長條圖比較張雅佳100公尺、50公尺與200公尺仰式的比賽成績](https://appi.news/images/appi-news-480/3.png "50公尺與100公尺仰式皆刷新全國紀錄，200公尺仰式雖奪金但成績未破紀錄")
 
 - 100公尺仰式1分00秒95、50公尺仰式28秒50，兩度刷新全國紀錄
 - 200公尺仰式2分15秒30奪金，未刷新紀錄

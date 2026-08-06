@@ -3,14 +3,11 @@ title: "「大隻雞慢啼」是真的嗎？學齡前語言發展黃金期與早
 slug: "appi-news-467"
 description: "地方政府擴增兒童發展篩檢與語言治療資源，反映及早發現的重要性。整理0-6歲語言發展警訊、篩檢管道與早療資源申請流程，助家長掌握黃金期。"
 publishDate: 2026-07-29
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
 tags: ["預防醫學", "育兒健康", "公共衛生", "基隆市"]
 author: "appi-editorial"
-reviewedBy:
-  - "huang-ziyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-467.webp"
 coverAlt: "家長帶著學齡前兒童在衛生所準備接受兒童發展篩檢的情境"
 status: published
@@ -18,11 +15,6 @@ sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 12
-risksAndLimits:
-  - "篩檢與轉介仍需家長主動聯繫各單位，衛生所名額與流程各縣市不同，非全國統一標準"
-  - "早療補助金額與申請文件以戶籍地社會局公告為準，可能隨時間調整"
-  - "文中引用的兩篇研究均提及觀察期偏短、隨機對照試驗數量仍少，長期成效尚未定論"
-  - "國外臨床指引數據套用在台灣情境時，篩檢工具與轉介制度存在差異，需保留解讀空間"
 references:
   - title: "基隆市政府衛生局 (2026). 講話慢別慌！基隆第2處「語言治療中心」落腳七堵！卡位學齡前兒童黃金期"
     url: "https://keelunghihi.com.tw/95650"
@@ -38,8 +30,6 @@ references:
     url: "https://pubmed.ncbi.nlm.nih.gov/38377329/"
 draft: false
 ---
-![家長帶著學齡前兒童在衛生所準備接受兒童發展篩檢的情境](https://appi.news/images/appi-news-467/1.jpg "及早篩檢是掌握語言發展黃金期的第一步，但多數家長不知道能從住家附近的衛生所開始（圖／基隆海嗨）")
-
 ## 前言：地方政府擴大早療資源背後的意義
 
 基隆市政府衛生局今年在七堵區衛生所啟用全市第二處「語言治療中心」，服務對象是已完成兒童發展聯合評估、確認有語言治療需求，但仍在等待醫療院所排診的學齡前兒童。同一時間，基隆市七區衛生所自四月起全面開設兒童發展篩檢專診，採電話預約、每日名額有限。

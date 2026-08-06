@@ -3,6 +3,7 @@ title: "關於黃金資產配置，你需要知道的6件事"
 slug: "appi-news-478"
 description: "金價從高點回落，黃金多頭是否已經反轉？從央行買盤、Fed利率決策到個人風險屬性，整理黃金資產配置該看懂的6個重點。"
 publishDate: 2026-08-02
+updatedDate: 2026-08-06
 category: finance
 subcategory: investing-literacy
 tags: ["投資理財", "總體經濟", "退休規劃", "資本市場"]
@@ -14,11 +15,6 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 12
-expertNote: "央行連續三年購金逾千公噸，是這波結構最穩定的一環，但這也代表黃金配置的價值在於分散風險，不是拿來賭短線漲跌。真正該顧的是比例紀律：定期檢視是否偏離自己風險屬性對應的區間，而非追高殺低。"
-risksAndLimits:
-  - "結構性支撐與壓抑因素的力道消長屬於總經觀察，非個股或商品投資建議"
-  - "5%至15%的配置區間僅為市場常見參考，未涵蓋所有資產結構與人生階段的家庭"
-  - "文中利率與金價數據反映Fed本次會議後狀況，後續決策方向仍可能改變"
 references:
   - title: "World Gold Council. *Gold Demand Trends: Central Banks, Q1 2026"
     url: "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q1-2026/central-banks"
@@ -35,8 +31,6 @@ draft: false
 **單看短期價格回檔不足以判斷多頭結構是否反轉**。回落可能只是獲利了結或市場情緒轉換，支撐黃金的結構性買盤（央行、地緣風險避險需求）並未同步消失。
 
 金價的短線走勢，本來就會隨消息面劇烈擺盪。真正該關注的，是驅動黃金中長期需求的結構性力量是否還在，這才是判斷「該不該調整配置」的依據，而不是盯著單日漲跌決定進出場。
-
-![金價走勢圖與黃金實體在分析師桌面上並置，畫面中可見一段上揚與一段下滑的趨勢線](https://appi.news/images/appi-news-478/1.jpg "金價短期回落是否代表多頭結構反轉，牽動的是央行買盤、地緣風險與降息預期這幾股力量的角力")
 
 ### 支撐黃金的三大因素：央行買盤、地緣風險、降息預期
 

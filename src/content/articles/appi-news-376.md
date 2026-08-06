@@ -3,15 +3,11 @@ title: "雨後登革熱防治完整指南：孳生源清除、巡倒清刷與居
 slug: "appi-news-376"
 description: "雨後為什麼登革熱風險升高？從積水容器孳生病媒蚊的原理，到巡倒清刷四步驟、居家防蚊熱點與社區動員，一次看懂雨後登革熱防治的完整做法。"
 publishDate: 2026-07-13
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
-tags:
-  - "傳染病防治"
+tags: []
 author: "huang-ziyan"
-reviewedBy:
-  - "huang-ziyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-376.webp"
 coverAlt: "雨後社區居民在陽台巡查花盆與容器中的積水"
 status: published
@@ -19,11 +15,6 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 11
-expertNote: "雨後巡查抓的是「一週內會孵化」的時間窗，不是打掃心情，花盆底盤與冷氣機集水盤這類淺水處最容易被當成不算數而漏掉。防蚊液和長袖是個人層面的補位，真正決定社區病媒指數的是巷弄整體有沒有同步清、同步刷，單戶做得再勤也擋不住鄰棟漏掉的積水。"
-risksAndLimits:
-  - "文中登革熱防治成效數據來自單一系統性回顧研究，非本站原始調查"
-  - "防蚊藥劑濃度與年齡限制以產品許可證標示為準，本文僅列一般參考範圍"
-  - "中醫養生段落為生活空間管理概念，不能取代孳生源清除或防蚊液"
 references:
   - title: "Montenegro-Quiñonez CA, Louis VR, Horstick O, et al. (2023). Interventions against Aedes/dengue at the household level: a systematic review and meta-analysis. *eBioMedicine"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10333437/"
@@ -34,8 +25,6 @@ references:
 draft: false
 ---
 你有沒有發現，午後雷陣雨一停，社區廣播就開始提醒巡查積水？這不是巧合。對病媒蚊來說,一場雨等於一次「開店通知」:花盆底盤、廢棄容器、屋簷排水溝,只要能存住一灘水,幾天內就可能變成孑孓的育嬰房。把家戶想像成一間廚房,登革熱要防治,得先處理掉那些放到發臭的廚餘與死角,而不是等蟲子上門了才拍打。這篇文章把「為什麼會孳生」「怎麼巡倒清刷」「家裡哪裡最容易漏掉」「防蚊液和衣物怎麼選」「社區為什麼要一起做」五件事,一次講清楚。
-
-![雨後社區居民在陽台巡查花盆與容器中的積水](https://appi.news/images/appi-news-376/1.jpg)
 
 ## 一、雨後為什麼登革熱風險會升高？積水容器與病媒蚊孳生的關係
 

@@ -52,8 +52,6 @@ originalContribution: "本文把 AMD 併購 MEXT 放進『記憶體牆』的座�
 
 AMD 買了一家做記憶體軟體的小公司，沒公布金額，新聞熱度也不高。但這筆案子讀起來，是 AI 加速器競爭的一個轉向：從比誰的晶片算力大，轉到比誰餵得動晶片。晶片再快，資料搬不進去就是空轉，而搬資料這件事，卡在一道叫「記憶體牆」的牆上。AMD 這一步是承認，再把錢砸在算力上，愈來愈是解錯題。
 
-<img src="/covers/amd-mext-memory-wall.webp" width="1200" height="800" loading="lazy" decoding="async" alt="資料中心記憶體晶片與電路示意，象徵 AI 加速器競爭從算力轉向記憶體牆">
-
 先講發生什麼事。AMD 在六月中旬宣布[併購一家叫 MEXT 的記憶體最佳化新創](https://finance.yahoo.com/technology/ai/articles/amd-amd-buys-mext-tackle-190622796.html)，未揭露金額，技術會併進它的資料中心產品線，包含 Instinct GPU、EPYC CPU 與 Helios 機櫃平台。MEXT 做的不是硬體，是一套軟體。它的[預測式記憶體引擎會分析資料存取模式，用 AI 預測接下來要用到哪塊資料](https://www.barchart.com/story/news/2634524/amds-mext-acquisition-is-more-important-than-markets-realize-heres-how-it-solves-the-memory-bottleneck)，趕在處理器伸手要之前，先把它從慢的快閃記憶體搬回快的 DRAM。講白一點，就是把便宜的 flash 當成昂貴 DRAM 的延伸來用，讓伺服器不必一直加買 DRAM，就能撐更大的記憶體需求。
 
 <img src="/images/amd-mext-memory-wall-s1.webp" width="960" height="720" loading="lazy" decoding="async" alt="伺服器記憶體模組與儲存硬體特寫，象徵預測式分層把快閃記憶體當 DRAM 延伸">

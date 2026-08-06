@@ -43,8 +43,6 @@ draft: false
 
 這件事要先把問題定義清楚。手機 AI 過去的角色是「工具」，使用者下指令，系統執行一個動作，完成。Gemini Intelligence 想往前走一層，讓 AI 從被動回應轉換為主動感知情境、跨應用協調並代理執行。這個轉換背後牽涉到系統整合層次、硬體門檻和落地能力的真實邊界，是這篇文章要拆解的核心。
 
-![Android 手機展示 Gemini Intelligence 主動代理介面示意圖](/images/appi-news-194-1.webp)
-
 ## 一、Gemini Intelligence 不是更強的語音助理
 
 **Gemini Intelligence 是 Google 把 Gemini AI 整合進 Android 作業系統底層的功能套件**，核心差異在於主動感知與跨應用代理執行，而不只是接受指令後回答問題。

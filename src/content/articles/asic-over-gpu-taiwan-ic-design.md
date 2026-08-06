@@ -53,8 +53,6 @@ originalContribution: "本文把摩根大通的 ASIC 出貨與市占預測、KuC
 
 AI 的錢正在換跑道。摩根大通（小摩）估 2026 年客製化 ASIC 晶片[出貨量年增 109%，遠高於 GPU 約 39% 的增速](https://news.cnyes.com/news/id/6506040)，占全球 AI 晶片出貨比重衝上約 42%，到 2027 年更以 53% 正式超車 GPU。這件事對台灣的直接後果，是世芯、創意、智原這群 IC 設計服務公司被法人重新估值，目標價與 EPS 一路上修。但要先把一件事講清楚：這不是輝達被取代，是雲端巨頭在替特定工作分流，追的是每瓦效能和成本，不是誰的晶片比較全能。
 
-<img src="/covers/asic-over-gpu-taiwan-ic-design.webp" width="1200" height="675" loading="lazy" decoding="async" alt="象徵 AI 資本從通用 GPU 轉向客製化 ASIC 晶片的半導體示意">
-
 先把 ASIC 跟 GPU 的差別講白。GPU 是通用加速器，什麼 AI 工作都能算，彈性高，但為了通用會犧牲效率；ASIC（特殊應用積體電路）是為單一任務量身打造的晶片，只做一件事，但做得又快又省電。雲端巨頭現在不缺演算法，缺的是把自家那幾樣固定的訓練與推論工作用最低電費跑完的晶片，所以乾脆自己下海設計。小摩估 Google 自研的 TPU 出貨量會[從 2026 年的 450 萬顆跳到 2027 年的 800 萬顆](https://news.cnyes.com/news/id/6506040)，亞馬遜的 Trainium 系列從 190 萬顆增到 330 萬顆，微軟與 Meta 的自研晶片也進量產。把這些加起來，[2027 年全球 AI 加速器總出貨估 2,330 萬顆，其中 ASIC／XPU 占 1,240 萬顆、GPU 剩 1,090 萬顆](https://www.kucoin.com/news/flash/jpmorgan-ai-asic-shipments-to-surpass-gpus-by-2027)，客製晶片第一次在數量上贏過通用 GPU。
 
 <img src="/images/asic-over-gpu-taiwan-ic-design-s1.webp" width="960" height="1280" loading="lazy" decoding="async" alt="資料中心裡並存的 AI 加速器與伺服器晶片，象徵 GPU 與 ASIC 的出貨結構轉變">

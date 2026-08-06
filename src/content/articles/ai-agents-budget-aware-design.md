@@ -71,8 +71,6 @@ AI agent 預設不會替你省錢。你給它一個任務，它會把工具呼�
 
 所以預算意識該不該寫進設計？該，而且要當成第一層的東西來設計，不是事後補的儀表板。具體到台灣企業明天早上就能做的有三件：導入 AI coding 助手或 agent 之前，先設每人、每專案、每次任務的硬性用量上限，撞到就停；把成本記帳做到「哪個 agent、哪個任務、花了多少」看得見，而不是月底收一張總帳單才驚醒；把「省下的成本」跟「任務完成率」一起放進驗收，別只看它做完了沒。這幾件事跟我之前寫 [MCP 成 agent 事實標準後、企業要治理什麼](/articles/mcp-de-facto-standard-agent-governance/) 是同一條線：agent 放進公司，要治理的從來不只是它能不能做事，還有它動了多少權限、花了多少錢。
 
-<img src="/images/ai-agents-budget-aware-design-s5.webp" width="960" height="640" loading="lazy" decoding="async" alt="監控儀表板與工程控制介面，象徵把成本記帳與用量上限做進系統">
-
 回到那個研究問的問題：AI agent 懂不懂省錢？就現在的證據看，它不懂，也沒有動機懂。這不是模型不夠好，是我們把一個沒有預算神經的東西，放進了會真的花錢的位置。解法不在等下一代模型自己變節儉，在把預算變成它繞不過的硬約束、把成本變成看得見的數字。看懂這一點，比追哪個模型每題便宜幾分錢重要。
 
 <img src="/images/ai-agents-budget-aware-design-s6.webp" width="960" height="640" loading="lazy" decoding="async" alt="辦公室團隊在螢幕前討論，象徵台灣企業導入 agent 時的成本治理">

@@ -61,8 +61,6 @@ topics: ["ai-medical-regulation"]
 
 TEMPO 全名是 Technology-Enabled Meaningful Patient Outcomes，跟 CMS 創新中心的 ACCESS 給付模式綁在一起。[ACCESS 是一個十年期（2026 到 2036）的付費模式，7 月 1 日開跑](https://www.mcdermottplus.com/blog/regs-eggs/access-tempo-the-2-door-entryway-to-faster-digital-health-innovation-in-traditional-medicare/)，針對傳統 Medicare（不含 Medicare Advantage）病患，付錢給用數位工具管理慢性病的照護單位。TEMPO 是這條路的另一道門：讓還沒拿到 FDA 核准的醫材，能先進到 ACCESS 裡被用、被給付。
 
-<img src="/covers/fda-tempo-ai-device-medicare.webp" width="1200" height="800" loading="lazy" decoding="async" alt="FDA 以執法裁量讓 AI 數位醫材未完整核准即進入 Medicare 慢性病照護的監理示意">
-
 ## 鬆綁的到底是哪幾關
 
 先把「免核准」講精確，不然容易嚇到人或看太輕。[FDA 對參與廠商行使執法裁量，暫時不執行三類要求](https://www.gtlaw.com/en/insights/2026/1/cms-and-fda-unveil-a-digital-health-pilot-for-chronic-conditions)：一是上市前核准（510(k) 或 PMA），二是臨床試驗要用的試驗醫材豁免（IDE），三是 21 CFR Part 50 與 Part 56，也就是整套知情同意與人體試驗審查委員會（IRB）的規定。換句話說，正常要嘛走完核准才能賣、要嘛掛「試驗用」做臨床，TEMPO 讓你兩邊都先跳過。

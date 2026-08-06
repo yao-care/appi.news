@@ -55,8 +55,6 @@ originalContribution: "本文把 2024 年 AlphaProof（Lean 驗證、銀牌）�
 
 AI 現在不只解得出國際數學奧林匹亞的金牌題，還能把整份證明寫成 Lean 這種形式化語言，讓機器逐行檢查每一步對不對。這件事真正的意義不是「AI 更會算數學」，而是 AI 做研究的產物第一次能被機器查證，不必靠你相信它沒在唬爛。長年卡住 AI 的那個老問題，它講得頭頭是道但你不知道是不是幻覺，在數學這一塊，第一次有了工程上的解法。
 
-<img src="/covers/ai-theorem-proving-lean-verifiable.webp" width="1200" height="675" loading="lazy" decoding="async" alt="AI 產出的數學證明被機器逐行驗證的示意">
-
 先看這一年多發生了什麼。2024 年 Google DeepMind 的 AlphaProof [在國際數學奧林匹亞拿到相當於銀牌的成績](https://deepmind.google/blog/ai-solves-imo-problems-at-silver-medal-level/)，解掉六題裡的三題（含全場最難那題），加上 AlphaGeometry 解掉一題幾何，合計 28 分。關鍵在它怎麼解：AlphaProof 整個跑在 Lean 這個形式化環境裡，DeepMind 講得很白，形式語言的好處就是涉及數學推理的證明可以被形式化地驗證正確性。到 2026 年初，一個叫 AxiomProver 的系統更進一步，[解掉四個過去沒人解出來的數學猜想、外加 2025 年 Putnam 競賽全部十二題](https://wal.sh/research/axiomprover-2026/)，每一份證明都在 Lean/Mathlib 裡驗過。連數學界的未解問題都開始倒：2025 年底那一週，[三個 Erdős 問題被 AI 攻下，並用 Lean 完成形式化](https://xenaproject.wordpress.com/2025/12/05/formalization-of-erdos-problems/)。
 
 <img src="/images/ai-theorem-proving-lean-verifiable-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="數學競賽與難題求解，象徵 AI 攻下奧數與過去未解的問題">

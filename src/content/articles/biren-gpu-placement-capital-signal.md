@@ -50,8 +50,6 @@ originalContribution: "本文把壁仞這次配股放進『上市半年、IPO �
 
 壁仞科技上市不到半年、手上還有約 42.8 億港元 IPO 募資沒花完，卻選在這個時候折價近一成、再配股抽走 70 億港元。這不是缺錢，是「時間比錢貴」的訊號。國產 GPU 的窗口正在關，誰先把下一代產品送樣、拉上量產、把客戶綁死，誰才卡得進 Nvidia 讓出的那道縫。折價換速度，讀出來的是急，不是虛。
 
-<img src="/covers/biren-gpu-placement-capital-signal.webp" width="1200" height="800" loading="lazy" decoding="async" alt="象徵國產 GPU 壁仞科技以港股配股募資、加速晶片商轉的抽象示意">
-
 先把這次配股的數字擺清楚。壁仞科技（06082.HK）在 7 月 6 日公告，[以每股 46.2 港元配售 1.53 億股新 H 股，較 7 月 3 日收市價 51.3 港元折讓 9.94%](https://www.finet.hk/newscenter/news_content/6a4b517e2308294e8a0c3a19)，募資總額近 70.7 億港元、淨額約 70.4 億港元，佔擴大後已發行 H 股約 11.3%。用途分四塊：[六成加速下一代 GPGPU 的商業化與量產、兩成投研發、一成戰略投資與收購、一成營運資金](https://www.thestandard.com.hk/finance/article/336455/Biren-Technology-plans-to-raise-nearly-707-billion-through-first-placing)。折價配股給機構，本質是用老股東的股權稀釋去換一筆能立刻動用的錢。
 
 <img src="/images/biren-gpu-placement-capital-signal-s1.webp" width="960" height="526" loading="lazy" decoding="async" alt="香港交易所股市交易畫面，象徵壁仞折價配售新 H 股募資">

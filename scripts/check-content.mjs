@@ -7,13 +7,18 @@
 //   WARN （只印，不擋）：高誤判軟訊號，分「詞彙/句式/結構/語氣」四層；
 //     單一檔案跨 ≥3 個不同層級命中 → 升級為 ERROR（記憶鐵則：命中 3 項不同層級才算 AI 味）。
 //
-// 掃描範圍（grandfather 存量，關鍵）：
+// 掃描範圍（存量豁免，關鍵）：
 //   預設＝只掃「相對 origin/main 的變動檔」（已提交＋工作區＋未追蹤）中的 src/**/*.md(x)；
 //     抓不到 git base（CI 淺 checkout）→ 掃 0 檔、exit 0，永不誤擋。
+//   **粒度是「新增的內容」，不是「檔案」**（2026-08-06）：正文有變時只送「相對 base 新增或
+//     改寫的行」，不整篇送檢。原本只要正文差一個字元就整篇掃，於是「刪掉一行重複的圖片標記」
+//     這種一個字都沒新增的維護性改動，也會把該檔存量散文全部拖進硬 gate（修 60 篇重複配圖時
+//     有 47 篇因此擋住 build）。gate 要擋的是新進來的 AI 腔，不是禁止碰舊檔。
 //   `--all`＝全站盤點（永遠 exit 0，供人工普查）。
 //   `<file>...`＝只掃指定檔（供 newsroom/產線產文後自檢）。
 import { readFileSync, existsSync } from "node:fs";
 import { execSync } from "node:child_process";
+import { pathToFileURL } from "node:url";
 
 const args = process.argv.slice(2);
 const ALL = args.includes("--all");
@@ -166,13 +171,19 @@ function firstProseSentence(masked) {
  *   把那批檔的存量正文一起拖進硬 gate。2026-08-02 第一版沒分 scope，一次把 579 個檔的
  *   舊正文全掃出來擋掉 build，就是漏了這一刀。
  */
-function scanFile(file, scope = "all", onlyProse = null) {
+function scanFile(file, scope = "all", onlyProse = null, onlyLines = null) {
   if (!existsSync(file)) return { errors: [], warns: [] };
   const raw = readFileSync(file, "utf8");
   // onlyProse＝這次相對 base 真的新增/改動的那幾條散文。存量條目（例如既有 highlights）
-  // 不因為同檔另一個欄位被回填就被拖進硬 gate，維持 grandfather 的精神。
+  // 不因為同檔另一個欄位被回填就被拖進硬 gate，維持存量豁免的精神。
   const fm = onlyProse ?? frontmatterProse(raw);
-  const masked = scope === "fm" ? fm : [...proseMask(raw), ...fm];
+  const fullMask = proseMask(raw);
+  // scope "lines"＝只檢查「這次相對 base 新增或改寫的正文行」（onlyLines）。
+  // 為什麼需要這一層：範圍判定原本的粒度是整個檔案——正文只要有一個字元不同就整篇送檢，
+  // 於是「刪掉一行重複的圖片標記」這種一個字都沒新增的維護性改動，也會把該檔存量散文
+  // 全部拖進硬 gate（2026-08-06 修 60 篇重複配圖時，47 篇因此擋住 build）。
+  // gate 的用意是「別讓新的 AI 腔進來」，不是「不准碰舊檔」，所以粒度要對齊「新增的內容」。
+  const masked = scope === "fm" ? fm : scope === "lines" ? [...(onlyLines ?? []), ...fm] : [...fullMask, ...fm];
   const whole = masked.join("\n");
   const errors = [], warns = [];
   const allowed = (s) => ALLOW.some((re) => re.test(s));
@@ -183,8 +194,12 @@ function scanFile(file, scope = "all", onlyProse = null) {
       if (re.test(line)) errors.push({ loc: `${file}:${i + 1}`, label, text: line.trim() });
   });
 
-  const first = firstProseSentence(masked);
-  if (BANNED_OPENINGS.some((re) => re.test(first)))
+  // 「模板化開頭」判的是**文章的開頭**，不是「這批新增行的第一行」。
+  // scope "lines" 下若整篇的第一句話本來就存在（不在新增行裡），就不該重判它。
+  const firstOfFile = fullMask.find((l) => l.trim()) ?? "";
+  const openingIsNew = scope !== "lines" || (onlyLines ?? []).includes(firstOfFile);
+  const first = scope === "lines" ? firstProseSentence([firstOfFile]) : firstProseSentence(masked);
+  if (openingIsNew && BANNED_OPENINGS.some((re) => re.test(first)))
     errors.push({ loc: `${file}:開頭`, label: "模板化開頭", text: first.slice(0, 40) });
 
   const hitLayers = new Set();
@@ -193,14 +208,37 @@ function scanFile(file, scope = "all", onlyProse = null) {
       const m = re.exec(whole);
       if (m) { warns.push({ file, layer, label, text: m[0].slice(0, 30) }); hitLayers.add(layer); }
     }
-  // 跨 ≥3 層 → 整檔升級為 ERROR
+  // 跨 ≥3 層 → 升級為 ERROR。scope "lines" 下統計基數是「這次新增的內容」而非整檔，
+  // 判的是「你這次寫進去的東西 AI 味重不重」，與存量無關（存量本來就豁免）。
   if (hitLayers.size >= 3) {
     errors.push({ loc: file, label: `AI 味跨 ${hitLayers.size} 層（${[...hitLayers].join("/")}）`, text: "軟訊號累積達鐵則門檻" });
   }
   return { errors, warns };
 }
 
-/** 回傳 [{file, scope}]；scope 見 scanFile 的說明（"all" 掃正文＋欄位、"fm" 只掃欄位）。 */
+/**
+ * 相對 before，after 裡「新出現」的行（多重集合差集）。純函式。
+ *
+ * 用多重集合而非 LCS：搬動位置的既有段落不算新增（它的文字本來就在站上、屬存量豁免範圍），
+ * 只有「原本不存在的字」才要受現行規則約束。同一行重複出現時逐次消耗，避免複製一行卻不被判。
+ */
+export function addedLines(beforeBody, afterBody) {
+  const pool = new Map();
+  for (const l of String(beforeBody ?? "").split("\n")) {
+    const k = l.trim();
+    pool.set(k, (pool.get(k) ?? 0) + 1);
+  }
+  const out = [];
+  for (const l of String(afterBody ?? "").split("\n")) {
+    const k = l.trim();
+    const n = pool.get(k) ?? 0;
+    if (n > 0) pool.set(k, n - 1);
+    else if (k) out.push(l);
+  }
+  return out;
+}
+
+/** 回傳 [{file, scope}]；scope 見 scanFile（"all" 整篇、"lines" 只掃新增行、"fm" 只掃欄位）。 */
 function targetFiles() {
   if (fileArgs.length) return fileArgs.filter((f) => /\.mdx?$/.test(f)).map((file) => ({ file, scope: "all" }));
   const run = (cmd) => { try { return execSync(cmd, { stdio: ["ignore", "pipe", "ignore"] }).toString().trim(); } catch { return null; } };
@@ -228,7 +266,17 @@ function targetFiles() {
     catch { picked.push({ file: f, scope: "all" }); continue; } // base 沒有這個檔＝新增，全掃
     let after;
     try { after = readFileSync(f, "utf8"); } catch { continue; } // 已刪除
-    if (body(before) !== body(after)) { picked.push({ file: f, scope: "all" }); continue; }
+    if (body(before) !== body(after)) {
+      // 正文有變：只挑「真的新增／改寫的行」送檢，不整篇送。
+      // 純刪除（例如移除一行重複的圖片標記）＝新增行為 0，正文完全不進 gate。
+      const added = addedLines(body(before), body(after));
+      const wasFm0 = new Set(frontmatterProse(before));
+      const freshFm0 = frontmatterProse(after).filter((x) => !wasFm0.has(x));
+      if (added.length || freshFm0.length) {
+        picked.push({ file: f, scope: "lines", lines: added, onlyProse: freshFm0.length ? freshFm0 : [] });
+      }
+      continue;
+    }
     // 正文沒變、但 frontmatter 散文欄位變了（expertNote/risksAndLimits/highlights）：
     // 那些字會渲染在文章頁上，2026-08-02 前是檢查死角，要掃；但**只掃這些欄位**，
     // 不可連同存量正文一起拖進硬 gate（那正是上面 2026-07-28 修掉的病）。
@@ -239,21 +287,32 @@ function targetFiles() {
   return picked;
 }
 
-const files = targetFiles();
-if (files === null) process.exit(0); // 無 git base，安全放行
-if (!files.length) { console.log("內容守門：無變動的 .md/.mdx 內容檔。"); process.exit(0); }
+// ── CLI（只有「直接執行」才跑；被 import（測試）時零副作用，同 repo 其他腳本慣例）──
+function main() {
+  const files = targetFiles();
+  if (files === null) return 0; // 無 git base，安全放行
+  if (!files.length) { console.log("內容守門：無變動的 .md/.mdx 內容檔。"); return 0; }
 
-let errors = [], warns = [];
-for (const { file, scope, onlyProse } of files) { const r = scanFile(file, scope, onlyProse); errors.push(...r.errors); warns.push(...r.warns); }
+  let errors = [], warns = [];
+  for (const { file, scope, onlyProse, lines } of files) {
+    const r = scanFile(file, scope, onlyProse, lines);
+    errors.push(...r.errors); warns.push(...r.warns);
+  }
 
-if (warns.length) {
-  console.error(`內容守門 WARN（軟訊號 ${warns.length}，未達 3 層不擋）：`);
-  for (const w of warns) console.error(`  · [${w.layer}] ${w.file}：${w.label}（${w.text}）`);
+  if (warns.length) {
+    console.error(`內容守門 WARN（軟訊號 ${warns.length}，未達 3 層不擋）：`);
+    for (const w of warns) console.error(`  · [${w.layer}] ${w.file}：${w.label}（${w.text}）`);
+  }
+  if (errors.length && !ALL) {
+    console.error(`\n去 AI 味違規 ${errors.length} 處（擋 build）：`);
+    for (const e of errors) console.error(`  ✗ ${e.loc} ${e.label}：${e.text}`);
+    console.error(`\n改法見記憶 content-no-ai-flavor：AI 出初稿、人味靠最後 20% 手動微調。`);
+    return 1;
+  }
+  console.log(`內容守門通過：掃 ${files.length} 檔，無 AI 味 ERROR${warns.length ? `（${warns.length} 則 WARN 見上）` : ""}。`);
+  return 0;
 }
-if (errors.length && !ALL) {
-  console.error(`\n去 AI 味違規 ${errors.length} 處（擋 build）：`);
-  for (const e of errors) console.error(`  ✗ ${e.loc} ${e.label}：${e.text}`);
-  console.error(`\n改法見記憶 content-no-ai-flavor：AI 出初稿、人味靠最後 20% 手動微調。`);
-  process.exit(1);
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  process.exit(main());
 }
-console.log(`內容守門通過：掃 ${files.length} 檔，無 AI 味 ERROR${warns.length ? `（${warns.length} 則 WARN 見上）` : ""}。`);

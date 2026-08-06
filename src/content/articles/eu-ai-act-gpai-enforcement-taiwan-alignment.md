@@ -77,8 +77,6 @@ references:
 
 <p>還有一個更常見的誤會要先拆掉：很多人以為招募、信用評分、生物辨識這些「高風險」義務也在同一天一起上路。原本確實是這樣排的，但歐盟的 Digital Omnibus 已經把這塊往後挪了。義務與罰則是不是「同日到位」，答案比標題複雜，而這個差別正好決定你接下來要先做什麼。</p>
 
-<img src="/covers/eu-ai-act-gpai-enforcement-taiwan-alignment.webp" width="960" height="562" loading="lazy" decoding="async" alt="象徵歐盟 AI 法執法權上路、對通用型 AI 監管的政策氛圍">
-
 <h2>義務早就在，變的是執法機器</h2>
 
 <p>先把 GPAI 這條線講清楚，因為它是 8/2 唯一沒有變數的部分。<a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-gpai-enforcement-20260509-csa-st/" target="_blank" rel="noopener">GPAI 供應商在 AI 法第 53、55 條下的義務，自 2025 年 8 月 2 日起就具法律效力</a>，包括維護技術文件、提供訓練資料摘要、揭露著作權政策，系統性風險等級的模型還要做模型評估與事件通報。換句話說，過去這一年不是緩衝到「還不用做」，而是「已經要做、只是沒人來查」。</p>

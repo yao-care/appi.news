@@ -64,8 +64,6 @@ originalContribution: "本文把『模型發布日期被開成賭盤』這個新
 
 在 Polymarket 上，「GPT-5.6 哪天對公眾發布」已經是一個成熟市場。[單一市場押進約 68 萬美元、開放利益約 9.6 萬美元，7 月 9 日這個選項一度喊到 79% 的隱含機率](https://cryptoslate.com/predictions/market/gpt-5pt6-released-onptptpt-20260623051439980/)，其他日期分食剩下的機率。而且這不是孤例。Polymarket 這半年還把賭桌開到了私人公司身上，[讓人下注 Anthropic 與 OpenAI 的估值、誰先 IPO，用 Nasdaq Private Market 的資料結算，光 Anthropic 相關市場就累積超過 260 萬美元交易量](https://mlq.ai/news/polymarket-expands-into-private-company-bets-as-anthropic-and-openai-valuations-become-tradable/)。模型什麼時候發、哪家旗艦排第一、估值追不追得上，通通變成可以下注的標的。
 
-<img src="/images/ai-model-release-prediction-markets-s1.webp" width="960" height="639" loading="lazy" decoding="async" alt="線上下注賠率看板，象徵模型發布日期被開成投機標的">
-
 問題來了：這個 79% 到底在告訴你什麼？
 
 很多人第一個反應是「群眾智慧，賠率高就代表快發了」。這個方向不能說錯，但如果就停在這一步，很容易把賭盤當成路線圖來讀。賭盤賠率反映的是參與者對謠言與敘事的共識，不是 OpenAI 內部行事曆。這裡有三個結構性的洞。第一，這類市場的流動性有限，[未受充分資訊驅動的噪音下注會拖累市場效率、讓價格失真](https://wifpr.wharton.upenn.edu/blog/a-primer-on-prediction-markets/)，賠率精確到小數點不代表底層資訊也一樣紮實。第二，[預測市場對近期事件比較準，對遠期或需要專業內部知識的題目，群眾的答案有時會錯得很離譜，甚至陷入「把當下賠率當成正確機率、不再用外部資訊更新」的自我強化迴圈](https://en.wikipedia.org/wiki/Prediction_market)。第三，也是這題最要命的：連「怎樣才算公開發布」都沒有共識。給二十家報備過的夥伴用算不算？開放 API 算不算？結算定義一模糊，你賭的其實是一個邊界不清的事件，那個 79% 精確到小數點，底下卻踩在一團定義的爛泥上。

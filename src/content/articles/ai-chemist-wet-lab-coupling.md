@@ -53,8 +53,6 @@ topics: ["medical-ai-frontline"]
 
 AI 這次不是在答題，是真的走進實驗室做了實驗。6 月 17 日，OpenAI 與波蘭化學新創 Molecule.one 公布一項成果：GPT-5.4 搭配對方的 agent 系統 Maria 與一座自動化實驗室，[跑了 10,080 筆化學反應](https://www.rdworldonline.com/openai-and-molecule-one-report-a-near-autonomous-ai-chemist-that-improved-a-stubborn-coupling-reaction/)，改良了醫藥化學界卡多年的一個偶聯反應。但這則新聞值得先踩個剎車：被打破的不是「智力」瓶頸，是「通量」瓶頸；成果可信是因為背後有一整套濕實驗室驗證迴路與人工守門，不是因為模型變聰明。看懂它解的是哪一類問題，比記住一萬這個數字重要。
 
-<img src="/covers/ai-chemist-wet-lab-coupling.webp" width="1200" height="795" loading="lazy" decoding="async" alt="自動化化學實驗室裡的實驗器材與試劑，象徵 AI 從答題走進濕實驗室做實驗">
-
 先把事情講清楚。這個反應叫 Chan-Lam 偶聯，是用銅催化把碳和氮接起來的方法，做藥時很常用。其中「初級磺醯胺（primary sulfonamide）」這個版本一直很難搞，產率偏低，而磺醯胺這個結構[出現在九十多款美國 FDA 核准的藥裡](https://letsdatascience.com/blog/openai-ai-chemist-chan-lam-tempo-discovery)，涵蓋腫瘤、抗菌到心血管，所以它一直是早期新藥開發的一個卡點。GPT-5.4 做的事，是自己選定這個題目、提出一個假設：用溫和的氧化劑 TEMPO（一種穩定的自由基）也許能拉高產率。接著 Maria 這座自動化實驗室分兩輪把它試出來。
 
 <img src="/images/ai-chemist-wet-lab-coupling-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="實驗室裡整排裝著試劑的樣品瓶，象徵自動化高通量反應篩選">

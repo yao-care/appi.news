@@ -35,7 +35,7 @@ references:
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8539340/"
 draft: false
 ---
-![彰化鴨農穿戴 N95 口罩與手套在鴨場巡視，背景可見候鳥的職業防護示意圖](/images/appi-news-162-1.webp)
+
 
 ## 一、新聞背景：疾管署確認台灣首例 H7 禽傳人案例
 

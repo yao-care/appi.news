@@ -195,23 +195,39 @@ export function isNoiseTitle(title) {
 
 // ── 抓取 ────────────────────────────────────────────────────────────────────
 
-/** 抓單一看板的高推文（用 PTT 搜尋 `recommend:N`，回最新一頁）。 */
-export async function fetchBoard({ board, minPush }, { fetchImpl = fetch, timeoutMs = 15000 } = {}) {
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * 抓單一看板的高推文（用 PTT 搜尋 `recommend:N`，回最新一頁）。
+ *
+ * **帶一次重試**：實測併發抓 30 板時，PTT 會零星拒連（2026-08-06 一次跑有 4 板失敗，
+ * 單獨重抓全部 200），推測是限速。單板失敗＝該分類這一輪完全沒有候選，
+ * 若剛好是 tech 那幾板連續失敗，科技就會長期沒題，所以值得retry 而不是放著。
+ */
+export async function fetchBoard({ board, minPush }, { fetchImpl = fetch, timeoutMs = 15000, retries = 1 } = {}) {
   const url = `https://www.ptt.cc/bbs/${board}/search?q=recommend%3A${minPush}`;
-  const ctl = new AbortController();
-  const timer = setTimeout(() => ctl.abort(), timeoutMs);
-  try {
-    const res = await fetchImpl(url, {
-      headers: { 'User-Agent': UA, Cookie: 'over18=1' },
-      signal: ctl.signal,
-    });
-    if (!res.ok) return { board, ok: false, error: `HTTP ${res.status}`, posts: [] };
-    return { board, ok: true, posts: parseBoardIndex(await res.text()) };
-  } catch (e) {
-    return { board, ok: false, error: e?.message || String(e), posts: [] };
-  } finally {
-    clearTimeout(timer);
+  let last = '';
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    if (attempt) await sleep(800 * attempt);
+    const ctl = new AbortController();
+    const timer = setTimeout(() => ctl.abort(), timeoutMs);
+    try {
+      const res = await fetchImpl(url, {
+        headers: { 'User-Agent': UA, Cookie: 'over18=1' },
+        signal: ctl.signal,
+      });
+      if (!res.ok) {
+        last = `HTTP ${res.status}`;
+        continue;
+      }
+      return { board, ok: true, posts: parseBoardIndex(await res.text()) };
+    } catch (e) {
+      last = e?.message || String(e);
+    } finally {
+      clearTimeout(timer);
+    }
   }
+  return { board, ok: false, error: last, posts: [] };
 }
 
 /**
@@ -220,7 +236,8 @@ export async function fetchBoard({ board, minPush }, { fetchImpl = fetch, timeou
  */
 export async function collectCandidates({
   boards = BOARDS,
-  concurrency = 4,
+  // 併發壓低到 3：實測 4 併發時 PTT 會零星拒連。這條每小時跑，30 板慢幾秒無所謂。
+  concurrency = 3,
   fetchImpl = fetch,
   // 每板最多取推文最高的前幾則。首跑會撈到數百則（多數是同一板的例行文），
   // 灌進 LLM 選題層既貴又稀釋判斷；每板取頭部就夠代表該板當下在討論什麼。

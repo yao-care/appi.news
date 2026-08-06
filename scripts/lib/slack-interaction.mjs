@@ -26,6 +26,10 @@ export function buildTopicButtonValue(topic) {
 /** 組「看法」modal view（不含 trigger_id；trigger_id 由 views.open 另帶）。 */
 export function buildViewpointModal({ topic }) {
   const title = String(topic?.title ?? '（未提供標題）');
+  // 事實稿（kind: factual，含論壇雷達產的 health/finance 候選）由編輯部署名、不含個人觀點，
+  // 因此「看法」改為**選填**（填了也只當補充脈絡，不會被當成作者觀點寫進文章）。
+  // 觀點稿仍維持必填——沒收到真人看法不動筆是禁杜撰的根防線。
+  const factual = topic?.kind === 'factual';
   return {
     type: 'modal',
     callback_id: MODAL_CALLBACK_ID,
@@ -38,14 +42,23 @@ export function buildViewpointModal({ topic }) {
       {
         type: 'input',
         block_id: VIEWPOINT_BLOCK,
-        label: { type: 'plain_text', text: '你對這題的看法／本業經驗（必填）' },
+        optional: factual,
+        label: {
+          type: 'plain_text',
+          text: factual ? '補充脈絡或指定角度（選填）' : '你對這題的看法／本業經驗（必填）',
+        },
         element: {
           type: 'plain_text_input',
           action_id: VIEWPOINT_ACTION,
           multiline: true,
-          min_length: 1, // Slack 端強制必填
+          ...(factual ? {} : { min_length: 1 }), // 觀點稿由 Slack 端強制必填
         },
-        hint: { type: 'plain_text', text: '機器人會用你這段當文章的真人觀點，沒有就不動筆。' },
+        hint: {
+          type: 'plain_text',
+          text: factual
+            ? '事實稿由編輯部署名、不含個人觀點；這欄留空即可，寫了只當寫作提示。'
+            : '機器人會用你這段當文章的真人觀點，沒有就不動筆。',
+        },
       },
       {
         type: 'input',

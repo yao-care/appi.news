@@ -111,7 +111,10 @@ export function handleInteraction({ rawBody, headers, signingSecret, allowlist, 
     const { userId, viewpoint, length, publishDate, topic } = parseModalSubmission(payload);
     if (!isAuthorized(userId, allowlist)) return errorsResponse('你沒有觸發權限');
     const job = toJob(topic, viewpoint, { length, publishDate });
-    const errs = validateJob(job);
+    // 事實稿放寬分類白名單（含 health/finance）：按鈕＝**真人下單**，非機器自選題，
+    // 且事實稿一律產待審草稿、人工核可才上線，放寬的是「誰能開單」不是「誰能直接上線」。
+    // 觀點稿維持只收 VERTICALS（機器不自選健康/財經觀點題的界線不動）。
+    const errs = validateJob(job, { allowAnyCategory: job.kind === 'factual' });
     if (errs.length) return errorsResponse(errs.join('；'));
     return {
       status: 200,
@@ -300,7 +303,11 @@ function runEngine(job) {
   // 專屬發佈 checkout：開跑前拉回 origin/main 乾淨最新狀態（隔離開發狀態的影響）。
   if (!syncCheckoutOrFail(job.title)) return;
   notify(`📝 開始自動撰寫：「${job.title}」（約十幾分鐘，完成回報）${waiting}`, ch);
-  const child = spawn('node', ['scripts/newsroom-write.mjs', jobPath, '--go'], { cwd: REPO_DIR, env: process.env });
+  // 事實稿要帶 --allow-any-category，否則 health/finance 會在 newsroom-write 端被白名單擋下
+  // （與上面 validateJob 的放寬條件必須一致，不然按鈕過得了、產文卻死在第二道驗證）。
+  const nwArgs = ['scripts/newsroom-write.mjs', jobPath, '--go'];
+  if (job.kind === 'factual') nwArgs.push('--allow-any-category');
+  const child = spawn('node', nwArgs, { cwd: REPO_DIR, env: process.env });
   let out = '';
   child.stdout.on('data', (d) => (out += d));
   child.stderr.on('data', (d) => (out += d));

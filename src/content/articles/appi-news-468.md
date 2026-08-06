@@ -3,27 +3,18 @@ title: "醫療AI黑箱和可解釋AI差在哪？怎麼選才安全"
 slug: "appi-news-468"
 description: "企業導入AI常遇到黑箱決策的信任問題，醫療場域因牽動診斷與病患安全而風險倍增。從AI藥物老藥新用案例看可解釋性工具如何讓臨床決策路徑可追溯。"
 publishDate: 2026-07-29
+updatedDate: 2026-08-06
 category: health
 subcategory: medtech
 tags: ["醫療AI", "AI治理", "AI", "數位健康", "藥物研發", "醫病關係", "醫療政策", "心理健康"]
 author: "appi-editorial"
-reviewedBy:
-  - "huang-ziyan"
-factCheckedBy:
-  - "appi-editorial"
-coverImage: "covers/appi-news-468-cover.webp"
-coverImageCredit: "Photo by Natanael Melchor on Unsplash"
-coverAlt: "醫療AI相關情境（示意圖）"
+coverImage: "covers/appi-news-468.webp"
+coverAlt: "醫師在診間查看AI輔助診斷系統畫面，畫面顯示決策推論流程"
 status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 16
-risksAndLimits:
-  - "巴瑞替尼案例來自2021年COVID-19研究，非現行常規用藥決策依據"
-  - "普如卡必利用於憂鬱認知功能僅屬早期人體試驗，未經大型隨機對照試驗驗證"
-  - "可解釋性AI對信任度的提升效果因解釋清晰度而異，並非一致有效"
-  - "文中分級信任機制為原則性建議，非現行法規強制標準"
 references:
   - title: "Smith DP, Oechsle O, Rawling MJ, Savory E, Lacoste AMB, Richardson PJ (2021). Expert-Augmented Computational Drug Repurposing Identified Baricitinib as a Treatment for COVID-19. *Frontiers in Pharmacology*, 12:709856"
     url: "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2021.709856/full"
@@ -41,8 +32,6 @@ references:
     url: "https://finance.technews.tw/2026/07/16/beyond-ai-hype-sober-reflections-black-box-risks-enterprise-adoption-realities/"
 draft: false
 ---
-![醫師在診間查看AI輔助診斷系統畫面，畫面顯示決策推論流程](https://appi.news/images/appi-news-468/1.jpg "醫療AI要被醫師信任，關鍵不在於它答對了什麼，而在於它說不說得出理由（圖／Frontiers）")
-
 醫療AI的黑箱決策問題，近期隨企業級AI導入熱潮再度被攤上檯面。一篇分析企業導入AI現況的報導指出，多數AI系統存在「黑箱」問題：即使開發者本身，也無法完整說明模型為何得出特定答案（[Technews報導](https://finance.technews.tw/2026/07/16/beyond-ai-hype-sober-reflections-black-box-risks-enterprise-adoption-realities/)）。報導同時點出，AI在自信語氣下產出錯誤資訊（幻覺）的問題，至今仍未被業界完全解決。這類黑箱風險在行銷發想等低風險場景影響有限，但一旦進入醫療診斷等高風險領域，容錯空間就大幅縮小。
 
 ## 企業AI的黑箱焦慮，為何在醫療場域被放大

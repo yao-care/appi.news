@@ -3,18 +3,11 @@ title: "南韓股市大起大落，台灣投資人該知道的7個資產集中�
 slug: "appi-news-401"
 description: "南韓Kospi指數今年漲幅驚人卻同時是全球波動度最高的主要股市，根源在於三星與SK海力士的極端集中。台灣投資人的退休金、保單與企業主資金結構其實高度相似，該如何檢視與分散？"
 publishDate: 2026-07-28
+updatedDate: 2026-08-06
 category: finance
 subcategory: investing-literacy
-tags:
-  - "投資理財"
-  - "資本市場"
-  - "韓國"
-  - "退休規劃"
+tags: []
 author: "wu-fang-jun"
-reviewedBy:
-  - "wu-fang-jun"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-401.webp"
 coverAlt: "首爾證交所交易大廳畫面，電子看板顯示三星電子與SK海力士股價劇烈震盪的走勢圖，交易員神情專注緊盯螢幕"
 status: published
@@ -22,11 +15,6 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 15
-expertNote: "南韓的教訓是集中結構在多頭與空頭會等比例放大，台灣退休金與保單多重壓半導體的族群尤其該注意；14年配置經驗看，多數人分散的是帳戶數量而非底層曝險，真正該優先檢視的是保單連結標的與退休金自營持股是否也繫在同一條供應鏈上。"
-risksAndLimits:
-  - "台積電41.6%、勞退基金台積電53%等權重數字為特定時點快照，會隨股價與調整而變動"
-  - "南韓與台灣的集中結構僅為對照類比，兩地產業組成與監管環境不同，程度不可直接等同"
-  - "文中未揭露南韓退休金體系對集中度的曝險數字，兩地比較僅限公開的指數與退休金片段資料"
 references:
   - title: "Bloomberg (2026年7月20日). South Korea Stock Boom: Why Kospi Is World's Most Volatile Benchmark Stock Index. 內容交叉驗證來源: Korean Stock Volatility Surpasses Bitcoin as Samsung, SK Hynix Concentration Fuels Swings. BiggingBit (2026年7月21日)"
     url: "https://en.bloomingbit.io/feed/news/116650"
@@ -47,8 +35,6 @@ references:
 draft: false
 ---
 南韓Kospi指數今年一度上漲逾六成，是全球表現最亮眼的主要股市之一，卻同時被彭博（Bloomberg）點名為全球波動度最高的主要基準指數。漲幅與波動雙雙登頂，看似矛盾，實際上是同一個病灶：指數集中度過高。這個病灶並非南韓獨有，台灣投資人的退休金帳戶、保單連結標的與企業主閒置資金，結構上有相當程度的相似之處。
-
-![首爾證交所交易大廳畫面，電子看板顯示三星電子與SK海力士股價劇烈震盪的走勢圖，交易員神情專注緊盯螢幕](https://appi.news/images/appi-news-401/1.jpg "南韓股市今年漲幅驚人，波動度卻也衝上全球之冠，同一個集中結構造就了兩種極端")
 
 ## 一、南韓股市今年表現亮眼，卻同時是全球波動度最高的主要指數
 

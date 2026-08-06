@@ -13,6 +13,9 @@
 ## 維護情境路由（先決定你在哪一格）
 
 > 本檔（給人）與 [`CLAUDE.md`](./CLAUDE.md)（給 AI/開發者）是**兩個對等入口、內容互相對齊**；不論你讀哪一份，下表都帶你到正確的事實來源（SOT）。入口只負責導航，**操作細節在各 SOT，不在入口重複**。
+>
+> 🔴 **本檔與所有 SOT 文件都禁止寫死「會變的東西」**（篇數、題數、ID、排程時間、當前分數、存量統計）——一律改成「跑這條指令去查」。規則與門檻（規範）才寫死，歷史數字留在 [`docs/lessons/`](./docs/lessons/)。
+> **要查任何現況，直接看 [`CLAUDE.md`](./CLAUDE.md) §查現況 的指令一覽表**（該表是正本，本檔不重複）。
 
 | 你要做的事 | 情境 | 依序讀（事實來源） |
 |---|---|---|
@@ -105,7 +108,7 @@ postbuild  →  scripts/subset-fonts.mjs             ① 字型子集化 + 首�
 
 本地上線前自檢：`pnpm build && pnpm check:links`。
 
-## 設計規範（v2，2026-07-20 全站統一）
+## 設計規範（CI 硬性守門）
 
 `scripts/check-design.mjs` 於 build 前掃 `src/` 下所有 `.css`/`.astro`/`.svelte`，違規即擋：
 
@@ -182,10 +185,10 @@ topics: ["drug-repurposing"]     # 可選，對應 src/content/topics/
 
 ### 自動發文流程（全貌）
 
-科技類日更已半自動化，每天由 server cron 驅動。完整全貌：
+多條產線由 server cron 驅動，**各有各的來源與判準**（完整清單見 [`CLAUDE.md`](./CLAUDE.md) §自動發文 pipeline 與 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md)）。人挑題的那條長這樣：
 
 ```
-tech-radar（cron 每日一次）→ 發候選題到 Slack（帶「我要寫這題」按鈕）
+選題雷達（cron）→ 發候選題到 Slack（帶「我要寫這題」按鈕）
   → 作者點按鈕 → slack-actions-server 收事件 → 觸發 scripts/newsroom-write.mjs
   → 起草＋逐段配圖＋連結逐條查證 →（配圖硬性 gate）→ commit → 排程/上線
 週末另跑 weekly-report，把曝光數據回饋成下一輪選題（見「了解網路曝光量」）
@@ -193,10 +196,11 @@ tech-radar（cron 每日一次）→ 發候選題到 Slack（帶「我要寫這�
 
 | 元件 | 路徑 / 識別 | 角色 |
 |---|---|---|
-| 選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選；排程／模型見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §cron 總表 |
+| 論壇選題雷達 | `scripts/lib/forum-signals.mjs`（純資料）＋`scripts/forum-radar.mjs`＋`scripts/cron/forum-radar.sh` | 掃 PTT 白名單看板 → 跨分類候選 → Slack 各分類台。抓取／政治過濾／去重全是純 node，沒有新熱題就 exit 0、不喚 Claude。看板清單＝`BOARDS`。為什麼＝[`docs/lessons/forum-signals-radar.md`](./docs/lessons/forum-signals-radar.md) |
+| 科技選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選；排程／模型見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §cron 總表 |
 | 自動產文 | `scripts/newsroom-write.mjs` | headless 起草＋**配圖硬性 gate**（缺封面/內文 0 圖即中止不發），完成寫 `result.json` |
 | Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文，回報摘要/重點/預覽連結 |
-| 健康紀念日（每年 51 天） | `scripts/lib/health-days.mjs`（年曆表）＋`scripts/health-days.mjs`＋`scripts/cron/health-days{,-publish}.sh` | **日期驅動**（不是題材驅動）：年曆表決定哪天寫什麼，T-2 天抓當年度素材寫成排程稿，當天台北 06:17 由另一支純 shell cron 觸發部署才上線。配圖一律 OpenAI 生圖 |
+| 健康紀念日 | `scripts/lib/health-days.mjs`（年曆表）＋`scripts/health-days.mjs`＋`scripts/cron/health-days{,-publish}.sh` | **日期驅動**（不是題材驅動）：年曆表決定哪天寫什麼，T-2 天抓當年度素材寫成排程稿，當天台北 06:17 由另一支純 shell cron 觸發部署才上線。配圖一律 OpenAI 生圖 |
 | 國際寫作前閘門 | `scripts/lib/international-gate.mjs`＋`~/.local/state/appi-news/international-seen.json` | 動用寫作前先便宜地篩掉注定白寫的題：同批同事件去重 → 跨日 seen 帳本 → 一次 Haiku 批次篩選（實測 24→10）。**任何一層壞掉一律 fail-open 全部放行** |
 | 發佈隔離 checkout | `/root/appi.news-publisher`（`PUBLISH_ISOLATED=1`） | 自動產文在此跑，每篇 reset 到 `origin/main`，不動開發目錄未提交改動 |
 
@@ -221,10 +225,20 @@ tech-radar（cron 每日一次）→ 發候選題到 Slack（帶「我要寫這�
 
 ## 分類體系
 
-目前 8 個主分類（定義在 `src/config/categories.ts`，唯一事實來源）：
+主分類與子分類定義在 `src/config/categories.ts`（唯一事實來源）。**不要把清單抄進文件**——
+新增分類時文件一定忘了改。要看目前有哪些，跑：
 
-| slug | 中文 | 備註 |
-|---|---|---|
+```bash
+node -e 'import("./scripts/lib/verticals.mjs").then(m=>{for(const[k,v]of Object.entries(m.ALL_CATEGORIES))console.log(k.padEnd(14),v.name,"|",v.subcategories.join(" "))})'
+```
+
+（`scripts/lib/verticals.mjs` 是 `categories.ts` 的 .mjs 鏡像，供腳本使用；改分類要兩邊同步。）
+
+**哪些分類開放機器自動選題**：`verticals.mjs` 的 `VERTICALS`（是 `ALL_CATEGORIES` 的子集）。
+`health` / `finance` / `focus` / `columns` 刻意不在其中——機器不自選這些題；但**事實稿**
+（`kind: factual`）可經 Slack 按鈕由真人開單，產待審草稿、人工核可才上線。
+
+---|---|---|
 | `focus` | 焦點 | |
 | `international` | 國際 | |
 | `health` | 健康 | 英文名 APPI Health |
@@ -320,6 +334,7 @@ MIGRATION_NOTES.md  WordPress 遷移工具與對照
 | [`PERFORMANCE.md`](./PERFORMANCE.md) | 全員（改 build/字型/CSS/圖片前必讀） | 效能現行做法與不可退回的底線（歷史根因連到 `docs/lessons/`） |
 | [`docs/lessons/`](./docs/lessons/) | 全員 | **歷史經驗正本**：踩過的坑與重大決策（問題→原因→解法）；說明文件的「為什麼」都連這裡 |
 | [`MIGRATION_NOTES.md`](./MIGRATION_NOTES.md) | 維護者 | WordPress 遷移工具、欄位/分類對照、遷移統計（2026-06-09 歷史紀錄） |
+| [`docs/automation-invariants.md`](./docs/automation-invariants.md) | 全員（動任何 cron／自動產文前） | 自動化不可違反規則的單一正本 |
 | [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) | server 端 AI/維運 | 自動化在 server 上的開機前置、金鑰擺放、cron、週報＋自動產文操作 |
 | [`docs/content-todo.md`](./docs/content-todo.md) | 編輯團隊 | 內容待補清單（缺 references / highlights / 圖等） |
 | [`docs/content-plan/`](./docs/content-plan/) | 編輯團隊 | 內容遷移與選題 worklist |

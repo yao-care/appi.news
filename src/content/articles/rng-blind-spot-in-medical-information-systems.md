@@ -3,6 +3,7 @@ title: "病歷系統裡也有一個亂數產生器：醫療資訊安全的3個�
 slug: "rng-blind-spot-in-medical-information-systems"
 description: "Coldcard冷錢包的亂數產生器根因,搬到醫療資訊系統會長什麼樣?從去識別化假名、SMART on FHIR 的 PKCE、亂數品質驗證三個檢查點,拆解一次做錯、長期無感、爆發時無法回溯的共通失效結構。"
 publishDate: 2026-08-05
+updatedDate: 2026-08-06
 category: health
 subcategory: medtech
 tags: ["醫療AI", "數位健康", "資安", "資料治理", "個資保護", "醫療政策"]
@@ -34,8 +35,6 @@ draft: false
 **一個組態檢查邏輯的疏漏,讓硬體亂數產生器長期形同虛設**,系統卻在每一次開機、每一次交易裡都維持「正常運作」的外觀,直到有人驗證熵值才發現問題已存在超過五年。
 
 2026年7月30日,加密貨幣冷錢包 Coldcard 被揭露這項根因問題,受影響裝置一度在41分鐘內被轉出逾千枚比特幣,後續擴大到數千個地址、金額達數千萬美元等級。完整的根因拆解、時間線與受影響版本,見姊妹作〈[如何避免靜默降級:Coldcard冷錢包事件的3個檢查點](https://appi.news/articles/coldcard-silent-degradation-rng-root-cause/)〉,本文不重述,只取一件事往下走。
-
-![醫療資訊系統與研究資料庫之間的資料流示意,一名資訊人員在監看資料傳輸畫面](https://appi.news/images/rng-blind-spot-in-medical-information-systems/1.jpg "資料在系統之間流動時看起來一切正常,真正的風險常常藏在沒有人檢查的那個環節（圖／APPI News）")
 
 ## 為什麼醫療資訊躲不掉這題
 

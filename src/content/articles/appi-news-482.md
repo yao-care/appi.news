@@ -3,14 +3,11 @@ title: "關於社區健康篩查，你需要知道的6件事"
 slug: "appi-news-482"
 description: "健保署、藥師公會與診所跨機構合作，把功能健康篩查從診間帶進社區藥局。從亞健康概念、分工模式到篩查怎麼做、哪些族群該留意，一次看懂這套預防醫學新模式。"
 publishDate: 2026-07-31
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
 tags: ["預防醫學", "健檢報告", "醫療政策", "健保", "公共衛生", "醫病關係"]
 author: "appi-editorial"
-reviewedBy:
-  - "huang-ziyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-482.webp"
 coverAlt: "藥師在社區藥局的健康篩檢櫃檯，為一位中年顧客量血壓，一旁擺放骨密度檢測儀器"
 status: published
@@ -18,11 +15,6 @@ sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 10
-risksAndLimits:
-  - "「亞健康」為民間協會倡議概念，非健保或醫學會認定的疾病診斷"
-  - "篩查涵蓋族群比例為協會宣導性說法，非流行病學調查或政府統計數字"
-  - "此模式屬新興實務案例，長期成效如能否降低特定疾病發生率仍缺乏大規模追蹤數據佐證"
-  - "篩查項目與費用以各參與院所或活動公告為準，部分延伸服務可能自費"
 references:
   - title: "蕃新聞（2026）．諾貝爾眼科攜手美聯健康診所 共創全人健康 健保署與北市藥師公會亞健康協會三方見證．"
     url: "https://n.yam.com/Article/20260729167451"
@@ -34,8 +26,6 @@ references:
     url: "https://www.mohw.gov.tw/cp-3558-37574-1.html"
 draft: false
 ---
-![藥師在社區藥局的健康篩檢櫃檯，為一位中年顧客量血壓，一旁擺放骨密度檢測儀器](https://appi.news/images/appi-news-482/1.jpg "篩檢的地點正在改變，從醫院診間搬進每週都會經過的社區藥局")
-
 ## 一、新聞背景：從診間到社區的預防醫學轉向
 
 台北市藥師公會自2025年起，攜手社團法人中華亞健康協會推動「社區健康聯盟」，邀請上市櫃企業與地方團體共同投入，把社區藥局改造為「社區健康站」。近期，諾貝爾醫療集團與美聯健康聯合診所簽署戰略合作協議，由衛生福利部中央健康保險署與台北市藥師公會出面見證，進一步把基因檢測、眼科轉診與全人健康檢測項目納入這套社區合作架構。

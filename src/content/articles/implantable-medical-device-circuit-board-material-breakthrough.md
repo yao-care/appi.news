@@ -3,6 +3,7 @@ title: "液態金屬電路和傳統電路板差在哪？植入式醫療裝置材
 slug: "implantable-medical-device-circuit-board-material-breakthrough"
 description: "彎折疲勞長期困擾植入式與穿戴式醫療裝置，液態金屬電路與有機電晶體兩條材料路徑正在改寫電路板的物理極限。拆解技術原理、研發進度與臨床應用限制。"
 publishDate: 2026-08-05
+updatedDate: 2026-08-06
 category: health
 subcategory: medtech
 tags: ["醫療AI", "數位健康", "心血管健康", "醫療政策"]
@@ -13,7 +14,7 @@ status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
-readingTime: 12
+readingTime: 11
 references:
   - title: "GCM編輯部（2026）。SPCB可伸縮電路板3大材料突破，植入醫療更安全舒適。GCM"
     url: "https://gcm.org.tw/blog/spcb%e5%8f%af%e4%bc%b8%e7%b8%ae%e9%9b%bb%e8%b7%af%e6%9d%bf3%e5%a4%a7%e6%9d%90%e6%96%99%e7%aa%81%e7%a0%b4%ef%bc%8c%e6%a4%8d%e5%85%a5%e9%86%ab%e7%99%82%e6%9b%b4%e5%ae%89%e5%85%a8%e8%88%92%e9%81%a9/"
@@ -107,7 +108,3 @@ KAIST 研究團隊在《Nature Communications》發表的論文指出，其開�
 
 ### Q5: 台灣患者如果想使用這類新材料裝置，要留意什麼？
 新材料要用於臨床裝置，須先在台灣完成食品藥物管理署的查驗登記與生物相容性等安全性檢測。目前這類材料仍在研發驗證階段，患者可留意裝置更換週期與配戴處是否異常，不需要因為技術報導而主動要求更換現有裝置。
-
-## 資料來源
-
-本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[SPCB可伸縮電路板3大材料突破，植入醫療更安全舒適](https://gcm.org.tw/blog/spcb%e5%8f%af%e4%bc%b8%e7%b8%ae%e9%9b%bb%e8%b7%af%e6%9d%bf3%e5%a4%a7%e6%9d%90%e6%96%99%e7%aa%81%e7%a0%b4%ef%bc%8c%e6%a4%8d%e5%85%a5%e9%86%ab%e7%99%82%e6%9b%b4%e5%ae%89%e5%85%a8%e8%88%92%e9%81%a9/)

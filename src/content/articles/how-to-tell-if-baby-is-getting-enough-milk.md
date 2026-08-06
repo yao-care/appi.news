@@ -3,6 +3,7 @@ title: "寶寶吃飽了嗎？別只看擠乳量，這4個徵兆更準"
 slug: "how-to-tell-if-baby-is-getting-enough-milk"
 description: "擠乳量常讓新手父母誤判母奶是否充足。從含乳姿勢、吞嚥節律、體重回升時程到濕尿布與排便次數，整理判斷寶寶是否吃飽的客觀方法，並列出該諮詢泌乳顧問或兒科的警訊。"
 publishDate: 2026-08-05
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
 tags: ["育兒健康", "營養", "女性健康", "預防醫學"]
@@ -13,7 +14,7 @@ status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
-readingTime: 12
+readingTime: 11
 references:
   - title: "上醫預防醫學發展協會GCM協會編輯部（2026）. 奶量不足怎麼辦？從寶寶攝取判斷，別只看擠乳量"
     url: "https://gcm.org.tw/blog/nfant-intake-based-milk-supply-assessment/"
@@ -132,7 +133,3 @@ GCM在衛教文章中建議，家長可先記錄餵食次數、尿布狀況與�
 
 ### Q4: 擠奶量一直很少，是不是代表要放棄親餵改配方奶？
 不需要單靠擠奶量做這個決定。擠乳效率因人、因泵而異，親餵時的實際攝取需另外透過含乳、吞嚥與尿布量觀察。若擔心奶量不足，建議先諮詢國際認證泌乳顧問（IBCLC）找出原因，再決定後續哺餵方式。
-
-## 資料來源
-
-本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[奶量不足怎麼辦？從寶寶攝取判斷，別只看擠乳量](https://gcm.org.tw/blog/nfant-intake-based-milk-supply-assessment/)

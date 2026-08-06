@@ -25,7 +25,15 @@ function isActive(href: string): boolean {
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href={navUrl('/')} aria-label="APPI News">
+    {/*
+      刻意不加 aria-label：無障礙名稱由內容算出（裝飾用的 brand-mark 有 aria-hidden，
+      不會被讀出），結果就是「APPI News」，與畫面上的字一致。
+      加了 aria-label 反而會觸發 axe 的 label-content-name-mismatch——該規則只在
+      「名稱由 aria-label 指定」時才檢查，而它把 aria-hidden 的裝飾 A 也算進可見文字
+      （Lighthouse 實測 nodeLabel="A\nAPPI News"），於是永遠對不上。
+      對語音控制使用者的影響：唸出看到的字要點得到，所以名稱必須包含可見文字。
+    */}
+    <a class="brand" href={navUrl('/')}>
       <span class="brand-mark" aria-hidden="true">A</span>
       <span class="brand-name">APPI&#32;<span class="brand-name-accent">News</span></span>
     </a>

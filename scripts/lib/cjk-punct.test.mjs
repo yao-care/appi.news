@@ -1,5 +1,7 @@
-import { describe, it } from 'node:test';
-import assert from 'node:assert/strict';
+// 2026-08-06：從 node:test 改寫成 vitest。原本用 node:test 的 describe/it 加 node:assert，
+// 在 `pnpm vitest run` 下會直接報「No test suite found」——等於這支測試一直沒被跑到
+// （整個測試套件唯一的失敗檔，其餘 72 檔都是 vitest）。斷言語意逐條對照搬過來，未改測試內容。
+import { describe, it, expect } from 'vitest';
 import { normalizeCjkPunct, normalizeCjkPunctAll } from './cjk-punct.mjs';
 
 // 這條規則的兩個方向都會改壞資料：轉太少＝中文句留半形標點，轉太多＝把千分位/時間改爛。
@@ -15,7 +17,7 @@ describe('normalizeCjkPunct', () => {
       ['這才是重點:能不能把', '這才是重點：能不能把'],
       ['他問,你確定嗎?他說', '他問，你確定嗎？他說'],
     ];
-    for (const [input, want] of cases) assert.equal(normalizeCjkPunct(input), want);
+    for (const [input, want] of cases) expect(normalizeCjkPunct(input)).toBe(want);
   });
 
   it('數字夾數字不動（千分位／時間／比值）', () => {
@@ -25,20 +27,20 @@ describe('normalizeCjkPunct', () => {
       '自費疫苗1,200至1,500元',
       '會議 14:30 開始',
     ]) {
-      assert.equal(normalizeCjkPunct(s), s);
+      expect(normalizeCjkPunct(s)).toBe(s);
     }
   });
 
   it('純拉丁語境不動', () => {
     for (const s of ['模型有 Sonnet 5, Haiku 4.5', 'key: value; other']) {
-      assert.equal(normalizeCjkPunct(s), s);
+      expect(normalizeCjkPunct(s)).toBe(s);
     }
   });
 
   it('非字串原樣回傳，陣列版逐項處理', () => {
-    assert.equal(normalizeCjkPunct(null), null);
-    assert.equal(normalizeCjkPunct(42), 42);
-    assert.deepEqual(normalizeCjkPunctAll(['甲,乙', '10,080 筆']), ['甲，乙', '10,080 筆']);
-    assert.deepEqual(normalizeCjkPunctAll('x'), 'x');
+    expect(normalizeCjkPunct(null)).toBe(null);
+    expect(normalizeCjkPunct(42)).toBe(42);
+    expect(normalizeCjkPunctAll(["甲,乙", "10,080 筆"])).toEqual(["甲，乙", "10,080 筆"]);
+    expect(normalizeCjkPunctAll("x")).toEqual("x");
   });
 });

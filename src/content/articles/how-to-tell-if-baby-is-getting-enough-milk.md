@@ -26,8 +26,6 @@ references:
     url: "https://www.pampers.com/en-us/baby/diapering/article/how-many-wet-diapers-should-a-newborn-have"
 draft: false
 ---
-![台灣媽媽在明亮居家環境中親餵新生兒，寶寶嘴巴張大、下巴貼緊乳房](https://appi.news/images/how-to-tell-if-baby-is-getting-enough-milk/1.jpg "判斷寶寶吃飽與否，不能只看擠乳量，含乳姿勢與哺乳過程的觀察同樣重要")
-
 擠乳瓶上的刻度，是許多新手父母判斷母奶夠不夠的第一個依據，也是最容易誤判的一個。上醫預防醫學發展協會（GCM）在衛教文章中指出，擠乳量與寶寶親餵時的實際攝取量「常常對不上」，兩者受到的生理機制原本就不同，用擠乳量推算親餵奶水是否充足，經常得出錯誤結論。真正能反映寶寶攝取狀況的，是含乳姿勢、吞嚥節律、體重曲線與尿布量這幾項可以客觀觀察與記錄的指標。
 
 ## 一、為什麼擠乳量不能代表寶寶吃到多少奶

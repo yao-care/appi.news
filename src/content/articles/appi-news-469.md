@@ -3,14 +3,11 @@ title: "3個數字看韓安齊200混合式如何改寫17年全國紀錄"
 slug: "appi-news-469"
 description: "韓安齊在全國中正盃以2分11秒72打破塵封17年的女子200公尺混合式全國紀錄，劍指名古屋亞運獎牌。從舊紀錄保持人程琬容、進步的0.83秒，到亞運對手實力分析，看懂這場突破的意義。"
 publishDate: 2026-07-29
+updatedDate: 2026-08-06
 category: sports
 subcategory: events
 tags: ["國際賽事", "日本"]
 author: "appi-editorial"
-reviewedBy:
-  - "chou-jingyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-469.webp"
 coverAlt: "韓安齊在200公尺混合式比賽中奮力游泳的畫面"
 status: published
@@ -18,9 +15,6 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 11
-risksAndLimits:
-  - "4秒差距是韓安齊現有2分11秒72與亞洲紀錄2分07秒41的比較，非同屆賽事直接對戰結果"
-  - "亞運參賽標準達標與能否奪牌是兩回事，內文未提及亞運選拔或報名是否已正式確定"
 references:
   - title: "中央社 (2026). 韓安齊200混合式女泳破高懸17年全國紀錄 目標名古屋亞運奪牌"
     url: "https://www.cna.com.tw/news/aspt/202606150239.aspx"
@@ -36,8 +30,6 @@ references:
     url: "https://www.tatlerasia.com/lifestyle/sports/angie-coe-zh-hant"
 draft: false
 ---
-![韓安齊在200公尺混合式比賽中奮力游泳的畫面](https://appi.news/images/appi-news-469/1.jpg "這面等了17年的紀錄，就在她奮力划水的這一瞬間被改寫（圖／Rti 中央廣播電臺）")
-
 ## 韓安齊改寫歷史：200混合式游出生涯最佳
 
 115年全國中正盃游泳錦標賽於2026年6月11日至15日在臺北市立大學詩欣館舉行，是國內選手備戰名古屋亞運的重要指標賽事之一。6月15日登場的女子200公尺混合式決賽，台美混血泳將韓安齊游出2分11秒72奪得金牌，改寫一面保持17年的全國紀錄。

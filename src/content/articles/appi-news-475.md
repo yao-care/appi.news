@@ -3,26 +3,18 @@ title: "什麼是衰弱前期？長者肌力訓練從這裡開始"
 slug: "appi-news-475"
 description: "衰弱前期是失能前的可逆黃金期，肌力訓練與社區活動課程能延緩長者衰弱徵象。本文解析介入原理、實證效益與居家可行做法。"
 publishDate: 2026-07-30
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
 tags: ["長照", "肌少症", "高齡健康", "預防醫學"]
 author: "appi-editorial"
-reviewedBy:
-  - "huang-ziyan"
-factCheckedBy:
-  - "appi-editorial"
-coverImage: "covers/appi-news-475-cover.webp"
-coverAlt: "長照相關情境（示意圖）"
+coverImage: "covers/appi-news-475.webp"
+coverAlt: "長者在社區據點由教練帶領進行彈力帶肌力訓練的實景照片"
 status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 11
-risksAndLimits:
-  - "研究對象與介入方案差異大，效果不宜過度類推到所有長者"
-  - "三高、心血管疾病或服用影響平衡藥物者，訓練前應先經專業評估"
-  - "肌力訓練效果多需10週以上、平均約23週的持續介入才觀察得到"
-  - "社區據點補助與費用依各縣市規定而異，非全國統一標準"
 references:
   - title: "Talar K, et al. (2021). Benefits of Resistance Training in Early and Late Stages of Frailty and Sarcopenia: A Systematic Review and Meta-Analysis of Randomized Controlled Studies. *Journal of Clinical Medicine*, 10(8), 1630"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8070531/"
@@ -74,8 +66,6 @@ draft: false
 衛生福利部自2020年起試辦銀髮健身俱樂部，2021年起由國民健康署主導擴大布建，截至統計，全國21個縣市已累計建置128處據點。這類據點的運作模式通常結合專業教練指導、功能評估、衛教課程與社交互動：長者定期到場參與團體運動,搭配前後測的肌力與行走能力評估，讓進度可以被追蹤而非憑感覺判斷。據點回報顯示，超過九成的參與長者自覺精神與心情有明顯正向改善，上下肢肌力、行走速度與穩定度也同步見到進展。
 
 除了銀髮健身俱樂部，各縣市長照2.0體系下的巷弄長照站（C據點）與日照中心也普遍提供團體運動課程，通常一週一至兩次、每次一小時上下,內容多結合肌力訓練與認知刺激活動。新竹榮家案例採用的12週、每週一次模式，強度介於這兩者之間,顯示課程長度與頻率可依機構資源與長者體能狀況彈性調整,並非只有單一標準做法。
-
-![長者在社區據點由教練帶領進行彈力帶肌力訓練的實景照片](https://appi.news/images/appi-news-475/2.jpg "全國已布建上百處銀髮據點，結合教練指導與定期評估，讓訓練成效有人陪著追蹤。")
 
 參與社區課程對長者而言,除了訓練效果本身,規律的出席與團體互動也有助於維持參與動機，這正是居家自主訓練經常缺乏、卻對長期持續度影響很大的一環。
 

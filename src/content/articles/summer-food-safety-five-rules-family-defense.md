@@ -24,8 +24,6 @@ references:
     url: "https://gcm.org.tw/blog/five-summer-food-safety-rules-for-safer-eating/"
 draft: false
 ---
-![夏日餐桌上放置常溫過久的便當與冰品，搭配食物溫度計，暗示溫度與時間是食物中毒的關鍵變因](https://appi.news/images/summer-food-safety-five-rules-family-defense/1.jpg "食物看起來沒有異狀，不代表安全，真正該注意的是離開冷藏或加熱後經過了多久時間")
-
 ## 一、食物中毒的核心：溫度與時間的交互作用
 
 衛生福利部食品藥物管理署（TFDA）在衛教資料中提醒，每年5月至10月為國內食品中毒通報案件的高峰期，氣溫與濕度上升是主要成因。TFDA 同時提出「五要原則」作為預防食品中毒的基本架構，呼籲民眾在備餐與外食時逐一檢視。

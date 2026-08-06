@@ -1,89 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="瘦瘦針前中後三階段健康管理：使用前完成抽血評估與排除禁忌，使用中監測副作用並補足蛋白質，使用後維護體組成並定期追蹤">
-<style>
-text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
-.title{font-size:26px;font-weight:700;fill:#1e2030;}
-.deck{font-size:15px;fill:#6e7276;}
-.num{font-size:18px;font-weight:700;fill:#ffffff;}
-.phase{font-size:22px;font-weight:700;fill:#1e2030;}
-.focus{font-size:14px;font-weight:700;fill:#a87515;}
-.item{font-size:15px;fill:#1e2030;}
-.note{font-size:13px;fill:#6e7276;font-style:italic;}
-.foot{font-size:13px;fill:#6e7276;}
-</style>
-<rect width="960" height="600" fill="#ffffff"/>
-
-<!-- 標題列 -->
-<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
-<text x="58" y="60" class="title">瘦瘦針前中後三階段健康管理</text>
-<text x="58" y="90" class="deck">從用藥前評估到停藥後維護，三個階段各有重點，減重的品質比數字更重要</text>
-
-<!-- 時間軸 -->
-<line x1="120" y1="140" x2="852" y2="140" stroke="#e8e9ed" stroke-width="2"/>
-<polygon points="862,140 850,134 850,146" fill="#6e7276"/>
-<circle cx="190" cy="140" r="18" fill="#1f3a5f"/>
-<text x="190" y="146" text-anchor="middle" class="num">1</text>
-<circle cx="490" cy="140" r="18" fill="#1f3a5f"/>
-<text x="490" y="146" text-anchor="middle" class="num">2</text>
-<circle cx="790" cy="140" r="18" fill="#1f3a5f"/>
-<text x="790" y="146" text-anchor="middle" class="num">3</text>
-
-<!-- 欄位分隔線 -->
-<line x1="340" y1="180" x2="340" y2="500" stroke="#e8e9ed" stroke-width="1"/>
-<line x1="640" y1="180" x2="640" y2="500" stroke="#e8e9ed" stroke-width="1"/>
-
-<!-- ── 使用前 ── -->
-<g>
-  <text x="190" y="205" text-anchor="middle" class="phase">使用前</text>
-  <text x="190" y="230" text-anchor="middle" class="focus">抽血評估・排除禁忌</text>
-  <g class="item">
-    <rect x="55" y="268" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="72" y="275">抽血查肝腎、血糖、甲狀腺、血脂</text>
-    <rect x="55" y="308" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="72" y="315">排除禁忌症與需謹慎族群</text>
-    <rect x="55" y="348" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="72" y="355">主動告知正在服用的藥物</text>
-    <rect x="55" y="388" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="72" y="395">建立用藥前的健康基準值</text>
-  </g>
-  <text x="190" y="470" text-anchor="middle" class="note">先做完整基準評估再開藥</text>
-</g>
-
-<!-- ── 使用中 ── -->
-<g>
-  <text x="490" y="205" text-anchor="middle" class="phase">使用中</text>
-  <text x="490" y="230" text-anchor="middle" class="focus">副作用監測・蛋白質補充</text>
-  <g class="item">
-    <rect x="360" y="268" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="377" y="275">低劑量起始、緩步調升劑量</text>
-    <rect x="360" y="308" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="377" y="315">監測噁心、腹瀉等腸胃反應</text>
-    <rect x="360" y="348" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="377" y="355">持續劇烈上腹痛立即就醫</text>
-    <rect x="360" y="388" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="377" y="395">蛋白質優先，必要時補 ONS</text>
-  </g>
-  <text x="490" y="470" text-anchor="middle" class="note">第 1–3 個月每月回診一次</text>
-</g>
-
-<!-- ── 使用後 ── -->
-<g>
-  <text x="790" y="205" text-anchor="middle" class="phase">使用後</text>
-  <text x="790" y="230" text-anchor="middle" class="focus">體組成維護・定期追蹤</text>
-  <g class="item">
-    <rect x="660" y="268" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="677" y="275">每 3–6 個月追蹤血糖腎功能</text>
-    <rect x="660" y="308" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="677" y="315">每 6 個月全套血液複檢</text>
-    <rect x="660" y="348" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="677" y="355">規律運動、保住肌肉量</text>
-    <rect x="660" y="388" width="7" height="7" rx="1.5" fill="#a87515"/>
-    <text x="677" y="395">停藥前先穩住飲食與運動習慣</text>
-  </g>
-  <text x="790" y="470" text-anchor="middle" class="note">把用藥期當改善代謝的窗口</text>
-</g>
-
-<!-- 頁尾 -->
-<line x1="40" y1="546" x2="920" y2="546" stroke="#e8e9ed" stroke-width="1"/>
-<text x="40" y="574" class="foot">製圖：APPI News</text>
-<text x="920" y="574" text-anchor="end" class="foot">資料：文內三階段健康管理・請依醫師指示進行</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+<defs><style>
+text{font-family:'Noto Sans TC','Microsoft JhengHei',Arial,sans-serif}
+.T{font-size:21px;font-weight:700;fill:#1B5E4B}
+.H{font-size:15px;font-weight:700;fill:#fff}
+.S{font-size:12px;font-weight:600;fill:#C9A227}
+.B{font-size:12.5px;fill:#1F2A28}
+.N{font-size:11px;fill:#6B7B77;font-style:italic}
+.SN{font-size:17px;font-weight:700;fill:#fff}
+</style></defs>
+<rect width="960" height="600" fill="#fff"/>
+<text x="480" y="43" text-anchor="middle" class="T">瘦瘦針前中後三階段健康管理時程</text>
+<rect x="200" y="52" width="560" height="3" rx="1.5" fill="#C9A227"/>
+<line x1="100" y1="110" x2="856" y2="110" stroke="#2E8B6F" stroke-width="3"/>
+<polygon points="862,110 852,104 852,116" fill="#2E8B6F"/>
+<circle cx="190" cy="110" r="15" fill="#1B5E4B"/>
+<text x="190" y="115" text-anchor="middle" class="SN">1</text>
+<circle cx="480" cy="110" r="15" fill="#1B5E4B"/>
+<text x="480" y="115" text-anchor="middle" class="SN">2</text>
+<circle cx="770" cy="110" r="15" fill="#1B5E4B"/>
+<text x="770" y="115" text-anchor="middle" class="SN">3</text>
+<rect x="60" y="135" width="260" height="400" rx="8" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+<rect x="60" y="135" width="260" height="60" rx="8" fill="#1B5E4B"/>
+<rect x="60" y="175" width="260" height="20" fill="#1B5E4B"/>
+<text x="190" y="161" text-anchor="middle" class="H">使用前</text>
+<text x="190" y="186" text-anchor="middle" class="S">抽血評估</text>
+<circle cx="82" cy="225" r="4" fill="#2E8B6F"/>
+<text x="95" y="229" class="B">空腹血糖與糖化血色素檢測</text>
+<circle cx="82" cy="260" r="4" fill="#2E8B6F"/>
+<text x="95" y="264" class="B">肝腎功能及胰腺基礎評估</text>
+<circle cx="82" cy="295" r="4" fill="#2E8B6F"/>
+<text x="95" y="299" class="B">記錄基礎體重、BMI 與體脂</text>
+<circle cx="82" cy="330" r="4" fill="#2E8B6F"/>
+<text x="95" y="334" class="B">詳細用藥史與過敏史詢問</text>
+<line x1="80" y1="363" x2="300" y2="363" stroke="#2E8B6F" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="190" y="386" text-anchor="middle" class="N">建議提前 2 週完成基礎評估</text>
+<rect x="350" y="135" width="260" height="400" rx="8" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+<rect x="350" y="135" width="260" height="60" rx="8" fill="#2E8B6F"/>
+<rect x="350" y="175" width="260" height="20" fill="#2E8B6F"/>
+<text x="480" y="161" text-anchor="middle" class="H">使用中</text>
+<text x="480" y="186" text-anchor="middle" class="S">副作用監測・蛋白質補充</text>
+<circle cx="372" cy="225" r="4" fill="#1B5E4B"/>
+<text x="385" y="229" class="B">記錄噁心嘔吐等腸胃反應</text>
+<circle cx="372" cy="260" r="4" fill="#1B5E4B"/>
+<text x="385" y="264" class="B">每日攝取足量優質蛋白質</text>
+<circle cx="372" cy="295" r="4" fill="#1B5E4B"/>
+<text x="385" y="299" class="B">每週固定量測體重變化</text>
+<circle cx="372" cy="330" r="4" fill="#1B5E4B"/>
+<text x="385" y="334" class="B">注射部位規律輪替</text>
+<line x1="370" y1="363" x2="590" y2="363" stroke="#2E8B6F" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="480" y="386" text-anchor="middle" class="N">記錄飲食日誌有助於調整</text>
+<rect x="640" y="135" width="260" height="400" rx="8" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+<rect x="640" y="135" width="260" height="60" rx="8" fill="#1B5E4B"/>
+<rect x="640" y="175" width="260" height="20" fill="#1B5E4B"/>
+<text x="770" y="161" text-anchor="middle" class="H">使用後</text>
+<text x="770" y="186" text-anchor="middle" class="S">體組成維護・追蹤</text>
+<circle cx="662" cy="225" r="4" fill="#2E8B6F"/>
+<text x="675" y="229" class="B">阻力訓練維持肌肉量</text>
+<circle cx="662" cy="260" r="4" fill="#2E8B6F"/>
+<text x="675" y="264" class="B">鞏固健康飲食習慣</text>
+<circle cx="662" cy="295" r="4" fill="#2E8B6F"/>
+<text x="675" y="299" class="B">定期回診追蹤體重變化</text>
+<circle cx="662" cy="330" r="4" fill="#2E8B6F"/>
+<text x="675" y="334" class="B">持續監測體脂率與肌肉量</text>
+<line x1="660" y1="363" x2="880" y2="363" stroke="#2E8B6F" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="770" y="386" text-anchor="middle" class="N">定期回診並與醫師保持溝通</text>
+<text x="480" y="572" text-anchor="middle" font-size="11" fill="#6B7B77">※ 請依醫師指示進行，本圖僅供衛教參考</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

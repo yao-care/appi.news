@@ -3,26 +3,18 @@ title: "羽球「35歲是巔峰尾聲」是真的嗎？周天成36歲奪超級10
 slug: "appi-news-453"
 description: "36歲的周天成在中國羽球公開賽奪下生涯第2座超級1000冠軍，寫下該級賽事史上最年長男單冠軍紀錄。從賽事等級、生涯軌跡到台灣羽球選手歷史對照，一次看懂這場勝利的意義與後續賽程。"
 publishDate: 2026-07-28
-updatedDate: 2026-07-29
+updatedDate: 2026-08-06
 category: sports
 subcategory: events
-tags:
-  - "國際賽事"
+tags: []
 author: "appi-editorial"
-reviewedBy:
-  - "chou-jingyan"
-factCheckedBy:
-  - "appi-editorial"
-coverImage: "covers/appi-news-453-cover.webp"
-coverAlt: "運動賽事相關情境（示意圖）"
+coverImage: "covers/appi-news-453.webp"
+coverAlt: "周天成身著中華台北隊紅色戰袍，在羽球場上高舉中國羽球公開賽男單冠軍獎盃，背景有五彩紙花與場館燈光"
 status: published
 sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 11
-risksAndLimits:
-  - "奧運三度止步男單8強，未突破獎牌關卡，長壽競技力不等於奧運成績突破"
-  - "樣本為周天成個人案例，其長壽競技表現能否複製到其他選手仍未有定論"
 references:
   - title: "中央社 (2026). 周天成中國羽球賽決賽擊敗波波夫 奪生涯第2座超級1000冠軍"
     url: "https://www.cna.com.tw/news/aspt/202607260151.aspx"
@@ -40,8 +32,6 @@ references:
     url: "https://www.scmp.com/sport/china/article/3361912/chinese-taipeis-chou-tien-chen-becomes-oldest-super-1000-winner-badmintons-china-open"
 draft: false
 ---
-![周天成身著中華台北隊紅色戰袍，在羽球場上高舉中國羽球公開賽男單冠軍獎盃，背景有五彩紙花與場館燈光](https://appi.news/images/appi-news-453/1.jpg "36歲的周天成用這座冠軍證明，巔峰未必要在30歲畫下句點（圖／中央社 CNA）")
-
 ## 一、賽事回顧：奪冠關鍵一戰
 
 2026年超級1000等級賽事「中國羽球公開賽」7月27日在江蘇常州落幕，台灣羽球一哥周天成在男單決賽中，以21比15、7比21、21比13擊敗世界排名第16的法國選手波波夫（Toma Junior Popov），拿下本季首座冠軍。

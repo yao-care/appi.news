@@ -3,27 +3,18 @@ title: "新竹縣全中運48面獎牌創史上最強：你該知道的6件事"
 slug: "appi-news-470"
 description: "新竹縣代表隊在115年全中運奪下9金20銀19銅共48面獎牌、127項次闖進全國前八，寫下歷史新高。從授旗規模到近億元場地投資，一次看懂這波進步背後的體育政策佈局。"
 publishDate: 2026-07-30
+updatedDate: 2026-08-06
 category: sports
 subcategory: events
 tags: ["學生賽事", "新竹縣", "教育", "運動產業"]
 author: "appi-editorial"
-reviewedBy:
-  - "chou-jingyan"
-factCheckedBy:
-  - "appi-editorial"
-coverImage: "covers/appi-news-470-cover.webp"
-coverImageCredit: "Photo by Hữu Phú on Unsplash"
-coverAlt: "學生賽事相關情境（示意圖）"
+coverImage: "covers/appi-news-470.webp"
+coverAlt: "新竹縣全中運代表隊授旗典禮，選手與縣府官員合影"
 status: published
 sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 13
-risksAndLimits:
-  - "「場地整修帶動獎牌成長」是本文推論比對，非官方認定的因果關係"
-  - "桃園市人口規模達新竹縣三倍以上，總獎牌數不宜與新竹縣直接比較"
-  - "115年度15校場地工程仍在招標施工，能否如期年底完工尚未確定"
-  - "新竹市、桃園市、苗栗縣的入列前八項次數字未公布，無法逐項對照"
 references:
   - title: "新竹縣政府 (2026). 竹縣小將全中運戰力炸裂 48面獎牌、127項次入前八創史上最強"
     url: "https://www.hsinchu.gov.tw/News_Content.aspx?n=153&s=283266"
@@ -40,8 +31,6 @@ references:
 draft: false
 ---
 新竹縣政府公布115年全國中等學校運動會（全中運）成績，代表隊在4月18日至23日於嘉義縣舉行的賽事中，累計奪下9金、20銀、19銅，總計48面獎牌，127項次闖進全國前八，寫下新竹縣參加全中運以來的最佳紀錄。這場成績單背後，是連續三屆逐年攀升的獎牌數，也是縣府近兩年在選手培訓與運動場地上的資源投入。
-
-![新竹縣全中運代表隊授旗典禮，選手與縣府官員合影](https://appi.news/images/appi-news-470/1.jpg "622名選手代表新竹縣出征嘉義，扛的是連三屆逐年攀升的成績與期待。（圖／PChome Online 新聞）")
 
 ## 一、竹縣全中運寫下歷史新高：48面獎牌、127項次前八
 

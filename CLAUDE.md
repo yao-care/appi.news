@@ -91,7 +91,9 @@
 
 ## 部署機制
 
-- 部署設定在 `.github/workflows/deploy.yml`，觸發條件有三：**push 到 `main`**、**每 6 小時 cron**、**手動 `workflow_dispatch`**。
+- 部署設定在 `.github/workflows/deploy.yml`。🔴 **push 不會觸發部署**（2026-08-06 起）——只有**每 15 分鐘的排程**與**手動 `workflow_dispatch`**會。
+  - 為什麼拿掉 push 觸發：各產線「一篇一 commit 一 push」加上人工推送，一天疊到 200 次部署，之後連續六次卡在 `deployment_queued` 逾時（站台僅佔 1 GB 上限的三分之一，不是體積問題），研判被節流。收斂成 4 次/小時，替 `workflow_dispatch` 留餘裕。
+  - **急著上線就手動戳**：`gh workflow run deploy.yml`。GitHub 排程常誤點，等排程實際可能 20–30 分鐘。
 - `status: scheduled` 且 `publishDate` 在未來的文章**不進列表／sitemap／RSS／llms**（由 `getPublishedArticles()` 過濾），到時間後由 6 小時 cron 重建自動上線。
   - 但會在 `/articles/<slug>/` 產出一個 **noindex、不被任何站內連結指到**的「排程草稿預覽頁」（`getScheduledPreviewArticles()` + `[slug].astro` getStaticPaths），供作者**站內預覽＋編輯**（登入 `/admin` 後右下角「編輯」鈕）。sitemap 由 `astro.config.mjs` 的 `previewPaths` 排除；tag 在預覽頁渲染為純文字（避免連到未產出的 tag 頁擋 `check:links`）。到 `publishDate` 後同一 URL 自動轉正。
   - **排程稿不會自己在非整點上線**：`isPublic()` 比對的是 build 當下時間，6 小時 cron 對不上任意時刻。要準點上線必須另排一支 cron 戳 `workflow_dispatch`。
@@ -101,7 +103,7 @@
 
 - 上線前自檢：`pnpm build && pnpm check:links`（**站內壞連結是硬性 gate，會擋部署**；Lighthouse 是軟性、僅參考）。
 - 驗收以**部署後的線上站**為準，不是本機 `pnpm preview`；上線後用 PSI 檢查（見 `PERFORMANCE.md` §3）。
-- **改動的終點是「已發佈上線」，不是「分支就緒」**：一律走完整條——開分支 → `pnpm build && pnpm check:links` 綠 → merge 進 `main` → `git push origin main` → 等發佈完 → 驗線上站 → **才回報**。**不要停下來問「要不要 push／開 PR」**（把自家網站內容 push＋發佈＝早已授權的既定流程）。
+- **改動的終點是「已發佈上線」，不是「分支就緒」**：一律走完整條——開分支 → `pnpm build && pnpm check:links` 綠 → merge 進 `main` → `git push origin main` → **`gh workflow run deploy.yml`（push 不會自己觸發）** → 等發佈完 → 驗線上站 → **才回報**。**不要停下來問「要不要 push／開 PR」**（把自家網站內容 push＋發佈＝早已授權的既定流程）。
 - **只有這幾類才先問一句**（其餘一律直接做到發佈）：
   1. 不可逆的資料／內容刪除或覆寫（刪非自建產物、drop DB）
   2. 向真實外部第三方主動送出（寄信給客戶、公開社群發文）

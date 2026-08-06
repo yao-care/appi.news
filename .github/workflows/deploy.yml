@@ -1,15 +1,22 @@
 name: Deploy to GitHub Pages
 
 on:
-  # 推送到 main 時部署
-  push:
-    branches: [main]
-  # 手動觸發
+  # ⚠️ **刻意沒有 push 觸發**（2026-08-06 站長裁示）。
+  #
+  # 原本每次 push 都部署，而各產線是「一篇文章一個 commit 一次 push」，加上人工推送，
+  # 一天疊到 200 次部署。2026-08-06 08:46 之後連續六次 `build: success / deploy: failure`，
+  # deploy 步驟 600 秒內狀態始終是 `deployment_queued`——GitHub 根本沒開始處理我們的
+  # artifact（站台僅 392 MB，是 1 GB 上限的三分之一，不是體積問題），研判是部署頻率被節流。
+  #
+  # 改成「排程收斂」：每 15 分鐘一次＝最多 4 次/小時，替 workflow_dispatch 留餘裕
+  # （健康紀念日準點上線、臨時發佈都用它）。代價是 push 後最多等 15 分鐘才上線，
+  # 而 GitHub 排程 workflow 常誤點，實際可能 20–30 分鐘。**急著上線就手動戳**：
+  #   gh workflow run deploy.yml
   workflow_dispatch:
-  # 排程重建：讓「未來日期」的文章到時間後自動上線
-  # （靜態站需重新 build 才會產生新文章；每 6 小時重建一次）
+  # 排程重建：把這段時間內 push 的內容一次帶上線，也讓「未來日期」的排程稿到時間後自動上線
+  # （靜態站需重新 build 才會產生新文章）。
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '*/15 * * * *'
 
 # 提前切到 Node.js 24 執行 JS actions（如 actions/deploy-pages@v4），
 # 消除「Node.js 20 actions are deprecated」警告。官方 opt-in 旗標。

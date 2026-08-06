@@ -142,6 +142,8 @@ session token與稽核軌跡的產生邏輯也是同樣道理,一旦亂數來源
 
 ![亂數產生器作為核心，分別連向去識別化代號、OAuth授權碼、session token與稽核軌跡的示意圖](https://appi.news/images/coldcard-silent-degradation-rng-root-cause/5.png "同一個亂數來源一旦變弱，受影響的不只是加密貨幣錢包，還有病歷去識別化與登入權杖")
 
+這幾個環節各自要怎麼檢查、在醫療資訊系統裡具體會長成什麼樣子，另一篇〈[病歷系統裡也有一個亂數產生器](https://appi.news/articles/rng-blind-spot-in-medical-information-systems/)〉把去識別化假名、`code_verifier` 與熵源自測拆成三個可執行的檢查點，可以接著讀。
+
 ### 常見問題
 
 ### Q1: 所有Coldcard用戶都受影響嗎?

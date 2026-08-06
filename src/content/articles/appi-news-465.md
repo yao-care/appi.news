@@ -3,14 +3,11 @@ title: "115年全國羽球團體錦標賽戰報：8組冠軍與各校名次一�
 slug: "appi-news-465"
 description: "中華民國羽球協會公布115年全國羽球團體錦標賽正式成績，362隊、逾3600名選手齊聚苗栗小巨蛋。飛迅南市文化國小奪國小男女雙料冠軍，各組名次、地區分佈與較去年的排名變化一次看懂。"
 publishDate: 2026-07-29
+updatedDate: 2026-08-06
 category: sports
 subcategory: events
 tags: ["學生賽事", "苗栗縣"]
 author: "appi-editorial"
-reviewedBy:
-  - "chou-jingyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-465.webp"
 coverAlt: "決賽關鍵局比分長條圖，呈現飛迅南市文化國小-紅隊男團與女團決賽各局比分"
 status: published
@@ -18,10 +15,6 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 14
-risksAndLimits:
-  - "兩屆名次對照僅回溯至114年，更早期戰績變化目前無公開資料可查證"
-  - "地區分佈僅列隊名可辨識縣市者，未含地域標示的隊伍不在統計之列"
-  - "選手個人名單僅飛迅南市文化國小經媒體報導揭露，其餘組別未見公開個人資料"
 references:
   - title: "中華民國羽球協會 (2026). 115年全國羽球團體錦標賽 成績紀錄"
     url: "https://www.ctb.org.tw/upload/files/中華民國115年全國羽球團體錦標賽_成績紀錄_0511.xlsx"
@@ -93,8 +86,6 @@ draft: false
 根據麗台運動報報導，5月7日進行的國小組男女團體決賽，飛迅南市文化國小-紅兩場都以3比1擊退亞柏高雄市前鎮區民權國小A隊。男團第一男單李承星以21比11、21比17連下兩局；四年級的王子維跨齡對上六年級選手，以21比9、21比19獲勝。女團部分，陳怡妟以21比12、21比17扳回一局，莊元曦／陳湘雨、蔡羽卉／朱妍霓兩組女雙搭檔也有穩定表現。
 
 男子乙組決賽的晉級過程則相對膠著。依中華民國羽球協會公布的對戰表，冠軍隊伍國立體育大學在準決賽以3比2驚險過關；亞軍亞柏海鴻高大A同樣經歷3比0與3比2的多場苦戰才挺進決賽，顯示公開組賽事的競爭強度並未因分組差距而降低。
-
-![決賽關鍵局比分長條圖，呈現飛迅南市文化國小-紅隊男團與女團決賽各局比分](https://appi.news/images/appi-news-465/2.png "男女團決賽都靠關鍵局拉開差距，21比17到21比19的比分顯示對手緊咬到最後一刻")
 
 ## 四、地區分佈觀察
 

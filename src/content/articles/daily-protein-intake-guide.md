@@ -3,7 +3,7 @@ title: "一天到底要吃多少蛋白質：不同族群的實際數字、怎麼
 slug: "daily-protein-intake-guide"
 description: "健康成人每天每公斤體重建議攝取1.1公克蛋白質，規律重訓者要拉高到1.4至2.0公克，70歲以上長者也高於一般成人。本文整理國健署膳食營養素參考攝取量、國際運動營養學會與腎臟病防治基金會等公開資料，提供計算公式、食物克數對照，並處理「吃太多蛋白質會傷腎」的疑慮。"
 excerpt: "一般成人每公斤體重1.1公克，重訓者要到1.4至2.0公克，長者也比想像中需要更多。整理計算公式、食物克數對照，以及「蛋白質吃多傷腎」的真實風險邊界。"
-publishDate: "2027-08-06T08:00:00+08:00"
+publishDate: "2026-08-06T05:55:28.112Z"
 category: "health"
 subcategory: "nutrition"
 tags:
@@ -14,7 +14,7 @@ tags:
 author: "appi-editorial"
 coverImage: "covers/daily-protein-intake-guide-cover.webp"
 coverAlt: "雞蛋、雞胸肉、豆腐、豆漿與魚肉等多種蛋白質食物平鋪在桌面上"
-status: "scheduled"
+status: "published"
 sourceType: "editorial"
 contentType: "guide"
 disclaimerType: "medical"
@@ -61,6 +61,7 @@ references:
   - title: "簡易食物份量代換表"
     url: "https://www.cmuh.cmu.edu.tw/HealthEdus/Detail?no=4799"
     publisher: "中國醫藥大學附設醫院"
+updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 健康成人的蛋白質建議攝取量，是每天每公斤體重1.1公克，規律重訓者要拉高到1.4至2.0公克，70歲以上長者的建議量也高於一般成人。衛福部國健署最新調查顯示，台灣人的蛋白質攝取量普遍超過建議值，三餐分配不均才是多數人常見的問題。至於「蛋白質吃多會傷腎」，健康腎功能者的風險被高估，但慢性腎臟病患者與攝取過量排擠其他營養素的疑慮，仍是真實存在的邊界。

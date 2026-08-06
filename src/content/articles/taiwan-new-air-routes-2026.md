@@ -3,7 +3,7 @@ title: "台灣新開航線整理：長榮、星宇下半年新增哪些點，對
 slug: "taiwan-new-air-routes-2026"
 description: "長榮航空 12 月起直飛印度德里、星宇航空 8 月起加入布拉格航線並於 10 月開航峇里島，是台灣兩大航空公司 2026 下半年最重要的航網布局。本文整理三條新航線的開航日期、班次與機型，並用『原本怎麼飛、現在能怎麼飛』說明對旅客的實際差異。"
 excerpt: "長榮 12 月直飛德里、星宇 8 月起飛布拉格、10 月開航峇里島。整理下半年三條新航線的班次與機型，看懂對旅客的實際差異。"
-publishDate: "2027-08-06T08:00:00+08:00"
+publishDate: "2026-08-06T05:55:28.112Z"
 category: "lifestyle"
 subcategory: "travel"
 tags:
@@ -14,7 +14,7 @@ author: "appi-editorial"
 coverImage: "covers/taiwan-new-air-routes-2026.webp"
 coverAlt: "機場出境大廳旅客拖著行李走向登機門"
 coverImageCredit: "Photo by Aaron Mrvelj on Unsplash"
-status: "scheduled"
+status: "published"
 sourceType: "editorial"
 contentType: "guide"
 disclaimerType: "general"
@@ -49,6 +49,7 @@ references:
   - title: "2026星宇航空新航線整理！直飛布拉格、峇里島、釜山，台北與台中出發航班時間表全攻略"
     url: "https://www.marieclaire.com.tw/lifestyle/travel/92877"
     publisher: "美麗佳人"
+updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 台灣兩大航空公司在 2026 下半年密集開闢新航點：長榮航空 12 月起直飛印度德里，補上台灣唯一直飛印度的空白；星宇航空 8 月起加入台北至布拉格的直飛市場，10 月再開航峇里島。三條航線裡，真正替旅客打開新選項的是德里，布拉格與峇里島則是既有市場多一家業者競爭、班次更密集。

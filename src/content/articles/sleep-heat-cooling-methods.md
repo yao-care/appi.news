@@ -3,7 +3,7 @@ title: "熱到睡不好怎麼辦：睡眠降溫哪些方法真的有用，哪些
 slug: "sleep-heat-cooling-methods"
 description: "人要入睡，核心體溫必須先下降，這是判斷降溫方法有沒有用的關鍵。溫水澡、透氣寢具、冷氣搭配電風扇都圍繞著幫助散熱設計，確實有效；冰枕、冷氣調太低、睡前沖冷水澡則可能干擾入睡或造成半夜醒來。本文用核心體溫下降這條生理原則，把常見降溫招數分成有效、看情況、沒用或反效果三類，並整理有冷氣、沒冷氣與租屋族的可行組合。"
 excerpt: "入睡靠的是核心體溫下降，不是皮膚感覺涼。整理哪些降溫方法真的有科學依據、哪些只是心理安慰，甚至可能讓你更難睡著。"
-publishDate: "2027-08-06T08:00:00+08:00"
+publishDate: "2026-08-06T05:55:28.112Z"
 category: "health"
 subcategory: "preventive"
 tags:
@@ -15,7 +15,7 @@ author: "appi-editorial"
 coverImage: "covers/sleep-heat-cooling-methods.webp"
 coverAlt: "夏夜臥室中一個人躺在床上難以入睡（示意圖）"
 coverImageCredit: "Photo by Greg Pappas on Unsplash"
-status: "scheduled"
+status: "published"
 sourceType: "editorial"
 contentType: "guide"
 disclaimerType: "general"
@@ -55,6 +55,7 @@ references:
   - title: "省電36計"
     url: "https://www.moeaea.gov.tw/ECW/populace/content/Content.aspx?menu_id=86"
     publisher: "經濟部能源署"
+updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 人要順利入睡，核心體溫必須先下降，這才是有效降溫方法的共同關鍵，光是皮膚感覺涼快並不夠。圍繞這個原則設計的做法，像是睡前溫水澡、選對寢具材質、冷氣搭配電風扇，都有研究支持確實有效；相對地，冰枕直接放頭、冷氣調得太低、睡前沖冷水澡，這幾種常被當成消暑手段的做法，可能干擾入睡或讓人半夜醒來。

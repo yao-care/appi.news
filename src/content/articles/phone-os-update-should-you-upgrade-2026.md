@@ -2,7 +2,7 @@
 title: "手機系統更新前先看這篇：舊機該不該升，出事了怎麼退回"
 slug: "phone-os-update-should-you-upgrade-2026"
 description: "三年以上的舊機在大版本更新後最容易耗電、卡頓，但延後更新會累積安全性風險。整理一套不綁機型的判斷流程，並說明iOS與Android更新後能不能降回舊版、代價各是什麼。"
-publishDate: "2027-08-06T08:00:00+08:00"
+publishDate: "2026-08-06T05:55:28.112Z"
 category: "tech"
 subcategory: "digital-tools"
 tags:
@@ -26,7 +26,8 @@ risksAndLimits:
   - "Android系統本身官方不提供降版功能，僅少數應用程式可透過安裝舊版APK復原"
   - "文中耗電與流暢度回報來自使用者社群與媒體整理，實際表現因機型與使用習慣而異"
 draft: false
-status: "scheduled"
+status: "published"
+updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 系統大版本更新對使用三年以上的舊機最容易出現耗電變快、操作變卡的狀況，但一直不更新會讓已知的安全性漏洞持續留在手機裡。合理的作法是等第一個修正版、更新前先備份、確認常用App已支援新系統，而不是看到通知就升級、也不是永遠不升。

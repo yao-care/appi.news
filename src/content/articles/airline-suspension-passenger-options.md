@@ -3,7 +3,7 @@ title: "航空公司突然停飛，已經買的機票怎麼辦：退款順位、
 slug: "airline-suspension-passenger-options"
 description: "越竹航空 2026 年 8 月 1 日起全面停止定期航班，機隊從 44 架縮減到僅剩 1 架運營，讓外籍航空公司無預警停飛時消費者機票求償的困境再度浮上檯面。本文整理實際可行的退款優先順序：信用卡爭議款、透過旅行社代訂的契約責任、主管機關申訴，並說明信用卡爭議款的申請時限與銀行審查天數，以及購票前後可以做的自保準備。"
 excerpt: "越竹航空 8 月 1 日起全面停飛，機隊僅剩 1 架運營。本文整理消費者機票求償的實際優先順序：信用卡爭議款、旅行社契約責任、主管機關申訴，以及購票前後的自保作法。"
-publishDate: "2027-08-06T08:00:00+08:00"
+publishDate: "2026-08-06T05:55:28.112Z"
 category: "international"
 subcategory: "asia"
 tags:
@@ -15,7 +15,7 @@ author: "appi-editorial"
 coverImage: "covers/airline-suspension-passenger-options.webp"
 coverAlt: "機場出境大廳航班資訊看板顯示班機取消"
 coverImageCredit: "Photo by Oscar Chan on Pexels"
-status: "scheduled"
+status: "published"
 sourceType: "editorial"
 contentType: "guide"
 disclaimerType: "financial"
@@ -61,6 +61,7 @@ references:
   - title: "全國消費者服務專線 1950"
     url: "https://cpc.ey.gov.tw/Page/A1D31DAB12817E9"
     publisher: "行政院消費者保護會"
+updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 航空公司無預警停止營運時，直接向航空公司申請退款通常最慢也最不確定，消費者實際可行的優先順序是信用卡爭議款、透過旅行社代訂的契約責任求償，最後才是向主管機關申訴。事前用信用卡付款並保留完整交易憑證，是唯一能提高求償成功率的預防動作。

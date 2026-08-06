@@ -3,7 +3,7 @@ title: "機器人替活豬做微創手術32分鐘完成：手術機器人現在�
 slug: "surgical-robot-live-pig-minimally-invasive"
 description: "美國加州大學聖地牙哥分校團隊用中國宇樹科技的人形機器人 G1，在外科醫師全程遠端操控下完成活豬膽囊切除手術，32分鐘結束。這不是機器自己開刀，跟台灣現行的達文西一樣是醫師全程操控的遙控系統，差別在硬體平台與成本。"
 excerpt: "宇樹 G1 人形機器人完成活豬膽囊切除手術的示範，全程由外科醫師遠端操控，不是機器自主開刀。跟台灣醫院現行的達文西系統比，差別在硬體平台通用與否、成本與臨床成熟度，自主程度其實一樣低。"
-publishDate: "2027-08-06T08:00:00+08:00"
+publishDate: "2026-08-06T05:55:28.112Z"
 category: "health"
 subcategory: "medtech"
 tags:
@@ -19,7 +19,7 @@ reviewedBy:
   - "huang-ziyan"
 factCheckedBy:
   - "appi-editorial"
-status: "scheduled"
+status: "published"
 sourceType: "editorial"
 contentType: "guide"
 disclaimerType: "medical"
@@ -55,6 +55,7 @@ references:
     publisher: "Uho優活健康網"
 column: "ai-healthcare"
 topics: ["ai-medical-regulation"]
+updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 一則機器人替活豬完成微創手術的示範影片在 PTT 引發熱議，但影片沒講清楚的是：這台機器人從頭到尾都是外科醫師在遠端操控台即時操控的，不是自己決定怎麼開刀。真正有突破的是硬體，一台不到 2 萬美元的通用型人形機器人，做出了跟專用手術平台差不多精細的動作。

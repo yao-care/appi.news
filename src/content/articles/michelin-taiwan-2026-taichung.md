@@ -3,7 +3,7 @@ title: "2026台灣米其林指南：入選名單怎麼看，台中新增哪些�
 slug: "michelin-taiwan-2026-taichung"
 description: "米其林星級、必比登推介、入選餐廳是三種不同標準，多數人在意的『好吃又划算』其實對應必比登。整理2026台灣米其林指南全台概況，以及台中新增的7家入選餐廳、新摘星與掉星名單。"
 excerpt: "星級、必比登、入選餐廳代表不同評鑑重點，整理2026台灣米其林指南台中新增名單與訂位提醒。"
-publishDate: "2027-08-06T08:00:00+08:00"
+publishDate: "2026-08-06T05:55:28.112Z"
 category: "lifestyle"
 subcategory: "food"
 tags:
@@ -16,7 +16,7 @@ reviewedBy:
   - "luo-yang"
 factCheckedBy:
   - "appi-editorial"
-status: "scheduled"
+status: "published"
 sourceType: "editorial"
 contentType: "guide"
 disclaimerType: "general"
@@ -50,6 +50,7 @@ references:
   - title: "2026台灣米其林必比登推介公布 全台146家入選"
     url: "https://udn.com/news/story/7270/9626403"
     publisher: "聯合新聞網"
+updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 米其林指南其實是三套不同標準的合集：星級代表頂級用餐體驗，必比登推介才是多數人真正在找的「好吃又不貴」，入選餐廳則是評審認為值得一試、但還沒摘星的口袋名單。2026台灣米其林指南7月21日公布，台中今年共63家餐廳登榜，比去年多了7家入選餐廳，也出現首度摘星與掉星的變化。

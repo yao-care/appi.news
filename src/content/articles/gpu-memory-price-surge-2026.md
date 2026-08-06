@@ -3,7 +3,7 @@ title: "顯卡與記憶體同步漲價：2026下半年為什麼買電腦變貴�
 slug: "gpu-memory-price-surge-2026"
 description: "NVIDIA顯卡在台累計漲幅逾120%，記憶體合約價連季走高。這波漲價的源頭是AI資料中心把DRAM晶圓產能吃掉近兩成後，一路往下游傳導到顯卡、筆電、手機。整理漲價全貌、該看哪些指標，以及什麼時候該出手。"
 excerpt: "顯卡漲、記憶體也漲，兩件事其實是同一條供應鏈上的同一場擠壓。追到源頭，才知道該盯緊哪個數字。"
-publishDate: "2027-08-06T08:00:00+08:00"
+publishDate: "2026-08-06T05:55:28.112Z"
 category: "tech"
 subcategory: "semiconductor"
 tags:
@@ -15,7 +15,7 @@ author: "appi-editorial"
 coverImage: "covers/gpu-memory-price-surge-2026.webp"
 coverAlt: "電腦主機內安裝的 GeForce RTX 顯卡特寫，象徵顯卡與記憶體零組件同步漲價"
 coverImageCredit: "Photo by Christian Wiediger on Unsplash"
-status: "scheduled"
+status: "published"
 sourceType: "editorial"
 contentType: "guide"
 disclaimerType: "general"
@@ -65,6 +65,7 @@ references:
   - title: "DRAM Spot Price"
     url: "https://www.trendforce.com/price/dram/dram_spot"
     publisher: "TrendForce 集邦科技"
+updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 現在買顯卡或筆電比半年前貴一大截。根因是DRAM、NAND記憶體的合約價連續好幾季往上跳，AI資料中心把晶圓產能吃掉一大塊之後，成本一路往下游傳導到顯卡、筆電、手機。這波漲勢短期內看不到回頭跡象，急著要用的人不必特意等，不急的人該持續觀察記憶體合約價的季度走勢，顯卡標價的參考價值相對有限。

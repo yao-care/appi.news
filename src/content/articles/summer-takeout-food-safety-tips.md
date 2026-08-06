@@ -3,6 +3,7 @@ title: "便當放到下午還能吃嗎？夏日外食衛生迷思一次破解"
 slug: "summer-takeout-food-safety-tips"
 description: "食藥署稽查揭露手搖飲與便當潛藏的衛生風險，從冰塊操作、生熟食分裝到室溫保存時間，整理外食族自保的具體檢查重點與危險溫度帶原則。"
 publishDate: 2026-08-05
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
 tags: ["食品安全", "預防醫學", "公共衛生", "職場健康"]
@@ -13,7 +14,7 @@ status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
-readingTime: 10
+readingTime: 9
 references:
   - title: "衛生福利部食品藥物管理署（無日期）。食品中毒常見問與答"
     url: "https://www.fda.gov.tw/TC/sitecontent.aspx?sid=2572"
@@ -107,7 +108,3 @@ draft: false
 
 ### Q5: 哪些族群要特別小心外食衛生風險？
 孕婦、兒童、慢性病患者與長期服藥者，因免疫或代謝狀況相對敏感，暴露於同樣的污染食物時出現腸胃不適的風險可能較高，這幾類族群在外食保存時間的拿捏上，建議比一般建議再保守一些，若出現不適也應及早就醫。
-
-## 資料來源
-
-本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[一杯冰飲、一盒便當：炎夏外食族最常忽略的腸胃風險](https://gcm.org.tw/blog/five-safety-checks-for-summer-takeout-foods/)

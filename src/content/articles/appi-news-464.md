@@ -3,25 +3,18 @@ title: "115全中運桌球會內賽完整指南：四組冠軍與封王學校總
 slug: "appi-news-464"
 description: "115年全國中等學校運動會桌球項目會內賽於嘉義縣義竹國中落幕，國男、國女、高男、高女四組團體賽冠軍出爐。新北市淡江高中同時稱霸高女與國女組，臺北市松山家商包辦高男組團體與雙打賽冠軍，完整名次與個人賽看點一次掌握。"
 publishDate: 2026-07-29
+updatedDate: 2026-08-06
 category: sports
 subcategory: events
 tags: ["桌球"]
 author: "appi-editorial"
-reviewedBy:
-  - "chou-jingyan"
-factCheckedBy:
-  - "appi-editorial"
-coverImage: "covers/appi-news-464-cover.webp"
-coverImageCredit: "Photo by Lisa Keffer on Unsplash"
-coverAlt: "桌球相關情境（示意圖）"
+coverImage: "covers/appi-news-464.webp"
+coverAlt: "全中運桌球會內賽比賽現場示意圖"
 status: published
 sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 11
-risksAndLimits:
-  - "成績報告表未附前一屆對照資料，無法判斷連霸或首度奪冠，本文不做此推論"
-  - "資料僅涵蓋115年會內賽單一屆次名次，不代表歷屆排名走勢"
 references:
   - title: "中華民國學校體育總會 (2026). 中華民國115年全國中等學校運動會桌球項目成績報告表"
     url: "https://sport115.cyc.edu.tw/downloadfile.php?aid=228&download=99041&code=1b5096809c9c8c7bc4cfbf41ec11adff"
@@ -31,8 +24,6 @@ references:
     url: "https://sport115.cyc.edu.tw/Module/Pages/Index.php?ID=16"
 draft: false
 ---
-![全中運桌球會內賽比賽現場示意圖](https://appi.news/images/appi-news-464/1.jpg "四組團體賽在嘉義縣義竹國中激烈開打,冠軍名單就此揭曉（圖／蕃新聞）")
-
 ## 一、115全中運桌球會內賽落幕，四組冠軍出爐
 
 中華民國115年全國中等學校運動會桌球項目會內賽於115年4月19日至22日在嘉義縣義竹國中舉行，依國男、國女、高男、高女四組分別進行團體賽、單打賽、雙打賽與混合雙打賽，各組完整名次已由主辦單位公布於[成績報告表](https://sport115.cyc.edu.tw/downloadfile.php?aid=228&download=99041&code=1b5096809c9c8c7bc4cfbf41ec11adff)。

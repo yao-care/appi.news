@@ -17,7 +17,8 @@
 //   node scripts/forum-radar.mjs --go      # 完整流程
 //   node scripts/forum-radar.mjs --go --max 12   # 限制送進 LLM 的候選數（預設 40）
 
-import { writeFileSync, readFileSync, readdirSync } from 'node:fs';
+import { writeFileSync, readFileSync, readdirSync, mkdtempSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
@@ -183,17 +184,48 @@ async function selectTopics(cands, max) {
   return parseSuggestions(out);
 }
 
+/**
+ * 逐則自動產文並上架（站長 2026-08-06 裁示：論壇雷達走全自動上架，同國際／警消／便民；不設每日上限）。
+ *
+ * **配圖鐵則**：一律 `NO_AI_IMAGE=1`，禁 OpenAI 生圖，只用站內既有圖或圖庫
+ * （站長明確要求）。這裡在 spawn 時強制帶上，不依賴呼叫端的環境——`.sh` 忘了設也不會破功。
+ *
+ * 走 newsroom-write 而不是自己寫一套：配圖／選題重複／去 AI 腔／標籤四道 gate 全部保留。
+ * 單篇失敗只丟那一篇（回 false），不連累同批——比照影片線的作法。
+ */
+function writeAndPublish(s) {
+  const dir = mkdtempSync(join(tmpdir(), 'forum-radar-'));
+  const jobPath = join(dir, 'job.json');
+  // publishDate 明確給「今天（台北）」＝立刻上線。不給的話 newsroom-write 會退回
+  // 「下一個還沒有文章的日子」，而日更早把未來一週佔滿，結果會排到八天後才見天日——
+  // 那不是全自動上架。自動線一律用系統時間蓋日期（docs/automation-invariants.md）。
+  const today = new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10);
+  writeFileSync(jobPath, JSON.stringify({ ...s, kind: 'factual', autoPublish: true, publishDate: today }));
+  const r = spawnSync('node', ['scripts/newsroom-write.mjs', jobPath, '--go', '--allow-any-category'], {
+    encoding: 'utf8',
+    env: { ...process.env, NO_AI_IMAGE: '1' },
+  });
+  const out = (r.stdout || '') + (r.stderr || '');
+  const url = out.match(/PUBLISHED_URL=(\S+)/)?.[1] || null;
+  const ok = r.status === 0 && !!url;
+  if (!ok) {
+    const why = out.match(/✖ [^\n]+/)?.[0] || `exit ${r.status}`;
+    console.error(`  ✖ 未產出：${s.title}｜${why.slice(0, 160)}`);
+  }
+  return ok ? url : null;
+}
+
 function postToSlack(suggestions, category) {
   const name = CATEGORY_NAMES[category] || category;
   const payload = {
     category,
-    text: `🧭 論壇選題雷達｜${name}`,
+    text: `🧭 論壇選題雷達｜${name}（已上架）`,
     blocks: [
       {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: `🧭 *論壇選題雷達*（${name}）\n來源：PTT 熱門討論。挑想寫的點「我要寫這題」。`,
+          text: `🧭 *論壇選題雷達*（${name}）\n來源：PTT 熱門討論，以下已自動撰寫並上架。要改就進編輯器。`,
         },
       },
     ],
@@ -278,18 +310,21 @@ async function main() {
     arr.push(s);
     byCat.set(s.category, arr);
   }
-  let sent = 0;
+  let published = 0;
   for (const [cat, list] of byCat) {
-    if (postToSlack(list, cat)) {
-      sent += list.length;
-      console.log(`  ✓ ${CATEGORY_NAMES[cat]}台：${list.length} 則`);
+    const done = [];
+    for (const s of list) {
+      const url = writeAndPublish(s);
+      if (url) { done.push({ ...s, url }); published++; console.log(`  ✓ 已上架：${s.title}`); }
     }
+    // 只回報真的上架的；一篇都沒成功就不吵那個分類台。
+    if (done.length && postToSlack(done, cat)) console.log(`  ✓ ${CATEGORY_NAMES[cat]}台：回報 ${done.length} 篇`);
   }
 
-  // 只有真的送出去才記帳本（送失敗要能重試）。
-  if (sent) saveSeen(mergeSeen(loadSeen(), pool));
-  console.log(sent ? `FORUM_RESULT=SENT ${sent}` : 'FORUM_RESULT=FAIL');
-  if (!sent) process.exitCode = 1;
+  // 只有真的產出文章才記帳本（全軍覆沒＝可能是 infra 問題，留著下輪重試）。
+  if (published) saveSeen(mergeSeen(loadSeen(), pool));
+  console.log(published ? `FORUM_RESULT=PUBLISHED ${published}` : 'FORUM_RESULT=FAIL');
+  if (!published) process.exitCode = 1;
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

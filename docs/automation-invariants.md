@@ -19,9 +19,12 @@
 - 會動 git 工作區的 cron 各自開臨時 worktree（`scripts/cron/_worktree.sh` 的 `cron_enter_worktree`，off `origin/main`）→ 並行、互不洗檔，**不用 flock**。純資料腳本（`indexing-submit.sh`）不走 worktree。
 - 改 `.sh` 包裝或發佈端程式（`slack-actions-server.mjs` 等）：**push → `/root/appi.news-publisher` `git pull` →（server 端）`pm2 restart appinews-slack-actions`**。只 push 不 pull，cron 跑的還是舊 `.sh`；只 restart 不 pull，server 載到舊碼。
 - **配圖硬性 gate 不可繞過**：缺 `coverImage`／封面檔不存在／內文 0 圖／**封面與內文圖重複** → 中止不發、留工作區待補。
+- **產線層級要禁 AI 生圖，就在該線的 `.sh` 與協調器**兩處**都設 `NO_AI_IMAGE=1`**（論壇雷達的作法）：只設一處，另一處被改掉就破功，而事後從檔案驗不出來。
 - **要禁 AI 生圖就設 `NO_AI_IMAGE=1`**（`get-image.mjs` 的兩個生圖進入點會直接 throw，含 `--generate`）。**只在 prompt 寫「不要生圖」不算數**，模型會忽略；而且 sharp 會剝掉圖片 metadata，事後**無法**驗證哪張是生成的，只能整批重跑。禁生圖後封面與內文容易撞成同一張圖庫照（同 query 回同一張），取圖的 `--query` 必須錯開。為什麼＝[`lessons/no-ai-image-batch.md`](./lessons/no-ai-image-batch.md)。
 - **平行批次要禁止模型自己跑 `pnpm build` / `check:links`**：多個進程搶同一個 `dist/` 會產生 ENOENT 競態、白白耗時。build 由外層批次驅動做一次。
 - 自動線 `publishDate` **用系統時間蓋**，別讓模型填（模型無可靠時鐘，會排到未來變排程稿）。
+  - **全自動上架的線要明確給「今天」**：不給的話 `newsroom-write` 會退回「下一個沒有文章的日子」，而日更早把未來一週佔滿，結果排到八天後（2026-08-06 論壇雷達改自動上架時實測）。
+  - **事實稿要自動上線得在工單帶 `autoPublish: true`**（覆寫 `kind: factual` 的「人工審後發」）。這是**產線層級的明示豁免**，不要改 `KINDS`——那會讓全站事實稿都變自動上線。
   - **唯一例外＝健康紀念日線**：它是刻意排程的，`publishDate` 用**年曆表算出的目標日 06:17** 蓋掉模型寫的（同樣不信任模型，只是蓋成排程時間而非現在）。
 - **排程稿不會自己上線**：`isPublic()` 比對 **build 當下時間**，靜態站沒有 runtime。要在非整點時刻上線，必須另排一支 cron 在那一刻 `gh workflow run deploy.yml`（`deploy.yml` 的 6 小時 cron 只落台北 02/08/14/20）。從觸發到線上可讀約 3-5 分鐘，「時間戳準」與「可見時刻準」二選一。為什麼＝[`lessons/annual-observance-scheduling.md`](./lessons/annual-observance-scheduling.md)。
 

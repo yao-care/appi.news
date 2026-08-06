@@ -132,7 +132,10 @@ export function normalizeJob(job) {
     contentType: isNonEmptyString(job.contentType) ? job.contentType : kindCfg.defaultContentType,
     viewpointRequired: kindCfg.viewpointRequired,
     viewpointGate: kindCfg.viewpointGate,
-    requireApproval: kindCfg.requireApproval,
+    // 事實稿預設「人工審後發」。`autoPublish: true` 是**產線層級的明示豁免**：
+    // 給已由站長裁示全自動上架的線用（如論壇選題雷達），與國際／警消／便民同一種模式。
+    // 刻意做成工單欄位而不是改 KINDS：那會讓所有事實稿都變成自動上線，範圍太大。
+    requireApproval: job.autoPublish === true ? false : kindCfg.requireApproval,
     signal: isNonEmptyString(job.signal) ? job.signal.trim() : '',
     angle: isNonEmptyString(job.angle) ? job.angle.trim() : '',
     length: job.length ?? LENGTH_DEFAULT,

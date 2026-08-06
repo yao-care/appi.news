@@ -169,7 +169,7 @@
 | 元件 | 路徑 | 角色 |
 |---|---|---|
 | 科技選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選，主訊號是 GSC 站內搜尋需求；以「可贏性」而非熱度選題 |
-| 論壇選題雷達 | `scripts/lib/forum-signals.mjs`（純資料）＋`scripts/forum-radar.mjs`＋`scripts/cron/forum-radar.sh` | 掃 PTT 白名單看板 → 跨分類候選 → Slack 各分類台。**抓取／政治過濾／去重全是純 node，沒有新熱題就 exit 0、完全不喚 Claude**。改看板或門檻＝改 `BOARDS`。**政治排除三層**（看板白名單／標題關鍵字／LLM 判斷），第三層不可省。為什麼＝[`docs/lessons/forum-signals-radar.md`](./docs/lessons/forum-signals-radar.md) |
+| 論壇選題雷達 | `scripts/lib/forum-signals.mjs`（純資料）＋`scripts/forum-radar.mjs`＋`scripts/cron/forum-radar.sh` | 掃 PTT 白名單看板 → 選題 → **自動撰寫並上架**（站長裁示，同國際／警消／便民，不設每日上限）→ 回報各分類台。**抓取／政治過濾／去重全是純 node，沒有新熱題就 exit 0、完全不喚 Claude**。改看板或門檻＝改 `BOARDS`。**政治排除三層**（看板白名單／標題關鍵字／LLM 判斷），第三層不可省。**配圖禁 OpenAI 生圖**（`NO_AI_IMAGE=1`，`.sh` 與 `writeAndPublish` 雙重保險）。為什麼＝[`docs/lessons/forum-signals-radar.md`](./docs/lessons/forum-signals-radar.md) |
 | 去重帳本 | `scripts/topic-ledger.mjs` | 雷達與週報共用，避免撞題 |
 | 國際寫作前閘門 | `scripts/lib/international-gate.mjs` | 同批同事件去重 → 跨日 seen 帳本 → 一次 Haiku 批次篩選，砍掉注定被判 SKIP 的題才動用寫作。**壞掉一律 fail-open**。為什麼＝[`docs/lessons/auto-publish-pipeline-traps.md`](./docs/lessons/auto-publish-pipeline-traps.md) §G |
 

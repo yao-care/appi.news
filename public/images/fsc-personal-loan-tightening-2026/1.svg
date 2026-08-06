@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="長條圖比較2025年6月至2026年5月近11個月間，個人理財周轉金貸款增加1.74兆元，超過同期不動產貸款增加的1.3兆元；理財周轉金占銀行總放款比重從2022年1月的7.07%升至2026年5月的11.29%">
+<style>
+text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
+.title{font-size:26px;font-weight:700;fill:#1e2030;}
+.deck{font-size:15px;fill:#6e7276;}
+.value{font-size:22px;font-weight:700;fill:#1e2030;}
+.label{font-size:20px;font-weight:700;fill:#1e2030;}
+.desc{font-size:14px;fill:#6e7276;}
+.foot{font-size:13px;fill:#6e7276;}
+</style>
+<rect width="960" height="600" fill="#ffffff"/>
+
+<!-- 標題列 -->
+<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="58" y="60" class="title">週轉金借更多，房貸增幅反而輸了</text>
+<text x="58" y="90" class="deck">2025年6月至2026年5月近11個月間的貸款增加額比較</text>
+
+<!-- 本文焦點欄（理財周轉金貸款）底色 -->
+<rect x="200" y="118" width="240" height="376" rx="12" fill="#eaf0f8"/>
+<rect x="212" y="118" width="216" height="3" rx="1.5" fill="#a87515"/>
+
+<!-- 基線 -->
+<line x1="140" y1="470" x2="820" y2="470" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- 長條一：個人理財周轉金貸款 1.74兆元 -->
+<rect x="240" y="150" width="160" height="320" rx="4" fill="#a87515"/>
+<text x="320" y="130" text-anchor="middle" class="value">增加 1.74 兆元</text>
+<text x="320" y="510" text-anchor="middle" class="label">個人理財周轉金貸款</text>
+<text x="320" y="534" text-anchor="middle" class="desc">含理財型房貸、股票質押、信貸</text>
+
+<!-- 長條二：不動產貸款 1.3兆元 -->
+<rect x="560" y="231" width="160" height="239" rx="4" fill="#1f3a5f"/>
+<text x="640" y="211" text-anchor="middle" class="value">增加 1.3 兆元</text>
+<text x="640" y="510" text-anchor="middle" class="label">不動產貸款（購屋）</text>
+
+<!-- 補充：占比變化 -->
+<line x1="140" y1="550" x2="820" y2="550" stroke="#e8e9ed" stroke-width="1"/>
+<text x="140" y="574" class="desc">理財周轉金占銀行總放款比重：2022年1月 7.07% → 2026年5月 11.29%</text>
+
+<!-- 頁尾 -->
+<text x="40" y="590" class="foot">製圖：APPI News</text>
+<text x="920" y="590" text-anchor="end" class="foot">資料來源：中央銀行報告、金管會（2026年8月）</text>
+</svg>

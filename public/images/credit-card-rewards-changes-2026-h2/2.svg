@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="960" height="460" role="img" aria-label="五步驟重算信用卡回饋流程圖：列出前五大消費類別、對照卡片通路清單、算出近三個月實得回饋、扣掉年費與登錄成本、留下實得回饋最高的一到兩張卡">
+<style>
+text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
+.title{font-size:26px;font-weight:700;fill:#1e2030;}
+.deck{font-size:15px;fill:#6e7276;}
+.num{font-size:16px;font-weight:700;fill:#ffffff;}
+.step{font-size:15.5px;font-weight:700;fill:#1e2030;}
+.desc{font-size:13px;fill:#6e7276;}
+.foot{font-size:13px;fill:#6e7276;}
+</style>
+<rect width="960" height="460" fill="#ffffff"/>
+
+<!-- 標題列 -->
+<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="58" y="60" class="title">五步驟重算法</text>
+<text x="58" y="90" class="deck">別追最高百分比，先算出自己的實得金額</text>
+
+<!-- 連接箭頭 -->
+<g stroke="#6e7276" stroke-width="2" fill="none">
+  <path d="M204 260 L232 260" marker-end="url(#arrow)"/>
+  <path d="M380 260 L408 260" marker-end="url(#arrow)"/>
+  <path d="M556 260 L584 260" marker-end="url(#arrow)"/>
+  <path d="M732 260 L760 260" marker-end="url(#arrow)"/>
+</g>
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+    <path d="M0 0 L8 4 L0 8 Z" fill="#6e7276"/>
+  </marker>
+</defs>
+
+<!-- 節點 1 -->
+<g>
+  <rect x="28" y="176" width="176" height="168" rx="12" fill="#eef0f3"/>
+  <circle cx="60" cy="200" r="16" fill="#a87515"/>
+  <text x="60" y="205" text-anchor="middle" class="num">1</text>
+  <text x="116" y="238" text-anchor="middle" class="step">列出前五大</text>
+  <text x="116" y="260" text-anchor="middle" class="step">消費類別</text>
+  <text x="116" y="292" text-anchor="middle" class="desc">看近3個月帳單，</text>
+  <text x="116" y="312" text-anchor="middle" class="desc">排出金額最高的</text>
+  <text x="116" y="332" text-anchor="middle" class="desc">五種消費場景</text>
+</g>
+
+<!-- 節點 2 -->
+<g>
+  <rect x="204" y="176" width="176" height="168" rx="12" fill="#eef0f3"/>
+  <circle cx="236" cy="200" r="16" fill="#a87515"/>
+  <text x="236" y="205" text-anchor="middle" class="num">2</text>
+  <text x="292" y="238" text-anchor="middle" class="step">對照卡片的</text>
+  <text x="292" y="260" text-anchor="middle" class="step">加碼通路清單</text>
+  <text x="292" y="292" text-anchor="middle" class="desc">逐項比對是否</text>
+  <text x="292" y="312" text-anchor="middle" class="desc">真的落在指定</text>
+  <text x="292" y="332" text-anchor="middle" class="desc">通路名單內</text>
+</g>
+
+<!-- 節點 3（焦點） -->
+<g>
+  <rect x="380" y="176" width="176" height="168" rx="12" fill="#eaf0f8"/>
+  <rect x="380" y="176" width="176" height="4" rx="2" fill="#a87515"/>
+  <circle cx="412" cy="200" r="16" fill="#a87515"/>
+  <text x="412" y="205" text-anchor="middle" class="num">3</text>
+  <text x="468" y="238" text-anchor="middle" class="step">算出近3個月</text>
+  <text x="468" y="260" text-anchor="middle" class="step">實得回饋金額</text>
+  <text x="468" y="292" text-anchor="middle" class="desc">消費金額×回饋率</text>
+  <text x="468" y="312" text-anchor="middle" class="desc">記得扣掉月/歸戶</text>
+  <text x="468" y="332" text-anchor="middle" class="desc">回饋上限</text>
+</g>
+
+<!-- 節點 4 -->
+<g>
+  <rect x="556" y="176" width="176" height="168" rx="12" fill="#eef0f3"/>
+  <circle cx="588" cy="200" r="16" fill="#a87515"/>
+  <text x="588" y="205" text-anchor="middle" class="num">4</text>
+  <text x="644" y="238" text-anchor="middle" class="step">扣掉年費與</text>
+  <text x="644" y="260" text-anchor="middle" class="step">登錄綁定成本</text>
+  <text x="644" y="292" text-anchor="middle" class="desc">年費、綁定電子</text>
+  <text x="644" y="312" text-anchor="middle" class="desc">帳單、指定平台</text>
+  <text x="644" y="332" text-anchor="middle" class="desc">扣繳等隱藏門檻</text>
+</g>
+
+<!-- 節點 5 -->
+<g>
+  <rect x="732" y="176" width="176" height="168" rx="12" fill="#eef0f3"/>
+  <circle cx="764" cy="200" r="16" fill="#a87515"/>
+  <text x="764" y="205" text-anchor="middle" class="num">5</text>
+  <text x="820" y="238" text-anchor="middle" class="step">留下實得最高</text>
+  <text x="820" y="260" text-anchor="middle" class="step">的一到兩張</text>
+  <text x="820" y="292" text-anchor="middle" class="desc">功能重複的卡</text>
+  <text x="820" y="312" text-anchor="middle" class="desc">考慮剪卡或降卡</text>
+  <text x="820" y="332" text-anchor="middle" class="desc">別留著繳年費</text>
+</g>
+
+<!-- 頁尾 -->
+<line x1="40" y1="388" x2="920" y2="388" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="418" class="foot">製圖：APPI News</text>
+<text x="920" y="418" text-anchor="end" class="foot">方法整理：APPI News 財經組</text>
+</svg>

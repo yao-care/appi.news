@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="NVIDIA GeForce RTX 50 系列顯卡在台累積漲幅：RTX 5090 漲幅逾120%，RTX 5070 Ti 漲約67%，RTX 5070 漲約50%，RTX 5060 漲約46%">
+<style>
+text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
+.title{font-size:26px;font-weight:700;fill:#1e2030;}
+.deck{font-size:15px;fill:#6e7276;}
+.model{font-size:20px;font-weight:700;fill:#1e2030;}
+.pct{font-size:22px;font-weight:700;fill:#1e2030;}
+.price{font-size:14px;fill:#6e7276;}
+.foot{font-size:13px;fill:#6e7276;}
+</style>
+<rect width="960" height="600" fill="#ffffff"/>
+
+<!-- 標題列 -->
+<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="58" y="60" class="title">RTX 50 系列顯卡在台累積漲幅</text>
+<text x="58" y="90" class="deck">對照 NVIDIA 官方初始定價與 2026 年 8 月台灣通路新售價</text>
+
+<!-- 本文焦點欄（RTX 5090）底色 -->
+<rect x="140" y="132" width="120" height="358" rx="12" fill="#eaf0f8"/>
+<rect x="152" y="132" width="96" height="3" rx="1.5" fill="#a87515"/>
+
+<!-- 基準線 -->
+<line x1="100" y1="490" x2="900" y2="490" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- ── RTX 5090（焦點） ── -->
+<g>
+  <text x="200" y="176" text-anchor="middle" class="model">RTX 5090</text>
+  <rect x="150" y="209" width="100" height="281" rx="4" fill="#a87515"/>
+  <text x="200" y="196" text-anchor="middle" class="pct">+122%</text>
+  <text x="200" y="512" text-anchor="middle" class="price">NT$71,990 → 約 16 萬</text>
+</g>
+
+<!-- ── RTX 5070 Ti ── -->
+<g>
+  <text x="400" y="176" text-anchor="middle" class="model">RTX 5070 Ti</text>
+  <rect x="350" y="335" width="100" height="155" rx="4" fill="#1f3a5f"/>
+  <text x="400" y="322" text-anchor="middle" class="pct">+67%</text>
+  <text x="400" y="512" text-anchor="middle" class="price">NT$26,990 → 約 4.5 萬</text>
+</g>
+
+<!-- ── RTX 5070 ── -->
+<g>
+  <text x="600" y="176" text-anchor="middle" class="model">RTX 5070</text>
+  <rect x="550" y="375" width="100" height="115" rx="4" fill="#1f3a5f"/>
+  <text x="600" y="362" text-anchor="middle" class="pct">+50%</text>
+  <text x="600" y="512" text-anchor="middle" class="price">NT$19,990 → 約 3 萬</text>
+</g>
+
+<!-- ── RTX 5060 ── -->
+<g>
+  <text x="800" y="176" text-anchor="middle" class="model">RTX 5060</text>
+  <rect x="750" y="384" width="100" height="106" rx="4" fill="#1f3a5f"/>
+  <text x="800" y="371" text-anchor="middle" class="pct">+46%</text>
+  <text x="800" y="512" text-anchor="middle" class="price">NT$10,990 → 約 1.6 萬</text>
+</g>
+
+<!-- 頁尾 -->
+<line x1="40" y1="540" x2="920" y2="540" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="566" class="foot">製圖：APPI News</text>
+<text x="920" y="566" text-anchor="end" class="foot">資料時點：2026 年 8 月・資料來源：4Gamers 台灣通路報價</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="不同族群每日蛋白質建議量比較：一般成人每公斤體重1.1公克，規律重訓者1.4至2.0公克，65歲以上年長者1.0至1.2公克，慢性腎臟病第3至5期未透析者0.55至0.8公克">
+<style>
+text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
+.title{font-size:26px;font-weight:700;fill:#1e2030;}
+.deck{font-size:15px;fill:#6e7276;}
+.cat{font-size:20px;font-weight:700;fill:#1e2030;}
+.desc{font-size:14px;fill:#6e7276;}
+.val{font-size:16px;font-weight:700;fill:#1e2030;}
+.tick{font-size:13px;fill:#6e7276;}
+.foot{font-size:13px;fill:#6e7276;}
+</style>
+<rect width="960" height="600" fill="#ffffff"/>
+
+<!-- 標題列 -->
+<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="58" y="60" class="title">不同族群每日蛋白質建議量</text>
+<text x="58" y="90" class="deck">每公斤體重建議攝取克數（g/kg／天），數字詳見內文出處</text>
+
+<!-- 圖表主體 -->
+<!-- 縱向格線 -->
+<line x1="401" y1="160" x2="401" y2="480" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="542" y1="160" x2="542" y2="480" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="683" y1="160" x2="683" y2="480" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="824" y1="160" x2="824" y2="480" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- Row 1：一般成人 -->
+<text x="40" y="196" class="cat">一般成人</text>
+<text x="40" y="216" class="desc">無特殊狀況、無運動習慣</text>
+<rect x="260" y="185" width="620" height="30" rx="4" fill="#eef0f3"/>
+<rect x="260" y="185" width="310" height="30" rx="4" fill="#a87515"/>
+<text x="578" y="205" class="val">1.1</text>
+
+<!-- Row 2：規律重訓者 -->
+<text x="40" y="276" class="cat">規律重訓者</text>
+<text x="40" y="296" class="desc">每週規律阻力訓練</text>
+<rect x="260" y="265" width="620" height="30" rx="4" fill="#eef0f3"/>
+<rect x="654" y="265" width="170" height="30" rx="4" fill="#a87515"/>
+<text x="654" y="255" class="val">1.4–2.0</text>
+
+<!-- Row 3：65歲以上年長者 -->
+<text x="40" y="356" class="cat">65歲以上年長者</text>
+<text x="40" y="376" class="desc">衰弱或肌少症取上限</text>
+<rect x="260" y="345" width="620" height="30" rx="4" fill="#eef0f3"/>
+<rect x="542" y="345" width="56" height="30" rx="4" fill="#a87515"/>
+<text x="542" y="335" class="val">1.0–1.2</text>
+
+<!-- Row 4：慢性腎臟病（未透析） -->
+<text x="40" y="436" class="cat">慢性腎臟病3–5期</text>
+<text x="40" y="456" class="desc">未透析，依有無糖尿病調整</text>
+<rect x="260" y="425" width="620" height="30" rx="4" fill="#eef0f3"/>
+<rect x="415" y="425" width="70" height="30" rx="4" fill="#a87515"/>
+<text x="415" y="415" class="val">0.55–0.8</text>
+
+<!-- X 軸 -->
+<line x1="260" y1="480" x2="880" y2="480" stroke="#c9cbd1" stroke-width="1"/>
+<text x="260" y="500" text-anchor="middle" class="tick">0</text>
+<text x="401" y="500" text-anchor="middle" class="tick">0.5</text>
+<text x="542" y="500" text-anchor="middle" class="tick">1.0</text>
+<text x="683" y="500" text-anchor="middle" class="tick">1.5</text>
+<text x="824" y="500" text-anchor="middle" class="tick">2.0</text>
+<text x="920" y="500" text-anchor="end" class="tick">g/kg／天</text>
+
+<!-- 頁尾 -->
+<line x1="40" y1="520" x2="920" y2="520" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="545" class="foot">製圖：APPI News</text>
+<text x="920" y="545" text-anchor="end" class="foot">資料來源：國健署DRIs第八版、ISSN 2017、PROT-AGE、腎臟病防治基金會等（詳見內文）</text>
+</svg>

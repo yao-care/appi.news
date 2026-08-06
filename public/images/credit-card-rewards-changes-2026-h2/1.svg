@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="四張討論度最高的信用卡回饋方案比較：國泰CUBE固定回饋1.2%、玉山uBear新戶20%、星展LINE Pay 10%邀請制、台新Richart Chill刷10%有額度上限">
+<style>
+text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
+.title{font-size:26px;font-weight:700;fill:#1e2030;}
+.deck{font-size:15px;fill:#6e7276;}
+.abbr{font-size:15px;font-weight:700;fill:#ffffff;}
+.bank{font-size:18px;font-weight:700;fill:#1e2030;}
+.value{font-size:32px;font-weight:700;fill:#a87515;}
+.sub{font-size:14px;font-weight:700;fill:#1e2030;}
+.desc{font-size:13.5px;fill:#6e7276;}
+.foot{font-size:13px;fill:#6e7276;}
+</style>
+<rect width="960" height="600" fill="#ffffff"/>
+
+<!-- 標題列 -->
+<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="58" y="60" class="title">四張討論度最高的卡，怎麼改</text>
+<text x="58" y="90" class="deck">共通方向：從無差別高回饋，收攏成指定通路加登錄上限</text>
+
+<!-- 本文焦點欄（uBear 新戶 20%）底色 -->
+<rect x="266" y="132" width="208" height="380" rx="12" fill="#eaf0f8"/>
+<rect x="278" y="132" width="184" height="3" rx="1.5" fill="#a87515"/>
+
+<!-- 欄位分隔線 -->
+<line x1="260" y1="152" x2="260" y2="494" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="480" y1="152" x2="480" y2="494" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="700" y1="152" x2="700" y2="494" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- ── 國泰 CUBE ── -->
+<g>
+  <rect x="107" y="166" width="86" height="28" rx="14" fill="#1f3a5f"/>
+  <text x="150" y="185" text-anchor="middle" class="abbr">國泰CUBE</text>
+  <text x="150" y="228" text-anchor="middle" class="bank">固定回饋方案</text>
+  <text x="150" y="284" text-anchor="middle" class="value">1.2%</text>
+  <text x="150" y="312" text-anchor="middle" class="sub">一般消費無上限</text>
+  <text x="150" y="352" text-anchor="middle" class="desc">海外實體 2.5%</text>
+  <text x="150" y="374" text-anchor="middle" class="desc">排除全聯、超商小額</text>
+  <text x="150" y="396" text-anchor="middle" class="desc">8/3上路，年底前</text>
+  <text x="150" y="418" text-anchor="middle" class="desc">不可切回其他方案</text>
+</g>
+
+<!-- ── 玉山 uBear（焦點） ── -->
+<g>
+  <rect x="327" y="166" width="86" height="28" rx="14" fill="#1f3a5f"/>
+  <text x="370" y="185" text-anchor="middle" class="abbr">玉山uBear</text>
+  <text x="370" y="228" text-anchor="middle" class="bank">指定五大通路</text>
+  <text x="370" y="284" text-anchor="middle" class="value">20%</text>
+  <text x="370" y="312" text-anchor="middle" class="sub">僅限新戶・舊戶13%</text>
+  <text x="370" y="352" text-anchor="middle" class="desc">每歸戶上限1,200元</text>
+  <text x="370" y="374" text-anchor="middle" class="desc">通路限手遊/電競/3C</text>
+  <text x="370" y="396" text-anchor="middle" class="desc">售票旅遊等五大類</text>
+  <text x="370" y="418" text-anchor="middle" class="desc">2026/6/15–8/31</text>
+</g>
+
+<!-- ── 星展 LINE Pay ── -->
+<g>
+  <rect x="537" y="166" width="106" height="28" rx="14" fill="#1f3a5f"/>
+  <text x="590" y="185" text-anchor="middle" class="abbr">星展LINE Pay</text>
+  <text x="590" y="228" text-anchor="middle" class="bank">刷卡金加碼</text>
+  <text x="590" y="284" text-anchor="middle" class="value">10%</text>
+  <text x="590" y="312" text-anchor="middle" class="sub">邀請制・限量8,888名</text>
+  <text x="590" y="352" text-anchor="middle" class="desc">每人上限300元</text>
+  <text x="590" y="374" text-anchor="middle" class="desc">須登錄＋完成5筆</text>
+  <text x="590" y="396" text-anchor="middle" class="desc">LINE Pay消費</text>
+  <text x="590" y="418" text-anchor="middle" class="desc">2026/2/11–4/30</text>
+</g>
+
+<!-- ── 台新 Richart Chill刷 ── -->
+<g>
+  <rect x="757" y="166" width="106" height="28" rx="14" fill="#1f3a5f"/>
+  <text x="810" y="185" text-anchor="middle" class="abbr">台新Richart</text>
+  <text x="810" y="228" text-anchor="middle" class="bank">Chill刷方案</text>
+  <text x="810" y="284" text-anchor="middle" class="value">10%</text>
+  <text x="810" y="312" text-anchor="middle" class="sub">指定飲食娛樂通路</text>
+  <text x="810" y="352" text-anchor="middle" class="desc">加碼消費以永久額度</text>
+  <text x="810" y="374" text-anchor="middle" class="desc">加30萬為限，超過</text>
+  <text x="810" y="396" text-anchor="middle" class="desc">部分僅回饋0.3%</text>
+  <text x="810" y="418" text-anchor="middle" class="desc">至2026/9/30</text>
+</g>
+
+<!-- 頁尾 -->
+<line x1="40" y1="526" x2="920" y2="526" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="556" class="foot">製圖：APPI News</text>
+<text x="920" y="556" text-anchor="end" class="foot">資料時點：2026年8月・各銀行官網／PTT creditcard板公開資訊</text>
+</svg>

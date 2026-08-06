@@ -3,6 +3,7 @@ title: "產後哺乳能撐多久？伴侶分工比監督奶量更關鍵"
 slug: "postpartum-partner-support-breastfeeding"
 description: "產後哺乳能否延續，關鍵常不在奶量本身。研究顯示伴侶分工與情緒支持才是延長哺乳的核心，一份可執行的家務、睡眠與溝通分工指南。"
 publishDate: 2026-08-05
+updatedDate: 2026-08-06
 category: health
 subcategory: mental-health
 tags: ["心理健康", "女性健康", "育兒健康", "睡眠與疲勞", "公共衛生"]
@@ -13,7 +14,7 @@ status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
-readingTime: 13
+readingTime: 12
 references:
   - title: "Grattan RE, London SM, Bueno GE. (2024). Perceived pressure to breastfeed negatively impacts postpartum mental health outcomes over time. *Frontiers in Public Health"
     url: "https://pubmed.ncbi.nlm.nih.gov/38638486/"
@@ -138,7 +139,3 @@ draft: false
 ![原文附圖：伴侶在家中一邊備餐一邊查看餵奶時間記錄的居家情境](https://appi.news/images/postpartum-partner-support-breastfeeding/1.jpg "圖／dep.mohw.gov.tw")
 
 ![原文附圖：伴侶專注聆聽產後媽媽說話的居家對話情境](https://appi.news/images/postpartum-partner-support-breastfeeding/2.jpg "圖／上醫預防醫學發展協會")
-
-## 資料來源
-
-本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[別再只問媽媽「奶夠不夠」：真正的哺乳支持，是讓她不用一個人撐](https://gcm.org.tw/blog/maternal-breastfeeding-support/)

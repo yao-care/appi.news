@@ -3,14 +3,11 @@ title: "關於油價衝擊債市與退休配置，你需要知道的5件事"
 slug: "appi-news-477"
 description: "布蘭特原油逼近100美元，推升美國10年期公債殖利率至4.63%、30年期房貸利率達6.55%。退休族與海外債券投資人如何檢視存續期間曝險、重新校準資產配置？"
 publishDate: 2026-08-01
+updatedDate: 2026-08-06
 category: finance
 subcategory: investing-literacy
 tags: ["投資理財", "退休規劃", "總體經濟", "資本市場", "房市", "地緣政治", "中東情勢", "美國"]
 author: "wu-fang-jun"
-reviewedBy:
-  - "wu-fang-jun"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-477.webp"
 coverAlt: "長條圖比較美國10年期公債殖利率4.63%、30年期房貸利率6.55%與聯邦資金利率3.63%三項數據"
 status: published
@@ -18,11 +15,6 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 12
-expertNote: "存續期間曝險是這波最該優先盤點的一步，尤其對已退休、仰賴海外債券配息的族群影響最直接。實務上建議先算出整體加權存續期間，再依風險承受度分批調整，而非等房貸與換匯成本雙雙墊高才回頭檢視資產配置的傳承與稅務規劃是否同步失衡。"
-risksAndLimits:
-  - "殖利率與債市連動受地緣政治、聯準會轉向等多重變數影響，方向未必持續"
-  - "文中數據為特定時點市場快照，含7月底FOMC決議與Freddie Mac房貸利率，僅適用當下"
-  - "存續期間檢視建議以持有海外債券或退休帳戶部位者為主，未涵蓋其他資產類別"
 references:
   - title: "Board of Governors of the Federal Reserve System (2026). Federal Reserve issues FOMC statement"
     url: "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"
@@ -53,8 +45,6 @@ draft: false
 ## 二、關鍵數據解讀：殖利率、房貸利率、聯邦資金利率各自說了什麼
 
 **三個數字合起來看，呈現的是「長天期利率獨立於政策利率走升」的格局**：聯準會沒有動作，但市場自己把長天期利率推高了。
-
-![長條圖比較美國10年期公債殖利率4.63%、30年期房貸利率6.55%與聯邦資金利率3.63%三項數據](https://appi.news/images/appi-news-477/2.png "政策利率按兵不動，長天期利率卻已經自己走高")
 
 ### 10年期公債殖利率4.63% vs 前值4.60%
 

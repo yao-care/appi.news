@@ -26,7 +26,8 @@
   - **全自動上架的線要明確給「今天」**：不給的話 `newsroom-write` 會退回「下一個沒有文章的日子」，而日更早把未來一週佔滿，結果排到八天後（2026-08-06 論壇雷達改自動上架時實測）。
   - **事實稿要自動上線得在工單帶 `autoPublish: true`**（覆寫 `kind: factual` 的「人工審後發」）。這是**產線層級的明示豁免**，不要改 `KINDS`——那會讓全站事實稿都變自動上線。
   - **唯一例外＝健康紀念日線**：它是刻意排程的，`publishDate` 用**年曆表算出的目標日 06:17** 蓋掉模型寫的（同樣不信任模型，只是蓋成排程時間而非現在）。
-- 🔴 **push 不會觸發部署**（2026-08-06 起）：只有每 15 分鐘的排程與 `gh workflow run deploy.yml` 會。產線 push 完不等於上線，回報措辭別寫成「已上線」；要立刻上線就手動戳。
+- 🔴 **push 不會觸發部署**（2026-08-06 起）：只有每 15 分鐘的排程與 `gh workflow run deploy.yml` 會。**產線 push 完不等於上線**，回報措辭別寫成「已上線」（要驗線上就自己戳一次再等）。
+  - 排程會先過 `check` job（`scripts/deploy-needed.mjs`）判斷有無變動：①上次成功部署後有新 commit ②有排程稿 `publishDate` 到期。**第二條不可省**——排程稿靠 build 當下時間轉正，只看 commit 會讓它們永遠上不了線。抓不到上次部署資訊一律 fail-open 照部署。
 - **排程稿不會自己上線**：`isPublic()` 比對 **build 當下時間**，靜態站沒有 runtime。要在非整點時刻上線，必須另排一支 cron 在那一刻 `gh workflow run deploy.yml`（`deploy.yml` 的 6 小時 cron 只落台北 02/08/14/20）。從觸發到線上可讀約 3-5 分鐘，「時間戳準」與「可見時刻準」二選一。為什麼＝[`lessons/annual-observance-scheduling.md`](./lessons/annual-observance-scheduling.md)。
 
 ## 故障不等於模型的判斷

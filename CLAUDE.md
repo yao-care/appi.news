@@ -95,9 +95,9 @@
   - 為什麼拿掉 push 觸發：各產線「一篇一 commit 一 push」加上人工推送，一天疊到 200 次部署，之後連續六次卡在 `deployment_queued` 逾時（站台僅佔 1 GB 上限的三分之一，不是體積問題），研判被節流。收斂成 4 次/小時，替 `workflow_dispatch` 留餘裕。
   - **排程跑起來會先判斷「有沒有變動」**（`check` job → `scripts/deploy-needed.mjs`），沒變動就幾秒結束、不 build 不上傳。判斷兩條件任一成立即部署：①上次成功部署後有新 commit ②有排程稿的 `publishDate` 落在（上次部署時間, 現在]。**第二條不可省**——排程稿是靠 build 當下時間轉正的，沒有新 commit 也需要重建。抓不到上次部署資訊一律 fail-open 照部署。
   - **急著上線就手動戳**：`gh workflow run deploy.yml`（手動觸發跳過上面的檢查，直接部署）。GitHub 排程常誤點，等排程實際可能 20–30 分鐘。
-- `status: scheduled` 且 `publishDate` 在未來的文章**不進列表／sitemap／RSS／llms**（由 `getPublishedArticles()` 過濾），到時間後由 6 小時 cron 重建自動上線。
+- `status: scheduled` 且 `publishDate` 在未來的文章**不進列表／sitemap／RSS／llms**（由 `getPublishedArticles()` 過濾），到時間後由每 15 分鐘的排程重建自動上線（該排程會偵測到有排程稿到期而觸發 build）。
   - 但會在 `/articles/<slug>/` 產出一個 **noindex、不被任何站內連結指到**的「排程草稿預覽頁」（`getScheduledPreviewArticles()` + `[slug].astro` getStaticPaths），供作者**站內預覽＋編輯**（登入 `/admin` 後右下角「編輯」鈕）。sitemap 由 `astro.config.mjs` 的 `previewPaths` 排除；tag 在預覽頁渲染為純文字（避免連到未產出的 tag 頁擋 `check:links`）。到 `publishDate` 後同一 URL 自動轉正。
-  - **排程稿不會自己在非整點上線**：`isPublic()` 比對的是 build 當下時間，6 小時 cron 對不上任意時刻。要準點上線必須另排一支 cron 戳 `workflow_dispatch`。
+  - **排程稿不會自己在非整點上線**：`isPublic()` 比對的是 build 當下時間，15 分鐘排程對不準任意時刻。要準點上線必須另排一支 cron 戳 `workflow_dispatch`。
 - **待審草稿**（`kind: factual`）＝ `status: scheduled` + 遠未來日，只建 noindex 預覽頁，人工核可才轉正（`scripts/newsroom-publish.mjs`）。
 
 ## 上線流程與紅線

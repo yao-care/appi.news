@@ -48,6 +48,7 @@ pnpm test
 
 ## 規則（務必遵守，違反會出事）
 
+- 🔴 **push 不會觸發部署（2026-08-06 起）**：只有**每 15 分鐘排程**與 `gh workflow run deploy.yml`。排程會先過 `check` job（`scripts/deploy-needed.mjs`）判斷有無變動——①上次成功部署後有新 commit ②有排程稿 `publishDate` 到期——都沒有就幾秒結束、不 build 不重傳 artifact。**產線 push 完不等於上線**，要驗線上就自己戳一次再等（實際可能 20–30 分鐘，GitHub 排程常誤點）。為什麼這樣改＝[`lessons/deploy-cadence.md`](./lessons/deploy-cadence.md)。
 - **自動化鐵則總表**（帳號／模型／cron／並發／發佈端／日誌）見 [`docs/automation-invariants.md`](./automation-invariants.md)——動任何 cron／自動產文前先過一遍。
 - **機密永不進 repo**。別把 token/key 寫進任何被追蹤的檔案、別 commit `~/.config/appi-news/*`、別在 commit message 貼出來。
 - **內容鐵則**（見 `CLAUDE.md`）：全文繁體中文 + 台灣用語、去 AI 腔（禁破折號/AI 套語）、**禁政治**、**禁杜撰**（不可捏造作者、數據、來源）、所有資料附「可連線」的來源超連結。
@@ -119,7 +120,7 @@ pnpm test
   - **例外**：`indexing-submit.sh`、`heartbeat.sh`、`aeo-radar.sh` 是**純資料/唯讀腳本**（不碰 git 工作區、不喚 Claude 或只喚一次且只寫 git 外帳本），故**不走 worktree**，與其他 cron 無洗檔競態。背景見 [`docs/lessons/google-indexing-api-gray-area.md`](./lessons/google-indexing-api-gray-area.md)。
   - **`cited-teardown.sh` 會寫 repo**（`geo-insights/<beat>.md`）→ 照內容線走 `_worktree.sh` 隔離 + `push HEAD:main` rebase 重試。
   - **`health-days-publish.sh` 是純 shell**（不喚 Claude、不碰工作區，只 `git grep origin/main` + `gh workflow run`）→ **不走 worktree**。同線的 `health-days.sh` 會寫 repo，照內容線走 worktree + `pushToMain`。
-- **健康紀念日為什麼要兩支 cron（2026-07-28 新增，別合併成一支）**：文章能否公開取決於 **build 當下的時間**有沒有超過 `publishDate`（`src/utils/content.ts` 的 `isPublic`）。`deploy.yml` 只在 push／每 6 小時 cron（台北 02、08、14、20）／手動觸發時 build，**六小時 cron 對不上 06:17**，所以非得在 06:17 準點戳一次 `workflow_dispatch` 不可。寫作與上線刻意分離還有兩個好處：T-2 寫失敗隔天還能重試；排程稿只產 noindex 預覽頁，站長有兩天可從 `/admin` 預覽修改。從觸發到線上可讀約 3-5 分鐘，故**文章時間戳是 06:17、實際可見約 06:21**（站長 2026-07-28 在「時間戳準」與「可見準」之間選了前者）。
+- **健康紀念日為什麼要兩支 cron（2026-07-28 新增，別合併成一支）**：文章能否公開取決於 **build 當下的時間**有沒有超過 `publishDate`（`src/utils/content.ts` 的 `isPublic`）。`deploy.yml` **不在 push 時 build**（2026-08-06 起拿掉 push 觸發），只有**每 15 分鐘的排程**與**手動 `workflow_dispatch`**會，**排程對不準 06:17**，所以非得在 06:17 準點戳一次 `workflow_dispatch` 不可。寫作與上線刻意分離還有兩個好處：T-2 寫失敗隔天還能重試；排程稿只產 noindex 預覽頁，站長有兩天可從 `/admin` 預覽修改。從觸發到線上可讀約 3-5 分鐘，故**文章時間戳是 06:17、實際可見約 06:21**（站長 2026-07-28 在「時間戳準」與「可見準」之間選了前者）。
 - **健康紀念日的用量幾乎為零**：`health-days.sh` 在建 worktree／喚 Claude **之前**先用 node 讀年曆表判斷「兩天後有沒有紀念日」，沒有就 `exit 0`。一年 365 天裡只有 51 天真的會叫 Claude（同 `lifestyle-typhoon.sh` 的前置 gate 思路）。要改提前天數用環境變數 `HEALTH_DAYS_LEAD`（預設 2）。**gate 掃的是 T+1…T+LEAD 的區間、不是剛好第 LEAD 天**——某天寫失敗時該篇隔天仍在區間內，配合「該年度已寫過就跳過」的帳本天然重試一次。
 - **AEO 學習環也吃 claude-appi 額度（2026-07-23 啟用排程）**：`aeo-radar.sh` 與 `cited-teardown.sh` 皆喚 claude-appi Sonnet，刻意排在午後空窗——避開清晨的選題雷達與 seo-ops 反思/大腦、傍晚的國際線尖峰。撞週限額 regex 偵測、當日 no-op、可回滾（同其他 claude-appi cron）。
 - **維運/系統訊號改發 dev 台（2026-06-30）**：原本「cron 一律不發 dev、dev 只給 @bot」的政策放寬——**非內容的維運訊號**（`heartbeat.sh` 的 📊 數據心跳＋🤖 大腦優化、`indexing-submit.sh` 的索引提交回報）改走 **dev 台**（`cron-report.mjs --dev` → `DEV_CHANNEL`），與內容/值勤回報（作者群、分類台）分流，維運訊號不再吵作者群。內容類 cron 仍照舊發作者群/分類台。🤖 大腦優化是**報告型**（claude-appi Sonnet 判讀 SEO/內容機會，撞週限會退化成只報確定性事實、不沉默），不自動改碼。

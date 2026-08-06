@@ -48,7 +48,7 @@
 | 字型 | `@fontsource` Noto Sans/Serif TC + Inter，**只用繁中子集進入點**（見 PERFORMANCE.md §1），build 時再子集化 |
 | 搜尋 | Pagefind（build 後產生靜態索引） |
 | SEO / AEO | 每頁 canonical / OpenGraph / Twitter card / JSON-LD；另出 `llms.txt`、`llms-full.txt`、`robots.txt`、`rss.xml`（全文）。詳見 [AEO / SEO](#aeo--seo) |
-| 部署 | GitHub Actions → GitHub Pages（push `main` / 每 6 小時 cron / 手動觸發） |
+| 部署 | GitHub Actions → GitHub Pages（**每 15 分鐘排程**／手動 `workflow_dispatch`；**push 不觸發**，見 §上線準則） |
 
 站名、品牌、OG 預設圖在 `src/config/site.ts`。
 
@@ -99,6 +99,12 @@ postbuild  →  scripts/subset-fonts.mjs             ① 字型子集化 + 首�
 - 內頁（文章頁）現已套用 critical CSS 內聯（`inline-css.mjs`）＋封面縮 webp（`optimize-article-images.mjs`），同 §2 手法已延伸到內頁（見 PERFORMANCE.md §5）。
 
 ## 上線準則（CI gate）
+
+> 🔴 **push 不會觸發部署**（2026-08-06 起）。只有**每 15 分鐘的排程**與**手動 `gh workflow run deploy.yml`** 會。
+> 排程跑起來會先判斷有沒有變動（`scripts/deploy-needed.mjs`）：上次成功部署後有新 commit、
+> 或有排程稿的 `publishDate` 到期，才真的 build；否則幾秒結束、不重傳 artifact。
+> **push 完不等於上線**——等排程（實際可能 20–30 分鐘，GitHub 排程常誤點）或自己戳。
+> 為什麼這樣改＝[`docs/lessons/deploy-cadence.md`](./docs/lessons/deploy-cadence.md)。
 
 部署 workflow（`.github/workflows/deploy.yml`）build 後設 gate：
 

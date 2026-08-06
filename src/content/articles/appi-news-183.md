@@ -3,31 +3,18 @@ title: "關於納豆與血壓控制，你需要知道的 5 件事"
 slug: "appi-news-183"
 description: "納豆激酶真的能降血壓嗎？從作用機轉、臨床數據到實際食用建議，完整解析納豆對心血管的科學根據，以及哪些人不適合食用。"
 publishDate: 2026-07-13
+updatedDate: 2026-08-06
 category: health
 subcategory: tcm-integrative
-tags:
-  - "保健食品"
-  - "心血管健康"
+tags: []
 author: "huang-ziyan"
-reviewedBy:
-  - "huang-ziyan"
-factCheckedBy:
-  - "appi-editorial"
-column: "herbal-cuisine"
-coverImage: "covers/appi-news-183-cover.webp"
-coverImageCredit: "Photo by Madara on Unsplash"
-coverAlt: "保健食品相關情境（示意圖）"
+coverImage: "covers/appi-news-183.webp"
+coverAlt: "用筷子拉起納豆絲，傳統日式納豆的黏絲質感，背景為木質桌面"
 status: published
 sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 9
-expertNote: "納豆激酶對血壓的助益，建立在「輔助」而非「取代」的前提上，這一點對已服藥的高血壓患者尤其重要，加入飲食前務必主動告知醫師用藥史。維生素 K2 與抗凝血藥的交互作用，是所有效果討論之外最該優先確認的實務環節，寧可先問清楚，不要先吃再說。"
-risksAndLimits:
-  - "補充品試驗多在 8 週內完成，長期食用一年以上的效果與安全性未見說明"
-  - "文中研究對象與台灣飲食習慣的落差未提及，實際降壓幅度可能因人而異"
-  - "服用抗凝血藥、術前兩週、孕婦屬明確禁忌族群，其餘慢性病患者風險未討論"
-  - "傍晚食用較佳一說僅為推論，內文明確指出尚需更多研究支持"
 references:
   - title: "Kim JY, et al. (2008). Effects of nattokinase on blood pressure: a randomized, controlled trial. *Hypertens Res*, 31(8), 1583–1588"
     url: "https://pubmed.ncbi.nlm.nih.gov/18971533/"
@@ -41,9 +28,7 @@ draft: false
 
 重點不在把納豆說成萬能解藥。在你決定要不要把它加進日常飲食之前，先把 5 件事搞清楚，比「聽說有效就開始吃」更踏實。
 
-![用筷子拉起納豆絲，傳統日式納豆的黏絲質感，背景為木質桌面](https://appi.news/images/appi-news-183/1.jpg)
-
-## 一、納豆是什麼：黃豆經發酵轉化的食物
+## 一、納豆是什麼：黃豆經發酵「解鎖」的食物
 
 **納豆是黃豆經納豆菌（Bacillus subtilis natto）發酵後的產物**，發酵過程會生成一種叫做**納豆激酶（nattokinase）**的絲氨酸蛋白酶，這是整個討論的核心。
 
@@ -73,7 +58,7 @@ draft: false
 
 2025 年，一份綜合 52 項世代研究的系統性回顧指出，定期食用發酵豆類（尤其是納豆）與全因死亡率及心血管死亡率的輕度下降有關（註3）。
 
-「納豆激酶補充顯著降低了收縮壓與舒張壓，研究結果支持將其視為高血壓的輔助療法之一，但需要更多大型試驗確認最佳劑量。」（Li X et al., *Reviews in Cardiovascular Medicine*, 2023）
+「納豆激酶補充顯著降低了收縮壓與舒張壓，研究結果支持將其視為高血壓的輔助療法之一，但需要更多大型試驗確認最佳劑量。」— Li X et al., *Reviews in Cardiovascular Medicine*, 2023
 
 ![兩項納豆激酶研究的血壓降幅比較：2008年隨機對照試驗（收縮壓-5.55、舒張壓-2.84 mmHg）與2023年統合分析（收縮壓-3.45、舒張壓-2.32 mmHg）](https://appi.news/images/appi-news-183/3.png)
 

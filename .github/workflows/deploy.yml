@@ -35,7 +35,45 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # 排程每 15 分鐘跑一次，但**沒有變動就不要 build/deploy**：
+  # 無條件跑等於一天 96 次、每次重傳約 335 MB，而平常日真正有內容的只有十幾次。
+  # 判斷不能只看 commit——排程稿是靠「build 當下時間」才轉正的，沒有新 commit 也可能該重建。
+  # 詳見 scripts/deploy-needed.mjs。手動 workflow_dispatch 一律直接部署，不做這個檢查。
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      should: ${{ steps.decide.outputs.should }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 判斷是否需要部署
+        id: decide
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "手動觸發，直接部署"; echo "should=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # 找最近一次「成功」的 github-pages 部署，取它的 sha 與時間
+          last=""
+          for id in $(gh api "repos/$GITHUB_REPOSITORY/deployments?environment=github-pages&per_page=30" --jq '.[].id'); do
+            st=$(gh api "repos/$GITHUB_REPOSITORY/deployments/$id/statuses" --jq '.[0].state // empty')
+            if [ "$st" = "success" ]; then
+              last=$(gh api "repos/$GITHUB_REPOSITORY/deployments/$id" --jq '.sha + " " + .created_at')
+              break
+            fi
+          done
+          if [ -z "$last" ]; then
+            echo "找不到上次成功部署 → 照部署（fail-open）"; echo "should=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          need=$(node scripts/deploy-needed.mjs $last)
+          echo "上次成功部署：$last｜需要部署：$need"
+          echo "should=$need" >> "$GITHUB_OUTPUT"
+
   build:
+    needs: check
+    if: needs.check.outputs.should == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

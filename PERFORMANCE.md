@@ -41,6 +41,7 @@
 2. **`font-display: optional` 的行為**：首次造訪以系統 CJK 字定版（不等字型、不擋首屏）；品牌字型在後台下載完成後，下次快取訪問才完整顯示。TBT 保持 0。
 3. **同名 `@font-face` 覆蓋無效**（舊逐頁版踩過）：若對同一 family 同時存在「全量版」與「切片版」@font-face，Chrome 會兩份都嘗試下載。現行機制直接替換，不留舊 @font-face，此問題不再出現。
 4. **新增文章不需重新切段**：切段邊界只取決於全站用字集合，字集變動後下次 build 自動重算並更新 hash，CDN 會取新檔。
+5. 🔴 **拉丁字型也必須 `font-display: optional`，別只顧繁中**（2026-08-06）：繁中五個權重在 `subset-fonts.mjs` 被整批換成 `optional`，但 Inter 走 @fontsource 原樣進 build、吃預設的 **`swap`**——swap 會在字型下載完成後換字並**推動版面**。實測 desktop 首頁 CLS 0.016（基準 0），Lighthouse 的 `cls-culprits-insight` 直指 `inter-latin-*.woff2`「Web font loaded」。修法在 `subset-fonts.mjs` 的步驟 4b（font-display 政策本來就歸它管），並加了計數與警告：改不到會在 build log 明講「CLS 會回來」。**未來若再引入任何 web font，先確認它的 `font-display` 不是 swap**（查法：`curl -s https://appi.news/ | grep -oE "font-display:[a-z]+" | sort | uniq -c`，應全為 optional）。
 
 ---
 

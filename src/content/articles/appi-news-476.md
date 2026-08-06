@@ -3,14 +3,11 @@ title: "什麼是股價「利多出盡」？台積電營收創高為何反跌"
 slug: "appi-news-476"
 description: "台積電第二季營收獲利雙創新高，股價卻不漲反跌。從「利多出盡」的市場邏輯，看懂訂單滿手與股價表現為何脫鉤，以及一般投資人該建立的判斷習慣。"
 publishDate: 2026-07-31
+updatedDate: 2026-08-06
 category: finance
 subcategory: investing-literacy
 tags: ["投資理財", "退休規劃", "半導體", "台積電", "總體經濟"]
 author: "wu-fang-jun"
-reviewedBy:
-  - "wu-fang-jun"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-476.webp"
 coverAlt: "股市電子看板顯示台積電股價與其他個股漲跌數字，紅綠數字交錯排列"
 status: published
@@ -18,11 +15,6 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 10
-expertNote: "股價修正不是台積電基本面轉壞，對一般投資人真正重要的是分清楚「公司好不好」與「股價要不要漲」是兩件事。實務上該做的，是回頭檢視自己的資金停留時間與心理承受度，而不是跟著單季財報數字追高殺低，這個環節最容易被新聞標題牽著走。"
-risksAndLimits:
-  - "股價下跌三個層面原因為綜合多家媒體分析，並非台積電官方逐項證實的因果說明"
-  - "CPI 2.60%與定存利率1.3%至1.8%為2026年6月當時資訊，之後可能變動"
-  - "風險承受度判斷架構僅為原則性參考，未涵蓋個人稅務與保險等具體規劃細節"
 references:
   - title: "經理人 (2026). 台積電第二季法說會:營收1.27兆元、EPS為27.25元創歷史新高"
     url: "https://www.managertoday.com.tw/articles/view/72538"
@@ -37,8 +29,6 @@ references:
 draft: false
 ---
 台積電第二季合併營收新台幣1兆2703億元、年增36%，每股盈餘27.25元，兩項數字都創下歷史新高。全年美元營收成長目標也由「超過30%」上修到「超過40%」。照直覺推論,訂單滿手、獲利創新高,股價應該同步走高。但財報公布後,股價反而承壓,外資圈甚至一度出現獲利了結賣壓。
-
-![股市電子看板顯示台積電股價與其他個股漲跌數字，紅綠數字交錯排列](https://appi.news/images/appi-news-476/1.jpg "財報數字創新高，股價卻應聲走跌，這個反差正是本文要拆解的市場邏輯")
 
 這不是單一個股的特例。營收與股價脫鉤的現象,在財務規劃實務上很常見,卻是多數投資人最容易誤判的一環。這篇文章要拆解三件事:訂單滿手為什麼不等於股價該漲、多數人對「長期持有」的理解錯在哪裡、以及該用什麼標準判斷自己是不是被通膨焦慮牽著走。
 

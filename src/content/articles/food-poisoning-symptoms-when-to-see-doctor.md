@@ -3,6 +3,7 @@ title: "關於食物中毒症狀，你需要知道的6件事"
 slug: "food-poisoning-symptoms-when-to-see-doctor"
 description: "食物中毒症狀有哪些？從腹瀉、嘔吐、腹痛到發燒，潛伏期因病原不同而異，不能只回想最後一餐。整理判斷方法、就醫警訊與高風險族群提醒。"
 publishDate: 2026-08-05
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
 tags: ["食品安全", "急救常識", "公共衛生", "高齡健康", "育兒健康", "女性健康"]
@@ -23,8 +24,6 @@ references:
 draft: false
 ---
 聚餐後突然上吐下瀉，第一個念頭常常是「一定是剛剛那道菜」。但食物中毒的症狀組合、發作時間跟嚴重程度，其實比多數人想的複雜得多。有些人幾小時內就倒下，有些人要拖到三天後才發作；有些狀況在家休息觀察就好，有些狀況卻是拖不得的警訊。這篇文章要說清楚的是：食物中毒常見哪些症狀、多久會出現、什麼時候該自己觀察、什麼時候該直接去醫院。
-
-![家庭聚餐後有人出現腹部不適的情境照](https://appi.news/images/food-poisoning-symptoms-when-to-see-doctor/1.jpg)
 
 ## 一、食物中毒有哪些常見症狀？
 

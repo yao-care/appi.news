@@ -1,82 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="季軍戰存廢兩方論點拉鋸：支持保留方看重國家榮譽、世界排名與獎金差距，主張取消方指競技強度低於決賽、體能消耗與受傷風險，FIFA 尚未正式表態">
-<style>
-text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
-.title{font-size:26px;font-weight:700;fill:#1e2030;}
-.deck{font-size:15px;fill:#6e7276;}
-.abbr{font-size:14px;font-weight:700;fill:#ffffff;letter-spacing:.5px;}
-.term{font-size:20px;font-weight:700;fill:#1e2030;}
-.desc{font-size:14px;fill:#6e7276;}
-.foot{font-size:13px;fill:#6e7276;}
-</style>
-<rect width="960" height="600" fill="#ffffff"/>
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="55" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="30" font-weight="700" fill="#1B5E4B">季軍戰存廢論點天秤</text>
+  <text x="200" y="130" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#1B5E4B">維持論點</text>
+  <text x="770" y="130" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="18" font-weight="700" fill="#1B5E4B">廢除論點</text>
 
-<!-- 標題列 -->
-<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
-<text x="58" y="60" class="title">季軍戰存廢的兩方拉鋸</text>
-<text x="58" y="90" class="deck">國家榮譽與獎金讓它留下，體能消耗與受傷風險讓取消聲浪不斷</text>
+  <rect x="410" y="540" width="140" height="16" rx="5" fill="#1B5E4B"/>
+  <path d="M480 500 L438 540 L522 540 Z" fill="#1B5E4B"/>
+  <line x1="480" y1="300" x2="480" y2="500" stroke="#1B5E4B" stroke-width="8"/>
+  <circle cx="480" cy="300" r="11" fill="#C9A227" stroke="#1B5E4B" stroke-width="2"/>
 
-<!-- 中央分隔線 -->
-<line x1="480" y1="186" x2="480" y2="440" stroke="#e8e9ed" stroke-width="1"/>
+  <line x1="200" y1="330" x2="770" y2="270" stroke="#1B5E4B" stroke-width="6"/>
+  <circle cx="200" cy="330" r="6" fill="#1B5E4B"/>
+  <circle cx="770" cy="270" r="6" fill="#1B5E4B"/>
 
-<!-- 兩方標籤 -->
-<rect x="206" y="132" width="88" height="30" rx="15" fill="#1f3a5f"/>
-<text x="250" y="153" text-anchor="middle" class="abbr">支持保留</text>
-<rect x="666" y="132" width="88" height="30" rx="15" fill="#1f3a5f"/>
-<text x="710" y="153" text-anchor="middle" class="abbr">主張取消</text>
+  <line x1="200" y1="330" x2="100" y2="390" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="200" y1="330" x2="300" y2="390" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="770" y1="270" x2="670" y2="330" stroke="#2E8B6F" stroke-width="2"/>
+  <line x1="770" y1="270" x2="870" y2="330" stroke="#2E8B6F" stroke-width="2"/>
 
-<!-- 中央天秤記號 -->
-<circle cx="480" cy="147" r="26" fill="#eef0f3" stroke="#d5d6da" stroke-width="1"/>
-<g transform="translate(480 147)">
-  <g stroke="#5e6070" stroke-width="3" stroke-linecap="round" fill="none">
-    <path d="M-14 -6 L14 -6 M0 -6 L0 10 M-8 10 L8 10"/>
-  </g>
-  <path d="M-14 -6 L-18 2 L-10 2 Z" fill="#5e6070"/>
-  <path d="M14 -6 L10 2 L18 2 Z" fill="#5e6070"/>
-</g>
+  <rect x="80" y="390" width="240" height="70" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <rect x="650" y="330" width="240" height="70" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
 
-<!-- ── 左：支持保留 ── -->
-<g>
-  <circle cx="120" cy="244" r="18" fill="#a87515"/>
-  <g transform="translate(120 244)" stroke="#ffffff" stroke-width="4" stroke-linecap="round"><path d="M-7 0 L7 0 M0 -7 L0 7"/></g>
-  <text x="154" y="242" class="term">國家榮譽</text>
-  <text x="154" y="268" class="desc">克羅埃西亞等隊視季軍為驕傲成績</text>
+  <circle cx="140" cy="425" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <polygon points="140,415 143,421 149,421 144,425 146,432 140,428 134,432 136,425 131,421 137,421" fill="#C9A227"/>
+  <circle cx="200" cy="425" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <circle cx="200" cy="425" r="9" fill="none" stroke="#C9A227" stroke-width="2"/>
+  <line x1="200" y1="415" x2="200" y2="435" stroke="#C9A227" stroke-width="2"/>
+  <circle cx="260" cy="425" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <path d="M260 434 L260 416 M254 422 L260 416 L266 422" fill="none" stroke="#C9A227" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <circle cx="120" cy="324" r="18" fill="#a87515"/>
-  <g transform="translate(120 324)" stroke="#ffffff" stroke-width="4" stroke-linecap="round"><path d="M-7 0 L7 0 M0 -7 L0 7"/></g>
-  <text x="154" y="322" class="term">世界排名</text>
-  <text x="154" y="348" class="desc">與榮譽、獎金並列的保留誘因</text>
+  <circle cx="710" cy="365" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <path d="M701 365 Q710 373 719 365" fill="none" stroke="#6B7B77" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="770" cy="365" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <line x1="770" y1="357" x2="770" y2="373" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+  <line x1="762" y1="365" x2="778" y2="365" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="830" cy="365" r="20" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+  <rect x="820" y="357" width="6" height="16" fill="#C9A227"/>
+  <rect x="828" y="363" width="6" height="10" fill="#C9A227"/>
+  <rect x="836" y="368" width="6" height="5" fill="#C9A227"/>
 
-  <circle cx="120" cy="404" r="18" fill="#a87515"/>
-  <g transform="translate(120 404)" stroke="#ffffff" stroke-width="4" stroke-linecap="round"><path d="M-7 0 L7 0 M0 -7 L0 7"/></g>
-  <text x="154" y="402" class="term">實質獎金</text>
-  <text x="154" y="428" class="desc">季軍與第四名差距約 200 萬美元</text>
-</g>
+  <text x="140" y="480" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">國家榮譽</text>
+  <text x="200" y="480" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">獎金</text>
+  <text x="260" y="480" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">世界排名分</text>
 
-<!-- ── 右：主張取消 ── -->
-<g>
-  <circle cx="600" cy="244" r="18" fill="#eef0f3" stroke="#d5d6da" stroke-width="1"/>
-  <g transform="translate(600 244)" stroke="#5e6070" stroke-width="4" stroke-linecap="round"><path d="M-7 0 L7 0"/></g>
-  <text x="634" y="242" class="term">強度與觀賞性</text>
-  <text x="634" y="268" class="desc">競技強度與觀賞性通常低於決賽</text>
-
-  <circle cx="600" cy="324" r="18" fill="#eef0f3" stroke="#d5d6da" stroke-width="1"/>
-  <g transform="translate(600 324)" stroke="#5e6070" stroke-width="4" stroke-linecap="round"><path d="M-7 0 L7 0"/></g>
-  <text x="634" y="322" class="term">體能消耗</text>
-  <text x="634" y="348" class="desc">一個月高強度賽事，身體接近極限</text>
-
-  <circle cx="600" cy="404" r="18" fill="#eef0f3" stroke="#d5d6da" stroke-width="1"/>
-  <g transform="translate(600 404)" stroke="#5e6070" stroke-width="4" stroke-linecap="round"><path d="M-7 0 L7 0"/></g>
-  <text x="634" y="402" class="term">受傷風險</text>
-  <text x="634" y="428" class="desc">多踢一場，多一分受傷風險</text>
-</g>
-
-<!-- 現況註記 -->
-<rect x="196" y="462" width="60" height="26" rx="13" fill="#1f3a5f"/>
-<text x="226" y="480" text-anchor="middle" class="abbr" style="font-size:13px;">現況</text>
-<text x="270" y="481" class="desc">歐洲國家盃 1980 年已取消季軍戰；FIFA 尚未正式表態，賽制調整仍懸而未決</text>
-
-<!-- 頁尾 -->
-<line x1="40" y1="526" x2="920" y2="526" stroke="#e8e9ed" stroke-width="1"/>
-<text x="40" y="556" class="foot">製圖：APPI News</text>
-<text x="920" y="556" text-anchor="end" class="foot">2026 年 7 月・整理自 Al Jazeera、Football365 報導</text>
-</svg>
+  <text x="710" y="420" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">選手疲勞</text>
+  <text x="770" y="420" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">受傷風險</text>
+  <text x="830" y="420" text-anchor="middle" font-family="'Noto Sans CJK TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#1F2A28">賽事強度低</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

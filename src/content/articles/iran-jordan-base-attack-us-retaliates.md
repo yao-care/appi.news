@@ -1,10 +1,10 @@
 ---
 title: "美伊戰事急轉：川普喊停對伊朗新攻擊　開出荷莫茲海峽全面開放換停火條件"
 slug: "iran-jordan-base-attack-us-retaliates"
-description: "美伊戰事8月1日晚間急轉：川普在Truth Social宣布，中東盟友已達成協議框架，美方將暫緩原訂對伊朗的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅。這場逆轉來得突然：就在數小時前，川普才誓言對伊朗「狠狠打擊」，革命衛隊聲稱擊中2艘由美軍護航的油輪，美國並在至少10個中東國家發布撤離警示；促成轉折的關鍵是沙烏地王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮，沙國防長隨後赴華府與川普、副總統萬斯會商。半島電視台報導指出，美軍愛國者飛彈庫存告急也是考量之一；卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」，否則將遭「相稱回應」。8月3日局勢再添變數：川普宣布將展開涉及去核化與海峽開放的談判，伊朗官方隨即否認與美方直接會談，僅承認與阿曼磋商海峽安全通行路線。8月4日財政部長貝森特稱美伊「今天或明天」有望就開放海峽達成協議，同一時間賴比瑞亞籍散貨輪「Minoan Pioneer」號深夜於阿曼外海遭不明射彈擊中，三副下落不明。"
-excerpt: "美伊戰事8月1日晚間急轉：川普宣布中東盟友已達成協議框架，美方暫緩新一輪對伊朗攻擊，換取荷莫茲海峽全面開放及終止伊朗核威脅。逆轉前數小時，川普才誓言對伊朗「狠狠打擊」、美國並在至少10個中東國家發布撤離警示；沙烏地王儲週六致電川普表達對衝突升級的憂慮是關鍵轉折。卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」。伊朗8月3日再否認與美方有直接談判，稱僅與阿曼磋商海峽安全通行路線；8月4日貝森特稱美伊談判「今天或明天」有望達成海峽開放協議，同一時間又一艘散貨輪深夜遇襲，一名船員下落不明。"
+description: "美伊戰事8月1日晚間急轉：川普在Truth Social宣布，中東盟友已達成協議框架，美方將暫緩原訂對伊朗的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅。這場逆轉來得突然：就在數小時前，川普才誓言對伊朗「狠狠打擊」，革命衛隊聲稱擊中2艘由美軍護航的油輪，美國並在至少10個中東國家發布撤離警示；促成轉折的關鍵是沙烏地王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮，沙國防長隨後赴華府與川普、副總統萬斯會商。半島電視台報導指出，美軍愛國者飛彈庫存告急也是考量之一；卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」，否則將遭「相稱回應」。8月3日局勢再添變數：川普宣布將展開涉及去核化與海峽開放的談判，伊朗官方隨即否認與美方直接會談，僅承認與阿曼磋商海峽安全通行路線。8月4日財政部長貝森特稱美伊「今天或明天」有望就開放海峽達成協議，同一時間賴比瑞亞籍散貨輪「Minoan Pioneer」號深夜於阿曼外海遭不明射彈擊中，三副下落不明。8月5日伊朗外交部宣布與阿曼協議進入「最後階段」，規劃船隻分道進出海峽並先清除水雷，但仍待最高領袖莫賈塔巴·哈梅內伊批准；總統佩澤希齊揚同日證實「聯繫他確實很困難」，外界並傳莫賈塔巴在2月28日空襲中重傷甚至毀容，惟未經伊朗官方證實。過境費用版本不一，川普稱協議「明天或後天」可望公布，參議院少數黨領袖舒默則質疑恐重演過去僅維持數天的模式。"
+excerpt: "美伊戰事8月1日晚間急轉：川普宣布中東盟友已達成協議框架，美方暫緩新一輪對伊朗攻擊，換取荷莫茲海峽全面開放及終止伊朗核威脅。逆轉前數小時，川普才誓言對伊朗「狠狠打擊」、美國並在至少10個中東國家發布撤離警示；沙烏地王儲週六致電川普表達對衝突升級的憂慮是關鍵轉折。卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」。伊朗8月3日再否認與美方有直接談判，稱僅與阿曼磋商海峽安全通行路線；8月4日貝森特稱美伊談判「今天或明天」有望達成海峽開放協議，同一時間又一艘散貨輪深夜遇襲，一名船員下落不明。8月5日伊朗宣布與阿曼協議進入「最後階段」，仍待最高領袖莫賈塔巴批准；總統佩澤希齊揚證實聯繫最高領袖「確實很困難」，外界並傳莫賈塔巴在開戰空襲中重傷，惟未經證實。"
 publishDate: "2026-07-19T15:18:08.284Z"
-updatedDate: "2026-08-04T16:27:31.005Z"
+updatedDate: "2026-08-06T15:11:37.000Z"
 category: "international"
 subcategory: "middle-east"
 tags:
@@ -12,6 +12,11 @@ tags:
   - "美國"
   - "地緣政治"
 highlights:
+  - "伊朗外交部發言人巴格海伊8月5日表示，與阿曼的荷莫茲海峽協議已進入「最後階段」擬定；兩名知情官員向美聯社透露，伊朗與阿曼談判代表已敲定協議草案，仍待最高領袖莫賈塔巴·哈梅內伊最終批准，協議規劃船隻入灣走伊朗控制航線、出灣走阿曼一側航線，首30天將清除海峽內估計70至100枚水雷"
+  - "伊朗總統佩澤希齊揚8月5日在國家電視台專訪中證實「目前與（最高領袖）聯繫確實很困難」，是官方首度鬆口承認接觸困難；外界據報莫賈塔巴在2月28日空襲中重傷、甚至毀容，惟伊朗當局尚未證實傷勢細節，他自接任以來從未公開露面"
+  - "過境費用版本不一：一說臨時協議期間海峽「不收取任何費用或通行稅」，另一說伊朗原要求收取貨物價值5%至7%費率、阿曼提案約3%、美方堅持零費率，實際定案版本截至發稿仍有出入"
+  - "川普8月4日晚間被問及協議可能於週三公布時回應「有可能，明天或後天，已有很大進展」；副總統萬斯稱談判「一團混亂」、「需要一些時間」，形容伊朗人是「極度難搞的對象」；參議院少數黨領袖舒默質疑協議恐重演過去僅維持數天即失效的模式"
+  - "葉門胡塞武裝8月5日再宣稱對沙烏地阿拉伯油輪發射飛彈，英國海事貿易行動組織通報亞丁灣、阿曼外海均傳出爆炸，區域海事風險尚未完全解除"
   - "財政部長貝森特8月4日接受CNBC訪問表示，美伊「今天或明天」有望就開放荷莫茲海峽達成協議，內容應包含船隻「自由通行」且伊朗不得收費；國務卿盧比奧稱伊朗與阿曼談判「有進展但尚未定論」，但伊朗仍要求主導海峽通行管制，與美方立場相悖"
   - "就在談判傳出樂觀訊息之際，賴比瑞亞籍散貨輪「Minoan Pioneer」號8月3日晚間10時（UTC）於阿曼卡薩卜東北方約37公里處遭不明射彈擊中引擎室，隨即失去動力並引發住宿區大火，三副下落不明，是穆桑達姆半島附近5天內第4起海事安全事件"
   - "川普8月2日在空軍一號上宣布，將於8月3日午後與伊朗展開涉及荷莫茲海峽開放與伊朗去核化的談判，稱原訂空襲規模堪稱「二戰以來最大規模攻擊」；伊朗外交部發言人巴格海伊8月3日隨即否認雙方有直接談判，僅稱與阿曼磋商海峽安全通行路線，美伊雙方說法互相矛盾"
@@ -28,6 +33,9 @@ highlights:
   - "國際油價因戰事劇烈波動：布蘭特原油7月29日單日暴漲7.9%至每桶90.74美元，創數週最大漲幅，30日回落至87.3美元"
   - "美伊戰事自2月28日爆發以來已逾5個月：美軍陣亡人數累計至少17人、逾500人受傷，伊朗官方統計死亡人數逾55人、逾600人受傷"
 risksAndLimits:
+  - "過境費用具體定案版本各方說法不一：有官員稱協議期間「不收費」，另有報導指伊朗要求5%至7%費率仍未拍板，實際條款待正式簽署文件公布才能確認"
+  - "莫賈塔巴·哈梅內伊受傷及毀容之說僅為外界援引消息人士報導，伊朗官方未證實傷勢細節，其健康狀況與履職能力仍是未知數"
+  - "協議仍待伊朗最高領袖最終批准、尚未正式簽署，能否如川普所稱「明天或後天」公布仍待觀察；6月的臨時協議也曾在數週內瓦解"
   - "貝森特稱「今天或明天」可能達成協議，惟截至發稿尚未簽署；伊朗要求主導海峽通行管制與出境路線監督，與美方「自由通行」主張仍有根本分歧，能否落實有待觀察"
   - "Minoan Pioneer號遭擊事件的肇事者身分與具體原因，截至發稿尚未經官方證實，船隻運營方Modion Maritime Management亦未回應置評請求"
   - "美伊雙方對是否進行直接談判說法矛盾：川普稱協議「即將達成」，伊朗官方發言人卻否認與美方直接會談，實際進展仍待後續查證"
@@ -175,6 +183,24 @@ references:
   - title: "Crewmember missing after bulker struck in Hormuz"
     url: "https://splash247.com/crewmember-missing-after-bulker-struck-in-hormuz/"
     publisher: "Splash247"
+  - title: "Iran and the U.S. say a Strait of Hormuz deal is close, but one or both would have to back down"
+    url: "https://www.nbcnews.com/world/iran/trump-iran-war-deal-strait-hormuz-deal-oman-rcna590920"
+    publisher: "NBC News (AP)"
+  - title: "US and Iran having 'very good discussions', Trump says"
+    url: "https://www.irishtimes.com/world/middle-east/2026/08/05/us-and-iran-having-very-good-discussions-trump-says/"
+    publisher: "The Irish Times"
+  - title: "Iran, Oman agree to new shipping routes in Hormuz as Washington, Tehran circle new agreement"
+    url: "https://www.washingtontimes.com/news/2026/aug/5/iran-oman-agree-new-shipping-routes-hormuz-washington-tehran-circle/"
+    publisher: "The Washington Times"
+  - title: "U.S. ready to return to 'commitments,' Iran says as Strait of Hormuz deal looms"
+    url: "https://www.cnbc.com/2026/08/06/us-iran-war-hormuz-trump-bessent-deal.html"
+    publisher: "CNBC"
+  - title: "Communication with Iranian supreme leader 'very difficult', Pezeshkian says"
+    url: "https://www.thenationalnews.com/news/mena/2026/08/06/communication-with-iranian-supreme-leader-very-difficult-pezeshkian-says/"
+    publisher: "The National"
+  - title: "Contact with Iran's supreme leader 'very difficult': Pezeshkian"
+    url: "https://www.dailysabah.com/world/mid-east/contact-with-irans-supreme-leader-very-difficult-pezeshkian"
+    publisher: "Daily Sabah"
 author: "appi-editorial"
 reviewedBy:
   - "luo-yang"
@@ -190,7 +216,7 @@ coverAlt: "約旦穆瓦法克薩爾蒂空軍基地內的美軍與約旦F-16戰�
 coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 ---
 
-美伊戰事在近5個月的軍事對抗後，於8月1日晚間出現轉折。美國總統川普宣布，中東盟友已達成結束戰爭的協議框架，美方將暫緩原訂對伊朗發動的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅；促成轉折的關鍵，是沙烏地阿拉伯王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮。這場戰事源於美軍中央司令部證實，伊朗7月17日（週五）以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地（Muwaffaq Salti Air Base，簡稱MSAB），造成2名美軍陣亡、1人失蹤、4人送醫，美國隨即展開報復性空襲，戰事一路升溫。7月28日晚間，伊朗再度以飛彈攻擊約旦美軍基地，美國與沙烏地阿拉伯隨即聯手空襲伊拉克境內親伊朗民兵，官方民兵聯盟PMF通報至少20死32傷，另有6名伊朗顧問喪生；美軍中央司令部30日凌晨再對伊朗本土發動新一輪空襲，規模較前次擴大約一倍，鎖定伊朗南部多處革命衛隊目標，伊朗官方通報格什姆島一處民宅遭擊中，造成一家3口罹難。戰事外溢範圍持續擴大：埃及地中海港口達米埃塔29日遭無人機攻擊，一艘美籍液化天然氣儲存船起火，是本輪衝突以來埃及領土首度遭波及；荷莫茲海峽3艘油輪遭伊朗革命衛隊攔停，科威特則通報1名工人在伊朗攻擊中喪生。國際油價單日暴漲7.9%，地緣政治風險同步攀升。逆轉來得突然：宣布暫停的數小時前，革命衛隊才聲稱擊中2艘由美軍護航的油輪，川普誓言對伊朗「狠狠打擊」，美國更在至少10個中東國家發布撤離警示，直到川普8月1日晚間喊停新攻擊、開出停火條件。不過這場外交轉折仍充滿變數：川普8月2日進一步宣布，將於隔日午後與伊朗展開涉及荷莫茲海峽開放與伊朗去核化的談判，但伊朗官方8月3日隨即否認雙方有直接會談，稱僅與阿曼磋商海峽安全通行路線，美伊雙方說法南轅北轍。局勢在8月4日又添新變數：財政部長貝森特稱美伊「今天或明天」有望就開放海峽達成協議，但就在樂觀訊息傳出的同時，賴比瑞亞籍散貨輪「Minoan Pioneer」號深夜於阿曼外海遭不明射彈擊中，三副下落不明，凸顯外交進展與海上風險同步並存的矛盾局面。
+美伊戰事在近5個月的軍事對抗後，於8月1日晚間出現轉折。美國總統川普宣布，中東盟友已達成結束戰爭的協議框架，美方將暫緩原訂對伊朗發動的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅；促成轉折的關鍵，是沙烏地阿拉伯王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮。這場戰事源於美軍中央司令部證實，伊朗7月17日（週五）以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地（Muwaffaq Salti Air Base，簡稱MSAB），造成2名美軍陣亡、1人失蹤、4人送醫，美國隨即展開報復性空襲，戰事一路升溫。7月28日晚間，伊朗再度以飛彈攻擊約旦美軍基地，美國與沙烏地阿拉伯隨即聯手空襲伊拉克境內親伊朗民兵，官方民兵聯盟PMF通報至少20死32傷，另有6名伊朗顧問喪生；美軍中央司令部30日凌晨再對伊朗本土發動新一輪空襲，規模較前次擴大約一倍，鎖定伊朗南部多處革命衛隊目標，伊朗官方通報格什姆島一處民宅遭擊中，造成一家3口罹難。戰事外溢範圍持續擴大：埃及地中海港口達米埃塔29日遭無人機攻擊，一艘美籍液化天然氣儲存船起火，是本輪衝突以來埃及領土首度遭波及；荷莫茲海峽3艘油輪遭伊朗革命衛隊攔停，科威特則通報1名工人在伊朗攻擊中喪生。國際油價單日暴漲7.9%，地緣政治風險同步攀升。逆轉來得突然：宣布暫停的數小時前，革命衛隊才聲稱擊中2艘由美軍護航的油輪，川普誓言對伊朗「狠狠打擊」，美國更在至少10個中東國家發布撤離警示，直到川普8月1日晚間喊停新攻擊、開出停火條件。不過這場外交轉折仍充滿變數：川普8月2日進一步宣布，將於隔日午後與伊朗展開涉及荷莫茲海峽開放與伊朗去核化的談判，但伊朗官方8月3日隨即否認雙方有直接會談，稱僅與阿曼磋商海峽安全通行路線，美伊雙方說法南轅北轍。局勢在8月4日又添新變數：財政部長貝森特稱美伊「今天或明天」有望就開放海峽達成協議，但就在樂觀訊息傳出的同時，賴比瑞亞籍散貨輪「Minoan Pioneer」號深夜於阿曼外海遭不明射彈擊中，三副下落不明，凸顯外交進展與海上風險同步並存的矛盾局面。談判進度持續推進：伊朗8月5日宣布與阿曼的協議已進入「最後階段」，規劃船隻分道進出海峽、先清水雷再全面開放，但協議仍待伊朗最高領袖莫賈塔巴·哈梅內伊批准，總統佩澤希齊揚同日證實「聯繫他確實很困難」，暴露伊朗最高領導層自2月28日開戰空襲以來的健康疑雲；過境費用等細節版本不一，川普稱協議「明天或後天」可望公布，但參議院少數黨領袖舒默對此仍抱持懷疑。
 
 ## 約旦基地遇襲：2死1失蹤4送醫
 
@@ -345,8 +371,29 @@ coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 
 [耶路撒冷郵報報導](https://www.jpost.com/international/article-904534)引述海事風險情報公司Vanguard聲明：「射彈擊中引擎室，住宿區隨後發生火災。船員正在滅火並請求協助，三副下落不明。」船隻遭擊後隨即失去動力，船員一度棄船滅火；運營方Modion Maritime Management公司未立即回應置評請求，事發原因與肇事者身分截至發稿尚未確認。[Splash247報導](https://splash247.com/crewmember-missing-after-bulker-struck-in-hormuz/)指出，這是阿曼穆桑達姆半島附近5天內第4起海事安全事件，凸顯船隻經阿曼一側海峽通行的風險持續存在。
 
+## 海峽協議進入最後階段：航道劃分、清雷計畫仍待拍板
+
+[NBC新聞轉發美聯社報導](https://www.nbcnews.com/world/iran/trump-iran-war-deal-strait-hormuz-deal-oman-rcna590920)指出，伊朗外交部發言人巴格海伊8月5日（週三）表示，與阿曼就荷莫茲海峽的協議已進入「最後階段」的擬定作業，若「某些第三方不阻撓這項作業」（暗指美國），雙方將發布聯合聲明。[愛爾蘭時報報導](https://www.irishtimes.com/world/middle-east/2026/08/05/us-and-iran-having-very-good-discussions-trump-says/)指出，伊朗與阿曼已就一條可通航道的地理座標達成協議：船隻入灣走伊朗控制的航線，出灣則多走阿曼一側航線；協議正式生效前，伊朗將先派包括油輪在內的船隻清除水雷，[華盛頓時報報導](https://www.washingtontimes.com/news/2026/aug/5/iran-oman-agree-new-shipping-routes-hormuz-washington-tehran-circle/)指出，海峽內估計仍有70至100枚水雷待清，首30天將是清雷作業期。
+
+[NBC新聞轉發美聯社報導](https://www.nbcnews.com/world/iran/trump-iran-war-deal-strait-hormuz-deal-oman-rcna590920)另指出，兩名知情官員向美聯社透露，伊朗與阿曼談判代表已敲定協議草案，仍待伊朗最高領袖莫賈塔巴·哈梅內伊最終批准；官員形容這份協議是暫時解決方案，與6月美伊間一度達成、後又瓦解的協議掛鉤，若協議成立，將為美伊重啟伊朗核計畫談判鋪路。至於外界關注的過境費用，同一報導指出，官員最初表示將對船隻收取「安全與海事環保服務費」，美方對此強烈反對；但[CNBC報導](https://www.cnbc.com/2026/08/06/us-iran-war-hormuz-trump-bessent-deal.html)引述一名參與協議的伊朗政府官員向MS NOW透露，臨時協議期間海峽「不收取任何費用或通行稅」；[華盛頓時報報導](https://www.washingtontimes.com/news/2026/aug/5/iran-oman-agree-new-shipping-routes-hormuz-washington-tehran-circle/)則指出，伊朗原先要求收取貨物價值5%至7%的費用、阿曼提案約3%，美方堅持「零費率」，實際定案版本截至發稿仍有出入。
+
+## 莫賈塔巴傷勢成謎：總統證實聯繫「很困難」
+
+[The National報導](https://www.thenationalnews.com/news/mena/2026/08/06/communication-with-iranian-supreme-leader-very-difficult-pezeshkian-says/)指出，伊朗總統佩澤希齊揚8月5日晚間錄製、於伊朗國家電視台播出的專訪中證實：「目前與他聯繫確實很困難，但他的存在對我們而言是很大的力量支持，使我們能繼續走這條路。」此言被外界視為官方首度罕見鬆口承認接觸最高領袖的困難。[Daily Sabah報導](https://www.dailysabah.com/world/mid-east/contact-with-irans-supreme-leader-very-difficult-pezeshkian)指出，莫賈塔巴自2月28日美以聯合空襲中喪父並接任最高領袖以來，從未公開露面；[The National報導](https://www.thenationalnews.com/news/mena/2026/08/06/communication-with-iranian-supreme-leader-very-difficult-pezeshkian-says/)指出，外界據報他在同一波空襲中身負重傷、甚至傳出毀容，但伊朗當局至今未證實傷勢細節，他的缺席也持續引發外界對其健康與履職能力的質疑。佩澤希齊揚同時否認政府內部存在分歧的傳言，稱他所見到的莫賈塔巴「在倫理、邏輯與謙遜上都很出色」。
+
+## 川普稱協議「這兩天內」可望公布　萬斯：進展緩慢屬正常
+
+[NBC新聞轉發美聯社報導](https://www.nbcnews.com/world/iran/trump-iran-war-deal-strait-hormuz-deal-oman-rcna590920)指出，川普8月4日（週二）晚間被記者問及Axios報導稱協議可能於週三公布時回應：「有可能，明天或後天。已經有很大進展了。」[華盛頓時報報導](https://www.washingtontimes.com/news/2026/aug/5/iran-oman-agree-new-shipping-routes-hormuz-washington-tehran-circle/)則引述川普在拉斯維加斯的演說：「我們在狠狠打擊他們，但我更想達成協議，因為我不想殺人。」同一篇報導並指出，參議院少數黨領袖舒默對協議進度表示懷疑：「每次川普說有協議的時候……海峽要麼還是關的，要麼只開放個幾天。」[NBC新聞轉發美聯社報導](https://www.nbcnews.com/world/iran/trump-iran-war-deal-strait-hormuz-deal-oman-rcna590920)並指出，副總統萬斯8月5日在福斯新聞受訪時坦言，美伊談判進展看似緩慢是正常現象，稱這場終戰努力「一團混亂」、「需要一些時間」，並形容伊朗人是「極度難搞的對象」，協商過程有時得先退一步才能前進。
+
+國際油價同步反映談判起伏：[NBC新聞轉發美聯社報導](https://www.nbcnews.com/world/iran/trump-iran-war-deal-strait-hormuz-deal-oman-rcna590920)指出，8月5日布蘭特原油價格先跌後回升，來到每桶約80美元，仍遠低於衝突高峰時的價位。
+
+## 海上風險未歇：葉門胡塞再襲沙國油輪
+
+局勢緩和的同時，區域海事風險並未完全解除。[NBC新聞轉發美聯社報導](https://www.nbcnews.com/world/iran/trump-iran-war-deal-strait-hormuz-deal-oman-rcna590920)指出，伊朗支持的葉門胡塞武裝8月5日宣稱，已對紅海上一艘航向沙國延布港附近海域的沙烏地阿拉伯油輪發射彈道飛彈，未提供證據，沙烏地阿拉伯官方未立即回應；英國海事貿易行動組織通報，亞丁灣海域一艘船隻回報附近傳出巨大爆炸聲，船員平安，胡塞武裝並宣稱另對一艘沙國油輪發射飛彈。
+
 ## 更新時間軸
 
+- （更新 2026-08-06：伊朗外交部宣布與阿曼的荷莫茲海峽協議已進入「最後階段」擬定，雙方就航道地理座標達成協議：船隻入灣走伊朗控制航線、出灣多走阿曼一側，協議生效前伊朗將先派油輪清除海峽內估計70至100枚水雷。協議仍待伊朗最高領袖莫賈塔巴·哈梅內伊批准；總統佩澤希齊揚證實「目前與他聯繫確實很困難」，是官方首度鬆口承認接觸困難，外界並傳莫賈塔巴在2月28日空襲中重傷甚至毀容，惟未經伊朗官方證實。過境費用版本不一：一說協議期間「不收取任何費用」，另一說伊朗原要求5%至7%費率、阿曼提案3%、美方堅持零費率，版本尚未統一。川普稱協議「明天或後天」可望公布，副總統萬斯稱談判「一團混亂」、需要時間；參議院少數黨領袖舒默質疑協議恐重演過去僅維持數天的模式。同一時間，葉門胡塞武裝再宣稱對沙烏地阿拉伯油輪發射飛彈，區域海事風險未歇。）（[NBC News/AP](https://www.nbcnews.com/world/iran/trump-iran-war-deal-strait-hormuz-deal-oman-rcna590920)、[The Irish Times](https://www.irishtimes.com/world/middle-east/2026/08/05/us-and-iran-having-very-good-discussions-trump-says/)、[The Washington Times](https://www.washingtontimes.com/news/2026/aug/5/iran-oman-agree-new-shipping-routes-hormuz-washington-tehran-circle/)、[CNBC](https://www.cnbc.com/2026/08/06/us-iran-war-hormuz-trump-bessent-deal.html)、[The National](https://www.thenationalnews.com/news/mena/2026/08/06/communication-with-iranian-supreme-leader-very-difficult-pezeshkian-says/)、[Daily Sabah](https://www.dailysabah.com/world/mid-east/contact-with-irans-supreme-leader-very-difficult-pezeshkian)）
 - （更新 2026-08-04：財政部長貝森特接受CNBC訪問表示，美伊「今天或明天」有望就開放荷莫茲海峽達成協議，內容應包含船隻「自由通行」且伊朗不得收費；美國國務卿盧比奧稱伊朗與阿曼談判「有進展但尚未定論」，卡達外交部僅稱「正在尋求外交解決方案」。惟伊朗仍要求主導海峽通行管制與出境路線監督，與美方「自由通行」原則相悖。同一時間，賴比瑞亞籍散貨輪「Minoan Pioneer」號8月3日晚間10時於阿曼卡薩卜東北方約37公里處遭不明射彈擊中引擎室，隨即失去動力並引發住宿區大火，三副下落不明，是穆桑達姆半島附近5天內第4起海事安全事件。市場對談判樂觀反應：布蘭特原油期貨跌至每桶約81.88美元，美股標普500指數創新高。）（[CNBC](https://www.cnbc.com/2026/08/04/bessent-says-there-may-be-deal-tuesday-or-wednesday-to-open-strait-of-hormuz-with-freedom-of-movement.html)、[Washington Times](https://www.washingtontimes.com/news/2026/aug/4/scott-bessent-says-us-iran-could-reach-deal-strait-hormuz-within-day/)、[Forbes](https://www.forbes.com/sites/zacharyfolk/2026/08/04/bessent-says-us-and-iran-could-reach-deal-to-open-strait-of-hormuz-today-or-tomorrow/)、[The Jerusalem Post](https://www.jpost.com/international/article-904534)、[Splash247](https://splash247.com/crewmember-missing-after-bulker-struck-in-hormuz/)）
 - （更新 2026-08-03：川普8月2日在空軍一號上宣布，將於8月3日午後與伊朗展開談判，內容涵蓋荷莫茲海峽開放與伊朗去核化；他稱沙烏地阿拉伯、阿聯酋、卡達與伊朗均要求美方取消原訂空襲，原訂規模堪稱「二戰以來最大規模攻擊」。但伊朗官方隨即否認與美方直接談判：外交部發言人巴格海伊表示「我們目前不與美國談判」，僅與阿曼就荷莫茲海峽安全通行路線磋商；伊朗外長阿拉格奇稱與阿曼談判已進入「最後階段」，討論替代運輸路線，卡達、巴基斯坦斡旋人士預計赴德黑蘭進行間接會談。專家評估，去核化協議「還遠得很」。）（[新華社](https://english.news.cn/20260803/2e4e6d354e1745dd8b0696e521ff0634/c.html)、[Al Jazeera](https://www.aljazeera.com/news/2026/8/3/trump-says-new-iran-negotiations-starting-what-we-know)、[CBS News](https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-kuwait-jordan-air-base/)、[CNBC](https://www.cnbc.com/2026/08/03/trump-iran-us-negotiations-peace-proposals-.html)）
 - （更新 2026-08-02：美伊戰事急轉，川普8月1日晚間在Truth Social宣布，中東盟友已達成協議框架，美方將暫緩原訂新一輪對伊朗攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅。促成轉折的關鍵是沙烏地王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮；沙國防長隨後赴華府與川普、副總統萬斯會商。半島電視台報導指出，美軍愛國者飛彈庫存已從開戰前2300枚降至不足827枚，彈藥吃緊、期中選舉壓力也是川普喊停的考量；卡達、巴基斯坦持續斡旋，土耳其、阿聯同步敦促降溫。伊朗官方態度強硬：國防部聲明稱國家「既不驚訝也不被動」，外長阿拉格奇警告美方勿「冒險行動」，否則將遭「相稱回應」。分析人士警告，若無明確協議開放海峽，這次暫停恐重蹈6月停火瓦解的覆轍。）（[Yahoo/AP](https://www.yahoo.com/news/politics/articles/saudi-crown-prince-urges-trump-014040218.html)、[Al Jazeera](https://www.aljazeera.com/news/2026/8/2/why-has-trump-halted-iran-attacks-and-what-is-the-deal-he-is-hinting-at)、[Fortune](https://fortune.com/2026/08/01/trump-iran-strikes-mideast-allies-emerging-strait-of-hormuz/)、[CBS News](https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-kuwait-jordan-air-base/)）

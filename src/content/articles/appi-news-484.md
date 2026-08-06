@@ -3,14 +3,11 @@ title: "全中運射箭676分奪金：關於謝明君這場破紀錄，你該知
 slug: "appi-news-484"
 description: "花蓮自強國中謝明君在115全中運射箭項目以雙局總分676分刷新大會紀錄奪金，本文整理成績細節、破紀錄意義、選手養成背景與後續國際賽事目標。"
 publishDate: 2026-08-01
+updatedDate: 2026-08-06
 category: sports
 subcategory: events
 tags: ["學生賽事", "國際賽事"]
 author: "appi-editorial"
-reviewedBy:
-  - "chou-jingyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-484.webp"
 coverAlt: "長條圖比較謝明君新紀錄與原大會紀錄的分數差距，雙局676分對668分、單局339分對338分"
 status: published
@@ -18,8 +15,6 @@ sourceType: editorial
 contentType: news
 disclaimerType: general
 readingTime: 9
-risksAndLimits:
-  - "本文所述選拔與集訓計畫（爭取亞青賽代表隊資格）尚未定案，實際入選結果需以主辦單位公告為準"
 references:
   - title: "中華民國115年全國中等學校運動會．會內賽成績系統－破紀錄查詢"
     url: "https://sport115.cyc.edu.tw/Module/Score/Record.php"
@@ -44,8 +39,6 @@ draft: false
 ### 比賽過程與關鍵表現
 
 排名賽採計選手在固定距離內連續射出的箭數總分，考驗的是穩定度而非單一次的爆發力。676分換算下來，平均每支箭將近9.4分，在滿分10分的計分制度下，屬於相當精準且穩定的表現。這樣的排名賽成績，讓謝明君以較高種子序進入淘汰賽，也為他後續在對抗賽奪金鋪好路。
-
-![長條圖比較謝明君新紀錄與原大會紀錄的分數差距，雙局676分對668分、單局339分對338分](https://appi.news/images/appi-news-484/2.png "8分之差改寫大會紀錄，看似微小的進步，是長期穩定訓練的累積")
 
 ## 二、破紀錄的意義：改寫大會歷史
 

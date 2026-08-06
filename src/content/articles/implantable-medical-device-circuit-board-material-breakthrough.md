@@ -48,8 +48,6 @@ KAIST 研究團隊在《Nature Communications》發表的論文指出，其開�
 
 ![上下對照示意圖，傳統軟性電路板反覆彎折後出現裂痕斷路，液態金屬電路反覆彎折後導電路徑仍完整](https://appi.news/images/implantable-medical-device-circuit-board-material-breakthrough/2.png "同樣反覆彎折，傳統電路板會出現裂痕斷路，液態金屬電路仍能維持導電路徑完整")
 
-![原文附圖：剛性電路板與液態金屬電路彎折疲勞比較示意圖](https://appi.news/images/implantable-medical-device-circuit-board-material-breakthrough/2.jpg "圖／上醫預防醫學發展協會")
-
 ## 三、兩條材料路徑怎麼解題：液態金屬與有機電晶體
 
 **液態金屬電路解決訊號傳輸的穩定性，有機電化學電晶體解決運算能不能就地完成**。前者讓電路本身能承受反覆拉伸，後者讓裝置不需要把資料傳回外部伺服器，就能在貼片端直接判讀。
@@ -65,8 +63,6 @@ KAIST 研究團隊在《Nature Communications》發表的論文指出，其開�
 需要留意的是，這張表比較的是材料與技術本身的實驗數據，不代表任何一項已經是可以直接植入人體的成品。液態金屬電路目前的應用示範集中在貼膚感測、肌電紀錄與神經刺激原型；有機電化學電晶體陣列則以心臟相關的訊號分析為主要測試場景。兩者都還沒有長期人體臨床試驗的公開數據。
 
 ![四格並列資訊卡，分別呈現導電率、電晶體密度、運算準確率與可拉伸倍數四項關鍵數據](https://appi.news/images/implantable-medical-device-circuit-board-material-breakthrough/3.svg "四項數據分屬不同材料與面向，共同說明這些技術離堪用還有多近")
-
-![原文附圖：液態金屬電路與有機電晶體關鍵數據資訊圖](https://appi.news/images/implantable-medical-device-circuit-board-material-breakthrough/3.jpg "圖／上醫預防醫學發展協會")
 
 ## 四、研發進度到哪、患者現在可以怎麼做
 

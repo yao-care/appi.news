@@ -3,14 +3,11 @@ title: "林昀儒、高承睿為何終結中國男雙50年紀錄？世錦賽奪�
 slug: "appi-news-483"
 description: "林昀儒與高承睿在2025杜哈世錦賽男雙連克中國兩組好手，讓中國隊寫下自1975年以來首度無緣四強的紀錄，最終奪銀、世界排名躍居第4。回顧晉級歷程、關鍵比分與這面銀牌對台灣桌球的意義。"
 publishDate: 2026-07-31
+updatedDate: 2026-08-06
 category: sports
 subcategory: events
 tags: ["桌球", "國際賽事", "中國", "日本"]
 author: "appi-editorial"
-reviewedBy:
-  - "chou-jingyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-483.webp"
 coverAlt: "林昀儒／高承睿男雙世界排名在世錦賽奪銀後從第11名躍升至第4名的長條圖"
 status: published
@@ -19,10 +16,6 @@ contentType: news
 disclaimerType: general
 readingTime: 12
 draft: false
-risksAndLimits:
-  - "中國隊男雙止步8強不代表整體實力滑落，該屆賽事中國隊仍在其他項目奪冠，此紀錄僅限男雙單一項目"
-  - "世界排名躍居第4為賽後當下的單一時間點數據，將隨後續賽事持續變動"
-  - "下一屆世錦賽男雙項目為預計2027年舉行，屆時賽制與參賽組合尚未確定"
 ---
 ## 一、賽事焦點：世錦賽男雙關鍵一戰
 
@@ -71,8 +64,6 @@ risksAndLimits:
 ## 五、這場勝利對台灣桌球的長遠影響
 
 **根據國際桌總排名，這面銀牌讓林昀儒、高承睿的世界男雙排名從賽前第11名躍升至第4名，也讓台灣男雙睽違12年重返世錦賽頒獎台**，象徵台灣桌球在雙打項目上有了新的世代接班人。
-
-![林昀儒／高承睿男雙世界排名在世錦賽奪銀後從第11名躍升至第4名的長條圖](https://appi.news/images/appi-news-483/2.png "一面銀牌，讓兩人的世界排名在賽後直接躍進7個名次")
 
 ![林昀儒／高承睿本屆世錦賽男雙晉級路線圖，歷經16強、8強、4強到決賽的對戰結果](https://appi.news/images/appi-news-483/3.png "淘汰兩組中國好手、扳倒世界球王法國兄弟檔，最後才在金牌戰飲恨")
 

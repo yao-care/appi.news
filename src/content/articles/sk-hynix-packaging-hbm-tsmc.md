@@ -52,8 +52,6 @@ SK 海力士這半年做的兩件大事，其實是同一題。一是要砸 [19 
 
 它不缺 DRAM 技術，也不缺先進製程，缺的是把一堆晶粒疊起來、封好、測完、還壓得住熱的後段產能。這才是這兩則新聞真正在講的事。
 
-<img src="/covers/sk-hynix-packaging-hbm-tsmc.webp" width="1200" height="800" loading="lazy" decoding="async" alt="象徵 SK 海力士把資本壓上 HBM 先進封裝、將戰線從晶圓拉到後段的示意">
-
 ## 先把「封裝」為什麼是瓶頸講清楚
 
 HBM（高頻寬記憶體）不是一顆晶片，是好幾顆 DRAM 晶粒垂直疊起來、再跟 GPU 或 AI 加速器透過特製的中介層接在一起的模組。做出晶圓只是第一步，真正難的是把它們[堆疊、鍵合、測試，變成一個能交付、能通過品質驗證、還能控熱的模組](https://www.igorslab.de/en/sk-hynix-invests-19-trillion-won-advanced-packaging-becomes-the-bottleneck-of-the-ai-memory-boom/)。這一段需要的是鍵合、測試、中介層、基板、散熱、良率控制，跟前段的曝光蝕刻是兩套本事。

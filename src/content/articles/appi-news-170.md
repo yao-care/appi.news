@@ -45,7 +45,7 @@ references:
     url: "https://vocus.cc/article/68ac0422fd89780001c1574e"
 draft: false
 ---
-![戶外工作者在高溫環境下的休息補水場景](/images/appi-news-170-1.webp)
+
 
 ## 一、台灣熱傷害就診屢創新高
 

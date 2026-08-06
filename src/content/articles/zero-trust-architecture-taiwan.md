@@ -59,8 +59,6 @@ originalContribution: "把 NIST SP 800-207 對零信任的官方定義、數位�
 
 <p>零信任架構（Zero Trust Architecture）不是一套要買的產品，是一種資安假設的翻轉：不因為使用者在公司內網、設備是公司財產，就預設它值得信任，每一次存取都要重新驗證身分、設備狀態與當下情境。台灣政府機關已依官方時程分階段導入身分鑑別、設備鑑別與信任推斷；金融業則從 2024 年的鼓勵性指引，走到 2025 年底把零信任列進四年期的資安韌性藍圖，逐步變成自律規範，但目前仍不是一步到位的強制令。</p>
 
-<img src="/covers/zero-trust-architecture-taiwan-cover.webp" width="1200" height="800" loading="lazy" decoding="async" alt="資訊人員在辦公室電腦前進行多重身分驗證，螢幕顯示存取權限畫面（示意圖）">
-
 <h2>零信任在解決什麼問題</h2>
 
 <p>傳統資安思維像蓋城牆：只要守住網路邊界，內網裡的人事物就自動被信任，防火牆之外才需要層層盤查。<a href="https://www.nist.gov/publications/zero-trust-architecture" target="_blank" rel="noopener">美國國家標準與技術研究院（NIST）在 SP 800-207 標準文件裡把零信任定義為「一套逐漸演進的資安典範，把防禦重心從靜態的網路邊界，轉向使用者、資產與資源本身」</a>，理由很直接：<a href="https://www.nist.gov/publications/zero-trust-architecture" target="_blank" rel="noopener">遠距工作、員工自帶設備（BYOD）、雲端服務讓愈來愈多資產本來就在傳統企業網路邊界之外，「城牆」早就守不住真正的資料與應用系統</a>。零信任不再問「你是不是從內網連進來」，改問「這次存取，憑什麼值得信任」。</p>

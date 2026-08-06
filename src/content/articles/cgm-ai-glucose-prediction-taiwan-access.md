@@ -87,8 +87,6 @@ topics: ["ai-medical-regulation"]
 
 <p>Abbott 在 2026 年 1 月的 CES 端出 Libre Assist，讓連續血糖監測（CGM）第一次有了明確可驗證的生成式 AI 功能：拍一張食物照片，AI 幫你預測等一下血糖會怎麼跳。但這項功能綁定的 FreeStyle Libre 3 Plus 感測器，台灣目前沒有醫療器材許可證。台灣消費者實際買得到、健保有給付的連續血糖監測，功能陽春、給付範圍窄，普及率不到 1%。CGM 的 AI 故事跟台灣人買得到的現實，中間隔著一道法規與給付的落差。</p>
 
-<img src="/covers/cgm-ai-glucose-prediction-taiwan-cover.webp" width="1200" height="800" loading="lazy" decoding="async" alt="手臂上貼著連續血糖監測感測貼片，手機螢幕顯示血糖趨勢圖">
-
 <h2>CGM 的 AI，目前做到哪裡</h2>
 
 <p>連續血糖監測用貼在皮膚上的感測器每隔幾分鐘量一次組織液葡萄糖濃度，取代傳統扎手指驗血糖的方式，長期以來最核心的智慧功能是「預測性警示」：<a href="https://ca.provider.dexcom.com/articles/getting-know-urgent-low-soon-alert" target="_blank" rel="noopener">Dexcom 的 Urgent Low Soon 警示能在血糖預測降到 3.1 mmol/L 以下的嚴重低血糖事件發生前，最快提前 20 分鐘示警</a>，讓使用者有時間喝糖水或吃東西補救。這個功能存在多年，本質是趨勢推算，不是這篇要談的重點。</p>

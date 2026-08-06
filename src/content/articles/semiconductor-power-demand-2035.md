@@ -62,8 +62,6 @@ draft: false
 
 負載端的數字同樣同步攀升。台電估算，半導體產業的用電負載將從今年[700萬瓩，成長到2030年1070萬瓩、2035年1460萬瓩](https://udn.com/news/story/7238/9652340)。
 
-<img src="/images/semiconductor-power-demand-2035-s3.webp" width="960" height="640" loading="lazy" decoding="async" alt="高壓輸電鐵塔與電網線路，象徵台灣電網需因應半導體用電成長（示意圖）">
-
 ## 晶圓製造是主力，台灣產能占全球逾8成
 
 用電結構上，[晶圓製造用電需求最大、成長也最快，其次是記憶體與先進封裝測試](https://www.cna.com.tw/news/afe/202607270168.aspx)。這與台灣半導體產業的全球位置有關：[台灣半導體產能占全球比重達83%，海外僅占17%](https://udn.com/news/story/7238/9652340)，加上[台積電在台已有19座先進製程與封裝廠運行，同時興建13座新廠](https://udn.com/news/story/7238/9652340)，產能持續向台灣集中，用電需求自然跟著往上堆疊。

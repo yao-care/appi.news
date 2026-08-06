@@ -55,8 +55,6 @@ originalContribution: "本文把 Coralogix 這輪募資放回整個可觀測性�
 
 6 月 3 日，以色列新創 Coralogix 宣布[拿到 2 億美元 Series F、總募資達 5.5 億、投後估值 16 億美元](https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/)，比前一輪的 10 億出頭[跳了 60%](https://www.calcalistech.com/ctechnews/article/bkifhk6gmx)。這輪由 Advent 與加拿大退休金投資局（CPPIB）共同領投，Greenfield 與 Brighton Park Capital 跟投。距離它上一輪 1.15 億美元的 Series E，只隔了 11 個月。錢賭的是一句很樸素的話：當 AI 與 agent 開始自己動手改生產系統，得有人在旁邊盯著它們。
 
-<img src="/images/coralogix-observability-agent-funding-s1.webp" width="960" height="509" loading="lazy" decoding="async" alt="創投資本流向底層技術基礎建設的抽象示意">
-
 先把名詞講清楚。可觀測性（observability）不是新東西，它就是把系統跑起來時吐出的三類資料（logs 日誌、metrics 指標、traces 追蹤）收集起來，讓工程師知道哪裡卡了、哪裡慢了、哪裡壞了。過去這是工程師開著 dashboard 盯的活。但 Coralogix 執行長 Ariel Assaraf 說了一句關鍵的話：需求暴增，是因為[現代系統產生的資料量爆炸](https://www.calcalistech.com/ctechnews/article/bkifhk6gmx)。更關鍵的一個數字：它超過一半的企業客戶，現在是透過內建 AI agent「Olly」或自家模型、用命令列與 agent 介面在查資料，[而不是傳統的 dashboard](https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/)。看資料的那雙眼睛，本身正在從人換成 AI。
 
 <img src="/images/coralogix-observability-agent-funding-s2.webp" width="960" height="539" loading="lazy" decoding="async" alt="伺服器機房裡的監控儀表板，收集日誌、指標與追蹤資料">

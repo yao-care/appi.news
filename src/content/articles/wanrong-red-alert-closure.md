@@ -53,8 +53,6 @@ references:
 
 依行政院人事行政總處[公告](https://www.dgpa.gov.tw/typh/daily/nds.html)，花蓮縣萬榮鄉萬榮村，以及鳳林鎮森榮里、長橋里、山興里、鳳信里、大榮里保全戶，今天（7 月 19 日）持續停止上班、停止上課，是本波萬里溪堰塞湖事件連續第五天未解除。堰塞湖水情同步吃緊，18 日晚間 8 時水位升至 1086.8 公尺，距壩頂溢流口僅剩約 0.7 公尺，蓄水率達 103.4%；林保署花蓮分署因當天午後雨勢趨緩，已將原估 19 日中午溢流的時間調整延後至當晚 9 時左右，但強調若降雨如預期再起，時間仍可能提前。
 
-<img src="/covers/wanrong-red-alert-closure.webp" width="1200" height="800" loading="lazy" decoding="async" alt="花蓮山區河谷與攔水壩體，象徵堰塞湖蓄水情形">
-
 ## 停班停課範圍與生效時間（7 月 19 日最新，連續第五天）
 
 <img src="/images/wanrong-red-alert-closure-s1.webp" width="960" height="1280" loading="lazy" decoding="async" alt="山區道路豎立交通錐與電線杆，象徵警戒區道路管制">

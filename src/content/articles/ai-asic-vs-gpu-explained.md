@@ -53,8 +53,6 @@ originalContribution: "把 imec 的 ASIC/GPU 架構比較、Silicon Analysts 的
 
 AI ASIC 是為單一運算任務把電路刻死的客製晶片，用犧牲彈性換取比通用 GPU 更高的每瓦效能與更低的單位成本。雲端巨頭把愈來愈多推論工作搬去自研 ASIC，理由很直接：那些工作負載上線後就固定重複，用不到 GPU 保留的彈性，卻要為那份彈性付電費。這條路線分流的是特定推論負載，訓練與還在快速變動的工作負載，仍是 GPU 的地盤。
 
-<img src="/covers/ai-asic-vs-gpu-explained-cover.webp" width="1200" height="675" loading="lazy" decoding="async" alt="半導體晶圓與晶片特寫，象徵 AI 運算從通用 GPU 走向客製化 ASIC">
-
 ## ASIC 是什麼？跟 GPU 差在架構
 
 ASIC 全名 Application-Specific Integrated Circuit，中文常譯特殊應用積體電路。它的電路在設計階段就針對單一任務刻死，AI 領域最常見的矩陣乘法與向量運算，會占滿整片晶片的電晶體資源。[imec 的比較整理指出](https://www.imeciclink.com/en/articles/asic-vs-gpu-ai)，GPU 像一把瑞士刀，靠數以萬計可程式化的核心處理各種平行運算，訓練、推論、圖形運算都能扛；ASIC 像量身訂做的工具，把通用性拿掉、犧牲彈性，換取專注在核心矩陣運算上的極致效率。這個架構差異決定了兩者的取捨：GPU 留了彈性應付還在變動的模型，ASIC 拿掉彈性，把省下來的電晶體全部拿去衝算力密度。

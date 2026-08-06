@@ -56,8 +56,6 @@ references:
 
 近四週實驗室監測顯示，社區流行病毒型別以克沙奇A6型為多，其次是腸病毒D68型及克沙奇A4型（[疾管署7月21日新聞稿](https://www.cdc.gov.tw/Bulletin/Detail/GOQt9ngPZ_TxzlwEcjUMiQ?typeid=9)）。今年累計6例腸病毒感染併發重症確定病例，含1例死亡，分別是腸病毒D68型4例、克沙奇A4型與克沙奇A16型各1例；7月7日新增的1例，是中部一名未滿1歲男嬰，6月上旬出現發燒症狀，確認感染腸病毒D68型併發重症，治療後已出院返家（[疾管署7月7日新聞稿](https://www.cdc.gov.tw/Bulletin/Detail/s8s1Js8kPmgFnAGyaItIKg?typeId=9)）。
 
-<img src="/covers/enterovirus-severe-warning-signs-2026-cover.webp" width="1200" height="800" loading="lazy" decoding="async" alt="小兒科診間候診區，示意腸病毒門急診就診人次上升（示意圖）">
-
 ## 一般症狀：發燒、口腔水泡、手腳紅疹，各型別怎麼分
 
 疾管署說明，腸病毒感染後約2到10天（平均3到5天）開始出現症狀，主要透過腸胃道（糞口、遭污染的水或食物）、呼吸道（飛沫、咳嗽或打噴嚏）以及接觸病童皮膚水泡液體傳染，患者可持續由腸道排出病毒長達8到12週（[疾病介紹｜疾管署](https://www.cdc.gov.tw/Category/Page/FgfRlDl6XxDkuqaOghuNfQ)）。

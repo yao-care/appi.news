@@ -80,8 +80,6 @@ topics: ["ai-medical-regulation"]
 
 <p>FHIR 是醫療資料的共同語言，全名 Fast Healthcare Interoperability Resources，由國際醫療資料交換標準組織 HL7 制定，把病歷拆成一個一個叫做 Resource 的模組，讓不同醫院、不同系統能用同一套規則組合、查詢、交換資料。AI 要在醫療現場派上用場，得先讀得懂這套語言：把病歷文字直接丟給模型去猜代碼，準確率不到五成；改讀結構化的 FHIR 資源，準確率能拉到九成以上。台灣衛福部正把這套語言鋪進全國醫學中心，目標 2026 年底前讓病歷真的能跨院互通。</p>
 
-<img src="/covers/fhir-ai-medical-data-taiwan-cover.webp" width="1200" height="800" loading="lazy" decoding="async" alt="醫療人員在電腦螢幕前檢視數位病歷資料介面">
-
 <h2>FHIR 到底在解決什麼問題</h2>
 
 <p>FHIR 由<a href="https://www.hl7.org/fhir/overview.html" target="_blank" rel="noopener">國際醫療資料交換標準組織 HL7 定義為一套「以 Resource 組成」的架構</a>，2011 年問世，持續演進到目前主流的 R4、R5 版本。<a href="https://www.ithome.com.tw/news/141637" target="_blank" rel="noopener">HL7 協會把健康照護領域常見的可互通資料項目歸納成 145 種 Resource，涵蓋病人基本資料、生理量測、用藥紀錄、醫療影像標記等類別，每種 Resource 就像資料庫裡的一張表，使用者可以直接複製、微調來解決臨床或行政上的需求</a>。跟前幾代標準比，這是關鍵差異：HL7 v2、v3 與 CDA 把規格寫死，要求各系統照著同一套文件格式走；FHIR 反過來，用組合的方式讓各醫院把自己需要的 Resource 拼起來，再透過通用的 RESTful API 存取，不必額外學資料庫查詢語法。</p>

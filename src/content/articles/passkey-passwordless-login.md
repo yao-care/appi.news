@@ -60,8 +60,6 @@ references:
 
 關鍵在於私密金鑰從頭到尾不會傳出去。Apple 在[通行密鑰安全性說明](https://support.apple.com/en-us/102195)中指出，伺服器永遠不會知道私密金鑰是什麼。也因為沒有可被竊取的共用密碼，passkey 同時具備「你持有的裝置」與「你的生物特徵或螢幕鎖」兩種因素，本質上就帶有多因素驗證的效果。
 
-<img src="/images/passkey-passwordless-login-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="代表公開金鑰加密的數位安全鎖與金鑰示意圖">
-
 ## 一般使用者怎麼開始用
 
 開始用 passkey 不需要額外硬體，流程是在支援的服務裡「建立一把」，之後改用裝置解鎖方式登入。Google 帳號可在帳號安全設定裡建立 passkey，建立後用指紋、臉部辨識或螢幕鎖就能登入，且可存進 Google 密碼管理工具跨裝置使用（見 [Google 官方說明](https://support.google.com/accounts/answer/13548313)）。

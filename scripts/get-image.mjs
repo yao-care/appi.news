@@ -64,9 +64,22 @@ if (!Number.isFinite(width)) {
 out = out.replace(/\.(jpe?g|png|webp)$/i, '') + '.webp';
 const src = '/' + out.replace(/^public\//, '');
 
+/** 全站禁用 AI 生圖的開關：`NO_AI_IMAGE=1` 時，任何走到 OpenAI 生圖的路徑一律硬失敗。
+ *  用途：站長要求某批文章「只能用既有圖或圖庫，不准生圖」時，把它設在環境變數即可，
+ *  不必逐條改 prompt（prompt 是軟約束，模型可能忽略；這裡是機械保證）。
+ *  刻意 throw 而非靜默改用圖庫——讓呼叫端看到失敗、換 query 再試，而不是拿到一張沒人要的生成圖。 */
+function noAiGuard(where) {
+  if (process.env.NO_AI_IMAGE === '1') {
+    throw new Error(
+      `NO_AI_IMAGE=1：本批禁用 AI 生圖（${where}）。請改用既有圖片或換一組英文 --query 再搜圖庫。`,
+    );
+  }
+}
+
 /** AI 生成（超寫實攝影產線：sonnet 展開＋多樣性輪轉＋haiku 自檢；台灣人鐵律由模組強制）
  *  2026-07 起概念/封面生成不再走插畫拼貼，一律新聞攝影感單一場景。 */
 async function generate(reason) {
+  noAiGuard(`generate(${reason})`);
   if (dryRun) return { mode: 'generated', reason, file: out, src, dry: true };
   const r = await generatePhotoRealImage({
     topic, context, caption, alt: altText, articleContext, width, seed: out,
@@ -173,6 +186,7 @@ async function embed() {
 
 /** 人物 photoreal 生圖（--people）：sonnet 展開 prompt → 生圖 medium → haiku 驗圖 → 不合格重生一次。 */
 async function generatePerson() {
+  noAiGuard('generatePerson');
   if (dryRun) return { mode: 'generated', reason: 'people', people: true, file: out, src, dry: true };
   const r = await generatePersonImage({
     topic, context, caption, alt: altText, articleContext, width,

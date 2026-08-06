@@ -1,91 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="四大央行利率政策方向並列：聯準會按兵不動，歐洲央行轉向升息，日本央行政策正常化，紐西蘭央行重啟升息">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
 <style>
-text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
-.title{font-size:26px;font-weight:700;fill:#1e2030;}
-.deck{font-size:15px;fill:#6e7276;}
-.abbr{font-size:14px;font-weight:700;fill:#ffffff;letter-spacing:.5px;}
-.bank{font-size:20px;font-weight:700;fill:#1e2030;}
-.stance{font-size:22px;font-weight:700;fill:#1e2030;}
-.sub{font-size:15px;fill:#6e7276;}
-.desc{font-size:14px;fill:#6e7276;}
-.foot{font-size:13px;fill:#6e7276;}
+.title{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:28px;font-weight:700;fill:#003A93;}
+.bank{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:20px;font-weight:700;fill:#1F1F1F;}
+.stance{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:18px;font-weight:700;fill:#D1482A;}
+.desc{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:13px;fill:#6B7280;}
+.abbr{font-family:"Noto Sans CJK TC","Microsoft JhengHei",sans-serif;font-size:17px;font-weight:700;fill:#FFFFFF;}
 </style>
-<rect width="960" height="600" fill="#ffffff"/>
+<rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+<text x="480" y="52" text-anchor="middle" class="title">四大央行利率政策方向</text>
+<line x1="370" y1="70" x2="590" y2="70" stroke="#D1482A" stroke-width="3"/>
 
-<!-- 標題列 -->
-<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
-<text x="58" y="60" class="title">四大央行利率政策方向</text>
-<text x="58" y="90" class="deck">有的升、有的守：2026 年下半年主要央行分頭行動</text>
+<rect x="20" y="105" width="210" height="425" rx="12" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+<circle cx="125" cy="185" r="34" fill="#003A93"/>
+<text x="125" y="191" text-anchor="middle" class="abbr">Fed</text>
+<text x="125" y="245" text-anchor="middle" class="bank">聯準會</text>
+<line x1="100" y1="345" x2="150" y2="325" stroke="#3D6BB5" stroke-width="5" stroke-linecap="round"/>
+<polygon points="150,325 137,323 144,337" fill="#3D6BB5"/>
+<text x="125" y="405" text-anchor="middle" class="stance">按兵不動</text>
+<text x="125" y="430" text-anchor="middle" class="stance">（偏鷹）</text>
+<text x="125" y="480" text-anchor="middle" class="desc">維持利率不變</text>
+<text x="125" y="500" text-anchor="middle" class="desc">保留後續升息彈性</text>
 
-<!-- 本文焦點欄（紐西蘭央行）底色 -->
-<rect x="706" y="132" width="208" height="380" rx="12" fill="#eaf0f8"/>
-<rect x="718" y="132" width="184" height="3" rx="1.5" fill="#a87515"/>
+<rect x="260" y="105" width="210" height="425" rx="12" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+<circle cx="365" cy="185" r="34" fill="#003A93"/>
+<text x="365" y="191" text-anchor="middle" class="abbr">ECB</text>
+<text x="365" y="245" text-anchor="middle" class="bank">歐洲央行</text>
+<line x1="365" y1="350" x2="365" y2="310" stroke="#D1482A" stroke-width="5" stroke-linecap="round"/>
+<polygon points="365,298 352,320 378,320" fill="#D1482A"/>
+<text x="365" y="405" text-anchor="middle" class="stance">升息</text>
+<text x="365" y="480" text-anchor="middle" class="desc">持續調升基準利率</text>
+<text x="365" y="500" text-anchor="middle" class="desc">抑制通膨壓力</text>
 
-<!-- 欄位分隔線 -->
-<line x1="260" y1="152" x2="260" y2="494" stroke="#e8e9ed" stroke-width="1"/>
-<line x1="480" y1="152" x2="480" y2="494" stroke="#e8e9ed" stroke-width="1"/>
-<line x1="700" y1="152" x2="700" y2="494" stroke="#e8e9ed" stroke-width="1"/>
+<rect x="500" y="105" width="210" height="425" rx="12" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+<circle cx="605" cy="185" r="34" fill="#003A93"/>
+<text x="605" y="191" text-anchor="middle" class="abbr">BOJ</text>
+<text x="605" y="245" text-anchor="middle" class="bank">日本央行</text>
+<line x1="605" y1="350" x2="605" y2="310" stroke="#D1482A" stroke-width="5" stroke-linecap="round"/>
+<polygon points="605,298 592,320 618,320" fill="#D1482A"/>
+<text x="605" y="405" text-anchor="middle" class="stance">政策正常化</text>
+<text x="605" y="480" text-anchor="middle" class="desc">逐步脫離超寬鬆</text>
+<text x="605" y="500" text-anchor="middle" class="desc">貨幣政策</text>
 
-<!-- ── 聯準會（按兵不動・觀望偏鷹） ── -->
-<g>
-  <rect x="119" y="166" width="62" height="30" rx="15" fill="#1f3a5f"/>
-  <text x="150" y="187" text-anchor="middle" class="abbr">Fed</text>
-  <text x="150" y="234" text-anchor="middle" class="bank">聯準會</text>
-  <circle cx="150" cy="300" r="30" fill="#eef0f3" stroke="#d5d6da" stroke-width="1"/>
-  <g transform="translate(150 300) rotate(90)" stroke="#5e6070" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M0 14 L0 -12 M-9 -3 L0 -13 L9 -3"/>
-  </g>
-  <text x="150" y="380" text-anchor="middle" class="stance">按兵不動</text>
-  <text x="150" y="406" text-anchor="middle" class="sub">觀望偏鷹</text>
-  <text x="150" y="448" text-anchor="middle" class="desc">維持利率不變</text>
-  <text x="150" y="472" text-anchor="middle" class="desc">保留緊縮彈性</text>
-</g>
-
-<!-- ── 歐洲央行（轉向升息） ── -->
-<g>
-  <rect x="339" y="166" width="62" height="30" rx="15" fill="#1f3a5f"/>
-  <text x="370" y="187" text-anchor="middle" class="abbr">ECB</text>
-  <text x="370" y="234" text-anchor="middle" class="bank">歐洲央行</text>
-  <circle cx="370" cy="300" r="30" fill="#a87515"/>
-  <g transform="translate(370 300)" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M0 14 L0 -12 M-9 -3 L0 -13 L9 -3"/>
-  </g>
-  <text x="370" y="380" text-anchor="middle" class="stance">轉向升息</text>
-  <text x="370" y="448" text-anchor="middle" class="desc">能源推升通膨</text>
-  <text x="370" y="472" text-anchor="middle" class="desc">結束連續降息</text>
-</g>
-
-<!-- ── 日本央行（政策正常化） ── -->
-<g>
-  <rect x="559" y="166" width="62" height="30" rx="15" fill="#1f3a5f"/>
-  <text x="590" y="187" text-anchor="middle" class="abbr">BOJ</text>
-  <text x="590" y="234" text-anchor="middle" class="bank">日本央行</text>
-  <circle cx="590" cy="300" r="30" fill="#a87515"/>
-  <g transform="translate(590 300) rotate(45)" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M0 14 L0 -12 M-9 -3 L0 -13 L9 -3"/>
-  </g>
-  <text x="590" y="380" text-anchor="middle" class="stance">政策正常化</text>
-  <text x="590" y="448" text-anchor="middle" class="desc">持續調升政策利率</text>
-  <text x="590" y="472" text-anchor="middle" class="desc">脫離超低利率環境</text>
-</g>
-
-<!-- ── 紐西蘭央行（重啟升息・本文焦點） ── -->
-<g>
-  <rect x="772" y="166" width="76" height="30" rx="15" fill="#1f3a5f"/>
-  <text x="810" y="187" text-anchor="middle" class="abbr">RBNZ</text>
-  <text x="810" y="234" text-anchor="middle" class="bank">紐西蘭央行</text>
-  <circle cx="810" cy="300" r="30" fill="#a87515"/>
-  <g transform="translate(810 300)" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M0 14 L0 -12 M-9 -3 L0 -13 L9 -3"/>
-  </g>
-  <text x="810" y="380" text-anchor="middle" class="stance">重啟升息</text>
-  <text x="810" y="406" text-anchor="middle" class="sub">三年來首次</text>
-  <text x="810" y="448" text-anchor="middle" class="desc">調升一碼</text>
-  <text x="810" y="472" text-anchor="middle" class="desc">OCR 升至 2.50%</text>
-</g>
-
-<!-- 頁尾 -->
-<line x1="40" y1="526" x2="920" y2="526" stroke="#e8e9ed" stroke-width="1"/>
-<text x="40" y="556" class="foot">製圖：APPI News</text>
-<text x="920" y="556" text-anchor="end" class="foot">2026 年 7 月・各央行政策動向</text>
-</svg>
+<rect x="740" y="105" width="210" height="425" rx="12" fill="#F4F4F4" stroke="#3D6BB5" stroke-width="2"/>
+<circle cx="845" cy="185" r="34" fill="#003A93"/>
+<text x="845" y="191" text-anchor="middle" class="abbr">RBNZ</text>
+<text x="845" y="245" text-anchor="middle" class="bank">紐西蘭央行</text>
+<line x1="845" y1="350" x2="845" y2="310" stroke="#D1482A" stroke-width="5" stroke-linecap="round"/>
+<polygon points="845,298 832,320 858,320" fill="#D1482A"/>
+<text x="845" y="405" text-anchor="middle" class="stance">升息</text>
+<text x="845" y="480" text-anchor="middle" class="desc">因應通膨數據</text>
+<text x="845" y="500" text-anchor="middle" class="desc">調升利率水準</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>

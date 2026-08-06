@@ -35,7 +35,9 @@ const isHighRisk = type === 'medical' || type === 'financial' || type === 'legal
     margin-bottom: 4px;
   }
   .disclaimer--risk .disclaimer-label {
-    color: var(--appi-accent);
+    /* 小字（--text-xs）放在 --appi-accent-soft 上，必須用 --appi-accent-ink；
+       直接用 --appi-accent 只有 3.51:1，過不了 WCAG AA 的 4.5:1。 */
+    color: var(--appi-accent-ink);
   }
   .disclaimer p {
     margin: 0;

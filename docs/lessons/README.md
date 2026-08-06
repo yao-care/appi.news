@@ -22,10 +22,11 @@
 
 ## 現有篇目
 
-**效能**
+**效能 / 設計 / 無障礙**
 | 篇目 | 一句話 |
 |---|---|
 | [font-render-blocking.md](./font-render-blocking.md) | 全腳本字型進入點造成 545 個 @font-face、662 KB render-blocking，怎麼救回來的 |
+| [accent-color-contrast.md](./accent-color-contrast.md) | 品牌金色當小字用只有 3.51:1（門檻 4.5），但同色用在 19.2px 粗體站名卻合格——WCAG 門檻隨字級變；hex 與 oklch 兩組值都要驗；check-design 管不到對比 |
 | [psi-cold-edge.md](./psi-cold-edge.md) | 剛部署 PSI 暴跌到 55 多半是冷邊緣假象，別對假問題改程式；低流量站連 cb 都暖不回 PSI 的 POP，判健康看暖讀指標非總分 |
 
 **SEO / 換網域**

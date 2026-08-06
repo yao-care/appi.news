@@ -17,6 +17,11 @@
   --appi-brand-dark: #16263d;
   --appi-accent: #a87515;
   --appi-accent-soft: #f7efdd;
+  /* accent-soft 底色上的「小字」專用深色。--appi-accent 直接放在 --appi-accent-soft 上只有
+     3.51:1，未達 WCAG AA 小字 4.5:1（Lighthouse 對全站 medical/financial/legal 文章的
+     免責標籤實測 color-contrast 失敗）。本值對 #f7efdd 為 4.92:1。
+     大字（≥18.66px 粗體，門檻 3:1）仍可直接用 --appi-accent，例如站名的金色字。 */
+  --appi-accent-ink: #8a5f10;
   /* 深色底（品牌底）上的文字 */
   --on-brand: #d7e0ec;
   --on-brand-dim: #9fb2cc;
@@ -44,6 +49,7 @@
     --appi-brand-dark: oklch(0.26 0.05 252);
     --appi-accent: oklch(0.60 0.10 75);
     --appi-accent-soft: oklch(0.95 0.03 80);
+    --appi-accent-ink: oklch(0.51 0.09 75); /* 對 accent-soft 5.04:1（見上方 hex fallback 說明） */
     --on-brand: oklch(0.88 0.02 252);
     --on-brand-dim: oklch(0.74 0.03 252);
 

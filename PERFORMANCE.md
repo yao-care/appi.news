@@ -18,18 +18,22 @@
 > - **❌ 禁止**在 `src/styles/global.css` import Fontsource「全腳本」進入點（`@fontsource/noto-sans-tc/400.css` 等）——會帶進日/韓/西里爾…全部子集。**只能用繁中子集進入點**（`chinese-traditional-<weight>.css`）作 build 佔位，由 postbuild 切塊。
 > - **❌ 禁止**逐頁迷你字型（已證實會膨脹到 182 MB+、不可跨頁快取）。
 >
-> 當初就是全腳本進入點造成 **545 個 `@font-face`、662 KB render-blocking CSS**，把 mobile 拖到 ~57。完整前因後果（含已廢棄歧路）見 [`docs/lessons/font-render-blocking.md`](./docs/lessons/font-render-blocking.md)。
+> 當初就是全腳本進入點造成大量 `@font-face` 與 render-blocking CSS，把 mobile 分數拖垮。**實際數字與完整前因後果（含已廢棄歧路）見 [`docs/lessons/font-render-blocking.md`](./docs/lessons/font-render-blocking.md)**——歷史數字留在 lesson，這裡不重述。
 
 ### 1-C. 現行機制：unicode-range 切塊（postbuild 自動化）
 
 **現況**由 `scripts/subset-fonts.mjs` 在 postbuild 階段全自動處理，`global.css` 改用 Fontsource 繁中子集進入點作為 build 時的佔位，woff2 與 `@font-face` 在 postbuild 被整批替換：
 
-1. **掃描全站用字**：讀取 `dist/` 所有 HTML，收集實際出現的字元（去重）。全站唯一字 **3,483 個**。
-2. **固定切段**：純函式庫 `scripts/lib/font-slicing.mjs` 依碼位連續性把這些字切成 **18 段**，各權重共用同一組邊界。
-3. **子集化**：每個（字重 × 區段）用 `subset-font` 工具切出一個 woff2，檔名含內容 hash（`<base>.slice-<i>.<hash>.woff2`）。5 個字重 × 18 段 = **90 個切片檔**，繁中字型 dist 總量約 **3.1 MB**（舊逐頁版曾達 182 MB+）。
+1. **掃描全站用字**：讀取 `dist/` 所有 HTML，收集實際出現的字元（去重）。
+2. **固定切段**：純函式庫 `scripts/lib/font-slicing.mjs` 依碼位連續性把這些字切段（每段目標字數＝該檔的 `TARGET_PER_SLICE`），各權重共用同一組邊界。
+3. **子集化**：每個（字重 × 區段）用 `subset-font` 工具切出一個 woff2，檔名含內容 hash（`<base>.slice-<i>.<hash>.woff2`）。
+
+> **實際字數／段數／切片檔數／總量會隨文章增加而變，不寫在文件裡**。查法：
+> `pnpm build` 時看 `[subset-fonts]` 那幾行輸出；或建置後跑
+> `ls dist/_astro/*.slice-*.woff2 | wc -l` 與 `du -ch dist/_astro/*.slice-*.woff2 | tail -1`。
 4. **注入 unicode-range**：用帶 `unicode-range` 描述符的 `@font-face`（family 名維持真實名稱 `Noto Sans TC` / `Noto Serif TC`、`font-display: optional`）取代 `_astro` CSS 內原本的單體繁中 `@font-face`；隨後 `inline-css.mjs` 照常將 CSS 內聯各頁。
 
-**效益**：瀏覽器只下載當頁實際出現字元命中的少數切片；切片 URL 全站固定（hash 穩定）→ 跨頁可共用 HTTP 快取；字型檔數固定、不隨文章數膨脹；build 回到分鐘級（乾淨 build 約 **201 秒**，exit 0）。
+**效益**：瀏覽器只下載當頁實際出現字元命中的少數切片；切片 URL 全站固定（hash 穩定）→ 跨頁可共用 HTTP 快取；字型檔數固定、不隨文章數膨脹；build 回到分鐘級（實際耗時看 `pnpm build` 輸出，會隨文章數變動）。
 
 ### 1-D. 設計決策與已知坑（別重踩）
 
@@ -54,12 +58,12 @@ node scripts/fix-redirect-pages.mjs      # ⑥ SEO（非效能）：轉址空殼
 ```
 
 ⑥ 是 2026-07-28 加的 **SEO 修正、與效能無關**，刻意接在鏈尾不干擾前五支。它只改「確實是
-Astro 轉址空殼」的頁，全站另外 1,581 個該保留 `noindex` 的頁（薄標籤/admin/搜尋/排程草稿）
-一律不碰。為什麼＝[`docs/lessons/duplicate-topic-gate.md`](./docs/lessons/duplicate-topic-gate.md) §轉址殘骸。
+Astro 轉址空殼」的頁，其餘該保留 `noindex` 的頁（薄標籤/admin/搜尋/排程草稿）一律不碰。
+實際掃了幾頁、改了幾個，看 `pnpm build` 尾端 `轉址頁修正：…` 那行輸出。為什麼＝[`docs/lessons/duplicate-topic-gate.md`](./docs/lessons/duplicate-topic-gate.md) §轉址殘骸。
 
 | 腳本 | 做什麼 | 為何不能拿掉 |
 |---|---|---|
-| `subset-fonts.mjs` | 掃 `dist` 全站 HTML 收集實際用字（3,483 字）→ 用 `lib/font-slicing.mjs` 切成 18 段 → 每（字重 × 段）子集成一個 woff2（共 90 個切片，總量 ~3.1 MB）→ 用帶 `unicode-range` 的 `@font-face`（`font-display: optional`）取代 `_astro` CSS 內原本的單體繁中 @font-face | 瀏覽器只下載命中切片；切片 URL 全站固定→跨頁快取；檔數固定不隨文章膨脹 |
+| `subset-fonts.mjs` | 掃 `dist` 全站 HTML 收集實際用字 → 用 `lib/font-slicing.mjs` 切段 → 每（字重 × 段）子集成一個 woff2 → 用帶 `unicode-range` 的 `@font-face`（`font-display: optional`）取代 `_astro` CSS 內原本的單體繁中 @font-face（字數／段數／切片數見 §1-C 的查法） | 瀏覽器只下載命中切片；切片 URL 全站固定→跨頁快取；檔數固定不隨文章膨脹 |
 | `optimize-home-images.mjs` | 用 sharp 把首頁 cover 圖縮成顯示尺寸 webp（feature 900px、卡片 600px），改寫 `index.html` 的 `<img src>` | 省 ~1.36 MB |
 | `optimize-article-images.mjs` | 用 sharp 把內頁文章封面縮成 900px webp，改寫各文章頁 `<img src>` | 減少內頁 LCP 圖片傳輸量 |
 | `inline-css.mjs` | 把**全站**外部 CSS（已被 ① 處理過）內聯進各頁 `<head>`、移除外部 `<link>`；排除 `/choice` 與 `/admin` | **FCP 2.9s→0.8s**，最後一哩；現已延伸到內頁 |
@@ -86,7 +90,7 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 - mobile 分數會在 **90↔100** 間浮動（GH Pages CDN 冷/熱邊緣餵給 Lighthouse 模型的差異），屬正常；**下限應 ≥90**。
 - **剛部署後量測的兩個大坑（會讓你誤判退步）**——①**冷邊緣**：新部署大站 CDN 邊緣仍冷，FCP/LCP 暴增到 10s+，等暖才是真值；②**PSI 對固定 URL 釘住舊（冷）跑**：**破解＝網址加 `?cb=<timestamp>`** 強制重跑。
   - **判讀準則**：先看 TBT / CLS / render-blocking / 各請求耗時，若都正常只是總分低，幾乎一定是冷邊緣假象，**別對假問題改程式**。前因後果見 [`docs/lessons/psi-cold-edge.md`](./docs/lessons/psi-cold-edge.md)。
-  - **低流量站的重要修正（2026-06-30 實測）**：以前寫「無 cb 卡 55、加 cb 立刻 91」**不再可靠**。本站流量極低（gtag 才上線兩週、週使用者約 200），**PSI 自己用的 POP 長期冷、cb 也暖不到它** → mobile 仍卡 ~55、FCP/LCP 飆高，且**無 CrUX field data 可佐證**。此時別把「cb 還是低分」當成真退步：改看 ①暖讀時 FCP 是否正常（curl 本地暖邊緣後 FCP 可達 1.2s、TBT=0、CLS=0、hero webp 0.23s 載完＝頁面健康）＋②Lighthouse 有沒有指出可修成因（render-blocking/慢請求/lazy-LCP/prioritize-LCP 全 None＝無可修、純冷邊緣）。詳見 [`docs/lessons/psi-cold-edge.md`](./docs/lessons/psi-cold-edge.md) §低流量站追記。
+  - **低流量站的重要修正（2026-06-30 實測）**：以前寫「無 cb 卡 55、加 cb 立刻 91」**不再可靠**。本站流量低（實際週使用者跑 `node scripts/weekly-data.mjs` 查），**PSI 自己用的 POP 長期冷、cb 也暖不到它** → mobile 仍卡 ~55、FCP/LCP 飆高，且**無 CrUX field data 可佐證**。此時別把「cb 還是低分」當成真退步：改看 ①暖讀時 FCP 是否正常（curl 本地暖邊緣後 FCP 可達 1.2s、TBT=0、CLS=0、hero webp 0.23s 載完＝頁面健康）＋②Lighthouse 有沒有指出可修成因（render-blocking/慢請求/lazy-LCP/prioritize-LCP 全 None＝無可修、純冷邊緣）。詳見 [`docs/lessons/psi-cold-edge.md`](./docs/lessons/psi-cold-edge.md) §低流量站追記。
 
 ---
 
@@ -98,7 +102,7 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 | LCP | ≤0.6s | ≤2.9s |
 | TBT / CLS | 0 / 0 | 0 / 0 |
 
-首頁總 payload ≈ **570 KB**（起點 2,562 KB）。**任何改動後請用 §3 複測，不可低於上表。**
+**任何改動後請用 §3 複測，不可低於上表。** 首頁實際 payload 由 PSI 報告的 `total-byte-weight` 稽核項讀取，不寫在本檔（會隨內容變動）。
 
 ---
 

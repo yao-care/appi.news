@@ -6,7 +6,7 @@
 ## 你的工作
 
 - **子專案 1**：每週「數據週報 → Slack」，技能 `/weekly-report`，由 cron 觸發。
-- **子專案 2（已上線）**：半自動產文。`tech-radar`（cron 每日一次，UTC 21:20 = 台北 05:20）發候選題到 Slack（**2026-07-07 曾停用，2026-07-20 站長要求重新啟用**）→ 作者點「我要寫這題」→ `slack-actions-server`（pm2 `appinews-slack-actions`）觸發 `scripts/newsroom-write.mjs` 起草＋配圖 gate＋查證 → 排程上線。寫作也可由週報（weekly-report，每 3 天）的「一鍵開寫」按鈕、`/newsroom` 互動寫作、或 `/admin` 下單觸發。詳見最後一節與 repo 根 `CLAUDE.md` §自動發文 pipeline。
+- **子專案 2（已上線）**：半自動產文。`tech-radar`（cron 每日一次，時間查 crontab）發候選題到 Slack（**2026-07-07 曾停用，2026-07-20 站長要求重新啟用**）→ 作者點「我要寫這題」→ `slack-actions-server`（pm2 `appinews-slack-actions`）觸發 `scripts/newsroom-write.mjs` 起草＋配圖 gate＋查證 → 排程上線。寫作也可由週報（weekly-report，每 3 天）的「一鍵開寫」按鈕、`/newsroom` 互動寫作、或 `/admin` 下單觸發。詳見最後一節與 repo 根 `CLAUDE.md` §自動發文 pipeline。
 
 ## 開機前置（git clone 之後一定要做 —— 這些東西「不在」repo，是故意的）
 
@@ -26,11 +26,11 @@ GOOGLE_APPLICATION_CREDENTIALS=~/.config/appi-news/ga4-sa.json node scripts/week
 # 2) 端到端（成功 = Slack「agent回報」頻道收到週報、exit 0）
 ./scripts/cron/weekly-report.sh
 
-# 3) 交給 cron（預設每週一 09:00；時間以伺服器時區為準，必要時調整）
+# 3) 交給 cron（排程正本是 crontab，見下方 §cron 總表的查法）
 #    crontab -e：
 0 9 * * 1 /絕對路徑/appi.news/scripts/cron/weekly-report.sh >> /tmp/weekly-report.log 2>&1
 
-# 4) 單元測試（應 166 綠）
+# 4) 單元測試（全綠才算過；數量會長，不寫死）
 pnpm test
 ```
 
@@ -41,7 +41,7 @@ pnpm test
 | 技能 | `.claude/skills/weekly-report/SKILL.md` | 讀數據 → 雷達 → 建議 → 發 Slack |
 | 資料層 | `scripts/lib/google-data.mjs` | JWT 自簽 → `ga4RunReport` / `gscQuery`（子專案 2 也用） |
 | 純轉換 | `scripts/lib/weekly-metrics.mjs` | GA4/GSC 原始回應 → 四區塊 |
-| 設定 | `scripts/lib/report-config.mjs` | GA4 property `541946427`、GSC `sc-domain:appi.news`、Slack 一分類一頻道（`CATEGORY_CHANNELS`）、預設/週報頻道＝作者群 `C0BC4JRQJF6` |
+| 設定 | `scripts/lib/report-config.mjs` | GA4 property、GSC 站台、Slack 一分類一頻道（`CATEGORY_CHANNELS`）、預設/週報頻道。**實際 ID 一律讀該檔**：`grep -nE "GA4_PROPERTY_ID\|GSC_SITE\|CHANNEL" scripts/lib/report-config.mjs` |
 | 投遞 | `scripts/slack-post.mjs` + `scripts/lib/slack.mjs` | bot `appi_claude` @ **appi.news** workspace（T0BCV23MAJU）；依 category 路由 |
 | cron 進入點 | `scripts/cron/weekly-report.sh` | `source` 金鑰 → `claude -p "/weekly-report"` |
 | 設計文件 | `docs/superpowers/specs/2026-06-16-weekly-report-slack-design.md`、`docs/superpowers/plans/2026-06-16-weekly-report-slack.md` | spec / 實作計畫 |
@@ -67,7 +67,7 @@ pnpm test
 
 | 元件 | 路徑 / 識別 | 說明 |
 |---|---|---|
-| 選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選；**cron 2026-07-07 停用、2026-07-20 重新啟用**（UTC 21:20 = 台北 05:20）|
+| 選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選；**cron 2026-07-07 停用、2026-07-20 重新啟用**（排程查 crontab）|
 | 自動產文 | `scripts/newsroom-write.mjs`（沿用 newsroom skill 的文風/查證） | headless 起草＋配圖 gate，寫 `result.json` |
 | Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文並回報 |
 | 去重帳本 | `scripts/topic-ledger.mjs`、`/root/.local/state/appi-news/suggested-topics.json` | 與週報共用，避免撞題 |
@@ -85,39 +85,43 @@ pnpm test
 > **日誌**：集中在 `/var/log/appi-news/<job>.log`（不放 `/tmp`，方便稽核）。
 > **crontab 排版**：所有 appi.news 行收在 crontab 末段同一個「APPI NEWS」區塊，勿再散落到其他專案之間。
 
-| 任務 | cron 腳本 | UTC | 台北 | 來源 | 上線方式 | 發 Slack？ |
-|---|---|---|---|---|---|---|
-| 科技選題雷達 | tech-radar.sh | 21:20 | 05:20 | WebSearch | 候選→人點按鈕→寫→自動上線 | ✅（2026-07-07 停用、2026-07-20 重新啟用）|
-| **論壇選題雷達** | forum-radar.sh | **每小時 :05** | 每小時 :05 | **PTT 白名單看板**（forum-signals.mjs `BOARDS`，30 板）| 跨 6 分類候選→人點按鈕→寫 | ✅**只有真的發出候選才報 dev 台**；無新題完全靜默（2026-08-06 新增）|
-| 焦點/ESG | focus-esg.sh | 01:30 | 09:30 | 6 議題群權威來源（focus-esg.mjs）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
-| 連假優惠 | lifestyle-deals.sh | 07:30 | 15:30 | data.gov.tw #14718 假日曆（tw-holidays.mjs）+ 雙鐵 | 事實稿→**待審草稿+發佈鈕** | ✅有連假時發**生活**台/失敗哨兵（2026-07-20 從 10:00 移到 07:30，見下方 §時區列的攤開註）|
-| 國際編譯台 | international-desk.sh | 15:00 | 23:00 | **GDELT Events 原始檔**（international-select/international-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
-| 警消好人好事 | lifestyle-police.sh | 04:45（每日） | 12:45 | 各地警局新聞稿（lifestyle-police.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
-| 便民市政 | lifestyle-civic.sh | 10:00（每日） | 18:00 | 各縣市政府 RSS（civic-feeds.mjs；本機日本 IP 可抓 ~10 站，餘待台灣 proxy）+ civic-ledger 去重 | **全自動上架**（跨縣市統整一篇、有新資料才寫）| ✅有新資料發**生活**台/失敗哨兵 |
-| 影片線索整理 | lifestyle-video.sh | 18:30（每日） | 02:30 | 訂閱 YouTube 頻道 RSS（video-feeds.mjs `VIDEO_FEEDS`）+ video-ledger 依 videoId 去重；**抓不到逐字稿**，影片只當線索、事實靠 LLM 上網交叉查證 | **全自動上架**（一片一篇、無篇數上限、≥2 個獨立來源才寫，否則 SKIP）| ✅有上架發**生活**台（列出每一篇，等線上 200 才發）/失敗哨兵；**無產出＝完全靜默**（站長 2026-07-27 明確裁示：只要有文章發就好，**不要**加靜默日心跳，別再提議）|
-| 颱風停班課 | lifestyle-typhoon.sh | 每 15 分鐘（5–11 月） | */15 * * 5-11 * | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
-| 新文章送 Indexing API | indexing-submit.sh | **07:30** | 15:30 | 線上 sitemap | n/a（送 Google 收錄）| 有送才報 **dev 台** |
-| 數據報告 | weekly-report.sh | 00:17（每 3 天） | 08:17 | GA4+GSC | n/a（數據）| ✅報告到**作者群** |
-| 維運心跳 | heartbeat.sh | 21:40 | 05:40 | 本地內容存量 + GA（8 區塊儀表板）| n/a（維運）| ✅📊數據心跳＋📊數據總覽兩則到 **dev 台**（皆無 LLM。2026-07-23 移除原步驟③🤖大腦優化，改由 seo-ops 大腦層 UTC 22:20 取代升級）|
-| AEO 能見度探針 | aeo-radar.sh | 12:00 | 20:00 | claude-appi 自身 web search 問 AI 引擎 | n/a（寫 geo-citation 帳本，git 外）| ✅🛰摘要到 **dev 台**（純讀不碰 git。2026-07-23 站長指示啟用排程，原只手動）|
-| 學被引用內容 | cited-teardown.sh | 13:30 | 21:30 | 競品被引用頁（WebFetch）| 寫 `geo-insights/<beat>.md`→push（newsroom 起草前讀）| ✅🔧摘要到 **dev 台**（按星期輪 7 beat；**會寫 repo**→走 worktree。2026-07-23 站長指示啟用）|
-| 健康紀念日·寫作 | health-days.sh | 03:00 | 11:00 | 年曆表 `scripts/lib/health-days.mjs`（51 筆）+ WebSearch 抓當年度官方主題/最新統計 | **排程**：寫 `status: scheduled` + `publishDate <當日>T06:17+08:00` 推 main，當天才轉正 | ✅有排程發**健康**台（附預覽連結）/失敗哨兵；**無紀念日＝完全靜默**（純資料 gate，不叫 Claude）|
-| 健康紀念日·準點上線 | health-days-publish.sh | 22:17 | 06:17（隔天） | 查 origin/main 有無排今天 06:17 的稿 | `gh workflow run deploy.yml` 觸發部署使排程稿轉正 | ✅有上線發**健康**台（等線上 200 才發）/觸發失敗哨兵；無稿＝靜默 |
-| 🔂**一次性**：轉址修正驗收 | gsc-audit-followup.sh | **2026-08-04** 01:00 | 09:00 | GSC（page 維度，純讀）| n/a（唯讀）| ✅🔍驗收比較到 **dev 台**（站長 2026-07-28 指示「7 天之後測試」。**跑完自我 rm 掉 `/etc/cron.d/appi-gsc-audit-followup`**，不留殭屍排程；純讀不碰 git、不喚 Claude、不需 worktree）|
+> ⚠️ **排程時間不寫在這裡**（會被改、文件必然過期）。**正本是 crontab**：
+> `crontab -l | grep "appi.news-publisher/scripts/cron"`（cron 一律 UTC 計時，看台北時間自己 +8）。
+> 本表只記**設計意圖**：每條線的來源、上線方式、Slack 行為——這些不會因為調時間而變。
 
-- **內容線排程刻意攤開，別再併回早上（2026-07-03；2026-07-20 更新；2026-07-26 加影片線）**：焦點/ESG 01:30、警消好人好事 04:45、連假優惠 **07:30**、便民市政 10:00、國際編譯台 15:00、影片線索整理 **18:30**、科技選題雷達 21:20（UTC）。影片線挑 18:30 是因為 15:00→21:20 是當時最大的空窗（前後各隔 3.5h／2.8h）。**科技台 16:45（2026-07-29 新增）**：科技原本只有選題雷達（產候選→Slack→人挑），沒有自動產文線；16:45 是 15:00→18:30 這段剩下的最大空窗（前後各 1h45，已不到 ≥5h，因為 24 小時已排滿）。該線**每天只跑一條 track（日期奇偶輪替：偶數日 APPI 編輯部概念解釋／奇數日張饒輝 AI 醫療現場）**，刻意不讓它兩條同跑，否則單日雙倍吃額度。各喚 claude-appi Sonnet；claude-appi 的 session 額度是**每 5 小時一個共用視窗**，原本全擠在 01:30–03:50 → 同一視窗搶額度，排最後的警消每天餓死（先撞 weekly limit、再 session limit）。原則：任兩條相隔 ≥5h 或跨 04:30 reset 邊界，一個視窗最多落一條。**⚠️例外（站長 2026-07-20 指定）**：連假優惠從 10:00 移到 **07:30**，與警消 04:45 僅差 2h45、落同一視窗——但連假優惠**只有臨近國定連假才實發**（平日靜默），撞期風險僅限連假前數日，故接受此例外。**代價**＝國際編譯台仍在台北深夜；連假優惠改台北午後。要再調時間，日更線（焦點/警消/國際/雷達/便民）務必維持 ≥5h 間隔，別看「都在白天比較整齊」就併回去。（另一個常態吸額度點是 agent.writer 每小時 :40 的 cron-write，跨專案，未動。）
+| 任務 | cron 腳本 | 來源 | 上線方式 | 發 Slack？ |
+|---|---|---|---|---|
+| 科技選題雷達 | tech-radar.sh | WebSearch | 候選→人點按鈕→寫→自動上線 | ✅（2026-07-07 停用、2026-07-20 重新啟用）|
+| **論壇選題雷達** | forum-radar.sh | **PTT 白名單看板**（清單＝forum-signals.mjs 的 `BOARDS`，數量與分類查該檔）| 跨分類候選→人點按鈕→寫 | ✅**只有真的發出候選才報 dev 台**；無新題完全靜默（2026-08-06 新增）|
+| 焦點/ESG | focus-esg.sh | 6 議題群權威來源（focus-esg.mjs）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
+| 連假優惠 | lifestyle-deals.sh | data.gov.tw #14718 假日曆（tw-holidays.mjs）+ 雙鐵 | 事實稿→**待審草稿+發佈鈕** | ✅有連假時發**生活**台/失敗哨兵（2026-07-20 站長指定調整過時段，見下方排程攤開註）|
+| 國際編譯台 | international-desk.sh | **GDELT Events 原始檔**（international-select/international-write）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
+| 警消好人好事 | lifestyle-police.sh | 各地警局新聞稿（lifestyle-police.mjs；來源清單 `docs/police-good-deeds-sources.md`）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
+| 便民市政 | lifestyle-civic.sh | 各縣市政府 RSS（清單＝civic-feeds.mjs；本機境外 IP 只抓得到一部分，餘待台灣 proxy）+ civic-ledger 去重 | **全自動上架**（跨縣市統整一篇、有新資料才寫）| ✅有新資料發**生活**台/失敗哨兵 |
+| 影片線索整理 | lifestyle-video.sh | 訂閱 YouTube 頻道 RSS（video-feeds.mjs `VIDEO_FEEDS`）+ video-ledger 依 videoId 去重；**抓不到逐字稿**，影片只當線索、事實靠 LLM 上網交叉查證 | **全自動上架**（一片一篇、無篇數上限、≥2 個獨立來源才寫，否則 SKIP）| ✅有上架發**生活**台（列出每一篇，等線上 200 才發）/失敗哨兵；**無產出＝完全靜默**（站長 2026-07-27 明確裁示：只要有文章發就好，**不要**加靜默日心跳，別再提議）|
+| 颱風停班課 | lifestyle-typhoon.sh | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
+| 新文章送 Indexing API | indexing-submit.sh | 線上 sitemap | n/a（送 Google 收錄）| 有送才報 **dev 台** |
+| 數據報告 | weekly-report.sh | GA4+GSC | n/a（數據）| ✅報告到**作者群** |
+| 維運心跳 | heartbeat.sh | 本地內容存量 + GA（8 區塊儀表板）| n/a（維運）| ✅📊數據心跳＋📊數據總覽兩則到 **dev 台**（皆無 LLM。2026-07-23 移除原步驟③🤖大腦優化，改由 seo-ops 大腦層 UTC 22:20 取代升級）|
+| AEO 能見度探針 | aeo-radar.sh | claude-appi 自身 web search 問 AI 引擎 | n/a（寫 geo-citation 帳本，git 外）| ✅🛰摘要到 **dev 台**（純讀不碰 git。2026-07-23 站長指示啟用排程，原只手動）|
+| 學被引用內容 | cited-teardown.sh | 競品被引用頁（WebFetch）| 寫 `geo-insights/<beat>.md`→push（newsroom 起草前讀）| ✅🔧摘要到 **dev 台**（按星期輪 7 beat；**會寫 repo**→走 worktree。2026-07-23 站長指示啟用）|
+| 健康紀念日·寫作 | health-days.sh | 年曆表 `scripts/lib/health-days.mjs`（筆數查該檔）+ WebSearch 抓當年度官方主題/最新統計 | **排程**：寫 `status: scheduled` + `publishDate <當日>T06:17+08:00` 推 main，當天才轉正 | ✅有排程發**健康**台（附預覽連結）/失敗哨兵；**無紀念日＝完全靜默**（純資料 gate，不叫 Claude）|
+| 健康紀念日·準點上線 | health-days-publish.sh | 查 origin/main 有無排今天 06:17 的稿 | `gh workflow run deploy.yml` 觸發部署使排程稿轉正 | ✅有上線發**健康**台（等線上 200 才發）/觸發失敗哨兵；無稿＝靜默 |
+| 🔂**一次性**：轉址修正驗收 | gsc-audit-followup.sh | GSC（page 維度，純讀）| n/a（唯讀）| ✅🔍驗收比較到 **dev 台**（站長 2026-07-28 指示「7 天之後測試」。**跑完自我 rm 掉 `/etc/cron.d/appi-gsc-audit-followup`**，不留殭屍排程；純讀不碰 git、不喚 Claude、不需 worktree）|
+
+- **內容線排程刻意攤開，別再併回早上（2026-07-03；2026-07-20 更新；2026-07-26 加影片線）**：**實際時間一律查 crontab，本檔不列**（列了必然過期）。原則如下。科技台那條的由來＝科技原本只有選題雷達（產候選→Slack→人挑），沒有自動產文線；它排在當時剩下的最大空窗，間距已不到 ≥5h——**因為 24 小時已排滿**。該線**每天只跑一條 track（日期奇偶輪替：偶數日 APPI 編輯部概念解釋／奇數日張饒輝 AI 醫療現場）**，刻意不讓它兩條同跑，否則單日雙倍吃額度。各喚 claude-appi Sonnet；claude-appi 的 session 額度是**每 5 小時一個共用視窗**，曾經全擠在同一個視窗搶額度，排最後的那條每天餓死（先撞 weekly limit、再 session limit）。原則：任兩條相隔 ≥5h 或跨 04:30 reset 邊界，一個視窗最多落一條。**⚠️已知例外（站長 2026-07-20 指定）**：連假優惠與警消落在同一個視窗——但連假優惠**只有臨近國定連假才實發**（平日靜默），撞期風險僅限連假前數日，故接受。要再調時間，日更線（焦點/警消/國際/雷達/便民）務必維持 ≥5h 間隔，別看「都在白天比較整齊」就併回去。（另一個常態吸額度點是 agent.writer 每小時 :40 的 cron-write，跨專案，未動。）
 - **論壇選題雷達為什麼可以每小時跑（2026-08-06 新增，別以為它違反上面那條 ≥5h 原則）**：因為它**大部分時候不喚 Claude**。`scripts/forum-radar.mjs` 的第一階段是純 node——抓 PTT 白名單看板、政治關鍵字過濾、跨次去重帳本（`~/.local/state/appi-news/forum-seen.json`，10 天比對窗）——**沒有新熱題就 `exit 0`，完全不動用 Claude**（同 `lifestyle-typhoon.sh` 的前置 gate 思路）。只有真的撈到新題才往下喚 Haiku（地方板逐則政治判斷）＋ Sonnet（選題）。排 :05 是避開既有各線的分鐘位（:00/:17/:20/:30/:40/:45）。**要改抓取範圍或門檻＝改 `scripts/lib/forum-signals.mjs` 的 `BOARDS`**，別去動 `.sh`。
   - **政治排除三層，第三層不可省**：①看板白名單（Gossiping／HatePolitics／Military／PublicServan 不在名單）②標題關鍵字（擋政黨與政治人物，**刻意不擋**金管會／衛福部這類行政機關的監理與便民題）③LLM 判斷（地方板逐則＋選題 prompt 的全域 backstop）。第三層必要的原因：**PTT 索引標題會被截斷**，實測「伊朗開出這驚人條件 川」的「川普」被切掉、關鍵字擋不到。純 script 不可能做到 100%。
   - **地方板（Tainan／Kaohsiung／TaichungBun）一定要走 LLM 逐則判斷**：實測台南板前 12 篇有 6 篇是南市府 vs 高市府的攻防，而它們字面上沒有政黨也沒有人物名。判斷輸出解析失敗時**保守全部排除**（地方板是加值，寧可少推也不要漏政治）。
   - **抓取併發壓在 3 並帶一次重試**：4 併發實測會被 PTT 零星拒連（一次跑 4 板失敗、單獨重抓全 200）。單板失敗＝該分類整輪沒候選，不能放著。
 - **並發保護（重要）**：已從「全域 flock + 共用工作目錄」改為**每支 cron 各開自己的臨時 detached worktree**（`scripts/cron/_worktree.sh` 的 `cron_enter_worktree`，off `origin/main`）→ 互不洗檔、可**真正並行**；寫稿端最後用 `pushToMain`（push `HEAD:main`，撞拒就 fetch+rebase 重試）安全上線。新增這類 cron 一律 `source _worktree.sh` 並 `cron_enter_worktree "<slug>"`。背景見 [`docs/lessons/`](./lessons/)（自動線多工不序列化）。
-  - **⚠️ `indexing-submit.sh` 的時間不能隨便動（2026-07-31 排錯）**：Indexing API 配額是 **200/天、per Google Cloud 專案**，且在**太平洋午夜重置**（夏令 07:00 UTC／冬令 08:00 UTC）。原本排 06:00 UTC＝重置前一小時，是一天中配額最枯竭的時刻；加上同一把服務帳號（`ga4-insights@yaocare`，專案 `yaocare`）**被 folk.tw（`index-ping.mjs`）、sutta.io、twdro.net 共用**，appi 每天搶不到額度，log 連日出現「⚠ 配額用盡，本次停在 0 篇」，待送從 20 累積到 84。改排 **07:30 UTC（重置後）** 後，單次即送出 84 篇、0 失敗、待送歸零。要再調時間務必排在太平洋午夜之後。**根治已完成（2026-07-31）**：appi.news 有自己的 Google Cloud 專案 `appi-news-504107`，服務帳號 `appi-indexing@appi-news-504107.iam.gserviceaccount.com`，金鑰放 `~/.config/appi-news/indexing-sa.json`（權限 600、在 repo 外）。`indexing-submit.mjs` 會優先讀它、缺檔自動退回共用金鑰，並在 log 印出實際使用的帳號（這次故障就是「以為在運作、其實每天送 0 篇」，所以刻意讓它每次都講清楚用的是哪把）。配額從此不與 folk.tw／sutta.io／twdro.net 相爭。
+  - **⚠️ `indexing-submit.sh` 的時間不能隨便動（2026-07-31 排錯）**：Indexing API 配額是 **200/天、per Google Cloud 專案**，且在**太平洋午夜重置**（夏令 07:00 UTC／冬令 08:00 UTC）。原本排 06:00 UTC＝重置前一小時，是一天中配額最枯竭的時刻；加上同一把服務帳號（`ga4-insights@yaocare`，專案 `yaocare`）**被 folk.tw（`index-ping.mjs`）、sutta.io、twdro.net 共用**，appi 每天搶不到額度，log 連日出現「⚠ 配額用盡，本次停在 0 篇」，待送持續累積（實際數字見該 lesson）。改排 **07:30 UTC（重置後）** 後，單次即送出 84 篇、0 失敗、待送歸零。要再調時間務必排在太平洋午夜之後。**根治已完成（2026-07-31）**：appi.news 有自己的 Google Cloud 專案 `appi-news-504107`，服務帳號 `appi-indexing@appi-news-504107.iam.gserviceaccount.com`，金鑰放 `~/.config/appi-news/indexing-sa.json`（權限 600、在 repo 外）。`indexing-submit.mjs` 會優先讀它、缺檔自動退回共用金鑰，並在 log 印出實際使用的帳號（這次故障就是「以為在運作、其實每天送 0 篇」，所以刻意讓它每次都講清楚用的是哪把）。配額從此不與 folk.tw／sutta.io／twdro.net 相爭。
   - **例外**：`indexing-submit.sh`、`heartbeat.sh`、`aeo-radar.sh`、`forum-radar.sh` 是**純資料/唯讀腳本**（不碰 git 工作區、不喚 Claude 或只喚一次且只寫 git 外帳本），故**不走 worktree**，與其他 cron 無洗檔競態。背景見 [`docs/lessons/google-indexing-api-gray-area.md`](./lessons/google-indexing-api-gray-area.md)。
   - **`cited-teardown.sh` 會寫 repo**（`geo-insights/<beat>.md`）→ 照內容線走 `_worktree.sh` 隔離 + `push HEAD:main` rebase 重試。
   - **`health-days-publish.sh` 是純 shell**（不喚 Claude、不碰工作區，只 `git grep origin/main` + `gh workflow run`）→ **不走 worktree**。同線的 `health-days.sh` 會寫 repo，照內容線走 worktree + `pushToMain`。
 - **健康紀念日為什麼要兩支 cron（2026-07-28 新增，別合併成一支）**：文章能否公開取決於 **build 當下的時間**有沒有超過 `publishDate`（`src/utils/content.ts` 的 `isPublic`）。`deploy.yml` 只在 push／每 6 小時 cron（台北 02、08、14、20）／手動觸發時 build，**六小時 cron 對不上 06:17**，所以非得在 06:17 準點戳一次 `workflow_dispatch` 不可。寫作與上線刻意分離還有兩個好處：T-2 寫失敗隔天還能重試；排程稿只產 noindex 預覽頁，站長有兩天可從 `/admin` 預覽修改。從觸發到線上可讀約 3-5 分鐘，故**文章時間戳是 06:17、實際可見約 06:21**（站長 2026-07-28 在「時間戳準」與「可見準」之間選了前者）。
 - **健康紀念日的用量幾乎為零**：`health-days.sh` 在建 worktree／喚 Claude **之前**先用 node 讀年曆表判斷「兩天後有沒有紀念日」，沒有就 `exit 0`。一年 365 天裡只有 51 天真的會叫 Claude（同 `lifestyle-typhoon.sh` 的前置 gate 思路）。要改提前天數用環境變數 `HEALTH_DAYS_LEAD`（預設 2）。**gate 掃的是 T+1…T+LEAD 的區間、不是剛好第 LEAD 天**——某天寫失敗時該篇隔天仍在區間內，配合「該年度已寫過就跳過」的帳本天然重試一次。
-- **AEO 學習環也吃 claude-appi 額度（2026-07-23 啟用排程）**：`aeo-radar.sh`（UTC 12:00）與 `cited-teardown.sh`（UTC 13:30）皆喚 claude-appi Sonnet，刻意排在 claude-appi 午後空窗——避開清晨 tech-radar(21:20 前一日)/seo-ops appi reflect·brain(21:45·22:20) 與傍晚 international(15:00)/arthurs 尖峰；兩者間隔 1.5h。撞週限額 regex 偵測、當日 no-op、可回滾（同其他 claude-appi cron）。
+- **AEO 學習環也吃 claude-appi 額度（2026-07-23 啟用排程）**：`aeo-radar.sh` 與 `cited-teardown.sh` 皆喚 claude-appi Sonnet，刻意排在午後空窗——避開清晨的選題雷達與 seo-ops 反思/大腦、傍晚的國際線尖峰。撞週限額 regex 偵測、當日 no-op、可回滾（同其他 claude-appi cron）。
 - **維運/系統訊號改發 dev 台（2026-06-30）**：原本「cron 一律不發 dev、dev 只給 @bot」的政策放寬——**非內容的維運訊號**（`heartbeat.sh` 的 📊 數據心跳＋🤖 大腦優化、`indexing-submit.sh` 的索引提交回報）改走 **dev 台**（`cron-report.mjs --dev` → `DEV_CHANNEL`），與內容/值勤回報（作者群、分類台）分流，維運訊號不再吵作者群。內容類 cron 仍照舊發作者群/分類台。🤖 大腦優化是**報告型**（claude-appi Sonnet 判讀 SEO/內容機會，撞週限會退化成只報確定性事實、不沉默），不自動改碼。
 - **國際是長跑**（最多 8 區×3 篇、逐篇 Claude 撰寫，每則 6~9 分鐘）；各 cron 各自 worktree 並行，不再彼此卡鎖。**沒有時間上限**——`INTL_TIME_BUDGET_MS` 預設 0（不限），只留當緊急手煞車（設 >0 才生效）。要降耗時優先調 `--max`。
 - **國際的寫作前三層閘門（2026-07-28 新增，`scripts/lib/international-gate.mjs`）**：GDELT 選題完全無狀態、且標地大量錯誤，實測一晚 24 則候選約三分之二注定被寫作端判 SKIP（同事件轉載重複、非國際新聞）。故在動用寫作前先跑：① curl 抓 `<title>` 後**同批同事件去重**（Jaccard ≥0.5）；② **跨日 seen 帳本** `~/.local/state/appi-news/international-seen.json`（14 天窗、45 天保留，`INTL_SEEN_PATH` 可覆寫；只記「拿到明確結論」的題，infra 失敗不記才會重試）；③ **一次 Haiku 批次篩選**標題。2026-07-28 首跑 24→10。**任何一層自己壞掉一律 fail-open 全部放行**，閘門絕不能變成新的「整晚 0 篇」來源。為什麼＝[`docs/lessons/auto-publish-pipeline-traps.md`](./lessons/auto-publish-pipeline-traps.md) §G。

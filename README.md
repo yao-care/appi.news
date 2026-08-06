@@ -113,9 +113,9 @@ postbuild  →  scripts/subset-fonts.mjs             ① 字型子集化 + 首�
 2. **顏色只准寫在 `src/styles/variables.css`**（oklch 主要＋hex fallback）；其他檔一律 `var(--*)`。
 3. **禁 `!important`**。
 4. **禁外部 CDN**（fonts.googleapis / cdnjs / unpkg / jsdelivr）；字型自託管（@fontsource）。
-5. **css 檔白名單** — `src/` 的 `.css` 只准 `src/styles/{variables,global,choice}.css`；元件樣式寫 scoped `<style>` 或進 global.css。
+5. **css 檔白名單** — `src/` 的 `.css` 只准 `src/styles/` 底下白名單那幾個；元件樣式寫 scoped `<style>` 或進 global.css。（白名單以 `scripts/check-design.mjs` 的 `STYLE_WHITELIST` 為準）
 
-> 遷移期凍結（禁再擴充，清單與理由見 `scripts/check-design.mjs` 檔頭）：`choice.css`＋`/choice` 頁整檔跳過；17 個既有檔僅豁免「顏色」一條（存量 `var(--x, #hex)` fallback 等待收斂進 variables.css）。
+> 遷移期凍結（禁再擴充）：少數既有檔僅豁免「顏色」一條。**清單以 `scripts/check-design.mjs` 的 `LEGACY_COLOR_FILES` 為準**（`sed -n '/LEGACY_COLOR_FILES = new Set(\[/,/^\]);/p' scripts/check-design.mjs`），理由見該檔檔頭。**不要把數量寫進文件**，清一檔就少一個。
 
 ## 目前正式網域設定
 
@@ -257,10 +257,10 @@ tech-radar（cron 每日一次）→ 發候選題到 Slack（帶「我要寫這�
 
 | 元件 | 路徑 / 識別 | 說明 |
 |---|---|---|
-| 站上埋點 | `src/components/seo/Analytics.astro`、`SITE.gaId`（`src/config/site.ts`，現為 `G-38R2SZ5FTQ`） | GA4 gtag，`requestIdleCallback` 延遲載入以保 TBT=0 |
+| 站上埋點 | `src/components/seo/Analytics.astro`、`SITE.gaId`（`src/config/site.ts`，實際 ID 跑 `grep -n gaId src/config/site.ts` 查） | GA4 gtag，`requestIdleCallback` 延遲載入以保 TBT=0 |
 | 數據抓取 | `scripts/weekly-data.mjs`、`scripts/lib/google-data.mjs` | 自簽 JWT 讀 GA4＋GSC，輸出四區塊 JSON（period / articlePerf / searchOpportunities / trafficHealth） |
 | 每週數據週報 | `.claude/skills/weekly-report/SKILL.md`、`scripts/cron/weekly-report.sh` | 數據 → 外部熱題雷達 → 建議寫作方向 → 發 Slack；排程見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §cron 總表 |
-| 設定常數 | `scripts/lib/report-config.mjs` | GA4 property `541946427`、GSC `sc-domain:appi.news`、Slack 一分類一頻道（`CATEGORY_CHANNELS`）、預設＝作者群 `C0BC4JRQJF6` |
+| 設定常數 | `scripts/lib/report-config.mjs` | GA4 property、GSC 站台、Slack 一分類一頻道（`CATEGORY_CHANNELS`）、預設頻道、dev 頻道。**實際 ID 一律讀該檔，不抄進文件** |
 | 機密金鑰 | `~/.config/appi-news/ga4-sa.json`（GA4/GSC 私鑰）、`~/.config/appi-news/report.env`（Slack token） | **永不進 repo**；從原開發機 `scp` 過來、`chmod 600` |
 
 快速查數據（確認 GA/GSC 讀得到）：
@@ -284,7 +284,7 @@ src/
   layouts/     BaseLayout / ChoiceLayout / PolicyLayout
   pages/       路由（index / [category] / articles/[slug] / authors / columns / topics /
                search / rss.xml.ts / robots.txt.ts / llms.txt.ts / llms-full.txt.ts）
-  styles/      variables.css（design token，唯一可寫死顏色）/ global.css（基礎樣式＋字型 import，僅繁中子集進入點）/ choice.css（/choice 預覽，遷移期凍結）
+  styles/      variables.css（design token，唯一可寫死顏色）/ global.css（基礎樣式＋字型 import，僅繁中子集進入點）
   utils/       content / url / date / jsonld / faq / llms / editor / hero-network
 scripts/
   used-images.mjs          prebuild：抽已用圖庫圖

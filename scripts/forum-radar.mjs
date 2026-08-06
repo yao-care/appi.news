@@ -17,9 +17,11 @@
 //   node scripts/forum-radar.mjs --go      # 完整流程
 //   node scripts/forum-radar.mjs --go --max 12   # 限制送進 LLM 的候選數（預設 40）
 
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
+import yaml from 'js-yaml';
 import { runClaudeOnce } from './lib/claude-cli.mjs';
 import {
   collectCandidates,
@@ -89,6 +91,39 @@ async function judgeLocal(localCands) {
   };
 }
 
+/**
+ * 近期已發文章標題（餵進選題 prompt 做去重）。
+ *
+ * **為什麼一定要有**：forum-seen 帳本只記「這則 PTT 文推過沒」，記不住「這個題目站上已經寫過」。
+ * 2026-08-06 首次實跑就推薦了當天稍早才發佈的同一題（手術機器人）。寫作端的
+ * check-duplicate-topic gate 雖然擋得下來，但那是**整篇寫完才擋**，白燒一篇額度，
+ * 還佔掉 Slack 清單一個位子。
+ */
+function recentTitles(days = 45, limit = 150) {
+  const cutoff = Date.now() - days * 86400 * 1000;
+  let files = [];
+  try {
+    files = readdirSync('src/content/articles').filter((f) => f.endsWith('.md'));
+  } catch {
+    return []; // 讀不到就當沒有，不因去重資料缺失而中斷選題
+  }
+  const out = [];
+  for (const f of files) {
+    try {
+      const m = readFileSync(join('src/content/articles', f), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (!m) continue;
+      const d = yaml.load(m[1]) || {};
+      const t = new Date(d.publishDate || 0).getTime();
+      if (t >= cutoff && d.title) out.push({ t, title: d.title });
+    } catch {
+      /* 單篇壞掉不影響其餘 */
+    }
+  }
+  // 由新到舊取上限：本線每小時可能跑一次，整窗塞進 prompt 太肥
+  // （實測 45 天窗有數百篇），而撞題風險本來就集中在最近幾天。
+  return out.sort((a, b) => b.t - a.t).slice(0, limit).map((x) => x.title);
+}
+
 /** 解析選題結果：模型回一段 JSON 陣列。解析不出來＝infra 故障（不是「今天沒題」）。 */
 export function parseSuggestions(stdout) {
   const s = String(stdout || '');
@@ -103,6 +138,7 @@ export function parseSuggestions(stdout) {
 }
 
 async function selectTopics(cands, max) {
+  const recent = recentTitles();
   const list = cands
     .slice(0, max)
     .map((c, i) => `${i + 1}. [${CATEGORY_NAMES[c.category]}/${c.board}] (${c.push}推) ${c.title}`)
@@ -135,6 +171,9 @@ async function selectTopics(cands, max) {
     ' "kind":"factual"}',
     '',
     '寧缺勿濫：**挑不到就回空陣列 []**，不要為了湊數硬選。上限 8 則。',
+    '',
+    '【站上近期已經寫過的題目——語意重複的一律不要再選】',
+    recent.length ? recent.map((t) => `- ${t}`).join('\n') : '（近期無）',
     '',
     '【本次候選】',
     list,

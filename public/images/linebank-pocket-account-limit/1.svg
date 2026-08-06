@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" role="img" aria-label="長條圖比較口袋帳戶存款上限從2025年9月的50萬元調升到2026年6月的900萬元，上限放大18倍">
+<style>
+.title{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:26px;font-weight:700;fill:#1e2030;}
+.subtitle{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:15px;fill:#6e7276;}
+.value{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:22px;font-weight:700;fill:#1e2030;}
+.label{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:20px;font-weight:700;fill:#1e2030;}
+.desc{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:14px;fill:#6e7276;}
+.foot{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:13px;fill:#6e7276;}
+.badge{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:18px;font-weight:700;fill:#1e2030;}
+</style>
+<rect x="0" y="0" width="960" height="640" fill="#ffffff"/>
+
+<rect x="40" y="34" width="4" height="30" fill="#a87515"/>
+<text x="56" y="58" class="title">口袋帳戶額度調升時間軸</text>
+<text x="56" y="82" class="subtitle">2025年9月到2026年6月，存款上限從50萬元跳升到900萬元，優惠年利率同為1.5%</text>
+
+<rect x="610" y="95" width="240" height="500" rx="16" fill="#eaf0f8"/>
+
+<rect x="160" y="499" width="140" height="21" rx="4" fill="#eef0f3" stroke="#5e6070" stroke-width="1.5"/>
+<text x="230" y="486" text-anchor="middle" class="value">50萬元</text>
+<text x="230" y="548" text-anchor="middle" class="label">2025/09</text>
+<text x="230" y="572" text-anchor="middle" class="desc">首次調高上限</text>
+
+<rect x="640" y="140" width="180" height="380" rx="4" fill="#a87515"/>
+<text x="730" y="125" text-anchor="middle" class="value">900萬元</text>
+<text x="730" y="548" text-anchor="middle" class="label">2026/06</text>
+<text x="730" y="572" text-anchor="middle" class="desc">再次調高（現行上限）</text>
+
+<circle cx="470" cy="300" r="34" fill="#a87515"/>
+<line x1="452" y1="312" x2="486" y2="286" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+<polygon points="486,286 472,288 482,300" fill="#ffffff"/>
+<text x="470" y="356" text-anchor="middle" class="badge">上限放大18倍</text>
+
+<line x1="40" y1="605" x2="920" y2="605" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="625" class="foot">製圖：APPI News</text>
+<text x="920" y="625" text-anchor="end" class="foot">資料來源：LINE Bank官方公告（2026-06-16）、PTT Bank_Service板（2026-06-03）</text>
+</svg>

@@ -2,7 +2,7 @@
 
 > 摘要：dev checkout 常有他人未提交 WIP、自動產文 job 也在背景動工作區；`git add -A` / 不帶 pathspec 的 commit 會把無關改動一起帶走。｜ 範圍：git/自動化 ｜ 狀態：已解決 ｜ 日期：2026-06
 
-對應 SOP：根 `CLAUDE.md` §部署與驗收（在 main 上先開分支）。
+對應 SOP：根 `CLAUDE.md` §上線流程與紅線（在 main 上先開分支）。
 
 ## A. 自動產文 job 只 stage 文章產物，不用 `git add -A`
 

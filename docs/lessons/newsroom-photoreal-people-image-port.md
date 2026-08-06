@@ -35,4 +35,4 @@ appi 的人物生圖（`get-image.mjs --people`）原本很樸素：`ai-image.mj
 
 - **正本流程在 `/root/agent.writer/scripts/lib/images/`**（photo-prompt.ts / visual-check.ts / claude-cli.ts）。未來 writer 再優化人物圖，同步回這裡的 `.mjs` 三兄弟。
 - worker 改動要 `wrangler deploy` 才生效；未部署時人物圖仍以 low 生成（流程照常）。見 [`domain-change-worker-cors.md`](./domain-change-worker-cors.md) 的 worker 部署慣例。
-- 配圖三來源與各頻道政策（誰准 AI、誰禁）見根 `CLAUDE.md` §配圖與 `get-image.mjs` 檔頭；帳號/模型政策見 [`automation-model-and-account-split.md`](./automation-model-and-account-split.md)。
+- 配圖三來源與各頻道政策（誰准 AI、誰禁）見 `get-image.mjs` 檔頭與根 `CLAUDE.md` §自動發文 pipeline 的鐵則段（`NO_AI_IMAGE`）；帳號/模型政策見 [`automation-model-and-account-split.md`](./automation-model-and-account-split.md)。

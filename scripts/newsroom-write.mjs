@@ -240,8 +240,12 @@ async function main() {
   // --allow-any-category：放寬分類白名單成「全部合法分類」（含 health/focus/finance/columns）。
   // 只給「真人經 /admin 下單」的 article-write 協調器用；自動選題產線不帶此旗標、維持只收 vertical。
   const allowAnyCategory = args.includes('--allow-any-category');
+  // --write-only：只起草＋過逐篇關卡（配圖／重複／去 AI 腔／標籤／觀點）＋寫 result.json，
+  // 不 build、不 check:links、不碰 git。給「平行寫多篇 → 一次 build → 一次發佈」的批次驅動用
+  // （沿用 acute-care-batch.sh 的作法：每篇各跑一次 662 篇 Astro build 會在 4 核/2GB 上 OOM）。
+  const writeOnly = args.includes('--write-only');
   const jobPath = args.find((a) => !a.startsWith('--'));
-  if (!jobPath) die('用法：node scripts/newsroom-write.mjs <job.json> [--go|--stage] [--allow-any-category]');
+  if (!jobPath) die('用法：node scripts/newsroom-write.mjs <job.json> [--go|--stage|--write-only] [--allow-any-category]');
 
   // 1) 讀 + 驗
   let raw;
@@ -260,8 +264,8 @@ async function main() {
   const isUpdate = !!job.slug && existsSync(join(ARTICLES_DIR, `${job.slug}.md`));
   const prompt = buildDraftPrompt(job, schedule, { isUpdate });
 
-  if (!go && !stage) {
-    console.log('— DRY RUN（不帶 --go/--stage，零副作用）—');
+  if (!go && !stage && !writeOnly) {
+    console.log('— DRY RUN（不帶 --go/--stage/--write-only，零副作用）—');
     console.log(`工單通過：${job.title}（${job.category}${job.subcategory ? '/' + job.subcategory : ''}，${job.kind}，${job.length}）`);
     console.log(
       isUpdate
@@ -278,23 +282,36 @@ async function main() {
   }
 
   // --go：真的起草並發佈。安全前置——工作區乾淨（避免把無關改動掃進發佈 commit）。
+  // --write-only 例外：批次驅動就是要多篇同時在同一個工作區寫，起點本來就不乾淨（別篇的產物），
+  // 且它不 commit，沒有「掃進發佈 commit」的風險。
   const branch = sh('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
-  if (sh('git', ['status', '--porcelain'])) {
+  if (!writeOnly && sh('git', ['status', '--porcelain'])) {
     die('工作區不乾淨，請先清乾淨再跑（避免把無關改動掃進發佈 commit）');
   }
-  console.log(`→ 在分支 ${branch} 上起草並發佈`);
+  console.log(writeOnly ? `→ 在分支 ${branch} 上起草（--write-only：不 build、不碰 git）` : `→ 在分支 ${branch} 上起草並發佈`);
 
   console.log('→ claude 起草中…');
   const draft = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { stdio: 'inherit' });
   if (draft.status !== 0) die(`claude 起草失敗（exit ${draft.status}）`);
 
-  // 必須真的產出了文章
-  const produced = sh('git', ['status', '--porcelain', 'src/content/articles/']);
-  if (!produced) die('claude 沒有在 src/content/articles/ 產出文章，中止（不發佈）');
-  // 從產出檔推出 slug → 文章網址（給 Slack 回報帶連結）。
-  // 工單指定固定 slug 時以它為準（滾動更新就是改寫該檔；避免 git 同時動到別檔誤判）。
-  const artLine = produced.split('\n').map((l) => l.trim()).find((l) => l.endsWith('.md'));
-  const slug = job.slug || (artLine ? artLine.replace(/^.*src\/content\/articles\//, '').replace(/\.md$/, '') : null);
+  // 必須真的產出了文章。
+  // --write-only 平行批次下，`git status src/content/articles/` 會同時看到**別篇**的產物，
+  // 拿它推 slug 會張冠李戴、也會讓「本篇其實沒寫成」被別篇的產出蓋過去。因此工單指定固定 slug 時
+  // 一律以該檔存在與否為準（批次驅動務必給 slug）。
+  let slug;
+  if (job.slug) {
+    if (!existsSync(join(ARTICLES_DIR, `${job.slug}.md`))) {
+      die(`claude 沒有產出指定 slug 的文章（src/content/articles/${job.slug}.md），中止（不發佈）`);
+    }
+    slug = job.slug;
+  } else {
+    if (writeOnly) die('--write-only 需在工單指定 slug（平行批次下無法從 git status 分辨是哪一篇的產物）');
+    const produced = sh('git', ['status', '--porcelain', 'src/content/articles/']);
+    if (!produced) die('claude 沒有在 src/content/articles/ 產出文章，中止（不發佈）');
+    // 從產出檔推出 slug → 文章網址（給 Slack 回報帶連結）。
+    const artLine = produced.split('\n').map((l) => l.trim()).find((l) => l.endsWith('.md'));
+    slug = artLine ? artLine.replace(/^.*src\/content\/articles\//, '').replace(/\.md$/, '') : null;
+  }
   const url = slug ? `https://appi.news/articles/${slug}/` : null;
 
   // 配圖硬性 gate（只擋自動產文這條路）：缺封面 / 封面檔不存在 / 內文 0 張圖 → 中止不發佈。
@@ -381,6 +398,14 @@ async function main() {
     writeFileSync(join(dirname(jobPath), 'result.json'), JSON.stringify(result));
   } catch (e) {
     console.error(`（result.json 寫入失敗，不影響發佈）：${e.message}`);
+  }
+
+  // --write-only：逐篇關卡都過了就收工，build / check:links / commit / push 交給批次驅動做一次。
+  // check:links 需要全站 dist，本來就只能整批驗一次；此處提早返回不會漏掉那一關。
+  if (writeOnly) {
+    console.log(`✓ 已寫成（--write-only：未 build、未 commit）。`);
+    console.log(`WRITE_ONLY_SLUG=${slug}`);
+    return;
   }
 
   // gate：壞連結會擋整站部署，沒過就不發佈（改動留在工作區供檢查，不自動還原）

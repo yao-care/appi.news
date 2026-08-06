@@ -3,14 +3,11 @@ title: "什麼是高齡周全性評估？結合中醫體質辨識預防長者衰
 slug: "appi-news-474"
 description: "高雄榮總跨團隊研究首度整合高齡周全性評估與中醫體質辨識，發現六成長者體質失衡且與老人症候群密切相關。中西醫合作如何補上單一評估看不到的空白？"
 publishDate: 2026-07-30
+updatedDate: 2026-08-06
 category: health
 subcategory: tcm-integrative
 tags: ["高齡健康", "中醫", "預防醫學", "健檢報告", "肌少症", "睡眠與疲勞"]
 author: "appi-editorial"
-reviewedBy:
-  - "huang-ziyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-474.webp"
 coverAlt: "一位年長女性與老年醫學科醫師在診間討論健康評估報告"
 status: published
@@ -18,11 +15,6 @@ sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 11
-risksAndLimits:
-  - "研究樣本為高雄榮總收治的一百名長者，結論是否適用其他地區或院所尚待驗證"
-  - "案例中林女士的膝痛改善為個別分享，未附具體治療週期或量化數據，不能推估自身成效"
-  - "目前整合評估證據多為觀察性研究，缺乏大型隨機對照試驗支持"
-  - "體質辨識量表信效度雖有本土驗證，但跨族群與長期追蹤資料仍不足"
 references:
   - title: "Lin WL, et al. (2025). Implications of comprehensive geriatric assessment and Traditional Chinese Medicine constitution types for integrative geriatric care. *Archives of Gerontology and Geriatrics*, 129, 105697"
     url: "https://pubmed.ncbi.nlm.nih.gov/39602981/"
@@ -43,8 +35,6 @@ draft: false
 **傳統健檢多鎖定單一疾病指標，對「功能性衰退」的敏感度有限**；高雄榮總的研究發現，約六成受試長者具有體質失衡的特徵，且體質失衡與睡眠障礙、聽力退化、尿失禁等老人症候群呈正相關。
 
 研究團隊進一步分析發現，長者身上出現的老人症候群項目愈多，體質失衡的可能性愈高：根據該研究數據，具有五項以上老人症候群者，體質失衡機率較基準族群增加約六倍；達七項以上者，增加約三十五倍。**這是相對倍數，研究並未公布各組體質失衡的實際比例**，個人風險高低仍需醫療團隊依個別狀況判讀，不宜僅憑倍數自行推估。這個數字說明的是，功能退化多半來自多重系統同時鬆動，並非單一原因所致，這正是傳統健檢報告不容易呈現的圖像。
-
-![一位年長女性與老年醫學科醫師在診間討論健康評估報告](https://appi.news/images/appi-news-474/1.jpg "說不出哪裡有病、卻覺得體力大不如前，是許多長者與醫療團隊要共同解開的謎題。")
 
 ## 二、什麼是高齡周全性評估（CGA）
 

@@ -3,14 +3,11 @@ title: "什麼是功能健康評估？健檢正常卻不適的關鍵解方"
 slug: "appi-news-473"
 description: "健檢報告一切正常,身體卻疲倦乏力？認識亞健康與功能健康評估三大面向:肌力、活動能力與社會參與,補上傳統健檢看不到的盲點。"
 publishDate: 2026-07-30
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
 tags: ["預防醫學", "健檢報告", "肌少症", "高齡健康", "公共衛生"]
 author: "appi-editorial"
-reviewedBy:
-  - "huang-ziyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-473.webp"
 coverAlt: "一位中年人在家中客廳從椅子上起身,呈現日常活動能力的畫面"
 status: published
@@ -18,11 +15,6 @@ sourceType: editorial
 contentType: news
 disclaimerType: medical
 readingTime: 11
-risksAndLimits:
-  - "相關研究多為觀察性世代追蹤，只能說明關聯性，無法證明握力或步速下降直接導致死亡風險上升"
-  - "亞健康目前並無統一定義與診斷工具，不同研究採用的判斷標準也不盡相同"
-  - "JAMA 步速研究與廣島握力研究的追蹤對象皆為中高齡族群，年輕族群的參考值證據較少"
-  - "握力與起坐測試的參考值依亞洲肌少症工作小組（AWGS）共識訂定，未必適用其他地區族群"
 references:
   - title: "Studenski S, Perera S, Patel K, et al. (2011). Gait speed and survival in older adults. *JAMA*, 305(1), 50-58"
     url: "https://pubmed.ncbi.nlm.nih.gov/21205966/"
@@ -40,8 +32,6 @@ references:
     url: "https://pubmed.ncbi.nlm.nih.gov/32033882/"
 draft: false
 ---
-![一位中年人在家中客廳從椅子上起身,呈現日常活動能力的畫面](https://appi.news/images/appi-news-473/1.jpg "起身這個日常動作,藏著健檢報告看不到的身體功能訊號")
-
 ## 一、為什麼健檢報告正常，身體卻感覺不對勁？
 
 近期媒體報導指出，不少民眾健檢數值一切正常，卻長期感覺疲勞、失眠、體力下滑，這類「渾身不適、檢查卻正常」的現象被稱為亞健康。另有報導引述日本高齡醫學專家觀察指出，高齡者的健康關鍵不在體重數字，而在於能否維持肌力、活動力與社會參與。兩則報導共同點出同一個問題：現行健康檢查看得到的數值，未必等於身體實際能做到的事。

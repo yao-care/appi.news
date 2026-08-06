@@ -9,7 +9,9 @@
 # （同 indexing-submit.sh / aeo-radar.sh 的例外條款，見 docs/SERVER_HANDOFF.md §並發保護）。
 TASK="論壇選題雷達"
 set -uo pipefail
-REPO="$(cd "$(dirname "$0")/.." && pwd)"; cd "$REPO"
+# 本檔在 scripts/cron/ 底下，所以要往上兩層才是 repo 根（少一層會變成 scripts/scripts/…，
+# 而且連 cron-report.mjs 都找不到 → 失敗告警一起啞掉，變成靜默空跑。2026-08-06 踩過）。
+REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
 
 set -a
 # shellcheck disable=SC1090

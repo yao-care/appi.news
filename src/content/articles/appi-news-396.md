@@ -3,17 +3,11 @@ title: "沙拉油苯駢芘完整指南：污染來源、風險與選購把關"
 slug: "appi-news-396"
 description: "沙拉油苯駢芘超標事件引發關注，本文解析苯駢芘的來源、健康風險、台灣檢驗標準，並提供選購與廚房用油的實用把關要點，幫助讀者判斷油品安全性。"
 publishDate: 2026-07-26
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
-tags:
-  - "食品安全"
-  - "營養"
-  - "環境汙染"
+tags: []
 author: "luo-yang"
-reviewedBy:
-  - "huang-ziyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-396.webp"
 coverAlt: "廚房料理台上放著食用油瓶與新鮮食材，呈現日常用油情境"
 status: published
@@ -21,12 +15,6 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 14
-expertNote: "一般沙拉油的苯駢芘風險，消費者不必逐批緊張，但同一鍋油反覆高溫油炸的家庭與長期外食族群才是實際暴露會累積的一群。與其糾結單一超標新聞，不如把注意力放在自己廚房的用油習慣與油品汰換頻率，這比挑品牌更能實際降低長期攝取量。"
-risksAndLimits:
-  - "台灣限量標準為苯（a）駢芘2.0微克／公斤，其他國家或地區規範可能不同"
-  - "一般消費者低劑量長期暴露的健康風險，目前缺乏大規模量化研究可精確估算"
-  - "致癌等級評估多來自動物實驗與職業高劑量暴露族群研究，不等同一般飲食暴露的風險程度"
-  - "文中提及的中聯油脂事件為特定違規案例，個別批次超標不代表市售沙拉油普遍不安全"
 references:
   - title: "衛生福利部（2026）。食藥署說明大豆沙拉油超標油品回收處置情形"
     url: "https://www.mohw.gov.tw/cp-16-87084-1.html"
@@ -37,8 +25,6 @@ references:
 draft: false
 ---
 沙拉油被驗出苯駢芘超標的新聞，讓不少人第一次聽到這個名詞就先愣住。苯駢芘是什麼、為什麼會出現在每天用的食用油裡、超標又代表什麼程度的風險，多數消費者並沒有清楚概念。這篇文章從苯駢芘的科學背景出發，拆解它在沙拉油裡的來源、台灣現行的檢驗把關機制，以及日常選購與烹調時可以實際操作的判斷方法。
-
-![廚房料理台上放著食用油瓶與新鮮食材，呈現日常用油情境](https://appi.news/images/appi-news-396/1.jpg)
 
 ## 一、什麼是苯駢芘？從多環芳香烴到一級致癌物
 

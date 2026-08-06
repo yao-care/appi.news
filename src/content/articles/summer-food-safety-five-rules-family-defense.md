@@ -3,6 +3,7 @@ title: "關於夏季食物中毒預防，你需要知道的5件事"
 slug: "summer-food-safety-five-rules-family-defense"
 description: "夏季細菌繁殖快，食物中毒通報案件明顯增加。從危險溫度帶到WHO食品安全五要，整理冰品、海鮮、便當、烤肉的保存與加熱檢查清單，並提醒高風險族群注意事項。"
 publishDate: 2026-08-05
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
 tags: ["食品安全", "公共衛生", "育兒健康", "高齡健康", "女性健康", "急救常識"]
@@ -13,7 +14,7 @@ status: published
 sourceType: editorial
 contentType: news
 disclaimerType: medical
-readingTime: 13
+readingTime: 12
 references:
   - title: "衛生福利部（取用日期：2026年8月）。遵守五要原則，預防食品中毒"
     url: "https://www.mohw.gov.tw/cp-3250-29716-1.html"
@@ -142,7 +143,3 @@ draft: false
 
 ### Q5: 出現什麼症狀應該立即就醫？
 若出現嚴重脫水、血便、發燒達 38.5°C 以上，或腹瀉、嘔吐持續超過 48 小時，合併神經症狀，應盡快就醫。
-
-## 資料來源
-
-本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[夏季食安五要清單：冰品、海鮮、便當與烤肉怎麼吃更安心](https://gcm.org.tw/blog/five-summer-food-safety-rules-for-safer-eating/)

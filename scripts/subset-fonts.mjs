@@ -104,6 +104,7 @@ if (rulesByBase.size === 0) {
 
 // 4) 在 CSS 取代舊單體 @font-face。
 let rewritten = 0;
+let latinFixed = 0; // 改成 optional 的拉丁 @font-face 檔數（見下方 4b）
 for (const f of cssFiles) {
   let text = readFileSync(f, 'utf8');
   let changed = false;
@@ -114,6 +115,22 @@ for (const f of cssFiles) {
       changed = true;
     }
   }
+  // 4b) 拉丁字型（Inter）也要 font-display: optional。
+  //
+  // 繁中那幾支在上面被整批換成 optional，但 Inter 走 @fontsource 原樣進 build、
+  // 吃預設的 `swap` —— swap 會在字型下載完成後換字並**推動版面**。
+  // 2026-08-06 實測：desktop 首頁 CLS 0.016（基準 0），Lighthouse 的 cls-culprits-insight
+  // 直指 `inter-latin-400/600-normal.woff2`「Web font loaded」。optional 的語意是
+  // 「沒即時就緒就這次不用」，不會有換字位移，與繁中的處理一致。
+  const latin = text.replace(
+    /(@font-face\{[^}]*?font-family:\s*Inter[^}]*?)font-display:\s*swap/g,
+    '$1font-display:optional',
+  );
+  if (latin !== text) {
+    text = latin;
+    changed = true;
+    latinFixed++;
+  }
   if (changed) {
     writeFileSync(f, text);
     rewritten++;
@@ -121,6 +138,11 @@ for (const f of cssFiles) {
 }
 if (rewritten === 0) {
   console.warn('[subset-fonts] 警告：CSS 中找不到可取代的繁中 @font-face（結構是否變動？）');
+}
+if (latinFixed === 0) {
+  console.warn('[subset-fonts] 警告：沒有把任何 Inter @font-face 改成 font-display:optional（@fontsource 產出格式是否變動？CLS 會回來）');
+} else {
+  console.log(`[subset-fonts] Inter font-display → optional：${latinFixed} 個 CSS 檔`);
 }
 
 // 5) 刪掉舊整包字型（woff2 + woff），避免殘留佔空間（切片檔含 .slice- 不刪）。

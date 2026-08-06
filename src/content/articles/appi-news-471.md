@@ -3,14 +3,11 @@ title: "特留分修法完整指南：兄弟姊妹被刪除後，遺囑與信託
 slug: "appi-news-471"
 description: "立法院三讀刪除兄弟姊妹的特留分，民法第一千二百二十三條迎來三十多年最大修正。整理修法前後比較、哪些家庭受影響最大，以及遺囑、信託、保險工具在新制下的規劃重點。"
 publishDate: 2026-07-30
+updatedDate: 2026-08-06
 category: finance
 subcategory: investing-literacy
 tags: ["投資理財", "退休規劃", "司法", "超高齡社會", "保險"]
 author: "wu-fang-jun"
-reviewedBy:
-  - "wu-fang-jun"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-471.webp"
 coverAlt: "一家人與財務規劃顧問在客廳討論遺產規劃文件"
 status: published
@@ -18,12 +15,6 @@ sourceType: author
 contentType: column
 disclaimerType: financial
 readingTime: 10
-expertNote: "修法把兄弟姊妹的分配權交回被繼承人手上，對單身或頂客族才有實質意義。已立遺囑的人可趁六個月緩衝期，把過去為了特留分妥協的條款，換成搭配保險稅源、必要時加信託分期的完整安排，而不是只改一份遺囑就結案。"
-risksAndLimits:
-  - "這次修法只刪兄弟姊妹的特留分，配偶、子女、父母、祖父母比例不變，適用範圍有限"
-  - "沒有遺囑完全不受影響，兄弟姊妹仍是第三順位法定繼承人，本文建議只對已立或打算立遺囑者有意義"
-  - "修正案須公布滿六個月才施行，正式生效日以官方公告為準，非立法院三讀當下"
-  - "酌給請求權須向法院聲請、非自動適用，實際能拿到多少仍待個案認定"
 references:
   - title: "全國法規資料庫（法務部）(2026). 民法第1223條"
     url: "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=1223"
@@ -34,8 +25,6 @@ references:
 draft: false
 ---
 立法院七月二十八日三讀通過民法第一千二百二十三條修正案，刪除兄弟姊妹的特留分規定。這代表被繼承人未來透過遺囑安排財產時，不需要再為手足預留一定比例的遺產。修正案將於公布六個月後施行，對還沒立遺囑的家庭會產生實質影響。以下整理修法前後的具體差異、哪些人的規劃會被牽動，以及遺囑、信託、保險三種工具在新制下各自適合的情境。
-
-![一家人與財務規劃顧問在客廳討論遺產規劃文件](https://appi.news/images/appi-news-471/1.jpg "特留分修法後,遺產分配更仰賴事先規劃,不能再單靠法律預設的保障範圍")
 
 ## 一、這次修法改了什麼
 

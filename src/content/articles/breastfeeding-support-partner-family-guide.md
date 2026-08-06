@@ -3,6 +3,7 @@ title: "哺乳支持完整指南：伴侶、家人與醫療端能做的事"
 slug: "breastfeeding-support-partner-family-guide"
 description: "產後媽媽最常被問的是奶夠不夠，但真正該問的是她需要什麼幫忙。整理伴侶、家人與醫療端具體能做的哺乳支持行動，以及該儘速求助的警訊。"
 publishDate: 2026-08-05
+updatedDate: 2026-08-06
 category: health
 subcategory: mental-health
 tags: ["女性健康", "心理健康", "育兒健康", "育兒"]
@@ -28,8 +29,6 @@ references:
 draft: false
 ---
 你有沒有發現，產後媽媽最常被問的一句話，通常是「奶夠不夠」，很少有人問她「妳還好嗎」。這句關心背後，藏著一個容易被忽略的問題：哺乳支持如果只剩下監督奶量，母親要扛的，其實是全部的重量。真正有幫助的哺乳支持，建立在伴侶、家人與醫療端一起分工，母親不必一個人在爐火前守到底。
-
-![台灣家庭中，伴侶在旁換尿布，母親在沙發上哺乳休息的居家情境](https://appi.news/images/breastfeeding-support-partner-family-guide/1.jpg)
 
 ## 一、當關心變成監督：哺乳壓力從哪裡來
 

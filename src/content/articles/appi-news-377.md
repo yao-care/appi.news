@@ -3,15 +3,11 @@ title: "關於雨後防蚊，家庭要知道的5件事"
 slug: "appi-news-377"
 description: "雨停之後，陽台的積水最快九天就能孵出會飛的蚊子。從官方巡倒清刷到親子巡檢任務，這篇文章用具體行動，幫有孩子與長輩的家庭把登革熱風險降到最低。"
 publishDate: 2026-07-13
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
-tags:
-  - "傳染病防治"
+tags: []
 author: "huang-ziyan"
-reviewedBy:
-  - "huang-ziyan"
-factCheckedBy:
-  - "appi-editorial"
 coverImage: "covers/appi-news-377.webp"
 coverAlt: "雨後家長與孩子在陽台一起檢查花盆底盤積水的情境"
 status: published
@@ -19,11 +15,6 @@ sourceType: author
 contentType: column
 disclaimerType: medical
 readingTime: 11
-expertNote: "對雨後居家蚊蟲管控來說，重點不在防蚊產品的效力比較，而在孳生源清除是否形成每週固定習慣。花盆底盤與廢棄輪胎因位置隱蔽、清洗頻率低，是最容易被家庭忽略的環節，建議優先納入固定巡檢清單。"
-risksAndLimits:
-  - "「巡、倒、清、刷」與孵化天數為疾管署與昆蟲學一般描述，非本文獨立驗證的數據"
-  - "訊息疲勞與社區參與研究為特定調查結果，未必適用所有地區與族群"
-  - "發燒就醫的天數門檻為原則性建議，實際病程請以當下症狀變化為準"
 references:
   - title: "衛生福利部疾病管制署 (2026). 防範登革熱 梅雨季節期間請民眾加強清除積水容器 落實「巡、倒、清、刷」"
     url: "https://www.cdc.gov.tw/Bulletin/Detail/fvUjKT2AhWh1ts4cYyK9mQ?typeid=9"
@@ -48,8 +39,6 @@ draft: false
 雨停的那一刻，家裡最容易被忽略的不是屋頂漏水，是陽台花盆底盤、回收桶蓋子凹陷處，還有陽台角落那個很久沒用的水桶。這些地方平常看不出問題，一下雨，全部同時裝滿水。
 
 台灣位處亞熱帶，本來就適合病媒蚊孳生，許多居家積水容器提供了牠們最理想的繁殖場所（註1）。這不是危言聳聽，是疾病管制署年年重複提醒的原因。
-
-![雨後家長與孩子在陽台一起檢查花盆底盤積水的情境](https://appi.news/images/appi-news-377/1.jpg)
 
 ## 二、積水多久會變成會飛的蚊子？
 

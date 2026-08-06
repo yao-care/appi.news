@@ -103,8 +103,6 @@ draft: false
 
 ![以媽媽為中心,向外連結伴侶、家人、朋友與專業資源的產後支持網絡示意圖](https://appi.news/images/postpartum-partner-support-breastfeeding/3.svg "伴侶之外,家人、朋友與泌乳顧問、心理諮商都是可以並行動用的支持來源")
 
-![原文附圖：以媽媽為中心，向外連結伴侶、家人、朋友與專業資源的產後支持網絡示意圖](https://appi.news/images/postpartum-partner-support-breastfeeding/3.jpg "圖／上醫預防醫學發展協會")
-
 上醫預防醫學發展協會在相關衛教文章中提到，真正的哺乳支持，是讓媽媽不必獨自面對這一切，而不是把注意力全部放在奶瓶刻度上。
 
 當情緒低落、焦慮或失眠持續兩週以上，且影響到日常生活，會是尋求專業協助的時機。衛生福利部提供的「愛丁堡產後憂鬱量表」是常用的自我評估工具，總分達 10 至 12 分建議與家人溝通或視需要諮詢專業，13 分以上則建議尋求專業醫療協助。有立即的情緒困擾時，可撥打衛生福利部提供的 1925 安心專線，全年無休、24 小時免付費。
@@ -135,7 +133,3 @@ draft: false
 ![伴侶協助照顧寶寶讓媽媽得以休息的家庭日常畫面](https://appi.news/images/postpartum-partner-support-breastfeeding/4.jpg "分工落實之後,媽媽才有機會擁有一段真正屬於自己的休息時間（圖／上醫預防醫學發展協會）")
 
 哺乳能否延續，從來不是媽媽一個人的責任，也不該由奶量這一個數字來決定。家務分工、睡眠安排、看不見的周邊勞動、情緒支持，每一項都在影響哺乳是否能走得下去。這週不妨找一個時間，和伴侶一起看一次目前的分工清單，找出一件可以立刻調整的事，從那裡開始。
-
-![原文附圖：伴侶在家中一邊備餐一邊查看餵奶時間記錄的居家情境](https://appi.news/images/postpartum-partner-support-breastfeeding/1.jpg "圖／dep.mohw.gov.tw")
-
-![原文附圖：伴侶專注聆聽產後媽媽說話的居家對話情境](https://appi.news/images/postpartum-partner-support-breastfeeding/2.jpg "圖／上醫預防醫學發展協會")

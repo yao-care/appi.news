@@ -3,6 +3,7 @@ title: "關於夏季食物中毒，你需要知道的5件事：從危險溫度�
 slug: "summer-food-poisoning-danger-zone-bacteria"
 description: "高雄春捲食物中毒案累計173人送醫、驗出沙門氏菌。食藥署定義7°C–60°C為危險溫度帶，細菌20分鐘可分裂一次，2小時內菌數能暴增64倍。從生物學機制拆解夏季食安風險，給出室溫、冷藏、冷凍的實用保存判準。"
 publishDate: 2026-08-05
+updatedDate: 2026-08-06
 category: health
 subcategory: preventive
 tags: ["食品安全", "公共衛生", "傳染病防治", "預防醫學"]
@@ -139,7 +140,3 @@ draft: false
 
 ### Q5: 隔夜菜加熱過就一定安全嗎？
 不一定。加熱能殺死大部分活菌，但像金黃色葡萄球菌釋出的腸毒素對熱穩定，一般家庭復熱難以完全破壞，真正的關鍵是食物在冷藏前，於危險溫度帶累計暴露了多久。
-
-## 資料來源
-
-本文改寫自 GCM 上醫預防醫學發展協會 供稿文章：[夏天食物為什麼容易壞？從危險溫度帶看懂細菌繁殖](https://gcm.org.tw/blog/summer-food-spoilage-and-bacterial-danger-zone/)

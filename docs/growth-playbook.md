@@ -88,10 +88,16 @@ node scripts/growth-lint.mjs --all --worst 30   # 排出最該補的前 30 篇
 **SOP**：`ls src/content/topics/` 看現有叢集 → 對 `growth-lint` 標 `G2-cluster` 的文章逐篇判斷能不能歸入 → 能就補 frontmatter，不能就留空。**不要自創不存在的 topic id**（會產生壞連結）。
 某個主題叢集夠厚但沒有對應 topic 檔時，才在 `src/content/topics/` 新增（schema 見 `src/content.config.ts`）。
 
-### B4. 延伸閱讀的版位（未完成，需要站長裁示）
+### B4. 延伸閱讀的版位（站長 2026-08-07 裁示：先不動，兩週後看數字再決定）
 
-目前「延伸閱讀」只出現在文末（`src/pages/articles/[slug].astro`），但跳出率高的讀者根本滑不到。可選作法：文中插入（讀到一半的段落間）、或側欄常駐。
-**這會動到版面與效能，動手前必須先讀 [`PERFORMANCE.md`](../PERFORMANCE.md)，且屬於「要先問站長」的改動。**
+目前「延伸閱讀」只出現在文末（`src/pages/articles/[slug].astro`），跳出率高的讀者根本滑不到。可選作法：文中插入（讀到一半的段落間）、桌機側欄常駐、讀完浮出推薦條——**每一種都會動到版面與效能，動手前必須先讀 [`PERFORMANCE.md`](../PERFORMANCE.md)，且屬於「要先問站長」的改動。**
+
+**現行決策**：先不動版位，改用零風險的 B1（新文內建內鏈，已上線）＋B2／B3（存量補內鏈與 topics）推同一個指標，**2026-08-21 之後**跑 `pnpm growth:audit` 對照 PV/session：
+
+- 有往上動 → 版位不必改，繼續做 B2／B3。
+- 沒動 → 代表內文內鏈救不到，再回來評估文中插入版位（那時才需要站長二次裁示）。
+
+基準值＝2026-08-07 當時的量測，記在 [`lessons/growth-three-gates.md`](./lessons/growth-three-gates.md)（歷史證據，不是現況）。
 
 ---
 

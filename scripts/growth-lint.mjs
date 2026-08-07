@@ -33,14 +33,20 @@ const SUMMARY = flag('--summary');
 const WORST = flag('--worst') ? Number(argv[argv.indexOf('--worst') + 1]) || 20 : 0;
 const files = argv.filter((a) => !a.startsWith('--') && !/^\d+$/.test(a));
 
-/** 站上所有合法的文章 slug（含 frontmatter 自訂 slug），用來驗內鏈目標是否存在。 */
+/**
+ * 站上所有**實際會產出頁面**的文章 slug，用來驗內鏈目標是否存在。
+ *
+ * 🔴 有 frontmatter `slug` 時，檔名就不再是有效網址（見 src/utils/content.ts 的
+ * `articleSlug()`＝`data.slug ?? id`）。這裡若把兩個都收，連到檔名的內鏈會通過 lint、
+ * 卻在 `check:links` 擋下整條部署——2026-08-07 補內鏈時就這樣連到 `/articles/wp-299/`
+ * （該篇實際網址是 `/articles/hypertension-dash-diet-menu/`）。
+ */
 function knownSlugs() {
   const set = new Set();
   for (const f of readdirSync(ARTICLES_DIR).filter((x) => /\.mdx?$/.test(x))) {
-    set.add(f.replace(/\.mdx?$/, ''));
     const m = readFileSync(path.join(ARTICLES_DIR, f), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
     const s = m?.[1].match(/^slug:\s*["']?([^"'\n]+)/m)?.[1]?.trim();
-    if (s) set.add(s);
+    set.add(s || f.replace(/\.mdx?$/, ''));
   }
   return set;
 }
@@ -65,11 +71,23 @@ export function auditArticle(raw, slugs = new Set()) {
   const fm = m ? m[1] : '';
   const body = m ? m[2] : raw;
   const get = (k) => fm.match(new RegExp(`^${k}:\\s*["']?([^"'\\n]*)`, 'm'))?.[1]?.trim() || '';
-  const hasList = (k) => new RegExp(`^${k}:\\s*\\n(\\s+-\\s+\\S)`, 'm').test(fm) || /\[.+\]/.test(get(k));
+  // get() 會在第一個引號截斷（給 title/description 用），拿它判斷陣列會漏掉 YAML 行內寫法
+  // `topics: ["a", "b"]`——截斷後變成 `["a`，找不到收尾的 `]`。判斷清單一律用整行原文。
+  const rawLine = (k) => fm.match(new RegExp(`^${k}:[ \\t]*(.*)$`, 'm'))?.[1]?.trim() || '';
+  const hasList = (k) =>
+    new RegExp(`^${k}:\\s*\\n(\\s+-\\s+\\S)`, 'm').test(fm) || /\[\s*\S[^\]]*\]/.test(rawLine(k));
 
-  const links = [...body.matchAll(/\[([^\]]+)\]\(\s*(\/articles\/[^)\s]+?)\s*\)/g)].map((x) => ({
-    anchor: x[1].trim(), href: x[2], at: x.index,
-  }));
+  // 兩種寫法都算：markdown `[錨](/articles/x/)`，以及 HTML `<a href="/articles/x/">錨</a>`。
+  // 有些文章（尤其編譯稿與含 <p> 區塊的長文）整段是 HTML，在 <p> 裡寫 markdown 連結不會被
+  // 渲染成連結——那種文章只能用 <a>，lint 若只認 markdown 就會把它們全部誤判成零內鏈。
+  const links = [
+    ...[...body.matchAll(/\[([^\]]+)\]\(\s*(\/articles\/[^)\s]+?)\s*\)/g)].map((x) => ({
+      anchor: x[1].trim(), href: x[2], at: x.index,
+    })),
+    ...[...body.matchAll(/<a\s[^>]*href=["'](\/articles\/[^"'#?]+)["'][^>]*>([\s\S]*?)<\/a>/gi)].map((x) => ({
+      anchor: x[2].replace(/<[^>]+>/g, '').trim(), href: x[1], at: x.index,
+    })),
+  ].sort((a, b) => a.at - b.at);
   const firstThird = body.length / 3;
   const bad = [];
 

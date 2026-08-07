@@ -1,14 +1,14 @@
 ---
-title: "英國前保守黨議員維德康達特穆爾住家遇害　警方列謀殺案調查，26歲男子曾遭拘留後獲釋"
+title: "英國前議員維德康住家遇害　警方列謀殺調查、26歲男子獲釋"
 slug: "ann-widdecombe-murder-investigation"
 description: "英國前保守黨國會議員、現任改革英國黨發言人維德康（Ann Widdecombe），7月9日被發現陳屍於英格蘭德文郡達特穆爾一帶住家，身受嚴重傷害，享壽78歲。警方隔日將死因列為謀殺案調查，一度逮捕一名26歲男子，但週六已將他釋放、稱其不再是調查對象。警方強調案件與恐怖主義或政治動機無關，首相施凱爾與多位政壇人士皆表達哀悼。"
 excerpt: "英國前保守黨議員、改革英國黨發言人維德康在達特穆爾住家遇害身亡，警方列謀殺案調查，一度逮捕又釋放一名26歲男子，各界政壇人士紛紛表達哀悼。"
 publishDate: "2026-07-11T15:14:06.560Z"
+updatedDate: "2026-08-07T09:30:00.000Z"
 category: "international"
 subcategory: "europe"
 tags:
   - "英國"
-  - "藥物研發"
   - "司法"
 highlights:
   - "78歲的英國前保守黨國會議員、現任改革英國黨發言人維德康（Ann Widdecombe），7月9日（週四）上午11時40分被發現陳屍於英格蘭德文郡達特穆爾國家公園邊緣的海托爾維爾（Haytor Vale）住家，身受嚴重傷害"
@@ -52,7 +52,7 @@ coverImageCredit: "© European Union 2019 - Source: EP"
 originalContribution: "本文整合 The Irish Times、GB News、CBS News、vt.co 對維德康命案的報導，梳理她被發現陳屍住家、警方將死因改列謀殺案調查、逮捕又釋放一名26歲男子的完整時間線，並補充警方對案件性質的研判與英國政壇跨黨派的哀悼反應，供台灣讀者理解事件全貌。"
 ---
 
-英國前保守黨國會議員、現任改革英國黨（Reform UK）發言人維德康（Ann Widdecombe），7月9日（週四）被發現陳屍於英格蘭德文郡（Devon）達特穆爾國家公園（Dartmoor National Park）邊緣的住家，身受嚴重傷害，享壽78歲。警方隔日將死因列為謀殺案調查，一度逮捕一名26歲男子，但週六已將他釋放。（[The Irish Times](https://www.irishtimes.com/world/uk/2026/07/10/uk-police-begin-murder-investigation-in-to-death-of-reform-uk-member-ann-widdecombe/)）
+英國前保守黨國會議員、現任改革英國黨（Reform UK）發言人維德康（Ann Widdecombe），7月9日（週四）被發現陳屍於英格蘭德文郡（Devon）達特穆爾國家公園（Dartmoor National Park）邊緣的住家，身受嚴重傷害，享壽78歲。警方隔日將死因列為謀殺案調查，一度逮捕一名26歲男子，但週六已將他釋放。（[The Irish Times](https://www.irishtimes.com/world/uk/2026/07/10/uk-police-begin-murder-investigation-in-to-death-of-reform-uk-member-ann-widdecombe/)）她生前是改革英國黨的移民政策發言人，該黨近期的移民主張見[法拉吉端出「堡壘行動」要皇家海軍逼法國收回偷渡客](/articles/uk-navy-channel-migrant-plan/)。
 
 ## 案發經過：週三遇襲、週四才被發現
 
@@ -82,6 +82,6 @@ originalContribution: "本文整合 The Irish Times、GB News、CBS News、vt.co
 
 首相施凱爾（Keir Starmer）在回應此案時呼籲各界「超越政治分歧」看待這起悲劇。內政大臣馬哈茂德（Shabana Mahmood）表示：「我深感悲痛，得知維德康過世的消息，她死亡的情況令人極度痛心。」（[GB News](https://www.gbnews.com/politics/ann-widdecombe-dead-investigation-conservatives-reform-uk)）
 
-改革英國黨黨魁法拉吉（Nigel Farage）稱自己對維德康死亡的方式「深感悲痛」，並表示「少了她，改革英國黨會是一個更糟的地方」；副黨魁提斯（Richard Tice）則稱維德康是「傑出的演說家」，形容她「無所畏懼」。維德康的經紀公司Cloud9也發表聲明，稱過去「這24小時十分沉痛、令人心碎」。（[GB News](https://www.gbnews.com/politics/ann-widdecombe-dead-investigation-conservatives-reform-uk)）
+改革英國黨黨魁法拉吉（Nigel Farage）稱自己對維德康死亡的方式「深感悲痛」，並表示「少了她，改革英國黨會是一個更糟的地方」；副黨魁提斯（Richard Tice）則稱維德康是「傑出的演說家」，形容她「無所畏懼」。法拉吉本人的近況見[辭下議院議員逼補選、「讓克拉克頓人民當裁判」](/articles/farage-resigns-clacton-by-election/)。維德康的經紀公司Cloud9也發表聲明，稱過去「這24小時十分沉痛、令人心碎」。（[GB News](https://www.gbnews.com/politics/ann-widdecombe-dead-investigation-conservatives-reform-uk)）
 
 警方調查仍在進行中，尚未公布更多案發細節或動機方向。

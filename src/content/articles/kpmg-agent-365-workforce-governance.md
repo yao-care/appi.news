@@ -44,6 +44,7 @@ references:
     url: "https://enterprisedna.co/resources/news/kpmg-microsoft-agent-365-enterprise-ai-agents-2026/"
     publisher: "Enterprise DNA"
     note: "Agent 365 為 governance and orchestration layer、'governance is the feature, not an afterthought'、pilot 到 production 卡關、'who is accountable when an agent makes a mistake'"
+topics: ["ai-agent-governance"]
 ---
 
 <p>KPMG 在 6 月 9 日宣布跟微軟擴大合作，<a href="https://news.microsoft.com/source/2026/06/09/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally-through-deployment-of-agent-365-and-copilot/" target="_blank" rel="noopener">把 Microsoft 365 Copilot 鋪給全球超過 27.6 萬名員工，同時導入 Microsoft Agent 365 來部署、監控與保護組織內的 AI agent</a>。數字很嚇人，但我關心的不是 27 萬這個量級有多大。一家專業服務公司願意把 agent 當全員工具發下去，這件事真正難的從來不是導入。難的是 27 萬人同時開始用 agent 的那一刻，誰能碰哪些資料、每一步留不留得下稽核軌跡、出事了算誰的，這三件事要怎麼一次到位。</p>

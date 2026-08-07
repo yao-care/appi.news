@@ -39,6 +39,7 @@ references:
     url: "https://devblogs.microsoft.com/microsoft365dev/work-iq-production-ready-intelligence-for-every-agent/"
     publisher: "Microsoft 365 Developer Blog"
     note: "10 個泛用工具透過 MCP 漸進揭露、getSchema 執行期動態探索結構；每個請求為使用者範圍、Rego 政策引擎逐請求判斷、每次工具呼叫皆記錄與評估供稽核"
+topics: ["ai-agent-governance"]
 ---
 
 <p>微軟在 6 月 2 日的 Build 大會上端出 Work IQ，6 月 16 日 API 正式上線。它的定位不是再多一個聊天機器人，而是想當「讓 AI agent 讀得懂你公司怎麼運作」的那一層。<a href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/announcing-the-new-work-iq-apis/" target="_blank" rel="noopener">官方的說法很直接：Work IQ 會持續處理 email、行事曆、會議、聊天、檔案、人員、協作模式，以及你的營運系統，建出一個「你的組織如何運作的即時模型」</a>。把這句話拆開，重點不是它能讀多少檔案，是它把組織的協作行為本身，做成了 agent 查得到的脈絡來源。</p>

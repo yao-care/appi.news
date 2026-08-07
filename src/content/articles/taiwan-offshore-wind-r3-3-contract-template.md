@@ -48,6 +48,7 @@ references:
   - title: "能源署公告離岸風電3之3行政契約 2026年完成選商目標"
     url: "https://www.nownews.com/news/6859530"
     publisher: "NOWnews今日新聞"
+topics: ["energy-policy"]
 ---
 
 經濟部能源署7月23日正式公告離岸風力發電區塊開發第三期（3-3期）行政契約範本，把7月初產業溝通平台會議上說明的調整重點正式落成白紙黑字的契約條文。[據工商時報報導](https://www.ctee.com.tw/news/20260723702004-430104)，這份範本明定保底收購價、違約金計算方式與新增的彈性併網機制，能源署目標年底前完成選商。這是繼[7月2日行政契約調整說明](/articles/taiwan-offshore-wind-r3-3-admin-contract-update/)之後，3-3期選商程序的下一步。

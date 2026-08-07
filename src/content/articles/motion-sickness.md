@@ -47,6 +47,7 @@ references:
   - title: "Motion Sickness"
     url: "https://my.clevelandclinic.org/health/diseases/12782-motion-sickness"
     publisher: "Cleveland Clinic"
+topics: ["first-aid-basics"]
 ---
 
 暈車當下最該做的一件事，是想辦法讓眼睛看到的畫面和內耳感覺到的晃動重新配對回來。坐到前座、把視線移到遠方不會晃動的地平線或路面，同時停止低頭看書、滑手機，是台大醫院神經部與英國國民保健署（NHS）都建議的第一步。本文為衛教整理，不能取代醫師對個別狀況的診斷與處置。

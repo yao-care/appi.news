@@ -50,6 +50,7 @@ references:
   - title: "腳踝扭傷- 前距腓韌帶斷裂"
     url: "https://www.wanfang.gov.tw/departments/education/post/4fe4c6ce545b195d"
     publisher: "臺北市立萬芳醫院骨科部"
+topics: ["first-aid-basics"]
 ---
 
 腳踝扭傷當下，第一件事是保護患處：立刻停止會讓疼痛加劇的動作，把腳墊高到心臟位置以上。這是《英國運動醫學期刊》（BJSM）2019年提出的最新處置原則「PEACE & LOVE」的第一步，取代了台灣多數人熟悉的舊版RICE（休息、冰敷、加壓、抬高）。先別急著長時間冰敷，也不要打算完全不動好幾天。

@@ -22,6 +22,7 @@ references:
   - title: "Tay WL, Chien JMF, Poulose V, How CH, Ng MCW. (2025). Acute gastroenteritis in adults. *Singapore Medical Journal"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12404423/"
 draft: false
+topics: ["first-aid-basics"]
 ---
 聚餐後突然上吐下瀉，第一個念頭常常是「一定是剛剛那道菜」。但食物中毒的症狀組合、發作時間跟嚴重程度，其實比多數人想的複雜得多。有些人幾小時內就倒下，有些人要拖到三天後才發作；有些狀況在家休息觀察就好，有些狀況卻是拖不得的警訊。這篇文章要說清楚的是：食物中毒常見哪些症狀、多久會出現、什麼時候該自己觀察、什麼時候該直接去醫院。
 

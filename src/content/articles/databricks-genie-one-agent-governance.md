@@ -43,6 +43,7 @@ references:
     url: "https://www.databricks.com/blog/enabling-governed-vibe-coding-enterprise-apps-databricks"
     publisher: "Databricks Blog"
     note: "App Space 層級設定資料與權限存取、on-behalf-of-user API scope、最貼近業務的人可建應用而不累積治理債、開發者非資安專家也能安全用資料"
+topics: ["ai-agent-governance"]
 ---
 
 <p>Databricks 在 6 月 16 日的 Data + AI Summit 上發表 Genie One，<a href="https://siliconangle.com/2026/06/16/databricks-new-agentic-coworker-genie-one-brings-ai-automation-every-part-business/" target="_blank" rel="noopener">把它定位成一個能跨結構化與非結構化資料、替每個團隊自動跑工作的「agentic coworker」</a>。同一天還開了給業務用的 vibe coding 環境 Genie App Builder。話術很性感，但我關心的不是它好不好用。一個能自己動作、還能讓業務自己生出應用的 agent 進到公司，真正的門檻從來不在介面，在它動得到哪些資料、用誰的權限。這一關，Databricks 把答案押在 Unity Catalog 這層治理上。</p>

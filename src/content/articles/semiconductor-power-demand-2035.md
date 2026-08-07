@@ -50,6 +50,7 @@ references:
     url: "https://technews.tw/2026/07/27/taipower-semiconductor-electricity-consumption-52-billion-kwh-to-110-billion-kwh-by-2035/"
     publisher: "TechNews 科技新報"
 draft: false
+topics: ["energy-policy"]
 ---
 
 台電董事長曾文生7月27日在「國泰永續金融暨氣候變遷高峰論壇」上，公布一組具體到產業別的用電推估：半導體產業今年用電量約[520億度，2030年增至800億度，2035年進一步達1100億度](https://www.cna.com.tw/news/afe/202607270168.aspx)，10年內成長超過1倍。這是繼經濟部6月公布十年電力供需報告、把全國用電需求年均成長率上修至2.5%之後，官方首度揭露半導體用電在整體用電量中的具體占比與時間軸，也讓「AI與半導體吃掉多少電」這個問題有了更明確的數字。

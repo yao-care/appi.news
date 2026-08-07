@@ -26,6 +26,7 @@ references:
   - title: "Yahoo奇摩股市 (2026). 元大台灣50(0050.TW) 持股分析"
     url: "https://tw.stock.yahoo.com/quote/0050.TW/holding"
 draft: false
+topics: ["taiwan-macro-economy"]
 ---
 南韓官方7月出口數據顯示，半導體出口年增178.8%，連續兩個月站上400億美元，AI晶片熱潮尚未出現降溫跡象。與此同時，美國實質GDP年增率已從第一季約2.68%放緩至第二季2.10%，全球最大經濟體的成長動能正在轉弱。
 

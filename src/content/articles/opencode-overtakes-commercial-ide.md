@@ -47,6 +47,7 @@ references:
     url: "https://en.wikipedia.org/wiki/The_Sum_of_All_Fears_(film)"
     publisher: "Wikipedia"
     note: "2002 電影，核戰升級的緊張情節：局勢一旦衝起來，要把速度降下來極難"
+topics: ["ai-agent-governance"]
 ---
 
 <p>這個月選 coding agent 的人，桌面上多了一件怪事：排在第一名的不是哪家燒了幾十億的商業 IDE，而是一個跑在終端機裡、完全開源的工具。<a href="https://blog.logrocket.com/ai-dev-tool-power-rankings/" target="_blank" rel="noopener">在 LogRocket 六月的 AI 開發工具榜單上，OpenCode 衝上第一，把原本的冠軍 Cursor 擠到第二</a>。很多人第一個反應是去看它多了什麼功能。這個方向沒有錯，但會看錯重點。</p>

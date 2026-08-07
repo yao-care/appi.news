@@ -53,6 +53,7 @@ references:
   - title: "1919食安專線，食藥署這樣說"
     url: "https://www.mohw.gov.tw/cp-5021-63569-1.html"
     publisher: "衛生福利部"
+topics: ["civic-services"]
 ---
 
 7-ELEVEN聯名商品「林聰明雞肉飯飯糰」「阜杭豆漿經典飯糰」因代工廠使用了中聯油脂遭驗出問題的大豆沙拉油，被[食藥署列入232項下架產品名單](https://www.storm.mg/lifestyle/11147806)。想知道自己買過的外食有沒有中鏢，不必只看新聞片段，食藥署與地方衛生局都有公開查詢系統可以直接比對。

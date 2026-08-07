@@ -50,6 +50,7 @@ references:
   - title: "Sleep Apnea"
     url: "https://my.clevelandclinic.org/health/diseases/8718-sleep-apnea"
     publisher: "Cleveland Clinic"
+topics: ["first-aid-basics"]
 ---
 
 整晚睡不著，如果已經躺在床上超過20分鐘還完全清醒，先起身離開房間，做點讓自己放鬆的事，等有睡意再回床上，這是英國國民保健署（NHS）建議的第一步。勉強繼續躺著硬逼自己睡，容易讓大腦把床和「睡不著的焦慮」綁在一起，越躺越清醒。

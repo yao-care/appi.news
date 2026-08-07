@@ -42,6 +42,7 @@ references:
   - title: "NVIDIA Nemotron 3 Ultra Powers Faster, More Efficient Reasoning for Long-Running Agents"
     url: "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/"
     publisher: "NVIDIA Technical Blog"
+topics: ["ai-agent-governance"]
 ---
 
 NVIDIA 這次端出來的東西，很容易被當成「又一個 agent 工具包」掃過去。但這次值得停一下。它在[一個開源 agent 開發平台](https://nvidianews.nvidia.com/news/ai-agents)裡放了兩塊真正的重點：一個叫 OpenShell 的 runtime，和一顆為長任務調過的開源模型 Nemotron 3 Ultra；採用名單上有 Adobe、Salesforce、SAP、ServiceNow、CrowdStrike、Red Hat 在內、NVIDIA 列出的 17 家軟體大廠。重點不在它多了哪些功能，而在它把安全、網路、隱私的護欄，從提示詞裡的叮嚀，改寫成 runtime 層強制執行的規則。真正要看的，是治理被往工具層下沉，不是模型又跑了幾分。

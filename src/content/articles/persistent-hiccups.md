@@ -45,6 +45,7 @@ references:
   - title: "新生兒打嗝知多少"
     url: "https://www.hc.mmh.org.tw/child/know_health_view.php?docid=105"
     publisher: "馬偕紀念醫院新竹分院"
+topics: ["first-aid-basics"]
 ---
 
 打嗝停不下來的當下，最該做的一件事，是先試著憋氣、做用力如解便般的憋氣動作（Valsalva maneuver），或慢慢喝一杯水。台灣家庭醫學醫學會刊登於《家庭醫學與基層醫療》的回顧文章指出，這類非藥物方式適合急性打嗝時嘗試，多半能干擾打嗝的反射動作。本文為衛教整理，不能取代醫師對個別狀況的診斷與處置。

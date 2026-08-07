@@ -45,6 +45,7 @@ references:
     url: "https://www.storm.mg/article/11153430"
     publisher: "風傳媒"
 draft: false
+topics: ["energy-policy"]
 ---
 
 台電「高雄～雄積三、四線」輸電線路工程8月1日正式竣工送電，[南科高雄楠梓園區供電能力可望從現有約400MW提升到逾1000MW](https://www.cna.com.tw/news/afe/202608020028.aspx)，是台電「強化電網韌性建設計畫」在南部的最新落地進度。這項工程去年5月動工，[原訂42個月工期大幅縮減至15個月，提前逾2年完工](https://udn.com/news/story/7238/9665608)，直接回應的是楠梓半導體園區持續擴產帶來的用電壓力。

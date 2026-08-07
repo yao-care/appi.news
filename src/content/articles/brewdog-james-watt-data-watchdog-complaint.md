@@ -48,6 +48,7 @@ disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體�
 coverImage: "covers/brewdog-james-watt-data-watchdog-complaint-cover.webp"
 coverAlt: "已停業的BrewDog亞伯丁分店（資料照）"
 coverImageCredit: "UltrasonicMadness — CC BY-SA 4.0, Wikimedia Commons"
+topics: ["startups-and-vc"]
 ---
 
 蘇格蘭精釀啤酒品牌BrewDog共同創辦人華特（James Watt），近日因試圖買回公司而聯繫前股東，卻惹上資料保護爭議。據[Irvine Times報導](https://www.irvinetimes.com/news/national/26290665.brewdog-co-founder-james-watt-faces-complaints-uk-data-watchdog/)，華特7月15日（週三）透過新成立的啤酒公司Second Best提出新一輪收購要約，自稱已獲4.3萬名「股權龐克」（Equity Punk）投資人支持買回這間他一手創立的公司。但《衛報》7月17日（週五）披露，部分遭他聯繫的前股東表示不清楚自己的聯絡資料從何而來，已向英國資訊專員辦公室（Information Commissioner's Office，ICO）投訴；ICO證實正在評估相關資訊。

@@ -23,6 +23,7 @@ references:
   - title: "金融監督管理委員會 (2024). 提供虛擬資產服務之事業或人員洗錢防制登記辦法"
     url: "https://law.fsc.gov.tw/LawContent.aspx?id=GL004000"
 draft: false
+topics: ["taiwan-macro-economy"]
 ---
 ## 一、前言：穩定幣熱潮下，一份BIS報告的警訊
 

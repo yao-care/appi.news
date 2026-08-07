@@ -23,6 +23,7 @@ references:
   - title: "State Street Global Advisors（2026）. *Gold 2026 Outlook: Can the Structural Bull Cycle Continue to $5,000?"
     url: "https://www.ssga.com/us/en/intermediary/insights/gold-2026-outlook-can-the-structural-bull-cycle-continue-to-5000"
 draft: false
+topics: ["taiwan-macro-economy"]
 ---
 金價近期從高點回落，讓不少手上持有黃金、或正在考慮配置黃金的人開始猶豫：這波拉回，是黃金多頭結構反轉的訊號，還是正常的價格修正？背後牽涉兩組互相拉鋸的力量，一邊是央行持續買金、地緣政治風險升溫、市場對美國聯準會（Fed）降息的期待；另一邊是油價走高推升通膨，可能延後降息時程，帶動美元與美債殖利率走強，壓抑不孳息資產黃金的吸引力。以下整理6個看懂這波拉鋸、並回頭檢視自己資產配置的重點。
 

@@ -49,6 +49,7 @@ disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體�
 coverImage: "covers/japan-kumamoto-earthquake-mall-collapse-cover.webp"
 coverAlt: "盛開櫻花樹前的熊本城天守閣"
 coverImageCredit: "Photo by Mohammed Kertiou on Unsplash"
+topics: ["first-aid-basics"]
 ---
 
 日本九州爆發今年以來規模最大的一起強震。[首相官邸公布的首相談話](https://japan.kantei.go.jp/105/speech/202607/28press.html)指出，7月28日下午4時27分左右，熊本地方發生規模7.1強震，熊本縣宇城市氷川町測得最高震度7級，達日本震度標的最高等級，九州全境都感受到明顯搖晃；[美國地質調查所後將規模修正為6.8](https://www.newsweek.com/japan-kumamoto-earthquake-news-update-12253419)。震央鄰近的鹿島町裡，一間AEON Mall購物中心二樓在強震中倒塌，警方另接獲疑似爆炸的通報，數十名員工一度下落不明。有明海一度發布海嘯警報，數小時內解除。

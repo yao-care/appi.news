@@ -39,6 +39,7 @@ sourceType: "editorial"
 disclaimerType: "financial"
 coverImage: "covers/post-707.webp"
 coverAlt: "全球FinTech融資2025年重回疫情前規模超級大額交易主導2026年延續集中化趨勢"
+topics: ["startups-and-vc"]
 ---
 
 全球金融科技（FinTech）產業的融資格局，在2025年完成了一次結構性重整。總金額重回疫情前水準，但背後的組成截然不同：交易件數降至八年低點，頭部效應空前明顯，資金高度集中在少數大型晚期交易。進入2026年，這個趨勢並未逆轉，反而更加強化，對台灣金科生態系的影響，值得認真梳理。

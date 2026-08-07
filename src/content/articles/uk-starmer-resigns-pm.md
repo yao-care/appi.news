@@ -96,6 +96,7 @@ disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體�
 coverImage: "covers/uk-starmer-resigns-pm-cover.webp"
 coverAlt: "英國首相施凱爾抵達唐寧街10號（資料照）"
 coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commons"
+topics: ["taiwan-macro-economy"]
 ---
 
 英國正式完成政權交接。大曼徹斯特市長伯納姆（Andy Burnham）7月20日先赴白金漢宮晉見國王查爾斯三世，隨後在唐寧街10號外發表首場首相演說，正式接替同日稍早遞出辭呈的施凱爾（Sir Keir Starmer）。據[LabourList刊出的演說全文](https://labourlist.org/2026/07/andy-burnham-first-speech-pm-transcript/)，伯納姆在演說中承諾「給民眾一些喘息空間、對生活成本的一些協助」，並自稱是「10年內第7位」走上唐寧街的首相，將此刻定位為英國的「斷路器」時刻。他同日宣布廢除施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，把資源轉向生活成本協助；內閣名單也同步公布，財政大臣一職最終出人意表由前國防大臣希利（John Healey）出任，原被看好接掌財政的馬哈穆德（Shabana Mahmood）、米勒班（Ed Miliband）雙雙落空，米勒班改任外交大臣，庫珀（Yvette Cooper）回任內政大臣。伯納姆確定接班後曾接受球評萊內克（Gary Lineker）專訪，首度就財富稅與對美關係表態，拒絕排除開徵財富稅，也允諾會以「非常坦率」的態度與美國總統川普互動；就任前夕，前首相蘇納克（Rishi Sunak）與強森（Boris Johnson）也分別透過報章與電視節目公開向他建言。

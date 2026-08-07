@@ -52,6 +52,7 @@ references:
     url: "https://www.nintendolife.com/news/2026/06/hacker-group-steals-nintendo-employee-data-posts-usd2-million-ransom"
     publisher: "Nintendo Life"
     note: "ShadowByt3$ 竊 859MB 員工資料、喊價 200 萬美元、破口在第三方平台 TINYpulse"
+topics: ["ai-agent-governance"]
 ---
 
 <p>ServiceNow 在 6 月 9 日揭露一起資安事件：平台上一個 Scripted REST API 端點因為預設不需要驗證，未授權的請求可以直接查到客戶執行個體裡的資料表。比這個技術細節更該記住的，是它代表的類型。2026 年的企業資料外洩，越來越多不是有人攻破了防火牆，而是某個 SaaS 服務的 API 認證設定本來就沒鎖好。問題換了，企業要顧的東西也得跟著換。不是「我家防線夠不夠硬」，而是「我串出去、和被串進來的每一個 API，認證邊界到底誰在顧」。</p>

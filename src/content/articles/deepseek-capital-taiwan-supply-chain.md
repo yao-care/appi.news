@@ -45,6 +45,7 @@ references:
   - title: "Sector Snapshot: Venture Funding To Foundational AI Startups In Q1 Was Double All Of 2025"
     url: "https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/"
     publisher: "Crunchbase News"
+topics: ["startups-and-vc"]
 ---
 
 大部分人看到這條新聞，記住的是一個數字：74 億美元。

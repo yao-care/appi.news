@@ -56,6 +56,7 @@ references:
     url: "https://netzero.cna.com.tw/news/202412050135/"
     publisher: "中央社"
 draft: false
+topics: ["energy-policy"]
 ---
 
 《建築物設置太陽光電發電設備標準》8月1日正式施行，這是內政部與經濟部依《再生能源發展條例》第12條之1第2項會銜訂定的新規範，2025年12月19日公告。新建、增建建築面積達1,000平方公尺（約300坪）以上，或既有建築改建、變動屋頂面積達同規模者，須依每20平方公尺設置1瓩（kW）太陽光電發電設備，內政部估計每年可新增約66萬瓩（660MW）裝置容量（見[內政部公告](https://www.moi.gov.tw/News_Content.aspx?n=145&s=335365)、[全國法規資料庫](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0070319)）。

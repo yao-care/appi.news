@@ -62,6 +62,7 @@ references:
   - title: "ACE inhibitors versus angiotensin receptor blockers for primary hypertension"
     url: "https://www.cochrane.org/zh-hant/evidence/CD009096_angiotensin-converting-enzyme-ace-inhibitors-versus-angiotensin-receptor-blockers-primary"
     publisher: "Cochrane"
+topics: ["first-aid-basics"]
 ---
 
 晚上咳嗽一發作，先把整個上半身墊高到肩膀，讓床頭到腰部形成一段連續的斜坡，這比在頭下多塞一顆枕頭有效。Cleveland Clinic家醫科醫師Elizabeth Rainbolt指出，抬高頭部是睡覺時最有幫助的姿勢，能減少分泌物在喉嚨後方堆積。躺平時鼻涕倒流或胃酸容易刺激喉嚨誘發咳嗽反射，這正是夜咳常見的原因。先做這件事，接下來看看什麼情況要立刻就醫、居家還能做什麼。

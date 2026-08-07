@@ -41,6 +41,7 @@ disclaimerType: "general"
 coverImage: "covers/post-624-stock.jpg"
 coverAlt: "資料中心機架列陣的近距離特寫"
 coverImageCredit: "Photo by panumas nikhomkhai on Pexels"
+topics: ["energy-policy"]
 ---
 
 台灣AI資料中心的選址困境，已從「哪裡便宜」變成「哪裡有電」。[台電自2024年起暫緩桃園以北用電量超過5MW以上資料中心的用電申請](https://www.reccessary.com/zh-tw/news/5mw-ai-data-center-taipower)，這條隱形的地理紅線，正迫使大型算力設施重新布局。根源在於一個持續惡化的結構問題：2023年北部用電量達930億度，發電量僅750億度，缺口約200億度，全靠南電北送、中電北送撐著。

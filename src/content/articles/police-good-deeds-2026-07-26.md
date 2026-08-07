@@ -31,6 +31,7 @@ references:
   - title: "八旬婦外出散步未返家 文山警迅速尋獲助團圓"
     url: "https://police.gov.taipei/News_Content.aspx?n=0B762199E50C4AB2&sms=72544237BBE4C5F6&s=A2744099294D6C07"
     publisher: "臺北市政府警察局"
+topics: ["police-good-deeds"]
 ---
 
 臺北市政府警察局文山第一分局日前公布一起員警協尋長者的案例：一名習慣到河堤散步的八旬婦人外出後遲遲未返家，家屬心急報案，指南派出所員警依定位資訊逐一排查周邊區域，順利在住家附近一處建築物內尋獲，讓家屬鬆了一口氣。

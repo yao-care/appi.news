@@ -32,6 +32,7 @@ references:
   - title: "警消攜手耐心勸導化解危機 關山警即時救援守護珍貴生命"
     url: "https://www.ttcpb.gov.tw/chinese/home.jsp?serno=201105170013&contlink=ap/news_view.jsp&dataserno=202607310005"
     publisher: "臺東縣政府警察局"
+topics: ["police-good-deeds"]
 ---
 
 親友或路人情緒忽然失控、疑似有輕生念頭時，在場的人常常慌了手腳，不確定第一步該做什麼、該找誰幫忙。臺東縣警察局關山分局日前處理的一起個案，示範了警消到場後實際的做法。

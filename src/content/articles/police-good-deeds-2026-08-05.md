@@ -30,6 +30,7 @@ references:
   - title: "萌貓受困汽車底盤 暖警耐心救援助脫困"
     url: "https://police.gov.taipei/News_Content.aspx?n=0B762199E50C4AB2&sms=72544237BBE4C5F6&s=778D2FFC3C94819A"
     publisher: "臺北市政府警察局"
+topics: ["police-good-deeds"]
 ---
 
 深夜聽到自家車底傳出微弱貓叫聲，第一時間該怎麼辦？臺北市中正第二分局員警最近就處理了一起這樣的案例，靠著耐心與分工，把鑽進車底盤、怎麼哄都不肯出來的幼貓平安救出。

@@ -41,6 +41,7 @@ references:
   - title: "走失柴犬重回懷抱，警暖心協助長者破涕為笑"
     url: "https://police.gov.taipei/News_Content.aspx?n=0B762199E50C4AB2&sms=72544237BBE4C5F6&s=EEB7CCC0F4B1C0B7"
     publisher: "臺北市政府警察局"
+topics: ["police-good-deeds"]
 ---
 
 家人一時走失，報案之後警方實際上會怎麼處理？這幾天臺北市警方接連處理三起走失協尋案例，對象涵蓋記憶混淆的長輩、與母親走散的幼童，還有牽繩鬆脫的寵物犬，過程可以看出警方協尋的實際做法，也能看出家屬事前可以先準備哪些東西，縮短找人找狗的時間。

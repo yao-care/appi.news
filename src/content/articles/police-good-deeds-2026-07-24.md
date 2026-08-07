@@ -35,6 +35,7 @@ references:
   - title: "車不動，警來動！竹北警「人力左轉」神救援"
     url: "https://www.hchpb.gov.tw/Tw/Common/BulletinDetail?filter=0EC3F79A-710D-4986-A51B-D9AA24862C8C&id=c7098f36-d11c-4540-bdb3-2b57d783317c&SiteID=6d0e3b6b-4623-45b4-ba6e-395e3b79eae0"
     publisher: "新竹縣政府警察局"
+topics: ["police-good-deeds"]
 ---
 
 這幾天南北兩地都傳出員警機警應變的暖心案例：臺東警察分局員警在街頭扶起體力不支倒地的男子,護送他平安返家;新竹縣竹北分局員警則在上班尖峰時段,靠著短短一次左轉綠燈,合力把拋錨車輛推離車道。本篇整理這兩則案例,內容均依警察局對外公開的新聞稿,並附上原文出處。

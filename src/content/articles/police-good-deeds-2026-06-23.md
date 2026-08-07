@@ -49,6 +49,7 @@ references:
   - title: "婦人夜晚迷途街頭 暖警即時協助平安返家"
     url: "https://police.gov.taipei/News_Content.aspx?n=0B762199E50C4AB2&sms=72544237BBE4C5F6&s=DCB557BD5BB059BD"
     publisher: "臺北市政府警察局"
+topics: ["police-good-deeds"]
 ---
 
 這一週，臺灣各地警察局又陸續公布了一批日常勤務裡的暖心案例：有人在祭典人潮中找回放聲大哭的孩子，有人趕在末班車前追回外籍旅客的護照，也有人在深夜與陰雨裡，把迷途的長者一一帶回家。本篇整理其中五則具代表性的好人好事，內容均依各局對外公開的新聞稿，並附上原文出處。

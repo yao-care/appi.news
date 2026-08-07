@@ -35,6 +35,7 @@ references:
   - title: "失智老婦迷途徘徊 池上警暖心護送"
     url: "https://www.ttcpb.gov.tw/chinese/home.jsp?serno=201105170013&contlink=ap/news_view.jsp&dataserno=202607210010"
     publisher: "臺東縣警察局"
+topics: ["police-good-deeds"]
 ---
 
 這幾天各地警局陸續傳出協助民眾的暖心案例：臺北大同分局員警幫日籍旅客尋回遺失相機，趕在班機起飛前送到機場；臺東關山分局員警則在巡邏途中發現徬徨徘徊的失智老婦，耐心協助她平安返家。本篇整理這兩則案例，內容均依各地警察局對外公開的新聞稿，並附上原文出處。

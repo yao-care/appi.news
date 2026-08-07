@@ -61,6 +61,7 @@
 | 三關體檢：頁面分散度／回訪與品牌／週線與世代 | `pnpm growth:audit`（可加 `--gate1`／`--gate2`／`--gate3`／`--cohort`） |
 | 成長規則覆蓋率（零內鏈幾篇、topics 空幾篇…） | `pnpm growth:lint:all`；排工作清單用 `node scripts/growth-lint.mjs --all --worst 30` |
 | 成長工作還剩多少沒做、下一批該做誰 | `pnpm growth:backlog`（含與上次快照的增減；每週一台北 09:00 由 cron 自動發 Slack 提醒） |
+| 主題中樞雷達這輪有沒有夠格的新主題 | `node scripts/topic-hub-radar.mjs`（dry-run；每週三台北 09:00 由 cron 自動建立並上線，門檻與帳本見該檔檔頭） |
 | 寫作成長規則的正本內容 | `node -e 'import("./scripts/lib/growth-prompt.mjs").then(m=>console.log(m.GROWTH_PROMPT))'` |
 | 線上效能／無障礙現況 | 依 [`PERFORMANCE.md`](./PERFORMANCE.md) §3 跑 PSI 對線上站 |
 

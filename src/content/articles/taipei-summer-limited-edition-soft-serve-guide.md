@@ -1,7 +1,8 @@
 ---
-title: 台北期間限定霜淇淋去哪吃？老字號復刻聖代、日系玉米霜淇淋、東京花漾造型整理
-description: 台北這個夏天同時有三檔限定甜點：波麗路復刻60年前聖代、LeTAO推出玉米口味霜淇淋、東京DOLCE TACUBO花漾霜淇淋快閃晶華，供應期間、地點與價格一次整理。
+title: "台北聖代、SOGO復興B3玉米霜淇淋、晶華快閃甜點去哪吃"
+description: "波麗路大稻埕限量復刻60年前聖代、LeTAO進駐SOGO復興館B3推出玉米霜淇淋、東京DOLCE TACUBO晶華酒店Regent Gift Shop快閃，三檔台北限定甜點的供應地點、期間與價格整理。"
 publishDate: "2026-08-02T12:00:00+08:00"
+updatedDate: 2026-08-07
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"

@@ -1,9 +1,10 @@
 ---
-title: "野火救災機器人為什麼刻意不裝AI自主？　加州「半人馬機器人」首度曝光，說明書罕見寫上怎麼讓它停下"
+title: "半人馬機器人加州曝光　野火救災為何不裝AI自主"
 slug: "wildfire-disaster-robot-no-ai-control"
-description: "加州機器人新創公司Satyress Robotics近日曝光一款代號Threehalves的半人馬造型機器人，結合四足底盤與人形上半身，設計用來替人類進入野火現場、倒塌建物與有毒物質洩漏等危險環境執行鏈鋸、鑽孔等高風險任務。這款機器人刻意不搭載自主AI，全程仰賴遠端操作員以搖桿控制，官網甚至罕見詳列如何讓機器人停止運作的方法；野火消防從業社群則對地面機器人能否勝任第一線任務持審慎態度。"
+description: "加州新創Satyress Robotics打造半人馬造型機器人Threehalves，四足底盤加人形上半身，設計用於野火現場、倒塌建物與毒物洩漏等危險任務，卻刻意不搭載自主AI、全程仰賴遠端操作員手持搖桿控制，官網甚至詳列如何讓機器人停止運作的方法，本文整理設計細節、消防從業者觀點與目前開發進度。"
 excerpt: "加州新創Satyress曝光半人馬造型機器人Threehalves，設計替人類進入野火與災難現場執行高風險任務，卻刻意不裝AI自主、全靠搖桿操作，官網還詳列如何讓它停下；消防從業社群對地面機器人能否勝任野火現場仍持保留態度。"
 publishDate: "2026-08-03T16:39:48.586Z"
+updatedDate: 2026-08-07
 category: "international"
 subcategory: "global-trends"
 tags:

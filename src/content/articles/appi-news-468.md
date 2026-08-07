@@ -1,9 +1,9 @@
 ---
-title: "醫療AI黑箱和可解釋AI差在哪？怎麼選才安全"
+title: "黑箱AI是什麼？和可解釋AI差在哪，醫療怎麼選才安全"
 slug: "appi-news-468"
-description: "企業導入AI常遇到黑箱決策的信任問題，醫療場域因牽動診斷與病患安全而風險倍增。從AI藥物老藥新用案例看可解釋性工具如何讓臨床決策路徑可追溯。"
+description: "黑箱AI指模型無法說明推論過程，一般商業場景頂多影響效率，但醫療診斷牽動病患安全風險倍增。用AI老藥新用案例看可解釋性工具如何讓決策路徑可追溯、值得信任。"
 publishDate: 2026-07-29
-updatedDate: 2026-08-06
+updatedDate: 2026-08-07
 category: health
 subcategory: medtech
 tags: ["醫療AI", "AI治理", "AI", "數位健康", "藥物研發", "醫病關係", "醫療政策", "心理健康"]

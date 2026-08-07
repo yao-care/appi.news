@@ -1,9 +1,10 @@
 ---
-title: "Claude Fable 5 開出「Mythos 級」新層級：模型分層對開發者到底差在哪"
+title: "Claude Fable 5是什麼？Mythos級差在哪、為何變笨"
 slug: "claude-fable-5-mythos-class-model-tiering"
-description: "Anthropic 6 月 9 日把 Fable 5 推上「Mythos 級」，一個比 Opus 高一階的正式產品層。真正該看的不是 80.3 這種跑分，而是它在長任務、agentic coding 上的領先會隨任務難度拉開。這篇拆解這個分層對開發者選型的實際意義：哪些工作值得用貴一倍的模型、哪些 Opus 4.8 就夠。"
+description: "Fable 5是Anthropic定價比Opus 4.8貴一倍的新層級Mythos級，任務越難、步驟越長，領先幅度才會明顯拉開。這篇整理Mythos級跟Opus 4.8到底差在哪、哪些工作值得多付這筆錢、哪些留在Opus 4.8就夠，並解釋為什麼最近有人覺得Claude變笨，其實是安全限制變多，不是模型退步。"
 excerpt: "Anthropic 6 月 9 日把 Fable 5 推上「Mythos 級」，一個比 Opus 高一階的正式產品層。真正該看的不是 80.3 這種跑分，而是它在長任務、agentic coding 上的領先會隨任務難度拉開。這篇拆解這個分層對開發者選型的實際意義。"
 publishDate: "2026-06-16T22:56:27.649Z"
+updatedDate: 2026-08-07
 category: "tech"
 subcategory: "ai"
 tags:

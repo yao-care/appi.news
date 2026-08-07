@@ -1,8 +1,9 @@
 ---
-title: "綜合維他命到底要不要吃？兩萬人研究說「護腦」，官方指引卻說「證據不足」"
+title: "綜合維他命的好處與缺點？兩萬人研究：防病不顯著，護腦效果小"
 slug: "multivitamin-worth-taking"
-description: "綜合維他命不是保險，也不是護腦神藥。COSMOS 兩萬人試驗顯示它防癌、防心血管都沒有顯著效果，USPSTF 也判證據不足；認知益處存在但幅度很小。教你判斷自己該不該吃。"
+description: "COSMOS 兩萬人試驗顯示，綜合維他命防癌、防心血管疾病都沒有顯著效果；認知／護腦益處雖存在但幅度很小，多數人未必感覺得到。文章整理誰該吃、誰不必吃，以及法規紅線。"
 publishDate: 2026-07-22T20:00:00+08:00
+updatedDate: 2026-08-07
 category: health
 subcategory: nutrition
 tags:

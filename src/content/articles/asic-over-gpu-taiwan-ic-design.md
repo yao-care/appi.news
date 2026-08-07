@@ -1,9 +1,10 @@
 ---
-title: "AI 的錢從 GPU 換到 ASIC：小摩估 2026 出貨年增 109%、2027 超車 GPU，台灣 IC 設計族群迎重估"
+title: "ASIC晶片出貨衝109%超車GPU，世芯喊到6200元"
 slug: "asic-over-gpu-taiwan-ic-design"
-description: "摩根大通估 2026 年客製化 ASIC 晶片出貨年增 109%、占 AI 晶片出貨約 42%，2027 年以 53% 正式超車 GPU。台灣世芯、創意、智原等 IC 設計服務族群被法人重估，但這波是贏者全拿，該問的是誰真的拿到 CSP 專案。"
+description: "摩根大通估2026年ASIC晶片出貨年增109%、2027年以53%超車GPU，台灣世芯目標價喊到6200元、創意6800元，法人重估IC設計服務族群，但真正該問的是誰接到CSP專案、客戶集中度與製程位階。"
 excerpt: "為什麼雲端巨頭寧可自己設計晶片也不多買 GPU？答案不在演算法，在電費。當每瓦效能變成天花板，專用 ASIC 就贏了，而台灣卡的是設計服務這道別人繞不過的工序。"
 publishDate: "2026-07-12T08:00:00+08:00"
+updatedDate: 2026-08-07
 category: "tech"
 subcategory: "semiconductor"
 tags:

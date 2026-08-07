@@ -1,9 +1,9 @@
 ---
-title: "瘦瘦針完整指南：事前評估、用藥監測與飲食管理"
+title: "瘦瘦針原理與GLP-1副作用：用藥前中後完整指南"
 slug: "appi-news-180"
-description: "想嘗試 GLP-1 瘦瘦針？抽血評估肝腎功能、監測副作用、補足蛋白質，這三個環節缺一不可。帶你了解使用前中後完整的健康管理配套。"
+description: "瘦瘦針靠GLP-1調節食慾與血糖來減重，原理是模擬腸道天然荷爾蒙訊號。這篇整理用藥常見的噁心、腹瀉等副作用怎麼因應，以及事前抽血評估、飲食蛋白質補充的完整照護重點。"
 publishDate: 2026-06-21
-updatedDate: 2026-08-06
+updatedDate: 2026-08-07
 category: health
 subcategory: tcm-integrative
 tags: []

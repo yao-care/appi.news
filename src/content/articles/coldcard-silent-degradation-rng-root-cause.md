@@ -1,9 +1,9 @@
 ---
-title: "如何避免靜默降級：Coldcard冷錢包事件的3個檢查點"
+title: "Coldcard冷錢包事件：MICROPY_HW_ENABLE_RNG為何讓私鑰被算出來"
 slug: "coldcard-silent-degradation-rng-root-cause"
-description: "Coldcard冷錢包41分鐘被轉出逾千枚比特幣，根因是一個關掉五年的亂數產生器組態，裝置本身並未遭入侵。從問題重新定義到三個可執行檢查點，拆解靜默降級為何連code review都看不到。"
+description: "Coldcard冷錢包41分鐘被轉出逾千枚比特幣，根因是建置旗標MICROPY_HW_ENABLE_RNG被誤判為啟用，讓亂數產生器悄悄降級成可預測版本，裝置本身並未遭入侵。拆解事件全貌與3個可執行檢查點，防止同樣的靜默降級發生在你的系統。"
 publishDate: 2026-08-05
-updatedDate: 2026-08-06
+updatedDate: 2026-08-07
 category: tech
 subcategory: security
 tags: ["資安", "資料治理", "個資保護", "開源", "數位轉型", "醫療AI", "數位健康"]

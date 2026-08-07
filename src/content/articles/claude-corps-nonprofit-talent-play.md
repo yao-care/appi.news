@@ -1,9 +1,10 @@
 ---
-title: "Anthropic 砸 1.5 億辦 Claude Corps、派 1000 人進非營利：是公益，也是把 Claude 鋪進組織的長線"
+title: "Claude NPO是什麼？Anthropic砸1.5億美元派1000人進駐非營利"
 slug: "claude-corps-nonprofit-talent-play"
-description: "Anthropic 6/18 宣布 Claude Corps，初期投入 1.5 億美元、招 1000 名 fellow，年薪 8.5 萬美元進駐至少 400 家非營利組織一年。這筆錢一半是公益，一半是通路：在數百家組織內部養出對 Claude 的日常依賴，也替市場養一批以 Claude 為母語的人才。台灣該學的不是撒錢，是先問 NPO 的瓶頸到底是不是缺 AI。"
+description: "Claude NPO 是 Anthropic 6 月宣布的 Claude Corps 計畫：砸 1.5 億美元招 1000 名 fellow，年薪 8.5 萬美元進駐至少 400 家非營利組織一年教用 Claude。文章拆解公益與通路各半的算盤，以及台灣該學的順序：先問 NPO 缺的到底是不是 AI。"
 excerpt: "為什麼一家前沿模型公司要花 1.5 億去教非營利組織用 AI？把它讀成純慈善會漏掉一半：同一筆錢也在把 Claude 鋪進 400 家組織的日常，順便養一批以 Claude 為工具母語的早期職涯人才。"
 publishDate: "2026-07-10T08:00:00+08:00"
+updatedDate: 2026-08-07
 category: "tech"
 subcategory: "industry-tech"
 tags:

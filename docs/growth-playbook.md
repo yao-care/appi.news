@@ -21,12 +21,21 @@
 
 ```bash
 cd /root/appi.news
+pnpm growth:backlog          # 還剩多少沒做 + 下一批該做哪 10 篇（先跑這個就夠）
 pnpm growth:audit            # 三關現況＋世代分析（GA4＋GSC 實跑，禁憑記憶）
 pnpm growth:lint:all         # 存量覆蓋率盤點（零內鏈幾篇、topics 空幾篇…）
-node scripts/growth-lint.mjs --all --worst 30   # 排出最該補的前 30 篇
 ```
 
-看完上面兩個輸出，再回來讀 §2 決定這一輪要推哪一條路線。**不要憑記憶報數字。**
+看完上面的輸出，再回來讀 §2 決定這一輪要推哪一條路線。**不要憑記憶報數字。**
+
+### 進度追蹤與提醒（站長 2026-08-07 裁示：分批做，沒做完要定期提醒）
+
+存量工作短期不做不會壞，全靠人記必定無限延後，所以做成機制：
+
+- **每週一台北 09:00**，`scripts/cron/growth-backlog.sh` 自動跑 `growth-backlog.mjs` 發一則到 Slack 作者群，內容＝各項還剩幾篇、**和上週相比做掉幾篇**、下一批建議做哪 10 篇。純資料不喚 Claude，不吃額度。
+- **下一批怎麼挑**：拿 GSC「有曝光但 0 點擊」名單 ∩「零內鏈」，依曝光量由高到低——同時吃到 B2 與 A1 兩份效益。取不到 GSC 就退回純 lint 排序。
+- **快照存 `~/.config/appi-news/growth-backlog.json`**，不進 repo（發佈端每次產文會 reset 到 origin/main，放 repo 會被洗掉）。
+- 進度數字一律現算，**不寫進本檔**。
 
 ## 1. 三關的定義與判準
 

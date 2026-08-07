@@ -130,11 +130,17 @@ Publisher Center 可用網站爬取或 feed。本站兩者都備好：
 
 ---
 
-## 6. 一個尚未填的可加分項（與本資料包相關）
+## 6. 官方社群連結（`org.sameAs`）
 
-`src/config/site.ts` 的 `org.sameAs` 目前是**空陣列** —— 站上沒有對外掛任何官方社群／權威連結（FB / LinkedIn / X / Threads / 維基）。這會讓 Google 與 AI 較難交叉核對「APPI News 是真實媒體實體」，間接影響 Google News 對刊物的信任。
+站上掛出的官方社群／權威連結會進 Organization structured data，讓 Google 與 AI 交叉核對「APPI News 是真實媒體實體」，間接影響 Google News 對刊物的信任。
 
-建立 Publisher Center 帳號後，建議回填這些官方帳號網址到 `org.sameAs`（會自動進 Organization structured data）。等你有了社群帳號，我可以幫你補進去。
+**目前掛了哪些一律用指令查，本檔不寫死**（會變）：
+
+```bash
+node -e 'import("./src/config/site.ts")' 2>/dev/null || sed -n '/sameAs: \[/,/\] as string\[\]/p' src/config/site.ts
+```
+
+新增帳號時直接把**帳號首頁**網址加進 `src/config/site.ts` 的 `org.sameAs`（不要填單則貼文網址——貼文會被刪或改為不公開，sameAs 的語意是「本機構在該平台的身分」）。加之前先確認該網址公開可存取。
 
 ---
 
@@ -142,4 +148,4 @@ Publisher Center 可用網站爬取或 feed。本站兩者都備好：
 
 1. 用哪個 Google 帳號當刊物擁有者（建議與 GSC 同帳號，免重驗）。
 2. 要不要我先產一個**長方形含字 logo**（目前唯一缺口）。
-3. 要不要開官方社群帳號以回填 `org.sameAs`（信任訊號）。
+3. 還要不要再補其他平台的官方帳號到 `org.sameAs`（信任訊號；已掛哪些見上面 §6 的查法）。

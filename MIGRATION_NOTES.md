@@ -69,5 +69,5 @@ python3 scripts/migrate_wp.py
 ## 排程發佈機制
 
 - `src/utils/content.ts` 的 `isPublic()` 會過濾掉 `publishDate > build 當下時間` 的文章。
-- `.github/workflows/deploy.yml` 設定每 6 小時 cron 重建，
+- `.github/workflows/deploy.yml` 設定排程重建（間隔以該檔 `schedule` 為準），
   因此 `future` 文章會在其日期之後的下一次重建自動上線，不會一次全部出現。

@@ -2,8 +2,9 @@
 # 每日 cron：健康紀念日「準點上線」。UTC 22:17 = 台北 06:17（隔天）。
 #
 # 為什麼需要這支：文章能不能公開，取決於「build 當下的時間」有沒有超過 publishDate
-# （src/utils/content.ts 的 isPublic）。deploy.yml 只在 push／每 6 小時 cron（台北 02、08、14、20）
-# ／手動觸發時 build，六小時 cron 對不上 06:17，所以由這支在 06:17 準點戳一次 workflow_dispatch。
+# （src/utils/content.ts 的 isPublic）。deploy.yml 只在**排程**（間隔以該檔 `schedule` 為準）
+# ／手動觸發時 build（2026-08-06 起 push 不再觸發），排程對不準 06:17 這種任意時刻，
+# 所以由這支在 06:17 準點戳一次 workflow_dispatch。
 #
 # 純 shell、不動用 Claude：先確認今天真的有排程稿要轉正，沒有就安靜結束。
 # 從觸發到線上可讀約 3-5 分鐘，故文章時間戳是 06:17、實際可見約 06:21（站長 2026-07-28 拍板的取捨）。

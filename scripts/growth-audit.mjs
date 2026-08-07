@@ -11,6 +11,7 @@
 //   node scripts/growth-audit.mjs --gate3    # 只看「週線是否連續成長」
 //   node scripts/growth-audit.mjs --cohort   # 只看「舊文世代自己有沒有在長」
 //   node scripts/growth-audit.mjs --days 28  # 改比較窗（預設 28 天，對比前一個等長窗）
+//   node scripts/growth-audit.mjs --gate1 --top 200  # 「有曝光但 0 點擊」印前 200 名（預設 10；排工作清單用）
 //
 // 需要 GA4／GSC 金鑰（同 weekly-data.mjs，見 scripts/lib/report-config.mjs 檔頭）。
 // 禁杜撰數據：報現況一律以本指令實跑輸出為準。
@@ -23,6 +24,7 @@ const ARTICLES_DIR = 'src/content/articles';
 const argv = process.argv.slice(2);
 const has = (f) => argv.includes(f);
 const DAYS = Number(argv[argv.indexOf('--days') + 1]) > 0 && argv.includes('--days') ? Number(argv[argv.indexOf('--days') + 1]) : 28;
+const TOP = has('--top') && Number(argv[argv.indexOf('--top') + 1]) > 0 ? Number(argv[argv.indexOf('--top') + 1]) : 10;
 const only = ['--gate1', '--gate2', '--gate3', '--cohort'].filter(has);
 const want = (k) => only.length === 0 || has(k);
 
@@ -72,8 +74,8 @@ if (want('--gate1')) {
   const withClick = rows.filter((r) => r.clicks >= 1);
   const dead = withImp.filter((r) => r.clicks === 0).sort((x, y) => y.impressions - x.impressions);
   console.log(`GSC 有曝光頁 ${withImp.length}｜有點擊頁 ${withClick.length}｜有曝光但 0 點擊 ${dead.length} 頁 ← 這批是關卡 A 的存量池`);
-  console.log('曝光最多卻 0 點擊的前 10 頁（改標題／description 的優先名單）：');
-  dead.slice(0, 10).forEach((r) => console.log(`  imp ${String(r.impressions).padStart(5)}  pos ${r.position.toFixed(1).padStart(5)}  ${r.page}`));
+  console.log(`曝光最多卻 0 點擊的前 ${TOP} 頁（改標題／description 的優先名單；--top N 可看更多）：`);
+  dead.slice(0, TOP).forEach((r) => console.log(`  imp ${String(r.impressions).padStart(5)}  pos ${r.position.toFixed(1).padStart(5)}  ${r.page}`));
   console.log();
 }
 

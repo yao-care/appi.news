@@ -21,6 +21,7 @@ import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { hasFaqSection } from './lib/faq-detect.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ARTICLES_DIR = path.join(ROOT, 'src/content/articles');
@@ -91,8 +92,8 @@ export function auditArticle(raw, slugs = new Set()) {
   const desc = get('description');
   if (desc && (width(desc) < 60 || width(desc) > 160))
     bad.push({ level: 'WARN', code: 'G3-desc', msg: `description 約 ${Math.round(width(desc))} 全形字（目標 60–160）` });
-  // G5 FAQ
-  if (!/^#{2,4}\s*(常見問題|FAQ|常見\s*Q\s*&\s*A)/m.test(body))
+  // G5 FAQ（判準與 src/utils/faq.ts 共用，見 scripts/lib/faq-detect.mjs 檔頭）
+  if (!hasFaqSection(body))
     bad.push({ level: 'INFO', code: 'G5-faq', msg: '沒有「常見問題」區段（可拿 FAQPage 結構化資料）' });
 
   return { links: links.length, issues: bad };

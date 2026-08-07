@@ -33,6 +33,7 @@
 | 自動發文：選題雷達 → Slack → 自動產文 → 排程上線 | 🤖 自動化 | 本檔 §自動發文 pipeline → [`docs/automation-invariants.md`](./docs/automation-invariants.md) → [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
 | 了解網路曝光量：流量、搜尋曝光、AI 轉介、週報 | 📊 數據 | 本檔 §數據與網路曝光量 → `.claude/skills/weekly-report/SKILL.md` → [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
 | 讓流量長大：站內導流、存量頁升級、回訪與品牌 | 📈 成長 | [`docs/growth-playbook.md`](./docs/growth-playbook.md)（工作項目＋SOP，先跑 `pnpm growth:audit`）→ 為什麼＝[`docs/lessons/growth-three-gates.md`](./docs/lessons/growth-three-gates.md) |
+| 判斷「某項 SEO／存量優化做了沒」 | 🤖 自動化 | 🔴 **先確認 appi.news 自己也掛在 seo-ops**：`/etc/cron.d/seo-ops` 每天跑 collect／reflect／**brain**（`--site appi.news`，用 `claude-appi` 帳號），大腦層會**實際改單篇內容、跑 gate、commit、push**，產出就是 `[auto-claude-seo]` 開頭的 commit。查法見下方 §查現況。**不查這條就回答「沒做過」必錯**（2026-08-07 踩過）|
 
 ## 查現況：一律跑指令，不要相信任何文件裡的數字
 
@@ -50,10 +51,16 @@
 | 論壇雷達此刻撈到什麼（純資料、不喚 LLM） | `node scripts/forum-radar.mjs`（dry-run） |
 | GA4 property／GSC 站台／Slack 頻道 ID | `grep -nE "GA4_PROPERTY_ID\|GSC_SITE\|CHANNEL" scripts/lib/report-config.mjs` |
 | 站上埋的 GA4 評估 ID | `grep -n gaId src/config/site.ts` |
-| 有哪些 appi cron、排在幾點 | `crontab -l \| grep "appi.news-publisher/scripts/cron"` |
+| 有哪些 appi cron、排在幾點 | `crontab -l \| grep "appi.news-publisher/scripts/cron"`（**crontab 是 UTC，台北 +8**） |
+| 接下來要上什麼（排程稿／待審草稿） | `node scripts/upcoming.mjs`（預設未來 14 天；`--all` 看全部，含等人工核可的待審草稿） |
+| appi 自己的 seo-ops 每日優化排在幾點、最近改了什麼 | `grep -n "appi.news" /etc/cron.d/seo-ops`；近況 `tail -40 /root/seo-ops/logs/appi.news-brain.log`、產出 `git log --oneline --grep=auto-claude-seo -20` |
+| 發佈端（publisher）有沒有跟上最新程式 | `git -C /root/appi.news-publisher log -1 --oneline` 與 `git log -1 --oneline` 比對；Slack server `pm2 status appinews-slack-actions` |
+| 警消線實際掃哪些縣市、幾家 | `node -e 'import("./scripts/lib/lifestyle-police.mjs").then(m=>console.log(m.POLICE_SOURCES.length, m.POLICE_SOURCES.map(s=>s.city).join("、")))'` |
+| 站上掛了哪些官方社群連結（`org.sameAs`） | `sed -n '/sameAs: \[/,/\] as string\[\]/p' src/config/site.ts` |
 | 流量／搜尋曝光現況 | `node scripts/weekly-data.mjs`（**禁杜撰數據**，一律以實跑輸出為準） |
 | 三關體檢：頁面分散度／回訪與品牌／週線與世代 | `pnpm growth:audit`（可加 `--gate1`／`--gate2`／`--gate3`／`--cohort`） |
 | 成長規則覆蓋率（零內鏈幾篇、topics 空幾篇…） | `pnpm growth:lint:all`；排工作清單用 `node scripts/growth-lint.mjs --all --worst 30` |
+| 成長工作還剩多少沒做、下一批該做誰 | `pnpm growth:backlog`（含與上次快照的增減；每週一台北 09:00 由 cron 自動發 Slack 提醒） |
 | 寫作成長規則的正本內容 | `node -e 'import("./scripts/lib/growth-prompt.mjs").then(m=>console.log(m.GROWTH_PROMPT))'` |
 | 線上效能／無障礙現況 | 依 [`PERFORMANCE.md`](./PERFORMANCE.md) §3 跑 PSI 對線上站 |
 

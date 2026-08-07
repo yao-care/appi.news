@@ -183,7 +183,7 @@ topics: ["drug-repurposing"]     # 可選，對應 src/content/topics/
 正文（Markdown）…
 ```
 
-> **排程發佈**：`publishDate` 設未來時間 + `status: scheduled`，文章會在該時間**之後的下一次 build** 才上線。注意上線時機取決於 build，不是時鐘——`isPublic()` 比對的是 build 當下的時間，靜態站沒有 runtime 會在 `publishDate` 那一刻自己翻牌。GitHub Actions 每 6 小時重建一次（台北 02、08、14、20），所以排在非這些整點的時間最多會延遲近 6 小時。要**準點**上線就得另外在那一刻觸發一次部署（健康紀念日線就是這樣做的，見下方 §自動發文流程）。細節與取捨見 [`docs/lessons/annual-observance-scheduling.md`](./docs/lessons/annual-observance-scheduling.md)。
+> **排程發佈**：`publishDate` 設未來時間 + `status: scheduled`，文章會在該時間**之後的下一次 build** 才上線。注意上線時機取決於 build，不是時鐘——`isPublic()` 比對的是 build 當下的時間，靜態站沒有 runtime 會在 `publishDate` 那一刻自己翻牌。**GitHub Actions 排程每 15 分鐘檢查一次**（`.github/workflows/deploy.yml` 的 `schedule`，實際間隔以該檔為準；push 不會觸發部署），排程會偵測到有排程稿到期而重建，所以上線時間最多落後十幾分鐘，但 GitHub 排程常誤點，實際可能 20–30 分鐘。要**準點**上線就得另外在那一刻觸發一次部署（健康紀念日線就是這樣做的，見下方 §自動發文流程）。細節與取捨見 [`docs/lessons/annual-observance-scheduling.md`](./docs/lessons/annual-observance-scheduling.md)。
 > **內文圖**：直接寫 `<img src="/images/檔名.webp">`，build 時 `rehypeBaseImages` 自動補 base 與 `loading="lazy"`。封面放 `public/covers/`、內文圖放 `public/images/`。
 
 ### 用 `/newsroom` 日更（科技類）

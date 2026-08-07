@@ -52,6 +52,7 @@ references:
     url: "https://techfundingnews.com/top-10-us-ai-agents-2026-fastest-scaling-category-52b-by-2030/"
     publisher: "Tech Funding News"
     note: "AI agent 是 2026 成長最快的軟體類別；市場 2024 年 52.5 億、2025 年估 78.4 億、2030 年估 526 億美元"
+topics: ["startups-and-vc"]
 ---
 
 <p>Supabase 在 6 月初宣布完成一輪 5 億美元的 Series F，<a href="https://www.prnewswire.com/news-releases/supabase-raises-500m-at-10-5b-to-accelerate-lead-in-agentic-infrastructure-302791787.html" target="_blank" rel="noopener">由新加坡主權基金 GIC 領投，投後估值站上 105 億美元</a>。對照它七個月前 Series E 還只有 50 億美元，估值在大半年內翻了一倍。我看這則消息，重點不在數字本身有多嚇人，是錢往哪裡流。這一輪熱錢追的不是又一個更大的模型，是讓人快速把 AI 應用做出來的那層基建。</p>

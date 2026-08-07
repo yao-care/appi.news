@@ -70,6 +70,7 @@ references:
   - title: "臺北市就業服務處微型徵才活動釋出853個職缺公告"
     url: "https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=B3E23B2E3A59CE4B"
     publisher: "臺北市政府"
+topics: ["civic-services"]
 ---
 
 今天整理臺北市、新北市、臺中市、高雄市、宜蘭縣、南投縣等地政府公告的便民市政措施，涵蓋交通改道與工程、補助與申辦、健康篩檢與疫苗接種、長照服務，以及求職徵才資訊，方便讀者掌握居住地或鄰近縣市的最新服務。

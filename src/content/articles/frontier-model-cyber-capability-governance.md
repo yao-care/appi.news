@@ -57,6 +57,7 @@ references:
   - title: "ISO/IEC 42001:2023 Artificial Intelligence Management System Standards"
     url: "https://learn.microsoft.com/en-us/compliance/regulatory/offering-iso-42001"
     publisher: "Microsoft Learn"
+topics: ["ai-agent-governance"]
 ---
 
 六月這幾週，AI 圈吵的不是哪個模型又刷新了跑分，而是一個更難回答的問題：當旗艦模型開始具備真刀真槍的網路攻防能力，誰該管、怎麼管。導火線是 Anthropic 的 Mythos 與 Fable 5。美國[商務部一封信下來](https://www.cybersecuritydive.com/news/anthropic-us-government-export-ban-mythos-fable/822909/)，要求對所有外國人（含 Anthropic 自家外籍員工）停止這兩個模型的存取，Anthropic 乾脆全球暫停。緊接著 [76 位資安老將連署反對](https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/)，[G7 峰會上各國領袖和 AI 大廠 CEO](https://www.globalbankingandfinance.com/g7-leaders-vow-closer-ties-ai-they-hash-out-trusted-partners/) 為了這件事坐到同一張桌子。我的看法是：企業與政府的不安，不是反應過度。它暴露的是一個治理缺口，模型釋出的分級、存取門檻、責任歸屬，全都還沒跟上能力曲線。該補的是治理框架，不是叫大家別用。

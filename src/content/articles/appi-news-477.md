@@ -25,6 +25,7 @@ references:
   - title: "Trading Economics (2026). Brent Crude Oil: Price, Chart, Historical Data, News"
     url: "https://tradingeconomics.com/commodity/brent-crude-oil"
 draft: false
+topics: ["taiwan-macro-economy"]
 ---
 布蘭特原油近期一度衝上每桶100美元附近，創下今年新高，牽動的不只是加油站的價格牌，還包括全球公債市場。美國10年期公債殖利率已升至4.63%（前值4.60%），30年期房貸利率同步彈升至6.55%（前值6.49%），而聯邦資金利率則維持在3.63%（目標區間3.50%至3.75%）不變。對多數人而言，這些數字看似是華爾街的事，實際上正在重新定價全球退休族與海外債券投資人手上的部位。
 

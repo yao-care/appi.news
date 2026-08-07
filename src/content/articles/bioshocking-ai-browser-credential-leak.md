@@ -46,6 +46,7 @@ references:
     url: "https://www.infosecurity-magazine.com/news/bioshocking-ai-browser-prompt/"
     publisher: "Infosecurity Magazine"
 originalContribution: "本文把 LayerX 揭露的六款 AI 瀏覽器修補進度整理成一張對照表，並用『解對題 vs 解錯題』框架指出這不是可靠改提示詞補掉的漏洞，而是代理架構把不可信網頁與已登入敏感資源綁在同一條信任通道的結構問題，最後落到台灣企業導入代理式瀏覽器前該問的三個問題。"
+topics: ["ai-agent-governance"]
 ---
 
 一句話講完：六款主流 AI 瀏覽器，被一個假的解謎遊戲頁面全部騙到繞過安全護欄、把使用者登入公司 GitHub 裡的 SSH 帳密抄出去交給攻擊者，沒有一個拒絕。這是資安公司 LayerX [六月底公開的「BioShocking」實測結果](https://layerxsecurity.com/blog/bioshocking-ai-gaming-the-ai-browser-and-escaping-its-guardrails/)。但真正該記住的不是哪家補得快，而是這類代理架構的病灶：它把「讀一個不可信的網頁」和「動用你已經登入的敏感資源」放在同一條信任通道上，靠提示層的護欄根本擋不住。

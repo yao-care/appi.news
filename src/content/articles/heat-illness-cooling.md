@@ -50,6 +50,7 @@ references:
   - title: "認識熱傷害"
     url: "https://tpech.gov.taipei/mp109181/News_Content.aspx?n=80359412498D4193&sms=D6D8C221F7AECFEE&s=F0E8D669516E3145"
     publisher: "臺北市立聯合醫院陽明院區"
+topics: ["first-aid-basics"]
 ---
 
 中暑或熱衰竭發生的當下，最該做的一件事，是立刻把患者移到陰涼通風處、脫掉多餘或緊繃的衣物開始降溫。[國民健康署的衛教資料](https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=577&pid=10751)指出，把身體泡在冷水中（頭露出水面）目前被認為是最快最有效的降溫方法，無法泡水時可以潑冷水加搧風，或在頸部、腋下、鼠蹊部這些表皮血流豐富處放冰袋。本文為衛教整理，不能取代醫師對個別狀況的診斷與處置。

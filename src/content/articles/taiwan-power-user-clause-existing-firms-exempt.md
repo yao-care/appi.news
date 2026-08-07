@@ -53,6 +53,7 @@ references:
     url: "https://udn.com/news/story/7238/9672143"
     publisher: "聯合新聞網"
 draft: false
+topics: ["energy-policy"]
 ---
 
 立法院經濟委員會8月5日初審通過《能源管理法》部分條文修正草案，這條被稱為「用電大戶條款2.0」的修法在[本站上一篇報導](/articles/taiwan-heavy-power-user-storage-mandate/)刊出後不到一天，出現重大轉折：委員會採納了工業總會（工總）先前提出的訴求，把政院原版草案大幅鬆綁。[民進黨立委鍾佳濱、邱議瑩、邱志偉提出修正動議並獲通過](https://udn.com/news/story/124979/9673507)，聯合新聞網以「一夕翻盤」形容這次修法轉向。以下整理初審通過後的具體內容、與原版差異，以及後續時程。

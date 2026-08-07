@@ -50,6 +50,7 @@ references:
     url: "https://www.taisounds.com/news/content/97/281172"
     publisher: "太報 TaiSounds"
 draft: false
+topics: ["energy-policy"]
 ---
 
 台電8月3日在台中電廠舉行一場採購廉政平台宣示儀式，主角是一筆創下紀錄的標案：「台中電廠第二期新建燃氣機組計畫3至6號複循環發電機組設備及其廠房與相關設施採購帶安裝案」，主設備採購預算高達3223億元，[是全國採購廉政平台成立以來金額最高的案件](https://news.ltn.com.tw/news/society/breakingnews/5527389)。這筆錢要蓋4部新燃氣機組，也牽動台中電廠未來十年「以氣換煤」的具體時程。以下整理這筆採購案的規模、機組容量與商轉時程，以及燃煤機組除役規劃怎麼分批進行。

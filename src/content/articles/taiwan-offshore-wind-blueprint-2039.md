@@ -55,6 +55,7 @@ references:
     url: "https://today.line.me/tw/v3/article/ZaRq85r"
     publisher: "環境資訊中心（LINE TODAY轉載）"
 draft: false
+topics: ["energy-policy"]
 ---
 
 經濟部能源署7月23日發布新聞稿[「我國擘劃離岸風電中長程發展藍圖 穩健增加產業綠電」](https://www.moea.gov.tw/MNS/populace/news/News.aspx?kind=1&menu_id=40&news_id=123431)，公布2026至2039年離岸風電中長程推動計畫。能源署將與國防部、交通部、農業部等機關跨部會合作，系統性盤點可設置離岸風電的海域空間，預計新增約15至18GW可開發容量，未來採每4年一期辦理選商、每期釋出約8GW，目標在2030年前完成選商作業。

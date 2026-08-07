@@ -49,6 +49,7 @@ references:
   - title: "Who Will Divide Up the CoWoS Production Capacity in 2026?"
     url: "https://eu.36kr.com/en/p/3580962946874242"
     publisher: "36Kr"
+topics: ["startups-and-vc"]
 ---
 
 重點先講清楚：Anthropic 估值衝到 9,650 億美元、機密遞件 IPO、估值排名超車 OpenAI，這三件事都是真的，但對台灣產業鏈來說都不是重點。前沿大廠誰比較貴是資本市場的八卦，台廠該盯的是這些錢最後流去哪、把哪一段供應鏈的需求綁得更死。

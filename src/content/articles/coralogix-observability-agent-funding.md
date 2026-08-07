@@ -49,6 +49,7 @@ references:
     url: "https://www.mordorintelligence.com/industry-reports/agent-observability-and-governance-market"
     publisher: "Mordor Intelligence"
 originalContribution: "本文把 Coralogix 這輪募資放回整個可觀測性賽道（Grafana、Datadog、Dynatrace）的吸金軌跡與市場規模數據交叉比對，提出『可觀測性正從工程師 dashboard 升格為 AI 進生產的必要基建』的分析框架，並用『監控≠治理、看見≠管好』區分這波賭注真正解的題與解不了的題，延伸評估台灣軟體與 SaaS 團隊該把可觀測性當上線前置條件的在地切入點。"
+topics: ["startups-and-vc"]
 ---
 
 一家做「可觀測性」的公司，在 11 個月內連募兩輪，估值直接翻上去，這件事本身就是訊號。

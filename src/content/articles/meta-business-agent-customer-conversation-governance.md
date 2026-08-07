@@ -60,6 +60,7 @@ references:
     url: "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=I0050021"
     publisher: "全國法規資料庫"
     note: "蒐集、處理、利用個資受特定目的拘束；目的外利用須有法定事由或當事人同意"
+topics: ["ai-agent-governance"]
 ---
 
 <p>6 月 3 日，Meta 把 Meta Business Agent 推向全球。<a href="https://about.fb.com/news/2026/06/meta-business-agent/" target="_blank" rel="noopener">官方的數字很有份量：已經有超過一百萬家商家在 WhatsApp 與 Messenger 上用它全天候回客人，平台上每天有超過十億筆與商家的對話串</a>。<a href="https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/" target="_blank" rel="noopener">這個 agent 會自己回答問題、推薦商品、幫忙預約、篩選銷售線索，談不定還能轉給真人</a>。真正的重點不在這支客服機器人，而在同一天端出的 Meta Business Agent Platform：<a href="https://about.fb.com/news/2026/06/meta-business-agent/" target="_blank" rel="noopener">一套讓大企業自己打造、客製、規模化部署 agent 的基礎設施，內建企業級控管與護欄，還能串接 Shopify、Zendesk、Shopee 這類數百個系統，先免費、之後按用量轉成付費訂閱</a>。</p>

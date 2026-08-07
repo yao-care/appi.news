@@ -67,6 +67,7 @@ references:
     url: "https://www.surepath.ai/blog/8-mcp-security-risks-every-enterprise-needs-to-know"
     publisher: "SurePath AI"
     note: "過度授權、憑證浮濫、無驗證 server、OAuth token 單點失效"
+topics: ["ai-agent-governance"]
 ---
 
 <p>過去一年，要讓 AI agent 接上你公司的資料庫、CRM 或內部 API，最大的麻煩從來不是模型不夠聰明，是每接一個系統就要再寫一套黏合層。MCP（Model Context Protocol，模型脈絡協定）把這件事標準化，然後它紅到一個地步：Anthropic 在 2025 年底把它<a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener">捐出去了</a>。標準底定之後，企業要煩惱的問題會換一個。不再是「該選哪個協定」，而是「agent 連出去的每一個工具，到底誰在管」。</p>

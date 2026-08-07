@@ -53,6 +53,7 @@ references:
     url: "https://airia.com/ai-agent-interoperability-what-mcp-and-a2a-mean-for-enterprise-governance/"
     publisher: "Airia"
 originalContribution: "本文把 Cognizant 六月兩則分開發佈的公告（6/4 治理層、6/18 編排層）併讀成同一套『統一中控』策略，用『解對題 vs 解錯題』框架拆出兩個容易被忽略的失敗點：把 agent 統一到單一廠商的可攜性風險，以及一套治理套死所有 agent 的授權設計錯誤，並交叉 Gartner 與 A2A 互通協定的證據延伸到台灣企業的採購順序。"
+topics: ["ai-agent-governance"]
 ---
 
 企業手上真正的問題，不是 agent 不夠多，是沒人把它們統一中控。每套 SaaS 都塞了自己的 agent，各帶各的連接器、各講各的話，湊在一起就是一團各自為政。Cognizant 六月連走的兩步，剛好踩在這個痛點上：先把治理層接好，再把編排層打通，方向抓對了。但這裡要先踩一個剎車，統一中控有兩種很容易解錯題的做法，等一下說。

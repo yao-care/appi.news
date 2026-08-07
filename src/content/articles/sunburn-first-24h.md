@@ -44,6 +44,7 @@ references:
   - title: "Baby Sunburn Prevention Tips"
     url: "https://www.healthychildren.org/English/ages-stages/baby/bathing-skin-care/Pages/Baby-Sunburn-Prevention.aspx"
     publisher: "HealthyChildren.org（American Academy of Pediatrics）"
+topics: ["first-aid-basics"]
 ---
 
 曬傷發生後，最該做的一件事，是立刻離開陽光、進到室內或陰涼處，接著用冷水沖澡或冷敷降溫。美國皮膚科醫學會（AAD）的衛教資料把「離開陽光」列為處理曬傷的第一步，衛生福利部疾病管制署也把局部冷敷、保濕列為曬傷後的核心照護做法，不是先找藥膏、也不是曝曬處持續照日光燈或吹風降溫。本文為衛教整理，不能取代醫師對個別狀況的診斷與處置。

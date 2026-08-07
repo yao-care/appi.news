@@ -22,6 +22,7 @@ references:
   - title: "Al Jazeera (2026). Japan and US confirm rare joint intervention to prop up yen"
     url: "https://www.aljazeera.com/economy/2026/8/3/japan-and-us-confirm-rare-joint-intervention-to-prop-up-yen"
 draft: false
+topics: ["taiwan-macro-economy"]
 ---
 美元指數（DTWEXBGS）近期落在120.71，較前一交易日的120.91持續走弱。單看這個數字並不特別，但它背後的成因值得留意：美國、日本、韓國三方在7月底罕見同步進場干預匯市，日圓與韓元同步大漲。過去外匯市場的干預多半是單一央行各自行動，這次美日韓一起出手，對海外資產配置以日圓、韓元為主的台灣投資人來說，是一個值得認真理解的轉折。
 

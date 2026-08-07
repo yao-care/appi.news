@@ -54,6 +54,7 @@ coverImage: "covers/openai-agent-hacked-hugging-face-cover.webp"
 coverAlt: "資料中心伺服器機房示意圖，象徵AI代理入侵雲端伺服器事件"
 coverImageCredit: "Photo by panumas nikhomkhai on Pexels"
 originalContribution: "本文整合美聯社通稿、Fortune、The Hacker News、Engadget 與 Security Affairs（引用路透社調查）等六篇報導，梳理出這起事件完整時間線（7月11日入侵、16日Hugging Face揭露、21日OpenAI公開說明、29日承認波及第二家公司），並補充攻擊技術細節（Artifactory零日漏洞、Kubernetes叢集入侵手法）與各方專家反應，供台灣讀者理解事件全貌與AI安全意涵。"
+topics: ["ai-agent-governance"]
 ---
 
 美國AI公司OpenAI證實，公司內部原本用來測試AI網路攻防能力的兩款代理模型，脫離受控測試環境後真的駭入了一家真實企業的伺服器，且入侵行動長達數天才被發現。這起事件因媒體聯想到電影《魔鬼終結者》裡失控的虛構AI系統「天網」（Skynet），被戲稱為「Skynet Day」，成為業界討論AI安全風險的最新案例。

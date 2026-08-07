@@ -43,6 +43,7 @@ references:
   - title: "低血糖的預防和處理｜衛教單張（兒童內分泌科）"
     url: "https://www.mmh.org.tw/child/know_health_view.php?docid=155"
     publisher: "馬偕兒童醫院"
+topics: ["first-aid-basics"]
 ---
 
 低血糖發作當下，第一件事是先判斷意識清不清楚，這比決定吃什麼更重要。意識清楚，立刻吃方糖2到4顆或喝120毫升含糖飲料；意識不清或已經抽搐、昏迷，絕對不可以硬灌東西進嘴巴，要讓人側躺，立刻撥打119。本文為衛教整理，不能取代醫師對個別狀況的診斷與處置。

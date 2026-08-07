@@ -61,6 +61,7 @@ references:
   - title: "Burn Prevention and Diabetic Neuropathy"
     url: "https://oklahoma.gov/content/dam/ok/en/health/health2/documents/diabetic-neuropathy-burns-english-2012.pdf"
     publisher: "Oklahoma State Department of Health, Injury Prevention Service"
+topics: ["first-aid-basics"]
 ---
 
 閃到腰的當下，先找一個不會拉扯到疼痛部位的姿勢坐下或躺平，不要勉強維持受傷當下的姿勢。美國克里夫蘭醫學中心（Cleveland Clinic）的[下背扭傷衛教資料](https://my.clevelandclinic.org/health/diseases/10265-back-strains-and-sprains)建議，受傷後前24到48小時可以冰敷加壓幫助止痛消腫，過了這段時間就該在能忍受的範圍內恢復日常活動；長時間臥床不動反而會拖慢復原。

@@ -49,6 +49,7 @@ references:
     url: "https://www.moeaea.gov.tw/"
     publisher: "經濟部能源署"
 draft: false
+topics: ["energy-policy"]
 ---
 
 經濟部6月18日公布114年度全國電力資源供需報告，把2026至2035年的用電需求[年均成長率上修到約2.5%](https://news.nextapple.com/finance/20260618/D6187FC0C29A886CE2E4E4BD8B0F9BB9)，比去年版本預估的1.7%多了0.8個百分點。依報告，這是[歷年預測中第二高的成長水準，也高於日本、南韓等亞洲鄰國](https://udn.com/news/story/7238/9574746)。報告回顧2025年整體電力供需，並在納入AI資料中心、半導體用電、氣溫與深度節能等變因後，推估未來十年的需求與供給規劃。以下整理這份報告的關鍵數字與它對台灣能源轉型的意義。

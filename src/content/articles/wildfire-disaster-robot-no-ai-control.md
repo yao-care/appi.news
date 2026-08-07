@@ -48,6 +48,7 @@ disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 Newsweek、Ynetnew
 coverImage: "covers/wildfire-disaster-robot-no-ai-control-cover.webp"
 coverAlt: "工廠內橘色工業機器手臂運作示意圖，象徵機器人科技（示意圖）"
 coverImageCredit: "Photo by Simon Kadula on Unsplash"
+topics: ["startups-and-vc"]
 ---
 
 加州機器人新創公司Satyress Robotics最近一支原型機器人在社群媒體迅速爆紅：代號「Threehalves」，外型結合四足底盤與人形上半身，頭頂還有一對角狀鏡頭，看起來像半人馬。這款機器人設計用來替人類進入野火現場、倒塌建物與有毒物質洩漏等危險環境，執行鏈鋸、鑽孔、拖運等高風險任務，卻刻意不搭載自主AI，全程仰賴遠端操作員手持搖桿操控。

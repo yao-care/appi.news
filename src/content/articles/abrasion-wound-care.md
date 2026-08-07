@@ -47,6 +47,7 @@ references:
   - title: "小兒常見外傷的護理方式"
     url: "https://epaper.ntuh.gov.tw/health/201908/child_2.html"
     publisher: "國立臺灣大學醫學院附設醫院健康電子報"
+topics: ["first-aid-basics"]
 ---
 
 擦傷發生的當下，最該做的一件事，是立刻用流動的清水或生理食鹽水沖洗傷口，把污垢、沙粒等異物沖乾淨，而不是急著消毒或放著等它結痂。[高雄榮民總醫院《高榮醫訊》](https://wwwfs.vghks.gov.tw/001/VghksUploadFiles/273/relfile/13805/148035/%E9%86%AB%E7%99%82%E4%B9%8B%E7%AA%97_%E7%9A%AE%E8%86%9A%E7%9A%84%E5%B0%8F%E6%8A%97%E8%AD%B0%EF%BC%9A%E5%A4%96%E5%82%B7%E5%BE%8C%E5%82%B7%E5%8F%A3%E8%81%B0%E6%98%8E%E7%85%A7%E9%A1%A7%E8%A1%93.pdf)與[衛生福利部](https://www.mohw.gov.tw/cp-3218-22744-1.html)的衛教資料都把清潔列為傷口照護的第一步。本文為衛教整理，不能取代醫師對個別狀況的診斷與處置。

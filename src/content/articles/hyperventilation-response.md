@@ -48,6 +48,7 @@ references:
   - title: "Hyperventilation in Children: Care Instructions"
     url: "https://healthy.kaiserpermanente.org/health-wellness/health-encyclopedia/he.hyperventilation-in-children-care-instructions.bu1261"
     publisher: "Kaiser Permanente"
+topics: ["first-aid-basics"]
 ---
 
 過度換氣發作的當下，最該做的一件事是找地方坐下來，放鬆肩頸，刻意把呼吸速度放慢。台灣胸腔暨重症加護醫學會的衛教資料指出，先安撫情緒、請對方放慢呼吸，通常5到10分鐘左右症狀就會緩和。本文為衛教整理，不能取代醫師對個別狀況的診斷與處置。

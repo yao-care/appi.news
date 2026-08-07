@@ -44,6 +44,7 @@ references:
   - title: "Venture Capital & Startup Funding Roundup, June 23, 2026"
     url: "https://techstartups.com/2026/06/23/venture-capital-startup-funding-roundup-june-23-2026/"
     publisher: "Tech Startups"
+topics: ["startups-and-vc"]
 ---
 
 把分散在各系統的營運資料先統一、讓組織能即時調度，正在變成 AI 真正落地前的基礎建設題。資料分析公司 Peregrine 六月底[完成 2.5 億美元 D 輪募資](https://www.prnewswire.com/news-releases/peregrine-technologies-raises-250-million-series-d-at-6-8-billion-valuation-302808115.html)，估值從 [2025 年 3 月的 25 億美元](https://news.crunchbase.com/venture/law-enforcement-startup-peregrine-unicorn-sequoia/)跳到 68 億美元，15 個月翻了將近三倍。這輪的錢說明一件事：資本開始往「把資料整理乾淨、打通孤島」搬，而不是往更炫的模型搬。

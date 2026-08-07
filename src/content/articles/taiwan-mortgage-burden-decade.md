@@ -54,6 +54,7 @@ coverImage: "covers/taiwan-mortgage-burden-decade.webp"
 coverAlt: "台灣城市中密集的集合住宅大樓外觀"
 coverImageCredit: "Photo by Timo Volz on Unsplash"
 updatedDate: "2026-08-07T07:06:19.631Z"
+topics: ["taiwan-macro-economy"]
 ---
 
 全國銀行房貸餘額從2015年底的6.1兆元，衝上2026年6月的11兆8126.52億元，十年間將近翻倍。內政部的房貸負擔率統計則繞了一圈：2016年第4季是38.34%，2024年第4季一度衝上10年最高的46.62%，2025年第4季緩降至40.75%，數字接近十年前但仍高出一截，購屋族實際要扛的貸款金額比十年前重得多。

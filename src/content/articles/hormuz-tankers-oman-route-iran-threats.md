@@ -54,6 +54,7 @@ disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體�
 coverImage: "covers/hormuz-tankers-oman-route-iran-threats-cover.webp"
 coverAlt: "海上航行的大型油輪"
 coverImageCredit: "Photo by Seval Torun on Unsplash"
+topics: ["energy-policy"]
 ---
 
 荷莫茲海峽的緊張情勢7月初再度升溫。英國軍方7月7日證實，兩艘船隻在阿曼外海遭不明投射物擊中，其中一艘卡達籍液化天然氣（LNG）運輸船引擎室起火，所幸均無人員傷亡。卡達外交部隨即譴責這是「對國際航行不可接受的攻擊」，而這起事件恐讓三週前才簽署、讓海峽暫時對所有船隻開放的停火備忘錄面臨瓦解。這波新攻擊，發生在伊朗革命衛隊持續威脅航運、油輪6月底改走阿曼沿岸新航道之後。

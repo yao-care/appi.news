@@ -48,6 +48,7 @@ references:
     url: "https://ea02.moeaea.gov.tw/d0308/news/more.aspx?cid=198&id=7042"
     publisher: "經濟部能源署"
 draft: false
+topics: ["energy-policy"]
 ---
 
 國際能源署（IEA）7月22日發布年中更新報告《Electricity Mid-Year Update 2026》，[報告原文指出](https://iea.blob.core.windows.net/assets/3c66a000-244c-4efb-aaeb-cda33eb833da/ElectricityMid-YearUpdate2026.pdf)，全球電力供應版圖正出現一個關鍵轉折：再生能源發電在2025年已與燃煤幾近打平，今年可望首度超車，成為全球最大的電力來源。與此同時，全球用電需求也在加速成長，成長動能來自工業、家電、空調、資料中心與電動車的用電擴張。[Electrek報導整理](https://electrek.co/2026/07/22/iea-global-power-demand-is-surging-and-renewables-are-passing-coal/)這份報告，稱這是全球電力供應史上少見的交叉時刻。

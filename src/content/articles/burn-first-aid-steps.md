@@ -44,6 +44,7 @@ references:
   - title: 燒燙傷處理
     url: https://www.auh.org.tw/NewsInfo/HealthEducationInfo?docid=1241
     publisher: 亞洲大學附屬醫院
+topics: ["first-aid-basics"]
 ---
 
 燙傷發生的當下，最該做的一件事，是立刻脫掉覆蓋在傷處的衣物、用流動冷水沖洗傷處20到30分鐘，藉此快速降低皮膚表面溫度。臺北市政府消防局防災教育雲與多家教學醫院的衛教資料都把這一步列為第一優先，不是先找藥膏、不是先冰敷。本文為衛教整理，不能取代醫師對個別狀況的診斷與處置。

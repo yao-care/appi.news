@@ -63,6 +63,7 @@ references:
   - title: "Yahoo奇摩股市。冷氣開26度不如別開？台電教1招「省電又涼快」"
     url: "https://tw.stock.yahoo.com/news/%E5%86%B7%E6%B0%A3%E9%96%8B26%E5%BA%A6%E4%B8%8D%E5%A6%82%E5%88%A5%E9%96%8B-%E5%8F%B0%E9%9B%BB%E6%95%991%E6%8B%9B-%E7%9C%81%E9%9B%BB%E5%8F%88%E6%B6%BC%E5%BF%AB-075300260.html"
     publisher: "Yahoo奇摩股市"
+topics: ["energy-policy"]
 ---
 
 台電住宅夏月電價從6月1日開始實施，一路計費到9月30日，這個制度今年已經走過37個年頭。每年一到夏天，不少家庭打開電費帳單都會嚇一跳，但台電數字顯示，真正因為夏月費率變貴而多付的錢，其實只占漲幅的一小部分。

@@ -41,6 +41,7 @@ references:
   - title: "AI Agents Market Size, Share and Growth Report"
     url: "https://www.precedenceresearch.com/ai-agents-market"
     publisher: "Precedence Research"
+topics: ["ai-agent-governance"]
 ---
 
 過去一年，關於 AI agent 的討論卡在一個問題：這東西是不是真的能用，還是又一輪炒作。2026 年中，這個問題悄悄換了。[blog.mean.ceo 六月的觀察](https://blog.mean.ceo/ai-agents-news-june-2026/)講得很白，這是市場停止問「AI agent 是不是真的」、開始問「我公司哪個部門先被 agent 化」的月份。撐起這個轉向的不只是氣氛。Gartner 給了一個量化訊號：[到 2026 年底，40% 的企業應用會內建任務型 agent，而 2025 年這個比例還不到 5%](https://finance.yahoo.com/news/40-enterprise-apps-embed-ai-181310288.html)，等於一年內翻了八倍。當採用率從個位數衝到四成，問題自然從「要不要用」變成「先用在哪」。

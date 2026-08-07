@@ -49,6 +49,7 @@ disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 Australian Associa
 coverImage: "covers/hungary-nuclear-plant-heatwave-shutdown-cover.webp"
 coverAlt: "匈牙利帕克斯核電廠廠區與冷卻系統外觀（資料照）"
 coverImageCredit: "IAEA Imagebank — CC BY-SA 2.0, Wikimedia Commons"
+topics: ["energy-policy"]
 ---
 
 匈牙利唯一的核電廠，8月2日在熱浪與乾旱夾擊下停止運轉。多瑙河流經帕克斯（Paks）河段的水位跌到史上最低，冷卻用水不足讓電廠兩座反應爐相繼關機，這是帕克斯核電廠1982年啟用以來第一次全面停擺。同一時間，阿爾巴尼亞南部村莊因野火疏散、義大利多座城市發布紅色高溫警報、英國農民正看著可能是四十年來最差的一季收成。歐洲的熱浪，這次燒到了電網。

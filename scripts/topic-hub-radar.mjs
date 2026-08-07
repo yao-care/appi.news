@@ -41,10 +41,26 @@ const argv = process.argv.slice(2);
 const WRITE = argv.includes('--write');
 const envNum = (k, d) => Number(process.env[k] || d);
 const MIN_ARTICLES = envNum('HUB_MIN_ARTICLES', 15);
-const MIN_COHESION = envNum('HUB_MIN_COHESION', 0.08);
+const MIN_COHESION = envNum('HUB_MIN_COHESION', 0.045);
 const MIN_WITH_IMPRESSIONS = envNum('HUB_MIN_IMPRESSIONS', 3);
 const MIN_RECENT = envNum('HUB_MIN_RECENT', 2);
 const COVERED_RATIO = envNum('HUB_COVERED_RATIO', 0.3);
+
+/**
+ * 面向標籤（facet）：地理與國別。這些**不是主題**，是「這篇發生在哪裡」。
+ *
+ * 為什麼要獨立排除，而不是靠內聚度擋：實測「台北市」42 篇內聚 0.058、「急救常識」
+ * 35 篇內聚 0.061，兩者幾乎一樣，但前者是地理面向、後者是真主題。內聚度分不開它們，
+ * 所以只好把面向明確列出來。列進來的標籤永遠不會被拿來開中樞（照樣可以掛在文章上）。
+ */
+const FACET_TAGS = new Set([
+  '台北市', '新北市', '桃園市', '台中市', '台南市', '高雄市', '基隆市', '新竹市', '新竹縣',
+  '苗栗縣', '彰化縣', '南投縣', '雲林縣', '嘉義市', '嘉義縣', '屏東縣', '宜蘭縣', '花蓮縣',
+  '台東縣', '澎湖縣', '金門縣', '連江縣', '縣市',
+  '亞太', '日本', '韓國', '新加坡', '印度', '東南亞', '歐洲', '中國', '香港', '美國',
+  '英國', '蘇格蘭', '北愛爾蘭', '愛爾蘭', '歐盟', '烏克蘭', '國際',
+  '健康與醫療', '科技與 AI', '永續與能源', '財經與產業', '生活與社會', '運動',
+]);
 
 /** 標題與描述的禁用句型（與 backfill-faq 同源，避免自動產出的公開頁面帶 AI 腔）。 */
 const TELLS = [
@@ -181,6 +197,7 @@ for (const a of articles) {
 
 const candidates = [];
 for (const [tag, group] of byTag) {
+  if (FACET_TAGS.has(tag)) continue; // 地理／國別／頻道級標籤不是主題
   const orphans = group.filter((a) => !a.topics.length && !a.column);
   if (orphans.length < MIN_ARTICLES) continue;
   const coveredRatio = (group.length - orphans.length) / group.length;
@@ -222,12 +239,20 @@ if (!WRITE) process.exit(0);
 
 /* --------------------------- 產生主題檔 --------------------------- */
 
-const slugify = (tag) =>
-  `topic-${[...tag].map((c) => c.codePointAt(0).toString(36)).join('')}`.slice(0, 60);
-
-/** id 不讓模型決定：優先用人工對照表，沒有就用可還原的編碼，確保網址穩定。 */
+/**
+ * id 不讓模型決定，只認人工對照表。
+ *
+ * 🔴 沒收錄就**放棄本次**，不要用編碼當備案——id 直接進網址 /topics/<id>/，上線後改
+ * 就是壞連結。2026-08-07 首次全量跑時備案機制產出過 `topic-k34gad` 這種網址，
+ * 得手動改名收拾。缺哪個標籤，補進 scripts/lib/topic-hub-ids.json 再跑即可。
+ */
 const ID_MAP = JSON.parse(readFileSync(path.join(ROOT, 'scripts/lib/topic-hub-ids.json'), 'utf8'));
-const id = ID_MAP[winner.tag] || slugify(winner.tag);
+const id = ID_MAP[winner.tag];
+if (!id) {
+  console.error(`✖ 標籤「${winner.tag}」不在 scripts/lib/topic-hub-ids.json 的對照表裡，本次不開。`);
+  console.error('  請人工補一列（id 會進網址，上線後不能改），再重跑。');
+  process.exit(0);
+}
 if (existingTopicIds.has(id)) {
   console.log(`主題 id ${id} 已存在，跳過（請人工確認對照表）`);
   process.exit(0);

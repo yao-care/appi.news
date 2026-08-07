@@ -29,5 +29,10 @@
   "美食": "food-and-dining",
   "電網": "power-grid",
   "台積電": "tsmc-watch",
-  "資本市場": "capital-markets"
+  "資本市場": "capital-markets",
+  "新創": "startups-and-vc",
+  "AI agent": "ai-agent-governance",
+  "總體經濟": "taiwan-macro-economy",
+  "創投": "startups-and-vc",
+  "AI治理": "ai-agent-governance"
 }

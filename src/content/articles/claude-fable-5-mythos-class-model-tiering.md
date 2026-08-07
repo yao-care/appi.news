@@ -57,6 +57,7 @@ references:
     url: "https://techjacksolutions.com/ai-brief/claude-fable-5s-swe-bench-pro-score-is-contested-what-indepe/"
     publisher: "TechJack Solutions"
     note: "80.3% 為廠商以自家 scaffolding 跑出，非中立評測環境，獨立來源數字不同"
+topics: ["ai-agent-governance"]
 ---
 
 <p>Anthropic 在 6 月 9 日上線 <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">Claude Fable 5，並順手開了一個新的產品層級叫「Mythos 級」</a>。很多人第一個反應是去翻跑分表，看它贏 Opus 4.8 幾分。這個方向沒有錯，但只盯著分數，很容易看錯重點。</p>

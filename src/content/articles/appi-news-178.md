@@ -21,6 +21,7 @@ references:
   - title: "Chen XY, Wang QY, Yan ZF, et al. (2025). Intranasal acupuncture therapy for allergic rhinitis: A systematic review and meta-analysis of randomized controlled trials. *Integrative Medicine Research"
     url: "https://pubmed.ncbi.nlm.nih.gov/40190741/"
 draft: false
+topics: ["tcm-acupuncture-pain"]
 ---
 你可能聽過這個問題：「美顏針和打肉毒、打玻尿酸，差在哪裡？」
 

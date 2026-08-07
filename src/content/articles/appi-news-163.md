@@ -25,6 +25,7 @@ references:
   - title: "Šoštarič A, et al. (2019). Detection of metabolic syndrome burden in healthy young adults may enable timely introduction of disease prevention. *Archives of Medical Science*, 15(5), 1184-1194"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6764305/"
 draft: false
+topics: ["metabolic-health"]
 ---
 ## 一、新聞背景：成人健檢門檻為何下移至30歲
 

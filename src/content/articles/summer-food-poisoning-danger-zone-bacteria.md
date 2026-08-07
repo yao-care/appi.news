@@ -29,6 +29,7 @@ references:
   - title: "食力foodNEXT (2026). 高雄春捲老店累積至173人食物中毒，未即時停賣且隱匿食材遭重罰144萬、移送地檢署偵辦"
     url: "https://www.foodnext.net/news/newssafe/paper/6471156282"
 draft: false
+topics: ["food-safety-storage"]
 ---
 ## 一、一頓聚餐後的隱形風險
 

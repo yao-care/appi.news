@@ -29,6 +29,7 @@ references:
   - title: "World Health Organization. (2024). Obesity and overweight"
     url: "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight"
 draft: false
+topics: ["health-check-reports"]
 ---
 你有沒有發現，很多人談到瘦瘦針，第一個問題都是「打了幾公斤？」而不是「你做過抽血評估嗎？」
 

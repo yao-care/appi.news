@@ -23,6 +23,7 @@ references:
   - title: "中華民國上醫預防醫學發展協會（取用日期：2026年8月）。夏季食品安全五要，讓你吃得更安心"
     url: "https://gcm.org.tw/blog/five-summer-food-safety-rules-for-safer-eating/"
 draft: false
+topics: ["food-safety-storage"]
 ---
 ## 一、食物中毒的核心：溫度與時間的交互作用
 

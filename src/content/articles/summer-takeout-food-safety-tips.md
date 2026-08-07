@@ -23,6 +23,7 @@ references:
   - title: "上醫預防醫學發展協會（無日期）。一杯冰飲、一盒便當：炎夏外食族最常忽略的腸胃風險"
     url: "https://gcm.org.tw/blog/five-safety-checks-for-summer-takeout-foods/"
 draft: false
+topics: ["food-safety-storage"]
 ---
 氣溫飆破三十五度的午後，手搖飲店前的排隊人潮不減，辦公室抽屜裡也常有一盒放到下午才拆封的便當。多數人判斷一家店衛不衛生，仍停留在「裝潢新不新」「生意好不好」的直覺印象，但真正決定食物安全的，往往是冰鏟怎麼拿、生熟食有沒有分開處理、便當在室溫下放了多久這些容易被忽略的細節。
 

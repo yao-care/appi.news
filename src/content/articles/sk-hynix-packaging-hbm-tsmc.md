@@ -46,6 +46,7 @@ references:
     url: "https://www.igorslab.de/en/sk-hynix-invests-19-trillion-won-advanced-packaging-becomes-the-bottleneck-of-the-ai-memory-boom/"
     publisher: "igor'sLAB"
 originalContribution: "本文把 SK 海力士『自蓋 P&T7 封裝廠』與『綁台積電 CoWoS 做 HBM4』兩則看似獨立的新聞，用『解對題』框架合成同一件事：記憶體龍頭把資本壓在後段封裝而非前段晶圓，因為 AI 記憶體的瓶頸在封裝不在晶圓。並從台積電 CoWoS 吃緊逼出 Intel EMIB 替代這條張力，推導台灣封測在 HBM 後段鏈的位置與被撬動的風險。"
+topics: ["taiwan-semiconductor-supply-chain"]
 ---
 
 SK 海力士這半年做的兩件大事，其實是同一題。一是要砸 [19 兆韓元（約 130 億美元）在南韓清州蓋一座號稱全球最大的 HBM 先進封裝廠](https://www.kedglobal.com/korean-chipmakers/newsView/ked202601130007)，二是跟[台積電簽備忘錄，把下一代 HBM4 綁上台積電的邏輯製程與封裝技術](https://news.skhynix.com/sk-hynix-partners-with-tsmc-to-strengthen-hbm-technological-leadership/)。一個是自己蓋廠、一個是找外援，方向卻一致：這家記憶體龍頭把競爭的戰線，從「晶圓做不做得出來」拉到「封裝堆不堆得出量」。

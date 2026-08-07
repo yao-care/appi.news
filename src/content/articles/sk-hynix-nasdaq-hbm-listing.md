@@ -56,6 +56,7 @@ references:
     url: "https://www.digitimes.com/news/a20260604PD211/tsmc-sk-hynix-hbm-packaging.html"
     publisher: "DIGITIMES"
 originalContribution: "本文把 SK 海力士這筆近 300 億美元募資，拆成『不缺現金、缺產能』的資本邏輯，並沿 HBM 產業鏈往下追到真正的瓶頸段（先進封裝與邏輯基礎裸晶），指出這筆錢會有一段回頭變成台積電 3 奈米代工與 CoWoS 的訂單；同時對照 SK 海力士以 Intel EMIB 與美國自建封裝廠分散台灣依賴，評估台灣的鎖定不是永久性的，卡位點在封裝、測試、載板與邊緣零組件，而非只守晶圓代工。"
+topics: ["taiwan-semiconductor-supply-chain"]
 ---
 
 SK 海力士要在那斯達克掛牌，發行 ADR（美國存託憑證）募約 294 億美元。這件事的重點不是金額，是一家單季淨利 40 兆韓元的公司，為什麼還要掏這麼大一筆股權出來。答案是：它不缺現金，缺的是產能，而 HBM（高頻寬記憶體）真正的產能瓶頸不在自家 DRAM 晶圓，在先進封裝與邏輯基礎裸晶那一段。對台灣來說，該讀的不是這個數字，是這筆錢會有一段回頭變成台積電的訂單。

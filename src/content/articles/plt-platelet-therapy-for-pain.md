@@ -25,6 +25,7 @@ references:
   - title: "屏東榮民總醫院. PRP血小板增生治療術 對付頑強關節疼痛"
     url: "https://www.ptvgh.gov.tw/News_Content.aspx?n=59691E739AAFFB67&sms=F694FF40D8A4F976&s=8608C1426891A648"
 draft: false
+topics: ["healthy-aging"]
 ---
 ## 前言：從醫美到疼痛管理的再生醫學新趨勢
 

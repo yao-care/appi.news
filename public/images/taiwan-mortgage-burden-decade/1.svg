@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="長條圖比較2016年、2024年與2025年第4季全國房貸負擔率，分別為38.34%、46.62%與40.75%，顯示2025年第4季仍高於2016年同期">
+<style>
+.title{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:26px;font-weight:700;fill:#1e2030;}
+.subtitle{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:15px;fill:#6e7276;}
+.colname{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:20px;font-weight:700;fill:#1e2030;}
+.value{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:22px;font-weight:700;fill:#1e2030;}
+.desc{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:14px;fill:#6e7276;}
+.foot{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:13px;fill:#6e7276;}
+.tag{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:14px;font-weight:700;fill:#a87515;}
+</style>
+<rect x="0" y="0" width="960" height="600" fill="#ffffff"/>
+
+<rect x="40" y="34" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="56" y="56" class="title">全國房貸負擔率十年變化</text>
+<text x="56" y="82" class="subtitle">同為第4季比較：2025年第4季負擔率仍高於2016年同期，且十年間一度衝上46.62%</text>
+
+<line x1="40" y1="106" x2="920" y2="106" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- baseline -->
+<line x1="40" y1="500" x2="920" y2="500" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- column 1: 2016 Q4 -->
+<text x="180" y="140" text-anchor="middle" class="colname">2016年第4季</text>
+<text x="180" y="162" text-anchor="middle" class="desc">（105年Q4）</text>
+<rect x="130" y="270" width="100" height="230" rx="4" fill="#1f3a5f"/>
+<text x="180" y="250" text-anchor="middle" class="value">38.34%</text>
+
+<!-- column 2: 2024 Q4 focus -->
+<rect x="380" y="118" width="200" height="382" rx="12" fill="#eaf0f8"/>
+<rect x="380" y="118" width="200" height="4" rx="2" fill="#a87515"/>
+<text x="480" y="150" text-anchor="middle" class="colname">2024年第4季</text>
+<text x="480" y="172" text-anchor="middle" class="desc">（113年Q4，十年最高點）</text>
+<rect x="430" y="222" width="100" height="278" rx="4" fill="#a87515"/>
+<text x="480" y="202" text-anchor="middle" class="value">46.62%</text>
+
+<!-- column 3: 2025 Q4 -->
+<text x="780" y="140" text-anchor="middle" class="colname">2025年第4季</text>
+<text x="780" y="162" text-anchor="middle" class="desc">（114年Q4，最新一季）</text>
+<rect x="730" y="255" width="100" height="245" rx="4" fill="#1f3a5f"/>
+<text x="780" y="235" text-anchor="middle" class="value">40.75%</text>
+
+<line x1="40" y1="530" x2="920" y2="530" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="556" class="foot">製圖：APPI News</text>
+<text x="920" y="556" text-anchor="end" class="foot">資料時點：2026年8月｜來源：內政部不動產資訊平台房價負擔能力統計、中央銀行金融穩定報告</text>
+</svg>

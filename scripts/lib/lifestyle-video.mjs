@@ -9,6 +9,7 @@
 /** 把一支候選影片格式化成 prompt 素材區塊。 */
 import { renderTitleTargeting } from './title-targeting.mjs';
 import { RISKS_PROMPT } from "./risks-prompt.mjs";
+import { GROWTH_PROMPT } from "./growth-prompt.mjs";
 
 function formatCandidate(c) {
   if (!c) return '（無候選）';
@@ -75,6 +76,7 @@ export function buildVideoPrompt(candidate, recentTitles = []) {
     '',
     `【frontmatter】category: "lifestyle"、subcategory: "life"、author: "appi-editorial"、contentType: "news"、sourceType: "wire"、status: "published"、publishDate 現在；slug 用能描述主題的 kebab-case 英文（不要用 videoId、不要用日期流水號），檔名＝slug；title 講清楚這篇在講什麼、可被搜尋；description 一句話概述；tags 帶主題詞（如「美食」「米其林」「高雄」）。disclosure 揭露「線索來自 <頻道名> YouTube 影片，內容經公開資料查證整理、附原始出處」。寫入 src/content/articles/<slug>.md，**不要 git add/commit/push**（外層處理）。`,
     RISKS_PROMPT,
+    GROWTH_PROMPT,
     '',
     '【最後輸出】一行：`VIDEO_RESULT=NEW｜<slug>`（有寫）或 `VIDEO_RESULT=SKIP｜<原因>`（沒有通得過 gate 的題）。',
   ].join('\n');

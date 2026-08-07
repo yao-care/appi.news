@@ -170,6 +170,10 @@ async function main() {
     if (missing.length) { console.error(`  ✖ 引用的本地圖檔不存在（${missing.join('、')}），丟棄這篇`); dropArticle(v.slug); continue; }
     const tone = spawnSync('node', ['scripts/check-content.mjs', file], { encoding: 'utf8' });
     if (tone.status !== 0) { console.error(`  ✖ 去 AI 腔 gate 未過，丟棄這篇：\n${(tone.stdout || tone.stderr || '').slice(-400)}`); dropArticle(v.slug); continue; }
+    // 成長規則自檢（report-only，永不擋發佈）：站內導流／topics／標題長度有沒有做到，印進 cron log 供事後回收。
+    // 規則正本＝scripts/lib/growth-prompt.mjs（GROWTH_PROMPT），盤點與工作清單＝docs/growth-playbook.md。
+    const _growth = spawnSync('node', ['scripts/growth-lint.mjs', file], { encoding: 'utf8' });
+    if (_growth.stdout) console.log(_growth.stdout.trim());
     const tagGate = spawnSync('node', ['scripts/check-tags.mjs', file], { encoding: 'utf8' });
     if (tagGate.status !== 0) { console.error(`  ✖ 標籤 gate 未過，丟棄這篇：\n${(tagGate.stdout || tagGate.stderr || '').slice(-400)}`); dropArticle(v.slug); continue; }
     written.push({ slug: v.slug, title: articleTitle(v.slug) || v.slug });

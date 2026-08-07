@@ -8,6 +8,7 @@
 /** 把候選清單格式化成 prompt 素材區塊（依縣市分組，讀起來像編輯桌上的線索表）。 */
 import { renderTitleTargeting } from './title-targeting.mjs';
 import { RISKS_PROMPT } from "./risks-prompt.mjs";
+import { GROWTH_PROMPT } from "./growth-prompt.mjs";
 
 function formatCandidates(candidates = []) {
   if (!candidates.length) return '（無候選）';
@@ -64,6 +65,7 @@ export function buildCivicPrompt(candidates = [], recentTitles = []) {
     '',
     `【frontmatter】category: "lifestyle"、subcategory: "life"、author: "appi-editorial"、contentType: "news"、sourceType: "wire"、status: "published"、publishDate 現在；slug 固定格式 civic-services-${today}（檔名＝slug）；title 像「各地便民措施整理（${today}）」之類清楚可搜尋；description 一句話概述今天涵蓋哪些縣市與主題；tags 帶「便民措施」「市政服務」與涵蓋的主要縣市。disclosure 揭露「整理自各縣市政府公開新聞稿/公告、附原文出處」。寫入 src/content/articles/<slug>.md，**不要 git add/commit/push**（外層處理）。`,
     RISKS_PROMPT,
+    GROWTH_PROMPT,
     '',
     '【最後輸出】一行：`CIVIC_RESULT=NEW｜<slug>`（有寫）或 `CIVIC_RESULT=SKIP｜<原因>`（無合適便民措施）。',
   ].join('\n');

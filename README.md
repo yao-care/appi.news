@@ -23,6 +23,7 @@
 | 手動新增內容：文章、作者、專欄、分類 | ✍ 內容 | 本檔 §新增內容 → `src/content.config.ts`、`src/config/categories.ts`（schema/分類唯一準據） |
 | 自動發文：選題雷達 → Slack → 自動產文 → 排程上線 | 🤖 自動化 | 本檔 §自動發文流程（全貌）→ `.claude/skills/tech-radar/`＋`.claude/skills/newsroom/` |
 | 了解網路曝光量：流量、搜尋曝光、AI 轉介、週報 | 📊 數據 | 本檔 §了解網路曝光量 → `.claude/skills/weekly-report/SKILL.md` → [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
+| 讓流量長大：站內導流、存量頁升級、回訪與品牌 | 📈 成長 | [`docs/growth-playbook.md`](./docs/growth-playbook.md)（工作項目＋SOP，先跑 `pnpm growth:audit`）→ 為什麼＝[`docs/lessons/growth-three-gates.md`](./docs/lessons/growth-three-gates.md) |
 
 ---
 
@@ -288,6 +289,15 @@ node -e 'import("./scripts/lib/verticals.mjs").then(m=>{for(const[k,v]of Object.
 ```bash
 GOOGLE_APPLICATION_CREDENTIALS=~/.config/appi-news/ga4-sa.json node scripts/weekly-data.mjs
 ```
+
+看「流量長不長得起來」（頁面分散度、回訪與品牌搜尋、週線與世代分析）另有一組指令與工作簿：
+
+```bash
+pnpm growth:audit        # 三關體檢（GA4＋GSC 實跑）
+pnpm growth:lint:all     # 站上文章對成長規則的覆蓋率
+```
+
+工作項目與 SOP 見 [`docs/growth-playbook.md`](./docs/growth-playbook.md)，為什麼分這三關見 [`docs/lessons/growth-three-gates.md`](./docs/lessons/growth-three-gates.md)。
 
 > **重要分辨**：週報「AI 轉介點擊」= 真人從 AI 答案點連結進站，**不等於**被 AI 爬蟲抓取/引用（GA 是 client-side JS，AI 爬蟲不跑 JS）。真正的 AEO 被引用量測需另案（自有 CDN 代理，見 [`PERFORMANCE.md`](./PERFORMANCE.md) §6）。報告曝光/流量一律以 `weekly-data.mjs` 實跑輸出為準，**不可憑記憶或估算**。
 

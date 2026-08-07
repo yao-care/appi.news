@@ -21,6 +21,8 @@
 - **配圖硬性 gate 不可繞過**：缺 `coverImage`／封面檔不存在／內文 0 圖／**封面與內文圖重複** → 中止不發、留工作區待補。
 - **產線層級要禁 AI 生圖，就在該線的 `.sh` 與協調器**兩處**都設 `NO_AI_IMAGE=1`**（論壇雷達的作法）：只設一處，另一處被改掉就破功，而事後從檔案驗不出來。
 - **要禁 AI 生圖就設 `NO_AI_IMAGE=1`**（`get-image.mjs` 的兩個生圖進入點會直接 throw，含 `--generate`）。**只在 prompt 寫「不要生圖」不算數**，模型會忽略；而且 sharp 會剝掉圖片 metadata，事後**無法**驗證哪張是生成的，只能整批重跑。禁生圖後封面與內文容易撞成同一張圖庫照（同 query 回同一張），取圖的 `--query` 必須錯開。為什麼＝[`lessons/no-ai-image-batch.md`](./lessons/no-ai-image-batch.md)。
+- 🔴 **新增產線一定要接 `GROWTH_PROMPT`**（`scripts/lib/growth-prompt.mjs`，與 `RISKS_PROMPT` 同層放進起草 prompt 陣列）：內鏈／`topics`／標題長度／開頭直答這些事只能在寫作當下做，事後補要逐篇重讀。只把規則寫進自己那條線的 prompt＝下一次規則漂移的起點。已接清單查法與 SOP＝[`growth-playbook.md`](./growth-playbook.md) §產線接線點，為什麼＝[`lessons/growth-three-gates.md`](./lessons/growth-three-gates.md)。
+- **成長規則自檢是 report-only、不可升成硬 gate**：各線在 `check-tags` 旁跑 `growth-lint.mjs` 只把結果印進 cron log。內鏈是品質不是正確性，拿它擋半夜的自動產線＝製造無人處理的停產。要嚴格檢查是人工帶 `--strict` 的事。
 - **平行批次要禁止模型自己跑 `pnpm build` / `check:links`**：多個進程搶同一個 `dist/` 會產生 ENOENT 競態、白白耗時。build 由外層批次驅動做一次。
 - 自動線 `publishDate` **用系統時間蓋**，別讓模型填（模型無可靠時鐘，會排到未來變排程稿）。
   - **全自動上架的線要明確給「今天」**：不給的話 `newsroom-write` 會退回「下一個沒有文章的日子」，而日更早把未來一週佔滿，結果排到八天後（2026-08-06 論壇雷達改自動上架時實測）。

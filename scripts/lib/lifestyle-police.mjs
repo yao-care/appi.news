@@ -11,6 +11,7 @@
 // 站點清單保留供測試/文件參考；實際運行的站配置在 ./police-fetch.mjs 的 POLICE_SITES。
 import { renderTitleTargeting } from './title-targeting.mjs';
 import { RISKS_PROMPT } from "./risks-prompt.mjs";
+import { GROWTH_PROMPT } from "./growth-prompt.mjs";
 
 export const POLICE_SOURCES = [
   { area: '高雄市', url: 'https://kcpd.kcg.gov.tw/News.aspx?n=3FAEF3DDE4DD3CD0&sms=4ED7718667AAD9B5', priority: true, note: '獨立「好人好事」頻道' },
@@ -74,6 +75,7 @@ export function buildPolicePrompt(candidates = [], recentTitles = [], days = 7) 
     '',
     '【frontmatter】category: "lifestyle"、subcategory: "life"、author: "appi-editorial"、contentType: "news"、sourceType: "wire"、status: "published"、publishDate 現在；slug 語意化英文 kebab（如 police-good-deeds-2026-06-21，避免 post-NNN，檔名＝slug）；disclosure 揭露「整理自各地警察局公開新聞稿、附原文出處」。寫入 src/content/articles/<slug>.md，**不要 git add/commit/push**（外層處理）。',
     RISKS_PROMPT,
+    GROWTH_PROMPT,
     '',
     '【最後輸出】一行：`POLICE_RESULT=NEW｜<slug>`（有寫）或 `POLICE_RESULT=SKIP｜<原因>`（無合適候選）。',
   ].join('\n');

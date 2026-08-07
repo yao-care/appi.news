@@ -27,6 +27,7 @@
  */
 import { renderTitleTargeting } from './title-targeting.mjs';
 import { RISKS_PROMPT } from "./risks-prompt.mjs";
+import { GROWTH_PROMPT } from "./growth-prompt.mjs";
 
 export const HEALTH_DAYS = [
   // ── 1 月 ────────────────────────────────────────────────────────────
@@ -813,6 +814,7 @@ export function buildHealthDayPrompt(entry, date, opts = {}) {
     '  disclosure: 說明本文整理自官方與權威組織公開資料、附原文出處',
     '',
     RISKS_PROMPT,
+    GROWTH_PROMPT,
     '',
     `寫入 src/content/articles/${slug}.md，**不要 git add/commit/push**（外層處理）。`,
     '',

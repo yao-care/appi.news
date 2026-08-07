@@ -126,6 +126,10 @@ async function main() {
     // 為什麼＝docs/lessons/ai-tone-gate.md。
     const _tone = spawnSync('node', ['scripts/check-content.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
     if (_tone.status !== 0) die(`去 AI 腔 gate 未過，不發佈（改動留工作區待改）：\n${_tone.stdout || _tone.stderr || ''}`);
+    // 成長規則自檢（report-only，永不擋發佈）：站內導流／topics／標題長度有沒有做到，印進 cron log 供事後回收。
+    // 規則正本＝scripts/lib/growth-prompt.mjs（GROWTH_PROMPT），盤點與工作清單＝docs/growth-playbook.md。
+    const _growth = spawnSync('node', ['scripts/growth-lint.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
+    if (_growth.stdout) console.log(_growth.stdout.trim());
     const _tags = spawnSync('node', ['scripts/check-tags.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
     if (_tags.status !== 0) die(`標籤 gate 未過，不發佈（改動留工作區待改）：\n${_tags.stdout || _tags.stderr || ''}`);
   }

@@ -344,6 +344,10 @@ async function main() {
     }
     // 去 AI 腔硬 gate：命中機械可判的簽名句（破折號／自我辯白旁白）就剔除這篇，不拖垮整批。
     // 為什麼＝docs/lessons/ai-tone-gate.md。
+    // 成長規則自檢（report-only，永不擋發佈）：站內導流／topics／標題長度有沒有做到，印進 cron log 供事後回收。
+    // 規則正本＝scripts/lib/growth-prompt.mjs（GROWTH_PROMPT），盤點與工作清單＝docs/growth-playbook.md。
+    const _growth = spawnSync('node', ['scripts/growth-lint.mjs', join(ARTICLES_DIR, `${x.slug}.md`)], { encoding: 'utf8' });
+    if (_growth.stdout) console.log(_growth.stdout.trim());
     const _tags = spawnSync('node', ['scripts/check-tags.mjs', join(ARTICLES_DIR, `${x.slug}.md`)], { encoding: 'utf8' });
     if (_tags.status !== 0) {
       console.log(`  ⚠️ 剔除 ${x.slug}：標籤不在受控詞彙表，不發這篇、不拖垮整批\n${_tags.stdout || _tags.stderr || ''}`);

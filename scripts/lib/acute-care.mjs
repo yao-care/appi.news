@@ -16,6 +16,8 @@
  * ＋未來的 publishDate（那才會產 noindex、不進 sitemap 的預覽頁）。
  */
 
+import { GROWTH_PROMPT } from './growth-prompt.mjs';
+
 /**
  * 寫作界線。這段會原文進 prompt，是整條線的安全核心。
  *
@@ -153,6 +155,8 @@ export function buildAcuteCarePrompt(topic, { recentTitles = [] } = {}) {
     `disclaimerType: "medical"、status: "published"、`,
     `slug: "${topic.key}"、publishDate 現在。寫入 src/content/articles/${topic.key}.md，`,
     '**不要 git add/commit/push**（外層處理）。',
+    '',
+    GROWTH_PROMPT,
     '',
     '【去重】不要重複下列近期已發的題：',
     recent,

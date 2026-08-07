@@ -117,6 +117,18 @@ description: APPI News 科技類日更引擎。輸入 /newsroom 後找議題，�
 - 跑 `pnpm check:links` 確認站內連結全綠。
 - 一次 `git add -A && git commit && git push`。提醒：scheduled 文章由部署 cron 到時自動現身。
 
+## 成長規則（與自動產線同一份正本，互動寫作一樣要做）
+
+起草前先看規則正本：
+
+```bash
+node -e 'import("./scripts/lib/growth-prompt.mjs").then(m=>console.log(m.GROWTH_PROMPT))'
+```
+
+重點：內文站內連結 ≥2 條且至少 1 條落在**前三分之一**（只能連 `ls`／`grep` 查證存在的 slug）、判斷要不要填 `topics`／`column`（延伸閱讀排序的最高權重）、title 全形 30 字內、description 60–160 字、開頭前兩句直接給結論。
+
+寫完自檢：`node scripts/growth-lint.mjs src/content/articles/<slug>.md`（report-only，不會擋你，但 `G1-none` 出現就代表這篇對站內導流沒有貢獻）。工作項目與 SOP＝[`docs/growth-playbook.md`](../../../docs/growth-playbook.md)。
+
 ## 硬規則總結
 - 全文繁中 + 台灣用語；去 AI 腔；每段必配圖（概念圖先圖庫、人物圖直接生成）且人物=台灣人。
 - 所有資料附 inline 來源超連結；全文超連結逐條查證可連線，不留死連結。

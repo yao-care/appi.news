@@ -32,7 +32,12 @@ GOOGLE_APPLICATION_CREDENTIALS=~/.config/appi-news/ga4-sa.json node scripts/week
 
 # 4) 單元測試（全綠才算過；數量會長，不寫死）
 pnpm test
+
+# 5) 成長三關體檢（頁面分散度／回訪與品牌／週線與世代）。工作項目與 SOP＝docs/growth-playbook.md
+pnpm growth:audit
 ```
+
+各條自動產線在寫完文章後會跑一次 report-only 的 `growth-lint`，結果印在該線的 `/var/log/appi-news/<job>.log` 裡（`G1-none` ＝那篇沒有站內連結）。**它不會擋發佈**，是給事後回收用的訊號。
 
 ## 系統地圖
 

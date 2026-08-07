@@ -37,6 +37,7 @@
 | [high-impression-zero-click-bot-queries.md](./high-impression-zero-click-bot-queries.md) | 高曝光零點擊不一定是 SEO 問題：氣象 App／通知的模板化查詢（非人類），改標題永遠 0 點擊，該「滅燈」不是優化；附裝置別查證法＋兩消費端 mute 機制 |
 | [tag-taxonomy.md](./tag-taxonomy.md) | `tags` 是全站唯一沒做 enum 約束的分類欄位，481 篇長出 1,883 個標籤、85.9% 只出現一次、1,618 個 noindex 死頁；唯一被指定固定詞的產線是唯一沒爛的產線；改成受控詞彙表＋schema enum 硬擋，unique 1,883→179 |
 | [duplicate-topic-gate.md](./duplicate-topic-gate.md) | `髖關節痛` 被自家 5 個 URL 瓜分全卡 pos 76-83：去重下在選題端（14 天窗、單一產線）蓋不到跨月與跨產線的重複，改下在寫入端；另查出 131 個 meta-refresh 轉址殘骸仍吃 15% 站台曝光，「轉址已處理」≠「權重已傳遞」 |
+| [growth-three-gates.md](./growth-three-gates.md) | 自然搜尋起飛後卡在哪：722 篇裡 624 篇零站內連結、631 篇 topics/column 全空、PV/session 1.22，同期 715 頁有曝光但 551 頁 0 點擊、回訪佔比反從 8% 掉到 6%；三個瓶頸都在「寫作當下沒做、事後補很貴」，規則做成單一正本注入 9 個起草點，量測改成指令（growth-audit／growth-lint），世代分析用來分辨「成長是真趨勢還是靠一直發新文撐」 |
 | [google-indexing-api-gray-area.md](./google-indexing-api-gray-area.md) | 「有 GSC key 就能催收錄」是誤解；Indexing API 對新聞站非官方、200 不保證收錄 |
 | [faq-schema-markdown.md](./faq-schema-markdown.md) | FAQ 抽取器三條規則全部只認 HTML 標題，但吃的是原始 markdown body：WordPress 舊文有 FAQPage、新寫文章一則都抽不到（92 篇白寫），抽查剛好會抽到正常的那批；測試輸入全是手寫 HTML 所以沒擋住。加一層 markdown 正規化，122→212 篇、零倒退 |
 | [discover-image-and-meta-signals.md](./discover-image-and-meta-signals.md) | Discover 0 曝光但技術前置全齊：破口是 20 篇直式封面（worker 搜圖沒帶 orientation）、og:image 尺寸寫死 1200×630 與實際不符、4 篇熱連結封面且 3 篇低於 1200px；附「標題不用為 Discover 另訂規則」的實測結論 |

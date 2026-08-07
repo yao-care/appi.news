@@ -32,6 +32,7 @@
 | 手動新增內容：文章、作者、專欄、分類 | ✍ 內容 | [`README.md`](./README.md) §新增內容 → `src/content.config.ts`、`src/config/categories.ts`、`src/config/tags.ts` |
 | 自動發文：選題雷達 → Slack → 自動產文 → 排程上線 | 🤖 自動化 | 本檔 §自動發文 pipeline → [`docs/automation-invariants.md`](./docs/automation-invariants.md) → [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
 | 了解網路曝光量：流量、搜尋曝光、AI 轉介、週報 | 📊 數據 | 本檔 §數據與網路曝光量 → `.claude/skills/weekly-report/SKILL.md` → [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
+| 讓流量長大：站內導流、存量頁升級、回訪與品牌 | 📈 成長 | [`docs/growth-playbook.md`](./docs/growth-playbook.md)（工作項目＋SOP，先跑 `pnpm growth:audit`）→ 為什麼＝[`docs/lessons/growth-three-gates.md`](./docs/lessons/growth-three-gates.md) |
 
 ## 查現況：一律跑指令，不要相信任何文件裡的數字
 
@@ -51,6 +52,9 @@
 | 站上埋的 GA4 評估 ID | `grep -n gaId src/config/site.ts` |
 | 有哪些 appi cron、排在幾點 | `crontab -l \| grep "appi.news-publisher/scripts/cron"` |
 | 流量／搜尋曝光現況 | `node scripts/weekly-data.mjs`（**禁杜撰數據**，一律以實跑輸出為準） |
+| 三關體檢：頁面分散度／回訪與品牌／週線與世代 | `pnpm growth:audit`（可加 `--gate1`／`--gate2`／`--gate3`／`--cohort`） |
+| 成長規則覆蓋率（零內鏈幾篇、topics 空幾篇…） | `pnpm growth:lint:all`；排工作清單用 `node scripts/growth-lint.mjs --all --worst 30` |
+| 寫作成長規則的正本內容 | `node -e 'import("./scripts/lib/growth-prompt.mjs").then(m=>console.log(m.GROWTH_PROMPT))'` |
 | 線上效能／無障礙現況 | 依 [`PERFORMANCE.md`](./PERFORMANCE.md) §3 跑 PSI 對線上站 |
 
 ## 技術速覽
@@ -238,6 +242,8 @@
 | 為什麼這樣做（踩過的坑、重大決策） | [`docs/lessons/`](./docs/lessons/) |
 | 日更流程與作者人格 | `.claude/skills/newsroom/` |
 | 自動化鐵則（帳號／模型／cron／發佈端） | [`docs/automation-invariants.md`](./docs/automation-invariants.md) |
+| 寫作成長規則（內鏈／topics／標題／開頭／FAQ） | `scripts/lib/growth-prompt.mjs` 的 `GROWTH_PROMPT`（所有產線共用，新增產線必接）|
+| 成長工作項目與 SOP（B 站內導流／A 存量升級／C 回訪） | [`docs/growth-playbook.md`](./docs/growth-playbook.md) |
 | 排程總表、各線來源與 Slack 行為 | [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
 | 數據／網路曝光量 | `scripts/weekly-data.mjs`＋`.claude/skills/weekly-report/`＋`scripts/lib/report-config.mjs` |
 | 機密金鑰位置 | `.env`（PSI）、`~/.config/appi-news/`（GA4／GSC／Slack）— 永不進 repo |

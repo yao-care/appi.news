@@ -29,6 +29,7 @@ import { nextOpenPublishDate, takenDatesFromContents } from './lib/publish-slot.
 import { coverDuplicatesInline } from './lib/image-dedupe.mjs';
 import { RISKS_PROMPT } from "./lib/risks-prompt.mjs";
 import { EXPERT_NOTE_PROMPT } from "./lib/expert-note-prompt.mjs";
+import { GROWTH_PROMPT } from "./lib/growth-prompt.mjs";
 
 const ARTICLES_DIR = 'src/content/articles';
 
@@ -188,6 +189,7 @@ export function buildDraftPrompt(job, schedule = null, opts = {}) {
       : `2. frontmatter：status: "${status}"、publishDate: "${pubDate}"、category: "${job.category}"${job.subcategory ? `、subcategory: "${job.subcategory}"` : ''}、author: "${author}"、contentType: "${contentType}"、sourceType: "editorial"（須為 src/content.config.ts 的 enum 合法值），並用 disclosure 欄位揭露「以 AI 輔助起草、經人工查證編輯」。`,
     RISKS_PROMPT,
     EXPERT_NOTE_PROMPT,
+    GROWTH_PROMPT,
     memoryStep,
     noFabricate,
     '5. **不要 git add / commit / push，也不要跑 `pnpm build` 或 `pnpm check:links`**——版控、建置與發佈全部由外層腳本在 gate 後統一處理。平行批次時多個進程同時 build 會搶同一個 `dist/`，產生 ENOENT 競態、白白耗時（實測 6 篇有 5 篇自己跑了 build）。你只要把文章與圖寫好即可。',
@@ -359,6 +361,10 @@ async function main() {
 
   // 標籤 gate：tags 必須落在 src/config/tags.ts 的受控詞彙表內。
   // 為什麼＝docs/lessons/tag-taxonomy.md（1,883 個自由標籤、85.9% 只出現一次的碎片化事故）。
+  // 成長規則自檢（report-only，永不擋發佈）：站內導流／topics／標題長度有沒有做到，印進 cron log 供事後回收。
+  // 規則正本＝scripts/lib/growth-prompt.mjs（GROWTH_PROMPT），盤點與工作清單＝docs/growth-playbook.md。
+  const _growth = spawnSync('node', ['scripts/growth-lint.mjs', articleFile], { encoding: 'utf8' });
+  if (_growth.stdout) console.log(_growth.stdout.trim());
   const tagGate = spawnSync('node', ['scripts/check-tags.mjs', articleFile], { encoding: 'utf8' });
   if (tagGate.status !== 0) {
     die(`標籤 gate 未過，不發佈（改動留工作區待改）：\n${(tagGate.stdout || '') + (tagGate.stderr || '')}`);

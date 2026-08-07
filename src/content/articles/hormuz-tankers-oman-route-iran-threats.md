@@ -113,3 +113,20 @@ coverImageCredit: "Photo by Seval Torun on Unsplash"
 
 - （更新 2026-07-07：英國軍方證實兩船在阿曼利馬外海遭不明投射物擊中，卡達籍LNG船「Al Rekayyat」引擎室起火、沙國籍油輪受損，均無人員傷亡；卡達外交部譴責「不可接受」，事件恐撕毀三週前簽署的60天通行備忘錄；川普警告「要嘛達成協議、要嘛我們把任務做完」。）（[Local10](https://www.local10.com/business/2026/07/07/british-military-says-second-ship-hit-in-strait-of-hormuz/)、[Al Jazeera](https://www.aljazeera.com/news/2026/7/7/ships-attacked-in-the-strait-of-hormuz-what-that-means-for-ongoing-talks)、[CNBC](https://www.cnbc.com/2026/07/07/oil-prices-iran-strait-hormuz.html)）
 - （2026-06-26）油輪「Stoic Warrior」號6月25日領頭改走阿曼與IMO合闢的沿岸新航道；伊朗革命衛隊稱該航道「不可接受且極度危險」並警告「違者將受處置」；海峽單週通行量回升至125艘，仍低於戰前水準。（[The Philadelphia Inquirer](https://www.inquirer.com/news/nation-world/strait-of-hormuz-iran-threats-20260625.html)、[Irish Examiner](https://www.irishexaminer.com/world/arid-41869023.html)、[Las Vegas Review-Journal](https://www.reviewjournal.com/news/politics-and-government/oil-tankers-use-new-route-through-strait-of-hormuz-despite-iranian-threats-3842820/)）
+
+## 常見問題
+
+### 荷莫茲海峽這次攻擊事件發生在什麼時候、什麼地點？
+英國軍方7月7日證實，兩艘船隻於7月6日夜間在阿曼北部利馬外海遭投射物擊中，事發地點約在利馬外海8海浬（15公里）處。
+
+### 兩艘遭擊船隻是哪些、受損情況如何？
+分別是卡達籍液化天然氣船「Al Rekayyat」與一艘沙烏地阿拉伯籍原油運輸船。前者引擎室起火，後者船體受損，兩船均無人員傷亡回報。
+
+### 這起攻擊是誰做的？伊朗有承認嗎？
+路透社消息人士指伊朗革命衛隊發射至少兩枚飛彈，伊朗國營電視台暗示涉入，但伊朗官方並未正式承認，中央司令部與革命衛隊也都未公開評論。
+
+### 這起攻擊會如何影響三週前簽署的停火備忘錄？
+該備忘錄原約定海峽至少60天須對所有船隻開放通行，但簽署後通行量遠低於戰前水準，這次攻擊恐讓備忘錄面臨瓦解。
+
+### 川普對這起攻擊有什麼反應？
+川普7月6日表示美伊「要嘛達成協議、要嘛我們把任務做完」，重申對伊朗採取軍事行動的威脅，消息傳出後國際油價隨之走揚。

@@ -106,3 +106,20 @@ AP報導引述歐盟哥白尼氣候變遷服務（Copernicus Climate Change Serv
 
 - （更新 2026-08-03：雅典近郊普薩塔野火陣線的直升機空中相撞事故確認死傷情況：2架貝爾滅火直升機其中一架墜地，機組員1名希臘籍、1名丹麥籍罹難，另1名希臘籍、1名英國籍生還；總理米佐塔基斯哀悼「希臘協調員與丹麥飛行員」。加計本週稍早殉職的3名消防員，希臘野火本週死亡人數已增至5人。當地野火延燒面積達40至50平方公里，消防隊已由海路撤離266人。）（[PBS NewsHour](https://www.pbs.org/newshour/world/2-firefighting-helicopters-collide-midair-near-athens-as-europes-wildfire-emergency-rages)、[The Boston Globe](https://www.bostonglobe.com/2026/08/02/world/2-killed-when-firefighting-helicopters-collide-near-athens-europes-wildfire-emergency-rages/)、[Irish News](https://www.irishnews.com/news/world/firefighting-helicopters-collide-mid-air-as-europes-wildfire-emergency-rages-MSG7HJ4YVFN37AIL3P62MWSEQQ/)）
 - （2026-08-02）歐洲野火危機東西兩極反差：法國吉倫特大火22萬撤離居民逾九成已返家，西班牙、葡萄牙火勢仍在延燒；希臘急速惡化，總理米佐塔基斯證實風速一度達每小時100公里，度假勝地波爾圖日爾梅諾遭燒到海邊，兩架滅火直升機在普薩塔空中相撞（事故詳情當時尚未釐清），克里特島雷西姆諾地區宣布緊急狀態，希臘本週已有3名消防員殉職。（[Euronews](https://www.euronews.com/my-europe/2026/08/02/europes-wildfires-update-greece-still-battling-outbreaks-in-spain)、[PBS NewsHour](https://www.pbs.org/newshour/world/new-wildfire-evacuations-ordered-in-france-bringing-total-to-330000-people-displaced-in-southwestern-europe)、[RTÉ News](https://www.rte.ie/news/2026/0731/1585928-wildfires/)、[Times of Israel](https://www.timesofisrael.com/firefighters-in-greece-struggle-to-save-coastal-resort-as-winds-rage/)）
+
+## 常見問題
+
+### 希臘直升機空中相撞事故造成多少人死傷？
+8月2日兩架貝爾滅火直升機在雅典近郊普薩塔空中相撞，其中一架墜地，機組員1名希臘籍、1名丹麥籍罹難，另1名希臘籍、1名英國籍生還。
+
+### 加計消防員殉職，希臘本週野火死亡人數共多少人？
+希臘本週已有3名消防員在救災任務中殉職，其中2人在克里特島、1人在伯羅奔尼撒，加計直升機事故的2名機組員，本週死亡人數已增至5人。
+
+### 法國吉倫特大火撤離居民返家情況如何？
+吉倫特大火已受控，累計燒毀4.2萬公頃林地、摧毀240棟房屋，22萬撤離居民中已有20.8萬人獲准返家，逾九成已返家。
+
+### 希臘波爾圖日爾梅諾當地疏散撤離規模有多大？
+當局已下令坎迪利、聖斯凱皮、圖圖利三個社區撤離，消防隊已由海路撤離266人，其中週五254人、週六12人。
+
+### 西班牙今年野火燒毀面積跟以往相比如何？
+西班牙自今年1月至8月2日全國已燒毀186,544公頃森林，是同期平均值的5倍，阿維拉地區的火災更創下西班牙歷來最大規模紀錄。

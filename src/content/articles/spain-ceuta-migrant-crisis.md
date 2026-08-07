@@ -106,3 +106,20 @@ originalContribution: "本文整合 PBS NewsHour、Al Jazeera、Fortune對西班
 
 - （更新 2026-08-02：西班牙官方統計，休達越境潮死亡人數已由最初通報的18人上修至67人；民警部隊8月1日清晨在Tarajal防波堤海域安裝一道500公尺長的海上圍欄封鎖越境路線，內政部長格蘭德－馬拉斯卡稱已與摩洛哥合作、24小時內控制住局面。官方統計截至7月31日傍晚6時，已有約4萬8300人自願返回摩洛哥。22個歐盟成員國聯名要求輪值主席國愛爾蘭緊急召開歐盟司法與內政理事會特別會議，義大利威脅暫停申根協議並已恢復對西班牙班機、船運的邊境管制，歐盟執委會主席馮德萊恩稱相關畫面「令人無法接受」。）（[PBS NewsHour](https://www.pbs.org/newshour/world/spain-installs-sea-barrier-on-ceutas-border-with-morocco-after-frontier-rush-that-killed-67)、[Al Jazeera](https://www.aljazeera.com/news/2026/8/1/spain-says-migrants-leaving-ceuta-after-mass-influx-in-which-67-died)、[Fortune](https://fortune.com/2026/08/01/spain-sea-barrier-ceuta-morocco-eu-states-uncontrolled-mass-crossings/)）
 - （2026-07-31）西班牙北非飛地休達7月30日爆發近年最嚴重的越境潮，數千人游泳渡海、搭船或翻越邊境圍欄闖入，官方當下確認至少18人喪生；西班牙政府宣布向休達增派軍隊，休達自治市主席比瓦斯宣布進入「絕對人道主義與社會緊急狀態」；當地將這波越境潮連結到西班牙最高法院本月稍早一項限制遣返的裁決；義大利總理梅洛尼揚言採取「非常措施」施壓，歐洲人民黨要求歐盟究責西班牙政府。（[半島電視台](https://www.aljazeera.com/news/2026/7/30/spanish-enclave-of-ceuta-raises-alarm-as-thousands-cross-morocco-border)、[富比世](https://www.forbes.com/sites/conormurray/2026/07/30/meloni-floats-extraordinary-measures-as-spains-ceuta-overwhelmed-with-migrants-from-morocco/)、[新聞週刊](https://www.newsweek.com/ceuta-morocco-migrant-crisis-europe-southern-border-breached-extraordinary-influx-12264622)、[福斯新聞](https://www.foxnews.com/world/spain-deploys-military-after-thousands-migrants-overwhelm-border-enclave-least-9-dead)）
+
+## 常見問題
+
+### 休達越境潮最終死亡人數是多少？
+西班牙官方統計已由事發當下通報的18人上修至67人，多數死者溺水，另有部分死於衝過防波堤圍欄時的推擠踩踏。
+
+### 西班牙如何封鎖越境路線？
+西班牙民警部隊8月1日清晨在Tarajal防波堤海域安裝一道500公尺長的海上圍欄，阻斷這波危機以來最主要的越境路線。
+
+### 越境的移民後來去哪了？
+官方統計截至7月31日傍晚6時，湧入休達的5萬至6萬名移民中，已有約4萬8300人自願折返摩洛哥，休達邊境已回歸相對平靜。
+
+### 這波越境潮的導火線是什麼？
+西班牙最高法院本月稍早裁定，海上攔截到、企圖抵達休達或梅利利亞的移民不得立即遣返摩洛哥、須經正當程序，人口販運網路傳藉此裁決招攬客源、煽動更多人偷渡。
+
+### 義大利對這起事件有什麼反應？
+義大利總理梅洛尼揚言暫停與西班牙的申根協議，並已恢復對來自西班牙班機與船運旅客的邊境管制，稱不受控制的非法移民對歐洲邊界安全構成具體威脅。

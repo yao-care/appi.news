@@ -403,3 +403,20 @@ coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 - （更新 2026-07-24：美軍完成對伊朗連續第13個夜晚的空襲，伊拉克埃爾比勒一處駐有美軍的基地附近傳出至少7聲爆炸、4股黑煙，庫德安全官員稱聯軍擊落5架無人機，巴林同時響起警報；空襲鎖定伊朗革命衛隊北部海軍基地、格什姆島、伊斯法罕省、庫齊斯坦省與法爾斯省。伊朗衛生部通報死亡人數已達55人（另有報導指上修至59人）、逾600人受傷。戰線延燒紅海，葉門胡塞武裝攻擊沙烏地油輪，川普揚言以伊朗資金支付船隻損失、警告對胡塞祭出「重大軍事懲罰」，伊朗外長阿拉格奇警告資產沒收將引發混亂。荷莫茲海峽約6000名海員受困400艘船隻，布蘭特原油衝破每桶100美元。）（[Swindon Advertiser](https://www.swindonadvertiser.co.uk/news/national/26406094.explosions-american-base-iraq-us-forces-strike-iran-13th-night/)、[WIBW/AP](https://www.wibw.com/2026/07/24/explosions-break-out-near-military-base-hosting-us-troops-iraq/)、[Military.com/AP](https://www.military.com/explosions-are-heard-near-a-us-base-in-northern-iraq-as-us-iran-fighting-escalates)、[The Boston Globe/AP](https://www.bostonglobe.com/2026/07/24/world/iran-us-war/)）
 - （更新 2026-07-21：美軍空襲伊朗已連續進行到第10個夜晚，鎖定大不里士附近、班達爾伊瑪目霍梅尼、錫里克、傑斯克、科納拉克、恰巴哈爾等地，伊朗官媒稱大不里士附近至少1人喪生；五角大廈證實陸軍中士史溫頓7月19日在伊拉克埃爾比勒基地執行無人機處置任務時陣亡，美軍陣亡累計達17人；伊朗革命衛隊宣稱已報復性攻擊科威特與巴林，科威特電力部門證實多座電廠與海水淡化廠遭擊中起火；伊朗內政部長已赴巴基斯坦斡旋兩天會談，白宮則稱空襲將持續至川普決定停止。）（[Al Jazeera](https://www.aljazeera.com/news/2026/7/21/us-launches-tenth-consecutive-night-of-attacks-on-iran)、[The Irish Times](https://www.irishtimes.com/world/middle-east/2026/07/20/us-carry-out-10th-consecutive-night-of-strikes-on-iran-bringing-all-out-war-closer/)、[PBS NewsHour](https://www.pbs.org/newshour/world/expansion-of-u-s-strikes-on-iran-leads-to-more-retaliation-across-the-gulf)、[ABC News](https://abcnews.com/International/live-updates/iran-live-updates-kuwait-attacked-bahrain-sounds-sirens/?id=134907987)）
 - （2026-07-19）美軍中央司令部證實，伊朗7月17日以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地，造成2名美軍陣亡、1人失蹤、4人送醫；川普下令美軍18日晚間對伊朗革命衛隊目標展開報復空襲，伊朗最高領袖警告將給予「永誌不忘的教訓」。（[WWSB/AP](https://www.mysuncoast.com/2026/07/18/2-troops-are-dead-1-is-missing-after-iranian-attacks-base-jordan-us-military-says/)、[Military Times](https://www.militarytimes.com/flashpoints/2026/07/18/2-us-troops-killed-1-missing-after-iranian-missile-drone-attack-in-jordan/)、[Air & Space Forces Magazine](https://www.airandspaceforces.com/2-americans-killed-one-missing-as-iran-attacks-u-s-base-in-jordan/)、[The National](https://www.thenationalnews.com/news/us/2026/07/18/two-us-troops-killed-and-one-missing-following-iranian-attack-in-jordan/)）
+
+## 常見問題
+
+### 川普喊停對伊朗新攻擊的條件是什麼？
+川普宣布，只要中東盟友促成荷莫茲海峽立即、完全、全面開放，並終止伊朗對外的核威脅，美方就暫緩原訂對伊朗發動的新一輪攻擊。
+
+### 是誰促成這次美伊局勢的逆轉？
+沙烏地阿拉伯王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮，隨後沙國防長赴華府與川普、副總統萬斯會商，促成轉折。
+
+### 伊朗最高領袖為何遲遲未批准與阿曼的海峽開放協議？
+協議須經最高領袖莫賈塔巴·哈梅內伊批准，但總統佩澤希齊揚坦言「聯繫他確實很困難」，外界並傳莫賈塔巴曾在2月28日空襲中重傷甚至毀容，惟未經伊朗官方證實。
+
+### 伊朗官方如何回應川普宣布展開直接談判的說法？
+川普8月2日宣布將與伊朗展開涉及去核化與海峽開放的談判，但伊朗官方8月3日隨即否認雙方有直接會談，僅承認與阿曼磋商海峽安全通行路線，雙方說法南轅北轍。
+
+### Minoan Pioneer號油輪發生了什麼事？
+這艘賴比瑞亞籍散貨輪8月4日深夜於阿曼外海遭不明射彈擊中，三副下落不明，事發時間恰逢財政部長貝森特稱美伊即將就開放海峽達成協議。

@@ -102,3 +102,20 @@ coverImageCredit: "Photo by İrfan Simsar on Pexels"
 - （更新 2026-06-23：美伊6月21日在瑞士比爾根施托克展開高層談判，斡旋的卡達與巴基斯坦稱進展「令人鼓舞」；雙方建立荷莫茲海峽通訊線、設黎巴嫩「防止衝突小組」，並接續整週技術性談判，目標60天內談成核子協議。）（[The Irish News](https://www.irishnews.com/news/world/mediators-hail-encouraging-progress-in-talks-between-iran-and-us-to-end-war-AJ2TSZ3PORNEBDDB6CGUGOQRMU/)、[eNCA](https://www.enca.com/news-top-stories/mediators-report-progress-iran-us-talks-end-war)）
 - （2026-06-21）伊朗軍方6月20日宣稱關閉荷莫茲海峽，美方反駁航運照常；美伊談判團隊仍準備赴瑞士展開週日的技術性談判。（[Newsweek](https://www.newsweek.com/iran-army-strait-of-hormuz-closed-vance-open-mou-trump-deal-breach-12098993)）
 - （2026-06-19）黎南交火黎方稱至少21死、以軍4名士兵陣亡；美伊瑞士談判一度延後、范斯取消行程，以伊就以軍撤出黎南僵持。（[Al Jazeera](https://www.aljazeera.com/news/2026/6/19/us-iran-talks-postponed-as-israel-attacks-lebanon)、[PBS](https://www.pbs.org/newshour/world/israel-and-hezbollah-renew-ceasefire-after-u-s-and-iran-call-off-talks-over-fighting-in-lebanon)、[CBS](https://www.cbsnews.com/live-updates/iran-war-us-deal-peace-israel-lebanon-hezbollah-strait-of-hormuz/)）
+
+## 常見問題
+
+### 美伊這輪高層談判在哪裡舉行、雙方派誰出席？
+6月21日在瑞士盧塞恩湖畔的比爾根施托克登場，美方由副總統范斯領軍，特使維特科夫與總統女婿庫許納同行；伊朗由國會議長加利巴夫帶隊，外長阿拉奇齊同行。
+
+### 這輪談判具體談出什麼成果？
+雙方就荷莫茲海峽建立通訊線以避免事故與誤判，並為黎巴嫩戰事設立納入雙方與黎方當局的防止衝突小組，技術性磋商將持續整週。
+
+### 荷莫茲海峽到底有沒有關閉？
+伊朗軍方6月20日宣布關閉海峽，稱是對以色列空襲黎巴嫩的回應；但美國副總統范斯反駁稱海峽其實開放，中央司令部也表示通過海峽的商船流量增加。
+
+### 美伊核子協議的談判期限是多久？
+上週簽署的過渡協議給予雙方約60天時間，處理伊朗核子計畫的最終安排，目標在期限內敲定核子協議。
+
+### 以色列與黎巴嫩的停火為何一度瀕臨破裂？
+6月19日黎南與貝卡谷地爆發交火，造成黎方至少21人死亡、以軍4名士兵陣亡，一度使瑞士談判延後，雙方就以軍是否撤出黎南僵持不下。

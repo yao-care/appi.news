@@ -93,3 +93,20 @@ originalContribution: "本文整合PA Media、美聯社（AP）多家轉載稿�
 
 - （更新2026-08-05：8月4日清晨，一艘載客173人的「超級充氣艇」在英吉利海峽引擎起火翻覆，打破165人紀錄，成為史上最大艘試圖橫渡該海峽的船隻；無人死亡、11人受傷，法國逮捕籌組偷渡的埃及籍男子，估獲利17.3萬英鎊；英國政府稱事件凸顯小船跨境的可怕危險。）（[Cotswold Journal](https://www.cotswoldjournal.co.uk/news/national/26434847.mega-dinghy-capsized-channel-largest-attempt-crossing/)、[Yahoo News](https://www.yahoo.com/news/us/articles/mega-dinghy-capsized-channel-largest-184833362.html)、[LBC](https://www.lbc.co.uk/article/migrants-channel-small-boat-fire-man-arrested-5HjdfdJ_2/)）
 - （2026-07-26）英國國家犯罪局宣布19歲南蘇丹籍男子Chan Mathok Atak遭控駕駛載客165人、創當時新高的「巨型橡皮艇」偷渡至英國，將於7月27日出庭；事發當天共366人分乘三艘船抵英。（[National Crime Agency](https://www.nationalcrimeagency.gov.uk/news/man-charged-with-piloting-small-boat-from-france-to-the-uk)、[Enfield Independent](https://www.enfieldindependent.co.uk/news/national/26410119.teenager-charged-piloting-small-boat-france-uk/)）
+
+## 常見問題
+
+### 這艘「超級充氣艇」載了多少人？為何引發關注？
+這艘船載有173人，是今年單艘偷渡艇載客人數新高，也是史上試圖橫越英吉利海峽的最大艘船隻，超越7月165人的紀錄。
+
+### 事故造成人員傷亡了嗎？
+官方通報無人死亡，但有11人受輕傷、3人送醫治療，獲救者最終被送上岸至法國布洛涅濱海市。
+
+### 誰因這起偷渡事件遭到逮捕？
+法國警方逮捕一名埃及籍男子，指控他負責籌組這趟173人的偷渡行程，估計每人收費約1000英鎊，總獲利上看17.3萬英鎊。
+
+### 今年以小船偷渡抵英的人數比去年多還是少？
+今年至今已有14,561人以小船方式偷渡抵英，較去年同期的25,436人下降43%，比2024年同期也少15%。
+
+### 這是近期第一次出現載客人數破紀錄的偷渡艇嗎？
+不是，7月23日已有一艘估計載客165人的巨型橡皮艇創下當時紀錄，19歲南蘇丹籍駕駛人遭控危害他人罪，173人事件是短短一週內第二次刷新紀錄。

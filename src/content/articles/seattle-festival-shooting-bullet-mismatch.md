@@ -97,3 +97,20 @@ PBS NewsHour另指出，案發後還有第8名傷者自行前往醫院檢查、�
 
 - （更新 2026-07-31：西雅圖警察局長巴恩斯在市長威爾森要求下宣布辭職，起因是美食節槍擊案通報延遲近5小時、市長一度誤報逮捕人數；威爾森任命資歷逾20年的副局長沙爾斯代理局長，巴恩斯稱盼交接有助警局聚焦青少年槍枝暴力問題。）（[PBS NewsHour](https://www.pbs.org/newshour/nation/seattle-mayor-says-police-chief-has-resigned-after-criticism-of-festival-shooting-response)、[Yahoo新聞](https://www.yahoo.com/news/us/articles/seattle-mayor-may-oust-police-221720002.html)）
 - （2026-07-30）西雅圖警方7月29日提交法庭文件指出，彈道初步鑑定顯示，擊斃2名旁觀者的子彈並非來自遭逮捕的15歲少年所持有的槍；現場彈殼顯示共有4把槍枝參與火拼，警方僅尋獲3把、其中2把曾擊發，另有2把武器至今未尋獲；15歲少年被控一級持槍傷人罪，檢方求送成人法庭。（[Post Register](http://www.postregister.com/news/national/police-bullets-that-killed-2-bystanders-at-seattle-festival-werent-from-teen-shooters-gun/article_d1235203-e91a-5ddf-9450-24663205cc5d.html)、[Click2Houston](https://www.click2houston.com/news/national/2026/07/29/police-bullets-that-killed-2-bystanders-at-seattle-festival-werent-from-teen-shooters-gun/)、[PBS NewsHour](https://www.pbs.org/newshour/nation/police-say-bullets-that-killed-2-at-seattle-festival-were-not-fired-from-arrested-teens-gun)）
+
+## 常見問題
+
+### 西雅圖警察局長巴恩斯為什麼辭職？
+因為美食節槍擊案發生後，警方延遲近5小時才對外說明案情，市長威爾森還一度誤稱已逮捕2名嫌犯、隨後緊急撤回，市長要求下巴恩斯於7月30日宣布辭職。
+
+### 誰接任代理警察局長？
+市長威爾森任命資歷逾20年的副局長沙爾斯（Andre Sayles）代理局長職務。
+
+### 彈道鑑定結果為何讓案情出現逆轉？
+法院文件顯示，對兩名死亡旁觀者身上取出的子彈初步鑑定後，結果與遭逮捕的15歲少年所持槍枝不符，顯示致命子彈另有來源。
+
+### 現場開火的槍枝都找到了嗎？
+沒有。彈殼顯示共有4把槍枝開火，警方僅尋獲3把，其中只有2把確認曾擊發，代表至少還有2把涉案武器尚未尋獲。
+
+### 這名15歲少年會在哪個法庭受審？
+金郡檢察官辦公室已對少年提出一級持槍傷人罪等起訴，並要求移送成人法庭審理；若定罪，成人法庭刑期約8至10年，少年法庭則僅2至2.5年。

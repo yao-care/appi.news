@@ -190,3 +190,20 @@ coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commo
 - （更新 2026-07-18：伯納姆本週末啟動搬入唐寧街10號流程，內閣名單訂於他7月20日正式就任當天公布；財政大臣人選傳於工黨左翼屬意的米勒班與現任內政大臣馬哈穆德間二選一，接替現任財政大臣里夫斯。伯納姆並表示施政將優先推動社會照護改革，地方分權工作將由設在曼徹斯特的「10號北方辦公室」主導，預計上任第一週造訪。）（[Barrhead News](https://www.barrheadnews.com/news/national/26291389.burnham-finalising-plans-government-becoming-prime-minister-monday/)、[MyJoyOnline](https://www.myjoyonline.com/burnham-says-he-is-finalising-cabinet-ahead-of-becoming-pm-on-monday/)）
 - （更新 2026-07-16：工黨黨魁提名7月16日截止，伯納姆到7月15日已取得逾九成國會黨團連署及足額地方黨部提名，等同無競爭當選黨魁，預計7月20日接任首相。他接受萊內克專訪，拒絕排除開徵財富稅，允諾以「非常坦率」的態度與川普互動；保守黨黨魁貝德諾克批評他「已在談加稅」，預言「混亂之夏」。）（[Yahoo Finance UK](https://uk.finance.yahoo.com/news/andy-burnham-declines-rule-wealth-163156908.html)、[Barrhead News](https://www.barrheadnews.com/news/national/26284089.andy-burnham-declines-rule-wealth-tax-will-upfront-trump/)、[Wikipedia](https://en.wikipedia.org/wiki/2026_Labour_Party_leadership_crisis)）
 - （2026-06-23）英國首相施凱爾6月22日在唐寧街10號外宣布請辭，成為英國10年來第六位下台的首相；下台導火線是5月地方選舉慘敗、法拉吉的改革黨在英格蘭大舉斬獲。工黨7月9日起開放黨魁提名，大曼徹斯特市長伯納姆剛贏得補選取得議員資格，被視為熱門接班人。（[Barrhead News](https://www.barrheadnews.com/news/national/26216635.starmer-right-go-failing-deliver-change-john-swinney-says/)、[Al Jazeera](https://www.aljazeera.com/news/2026/6/22/why-has-keir-starmer-resigned-as-uk-prime-minister-and-who-will-take-over)、[Wikipedia](https://en.wikipedia.org/wiki/2026_Labour_Party_leadership_crisis)、[CBS News](https://www.cbsnews.com/news/keir-starmer-resigns-uk-prime-minister-labour-party-andy-burnham/)）
+
+## 常見問題
+
+### 伯納姆內閣的財政大臣最終由誰出任？
+財政大臣一職最終由前國防大臣希利出任，原本被看好接掌財政的馬哈穆德與米勒班雙雙落空，米勒班改任外交大臣，庫珀則回任內政大臣，結果跌破外界預期。
+
+### 伯納姆宣布廢除了哪項前朝政策？
+伯納姆就任當天宣布廢除施凱爾政府規劃、預估耗資18億英鎊的數位身分證計畫，將原本編列的資源轉向生活成本協助，回應對物價與生活開銷的民怨。
+
+### 伯納姆對開徵財富稅抱持什麼態度？
+伯納姆接受專訪時表示，現階段不會排除任何選項，強調社會需要更大程度的公平感，但已承諾遵守財政規則，排除調高加值稅、所得稅或國民保險費。
+
+### 伯納姆是如何一路選上工黨黨魁的？
+伯納姆先於6月18日以55%得票率贏得馬克菲爾德補選取得國會席次，之後取得逾九成工黨議員連署及地方黨部提名，最終在無人挑戰下當選黨魁。
+
+### 伯納姆規劃設立的「10號北方辦公室」有什麼用途？
+伯納姆延續先前規劃，將在曼徹斯特設立「10號北方辦公室」推動地方分權，並打算在上任第一週內親自造訪，這是他組閣時強調的施政重點之一。

@@ -1,9 +1,10 @@
 ---
-title: "618 電商三強爭霸：momo、蝦皮、酷澎搶單，線上 FMCG 年增 10%"
+title: "618電商三強戰：momo、蝦皮、酷澎怎麼搶客"
 slug: "618-ecommerce-momo-shopee-coupang"
-description: "2026年618購物節，台灣電商從單純價格戰轉向會員訂閱與快速物流的服務競爭。momo、蝦皮、酷澎三強加上好市多線上通路各出奇招，台灣FMCG線上銷額年增10%，成為零售業最關鍵的一場中場決戰。"
+description: "2026年618，momo主打組隊回饋、蝦皮衝85折信用卡券、酷澎推隔日到貨搶客，台灣FMCG網購佔比已達兩成、年增10%，一次看懂三大電商怎麼搶這場中場戰"
 excerpt: "2026年618購物節，台灣電商從單純價格戰轉向會員訂閱與快速物流的服務競爭。momo、蝦皮、酷澎三強加上好市多線上通路各出奇招，台灣FMCG線上銷額年增10%，成為零售業最關鍵的一場中場決戰。"
 publishDate: "2026-06-01T09:00:00+08:00"
+updatedDate: 2026-08-07
 category: "lifestyle"
 subcategory: "consumer"
 tags:

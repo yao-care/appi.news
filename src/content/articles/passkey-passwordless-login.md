@@ -1,8 +1,9 @@
 ---
-title: "Passkey 通行密鑰是什麼：無密碼登入的運作原理與台灣導入現況"
+title: "密碼金鑰（Passkey）是什麼？原理與台灣行動自然人憑證現況"
 slug: "passkey-passwordless-login"
-description: "通行密鑰用裝置端的公私鑰取代密碼，登入時以生物辨識解鎖私鑰簽章，密碼不再傳輸或外洩。本文整理 Passkey 的運作原理、怎麼開始用，以及台灣已支援的服務與限制。"
+description: "密碼金鑰（Passkey）用手機或電腦的生物辨識取代密碼，這篇整理它的運作原理、怎麼在 Google、Apple、Microsoft 帳號開始用，以及台灣行動自然人憑證與露天、可樂旅遊等民間服務的導入現況。"
 publishDate: "2026-06-23T17:05:00+08:00"
+updatedDate: 2026-08-07
 status: "published"
 category: "tech"
 subcategory: "security"

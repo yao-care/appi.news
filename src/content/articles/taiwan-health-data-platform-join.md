@@ -1,8 +1,9 @@
 ---
-title: 一人一份健康資料，台灣就能養出自己的醫療 AI
+title: "健康存摺SDK能幹嘛？跟AI醫療背後的台灣健康網路平台差在哪"
 slug: taiwan-health-data-platform-join
-description: 台灣健康網路平台要串接全台千萬健康存摺使用者的資料。個人紅利有限又有條件，集體效益才是重點：資料匯集後，台灣才可能訓練出貼合本地體質的醫療 AI。平台如何劃定退出、獨立監理與二次利用的界線，是參與前的關鍵。
+description: "健康存摺SDK早就能授權分享看診、用藥、檢驗資料，但轉診免重做檢查、訓練醫療AI靠的是台灣健康網路平台這個新系統。文章拆解兩者差在哪、資料流向誰，以及參與前該確認的退出與監理界線。"
 publishDate: 2026-07-20T12:00:00.000Z
+updatedDate: 2026-08-07
 category: health
 subcategory: health-policy
 tags:

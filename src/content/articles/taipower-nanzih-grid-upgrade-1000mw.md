@@ -1,8 +1,9 @@
 ---
-title: "台電雄積三、四線完工：楠梓半導體園區供電翻倍上看1000MW"
+title: "楠梓供電翻倍上看1000MW：台電雄積三、四線完工強化電網"
 slug: "taipower-nanzih-grid-upgrade-1000mw"
 description: "台電「高雄～雄積三、四線」輸電線路工程8月1日完工送電，是「強化電網韌性建設計畫」的最新進度；南科高雄楠梓園區供電能力從現有約400MW提升到逾1000MW，原訂42個月工期大幅縮減至15個月、提前逾2年完工，線路兼顧161kV現況需求與未來升級345kV的擴充彈性，因應楠梓半導體產業擴產用電需求。"
 publishDate: "2026-08-04T02:33:28.101Z"
+updatedDate: 2026-08-07
 category: "focus"
 subcategory: "trend-watch"
 tags:

@@ -1,8 +1,9 @@
 ---
-title: "台灣是洗腎王國：健檢報告的 eGFR 是什麼，教你算出腎臟剩幾分"
+title: "eGFR是什麼？健檢腎臟指數紅字別慌，教你看懂分期"
 slug: "egfr-kidney-function"
-description: "台灣透析率世界前段、慢性腎臟病九成初期沒症狀。健檢報告的 eGFR 就是在估你腎臟剩幾分。教你看懂 eGFR 與 CKD 分期、為何一次紅字先別慌，以及傷腎地雷有哪些。"
+description: "健檢報告的eGFR是什麼？教你看懂這個腎臟指數怎麼算、CKD-EPI公式與分期怎麼分，一次紅字為什麼先別慌，以及止痛藥等傷腎地雷有哪些。"
 publishDate: 2026-07-19T20:00:00+08:00
+updatedDate: 2026-08-07
 category: health
 subcategory: medical
 tags:

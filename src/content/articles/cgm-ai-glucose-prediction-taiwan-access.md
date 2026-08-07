@@ -1,9 +1,10 @@
 ---
-title: "連續血糖監測加上 AI 預測，台灣人現在買得到嗎？"
+title: "iFree2 CGM 台灣有許可證，AI血糖預測還買不到"
 slug: "cgm-ai-glucose-prediction-taiwan-access"
-description: "Abbott 在 CES 2026 端出用生成式 AI 拍照預測食物血糖反應的 Libre Assist，但這項功能綁定的 Libre 3 Plus 感測器，台灣根本沒有 TFDA 許可證。台灣消費者買得到的連續血糖監測，健保給付範圍窄、普及率不到 1%，還有人跨海網購沒有許可證的感測器，撞上後來被列為高風險的回收事件。拆解 CGM 的 AI 預測到底做到哪、台灣現況卡在哪。"
+description: "華廣生技 iFree2 是台灣少數取得食藥署許可證的連續血糖監測系統，但沒有 AI 功能；Abbott CES 2026 發表的 Libre Assist 用生成式 AI 預測血糖，綁定的感測器台灣沒有許可證，健保給付範圍也窄。整理台灣現在真正買得到的 CGM 選項與健保給付門檻。"
 excerpt: "生成式 AI 預測食物血糖反應的 CGM 功能，綁定的感測器台灣沒有許可證；台灣人買得到的連續血糖監測，健保給付窄、普及率不到 1%。AI 預測與台灣現況之間，隔著一道法規與給付的落差。"
 publishDate: "2026-08-03T17:12:33.096Z"
+updatedDate: 2026-08-07
 category: "tech"
 subcategory: "ai"
 tags:

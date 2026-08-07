@@ -1,9 +1,10 @@
 ---
-title: "SK 海力士砸 19 兆韓元蓋封裝廠、再綁台積電做 HBM4：記憶體龍頭把戰線拉到封裝"
+title: "SK海力士砸19兆綁台積電拚HBM4：封裝才是AI晶片真正戰場"
 slug: "sk-hynix-packaging-hbm-tsmc"
-description: "SK 海力士宣布投 19 兆韓元（約 130 億美元）在南韓清州蓋號稱全球最大的 HBM 先進封裝廠 P&T7，同時跟台積電簽備忘錄把 HBM4 綁上台積電邏輯製程與 CoWoS。兩件事是同一題：記憶體龍頭把競爭戰線從晶圓拉到封裝。台灣要讀的是台積電 CoWoS 這道咽喉正在鬆動。"
+description: "SK海力士砸19兆韓元蓋封裝廠、綁台積電做HBM4，卻又跑去測試Intel的EMIB封裝技術。文章拆解封裝為何變成記憶體大廠的新戰場，以及台積電CoWoS吃緊下，台灣封測業者可能補上的位置。"
 excerpt: "HBM 龍頭不缺產能技術，為什麼還要砸 130 億美元蓋封裝廠、又跑去綁台積電？因為 AI 記憶體真正的瓶頸不在 DRAM 晶圓，在把晶粒堆疊、封裝、測試、控熱成可交付模組的後段。"
 publishDate: "2026-07-13T08:00:00+08:00"
+updatedDate: 2026-08-07
 category: "tech"
 subcategory: "semiconductor"
 tags:

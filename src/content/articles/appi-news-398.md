@@ -1,9 +1,9 @@
 ---
-title: "什麼是「老人養老人」？超高齡社會下的退休金壓力全解析"
+title: "台灣出生率創新低如何加重老人養老人退休金壓力"
 slug: "appi-news-398"
-description: "台灣2025年正式邁入超高齡社會，65歲以上人口占比突破20%。什麼是「老人養老人」？退休金為何被迫提前透支？完整解析成因、財務衝擊與因應之道。"
+description: "台灣出生率屢創新低，手足變少讓退休族獨自扶養年邁父母，退休金加速透支、甚至被迫延後退休。解析老人養老人成因、財務衝擊與因應之道。"
 publishDate: 2026-07-27
-updatedDate: 2026-08-06
+updatedDate: 2026-08-07
 category: finance
 subcategory: consumer-finance
 tags: ["超高齡社會"]

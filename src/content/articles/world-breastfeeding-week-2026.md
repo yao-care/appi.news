@@ -1,9 +1,10 @@
 ---
-title: "世界母乳哺育週2026：WHO主題喊「強化有效做法」，台灣育嬰留停彈性新制上路、哺集乳室仍卡在無罰則"
+title: "國際母乳哺育週2026：台灣育嬰留停新制上路，哺育率低於WHO目標"
 slug: "world-breastfeeding-week-2026"
 description: "8月1日至7日世界母乳哺育週，WABA、WHO與UNICEF今年主題聚焦「強化行之有效的做法」。台灣同一時間迎來育嬰留職停薪彈性化新制上路，哺集乳室設置比例逾九成、但仍無罰則，母乳哺育率則低於WHO目標。"
 excerpt: "世界母乳哺育週不是一天、是一週。今年主題要各國「盤點已經有效的做法再加強」，台灣則有一項2026年才上路的新制度，正好卡在這個位置上。"
 publishDate: "2026-08-01T06:17:00+08:00"
+updatedDate: 2026-08-07
 category: "health"
 subcategory: "nutrition"
 tags:

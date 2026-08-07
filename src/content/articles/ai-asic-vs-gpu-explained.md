@@ -1,9 +1,10 @@
 ---
-title: "AI ASIC 是什麼？為什麼雲端巨頭讓晶片從 GPU 轉向它"
+title: "ASIC 是什麼？和 GPU 差在哪，AI 晶片為何轉向它"
 slug: "ai-asic-vs-gpu-explained"
 description: "AI ASIC 是為單一運算任務把電路刻死的客製晶片，換取比通用 GPU 更高的每瓦效能與更低單位成本。解釋 ASIC 跟 GPU 的架構差異、為什麼推論階段特別適合 ASIC、流片一次要花多少錢跟多久、台灣 IC 設計與封測吃到哪一段，以及什麼情況下仍該用 GPU。"
 excerpt: "GPU 是什麼工作都能算的瑞士刀，ASIC 是只做一件事但做到極致的量身工具。當推論工作負載固定又大量重複，雲端巨頭開始覺得那份彈性的電費不划算。"
 publishDate: "2026-07-29T11:10:00+08:00"
+updatedDate: 2026-08-07
 category: "tech"
 subcategory: "semiconductor"
 tags:

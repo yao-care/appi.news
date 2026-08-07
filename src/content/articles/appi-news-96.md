@@ -1,8 +1,9 @@
 ---
-title: 王威鵬醫師：深臀症候群的診斷與治療，針灸與物理治療的整合應用
+title: "王威鵬醫師專訪：深臀症候群針灸與物理治療整合療法"
 slug: appi-news-96
-description: 深臀症候群常被誤診為坐骨神經痛或腰椎問題，本文彙整王威鵬醫師臨床觀點，說明深層臀肌疼痛的辨識重點、針灸乾針的差異，以及前期止痛到後期功能重建的整合治療策略。
+description: "王威鵬醫師專訪，說明深臀症候群為何常被誤診為坐骨神經痛或腰椎問題，解析針灸、乾針與物理治療如何分階段整合，從止痛走到臀肌功能重建，並提供就診前自我檢查重點。"
 publishDate: 2026-06-21T00:00:00.000Z
+updatedDate: 2026-08-07
 category: health
 topics: ["tcm-acupuncture-pain"]
 subcategory: tcm-integrative

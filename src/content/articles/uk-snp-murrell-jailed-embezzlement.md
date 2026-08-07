@@ -1,9 +1,10 @@
 ---
-title: "蘇格蘭民族黨前執行長莫雷爾侵吞黨費逾40萬英鎊　判刑5年3個月　前妻施特金稱「遭蒙蔽背叛」"
+title: "SNP認栽核銷穆雷爾露營車帳、拒還他6萬鎊貸款　前執行長侵吞黨費逾40萬英鎊已判囚5年3個月"
 slug: "uk-snp-murrell-jailed-embezzlement"
-description: "蘇格蘭民族黨前執行長莫雷爾6月23日在愛丁堡高等法院被判5年3個月徒刑，他承認2010至2022年間侵吞黨費40萬310.65英鎊，包括以12萬4550英鎊購買豪華露營車。前妻、前蘇格蘭首席部長施特金稱自己「遭蒙蔽、誤導與背叛」。"
-excerpt: "蘇格蘭民族黨前執行長莫雷爾6月23日在愛丁堡高等法院被判5年3個月徒刑，他承認2010至2022年間侵吞黨費逾40萬英鎊。前妻、前蘇格蘭首席部長施特金稱自己「遭蒙蔽、誤導與背叛」。"
+description: "蘇格蘭民族黨最新公布的2025年度財報，將前執行長莫雷爾購買的12萬4550英鎊豪華露營車帳面價值全數註銷，並確定不會償還他2021年借給黨方、迄今未還的6萬英鎊貸款。莫雷爾已因侵吞黨費逾40萬英鎊判囚5年3個月，黨方將於下月沒收聽證會上尋求追回全部贓款。"
+excerpt: "SNP最新財報核銷莫雷爾露營車帳面價值、確定不還他6萬英鎊貸款；莫雷爾稍早已因侵吞黨費逾40萬英鎊被判囚5年3個月，黨方下月將尋求沒收令追回贓款。"
 publishDate: "2026-06-23T13:23:26.574Z"
+updatedDate: "2026-08-07T17:51:19.651Z"
 category: "international"
 subcategory: "europe"
 tags:
@@ -11,15 +12,28 @@ tags:
   - "蘇格蘭"
   - "司法"
 highlights:
-  - "蘇格蘭民族黨（SNP）前執行長莫雷爾6月23日在愛丁堡高等法院被判5年3個月徒刑，5月25日已認罪"
-  - "他承認2010年8月至2022年10月間，利用掌控的黨帳戶侵吞40萬310.65英鎊，並在會計軟體中以不實摘要掩飾"
-  - "侵吞款項用於採購一輛12萬4550英鎊豪華露營車、汽車、名錶與高級文具等私人用品"
-  - "案件源於2021年「樹枝行動」調查；莫雷爾的前妻、前蘇格蘭首席部長施特金稱自己「遭蒙蔽、誤導與背叛」，未遭起訴"
+  - "SNP最新公布的2025年度財報，將莫雷爾購買的12萬4550英鎊豪華露營車帳面價值全數註銷，並確認不會償還他2021年借給黨方、迄今仍欠的6萬英鎊貸款"
+  - "審計師警告黨內「關係人交易與人工分錄」仍有「較高的詐欺風險」；保守黨財政發言人霍伊批評此帳目「引發更多嚴重疑問」"
+  - "莫雷爾已於6月23日在愛丁堡高等法院被判5年3個月徒刑，承認2010年8月至2022年10月間侵吞黨費40萬310.65英鎊"
+  - "黨方預計下月召開沒收聽證會，尋求追回莫雷爾侵吞的全部款項；前議員雪莉則質疑黨方應歸還挪用的66萬英鎊獨立公投基金"
 risksAndLimits:
-  - "莫雷爾的判刑細節與侵吞金額以愛丁堡高等法院6月23日認定為準，後續上訴可能影響刑期"
+  - "露營車帳面淨值變化與貸款細節依SNP向英國選舉委員會申報的2025年度財報為準，後續若有更正應以正式申報文件為準"
+  - "沒收聽證會（proceeds of crime hearing）僅為黨方與媒體預告的「下月」時程，確切開庭日期尚未公告"
   - "施特金遭蒙蔽、誤導與背叛的說法為其個人陳述，尚未見獨立調查報告佐證"
   - "本案聚焦莫雷爾個人刑責，與66萬英鎊獨立公投募款去向的樹枝行動調查是否有其他人涉案尚無定論"
 references:
+  - title: "SNP writes off value of Peter Murrell motorhome and will not repay him £60k loan"
+    url: "https://www.gazetteherald.co.uk/news/national/26441974.snp-writes-off-value-peter-murrell-motorhome-will-not-repay-gbp60k-loan/"
+    publisher: "Gazette & Herald（PA Media 通訊稿）"
+  - title: "SNP write-off value of Murrell motorhome in party accounts"
+    url: "https://www.yahoo.com/news/politics/articles/snp-write-off-value-murrell-151457787.html"
+    publisher: "Yahoo News（PA Media 通訊稿）"
+  - title: "Murrell motorhome value written off in SNP accounts"
+    url: "https://dailybusinessgroup.co.uk/2026/08/murrell-motorhome-value-written-off-in-snp-accounts/"
+    publisher: "Daily Business Group"
+  - title: "SNP's accounts raise 'serious questions' as John Swinney told to refund IndyRef donors using his 'formidable financial strength'"
+    url: "https://www.scottishdailyexpress.co.uk/news/politics/snps-accounts-raise-serious-questions-37521825"
+    publisher: "Scottish Daily Express"
   - title: "Former SNP chief Peter Murrell jailed for embezzling more than £400,000 of party funds"
     url: "https://www.euronews.com/my-europe/2026/06/23/former-snp-chief-peter-murrell-jailed-for-embezzling-more-than-400000-of-party-funds"
     publisher: "Euronews"
@@ -41,19 +55,32 @@ status: "published"
 sourceType: "wire"
 contentType: "news"
 disclaimerType: "general"
-disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
+disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 PA Media 通訊稿（經多家英國地方媒體轉載）、Daily Business Group、Scottish Daily Express、Euronews 等外媒公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/uk-snp-murrell-jailed-embezzlement-cover.webp"
 coverAlt: "蘇格蘭愛丁堡高等法院（資料照）"
 coverImageCredit: "Chabe01 — CC BY-SA 4.0, Wikimedia Commons"
+originalContribution: "本文延續6月23日莫雷爾判刑報導，整合8月6日SNP公布2025年度財報後PA Media、Daily Business Group、Scottish Daily Express對露營車帳面價值遭核銷、6萬英鎊貸款不獲償還的最新報導，補上黨方財務數字、審計警語與跨黨派反應，供台灣讀者掌握案件財務面的最新進展。"
 ---
 
-長期執掌蘇格蘭民族黨（Scottish National Party，SNP）黨務的前執行長莫雷爾（Peter Murrell），6月23日在愛丁堡高等法院（High Court in Edinburgh）因侵吞黨費被判處5年3個月徒刑。據[Euronews報導](https://www.euronews.com/my-europe/2026/06/23/former-snp-chief-peter-murrell-jailed-for-embezzling-more-than-400000-of-party-funds)，現年61歲的莫雷爾在2010年8月至2022年10月間，利用自己掌控的SNP主要銀行帳戶採購一連串昂貴私人物品，並動用黨的會計軟體，以「具誤導性的摘要與／或會計科目」登錄收支來掩飾。他已於今年5月25日認罪。
+蘇格蘭民族黨（Scottish National Party，SNP）8月6日公布的2025年度財務報告顯示，前執行長莫雷爾（Peter Murrell）購買的豪華露營車帳面價值已全數註銷、從資產負債表移除，黨方也確定不會償還莫雷爾2021年借給黨方、迄今仍欠的6萬英鎊貸款。據[Gazette & Herald引述PA Media通訊稿](https://www.gazetteherald.co.uk/news/national/26441974.snp-writes-off-value-peter-murrell-motorhome-will-not-repay-gbp60k-loan/)，SNP發言人表示，鑑於莫雷爾已認罪，黨方「正在追討全部遭竊款項，不會再支付莫雷爾任何款項」。莫雷爾6月23日已在愛丁堡高等法院（High Court in Edinburgh）因侵吞黨費被判處5年3個月徒刑。據[Euronews報導](https://www.euronews.com/my-europe/2026/06/23/former-snp-chief-peter-murrell-jailed-for-embezzling-more-than-400000-of-party-funds)，現年61歲的莫雷爾在2010年8月至2022年10月間，利用自己掌控的SNP主要銀行帳戶採購一連串昂貴私人物品，並動用黨的會計軟體，以「具誤導性的摘要與／或會計科目」登錄收支來掩飾。他已於今年5月25日認罪。
+
+## 最新財報：核銷露營車帳、確定不還貸款
+
+去年度（2024）SNP財報就已顯示，這輛露營車帳面淨值從年初的10萬790英鎊腰斬至年底4萬1284英鎊；最新公布的2025年度財報則直接將其帳面價值全數註銷、自資產負債表移除。據[Daily Business Group](https://dailybusinessgroup.co.uk/2026/08/murrell-motorhome-value-written-off-in-snp-accounts/)，這輛露營車目前停放在莫雷爾母親住處。
+
+財報同時揭露，SNP仍欠莫雷爾6萬英鎊，這是他2021年借給黨方的貸款，雙方當時未簽訂正式協議、無利息也無還款期限。據[Gazette & Herald](https://www.gazetteherald.co.uk/news/national/26441974.snp-writes-off-value-peter-murrell-motorhome-will-not-repay-gbp60k-loan/)，帳目附註指出，由於缺乏議定的償還條款、加上近來雙方也乏聯繫，何時或是否償還這筆貸款仍屬未知。
+
+延伸閱讀：[蘇格蘭婦人克里特島陳屍17年後終定罪、判10年徒刑　希臘上訴制度下仍未收押，家屬痛批『太離譜』](/articles/jean-hanlon-crete-murder-conviction/)
+
+獨立審計師也對黨務治理提出警語。據[Scottish Daily Express](https://www.scottishdailyexpress.co.uk/news/politics/snps-accounts-raise-serious-questions-37521825)，審計師指出黨內「關係人交易與人工分錄」仍屬「較高的詐欺風險」領域。蘇格蘭保守黨財政發言人霍伊（Craig Hoy）批評，帳目「引發更多嚴重疑問」，「該黨技術上仍欠這個『不誠實的』莫雷爾6萬英鎊，令人震驚；審計師點名的詐欺風險也會讓外界揚眉」。
+
+黨魁、首席部長史威尼（John Swinney）則強調財務體質好轉。他在X平台表示，2025年度財報顯示SNP「處於雄厚的財務實力」，全年盈餘逾50萬英鎊（509,903英鎊），一舉扭轉前一年度近38萬4000英鎊（383,707英鎊）赤字的頹勢。不過黨員人數持續流失，據同一報導，SNP黨員數已從高峰期逾12萬人，降至今年6月底的5萬443人，較去年同期的5萬6011人再減；會費收入則逾170萬英鎊。
+
+黨方預計下月（9月）召開沒收聽證會（proceeds of crime hearing），據[Gazette & Herald](https://www.gazetteherald.co.uk/news/national/26441974.snp-writes-off-value-peter-murrell-motorhome-will-not-repay-gbp60k-loan/)，屆時將尋求向莫雷爾追回全部遭侵吞的款項。這起帳目風波也牽動黨內舊帳：前議員雪莉（Joanna Cherry）在同一時間點名史威尼，質問「既然你已承認原本圈存給第二次獨立公投的基金被拿去支應黨務一般開支，何不把錢還回去？」，指向2021年募得、卻遭挪用的66萬英鎊獨立公投基金。
 
 ## 一筆筆登錄成黨支出的私人採購
 
 法院認定的侵吞金額相當精確。據[Radio NewsHub報導](https://www.radionewshub.com/articles/news-updates/Former-SNP-chief-executive-Peter-Murrell-jailed-for-more-than-five-years)，莫雷爾在這12年間共侵吞40萬310.65英鎊，手法包括直接銀行轉帳、使用多張黨的簽帳卡、不實報銷，以及在會計軟體中填入誤導性說明。同一報導指出，本案由楊勳爵（Lord Young）審理，刑期自起算日回溯計算。
-
-延伸閱讀：[蘇格蘭婦人克里特島陳屍17年後終定罪、判10年徒刑　希臘上訴制度下仍未收押，家屬痛批『太離譜』](/articles/jean-hanlon-crete-murder-conviction/)
 
 <img src="/images/uk-snp-murrell-jailed-embezzlement-motorhome.webp" width="660" height="440" loading="lazy" decoding="async" alt="豪華露營車示意圖（資料照，非當事車輛）">
 
@@ -77,7 +104,18 @@ SNP是英國蘇格蘭地區的主要政黨，長期主張蘇格蘭獨立、推�
 
 延伸閱讀：[英國把抗議團體列「恐怖組織」合法嗎？巴勒斯坦行動禁令案送最高法院　西敏寺法院外單日再增117人被捕，2000多起案件延押10月](/articles/uk-palestine-action-ban-supreme-court/)
 
+## 更新時間軸
+
+- （更新 2026-08-06：SNP公布2025年度財報，將莫雷爾露營車帳面價值全數註銷、確認不會償還他2021年的6萬英鎊貸款；審計師警告黨內詐欺風險偏高，黨方預計下月召開沒收聽證會追討贓款。[Gazette & Herald](https://www.gazetteherald.co.uk/news/national/26441974.snp-writes-off-value-peter-murrell-motorhome-will-not-repay-gbp60k-loan/)、[Scottish Daily Express](https://www.scottishdailyexpress.co.uk/news/politics/snps-accounts-raise-serious-questions-37521825)）
+- 2026-06-23：莫雷爾在愛丁堡高等法院被判5年3個月徒刑，承認2010年8月至2022年10月間侵吞黨費40萬310.65英鎊。（[Euronews](https://www.euronews.com/my-europe/2026/06/23/former-snp-chief-peter-murrell-jailed-for-embezzling-more-than-400000-of-party-funds)）
+
 ## 常見問題
+
+### SNP最新財報對莫雷爾的露營車和貸款做了什麼處置？
+SNP 8月6日公布的2025年度財報，將莫雷爾購買的12萬4550英鎊豪華露營車帳面價值全數註銷，並確認不會償還他2021年借給黨方、迄今仍欠的6萬英鎊貸款。
+
+### 這筆6萬英鎊貸款是怎麼回事？
+這是莫雷爾2021年借給SNP的貸款，雙方當時未簽訂正式協議、無利息也無還款期限；黨方鑑於他已認罪侵吞黨費，表示會全力追討遭竊款項、不會再支付他任何款項。
 
 ### 莫雷爾被判多久徒刑，侵吞了多少黨費？
 莫雷爾6月23日在愛丁堡高等法院被判5年3個月徒刑，他承認2010年8月至2022年10月間侵吞蘇格蘭民族黨黨費共40萬310.65英鎊。

@@ -20,6 +20,8 @@ risksAndLimits:
 
 台灣的長照需求一年比一年逼近臨界點，家裡有長輩需要照顧的人，多半都感受過「排不到照服員」「夜班沒人顧」的窘境。衛福部近期對外說明一套長照人力重整方案,把照顧工作拆成核心照護、非核心陪伴,以及外籍勞動力三塊,外籍人力的角色也打算分三階段逐步擴大。這套規劃會怎麼影響一般家庭申請服務、未來想投入照顧產業的人,以下整理目前查得到的具體內容。
 
+延伸閱讀：[全台首座兒童住宿型長照機構「童羽之家」：收治資格、床位現況與申請費用整理](/articles/taipei-tong-yu-home-child-longterm-care-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=GE3RcWWo174" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：超高齡時代來臨 長照缺工危機爆發! 衛福部擬納外籍勞動力「3階段補人力缺口」｜十點不一樣20260804">
     <img src="/images/long-term-care-workforce-shortage-plan-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="超高齡時代來臨 長照缺工危機爆發! 衛福部擬納外籍勞動力「3階段補人力缺口」｜十點不一樣20260804">

@@ -60,6 +60,10 @@ references:
 
 南投縣信義鄉的東埔溫泉，最近因為一支帶路影片重新被討論。深耕南投觀光業逾40年、現任泰雅渡假村總經理的李吉田，日前在[民視新聞](https://www.youtube.com/watch?v=9rL9_udNMJU)的節目中走訪東埔溫泉，帶大家泡湯並品嚐他私房喜愛的放山雞料理。這處緊鄰玉山國家公園的老溫泉區，其實從日治時期就以「美人湯」聞名。以下整理東埔溫泉的泉質特色、交通方式與在地美食資訊，給想安排一趟溫泉小旅行的讀者參考。
 
+延伸閱讀：[台灣美食展飯店餐券怎麼挑最划算？14家五星飯店優惠、日期與票價整理](/articles/taiwan-food-expo-hotel-vouchers-guide/)
+
+延伸閱讀：[公館老字號「梅江韓國銅盤烤肉」10月歇業：30年吃到飽走入歷史，收攤前資訊整理](/articles/gongguan-mei-jiang-korean-bbq-closing/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=9rL9_udNMJU" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：在地美食／南投東埔溫泉泡湯吃美食好療癒　放山雞多汁肉Q彈">
     <img src="/images/dongpu-hotspring-free-range-chicken-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="在地美食／南投東埔溫泉泡湯吃美食好療癒　放山雞多汁肉Q彈">

@@ -53,6 +53,8 @@ coverImageCredit: "Amirhossein.marami — CC BY-SA 4.0, Wikimedia Commons"
 
 [Al Jazeera的葬禮路線整理](https://www.aljazeera.com/news/2026/7/3/mapping-irans-ali-khamenei-funeral-where-mourners-will-gather-each-day)指出，公開悼念自7月4日當地時間清晨6時起，在德黑蘭伊瑪目霍梅尼大清真寺（Grand Mosalla，又稱大穆薩拉）展開連續24小時的靈柩瞻仰，天未亮就有大批民眾在廣場外聚集。7月6至7日，靈柩隊伍將行經德黑蘭其他地區，再南下距首都約120公里的宗教重鎮庫姆（Qom）。7月8日靈柩跨境抵達伊拉克納傑夫國際機場，由伊拉克總理與資深官員、宗教領袖正式接待，隊伍先赴納傑夫的伊瑪目阿里聖殿，再以直升機轉往約80公里外卡爾巴拉的伊瑪目侯賽因聖殿，當日稍晚飛返伊朗。7月9日，哈梅內伊將於什葉派聖地之一、馬什哈德的伊瑪目雷扎聖殿正式下葬。
 
+延伸閱讀：[美伊戰事急轉：川普喊停對伊朗新攻擊　開出荷莫茲海峽全面開放換停火條件](/articles/iran-jordan-base-attack-us-retaliates/)
+
 <figure>
 <img src="/images/iran-khamenei-state-funeral-s1.webp" width="960" height="629" loading="lazy" decoding="async" alt="馬什哈德伊瑪目雷扎聖殿金頂">
 <figcaption>哈梅內伊最終將安葬於馬什哈德伊瑪目雷扎聖殿，什葉派最重要的聖地之一。（khamenei.ir／CC BY 4.0，Wikimedia Commons）</figcaption>
@@ -73,3 +75,5 @@ coverImageCredit: "Amirhossein.marami — CC BY-SA 4.0, Wikimedia Commons"
 ## 哈梅內伊之後：兒子接掌大位，戰爭中鮮少露面
 
 [Middle East Eye報導](https://www.middleeasteye.net/news/iran-begins-six-day-state-funeral-ali-khamenei)指出，哈梅內伊之子莫賈塔巴（Mojtaba Khamenei）已於今年3月接任最高領袖，他在戰爭中一度受傷，自戰事爆發以來僅透過書面聲明對外表態，這場國葬將是他戰後首度可能的公開亮相。伊朗最高領袖一職原本並非世襲制，莫賈塔巴接掌大位也讓外界持續關注伊朗政教體制在哈梅內伊身後如何延續。
+
+延伸閱讀：[美伊瑞士談判傳「進展令人鼓舞」　設荷莫茲海峽通訊線、黎巴嫩防衝突機制](/articles/lebanon-ceasefire-us-iran-hormuz/)

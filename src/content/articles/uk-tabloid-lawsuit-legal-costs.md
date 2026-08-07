@@ -49,6 +49,8 @@ coverImageCredit: "David Castor — CC0，取自 Wikimedia Commons"
 
 案件經過10週以上的審理，法官尼克林（Mr Justice Nicklin）今年7月7日做出判決，認定原告方「所提出的訴狀相當單薄」、「沒有指出任何具體的非法行為」，全數駁回7人的指控。（[Newsweek](https://www.newsweek.com/entertainment/celebrity-news/prince-harry-costs-daily-mail-lawsuit-hearing-12257835)）
 
+延伸閱讀：[蘇格蘭民族黨前執行長莫雷爾侵吞黨費逾40萬英鎊　判刑5年3個月　前妻施特金稱「遭蒙蔽背叛」](/articles/uk-snp-murrell-jailed-embezzlement/)
+
 <img src="/images/uk-tabloid-lawsuit-legal-costs-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="倫敦皇家司法宮外觀，維多利亞哥德復興式建築">
 
 ## 訟費逾3400萬英鎊，雙方喬不攏初期付款
@@ -68,3 +70,5 @@ coverImageCredit: "David Castor — CC0，取自 Wikimedia Commons"
 ## 下一步：8月見分曉
 
 聽證結束後，法官尼克林表示，將於下個月（8月）以書面裁決確認初期付款的具體金額，以及費用審核要採哪種計算基準。他也告訴原告方，屆時會確認一筆金額，原告最快必須在8月28日前支付。完整的費用審核則要等到日後另外的聽證才會定案。（[Irvine Times](https://www.irvinetimes.com/news/national/26424398.harry-others-face-wait-size-legal-fees-payment-mail-publisher/)、[The National](https://www.thenationalnews.com/news/uk/2026/07/29/daily-mail-seeks-13-million-interim-payment-after-prince-harry-loses-lawsuit/)）
+
+延伸閱讀：[外交豁免權一出，規劃許可的附加條件還管用嗎？英國中國『超級大使館』官司敗訴，居民誓言上訴](/articles/uk-china-embassy-royal-mint-court/)

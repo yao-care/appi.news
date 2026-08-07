@@ -81,6 +81,8 @@ Windows 11電腦一開機記憶體用量就衝到六、七成，這件事本身�
 
 文章指的是微軟Windows與裝置事業群總裁Pavan Davuluri，在2026年7月31日發布於官方[Windows Insider Blog的系統品質進度報告](https://blogs.windows.com/windows-insider/2026/07/31/windows-quality-an-update-on-the-commitment-we-made-in-march/)，裡面把「8GB以上機型的記憶體最佳化」列為下半年四大重點方向之一。微軟說明做法有三項：換用更有效率的記憶體配置器降低應用程式與系統元件的額外開銷、持續調校WinUI 3框架讓用它蓋出來的應用程式預設就吃更少記憶體，以及提升Chromium與WebView2元件（Edge與許多內建App共用這套引擎）的效率。報告沒有給出具體省下多少記憶體的數字，時程也只說「這個秋天起會陸續推送」，不是單一更新包一次到位。
 
+延伸閱讀：[手機系統更新前先看這篇：舊機該不該升，出事了怎麼退回](/articles/phone-os-update-should-you-upgrade-2026/)
+
 <img src="/images/windows-11-ram-usage-fix-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="筆記型電腦螢幕與鍵盤特寫（示意圖）">
 
 ## 依效果排序，這幾個設定真的能降

@@ -57,6 +57,8 @@ references:
 
 [NPR／WWNO報導](https://www.wwno.org/npr-news/2026-08-05/dr-erica-schwartz-confirmed-as-cdc-director-filling-a-leadership-vacuum)指出，美國參議院8月5日以51票對44票，確認史瓦茲（Erica Schwartz）出任CDC主任，是該機關近一年來首位獲參院同意的正式主任。她接手的是一個因裁員、辭職與領導層動盪，已流失數千名員工的機構。
 
+延伸閱讀：[美國總統的人事任命為什麼會卡在參議院？從布蘭奇提名風波看川普家族避稅協議的政治代價](/articles/us-senate-confirmation-power-blanche/)
+
 ## 史瓦茲是誰：24年軍旅資歷，表決卻幾乎全按黨派分票
 
 <img src="/images/us-cdc-director-schwartz-confirmed-s1.webp" width="960" height="645" loading="lazy" decoding="async" alt="美國CDC位於喬治亞州亞特蘭大的Roybal總部園區外觀">
@@ -80,3 +82,5 @@ CIDRAP的報導指出，史瓦茲上任時，CDC同時應對三場疫情：15州
 ## 對台灣讀者的參考點：CDC動盪為何牽動全球防疫網絡
 
 台灣讀者較少留意的是，CDC不只是美國的國內機關，它的傳染病監測系統、疫苗建議指引與流行病學人才培訓，長期是全球公衛體系互相參照的一環，台灣的疾病管制署在防疫合作與資訊交換上也與其互動。當這個機關陷入近一年的領導真空、人力又折損四分之一，對整體傳染病監測與應變能量會不會留下缺口，是接下來值得追蹤的問題；史瓦茲能否在黨派對立與人才流失的雙重壓力下穩住CDC的公衛職能，還有待後續報導觀察。
+
+延伸閱讀：[總統特赦後還能引用第五修正案拒答國會嗎？佛奇藐視國會案參議院委員會表決過關，恐送司法部起訴](/articles/fauci-contempt-congress-pardon-fifth-amendment/)

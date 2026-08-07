@@ -54,6 +54,8 @@ coverImageCredit: "Photo by Aseem Borkar on Pexels"
 
 基輔近郊地區8月4日深夜遭俄羅斯發動大規模飛彈與無人機攻擊，持續近兩小時，直到隔天5日凌晨才停歇。[《愛爾蘭新聞報》引述美聯社報導](https://www.irishnews.com/news/world/russian-missile-and-drone-barrage-in-ukrainian-capital-region-kills-at-least-15-U3VFRNOMIFL6DKOMCXLFWUQVXI/)，烏克蘭總統澤倫斯基稍後將死亡人數上修至17人，另有44人受傷。[美聯社透過WTOP報導](https://wtop.com/russia-ukraine-war-news/2026/08/russian-missile-and-drone-barrage-in-ukrainian-capital-region-kills-at-least-15/)指出，這波攻擊動用24枚彈道飛彈、4枚超音速巡弋飛彈，以及115架多為噴氣動力、速度更快難以攔截的無人機。
 
+延伸閱讀：[黑海航運安全為什麼拉警報？俄烏無人機互襲波及沙灘與土耳其商船，傷亡創新高](/articles/black-sea-shipping-safety-ukraine-russia-drones/)
+
 ## 防空一枚都攔不下　愛國者攔截彈只剩去年三分之一
 
 [路透社記者Yuliia Dysa報導](https://www.yahoo.com/news/articles/ukraine-says-missile-interceptor-deliveries-122958312.html)，這波攻擊中24枚彈道飛彈全數突破烏克蘭防空網，沒有一枚被擊落，115架無人機則攔下98架。澤倫斯基在Telegram發文表示，這不是單一事件，「這適用於2026年上半年的每一段時期」，並指出西方盟國今年供應的防空攔截彈數量只有2025年同期的三分之一。他要求盟國加快授權烏克蘭在地生產愛國者飛彈，並對俄羅斯飛彈供應鏈相關企業加重制裁。
@@ -75,3 +77,5 @@ coverImageCredit: "Photo by Aseem Borkar on Pexels"
 ## 西方盟國：討論補充彈藥、加重制裁
 
 Al Jazeera報導同時指出，美國官員正討論協助烏克蘭補充愛國者攔截彈庫存，方案包括在地製造部分零組件；法國總統馬克宏則宣布歐盟將加重對俄羅斯的制裁，並持續提供軍事援助。烏克蘭情報單位另指控北韓正向俄羅斯提供飛彈操作單位，這項說法目前尚待進一步獨立查證。
+
+延伸閱讀：[澤倫斯基撤換烏克蘭總司令　敘爾斯基下台、德拉帕蒂接掌　連日抗議後軍方大搬風](/articles/ukraine-zelensky-fires-syrskyi-drapatyi/)

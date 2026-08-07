@@ -49,6 +49,10 @@ coverImageCredit: "Photo by Niklas Jonasson on Unsplash"
 
 加拿大卑詩省野火季持續升溫，墨西哥8月3日週一起分批派遣逾300名消防人員跨海馳援，首批100多人當天下午抵達阿伯茨福德國際機場（Abbotsford International Airport），另200多人預計本週稍後抵達。[《Hope Standard》報導](https://hopestandard.com/2026/08/03/more-than-100-mexican-wildfire-personnel-arrive-in-b-c/)指出，卑詩省林業部長拉維．帕瑪（Ravi Parmar）親自到機場接機，並向這批遠道而來的救援人員喊話：「他們遠道而來保護我們的家園，讓我們熱情歡迎他們。」[《Abbotsford News》報導](https://abbynews.com/2026/08/03/more-than-100-mexican-wildfire-personnel-arrive-in-b-c/)也證實了同一場面，兩篇報導引述的部長談話一致。
 
+延伸閱讀：[熱浪為什麼能讓核電廠關閉？匈牙利多瑙河水位探44年新低，帕克斯核電廠首度全面停機](/articles/hungary-nuclear-plant-heatwave-shutdown/)
+
+延伸閱讀：[歐洲野火為什麼一年比一年凶猛？　希臘滅火直升機空中相撞釀2死，野火本週死亡人數增至5人](/articles/europe-wildfire-crisis-france-greece/)
+
 這批人員抵達後將與卑詩野火服務隊（BC Wildfire Service）並肩作戰。[《Victoria News》報導](https://vicnews.com/2026/08/03/more-than-100-mexican-wildfire-personnel-arrive-in-b-c/)指出，截至8月3日下午，卑詩省境內共有126場活躍野火，其中53場失控、53場受控、20場已控制，過去24小時內另新增9場火災；同一天，卑詩省已核發38份撤離令與38份撤離警報，前一天境內錄得逾2200次閃電，其中22起疑似由雷擊直接引發火勢。
 
 ## 中歐肯納根疏散逾2200戶　週末強風一度達115公里

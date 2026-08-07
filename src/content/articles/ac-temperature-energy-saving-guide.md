@@ -45,6 +45,8 @@ references:
 
 夏天一到，家裡的電費通知單數字跟著往上跳，冷氣該開幾度、外出時該不該關，成了每年反覆被討論的問題。台灣的官方說法和美國能源部的建議其實方向一致，只是計算基準不同，加上開開關關這件事最近又被美國專家重新檢視，整理成一篇給讀者參考。
 
+延伸閱讀：[冷氣房也會中暑？室內中暑原因、高風險族群與正確冷氣溫度整理](/articles/indoor-heatstroke-air-conditioned-room-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=NlIpzipZ6j8" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：調高0.6度省3%! 美研究揭冷氣省電秘訣 台電也曾認證｜十點不一樣20260804">
     <img src="/images/ac-temperature-energy-saving-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="調高0.6度省3%! 美研究揭冷氣省電秘訣 台電也曾認證｜十點不一樣20260804">

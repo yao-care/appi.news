@@ -42,6 +42,7 @@ disclaimerType: "general"
 coverImage: "covers/post-697-stock.jpg"
 coverAlt: "矽晶圓上整齊排列晶片的顯微特寫"
 coverImageCredit: "Photo by Laura Ockel on Unsplash"
+topics: ["taiwan-semiconductor-supply-chain"]
 ---
 
 半導體產業有個說法：封裝是晶片的最後一哩路。但在2025年，台積電的CoWoS先進封裝技術已不再是「最後一哩」，而是整個AI晶片供應鏈中最緊缺、最具競爭力的核心資源。[TrendForce最新分析](https://www.trendforce.com/news/2026/04/28/news-tsmc-cowos-wafer-asp-reportedly-nears-7nm-levels-advanced-packaging-poised-to-become-a-key-profit-driver)指出，台積電單片CoWoS封裝晶圓的平均售價約為1萬美元，已與7奈米先進製程晶圓並駕齊驅。這個定價不是偶然，而是反映了CoWoS作為AI算力瓶頸的市場地位。
@@ -49,6 +50,8 @@ coverImageCredit: "Photo by Laura Ockel on Unsplash"
 ## CoWoS產能成為AI供應鏈的核心卡點
 
 CoWoS是晶圓上晶片（Chip-on-Wafer）加基板封裝（on-Substrate）的縮寫，核心概念是透過矽中介層（interposer）將多個晶片橫向並排整合，達到比傳統電路板更高的頻寬與更低的能耗。輝達的H100、H200與GB200系列GPU，均採用CoWoS封裝方式整合GPU晶粒與HBM記憶體。
+
+延伸閱讀：[馬斯克為什麼要自建晶圓廠？Terafab計畫168億美元的算盤一次看懂](/articles/musk-terafab-chip-fab-plan/)
 
 [TrendForce資料](https://www.trendforce.com/presscenter/news/20260430-13028.html)顯示，台積電的CoWoS月產能預計在2025年底達到6.5萬片，而輝達早已鎖定超過七成的CoWoS-L產能。CoWoS-L是以雷射鑽孔取代矽通孔連接的改良版，支援更大面積的矽中介層，適合GB200這類尺寸更大的AI加速器。這個產能格局說明了一件事：Google、AMD等其他業者在爭搶剩餘的不到三成CoWoS產能，供應端的稀缺性是真實存在的。
 

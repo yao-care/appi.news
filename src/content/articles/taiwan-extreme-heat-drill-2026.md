@@ -62,6 +62,8 @@ draft: false
 
 環境部把這次演練定位為「超前部署」，背景是正在延燒的歐洲熱浪。[據 Euronews 報導](https://www.euronews.com/2026/06/24/red-heatwave-alerts-spread-across-europe-with-hottest-day-ever-in-france-and-40-deaths-fro)，法國在這波熱浪中寫下有紀錄以來最熱的一天，紅色高溫警戒一度擴及逾 50 個省份，一週內已有約 40 人在戲水消暑時溺斃。[CNN 的整理](https://www.cnn.com/2026/06/23/climate/europe-heat-wave-france-uk-spain)也指出，這波橫掃西歐的熱浪伴隨多國學校停課與高溫死亡通報，多地氣溫逼近或突破 40 度。環境部新聞稿則引述，法國單日高溫突破 42 度、造成至少 18 條人命喪生、逾千所學校停課，作為台灣必須提前演練的對照。
 
+延伸閱讀：[「國土綠蔭氣候調適網」上線：環境部全國巡迴說明會走到臺北，年底前拍板都市林專法規劃](/articles/urban-canopy-climate-adaptation-network-launch/)
+
 高溫對台灣已非遙遠的境外事件。[據 NOWnews 整理氣象署紀錄](https://www.nownews.com/news/6840674)，台灣在 5 月 27 日多地湧現極端高溫，台北測站測得 38.3 度，刷新該站設站 130 年來的 5 月最高溫紀錄，基隆測站 37.6 度同樣改寫該站 5 月紀錄；以自動氣象站來看，台南玉井當天飆到 39.8 度為全台最高，全台共 7 個縣市出現 38 度以上高溫。對一個並非以酷熱聞名的春末來說，這樣的數字凸顯高溫風險正在前移。
 
 <img src="/images/taiwan-extreme-heat-drill-2026-s1.webp" width="960" height="683" loading="lazy" decoding="async" alt="溫度計在烈日下顯示高溫，象徵極端高溫風險">
@@ -81,3 +83,5 @@ draft: false
 值得釐清的是制度上的空白。[據環境部新聞稿](https://enews.moenv.gov.tw/page/3b3c62c78849f32f/3f1b59a7-6ecb-4c0f-8d19-4860778bb072)，高溫目前尚未納入《災害防救法》所列的法定天然災害，缺乏既有的災防分工框架，因此由環境部發揮主管機關角色，主動推動跨部會應變機制的建立。這場兵棋推演與後續實兵演練，本質上是在法定災害類別之外，先把高溫的協作腳本演練成形。
 
 演練不會止於一次性活動。[新聞稿指出](https://enews.moenv.gov.tw/page/3b3c62c78849f32f/3f1b59a7-6ecb-4c0f-8d19-4860778bb072)，這次演練累積的經驗與成果，將納入第四期國家氣候變遷調適行動計畫的高溫專章，成為台灣長期因應高溫的行動依據。[依環境部氣候變遷署資料](https://www.cca.gov.tw/information-service/info/3824.html)，現行的國家氣候變遷調適行動計畫為 112 至 115 年（2023 至 2026 年）的第三期，涵蓋災害、健康、能源供給及產業等多個調適領域；高溫被獨立成專章處理，意味它正從零星預警，逐步上升為需要跨部門長期治理的氣候調適課題。
+
+延伸閱讀：[台日簽署抗高溫MOU：從跨部會兵推到國際合作，涼適地圖整合逾9600處降溫據點](/articles/taiwan-japan-extreme-heat-mou/)

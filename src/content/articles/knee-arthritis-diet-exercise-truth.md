@@ -51,6 +51,8 @@ topics: ["joint-pain"]
 
 膝蓋卡卡、上下樓梯痛，很多人第一反應是找抗發炎食物或保健食品救急，藍莓、鮭魚、薑黃、橄欖油都是常被點名的「護膝聖品」。但查證多方醫療與營養資訊後發現，這類食物頂多能輔助抗發炎，真正能延緩膝關節退化的做法，其實一直都是同一套：控制體重、規律運動、練好大腿肌力。
 
+延伸閱讀：[膝蓋退化變天就會痛？專家推薦5大運動，強化關節不怕痛！](/articles/knee-degeneration-weather-pain-myth/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=3DsQt12frNQ" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：藍莓能改善膝痛? 醫師揭關節保養真相 必須做對「這件事」!｜十點不一樣">
     <img src="/images/knee-arthritis-diet-exercise-truth-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="藍莓能改善膝痛? 醫師揭關節保養真相 必須做對「這件事」!｜十點不一樣">
@@ -71,6 +73,8 @@ topics: ["joint-pain"]
 多篇報導交叉比對後，指向同一個結論。體重方面，[元氣網整理AAOS指引](https://health.udn.com/health/story/5967/7698140)指出，持續減重能改善超重或肥胖者膝關節的疼痛與功能，推薦強度達中等（三顆星），原理是減少膝蓋承受的機械負荷。運動方面，指引建議「進行有監督的運動、無監督的運動或水中運動，總比不運動好」，研究並未發現一定要專人指導才有效，快走、水中運動、室內腳踏車都是常見選項。
 
 大腿肌力則是另一個反覆被提到的重點。[維力骨科診所的衛教說明](https://www.weili-clinic.com/knowledge/category-43/post-72)介紹了坐姿抬腿、單腳畫W形、臀部蚌殼式與單腳後抬腿等4種居家動作，強調股四頭肌（大腿前側肌群）訓練能穩定膝關節、分攤關節壓力；股四頭肌被形容為膝蓋的「天然護具」，走路、上下樓梯、蹲站等日常動作都靠它出力。[元氣網另一篇報導](https://health.udn.com/health/story/5967/9505100)也提到，骨科醫師常用「蹲下站起」測試分辨膝蓋不適是單純肌力不足還是關節已經退化，如果蹲站吃力但沒有明顯腫痛，加強肌力訓練通常能明顯改善。
+
+延伸閱讀：[高齡者骨骼、肌肉、關節整體健康：從推拿骨折事件談起](/articles/elderly-bone-muscle-joint-health/)
 
 ## 讀者實用資訊：與其迷信單一食物，不如照這個順序做
 

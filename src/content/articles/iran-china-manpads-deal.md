@@ -56,6 +56,8 @@ coverImageCredit: "Mike1979 Russia — CC BY-SA 4.0, Wikimedia Commons"
 
 這類武器鎖定的目標多半是直升機、無人機、巡航飛彈等低空慢速機種，對高空戰機威脅有限。Army Recognition分析指出，MANPADS的戰術價值不在於實際擊落多少架飛機，重點在於「迫使對手的飛機保持更高高度、避開特定山谷、從更遠距離才敢投彈」。低成本武器拉高對手的作戰風險與代價，正是這類系統長年受各國武裝團體青睞的原因。
 
+延伸閱讀：[美伊戰事急轉：川普喊停對伊朗新攻擊　開出荷莫茲海峽全面開放換停火條件](/articles/iran-jordan-base-attack-us-retaliates/)
+
 ## 路透社起底交易細節：新疆空運、巴基斯坦轉運
 
 <figure>
@@ -80,3 +82,5 @@ coverImageCredit: "Mike1979 Russia — CC BY-SA 4.0, Wikimedia Commons"
 ## 為何是現在：戰事留下的防空缺口與9月的習近平訪美行程
 
 這筆軍購案發生的時間點頗有意味。[Defense News報導](https://www.defensenews.com/industry/techwatch/2026/07/30/iran-to-get-chinese-shoulder-launched-missile-systems-in-weeks-sources-say/)指出，伊朗與美國、以色列的戰事已延燒五個月，雙方名義上自4月起停火，但這場戰爭已暴露伊朗在保護軍事據點與關鍵基礎設施上的防空缺口，這正是伊朗急著補強MANPADS的背景。[Local12報導](https://local12.com/news/nation-world/report-iran-to-buy-60m-70m-in-chinese-shoulder-fired-air-defense-missiles-oil-strait-hormuz-pete-hegseth-nato-president-xi-jinping)也提到一個對照組：身為全球最大石油進口國的中國，自戰事爆發後大幅減少進口量，流經荷莫茲海峽的石油因此減少，反而緩解了一部分全球油價的衝擊。這則MANPADS交易的報導，正好落在習近平預定9月下旬訪美的前夕，讓中伊軍事往來與中美關係的敏感度又添一層。
+
+延伸閱讀：[哈瑪斯解除武裝為何卡關？以色列開三大條件，加薩停火協議恐生變](/articles/gaza-hamas-disarmament-deal-israel-concerns/)

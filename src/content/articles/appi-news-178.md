@@ -21,6 +21,7 @@ references:
   - title: "Chen XY, Wang QY, Yan ZF, et al. (2025). Intranasal acupuncture therapy for allergic rhinitis: A systematic review and meta-analysis of randomized controlled trials. *Integrative Medicine Research"
     url: "https://pubmed.ncbi.nlm.nih.gov/40190741/"
 draft: false
+topics: ["tcm-acupuncture-pain"]
 ---
 你可能聽過這個問題：「美顏針和打肉毒、打玻尿酸，差在哪裡？」
 
@@ -60,6 +61,8 @@ draft: false
 ## 三、肩頸胸椎的張力，也在影響你的臉
 
 核心肌群無力時，周邊肌肉筋膜會代償緊縮來穩定結構，長期下來可能讓頸部向前傾、肩背塌陷，連帶影響頭頸姿勢——而姿勢影響了臉部線條的下垂程度。肌肉和筋膜是一個連續系統，不是各自分隔的局部。
+
+延伸閱讀：[中醫美顏針完整指南：有效嗎、幾次有感、誰不適合、和醫美差在哪](/articles/tcm-facial-acupuncture-guide/)
 
 臨床上，頸椎過直的患者常伴隨背部僵硬。頸部椎間盤突出的患者，症狀常表現為頸部疼痛加上手臂麻痛。單純針刺頸肩效果不持久；當一併處理背部僵硬，才能更有效緩解手臂麻痛。這是從局部到整體的評估邏輯。
 

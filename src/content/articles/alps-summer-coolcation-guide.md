@@ -21,6 +21,10 @@ risksAndLimits:
 
 義大利埃特納火山今年夏天照常吸引遊客搭纜車上山，但這幾年在歐洲，「往山上走」已經不只是少數人的選擇。公視新聞網一支國際新聞整理指出，今年歐洲夏天動輒飆破40度，越來越多遊客放棄陽光沙灘，轉往海拔兩三千公尺的高山避暑。這個現象背後其實有明確數據支撐，也正在改變阿爾卑斯山周邊度假村的生意模式。
 
+延伸閱讀：[富士山最高山屋怎麼住？頂上富士館海拔、費用與台灣員工實況一次看懂](/articles/mount-fuji-summit-hut-guide/)
+
+延伸閱讀：[燃油附加費是什麼？8月9日調漲前，搶便宜機票的最後機會](/articles/fuel-surcharge-hike-cheap-flights-japan-korea/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=rhwlbJ3O_fg" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：全球現場漫遊天下：熱浪改寫旅遊版圖 阿爾卑斯山夏季翻身">
     <img src="/images/alps-summer-coolcation-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="全球現場漫遊天下：熱浪改寫旅遊版圖 阿爾卑斯山夏季翻身">

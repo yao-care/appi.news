@@ -63,6 +63,8 @@ ASIC 全名 Application-Specific Integrated Circuit，中文常譯特殊應用�
 
 一顆模型訓練完上線後，推論階段的運算模式已經固定，同一組矩陣乘法會被重複執行幾十億次，這正是 ASIC 吃得到甜頭的場景。[imec 指出](https://www.imeciclink.com/en/articles/asic-vs-gpu-ai)，ASIC 能在吞吐量、延遲、能源效率三項指標上同時超越 GPU，前提是工作負載要匹配它的專業化設計，且要有持續的資料供應把產能撐滿。訓練階段正好相反，模型架構還在快速迭代，這一輪跑的層數與參數配置，下一輪可能整個換掉，ASIC 的固定電路在這種場景反而綁手綁腳。這也是為什麼 Google TPU、亞馬遜 Trainium 這類超大規模自研晶片，幾乎都先從推論任務切入放量，訓練工作至今仍主要靠 GPU。
 
+延伸閱讀：[台積電 CoWoS 持續擴大領先，NVIDIA 預訂逾七成產能](/articles/tsmc-cowos-nvidia-capacity-booking/)
+
 <img src="/images/ai-asic-vs-gpu-explained-s2.webp" width="960" height="639" loading="lazy" decoding="async" alt="資料中心伺服器機櫃，象徵大量重複的 AI 推論運算工作負載">
 
 ## 成本與能效：GPU 前期便宜，ASIC 量產才划算

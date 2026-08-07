@@ -62,6 +62,8 @@ COVID-19疫情爆發初期，英國AI藥物研發公司BenevolentAI的研究團�
 
 這項發現後續發表於期刊《Frontiers in Pharmacology》（[Smith et al., 2021](https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2021.709856/full)）。
 
+延伸閱讀：[液態金屬電路和傳統電路板差在哪？植入式醫療裝置材料怎麼選](/articles/implantable-medical-device-circuit-board-material-breakthrough/)
+
 後續發表於期刊《Vaccines》的臨床研究，進一步整理了巴瑞替尼在COVID-19治療上的臨床效益證據（[Richardson et al., 2022](https://pubmed.ncbi.nlm.nih.gov/35746559/)）。
 
 值得比較的是，同一段時間也有另一種完全不靠AI的老藥新用路徑。今年稍早，英國伯明罕大學與牛津大學團隊發表於《Psychological Medicine》的研究，測試一款慢性便祕處方藥「普如卡必利」（prucalopride）是否能改善憂鬱症康復患者的認知功能。
@@ -124,6 +126,8 @@ BenevolentAI採取的做法，是把知識圖譜的推論過程做成可視覺�
 企業導入AI遇到的黑箱疑慮，商業場景多半能靠事後查核彌補，但醫療場景的容錯空間小得多。從COVID-19期間的知識圖譜藥物篩選，到近期針對憂鬱症認知功能的藥理研究，兩條路徑都說明了同一件事：任何要進入臨床的新發現，最終都得經得起研究人員與醫師逐步追問「為什麼」。
 
 可解釋性因此已經不只是醫療AI錦上添花的加分項，它直接決定了這套系統能不能被醫療體系採信、能不能守住病患權益。對機構與臨床端而言，導入任何一套醫療AI工具前，值得先確認這套系統的建議是否真的說得出理由。
+
+延伸閱讀：[台灣臨床試驗生態系具全球競爭力四成七試驗聚焦腫瘤藥物研發](/articles/taiwan-clinical-trials-oncology-hub/)
 
 ### 常見問題
 

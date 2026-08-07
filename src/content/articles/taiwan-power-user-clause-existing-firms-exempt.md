@@ -61,6 +61,8 @@ draft: false
 
 修法最受矚目的兩處變動，都是產業界原本反對聲浪最大的地方。第一，[新制僅適用「新設」或「增設」用電設備達規定容量的用電大戶，既有大戶不受影響、不溯及既往](https://udn.com/news/story/124979/9673431)。政院原版草案要求全國契約容量達門檻的用電大戶（含既有廠房）全數納管，[初審通過後，現有約400多家半導體、資料中心、石化、鋼鐵業者被排除在規範外](https://udn.com/news/story/124979/9673431)。
 
+延伸閱讀：[能源管理法草案要求用電大戶配置自有發電與儲能設備強化電網韌性](/articles/energy-management-act-storage-mandate/)
+
 <img src="/images/taiwan-power-user-clause-relaxed-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="立法院委員會議事場景，象徵能源管理法修正草案審查過程（示意圖）">
 
 第二，[自用發電設備與儲能設備的要求從「及」改為「或」，企業可二擇一設置，不必同時建置兩種設施](https://www.chinatimes.com/realtimenews/20260805003373-260410)。[中國時報報導指出，產業界反對的主因是既有廠區空間不足，且儲能設備存在保險公司多拒保的疑慮，工總因此公開表態反對政院原版](https://www.chinatimes.com/realtimenews/20260805003373-260410)。

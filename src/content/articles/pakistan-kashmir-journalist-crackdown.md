@@ -55,6 +55,8 @@ references:
 
 巴基斯坦控制的查謨喀什米爾地區（Pakistan-occupied Jammu and Kashmir，PoJK）7月27日舉行地方選舉，拉瓦拉科特（Rawalakot）與科特利（Kotli）當天爆發致命衝突。[國際特赦組織聲明](https://www.amnesty.org/en/latest/news/2026/07/pakistan-authorities-must-lift-communications-blackout-following-reports-of-lethal-force-used-against-protesters-amid-elections/)指出，當地聯合行動委員會（JAAC）宣稱選舉當天有19人喪生、數十人受傷，但警方僅證實2名員警受傷；組織進一步指出，早在選舉之前，該地區已累計約40人死亡，其中34人是抗議者、6人是警察與準軍事人員。
 
+延伸閱讀：[巴基斯坦煤礦為何頻繁爆炸致命？俾路支省瓦斯爆炸奪34命，今年已是第三起重大礦災](/articles/pakistan-coal-mine-safety-crisis/)
+
 <img src="/images/pakistan-kashmir-journalist-crackdown-s1.webp" width="960" height="721" loading="lazy" decoding="async" alt="智慧型手機顯示無訊號畫面，示意通訊中斷" title="巴控喀什米爾地區行動網路自6月5日起中斷至今近兩個月（示意圖）">
 
 國際特赦組織南亞代理區域主任拉塞（Isabelle Lassee）表示，「拉瓦拉科特傳出的令人不安的報導，與巴基斯坦當局長期以來對抗議者使用不法暴力的紀錄相符」，要求對安全部隊使用致命武力展開「迅速、獨立且透明」的調查，並呼籲當局立即恢復當地所有通訊、允許媒體與獨立觀察員進入該地區。[《論壇報》（印度）報導](https://www.tribuneindia.com/news/al-jazeera/amnesty-condemns-crackdown-in-pojk-as-cpj-raises-alarm-over-journalist-disappearances-communications-blackout)指出，這波衝突累計死亡人數在選舉後持續攀升，分布於拉瓦拉科特、米爾普爾（Mirpur）與穆扎法拉巴德（Muzaffarabad）等地，但各方統計出入頗大，尚待獨立查核。

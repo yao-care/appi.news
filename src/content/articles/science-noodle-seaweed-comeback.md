@@ -48,6 +48,8 @@ references:
 
 超商架上曾經有一款科學麵，很多人小時候放學路上一定買，後來卻悄悄從貨架上消失。這款「岩烤海苔」口味最近正式回歸，才上架沒幾天就有網友在社群詢問哪裡還買得到現貨。一支泡麵口味的停產與復出，看似小事，卻是觀察台灣人怎麼被童年味道打動掏錢的一個活案例。
 
+延伸閱讀：[爭鮮鮭魚季開跑：9款鮭魚創意料理、價格與集點鮭魚扇整理](/articles/sushi-express-salmon-season-2026/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=BEDBxXHrAqE" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：最熟悉味道！科學麵海苔風味復出　勾起回憶｜華視新聞">
     <img src="/images/science-noodle-seaweed-comeback-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="最熟悉味道！科學麵海苔風味復出　勾起回憶｜華視新聞">
@@ -72,6 +74,8 @@ references:
 ## 不只科學麵：懷舊零食一直有一批固定買家
 
 科學麵岩烤海苔不是唯一還在被討論的古早味零食。卡哩卡哩、麵茶粉這類早年柑仔店常見的零食，至今仍有店家持續現做現賣，例如桃園大溪老街一帶的攤商仍以傳統作法供應卡哩卡哩，顯示這類懷舊口味的市場需求長期存在，一批消費者始終願意為童年味道買單。品牌把停產多年的口味重新包裝上市，等於是在對接這批長期存在、卻曾在貨架上找不到對應商品的需求。
+
+延伸閱讀：[台北期間限定霜淇淋去哪吃？老字號復刻聖代、日系玉米霜淇淋、東京花漾造型整理](/articles/taipei-summer-limited-edition-soft-serve-guide/)
 
 ## 讀者實用資訊
 

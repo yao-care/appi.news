@@ -51,6 +51,8 @@ Insilico Medicine的GENESIS-IPF研究測試的是一種叫做TNIK（Traf2- and N
 
 Phase IIa研究在IPF患者身上進行，用肺功能指標FVC（用力肺活量）的變化作為主要量測依據。正面讀出包含兩個關鍵訊號：劑量依賴性的FVC改善，以及可接受的安全性和耐受性數據。劑量依賴性是臨床上特別重要的指標，因為它顯示藥物效果不是隨機噪音，而是和藥物暴露量有系統性關聯。這兩個條件同時成立，是讓這份讀出具有說服力的原因。
 
+延伸閱讀：[ASCO 2026：胰臟癌新藥 daraxonrasib 中位存活期從 6.7 個月倍增至 13.2 個月](/articles/asco-pancreatic-daraxonrasib-survival/)
+
 Rentosertib在2025年由USAN（美國採用名稱委員會）正式命名，這是藥物進入上市流程的前置步驟之一，確認了它在監管流程中的正式地位。[Insilico Medicine同年公布的年度管線更新](https://insilico.com/news/ohz9ozx0t1-insilico-medicine-announces-2025-annual)顯示，除了Rentosertib進入Phase II外，公司整體有28個臨床前候選藥物、10個項目正在不同階段的臨床試驗，管線規模在AI藥物設計公司中屬於前段。
 
 ## 為什麼這個數據對台灣生技有直接意義
@@ -70,3 +72,5 @@ Phase IIa正面數據推升了整個AI藥物設計板塊的市場情緒。Insili
 對台灣生技業者和投資人來說，接下來值得密切追蹤的指標有兩個。第一是Rentosertib的Phase III設計公告，這會顯示Insilico Medicine對自己數據的信心程度，以及監管機構的溝通進展。第二是其他AI藥物平台的Phase II讀出頻率，如果2026年出現三到四個正面二期數據，「AI藥物設計可以複製」的論點就從單點突破轉為趨勢，對整個產業的導入決策將產生顯著影響。
 
 AI藥物設計從概念到臨床數據的這一步，是真實的進展，不是炒作。但它解決的是研發鏈上某幾個具體節點的效率問題，不是藥物開發的全部難題。台灣生技廠商如果選擇導入，應當先定義自己的研發流程中哪個節點是瓶頸，再評估哪類AI工具對應那個瓶頸，而不是把「導入AI」當作目標本身。工具沒有問題，但問題定義的順序不能倒。
+
+延伸閱讀：[AI 藥物研發砸下 20 億美元，為何至今零款 AI 原生新藥過關](/articles/ai-drug-discovery-fda-approval-gap/)

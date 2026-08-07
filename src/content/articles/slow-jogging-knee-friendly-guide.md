@@ -50,6 +50,8 @@ references:
 
 膝蓋不好還能跑步嗎？這幾年在日本與台灣陸續掀起討論的「超慢跑」，主打速度慢到能邊跑邊聊天，號稱從運動新手到長者都能上手。這項運動到底是什麼、正確姿勢怎麼做、哪些人不適合貿然嘗試，整理公開資料查證給讀者參考。
 
+延伸閱讀：[藍莓、薑黃能護膝蓋？醫師與美國骨科醫學會都說：控制體重、練大腿肌力才是關鍵](/articles/knee-arthritis-diet-exercise-truth/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=AeAt90izxZE" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：省電秘訣! 冷氣開開關關更耗電? 膝蓋不好也能跑! 專家談「超慢跑」秘訣｜十點不一樣">
     <img src="/images/slow-jogging-knee-friendly-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="省電秘訣! 冷氣開開關關更耗電? 膝蓋不好也能跑! 專家談「超慢跑」秘訣｜十點不一樣">

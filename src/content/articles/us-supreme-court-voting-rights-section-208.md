@@ -52,6 +52,8 @@ coverImageCredit: "Duncan Lock (Dflock) — CC BY-SA 3.0, Wikimedia Commons"
 
 《投票權法》第208條規定，因身心障礙或無法讀寫而需要協助的選民，可以請一位自己選擇的人協助投票。據[NPR報導](https://www.npr.org/2026/06/22/nx-s1-5863532/supreme-court-voting-rights-act-private-right-arkansas)，受第八巡迴上訴法院裁定影響的7個州為：阿肯色、愛荷華、明尼蘇達、密蘇里、內布拉斯加、北達科他與南達科他。
 
+延伸閱讀：[美最高法院鬆綁後海地敘利亞TPS到期：近35萬海地人一夕失身份　估5萬美籍子女恐骨肉分離](/articles/haiti-syria-tps-expires/)
+
 <img src="/images/us-supreme-court-voting-rights-section-208-s1.webp" width="940" height="627" loading="lazy" decoding="async" alt="選民在投票所投票（示意圖）">
 
 本案的爭點在於「私人訴權」（private right of action），也就是究竟誰有資格上法院執行這項保障。據[WSIU引述NPR報導](https://www.wsiu.org/politics-elections/2026-06-22/supreme-court-allows-a-ruling-that-ends-a-tool-to-protect-minority-voters-in-7-states)，這個概念決定的是：私人公民與組織能否自行提告以執行投票保障，或只有美國司法部長能提起這類訴訟。第八巡迴上訴法院認定，第208條之下沒有私人訴權。
@@ -71,3 +73,5 @@ coverImageCredit: "Duncan Lock (Dflock) — CC BY-SA 3.0, Wikimedia Commons"
 代理「阿肯色聯合」的「墨西哥裔美國人法律辯護與教育基金會」（MALDEF）則表示不會就此罷手。據[WSIU](https://www.wsiu.org/politics-elections/2026-06-22/supreme-court-allows-a-ruling-that-ends-a-tool-to-protect-minority-voters-in-7-states)，MALDEF主席暨總法律顧問薩恩斯（Thomas Saenz）說，將推進另一起密蘇里州的訴訟，挑戰類似的選民協助限制，並表示會「試著讓它往前走」、「往上推進，希望最高法院看到自己有必要阻止這種情況」。
 
 《投票權法》是美國1965年通過的指標性民權法律，旨在禁止選舉中的種族歧視，相關背景可參見[英文維基百科的整理](https://en.wikipedia.org/wiki/Voting_Rights_Act_of_1965)。對台灣讀者而言，這起案件反映美國近年圍繞投票權執行機制的法律角力：當最高法院選擇不介入，下級法院的見解便在特定區域內定錨，牽動少數族裔與身障選民實際能否找人協助投票。
+
+延伸閱讀：[總統特赦後還能引用第五修正案拒答國會嗎？佛奇藐視國會案參議院委員會表決過關，恐送司法部起訴](/articles/fauci-contempt-congress-pardon-fifth-amendment/)

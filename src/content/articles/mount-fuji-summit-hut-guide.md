@@ -50,6 +50,8 @@ references:
 
 富士山山頂上，一間海拔逾3,700公尺的山屋最近成了台灣網路熱議話題，起因是一位台灣員工在社群發出的求救文。
 
+延伸閱讀：[燃油附加費是什麼？8月9日調漲前，搶便宜機票的最後機會](/articles/fuel-surcharge-hike-cheap-flights-japan-korea/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=seV4vE9tm9M" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：富士山最高山屋首位外國員工　台女求救伙食營養不足｜華視新聞">
     <img src="/images/mount-fuji-summit-hut-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="富士山最高山屋首位外國員工　台女求救伙食營養不足｜華視新聞">
@@ -76,3 +78,5 @@ references:
 ## 給打算爬富士山的讀者
 
 富士山每年開放攻頂與山屋營業的季節僅約7月到9月初，且各路線山屋數量有限，旺季一位難求，計畫入住建議提前留意各山屋官網或やまたん等預約平台的公告日期，及早訂位。若沒有特別偏好山頂過夜，富士宮路線沿途也有多間海拔較低的山屋可供中途休息或住宿，能降低高山反應風險，也不必和頂上富士館一樣一路睡在3,700公尺的稀薄空氣裡。
+
+延伸閱讀：[高山避暑旅遊夯什麼？歐洲熱浪怎麼把阿爾卑斯山變成夏天新戰場](/articles/alps-summer-coolcation-guide/)

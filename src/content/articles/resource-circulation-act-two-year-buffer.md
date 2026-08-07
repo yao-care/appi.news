@@ -58,6 +58,8 @@ references:
 
 法律公布不代表所有條文同時上路。[全國法規資料庫](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=O0050049)列出的第52條明定，「本法除第十四條及第三十八條第一項規定自公布後二年施行外，自公布日施行」，換算下來，第14條與第38條第1項要等到2028年6月17日才正式生效，其餘條文6月17日公布當天就已經開始適用。
 
+延伸閱讀：[循環標誌上路：紡織、塑膠等5大類12項規格出爐，廠商7月起可申請、政府採購優先選用](/articles/taiwan-circular-label-launch/)
+
 <img src="/images/resource-circulation-act-two-year-buffer-s1.webp" width="960" height="1440" loading="lazy" decoding="async" alt="堆置的廢棄木材與回收料，示意圖">
 
 延後施行的[第14條](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=O0050049&flno=14)是綠色設計核定制度的核心：中央主管機關可指定特定產品或營建工程，要求製造、輸入業者申請核定並取得循環標誌；未被指定的業者也能自願申請。若指定產品須使用一定比率的再生粒料，業者還得提供來源、用量等資料，經驗證機構查驗備查。

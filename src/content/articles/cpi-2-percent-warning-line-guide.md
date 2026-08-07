@@ -38,6 +38,8 @@ references:
 
 買一顆六吋蛋糕要多少錢，最近很多人重新算過一次。台視新聞的報導提到，父親節前不少人發現蛋糕行情又漲了一截，這其實只是這波物價上漲裡最容易被感覺到的一個角落。[主計總處8月6日公布](https://www.cna.com.tw/news/afe/202608060275.aspx)，7月消費者物價指數（CPI）年增率為2.54%，已經連續3個月站上「2%通膨警戒線」。這條線常出現在新聞標題，但它到底怎麼算出來、代表什麼，多數人其實說不清楚。
 
+延伸閱讀：[日本居酒屋倒閉潮創新高：物價上漲、人手不足怎麼掏空小酒館獲利](/articles/japan-izakaya-closure-wave/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=ECvhoYOJ_ww" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：吃飯.租屋變貴 7月CPI年增2.54%連3月越紅線">
     <img src="/images/cpi-2-percent-warning-line-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="吃飯.租屋變貴 7月CPI年增2.54%連3月越紅線">
@@ -64,3 +66,5 @@ CPI是「消費者物價指數」的縮寫，主計總處每月固定調查一�
 新聞常說CPI年增率超過2%就是「破警戒線」，這個門檻其實源自國際慣例：多數先進經濟體的央行，長期以2%作為物價穩定的參考目標。但這不是放諸四海皆準的鐵律。[台灣央行本身的立場](https://www.cbc.gov.tw/dl-206167-c61404219bb34a7c9cad23d4ffe6e0f9.html)是，台灣屬於小型開放經濟體，物價容易受國際因素牽動，因此採取更具彈性的物價穩定定義，不會單純用2%這條線來啟動政策工具。
 
 也就是說，「連3個月破2%」是一個方便媒體與讀者掌握趨勢的門檻，但央行實際上會綜合核心CPI走勢、國際原物料價格與匯率等多項因素，才會決定是否調整貨幣政策，並不是CPI一過線就自動觸發升息或其他措施。對一般人來說，比起緊盯單月數字有沒有破2%，更實用的做法是留意外食、房租這類跟自己生活最相關的分項漲幅，評估對家庭支出的實際影響。
+
+延伸閱讀：[自助餐計價怎麼算？高雄「腿排便當變300變230」爭議看懂目測與秤重差異](/articles/buffet-pricing-methods-guide/)

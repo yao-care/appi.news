@@ -64,6 +64,8 @@ references:
 
 開始用 passkey 不需要額外硬體，流程是在支援的服務裡「建立一把」，之後改用裝置解鎖方式登入。Google 帳號可在帳號安全設定裡建立 passkey，建立後用指紋、臉部辨識或螢幕鎖就能登入，且可存進 Google 密碼管理工具跨裝置使用（見 [Google 官方說明](https://support.google.com/accounts/answer/13548313)）。
 
+延伸閱讀：[Passkey 是什麼、怎麼設定：簡訊 OTP 為什麼要退場，台灣哪些服務已經能用](/articles/passkey-taiwan-sms-otp-replacement/)
+
 Apple 裝置要先開啟 iCloud 鑰匙圈與雙重認證，passkey 會加密存進 iCloud 鑰匙圈、在你的 Apple 裝置間同步，也能用 iPhone 去登入非 Apple 裝置上的網站與 App（見 [Apple 使用說明](https://support.apple.com/guide/iphone/use-passkeys-to-sign-in-to-websites-and-apps-iphf538ea8d0/ios)）。Microsoft 帳號則可[建立並儲存 passkey](https://support.microsoft.com/en-us/account-billing/create-and-save-a-passkey-e92cd3e0-11fa-4630-a5ea-3ccc0396b3d9)，用臉部、指紋或 PIN 確認登入，進一步還能移除密碼、改成完全無密碼登入。
 
 <img src="/images/passkey-passwordless-login-s3.webp" width="960" height="540" loading="lazy" decoding="async" alt="使用者以臉部辨識解鎖智慧型手機的近拍">
@@ -81,6 +83,8 @@ Apple 裝置要先開啟 iCloud 鑰匙圈與雙重認證，passkey 會加密存�
 Passkey 還是有要留意的地方。它多半綁在某個生態系的同步機制裡，例如 Apple 存在 iCloud 鑰匙圈、Google 存在 Google 密碼管理工具；要在不同生態系之間（例如把 iPhone 上的 passkey 拿到 Android 用）目前得靠掃 QR code 的跨裝置登入流程，不是無痛搬移。FIDO 聯盟也說明，passkey 是由作業系統、瀏覽器或第三方密碼工具這類「通行密鑰提供者」保管（見 [FIDO 聯盟](https://fidoalliance.org/passkeys/)）。
 
 開通通常需要先有一個已驗證、設好螢幕鎖的裝置。以 Apple 為例，使用 iCloud 鑰匙圈一定要開啟雙重認證，沒開的話註冊 passkey 時會被要求補設定（見 [Apple 安全性說明](https://support.apple.com/en-us/102195)）。裝置遺失時，要靠帳號的雲端同步或備援登入方式，才能在新裝置取回。目前多數服務仍保留密碼當備援，passkey 是更安全的選項，而不是唯一入口。
+
+延伸閱讀：[零信任架構是什麼？台灣政府機關與金融業現在做到哪](/articles/zero-trust-architecture-taiwan/)
 
 <img src="/images/passkey-passwordless-login-s5.webp" width="960" height="960" loading="lazy" decoding="async" alt="筆電與手機並排，象徵通行密鑰在多裝置間同步">
 

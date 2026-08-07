@@ -18,6 +18,8 @@ risksAndLimits:
 
 中聯油脂旗下油品被驗出一級致癌物苯駢芘超標，經泰山、福壽、福懋等業者分裝加工後流入市場，[食力foodNEXT報導](https://www.foodnext.net/news/newssafe/paper/6611180164)指出，累計送驗29個批號、攔截近40公噸問題油，衛福部已要求4至6月生產的所有相關油品與衍生食品預防性下架。這起事件也讓不少人回頭檢視家裡的保健食品：包裝上那張「檢驗合格」的報告，到底能不能信？
 
+延伸閱讀：[「少添加」不等於「沒有殘留」：買保健食品前，教你看懂第三方檢驗報告](/articles/supplement-lab-report/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=BnFvQPott0A" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：油品食安風暴引恐慌！挑保健食品只看檢驗報告還不夠？營養師揭報告隱藏漏洞">
     <img src="/images/health-supplement-inspection-report-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="油品食安風暴引恐慌！挑保健食品只看檢驗報告還不夠？營養師揭報告隱藏漏洞">
@@ -44,6 +46,8 @@ risksAndLimits:
 中聯油品事件也讓政府動手補這個漏洞。[中央社報導](https://www.cna.com.tw/news/ahel/202607120085.aspx)指出，衛福部長石崇良提出的精進方向之一，是要求高風險食品原料「逐批留樣檢驗」，並研議修正食品安全衛生管理法，要求資本額一億元以上業者若自設實驗室，須符合衛福部認證資格。[聯合新聞網報導](https://udn.com/news/story/124948/9636317)則點出執行面的難處：全台符合資格、可承接食用油逐批留樣檢驗的認證實驗室目前僅3家，量能明顯不足。
 
 這個邏輯放回保健食品同樣成立：原料每一批的產地、產季、加工流程都可能不同，前一批檢驗合格,不代表後面每一批都沒問題。買保健食品時,與其只看有沒有「一張」報告,不如留意報告上是否標明對應的產品批號與效期,確認手上這一罐是不是真的有驗過,而不是拿別批的報告充數。
+
+延伸閱讀：[保健食品認證標章怎麼看？小綠人、SNQ、潔淨標章一次分清楚](/articles/supplement-labels-explained/)
 
 ## 實用查詢清單
 

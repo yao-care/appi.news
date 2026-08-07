@@ -24,6 +24,8 @@ risksAndLimits:
 
 台北這個夏天同時有三檔限定甜點在排隊：一間開業超過80年的老字號西餐廳翻出60多年前的手繪菜單復刻聖代，一間北海道甜點品牌把玉米做成鹹甜霜淇淋，另一間東京排隊名店則帶著花瓣造型的霜淇淋回到台北晶華快閃。三檔活動時間重疊，都在最近兩、三週內登場，以下把供應地點、期間與價格整理清楚。
 
+延伸閱讀：[漢餅為什麼做起義式冰淇淋？從舊振南Gelato到涼麵雪糕，這波老字號跨界甜點一次看懂](/articles/century-bakery-gelato-cold-noodle-popsicle/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=2Wkwje-Dojo" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：老店巧克力香草聖代回歸　日系霜淇淋新口味比「花」樣">
     <img src="/images/taipei-summer-limited-edition-soft-serve-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="老店巧克力香草聖代回歸　日系霜淇淋新口味比「花」樣">
@@ -52,3 +54,5 @@ risksAndLimits:
 ## 怎麼安排
 
 三個地點都在台北市區，波麗路在大稻埕、LeTAO在忠孝東路SOGO復興館、DOLCE TACUBO在晶華酒店，車程都在半小時內，一個下午排得完。波麗路的復刻聖代8月20日就會下架，是三檔裡最早結束的一檔，想吃到民國四十年代的味道得抓緊時間；另外兩檔目前都未公告明確結束日期，建議出發前先致電門市確認是否仍有供應。
+
+延伸閱讀：[客製化造型蛋糕怎麼挑？從許願池蛋糕到韓系蛋糕捲一次看懂](/articles/custom-cake-wishing-pool-korean-roll-guide/)

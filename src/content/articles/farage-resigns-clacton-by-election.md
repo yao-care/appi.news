@@ -52,6 +52,8 @@ references:
 
 不過，就算法拉吉如願連任，也未必能一勞永逸。[半島電視台的分析報導](https://www.aljazeera.com/news/2026/7/8/why-has-uk-reforms-nigel-farage-resigned-as-mp-what-happens-next)指出，若他重新當選，暫停的國會調查仍會恢復進行，屆時可能再度觸發辭職與補選。
 
+延伸閱讀：[英國前議員維德康住家遇害　警方列謀殺調查、26歲男子獲釋](/articles/ann-widdecombe-murder-investigation/)
+
 ## 兩起資金調查：500萬英鎊捐款與詐欺犯提供的利益
 
 法拉吉此時辭職，外界普遍解讀與兩起針對他的國會標準調查有關。
@@ -74,6 +76,8 @@ references:
 ## 一場沒有對手的補選
 
 綜合各家報導，這場補選的態勢相當清楚：法拉吉在一個自己剛以逾四成選票拿下的選區，面對主要政黨集體不派候選人的局面，重新當選幾乎沒有懸念。真正的變數不在票匭，而在他能否擺脫兩起標準調查的糾纏。[半島電視台的分析](https://www.aljazeera.com/news/2026/7/8/why-has-uk-reforms-nigel-farage-resigned-as-mp-what-happens-next)點出這步棋的邏輯：用一場勝券在握的補選，換取「選民已經審判過我」的政治正當性，藉此稀釋國會調查的殺傷力。至於補選確切何時舉行、各方是否真如宣稱般作壁上觀，仍有待後續發展。
+
+延伸閱讀：[伯納姆內閣人事翻盤：財政大臣改由希利出任　智庫示警『喘息空間』承諾壓縮財政餘裕至80億英鎊](/articles/uk-starmer-resigns-pm/)
 
 ## 更新時間軸
 

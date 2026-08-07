@@ -55,6 +55,8 @@ references:
 
 連鎖迴轉壽司店的鮭魚菜單,最近不只出現在生魚片跟握壽司上。爭鮮從8月4日起推出「鮭魚季」,把鮭魚做成茶碗蒸、千層蛋糕甚至霜淇淋,一支魚從頭吃到尾;同一時間壽司郎、藏壽司也各自端出夏季新菜單較勁。對常吃迴轉壽司的人來說,這波菜單變化牽涉到荷包跟這幾週該點什麼,值得整理清楚。
 
+延伸閱讀：[漢餅為什麼做起義式冰淇淋？從舊振南Gelato到涼麵雪糕，這波老字號跨界甜點一次看懂](/articles/century-bakery-gelato-cold-noodle-popsicle/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=wuhV_FmoW9A" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：連鎖壽司掀「鮭魚戰」！混搭甜點.辣味噌搶攻味蕾">
     <img src="/images/sushi-express-salmon-season-2026-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="連鎖壽司掀「鮭魚戰」！混搭甜點.辣味噌搶攻味蕾">
@@ -85,6 +87,8 @@ references:
 ## 不只爭鮮:同期壽司郎、藏壽司也在拚鮭魚新菜單
 
 這波鮭魚創意熱不是單一品牌現象。台灣壽司郎[官方菜單](https://www.sushiro.com.tw/Menu)顯示,同期推出的「夏日納涼宴」(7月29日至8月23日)同樣有多款鮭魚系列新品,例如蒔蘿鮭魚海苔包、炭燒野生紅鮭等,並在8月11日起再加碼極味炙燒黑鮪魚大腹等新品。藏壽司也於8月4日同步推出新一輪新品菜單。連鎖壽司業者集中在同一時段推陳出新,顯示鮭魚系列仍是各家角力的主戰場,做法也從單純生魚片、握壽司,延伸到甜點化的跨界嘗試。
+
+延伸閱讀：[科學麵岩烤海苔回歸秒殺！停產多年的零食一復刻為何總被搶購一空](/articles/science-noodle-seaweed-comeback/)
 
 ## 讀者實用資訊
 

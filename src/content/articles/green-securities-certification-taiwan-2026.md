@@ -53,6 +53,8 @@ draft: false
 
 制度以企業年度營收中「綠色收入」的占比作為分級依據。[依櫃買中心綠色證券認證平台說明](https://eco-fin.tpex.org.tw/ESGGreenStockDesignations)，一級標章要求深綠色收入占營業收入超過50%，且化石燃料相關營收不得超過5%；二級標章則放寬為深綠與淺綠色收入合計超過50%，化石燃料營收上限提高到50%。兩級標章都必須同時符合「無不宜條件」的要求，並非單看收入比率一項指標就能過關。
 
+延伸閱讀：[綠色證券認證制度 8 月上路，企業憑綠色收入取得標章](/articles/green-securities-certification-launch/)
+
 綠色收入的認定並非企業自行申報就算數。[臺灣證券交易所新聞稿指出](https://cgc.twse.com.tw/pressReleases/promoteNewsArticleCh/4588)，制度參考國內《永續經濟活動認定參考指引》與歐盟分類規則（EU Taxonomy）對經濟活動的定義，並納入產品或服務、綠色工廠、清潔生產評估系統等第三方認證的綠色標章，以及企業是否已提交並通過SBTi 1.5°C短期減碳目標審核、最近一年度CDP氣候變遷問卷是否達A－級以上，作為輔助判定綠色收入深淺的依據。
 
 <img src="/images/green-securities-certification-taiwan-2026-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="證券交易所交易大廳的股價電子看板，象徵上市櫃公司資訊揭露（示意圖）">

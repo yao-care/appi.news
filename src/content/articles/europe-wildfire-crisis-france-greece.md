@@ -82,6 +82,8 @@ coverImageCredit: "Mikani — CC BY-SA 4.0, Wikimedia Commons"
 
 同篇報導指出，葡萄牙今年燒毀面積同樣高於正常水準，北部瓦爾帕索斯（Valpaços）的野火已燒毀15,000公頃、造成5人受傷，火勢自週二起持續延燒。
 
+延伸閱讀：[熱浪為什麼能讓核電廠關閉？匈牙利多瑙河水位探44年新低，帕克斯核電廠首度全面停機](/articles/hungary-nuclear-plant-heatwave-shutdown/)
+
 ## 希臘急速惡化：度假村燒到海邊，直升機空中相撞
 
 希臘成為這波歐洲野火危機中最危險的一線。[Euronews報導](https://www.euronews.com/my-europe/2026/08/02/europes-wildfires-update-greece-still-battling-outbreaks-in-spain)引述希臘總理米佐塔基斯（Kyriakos Mitsotakis）的說法，希臘正面臨「極端天氣，風速一度達每小時100公里」的條件；民防部長也表示，強風導致滅火飛機經常無法取水或投水，作業困難。
@@ -97,6 +99,8 @@ coverImageCredit: "Mikani — CC BY-SA 4.0, Wikimedia Commons"
 ## 高溫與野火交織，歐洲暖化速度是全球兩倍
 
 AP報導引述歐盟哥白尼氣候變遷服務（Copernicus Climate Change Service）的資料指出，歐洲自1980年代以來的升溫速度，是全球平均值的兩倍以上，這也是近年南歐夏季野火季節一年比一年提前、延長的氣候背景。目前法國、西班牙、葡萄牙的火勢正朝可控方向發展，但希臘的野火戰線仍在雅典近郊、克里特島與伯羅奔尼撒之間多點延燒，強風何時減弱，將是接下來能否止血的關鍵。
+
+延伸閱讀：[野火人力吃緊時各國怎麼互相支援？墨西哥300名消防員飛抵加拿大卑詩省滅火](/articles/mexico-firefighters-bc-wildfire-aid/)
 
 ## 更新時間軸
 

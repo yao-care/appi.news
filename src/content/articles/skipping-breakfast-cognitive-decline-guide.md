@@ -52,6 +52,8 @@ references:
 
 早餐該不該吃，一直是營養話題裡吵不完的一項，但如果把時間軸拉長到「老後的腦」，答案似乎比較明確。[世界新聞網的報導](https://www.worldjournal.com/wj/story/121240/9605032)整理了一項針對長者的長期追蹤研究，發現習慣性不吃早餐的人，認知功能下滑得比規律吃早餐的人更快，腦部影像上也出現更明顯的萎縮跡象。
 
+延伸閱讀：[魚油防失智？美國兩年臨床試驗：單靠補充劑無助認知功能，均衡飲食才是根本](/articles/fish-oil-supplements-dementia-prevention-myth/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=uib5rJh1GtI" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：長期不吃早餐恐腦萎縮? 醫師揭認知退化真相與健康早餐3原則">
     <img src="/images/skipping-breakfast-cognitive-decline-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="長期不吃早餐恐腦萎縮? 醫師揭認知退化真相與健康早餐3原則">
@@ -72,6 +74,8 @@ references:
 比起要不要吃早餐，怎麼吃可能才是台灣讀者更需要的答案。[自由電子報彙整的營養師建議](https://food.ltn.com.tw/article/4636)點出幾個具體方向：蛋白質儘量挑看得到肉絲纖維的原型食物，例如肉片、雞腿肉，或是無糖豆漿，比重組肉的漢堡排、便利商店熱狗堡更理想；蔬菜可以直接加進蛋餅、三明治裡補纖維；澱粉則優先選全麥、五穀雜糧等低升糖選項，少碰精緻澱粉與油炸物。傳統早餐店常見的燒餅油條、含糖豆漿，連鎖早餐店的鐵板麵與含反式脂肪的乳瑪琳，都被列為建議少吃的品項。
 
 至於加工肉品，除了營養密度較低，[衛生福利部國民健康署的提醒](https://www.mohw.gov.tw/fp-2649-20047-1.html)也指出，香腸、培根、火腿等加工肉品經煙燻、鹽漬或添加防腐劑處理，其中的硝酸鹽等成分與大腸癌風險增加有關，國際癌症研究機構已將加工肉品列為致癌物；國健署建議「聰明吃」原則是遠離加工肉品、少吃紅肉，改以新鮮蔬食和白肉（魚、瘦雞肉）為主，並搭配規律運動與定期篩檢。
+
+延伸閱讀：[9小時內吃完三餐、睡前4小時禁食 美國新研究：可能有助延緩認知衰退](/articles/nine-hour-eating-window-dementia-prevention/)
 
 ## 讀者實用資訊：早餐這樣調整
 

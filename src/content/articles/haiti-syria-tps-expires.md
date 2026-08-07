@@ -70,6 +70,8 @@ coverImageCredit: "Laura Choate — CC BY-SA 3.0, Wikimedia Commons"
 
 [PBS新聞時刻報導](https://www.pbs.org/newshour/politics/whats-next-for-immigrants-with-tps-status-after-supreme-court-ruling)指出，最高法院在Mullin v. Doe案的裁決認定，國土安全部長就TPS存廢做出的判斷屬行政裁量，不受法院審查。哥倫比亞法學院移民權利診所主任Elora Mukherjee對此表示，TPS持有人恐面臨「幾乎立即的被捕、拘留與驅逐風險」；霍夫斯特拉大學法學教授James Sample則指出，最高法院此舉等於「裁定這些判斷屬於國土安全部長」的專屬權限。馬里蘭大學Chacón移民司法中心主任Maureen Sweeney並提醒，TPS制度原本就缺乏通往公民身份的途徑，一旦指定終止，持有人只能恢復先前的移民身份。[PBS新聞時刻報導](https://www.pbs.org/newshour/politics/whats-next-for-immigrants-with-tps-status-after-supreme-court-ruling)指出，此案同時牽動全球約130萬名TPS受益人，其中7個國家的TPS工作許可已於7月10日失效，另有10國的終止程序仍在進行。
 
+延伸閱讀：[DACA身分為什麼說撤就撤？「未經授權出境」成關鍵　德州媽媽遭驅逐、三名美籍子女困邊境](/articles/daca-status-termination-unauthorized-travel/)
+
 ## 海地TPS屆滿16年：7月27日正式到期
 
 海地的TPS指定始於2010年1月，起因是規模7.0強震重創當地。[Epoch Times報導](https://www.theepochtimes.com/us/temporary-protected-status-ending-for-syrians-haitians-6067939)指出，前國土安全部長Kristi Noem於2025年11月28日簽署終止海地TPS的決定，原訂2026年2月3日生效，但遭聯邦地方法院裁定暫緩執行；直到最高法院6月25日的裁決掃清障礙後，終止程序才得以照原計畫推進，海地TPS最終於7月27日週一正式到期。[NPR經WLRN轉載的報導](https://www.wlrn.org/immigration/2026-07-23/families-brace-for-separation-as-haitians-set-to-lose-protected-status-next-week)指出，這次到期讓近35萬名海地人、逾6千名敘利亞人同時失去遣返保護；持TPS核發的A12、C19類別工作許可文件同步失效，未持有其他合法身份者將立即面臨遣返風險。
@@ -96,6 +98,8 @@ TPS到期最直接衝擊的是混合身份家庭。[NPR經WLRN轉載的報導](h
 工作許可7月27日未獲延長後，恐懼已從法律風險延燒到日常生活。[The Haitian Times轉載的美聯社報導](https://haitiantimes.com/2026/08/05/maryland-haitian-community-fear-after-tps-ends/)指出，馬里蘭州東岸薩利斯伯里市的Word of Life Center教會，長年是當地海地社群的活動中心；自1995年起主持該會的牧師Roosevelt Toussaint說，上週日的禮拜出席人數較平常超過500人的規模腰斬逾半，一場婚前淋浴派對、一場庭院烤肉義賣、以及英語課程都被迫取消。[ABC News轉載的美聯社報導](https://abcnews.com/Politics/wireStory/empty-pews-fear-ice-marylands-eastern-shore-after-135382907)指出，薩利斯伯里約3.3萬居民中一成是海地人，許多人持TPS身份在家禽加工廠、農場與長照機構工作，是當地經濟的重要人力來源；不少人如今不敢輕易離家，擔心一出門就被美國移民及海關執法局（ICE）人員逮捕拘留。Toussaint牧師呼籲：「我們期待你們對我們的人民有同情心，他們沒有做錯任何事，只是想為經濟做出貢獻。」
 
 海地與敘利亞TPS到期後，兩國移民能否留在美國，將取決於各自是否持有其他合法身份；對缺乏替代身份的數十萬人而言，這場延宕近一年的訴訟攻防，最終仍以驅逐風險畫下句點，而馬里蘭州東岸的空蕩座席，已是這場風險落地的第一批具體畫面。
+
+延伸閱讀：[美國ICE可以拘留哺乳中的母親嗎？聯邦禁令與『例外條款』的灰色地帶](/articles/ice-nursing-mother-detention-policy/)
 
 ## 更新時間軸
 

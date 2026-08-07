@@ -38,6 +38,8 @@ risksAndLimits:
 
 艾哈邁扎伊已合法居留希臘10年，平時以拳擊為業，與美籍妻子艾萊娜．霍爾（Alaina Hall）及年幼孩子同住雅典。他於上週日（8月2日）遭警方逮捕，警方是透過街頭監視器畫面鎖定他，畫面顯示一名男子推著大型深色行李箱。（[ITV News](https://www.itv.com/news/2026-08-06/man-charged-with-murder-of-scottish-woman-in-athens-remanded-in-custody)、[STV News](https://news.stv.tv/east-central/afghan-boxer-accused-of-murdering-scottish-woman-remains-silent-before-judge)）
 
+延伸閱讀：[蘇格蘭婦人克里特島陳屍17年後終定罪、判10年徒刑　希臘上訴制度下仍未收押，家屬痛批『太離譜』](/articles/jean-hanlon-crete-murder-conviction/)
+
 <img src="/images/edinburgh-woman-athens-suitcase-death-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="蘇格蘭愛丁堡城市天際線（示意圖，不代表死者本人或案發地點）">
 
 ## 坦承移動遺體、否認殺人：被告說法與檢方指控
@@ -49,6 +51,8 @@ risksAndLimits:
 警方重建的時間線顯示，羅斯6月26日從愛丁堡飛抵希臘，7月15日最後一次與朋友通話，7月18日遺體在雅典基普塞利區（Kypseli）一棟廢棄建築內、被一名遊民發現裝在行李箱中，死因初步研判為窒息。希臘警方稍早曾將指紋資料送交國際刑警組織比對、美國當局提供DNA證據，才在7月29日確認死者身分。（[STV News](https://news.stv.tv/east-central/afghan-boxer-accused-of-murdering-scottish-woman-remains-silent-before-judge)、[The Irish Times](https://www.irishtimes.com/world/europe/2026/07/29/body-found-in-suitcase-in-athens-is-that-of-38-year-old-british-woman/)）
 
 英國國家犯罪局（National Crime Agency）、蘇格蘭警察局與美國執法機構皆協助希臘警方偵辦，英國外交及國協事務部持續提供羅斯家屬領事協助。（[Denbighshire Free Press](https://www.denbighshirefreepress.co.uk/news/national/26440718.man-accused-killing-scottish-aid-worker-athens-expected-back-court/)）
+
+延伸閱讀：[英國前議員維德康住家遇害　警方列謀殺調查、26歲男子獲釋](/articles/ann-widdecombe-murder-investigation/)
 
 ## 更新時間軸
 

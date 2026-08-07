@@ -64,6 +64,8 @@ draft: false
 
 官方立場也一致。USPSTF 2022 年對「用綜合維他命預防心血管疾病與癌症」給出的是「證據不足」。這裡要小心一個判讀陷阱：「證據不足」是無法評估利弊、不表態，不等於「反對」，也不等於「官方認證有效」。它就是字面意思：目前的證據還不夠讓人下結論。
 
+延伸閱讀：[膠原蛋白吃了會補到臉上嗎？答案藏在「這些研究是誰出錢做的」裡](/articles/collagen-supplement-skin/)
+
 <img src="/images/multivitamin-worth-taking-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="COSMOS 兩萬人試驗綜合維他命對癌症心血管死亡無顯著效果的示意">
 
 ## 硬證據二：「護腦」這條線，效果是真的，但很小

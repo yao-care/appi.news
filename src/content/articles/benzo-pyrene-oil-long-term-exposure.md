@@ -63,6 +63,8 @@ references:
 
 至於污染怎麼來的，[公視新聞](https://news.pts.org.tw/article/815719)引述毒物專家的說法，仍待釐清是加工過程高溫所致，還是原料受環境污染。這也呼應苯駢芘的兩條常見來源：食物經高溫燒烤、油炸、油脂加熱超過發煙點，或油脂在[精煉過程經歷高溫](https://blog.health-click.com.tw/benzopyrene-contamination-cooking-oil-safety-guide/)。
 
+延伸閱讀：[超商飯糰驗出爭議添加物？從林聰明、阜杭飯糰下架事件看外食食安怎麼查](/articles/rice-ball-oil-recall-check-guide/)
+
 ## 8.1 μg/kg 是什麼意思
 
 μg/kg 是「每公斤含幾微克」。8.1 μg/kg 就是每公斤油裡有 8.1 微克苯駢芘，而我國《食品中污染物質及毒素衛生標準》對食用油脂的限量是 2.0 μg/kg，這個數字[和歐盟的標準一致](https://blog.health-click.com.tw/benzopyrene-contamination-cooking-oil-safety-guide/)。
@@ -106,3 +108,5 @@ references:
 ## 這類事件的通則
 
 食安事件幾乎每隔一段時間就來一次，記住兩個原則就不會被標題帶著走：第一，**盯食藥署與業者公告的品名和批號**，不要憑品牌印象；第二，**分辨自己是「偶爾吃到」還是「長期大量」**，前者停用退貨就好，後者才需要進一步清查與留意。順帶一提，業者若發現產品有危害衛生安全之虞卻未依規定通報，依食安法第 7 條[可處 3 萬至 300 萬元罰鍰](https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=t634379)，把關責任本來就該落在供應端，而不是每個消費者自己驗油。
+
+延伸閱讀：[發芽馬鈴薯有毒素：龍葵鹼危害與安全選購指南](/articles/sprouted-potato-solanine-safety/)

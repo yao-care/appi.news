@@ -57,6 +57,8 @@ originalContribution: "本文把 Coralogix 這輪募資放回整個可觀測性�
 
 先把名詞講清楚。可觀測性（observability）不是新東西，它就是把系統跑起來時吐出的三類資料（logs 日誌、metrics 指標、traces 追蹤）收集起來，讓工程師知道哪裡卡了、哪裡慢了、哪裡壞了。過去這是工程師開著 dashboard 盯的活。但 Coralogix 執行長 Ariel Assaraf 說了一句關鍵的話：需求暴增，是因為[現代系統產生的資料量爆炸](https://www.calcalistech.com/ctechnews/article/bkifhk6gmx)。更關鍵的一個數字：它超過一半的企業客戶，現在是透過內建 AI agent「Olly」或自家模型、用命令列與 agent 介面在查資料，[而不是傳統的 dashboard](https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/)。看資料的那雙眼睛，本身正在從人換成 AI。
 
+延伸閱讀：[Supabase 一輪募 5 億美元、估值衝 105 億：AI 應用的『基建層』正在吸走熱錢](/articles/supabase-500m-ai-infrastructure-layer/)
+
 <img src="/images/coralogix-observability-agent-funding-s2.webp" width="960" height="539" loading="lazy" decoding="async" alt="伺服器機房裡的監控儀表板，收集日誌、指標與追蹤資料">
 
 所以這不是 Coralogix 一家特別會募資。整個賽道都在吸金。Grafana 在 4 月的 GrafanaCON 2026 主打補「AI 盲區」，直接說[AI 系統開始長得很像十年前的分散式系統：很強，但難以推理、更難操作](https://grafana.com/press/2026/04/21/grafana-labs-targets-the-ai-blind-spot-with-new-observability-tools-announced-at-grafanacon-2026/)；Datadog 的 AI 監控模組另外加收三成費用。市場數字更直白：光是「agent 可觀測性與治理」這一塊，[2026 年約 16.8 億美元，預估 2031 年衝到 86.2 億，年複合成長率 38.69%](https://www.mordorintelligence.com/industry-reports/agent-observability-and-governance-market)。資金從「做更大的模型」那一格，往「盯著模型跑」這一格移。這條線我之前寫[MCP 變成 agent 治理的事實標準](/articles/mcp-de-facto-standard-agent-governance/)時就講過：agent 要能被接、被管、被看，這層底層基建的價值正在被重新定價。

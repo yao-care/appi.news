@@ -44,6 +44,8 @@ updatedDate: "2026-08-06T05:55:28.112Z"
 
 延後更新最常被忽略的代價是資安。[iOS 26.6這次一口氣修補了涵蓋核心、WebKit、Wi-Fi、Siri在內的近90個安全性漏洞](https://mrmad.com.tw/ios-266-features-security-patch)，代表在這次更新釋出之前，這些漏洞已經存在於舊版系統裡，愈晚更新，暴露在已知攻擊手法下的時間就愈長。這也是為什麼「等一等再更新」跟「永遠不更新」是兩件事，前者是等系統穩定，後者是放著安全性風險不管。
 
+延伸閱讀：[Windows 11 記憶體吃太兇？微軟承認最佳化有問題，先看這幾個實際能降的設定](/articles/windows-11-ram-usage-fix/)
+
 <img src="/images/phone-os-update-should-you-upgrade-2026-s2.webp" width="960" height="720" loading="lazy" decoding="async" alt="手機螢幕顯示安全鎖與盾牌圖示（示意圖）">
 
 ## 判斷該不該現在升級的四個步驟

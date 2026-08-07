@@ -54,6 +54,8 @@ references:
 
 家中若有孩子因重症、罕見疾病或早產併發症，需要長期照護與復健，過去在台灣很難找到專門收治兒童的住宿型機構，長照資源多半設計給成人與失能長輩。台北市立聯合醫院婦幼院區在婦幼院區內開設的「童羽之家」，正是為了補上這塊空白，讓需要密集照護的孩子有地方住、家長也能喘口氣。
 
+延伸閱讀：[各地便民措施整理（2026-07-27）](/articles/civic-services-2026-07-27/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=qt_94MkMTU8" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：全台首座兒童長照機構 北市童羽之家照護失能重症兒">
     <img src="/images/taipei-tong-yu-home-child-longterm-care-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="全台首座兒童長照機構 北市童羽之家照護失能重症兒">
@@ -80,6 +82,8 @@ references:
 童羽之家採電話預約參訪制，[機構官方頁面](https://tpech.gov.taipei/mp109161/cp.aspx?n=DE0A7F64050ECABF&s=ABAB7E86CA8B1A47)列出的流程分五步：先電話預約參訪時段，接著到現場面談評估（約1到1.5小時），再由醫師評估孩子的醫療狀況，通過後簽訂契約並繳交相關證明文件，最後在入住前五天內完成體檢。機構也已申請成為長照喘息服務、短期服務的特約單位，家長若原本就在使用長照資源，可留意銜接方式。
 
 收費部分，入住時需繳交5萬元保證金，解約時無息退還；月費依房型不同，單人房每月6萬元、雙人房4.9萬元、三人房4.5萬元，費用已包含伙食。若孩子需要灌食，每日加收60元；特殊醫療耗材另計，復健費用則按實際使用情形計價。
+
+延伸閱讀：[長照人力缺口怎麼補？核心照顧、外籍看護三階段方案一次看懂](/articles/long-term-care-workforce-shortage-plan/)
 
 ## 讀者實用資訊
 

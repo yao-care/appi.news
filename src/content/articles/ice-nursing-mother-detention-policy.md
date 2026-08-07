@@ -53,6 +53,8 @@ coverImageCredit: "Mark Stebnicki — Pexels"
 
 [WSMV報導](https://www.wsmv.com/2026/07/31/nashville-woman-detained-by-ice-during-asylum-journey-attorneys-argue-arrest-violates-ice-policy/)指出，這份於2021年7月發布的ICE內部指令11032.4，原則上禁止拘留懷孕、產後或哺乳期婦女，除非個案涉及國家安全威脅或她本人可能構成人身危險等「例外情況」。這名化名「瑪麗亞·佩雷茲」的女性代理律師凱蒂·布蘭肯希普指出，佩雷茲「絕對沒有犯罪記錄」，逮捕當下也沒有出示任何理由，「唯一的理由就是她是拉丁裔女性」。這正是這起案件的爭點所在：政策文字寫得明確，但「例外情況」的認定權握在執法端手裡，外界難以在事前判斷一次拘留是否合乎規定。
 
+延伸閱讀：[DACA身分為什麼說撤就撤？「未經授權出境」成關鍵　德州媽媽遭驅逐、三名美籍子女困邊境](/articles/daca-status-termination-unauthorized-travel/)
+
 <figure>
 <img src="/images/ice-nursing-mother-detention-policy-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="母親抱著嬰兒">
 <figcaption>ICE政策明訂哺乳期婦女原則上不予拘留，但保留「例外情況」認定空間。（示意圖／Photo by Kristina Paukshtite on Pexels）</figcaption>
@@ -78,3 +80,5 @@ coverImageCredit: "Mark Stebnicki — Pexels"
 ## 法律攻防：人身保護令、庇護與人道假釋併行
 
 [NewsChannel 9報導](https://newschannel9.com/news/local/guatemalan-mother-detained-by-ice-in-nashville-files-legal-challenge-to-detention-while-breastfeeding-10-month-old-and-caring-for-child-with-down-syndrome)指出，佩雷茲的律師團隊已在路易斯安那州聯邦地方法院提出人身保護令聲請，要求法官下令釋放她，同時並行推進她的庇護案與多項人道假釋請求，並提出民權投訴。案件排定8月下旬開庭，屆時法院須就ICE的拘留是否違反自身政策做出裁定。這起個案受到關注，一部分是當事人的處境，一部分是ICE指令11032.4的「例外情況」條款被攤在陽光下檢驗：一份寫明保護哺乳婦女的內部政策，實際執行時能有多大彈性，將是這場官司的核心問題。
+
+延伸閱讀：[美最高法院鬆綁後海地敘利亞TPS到期：近35萬海地人一夕失身份　估5萬美籍子女恐骨肉分離](/articles/haiti-syria-tps-expires/)

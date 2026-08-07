@@ -54,6 +54,8 @@ coverImageCredit: "Photo by Zifeng Xiong on Pexels"
 
 這場關稅接力的背景，得回溯到今年2月。[ABC News報導](https://abcnews.com/US/wireStory/trump-imposes-double-digit-tariffs-dozens-countries-10-135034690)指出，美國最高法院當時裁定，川普原先援引的《1977年國際緊急經濟權力法》（IEEPA）並不授權總統課徵關稅，政府因此須向進口商辦理退稅。為填補政策空窗，川普改依《1974年貿易法》第122條，對全球商品一律加徵10%關稅；但第122條的授權上限只有150天，時間一到7月25日便必須退場。
 
+延伸閱讀：[光收發器是什麼？美國擬禁中國AI資料中心零件進口，中國嗆「必要時反制」](/articles/fcc-china-transceiver-ban-datacenter/)
+
 這次頂替上場的新關稅，法源換成同一部法案的第301條，也就是川普第一任期用來對中國加徵關稅、且已通過法律挑戰考驗的條文，適用對象是被認定有「不正當」、「不合理」或「歧視性」貿易行為的國家。[PBS NewsHour報導](https://www.pbs.org/newshour/politics/trump-imposes-double-digit-tariffs-on-dozens-of-countries-as-stopgap-10-levies-expire-friday)引述美國貿易代表葛里爾（Jamieson Greer）說法：「美國近一個世紀以來實施強迫勞動進口禁令，並嚴格執行；我們的貿易夥伴早就該這樣做。」
 
 <img src="/images/trump-new-tariffs-60-countries-s1.webp" width="960" height="1280" loading="lazy" decoding="async" alt="貨櫃船與港口貨櫃（示意圖）">

@@ -65,6 +65,8 @@ coverImageCredit: "Photo by İrfan Simsar on Pexels"
 
 伊朗外長阿拉奇齊對斡旋成果表態正面。[eNCA引述](https://www.enca.com/news-top-stories/mediators-report-progress-iran-us-talks-end-war)其說法稱，「巴基斯坦與卡達不懈的斡旋，為終結黎巴嫩戰事帶來重大進展」，並提到在過渡期內「石油與石化品出口獲得豁免、封鎖解除、部分凍結資產獲釋」。不過談判過程並非一帆風順；[愛爾蘭新聞報](https://www.irishnews.com/news/world/mediators-hail-encouraging-progress-in-talks-between-iran-and-us-to-end-war-AJ2TSZ3PORNEBDDB6CGUGOQRMU/)指出，美國總統川普稍早在社群貼文與福斯新聞（Fox News）受訪時的言論一度觸怒伊朗代表，使協商短暫中斷。
 
+延伸閱讀：[荷莫茲海峽再爆攻擊：卡達籍LNG船、沙國油輪同遭擊中　恐撕毀三週前停火備忘錄](/articles/hormuz-tankers-oman-route-iran-threats/)
+
 ## 停火多次瀕臨破裂
 
 以色列與黎巴嫩的這輪停火，[最早於2026年4月16日在美國斡旋下達成](https://en.wikipedia.org/wiki/2026_Israel%E2%80%93Lebanon_ceasefire)，但身為實際交戰一方的真主黨並非正式簽署方，停火自始就建立在不穩的基礎上；協議歷經多次延長，期間以色列的空襲仍未停歇，造成數十名平民傷亡。
@@ -92,6 +94,8 @@ coverImageCredit: "Photo by İrfan Simsar on Pexels"
 ## 對台灣讀者的關注點
 
 荷莫茲海峽是全球石油與液化天然氣海運的咽喉，任何「關閉」與否的訊號都牽動國際油價與航運成本。台灣能源幾乎全數仰賴進口，這條水道的風吹草動，最終會透過油價與天然氣價格傳導到台灣的能源與物價。眼下美伊雙方對海峽狀態的說法仍互相矛盾，後續談判進展與停火能否守住，是判斷局勢走向的兩個重要觀察點。
+
+延伸閱讀：[美伊戰事急轉：川普喊停對伊朗新攻擊　開出荷莫茲海峽全面開放換停火條件](/articles/iran-jordan-base-attack-us-retaliates/)
 
 ## 更新時間軸
 

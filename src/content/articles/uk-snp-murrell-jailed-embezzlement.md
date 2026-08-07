@@ -53,6 +53,8 @@ coverImageCredit: "Chabe01 — CC BY-SA 4.0, Wikimedia Commons"
 
 法院認定的侵吞金額相當精確。據[Radio NewsHub報導](https://www.radionewshub.com/articles/news-updates/Former-SNP-chief-executive-Peter-Murrell-jailed-for-more-than-five-years)，莫雷爾在這12年間共侵吞40萬310.65英鎊，手法包括直接銀行轉帳、使用多張黨的簽帳卡、不實報銷，以及在會計軟體中填入誤導性說明。同一報導指出，本案由楊勳爵（Lord Young）審理，刑期自起算日回溯計算。
 
+延伸閱讀：[蘇格蘭婦人克里特島陳屍17年後終定罪、判10年徒刑　希臘上訴制度下仍未收押，家屬痛批『太離譜』](/articles/jean-hanlon-crete-murder-conviction/)
+
 <img src="/images/uk-snp-murrell-jailed-embezzlement-motorhome.webp" width="660" height="440" loading="lazy" decoding="async" alt="豪華露營車示意圖（資料照，非當事車輛）">
 
 最受矚目的單筆款項是一輛豪華露營車。據[Euronews](https://www.euronews.com/my-europe/2026/06/23/former-snp-chief-peter-murrell-jailed-for-embezzling-more-than-400000-of-party-funds)，這輛車要價12萬4550英鎊，於2020年由黨費全額支付。其餘被列舉的採購還包括價值9350.25英鎊的名錶、3231.90英鎊的咖啡機，以及2萬4342.60英鎊的萬寶龍（Montblanc）商品。[Radio NewsHub](https://www.radionewshub.com/articles/news-updates/Former-SNP-chief-executive-Peter-Murrell-jailed-for-more-than-five-years)另提到，採購清單還涵蓋一台3070英鎊的割草機器人、一只3500英鎊的銀製酒瓶墊，以及汽車、珠寶、高級居家用品與設計師文具等。
@@ -72,3 +74,5 @@ coverImageCredit: "Chabe01 — CC BY-SA 4.0, Wikimedia Commons"
 ## 對台灣讀者的關注點
 
 SNP是英國蘇格蘭地區的主要政黨，長期主張蘇格蘭獨立、推動第二次獨立公投，是觀察英國憲政與地方政治動向的重要指標。黨內核心人物因侵吞黨費入獄，加上同案衍生的政治餘波，可能牽動該黨的公眾信任與未來路線。對關注英國政局與蘇格蘭獨立議題的讀者而言，後續發展值得持續留意。
+
+延伸閱讀：[英國把抗議團體列「恐怖組織」合法嗎？巴勒斯坦行動禁令案送最高法院　西敏寺法院外單日再增117人被捕，2000多起案件延押10月](/articles/uk-palestine-action-ban-supreme-court/)

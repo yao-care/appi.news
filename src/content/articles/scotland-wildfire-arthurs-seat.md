@@ -55,6 +55,8 @@ coverImageCredit: "Connor Mollison — Unsplash"
 
 據[CNN報導](https://kvia.com/news/us-world/cnn-world/2026/07/20/firefighters-battle-blaze-on-arthurs-seat-in-the-heart-of-edinburgh/)，亞瑟座山是一座休眠火山，海拔251公尺，坐落在霍利路德公園（Holyrood Park）內，緊鄰蘇格蘭議會與英王查爾斯的官方居所荷里路德宮，山頭上還有約兩千年前的古堡遺跡與15世紀的聖安東尼禮拜堂遺址，是愛丁堡市中心最著名的健行地點之一。
 
+延伸閱讀：[蘇格蘭民族黨前執行長莫雷爾侵吞黨費逾40萬英鎊　判刑5年3個月　前妻施特金稱「遭蒙蔽背叛」](/articles/uk-snp-murrell-jailed-embezzlement/)
+
 [STV News報導](https://news.stv.tv/east-central/fire-crews-battle-blaze-on-arthurs-seat-in-edinburgh-overnight)指出，火警於週日（19日）晚間6時38分接獲通報，蘇格蘭消防救援隊（SFRS）指揮中心調派六輛消防車與專業救援資源趕赴現場，撲救一場延燒草地的火勢。消防隊員整夜奮力滅火，直到週一下午仍有人力駐守現場。SFRS地區指揮官David Dourley表示：「我們的隊員通宵奮戰滅火，行動將持續到火勢完全撲滅為止。」（[CNN](https://kvia.com/news/us-world/cnn-world/2026/07/20/firefighters-battle-blaze-on-arthurs-seat-in-the-heart-of-edinburgh/)）目前沒有任何人員傷亡的報告。
 
 火勢延燒期間，霍利路德公園部分區域與貫穿其中的女王大道（Queen's Drive）一度封閉，蘇格蘭警方要求民眾避開該區域，附近居民也被提醒關閉門窗，避免濃煙飄入室內。（[STV News](https://news.stv.tv/east-central/fire-crews-battle-blaze-on-arthurs-seat-in-edinburgh-overnight)）
@@ -72,3 +74,5 @@ coverImageCredit: "Connor Mollison — Unsplash"
 受愛丁堡與凱恩戈姆兩場野火牽動，蘇格蘭消防救援隊與蘇格蘭野火論壇（Scottish Wildfire Forum）決定把原本涵蓋中部高地、南部與東部蘇格蘭的「極高」野火風險警告延長，原訂五天的效期展延至本週五（24日）。（[STV News](https://news.stv.tv/scotland/very-high-wildfire-risk-extended-across-scotland-after-arthurs-seat-and-cairngorms-fires)）
 
 副助理長官Ian McMeekin就此表示，野火「可能對環境造成毀滅性的衝擊，也對社區帶來嚴重破壞」，並提醒「一顆火星就可能釀成重大損害」。（[STV News](https://news.stv.tv/scotland/very-high-wildfire-risk-extended-across-scotland-after-arthurs-seat-and-cairngorms-fires)）目前蘇格蘭消防救援隊仍持續呼籲民眾在戶外活動時提高警覺，避免任何可能引發火苗的行為。
+
+延伸閱讀：[歐洲野火為什麼一年比一年凶猛？　希臘滅火直升機空中相撞釀2死，野火本週死亡人數增至5人](/articles/europe-wildfire-crisis-france-greece/)

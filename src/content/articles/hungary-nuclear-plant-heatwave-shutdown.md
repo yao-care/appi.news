@@ -57,6 +57,8 @@ coverImageCredit: "IAEA Imagebank — CC BY-SA 2.0, Wikimedia Commons"
 
 [gCaptain報導](https://gcaptain.com/hungary-stops-nuclear-plant-for-first-time-as-danube-river-dries-up/)指出，帕克斯核電廠正常滿載發電量是2,000百萬瓦，8月1日已因水位下滑掉到965百萬瓦，當天深夜更暴跌到只剩240百萬瓦。兩座反應爐週日相繼關閉，一座在清晨停機，另一座在當晚跟進。[Al Jazeera報導](https://www.aljazeera.com/news/2026/8/2/hungary-plans-to-shut-down-only-nuclear-power-plant-amid-drought)提供了更精確的水位數字：多瑙河在帕克斯河段的水位跌到負144公分，遠遠低於2018年寫下的負98公分舊紀錄；電廠的安全規範是水位一旦跌破負134公分，就得啟動強制停機程序。
 
+延伸閱讀：[歐洲野火為什麼一年比一年凶猛？　希臘滅火直升機空中相撞釀2死，野火本週死亡人數增至5人](/articles/europe-wildfire-crisis-france-greece/)
+
 帕克斯核電廠平常供應全國近半電力，是匈牙利最大的單一發電來源，靠抽取多瑙河河水冷卻反應爐運作。河水位一旦太低，抽水口露出水面或流量不足，冷卻系統就撐不住，只能停機。[gCaptain報導](https://gcaptain.com/hungary-stops-nuclear-plant-for-first-time-as-danube-river-dries-up/)引述帕克斯廠副主任納吉（Laszlo Nagy）的話：「展望並不太樂觀，我們面臨前所未有的局面。」匈牙利總理馬傑爾（Peter Magyar）則坦言：「我們繼承了一套脆弱、昂貴又易受傷害的系統，現在必須同時運營、保護，並從根本上重建它。」
 
 <img src="/images/hungary-nuclear-plant-heatwave-shutdown-s1.webp" width="960" height="539" loading="lazy" decoding="async" alt="乾旱下龜裂見底的河床，象徵歐洲多國河川水位創新低（示意圖）">
@@ -78,3 +80,5 @@ coverImageCredit: "IAEA Imagebank — CC BY-SA 2.0, Wikimedia Commons"
 ## 從野火到電網，熱浪衝擊的下一站
 
 今年夏天歐洲的熱浪報告，前段時間多半聚焦在希臘、法國、西班牙的野火與撤離行動。帕克斯核電廠這次停機，把同一波高溫乾旱的衝擊，延伸到了電力基礎設施本身：河流水位不只影響航運與農業灌溉，也直接卡住了仰賴河水冷卻的發電廠。匈牙利、義大利、英國分別面對限電、高溫警報與歉收，說明熱浪造成的損失，已經不只是燒毀的林地面積可以完整衡量。
+
+延伸閱讀：[英國發布罕見「紅色」極端高溫警告　氣溫逼近40°C、六月紀錄恐破　鐵路籲非必要勿搭](/articles/uk-heatwave-red-warning-40c/)

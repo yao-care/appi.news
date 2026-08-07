@@ -57,6 +57,8 @@ draft: false
 
 台電這次釋出的標案全名為「161kV交連PE電纜及附屬器材」，金額約193億元。據產業資訊整理，這是強韌電網計畫推進過程中規模最大的單筆電纜採購，被稱為[台電史上最大的電纜標案](https://www.sinotrade.com.tw/richclub/industry/%E5%8F%B0%E9%9B%BB%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A4%A7193%E5%84%84%E9%9B%BB%E7%BA%9C%E6%A8%99%E6%A1%88-%E8%8F%AF%E6%96%B0-%E5%90%88%E6%A9%9F-%E5%AE%8F%E6%B3%B0%E7%AD%898%E6%AA%94%E5%BC%B7%E9%9F%8C%E9%9B%BB%E7%B6%B2%E6%A6%82%E5%BF%B5%E8%82%A1%E8%AA%B0%E6%9C%80%E5%8F%97%E6%83%A0--%E7%94%A2%E6%A5%AD%E7%86%B1%E8%A9%B1-68d4b72991d5da84c2b47fab)。在政策加速下，這批電纜的相關建設[目標提前至2028年完成](https://udn.com/news/story/7252/9582663)，較原訂時程提早約四年。
 
+延伸閱讀：[161kV是什麼？台電強韌電網5645億怎麼花，193億電纜標案進度一次看](/articles/161kv-taipower-grid-resilience-budget-breakdown/)
+
 <img src="/images/taipower-grid-resilience-161kv-cable-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="成捆的高壓電力電纜，對應台電161kV交連PE電纜標案">
 
 就決標結果，據[聯合新聞網報導](https://udn.com/news/story/7252/9582663)，多家國內線纜廠商分食這筆訂單，例如合機約21.92億元、宏泰電約21.19億元、大山約20.67億元、華電約20.26億元，其餘大亞、大東電、華新、華榮等也各拿下約10億元規模。報導並指出，下半年台電可能進一步釋出345kV超高壓電纜訂單，超高壓電纜市場規模逐步擴大。
@@ -84,6 +86,8 @@ draft: false
 <img src="/images/taipower-grid-resilience-161kv-cable-s5.webp" width="960" height="640" loading="lazy" decoding="async" alt="入夜後城市燈火通明，象徵穩定供電">
 
 在供電穩定之外，電網韌性也是淨零能源轉型的前提。再生能源占比提高後，間歇性綠電需要更強的調度與分散能力才能順利併入電網，因此輸配電骨幹的更新與強固，是綠電擴張能否落地的關鍵。對一般用戶而言，這些基礎建設的進度，最終會反映在停電風險高低與供電品質上。
+
+延伸閱讀：[台電雄積三、四線完工：楠梓半導體園區供電翻倍上看1000MW](/articles/taipower-nanzih-grid-upgrade-1000mw/)
 
 <h2>常見問題</h2>
 

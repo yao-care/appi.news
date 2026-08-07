@@ -59,6 +59,8 @@ AI agent 預設不會替你省錢。你給它一個任務，它會把工具呼�
 
 這半年學界開始正面問一個更根本的問題：agent 到底懂不懂它在花錢。二月有一篇[《Budget-Constrained Agentic Large Language Models》](https://arxiv.org/abs/2602.11541)講得直接，現在的問題不再是 agent 能不能解難題，而是我們能不能信任它替我們做「花錢的決定」。這篇的實驗發現，放著不管的 agent 經常直接違反硬性預算上限，而且光靠在提示裡塞成本回饋（跟它說「請省一點」），根本不足以保證它守得住預算。
 
+延伸閱讀：[跨廠牌 AI agent 各自為政，企業要的是統一中控：Cognizant 把 ServiceNow agent 接進單一編排層，再疊一層 AI Control Tower](/articles/enterprise-agent-orchestration-control-tower/)
+
 <img src="/images/ai-agents-budget-aware-design-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="研究桌上的圖表與分析文件，象徵學界量測 agent 的成本行為">
 
 為什麼叫它省它不省？因為省錢對 agent 來說不是能力問題，是它的運作機制裡根本沒有一條「會痛」的神經。人會省錢，是因為錢從自己口袋出、超支有後果。agent 沒有這條神經，你在提示裡寫的預算對它只是一句參考文字，跟它拿來衝任務成功率的目標不在同一個量級。這跟我一直講的同一個道理：可信度靠的是流程設計，不是模型多聰明。要它守預算，得把預算變成它繞不過去的硬牆。那篇論文自己的做法也印證這件事，它不是把成本寫進提示求 agent 自律，而是設計一套機制去強制執行硬性預算可行性，才守得住。

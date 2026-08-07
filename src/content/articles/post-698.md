@@ -42,6 +42,7 @@ disclaimerType: "general"
 coverImage: "covers/post-698-stock.jpg"
 coverAlt: "電腦處理器晶片的細部特寫"
 coverImageCredit: "Photo by SHOX ART on Pexels"
+topics: ["taiwan-semiconductor-supply-chain"]
 ---
 
 台積電在2025年10月16日公布的第三季財報，再次刷新了投資人對「歷史紀錄」這個詞的想像。[CNBC報導](https://www.cnbc.com/2025/10/16/tsmc-hits-yet-another-record-as-profit-surges-39percent-beating-estimates-on-ai-chip-demand-surge.html)，台積電Q3合計營收達331億美元，較去年同期成長39%，淨利潤年增39.1%，雙雙超越市場預期。連續多季創新高的背後，是一個結構性的需求轉移：AI運算從研究實驗室進入消費端，帶動了對先進製程晶片幾乎沒有上限的需求。
@@ -49,6 +50,8 @@ coverImageCredit: "Photo by SHOX ART on Pexels"
 ## 財報數字背後的結構性變化
 
 [台積電官方財報資料](https://www.theglobeandmail.com/investing/markets/stocks/TSM/pressreleases/35521498/tsmc-reports-strong-q3-2025-financial-results-with-significant-growth)顯示，本季合計新台幣營收達9,899億元，淨利4,523億元，每股盈餘17.44元。以美元計算，Q3營收達331億美元，比上一季環比成長10.1%。這個數字超越了台積電自身設定的指引上限，也打破了分析師預估的中位數。
+
+延伸閱讀：[台積電 CoWoS 持續擴大領先，NVIDIA 預訂逾七成產能](/articles/tsmc-cowos-nvidia-capacity-booking/)
 
 最值得關注的數字結構，是高效能運算部門的佔比。HPC部門在Q3佔台積電總營收的57%，成為第一大業務，遠超智慧型手機部門的26%。這個比例在三年前尚不到40%，反映的是AI訓練與推論晶片需求對整體晶圓代工市場的改寫力道。台積電為輝達、AMD、蘋果、Google等客戶生產的AI加速器，已成為其收入成長的最主要引擎。
 
@@ -69,3 +72,5 @@ Q4的指引同樣傳遞出需求持續的訊號：322億至334億美元的Q4營�
 對台灣整體半導體生態系的影響，體現在供應鏈的擴散效應上。台積電擴產帶動了上游矽晶圓、光阻液、先進封裝基板的需求，也帶動了CoWoS先進封裝產能的繼續擴充。這些需求沿著供應鏈向下滲透，讓台灣半導體生態系從設計、製造到封裝測試，在這個AI週期中全面受惠。台積電的財報是否持續創新高，已成為台灣整體科技出口表現的最直接前導指標。
 
 接下來N2量產良率能否如期達標，以及CoWoS產能能否在2026年跟上輝達Rubin的訂單，是這個故事的下兩個關鍵章節。台積電的N2製程若能在2026年上半年完成足夠的量產良率，輝達Rubin架構晶片的出貨時程就能如期兌現；若良率爬坡落後預期，整個AI伺服器供應鏈的出貨節奏都將承壓。這是觀察2026年台灣半導體出口最核心的單一技術風險點。
+
+延伸閱讀：[台積電魏哲家：AI 晶片需求未緩和，已購 High-NA EUV 設備研發](/articles/tsmc-wei-ai-demand-high-na-euv/)

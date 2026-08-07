@@ -76,6 +76,10 @@ updatedDate: "2026-08-06T05:55:28.112Z"
 
 **選透氣、吸濕排汗的寢具材質。** 純棉、亞麻、天絲這類天然纖維透氣性較好，能讓汗水蒸發帶走熱量；不透氣的化纖寢具則會把濕氣悶在皮膚表面，反而刺激流汗與翻身次數增加。
 
+延伸閱讀：[熱衰竭和中暑差在哪？分辨症狀、緊急急救與預防指南](/articles/appi-news-170/)
+
+延伸閱讀：[極端高溫警告怎麼看懂？中央氣象署黃橙紅燈號分級，中暑、熱衰竭防護與急救一次整理](/articles/extreme-heat-warning-guide/)
+
 <img src="/images/sleep-heat-cooling-methods-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="台灣一般住家臥室夜間，電風扇擺放在房間一角吹動空氣（示意圖）">
 
 ## 看情況：電風扇與租屋族的可行組合

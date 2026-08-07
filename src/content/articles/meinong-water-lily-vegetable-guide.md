@@ -53,6 +53,10 @@ references:
 
 台灣不缺讓外國遊客驚豔的水果，但最近在社群上引發討論的是一種蔬菜。民視新聞網的YouTube頻道報導，近期陸續有日本、香港、中國遊客在網路上發文，分享第一次吃到「細細長長蔬菜」的震撼，其中一則日本網友的貼文吸引超過兩萬人按讚。這道菜就是水蓮，台灣人再熟悉不過的熱炒常客，對許多外國遊客卻是聞所未聞的新奇滋味。
 
+延伸閱讀：[科學麵岩烤海苔回歸秒殺！停產多年的零食一復刻為何總被搶購一空](/articles/science-noodle-seaweed-comeback/)
+
+延伸閱讀：[爭鮮鮭魚季開跑：9款鮭魚創意料理、價格與集點鮭魚扇整理](/articles/sushi-express-salmon-season-2026/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=79yrEJErLSo" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：午夜特搜：日港中客都驚豔！台灣「這蔬菜」有這麼好吃？">
     <img src="/images/meinong-water-lily-vegetable-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="午夜特搜：日港中客都驚豔！台灣「這蔬菜」有這麼好吃？">

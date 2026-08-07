@@ -56,6 +56,10 @@ references:
 
 [EUR-Lex的指令全文列出](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024L1799)適用範圍為附件II所列、既有歐盟可維修性規範的產品類別，包括家用洗衣機與洗脫烘衣機、洗碗機、冰箱與冷凍櫃、吸塵器、電視與螢幕等電子顯示器，以及手機、無線電話、平板電腦、伺服器。這份清單會隨新的生態設計法規陸續擴充，目前尚未涵蓋摺疊螢幕手機等新型態產品。
 
+延伸閱讀：[歐盟包裝法規PPWR 8月12日上路：食品包裝PFAS限值25微克，台灣出口商要準備什麼](/articles/eu-ppwr-packaging-regulation-taiwan-exporters/)
+
+延伸閱讀：[歐盟、日本加速循環經濟立法，台灣《資源循環推動法》三讀後的落地考題](/articles/eu-japan-circular-economy-laws/)
+
 <img src="/images/eu-right-to-repair-directive-2026-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="手機與平板維修零件散落在工作桌上，示意圖">
 
 核心義務方面，[歐盟執委會頁面說明](https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en)，製造商須「in a reasonable time and for a reasonable price」完成維修，且不得以合約條款、硬體或軟體手段阻礙維修，除非有正當理由；零件與維修工具也須以「reasonable prices」提供給消費者與獨立維修業者。這條規定同時具追溯效力，[EUR-Lex摘要指出](https://eur-lex.europa.eu/EN/legal-content/summary/common-rules-promoting-the-repair-of-goods-and-amending-related-eu-legislation.html)，製造商不能以商品是在7月31日之前售出為理由拒絕維修。

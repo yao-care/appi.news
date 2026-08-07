@@ -56,6 +56,8 @@ originalContribution: "本文把壁仞這次配股放進『上市半年、IPO �
 
 真正值得停下來看的，是時機。壁仞 1 月 2 日才掛牌，IPO 募了約 55.8 億港元。到這次配股公告前，[全球發售裡分給營運資金那部分已經用掉超過七成，還剩約 42.8 億港元沒動用](https://www.thestandard.com.hk/finance/article/336455/Biren-Technology-plans-to-raise-nearly-707-billion-through-first-placing)。一家口袋裡還躺著四十幾億、上市才半年的公司，願意折價近一成再抽一輪，這個動作本身就是訊號：管理層判斷現在把錢備足、把產品往前推的價值，高過守住股權不被稀釋。缺錢的公司是被迫融資，壁仞這輪比較像主動搶時間。國產 GPU 這條賽道，客戶送樣驗證、機架級參考設計、量產爬坡，每一步都要真金白銀墊在前面，晚一季可能就換人卡位。
 
+延伸閱讀：[AMD 買下記憶體新創 Mext：AI 加速器的下一場仗，從算力打到記憶體牆](/articles/amd-mext-memory-wall/)
+
 <img src="/images/biren-gpu-placement-capital-signal-s2.webp" width="960" height="960" loading="lazy" decoding="async" alt="沙漏與時間意象，象徵上市不到半年再融資反映的窗口期急迫">
 
 這時候一定有人把招股書那個數字端出來嚇人：壁仞四年累計虧損高達 212 億人民幣。這裡要踩個剎車，這個數字大半是帳面幻覺。[2025 年那筆 164.93 億的年內虧損，絕大部分不是經營虧損，而是上市過程優先股贖回權的公允價值變動，是一次性的紙面帳，掛牌後不會再出現](https://finance.sina.com.cn/tech/roll/2026-06-17/doc-inicsrqv7196112.shtml)。把這塊剝掉，2025 年經調整的核心經營虧損是 8.74 億、2024 年是 7.67 億，量級完全不同。看財務不先分清楚「紙面 vs 經營」，就會對著假問題緊張。
@@ -75,6 +77,8 @@ originalContribution: "本文把壁仞這次配股放進『上市半年、IPO �
 <img src="/images/biren-gpu-placement-capital-signal-s5.webp" width="960" height="1200" loading="lazy" decoding="async" alt="台灣半導體製造與晶片供應鏈，象徵台廠在國產 GPU 鏈上的位置">
 
 回到壁仞這次配股。掛牌半年、募資沒花完、股價相對發行價還在高位，卻折價再抽 70 億，這串動作合起來就是一句話：國產 GPU 的競爭已經進到「誰先把商轉做起來誰活」的階段，資本要提早備滿、股權可以先讓。這是清醒的選擇，不是財務吃緊的求救。但配股解的是速度，解不了製程、良率與生態這三道慢工。看懂它抽這筆錢是為了追時間，比記住 70 億這個金額重要。
+
+延伸閱讀：[AI 記憶體超級循環的第一張帳單，先砸到雲端大廠自己：微軟 2026 資本支出衝 1900 億，其中 250 億是記憶體漲出來的](/articles/microsoft-capex-memory-supercycle/)
 
 <h2>常見問題</h2>
 

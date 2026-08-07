@@ -49,6 +49,8 @@ references:
 
 想用五星飯店的價格吃到平常訂不到位的合菜或和牛排，這幾天有一個機會。2026台灣美食展7月31日起在台北世貿一館展開，[聯合新聞網報導](https://udn.com/news/story/7270/9648278)指出，展場集結多家五星飯店的限定餐券與住宿優惠，折扣最低下殺到1.9折，是每年這個時間點少數能一次比較各家飯店優惠的場合。
 
+延伸閱讀：[南投東埔溫泉美人湯泡湯攻略：碳酸氫鈉泉泉質、放山雞美食與交通全整理](/articles/dongpu-hotspring-free-range-chicken/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=UvAvGuagDsI" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：【直播完整版】0801 美食展盛大開幕 五星飯店餐券等重點內容一次看">
     <img src="/images/taiwan-food-expo-hotel-vouchers-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="【直播完整版】0801 美食展盛大開幕 五星飯店餐券等重點內容一次看">
@@ -73,6 +75,8 @@ references:
 ## 其他亮點：14家米其林必比登、限量鰻魚試吃
 
 除了餐券住宿，[三立新聞網報導](https://www.setn.com/news/1879400)指出，今年展場集結14家米其林綠星及必比登推薦餐廳進駐，包括小小樹食、雲川水月、麺や自在天等，現場並安排超過百場料理展演，邀請阿基師、詹姆士等主廚參與。開幕首日下午限量500份免費鰻魚試吃，開幕典禮則邀請總統賴清德、交通部長陳世凱等超過200位貴賓出席。
+
+延伸閱讀：[公館老字號「梅江韓國銅盤烤肉」10月歇業：30年吃到飽走入歷史，收攤前資訊整理](/articles/gongguan-mei-jiang-korean-bbq-closing/)
 
 ## 讀者實用資訊
 

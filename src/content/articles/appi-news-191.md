@@ -31,6 +31,7 @@ references:
   - title: "International Osteoporosis Foundation (IOF). Calcium Recommendations"
     url: "https://www.osteoporosis.foundation/educational-hub/topic/calcium/calcium-recommendations"
 draft: false
+topics: ["healthy-aging"]
 ---
 你有沒有發現，很多人說起老年人的跌倒，第一個反應都是「哎，上了年紀就是這樣」，卻沒有停下來問：為什麼一跤對年輕人只是瘀青，對長者卻可能是生命的轉折？
 

@@ -25,6 +25,10 @@ risksAndLimits:
 
 早餐店的飯糰一般一顆兩三百公克，配料簡單、幾口就能解決。但台南中西區與高雄鳳山，最近各有一攤把飯糰做到平常的兩倍大，價格卻沒跟著翻倍，吸引不少人專程排隊嘗鮮。
 
+延伸閱讀：[台北期間限定霜淇淋去哪吃？老字號復刻聖代、日系玉米霜淇淋、東京花漾造型整理](/articles/taipei-summer-limited-edition-soft-serve-guide/)
+
+延伸閱讀：[漢餅為什麼做起義式冰淇淋？從舊振南Gelato到涼麵雪糕，這波老字號跨界甜點一次看懂](/articles/century-bakery-gelato-cold-noodle-popsicle/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=nMyX3MePtgk" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：台南早餐店800公克巨無霸飯糰">
     <img src="/images/jumbo-rice-ball-tainan-kaohsiung-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="台南早餐店800公克巨無霸飯糰">

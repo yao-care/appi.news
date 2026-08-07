@@ -26,6 +26,8 @@ risksAndLimits:
 
 四十歲前後突然覺得提不起勁、對工作跟生活都沒有以前有感，不是只有你這樣。跨國研究發現，人一生的幸福感呈現一條「U型曲線」，年輕時偏高，中年跌到谷底，過了五十歲後又慢慢回升，甚至超過年輕時的水準。
 
+延伸閱讀：[手機滑越多、小孩生越少？美國研究揭露生育率下滑的新解釋](/articles/smartphone-birth-rate-decline-study/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=OrxiRRTxGh0" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：中年幸福感跌谷底! 研究揭「U型曲線」 專家:非危機是轉換期">
     <img src="/images/midlife-happiness-u-curve-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="中年幸福感跌谷底! 研究揭「U型曲線」 專家:非危機是轉換期">

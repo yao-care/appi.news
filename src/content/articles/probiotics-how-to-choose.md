@@ -70,6 +70,8 @@ draft: false
 
 這是整篇最該記住的一句。WGO 明白指出，[益生菌的效果具菌株特異性與劑量特異性，最可靠的做法是把某個益處連到『特定菌株或菌株組合、在有效劑量下』的人體試驗](https://www.worldgastroenterology.org/UserFiles/file/guidelines/probiotics-and-prebiotics-english-2023.pdf)。意思是，同樣是「比菲德氏菌」或「乳酸桿菌」，換一株，別人做出來的研究就不能算在你頭上。
 
+延伸閱讀：[葉黃素能救你的 3C 眼嗎？AREDS2 證實有效的護眼對象，很可能不是你](/articles/lutein-eye-health-areds2/)
+
 所以看標籤要看到「株」這一層。菌株的命名通常是「屬＋種＋菌株編號」，例如上面那株 B. longum 35624、或常見的 LGG（Lacticaseibacillus rhamnosus GG）。只寫「乳酸菌」「比菲德氏菌」而沒有菌株編號的，等於沒告訴你它到底是哪一株、有沒有對應的人體證據。判定一株菌是否真的有效，[國際採用的門檻是至少要有一項雙盲、隨機、安慰劑對照、且樣本數與主要療效指標適當的人體試驗](https://isappscience.org/new-global-guidelines-for-probiotics-and-prebiotics-for-gut-health-and-disease/)。順帶一提，PubMed 上益生菌的人體試驗雖然[已累積超過 1,500 篇](https://www.worldgastroenterology.org/UserFiles/file/guidelines/probiotics-and-prebiotics-english-2023.pdf)，但菌株、族群、劑量高度不一，多數結論是「特定菌株×特定適應症」，不能外推成「益生菌都有效」。
 
 ## 標籤怎麼看：保存期限末的存活菌數
@@ -97,6 +99,8 @@ draft: false
 把上面收攏成可以存手機的幾條：一、看有沒有標到「菌株編號」，只寫菌屬菌種的略過；二、查這株菌有沒有對應你需求的人體試驗，劑量對不對得上；三、看億數要看「保存期限末的存活菌數」，不是出廠菌數；四、依標籤指示保存，別被「要不要冷藏」綁架，也別以為耐儲存就比較強；五、合生元要看益生元有沒有加到有效量；六、選有批次檢驗、品管透明的廠商。附帶一個提醒：市面上把產品連到「證據」的益生菌對照工具，[本身多由商業補助資助](https://www.worldgastroenterology.org/UserFiles/file/guidelines/probiotics-and-prebiotics-english-2023.pdf)，參考可以，別當成中立的裁判。
 
 最後照例把話說清楚：益生菌是輔助、不是藥，不能取代正規治療。健康的人是否需要天天補充，目前並沒有官方建議；免疫低下、重症或住院病人使用益生菌要特別謹慎，有極少數感染風險。如果你有腸胃疾病、正在用藥或懷孕哺乳，吃之前先問醫師或藥師。這篇是衛教與消費資訊，不是醫療建議。
+
+延伸閱讀：[紅麴是天然的降血脂食品，比較安全嗎？它的活性成分其實就是一種 statin](/articles/red-yeast-rice-monacolin-safety/)
 
 <h2>常見問題</h2>
 

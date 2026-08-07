@@ -64,6 +64,8 @@ references:
 
 如果出血量大，不要自己開車去醫院，請人陪同或叫救護車。另外，即使每次都能輕鬆止住，只要**一週內流鼻血超過一次**，Mayo Clinic 建議還是安排時間看醫師，找出反覆出血的原因。
 
+延伸閱讀：[小腿抽筋怎麼辦：半夜發作先把腳尖往回勾](/articles/leg-cramp-relief/)
+
 ![急診室時鐘與走廊，象徵需要立刻就醫的時間警訊](/images/nosebleed-correct-position-s1.webp)
 
 ## 居家處置怎麼做
@@ -99,6 +101,8 @@ references:
 ![示意圖：家長在家照顧流鼻血兒童的居家照護情境](/images/nosebleed-correct-position-s4.webp)
 
 本文為衛教整理，內容彙整自衛福部中央健康保險署、Mayo Clinic 與國內教學醫院耳鼻喉科公開衛教資料，不能取代醫師對個別狀況的診斷與處置。反覆、不明原因或止血後仍不放心的流鼻血，請直接找耳鼻喉科醫師評估。
+
+延伸閱讀：[擦傷傷口照顧該不該結痂？清潔消毒方式與就醫時機一次看](/articles/abrasion-wound-care/)
 
 ## 參考資料
 

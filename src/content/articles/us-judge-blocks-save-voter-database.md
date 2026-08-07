@@ -50,6 +50,8 @@ coverImageCredit: "Photo by Element5 Digital on Unsplash"
 
 SAVE 全名為「外籍人士福利資格系統查核」（Systematic Alien Verification for Entitlements），原本用於逐筆查核個人申領政府福利的資格。據[NPR報導](https://www.wvxu.org/news-from-npr/2026-06-22/a-federal-judge-finds-a-trump-data-system-to-verify-voters-is-unlawful)，川普政府將其擴充為可對整份選民名冊進行批次比對，並串接社會安全署（SSA）的資料，藉此找出可能的非公民與已故選民。
 
+延伸閱讀：[美最高法院拒審投票權法案件　7州少數族裔選民「找人協助投票」維權途徑受限](/articles/us-supreme-court-voting-rights-section-208/)
+
 蘇克納南的裁定認定，相關聯邦機構並無改造 SAVE 的法定職權，擴充版 SAVE 的建置違反了《隱私法》（Privacy Act）、《社會安全法》（Social Security Act）與《行政程序法》（Administrative Procedure Act）。她在判決中寫道，聯邦機構「草率地拼湊並挪用了數百萬美國人的私人資訊，包括他們明知不可靠的公民身分資料」。據[WISH-TV報導](https://www.wishtv.com/news/politics/federal-judge-rules-against-trumps-voter-verification-tool-citing-privacy-concerns/)，這份判決長達75頁，蘇克納南是拜登提名的法官。
 
 在這份判決中，蘇克納南寫道：「整體而言，聯邦政府明知故犯地踐踏了美國公民的隱私權，其方式已威脅到神聖的投票權。」她並指出，原告已證明這套更新後的系統確實把部分合法選民辨識為非公民，使用該系統的各州「正依據不準確的資訊，把美國公民從選民名冊中除名」。
@@ -69,3 +71,5 @@ SAVE 全名為「外籍人士福利資格系統查核」（Systematic Alien Veri
 對於這項裁定，川普政府一方表達不滿並計畫上訴。據[NPR報導](https://www.wvxu.org/news-from-npr/2026-06-22/a-federal-judge-finds-a-trump-data-system-to-verify-voters-is-unlawful)，國土安全部（DHS）總法律顧問珀西瓦爾（James Percival）在社群媒體上批評這項判決。他在[WISH-TV引述](https://www.wishtv.com/news/politics/federal-judge-rules-against-trumps-voter-verification-tool-citing-privacy-concerns/)的發言中說：「令人驚訝的是，左派竟如此奮力阻止我們去解決他們堅稱根本不存在的問題。」
 
 SAVE 系統是川普政府推動將選舉事務全國一致化的重要工具，這項裁定使該政策的後續走向增添變數。
+
+延伸閱讀：[DACA身分為什麼說撤就撤？「未經授權出境」成關鍵　德州媽媽遭驅逐、三名美籍子女困邊境](/articles/daca-status-termination-unauthorized-travel/)

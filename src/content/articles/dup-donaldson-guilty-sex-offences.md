@@ -54,6 +54,8 @@ coverImageCredit: "Chris McAndrew — CC BY 3.0, Wikimedia Commons"
 
 據[TheJournal.ie的即時報導](https://www.thejournal.ie/jeffrey-donaldson-newry-crown-court-2-7074857-Jun2026/)，裁決於6月22日下午在紐里刑事法院宣讀，唐納森被認定18項罪名全部成立。
 
+延伸閱讀：[北愛爾蘭泌尿科調查報告出爐：逾千名病患遭召回、系統性治理失靈　主席稱「病患被嚴重辜負」](/articles/ni-urology-inquiry-systemic-failures/)
+
 ## 法官：長期監禁無可避免
 
 [RTÉ](https://www.rte.ie/news/courts/2026/0622/1579576-jeffrey-donaldson-court/)報導，承審法官藍西（Judge Paul Ramsey）表示，對唐納森而言「長期監禁」已無可避免。現年63歲的唐納森當庭遭到收押，並依規定列入性犯罪者名冊，正式量刑訂於2026年9月25日在同一法院進行。
@@ -73,3 +75,5 @@ coverImageCredit: "Chris McAndrew — CC BY 3.0, Wikimedia Commons"
 ## 對台灣讀者的關注點
 
 唐納森一案牽動的是公眾人物問責與司法獨立的核心命題。一名長年位居要職的資深政治人物，在權勢與形象的保護之下仍被陪審團定罪、當庭收押，凸顯司法程序對任何身份一視同仁的原則。對同樣關注政治人物操守與司法公信的台灣讀者而言，北愛這起案件後續的量刑與相關究責，值得持續觀察。
+
+延伸閱讀：[愛爾蘭邊境查獲塞姆汀炸彈疑涉新愛爾蘭共和軍　國家博物館員工與實習大律師雙雙被控](/articles/ireland-monaghan-bomb-museum-worker-charged/)

@@ -61,6 +61,8 @@ references:
 
 [聯合新聞網報導指出](https://udn.com/news/story/7266/9630638)，這項辦法的補助對象全面納入法定事業，包括公司、行號、工廠、民間機構、行政機關（構），以及公私立大專校院、公立研究機構與財團法人學術研究機構；每一案的補助金額以全案總經費的50%為上限。[華視新聞網的報導](https://news.cts.com.tw/cna/life/202607/202607153055770.html)補充，若屬事業依法本應辦理的義務性項目，例如溫室氣體盤查登錄，或已核定碳費徵收對象的自主減量計畫範疇內容，則不在補助範圍內，避免補助資源與法定義務重疊。
 
+延伸閱讀：[碳費滿月接軌 ETS：環境部借鏡日韓教訓不發大量免費配額，學者憂自主減量計畫近半揭露不清](/articles/carbon-fee-ets-taiwan-japan-korea-forum-2026/)
+
 <img src="/images/carbon-fee-technology-subsidy-s1.webp" width="960" height="559" loading="lazy" decoding="async" alt="工業管線與碳捕捉相關設備">
 
 ## 補助項目涵蓋減量到調適，CBAM因應也在列

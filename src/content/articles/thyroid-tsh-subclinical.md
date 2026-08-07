@@ -76,6 +76,8 @@ draft: false
 
 台灣偏低有幾個原因。台灣長期實施食鹽加碘、碘營養相對充足（碘缺乏地區的亞臨床甲低會更多）；健檢族群偏年輕健康；而且那項研究以 TSH 小於 10 為切點、又缺游離 T4 資料。所以正確的說法是「某一台灣健檢世代約 1.3%」，不能寫成「台灣的盛行率」，而國際的 4% 到 20% 是不同族群、不同定義下的數字，兩者不衝突，只是口徑不同。它最常見的成因是自體免疫的橋本氏甲狀腺炎，[約八成患者測得到抗甲狀腺過氧化酶抗體（anti-TPO）](https://www.tafm.org.tw/ehc-tafm/s/viewDocument?documentId=86dd094a560f4798ba1cd89218f2d8ef)。
 
+延伸閱讀：[肝指數 GOT、GPT 正常值是多少？數字沒紅字也不代表肝沒事](/articles/liver-enzymes-got-gpt/)
+
 ## TSH 偏高不一定會惡化，還可能自己好
 
 這一段最能讓人放下心。TSH 偏高不代表一路往下壞。研究顯示[抗體陽性者每年約 4.3%、抗體陰性者約 2.6% 會進展為明顯的甲狀腺低下，整體每年約 2% 到 6%，一般認為 TSH 超過 10 才暗示進展風險較高](https://www.tafm.org.tw/ehc-tafm/s/viewDocument?documentId=c1401d353b2f4e5abc252e1ef31f348c)。反過來，[有相當比例的亞臨床甲低會自行恢復正常：未治療下約 52% 的患者在六年內 TSH 與游離 T4 回到正常，而且 TSH 愈接近上限愈容易恢復](https://www.tafm.org.tw/ehc-tafm/s/viewDocument?documentId=86dd094a560f4798ba1cd89218f2d8ef)。
@@ -103,6 +105,8 @@ draft: false
 一個好懂的反證：抗心律不整藥 amiodarone 每天 200 毫克，[經代謝會釋放約 6 毫克游離碘，約是每日碘需求的 40 倍，長期反而可能誘發甲狀腺低下](https://www.tafm.org.tw/ehc-tafm/s/viewDocument?documentId=c1401d353b2f4e5abc252e1ef31f348c)。碘過量會傷甲狀腺，這就是最清楚的例子。
 
 TSH 是路標，不是判決。偏高多半是亞臨床狀態，先複檢、看有沒有危險因子、由醫師決定追蹤還是治療，別自己嚇自己，也別自己猛補碘。是否用藥、如何追蹤，要由醫師依你的年齡、症狀、抗體、是否懷孕等綜合判斷，這篇能幫你看懂報告，但不能取代醫囑。
+
+延伸閱讀：[台灣是洗腎王國：健檢報告的 eGFR 是什麼，教你算出腎臟剩幾分](/articles/egfr-kidney-function/)
 
 <h2>常見問題</h2>
 

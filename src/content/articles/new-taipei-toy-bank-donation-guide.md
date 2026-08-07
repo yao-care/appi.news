@@ -25,6 +25,8 @@ risksAndLimits:
 
 家裡小孩長大了，玩具堆在角落沒人碰，直接丟掉又覺得可惜。新北市志願服務推廣中心與新北市玩具銀行日前舉辦[「志工家庭一日服務心體驗」活動](https://mypeoplevol.com/2026/life/104747)，邀請28位親子志工到玩具銀行幫忙整理、清潔、分類玩具，把這套運作多年的二手玩具回收機制帶到更多家庭眼前。玩具銀行[去年共回收48噸二手玩具](https://mypeoplevol.com/2026/life/104747)，整理修復後送往偏鄉、早療機構、離島與海外。這套系統平常怎麼收、誰能申請，以下整理清楚。
 
+延伸閱讀：[青安3.0房貸怎麼貸？申請資格、額度分級與利率補貼一次看懂](/articles/qingan-3-housing-loan-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=giyk944WdcE" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：志工家庭一日服務心體驗">
     <img src="/images/new-taipei-toy-bank-donation-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="志工家庭一日服務心體驗">

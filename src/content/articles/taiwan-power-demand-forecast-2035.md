@@ -59,6 +59,8 @@ draft: false
 
 上修的兩大推力，一是產業、二是天氣。經濟部把成長主要歸因於[AI資料中心及半導體產業的投資擴產用電](https://news.nextapple.com/finance/20260618/D6187FC0C29A886CE2E4E4BD8B0F9BB9)；同時高溫拉高空調需求，報告提到[今年1月至6月10日日均溫超過26度的天數達44天，高於去年同期的38天](https://www.rti.org.tw/news?uid=3&pid=215348)。
 
+延伸閱讀：[台電估半導體用電10年翻倍：2035年衝1100億度、占全台用電3成](/articles/semiconductor-power-demand-2035/)
+
 <img src="/images/taiwan-power-demand-forecast-2035-s1.webp" width="960" height="539" loading="lazy" decoding="async" alt="資料中心伺服器機房，象徵AI與半導體產業帶動的用電需求成長">
 
 值得放在一起看的是2025年的實際數字。報告指出，2025年[總體用電量相較2024年微幅降低8.4億度，降幅約0.3%](https://news.nextapple.com/finance/20260618/D6187FC0C29A886CE2E4E4BD8B0F9BB9)。也就是說，過去一年用電其實小幅回落，但官方對未來十年的曲線卻往上修，反映的是對AI與半導體新增負載的預期，而非當下用電已經暴衝。
@@ -84,3 +86,5 @@ draft: false
 ## 對台灣的意義
 
 把這份報告拆開來看，它把「AI與半導體帶來的新增用電」正式寫進國家級的十年供需推估，並用燃氣機組與綠能裝置容量兩條線去回應。對製造業、資料中心營運商與電網相關供應鏈來說，這份報告是後續電源開發、調度與綠電採購規劃的官方參考基準。完整內容可查經濟部能源署[全國電力資源供需報告專區](https://www.moeaea.gov.tw/)。
+
+延伸閱讀：[離岸風電中長程藍圖出爐：2039年拚24.7至27.9GW，總統定調國家戰略工程](/articles/taiwan-offshore-wind-blueprint-2039/)

@@ -29,6 +29,7 @@ references:
   - title: "World Health Organization. (2024). Obesity and overweight"
     url: "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight"
 draft: false
+topics: ["health-check-reports"]
 ---
 你有沒有發現，很多人談到瘦瘦針，第一個問題都是「打了幾公斤？」而不是「你做過抽血評估嗎？」
 
@@ -90,6 +91,8 @@ GLP-1 藥物本身經腎臟排泄比例並不高（主要靠酵素降解），�
 - 懷孕或計劃懷孕者
 
 你可以把這個評估過程，理解為廚師在開始料理之前，先確認所有食材的新鮮度和保存狀態。跳過這一步，再好的食譜也可能出問題。
+
+延伸閱讀：[瘦瘦針×中醫整合：體質調理、副作用管理、停藥後維持](/articles/appi-news-179/)
 
 ![瘦瘦針使用前必做六項抽血評估清單](https://appi.news/images/appi-news-180/2.svg)
 

@@ -84,3 +84,20 @@ coverImageCredit: "Mike1979 Russia — CC BY-SA 4.0, Wikimedia Commons"
 這筆軍購案發生的時間點頗有意味。[Defense News報導](https://www.defensenews.com/industry/techwatch/2026/07/30/iran-to-get-chinese-shoulder-launched-missile-systems-in-weeks-sources-say/)指出，伊朗與美國、以色列的戰事已延燒五個月，雙方名義上自4月起停火，但這場戰爭已暴露伊朗在保護軍事據點與關鍵基礎設施上的防空缺口，這正是伊朗急著補強MANPADS的背景。[Local12報導](https://local12.com/news/nation-world/report-iran-to-buy-60m-70m-in-chinese-shoulder-fired-air-defense-missiles-oil-strait-hormuz-pete-hegseth-nato-president-xi-jinping)也提到一個對照組：身為全球最大石油進口國的中國，自戰事爆發後大幅減少進口量，流經荷莫茲海峽的石油因此減少，反而緩解了一部分全球油價的衝擊。這則MANPADS交易的報導，正好落在習近平預定9月下旬訪美的前夕，讓中伊軍事往來與中美關係的敏感度又添一層。
 
 延伸閱讀：[哈瑪斯解除武裝為何卡關？以色列開三大條件，加薩停火協議恐生變](/articles/gaza-hamas-disarmament-deal-israel-concerns/)
+
+## 常見問題
+
+### 肩射式防空飛彈（MANPADS）是什麼？
+MANPADS是士兵可單人肩扛發射的防空飛彈系統，不需雷達車或固定陣地，機動性高，主要用來對付直升機、無人機與巡航飛彈等低空慢速目標。
+
+### 伊朗這次向中國採購的是哪些型號、規模多大？
+交易涵蓋300至400套QW-12與FN-16系統，金額約6,000萬至7,000萬美元（約新台幣19億至22億元），是伊朗與美國、以色列爆發戰事以來規模最大的已知防空採購案之一。
+
+### 這批飛彈怎麼運到伊朗？
+由香港註冊的中青寶尚國際投資有限公司牽線，貨物先從中國新疆烏魯木齊空運出境，再經巴基斯坦轉運進入伊朗，首批最快數週內送達。
+
+### 中國與巴基斯坦對這筆交易有何回應？
+中國外交部稱報導「完全毫無根據」，國防部表示「不熟悉相關情況」；巴基斯坦軍方公關部門則駁斥涉入指控，稱相關揣測「完全是捏造和虛假的」。
+
+### 美國對這件事的態度是什麼？
+川普稱若屬實會令人意外，並轉述習近平曾表態不會參與；北約大使惠特克措辭較強硬，國防部長赫格塞斯先前已證實中俄正協助伊朗補強軍力。

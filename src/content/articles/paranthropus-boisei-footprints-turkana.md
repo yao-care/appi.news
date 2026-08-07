@@ -72,3 +72,20 @@ coverImageCredit: "Henry Sanderson Viyuyi — Pexels"
 這並非Hatala團隊第一次在圖爾卡納湖區靠足跡改寫古人類研究。2024年，同一批研究人員曾在鄰近地點發表另一項足跡發現，同一層位竟同時保存了南方古猿粗壯種與直立人兩種古人類的足跡，證實這兩支物種曾在同一片棲地共同生活長達數十萬年之久。（[NBC News](https://www.nbcnews.com/science/science-news/footprints-two-species-ancient-human-relatives-same-time-rcna181806)）當時的研究刊登於《科學》（Science）期刊，團隊成員橫跨查塔姆大學、哈佛大學、史密森尼學會、圖爾卡納盆地研究所（Turkana Basin Institute）與紐約州立大學石溪分校。（[Chatham University Pulse](https://www.pulse.chatham.edu/blog-announcements/chatham-professor-kevin-hatala-research-ancient-humans-kenya-footprints-fossils-biology)）
 
 這次的GaJi10足跡群把時間軸再往前延伸，也讓科學家對南方古猿粗壯種的體型與社會生活有了比過去更立體的認識，圖爾卡納湖這片乾涸湖岸持續是研究人類演化史上關鍵的化石寶庫。（[Archaeology Magazine](https://archaeology.org/news/2024/12/03/footprints-in-kenya-suggest-ancient-human-relatives-shared-space/)）
+
+## 常見問題
+
+### GaJi10遺址的足跡最早是什麼時候發現的？
+這處遺址由史密森尼學會的Kay Behrensmeyer於1978年首度發現，之後在2016年與2023年再兩度挖掘，共保存21個化石足跡。
+
+### 研究團隊怎麼確認這批足跡屬於南方古猿粗壯種？
+查塔姆大學Kevin Hatala帶隊，依據足部形狀與步態特徵分析，判定21個足跡來自8個南方古猿粗壯種個體，年代約143萬年前，而非同時期存在的人屬物種。
+
+### 足跡量出的身高體重跟過去認知差多少？
+過去靠零散頭骨牙齒推估體型較小，這次足跡反推最高可達183公分、體重約75公斤，逼近體格明顯較大的直立人。
+
+### 這8個足跡個體是怎麼一起行動的？
+研究判定足跡多數來自成年雄性，像一個隊伍集體穿越泥灘，沒有明顯屬於女性或幼兒的足跡，顯示可能有雄性成群移動的社會行為。
+
+### 這次發現跟2024年圖爾卡納湖的足跡研究有什麼關聯？
+同一批研究人員2024年曾在鄰近地點發現，南方古猿粗壯種與直立人的足跡同層位共存，證實兩物種曾共域數十萬年，這次GaJi10足跡把時間軸再往前延伸。

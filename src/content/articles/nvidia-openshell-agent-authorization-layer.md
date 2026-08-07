@@ -67,3 +67,20 @@ NVIDIA 這次端出來的東西，很容易被當成「又一個 agent 工具包
 可信度從來不是靠模型多聰明撐起來的，是靠[落地流程](/articles/llm-healthcare-promise-limits/)。OpenShell 把這件事講白了：它賭的不是 agent 會不會更強，而是 agent 自己亂動的時候，環境攔不攔得下來。對要導入的人來說，問題其實不是「要不要用 NVIDIA 的護欄」，而是這套護欄的鑰匙，最後握在誰手上。
 
 <img src="/images/nvidia-openshell-agent-authorization-layer-s6.webp" width="960" height="641" loading="lazy" decoding="async" alt="授權護欄的控制鑰匙握在誰手上，象徵權限歸屬的關鍵問題">
+
+## 常見問題
+
+### OpenShell 是什麼？
+一個 Apache 2.0 授權的開源 runtime，不靠提示詞叮嚀 agent，而是直接在 agent 運行的環境上設限制，就算 agent 被攻陷也一樣受約束，靠 sandbox、policy engine、Privacy Router 三件事撐起護欄。
+
+### Nemotron 3 Ultra 是什麼樣的模型？
+550B 參數的 MoE 開源模型，每次推理約啟用 55B，權重、資料、訓練配方全開源，專為長鏈 agent 任務調校，吞吐量比同級開源模型快 5 倍，能把複雜任務成本壓低約 30%。
+
+### OpenShell 和 MCP 有什麼不同？
+MCP 解決的是連接問題，讓所有工具都能接上；OpenShell 解決的是授權問題，先決定哪些工具能接。兩者是完全不同的治理哲學，一個管連得上，一個管准不准動。
+
+### 企業導入前該先問哪些問題？
+文章建議依序問三件事：agent 要解的情境是什麼、得碰哪些系統和資料；護欄政策由誰定義、能不能匯出、換 runtime 會不會搬不走；deny-by-default 的預設權限要開多大、哪些動作得留人工確認。
+
+### deny-by-default 是什麼意思？
+這是 OpenShell policy engine 的判定原則，對檔案、網路、process 三層的每個動作逐一判定，預設先擋、不主動放行，等於在環境層先築起攔截線，而不是事後補救。

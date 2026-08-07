@@ -86,3 +86,20 @@ originalContribution: "本文以路透社（經 Asia Bulletin 轉載）獨家報
 ## 不是頭一次：FCC已對中國無人機、路由器、機器人下過類似禁令
 
 [路透社報導](http://www.asiabulletin.com/news/279222505/us-weighs-ban-on-chinese-data-center-equipment-imports)指出，FCC先前已對中國製無人機與路由器透過「受管制清單」（Covered List）祭出類似禁令，上週也才對中國製電力變流器與機器人追加限制。這項光收發器提案若定案，將是FCC延續同一套管制邏輯，把範圍進一步擴大到AI資料中心的核心零件供應鏈。[Tom's Hardware報導](https://www.tomshardware.com/tech-industry/data-centers/us-mulling-ban-on-key-chinese-networking-tech-in-data-center-component-crackdown-white-house-wants-to-impose-restrictions-in-2026-china-says-it-will-respond-if-necessary)引述業界分析師意見指出，中國廠商產品已深度嵌入全球供應鏈，籠統禁令能否真正阻絕資安風險、還是徒增美系業者成本，業界看法分歧；由於提案細節仍未正式公布，最終管制範圍與生效時間仍有變數。
+
+## 常見問題
+
+### 光收發器是什麼？
+光收發器是安裝在伺服器與交換器連接埠上的小型模組，負責把電子訊號轉換成光脈衝，透過光纖電纜在資料中心內部高速傳輸資料，是AI模型訓練時伺服器彼此溝通的關鍵零件。
+
+### 美國為何要禁止進口中國製光收發器？
+官員擔心中國企業藉這項零件竊取資料、植入惡意軟體，或癱瘓訓練與運行AI模型的美國資料中心服務，因此透過FCC草擬禁令，盼今年內公布並生效。
+
+### 這項禁令現在定案了嗎？
+還沒。消息人士強調FCC草案尚未定案，仍可能修改或擱置，草案傾向只禁新型號中國製收發器進口，並讓多數非中國供應商豁免於限制之外。
+
+### 禁令若成真，哪些企業會受衝擊？
+全球最大光收發器供應商之一中際旭創首當其衝，其與中國廠商Eoptolink合計掌握全球高階光收發器逾6成市占；AWS等美國雲端業者恐須轉單Coherent、Lumentum，推升採購成本。
+
+### 這是FCC第一次對中國科技產品下類似禁令嗎？
+並非首次。FCC先前已透過受管制清單對中國製無人機與路由器下過禁令，上週也才對中國製電力變流器與機器人追加限制，這次是同一套管制邏輯的延伸。

@@ -77,3 +77,20 @@ coverImageCredit: "Russell Watkins / DFID — CC BY 2.0, Wikimedia Commons"
 孟加拉政府已正式向印度提出引渡哈希娜的請求。據[SCMP報導](https://www.scmp.com/news/asia/south-asia/article/3362236/bangladeshs-sheikh-hasina-vows-return-despite-believing-she-may-be-killed)，新德里對此回應稱該請求「正在審查中」，尚未給出明確答覆。哈希娜則表示，印度當局並未就此與她討論，她目前仍住在印度境內一處未公開的地點；[Hürriyet Daily News報導](https://www.hurriyetdailynews.com/bangladesh-ex-premier-hasina-vows-to-return-despite-fearing-for-life-224954)提到，她堅稱自己並未受到任何要她返國的壓力。孟加拉政府則承諾，若她真的返國，將確保她獲得合法的法律程序。
 
 值得對照的是，孟加拉政局在過去半年已出現重大翻盤。據[半島電視台（Al Jazeera）報導](https://www.aljazeera.com/news/2026/2/14/bnp-wins-bangladesh-election-tarique-rahman-set-to-be-prime-minister)，孟加拉今年2月12日舉行2024年起義後的首次大選，由孟加拉民族主義黨（BNP）拿下國會299席中的212席，取得壓倒性勝利；黨魁塔里克．拉赫曼（Tarique Rahman）2月17日宣誓就任總理，接替此前的尤努斯（Muhammad Yunus）看守政府。[半島電視台另一篇報導](https://www.aljazeera.com/news/2026/2/14/tarique-rahman-from-17-year-exile-to-landslide-win-in-bangladesh-election)指出，拉赫曼本人同樣曾流亡海外17年，直到2025年12月才結束在英國的流亡生涯返國參選，如今換成昔日政敵哈希娜期盼循同樣路徑重返家園，形成強烈對比。
+
+## 常見問題
+
+### 哈希娜為什麼堅持要在2026年12月前返回孟加拉？
+她向法新社表示，儘管清楚自己可能被殺害、逮捕或入獄，仍決心返國，因為「我的人民在召喚我」，並強調權力不是她的目的地，服務人民才是。
+
+### 哈希娜被判了什麼罪、何時判決？
+達卡國際罪行法庭於2025年11月17日以違反人道罪，就她煽動執法人員法外處決示威者一事，缺席判處她死刑，同案兩名被告分別被判死刑與5年徒刑。
+
+### 孟加拉政府有沒有要求引渡哈希娜？
+有，孟加拉政府已正式向印度提出引渡請求，新德里回應稱該請求「正在審查中」，尚未給出明確答覆；哈希娜表示印度並未就此與她討論。
+
+### 哈希娜對這項死刑判決有什麼回應？
+她稱判決是「披著法律外衣的政治報復」，否認曾下令過度使用武力，辯稱其政府當時已展現最高耐心，但未曾正式道歉，僅表達對罹難者家庭的同情。
+
+### 孟加拉現在的總理是誰？
+孟加拉民族主義黨（BNP）在今年2月大選中勝選拿下多數席次，黨魁塔里克．拉赫曼於2月17日宣誓就任總理，接替此前的尤努斯看守政府。

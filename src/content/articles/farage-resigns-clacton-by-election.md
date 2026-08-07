@@ -82,3 +82,20 @@ references:
 ## 更新時間軸
 
 - （2026-07-09）改革黨黨魁法拉吉7月7日宣布辭去克拉克頓下議院議員、逼出補選並表明再戰，稱要讓選民「當裁判」；此舉正值他面臨500萬英鎊未申報捐款、以及詐欺犯柯特爾提供未申報利益等兩起國會標準調查。首相施凱爾批為「絕望的作秀」，工黨與自民黨拒絕派候選人，保守黨與 Restore Britain 稱要等調查結束再參選。（[Al Jazeera（分析）](https://www.aljazeera.com/news/2026/7/8/why-has-uk-reforms-nigel-farage-resigned-as-mp-what-happens-next)、[Al Jazeera（事件）](https://www.aljazeera.com/news/2026/7/7/reform-uks-farage-resigns-as-mp-amid-funding-scandal-forcing-by-election)、[Politics.co.uk](https://www.politics.co.uk/news/2026/07/07/nigel-farage-resigns-as-mp-to-force-by-election/)、[CNBC](https://www.cnbc.com/2026/07/07/nigel-farage-parliament-election.html)）
+
+## 常見問題
+
+### 法拉吉為什麼突然辭去下議院議員？
+他7月7日主動辭去克拉克頓下議院議員席位以逼出補選，並表明會再度參選，讓選民「當我行為的裁判」，藉此在面對兩起國會標準調查之際尋求政治正當性。
+
+### 法拉吉面臨哪兩起調查？
+一是加密貨幣富豪哈本捐贈的500萬英鎊未申報款項，原稱用於私人維安；二是已定罪詐欺犯柯特爾提供的未申報利益，包括支付員工替他經營社群媒體與提供一棟聯排別墅供他使用。
+
+### 工黨與自民黨會派人參選這場補選嗎？
+不會。工黨與自由民主黨都表明不派候選人，自民黨並把法拉吉的辭職形容為一次「逃跑」；首相施凱爾則批評此舉是「絕望的作秀」。
+
+### 保守黨為什麼不參加這場補選？
+保守黨與右翼政黨Restore Britain表示，要等到相關國會標準調查結束後，再參加一場他們認為「真正的補選」，暫不派候選人角逐這次法拉吉主動促成的補選。
+
+### 法拉吉若補選連任，調查就會終止嗎？
+不會。半島電視台分析指出，就算法拉吉重新當選，暫停的國會調查仍會恢復進行，屆時仍可能再度觸發辭職與補選的循環。

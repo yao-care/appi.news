@@ -86,3 +86,20 @@ coverImageCredit: "Scott Goodwill — Unsplash"
 英國衛生安全局（UKHSA）同步示警。據[英國氣象局](https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/red-extreme-heat-warning-issued-with-june-temperature-records-forecast-to-break)，UKHSA發布了紅色高溫健康警示，這是英國史上第二次發布此等級警示，首次是在2022年7月氣溫衝破40°C時。UKHSA的索沙博士（Dr Agostinho Sousa）指出：「紅色高溫健康警示意味著，即使是健康族群也面臨生命風險。」
 
 英國氣象局首席科學家貝爾徹教授（Professor Stephen Belcher）則就成因表示，人為造成的氣候變遷，已讓這類事件「更可能發生、也更為劇烈」。（[Met Office](https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/red-extreme-heat-warning-issued-with-june-temperature-records-forecast-to-break)）
+
+## 常見問題
+
+### 這次紅色極端高溫警告涵蓋哪些地區、生效多久？
+涵蓋中部與南部英格蘭及威爾斯大部，自週三上午9時起至週四晚間9時，是英國氣象局最高等級的高溫警告。
+
+### 這波高溫會有多熱，可能打破什麼紀錄？
+週三、週四氣溫預估至少達39°C，可能更高，英國六月歷史最高溫35.6°C的紀錄極可能被改寫，威爾斯33.7°C的六月紀錄也可能不保。
+
+### 為什麼這波熱浪連夜間都難以降溫？
+這波高溫濕度偏高，露點溫度上看22°C，悶熱感明顯又削弱排汗散熱效果，多處夜間氣溫恐不低於20°C，形成熱帶夜，難以恢復體力。
+
+### 鐵路系統因應紅色高溫警告採取什麼措施？
+Network Rail宣布列車降速行駛並改用調整後時刻表，行車時間拉長、誤點風險升高，且不安排接駁巴士，籲紅色警戒區旅客非必要勿搭車。
+
+### 英國衛生單位這次發布的高溫健康警示等級有多罕見？
+英國衛生安全局同步發布紅色高溫健康警示，這是英國史上第二次發布此等級警示，首次是2022年7月氣溫突破40°C時。

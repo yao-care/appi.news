@@ -99,3 +99,20 @@ coverImageCredit: "Photo by Berna on Pexels"
 ## 更新時間軸
 
 - （2026-07-31）英國最高法院7月30日准許巴勒斯坦行動創辦人阿莫里就恐怖組織禁令上訴，僅開放「內政部政策適用瑕疵」一項理由，言論自由挑戰遭駁回，聆訊預定10月至12月舉行；同日西敏寺法院外117人因聲援該組織被捕，逾2,000起相關案件延押至10月26日。（[Lincs Online](https://www.lincsonline.co.uk/national/palestine-action-terror-ban-challenge-to-go-to-supreme-court-as-117-arrested-170013/)、[半島電視台](https://www.aljazeera.com/news/2026/7/30/police-arrest-dozens-at-london-rally-supporting-palestine-action)、[The Jewish Chronicle](https://www.thejc.com/news/uk/palestine-action-appeal-supreme-court-v7uetpjk)）
+
+## 常見問題
+
+### 最高法院這次准許上訴的理由是什麼？
+最高法院僅就「前內政大臣古柏錯誤適用自身政策」這項理由開放上訴，至於涉及言論自由與結社自由的挑戰則遭駁回。
+
+### 巴勒斯坦行動為何在2025年被列為恐怖組織？
+因該組織2025年6月闖入布萊茲諾頓皇家空軍基地，對兩架加油機噴漆，造成約700萬英鎊損失，時任內政大臣古柏隨後依《2000年恐怖主義法》第3條將其列為禁止組織。
+
+### 最高法院的上訴聆訊什麼時候舉行？
+聆訊預定在2026年10月至12月間進行，將審理古柏是否錯誤適用內政部自身政策。
+
+### 西敏寺法院外的逮捕行動是怎麼發生的？
+警方在組織者開始搭建小舞台、準備進行模擬畢業典禮形式的抗議時介入，逮捕117人，多數因表達對禁令組織的支持被捕，另有4人涉嫌鼓勵或協助犯罪。
+
+### 原訂7月30日開庭的相關案件後來怎麼處理？
+原訂當天在西敏寺治安法院開庭的逾2,000起相關案件，已延押至2026年10月26日一併處理。

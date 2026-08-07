@@ -50,3 +50,20 @@ risksAndLimits:
 面對質疑，國務卿盧比奧稍早向國會表示，石油銷售由會計師事務所KPMG進行「持續性稽核」，「每一筆支出、每一筆撥款都經過稽核，不是一年一次的稽核」；政府方面則僅表示資金將「為美國人民和委內瑞拉人民的利益而支配」，未進一步說明具體流向。（[OilPrice.com](https://oilprice.com/Energy/Crude-Oil/US-Sale-Of-Venezuelas-Oil-Hits-13-Billion-Since-Trumps-Takeover.html)、[The Daily Beast](https://www.thedailybeast.com/trump-hit-with-demand-for-answers-over-secret-13b-raked-in-from-venezuelan-oil-revenues/)）
 
 川普政府去年也曾承諾，美國企業將「快速重建」委內瑞拉老舊的石油產業，但根據報導，時隔近八個月，目前仍未有任何新的石油開發案與美國企業正式簽署，能源部因決策步調緩慢而遭批評。（[Attack of the Fanboy](https://attackofthefanboy.com/politics/trump-promised-us-firms-would-rapidly-rebuild-venezuelas-oil-industry-but-eight-months-later-no-deals-have-been-finalized/)）
+
+## 常見問題
+
+### 美國從委內瑞拉石油銷售中累計拿了多少錢？
+川普7月底表示，自馬杜羅遭逮捕以來，委內瑞拉石油銷售已產生超過130億美元收入，資金目前由美國財政部監管的花旗銀行帳戶持有。
+
+### 這筆石油收入實際花到哪裡？
+國務院官員曾說明約30億美元撥用於委內瑞拉政府薪資與石油基礎設施，但《金融時報》指出近半資金去向不明，也沒有證據顯示流入委內瑞拉人民手中。
+
+### 國會對這筆錢有什麼質疑？
+民主黨眾議員卡斯楚指控政府缺乏透明度與保障，共和黨眾議員薩拉薩爾也要求完全披露資金去向，顯示兩黨都對帳目不透明有意見。
+
+### 政府怎麼回應資金流向的質疑？
+國務卿盧比奧表示石油銷售由KPMG進行持續性稽核，每一筆支出都經稽核；政府則僅稱資金將為美國與委內瑞拉人民利益支配，未說明具體流向。
+
+### 美國企業重建委內瑞拉石油產業的承諾進度如何？
+川普政府去年承諾美國企業將快速重建委內瑞拉老舊石油產業，但近八個月過去，目前仍未有任何新開發案與美國企業正式簽署。

@@ -58,3 +58,20 @@ risksAndLimits:
 
 - （更新 2026-08-06：希臘檢方正式以故意殺人、搶劫、非法持有武器罪名起訴艾哈邁扎伊；他週三首度出庭、週四遭法官裁定羈押候審，坦承移動遺體但否認殺人，審判日期尚未排定。[ITV News](https://www.itv.com/news/2026-08-06/man-charged-with-murder-of-scottish-woman-in-athens-remanded-in-custody)、[STV News](https://news.stv.tv/east-central/afghan-boxer-accused-of-murdering-scottish-woman-remains-silent-before-judge)）
 - 2026-07-29：希臘警方比對指紋與DNA確認遺體身分為羅斯，案件當時僅列刑事調查、尚未定調謀殺。（[The Irish Times](https://www.irishtimes.com/world/europe/2026/07/29/body-found-in-suitcase-in-athens-is-that-of-38-year-old-british-woman/)）
+
+## 常見問題
+
+### 艾哈邁扎伊被控哪些罪名？
+希臘檢方本週依故意殺人、搶劫及非法持有武器罪名，正式起訴這名26歲阿富汗籍拳擊手，他週三首度出庭、週四遭法官裁定羈押候審。
+
+### 艾哈邁扎伊如何回應指控？
+他向法院表示是發現羅斯倒臥浴室地板，坦承移動了她的遺體，但否認自己殺害她；聽審時保持沉默，未做任何答辯。
+
+### 警方如何鎖定艾哈邁扎伊？
+警方透過街頭監視器畫面，拍到一名男子推著大型深色行李箱，藉此鎖定他的身分，並於8月2日將他逮捕。
+
+### 羅斯的遺體是何時、如何被發現的？
+羅斯的遺體於7月18日在雅典基普塞利區一棟廢棄建築內、被一名遊民發現裝在行李箱中，死因初步研判為窒息，直到7月29日才透過指紋與DNA比對確認身分。
+
+### 檢方指控艾哈邁扎伊在羅斯死後做了什麼？
+檢警指控他曾盜用羅斯的銀行卡提領超過1萬歐元，並疑似冒用她的手機發送訊息，讓外界誤以為她仍在世，研判動機與金錢有關。

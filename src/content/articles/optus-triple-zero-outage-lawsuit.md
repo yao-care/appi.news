@@ -77,3 +77,20 @@ ACMA主席歐洛林（Nerida O'Loughlin）在聲明中表示：「澳洲人有�
 ## 更新時間軸
 
 - （2026-07-30）ACMA宣布向聯邦法院提告Optus Mobile，指控其在2025年9月18日近14小時的000網路中斷中逾千次違反法律義務，最高恐面臨2.5億澳元罰款；此為Optus兩年內第二度因000故障挨罰。（[PerthNow（AAP）](https://www.perthnow.com.au/news/technology/optus-sued-by-watchdog-over-triple-zero-network-outage-c-22650623)、[Canberra Times（AAP）](https://www.canberratimes.com.au/story/9320674/optus-sued-by-watchdog-over-triple-zero-network-outage/)、[SBS News](https://www.sbs.com.au/news/article/acma-sues-optus-over-2025-netword-outage-and-failed-triple-zero-calls/t2ty0fm4v)）
+
+## 常見問題
+
+### 這次000故障發生在什麼時候、持續多久？
+故障發生於2025年9月18日凌晨約12點30分，起因是Optus與諾基亞對防火牆系統進行例行升級，變更誤擋000緊急電話，直到當天下午1點30分才排除，前後長達近14小時。
+
+### 故障期間有多少通000電話受影響？
+故障期間共有600通000電話受影響，其中455通未能成功接通，另有超過1000次違反法律義務的紀錄，涵蓋北領地、南澳、西澳與新州部分地區。
+
+### Optus這次最高可能面臨多少罰款？
+每一次違規依法最高可處25萬澳元罰款，以逾千次違規計算，Optus潛在罰款總額上看2.5億澳元，換算約合新台幣8.5億元。
+
+### 這是Optus第幾次因000故障被追究責任？
+這是Optus兩年內第二度因000故障挨告，2023年11月同類事件已讓Optus支付逾1200萬澳元罰款，此次是短時間內再度發生同類事件。
+
+### Optus對這起訴訟有何回應？
+Optus表示將持續投資網路韌性，並落實修特主導的獨立審查報告建議；執行長儒伊事發後曾公開道歉，承諾啟動獨立調查並導入000故障通報的強制升級處理程序。

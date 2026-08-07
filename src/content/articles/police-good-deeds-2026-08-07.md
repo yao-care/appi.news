@@ -54,6 +54,7 @@ references:
   - title: "忘了回家的路 8旬翁一路搭公車坐回總站 松山警抽絲剝繭助返家"
     url: "https://police.gov.taipei/News_Content.aspx?n=0B762199E50C4AB2&sms=72544237BBE4C5F6&s=A73DE83410DB88DC"
     publisher: "臺北市政府警察局"
+topics: ["police-good-deeds"]
 ---
 
 手機收到「我人在國外，缺錢想早點回家」這類訊息，先別急著匯款。臺北內湖分局員警本週攔阻一起真實案例，歸納出3個假冒親友詐騙常見的破綻：對話用詞和互動方式跟平常不同、一直催促要盡快匯款、講不清楚細節卻強調時間緊迫。同一週，[高雄警方也曾攔下一起141萬元的假檢警詐騙](/articles/police-good-deeds-2026-06-24/)，手法雖然不同，但催促與製造恐慌的套路類似。

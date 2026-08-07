@@ -47,6 +47,7 @@ references:
   - title: "失智老翁烈日迷途徘徊 崇蘭暖警即時伸援平安護送返家"
     url: "https://www.pthg.gov.tw/pcpb/News_Content.aspx?n=A58BECEB18B19997&sms=B37B36F2CFEB3E64&s=8FCFCD3BBC711632"
     publisher: "屏東縣政府警察局"
+topics: ["police-good-deeds"]
 ---
 
 這一週，臺灣各地警察局又陸續公布了一批日常勤務裡的暖心案例：有人在深夜的泥濘山路上把陷住的車輛拖出來，有人在語言不通的情況下協助外籍旅客找回回飯店的路，也有人趕在積蓄匯出前一刻識破詐騙話術。本篇整理其中四則具代表性的好人好事，內容均依各局對外公開的新聞稿，並附上原文出處。

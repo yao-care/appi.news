@@ -34,6 +34,7 @@ references:
   - title: "深夜沒油受困3小時 暖警化身「加油員」助騎士平安返家"
     url: "https://www.pthg.gov.tw/pcpb/News_Content.aspx?n=A58BECEB18B19997&sms=B37B36F2CFEB3E64&s=4D15482CCC5AAEC5"
     publisher: "屏東縣政府警察局"
+topics: ["police-good-deeds"]
 ---
 
 這幾天屏東縣警察局陸續傳出協助民眾的暖心案例：崇蘭派出所員警幫失智老翁找到回家的路，德協派出所員警則在深夜為沒油受困的機車騎士跑腿買油。本篇整理這兩則案例，內容均依屏東縣政府警察局對外公開的新聞稿，並附上原文出處。

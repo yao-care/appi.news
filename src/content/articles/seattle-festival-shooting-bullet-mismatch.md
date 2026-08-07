@@ -52,6 +52,7 @@ coverImage: "covers/seattle-festival-shooting-bullet-mismatch-cover.webp"
 coverAlt: "西雅圖太空針塔與市中心天際線示意圖"
 coverImageCredit: "Photo by Toan Chu on Unsplash"
 originalContribution: "本文整合 PBS NewsHour、Yahoo新聞對西雅圖警察局長辭職的報導，與先前美聯社（經 Post Register、Click2Houston 轉載）、PBS NewsHour 對彈道鑑定逆轉的報導整併成完整時間軸，呈現這起美國幫派槍擊案從命案偵辦到警局人事地震的完整脈絡，供台灣讀者理解事件全貌。"
+topics: ["police-good-deeds"]
 ---
 
 西雅圖美食節槍擊案，如今演變成一場政治風暴。西雅圖警察局長巴恩斯（Shon Barnes）在市長威爾森（Katie Wilson）要求下，7月30日（週四）宣布辭職，起因是上週日（7月26日）美食節（Bite of Seattle）槍擊案發生後，警方延遲近5小時才對外說明案情，市長一度誤稱已逮捕2名嫌犯、隨後緊急撤回，讓外界質疑警局的危機處理能力。這起人事地震，發生在警方才剛於本週三（7月29日）提交法庭文件、指出案情出現彈道鑑定逆轉之後。（[PBS NewsHour](https://www.pbs.org/newshour/nation/seattle-mayor-says-police-chief-has-resigned-after-criticism-of-festival-shooting-response)）

@@ -31,6 +31,7 @@ references:
   - title: "女子獨自外出迷途 文山警調監視器迅速尋回助返家"
     url: "https://police.gov.taipei/News_Content.aspx?n=0B762199E50C4AB2&sms=72544237BBE4C5F6&s=EA83AE488A753E9F"
     publisher: "臺北市政府警察局"
+topics: ["police-good-deeds"]
 ---
 
 臺北市政府警察局文山第一分局日前公布一起員警耐心協尋的案例：一名領有身心障礙證明的女子獨自外出後未返家，家屬遍尋未果向警方求助，員警靠著調閱沿線監視器逐格比對，順利在市區內尋回，讓家屬放下心中大石。

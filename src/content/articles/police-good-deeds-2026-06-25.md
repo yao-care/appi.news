@@ -41,6 +41,7 @@ references:
   - title: "端午連假重機拋錨路旁　達仁警主動關懷助脫困"
     url: "https://www.ttcpb.gov.tw/chinese/home.jsp?serno=201105170013&contlink=ap/news_view.jsp&dataserno=202606220011"
     publisher: "臺東縣警察局"
+topics: ["police-good-deeds"]
 ---
 
 這幾天臺東縣警察局陸續公布了一批日常勤務裡的暖心案例：有人接到家屬「親人多日聯絡不上」的求助後跳窗救人，有人在昏暗的橋上替沒油的環島學生送來汽油，也有人在端午連假替輪胎爆胎、求助無門的旅人解圍。本篇整理其中三則具代表性的好人好事，內容均依臺東縣警察局對外公開的新聞稿，並附上原文出處。

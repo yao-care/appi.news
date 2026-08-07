@@ -50,6 +50,7 @@ references:
   - title: "韓籍夫妻遊臺東遺失錢包 東警暖心協尋獲讚賞"
     url: "https://www.ttcpb.gov.tw/chinese/home.jsp?serno=201105170013&contlink=ap/news_view.jsp&dataserno=202608050005"
     publisher: "臺東縣政府警察局"
+topics: ["police-good-deeds"]
 ---
 
 這幾天各地警察局陸續傳出協助民眾的暖心案例：高雄苓雅警破門救出摔傷婦人，臺北中正二警靠簡訊喚回一度失聯的女大生，松山警循線協助搭錯公車的長輩返家，大安警及時攔下一起網戀詐騙，臺東警則在飯店大廳尋回旅客遺失的錢包。本篇整理這五則案例，內容均依各縣市警察局對外公開的新聞稿，並附上原文出處。

@@ -39,6 +39,7 @@ references:
   - title: "臺東暖警自掏腰包伸援手 助老翁平安踏上返家路"
     url: "https://www.ttcpb.gov.tw/chinese/home.jsp?serno=201105170013&contlink=ap/news_view.jsp&dataserno=202607100005"
     publisher: "臺東縣警察局"
+topics: ["police-good-deeds"]
 ---
 
 這幾天颱風天候不穩，警局公布的暖心案例也多與照顧長者有關：臺北內湖警在風雨中及時扶起路倒的老翁，臺東警則自掏腰包幫迷途老翁買車票、親自駕車送上返家的路。本篇整理其中兩則具代表性的好人好事，內容均依各地警察局對外公開的新聞稿，並附上原文出處。

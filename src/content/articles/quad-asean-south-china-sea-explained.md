@@ -58,6 +58,8 @@ originalContribution: "本文整合ProKerala（IANS）、The Diplomat、Republic
 
 Quad由美國、日本、印度、澳洲四國組成，是近年印太地區討論度最高的安全對話機制之一，但過去多次被中國官方稱為「亞洲版北約」。[Republic World的報導](https://www.republicworld.com/world-news/quad-foreign-ministers-meet-in-manila-reaffirm-support-for-free-indo-pacific-and-asean-centrality-2026-07-22-133159)指出，這次馬尼拉會議是繼今年5月新德里會議後的又一次外長級聚首，四國外長在聲明中列出四大合作領域：海事與跨國安全、經濟繁榮與安全、關鍵新興技術，以及人道援助與應急反應。
 
+延伸閱讀：[C5+1是什麼？美國拉攏中亞五國搶關鍵礦產，一趟印度中亞行看懂印太外交棋局](/articles/central-asia-critical-minerals-us-strategy/)
+
 聲明中一句話被外界反覆引用：「我們一致認為，印太海域的和平穩定是本區域安全與繁榮的基礎。」[報導](https://www.republicworld.com/world-news/quad-foreign-ministers-meet-in-manila-reaffirm-support-for-free-indo-pacific-and-asean-centrality-2026-07-22-133159)也提到，日本外相在會後談話中特別提及東海與南海局勢的發展，強調「強烈反對任何片面以武力或脅迫改變現狀的企圖」。美國國務卿盧比奧則表示，Quad仍是優先事項，四國將在今年稍後再次舉行會議。
 
 <figure>

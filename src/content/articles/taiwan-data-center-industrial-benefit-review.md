@@ -53,6 +53,8 @@ draft: false
 
 根據能源署新聞稿，修正後的附表七要求資料中心於申請能源使用說明書時，一併說明[「投資與產業產值貢獻、就業人數、產業供應鏈效益、人工智慧生態系賦能效益、資通訊安全與韌性」等 5 項指標](https://www.moeaea.gov.tw/ECW/populace/news/News.aspx?kind=1&menu_id=41&news_id=34504)。[壹蘋新聞網的整理](https://news.nextapple.com/finance/20260701/65156024D99AC09D38B870DFA852D2C1)指出，這 5 項指標對應到資料中心對台灣在地經濟的具體貢獻，包括帶動多少投資與產值、創造多少就業機會、能否連結本土供應鏈，以及對台灣既有 AI 產業生態系的賦能效果。
 
+延伸閱讀：[經濟部上修十年用電預估：2026至2035年均成長2.5%，AI與半導體成最大推力](/articles/taiwan-power-demand-forecast-2035/)
+
 <img src="/images/taiwan-data-center-industrial-benefit-review-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="電網與電力輸配設施，象徵資料中心用電需求對電網負載的影響">
 
 [中國時報報導](https://www.chinatimes.com/newspapers/20260702000656-260110)引述官員說法，這套機制的政策用意在於「鼓勵在地採購」，要求業者說明機房建置過程中在地採購與雇用在地人力的具體規劃；官員並表示，審查重點在於業者能否清楚說明「將創造多少就業機會、有哪些在地供應鏈合作」，而非僅提出用電需求。
@@ -70,3 +72,5 @@ draft: false
 這並非能源署首次針對資料中心用電加強管理。[能源署新聞稿提及](https://www.moeaea.gov.tw/ECW/populace/news/News.aspx?kind=1&menu_id=41&news_id=34504)，此次修法是繼 2025 年 11 月要求能源使用數量達 5MW 以上的資料中心於新建、擴建階段採用最佳可行技術之後的第二階段修法，這次進一步把「產業效益」納入審查項目，形成從節能技術到在地經濟貢獻的雙重把關。
 
 依能源署說明，修法目的在引導資料中心開發業者及早規劃電力供應可行性、選擇合適設置地點、導入節能設計，並在地方創造產業關聯效益，而非僅將資料中心視為單純的用電負載。這項草案目前進入預告期，[壹蘋新聞網報導](https://news.nextapple.com/finance/20260701/65156024D99AC09D38B870DFA852D2C1)指出，若 30 天預告期程順利完成，最快可望於 2026 年第 3 季公告施行。
+
+延伸閱讀：[台電估半導體用電10年翻倍：2035年衝1100億度、占全台用電3成](/articles/semiconductor-power-demand-2035/)

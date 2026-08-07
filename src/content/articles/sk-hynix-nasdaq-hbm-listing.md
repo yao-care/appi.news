@@ -68,6 +68,8 @@ SK 海力士要在那斯達克掛牌，發行 ADR（美國存託憑證）募約 
 
 那為什麼是現在、要募這麼多？這才是關鍵。SK 海力士[第一季淨利 40.35 兆韓元、營業利益率 72%](https://cryptobriefing.com/sk-hynix-q1-2026-profit-nasdaq-listing/)，帳上根本不缺錢。它掏股權，是因為 HBM 這場仗的資本支出是「先花、後收」：產能要提前一兩年壓下去，等客戶的訂單追上來時你才接得住。募到的錢[點名要投用地（Yongin）叢集與 M15X 產線的量產擴建](https://cryptobriefing.com/sk-hynix-q1-2026-profit-nasdaq-listing/)。用自由現金流慢慢養，跟一次募一大筆把產能軍備競賽壓上桌，是兩種節奏；它選了後者。
 
+延伸閱讀：[SK 海力士砸 19 兆韓元蓋封裝廠、再綁台積電做 HBM4：記憶體龍頭把戰線拉到封裝](/articles/sk-hynix-packaging-hbm-tsmc/)
+
 <img src="/images/sk-hynix-nasdaq-hbm-listing-s3.webp" width="960" height="640" loading="lazy" decoding="async" alt="半導體無塵室與擴廠設備，象徵 SK 海力士提前壓下的資本支出">
 
 這裡要踩一個常見誤讀的剎車。很多人一看到記憶體擴產，直覺想到的是「多蓋幾條 DRAM 晶圓線」。但 HBM 的瓶頸這兩年早就不在晶圓，在後段。HBM 是把很多層 DRAM 疊起來、再接上一顆負責對外溝通的邏輯基礎裸晶（base die），最後用先進封裝黏到 GPU 旁邊。這條鏈上最卡的兩段，一段是基礎裸晶的邏輯製程，一段是把記憶體和運算晶片包在一起的 2.5D 封裝。這兩段，恰好都指向台灣。
@@ -83,6 +85,8 @@ SK 海力士要在那斯達克掛牌，發行 ADR（美國存託憑證）募約 
 <img src="/images/sk-hynix-nasdaq-hbm-listing-s6.webp" width="960" height="640" loading="lazy" decoding="async" alt="全球供應鏈與電路板製造，象徵 SK 海力士以 Intel EMIB 與美國封裝廠分散台灣依賴">
 
 所以台灣該從這則新聞讀出的，不是「又有一個大客戶要擴產、我們有單接」這種樂觀，而是把自己在這條鏈上的位置定義清楚。真正值錢的段落不是喊得最大聲的雲端大晶片，是基礎裸晶的邏輯代工、2.5D 封裝、測試、載板，還有把 HBM 塞進裝置時要的那些零組件。這幾段台灣本來就有底子，但別人也在補課。看懂 SK 海力士這筆募資會怎麼流、流到哪一段、又想在哪一段甩開你，比記住 294 億美元這個數字重要得多。
+
+延伸閱讀：[台積電 CoWoS 持續擴大領先，NVIDIA 預訂逾七成產能](/articles/tsmc-cowos-nvidia-capacity-booking/)
 
 <h2>常見問題</h2>
 

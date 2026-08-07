@@ -53,6 +53,8 @@ coverImageCredit: "Photo by Jimmy Liao on Pexels"
 
 [UNDP這份報告](https://www.undp.org/asia-pacific/publications/rethinking-urban-governance-tomorrows-cities-asia-pacific)分析了曼谷、北京、艾哈邁達巴德（印度）、菲律賓洛伊洛四個城市案例，並在亞太多個城市進行問卷調查。調查結果裡有一個數字值得單獨說清楚：氣候風險在受訪者列出的緊迫挑戰中排名第二，僅次於經濟不平等。排名本身不新鮮，但背後的含義是，城市居民已經把氣候威脅感知為當下的生計問題，而不是下一代的環境議題。
 
+延伸閱讀：[新加坡發布全球首個主體型 AI 治理框架 MGF，成台灣 AI 輸出合規座標](/articles/singapore-agentic-ai-governance-mgf/)
+
 報告提出的核心架構稱為「三A治理」：預期性（Anticipatory）、適應性（Adaptive）、敏捷性（Agile）。預期性指的是利用氣候數據與模型，在事件發生前調整政策；適應性指的是治理結構能夠對持續變化的環境做出修正，而不是靠固定計畫撐到底；敏捷性指的是跨部門、跨層級的快速協調能力，在危機期間不卡在公文流程裡。
 
 三A架構配套三個操作工具：資料利用（氣候感測網路和共享資料平台）、參與式預算（讓社區居民決定韌性投資優先序）、創新融資（氣候債券、多邊開發銀行）。這三個工具本身不新奇，報告強調的是：沒有治理框架配套，工具效果都會在部門壁壘裡打折。

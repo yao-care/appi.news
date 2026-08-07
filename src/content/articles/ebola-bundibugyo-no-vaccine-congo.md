@@ -65,6 +65,8 @@ coverImageCredit: "Photo by Arion Reyvonputra on Unsplash"
 
 根據[Al Jazeera彙整美聯社與路透社報導](https://www.aljazeera.com/news/2026/8/4/dr-congo-ebola-outbreak-kills-more-than-1700-as-who-accelerates-trials)，本波疫情在啟動應變後40天內，確診數就突破1000例；相較之下，2018年剛果的伊波拉疫情花了約235天才達到同樣的千例里程碑，等於這次擴散速度快了近6倍，是目前有紀錄以來擴散最快的一次。
 
+延伸閱讀：[剛果、烏干達伊波拉破 500 例，WHO 宣告全球公衛緊急事件](/articles/congo-uganda-ebola-who-emergency/)
+
 <figure>
 <img src="/images/ebola-bundibugyo-no-vaccine-congo-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="一名衛教人員手持圖卡，向社區民眾說明防疫注意事項">
 <figcaption>接觸者追蹤與社區衛教，是防堵伊波拉病毒擴散的第一線工作。（示意圖）</figcaption>
@@ -91,6 +93,8 @@ coverImageCredit: "Photo by Arion Reyvonputra on Unsplash"
 ## 谷德塞二度訪剛果，部分醫護仍在罷工
 
 根據[美聯社報導（ABC News轉載）](https://abcnews.com/International/wireStory/chief-arrives-congo-support-ebola-response-cases-4000-135378371)，谷德塞8月5日晚間抵達金沙薩，這是疫情5月中旬宣布以來他第二次訪問剛果，預計與契塞克迪及各合作夥伴會面，商討如何加速應對疫情。報導指出，仍有不少醫護人員因欠薪持續罷工，儘管近期部分人員已陸續領到積欠薪資；非洲疾病預防控制中心主任卡塞亞（Jean Kaseya）重申，接觸者追蹤成效不彰，至少6成到7成新增病例來自既有監控名單之外，凸顯疫情已進入更難單靠傳統防疫工具圍堵的階段。
+
+延伸閱讀：[H5N1禽流感為什麼讓野鳥大量死亡？　澳洲爆史上最大死亡潮，銀鷗確診恐把病毒帶進城市](/articles/h5n1-bird-flu-wild-birds-australia/)
 
 ## 更新時間軸
 

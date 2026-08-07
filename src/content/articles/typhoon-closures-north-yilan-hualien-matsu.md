@@ -97,6 +97,8 @@ references:
 
 新竹縣尖石鄉、五峰鄉是這波持續停班停課最明顯的重災區。依[客新聞報導](https://hakkanews.tw/2026/07/11/290356/)，竹苗山區累積雨量已突破 500 毫米，頭前溪、鳳山溪水位暴漲；依[公視新聞網報導](https://news.pts.org.tw/article/817186)，122 縣道因土石崩落中斷、五峰鐵線橋淹水，新竹縣政府已在尖石、五峰、橫山三鄉撤離近 1500 人並開設 16 處收容所，水保署更對五峰、尖石一帶發布大規模崩塌紅色警戒，山區道路坍方風險尚未解除，是苗栗、臺中和平、桃園復興等山地原住民區同步續停的共同原因。連江縣則不同，依[TVBS 新聞網報導](https://news.tvbs.com.tw/life/3254578)，中央氣象署預測 7 月 12 日凌晨風力仍持續達停止上班及上課標準，因此以風力而非降雨作為續停依據。
 
+延伸閱讀：[6 月 26 日颱風停班停課最新一覽：臺南、高雄、屏東全境停班停課，新竹縣竹北市、芎林鄉午後加入](/articles/typhoon-closures-kaohsiung-pingtung-chiayi/)
+
 ## 其餘縣市全數恢復正常上班上課
 
 <img src="/images/typhoon-closures-north-yilan-hualien-matsu-s2.webp" width="960" height="1440" loading="lazy" decoding="async" alt="照常上班上課的城市日常">
@@ -122,6 +124,8 @@ references:
 <img src="/images/typhoon-closures-north-yilan-hualien-matsu-s4.webp" width="960" height="571" loading="lazy" decoding="async" alt="用手機查詢停班停課資訊">
 
 停班停課情形可能隨雨勢變化調整，因此務必以官方最新公告為準。最權威的單一查詢來源是人事行政總處的[「天然災害停止上班及上課情形」頁面](https://www.dgpa.gov.tw/typh/daily/nds.html)，逐縣市即時更新，頁面本身也會標註最後更新時間；各縣市政府人事單位與官方社群帳號也會同步發布，住在山區或離島的民眾可一併留意地方政府的個別通知。
+
+延伸閱讀：[7 月 19 日花蓮萬榮鄉、鳳林鎮停班停課持續：萬里溪堰塞湖警戒進入第五天](/articles/wanrong-red-alert-closure/)
 
 <h2>常見問題</h2>
 

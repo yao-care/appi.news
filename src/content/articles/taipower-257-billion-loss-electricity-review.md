@@ -60,6 +60,8 @@ draft: false
 
 台電副總經理蔡志孟說明，[天然氣發電約占台電發電量5成，電業氣價每立方公尺調漲1元，全年燃料成本就會增加逾200億元](https://udn.com/news/story/7238/9663693)；同時國際煤價走揚，也推升燃煤機組的採購成本。台電表示會「密切關注燃料波動，滾動調整應變方案」。
 
+延伸閱讀：[IEA最新報告：全球用電需求加速成長，再生能源今年首度超車燃煤成最大電力來源](/articles/renewables-overtake-coal-2026-iea-report/)
+
 <img src="/images/taipower-257-billion-loss-electricity-review-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="天然氣接收站與液化天然氣儲槽，象徵中油天然氣調價與電業成本（示意圖）">
 
 ## 中油8月調價：電業漲9.91%、工業漲5%、民生凍漲

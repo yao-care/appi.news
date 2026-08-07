@@ -48,6 +48,8 @@ references:
 
 限制每天的進食時間，除了常被拿來討論減重效果，最近一項美國臨床試驗又替它加了一個新角色：可能對高齡者的認知功能有幫助。[自由時報引述的報導](https://news.ltn.com.tw/news/world/breakingnews/5518616)指出，美國新澤西州羅格斯大學（Rutgers University）營養學家夏普斯（Sue Shapses）主持的研究發現，把三餐與點心集中在9小時內吃完、睡前4小時停止進食的受試者，認知測驗表現優於進食時間較分散的對照組。
 
+延伸閱讀：[魚油防失智？美國兩年臨床試驗：單靠補充劑無助認知功能，均衡飲食才是根本](/articles/fish-oil-supplements-dementia-prevention-myth/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=iGp_L6-tfV8" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：美國新研究稱每日限9小時進食　有助延緩失智">
     <img src="/images/nine-hour-eating-window-dementia-prevention-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="美國新研究稱每日限9小時進食　有助延緩失智">
@@ -66,6 +68,8 @@ references:
 ## 專家提醒：樣本小、效果有限，還不能當定論
 
 主持研究的夏普斯自己也坦言，這些認知改善的效果「有限」；[自由時報的報導](https://news.ltn.com.tw/news/world/breakingnews/5518616)也引述倫敦國王學院一名營養科學學者的看法，認為必須等到完整的同儕審查報告公開，才能判斷這些改善在臨床上是否具有實質意義。試驗只有47人參與,且對象限定在超重或肥胖的中高齡女性，能否套用到其他族群、效果能否長期維持，都還需要更大規模、更長時間的研究驗證。這類初步發現值得留意，但還稱不上「吃9小時內就能防失智」的醫囑。
+
+延伸閱讀：[抗老怎麼顧？醫學實證的三個關鍵：肌肉量、代謝健康與大腦刺激](/articles/anti-aging-muscle-metabolism-brain-guide/)
 
 ## 讀者實用資訊：想試試限時進食,要注意什麼
 

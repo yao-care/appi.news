@@ -58,6 +58,8 @@ coverImageCredit: "Photo by Kristina Bekher on Unsplash"
 
 這場調查是愛爾蘭企業部所做，源頭是澤倫斯基三週前訪問都柏林時當面提出的要求。[《愛爾蘭觀察家報》（Irish Examiner）報導](https://www.irishexaminer.com/news/politics/arid-41884645.html)，調查結果將轉交歐盟執委會參考，而澤倫斯基也當面建議愛爾蘭檢視國內立法，看能否依愛爾蘭自身法律對這座工廠實施制裁；不過澤倫斯基本人仍傾向由歐盟層級統一出手，而非各國各自為政。
 
+延伸閱讀：[澤倫斯基撤換烏克蘭總司令　敘爾斯基下台、德拉帕蒂接掌　連日抗議後軍方大搬風](/articles/ukraine-zelensky-fires-syrskyi-drapatyi/)
+
 馬丁提出的因應方向，是繞開「直接制裁該項產品」的做法。[《愛爾蘭時報》報導](https://www.irishtimes.com/politics/2026/07/23/taoiseach-government-may-explore-other-approaches-to-ensure-alumina-not-reaching-russia/)指出，他打算與歐盟執委會合作，尋求「其他途徑」達成同一個目的：確保鋁土礦不會流向俄羅斯，而不必然要對這項產品下制裁令。他點出一個現實考量：法國敦克爾克（Dunkirk）的煉油設施高度仰賴這座愛爾蘭工廠，接收其產出鋁土礦的7成，這個供應鏈牽動必須納入歐盟未來決策的計算。[《愛爾蘭觀察家報》報導](https://www.irishexaminer.com/news/politics/arid-41884645.html)則指出，歐盟下一輪對俄制裁方案預計9月才會進入討論，這也代表鋁土礦爭議短期內不會有明確定案。
 
 <img src="/images/ireland-taoiseach-zelensky-kyiv-alumina-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="工業煉製廠房與金屬管線設施（示意圖）" title="爭議核心是利默里克一座俄資煉油廠產出的鋁土礦是否流向俄羅斯軍工業者（示意圖）">
@@ -75,3 +77,5 @@ coverImageCredit: "Photo by Kristina Bekher on Unsplash"
 ## 對台灣讀者的關注點
 
 這起訪問把一個小國常見的兩難攤在檯面上：一邊是對外的道義表態與軍援聲援，一邊是本國企業、供應鏈牽動的現實利益，兩者卡在同一座煉油廠上僵持不下。愛爾蘭的做法是先把調查結果攤開講清楚「查不到、也排除不了」，再另尋不直接動用制裁工具的替代路徑，而不是急著給出非黑即白的結論。對同樣高度依賴國際供應鏈、也持續關注出口管制與制裁如何被執行的台灣讀者來說，這種「調查沒有標準答案時怎麼往下走」的處理方式，是一個值得對照的案例。
+
+延伸閱讀：[烏克蘭防空為何攔不下飛彈？愛國者攔截彈只剩去年三分之一，基輔一夜空襲至少17死](/articles/ukraine-patriot-interceptor-shortage/)

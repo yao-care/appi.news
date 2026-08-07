@@ -62,6 +62,8 @@ references:
 
 腸病毒引起的常見疾病表現，最典型的是手足口病與疱疹性咽峽炎，兩者都會發燒，差別在水泡出現的位置：
 
+延伸閱讀：[喉嚨痛怎麼舒緩？溫鹽水漱口先做，出現這些症狀要立刻就醫](/articles/sore-throat-home-relief/)
+
 - **手足口病**：由A型克沙奇病毒及腸病毒71型引起，除了發燒，口腔黏膜、舌頭、軟顎、牙齦與嘴唇會出現多處小水泡與潰瘍，常導致孩子因口腔痛而無法進食；四肢則是手掌、腳掌會冒出稍微隆起的紅疹，疹子頂端多半帶小水泡，病程約7到10天（[疾病介紹｜疾管署](https://www.cdc.gov.tw/Category/Page/FgfRlDl6XxDkuqaOghuNfQ)）。
 - **疱疹性咽峽炎**：由A型克沙奇病毒引起，特徵是突發性發燒、嘔吐，以及咽峽部（口腔後方）出現小水泡或潰瘍，四肢通常不會長疹子，病程約4到6天（[疾病介紹｜疾管署](https://www.cdc.gov.tw/Category/Page/FgfRlDl6XxDkuqaOghuNfQ)）。
 
@@ -109,3 +111,5 @@ references:
 <img src="/images/enterovirus-severe-warning-signs-2026-s3.webp" width="960" height="640" loading="lazy" decoding="async" alt="幼兒園教室空間，示意開學後托育機構防疫（示意圖）">
 
 疾管署也設有防疫專線1922或0800-001922，家長對孩子的症狀有疑慮，或想進一步確認就醫時機，都可以隨時撥打諮詢（[疾管署7月7日新聞稿](https://www.cdc.gov.tw/Bulletin/Detail/s8s1Js8kPmgFnAGyaItIKg?typeId=9)）。開學前把8大重症前兆記熟、居家環境改用漂白水消毒，是這個階段家長最實際能做的準備。
+
+延伸閱讀：[腹瀉補水怎麼做：口服電解質液取代白開水，這樣補才對](/articles/acute-diarrhea-rehydration/)

@@ -57,6 +57,10 @@ coverImageCredit: "Scott Goodwill — Unsplash"
 
 氣象局副首席預報員席德威（Mark Sidaway）表示：「紅色警告只保留給最嚴重的事件，這次我們預期會出現嚴重而顯著的衝擊。」（[Met Office](https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/red-extreme-heat-warning-issued-with-june-temperature-records-forecast-to-break)）
 
+延伸閱讀：[熱浪為什麼能讓核電廠關閉？匈牙利多瑙河水位探44年新低，帕克斯核電廠首度全面停機](/articles/hungary-nuclear-plant-heatwave-shutdown/)
+
+延伸閱讀：[歐洲野火為什麼一年比一年凶猛？　希臘滅火直升機空中相撞釀2死，野火本週死亡人數增至5人](/articles/europe-wildfire-crisis-france-greece/)
+
 ## 濕度高、夜間難退　恐現「熱帶夜」
 
 這波高溫與一般乾熱不同，伴隨偏高的濕度。據[英國氣象局](https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/red-extreme-heat-warning-issued-with-june-temperature-records-forecast-to-break)，週三、週四的露點溫度（衡量空氣濕度的指標）部分地區上看約22°C，悶熱感更明顯，也會削弱人體靠排汗散熱的能力。

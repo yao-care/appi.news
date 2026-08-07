@@ -48,6 +48,10 @@ coverImageCredit: "Photo by Ron Lach on Pexels"
 
 [Sustainability Magazine的報導](https://sustainabilitymag.com/news/why-did-the-uns-inc-5-2-fail-to-organise-a-plastic-treaty)清楚點出了讓談判失速的三個節點。第一，塑膠生產上限。以沙烏地阿拉伯、俄羅斯、伊朗為核心的石油出口國，堅決反對任何設定生產量上限的條文，視其為侵犯國家主權的貿易干預；而由歐盟、加拿大、挪威組成的「高雄心聯盟」，主張沒有生產端管制的公約只是在管末端廢棄物，本質上是在治標不治本。這兩種立場之間沒有合理的妥協空間，生產上限條文就這樣成了卡關鍵石。
 
+延伸閱讀：[歐盟《維修權指令》7月31日上路：手機、平板、伺服器都要能修，選修可延長保固一年](/articles/eu-right-to-repair-directive-2026/)
+
+延伸閱讀：[歐盟包裝法規PPWR 8月12日上路：食品包裝PFAS限值25微克，台灣出口商要準備什麼](/articles/eu-ppwr-packaging-regulation-taiwan-exporters/)
+
 第二，財務機制。發展中國家要求建立專屬氣候基金，用已開發國家的資金支持各國塑膠轉型，但在具體出資規模與治理架構上雙方無法達成共識。第三，程序規則。表決機制的設計直接決定了油產國的否決能量，「共識決」vs「多數決」的爭議本身就是一場政治角力，讓實質文本的討論一再被程序辯論拖慢。
 
 [根據世界經濟論壇的說明](https://www.weforum.org/stories/2025/08/global-plastics-treaty-inc-5-2-explainer)，INC-5.2結束時並非毫無進展。部分技術工作組在廢棄物管理、有害化學物質清單等技術細節上找到共同語言，但這些技術共識無法彌補生產端的政治分裂。下一步是可能的INC-5.3，但會議地點、資金來源、時程都還沒有定案，甚至有談判觀察者公開懷疑再開一輪能否突破僵局。

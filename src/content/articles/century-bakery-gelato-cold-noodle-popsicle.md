@@ -55,6 +55,8 @@ references:
 
 夏天一到，老字號餅舖與超商今年不約而同玩起「跨界甜點」：把傳統漢餅做成義式冰淇淋，把在地涼麵做成冰棒雪糕。這些看似獵奇的組合背後，其實是老品牌想接觸年輕客群的具體策略，也牽動了地方小吃店的展店版圖。
 
+延伸閱讀：[客製化造型蛋糕怎麼挑？從許願池蛋糕到韓系蛋糕捲一次看懂](/articles/custom-cake-wishing-pool-korean-roll-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=c49TAG_Efdw" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：鳳梨酥綠豆椪變義式冰淇淋　百年餅舖大玩創意｜華視新聞 20260805">
     <img src="/images/century-bakery-gelato-cold-noodle-popsicle-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="鳳梨酥綠豆椪變義式冰淇淋　百年餅舖大玩創意｜華視新聞 20260805">
@@ -79,3 +81,5 @@ references:
 ## 想吃這些跨界甜點，去哪找
 
 舊振南漢餅義式冰淇淋目前仍在展店階段，想嘗鮮的讀者可留意台中漢神洲際購物廣場門市，以及後續進駐的台北SOGO大巨蛋據點；全家的白醋涼麵雪糕則是全台全家便利商店常態鋪貨，單支49元，冰櫃找不到時可以先向店員詢問到貨狀況。兩者都是限量、期間性質較強的商品，實際供貨與優惠檔期建議以品牌官方公告與門市現場資訊為準。
+
+延伸閱讀：[台北期間限定霜淇淋去哪吃？老字號復刻聖代、日系玉米霜淇淋、東京花漾造型整理](/articles/taipei-summer-limited-edition-soft-serve-guide/)

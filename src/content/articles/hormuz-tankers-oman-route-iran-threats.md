@@ -75,6 +75,8 @@ coverImageCredit: "Photo by Seval Torun on Unsplash"
 
 這起攻擊的時機格外敏感。據[半島電視台報導](https://www.aljazeera.com/news/2026/7/7/ships-attacked-in-the-strait-of-hormuz-what-that-means-for-ongoing-talks)，美伊三週前簽署的備忘錄原本約定，荷莫茲海峽至少60天內須對所有船隻開放通行，作為雙方談判永久協議的基礎；但備忘錄簽署後四天，通過海峽的船隻僅7艘，遠低於戰前每日120至140艘的水準，而美伊另一份為期一週、暫停海峽攻擊的協議也已到期。半島電視台引述南佛羅里達大學政治學教授米拉尼（Mohsen Milani）分析，伊朗正試圖把「對海峽一半的實質掌控」轉化成談判籌碼。
 
+延伸閱讀：[美伊戰事急轉：川普喊停對伊朗新攻擊　開出荷莫茲海峽全面開放換停火條件](/articles/iran-jordan-base-attack-us-retaliates/)
+
 ## 川普：要嘛達成協議、要嘛做完任務
 
 美國總統川普對此事件反應強烈。[CNBC報導](https://www.cnbc.com/2026/07/07/oil-prices-iran-strait-hormuz.html)指出，川普7月6日表示美伊「要嘛達成協議、要嘛我們把任務做完」，重申對伊朗採取軍事行動的威脅；受攻擊消息影響，國際油價隨後走揚。[半島電視台報導](https://www.aljazeera.com/news/2026/7/7/ships-attacked-in-the-strait-of-hormuz-what-that-means-for-ongoing-talks)則引述伊朗外長阿拉奇齊（Abbas Araghchi）回應，若威脅持續，最終協議的談判恐怕無法展開。雙方爭執焦點還包括伊朗是否可對通行船隻收費、海峽內水雷疑慮，以及以色列對黎巴嫩的軍事行動。
@@ -104,6 +106,8 @@ coverImageCredit: "Photo by Seval Torun on Unsplash"
 這波海上對峙，發生在美伊試圖談成過渡和平協議的背景下。據[費城詢問報](https://www.inquirer.com/news/nation-world/strait-of-hormuz-iran-threats-20260625.html)與[愛爾蘭快報](https://www.irishexaminer.com/world/arid-41869023.html)報導，美國與伊朗上週簽署一份諒解備忘錄，給予雙方60天時間敲定過渡協議，內容涵蓋船隻通行權與伊朗濃縮鈾庫存等議題。美國國務卿魯比歐（Marco Rubio）6月25日赴波斯灣會晤海灣阿拉伯國家合作委員會（GCC）官員，向盟邦保證美方仍堅守支持這條新航道的立場。
 
 荷莫茲海峽是全球能源運輸的咽喉。根據[維基百科彙整的「2026年荷莫茲海峽危機」條目](https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis)，這場危機自2026年2月底軍事衝突爆發後升溫，伊朗一度宣布封鎖海峽、攔截或攻擊船隻，使這條平日承載全球大量原油外運的水道一度近乎癱瘓。如今船隻嘗試循新航道恢復通行，但伊朗與相關各方對「哪條航道合法」各執一詞，海峽局勢仍未真正穩定。
+
+延伸閱讀：[美伊瑞士談判傳「進展令人鼓舞」　設荷莫茲海峽通訊線、黎巴嫩防衝突機制](/articles/lebanon-ceasefire-us-iran-hormuz/)
 
 ## 更新時間軸
 

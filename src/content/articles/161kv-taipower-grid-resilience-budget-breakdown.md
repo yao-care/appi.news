@@ -72,6 +72,8 @@ draft: false
 
 這項工程的正式名稱是「強化電網韌性建設計畫」，起因是2022年3月3日的全台大停電。行政院檢討報告指出，事故起於[台電興達電廠人員操作隔離開關時，未確認相鄰斷路器的絕緣氣體狀態，引發短路故障，連鎖跳脫龍崎超高壓變電所的發電機組](https://www.gvm.com.tw/article/87778)，最終造成549萬戶停電。經濟部隨後提出5大改善對策，其中一項就是「投入國家資源加速提升電網韌性」，[「強化電網韌性建設計畫」因此拍板](https://www.gvm.com.tw/article/95587)：10年內投入5645億元，以「力求分散、持續強固、加強防衛」三大主軸、[10項具體作為](https://www.gvm.com.tw/article/95587)推動。
 
+延伸閱讀：[台電雄積三、四線完工：楠梓半導體園區供電翻倍上看1000MW](/articles/taipower-nanzih-grid-upgrade-1000mw/)
+
 分散工程包含電廠直供園區、綠能分散供電、樞紐節點分群、增加配送節點與精進區域調度；強固工程包含電網擴充更新、廣增儲能設備與變電所屋內化；防衛工程則是強化防衛縱深與即時動態防衛。就預算執行進度，[目前已規劃執行中的工程金額約3761億元，其餘1884億元將陸續編列專案計畫執行](https://www.businesstoday.com.tw/article/category/183027/post/202211080024/)。
 
 <img src="/images/161kv-taipower-grid-resilience-budget-breakdown-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="地下電纜施工與線纜捲盤，對應161kV交連PE電纜佈設工程（示意圖）">

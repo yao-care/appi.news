@@ -47,6 +47,8 @@ coverImageCredit: "Photo by Bharat Tamang on Pexels"
 
 2026年台北國際自行車展的招商邏輯，與過去以整車、零組件為主的陳列方式有根本性的不同。經濟部工業局（IDA）與自行車暨健康科技工業研究發展中心（CHC）在展會上聯合展示的項目，主力集中在「Cycling Common Protocol Alliance（CCPA）」，這是一套由台灣自行車業者主導制定的E-bike通訊協定，旨在讓不同品牌的電機、電池、控制器與儀表板之間能夠互通，消除E-bike系統整合的技術障礙。這個標準化工作若能獲得國際品牌採納，台灣廠商在E-bike供應鏈中的話語權將大幅提升。
 
+延伸閱讀：[TAIPEI CYCLE 加速 E-bike 布局，台廠搶亞太低碳移動供應鏈](/articles/taipei-cycle-ebike-low-carbon/)
+
 永續面向的能見度同樣顯著提升。台灣自行車業建立的[BAS永續聯盟（Bicycling Alliance for Sustainability）](https://www.prnewswire.com/news-releases/2026-taipei-cycle-show-moea-and-chc-spearhead-dual-transition-toward-smart-connectivity-and-net-zero-sustainability-302726897.html)，在展會期間舉辦了第三屆ESG全球論壇，聚焦永續製造、低碳材料與歐盟碳邊境調整機制（CBAM）的應對策略。ESG認證與ISO 14067碳足跡核算，正成為歐洲買主採購台灣自行車的硬性門檻，而非加分項目。
 
 [台北國際自行車展D&I設計獎今年的徵件說明](https://www.bicycleretailer.com/announcements/2025/08/28/taipei-cycle-d-i-awards-2026-%E2%80%93-submissions-now-open)中，明確將永續材料、E-bike整合方案與創新移動場景列為優先評審面向，並特別提及「在關稅調整與供應鏈重組的背景下，以更負責任的材料延伸產品價值」。這個措辭直接回應了美中貿易衝突對自行車產業的衝擊，台灣廠商需要用設計與永續能力建立差異化，才能在重新洗牌的全球供應鏈中維持市場地位。
@@ -66,3 +68,5 @@ D&I設計獎徵件說明中明確提及的「關稅調整」，指的是美中�
 TAIPEI CYCLE在這個脈絡下的戰略意義更加清晰：透過展覽讓國際買主直接接觸台灣廠商，降低採購鏈中的資訊不對稱，同時展示台灣廠商在ESG與技術升級上的具體進展，為繞過關稅風險的直接合作提供基礎。
 
 展覽結束不等於任務完成。真正的觀察重點在接下來半年：台灣廠商在展會上簽訂的合作意向，有多少轉化為實際訂單？CCPA協定的推進進度如何？BAS永續聯盟的認證機制能否在下一輪歐盟採購中發揮實際效果？這些問題的答案，才是評斷台灣自行車業這一輪轉型成效的真正指標。
+
+延伸閱讀：[台北自行車展與 TaiSPO 雙展開幕，900 家廠商打造健康科技生態](/articles/taipei-cycle-taispo-wellness-expo/)

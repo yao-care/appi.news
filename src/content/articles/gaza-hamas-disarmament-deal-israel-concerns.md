@@ -57,6 +57,8 @@ coverImageCredit: "Israel Defense Forces — CC BY-SA 2.0, Wikimedia Commons"
 
 [NBC新聞報導](https://www.nbcnews.com/world/israel/israel-concerns-hamas-disarmament-deal-trump-gaza-strikes-rcna590539)指出，以色列情報單位認為，哈瑪斯利用停火這段時間招募了數千名新成員、重建軍事基礎設施，並為日後可能的攻擊做準備。以色列能源部長科恩則對美聯社表示，政府願意給哈瑪斯一個機會，但他個人「非常懷疑」哈瑪斯會真正照做。
 
+延伸閱讀：[美伊戰事急轉：川普喊停對伊朗新攻擊　開出荷莫茲海峽全面開放換停火條件](/articles/iran-jordan-base-attack-us-retaliates/)
+
 <figure>
 <img src="/images/gaza-hamas-disarmament-deal-israel-concerns-1.webp" width="960" height="640" loading="lazy" decoding="async" alt="多枚哈瑪斯自製卡薩姆火箭殘骸並排展示">
 <figcaption>示意圖／加薩多年來累積的火箭與武器庫存，是這輪解除武裝談判爭議的核心。（Photo by Giorgio Montersino, CC BY-SA 2.0, via Wikimedia Commons）</figcaption>
@@ -77,3 +79,5 @@ coverImageCredit: "Israel Defense Forces — CC BY-SA 2.0, Wikimedia Commons"
 [KPBS的報導](https://www.kpbs.org/news/international/2026/08/03/israel-says-it-has-serious-concerns-with-hamas-disarmament-deal)指出，就在以色列對外表達解除武裝疑慮的同一時間，加薩週日、週一晚間仍遭以軍空襲，兩天合計至少造成17人死亡，其中包含兒童。南加薩一處住宅遭空襲，納賽爾醫院通報一家3名成員罹難，其中一人是4歲幼童。
 
 自2023年10月7日哈瑪斯攻擊以色列、造成約1200人死亡、251人被擄以來，加薩衛生部統計的死亡人數已累計超過7萬3000人，當中約半數為婦女與兒童。加薩地帶目前人口約200萬人，仍生活在停火但空襲未止的狀態下。
+
+延伸閱讀：[肩射式防空飛彈是什麼？扛在肩上就能打飛機的『單兵飛彈』全解析](/articles/iran-china-manpads-deal/)

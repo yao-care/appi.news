@@ -68,6 +68,8 @@ draft: false
 
 依[疾管署公布的115年度實施對象](https://www.cdc.gov.tw/Category/MPage/JNTC9qza3F_rgt9sRHqV2Q)，公費流感疫苗涵蓋以下類別（沿用歷年分類架構）：
 
+延伸閱讀：[腸病毒症狀與重症前兆完整整理：5歲以下8大警訊，開學防疫怎麼做](/articles/enterovirus-severe-warning-signs-2026/)
+
 - 醫事及衛生防疫相關人員
 - 65歲以上長者
 - 安養、養護、長期照顧（服務）機構之受照顧者及所屬工作人員

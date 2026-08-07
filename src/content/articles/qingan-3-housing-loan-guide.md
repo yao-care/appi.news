@@ -32,6 +32,8 @@ references:
 
 想在近幾年內購屋的人，最近應該都聽過「青安3.0」這個名字。財政部的青年安心成家購屋優惠貸款進入第三代，[自2026年8月1日起正式實施](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=482aa9c142b34abc83750cb64c15cb11)，新婚與育兒家庭的貸款額度大幅提高，但同時也多了幾道過去沒有的門檻。額度變多不代表人人都貸得到，申請前得先弄清楚自己符不符合資格。
 
+延伸閱讀：[買房該選大坪數還是小宅？內政部統計：2025年小坪數住宅成交易主力](/articles/small-apartment-real-estate-trend-2025/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=IRNWXRFri2A" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：青安3.0最高可貸1500萬? 財產繼承男女不同! 拋棄繼承女多男｜十點不一樣">
     <img src="/images/qingan-3-housing-loan-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="青安3.0最高可貸1500萬? 財產繼承男女不同! 拋棄繼承女多男｜十點不一樣">
@@ -60,3 +62,5 @@ references:
 ## 申辦期間與適用對象
 
 青安3.0的申辦期間為[2026年8月1日至2029年7月31日，共3年](https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=482aa9c142b34abc83750cb64c15cb11)。方案仍維持「限貸一次」原則，並保留違規查核機制，避免資格不符者透過人頭申請套利。有意申請的人可直接向承辦銀行洽詢個人條件是否符合，並留意購屋合約總價是否落在所屬地區的上限之內。
+
+延伸閱讀：[舊玩具怎麼捐？新北市玩具銀行捐贈條件、申請流程與地點一次看懂](/articles/new-taipei-toy-bank-donation-guide/)

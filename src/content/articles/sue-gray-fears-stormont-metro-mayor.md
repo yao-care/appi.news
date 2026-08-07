@@ -50,6 +50,8 @@ coverImageCredit: "William Murphy — CC BY-SA 2.0，引用自 Wikimedia Commons
 
 「我為斯托蒙特擔憂，我也認為這裡的民眾應該得到行動與決策，而這是許多人的共同責任，」格雷說（[Border Telegraph](https://www.bordertelegraph.com/news/national/26229116.baroness-sue-gray-says-fears-stormont/)）。斯托蒙特（Stormont）是北愛爾蘭議會與行政部門所在地，其運作近年屢因政黨僵局而中斷，自治政府能否穩定運轉一直是當地政治的核心議題。
 
+延伸閱讀：[前北愛民主統一黨魁唐納森18項性侵罪全部成立　含1項強暴、面臨長期監禁](/articles/dup-donaldson-guilty-sex-offences/)
+
 格雷的背景使她的發言格外受到關注。她曾任資深公務員，先後在英國白廳（Whitehall）與北愛公務體系任職，並擔任過斯托蒙特財政部常務次長；她也是調查新冠封城期間唐寧街聚會的「派對門」報告作者。格雷於2024年10月辭去施凱爾幕僚長一職，四個月後獲封為上議院議員（[Wikipedia](https://en.wikipedia.org/wiki/Sue_Gray)）。
 
 ![貝爾法斯特市政廳與街景](/images/sue-gray-fears-stormont-metro-mayor-s1.webp)
@@ -68,3 +70,5 @@ coverImageCredit: "William Murphy — CC BY-SA 2.0，引用自 Wikimedia Commons
 格雷並把這套權力下放的思路延伸到中央政府本身。她肯定大曼徹斯特市長伯納姆（Andy Burnham）兼具曼徹斯特地方與白廳中央的歷練，認為他具備條件去回應改革黨（Reform UK）帶來的政治挑戰（[NewsHub](https://www.newshub.co.uk/politics/2026/06/25/sue-grays-fears-for-stormont-and-calls-for-greater-uk-wide-collaboration/)）。
 
 對於外傳伯納姆若接替施凱爾出任首相、將把部分唐寧街運作遷往曼徹斯特的構想，格雷表示支持。她認為把政府部分職能移出倫敦，會向各部會發出「非常強烈的訊號」（[Border Telegraph](https://www.bordertelegraph.com/news/national/26229116.baroness-sue-gray-says-fears-stormont/)）。
+
+延伸閱讀：[北愛爾蘭泌尿科調查報告出爐：逾千名病患遭召回、系統性治理失靈　主席稱「病患被嚴重辜負」](/articles/ni-urology-inquiry-systemic-failures/)

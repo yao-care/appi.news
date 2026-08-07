@@ -66,6 +66,8 @@ OpenAI 把 ChatGPT 的廣告生意做成了一台任何人都能自助下單的�
 
 OpenAI 當然知道這件事，所以才立「答案獨立」原則，把廣告和回答內容切開。這條線本身是對的。但要看清楚它的性質：它是一個承諾，不是一個保證。它由 OpenAI 自己畫、自己守，外部無法驗證。你沒有辦法從外面確認某個回答到底有沒有被商業關係影響過。信任的門檻，從「機制上沒有理由騙你」，退到「它承諾不騙你」，這是兩個完全不同的信任等級。
 
+延伸閱讀：[Anthropic 砸 1.5 億辦 Claude Corps、派 1000 人進非營利：是公益，也是把 Claude 鋪進組織的長線](/articles/claude-corps-nonprofit-talent-play/)
+
 <img src="/images/chatgpt-ads-trust-boundary-s3.webp" width="960" height="640" loading="lazy" decoding="async" alt="抽象的數位信任與連線示意，象徵 AI 的信任基礎在於機制上沒有隱瞞的理由">
 
 而且這個承諾要頂住的壓力，只會愈來愈大。OpenAI 給投資人的數字是[今年廣告收入約 25 億美元，2030 年衝到 1000 億美元](https://thetechportal.com/2026/04/09/openai-projects-100bn-in-ad-revenue-by-2030-around-2-5bn-in-2026-report)，中間 2027 年 110 億、2028 年 250 億、2029 年 530 億一路往上爬，前提是 ChatGPT 週活躍使用者要到 27.5 億。廣告不是副業，是被寫進核心財務模型的主引擎。[光是二月開跑的試投，不到兩個月就做出約 1 億美元的年化營收](https://futurism.com/artificial-intelligence/openai-money-chatgpt-ads)。當一家公司愈來愈依賴廣告收入，維持那條「答案不受廣告影響」的自律界線，成本就愈來愈高，而想去模糊它的誘因就愈來愈強。自己畫、自己守的界線，在商業壓力下會漂移，這在靠廣告養大的媒體史上看過太多次。對照組很清楚：[Anthropic 在超級盃打廣告，主打 Claude 不放廣告](https://futurism.com/artificial-intelligence/openai-money-chatgpt-ads)，把「不靠廣告」直接當成信任賣點。這不是誰對誰錯，是兩種不同的信任結構在分岔。
@@ -81,6 +83,8 @@ OpenAI 當然知道這件事，所以才立「答案獨立」原則，把廣告�
 <img src="/images/chatgpt-ads-trust-boundary-s6.webp" width="960" height="640" loading="lazy" decoding="async" alt="使用者以手機與 AI 助理對話，象徵在健康與消費決策上重整對 AI 的信任邊界">
 
 把廣告位做成自助機器，是 OpenAI 在說一句話：ChatGPT 從一個工具，變成一個媒體。標示清楚的廣告是這件事裡誠實的那一半。要盯的是另一半：當公司的核心財務愈來愈靠廣告撐，那條「答案不受影響」的線由誰來守、守不守得住。信任 AI 從來不是因為它聰明，是因為它沒有騙你的理由。這個理由，現在被裝上去了。
+
+延伸閱讀：[Anthropic 一口氣拿下 NAVER、三星、LG：開首爾辦公室、用「在地資料控管」整套端走韓國企業市場](/articles/anthropic-korea-in-region-data-playbook/)
 
 <h2>常見問題</h2>
 

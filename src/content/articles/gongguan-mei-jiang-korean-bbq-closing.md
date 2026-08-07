@@ -51,6 +51,8 @@ references:
 
 公館商圈是台大、師大周邊學生聚餐的老根據地，一家陪伴三代學生的平價韓式烤肉吃到飽，最近宣布要收攤了。經營逾30年的「梅江韓國銅盤烤肉」公館店，[TVBS新聞網報導](https://news.tvbs.com.tw/life/3268767)指出將於10月26日歇業，消息一出，不少老顧客在社群上留言道別。
 
+延伸閱讀：[台灣美食展飯店餐券怎麼挑最划算？14家五星飯店優惠、日期與票價整理](/articles/taiwan-food-expo-hotel-vouchers-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=qWtVwIjNYKE" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：公館商圈「異國美食」戰區 銅盤烤肉「梅江」將收攤">
     <img src="/images/gongguan-mei-jiang-korean-bbq-closing-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="公館商圈「異國美食」戰區 銅盤烤肉「梅江」將收攤">
@@ -69,6 +71,8 @@ references:
 ## 公館異國美食戰區，街邊老店面臨的共同壓力
 
 公館商圈鄰近台大、師大，外國學生比例高，印度、泰式、越式、日式等各國料理長期在此競爭激烈，是台北數一數二的異國美食聚落。[中時新聞網報導](https://www.chinatimes.com/realtimenews/20260727002403-260405)分析，梅江這類街邊個體戶近年退場，除了學生消費習慣改變，也和連鎖燒肉品牌搶市、店租持續上漲脫不了關係;隨著吃到飽模式競爭者增加，服務與環境若跟不上,對主打CP值的學生族群吸引力就會下降。這樣的壓力不只發生在梅江一家，也是公館商圈許多老字號共同面對的處境。
+
+延伸閱讀：[台北期間限定霜淇淋去哪吃？老字號復刻聖代、日系玉米霜淇淋、東京花漾造型整理](/articles/taipei-summer-limited-edition-soft-serve-guide/)
 
 ## 讀者實用資訊
 

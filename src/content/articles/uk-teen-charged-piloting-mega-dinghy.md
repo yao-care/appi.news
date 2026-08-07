@@ -69,6 +69,10 @@ originalContribution: "本文整合PA Media、美聯社（AP）多家轉載稿�
 
 這艘船週一（8月3日）夜間從韋勒萊羅茲海灘出發，隔天清晨6點左右在法國布洛涅濱海市（Boulogne-sur-Mer）外海的法國搜救海域引擎起火，觸發緊急求救。（[LBC](https://www.lbc.co.uk/article/migrants-channel-small-boat-fire-man-arrested-5HjdfdJ_2/)）法國救難船隊、英國邊境安全指揮部門的兩艘船、皇家國家救生艇機構（RNLI）與駐守勒圖凱（Le Touquet）的直升機基地隨即投入救援。（[Yahoo News](https://www.yahoo.com/news/us/articles/mega-dinghy-capsized-channel-largest-184833362.html)）
 
+延伸閱讀：[英國能靠皇家海軍逼法國收回偷渡客嗎？法拉吉端出「堡壘行動」，工黨批「炒冷飯」](/articles/uk-navy-channel-migrant-plan/)
+
+延伸閱讀：[西班牙為何屢爆移民潮？休達越境67死、急築海上圍欄封鎖](/articles/spain-ceuta-migrant-crisis/)
+
 最終173人全數獲救，其中110人由法國船隻救起，另外63人由英國邊境安全指揮部門船隻救起後送回法國。（[Yahoo News](https://www.yahoo.com/news/us/articles/mega-dinghy-capsized-channel-largest-184833362.html)）官方通報無人死亡，但11人受輕傷、3人送醫治療，獲救者最終被送上岸至布洛涅濱海市。（[LBC](https://www.lbc.co.uk/article/migrants-channel-small-boat-fire-man-arrested-5HjdfdJ_2/)）法國當局也透露，起火前一度考量到強行阻止移民登船恐危及生命，最初選擇不強制驅離。（[Yahoo News](https://www.yahoo.com/news/us/articles/mega-dinghy-capsized-channel-largest-184833362.html)）
 
 ## 埃及籍男子遭控籌組偷渡，估獲利17.3萬英鎊

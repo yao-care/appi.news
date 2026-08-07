@@ -66,6 +66,8 @@ AI 記憶體超級循環的第一張大帳單，先砸到出錢蓋機房的雲�
 
 先把數字擺清楚。微軟這輪 1900 億美元的資本支出創下同業紀錄，把五大雲端業者加起來，[2026 年整體大型科技公司的資本支出衝上約 7250 億美元的新高](https://www.tomshardware.com/tech-industry/big-tech/microsoft-attributed-25-billion-of-its-record-ai-budget-to-memory-chip-costs)。其中微軟明說有 250 億美元是記憶體與晶片漲價貢獻的，跟蓋更多資料中心無關。Amy Hood 還補了一句關鍵的話：記憶體與儲存價格從去年秋天以來飆漲，部分品項[漲超過三倍，而且供給「至少到 2026 年都會持續吃緊」](https://www.theregister.com/2026/04/30/microsoft_q3_2026/)。翻成白話，這不是一次性的成本抖動，是一段時間內都得含淚吞下去的固定支出。
 
+延伸閱讀：[顯卡與記憶體同步漲價：2026下半年為什麼買電腦變貴，什麼時候該出手](/articles/gpu-memory-price-surge-2026/)
+
 <img src="/images/microsoft-capex-memory-supercycle-s2.webp" width="960" height="720" loading="lazy" decoding="async" alt="特寫的 DRAM 記憶體模組，象徵 AI 需求把記憶體現貨價格推到三倍以上">
 
 這裡要踩個剎車。很多人把記憶體漲價當成又一次景氣循環的高點，等它像過去那樣自己跌回來。這次的根因不太一樣。TrendForce 把它講成「記憶體牆」：AI 晶片的算力兩年成長三倍，記憶體頻寬只跟上一點點，於是 AI 加速器需要的高頻寬記憶體（HBM）大口吃掉 DRAM 的晶圓產能，[排擠掉一般的伺服器與消費級記憶體](https://www.trendforce.com/insights/memory-wall)。原廠把八成以上產能轉去做高階與企業級產品，供給那一端被結構性地抽走。結果是 TrendForce 估 2026 年 DRAM 價格再漲超過七成；SK 海力士引用美銀的預估，[2026 年全球 DRAM 營收年增 51%、NAND 年增 45%，HBM 市場規模衝到 546 億美元、年增 58%](https://news.skhynix.com/2026-market-outlook-focus-on-the-hbm-led-memory-supercycle/)。這是供需失衡被設計出來的結果，不是景氣循環的自然波動。
@@ -81,6 +83,8 @@ AI 記憶體超級循環的第一張大帳單，先砸到出錢蓋機房的雲�
 <img src="/images/microsoft-capex-memory-supercycle-s6.webp" width="960" height="640" loading="lazy" decoding="async" alt="電子製造產線與電路板組裝，象徵台灣供應鏈在記憶體循環中受惠與受壓兩面受力">
 
 把這張帳單讀完，會得到一個和「AI 泡沫」無關的判斷。微軟願意在毛利被壓的情況下，還是把 1900 億美元砸下去、還說要[含淚吞 250 億的漲價](https://www.theregister.com/2026/04/30/microsoft_q3_2026/)，代表它賭 AI 的實際需求撐得住這個成本結構。這個賭注成不成，要看兩件事：AI 的使用量有沒有跟上這條愈墊愈高的成本曲線，以及記憶體供給什麼時候鬆。誰吃得住這張帳單，不會是因為誰的模型比較聰明，而是誰在這條鏈上卡到了別人繞不過去的位置。
+
+延伸閱讀：[AMD 買下記憶體新創 Mext：AI 加速器的下一場仗，從算力打到記憶體牆](/articles/amd-mext-memory-wall/)
 
 <img src="/images/microsoft-capex-memory-supercycle-s3.webp" width="960" height="541" loading="lazy" decoding="async" alt="上升的成本與財務圖表，象徵記憶體漲價墊高整條 AI 供應鏈的固定支出">
 

@@ -68,6 +68,8 @@ igorslab 那篇分析講得直接：如果封裝產能不夠，前段晶圓開�
 
 這是把資本壓在對的地方。全球 HBM 市場被估到[2030 年前以年複合 33% 的速度成長](https://www.kedglobal.com/korean-chipmakers/newsView/ked202601130007)，需求端沒有問題，能不能吃下這波，賭的是後段封得出多少量。花 130 億美元蓋一座封裝廠，是這家公司對「瓶頸在哪」給出的答案。
 
+延伸閱讀：[SK 海力士赴那斯達克掛牌募近 300 億美元：這筆錢有一段會流回台積電](/articles/sk-hynix-nasdaq-hbm-listing/)
+
 <img src="/images/sk-hynix-packaging-hbm-tsmc-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="半導體後段封裝測試無塵室產線示意">
 
 ## 綁台積電，補的是同一段
@@ -97,6 +99,8 @@ SK 海力士 AI 基礎設施負責人 Justin Kim 講這段合作時說，期待�
 台積電的 CoWoS 是這條 HBM 鏈最關鍵的一段，也是台灣目前最強的卡位。但這裡有個容易看歪的地方：以為 CoWoS 吃緊等於台積電穩贏、訂單接不完就好。真實情況是，吃緊本身正在把客戶推向 Intel EMIB 這類替代方案，Google、Meta 已經在採用，替代路徑正在長出來。獨佔靠的是別人做不出來，一旦替代方案成熟，議價權會鬆。
 
 另一個容易漏掉的是後段封測。HBM 要疊、要測、要控熱，這些後段活不是只有台積電在做，日月光、京元電這些台灣封測與測試廠本來就在半導體後段鏈上有位置。當整個產業把資源往先進封裝與測試搬，這一段的重要性只會往上走。台灣要讀的不是「SK 海力士又砸了多少錢」這個數字，是這波錢往後段封裝流，台灣在這條鏈上到底守著哪幾格、哪幾格正在被別人補上。看懂戰線移到哪裡，比記住 19 兆這個數字重要。
+
+延伸閱讀：[台積電 CoWoS 持續擴大領先，NVIDIA 預訂逾七成產能](/articles/tsmc-cowos-nvidia-capacity-booking/)
 
 <img src="/images/sk-hynix-packaging-hbm-tsmc-s5.webp" width="960" height="640" loading="lazy" decoding="async" alt="台灣半導體封測與 IC 產業示意">
 

@@ -59,6 +59,8 @@ originalContribution: "本文整合 STV News 與 Newsquest 地方媒體集團（
 
 案發當晚，漢隆與後來被起訴的男子一同前往港區一間咖啡館；法庭審理時揭露，她曾傳簡訊給朋友，表示不想與該名男子繼續待在那裡。（[Perspective Media](https://www.perspectivemedia.com/infuriating-that-jean-hanlons-killer-still-free-after-murder-conviction-son/)）
 
+延伸閱讀：[雅典行李箱陳屍案嫌犯被控謀殺　26歲阿富汗拳擊手法院裁定羈押候審](/articles/edinburgh-woman-athens-suitcase-death/)
+
 ## 家屬近17年奔走促成重啟調查
 
 家屬長期懷疑真凶仍逍遙法外，多次自費前往希臘、聘請私家偵探協助蒐證，並持續向當地檢方施壓；希臘當局2024年同意重啟此案，2025年將一名與漢隆相識、年約50多歲的男子逮捕到案。（[STV News](https://news.stv.tv/west-central/greek-man-found-guilty-of-murdering-scots-mum-jean-hanlon-in-crete-17-years-ago)）
@@ -82,3 +84,5 @@ originalContribution: "本文整合 STV News 與 Newsquest 地方媒體集團（
 <img src="/images/jean-hanlon-crete-murder-conviction-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="法槌與法庭示意圖">
 
 家屬這場近17年的司法長跑，最終讓一起一度被歸類為意外的死亡，重新被希臘司法體系認定為謀殺；但對漢隆的家人而言，等到的定罪與仍未真正入獄服刑的凶手，讓這起案件的結局依然帶著遺憾。（[Irvine Times](https://www.irvinetimes.com/news/national/26253882.infuriating-jean-hanlons-killer-still-free-murder-conviction---son/)）
+
+延伸閱讀：[蘇格蘭民族黨前執行長莫雷爾侵吞黨費逾40萬英鎊　判刑5年3個月　前妻施特金稱「遭蒙蔽背叛」](/articles/uk-snp-murrell-jailed-embezzlement/)

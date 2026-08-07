@@ -54,6 +54,8 @@ coverImageCredit: "Chris Johnson — Unsplash"
 
 [Bangor Daily News報導](https://www.bangordailynews.com/2026/07/30/nation/new-mexico-ag-sues-for-return-of-teen-forced-to-cross-border-by-foster-care-staff/)指出，這名少年多年來由教父母照顧，與生父母鮮少聯繫；今年6月，一家醫院拒絕把他交還教母監護，CYFD因此介入，把他納入寄養安置。少年的母親是墨西哥籍，稍早因毒品相關罪名遭逮捕後被驅逐出境。7月6日，CYFD工作人員開車把少年送到艾爾帕索邊境橋，指示他自行步行過境與母親會合。
 
+延伸閱讀：[DACA身分為什麼說撤就撤？「未經授權出境」成關鍵　德州媽媽遭驅逐、三名美籍子女困邊境](/articles/daca-status-termination-unauthorized-travel/)
+
 <figure>
 <img src="/images/new-mexico-foster-teen-border-lawsuit-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="美國一座古典列柱式法院大樓外觀，門前立有美國國旗">
 <figcaption>訴狀已送交新墨西哥州法院，要求裁定CYFD協助少年返美。（示意圖／Photo by Joshua J. Cotten on Unsplash）</figcaption>
@@ -72,3 +74,5 @@ CYFD則透過發言人回應，[Bangor Daily News報導](https://www.bangordaily
 這不是CYFD第一次被指控把家庭團聚看得比兒童安全更重。[ABC新聞報導](https://abcnews.com/US/wireStory/new-mexico-ag-sues-return-teen-forced-cross-135242029)指出，新墨西哥司法部今年4月才發布一份逾200頁的報告，記錄CYFD的系統性缺失，指出機構員工「優先考慮團聚而非安全」，導致部分兒童被送回危險環境。這起邊境案件發生在報告公布後不過三個月，讓外界質疑機構內部究竟有沒有從報告記載的問題中真正記取教訓。
 
 [華盛頓時報報導](https://www.washingtontimes.com/news/2026/jul/30/raul-torrez-new-mexico-ag-sues-return-teen-forced-cross-border-foster/)指出，這起事件也發生在川普政府加強驅逐移民、邊境執法趨嚴的大環境下。各州兒童福利機構經手的家庭裡，父母一方遭逮捕或驅逐出境的案例正在增加，一旦機構把「協助家庭團聚」簡化成「送孩子過邊境」，即使當事人是美國公民，也可能在制度的縫隙裡被犧牲。這起訴訟後續怎麼裁定，會是檢驗各州兒童福利機構在移民執法與兒童保護之間如何拿捏分寸的一個案例。
+
+延伸閱讀：[一批辣椒怎麼讓沙門氏菌吃遍全美？Chipotle急下架墨西哥辣椒，明尼蘇達逾百人確診、聯邦數字卻兜不攏](/articles/chipotle-jalapeno-salmonella-outbreak/)

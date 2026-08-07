@@ -73,6 +73,8 @@ TEMPO 全名是 Technology-Enabled Meaningful Patient Outcomes，跟 CMS 創新�
 
 這裡要踩個剎車。執法裁量和核准是兩件事，混在一起就會解錯題。核准是 FDA 認定這個醫材對它宣稱的用途安全有效；執法裁量只是 FDA 說「這段期間我不去追究你沒核准這件事」。前者是判斷，後者是選擇不判斷。
 
+延伸閱讀：[美國 FDA 替 AI 醫材鬆綁低風險、核准逾 1,350 件：和台灣、歐盟的路線差在哪](/articles/fda-ai-medical-device-taiwan-eu/)
+
 差別為什麼重要，看它的誘因結構就懂。[Morgan Lewis 的分析點得很直白：這種裁量是暫時的，FDA 最終仍會希望這些醫材走完正式核准、回到完整法規要求下](https://www.morganlewis.com/blogs/asprescribed/2025/12/new-fda-digital-health-pilot-same-fda-enforcement-discretion)。它是一條通往核准的跑道，不是核准的替代品。FDA 換到的是真實世界資料，廠商換到的是提早進場和給付，但這個狀態可撤回、綁著標示與記錄條件。你若把它當成「這醫材已經被 FDA 認證」，就誤讀了它給你的信任邊界：資料還沒攤開，判斷還沒做完。
 
 <img src="/images/fda-tempo-ai-device-medicare-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="天秤與法規符號，象徵執法裁量是暫時不追究而非正式核准的監理選擇">

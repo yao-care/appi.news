@@ -61,6 +61,8 @@ coverImageCredit: "Photo: LPhot Lee Blease/UK Ministry of Defence 2022 — OGL v
 
 [Bracknell News報導](https://www.bracknellnews.co.uk/news/national/26430484.france-will-take-migrants-picked-navy-says-zia-yusuf/)指出，改革黨內政事務發言人祖亞·尤瑟夫（Zia Yusuf）稍早已透露構想核心：只要皇家海軍在海上救起偷渡船上的移民，依國際海事法就必須把人送到「最近的安全港口」，而那個港口就是法國，等於變相強迫法國收人。[Yahoo News UK報導](https://uk.news.yahoo.com/reform-uk-unveils-plan-largest-212457471.html)進一步說明計畫細節：改革黨政府上台後將成立聯合軍事指揮部，整合皇家海軍、皇家海軍陸戰隊、皇家空軍與陸軍，並設專責監視中心追蹤來船，被攔截者會先獲得飲水、食物與醫療評估後才遣返。
 
+延伸閱讀：[西班牙為何屢爆移民潮？休達越境67死、急築海上圍欄封鎖](/articles/spain-ceuta-migrant-crisis/)
+
 尤瑟夫在記者會上直言：「英國正遭入侵。托利黨和工黨政府的回應是免費渡輪服務、免費旅館。」他形容這將是「英吉利海峽自二戰以來最大規模的軍事行動」。[Breitbart報導](https://www.breitbart.com/europe/2026/08/03/farages-reform-uk-vows-to-deploy-royal-navy-to-stop-english-channel-migrant-crisis/)引述黨魁法拉吉（Nigel Farage）的說法：「堡壘行動將是一場聯合軍事行動，它能拯救生命，也能幫法國盡到阻止船隻出海的責任，還能省下大筆公帑。皇家海軍存在的目的是什麼？如果不是保護國家不受入侵，我想不出還有什麼理由。」
 
 <img src="/images/uk-navy-channel-migrant-plan-1.webp" width="960" height="720" loading="lazy" decoding="async" alt="海面上的偷渡小船與救援船隻（示意圖）" title="英吉利海峽偷渡小船問題近年持續困擾英法兩國（示意圖）">
@@ -82,3 +84,5 @@ coverImageCredit: "Photo: LPhot Lee Blease/UK Ministry of Defence 2022 — OGL v
 技術面的質疑來自軍方內部。[HuffPost UK報導](https://huffingtonpost.co.uk/entry/former-navy-commander-monsters-reform_uk_6a703700e4b03026f4f03430?6kj=)引述前皇家海軍指揮官夏普（Tom Sharpe）的評論，他直言這套計畫「開始很快就會瓦解」。夏普指出，現實是「當你真的去看我們有哪些軍艦時，基本上什麼都沒有」，皇家海軍能調度的艦艇數量遠不如改革黨想像；他也批評用軍艦執行這種任務本身就不合理，「一艘十億英鎊、配備防空或反潛武器的軍艦，並不適合拿來到處運送人員，不如直接用真正的渡輪」。夏普認為，英國邊境部隊（Border Force）其實已具備處理這類任務的能力，軍艦介入是殺雞用牛刀。他也直接點出計畫最大的破口：整套方案需要法國「完全同意」，而他判斷「我們不會得到這個同意」。
 
 截至發稿，這仍只是改革黨的競選政策提案，並非英國現行政策；法拉吉的黨目前身分是最大反對黨，計畫要落地，得先等到該黨贏得下一屆英國大選、真正組成政府。
+
+延伸閱讀：[英吉利海峽偷渡艇為何越造越大？　173人「超級充氣艇」引擎起火翻覆創新紀錄，埃及籍男子遭控籌組偷渡](/articles/uk-teen-charged-piloting-mega-dinghy/)

@@ -25,6 +25,10 @@ risksAndLimits:
 
 高雄一間經營超過20年的自助餐店，這幾天因為一個便當的價格吵上新聞。顧客結帳時先被告知300元，當場提出疑問後，老闆重新算了一次，改口變230元，差了70元。這起爭議之所以引起討論，是因為它點出多數人買自助餐時都遇過的困惑：夾了什麼菜、到底怎麼算錢，很多時候自己也說不清楚。
 
+延伸閱讀：[CPI是什麼？消費者物價指數怎麼算，「2%通膨警戒線」代表什麼一次看懂](/articles/cpi-2-percent-warning-line-guide/)
+
+延伸閱讀：[日本居酒屋倒閉潮創新高：物價上漲、人手不足怎麼掏空小酒館獲利](/articles/japan-izakaya-closure-wave/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=gAZtC21JHxw" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：夾菜計價全憑老闆心算？男買高雄自助餐「腿排便當要300元」控蛤一聲變230">
     <img src="/images/buffet-pricing-methods-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="夾菜計價全憑老闆心算？男買高雄自助餐「腿排便當要300元」控蛤一聲變230">

@@ -57,6 +57,8 @@ coverImageCredit: "Photo by Mohammed Kertiou on Unsplash"
 
 [KPBS轉發的美聯社報導](https://www.kpbs.org/news/international/2026/07/28/a-7-1-quake-hits-japans-kyushu-trapping-people-in-a-collapsed-shopping-center)指出，鹿島町這間AEON Mall（永旺購物中心）第二層樓在地震中倒塌，多人受困其中；共同社引述當地警方消息稱，約有20至30名員工下落不明，另有數人已被救出並送醫。[CBS新聞引述日本電視網TBS報導](https://www.cbsnews.com/news/strong-earthquake-with-7-1-magnitude-strikes-southern-japan-tsunami-alert-issued/)則提到，倒塌前警方曾接獲類似爆炸的通報，但確切起因尚未獲官方證實。
 
+延伸閱讀：[熊本強震後還能去嗎：交通與觀光現況、班機退改規則、行前該查哪些官方資訊](/articles/kumamoto-earthquake-travel-impact/)
+
 死傷數字仍在滾動更新中。[半島電視台報導](https://www.aljazeera.com/news/2026/7/28/magnitude-7-1-earthquake-shakes-southern-japan-tsunami-warning-issued)提到已有人在購物中心的意外中喪生；[CBS新聞](https://www.cbsnews.com/news/strong-earthquake-with-7-1-magnitude-strikes-southern-japan-tsunami-alert-issued/)則彙整了兩種說法：共同社報導一人在自家住宅倒塌中身亡，是目前唯一經證實的死亡個案；TBS引述警方消息稱死亡人數恐怕不只一人，但強調確切數字仍需要時間確認。受傷人數方面，[CBS新聞引述NHK報導](https://www.cbsnews.com/news/strong-earthquake-with-7-1-magnitude-strikes-southern-japan-tsunami-alert-issued/)指出至少50人被送醫；[半島電視台報導](https://www.aljazeera.com/news/2026/7/28/magnitude-7-1-earthquake-shakes-southern-japan-tsunami-warning-issued)則提到八代市一家醫院收治約40名傷患、其中10人傷勢較重，熊本市另一家醫院也收治約50人。[CBS新聞](https://www.cbsnews.com/news/strong-earthquake-with-7-1-magnitude-strikes-southern-japan-tsunami-alert-issued/)並提到，NHK報導指出九州當地一家製紙工廠的煙囪頂端在地震中崩落，同樣有工人下落不明。
 
 ## 海嘯警報一度發布　交通全面停擺
@@ -75,3 +77,5 @@ coverImageCredit: "Photo by Mohammed Kertiou on Unsplash"
 日本首相高市早苗在東京官邸對媒體發表談話。[首相官邸公布的談話全文](https://japan.kantei.go.jp/105/speech/202607/28press.html)顯示，她表示「部分地區已發生停電與火災，也有道路、橋梁受損及建築物倒塌的情形」，並指示相關部會儘速掌握災情、與地方政府密切協調，秉持「人命為最優先」原則推動救災，同時適時公布避難與災情資訊；她也宣布派遣內閣府調查團前往災區。高市並提醒，未來一週內都有可能發生同等規模的餘震，籲請民眾提高警覺、採取自我保護措施。
 
 熊本十年前的強震記憶，這次也再度被喚起。[KPBS報導](https://www.kpbs.org/news/international/2026/07/28/a-7-1-quake-hits-japans-kyushu-trapping-people-in-a-collapsed-shopping-center)引述御船町公所官員下田裕貴（Hiroki Shimoda）的說法，他形容這次搖晃「讓我想起十年前的熊本地震，當下真的很害怕」。2016年熊本連續強震造成上百人死亡、數十萬棟建築受損，是九州近年最慘重的地震災害之一；這次AEON Mall倒塌與死傷人數的確切統計，仍有待日本當局在救災工作持續進行後進一步公布。
+
+延伸閱讀：[非核三原則是什麼？廣島原爆81週年　高市早苗喊「堅持」仍難消外界疑慮](/articles/hiroshima-81st-non-nuclear-principles/)

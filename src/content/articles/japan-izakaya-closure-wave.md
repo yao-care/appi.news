@@ -18,6 +18,8 @@ risksAndLimits:
 
 日本居酒屋今年上半年出現前所未見的倒閉潮，兩家日本信用調查機構各自統計都創下歷史新高。對常去日本自由行、喜歡下班後找間小酒館喝一杯的台灣旅客來說，這波倒閉潮意味著熟悉的店家可能悄悄消失，剩下的店則得靠漲價撐下去。
 
+延伸閱讀：[CPI是什麼？消費者物價指數怎麼算，「2%通膨警戒線」代表什麼一次看懂](/articles/cpi-2-percent-warning-line-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=x3XlCjgMRHU" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：比疫情慘! 日本居酒屋上半年收掉118家「2原因」掀倒閉潮">
     <img src="/images/japan-izakaya-closure-wave-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="比疫情慘! 日本居酒屋上半年收掉118家「2原因」掀倒閉潮">
@@ -44,3 +46,5 @@ TSR的分析指出，「物價高」相關倒閉共86件，較去年同期暴增
 如果你常去日本自由行，這波倒閉潮短期內可能反映在幾個地方：熟悉的居酒屋可能已經歇業，訂位前建議先上店家官網或Google地圖確認營業狀態；還在營業的店，飲み放題（喝到飽）方案價格可能比過去貴，時段也可能縮短；連鎖居酒屋因為採購規模大、比較能吸收成本壓力，相對獨立小店更容易撐下來，這也是為什麼統計顯示倒閉的九成以上是10人以下小店。
 
 長期來看，這個趨勢已經連續四年惡化，短期內看不出反轉跡象，物價與缺工是拖了四年的結構性問題，短期景氣回溫也很難逆轉。
+
+延伸閱讀：[公館老字號「梅江韓國銅盤烤肉」10月歇業：30年吃到飽走入歷史，收攤前資訊整理](/articles/gongguan-mei-jiang-korean-bbq-closing/)

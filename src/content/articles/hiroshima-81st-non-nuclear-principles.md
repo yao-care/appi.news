@@ -60,6 +60,8 @@ coverImageCredit: "At by At — CC BY-SA 3.0, Wikimedia Commons"
 
 首相高市早苗首度以首相身分出席紀念式，[日本經濟新聞刊出的致詞全文](https://www.nikkei.com/article/DGXZQOUA060840W6A800C2000000/)顯示，她表示日本作為「唯一的戰爭被爆國」，肩負「不懈推進核兵器廢絕」的使命，並將在核不擴散條約（NPT）體制的維持與強化下，依「廣島行動計畫」採取「現實且務實」的路線邁向無核武世界。她在致詞中明確表示「我國堅持非核三原則」。
 
+延伸閱讀：[日本熊本規模7.1強震：AEON Mall鹿島店二樓倒塌　20至30名員工失聯、海嘯警報一度發布](/articles/japan-kumamoto-earthquake-mall-collapse/)
+
 <figure>
 <img src="/images/hiroshima-81st-non-nuclear-principles-s1.webp" width="960" height="659" loading="lazy" decoding="async" alt="2023年廣島和平紀念式典會場，前排官員肅立參與儀式">
 <figcaption>廣島和平紀念式典每年8月6日固定在紀念公園舉行，圖為2023年式典資料照。（內閣官房內閣広報室／CC BY 4.0，Wikimedia Commons）</figcaption>

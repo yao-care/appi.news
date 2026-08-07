@@ -47,6 +47,8 @@ coverImageCredit: "Photo by NASA on Unsplash"
 
 [ESA的官方說明](https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/ESA_astronaut_Luca_Parmitano_joins_NASA_s_Artemis_III_mission_as_pilot)指出，Artemis III定位為低地球軌道的載人測試飛行，核心目標是驗證Orion太空船與兩套登月系統（分別由Blue Origin和SpaceX開發）的交會對接能力。任務預計2027年執行，組員將練習對接、艙口操作、艙內操作及在零重力環境中穿脫太空衣。這些演練缺一不可，因為實際登月時的月面環境要求組員對設備操作幾乎無失誤容忍度。
 
+延伸閱讀：[NASA ESCAPADE 雙星升空，JAXA 火衛一採樣同步備戰：火星探索新局](/articles/nasa-escapade-jaxa-mars-missions/)
+
 根據[NASA官方新聞稿](https://www.nasa.gov/news-release/nasa-marches-toward-artemis-iii-mission-in-2027-names-crew-members)，Artemis III完成後，Artemis IV將成為首次計畫載人登陸月球南極的任務，時間點預定2028年。也就是說，2027年的任務是2028年的前置條件，任何系統驗證的落後都會直接推遲人類重返月面的時程。
 
 帕米塔諾本人資歷深厚。他曾兩度赴國際太空站執行長期任務，2019年在Expedition 61期間擔任指揮官，成為首位擔任ISS站長的義大利人。他在法國測試飛行學校取得實驗試飛員資格，累積逾2,000小時飛行時數、操作逾40種機型。在Artemis框架下，帕米塔諾的角色超越科學象徵的層次，他是具備高度技術自主能力的操作核心。
@@ -68,3 +70,5 @@ ESA提供Artemis III任務的第三具歐洲服務艙（ESM），這個組件負
 2027年Artemis III順利執行，將是整個商業登月系統供應鏈從設計驗證進入量產準備的轉折點。台灣廠商若想在2028年Artemis IV的採購週期之前站穩一個位置，現在已是最後能提前佈局的時間窗口，而不是等任務成功再進場的時機。
 
 台灣在太空領域的最大優勢，在於製造精度與供應鏈彈性，這兩項恰好是登月系統整合商最缺乏的能力。問題在於主動出擊的意願。TASA每年與NASA的資料共享協議、FORMOSAT系列的軌道數據交換，都是雙方技術信任的基礎。下一步是把這份信任從科學合作擴展到商業供應鏈對話，需要的是產業界主動開口，而不是等待官方框架先行。帕米塔諾加入Artemis的案例說明一件事：太空探索的伙伴關係，從來都是硬體與人員一起押注的結果。
+
+延伸閱讀：[Parker 探測器創最近日紀錄，首度記錄太陽風起源與磁重聯](/articles/parker-probe-solar-wind-origin/)

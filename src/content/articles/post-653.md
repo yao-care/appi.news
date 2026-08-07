@@ -49,6 +49,8 @@ coverImageCredit: "Photo by Vladimír  Sládek on Pexels"
 
 [ENTRA1 Energy與TVA的6 GW協議](https://www.nuscalepower.com/press-releases/2025/nuscale-proudly-supports-tva-and-entra1-energy-announcement-of-landmark-6-gigawatt-small-module-reactor-smr-deployment-program)是幾個數字疊在一起的結果。TVA是美國最大的聯邦公共電力供應商之一，七州服務區涵蓋田納西、阿拉巴馬、喬治亞等地，年度用電規模龐大。6 GW的SMR容量若全數落地，相當於六座中型燃煤電廠同時上線。這不是意向書，而是有具體部署範圍的合作框架。
 
+延伸閱讀：[2025 全球能源轉型投資達 2.3 兆美元，亞太佔 47% 居首](/articles/2025-energy-transition-investment-asia/)
+
 NuScale在這個協議中的位置值得說清楚。它是美國唯一取得核管會（NRC）設計認證的SMR技術商，77 MWe上調功率版本早已通過審查，462 MWe的標準設計（US 460）則在2025年5月完成NRC標準設計批准，還比原定計畫提前兩個月。設計認證在核能產業意味著什麼？意味著每個新電廠不需要重新走完整套監管審查，可以直接套用已批准的設計，大幅壓縮從簽約到取得建廠許可的時間。這是NuScale能拿下6 GW承諾的結構性原因之一。
 
 與此同時，其他SMR開發商的進展也開始轉為具體數字。Amazon投入5億美元於X-energy，Google與Kairos Power簽署500 MW購電協議，Terrestrial Energy在2025年10月完成SPAC合併籌資2.93億美元。各家技術路線不同，但商業模式的前提一致：把電力準時交付給願意付錢的買家。買家是誰，正在愈來愈清楚。
@@ -70,3 +72,5 @@ SMR商業賽局的開局對NuScale有利，但這場賽局的贏家不一定是�
 [Forbes的分析](https://www.forbes.com/sites/rrapier/2025/10/26/the-smr-surge-nuclears-quiet-comeback-is-now-a-commercial-race)把當前定性為「商業賽局」而非「核能復甦」，這個區別很重要。SMR要解的電力需求場景是AI資料中心的基載電力採購，是過去二十年根本不存在的市場。這不是舊核電的回歸，而是新需求驅動出新供給路徑。
 
 SMR商業化正在把核能從政策選項變成工程採購問題。台灣目前沒有能力參與這場討論，根源在於缺乏規範框架，而不是缺乏資源。這個缺口，比「要不要蓋核電廠」更值得先說清楚。
+
+延伸閱讀：[全球氫能進入生死抉擇年：中東砍案、印度風險高、台灣進口策略面臨考驗](/articles/global-hydrogen-make-or-break-year/)

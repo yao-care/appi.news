@@ -51,6 +51,8 @@ coverImageCredit: "Ilovetheeu — CC BY-SA 4.0, Wikimedia Commons"
 
 [《愛爾蘭新聞報》](https://www.irishnews.com/news/uk/brexit-branded-unprecedented-continuing-disaster-as-marchers-call-to-rejoin-eu-4ID6SP6SDRPWLBOEPVRWXFTEHU/)指出，遊行群眾揮舞歐盟旗幟、穿著藍黃配色的服裝，舉著「歐洲公民」（Citizen of Europe）與「把我們的星星還來」（We Want Our Star Back）等標語。
 
+延伸閱讀：[華盛頓接受英軍投降親筆信首度在倫敦展出　見證美國獨立起點、1880年起藏於英國檔案](/articles/washington-yorktown-surrender-note-london/)
+
 ## 「經濟損害巨大、驚人」
 
 定調這場遊行氣氛的，是曾任工黨黨魁的金諾克勳爵。據[Nation.Cymru報導](https://nation.cymru/news/brexit-branded-unprecedented-continuing-disaster-as-marchers-call-to-rejoin-eu/)，他對群眾表示：「脫歐一直是一場毫無緩解、空前且持續的災難。經濟損害巨大，驚人。」他並稱英國「卡在脫歐裡，被困住，成了與我們所在大陸其餘部分隔絕的局外人」。

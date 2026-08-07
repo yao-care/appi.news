@@ -54,6 +54,10 @@ coverImageCredit: "U.S. Department of State（公眾領域）"
 
 雙方握手拍照時，現場記者大聲追問米勒班：還認不認為川普是「白癡、種族主義者、厭女者」？這是米勒班2016年川普首度勝選後，[在BBC廣播節目上說過的原話](https://www.timesandstar.co.uk/news/national/26440647.uk-us-closest-allies-says-miliband-ducks-criticism-trump-dc/)。米勒班沒有正面回應，被問到這些過往言論是否影響了英美關係時，他只說「沒有，而且這些話今天根本沒被提起」，語氣輕描淡寫地把話題帶過。
 
+延伸閱讀：[伯納姆內閣人事翻盤：財政大臣改由希利出任　智庫示警『喘息空間』承諾壓縮財政餘裕至80億英鎊](/articles/uk-starmer-resigns-pm/)
+
+延伸閱讀：[英國把抗議團體列「恐怖組織」合法嗎？巴勒斯坦行動禁令案送最高法院　西敏寺法院外單日再增117人被捕，2000多起案件延押10月](/articles/uk-palestine-action-ban-supreme-court/)
+
 這個提問並非空穴來風。美國駐英大使史蒂芬斯不久前才公開點名，說米勒班2016年稱川普是「種族主義者、厭女者、自承的性騷擾者」[「說錯了」，並表示「希望他的看法已經改變」](https://www.aol.co.uk/articles/miliband-denies-relations-closest-ally-213933000.html)。一邊是美方大使公開要求表態，一邊是英國外相選擇迴避，這個尷尬瞬間也成了這場訪問被最多媒體引用的畫面。
 
 <figure>

@@ -63,6 +63,8 @@ coverImageCredit: "Dominik Vanyi — Unsplash"
 
 C5+1並不是新玩意。[CSIS分析](https://www.csis.org/analysis/ten-years-c51-us-central-asia-minerals-cooperation)指出，這個由美國與哈薩克、吉爾吉斯、塔吉克、土庫曼、烏茲別克五國組成的區域外交平台成立於2015年，原本涵蓋經濟、能源與安全合作等廣泛議題。真正讓它變成礦產外交主戰場的轉折點在2024年2月，美國在這個框架下另外啟動「C5+1關鍵礦產對話」，目標是強化地質勘探合作、吸引採礦投資，並協助中亞五國建立地質數據透明度。同一年，哈薩克與烏茲別克也加入美國主導的礦產安全夥伴關係（Minerals Security Partnership），[CSIS分析](https://www.csis.org/analysis/ten-years-c51-us-central-asia-minerals-cooperation)指出，美方並在部分共同開發的礦床上取得優先議約權。
 
+延伸閱讀：[四方安全對話（Quad）是什麼？東盟首度同台表態，馬尼拉峰會牽動南海台海局勢](/articles/quad-asean-south-china-sea-explained/)
+
 <figure>
 <img src="/images/central-asia-critical-minerals-us-strategy-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="地質勘探取得的礦石樣本近照">
 <figcaption>中亞五國近年積極對外揭露地質勘探數據，盼吸引國際礦業投資。（示意圖／Photo by USGS on Unsplash）</figcaption>

@@ -51,6 +51,8 @@ references:
 
 魚油是台灣人保健食品櫃裡的常客，不少人吃它就是希望顧腦、延緩老化後的認知退化。但一項針對高風險族群、追蹤長達2年的美國臨床試驗潑了冷水：單靠吃魚油，看不出對大腦有實質幫助。
 
+延伸閱讀：[9小時內吃完三餐、睡前4小時禁食 美國新研究：可能有助延緩認知衰退](/articles/nine-hour-eating-window-dementia-prevention/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=8ZRlDDXDCtQ" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：別單靠魚油顧腦! 醫揭關鍵:基礎沒做到根本沒用｜十點不一樣">
     <img src="/images/fish-oil-supplements-dementia-prevention-myth-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="別單靠魚油顧腦! 醫揭關鍵:基礎沒做到根本沒用｜十點不一樣">
@@ -69,6 +71,8 @@ references:
 這不是第一篇指出「吃魚」和「吃魚油」效果可能不一樣的報導。[中時新聞網的整理](https://www.chinatimes.com/realtimenews/20260709002006-260408)引述加拿大多倫多大學營養科學教授理查德．巴齊內特的說法：目前最好的證據仍顯示，攝取富含Omega-3的天然食物與較佳的大腦健康有關，但想靠補充劑「走捷徑」，似乎無法得到相同效果。他建議與其依賴保健品追求「快速見效」，不如增加魚類、堅果與植物性食物的比重，建立長期均衡的飲食習慣。
 
 [聯合新聞網元氣網的報導](https://health.udn.com/health/story/6034/9437727)也提到，美國國立衛生研究院與日本厚生勞動省皆表示，目前沒有直接證據證明特定的營養補充品或草藥，對預防失智或延緩認知功能下降具有決定性效果；許多支持特定保健食品的研究僅停留在動物或細胞實驗階段，難以直接套用在人體身上。
+
+延伸閱讀：[不吃早餐恐加速認知退化？成大規模追蹤研究與健康早餐3原則整理](/articles/skipping-breakfast-cognitive-decline-guide/)
 
 ## 讀者實用資訊：與其迷信單一保健品，不如顧好這幾件事
 

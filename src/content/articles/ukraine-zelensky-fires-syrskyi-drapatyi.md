@@ -59,6 +59,8 @@ coverImageCredit: "armyinform.com.ua — CC BY 4.0, Wikimedia Commons"
 
 敘爾斯基自2024年2月起擔任烏克蘭三軍總司令，這次下台的核心爭議是他的指揮風格。據[The Kyiv Independent報導](https://kyivindependent.com/mykhailo-drapatyi-the-man-some-protesters-want-to-replace-syrskyi/)，他長期被批評延續蘇聯時代的指揮方式，包括高層對戰場細節過度微觀管理、不顧人員傷亡也要堅守既有陣地、決策機制缺乏彈性，年輕軍官對此尤其不滿；報導形容部隊內部瀰漫「恐懼氛圍、缺乏主動性、對人事問題漠不關心」等系統性問題。
 
+延伸閱讀：[莫斯科為何頻傳鎖定軍方人士的攻擊？空軍將領生日宴驚傳炸彈恐攻，釀3死21傷](/articles/moscow-restaurant-bombing-military-target/)
+
 這股不滿在前一週集中爆發。據[Yahoo News報導](https://www.yahoo.com/news/world/articles/ukraines-zelenskyy-fires-military-chief-195516082.html)，抗議自7月18日延續至21日，數千名抗議者走上基輔及烏克蘭多個城市街頭，參與者包括退伍軍人、現役士兵、公眾人物，甚至有空軍副司令現身聲援。導火線之一是國防部長費多羅夫（Mykhailo Fedorov）在7月18日前後遭撤換，[Yahoo News報導](https://www.yahoo.com/news/world/articles/ukraines-zelenskyy-fires-military-chief-195516082.html)指出，35歲的費多羅夫以推動科技化與募兵創新聞名，任職僅6個月，因與敘爾斯基之間「無法調和的矛盾」去職，澤倫斯基事後提議給他一個統籌科技領域的職位。
 
 ## 新任總司令：曾為訓練場死傷主動請辭負責
@@ -76,3 +78,5 @@ coverImageCredit: "armyinform.com.ua — CC BY 4.0, Wikimedia Commons"
 ## 對台灣讀者的關注點
 
 俄烏戰爭進入第三年，烏克蘭這次臨陣換將，牽動的不只是前線指揮鏈，也牽動西方盟友對烏克蘭戰局走向的判斷。對長期關注兩岸情勢的台灣讀者而言，這起人事案是一個觀察樣本：一個處於長期高強度戰爭壓力下的國家，如何透過究責與換人回應內部信任危機，後續德拉帕蒂能否落實他所主張的「多聽基層意見」的指揮風格改革，值得持續追蹤。
+
+延伸閱讀：[烏克蘭防空為何攔不下飛彈？愛國者攔截彈只剩去年三分之一，基輔一夜空襲至少17死](/articles/ukraine-patriot-interceptor-shortage/)

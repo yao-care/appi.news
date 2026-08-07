@@ -134,6 +134,8 @@ coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commo
 
 伯納姆本週末開始搬入唐寧街10號的流程，內閣名單預計於他正式就任當天（週一）公布。據[Barrhead News報導](https://www.barrheadnews.com/news/national/26291389.burnham-finalising-plans-government-becoming-prime-minister-monday/)，他表示外界對閣員人選的揣測「已經過頭」，並說：「我正在最後敲定這些決定……然後我會在週一宣布。」
 
+延伸閱讀：[英美「特殊關係」還剩多少實質？外相避答川普爭議言論，會談聚焦伊朗停火與能源價格](/articles/uk-us-special-relationship-miliband-trump/)
+
 [MyJoyOnline報導](https://www.myjoyonline.com/burnham-says-he-is-finalising-cabinet-ahead-of-becoming-pm-on-monday/)引述伯納姆說法，倉促公布內閣名單會「造成完全混亂」；他也承諾新內閣將「代表我們黨的所有部分」與「所有社群」。
 
 財政大臣一職的競逐尤其受矚目。據[Barrhead News報導](https://www.barrheadnews.com/news/national/26291389.burnham-finalising-plans-government-becoming-prime-minister-monday/)，工黨左翼屬意由米勒班（Ed Miliband）出任，但外界報導傾向現任內政大臣馬哈穆德（Shabana Mahmood）將接下這個職位；[MyJoyOnline報導](https://www.myjoyonline.com/burnham-says-he-is-finalising-cabinet-ahead-of-becoming-pm-on-monday/)指出，兩人都被視為接替現任財政大臣里夫斯（Rachel Reeves）的熱門人選。
@@ -177,6 +179,8 @@ coverImageCredit: "Rory Arnold / No 10 Downing Street — OGL 3, Wikimedia Commo
 ## 對台灣讀者的關注點
 
 英國是七大工業國（G7）成員，也是台灣重要的理念相近夥伴之一。7月20日首相換人上任，加上伯納姆在稅制與對美關係上釋出的初步立場，短期內對英國的財政政策、對歐關係、國防支出與印太布局等議題的後續走向都可能帶來變數，值得持續觀察。在新政府正式就任、路線進一步明朗化之前，相關政策方向仍存在不確定性。
+
+延伸閱讀：[英國把抗議團體列「恐怖組織」合法嗎？巴勒斯坦行動禁令案送最高法院　西敏寺法院外單日再增117人被捕，2000多起案件延押10月](/articles/uk-palestine-action-ban-supreme-court/)
 
 ## 更新時間軸
 

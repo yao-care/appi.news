@@ -58,6 +58,8 @@ AI 設計工具能不能用，先看的不是它做的圖多漂亮，是你花�
 
 為什麼設計工具會燒得比聊天快這麼多？根因在生成式設計的運作方式，不在它比較貪。聊天你問一句它答一句；生成式設計要它產出一個能互動的網頁版型，等於每一輪都在寫一份完整的前端。而且[對話裡每一則訊息都會把先前的脈絡整包重送回模型](https://www.mindstudio.ai/blog/claude-design-token-management-usage-limit)，改到第十五輪，光是背景就要重讀好幾千個 token。再加上早期 Claude Design 有一個獨立、而且比較小的額度池，[五月底 Anthropic 才把它併進聊天與 Claude Code 的共用額度](https://pasqualepillitteri.it/en/news/3673/claude-design-shares-usage-limits-claude-ai-claude-code)，兩件事疊起來，才有「25 分鐘見底」這種數字。
 
+延伸閱讀：[微軟自研 coding 模型、Foundry 收進逾 11000 個模型：平台層「去單一供應商」對企業選型的訊號](/articles/microsoft-foundry-multi-model-optionality/)
+
 <img src="/images/claude-design-cost-predictability-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="多個網頁版型與設計稿並列，象徵生成式設計反覆重跑燒掉 token">
 
 六月的改版，[官方講的三件事都對著成本來](https://releasebot.io/updates/anthropic/claude)：每一輪平均少用 token、錯誤率大幅下降、額度改成跟聊天和 Claude Code 共用一個大池。還有一件容易被當成介面小事、其實直接省錢的：[新的畫布編輯器讓你能直接拖拉、縮放、對齊元素，而不必為每一個微調都跑一次模型](https://novalogiq.com/2026/06/18/anthropic-ships-major-claude-design-overhaul-with-design-system-imports-code-round-trips-and-a-fix-for-its-token-burning-problem/)。以前你想把按鈕往右移兩格，得再花一個 model turn 叫它重生；現在自己在畫布上拉就好。省下來的每一個 turn，都是省下來的額度。

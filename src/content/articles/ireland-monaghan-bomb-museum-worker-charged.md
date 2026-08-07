@@ -51,6 +51,10 @@ coverImageCredit: "Photo by Joaquin Carfagna on Pexels"
 
 愛爾蘭警方7月22日（週三）下午在莫納亨郡（Monaghan）卡里克馬克羅斯（Carrickmacross）附近的N2公路，以情報導引方式攔查一輛行駛在都柏林至德里主幹道上的汽車。[《愛爾蘭時報》報導](https://www.irishtimes.com/crime-law/2026/07/24/law-student-25-charged-over-explosives-seized-near-border/)，員警在車輛後座發現一個黑色袋子，裡頭裝有炸藥與引爆裝置，當地一度因此疏散。[TheJournal.ie 引述法庭證詞指出](https://www.thejournal.ie/monaghan-car-bomb-7113335-Jul2026/)，袋內查獲的是394公克軍用等級塞姆汀炸藥（Semtex）、一個計時開關，以及一個可運作的引爆器。警方助理總監賈斯汀·凱利（Justin Kelly）向媒體表示，這是「一次極其重大的查獲」，形容案情「真正令人擔憂」，[《愛爾蘭新聞報》引述他的說法](https://www.irishnews.com/news/northern-ireland/cross-border-bomb-suspect-works-for-irish-government-funded-body-KNUBWUEEE5GFZCRRWGPA5H4NQE/)。
 
+延伸閱讀：[前北愛民主統一黨魁唐納森18項性侵罪全部成立　含1項強暴、面臨長期監禁](/articles/dup-donaldson-guilty-sex-offences/)
+
+延伸閱讀：[北愛爾蘭泌尿科調查報告出爐：逾千名病患遭召回、系統性治理失靈　主席稱「病患被嚴重辜負」](/articles/ni-urology-inquiry-systemic-failures/)
+
 <img src="/images/ireland-monaghan-bomb-museum-worker-charged-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="愛爾蘭鄉間道路（示意圖）" title="警方查獲地點位於莫納亨郡卡里克馬克羅斯附近的N2公路（示意圖）">
 
 ## 一位是博物館館員，一位是實習大律師

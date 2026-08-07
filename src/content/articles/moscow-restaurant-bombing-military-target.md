@@ -57,6 +57,8 @@ coverImageCredit: "Dmitry Rozhkov (CC BY 3.0), via Wikimedia Commons"
 
 俄羅斯國家反恐委員會證實，這起攻擊使用的是自製爆炸裝置。[CBS新聞報導](https://www.cbsnews.com/news/explosion-moscow-restaurant-fatalities-injuries/)指出，三名死者分別是試圖闖關的女性本人、出手阻止她的保安人員，以及一名餐廳顧客。莫斯科調查委員會表示，案件仍在調查中，尚未對外公布死者與傷者的完整身份。
 
+延伸閱讀：[澤倫斯基撤換烏克蘭總司令　敘爾斯基下台、德拉帕蒂接掌　連日抗議後軍方大搬風](/articles/ukraine-zelensky-fires-syrskyi-drapatyi/)
+
 <figure>
 <img src="/images/moscow-restaurant-bombing-military-target-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="夜間封鎖線與警車停放在案發現場外圍">
 <figcaption>示意圖／案發後警方通常會封鎖周邊區域展開鑑識調查。（Photo by cottonbro studio on Pexels）</figcaption>
@@ -81,3 +83,5 @@ coverImageCredit: "Dmitry Rozhkov (CC BY 3.0), via Wikimedia Commons"
 這起事件受到關注，跟發生的場景有關：地點是一場私人聚會、一間市中心餐廳，沒有軍事設施或政府機關的戒備。對莫斯科的軍方與安全人士來說，這類爆炸凸顯的隱憂，是人身安全風險在非公務場合同樣可能出現。往後只要莫斯科再傳出類似攻擊，各界都會反覆檢視：鎖定對象是隨機還是蓄意、地點是巧合還是刻意選擇。
 
 案件後續發展，包括嫌疑人身份確認、動機釐清與是否有人出面聲稱負責，仍有待俄羅斯官方進一步公布。
+
+延伸閱讀：[黑海航運安全為什麼拉警報？俄烏無人機互襲波及沙灘與土耳其商船，傷亡創新高](/articles/black-sea-shipping-safety-ukraine-russia-drones/)

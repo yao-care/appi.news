@@ -46,6 +46,8 @@ coverImageCredit: "Photo by Vedrana Filipović on Unsplash"
 
 巴基斯坦西南部俾路支省首府奎達（Quetta）近郊的索蘭日（Sorange）煤田，7月30日下午一座名為「薩達爾．烏斯曼租賃礦」（Sardar Usman Lease）的私營煤礦發生甲烷氣體爆炸，隨後引發坑內坍塌。據[Maitland Mercury刊出的AAP報導](https://www.maitlandmercury.com.au/story/9321190/at-least-32-dead-in-pakistan-coal-mine-explosion/)，截至7月31日已確認至少34名礦工罹難，事發時礦內估計有36至42名工人正在作業。
 
+延伸閱讀：[巴控喀什米爾為何網路封鎖近兩個月？　拉瓦拉科特選舉衝突釀數十死，記者遭強制失蹤惹國際特赦組織介入](/articles/pakistan-kashmir-journalist-crackdown/)
+
 ## 甲烷積聚引爆，搜救逾12小時仍在進行
 
 [The Express Tribune報導](https://tribune.com.pk/story/2621148/two-dead-as-methane-blast-collapses-coal-mine-in-balochistans-sorange-traps-over-two-dozen-miners)引述俾路支省礦業檢查主管阿卜杜勒．加尼．俾路支（Abdul Ghani Baloch）說明，甲烷氣體在坑內深處積聚後引發爆炸，一度困住25名地下作業工人；事故初期僅通報2人罹難，隨著搜救推進，死亡人數逐步攀升至34人，另有3名礦工獲救。[半島電視台（Al Jazeera）報導](https://www.aljazeera.com/news/2026/7/30/pakistan-coal-mine-explosion-kills-at-least-11-traps-dozens)指出，爆炸發生超過12小時後，搜救工作仍未停歇，但官員坦言此時尋獲生還者的機會極低；報導並提到相鄰兩座礦坑均受損。

@@ -56,6 +56,8 @@ coverImageCredit: "Dean Molyneaux / Geograph，CC BY-SA 2.0，via Wikimedia Comm
 
 調查的核心結論，是把傷害的根源指向制度而非單一醫師。據[公關公司AIKEN代發的調查新聞稿](https://www.aikenpr.com/whats-new/2026/06/urology-services-inquiry-systemic-governance-failures-in-the-southern-health-and-social-care-trust)，報告認定信託在治理、監督、領導、文化與董事會問責上都存在系統性失靈，風險辨識與通報升級機制薄弱，並錯失多次處理相關疑慮的機會。史密斯在報告中寫道：「這份報告的核心，是一群被嚴重辜負的病患。他們面臨診斷與治療上的延誤。」
 
+延伸閱讀：[前北愛民主統一黨魁唐納森18項性侵罪全部成立　含1項強暴、面臨長期監禁](/articles/dup-donaldson-guilty-sex-offences/)
+
 <img src="/images/ni-urology-inquiry-systemic-failures-s2.webp" width="960" height="747" loading="lazy" decoding="async" alt="醫院走廊（示意圖，資料照）">
 
 傷害並非抽象。據[愛爾蘭時報報導](https://www.irishtimes.com/health/2026/06/24/some-patients-seriously-harmed-by-delays-in-cancer-treatment-in-north-inquiry-finds/)，部分病患因癌症診斷與治療延誤而「受到嚴重傷害」；衛生部長奈斯比特（Mike Nesbitt）形容這是「規模驚人的失敗」（a failure of monumental size）。
@@ -75,3 +77,5 @@ coverImageCredit: "Dean Molyneaux / Geograph，CC BY-SA 2.0，via Wikimedia Comm
 ## 對台灣讀者的關注點
 
 英國NHS是各國公醫制度常被援引的參照對象，北愛爾蘭這份調查呈現的，並非單一醫師的疏失，而是治理、監督與通報升級層層失靈如何讓問題「多年為人所知卻無人處理」。對同樣討論醫療品質把關、病安通報與院所治理的台灣讀者而言，報告把「病患安全列為首要目的」「強化領導與資料系統」當成制度補強方向，是值得參考的觀察點。後續信託與北愛當局如何落實這三項建議，仍待持續追蹤。
+
+延伸閱讀：[施凱爾前幕僚長蘇·格雷示警「我為斯托蒙特擔憂」　倡貝爾法斯特、德里設都會市長下放權力](/articles/sue-gray-fears-stormont-metro-mayor/)

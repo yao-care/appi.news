@@ -20,6 +20,8 @@ risksAndLimits:
 
 夏天待在冷氣房裡，很多人以為就不會中暑，但醫師提醒，冷氣房照樣可能出事，關鍵常是「忘記喝水」與「進出溫差過大」。TVBS 新聞在 [8 月 6 日的報導](https://www.youtube.com/watch?v=FdGug_acGUA)中，醫師點出冷氣房降低環境濕度會加速水分流失，長者尤其容易在不知不覺間脫水、體溫調節失衡，這個現象也常被稱為「室內中暑」或中醫所說的「陰暑」。
 
+延伸閱讀：[冷氣溫度調高多少最省電？開開關關和持續運轉怎麼選一次看懂](/articles/ac-temperature-energy-saving-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=FdGug_acGUA" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：冷氣房也會中暑? 醫揭「忘記喝水」成關鍵 長者更要當心｜十點不一樣20260806">
     <img src="/images/indoor-heatstroke-air-conditioned-room-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="冷氣房也會中暑? 醫揭「忘記喝水」成關鍵 長者更要當心｜十點不一樣20260806">

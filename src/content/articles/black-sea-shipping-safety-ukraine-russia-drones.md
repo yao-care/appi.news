@@ -55,6 +55,8 @@ coverImageCredit: "Photo by Erhan Üstünbaş on Pexels"
 
 州政府將攻擊歸咎於烏克蘭，但[《愛爾蘭時報》報導](https://www.irishtimes.com/world/europe/2026/08/04/ukraine-and-russia-exchange-attacks-after-seven-killed-on-beach/)指出，烏克蘭軍方對這起攻擊既未證實也未否認，目前無法獨立確認幕後行動方。
 
+延伸閱讀：[烏克蘭防空為何攔不下飛彈？愛國者攔截彈只剩去年三分之一，基輔一夜空襲至少17死](/articles/ukraine-patriot-interceptor-shortage/)
+
 ## 俄軍報復轟炸　烏克蘭多地傳出死傷
 
 沙灘攻擊發生後，俄軍隨即在烏克蘭多地展開報復性攻擊。《Cotswold Journal》報導指出，莫斯科州州長沃羅比約夫（Andrei Vorobyov）證實，週二上午一枚烏克蘭無人機攻擊莫斯科近郊地區，造成5人死亡、10人受傷。
@@ -70,3 +72,5 @@ coverImageCredit: "Photo by Erhan Üstünbaş on Pexels"
 土耳其外交部發表聲明表示，包括本國公民在內的一批船員受傷，對黑海衝突持續升級「深感關切」，並警告若不採取預防措施，衝突升級恐對包括糧食安全在內的多個層面造成不利影響。《Daily Sabah》報導提到，這並非首例：今年6月一艘土耳其籍漁船也曾在克里米亞附近遭鎖定攻擊，造成1死4傷；土耳其近月已與羅馬尼亞、保加利亞啟動聯合海上安全機制，聚焦黑海水雷清除作業。
 
 土耳其長期扮演黑海穀物運輸的樞紐角色，商船屢遭無人機波及，使得原本仰賴黑海航道的糧食與能源運輸風險持續墊高，也讓外界對這條戰線是否會進一步失控更加關注。
+
+延伸閱讀：[莫斯科為何頻傳鎖定軍方人士的攻擊？空軍將領生日宴驚傳炸彈恐攻，釀3死21傷](/articles/moscow-restaurant-bombing-military-target/)

@@ -64,6 +64,8 @@ originalContribution: "本文以路透社（經 Asia Bulletin 轉載）獨家報
 
 光收發器是一種安裝在伺服器與交換器連接埠上的小型模組，負責把電子訊號轉換成光脈衝、再透過光纖電纜高速傳輸資料，是資料中心機房內伺服器彼此溝通的關鍵通道。[Network World報導](https://www.networkworld.com/article/4205228/with-fcc-ban-on-new-chinese-made-optical-transceivers-for-dcs-likely-it-may-be-time-to-stock-up.html)指出，隨著AI模型訓練需要成千上萬顆晶片同步運算，資料在伺服器之間搬移的速度直接影響訓練效率，光收發器因此成為AI資料中心擴建潮中需求量暴增的零件之一。[The Next Web報導](https://thenextweb.com/news/fcc-optical-transceiver-ban-china-us-hyperscalers)引述業界估算，中國企業目前掌握全球光收發器供應量約三分之二，是這波AI基礎建設熱潮背後相當隱形、卻幾乎無所不在的零件供應方。
 
+延伸閱讀：[川普對60國課10%至12.5%新關稅　印度稅率因加強反強迫勞動下修、巴西智利揚言反制](/articles/trump-new-tariffs-60-countries/)
+
 <figure>
 <img src="/images/fcc-china-transceiver-ban-datacenter-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="光纖網路線與交換器設備示意畫面">
 <figcaption>光收發器負責把電子訊號轉為光脈衝、透過光纖電纜在資料中心內部高速傳輸資料。（示意圖，攝影：Scott Rodgerson，Unsplash）</figcaption>

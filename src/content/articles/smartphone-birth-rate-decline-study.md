@@ -47,6 +47,8 @@ references:
 
 少子化在台灣已經是老生常談的議題，但美國一份新論文提供了一個比較少被談到的角度：智慧型手機本身，可能就是壓低生育率的一項具體變因。TVBS NEWS《十點不一樣》近日訪問心理師談這個現象，這篇整理背後那份研究實際上做了什麼、數據怎麼算出來的，以及研究本身承認的限制。
 
+延伸閱讀：[中年幸福感為何最低？跨國研究揭「U型曲線」：40至50歲谷底、晚年反超年輕人](/articles/midlife-happiness-u-curve/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=_wiPQ5I_8t8" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：手機成癮侵蝕愛情? 恐影響出生率">
     <img src="/images/smartphone-birth-rate-decline-study-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="手機成癮侵蝕愛情? 恐影響出生率">

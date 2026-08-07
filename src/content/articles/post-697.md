@@ -50,6 +50,8 @@ coverImageCredit: "Photo by Laura Ockel on Unsplash"
 
 CoWoS是晶圓上晶片（Chip-on-Wafer）加基板封裝（on-Substrate）的縮寫，核心概念是透過矽中介層（interposer）將多個晶片橫向並排整合，達到比傳統電路板更高的頻寬與更低的能耗。輝達的H100、H200與GB200系列GPU，均採用CoWoS封裝方式整合GPU晶粒與HBM記憶體。
 
+延伸閱讀：[馬斯克為什麼要自建晶圓廠？Terafab計畫168億美元的算盤一次看懂](/articles/musk-terafab-chip-fab-plan/)
+
 [TrendForce資料](https://www.trendforce.com/presscenter/news/20260430-13028.html)顯示，台積電的CoWoS月產能預計在2025年底達到6.5萬片，而輝達早已鎖定超過七成的CoWoS-L產能。CoWoS-L是以雷射鑽孔取代矽通孔連接的改良版，支援更大面積的矽中介層，適合GB200這類尺寸更大的AI加速器。這個產能格局說明了一件事：Google、AMD等其他業者在爭搶剩餘的不到三成CoWoS產能，供應端的稀缺性是真實存在的。
 
 CoWoS封裝晶圓售價逼近7奈米製程晶圓，從財務結構來看意義重大。過去業界普遍認為，封裝是低附加價值的「後段」製程，毛利率遠低於前段晶圓製造。但根據報導，CoWoS在相對較低資本支出結構下，毛利率已有潛力接近先進製程節點的水準。這意味著台積電的封裝業務正從成本中心轉型為利潤中心，並在整體營收佔比從2025年的約10%持續攀升。

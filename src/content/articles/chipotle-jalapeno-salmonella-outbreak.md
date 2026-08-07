@@ -57,6 +57,10 @@ coverImageCredit: "Photo by Doğan Alpaslan DEMİR on Unsplash"
 
 這84人裡有9人並未去過Chipotle，而是在其他墨西哥風味餐廳用餐後同樣發病。這個細節是衛生官員判斷問題出在辣椒這項食材本身的關鍵依據。[Marler Blog的報導](https://www.marlerblog.com/case-news/chipotle-pulled-jalapenos-after-110-fell-ill-in-minnesota-with-salmonella-fda-and-cdc-still-say-nothing/)也點出，這起事件源頭指向辣椒這項共同食材，波及範圍超出單一連鎖品牌。
 
+延伸閱讀：[美國寄養機構為何能讓公民少年獨自跨越墨西哥邊境？紐墨西哥州告自家機構求返還15歲少年](/articles/new-mexico-foster-teen-border-lawsuit/)
+
+延伸閱讀：[DACA身分為什麼說撤就撤？「未經授權出境」成關鍵　德州媽媽遭驅逐、三名美籍子女困邊境](/articles/daca-status-termination-unauthorized-travel/)
+
 ## Chipotle怎麼回應：追溯到單一批次
 
 <img src="/images/chipotle-jalapeno-salmonella-outbreak-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="餐廳廚房裡準備中的新鮮食材與烹調器具（示意圖）">

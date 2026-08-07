@@ -17,6 +17,8 @@ risksAndLimits:
 
 台灣夏天的消暑冰品名稱五花八門，剉冰、雪花冰、綿綿冰之外，還有一種較少見的「雪冰」。桃園龍潭一家開業近90年的老店，至今仍用早期的鹽水製冰機手工打雪冰，是少數還在用這種古法的店家。這篇整理雪冰的製作原理、跟其他冰品的差異，以及這間老店的實用資訊。
 
+延伸閱讀：[客製化造型蛋糕怎麼挑？從許願池蛋糕到韓系蛋糕捲一次看懂](/articles/custom-cake-wishing-pool-korean-roll-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=-3MqegMXt_s" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：尋找台灣感動力-桃園龍潭懷舊雪冰 綿密清爽賣逾90年">
     <img src="/images/longtan-snow-ice-shop-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="尋找台灣感動力-桃園龍潭懷舊雪冰 綿密清爽賣逾90年">
@@ -44,3 +46,5 @@ risksAndLimits:
 - **交通**：龍元路周邊不易停車，建議機車停店門口，開車可停龍潭大池周邊或中正路附近停車格再步行前往（[viviyu.com 店家介紹](https://www.viviyu.com/archives/43788)）
 
 老字號手工雪冰店在台灣越來越少見,設備汰換成本高、傳承意願低是主因。這間店目前由第3代老闆夫妻經營,家中剛畢業的兒子也已加入顧店,是少數看得到第四代接班可能的店家之一。
+
+延伸閱讀：[漢餅為什麼做起義式冰淇淋？從舊振南Gelato到涼麵雪糕，這波老字號跨界甜點一次看懂](/articles/century-bakery-gelato-cold-noodle-popsicle/)

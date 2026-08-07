@@ -49,6 +49,8 @@ coverImageCredit: "John Trumbull《康沃利斯投降》— 公眾領域，引�
 
 據[《愛爾蘭新聞報》（The Irish News）報導](https://www.irishnews.com/news/uk/george-washington-note-accepting-british-surrender-to-go-on-display-in-london-UCA3VAPZWNJOLDPJJSQN227AOA/)，這封信由華盛頓寫於1781年10月，正式接受英軍在約克鎮的投降。約克鎮一役後，英方意識到大勢已去；[《愛爾蘭新聞報》](https://www.irishnews.com/news/uk/george-washington-note-accepting-british-surrender-to-go-on-display-in-london-UCA3VAPZWNJOLDPJJSQN227AOA/)指出，這封信開啟了後續一連串談判，最終促成1783年的《巴黎條約》（Treaty of Paris），英國在條約中正式承認美國獨立。
 
+延伸閱讀：[脫歐公投十週年　倫敦千人遊行喊「重返歐盟」、金諾克斥「空前持續的災難」](/articles/uk-rejoin-eu-march-10-years/)
+
 <figure>
   <img src="/images/washington-yorktown-surrender-note-london-s1.webp" width="960" height="1165" loading="lazy" decoding="async" alt="吉爾伯特·斯圖爾特繪喬治·華盛頓肖像（1803年）">
   <figcaption>喬治·華盛頓肖像。Gilbert Stuart 繪（1803年），公眾領域，引用自 <a href="https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg">Wikimedia Commons</a>。</figcaption>

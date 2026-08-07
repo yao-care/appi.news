@@ -55,6 +55,10 @@ coverImageCredit: "Calistemon — CC BY-SA 4.0, Wikimedia Commons"
 
 據[Illawarra Mercury報導](https://www.illawarramercury.com.au/story/9322834/perfect-mix-stage-set-for-maximum-bird-flu-damage/)，南澳Cape Jaffa南方外海的Baudin Rocks島礁8月1日經空中普查後，發現49隻大鳳頭燕鷗（greater crested tern）死亡、另有35隻出現急性病徵，是澳洲有紀錄以來單一地點最大規模的鳥類死亡事件。[Australian Geographic報導](https://www.australiangeographic.com.au/science-environment/2026/08/grim-milestone-in-spread-of-h5n1-bird-flu/)指出，這批鳥屍檢驗結果一旦確認為H5N1，將是「澳洲首次與該病毒相關的野生動物大量死亡事件」。
 
+延伸閱讀：[伊波拉為什麼還沒有疫苗可打？　剛果Bundibugyo病毒疫情惡化為史上最大規模，確診逼近3900例、死亡逾1750人](/articles/ebola-bundibugyo-no-vaccine-congo/)
+
+延伸閱讀：[剛果、烏干達伊波拉破 500 例，WHO 宣告全球公衛緊急事件](/articles/congo-uganda-ebola-who-emergency/)
+
 BirdLife Australia的Sean Dooley形容，眼前的狀況是「完美環境促成最大傷害」：南澳沿海密集的燕鷗繁殖群落，加上病毒已在候鳥間立足，讓大規模死亡幾乎難以避免。南澳環境部長Emily Bourke與聯邦環境部長Murray Watt、聯邦農業部長Julie Collins近日皆對外證實疫情擴大，南澳同時在Coorong（Murray River河口）發現染疫海燕，維多利亞州西南部也傳出確診。
 
 <figure>

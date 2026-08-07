@@ -57,6 +57,8 @@ originalContribution: "本文整合半島電視台、Africanews、Global News、
 
 [半島電視台報導](https://www.aljazeera.com/news/2026/7/31/us-government-mislabels-countries-on-map-of-africa-at-global-conference)描述，這張地圖把西非沿海國奈及利亞畫成撒哈拉沙漠裡的內陸國家，東南非沿海的莫三比克則被搬到衣索比亞所在的東非之角。[Africanews報導](https://www.africanews.com/2026/07/30/ai-generated-africa-map-blunder-overshadows-us-presentation-at-global-aids-conference/)進一步指出，象牙海岸的標籤顏色與其實際所在國家對不上，橘色標籤連到的卻是大陸另一端一塊塗成綠色的區域，烏干達與馬拉威的邊界線也被整個重畫，形狀與真實國界不符。[The Advocate報導](https://www.advocate.com/politics/national/trump-administration-embarrassing-africa-map)還提到，喀麥隆的名稱標示出現在地圖上，卻沒有連到任何實際國家範圍。
 
+延伸閱讀：[PEPFAR經費砍3成、全球逾1700處愛滋防治據點關閉　里約登場國際愛滋病大會示警防線鬆動](/articles/pepfar-funding-cuts-aids-conference/)
+
 <figure>
 <img src="/images/us-state-department-ai-africa-map-error-1.webp" width="960" height="540" loading="lazy" decoding="async" alt="數位螢幕上顯示的世界地圖與科技線條，象徵AI生成圖像技術">
 <figcaption>路透社的技術分析發現，簡報中的非洲地圖含有OpenAI製圖工具的浮水印。（示意圖，攝影：Nicolas Arnold，Unsplash）</figcaption>

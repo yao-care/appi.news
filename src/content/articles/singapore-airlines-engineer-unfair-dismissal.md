@@ -49,6 +49,8 @@ coverImageCredit: "Photo by Nihar Reddy Jangam on Unsplash"
 
 新加坡航空對此並不滿意，認為這次的故障訊息其實不需要動用斷電重啟這麼大的處置，並指工程師是憑「經驗與直覺」判斷，而非依循標準協議，最終造成延誤與「客戶不滿」。（[Simple Flying](https://simpleflying.com/engineer-sacked-singapore-airlines-reboot-17-minute-delay/)）
 
+延伸閱讀：[Optus挨告：澳洲通訊監管機關控000緊急電話中斷逾千次違規　最高恐罰8.5億台幣](/articles/optus-triple-zero-outage-lawsuit/)
+
 <img src="/images/singapore-airlines-engineer-unfair-dismissal-1.webp" width="960" height="641" loading="lazy" decoding="async" alt="客機駕駛艙儀表板示意圖">
 *客機駕駛艙儀表板示意圖（示意圖）。Photo by Moritz Mentges on Unsplash*
 

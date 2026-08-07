@@ -51,6 +51,8 @@ DACA（童年入境者暫緩遣返，Deferred Action for Childhood Arrivals）�
 
 特雷維尼奧自8歲起即以DACA身分合法居留美國，[美聯社報導](https://abcnews.com/US/wireStory/us-cites-unauthorized-travel-end-daca-status-mother-135244210)指出，她的工作許可原本已獲准延長至2027年4月。轉折發生在2025年12月：聯邦探員跟蹤她與丈夫的車輛進入南德州一處Home Depot停車場後，將兩人逮捕。[華盛頓時報報導](https://www.washingtontimes.com/news/2026/jul/30/us-cites-unauthorized-travel-end-daca-status-mother-3-deported-mexico/)指出，移民法官隨後於2026年2月簽發自願離境令。
 
+延伸閱讀：[美最高法院鬆綁後海地敘利亞TPS到期：近35萬海地人一夕失身份　估5萬美籍子女恐骨肉分離](/articles/haiti-syria-tps-expires/)
+
 <figure>
 <img src="/images/daca-status-termination-unauthorized-travel-s1.webp" width="960" height="768" loading="lazy" decoding="async" alt="移民法庭聽證場景，象徵跨境家庭面臨的法律程序">
 <figcaption>DACA受益人一旦被認定違反出境限制，身分與工作許可可能同步終止。（示意圖／Photo by Boko Shots on Pexels）</figcaption>
@@ -71,3 +73,5 @@ DACA（童年入境者暫緩遣返，Deferred Action for Childhood Arrivals）�
 ## 川普政府的DACA執法規模
 
 [美聯社報導](https://abcnews.com/US/wireStory/us-cites-unauthorized-travel-end-daca-status-mother-135244210)引述今年2月的國土安全部信函指出，川普政府上任以來已驅逐86名DACA受益人、逮捕241人，特雷維尼奧一案並非孤例。這起訴訟的後續進展，將牽動DACA受益人出境限制在實務上如何被認定與執行。
+
+延伸閱讀：[美國寄養機構為何能讓公民少年獨自跨越墨西哥邊境？紐墨西哥州告自家機構求返還15歲少年](/articles/new-mexico-foster-teen-border-lawsuit/)

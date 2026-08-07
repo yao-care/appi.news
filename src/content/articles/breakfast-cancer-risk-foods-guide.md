@@ -18,6 +18,10 @@ risksAndLimits:
 
 一支中天新聞的健康節目影片，引述日本醫師對早餐提出的警告，點名精緻碳水化合物、亞硝酸鹽加工肉品與高脂乳品三類食物與癌症風險有關，也帶出長庚醫院腎臟科醫師顏宗海的提醒：這些說法有理論依據，但若直接解讀成「完全不能吃」則過於簡化，關鍵仍在份量與烹調方式。這三類食物幾乎天天出現在台灣人的早餐桌上，值得把成因與實際數據拆開來看。
 
+延伸閱讀：[不吃早餐恐加速認知退化？成大規模追蹤研究與健康早餐3原則整理](/articles/skipping-breakfast-cognitive-decline-guide/)
+
+延伸閱讀：[魚油防失智？美國兩年臨床試驗：單靠補充劑無助認知功能，均衡飲食才是根本](/articles/fish-oil-supplements-dementia-prevention-myth/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=JuW6YArWpqA" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：日本名醫警告3種早餐致癌太誇張? 顏宗海:掌握1原則免驚">
     <img src="/images/breakfast-cancer-risk-foods-guide-video.webp" width="480" height="360" loading="lazy" decoding="async" alt="日本名醫警告3種早餐致癌太誇張? 顏宗海:掌握1原則免驚">

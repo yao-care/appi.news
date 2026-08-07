@@ -52,6 +52,8 @@ coverImageCredit: "Photo by Towfiqu barbhuiya on Pexels"
 
 美國總統愛滋病緊急救援計畫（PEPFAR）自2003年設立以來，[據《華盛頓灣報》（Washington Blade）報導](https://www.washingtonblade.com/2026/07/23/2026-international-aids-conference-to-take-place-in-rio/)已挽救超過2600萬條人命，是全球對抗愛滋病最重要的單一資金來源。但川普政府上任後大砍這筆經費，[NPR報導指出](https://www.wknofm.org/news-from-npr/2026-07-28/amid-u-s-funding-cuts-the-international-aids-conference-faces-an-uncertain-future)，美國對全球HIV/AIDS的援助總額從約67億美元砍到46億美元，砍幅約3成；即便國會一度嘗試把經費撥回原本水準，主管PEPFAR的美國國務院至今也僅動支已編列經費的7成。川普政府已進一步宣布，2027年初將永久停止PEPFAR撥款。
 
+延伸閱讀：[AI生成圖片的破綻怎麼看？美國國務院愛滋病大會出包，地圖上非洲國家名稱全數標錯](/articles/state-department-ai-map-africa-mislabeled/)
+
 經費驟減的直接後果，是全球服務網絡大量收縮。NPR統計，已有逾1700處愛滋防治診所、社福據點被迫關閉；《華盛頓灣報》引述另一份統計，光是公共衛生設施、服務點與中心加總就有超過1400處掛牌熄燈。在里約會場，倡議團體「健康援助」（Health GAP）執行主任更當場抗議，直指政府「關掉了1700個PEPFAR愛滋治療點」。
 
 <img src="/images/pepfar-funding-cuts-aids-conference-s1.webp" width="960" height="602" loading="lazy" decoding="async" alt="醫療研究與公共衛生資金示意圖">

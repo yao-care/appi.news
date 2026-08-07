@@ -109,6 +109,7 @@ pnpm growth:audit
 | 新文章送 Indexing API | indexing-submit.sh | 線上 sitemap | n/a（送 Google 收錄）| 有送才報 **dev 台** |
 | 數據報告 | weekly-report.sh | GA4+GSC | n/a（數據）| ✅報告到**作者群** |
 | 維運心跳 | heartbeat.sh | 本地內容存量 + GA（8 區塊儀表板）| n/a（維運）| ✅📊數據心跳＋📊數據總覽兩則到 **dev 台**（皆無 LLM。2026-07-23 移除原步驟③🤖大腦優化，改由 seo-ops 大腦層 UTC 22:20 取代升級）|
+| 主題中樞雷達（每週三） | topic-hub-radar.sh | 本地標籤分群 + 內文內聚度 + GSC 曝光 | **全自動建立並上線**（站長 2026-08-07 裁示）：每次最多開 1 個，build/check:links 沒過就不推 | ✅一則到 **dev 台**，附中樞網址與撤除方法（把該 topic 檔 status 改 inactive）。停用開關 `HUB_RADAR_OFF=1` |
 | 成長待辦提醒（每週一） | growth-backlog.sh | 本地存量（growth-lint 判準）+ GSC 零點擊名單 | n/a（唯讀，不產文、不 commit、**不做 git reset**——同一個 checkout 是 seo-ops 大腦的工作區）| ✅一則到**作者群**：各項還剩幾篇、與上週的增減、下一批建議做哪 10 篇（無 LLM。站長 2026-08-07 指示要定期提醒）|
 | AEO 能見度探針 | aeo-radar.sh | claude-appi 自身 web search 問 AI 引擎 | n/a（寫 geo-citation 帳本，git 外）| ✅🛰摘要到 **dev 台**（純讀不碰 git。2026-07-23 站長指示啟用排程，原只手動）|
 | 學被引用內容 | cited-teardown.sh | 競品被引用頁（WebFetch）| 寫 `geo-insights/<beat>.md`→push（newsroom 起草前讀）| ✅🔧摘要到 **dev 台**（按星期輪 7 beat；**會寫 repo**→走 worktree。2026-07-23 站長指示啟用）|

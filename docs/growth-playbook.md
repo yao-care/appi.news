@@ -77,9 +77,14 @@ pnpm growth:lint:all         # 存量覆蓋率盤點（零內鏈幾篇、topics 
 - 看哪些線接上了：見本檔 §產線接線點
 - **完成判準**：新產出的文章跑 `node scripts/growth-lint.mjs <file>` 不出現 `G1-none`。
 
-### B2. 存量補內鏈（未完成，主要工作量）
+### B2. 存量補內鏈（機械回填已跑過一輪，殘餘靠新文章補厚）
 
-**SOP**：
+**先跑工具，別從手工開始**：`node scripts/growth-backfill-links.mjs`（dry-run）→ `--write`。
+相關度用 TF-IDF 餘弦，找不到夠相關的就留白不硬連；判準與踩過的坑見
+[`lessons/mechanical-backfill-traps.md`](./lessons/mechanical-backfill-traps.md)。
+工具跑完仍是零內鏈的，代表站上沒有同題文章，**只能靠新文章把叢集補厚**，不要手動硬連。
+
+**逐篇手改的 SOP**（工具挑不到、但你判斷該連時）：
 
 1. `node scripts/growth-lint.mjs --all --worst 30` 取出待補清單。
 2. 逐篇處理：先 `grep -rl "<該篇主題關鍵詞>" src/content/articles/ | head` 找出可連的姊妹文，`head -8` 確認題目扣得上。
@@ -89,7 +94,14 @@ pnpm growth:lint:all         # 存量覆蓋率盤點（零內鏈幾篇、topics 
 
 **節奏建議**：一次 20–30 篇為一批，優先處理 `growth-audit` 關卡 1 那份「有曝光但 0 點擊」名單裡也出現的文章（同時吃到 A 的效益）。
 
-### B3. 補 `topics` / `column`（未完成）
+### B3. 補 `topics` / `column`（已自動化，每週三跑）
+
+`scripts/topic-hub-radar.mjs` ＋ `scripts/cron/topic-hub-radar.sh`：每週三台北 09:00 偵測
+「夠厚卻還沒有中樞」的群，自動開一個中樞並回填成員文章。門檻、面向標籤排除、
+id 對照表（`scripts/lib/topic-hub-ids.json`，**id 進網址、上線後不能改**）見該檔檔頭。
+手動補單篇時照下面的 SOP。
+
+#### 手動補的 SOP
 
 `relatedArticles()`（`src/utils/content.ts`）的權重是：同 topic 每個 **×3** ＞ 同 column **+3** ＞ 同分類 **+2** ＞ 同子分類 **+1** ＞ 每個共同 tag **+1**。
 兩個欄位都空的文章，「延伸閱讀」只能退回「同分類最新文」，等於推薦不相干的東西。
@@ -143,6 +155,15 @@ pnpm growth:lint:all         # 存量覆蓋率盤點（零內鏈幾篇、topics 
 ### A2. 標題長度的存量清理
 
 `pnpm growth:lint:all` 會報 title 過長的篇數。這批不必全改，**只改「有曝光」的那些**（沒曝光的頁改標題不會有效果，白工）。兩份名單交集才是工作清單。
+
+---
+
+### B5. 常見問題（✅ 已完成，維持即可）
+
+`scripts/backfill-faq.mjs` 已把存量補到 0 篇缺漏。新文章由產線 prompt 負責；
+若日後又出現缺漏，直接重跑（冪等）。**生成內容會撞內容 gate 的兩種撞法**
+（禁連結 → 模糊引用；拔高措辭）見
+[`lessons/mechanical-backfill-traps.md`](./lessons/mechanical-backfill-traps.md) §四。
 
 ---
 

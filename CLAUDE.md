@@ -252,6 +252,8 @@
 | 自動化鐵則（帳號／模型／cron／發佈端） | [`docs/automation-invariants.md`](./docs/automation-invariants.md) |
 | 寫作成長規則（內鏈／topics／標題／開頭／FAQ） | `scripts/lib/growth-prompt.mjs` 的 `GROWTH_PROMPT`（所有產線共用，新增產線必接）|
 | 成長工作項目與 SOP（B 站內導流／A 存量升級／C 回訪） | [`docs/growth-playbook.md`](./docs/growth-playbook.md) |
+| 存量批次回填工具（內鏈／常見問題／主題中樞） | `scripts/growth-backfill-links.mjs`、`scripts/backfill-faq.mjs`、`scripts/topic-hub-radar.mjs`（判準與踩過的坑＝[`docs/lessons/mechanical-backfill-traps.md`](./docs/lessons/mechanical-backfill-traps.md)）|
+| 主題中樞的 id 對照表（**id 進網址，上線後不能改**） | `scripts/lib/topic-hub-ids.json` |
 | 排程總表、各線來源與 Slack 行為 | [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
 | 數據／網路曝光量 | `scripts/weekly-data.mjs`＋`.claude/skills/weekly-report/`＋`scripts/lib/report-config.mjs` |
 | 機密金鑰位置 | `.env`（PSI）、`~/.config/appi-news/`（GA4／GSC／Slack）— 永不進 repo |

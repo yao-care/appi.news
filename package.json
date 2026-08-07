@@ -23,6 +23,8 @@
     "growth:audit": "node scripts/growth-audit.mjs",
     "growth:lint": "node scripts/growth-lint.mjs",
     "growth:lint:all": "node scripts/growth-lint.mjs --all --summary",
+    "growth:backlog": "node scripts/growth-backlog.mjs",
+    "upcoming": "node scripts/upcoming.mjs",
     "indexnow": "node scripts/indexnow.mjs",
     "astro": "astro",
     "test": "vitest run",

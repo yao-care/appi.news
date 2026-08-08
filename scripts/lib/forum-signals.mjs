@@ -157,6 +157,37 @@ export function parseBoardIndex(html) {
 }
 
 /**
+ * 解析 PTT 網頁版（pttweb.cc）的看板熱門頁 HTML → 文章清單。純函式。
+ *
+ * 為什麼要有這支：2026-08-06 起 ptt.cc 對本機 IP 直接 TCP 逾時（DNS 正常、80/443 都不通），
+ * 原本的 `parseBoardIndex` 再正確也拿不到資料。pttweb 是 PTT 的網頁前端鏡像，本機連得到，
+ * 且它的看板熱門頁自帶推文數與完整標題（含 `[標籤]` 前綴，`isNoiseTitle` 靠那個判板務文）。
+ *
+ * 版面結構（2026-08-08 實測）：一篇一個 `class="e7-container"` 區塊，
+ * 推文數在 `e7-recommendScore`，連結與完整標題在 `e7-article-default` + `e7-show-if-device-is-not-xs`
+ * （手機版那個 span 會把 `[標籤]` 拿掉，**不要抓那個**）。
+ *
+ * @returns {Array<{push:number, title:string, href:string, date:string}>}
+ */
+export function parsePttWebBoard(html) {
+  const out = [];
+  for (const chunk of String(html || '').split(/class="e7-container"/).slice(1)) {
+    const link = chunk.match(
+      /<a href="(\/bbs\/[^"]+)"[^>]*class="e7-article-default"[\s\S]*?e7-show-if-device-is-not-xs"[^>]*><span[^>]*>([^<]*)<\/span>/,
+    );
+    if (!link) continue; // 非文章區塊（頁首/廣告）
+    const push = chunk.match(/e7-recommendScore[^>]*>[\s\S]*?<\/i>\s*([^<]*?)\s*<\/div>/);
+    out.push({
+      push: parsePush(push?.[1]),
+      title: decodeEntities(link[2]).trim(),
+      href: `https://www.pttweb.cc${link[1]}`,
+      date: '', // pttweb 熱門頁不帶日期；本線的去重靠帳本與標題，不靠日期
+    });
+  }
+  return out;
+}
+
+/**
  * 去重用的正規化鍵：拿掉標籤前綴、Re:/Fw:、空白與標點，只留可比對的主體。
  * 純函式。同一事件的 Re: 串會收斂成同一個 key，避免同題連推。
  */
@@ -198,33 +229,68 @@ export function isNoiseTitle(title) {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /**
- * 抓單一看板的高推文（用 PTT 搜尋 `recommend:N`，回最新一頁）。
+ * 資料來源依序嘗試（第一個拿得到就用）。
+ *
+ * 🔴 **主來源是 pttweb.cc、不是 ptt.cc**：2026-08-06 起本機到 ptt.cc 的 TCP 連線直接逾時
+ * （DNS 解得到 140.112.172.16，80/443 都不通，同機連其他站正常＝對方擋我們的出口 IP），
+ * 30 個板全軍覆沒、每小時空跑。ptt.cc 留在清單最後當退路：哪天 IP 解封會自動用回原生來源。
+ * 換來源要成對改「url + parse」，並補 parse 的固定 HTML 測試。
+ */
+const SOURCES = [
+  {
+    name: 'pttweb',
+    // 看板熱門（24 小時）：直接就是我們要的「近期高推文」，不必再爬索引頁翻頁。
+    url: ({ board }) => `https://www.pttweb.cc/bbs/${board}/hot/24h`,
+    parse: (html) => parsePttWebBoard(html),
+    // 冷門板 24 小時內可能真的一篇熱門文都沒有（Soft_Job／MuscleBeach 實測），
+    // 那是「今天沒題」不是「來源壞了」——認得出版面就當成功，不要退去 ptt.cc 白等逾時。
+    looksValid: (html) => /e7-container|PTT網頁版/.test(html),
+  },
+  {
+    name: 'ptt.cc',
+    url: ({ board, minPush }) => `https://www.ptt.cc/bbs/${board}/search?q=recommend%3A${minPush}`,
+    parse: (html) => parseBoardIndex(html),
+    looksValid: (html) => /r-ent|批踢踢/.test(html),
+  },
+];
+
+/**
+ * 抓單一看板的高推文（主來源 pttweb 的看板熱門頁；失敗才退回 ptt.cc 搜尋）。
  *
  * **帶一次重試**：實測併發抓 30 板時，PTT 會零星拒連（2026-08-06 一次跑有 4 板失敗，
  * 單獨重抓全部 200），推測是限速。單板失敗＝該分類這一輪完全沒有候選，
  * 若剛好是 tech 那幾板連續失敗，科技就會長期沒題，所以值得retry 而不是放著。
  */
 export async function fetchBoard({ board, minPush }, { fetchImpl = fetch, timeoutMs = 15000, retries = 1 } = {}) {
-  const url = `https://www.ptt.cc/bbs/${board}/search?q=recommend%3A${minPush}`;
   let last = '';
-  for (let attempt = 0; attempt <= retries; attempt++) {
-    if (attempt) await sleep(800 * attempt);
-    const ctl = new AbortController();
-    const timer = setTimeout(() => ctl.abort(), timeoutMs);
-    try {
-      const res = await fetchImpl(url, {
-        headers: { 'User-Agent': UA, Cookie: 'over18=1' },
-        signal: ctl.signal,
-      });
-      if (!res.ok) {
-        last = `HTTP ${res.status}`;
-        continue;
+  for (const src of SOURCES) {
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      if (attempt) await sleep(800 * attempt);
+      const ctl = new AbortController();
+      const timer = setTimeout(() => ctl.abort(), timeoutMs);
+      try {
+        const res = await fetchImpl(src.url({ board, minPush }), {
+          headers: { 'User-Agent': UA, Cookie: 'over18=1' },
+          signal: ctl.signal,
+        });
+        if (!res.ok) {
+          last = `${src.name} HTTP ${res.status}`;
+          continue;
+        }
+        const html = await res.text();
+        const posts = src.parse(html);
+        // 0 篇要分兩種：版面認得出來＝這板今天真的沒熱門文（成功）；認不出來＝版面改了或被導去
+        // 錯誤頁（失敗，換下一個來源）。不分清楚的話冷門板每輪都會去 ptt.cc 白等 15 秒逾時。
+        if (!posts.length && !src.looksValid(html)) {
+          last = `${src.name} 回 0 篇且版面不符`;
+          break;
+        }
+        return { board, ok: true, posts, source: src.name };
+      } catch (e) {
+        last = `${src.name} ${e?.message || String(e)}`;
+      } finally {
+        clearTimeout(timer);
       }
-      return { board, ok: true, posts: parseBoardIndex(await res.text()) };
-    } catch (e) {
-      last = e?.message || String(e);
-    } finally {
-      clearTimeout(timer);
     }
   }
   return { board, ok: false, error: last, posts: [] };

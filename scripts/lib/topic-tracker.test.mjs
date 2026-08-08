@@ -88,15 +88,15 @@ describe('狀態燈號（純規則）', () => {
 });
 
 describe('delta', () => {
-  it('▲/▼ 與持平', () => {
-    expect(delta(120, 100)).toBe('▲20');
-    expect(delta(80, 100)).toBe('▼20');
+  it('漲用 🔺、跌用 - 、持平用 —', () => {
+    expect(delta(120, 100)).toBe('🔺20');
+    expect(delta(80, 100)).toBe('-20');
     expect(delta(100, 100)).toBe('—');
-    expect(delta(24.5, 25.7, { digits: 1 })).toBe('▼1.2');
+    expect(delta(24.5, 25.7, { digits: 1 })).toBe('-1.2');
   });
-  it('排名：數字變小是進步 → ▲（箭頭是語意方向，不是數值方向）', () => {
-    expect(delta(8.4, 9.1, { digits: 1, betterWhenLower: true })).toBe('▲0.7');
-    expect(delta(9.1, 8.4, { digits: 1, betterWhenLower: true })).toBe('▼0.7');
+  it('排名：數字變小是進步 → 🔺（符號是語意方向，不是數值方向）', () => {
+    expect(delta(8.4, 9.1, { digits: 1, betterWhenLower: true })).toBe('🔺0.7');
+    expect(delta(9.1, 8.4, { digits: 1, betterWhenLower: true })).toBe('-0.7');
   });
 });
 
@@ -110,7 +110,7 @@ describe('Slack table blocks', () => {
   it('總表：第一列是表頭、欄數一致、主題名是連結', () => {
     const t = summaryTable(rows);
     expect(t.type).toBe('table');
-    expect(t.rows[0].map((c) => c.text)).toEqual(['主題', '收錄', '曝光', '點擊', '排名', '狀態']);
+    expect(t.rows[0].map((c) => c.text)).toEqual(['主題', '收錄（篇）', '曝光（次）', '點擊（次）', '排名（名）', '狀態']);
     expect(t.rows.every((r) => r.length === 6)).toBe(true);
     expect(t.column_settings).toHaveLength(6);
     const first = t.rows[1][0];
@@ -120,8 +120,8 @@ describe('Slack table blocks', () => {
 
   it('總表：數字帶千分位與週比較', () => {
     const t = summaryTable(rows);
-    expect(t.rows[1][2].text).toBe('3,412 ▲220');
-    expect(t.rows[1][4].text).toBe('31.2 ▲0.4'); // 31.64 → 31.24＝排名進步，語意方向要顯示 ▲
+    expect(t.rows[1][2].text).toBe('3,412 🔺220');
+    expect(t.rows[1][4].text).toBe('31.2 🔺0.4'); // 31.64 → 31.24＝排名進步，語意方向要顯示 ▲
   });
 
   it('Slack 上限：100 列、20 欄', () => {

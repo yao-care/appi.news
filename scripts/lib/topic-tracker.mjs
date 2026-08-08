@@ -124,11 +124,12 @@ export function topicStatus({ recent90, impressions, prevImpressions }) {
 const nf = (n) => Number(n || 0).toLocaleString('en-US');
 
 /**
- * 與上週的差：▲/▼ + 絕對值；持平或無資料回 '—'。
+ * 與上週的差。持平或無資料回 '—'。
  *
- * 🔴 箭頭是**語意方向**，不是數值方向：▲＝好消息、▼＝壞消息。
- * 曝光/點擊變多是好事（數值升＝▲）；**平均排名數字變小才是進步**，所以排名欄要傳
- * `betterWhenLower: true`，否則「8.4 ▼0.7」會被讀成退步——實際上那是進步（2026-08-08 站長指出）。
+ * 🔴 符號是**語意方向、不是數值方向**：好消息用 🔺（醒目），壞消息用 `-`（低調）。
+ * 站長 2026-08-08 指定這種不對稱寫法：漲的時候要跳出來，跌的時候不要一片紅。
+ * 曝光/點擊變多＝好；**平均排名數字變小才是進步**，所以排名欄要傳 `betterWhenLower: true`，
+ * 否則「8.4 -0.7」會被讀成退步——實際上那是進步。
  */
 export function delta(cur, prev, { digits = 0, betterWhenLower = false } = {}) {
   const a = Number(cur || 0), b = Number(prev || 0);
@@ -136,7 +137,7 @@ export function delta(cur, prev, { digits = 0, betterWhenLower = false } = {}) {
   if (!Number.isFinite(d) || Math.abs(d) < (digits ? 0.05 : 0.5)) return '—';
   const v = digits ? Math.abs(d).toFixed(digits) : nf(Math.round(Math.abs(d)));
   const better = betterWhenLower ? d < 0 : d > 0;
-  return `${better ? '▲' : '▼'}${v}`;
+  return better ? `🔺${v}` : `-${v}`;
 }
 
 /** 「值 ▲差」一格。排名的差要反過來讀（數字變小是進步），所以另外標。 */
@@ -151,7 +152,9 @@ const linkCell = (text, url) => ({
  * clicks, prevClicks, position, prevPosition, status }]，呼叫端已排序。
  */
 export function summaryTable(rows) {
-  const header = ['主題', '收錄', '曝光', '點擊', '排名', '狀態'].map(cell);
+  // 表頭帶單位（站長 2026-08-08）：用括號單位而不是「收錄篇數」，省欄寬又講清楚量的是什麼。
+  // 「與上週對照」的說明不塞表頭（會把主題欄擠窄），放在訊息開頭那行說明。
+  const header = ['主題', '收錄（篇）', '曝光（次）', '點擊（次）', '排名（名）', '狀態'].map(cell);
   const body = rows.map((r) => [
     linkCell(r.title, r.url),
     cell(nf(r.members)),

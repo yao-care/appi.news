@@ -198,15 +198,16 @@ async function main() {
 
   // ① 主層總表
   const period = `${cur.start} ~ ${cur.end}`;
-  const head = `📊 *主題總表*　${period}\n曝光/點擊/排名為各主題收錄文章加總，與前一週相比。`;
+  // 說明放訊息 text（Slack 顯示在表格上方），不塞進表頭——塞表頭會把主題欄擠窄。
+  // 🔴 粗體 closing `*` 後面只能接 ASCII 空白或換行，接全形空白會讓 `*` 原樣外露（週報踩過）。
+  const head = `📊 *主題總表* ${period}\n曝光／點擊／排名＝各主題收錄文章加總，與前一週相比（🔺進步、-退步）。`;
   const r = await post({
     token, channel: TOPIC_CHANNEL,
-    text: `📊 主題總表 ${period}`,
+    text: head,
     table: summaryTable(rows),
     fallback: summaryFallbackText(rows),
   });
-  // 表格前的說明另發一則會洗版，改成把說明放 text（Slack 會顯示在 blocks 之前的通知列）。
-  console.log(`總表已發（${rows.length} 個主題）ts=${r.ts}｜${head.split('\n')[0]}`);
+  console.log(`總表已發（${rows.length} 個主題）ts=${r.ts}`);
 
   // ② thread：新主題建父訊息；既有主題只在成員有增減時回覆
   for (const job of threadJobs) {

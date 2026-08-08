@@ -17,8 +17,8 @@
 //   node scripts/forum-radar.mjs --go      # 完整流程
 //   node scripts/forum-radar.mjs --go --max 12   # 限制送進 LLM 的候選數（預設 40）
 
-import { writeFileSync, readFileSync, readdirSync, mkdtempSync } from 'node:fs';
-import { tmpdir } from 'node:os';
+import { writeFileSync, readFileSync, readdirSync, mkdtempSync, mkdirSync } from 'node:fs';
+import { tmpdir, homedir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
@@ -37,6 +37,24 @@ const arg = (n, d) => {
   const i = process.argv.indexOf(`--${n}`);
   return i >= 0 ? process.argv[i + 1] : d;
 };
+
+// 全板抓取失敗的告警節流（同一波故障最多 6 小時報一次）。與 forum-seen 同一個 state 目錄。
+const FETCH_ALERT_PATH = join(
+  process.env.XDG_STATE_HOME || join(homedir(), '.local', 'state'),
+  'appi-news', 'forum-fetch-alert.json',
+);
+const ALERT_COOLDOWN_MS = 6 * 3600 * 1000;
+
+function shouldAlertFetchFailure(now = Date.now()) {
+  let last = 0;
+  try { last = JSON.parse(readFileSync(FETCH_ALERT_PATH, 'utf8')).lastAlertMs || 0; } catch { /* 沒帳本＝沒報過 */ }
+  if (now - last < ALERT_COOLDOWN_MS) return false;
+  try {
+    mkdirSync(join(FETCH_ALERT_PATH, '..'), { recursive: true });
+    writeFileSync(FETCH_ALERT_PATH, JSON.stringify({ lastAlertMs: now }));
+  } catch { /* 寫不進去也照報，寧可多報不可不報 */ }
+  return true;
+}
 
 const CATEGORY_NAMES = {
   tech: '科技', finance: '財經', health: '健康',
@@ -245,6 +263,19 @@ async function main() {
   console.log(`掃 ${scanned} 板／候選 ${candidates.length}／扣帳本後新題 ${fresh.length}`);
   if (failures.length) {
     console.log(`抓取失敗 ${failures.length} 板：${failures.map((f) => f.board).join(', ')}`);
+  }
+
+  // 🔴 「全部板都抓不到」≠「今天沒有熱題」，但兩者在下面都走「安靜結束」——2026-08-06 起
+  // PTT 對本機 IP 連線逾時，本線每小時空跑、完全靜默沒人發現。全軍覆沒要出聲，但每小時
+  // 喊一次會洗頻，所以節流：同一波故障最多每 6 小時報一次（狀態在 git 外帳本）。
+  if (candidates.length === 0 && failures.length >= scanned && scanned > 0) {
+    if (shouldAlertFetchFailure()) {
+      console.log(`FETCH_ALL_FAILED ${failures.length}/${scanned}`);
+      console.log('FORUM_RESULT=FAIL'); // → .sh 判定失敗 → ❌ 進 dev 台
+      process.exitCode = 1;
+      return;
+    }
+    console.log(`（全板抓取失敗，但 6 小時內已報過一次，本輪靜默）`);
   }
 
   // 沒有新題就收工——**這是每小時跑也不燒額度的關鍵**，不要改成「照樣問一次 LLM」。

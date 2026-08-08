@@ -32,7 +32,7 @@ import {
 } from './lib/slack-interaction.mjs';
 import { validateJob } from './lib/newsroom-job.mjs';
 import { postMessage } from './lib/slack.mjs';
-import { SLACK_CHANNEL, NEWSROOM_AUTHORIZED_SLACK_USERS, channelForCategory, DEV_CHANNEL } from './lib/report-config.mjs';
+import { SLACK_CHANNEL, NEWSROOM_AUTHORIZED_SLACK_USERS, channelForCategory, DEV_CHANNEL, isAlert } from './lib/report-config.mjs';
 import {
   parseSlackEvent,
   buildIssueBody,
@@ -184,8 +184,11 @@ async function slackApi(method, body) {
 }
 
 // 訊息預設發到分類頻道（傳 channel 覆寫）；未指定分類落到預設頻道。
-const notify = (text, channel = SLACK_CHANNEL) => postMessage({ token: BOT_TOKEN, channel, text }).catch(() => {});
-const notifyBlocks = (text, blocks, channel = SLACK_CHANNEL) => postMessage({ token: BOT_TOKEN, channel, text, blocks }).catch(() => {});
+// 🔴 例外：❌/⚠️ 開頭的失敗/略過訊息一律強制 dev 台（無視傳進來的 channel），與 cron 端同一條規則，
+//    判準集中在 report-config.mjs 的 isAlert，別在各呼叫點各自判斷。
+const dest = (text, channel) => (isAlert(text) ? DEV_CHANNEL : channel);
+const notify = (text, channel = SLACK_CHANNEL) => postMessage({ token: BOT_TOKEN, channel: dest(text, channel), text }).catch(() => {});
+const notifyBlocks = (text, blocks, channel = SLACK_CHANNEL) => postMessage({ token: BOT_TOKEN, channel: dest(text, channel), text, blocks }).catch(() => {});
 
 /** 佇列任務的顯示名（write 用標題、publish 用標題或 slug）。 */
 const taskLabel = (task) => (task.type === 'publish' ? task.title || task.slug : task.job?.title || '（未命名）');

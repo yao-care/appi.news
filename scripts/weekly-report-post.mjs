@@ -8,7 +8,7 @@ import { readFileSync } from 'node:fs';
 import { postMessage } from './lib/slack.mjs';
 import { weeklyReportBlocks } from './lib/weekly-blocks.mjs';
 import { suggestionBlocks } from './lib/suggestion-blocks.mjs';
-import { SLACK_CHANNEL } from './lib/report-config.mjs';
+import { SLACK_CHANNEL, DEV_CHANNEL, isAlert } from './lib/report-config.mjs';
 
 const [, , payloadPath] = process.argv;
 const token = process.env.SLACK_BOT_TOKEN;
@@ -21,7 +21,9 @@ const extra = suggestionBlocks(suggestions);
 const blocks = [...base, ...extra];
 
 try {
-  const r = await postMessage({ token, channel: SLACK_CHANNEL, text, blocks: blocks.length ? blocks : undefined });
+  // 週報本體固定作者群；⚠️ 週報失敗哨兵屬告警 → dev 台（見 report-config.mjs）。
+  const channel = isAlert(text) ? DEV_CHANNEL : SLACK_CHANNEL;
+  const r = await postMessage({ token, channel, text, blocks: blocks.length ? blocks : undefined });
   console.log('sent ts=' + r.ts);
 } catch (e) {
   console.error(String(e.message || e));

@@ -65,6 +65,7 @@ description: APPI News 颱風停班停課即時守望。檢查人事行政總處
    - 帶 `--slug` 是關鍵：它讓下一次有變更時，`EPISODE_SLUG` 指回同一篇 → 走滾動更新而不是新建。新建與滾動更新都照這樣 record（slug 相同、簽章更新）。
    - 失敗就不要 record（讓下次重試）。
 
-## 步驟 5：失敗處理（失敗→生活台，與本線一致；不發作者群、不發 dev）
-抓不到官方頁、解析失敗、gate 未過：把 `{ "text": "⚠️ 颱風停班課守望失敗：<原因一句>", "category": "lifestyle" }` 寫到 `/tmp/typhoon-fail.json`，跑 `node scripts/slack-post.mjs /tmp/typhoon-fail.json`（**payload 帶 `category:"lifestyle"` → 發到生活台**）。
-- 頻道紀律：**成功判定「無停班課」安靜結束、不發任何訊息**（步驟 2 exit 3）；**有停班課→生活台**（發佈鈕，由 notify-pending-draft 處理）；**失敗→生活台**。**dev 台只放 @bot 開發需求，颱風線一律不發 dev。**
+## 步驟 5：失敗處理（失敗→dev 台）
+抓不到官方頁、解析失敗、gate 未過：把 `{ "text": "⚠️ 颱風停班課守望失敗：<原因一句>" }` 寫到 `/tmp/typhoon-fail.json`，跑 `node scripts/slack-post.mjs /tmp/typhoon-fail.json`。
+**訊息開頭一定要是 ⚠️ 或 ❌**——`slack-post` 看到這兩個開頭就強制送 dev 台。不必也不要帶 `category`。
+- 頻道紀律：**成功判定「無停班課」安靜結束、不發任何訊息**（步驟 2 exit 3）；**有停班課→生活台**（發佈鈕，由 notify-pending-draft 處理）；**失敗／略過→dev 台**（全站統一，2026-08-08 起）。

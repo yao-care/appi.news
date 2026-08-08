@@ -12,7 +12,7 @@ import { pathToFileURL } from 'node:url';
 import { postMessage } from './lib/slack.mjs';
 import { buildPublishButton } from './lib/slack-interaction.mjs';
 import { buildDoneMessage } from './slack-actions-server.mjs';
-import { channelForCategory } from './lib/report-config.mjs';
+import { routeChannel } from './lib/report-config.mjs';
 
 async function main() {
   const resultPath = process.argv[2];
@@ -50,7 +50,7 @@ async function main() {
     ];
   }
 
-  const channel = channelForCategory(result.category); // 路由到對應分類頻道（如生活）
+  const channel = routeChannel({ text, category: result.category }); // 分類頻道（如生活）；⚠️/❌ 開頭則進 dev
   const r = await postMessage({ token, channel, text, blocks });
   console.log('sent ts=' + r.ts);
 }

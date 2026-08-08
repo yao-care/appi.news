@@ -62,12 +62,17 @@ pnpm growth:audit
 | ③ 發送入口 | `scripts/slack-post.mjs`、`scripts/cron-report.mjs`、`scripts/notify-pending-draft.mjs`、`scripts/weekly-report-post.mjs` | 每則訊息「落到哪一台」的判斷邏輯（四支規則不同，見下） |
 | ④ 內容組裝 | `scripts/lib/suggestion-blocks.mjs`（建議方向＋「我要寫這題」鈕）、`scripts/lib/weekly-blocks.mjs`（週報版面）、`scripts/lib/slack-interaction.mjs`（看法 modal、發佈鈕）、`scripts/lib/devbot.mjs`（需求單鈕）、`scripts/slack-actions-server.mjs` 的 `buildDoneMessage()` 與內嵌通知字串 | 文案、版面、按鈕 |
 
+**🔴 全站最高優先的一條規則（2026-08-08 站長裁示，無例外）**：**訊息開頭是 `❌` 或 `⚠️`＝失敗／略過，一律強制發 dev 台**，無視 `--category`、`payload.category`、甚至明確傳進來的 channel。判準只有一處＝`report-config.mjs` 的 `isAlert()`／`routeChannel()`，四支入口與互動 server 都接同一個函式。**所以新產線不必再自己記得帶 `--dev`——把開頭 emoji 寫對就好**；`.sh` 裡既有的 `--category X` 對告警訊息已無作用（留著無害）。分類台自此只留「有產出、人要看的東西」。
+
 **③ 四支入口的路由優先序（這是契約，改了要一併檢查所有呼叫端）**：
 
-- `slack-post.mjs`：明確 channelId 參數 ＞ `authors`/`default`（強制作者群）＞ `payload.category` ＞ **第一則 suggestion 的 category** ＞ 預設作者群。
-- `cron-report.mjs`：`--dev`（維運／系統訊號）＞ `--category`（分類台）＞ 預設作者群（值勤回報）。
-- `notify-pending-draft.mjs`：一律 `channelForCategory(result.category)`；待審草稿附「✅ 發佈這篇」鈕。
-- `weekly-report-post.mjs`：**寫死作者群**、不走分類路由（否則會被第一則 suggestion 的 category 帶走）。
+- `slack-post.mjs`：**`isAlert` → dev** ＞ 明確 channelId 參數 ＞ `authors`/`default`（強制作者群）＞ `payload.category` ＞ **第一則 suggestion 的 category** ＞ 預設作者群。
+- `cron-report.mjs`：**`isAlert` → dev** ＞ `--dev`（維運／系統訊號）＞ `--category`（分類台）＞ 預設作者群（值勤回報）。
+- `notify-pending-draft.mjs`：`routeChannel({ text, category: result.category })`；待審草稿附「✅ 發佈這篇」鈕。
+- `weekly-report-post.mjs`：**`isAlert` → dev**，其餘**寫死作者群**、不走分類路由（否則會被第一則 suggestion 的 category 帶走）。
+- `slack-actions-server.mjs`：`notify()`／`notifyBlocks()` 內建同一條 `isAlert` 覆寫（產文失敗、核可上線失敗、未開始、互動錯誤、開 modal 失敗都因此進 dev）。
+
+**上架回報一律帶連結**：任何「自動上架 N 篇」訊息都必須列出每篇的標題＋網址（各線的 `PUBLISHED=<url> ｜ <title>` 行 → `.sh` 組成 `• 標題\n  <url>`），**不可只報篇數**。已上架的文章不要用 `suggestionBlocks` 渲染——那是給「還沒寫的候選」用的，沒有連結而且會掛上「我要寫這題」鈕。
 
 **🔴 三個逃出 `report-config.mjs` 的孤島**——只改頻道對照表不會動到它們：
 

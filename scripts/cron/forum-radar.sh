@@ -38,7 +38,10 @@ if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|FORU
   # 有上架才回報 dev 台；各分類台的內容回報由 forum-radar.mjs 自己發。
   if grep -q 'FORUM_RESULT=PUBLISHED' <<<"$out"; then
     n="$(grep -o 'FORUM_RESULT=PUBLISHED [0-9]*' <<<"$out" | awk '{print $2}')"
-    node scripts/cron-report.mjs --dev --text "🧭 $TASK：自動上架 ${n} 篇（$ts）" || true
+    # 上架回報一律帶連結（PUBLISHED=<url> ｜ <title>，格式同其他自動線）。
+    pub=$(grep '^PUBLISHED=' <<<"$out" | sed 's/^PUBLISHED=//')
+    list=$(awk -F' ｜ ' '{printf "• %s\n  %s\n", $2, $1}' <<<"$pub")
+    node scripts/cron-report.mjs --dev --text "$(printf '🧭 %s：自動上架 %s 篇（%s）：\n%s' "$TASK" "$n" "$ts" "$list")" || true
   fi
   exit 0
 fi

@@ -38,22 +38,68 @@ const arg = (n, d) => {
   return i >= 0 ? process.argv[i + 1] : d;
 };
 
-// 全板抓取失敗的告警節流（同一波故障最多 6 小時報一次）。與 forum-seen 同一個 state 目錄。
+// 全板抓取失敗的告警節流。與 forum-seen 同一個 state 目錄。
+//
+// 🔴 **一波故障的第 1 輪一定要報，之後才節流**——只看「距上次報過多久」會讓
+// 「剛壞掉」與「壞了一整夜」長得一模一樣。2026-08-08 站長收到一則 ❌ 無法判斷那是
+// 單次還是連續第 8 輪，得翻 log 才知道，所以訊息一律帶連續輪數與起始時間。
 const FETCH_ALERT_PATH = join(
   process.env.XDG_STATE_HOME || join(homedir(), '.local', 'state'),
   'appi-news', 'forum-fetch-alert.json',
 );
 const ALERT_COOLDOWN_MS = 6 * 3600 * 1000;
+// 隔太久沒失敗就算新一波（cron 停擺／主機重開後不該把舊 streak 接著算）。
+const STREAK_GAP_MS = 6 * 3600 * 1000;
 
-function shouldAlertFetchFailure(now = Date.now()) {
-  let last = 0;
-  try { last = JSON.parse(readFileSync(FETCH_ALERT_PATH, 'utf8')).lastAlertMs || 0; } catch { /* 沒帳本＝沒報過 */ }
-  if (now - last < ALERT_COOLDOWN_MS) return false;
+function readAlertState() {
+  try { return JSON.parse(readFileSync(FETCH_ALERT_PATH, 'utf8')) || {}; } catch { return {}; }
+}
+
+function writeAlertState(state) {
   try {
     mkdirSync(join(FETCH_ALERT_PATH, '..'), { recursive: true });
-    writeFileSync(FETCH_ALERT_PATH, JSON.stringify({ lastAlertMs: now }));
-  } catch { /* 寫不進去也照報，寧可多報不可不報 */ }
-  return true;
+    writeFileSync(FETCH_ALERT_PATH, JSON.stringify(state));
+  } catch { /* 寫不進去不影響本輪判斷，寧可多報不可不報 */ }
+}
+
+/**
+ * 記一次「全板抓取失敗」，回報這一波的連續狀況與這輪該不該出聲。
+ * 寫不進帳本時 streak 會退回 1、shouldAlert 恆真——寧可多報不可不報。
+ *
+ * `persist=false`（dry-run）只算不寫：手動跑 dry-run 剛好撞上故障時，
+ * 若寫進帳本會把 lastAlertMs 蓋成現在，**吃掉下一輪 cron 的告警**。
+ */
+export function noteFetchFailure(now = Date.now(), { persist = true } = {}) {
+  const prev = readAlertState();
+  const continued = prev.lastFailMs && now - prev.lastFailMs <= STREAK_GAP_MS;
+  const streak = continued ? (prev.streak || 1) + 1 : 1;
+  const streakStartMs = continued ? (prev.streakStartMs || now) : now;
+  // 第 1 輪一定報；同一波之後每 ALERT_COOLDOWN_MS 才再報一次。
+  const shouldAlert = streak === 1 || now - (prev.lastAlertMs || 0) >= ALERT_COOLDOWN_MS;
+  if (persist) {
+    writeAlertState({
+      streak,
+      streakStartMs,
+      lastFailMs: now,
+      lastAlertMs: shouldAlert ? now : (prev.lastAlertMs || 0),
+    });
+  }
+  return { streak, streakStartMs, shouldAlert, elapsedMs: now - streakStartMs };
+}
+
+/** 抓得到東西就結束這一波，下次失敗要從第 1 輪重新算（也才會立刻出聲）。 */
+export function clearFetchFailure() {
+  const prev = readAlertState();
+  if (prev.lastFailMs) writeAlertState({});
+}
+
+export function describeStreak({ streak, streakStartMs, elapsedMs }) {
+  const hours = elapsedMs / 3600000;
+  const span = hours < 1 ? '不到 1 小時' : `約 ${Math.round(hours)} 小時`;
+  const since = new Date(streakStartMs).toISOString().slice(0, 16).replace('T', ' ');
+  return streak === 1
+    ? '本波第 1 輪（剛開始失敗）'
+    : `連續第 ${streak} 輪、${span}（起於 ${since} UTC）`;
 }
 
 const CATEGORY_NAMES = {
@@ -267,15 +313,20 @@ async function main() {
 
   // 🔴 「全部板都抓不到」≠「今天沒有熱題」，但兩者在下面都走「安靜結束」——2026-08-06 起
   // PTT 對本機 IP 連線逾時，本線每小時空跑、完全靜默沒人發現。全軍覆沒要出聲，但每小時
-  // 喊一次會洗頻，所以節流：同一波故障最多每 6 小時報一次（狀態在 git 外帳本）。
-  if (candidates.length === 0 && failures.length >= scanned && scanned > 0) {
-    if (shouldAlertFetchFailure()) {
-      console.log(`FETCH_ALL_FAILED ${failures.length}/${scanned}`);
+  // 喊一次會洗頻，所以：**第 1 輪一定報**，同一波之後每 6 小時再報一次（狀態在 git 外帳本），
+  // 且訊息一律帶連續輪數與起始時間，讓收到的人不必翻 log 就知道壞多久了。
+  const allFailed = candidates.length === 0 && failures.length >= scanned && scanned > 0;
+  if (allFailed) {
+    const wave = noteFetchFailure(Date.now(), { persist: go }); // dry-run 只算不寫，免得吃掉 cron 的告警
+    if (wave.shouldAlert) {
+      console.log(`FETCH_ALL_FAILED ${failures.length}/${scanned}｜${describeStreak(wave)}`);
       console.log('FORUM_RESULT=FAIL'); // → .sh 判定失敗 → ❌ 進 dev 台
       process.exitCode = 1;
       return;
     }
-    console.log(`（全板抓取失敗，但 6 小時內已報過一次，本輪靜默）`);
+    console.log(`（全板抓取失敗｜${describeStreak(wave)}；6 小時內已報過一次，本輪靜默）`);
+  } else if (candidates.length > 0 && go) {
+    clearFetchFailure(); // 抓得到就結束這一波，下次壞掉才會立刻出聲
   }
 
   // 沒有新題就收工——**這是每小時跑也不燒額度的關鍵**，不要改成「照樣問一次 LLM」。

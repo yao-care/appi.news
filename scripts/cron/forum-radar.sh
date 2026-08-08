@@ -41,5 +41,7 @@ if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|FORU
   # 上架清單仍完整留在 /var/log/appi-news/forum-radar.log（PUBLISHED= 行），事後要查有紀錄。
   exit 0
 fi
-node scripts/cron-report.mjs --dev --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
+# tail 上限 800 而非 500：全板失敗的訊息含 30 個板名（約 470 bytes），500 只剩 30 bytes 餘裕，
+# 加一個看板就會從開頭切掉「掃 N 板」與連續輪數那幾行——那正是收到告警時最需要看的資訊。
+node scripts/cron-report.mjs --dev --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 800 <<<"$out")")" || true
 exit "$rc"

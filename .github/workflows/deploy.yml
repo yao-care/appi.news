@@ -156,17 +156,23 @@ jobs:
     if: failure()
     runs-on: ubuntu-latest
     steps:
+      # 取 checkout 只為了讀 report-config.mjs 的 DEV_CHANNEL——頻道 ID 的單一真實來源在那裡，
+      # 不抄進 workflow、也不再依賴 SLACK_CHANNEL_ID secret（2026-08-08：CI 告警與站上所有
+      # ❌/⚠️ 一樣收在 dev 台）。secret 仍留作退路，讀不到檔案時用它。
+      - uses: actions/checkout@v4
       - name: Notify Slack
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_CHANNEL_FALLBACK: ${{ secrets.SLACK_CHANNEL_ID }}
         run: |
+          SLACK_CHANNEL_ID="$(sed -n "s/^export const DEV_CHANNEL = '\([^']*\)'.*/\1/p" scripts/lib/report-config.mjs | head -1)"
+          [ -z "$SLACK_CHANNEL_ID" ] && SLACK_CHANNEL_ID="$SLACK_CHANNEL_FALLBACK"
           if [ -z "$SLACK_BOT_TOKEN" ] || [ -z "$SLACK_CHANNEL_ID" ]; then
-            echo "Slack secrets not set; skip notify."
+            echo "Slack token 或頻道取不到；skip notify."
             exit 0
           fi
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          TEXT="🚨 ${{ github.repository }} 部署被守門擋下（commit ${GITHUB_SHA::7}）。請修正設計規範/建置錯誤後 push，workflow 會自動重審。詳情： $RUN_URL"
+          TEXT="❌ ${{ github.repository }} 部署被守門擋下（commit ${GITHUB_SHA::7}）。請修正設計規範/建置錯誤後 push，workflow 會自動重審。詳情： $RUN_URL"
           curl -sf -X POST https://slack.com/api/chat.postMessage \
             -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
             -H 'Content-type: application/json; charset=utf-8' \

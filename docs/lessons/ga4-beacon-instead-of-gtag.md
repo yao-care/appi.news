@@ -59,6 +59,14 @@ page.on('request', (r) => {
 2. **邏輯層**：把**建置後**的 inline script 抽出來丟 `node:vm` 配假 DOM 跑（同 `ReadingBeacon` 的做法）：首訪、非正式網域、沿用舊 `_ga`、同 session 第二頁、逾時換 session、engagement 結算與不重複送、gtag 墊片、fragment 去除、站內/站外 referrer、utm 轉 `cs/cm/cn`。
 3. **效能層**：重跑同一套受控 A/B，確認 TBT 與 TTI 回到「等於沒有 analytics」的水準。
 
+**上線後的線上驗收（2026-08-08）**：真瀏覽器開線上文章頁，全頁**零第三方網域**、只有一發 collect，參數（含 `ep.content_group`）正確。PSI mobile 連抓到兩次暖跑（FCP 1.0s / 1.2s）：
+
+```
+score=100  LCP=1.7s  TBT=0ms  CLS=0  TTI=1.7s  bootup-time=0.0s
+```
+
+對照拆掉前的暖跑：TBT 140–215ms、gtag scripting 216–225ms。第三次是冷跑（FCP 5.7s、score 64、TBT 0）——**冷跑的 TBT 恆為 0，不能當證據**，只取 FCP<3s 的那幾次看。
+
 ## 怎麼避免重犯 / 相關
 
 - 🔴 **GA4 realtime API 有幾分鐘延遲，150 秒內查不到不代表沒收到**。第一次自我測試連查 10 次（150s）全是 0 rows，差點誤判「精簡參數集被 GA4 丟掉」；幾分鐘後再查，那批事件全都在。**判「有沒有收到」至少等 5 分鐘，而且要看 rows 總數**（rows=0 連別人的真流量都沒有，那是延遲；rows>0 卻沒有你的，才是真的沒收到）。

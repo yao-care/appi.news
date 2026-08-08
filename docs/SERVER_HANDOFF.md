@@ -58,7 +58,7 @@ pnpm growth:audit
 | 層 | 檔案 | 改這裡等於改什麼 |
 |---|---|---|
 | ① 投遞 | `scripts/lib/slack.mjs` 的 `postMessage()` | 所有 node 路徑的**唯一出口**（下面每一支 CLI 與互動 server 都走它） |
-| ② 收件對象 | `scripts/lib/report-config.mjs`：`SLACK_CHANNEL`（預設作者群）／`CATEGORY_CHANNELS`（一分類一台）／`DEV_CHANNEL`／`channelForCategory()`／`NEWSROOM_AUTHORIZED_SLACK_USERS`（誰按得動按鈕） | 頻道對照與授權名單的 SOT。**頻道 ID 只改這裡，永遠不要抄進任何文件** |
+| ② 收件對象 | `scripts/lib/report-config.mjs`：`SLACK_CHANNEL`（預設作者群）／`CATEGORY_CHANNELS`（一分類一台）／`DEV_CHANNEL`／`TOPIC_CHANNEL`（主題追蹤）／`channelForCategory()`／`NEWSROOM_AUTHORIZED_SLACK_USERS`（誰按得動按鈕） | 頻道對照與授權名單的 SOT。**頻道 ID 只改這裡，永遠不要抄進任何文件** |
 | ③ 發送入口 | `scripts/slack-post.mjs`、`scripts/cron-report.mjs`、`scripts/notify-pending-draft.mjs`、`scripts/weekly-report-post.mjs` | 每則訊息「落到哪一台」的判斷邏輯（四支規則不同，見下） |
 | ④ 內容組裝 | `scripts/lib/suggestion-blocks.mjs`（建議方向＋「我要寫這題」鈕）、`scripts/lib/weekly-blocks.mjs`（週報版面）、`scripts/lib/slack-interaction.mjs`（看法 modal、發佈鈕）、`scripts/lib/devbot.mjs`（需求單鈕）、`scripts/slack-actions-server.mjs` 的 `buildDoneMessage()` 與內嵌通知字串 | 文案、版面、按鈕 |
 
@@ -71,6 +71,8 @@ pnpm growth:audit
 - `notify-pending-draft.mjs`：`routeChannel({ text, category: result.category })`；待審草稿附「✅ 發佈這篇」鈕。
 - `weekly-report-post.mjs`：**`isAlert` → dev**，其餘**寫死作者群**、不走分類路由（否則會被第一則 suggestion 的 category 帶走）。
 - `slack-actions-server.mjs`：`notify()`／`notifyBlocks()` 內建同一條 `isAlert` 覆寫（產文失敗、核可上線失敗、未開始、互動錯誤、開 modal 失敗都因此進 dev）。
+
+**主題追蹤頻道（`TOPIC_CHANNEL`）的形狀是刻意的**（站長 2026-08-08 拍板）：每週**一則主題總表在主層**（唯一放成效的地方，數字＝各主題收錄文章的加總，不是主題頁自己），**每個主題一條 thread 只記收錄文章增減**，沒有增減就完全不回。刻意不做「一主題一頻道」——側欄會被幾十個低流量頻道塞爆。版面用 Slack 原生 `table` block（限 100 列／20 欄／全表 10,000 字元），工作區不支援時自動退回兩行制 mrkdwn；**不要退回用 `|` 排的假表格**（手機會崩，見 [`lessons/weekly-report-mobile-layout.md`](./lessons/weekly-report-mobile-layout.md)）。實作＝`scripts/topic-tracker.mjs`＋`scripts/lib/topic-tracker.mjs`（純轉換層，呈現規格寫在檔頭），thread_ts 與上次成員快照存在 `~/.config/appi-news/topic-threads.json`（git 外）。
 
 **上架回報一律帶連結**：任何「自動上架 N 篇」訊息都必須列出每篇的標題＋網址（各線的 `PUBLISHED=<url> ｜ <title>` 行 → `.sh` 組成 `• 標題\n  <url>`），**不可只報篇數**。已上架的文章不要用 `suggestionBlocks` 渲染——那是給「還沒寫的候選」用的，沒有連結而且會掛上「我要寫這題」鈕。
 

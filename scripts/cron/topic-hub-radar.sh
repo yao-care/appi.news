@@ -49,5 +49,9 @@ git push -q origin HEAD:main || {
 }
 gh workflow run deploy.yml --repo yao-care/appi.news --ref main >/dev/null 2>&1 || true
 
+# 新主題成立當下就在主題追蹤頻道開一條 thread（之後每週的成員異動都回在這串）。
+# 失敗不影響本線：下次 topic-tracker.sh 週跑時會自動補建。
+node scripts/topic-tracker.mjs --topic "$id" || true
+
 node scripts/cron-report.mjs --dev --text "$(printf '🗂 %s：新增主題中樞「%s」，收錄 %s 篇（%s）\nhttps://appi.news/topics/%s/\n（自動上線，要撤掉就把 src/content/topics/%s.md 的 status 改成 inactive）' "$TASK" "$title" "$count" "$ts" "$id" "$id")" || true
 exit 0

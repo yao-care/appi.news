@@ -20,6 +20,10 @@ export const CATEGORY_CHANNELS = {
 // 「請 claude 幫我做」開發頻道（讀此頻道訊息 → 跑 Claude）。
 export const DEV_CHANNEL = 'C0BC4JJDR0C';
 
+// 主題追蹤頻道（站長 2026-08-08 指定）：每週一則「主題總表」在主層，
+// 每個主題一條 thread 只記成員增減。刻意不一主題一頻道——側欄會被幾十個低流量頻道塞爆。
+export const TOPIC_CHANNEL = 'C0BNF97AXQX';
+
 /** 分類 → 發文頻道；未知/未給 → 預設頻道。 */
 export function channelForCategory(category) {
   return CATEGORY_CHANNELS[category] || SLACK_CHANNEL;

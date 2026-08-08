@@ -64,6 +64,7 @@
 | 成長規則覆蓋率（零內鏈幾篇、topics 空幾篇…） | `pnpm growth:lint:all`；排工作清單用 `node scripts/growth-lint.mjs --all --worst 30` |
 | 成長工作還剩多少沒做、下一批該做誰 | `pnpm growth:backlog`（含與上次快照的增減；每週一台北 09:00 由 cron 自動發 Slack 提醒） |
 | 主題中樞雷達這輪有沒有夠格的新主題 | `node scripts/topic-hub-radar.mjs`（dry-run；每週三台北 09:00 由 cron 自動建立並上線，門檻與帳本見該檔檔頭） |
+| 主題追蹤這週會報什麼（各主題成效與收錄異動） | `node scripts/topic-tracker.mjs --dry-run`（加 `--no-metrics` 可跳過 Google 只看成員；每週一台北 09:10 由 cron 發到主題追蹤頻道） |
 | 寫作成長規則的正本內容 | `node -e 'import("./scripts/lib/growth-prompt.mjs").then(m=>console.log(m.GROWTH_PROMPT))'` |
 | 線上效能／無障礙現況 | 依 [`PERFORMANCE.md`](./PERFORMANCE.md) §3 跑 PSI 對線上站 |
 
@@ -256,6 +257,7 @@
 | 成長工作項目與 SOP（B 站內導流／A 存量升級／C 回訪） | [`docs/growth-playbook.md`](./docs/growth-playbook.md) |
 | 存量批次回填工具（內鏈／常見問題／主題中樞） | `scripts/growth-backfill-links.mjs`、`scripts/backfill-faq.mjs`、`scripts/topic-hub-radar.mjs`（判準與踩過的坑＝[`docs/lessons/mechanical-backfill-traps.md`](./docs/lessons/mechanical-backfill-traps.md)）|
 | 主題中樞的 id 對照表（**id 進網址，上線後不能改**） | `scripts/lib/topic-hub-ids.json` |
+| 主題追蹤的呈現規格（總表欄位、thread 只記異動、table block 與退路） | `scripts/lib/topic-tracker.mjs` 檔頭（純轉換層）＋`scripts/topic-tracker.mjs`（I/O、帳本）|
 | 排程總表、各線來源與 Slack 行為 | [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
 | Slack 收件頻道／授權按鈕的人 | `scripts/lib/report-config.mjs`（`SLACK_CHANNEL`／`CATEGORY_CHANNELS`／`DEV_CHANNEL`／`NEWSROOM_AUTHORIZED_SLACK_USERS`；**ID 只改這裡、不抄進文件**）。全站發訊分層與改法＝[`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §Slack 發訊地圖 |
 | 數據／網路曝光量 | `scripts/weekly-data.mjs`＋`.claude/skills/weekly-report/`＋`scripts/lib/report-config.mjs` |

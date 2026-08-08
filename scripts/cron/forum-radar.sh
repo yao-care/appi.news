@@ -34,15 +34,11 @@ printf '%s\n' "$out"
 
 # 失敗偵測：rc 非 0，或輸出含 API/拒答/用量上限字樣（claude-appi 撞上限會 exit 0 只印訊息）。
 if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|FORUM_RESULT=FAIL|hit your .*limit|weekly limit|usage limit' <<<"$out"; then
-  # 每小時跑一次，**無新題是常態（一天大部分時段都是）→ 完全靜默**，否則會把 Slack 洗爆。
-  # 有上架才回報 dev 台；各分類台的內容回報由 forum-radar.mjs 自己發。
-  if grep -q 'FORUM_RESULT=PUBLISHED' <<<"$out"; then
-    n="$(grep -o 'FORUM_RESULT=PUBLISHED [0-9]*' <<<"$out" | awk '{print $2}')"
-    # 上架回報一律帶連結（PUBLISHED=<url> ｜ <title>，格式同其他自動線）。
-    pub=$(grep '^PUBLISHED=' <<<"$out" | sed 's/^PUBLISHED=//')
-    list=$(awk -F' ｜ ' '{printf "• %s\n  %s\n", $2, $1}' <<<"$pub")
-    node scripts/cron-report.mjs --dev --text "$(printf '🧭 %s：自動上架 %s 篇（%s）：\n%s' "$TASK" "$n" "$ts" "$list")" || true
-  fi
+  # 成功一律不發 Slack：
+  #   - 有上架 → **內容已經由 forum-radar.mjs 一篇一行帶連結報到各分類台**，dev 再收一份
+  #     跨分類總表是同一批東西講兩次（2026-08-08 拿掉；分類台放產出、dev 只放失敗與維運）。
+  #   - 沒有新熱題 → 每小時跑一次，一天大部分時段都是這個狀態，發了會洗爆頻道。
+  # 上架清單仍完整留在 /var/log/appi-news/forum-radar.log（PUBLISHED= 行），事後要查有紀錄。
   exit 0
 fi
 node scripts/cron-report.mjs --dev --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true

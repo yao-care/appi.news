@@ -53,5 +53,5 @@ gh workflow run deploy.yml --repo yao-care/appi.news --ref main >/dev/null 2>&1 
 # 失敗不影響本線：下次 topic-tracker.sh 週跑時會自動補建。
 node scripts/topic-tracker.mjs --topic "$id" || true
 
-node scripts/cron-report.mjs --dev --text "$(printf '🗂 %s：新增主題中樞「%s」，收錄 %s 篇（%s）\nhttps://appi.news/topics/%s/\n（自動上線，要撤掉就把 src/content/topics/%s.md 的 status 改成 inactive）' "$TASK" "$title" "$count" "$ts" "$id" "$id")" || true
+node scripts/cron-report.mjs --topics --text "$(printf '🗂 %s：新增主題中樞「%s」，收錄 %s 篇（%s）\nhttps://appi.news/topics/%s/\n（自動上線，要撤掉就把 src/content/topics/%s.md 的 status 改成 inactive）' "$TASK" "$title" "$count" "$ts" "$id" "$id")" || true
 exit 0

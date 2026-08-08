@@ -10,6 +10,7 @@ import {
   filterUnseen,
   mergeSeen,
   BOARDS,
+  parsePttWebBoard,
 } from './forum-signals.mjs';
 
 describe('政治過濾（第二層）', () => {
@@ -189,7 +190,8 @@ describe('collectCandidates（注入 fetch，不打網路）', () => {
 
     const { candidates, failures } = await collectCandidates({ boards, fetchImpl });
     expect(candidates).toHaveLength(1);
-    expect(failures).toEqual([{ board: 'Tainan', error: 'HTTP 503' }]);
+    // 錯誤字串會帶來源名（兩個來源都試過才算失敗），對維運判讀「是哪個來源掛了」很重要。
+    expect(failures).toEqual([{ board: 'Tainan', error: 'ptt.cc HTTP 503' }]);
   });
 
   it('perBoardLimit 限制每板取幾則', async () => {
@@ -263,5 +265,31 @@ describe('看板白名單本身就是第一層政治過濾', () => {
       expect(valid.has(b.category)).toBe(true);
       expect(b.minPush).toBeGreaterThan(0);
     }
+  });
+});
+
+describe('parsePttWebBoard — pttweb.cc 版面（2026-08-08 起的主來源）', () => {
+  // 精簡自實際頁面：一篇正常文 + 一個非文章區塊（頁首），驗「推文數／完整標題／連結」三件事。
+  const html = `
+<div class="e7-container"><div class="e7-left"><div class="e7-recommendScore text-no-wrap f13"><i e7description="推文:"></i>
+      36
+    </div></div><div class="e7-right ml-2"><div class="e7-right-top-container"><a href="/bbs/PC_Shopping/M.1786066012.A.C76" class="e7-article-default"><span class="e7-title my-1 e7-link-to-article e7-article-default"><span class="e7-show-if-device-is-not-xs"><span>[情報] 技嘉顯示卡加裝散熱塊</span></span><span class="e7-show-if-device-is-xs">
+      技嘉顯示卡加裝散熱塊
+    </span></span></a></div></div></div>
+<div class="e7-container"><div class="e7-left">頁首區塊，沒有文章連結</div></div>`;
+
+  it('抓到推文數與「含標籤」的完整標題（手機版 span 會拿掉 [標籤]，不可抓那個）', () => {
+    const posts = parsePttWebBoard(html);
+    expect(posts).toHaveLength(1);
+    expect(posts[0]).toMatchObject({
+      push: 36,
+      title: '[情報] 技嘉顯示卡加裝散熱塊',
+      href: 'https://www.pttweb.cc/bbs/PC_Shopping/M.1786066012.A.C76',
+    });
+  });
+
+  it('沒有文章連結的區塊直接略過，空 HTML 回空陣列', () => {
+    expect(parsePttWebBoard('')).toEqual([]);
+    expect(parsePttWebBoard('<div class="e7-container">nothing</div>')).toEqual([]);
   });
 });

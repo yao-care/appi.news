@@ -6,6 +6,7 @@ import {
   SLACK_CHANNEL,
   CATEGORY_CHANNELS,
   DEV_CHANNEL,
+  TOPIC_CHANNEL,
   channelForCategory,
   isAlert,
   routeChannel,
@@ -54,6 +55,10 @@ describe('isAlert / routeChannel — 失敗與略過一律進 dev', () => {
   it('告警無視 category，一律 dev', () => {
     expect(routeChannel({ text: '❌ 焦點/ESG 失敗', category: 'focus' })).toBe(DEV_CHANNEL);
     expect(routeChannel({ text: '⚠️ 無法建 worktree，略過本次', category: 'lifestyle' })).toBe(DEV_CHANNEL);
+  });
+  it('--topics 走主題追蹤台，但告警仍優先進 dev', () => {
+    expect(routeChannel({ text: '🗂 新增主題中樞「X」', topics: true })).toBe(TOPIC_CHANNEL);
+    expect(routeChannel({ text: '❌ 主題中樞雷達失敗', topics: true })).toBe(DEV_CHANNEL);
   });
   it('非告警照舊走分類 / 預設 / --dev', () => {
     expect(routeChannel({ text: '💻 科技台自動上架 2 篇', category: 'tech' })).toBe(CATEGORY_CHANNELS.tech);

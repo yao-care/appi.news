@@ -41,9 +41,10 @@ export function isAlert(text) {
   return ALERT_PREFIXES.some((p) => t.startsWith(p));
 }
 
-/** 統一路由：告警 ＞ 明示 dev ＞ 分類頻道 ＞ 預設作者群。 */
-export function routeChannel({ text, category, dev } = {}) {
+/** 統一路由：告警 ＞ 明示 dev ＞ 主題追蹤台 ＞ 分類頻道 ＞ 預設作者群。 */
+export function routeChannel({ text, category, dev, topics } = {}) {
   if (isAlert(text) || dev) return DEV_CHANNEL;
+  if (topics) return TOPIC_CHANNEL;
   return channelForCategory(category);
 }
 

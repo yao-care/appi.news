@@ -153,8 +153,9 @@ const linkCell = (text, url) => ({
  */
 export function summaryTable(rows) {
   // 表頭帶單位（站長 2026-08-08）：用括號單位而不是「收錄篇數」，省欄寬又講清楚量的是什麼。
-  // 「與上週對照」的說明不塞表頭（會把主題欄擠窄），放在訊息開頭那行說明。
-  const header = ['主題', '收錄（篇）', '曝光（次）', '點擊（次）', '排名（名）', '狀態'].map(cell);
+  // 「排名」不加單位——「名」字本身就是單位，寫成「排名（名）」是重複。
+  // 也不要在表頭或表格上方掛「與上週對照」的說明文字（站長指定），符號自己會講。
+  const header = ['主題', '收錄（篇）', '曝光（次）', '點擊（次）', '排名', '狀態'].map(cell);
   const body = rows.map((r) => [
     linkCell(r.title, r.url),
     cell(nf(r.members)),

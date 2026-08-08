@@ -110,7 +110,7 @@ describe('Slack table blocks', () => {
   it('總表：第一列是表頭、欄數一致、主題名是連結', () => {
     const t = summaryTable(rows);
     expect(t.type).toBe('table');
-    expect(t.rows[0].map((c) => c.text)).toEqual(['主題', '收錄（篇）', '曝光（次）', '點擊（次）', '排名（名）', '狀態']);
+    expect(t.rows[0].map((c) => c.text)).toEqual(['主題', '收錄（篇）', '曝光（次）', '點擊（次）', '排名', '狀態']);
     expect(t.rows.every((r) => r.length === 6)).toBe(true);
     expect(t.column_settings).toHaveLength(6);
     const first = t.rows[1][0];

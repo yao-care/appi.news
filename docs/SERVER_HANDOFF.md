@@ -72,6 +72,8 @@ pnpm growth:audit
 - `weekly-report-post.mjs`：**`isAlert` → dev**，其餘**寫死作者群**、不走分類路由（否則會被第一則 suggestion 的 category 帶走）。
 - `slack-actions-server.mjs`：`notify()`／`notifyBlocks()` 內建同一條 `isAlert` 覆寫（產文失敗、核可上線失敗、未開始、互動錯誤、開 modal 失敗都因此進 dev）。
 
+**主題中樞雷達的三個設定 2026-08-08 複核後維持不變**（別再重新討論）：門檻 **≥15 篇**不降（薄中樞頁對 SEO 反效果）、**每次最多開 1 個**不放寬（自動上線寧可慢）、**不改成按鈕核可**（把關已全在機器端：四道門檻＋文案逐條驗證＋build/check:links）。要撤掉某個主題就把 `src/content/topics/<id>.md` 的 `status` 改 `inactive`。成立訊息發**主題追蹤頻道**（dev 只留失敗），並在該頻道開一條 thread。判準正本＝`scripts/topic-hub-radar.mjs` 檔頭（內聚門檻實際預設 0.045，可用 `HUB_MIN_COHESION` 覆寫）。
+
 **主題追蹤頻道（`TOPIC_CHANNEL`）的形狀是刻意的**（站長 2026-08-08 拍板）：每週**一則主題總表在主層**（唯一放成效的地方，數字＝各主題收錄文章的加總，不是主題頁自己），**每個主題一條 thread 只記收錄文章增減**，沒有增減就完全不回。刻意不做「一主題一頻道」——側欄會被幾十個低流量頻道塞爆。版面用 Slack 原生 `table` block（限 100 列／20 欄／全表 10,000 字元），工作區不支援時自動退回兩行制 mrkdwn；**不要退回用 `|` 排的假表格**（手機會崩，見 [`lessons/weekly-report-mobile-layout.md`](./lessons/weekly-report-mobile-layout.md)）。實作＝`scripts/topic-tracker.mjs`＋`scripts/lib/topic-tracker.mjs`（純轉換層，呈現規格寫在檔頭），thread_ts 與上次成員快照存在 `~/.config/appi-news/topic-threads.json`（git 外）。
 
 **主題層每週派工會寫進 seo-ops 的 playbook**：同一支 cron 在發完總表後，用純規則（不喚 LLM）挑**最多 3 個**主題標的，發一則「🛠 本週主題派工」到同一頻道，並覆寫 `/root/seo-ops/playbooks/appi.news.md` 的 `playbook:topics` 區塊——反思層與大腦層每天把**整份 playbook** 塞進 prompt，寫在那裡它們才看得到、才會真的去改內容。三件事別踩：①**只覆寫 `playbook:topics` 區塊**，人工共筆的 `playbook:strategy` 區塊不碰；②派工的「動作」必須落在 playbook 的 `reflect:scope`／`brain:scope` 白名單內，否則 `reflect-guard` 會擋（主題頁文案正本 `src/content/topics/**` 已於 2026-08-08 加進反思白名單）；③🔴 停滯主題**不派給大腦**——那是選題問題，大腦層無權新增內容。上週派工的成效回顧也寫在同一區塊。

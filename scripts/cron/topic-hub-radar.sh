@@ -42,7 +42,7 @@ if ! pnpm build >/tmp/hub-build.log 2>&1 || ! pnpm check:links >>/tmp/hub-build.
 fi
 
 git add -A
-git commit -q -m "$(printf 'feat(topics): 新增主題中樞「%s」，收錄 %s 篇\n\n由 scripts/cron/topic-hub-radar.sh 自動偵測並建立（門檻 ≥15 篇、內聚 ≥0.08、\n近 90 天有新文、GSC 有曝光）。判準見 scripts/topic-hub-radar.mjs 檔頭。' "$title" "$count")" || exit 0
+git commit -q -m "$(printf 'feat(topics): 新增主題中樞「%s」，收錄 %s 篇\n\n由 scripts/cron/topic-hub-radar.sh 自動偵測並建立（門檻 ≥15 篇、內聚 ≥0.045、\n近 90 天有新文、GSC 有曝光）。判準見 scripts/topic-hub-radar.mjs 檔頭。' "$title" "$count")" || exit 0
 git push -q origin HEAD:main || {
   node scripts/cron-report.mjs --dev --text "❌ $TASK：push 失敗（$ts）" || true
   exit 1

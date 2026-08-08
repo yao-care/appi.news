@@ -198,9 +198,9 @@ async function main() {
 
   // ① 主層總表
   const period = `${cur.start} ~ ${cur.end}`;
-  // 說明放訊息 text（Slack 顯示在表格上方），不塞進表頭——塞表頭會把主題欄擠窄。
+  // 只有標題與期間，不加任何說明文字（站長 2026-08-08 指定：符號自己會講，不要贅述）。
   // 🔴 粗體 closing `*` 後面只能接 ASCII 空白或換行，接全形空白會讓 `*` 原樣外露（週報踩過）。
-  const head = `📊 *主題總表* ${period}\n曝光／點擊／排名＝各主題收錄文章加總，與前一週相比（🔺進步、-退步）。`;
+  const head = `📊 *主題總表* ${period}`;
   const r = await post({
     token, channel: TOPIC_CHANNEL,
     text: head,

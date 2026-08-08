@@ -57,7 +57,7 @@
 | [acute-care-line-traps.md](./acute-care-line-traps.md) | 批次產線三個「失敗訊號長得像成功」的坑：`status: draft` **不會產出任何頁面**（getStaticPaths 兩邊都排除它），要能預覽得用 `scheduled` + 遠未來 publishDate；模型把 slug 包在反引號／粗體裡讓解析器對不到檔案，**解析失敗 ≠ 沒產出**，指定題目時 slug 必等於 topic.key、要有不依賴模型回報的事實查核；孤兒稿繞過逐篇 gate 混到整批 build 才被 check:links 擋下、一顆老鼠屎擋住 26 篇，階段之間要有獨立守門；合規要機械檢查不要人工抽驗，且劑量規則要排除 mg/dL 等濃度單位免誤判 |
 | [annual-observance-scheduling.md](./annual-observance-scheduling.md) | 年度紀念日產線：`status: scheduled` 不會自己上線（`isPublic` 比對 build 當下時間，6 小時 cron 對不上 06:17，要另排一支準點戳 deploy 的 cron）；「時間戳準」與「可見時刻準」二選一；坊間紀念日對照表三筆過期/錯誤（癲癇日、高血壓日、肥胖日），照抄會每年錯一次；「提前 N 天寫」掃單日會沒有重試能力，要掃區間＋冪等帳本；浮動日期要寫成規則不能寫死 |
 | [commit-hygiene-shared-checkout.md](./commit-hygiene-shared-checkout.md) | 共用 checkout 別把別人 WIP 掃進 commit：只 stage 文章產物 / 用 pathspec |
-| [weekly-report-mobile-layout.md](./weekly-report-mobile-layout.md) | 週報手機排版崩掉：模型手刻多欄塞一行；版面收歸決定論渲染器，模型只填數據+notes |
+| [weekly-report-mobile-layout.md](./weekly-report-mobile-layout.md) | 週報手機排版崩掉：模型手刻多欄塞一行；版面收歸決定論渲染器，模型只填數據+notes（2026-08 追記：Slack 已有原生 table block，禁的是假表格不是表格） |
 | [deterministic-fetch-llm-only-writes.md](./deterministic-fetch-llm-only-writes.md) | 自動線抓資料別交給 LLM agent（慢/發散翻頁/燒額度）；改固定抓→LLM 只寫；exit124 是逾時非額度、cron 別擠同一 5h session 視窗 |
 | [youtube-video-digest.md](./youtube-video-digest.md) | 「影片變文章」拿不到逐字稿：主機 IP 被 YouTube 擋（yt-dlp 五種 client 全掛）、台灣媒體站對境外 403；改用官方頻道 RSS 當線索＋≥2 個獨立來源交叉查證才寫（否則 SKIP＝洗稿防線），影片用本地縮圖 facade 不嵌 iframe 保 CLS 0；「我已經有某工具」要在主機驗證 |
 | [article-draft-consumer.md](./article-draft-consumer.md) | /admin 寫作任務有生產端沒消費端：`article-draft` issue 靜默孤兒化；補消費端用 newsroom `--stage` 開 PR、kind=factual 待審、放寬分類白名單給真人下單 |

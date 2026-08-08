@@ -195,3 +195,124 @@ export function summaryFallbackText(rows) {
 export function updateFallbackText(changes) {
   return changes.map((c) => `${c.sign} <${c.url}|${c.title}>（${c.category || '—'}）`).join('\n');
 }
+
+// ── 每週主題優化計畫（純規則，不喚 LLM）─────────────────────────────────────
+// 產出會寫進 seo-ops 的站台 playbook，成為反思層/大腦層每天的 context（兩層都把整份
+// playbook 塞進 prompt）。所以「動作」必須落在 playbook 白名單內，否則 reflect-guard 會擋：
+//   反思(reflect:scope)＝src/pages/**、src/components/seo/**、src/content/topics/**（頁組/內鏈/主題頁文案）
+//   大腦(brain:scope)  ＝src/content/articles/**（單篇 meta/內文）
+// 每週最多派 3 個標的——playbook 站規是「每天最多改 3 個檔」，給一長串等於沒給。
+
+/** 主題頁自己的訊號 → 該派哪一層、做什麼。回 null 代表這個主題本週沒有可行動訊號。 */
+export function pickLever(row) {
+  const p = row.page || {};
+  const imp = Number(p.impressions || 0);
+  const clicks = Number(p.clicks || 0);
+  const pos = p.position == null ? null : Number(p.position);
+
+  // ① 排 5–15 名（striking distance）：改主題頁 description 貼近查詢詞，最高槓桿。
+  if (pos != null && pos >= 5 && pos <= 15 && clicks < 3) {
+    return { owner: '反思', action: '改主題頁 description 貼近查詢詞', reason: `主題頁排 ${pos.toFixed(1)} 名、點擊 ${clicks}`, priority: 3 };
+  }
+  // ② 有曝光但 0 點擊：同樣先動 meta，並補 FAQ 結構化資料。
+  if (imp >= 20 && clicks === 0) {
+    return { owner: '反思', action: '改主題頁 description ＋ 補 FAQ 結構化資料', reason: `主題頁曝光 ${imp}、點擊 0`, priority: 2 };
+  }
+  // ③ 收錄夠厚但主題頁自己沒曝光：是入口問題不是內容問題，補內鏈密度。
+  if (row.members >= 15 && imp < 10) {
+    return { owner: '反思', action: '補分類頁／相關文章的主題入口內鏈', reason: `收錄 ${row.members} 篇但主題頁曝光僅 ${imp}`, priority: 1 };
+  }
+  // ④ 成員文章有需求、主題頁吃不到：交給大腦改該主題內最有機會的單篇 meta。
+  if (row.impressions >= 100 && clicks === 0) {
+    return { owner: '大腦', action: '挑該主題內曝光最高、點擊為 0 的成員文章改 meta', reason: `收錄文章加總曝光 ${row.impressions}、主題頁 0 點擊`, priority: 1 };
+  }
+  return null;
+}
+
+/**
+ * 依訊號挑本週標的。rows 需含 page（主題頁自己的 GSC 數字）。
+ * 回 { targets:[{id,title,url,owner,action,reason}], stale:[{id,title}] }。
+ * stale（🔴 近 90 天 0 篇）**不派給大腦**——那是選題問題，大腦層無權新增內容，列出來給編輯部。
+ */
+export function optimizationPlan(rows, { max = 3 } = {}) {
+  const scored = [];
+  for (const r of rows) {
+    const lever = pickLever(r);
+    if (lever) scored.push({ ...r, ...lever });
+  }
+  scored.sort((a, b) => b.priority - a.priority || b.impressions - a.impressions);
+  return {
+    targets: scored.slice(0, max).map((t) => ({
+      id: t.id, title: t.title, url: t.url, owner: t.owner, action: t.action, reason: t.reason,
+    })),
+    stale: rows.filter((r) => r.status === '🔴').map((r) => ({ id: r.id, title: r.title })),
+  };
+}
+
+/** 上週派的標的這週有沒有起色（曝光/排名比較）。prevTargets 來自帳本。 */
+export function planReview(prevTargets = [], rows = []) {
+  const byId = new Map(rows.map((r) => [r.id, r]));
+  return prevTargets.map((t) => {
+    const now = byId.get(t.id);
+    if (!now) return { id: t.id, title: t.title, verdict: '主題已下架或改名' };
+    const impNow = Number(now.page?.impressions || 0);
+    const posNow = now.page?.position == null ? null : Number(now.page.position);
+    const impWas = Number(t.impressions || 0);
+    const posWas = t.position == null ? null : Number(t.position);
+    const better = impNow > impWas || (posNow != null && posWas != null && posNow < posWas);
+    return {
+      id: t.id,
+      title: t.title,
+      verdict: `${better ? '有起色' : '沒起色'}：曝光 ${impWas}→${impNow}${posWas != null && posNow != null ? `、排名 ${posWas.toFixed(1)}→${posNow.toFixed(1)}` : ''}`,
+    };
+  });
+}
+
+/** 計畫 → Slack 表（主題／負責層／動作）。 */
+export function planTable(targets) {
+  const header = ['主題', '交給', '本週動作'].map(cell);
+  const body = targets.map((t) => [linkCell(t.title, t.url), cell(t.owner), cell(t.action)]);
+  return {
+    type: 'table',
+    column_settings: [{ is_wrapped: true }, { align: 'center' }, { is_wrapped: true }],
+    rows: [header, ...body],
+  };
+}
+
+export function planFallbackText(targets) {
+  return targets.map((t) => `• <${t.url}|${t.title}>（${t.owner}）\n　${t.action}——${t.reason}`).join('\n');
+}
+
+/** 計畫 → playbook 用的 markdown（每週覆寫，內容要能被反思/大腦當指令讀）。 */
+export function planMarkdown({ period, targets, stale, review = [] }) {
+  const lines = [`> 本區塊由 \`scripts/topic-tracker.mjs\` 每週一自動覆寫（資料期間 ${period}），下面是本週主題層的派工。`, ''];
+  if (!targets.length) {
+    lines.push('- 本週沒有可行動的主題訊號（都沒到 striking distance、也沒有入口缺口），主題層不派工。');
+  } else {
+    for (const t of targets) {
+      lines.push(`- **${t.title}**（\`/topics/${t.id}/\`）→ **${t.owner}**：${t.action}。依據：${t.reason}。`);
+    }
+  }
+  if (review.length) {
+    lines.push('', '上週派工回顧：');
+    for (const r of review) lines.push(`- ${r.title}：${r.verdict}`);
+  }
+  if (stale.length) {
+    lines.push('', `停滯主題（近 90 天 0 篇新文，**不派給大腦**，屬選題問題）：${stale.map((s) => s.title).join('、')}`);
+  }
+  return lines.join('\n');
+}
+
+/**
+ * 把計畫寫回 playbook 的專屬區塊（不碰人工共筆的 strategy 區塊）。
+ * 找不到標記就附加到檔尾。回新的檔案內容（純函式，寫檔由呼叫端負責）。
+ */
+export const PLAN_MARK_START = '<!-- playbook:topics:start 每週主題優化計畫（由 appi.news 的 topic-tracker.mjs 自動覆寫；人工要調整改那支的規則）-->';
+export const PLAN_MARK_END = '<!-- playbook:topics:end -->';
+
+export function upsertPlanBlock(playbook, markdown) {
+  const block = `${PLAN_MARK_START}\n${markdown}\n${PLAN_MARK_END}`;
+  const re = new RegExp(`${PLAN_MARK_START.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\s\\S]*?${PLAN_MARK_END}`);
+  if (re.test(playbook)) return playbook.replace(re, block);
+  return `${playbook.trimEnd()}\n\n# 主題層每週派工\n\n${block}\n`;
+}

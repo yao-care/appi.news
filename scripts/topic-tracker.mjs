@@ -31,6 +31,7 @@ import { loadServiceAccount, getAccessToken, ga4RunReport, gscQuery } from './li
 import {
   parseArticle, parseTopic, membersOf, diffMembers, aggregate, recentCount, topicStatus,
   summaryTable, updateTable, summaryFallbackText, updateFallbackText,
+  optimizationPlan, planReview, planTable, planFallbackText, planMarkdown, upsertPlanBlock,
 } from './lib/topic-tracker.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -46,6 +47,9 @@ const arg = (f) => { const i = argv.indexOf(`--${f}`); return i >= 0 ? argv[i + 
 const DRY = has('dry-run');
 const NO_METRICS = has('no-metrics');
 const ONLY_TOPIC = arg('topic');
+// 每週派工要寫進 seo-ops 的站台 playbook——反思層與大腦層每天都把整份 playbook 塞進 prompt，
+// 寫在這裡它們才看得到。只覆寫 playbook:topics 專屬區塊，人工共筆的 strategy 區塊不碰。
+const PLAYBOOK = arg('playbook') || '/root/seo-ops/playbooks/appi.news.md';
 
 const readLedger = () => (existsSync(LEDGER) ? JSON.parse(readFileSync(LEDGER, 'utf8')) : {});
 function saveLedger(l) {
@@ -159,11 +163,15 @@ async function main() {
     const members = membersOf(t, articles);
     const a = aggregate(members, curM);
     const b = aggregate(members, prevM);
+    const hubPath = `/topics/${t.id}/`;
     rows.push({
       id: t.id,
       title: t.title,
       url: `${SITE}/topics/${t.id}/`,
       members: members.length,
+      // 主題頁「自己」的數字：總表不顯示（量太小），但派工要靠它判斷 striking distance／入口缺口。
+      page: curM[hubPath] || {},
+      prevPage: prevM[hubPath] || {},
       impressions: a.impressions, prevImpressions: b.impressions,
       clicks: a.clicks, prevClicks: b.clicks,
       position: a.position, prevPosition: b.position,
@@ -198,6 +206,11 @@ async function main() {
 
   // ① 主層總表
   const period = `${cur.start} ~ ${cur.end}`;
+  if (has('plan-only')) { // 總表已發、只要補派工（或臨時重跑派工）時用
+    await postPlan({ token, rows, ledger, period, curEnd: cur.end });
+    saveLedger(ledger);
+    return;
+  }
   // 只有標題與期間，不加任何說明文字（站長 2026-08-08 指定：符號自己會講，不要贅述）。
   // 🔴 粗體 closing `*` 後面只能接 ASCII 空白或換行，接全形空白會讓 `*` 原樣外露（週報踩過）。
   const head = `📊 *主題總表* ${period}`;
@@ -208,6 +221,9 @@ async function main() {
     fallback: summaryFallbackText(rows),
   });
   console.log(`總表已發（${rows.length} 個主題）ts=${r.ts}`);
+
+  // ①-2 本週派工：純規則挑 ≤3 個標的 → 發 Slack ＋ 寫進 seo-ops playbook（反思/大腦每天讀）
+  await postPlan({ token, rows, ledger, period, curEnd: cur.end });
 
   // ② thread：新主題建父訊息；既有主題只在成員有增減時回覆
   for (const job of threadJobs) {
@@ -228,6 +244,39 @@ async function main() {
   }
 
   saveLedger(ledger);
+}
+
+/** 本週派工：挑標的 → 發 Slack → 寫 playbook → 記帳本（供下週回顧「做了有沒有起色」）。 */
+async function postPlan({ token, rows, ledger, period, curEnd }) {
+  const plan = optimizationPlan(rows);
+  const review = planReview(ledger.__plan?.targets || [], rows);
+  if (plan.targets.length) {
+    await post({
+      token, channel: TOPIC_CHANNEL,
+      text: `🛠 *本週主題派工* ${period}`,
+      table: planTable(plan.targets),
+      fallback: planFallbackText(plan.targets),
+    });
+  } else {
+    console.log('本週無可行動主題訊號，不發派工訊息');
+  }
+  writePlaybook(planMarkdown({ period, targets: plan.targets, stale: plan.stale, review }));
+  ledger.__plan = {
+    date: curEnd,
+    targets: plan.targets.map((t) => {
+      const row = rows.find((x) => x.id === t.id);
+      return { id: t.id, title: t.title, impressions: Number(row?.page?.impressions || 0), position: row?.page?.position ?? null };
+    }),
+  };
+}
+
+/** 把派工寫回 seo-ops playbook 的 topics 區塊。playbook 不在（別台主機/沒裝 seo-ops）就跳過。 */
+function writePlaybook(markdown) {
+  if (!existsSync(PLAYBOOK)) { console.error(`⚠ 找不到 playbook（${PLAYBOOK}），略過寫入`); return; }
+  const next = upsertPlanBlock(readFileSync(PLAYBOOK, 'utf8'), markdown);
+  if (DRY) { console.log(`\n──[dry] playbook 區塊\n${markdown}`); return; }
+  writeFileSync(PLAYBOOK, next);
+  console.log(`已更新 playbook 派工區塊：${PLAYBOOK}`);
 }
 
 /** thread 父訊息（主題卡片，一個主題只發一次）。 */

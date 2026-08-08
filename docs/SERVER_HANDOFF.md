@@ -51,6 +51,50 @@ pnpm growth:audit
 | cron 進入點 | `scripts/cron/weekly-report.sh` | `source` 金鑰 → `claude -p "/weekly-report"` |
 | 設計文件 | `docs/superpowers/specs/2026-06-16-weekly-report-slack-design.md`、`docs/superpowers/plans/2026-06-16-weekly-report-slack.md` | spec / 實作計畫 |
 
+## Slack 發訊地圖（要改「發給誰」或「發什麼」先讀這段）
+
+上一節只講週報那條線；**全站所有 Slack 訊息**（cron 值勤回報、分類台上架通知、dev 台維運訊號、按鈕與 modal、投稿轉信、CI 告警）的分層長這樣。**改哪一層決定影響範圍**：
+
+| 層 | 檔案 | 改這裡等於改什麼 |
+|---|---|---|
+| ① 投遞 | `scripts/lib/slack.mjs` 的 `postMessage()` | 所有 node 路徑的**唯一出口**（下面每一支 CLI 與互動 server 都走它） |
+| ② 收件對象 | `scripts/lib/report-config.mjs`：`SLACK_CHANNEL`（預設作者群）／`CATEGORY_CHANNELS`（一分類一台）／`DEV_CHANNEL`／`channelForCategory()`／`NEWSROOM_AUTHORIZED_SLACK_USERS`（誰按得動按鈕） | 頻道對照與授權名單的 SOT。**頻道 ID 只改這裡，永遠不要抄進任何文件** |
+| ③ 發送入口 | `scripts/slack-post.mjs`、`scripts/cron-report.mjs`、`scripts/notify-pending-draft.mjs`、`scripts/weekly-report-post.mjs` | 每則訊息「落到哪一台」的判斷邏輯（四支規則不同，見下） |
+| ④ 內容組裝 | `scripts/lib/suggestion-blocks.mjs`（建議方向＋「我要寫這題」鈕）、`scripts/lib/weekly-blocks.mjs`（週報版面）、`scripts/lib/slack-interaction.mjs`（看法 modal、發佈鈕）、`scripts/lib/devbot.mjs`（需求單鈕）、`scripts/slack-actions-server.mjs` 的 `buildDoneMessage()` 與內嵌通知字串 | 文案、版面、按鈕 |
+
+**③ 四支入口的路由優先序（這是契約，改了要一併檢查所有呼叫端）**：
+
+- `slack-post.mjs`：明確 channelId 參數 ＞ `authors`/`default`（強制作者群）＞ `payload.category` ＞ **第一則 suggestion 的 category** ＞ 預設作者群。
+- `cron-report.mjs`：`--dev`（維運／系統訊號）＞ `--category`（分類台）＞ 預設作者群（值勤回報）。
+- `notify-pending-draft.mjs`：一律 `channelForCategory(result.category)`；待審草稿附「✅ 發佈這篇」鈕。
+- `weekly-report-post.mjs`：**寫死作者群**、不走分類路由（否則會被第一則 suggestion 的 category 帶走）。
+
+**🔴 三個逃出 `report-config.mjs` 的孤島**——只改頻道對照表不會動到它們：
+
+1. `workers/sports-submission/src/index.ts`：Cloudflare Worker 自己 fetch `chat.postMessage`，token 是 wrangler secret、頻道是 `wrangler.toml` 的 `SLACK_CHANNEL` var。
+2. `.github/workflows/deploy.yml` 的 `notify-failure` job：curl 直打，頻道來自 repo secret `SLACK_CHANNEL_ID`（secrets 未設就靜默跳過）。
+3. `scripts/slack-actions-server.mjs` 的 `slackApi()`：`views.open`／`auth.test`／`conversations.replies` 自己 fetch，不經 `slack.mjs`。
+
+**互動端（pm2 `appinews-slack-actions`）三種對象混在同一支**：`notify()`／`notifyBlocks()` 預設作者群、多數呼叫傳 `taskChannel()`／`channelForCategory()` 覆寫成分類台；`devReply()` 固定發 `DEV_CHANNEL` 且帶 `thread_ts`（在討論串內回）。文案逐條內嵌在該檔。
+
+**改動前一律先跑盤點，別照抄任何列舉**（清單會長）：
+
+```bash
+# 真正打 Slack API 的地方（含 worker 與 CI）
+grep -rn "lib/slack.mjs\|slack.com/api" --include=*.mjs --include=*.ts --include=*.yml . | grep -v node_modules
+# 誰在叫四支發送入口（cron .sh / skills / 其他 node）
+grep -rln "cron-report.mjs\|slack-post.mjs\|notify-pending-draft.mjs\|weekly-report-post.mjs" scripts .claude .github
+# 互動 server 的逐條發訊點
+grep -n "notify(\|notifyBlocks(\|devReply(" scripts/slack-actions-server.mjs
+```
+
+呼叫端的分佈：**cron `.sh`** 在「完成／無產出／失敗」三態都回報（內容線→分類台、維運線→dev 台、週報→作者群，例外見下方 §cron 總表後的說明）；**skills** 自己寫 payload 再叫 CLI（tech-radar→`slack-post`、weekly-report→`weekly-report-post`、lifestyle-typhoon／deals→`notify-pending-draft`、aeo-radar／cited-teardown→`cron-report --dev --stdin`）；另有少數 node 腳本在程式內 spawn CLI（`forum-radar.mjs`、`growth-backlog.mjs`）、或只印文字到 stdout 由 `.sh` pipe 給 `cron-report --stdin`（`data-heartbeat.mjs`、`dashboard-post.mjs`、`brain-checkup.mjs`）。
+
+**改完必做**：
+
+- `pnpm test`——行為被單元測試釘住（`scripts/lib/slack*.test.mjs`、`report-config.test.mjs`、`suggestion-blocks.test.mjs`、`weekly-blocks.test.mjs`、`devbot.test.mjs`、`slack-actions-server.test.mjs`、`workers/sports-submission/src/index.test.ts`）。
+- 動到 `slack-actions-server.mjs` 或任何 `scripts/cron/*.sh`：push → `/root/appi.news-publisher` `git pull` → `pm2 restart appinews-slack-actions`。**只 push 不 pull、或只 restart 不 pull，都會跑到舊碼。**
+
 ## 規則（務必遵守，違反會出事）
 
 - 🔴 **push 不會觸發部署（2026-08-06 起）**：只有**每 15 分鐘排程**與 `gh workflow run deploy.yml`。排程會先過 `check` job（`scripts/deploy-needed.mjs`）判斷有無變動——①上次成功部署後有新 commit ②有排程稿 `publishDate` 到期——都沒有就幾秒結束、不 build 不重傳 artifact。**產線 push 完不等於上線**，要驗線上就自己戳一次再等（實際可能 20–30 分鐘，GitHub 排程常誤點）。為什麼這樣改＝[`lessons/deploy-cadence.md`](./lessons/deploy-cadence.md)。

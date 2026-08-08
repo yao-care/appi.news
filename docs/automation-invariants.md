@@ -18,6 +18,7 @@
 - 🔴 **新增 `scripts/cron/*.sh` 一定要用 `REPO="$(cd "$(dirname "$0")/../.." && pwd)"`**（本檔在 `scripts/cron/` 底下，往上**兩層**才是 repo 根）。少一層會變成 `scripts/scripts/…` MODULE_NOT_FOUND，**而且連 `cron-report.mjs` 都找不到 → 失敗告警一起啞掉，變成完全靜默的空跑**（2026-08-06 forum-radar 踩過，連空跑兩輪才被發現）。**新排程上線後，第一次觸發時間過了就去看 `/var/log/appi-news/<job>.log`**，不要等它自己回報。
 - 會動 git 工作區的 cron 各自開臨時 worktree（`scripts/cron/_worktree.sh` 的 `cron_enter_worktree`，off `origin/main`）→ 並行、互不洗檔，**不用 flock**。純資料腳本（`indexing-submit.sh`）不走 worktree。
 - 改 `.sh` 包裝或發佈端程式（`slack-actions-server.mjs` 等）：**push → `/root/appi.news-publisher` `git pull` →（server 端）`pm2 restart appinews-slack-actions`**。只 push 不 pull，cron 跑的還是舊 `.sh`；只 restart 不 pull，server 載到舊碼。
+- 🔴 **要發 Slack 一律走既有的四支入口**（`cron-report.mjs`／`slack-post.mjs`／`notify-pending-draft.mjs`／`weekly-report-post.mjs`），**不可在 `.sh`、skill 或新腳本裡自己 curl `chat.postMessage`、也不可寫死頻道 ID**——頻道與授權名單的 SOT 是 `scripts/lib/report-config.mjs`，繞過它的訊息在改頻道時必然被漏掉。改發訊對象或文案前先讀 [`SERVER_HANDOFF.md`](./SERVER_HANDOFF.md) §Slack 發訊地圖（四層分工、各入口路由優先序、盤點指令、三個已知逃出頻道表的孤島）。
 - **配圖硬性 gate 不可繞過**：缺 `coverImage`／封面檔不存在／內文 0 圖／**封面與內文圖重複** → 中止不發、留工作區待補。
 - **產線層級要禁 AI 生圖，就在該線的 `.sh` 與協調器**兩處**都設 `NO_AI_IMAGE=1`**（論壇雷達的作法）：只設一處，另一處被改掉就破功，而事後從檔案驗不出來。
 - **要禁 AI 生圖就設 `NO_AI_IMAGE=1`**（`get-image.mjs` 的兩個生圖進入點會直接 throw，含 `--generate`）。**只在 prompt 寫「不要生圖」不算數**，模型會忽略；而且 sharp 會剝掉圖片 metadata，事後**無法**驗證哪張是生成的，只能整批重跑。禁生圖後封面與內文容易撞成同一張圖庫照（同 query 回同一張），取圖的 `--query` 必須錯開。為什麼＝[`lessons/no-ai-image-batch.md`](./lessons/no-ai-image-batch.md)。

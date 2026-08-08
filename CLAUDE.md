@@ -31,6 +31,7 @@
 | 優化／更新專案本體：效能、版面、schema、build、部署 | 🛠 開發 | 本檔 §動手前驗證＋§效能鐵則 → [`PERFORMANCE.md`](./PERFORMANCE.md)（動字型／CSS／圖／build 前必讀）→ [`README.md`](./README.md) §開發 |
 | 手動新增內容：文章、作者、專欄、分類 | ✍ 內容 | [`README.md`](./README.md) §新增內容 → `src/content.config.ts`、`src/config/categories.ts`、`src/config/tags.ts` |
 | 自動發文：選題雷達 → Slack → 自動產文 → 排程上線 | 🤖 自動化 | 本檔 §自動發文 pipeline → [`docs/automation-invariants.md`](./docs/automation-invariants.md) → [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
+| 改 Slack 訊息：發給誰（頻道路由）、發什麼（文案／版面／按鈕）、誰能按 | 🤖 自動化 | [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §Slack 發訊地圖（四層分工＋盤點指令＋三個逃出頻道表的孤島）→ 頻道 SOT＝`scripts/lib/report-config.mjs` |
 | 了解網路曝光量：流量、搜尋曝光、AI 轉介、週報 | 📊 數據 | 本檔 §數據與網路曝光量 → `.claude/skills/weekly-report/SKILL.md` → [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
 | 讓流量長大：站內導流、存量頁升級、回訪與品牌 | 📈 成長 | [`docs/growth-playbook.md`](./docs/growth-playbook.md)（工作項目＋SOP，先跑 `pnpm growth:audit`）→ 為什麼＝[`docs/lessons/growth-three-gates.md`](./docs/lessons/growth-three-gates.md) |
 | 判斷「某項 SEO／存量優化做了沒」 | 🤖 自動化 | 🔴 **先確認 appi.news 自己也掛在 seo-ops**：`/etc/cron.d/seo-ops` 每天跑 collect／reflect／**brain**（`--site appi.news`，用 `claude-appi` 帳號），大腦層會**實際改單篇內容、跑 gate、commit、push**，產出就是 `[auto-claude-seo]` 開頭的 commit。查法見下方 §查現況。**不查這條就回答「沒做過」必錯**（2026-08-07 踩過）|
@@ -58,6 +59,7 @@
 | 警消線實際掃哪些縣市、幾家 | `node -e 'import("./scripts/lib/lifestyle-police.mjs").then(m=>console.log(m.POLICE_SOURCES.length, m.POLICE_SOURCES.map(s=>s.city).join("、")))'` |
 | 站上掛了哪些官方社群連結（`org.sameAs`） | `sed -n '/sameAs: \[/,/\] as string\[\]/p' src/config/site.ts` |
 | 流量／搜尋曝光現況 | `node scripts/weekly-data.mjs`（**禁杜撰數據**，一律以實跑輸出為準） |
+| 站上哪些地方會發 Slack | `grep -rn "lib/slack.mjs\|slack.com/api" --include=*.mjs --include=*.ts --include=*.yml . \| grep -v node_modules`（打 API 的出口）／`grep -rln "cron-report.mjs\|slack-post.mjs\|notify-pending-draft.mjs\|weekly-report-post.mjs" scripts .claude .github`（呼叫端）。分層與改法＝[`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §Slack 發訊地圖 |
 | 三關體檢：頁面分散度／回訪與品牌／週線與世代 | `pnpm growth:audit`（可加 `--gate1`／`--gate2`／`--gate3`／`--cohort`） |
 | 成長規則覆蓋率（零內鏈幾篇、topics 空幾篇…） | `pnpm growth:lint:all`；排工作清單用 `node scripts/growth-lint.mjs --all --worst 30` |
 | 成長工作還剩多少沒做、下一批該做誰 | `pnpm growth:backlog`（含與上次快照的增減；每週一台北 09:00 由 cron 自動發 Slack 提醒） |
@@ -255,5 +257,6 @@
 | 存量批次回填工具（內鏈／常見問題／主題中樞） | `scripts/growth-backfill-links.mjs`、`scripts/backfill-faq.mjs`、`scripts/topic-hub-radar.mjs`（判準與踩過的坑＝[`docs/lessons/mechanical-backfill-traps.md`](./docs/lessons/mechanical-backfill-traps.md)）|
 | 主題中樞的 id 對照表（**id 進網址，上線後不能改**） | `scripts/lib/topic-hub-ids.json` |
 | 排程總表、各線來源與 Slack 行為 | [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
+| Slack 收件頻道／授權按鈕的人 | `scripts/lib/report-config.mjs`（`SLACK_CHANNEL`／`CATEGORY_CHANNELS`／`DEV_CHANNEL`／`NEWSROOM_AUTHORIZED_SLACK_USERS`；**ID 只改這裡、不抄進文件**）。全站發訊分層與改法＝[`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §Slack 發訊地圖 |
 | 數據／網路曝光量 | `scripts/weekly-data.mjs`＋`.claude/skills/weekly-report/`＋`scripts/lib/report-config.mjs` |
 | 機密金鑰位置 | `.env`（PSI）、`~/.config/appi-news/`（GA4／GSC／Slack）— 永不進 repo |

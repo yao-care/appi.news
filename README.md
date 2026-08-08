@@ -22,6 +22,7 @@
 | 優化/更新專案本體：效能、版面、schema、build、部署 | 🛠 開發 | [`PERFORMANCE.md`](./PERFORMANCE.md)（動字型/CSS/圖/build 前必讀）→ [`CLAUDE.md`](./CLAUDE.md)（開發紀律）→ 本檔 §開發、§效能驗收、§目錄結構 |
 | 手動新增內容：文章、作者、專欄、分類 | ✍ 內容 | 本檔 §新增內容 → `src/content.config.ts`、`src/config/categories.ts`（schema/分類唯一準據） |
 | 自動發文：選題雷達 → Slack → 自動產文 → 排程上線 | 🤖 自動化 | 本檔 §自動發文流程（全貌）→ `.claude/skills/tech-radar/`＋`.claude/skills/newsroom/` |
+| 改 Slack 訊息：發給誰（頻道路由）、發什麼（文案／版面／按鈕）、誰能按 | 🤖 自動化 | [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §Slack 發訊地圖（四層分工＋盤點指令）→ 頻道與授權名單 SOT＝`scripts/lib/report-config.mjs` |
 | 了解網路曝光量：流量、搜尋曝光、AI 轉介、週報 | 📊 數據 | 本檔 §了解網路曝光量 → `.claude/skills/weekly-report/SKILL.md` → [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
 | 讓流量長大：站內導流、存量頁升級、回訪與品牌 | 📈 成長 | [`docs/growth-playbook.md`](./docs/growth-playbook.md)（工作項目＋SOP，先跑 `pnpm growth:audit`）→ 為什麼＝[`docs/lessons/growth-three-gates.md`](./docs/lessons/growth-three-gates.md) |
 
@@ -351,7 +352,7 @@ MIGRATION_NOTES.md  WordPress 遷移工具與對照
 | [`docs/lessons/`](./docs/lessons/) | 全員 | **歷史經驗正本**：踩過的坑與重大決策（問題→原因→解法）；說明文件的「為什麼」都連這裡 |
 | [`MIGRATION_NOTES.md`](./MIGRATION_NOTES.md) | 維護者 | WordPress 遷移工具、欄位/分類對照、遷移統計（2026-06-09 歷史紀錄） |
 | [`docs/automation-invariants.md`](./docs/automation-invariants.md) | 全員（動任何 cron／自動產文前） | 自動化不可違反規則的單一正本 |
-| [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) | server 端 AI/維運 | 自動化在 server 上的開機前置、金鑰擺放、cron、週報＋自動產文操作 |
+| [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) | server 端 AI/維運 | 自動化在 server 上的開機前置、金鑰擺放、cron、週報＋自動產文操作、**§Slack 發訊地圖**（全站發訊分層與改法） |
 | [`docs/content-todo.md`](./docs/content-todo.md) | 編輯團隊 | 內容待補清單（缺 references / highlights / 圖等） |
 | [`docs/content-plan/`](./docs/content-plan/) | 編輯團隊 | 內容遷移與選題 worklist |
 | [`.claude/skills/newsroom/SKILL.md`](./.claude/skills/newsroom/SKILL.md) | AI / 作者 | 日更起草流程、文風與引用查證規則 |

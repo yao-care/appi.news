@@ -30,9 +30,26 @@
 
 **驗證方式**：契約合規用腳本逐條硬驗建置產物（型別、`additionalProperties`、`pattern`、排序、featured 涵蓋），不靠肉眼看 JSON；beacon 行為把**建置後**的 inline script 抽出來丟進 `node:vm` 配假 DOM 跑四個情境（正式網域帶 `#r=`、localhost、無 `#r=`、畸形 short_id）。第 3 點那個 bug 就是這個模擬器抓到的。
 
+## 追記（2026-08-08）：文章頁的 mobile TBT 是 GA4 撐起來的，不是 0
+
+上線後照規矩對文章頁複測，結果比預期麻煩，過程值得留下來——**下一個人要驗任何「文章頁效能有沒有退步」都會撞到同一堵牆**。
+
+**牆是什麼**：PSI 對本站的 POP 長期冷（見 [`psi-cold-edge.md`](./psi-cold-edge.md) §低流量站追記），38 次 PSI 只中 2 次暖跑。而**冷跑的 TBT 天然是 0**（網路綁死、CPU 沒事做），拿它宣稱「TBT 達標」等於自我欺騙。三種暖機手段全部失敗：`?cb=` 強制重跑、同 `cb` 連跑兩次（第一次暖邊緣第二次採計）、連打 14 次。
+
+**能繞過的量法（照這個做，不要再從 PSI 硬幹）**：
+
+1. **本機 Lighthouse 對線上站，成對交替跑** —— 用 puppeteer 帶的 Chrome（`/root/.cache/puppeteer/chrome/*/chrome-linux64/chrome`）跑 `npx lighthouse@12 --form-factor=mobile --screenEmulation.mobile --throttling-method=simulate`。`PERFORMANCE.md` §3 禁止拿本機 Lighthouse 當**驗收**標準（會抖），但拿來做**同機同時段的 A/B 差分**是合理的：噪音對兩邊一致。判讀時只取暖跑（FCP<3s）比較。
+2. **受控 A/B：把要測的東西真的拿掉** —— 複製建置後的 HTML 成兩份（一份整段刪掉目標 script、一份強制它全程執行），放本機 `python3 -m http.server` 再跑 Lighthouse。沒有 CDN 冷熱、沒有擴充功能、沒有登入狀態。這是唯一能給出「這段程式值幾毫秒」的方法。⚠️ 測完**一定要收掉 server 並刪掉測試變體**；`$!` 抓到的可能是外層 shell，要用 `pgrep -af http.server` 確認真的沒了。
+3. **要歸因就看 `bootup-time` / `long-tasks` 的逐 URL 明細**，不要只看總分。
+
+**查出來的事實**：文章頁 mobile 暖跑 TBT 約 **140–215ms，來源是 GA4 的 `gtag.js`**（scripting 216–225ms、long task 137ms + 121ms），而且是在把受測 script 停掉的對照組量到的。本機把 GA 擋掉後同一頁 TBT 掉到 0。**所以 `PERFORMANCE.md` §4 那條「TBT/CLS = 0/0」對文章頁的暖跑並不成立**——那張表看來是首頁在冷邊緣條件下的數字。CLS 倒是貨真價實：78 次量測沒有一次不是 0。
+
+**這代表什麼**：以後有人量到文章頁 TBT 一兩百毫秒，**那是既有狀況、不是他剛改壞的**。要真的把它壓下去得動 GA4 的載入方式（`Analytics.astro` 已經是 `load` + `requestIdleCallback` 了，再往後推的空間有限），那是獨立題目，別在別的改動裡順手處理。
+
 ## 怎麼避免重犯 / 相關
 
 - **改這兩支任何欄位前先讀契約正本**；本 repo 這兩檔的檔頭都寫了路徑。單方面改＝對面靜默降級。
+- **驗「效能有沒有退步」不能只跑 PSI**：冷跑 TBT 恆為 0，看起來像通過。照上面追記的兩段式量法做，並且**先確認你的對照組跟實驗組同溫**。
 - **inline script 一律用 `<script is:inline set:html={snippet} />`**，不要用 `define:vars` 包樣板字串（會被當成被丟棄的字串、IIFE 不執行）——`Analytics.astro` 已記過這個坑。
 - **`check-design.mjs` 是逐行掃 `src/`、不分 CSS 還是 JS**：snippet 裡出現 `#` 開頭的十六進位色碼或 `rgba(` 就會被判成硬編顏色而 build fail，且豁免清單只准變短。解析 fragment 時先 `location.hash.replace(/^#/, '')` 再比對，別把 `#` 寫進字元類別。
 - **文章頁不在 `lighthouserc.json` 的稽核清單裡**（只有 `/`、`/health/`、`/about/`），斷言又全是 warn + `continue-on-error`，所以這類改動的效能回歸 **CI 抓不到**，上線後要照 [`PERFORMANCE.md`](../../PERFORMANCE.md) §3 的 PSI cachebust 手法對文章頁複測 TBT/CLS。

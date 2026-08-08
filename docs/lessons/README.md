@@ -27,7 +27,7 @@
 |---|---|
 | [font-render-blocking.md](./font-render-blocking.md) | 全腳本字型進入點造成 545 個 @font-face、662 KB render-blocking，怎麼救回來的 |
 | [accent-color-contrast.md](./accent-color-contrast.md) | 品牌金色當小字用只有 3.51:1（門檻 4.5），但同色用在 19.2px 粗體站名卻合格——WCAG 門檻隨字級變；hex 與 oklch 兩組值都要驗；check-design 管不到對比 |
-| [psi-cold-edge.md](./psi-cold-edge.md) | 剛部署 PSI 暴跌到 55 多半是冷邊緣假象，別對假問題改程式；低流量站連 cb 都暖不回 PSI 的 POP，判健康看暖讀指標非總分 |
+| [psi-cold-edge.md](./psi-cold-edge.md) | 剛部署 PSI 暴跌到 55 多半是冷邊緣假象，別對假問題改程式；低流量站連 cb 都暖不回 PSI 的 POP，判健康看暖讀指標非總分（**冷跑 TBT 恆為 0、看起來像通過**，繞過方法見 [reader-index-and-beacon-contract.md](./reader-index-and-beacon-contract.md) 追記）|
 
 **SEO / 換網域**
 | 篇目 | 一句話 |
@@ -58,7 +58,7 @@
 | [annual-observance-scheduling.md](./annual-observance-scheduling.md) | 年度紀念日產線：`status: scheduled` 不會自己上線（`isPublic` 比對 build 當下時間，6 小時 cron 對不上 06:17，要另排一支準點戳 deploy 的 cron）；「時間戳準」與「可見時刻準」二選一；坊間紀念日對照表三筆過期/錯誤（癲癇日、高血壓日、肥胖日），照抄會每年錯一次；「提前 N 天寫」掃單日會沒有重試能力，要掃區間＋冪等帳本；浮動日期要寫成規則不能寫死 |
 | [commit-hygiene-shared-checkout.md](./commit-hygiene-shared-checkout.md) | 共用 checkout 別把別人 WIP 掃進 commit：只 stage 文章產物 / 用 pathspec |
 | [weekly-report-mobile-layout.md](./weekly-report-mobile-layout.md) | 週報手機排版崩掉：模型手刻多欄塞一行；版面收歸決定論渲染器，模型只填數據+notes（2026-08 追記：Slack 已有原生 table block，禁的是假表格不是表格） |
-| [reader-index-and-beacon-contract.md](./reader-index-and-beacon-contract.md) | LINE 官方帳號要的索引與閱讀量測：契約正本在對方 repo，欄位改壞只會讓對面靜默降級不會報錯；索引取「各分類最新 40 篇聯集」而非全站最新 N 篇（否則 focus 整個消失）；捲動深度不可在 rAF 連續取樣取最大值（延後載入的圖讓早期 scrollHeight 偏小、比例灌水），改成送出當下用最終高度算一次；停留計時用真值判斷時間戳會被 `performance.now()===0` 吃掉整段，靠 node:vm 假 DOM 模擬才抓到 |
+| [reader-index-and-beacon-contract.md](./reader-index-and-beacon-contract.md) | LINE 官方帳號要的索引與閱讀量測：契約正本在對方 repo，欄位改壞只會讓對面靜默降級不會報錯；索引取「各分類最新 40 篇聯集」而非全站最新 N 篇（否則 focus 整個消失）；捲動深度不可在 rAF 連續取樣取最大值（延後載入的圖讓早期 scrollHeight 偏小、比例灌水），改成送出當下用最終高度算一次；停留計時用真值判斷時間戳會被 `performance.now()===0` 吃掉整段，靠 node:vm 假 DOM 模擬才抓到；**追記**：文章頁 mobile 暖跑 TBT 140–215ms 的來源是 GA4 gtag.js 不是新程式，§4 的 TBT=0 對文章頁不成立，附「PSI 暖不起來時怎麼量」的兩段式方法 |
 | [deterministic-fetch-llm-only-writes.md](./deterministic-fetch-llm-only-writes.md) | 自動線抓資料別交給 LLM agent（慢/發散翻頁/燒額度）；改固定抓→LLM 只寫；exit124 是逾時非額度、cron 別擠同一 5h session 視窗 |
 | [youtube-video-digest.md](./youtube-video-digest.md) | 「影片變文章」拿不到逐字稿：主機 IP 被 YouTube 擋（yt-dlp 五種 client 全掛）、台灣媒體站對境外 403；改用官方頻道 RSS 當線索＋≥2 個獨立來源交叉查證才寫（否則 SKIP＝洗稿防線），影片用本地縮圖 facade 不嵌 iframe 保 CLS 0；「我已經有某工具」要在主機驗證 |
 | [article-draft-consumer.md](./article-draft-consumer.md) | /admin 寫作任務有生產端沒消費端：`article-draft` issue 靜默孤兒化；補消費端用 newsroom `--stage` 開 PR、kind=factual 待審、放寬分類白名單給真人下單 |

@@ -74,6 +74,8 @@ pnpm growth:audit
 
 **主題追蹤頻道（`TOPIC_CHANNEL`）的形狀是刻意的**（站長 2026-08-08 拍板）：每週**一則主題總表在主層**（唯一放成效的地方，數字＝各主題收錄文章的加總，不是主題頁自己），**每個主題一條 thread 只記收錄文章增減**，沒有增減就完全不回。刻意不做「一主題一頻道」——側欄會被幾十個低流量頻道塞爆。版面用 Slack 原生 `table` block（限 100 列／20 欄／全表 10,000 字元），工作區不支援時自動退回兩行制 mrkdwn；**不要退回用 `|` 排的假表格**（手機會崩，見 [`lessons/weekly-report-mobile-layout.md`](./lessons/weekly-report-mobile-layout.md)）。實作＝`scripts/topic-tracker.mjs`＋`scripts/lib/topic-tracker.mjs`（純轉換層，呈現規格寫在檔頭），thread_ts 與上次成員快照存在 `~/.config/appi-news/topic-threads.json`（git 外）。
 
+**主題層每週派工會寫進 seo-ops 的 playbook**：同一支 cron 在發完總表後，用純規則（不喚 LLM）挑**最多 3 個**主題標的，發一則「🛠 本週主題派工」到同一頻道，並覆寫 `/root/seo-ops/playbooks/appi.news.md` 的 `playbook:topics` 區塊——反思層與大腦層每天把**整份 playbook** 塞進 prompt，寫在那裡它們才看得到、才會真的去改內容。三件事別踩：①**只覆寫 `playbook:topics` 區塊**，人工共筆的 `playbook:strategy` 區塊不碰；②派工的「動作」必須落在 playbook 的 `reflect:scope`／`brain:scope` 白名單內，否則 `reflect-guard` 會擋（主題頁文案正本 `src/content/topics/**` 已於 2026-08-08 加進反思白名單）；③🔴 停滯主題**不派給大腦**——那是選題問題，大腦層無權新增內容。上週派工的成效回顧也寫在同一區塊。
+
 **上架回報一律帶連結**：任何「自動上架 N 篇」訊息都必須列出每篇的標題＋網址（各線的 `PUBLISHED=<url> ｜ <title>` 行 → `.sh` 組成 `• 標題\n  <url>`），**不可只報篇數**。已上架的文章不要用 `suggestionBlocks` 渲染——那是給「還沒寫的候選」用的，沒有連結而且會掛上「我要寫這題」鈕。
 
 **🔴 三個逃出 `report-config.mjs` 的孤島**——只改頻道對照表不會動到它們：

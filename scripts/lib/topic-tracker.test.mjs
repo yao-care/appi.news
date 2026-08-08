@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   fmList, parseArticle, parseTopic, membersOf, diffMembers, aggregate,
   recentCount, topicStatus, delta, summaryTable, updateTable, summaryFallbackText,
+  pickLever, optimizationPlan, planReview, planMarkdown, upsertPlanBlock, PLAN_MARK_START,
 } from './topic-tracker.mjs';
 
 const article = (fm) => `---\n${fm}\n---\n內文`;
@@ -97,6 +98,71 @@ describe('delta', () => {
   it('排名：數字變小是進步 → 🔺（符號是語意方向，不是數值方向）', () => {
     expect(delta(8.4, 9.1, { digits: 1, betterWhenLower: true })).toBe('🔺0.7');
     expect(delta(9.1, 8.4, { digits: 1, betterWhenLower: true })).toBe('-0.7');
+  });
+});
+
+describe('每週派工（純規則）', () => {
+  const base = { id: 'x', title: 'X', url: 'u', members: 5, impressions: 0, status: '🟡', page: {} };
+
+  it('排 5–15 名且點擊少 → 反思改主題頁 description（最高優先）', () => {
+    const l = pickLever({ ...base, page: { impressions: 40, clicks: 1, position: 10 } });
+    expect(l).toMatchObject({ owner: '反思', priority: 3 });
+    expect(l.action).toMatch(/description/);
+  });
+  it('有曝光 0 點擊 → description ＋ FAQ schema', () => {
+    expect(pickLever({ ...base, page: { impressions: 40, clicks: 0, position: 30 } })).toMatchObject({ owner: '反思', priority: 2 });
+  });
+  it('收錄夠厚但主題頁沒曝光 → 補內鏈入口', () => {
+    const l = pickLever({ ...base, members: 20, page: { impressions: 3, clicks: 0 } });
+    expect(l.action).toMatch(/內鏈/);
+  });
+  it('成員有需求但主題頁吃不到 → 交給大腦動單篇 meta', () => {
+    expect(pickLever({ ...base, members: 5, impressions: 300, page: { impressions: 5, clicks: 0 } })).toMatchObject({ owner: '大腦' });
+  });
+  it('沒有訊號就不派工', () => {
+    expect(pickLever({ ...base, members: 3, impressions: 5, page: { impressions: 5, clicks: 4, position: 30 } })).toBeNull();
+  });
+
+  it('最多派 3 個、依優先度排序；🔴 停滯只列出不派工', () => {
+    const rows = [
+      { ...base, id: 'a', title: 'A', members: 20, page: { impressions: 3, clicks: 0 } },
+      { ...base, id: 'b', title: 'B', page: { impressions: 90, clicks: 0, position: 8 } },
+      { ...base, id: 'c', title: 'C', page: { impressions: 50, clicks: 0, position: 40 } },
+      { ...base, id: 'd', title: 'D', members: 30, page: { impressions: 1, clicks: 0 } },
+      { ...base, id: 'e', title: 'E', status: '🔴', page: {} },
+    ];
+    const plan = optimizationPlan(rows);
+    expect(plan.targets.map((t) => t.id)).toEqual(['b', 'c', 'a']);
+    expect(plan.stale.map((s) => s.id)).toEqual(['e']);
+  });
+
+  it('回顧上週標的有沒有起色', () => {
+    const rows = [{ ...base, id: 'a', title: 'A', page: { impressions: 50, position: 9 } }];
+    const [r] = planReview([{ id: 'a', title: 'A', impressions: 20, position: 12 }], rows);
+    expect(r.verdict).toMatch(/有起色/);
+    const [r2] = planReview([{ id: 'zz', title: '舊主題', impressions: 1, position: 1 }], rows);
+    expect(r2.verdict).toMatch(/下架/);
+  });
+});
+
+describe('playbook 區塊寫入', () => {
+  const md = '- **A**（`/topics/a/`）→ **反思**：做某事。';
+  it('沒有標記就附加到檔尾，且不動既有內容', () => {
+    const out = upsertPlanBlock('# 舊內容\n\n<!-- reflect:scope:start -->\n- src/pages/**\n<!-- reflect:scope:end -->', md);
+    expect(out).toMatch(/reflect:scope:start/);
+    expect(out).toContain(PLAN_MARK_START);
+    expect(out).toContain(md);
+  });
+  it('已有標記就整塊覆寫（可重複執行、不會越長越長）', () => {
+    const once = upsertPlanBlock('# 舊內容', md);
+    const twice = upsertPlanBlock(once, '- **B**（`/topics/b/`）→ **大腦**：做別的事。');
+    expect(twice.match(new RegExp(PLAN_MARK_START.slice(0, 30), 'g'))).toHaveLength(1);
+    expect(twice).not.toContain('**A**');
+    expect(twice).toContain('**B**');
+  });
+  it('無派工時仍寫入一句「本週不派工」，不留舊資料誤導大腦', () => {
+    const out = planMarkdown({ period: 'p', targets: [], stale: [] });
+    expect(out).toMatch(/不派工/);
   });
 });
 

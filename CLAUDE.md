@@ -224,7 +224,7 @@
 
 | 元件 | 路徑 | 說明 |
 |---|---|---|
-| 站上埋點 | `src/components/seo/Analytics.astro`、`SITE.gaId`（`src/config/site.ts`） | GA4 gtag，`requestIdleCallback` 延遲載入以保 TBT=0 |
+| 站上埋點 | `src/components/seo/Analytics.astro`、`SITE.gaId`（`src/config/site.ts`） | **不載 gtag.js**：inline 自送 GA4 `/g/collect` beacon（零第三方 JS、TBT 0）。改送出欄位前先讀該檔檔頭與 [`docs/lessons/ga4-beacon-instead-of-gtag.md`](./docs/lessons/ga4-beacon-instead-of-gtag.md) |
 | 數據抓取 | `scripts/weekly-data.mjs`、`scripts/lib/google-data.mjs` | 自簽 JWT 讀 GA4＋GSC，輸出四區塊 JSON |
 | 週報技能 | `.claude/skills/weekly-report/SKILL.md`、`scripts/cron/weekly-report.sh` | 數據 → 熱題雷達 → 建議方向 → 發 Slack |
 | 設定常數 | `scripts/lib/report-config.mjs` | GA4 property、GSC 站台、Slack 一分類一頻道（`CATEGORY_CHANNELS`）、預設頻道、dev 頻道 |

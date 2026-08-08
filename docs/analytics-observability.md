@@ -39,15 +39,16 @@
 
 ## 埋點（讓分區塊/漏斗在 GA 可觀測）
 
-- `src/components/seo/Analytics.astro` + `src/layouts/BaseLayout.astro`:gtag config 帶 **`content_group`=中文分類名**(BaseLayout 由 category slug 走 `getCategoryName`,其餘 path 推導;新分類自動涵蓋)。值**消毒**只移除會破壞 inline script 的字元(引號/反斜線/角括號/換行),允許中文。
-- `src/pages/submit.astro`:AJAX 送出成功發 `gtag('event','generate_lead')`(非同步、不帶 PII)。
+- `src/components/seo/Analytics.astro` + `src/layouts/BaseLayout.astro`:**不載入 gtag.js**,inline 自送 GA4 `/g/collect` beacon(page_view/user_engagement/自訂事件),帶 **`content_group`=中文分類名**(封包欄位是 `ep.content_group`;BaseLayout 由 category slug 走 `getCategoryName`,其餘 path 推導;新分類自動涵蓋)。值**消毒**只移除會破壞 inline script 的字元(引號/反斜線/角括號/換行),允許中文。為什麼＝[`lessons/ga4-beacon-instead-of-gtag.md`](./lessons/ga4-beacon-instead-of-gtag.md)。
+- `src/pages/submit.astro`:AJAX 送出成功發 `gtag('event','generate_lead')`(非同步、不帶 PII)。`window.gtag` 由 `Analytics.astro` 提供同介面墊片,呼叫端不必知道底下換了實作。
+- **沒有 GA4 自動增強型評估**(scroll/outbound click/file_download/影片):拆掉 gtag.js 就沒有了,目前無報表消費。要哪一個就在該互動點自己呼叫 `gtag('event', ...)` 墊片,不要把整包 gtag.js 請回來。
 - **資料不回溯**:埋點只從部署後累積。
 
 ## 維護鐵則（踩雷點）
 
 1. **改 cron `*.sh` 或報表 `*.mjs` 後**:push → **`cd /root/appi.news-publisher && git reset --hard origin/main`**。cron 從 publisher checkout 跑,不 pull 會跑到舊版(見記憶 `cron-wrapper-runs-from-stale-publisher`)。
 2. **GA 是唯讀**:服務帳號 scope `analytics.readonly`,**不能**改 GA 後台/建維度/建自訂頻道群組。那些是 console 手動操作(GA 新版「AI Assistants」頻道已內建)。
-3. **動 `Analytics.astro`/`BaseLayout` 前先讀 `PERFORMANCE.md`**:gtag 須維持延後載入(load + requestIdleCallback)、TBT=0;部署後 PSI 複驗(低流量站 LCP 冷邊緣假象別追,看 TBT/CLS)。
+3. **動 `Analytics.astro`/`BaseLayout` 前先讀 `PERFORMANCE.md`**:埋點須維持「零第三方 JS、TBT=0」,**不可為了省事把 gtag.js 請回來**(它就是文章頁 TBT 的來源)。要改送出欄位前,先照 lesson 的方法用 headless Chrome 攔一次真 gtag 封包比對,不要憑記憶加參數;攔截時務必 abort/respond,否則本機測試會把假資料灌進正式 GA4 資源。部署後 PSI 複驗(低流量站 LCP 冷邊緣假象別追,看 TBT/CLS)。
 4. **判斷 cron 成功不能只看 exit code**:claude-appi 撞週限會 exit 0 只印限額訊息(brain-checkup 已用 regex 偵測退化)。
 
 ## 怎麼看（給營運者）

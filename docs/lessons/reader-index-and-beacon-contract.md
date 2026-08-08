@@ -46,6 +46,8 @@
 
 **這代表什麼**：以後有人量到文章頁 TBT 一兩百毫秒，**那是既有狀況、不是他剛改壞的**。要真的把它壓下去得動 GA4 的載入方式（`Analytics.astro` 已經是 `load` + `requestIdleCallback` 了，再往後推的空間有限），那是獨立題目，別在別的改動裡順手處理。
 
+> **已處理（2026-08-08）**：`gtag.js` 已整個拆掉，改成 inline 自送 GA4 `/g/collect` beacon，文章頁 TBT 回到「等於沒有 analytics」的水準。做法、驗證三層與踩到的坑見 [`ga4-beacon-instead-of-gtag.md`](./ga4-beacon-instead-of-gtag.md)。上面那句「TBT 一兩百毫秒是既有狀況」**自該日起不再適用**——現在量到就是真的退步了。
+
 ## 怎麼避免重犯 / 相關
 
 - **改這兩支任何欄位前先讀契約正本**；本 repo 這兩檔的檔頭都寫了路徑。單方面改＝對面靜默降級。

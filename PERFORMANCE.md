@@ -105,6 +105,8 @@ curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$U&strat
 
 **任何改動後請用 §3 複測，不可低於上表。** 首頁實際 payload 由 PSI 報告的 `total-byte-weight` 稽核項讀取，不寫在本檔（會隨內容變動）。
 
+⚠️ **TBT=0 這格曾經對文章頁不成立**：2026-08-08 前，文章頁 mobile 暖跑 TBT 是 140–215ms，來源是 GA4 的 `gtag.js`（冷跑 TBT 天然為 0，所以 PSI 一直看起來達標）。該日已把 gtag.js 拆掉改成 inline beacon，這格才回到名副其實。**現在量到文章頁 TBT 不是 0，就是真的退步**。前因後果與「PSI 暖不起來時怎麼量」的兩段式方法＝[`docs/lessons/ga4-beacon-instead-of-gtag.md`](./docs/lessons/ga4-beacon-instead-of-gtag.md)、[`docs/lessons/reader-index-and-beacon-contract.md`](./docs/lessons/reader-index-and-beacon-contract.md) 追記。
+
 ---
 
 ## 5. 一般原則（任何頁面都適用）

@@ -1,17 +1,30 @@
 ---
 /**
- * Google Analytics 4（gtag）延遲載入。
+ * GA4 量測（自送 collect beacon，不載入 gtag.js）。
  *
- * 效能鐵則（PERFORMANCE.md §4/§5）：TBT 必須維持 0。gtag.js 會在主執行緒
- * 解析/執行，若放進首屏關鍵路徑會吃 TBT，因此這裡：
- *   1. 等 window `load` 之後（已過 TBT 量測窗 FCP→TTI）。
- *   2. 再用 requestIdleCallback（無則 setTimeout 後備）在閒置時才插入 gtag.js。
- * 並用 hostname 守門：僅在正式網域 appi.news 啟用，避免本機 / pnpm preview /
- * 舊的 github.io 專案頁重複送資料污染 GA。
+ * 為什麼不用官方 gtag.js：`gtag.js` 約 90KB 第三方 JS，在行動裝置上要花
+ * 130–220ms 主執行緒時間解析執行，是文章頁 mobile TBT 的**唯一**來源
+ * （受控 A/B 實測：拿掉它 TBT 歸零、TTI 從 ~8s 掉到 ~2s）。它已經被推到
+ * `load` + `requestIdleCallback` 了，再往後推只會把長任務推到讀者正在
+ * 捲動的當下、並讓 TTI 更晚，沒有剩餘空間。改成直接送 GA4 的
+ * `/g/collect`：整段 inline、零第三方請求、零長任務。
+ * 為什麼＝docs/lessons/ga4-beacon-instead-of-gtag.md。
  *
- * GA ID 來源是 src/config/site.ts 的 SITE.gaId（空字串則整段不輸出）。
- * 用 set:html 原樣輸出腳本文字（gaId 為固定常數，無注入風險）；
- * 不用 define:vars + 樣板字串包裹，那會被當成被丟棄的字串、IIFE 不執行。
+ * 參數集不是猜的：用 headless Chrome 攔截真 gtag.js 送出的請求逐項比對
+ * （所以 content_group 是 `ep.content_group`、事件參數前綴是 `ep.`）。
+ * 要改欄位前先照 lesson 裡的方法重抓一次真 gtag 封包，不要憑記憶加參數。
+ *
+ * 消費端（會因為欄位漏送而靜默劣化的報表）：weekly-data / growth-audit /
+ * section-report / topic-tracker / audience-report / funnel-report /
+ * ai-signals-report。它們用到的維度＝pagePath、landingPagePlusQueryString、
+ * contentGroup、sessionSource/Medium、newVsReturning、deviceCategory、region、
+ * eventName；指標＝screenPageViews、totalUsers、sessions、userEngagementDuration、
+ * eventCount。地理與裝置由 Google 從請求本身推導，其餘全靠這裡送。
+ *
+ * hostname 守門：僅正式網域啟用，避免本機 / pnpm preview / CI 的 Lighthouse
+ * 往正式資源灌假資料。GA ID 來源是 src/config/site.ts 的 SITE.gaId。
+ * 用 set:html 原樣輸出腳本文字；不用 define:vars + 樣板字串包裹，那會被當成
+ * 被丟棄的字串、IIFE 不執行（這個坑踩過，見 lesson）。
  */
 import { SITE } from '@/config/site';
 const gaId = SITE.gaId;
@@ -21,24 +34,152 @@ const contentGroup = (String(Astro.props.contentGroup || '其他').replace(/['"\
 const snippet = `(function () {
   var host = location.hostname;
   if (host !== 'appi.news' && host !== 'www.appi.news') return;
-  function loadGA() {
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=${gaId}';
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { window.dataLayer.push(arguments); }
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', '${gaId}', { content_group: '${contentGroup}' });
+  if (!navigator.sendBeacon) return;
+
+  var TID = '${gaId}';
+  var ENDPOINT = 'https://www.google-analytics.com/g/collect';
+  var CONTENT_GROUP = '${contentGroup}';
+  var TWO_YEARS = 63072000;
+  var SESSION_GAP_MS = 1800000; // GA4 的定義：30 分鐘無活動即換 session
+  var ENGAGED_MS = 10000; // GA4 的定義：前景滿 10 秒即算 engaged session
+
+  function readCookie(name) {
+    var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : '';
   }
-  window.addEventListener('load', function () {
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(loadGA, { timeout: 4000 });
-    } else {
-      setTimeout(loadGA, 1500);
+  function writeCookie(name, value) {
+    document.cookie = name + '=' + value + '; path=/; domain=appi.news; max-age=' + TWO_YEARS + '; SameSite=Lax; Secure';
+  }
+
+  // client_id 沿用 gtag 寫過的 _ga cookie（格式 GA1.1.<a>.<b>），並用同格式寫回：
+  // 換掉 gtag 之後既有讀者仍被認成同一人，newVsReturning 不會整批變新使用者，
+  // 之後若要回退成官方 gtag 也接得上。
+  var firstVisit = 0;
+  var cid = '';
+  var parts = readCookie('_ga').split('.');
+  if (parts.length >= 4 && parts[0] === 'GA1') cid = parts[2] + '.' + parts[3];
+  if (!cid) {
+    cid = Math.floor(Math.random() * 2147483647) + '.' + Math.floor(Date.now() / 1000);
+    firstVisit = 1;
+  }
+  writeCookie('_ga', 'GA1.1.' + cid);
+
+  // session 狀態自己存一份，不去解析 gtag 的 _ga_<id> cookie（格式不公開且會改版）。
+  var now = Date.now();
+  var st = readCookie('_appi_ga').split('.');
+  var sid = st[0] || '';
+  var sct = parseInt(st[1], 10) || 0;
+  var seg = st[2] === '1' ? 1 : 0;
+  var lastHit = parseInt(st[3], 10) || 0;
+  var sessionStart = 0;
+  if (!sid || !lastHit || now - lastHit > SESSION_GAP_MS) {
+    sid = String(Math.floor(now / 1000));
+    sct = sct + 1;
+    seg = 0;
+    sessionStart = 1;
+  } else {
+    seg = 1; // 同一 session 的第 2 個以上 page_view，依 GA4 定義已算 engaged
+  }
+  function saveSession() {
+    writeCookie('_appi_ga', sid + '.' + sct + '.' + seg + '.' + Date.now());
+  }
+
+  var pageId = Math.floor(Math.random() * 2147483647);
+  var hitNo = 0;
+
+  // 網址一律去掉 fragment：LINE 派送的 #r=<short_id> 不該進到達網頁報表
+  // （ReadingBeacon 也會把它從網址列抹掉，但那發生在本段之後）。
+  function docLocation() {
+    return location.protocol + '//' + location.host + location.pathname + location.search;
+  }
+
+  function send(eventName, params, engagementMs) {
+    hitNo++;
+    var q = 'v=2&tid=' + TID +
+      '&_p=' + pageId +
+      '&cid=' + encodeURIComponent(cid) +
+      '&sid=' + sid +
+      '&sct=' + sct +
+      '&seg=' + seg +
+      '&_s=' + hitNo +
+      '&en=' + encodeURIComponent(eventName) +
+      '&dl=' + encodeURIComponent(docLocation()) +
+      '&dt=' + encodeURIComponent(document.title || '') +
+      '&ul=' + encodeURIComponent((navigator.language || '').toLowerCase()) +
+      '&sr=' + (screen.width || 0) + 'x' + (screen.height || 0);
+    if (sessionStart && hitNo === 1) q += '&_ss=1';
+    if (firstVisit && hitNo === 1) q += '&_fv=1';
+    // 站內互連的 referrer 不送：送了會讓 GA4 把自己算成 referral 來源，
+    // 蓋掉真正的 organic / social 歸因。
+    var ref = document.referrer || '';
+    if (ref && ref.indexOf('//' + host) === -1 && ref.indexOf('//www.appi.news') === -1 && ref.indexOf('//appi.news') === -1) {
+      q += '&dr=' + encodeURIComponent(ref);
     }
+    var usp = new URLSearchParams(location.search);
+    var camp = { cs: 'utm_source', cm: 'utm_medium', cn: 'utm_campaign', ck: 'utm_term', cc: 'utm_content' };
+    for (var key in camp) {
+      var val = usp.get(camp[key]);
+      if (val) q += '&' + key + '=' + encodeURIComponent(val);
+    }
+    if (engagementMs > 0) q += '&_et=' + Math.round(engagementMs);
+    for (var name in params) {
+      if (params[name] === undefined || params[name] === null) continue;
+      var prefix = typeof params[name] === 'number' ? 'epn.' : 'ep.';
+      q += '&' + prefix + encodeURIComponent(name) + '=' + encodeURIComponent(params[name]);
+    }
+    try { navigator.sendBeacon(ENDPOINT + '?' + q); } catch (e) {}
+    saveSession();
+  }
+
+  // 停留時間（GA4 的 userEngagementDuration）只算前景時間：分頁切走就停錶。
+  // running 用獨立旗標而不是「since 有沒有值」——時間戳可能合法地等於 0。
+  var engagedMs = 0;
+  var since = 0;
+  var running = false;
+  function nowMs() {
+    return window.performance && performance.now ? performance.now() : Date.now();
+  }
+  function pause() {
+    if (!running) return;
+    engagedMs += nowMs() - since;
+    running = false;
+  }
+  function resume() {
+    if (running) return;
+    since = nowMs();
+    running = true;
+  }
+
+  send('page_view', { content_group: CONTENT_GROUP }, 0);
+  if (document.visibilityState !== 'hidden') resume();
+
+  function flush() {
+    pause();
+    if (engagedMs < 1) return;
+    if (engagedMs >= ENGAGED_MS) seg = 1;
+    var ms = engagedMs;
+    engagedMs = 0; // 歸零：同一次瀏覽可能 flush 多次，不可重複計時
+    send('user_engagement', {}, ms);
+  }
+
+  // 掛 visibilitychange 與 pagehide，不掛 beforeunload（行動裝置常不觸發）。
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') flush();
+    else resume();
   });
+  window.addEventListener('pagehide', flush);
+
+  // 站上其餘程式（例如 /submit 的 generate_lead）沿用 gtag('event', ...) 介面，
+  // 這裡補一個同介面的墊片，改動時不必動那些呼叫端。
+  window.gtag = function (kind, eventName, params) {
+    if (kind !== 'event' || !eventName) return;
+    seg = 1; // 有互動事件即算 engaged session
+    pause();
+    var ms = engagedMs;
+    engagedMs = 0;
+    resume();
+    send(String(eventName), params || {}, ms);
+  };
 })();`;
 ---
 {gaId && <script is:inline set:html={snippet} />}

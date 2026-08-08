@@ -97,4 +97,5 @@ description: APPI News 每週數據週報。讀 GA4+GSC 四區塊數據、跑外
 ## 失敗處理
 任一步驟致命失敗（資料抓不到、token 失效）：把
 `{ "text": "⚠️ APPI News 週報失敗：<原因一句>" }` 寫到 `/tmp/weekly-report-payload.json`（**不帶 `report`**，weekly-report-post 會只發純文字），
-跑 `node scripts/weekly-report-post.mjs /tmp/weekly-report-payload.json`，讓失敗在作者群出聲，不要靜默。
+跑 `node scripts/weekly-report-post.mjs /tmp/weekly-report-payload.json`，讓失敗出聲、不要靜默。
+**訊息開頭一定要是 ⚠️ 或 ❌**——`weekly-report-post` 看到這兩個開頭就把它送 dev 台（週報本體照舊發作者群；全站失敗／略過統一收在 dev）。

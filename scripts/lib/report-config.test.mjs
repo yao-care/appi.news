@@ -7,6 +7,8 @@ import {
   CATEGORY_CHANNELS,
   DEV_CHANNEL,
   channelForCategory,
+  isAlert,
+  routeChannel,
 } from './report-config.mjs';
 
 describe('report-config 常數', () => {
@@ -33,6 +35,30 @@ describe('channelForCategory — 分類路由', () => {
     expect(Object.keys(CATEGORY_CHANNELS).sort()).toEqual(
       ['finance', 'focus', 'health', 'international', 'lifestyle', 'sports', 'tech'].sort(),
     );
+  });
+});
+
+describe('isAlert / routeChannel — 失敗與略過一律進 dev', () => {
+  it('❌ 與 ⚠️ 開頭視為告警（允許前置空白）', () => {
+    expect(isAlert('❌ 科技台 失敗（exit 1）')).toBe(true);
+    expect(isAlert('⚠️ 便民市政：無法建 worktree，略過本次')).toBe(true);
+    expect(isAlert('  ⚠️ 開 modal 失敗')).toBe(true);
+  });
+  it('有產出的內容訊息不是告警', () => {
+    expect(isAlert('✅ 數據報告：完成')).toBe(false);
+    expect(isAlert('🌍 國際編譯自動上架 3 篇')).toBe(false);
+    expect(isAlert('📝 已產出待審草稿（未上線）')).toBe(false);
+    expect(isAlert('')).toBe(false);
+    expect(isAlert(undefined)).toBe(false);
+  });
+  it('告警無視 category，一律 dev', () => {
+    expect(routeChannel({ text: '❌ 焦點/ESG 失敗', category: 'focus' })).toBe(DEV_CHANNEL);
+    expect(routeChannel({ text: '⚠️ 無法建 worktree，略過本次', category: 'lifestyle' })).toBe(DEV_CHANNEL);
+  });
+  it('非告警照舊走分類 / 預設 / --dev', () => {
+    expect(routeChannel({ text: '💻 科技台自動上架 2 篇', category: 'tech' })).toBe(CATEGORY_CHANNELS.tech);
+    expect(routeChannel({ text: '✅ 完成' })).toBe(SLACK_CHANNEL);
+    expect(routeChannel({ text: '📊 數據心跳', dev: true })).toBe(DEV_CHANNEL);
   });
 });
 

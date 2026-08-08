@@ -25,6 +25,24 @@ export function channelForCategory(category) {
   return CATEGORY_CHANNELS[category] || SLACK_CHANNEL;
 }
 
+// ── 失敗／略過一律進 dev 台（站長 2026-08-08 裁示，無例外）─────────────────
+// 判準寫在這一處、不散落到各產線：訊息開頭是 ❌ 或 ⚠️ 就是告警，不論哪條線、哪個分類，
+// 都不進內容頻道（分類台只留「有產出、人要看的東西」）。集中判斷的理由：舊作法是每支
+// `.sh`／SKILL 自己記得帶 `--dev`，漏一支就把錯誤洗進作者群或分類台，而且新產線一定會忘。
+export const ALERT_PREFIXES = ['❌', '⚠️'];
+
+/** 這則訊息是不是失敗／略過告警（看開頭的 emoji，允許前面有空白）。 */
+export function isAlert(text) {
+  const t = String(text ?? '').trimStart();
+  return ALERT_PREFIXES.some((p) => t.startsWith(p));
+}
+
+/** 統一路由：告警 ＞ 明示 dev ＞ 分類頻道 ＞ 預設作者群。 */
+export function routeChannel({ text, category, dev } = {}) {
+  if (isAlert(text) || dev) return DEV_CHANNEL;
+  return channelForCategory(category);
+}
+
 // Phase 1 互動端點：可觸發無人值守自動產文 / 核可上線的授權 Slack user（白名單）。
 // 非機密。新增授權人就加 member ID（U 開頭）。appi.news workspace 的站長 ID。
 export const NEWSROOM_AUTHORIZED_SLACK_USERS = ['U0BBK944P1D'];

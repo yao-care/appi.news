@@ -47,4 +47,5 @@ newsroom-write 成功後（stdout 出現 `PENDING_APPROVAL_SLUG=`），跑：
 把待審草稿摘要 + 預覽/編輯連結 + 「✅ 發佈這篇」鈕發到 Slack，作者審閱後一鍵核可上線。
 
 ## 步驟 5：失敗處理
-任一步致命失敗（查不到官方日曆、找不到可查證優惠、gate 未過）：把 `{ "text": "⚠️ 連假優惠 roundup 未產出：<原因一句>", "category": "lifestyle" }` 寫到 `/tmp/deals-roundup-fail.json`，跑 `node scripts/slack-post.mjs /tmp/deals-roundup-fail.json`（**payload 帶 `category:"lifestyle"` → 失敗發到生活台，與本線一致；不發作者群/ dev**）。資料不足就回報一句、不要硬湊優惠。
+任一步致命失敗（查不到官方日曆、找不到可查證優惠、gate 未過）：把 `{ "text": "⚠️ 連假優惠 roundup 未產出：<原因一句>" }` 寫到 `/tmp/deals-roundup-fail.json`，跑 `node scripts/slack-post.mjs /tmp/deals-roundup-fail.json`。資料不足就回報一句、不要硬湊優惠。
+**訊息開頭一定要是 ⚠️ 或 ❌**——`slack-post` 看到這兩個開頭就強制送 dev 台（全站失敗／略過統一收在那裡）。不必也不要帶 `category`。

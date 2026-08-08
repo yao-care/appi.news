@@ -18,6 +18,8 @@
 - 🔴 **新增 `scripts/cron/*.sh` 一定要用 `REPO="$(cd "$(dirname "$0")/../.." && pwd)"`**（本檔在 `scripts/cron/` 底下，往上**兩層**才是 repo 根）。少一層會變成 `scripts/scripts/…` MODULE_NOT_FOUND，**而且連 `cron-report.mjs` 都找不到 → 失敗告警一起啞掉，變成完全靜默的空跑**（2026-08-06 forum-radar 踩過，連空跑兩輪才被發現）。**新排程上線後，第一次觸發時間過了就去看 `/var/log/appi-news/<job>.log`**，不要等它自己回報。
 - 會動 git 工作區的 cron 各自開臨時 worktree（`scripts/cron/_worktree.sh` 的 `cron_enter_worktree`，off `origin/main`）→ 並行、互不洗檔，**不用 flock**。純資料腳本（`indexing-submit.sh`）不走 worktree。
 - 改 `.sh` 包裝或發佈端程式（`slack-actions-server.mjs` 等）：**push → `/root/appi.news-publisher` `git pull` →（server 端）`pm2 restart appinews-slack-actions`**。只 push 不 pull，cron 跑的還是舊 `.sh`；只 restart 不 pull，server 載到舊碼。
+- 🔴 **失敗／略過的訊息一律進 dev 台**（2026-08-08 站長裁示，無例外）：**訊息開頭寫 `❌`（失敗）或 `⚠️`（略過／未開始）**，`report-config.mjs` 的 `isAlert()` 會強制路由到 `DEV_CHANNEL`，不必也不要帶 `--category`。分類台與作者群只留「有產出、人要看的東西」。**新產線只要把開頭 emoji 寫對就自動符合**；反過來說，**成功訊息不可用 ❌/⚠️ 開頭**，否則會被判成告警送錯台。
+- 🔴 **「自動上架 N 篇」一律帶連結**：每篇都要列標題＋網址（協調器印 `PUBLISHED=<url> ｜ <title>`，`.sh` 組 `• 標題\n  <url>`），只報篇數不算數。已上架的文章不要走 `suggestionBlocks`（那是未寫候選用的，沒連結又會掛「我要寫這題」鈕）。
 - 🔴 **要發 Slack 一律走既有的四支入口**（`cron-report.mjs`／`slack-post.mjs`／`notify-pending-draft.mjs`／`weekly-report-post.mjs`），**不可在 `.sh`、skill 或新腳本裡自己 curl `chat.postMessage`、也不可寫死頻道 ID**——頻道與授權名單的 SOT 是 `scripts/lib/report-config.mjs`，繞過它的訊息在改頻道時必然被漏掉。改發訊對象或文案前先讀 [`SERVER_HANDOFF.md`](./SERVER_HANDOFF.md) §Slack 發訊地圖（四層分工、各入口路由優先序、盤點指令、三個已知逃出頻道表的孤島）。
 - **配圖硬性 gate 不可繞過**：缺 `coverImage`／封面檔不存在／內文 0 圖／**封面與內文圖重複** → 中止不發、留工作區待補。
 - **產線層級要禁 AI 生圖，就在該線的 `.sh` 與協調器**兩處**都設 `NO_AI_IMAGE=1`**（論壇雷達的作法）：只設一處，另一處被改掉就破功，而事後從檔案驗不出來。

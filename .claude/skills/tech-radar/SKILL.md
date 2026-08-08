@@ -140,4 +140,5 @@ i  2 pos 8.0  work iq
 這是給 cron 解析的硬契約——cron 不再靠猜你敘述裡有沒有「sent ts=」，請務必照輸出。
 
 ## 失敗處理
-任一步致命失敗（雷達掛、token 失效、用量達上限）：把 `{ "text": "⚠️ 每日科技選題失敗：<原因一句>", "category": "tech" }` 寫到 payload，跑 `slack-post`（**payload 帶 `category:"tech"` → 失敗發到科技台，與本線一致；不發 dev、不發作者群**），讓失敗在 Slack 出聲，不要靜默；並讓回應最後一行輸出 `RADAR_RESULT=FAIL`。
+任一步致命失敗（雷達掛、token 失效、用量達上限）：把 `{ "text": "⚠️ 每日科技選題失敗：<原因一句>" }` 寫到 payload，跑 `slack-post`，讓失敗在 Slack 出聲，不要靜默；並讓回應最後一行輸出 `RADAR_RESULT=FAIL`。
+**訊息開頭一定要是 ⚠️ 或 ❌**——`slack-post` 看到這兩個開頭就強制送 dev 台（全站失敗／略過統一收在那裡，分類台只留有產出的內容）。不必也不要帶 `category`。

@@ -215,21 +215,17 @@ function writeAndPublish(s) {
   return ok ? url : null;
 }
 
-function postToSlack(suggestions, category) {
+// 上架回報一律「一篇一行、標題帶連結」（站長 2026-08-08 裁示：自動上架訊息不可只報篇數）。
+// 刻意不走 suggestionBlocks：那是給「還沒寫的候選」用的，會渲染切角/依據並掛上「我要寫這題」鈕，
+// 對已經上架的文章既沒有連結、按鈕也是誤導。
+function postToSlack(published, category) {
   const name = CATEGORY_NAMES[category] || category;
+  const list = published.map((s) => `• <${s.url}|${s.title}>`).join('\n');
+  const body = `🧭 *論壇選題雷達*（${name}）\n來源：PTT 熱門討論，以下已自動撰寫並上架。要改就進編輯器。\n\n${list}`;
   const payload = {
     category,
-    text: `🧭 論壇選題雷達｜${name}（已上架）`,
-    blocks: [
-      {
-        type: 'section',
-        text: {
-          type: 'mrkdwn',
-          text: `🧭 *論壇選題雷達*（${name}）\n來源：PTT 熱門討論，以下已自動撰寫並上架。要改就進編輯器。`,
-        },
-      },
-    ],
-    suggestions,
+    text: `🧭 論壇選題雷達｜${name}（已上架 ${published.length} 篇）`,
+    blocks: [{ type: 'section', text: { type: 'mrkdwn', text: body } }],
   };
   const path = `/tmp/forum-radar-${category}.json`;
   writeFileSync(path, JSON.stringify(payload));
@@ -315,7 +311,8 @@ async function main() {
     const done = [];
     for (const s of list) {
       const url = writeAndPublish(s);
-      if (url) { done.push({ ...s, url }); published++; console.log(`  ✓ 已上架：${s.title}`); }
+      // PUBLISHED= 行給 cron `.sh` 組「標題＋連結」清單用（格式與其他自動線一致，勿改）。
+      if (url) { done.push({ ...s, url }); published++; console.log(`  ✓ 已上架：${s.title}`); console.log(`PUBLISHED=${url} ｜ ${s.title}`); }
     }
     // 只回報真的上架的；一篇都沒成功就不吵那個分類台。
     if (done.length && postToSlack(done, cat)) console.log(`  ✓ ${CATEGORY_NAMES[cat]}台：回報 ${done.length} 篇`);

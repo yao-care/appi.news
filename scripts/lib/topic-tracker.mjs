@@ -123,13 +123,20 @@ export function topicStatus({ recent90, impressions, prevImpressions }) {
 
 const nf = (n) => Number(n || 0).toLocaleString('en-US');
 
-/** 與上週的差：▲/▼ + 絕對值；持平或無資料回 '—'。 */
-export function delta(cur, prev, { digits = 0 } = {}) {
+/**
+ * 與上週的差：▲/▼ + 絕對值；持平或無資料回 '—'。
+ *
+ * 🔴 箭頭是**語意方向**，不是數值方向：▲＝好消息、▼＝壞消息。
+ * 曝光/點擊變多是好事（數值升＝▲）；**平均排名數字變小才是進步**，所以排名欄要傳
+ * `betterWhenLower: true`，否則「8.4 ▼0.7」會被讀成退步——實際上那是進步（2026-08-08 站長指出）。
+ */
+export function delta(cur, prev, { digits = 0, betterWhenLower = false } = {}) {
   const a = Number(cur || 0), b = Number(prev || 0);
   const d = a - b;
   if (!Number.isFinite(d) || Math.abs(d) < (digits ? 0.05 : 0.5)) return '—';
   const v = digits ? Math.abs(d).toFixed(digits) : nf(Math.round(Math.abs(d)));
-  return `${d > 0 ? '▲' : '▼'}${v}`;
+  const better = betterWhenLower ? d < 0 : d > 0;
+  return `${better ? '▲' : '▼'}${v}`;
 }
 
 /** 「值 ▲差」一格。排名的差要反過來讀（數字變小是進步），所以另外標。 */
@@ -150,7 +157,7 @@ export function summaryTable(rows) {
     cell(nf(r.members)),
     cell(`${nf(r.impressions)} ${delta(r.impressions, r.prevImpressions)}`),
     cell(`${nf(r.clicks)} ${delta(r.clicks, r.prevClicks)}`),
-    cell(r.position == null ? '—' : `${r.position.toFixed(1)} ${delta(r.position, r.prevPosition, { digits: 1 })}`),
+    cell(r.position == null ? '—' : `${r.position.toFixed(1)} ${delta(r.position, r.prevPosition, { digits: 1, betterWhenLower: true })}`),
     cell(r.status),
   ]);
   return {

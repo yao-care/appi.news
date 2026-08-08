@@ -94,6 +94,10 @@ describe('delta', () => {
     expect(delta(100, 100)).toBe('—');
     expect(delta(24.5, 25.7, { digits: 1 })).toBe('▼1.2');
   });
+  it('排名：數字變小是進步 → ▲（箭頭是語意方向，不是數值方向）', () => {
+    expect(delta(8.4, 9.1, { digits: 1, betterWhenLower: true })).toBe('▲0.7');
+    expect(delta(9.1, 8.4, { digits: 1, betterWhenLower: true })).toBe('▼0.7');
+  });
 });
 
 describe('Slack table blocks', () => {
@@ -117,7 +121,7 @@ describe('Slack table blocks', () => {
   it('總表：數字帶千分位與週比較', () => {
     const t = summaryTable(rows);
     expect(t.rows[1][2].text).toBe('3,412 ▲220');
-    expect(t.rows[1][4].text).toBe('31.2 ▼0.4');
+    expect(t.rows[1][4].text).toBe('31.2 ▲0.4'); // 31.64 → 31.24＝排名進步，語意方向要顯示 ▲
   });
 
   it('Slack 上限：100 列、20 欄', () => {

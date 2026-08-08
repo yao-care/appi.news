@@ -88,7 +88,9 @@ grep -rln "cron-report.mjs\|slack-post.mjs\|notify-pending-draft.mjs\|weekly-rep
 grep -n "notify(\|notifyBlocks(\|devReply(" scripts/slack-actions-server.mjs
 ```
 
-呼叫端的分佈：**cron `.sh`** 在「完成／無產出／失敗」三態都回報（內容線→分類台、維運線→dev 台、週報→作者群，例外見下方 §cron 總表後的說明）；**skills** 自己寫 payload 再叫 CLI（tech-radar→`slack-post`、weekly-report→`weekly-report-post`、lifestyle-typhoon／deals→`notify-pending-draft`、aeo-radar／cited-teardown→`cron-report --dev --stdin`）；另有少數 node 腳本在程式內 spawn CLI（`forum-radar.mjs`、`growth-backlog.mjs`）、或只印文字到 stdout 由 `.sh` pipe 給 `cron-report --stdin`（`data-heartbeat.mjs`、`dashboard-post.mjs`、`brain-checkup.mjs`）。
+呼叫端的分佈：**cron `.sh`** 在「完成／無產出／失敗」三態都回報（內容線→分類台、維運線→dev 台、週報→作者群，例外見下方 §cron 總表後的說明）；**skills** 自己寫 payload 再叫 CLI（tech-radar→`slack-post`、weekly-report→`weekly-report-post`、lifestyle-typhoon／deals→`notify-pending-draft`、aeo-radar／cited-teardown→`cron-report --dev --stdin`）；另有少數 node 腳本在程式內 spawn CLI（`forum-radar.mjs`、`growth-backlog.mjs`）、或只印文字到 stdout 由 `.sh` pipe 給 `cron-report --stdin`（`data-heartbeat.mjs`、`dashboard-post.mjs`）。
+
+**🔴 第四個發訊來源在本 repo 外**：`/root/seo-ops`（collect／reflect／brain／weekly，`--site appi.news`）用**自己的** `lib/slack.mjs` 與 `sites/appi.news.json` 的 `slack.channel` 發訊，目前與本站 dev 台同一個頻道。所以「dev 台為什麼這麼吵」不能只查本 repo，查法：`grep -n appi.news /etc/cron.d/seo-ops`、頻道 `grep -A3 '"slack"' /root/seo-ops/sites/appi.news.json`。要改它的收件對象是改那份 json，不是 `report-config.mjs`。
 
 **改完必做**：
 

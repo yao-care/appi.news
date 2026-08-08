@@ -118,10 +118,15 @@ export async function GET(context: APIContext) {
 
   pool.sort((x, y) => y.data.publishDate.getTime() - x.data.publishDate.getTime());
 
+  // 契約的 site 範例是無尾斜線的 https://appi.news，且 reader 會拿它去拼字串，
+  // 帶斜線會拼出雙斜線。base 非 '/' 時（退回 github.io 專案頁）同樣只去掉尾斜線，
+  // 保留 base 路徑本身。
+  const siteRoot = absoluteUrl('/', site).replace(/\/+$/, '');
+
   const body = JSON.stringify({
     version: 1,
     generated_at: new Date().toISOString(),
-    site: absoluteUrl('/', site),
+    site: siteRoot,
     featured: featured.map(articleSlug),
     articles: pool.map((a) => toEntry(a, site)),
   });

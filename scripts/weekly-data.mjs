@@ -15,6 +15,7 @@ import {
   siteTraffic,
   articleTrafficShape,
   sprintStatus,
+  seasonalTopicClicks,
 } from './lib/weekly-metrics.mjs';
 import { loadArticleCategoryMap } from './lib/article-category-map.mjs';
 import { parseArticle, parseTopic, membersOf, aggregate } from './lib/topic-tracker.mjs';
@@ -34,7 +35,7 @@ const gscTok = await getAccessToken({ clientEmail: gscSa.clientEmail, privateKey
 
 const dr = (range) => [{ startDate: range.start, endDate: range.end }];
 
-const [topRep, catCur, catPrev, srcRep, usersCur, usersPrev, siteCur, sitePrev] = await Promise.all([
+const [topRep, catCur, catPrev, srcRep, usersCur, usersPrev, siteCur, sitePrev, seasonalClickRep] = await Promise.all([
   ga4RunReport({ token: gaTok, body: { dateRanges: dr(cur), dimensions: [{ name: 'pagePath' }, { name: 'pageTitle' }], metrics: [{ name: 'screenPageViews' }, { name: 'userEngagementDuration' }], orderBys: [{ metric: { metricName: 'screenPageViews' }, desc: true }], limit: 5 } }),
   ga4RunReport({ token: gaTok, body: { dateRanges: dr(cur), dimensions: [{ name: 'pagePath' }], metrics: [{ name: 'screenPageViews' }], limit: 1000 } }),
   ga4RunReport({ token: gaTok, body: { dateRanges: dr(prev), dimensions: [{ name: 'pagePath' }], metrics: [{ name: 'screenPageViews' }], limit: 1000 } }),
@@ -43,6 +44,21 @@ const [topRep, catCur, catPrev, srcRep, usersCur, usersPrev, siteCur, sitePrev] 
   ga4RunReport({ token: gaTok, body: { dateRanges: dr(prev), metrics: [{ name: 'totalUsers' }] } }),
   ga4RunReport({ token: gaTok, body: { dateRanges: dr(cur), metrics: [{ name: 'screenPageViews' }, { name: 'sessions' }] } }),
   ga4RunReport({ token: gaTok, body: { dateRanges: dr(prev), metrics: [{ name: 'screenPageViews' }, { name: 'sessions' }] } }),
+  ga4RunReport({
+    token: gaTok,
+    body: {
+      dateRanges: dr(cur),
+      dimensions: [{ name: 'contentGroup' }],
+      metrics: [{ name: 'eventCount' }],
+      dimensionFilter: {
+        filter: {
+          fieldName: 'eventName',
+          stringFilter: { matchType: 'EXACT', value: 'seasonal_topic_click' },
+        },
+      },
+      limit: 10,
+    },
+  }),
 ]);
 
 const [gscOpp, gscPages] = await Promise.all([
@@ -110,6 +126,7 @@ console.log(
           atLeast10Pv: trafficShape.pagesAtLeast10Pv,
           atLeast20Pv: trafficShape.pagesAtLeast20Pv,
         },
+        seasonalTopicClicks: seasonalTopicClicks(seasonalClickRep),
         topics: sprintTopicPerformance(),
       },
       articlePerf: {

@@ -180,7 +180,12 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
     {
       seasonalCampaign && seasonalTopic && (
         <section class="section seasonal-topic" aria-labelledby="seasonal-topic-title">
-          <a class="seasonal-topic-link" href={url(`/topics/${seasonalTopic.id}/`)}>
+          <a
+            class="seasonal-topic-link"
+            href={url(`/topics/${seasonalTopic.id}/`)}
+            data-seasonal-topic-id={seasonalTopic.id}
+            data-seasonal-slot="primary"
+          >
             <span class="seasonal-topic-copy">
               <span class="seasonal-topic-eyebrow">{seasonalCampaign.eyebrow}</span>
               <span class="seasonal-topic-title" id="seasonal-topic-title">{seasonalTopic.data.title}</span>
@@ -193,6 +198,8 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
               <a
                 class="seasonal-topic-companion"
                 href={url(`/topics/${backToSchoolCompanion.id}/`)}
+                data-seasonal-topic-id={backToSchoolCompanion.id}
+                data-seasonal-slot="companion"
               >
                 <span>
                   <span class="seasonal-topic-companion-eyebrow">提早準備｜8 月 31 日開學</span>
@@ -207,6 +214,26 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
         </section>
       )
     }
+
+    <script>
+      document
+        .querySelectorAll<HTMLAnchorElement>('a[data-seasonal-topic-id][data-seasonal-slot]')
+        .forEach((link) => {
+          link.addEventListener('click', () => {
+            const topicId = link.dataset.seasonalTopicId;
+            const slot = link.dataset.seasonalSlot;
+            const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+            if (!topicId || !slot || typeof gtag !== 'function') return;
+
+            gtag('event', 'seasonal_topic_click', {
+              topic_id: topicId,
+              slot,
+              link_url: link.href,
+              content_group: `首頁季節入口｜${slot}｜${topicId}`,
+            });
+          });
+        });
+    </script>
 
     <section class="section home-latest">
       <div class="section-head">

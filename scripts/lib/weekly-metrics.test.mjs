@@ -12,6 +12,7 @@ import {
   siteTraffic,
   articleTrafficShape,
   sprintStatus,
+  seasonalTopicClicks,
 } from './weekly-metrics.mjs';
 
 const ga = (path, views) => ({ dimensionValues: [{ value: path }], metricValues: [{ value: String(views) }] });
@@ -98,6 +99,20 @@ describe('sprint metrics', () => {
     });
     expect(sprintStatus({ endDate: '2026-08-24', pageViews: 4700, sessions: 3000, topArticleSharePct: 30 }).milestoneDate).toBe('2026-08-31');
     expect(sprintStatus({ endDate: '2026-08-24', pageViews: 4700, sessions: 3000, topArticleSharePct: 30 }).concentrationPass).toBe(false);
+  });
+
+  it('breaks seasonal homepage clicks down by slot and topic without custom dimensions', () => {
+    const report = {
+      rows: [
+        ga('首頁季節入口｜companion｜back-to-school-2026', 12),
+        ga('首頁季節入口｜primary｜zhongyuan-2026', 30),
+        ga('健康', 99),
+      ],
+    };
+    expect(seasonalTopicClicks(report)).toEqual([
+      { slot: 'primary', topicId: 'zhongyuan-2026', clicks: 30 },
+      { slot: 'companion', topicId: 'back-to-school-2026', clicks: 12 },
+    ]);
   });
 });
 

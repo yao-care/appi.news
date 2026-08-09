@@ -160,6 +160,21 @@ export function trafficSources(report) {
   return { sources: all.slice(0, 6), aiReferrals: all.filter((s) => isAiReferral(s.source)) };
 }
 
+/**
+ * 首頁季節入口點擊。contentGroup 編碼為「首頁季節入口｜slot｜topicId」，
+ * 因此 GA4 唯讀帳號不必建立自訂維度，也能同時拆出入口位置與專題。
+ */
+export function seasonalTopicClicks(report) {
+  return rows(report)
+    .map((r) => {
+      const [group, slot, topicId] = dim(r, 0).split('｜');
+      if (group !== '首頁季節入口' || !slot || !topicId) return null;
+      return { slot, topicId, clicks: met(r, 0) };
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.clicks - a.clicks);
+}
+
 /** GSC dimensions=[query]，留排名 11-20、依曝光排序 */
 export function searchOpportunities(resp, n = 5) {
   return (resp?.rows ?? [])

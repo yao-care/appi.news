@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" font-family="'Noto Sans TC','PingFang TC',sans-serif">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#003A93">退休提領情境模擬：資產存續曲線比較</text>
+  <text x="480" y="68" text-anchor="middle" font-size="14" fill="#6B7280">橫軸：提領年數（0–30年）　縱軸：資產價值（占初始資產比例）</text>
+
+  <!-- 樂觀市場 -->
+  <rect x="30" y="100" width="280" height="360" rx="10" fill="#F4F4F4"/>
+  <text x="170" y="132" text-anchor="middle" font-size="18" font-weight="700" fill="#3D6BB5">樂觀市場</text>
+  <line x1="75" y1="150" x2="75" y2="420" stroke="#6B7280" stroke-width="1.5"/>
+  <line x1="75" y1="420" x2="295" y2="420" stroke="#6B7280" stroke-width="1.5"/>
+  <polyline points="75,212 130,171 185,160 240,181 295,202" fill="none" stroke="#3D6BB5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="295" cy="202" r="5" fill="#3D6BB5"/>
+  <text x="75" y="440" font-size="12" fill="#6B7280">0年</text>
+  <text x="285" y="440" font-size="12" fill="#6B7280">30年</text>
+  <text x="170" y="458" text-anchor="middle" font-size="12" fill="#1F1F1F">資產穩健成長，餘裕充足</text>
+
+  <!-- 中性市場 -->
+  <rect x="340" y="100" width="280" height="360" rx="10" fill="#F4F4F4"/>
+  <text x="480" y="132" text-anchor="middle" font-size="18" font-weight="700" fill="#003A93">中性市場</text>
+  <line x1="385" y1="150" x2="385" y2="420" stroke="#6B7280" stroke-width="1.5"/>
+  <line x1="385" y1="420" x2="605" y2="420" stroke="#6B7280" stroke-width="1.5"/>
+  <polyline points="385,212 440,223 495,244 550,275 605,316" fill="none" stroke="#003A93" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="605" cy="316" r="5" fill="#003A93"/>
+  <text x="385" y="440" font-size="12" fill="#6B7280">0年</text>
+  <text x="595" y="440" font-size="12" fill="#6B7280">30年</text>
+  <text x="480" y="458" text-anchor="middle" font-size="12" fill="#1F1F1F">資產緩步下滑，30年末仍有餘額</text>
+
+  <!-- 保守市場 -->
+  <rect x="650" y="100" width="280" height="360" rx="10" fill="#F4F4F4"/>
+  <text x="790" y="132" text-anchor="middle" font-size="18" font-weight="700" fill="#D1482A">保守市場</text>
+  <line x1="695" y1="150" x2="695" y2="420" stroke="#6B7280" stroke-width="1.5"/>
+  <line x1="695" y1="420" x2="915" y2="420" stroke="#6B7280" stroke-width="1.5"/>
+  <polyline points="695,212 750,264 805,327 860,389 903,420" fill="none" stroke="#D1482A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="903" cy="420" r="6" fill="#D1482A"/>
+  <text x="695" y="440" font-size="12" fill="#6B7280">0年</text>
+  <text x="905" y="440" font-size="12" fill="#6B7280">30年</text>
+  <text x="790" y="458" text-anchor="middle" font-size="12" fill="#1F1F1F">資產提前枯竭，約27年即用罄</text>
+
+  <!-- 圖例 -->
+  <g>
+    <line x1="230" y1="540" x2="260" y2="540" stroke="#3D6BB5" stroke-width="5"/>
+    <text x="268" y="545" font-size="13" fill="#1F1F1F">樂觀市場</text>
+    <line x1="430" y1="540" x2="460" y2="540" stroke="#003A93" stroke-width="5"/>
+    <text x="468" y="545" font-size="13" fill="#1F1F1F">中性市場</text>
+    <line x1="630" y1="540" x2="660" y2="540" stroke="#D1482A" stroke-width="5"/>
+    <text x="668" y="545" font-size="13" fill="#1F1F1F">保守市場</text>
+  </g>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>

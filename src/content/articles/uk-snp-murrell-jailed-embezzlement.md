@@ -1,10 +1,10 @@
 ---
 title: "SNP認栽核銷穆雷爾露營車帳、拒還他6萬鎊貸款　前執行長侵吞黨費逾40萬英鎊已判囚5年3個月"
 slug: "uk-snp-murrell-jailed-embezzlement"
-description: "蘇格蘭民族黨最新公布的2025年度財報，將前執行長莫雷爾購買的12萬4550英鎊豪華露營車帳面價值全數註銷，並確定不會償還他2021年借給黨方、迄今未還的6萬英鎊貸款。莫雷爾已因侵吞黨費逾40萬英鎊判囚5年3個月，黨方將於下月沒收聽證會上尋求追回全部贓款。"
-excerpt: "SNP最新財報核銷莫雷爾露營車帳面價值、確定不還他6萬英鎊貸款；莫雷爾稍早已因侵吞黨費逾40萬英鎊被判囚5年3個月，黨方下月將尋求沒收令追回贓款。"
+description: "前蘇格蘭首席部長施特金8月8日首度公開表態，稱已判囚的丈夫莫雷爾入獄後兩人未再聯繫，她不會探監也不會再跟他說話。莫雷爾因侵吞SNP黨費逾40萬英鎊判囚5年3個月，SNP最新財報也將他購買的12萬4550英鎊露營車帳面價值全數註銷，並確定不償還他6萬英鎊貸款。"
+excerpt: "施特金首度公開表態不探監、不再跟已判囚的丈夫莫雷爾說話；莫雷爾因侵吞SNP黨費逾40萬英鎊被判囚5年3個月，SNP財報也核銷他的露營車帳面價值、不還他6萬英鎊貸款。"
 publishDate: "2026-06-23T13:23:26.574Z"
-updatedDate: "2026-08-07T17:51:19.651Z"
+updatedDate: "2026-08-09T16:59:38.892Z"
 category: "international"
 subcategory: "europe"
 tags:
@@ -12,6 +12,7 @@ tags:
   - "蘇格蘭"
   - "司法"
 highlights:
+  - "施特金8月8日在愛丁堡藝穗節與主持人戴爾錄製播客時首度公開表態，稱莫雷爾入獄後兩人未再聯繫，她不會探監、也不會再跟他說話，直言自己『像個傻子』還在乎他"
   - "SNP最新公布的2025年度財報，將莫雷爾購買的12萬4550英鎊豪華露營車帳面價值全數註銷，並確認不會償還他2021年借給黨方、迄今仍欠的6萬英鎊貸款"
   - "審計師警告黨內「關係人交易與人工分錄」仍有「較高的詐欺風險」；保守黨財政發言人霍伊批評此帳目「引發更多嚴重疑問」"
   - "莫雷爾已於6月23日在愛丁堡高等法院被判5年3個月徒刑，承認2010年8月至2022年10月間侵吞黨費40萬310.65英鎊"
@@ -22,6 +23,12 @@ risksAndLimits:
   - "施特金遭蒙蔽、誤導與背叛的說法為其個人陳述，尚未見獨立調查報告佐證"
   - "本案聚焦莫雷爾個人刑責，與66萬英鎊獨立公投募款去向的樹枝行動調查是否有其他人涉案尚無定論"
 references:
+  - title: "Nicola Sturgeon feels like a 'mug' over Murrell and won't visit him in prison"
+    url: "https://www.irishnews.com/news/uk/nicola-sturgeon-feels-like-a-mug-over-murrell-and-wont-visit-him-in-prison-NYJUYL4QJZLGFP2JZR6MUGTMYU/"
+    publisher: "Irish News（PA Media 通訊稿）"
+  - title: "Nicola Sturgeon feels like a 'mug' over Murrell and will not visit him in prison"
+    url: "https://uk.news.yahoo.com/nicola-sturgeon-feels-mug-over-133847962.html"
+    publisher: "Yahoo News UK（PA Media 通訊稿）"
   - title: "SNP writes off value of Peter Murrell motorhome and will not repay him £60k loan"
     url: "https://www.gazetteherald.co.uk/news/national/26441974.snp-writes-off-value-peter-murrell-motorhome-will-not-repay-gbp60k-loan/"
     publisher: "Gazette & Herald（PA Media 通訊稿）"
@@ -55,11 +62,11 @@ status: "published"
 sourceType: "wire"
 contentType: "news"
 disclaimerType: "general"
-disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 PA Media 通訊稿（經多家英國地方媒體轉載）、Daily Business Group、Scottish Daily Express、Euronews 等外媒公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
+disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 PA Media 通訊稿（經 Irish News、Yahoo News UK 及多家英國地方媒體轉載）、Daily Business Group、Scottish Daily Express、Euronews 等外媒公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/uk-snp-murrell-jailed-embezzlement-cover.webp"
 coverAlt: "蘇格蘭愛丁堡高等法院（資料照）"
 coverImageCredit: "Chabe01 — CC BY-SA 4.0, Wikimedia Commons"
-originalContribution: "本文延續6月23日莫雷爾判刑報導，整合8月6日SNP公布2025年度財報後PA Media、Daily Business Group、Scottish Daily Express對露營車帳面價值遭核銷、6萬英鎊貸款不獲償還的最新報導，補上黨方財務數字、審計警語與跨黨派反應，供台灣讀者掌握案件財務面的最新進展。"
+originalContribution: "本文延續6月23日莫雷爾判刑報導與8月6日SNP財報揭露，再整合8月8日施特金在愛丁堡藝穗節首度公開表態不探監、不再與莫雷爾聯繫的PA Media通訊稿最新報導，補上她本人的原話與心境轉折，供台灣讀者掌握案件人際面的最新進展。"
 ---
 
 蘇格蘭民族黨（Scottish National Party，SNP）8月6日公布的2025年度財務報告顯示，前執行長莫雷爾（Peter Murrell）購買的豪華露營車帳面價值已全數註銷、從資產負債表移除，黨方也確定不會償還莫雷爾2021年借給黨方、迄今仍欠的6萬英鎊貸款。據[Gazette & Herald引述PA Media通訊稿](https://www.gazetteherald.co.uk/news/national/26441974.snp-writes-off-value-peter-murrell-motorhome-will-not-repay-gbp60k-loan/)，SNP發言人表示，鑑於莫雷爾已認罪，黨方「正在追討全部遭竊款項，不會再支付莫雷爾任何款項」。莫雷爾6月23日已在愛丁堡高等法院（High Court in Edinburgh）因侵吞黨費被判處5年3個月徒刑。據[Euronews報導](https://www.euronews.com/my-europe/2026/06/23/former-snp-chief-peter-murrell-jailed-for-embezzling-more-than-400000-of-party-funds)，現年61歲的莫雷爾在2010年8月至2022年10月間，利用自己掌控的SNP主要銀行帳戶採購一連串昂貴私人物品，並動用黨的會計軟體，以「具誤導性的摘要與／或會計科目」登錄收支來掩飾。他已於今年5月25日認罪。
@@ -92,11 +99,13 @@ originalContribution: "本文延續6月23日莫雷爾判刑報導，整合8月6�
 
 辦案單位將此案定位為對公眾信任的背叛。據[Euronews](https://www.euronews.com/my-europe/2026/06/23/former-snp-chief-peter-murrell-jailed-for-embezzling-more-than-400000-of-party-funds)，蘇格蘭警方助理警察總監休斯頓（Stuart Houston）表示，莫雷爾「在蘇格蘭公共生活中占據著重要的特權與權力位置」。
 
-## 前妻施特金：遭蒙蔽、誤導與背叛
+## 前妻施特金：不探監、不再說話
 
 莫雷爾的婚姻關係也是外界關注焦點。據[英文維基百科](https://en.wikipedia.org/wiki/Peter_Murrell)，他與曾任蘇格蘭首席部長、SNP黨魁的施特金（Nicola Sturgeon）於2010年7月結婚，施特金在2025年1月13日透過社群宣布兩人分居，隨後展開離婚程序。
 
 施特金本人否認知情。據[Radio NewsHub](https://www.radionewshub.com/articles/news-updates/Former-SNP-chief-executive-Peter-Murrell-jailed-for-more-than-five-years)，她稱自己「遭蒙蔽、誤導與背叛」，並表示在歷經「長達兩年、非常縝密的警方調查」後「已獲完全澄清」；她曾在「樹枝行動」中被捕並接受問訊，但未遭起訴。
+
+莫雷爾入獄後，施特金8月8日首度公開談及兩人現況。據[Irish News引述PA Media通訊稿](https://www.irishnews.com/news/uk/nicola-sturgeon-feels-like-a-mug-over-murrell-and-wont-visit-him-in-prison-NYJUYL4QJZLGFP2JZR6MUGTMYU/)，她在愛丁堡藝穗節（Edinburgh Festival Fringe）與廣播主持人戴爾（Iain Dale）錄製播客時表示，莫雷爾入獄後兩人不曾交談，她「不會探監，也不會跟他說話」。她說直到莫雷爾出庭前一週，自己才得知他將認罪，但事後發現他其實已私下協商認罪條件數月，「他一直騙我，騙到他認罪那天為止」。據[Yahoo News UK](https://uk.news.yahoo.com/nicola-sturgeon-feels-mug-over-133847962.html)，施特金坦言這個發現「像一噸磚頭一樣打在我身上」，她如今回想：「真是個傻子，當初何必還為他擔心。」她並形容自己「突然意識到，原來自己一直和一個從未真正認識的人生活在一起」。
 
 ## 對台灣讀者的關注點
 
@@ -106,6 +115,7 @@ SNP是英國蘇格蘭地區的主要政黨，長期主張蘇格蘭獨立、推�
 
 ## 更新時間軸
 
+- （更新 2026-08-08：施特金在愛丁堡藝穗節與主持人戴爾錄製播客時首度公開表態，稱莫雷爾入獄後兩人未再聯繫，她不會探監、也不會再跟他說話，直言自己「像個傻子」還在乎他，並形容才發現自己與一個從未真正認識的人共同生活。[Irish News](https://www.irishnews.com/news/uk/nicola-sturgeon-feels-like-a-mug-over-murrell-and-wont-visit-him-in-prison-NYJUYL4QJZLGFP2JZR6MUGTMYU/)、[Yahoo News UK](https://uk.news.yahoo.com/nicola-sturgeon-feels-mug-over-133847962.html)）
 - （更新 2026-08-06：SNP公布2025年度財報，將莫雷爾露營車帳面價值全數註銷、確認不會償還他2021年的6萬英鎊貸款；審計師警告黨內詐欺風險偏高，黨方預計下月召開沒收聽證會追討贓款。[Gazette & Herald](https://www.gazetteherald.co.uk/news/national/26441974.snp-writes-off-value-peter-murrell-motorhome-will-not-repay-gbp60k-loan/)、[Scottish Daily Express](https://www.scottishdailyexpress.co.uk/news/politics/snps-accounts-raise-serious-questions-37521825)）
 - 2026-06-23：莫雷爾在愛丁堡高等法院被判5年3個月徒刑，承認2010年8月至2022年10月間侵吞黨費40萬310.65英鎊。（[Euronews](https://www.euronews.com/my-europe/2026/06/23/former-snp-chief-peter-murrell-jailed-for-embezzling-more-than-400000-of-party-funds)）
 
@@ -131,3 +141,6 @@ SNP 8月6日公布的2025年度財報，將莫雷爾購買的12萬4550英鎊豪�
 
 ### 前妻施特金對這件事有什麼回應？
 施特金稱自己「遭蒙蔽、誤導與背叛」，表示歷經長達兩年縝密的警方調查後「已獲完全澄清」；她雖曾被捕接受問訊，但未遭起訴。
+
+### 施特金會去監獄探視莫雷爾嗎？
+不會。施特金8月8日在愛丁堡藝穗節公開表示，莫雷爾入獄後兩人未再交談，她不會探監、也不會再跟他說話，直言自己「像個傻子」還在乎他。

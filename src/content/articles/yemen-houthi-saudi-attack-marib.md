@@ -1,9 +1,10 @@
 ---
 title: "胡塞武裝是誰？葉門停火瓦解、沙烏地部隊遭大規模攻擊釀重大死傷"
 slug: "yemen-houthi-saudi-attack-marib"
-description: "葉門胡塞武裝8月6日對沙烏地支持部隊發動大規模飛彈與無人機攻擊，維持近四年的停火瀕臨瓦解。整理馬里卜、哈德拉毛傷亡數字、各方說法落差，以及與紅海封鎖、伊朗代理人戰爭的關聯。"
-excerpt: "葉門胡塞武裝8月6日對沙烏地支持部隊發動大規模飛彈與無人機攻擊，四年停火瀕臨瓦解，馬里卜、哈德拉毛傷亡數字各方說法落差極大。"
+description: "葉門胡塞武裝8月6日對沙烏地支持部隊發動大規模飛彈與無人機攻擊，8月9日再以無人機直擊沙國吉贊阿美煉油廠。整理馬里卜、哈德拉毛傷亡數字、各方說法落差，以及與紅海封鎖、伊朗代理人戰爭的關聯。"
+excerpt: "葉門胡塞武裝8月6日對沙烏地支持部隊發動大規模飛彈與無人機攻擊，四年停火瀕臨瓦解；8月9日再以無人機直擊沙國吉贊阿美煉油廠，攻擊延伸到沙國本土能源設施。"
 publishDate: "2026-08-07T17:51:19.651Z"
+updatedDate: "2026-08-09T16:59:38.892Z"
 category: "international"
 subcategory: "middle-east"
 tags:
@@ -22,13 +23,15 @@ highlights:
   - "8月7日攻擊持續延燒，至少再發動12次飛彈與無人機攻擊，AFP引述消息指死亡人數已上看58人，沙烏地支持的聯合作戰司令部則僅證實17人陣亡"
   - "胡塞同日對沙國納季蘭省發動無人機攻擊，造成11名平民受傷，其中一名4歲孩童二度燒傷"
   - "這是2022年聯合國停火協議生效、葉門維持近四年相對平靜以來最致命的一波攻擊，分析人士警告全面內戰風險已不再遙遠"
+  - "（更新8月9日）胡塞武裝再以無人機直擊沙國紅海岸吉贊阿美煉油廠，沙國能源部證實火警已撲滅、無人員傷亡，阿美執行長稱生產僅部分中斷"
 risksAndLimits:
   - "葉門政府與胡塞武裝雙方公布的死傷數字落差極大，均未經第三方獨立查證"
   - "AFP與沙烏地支持的聯合作戰司令部公布的死亡人數也不一致（58人與17人），確切規模仍待釐清"
+  - "阿美執行長稱吉贊煉油廠攻擊「無實質性財務影響」為企業單方說法，實際產能損失尚未經第三方查證"
   - "衝突仍在延燒，本文數字以查證當下最新外電為準，後續傷亡與情勢可能持續變動"
 ---
 
-葉門胡塞武裝8月6日對沙烏地支持的政府軍部隊發動大規模飛彈與無人機攻擊，馬里卜、哈德拉毛兩省至少30名士兵陣亡，維持近四年的停火局面瀕臨瓦解（[Al Jazeera](https://www.aljazeera.com/news/2026/8/6/houthis-claim-to-have-killed-45-in-attacks-on-yemeni-government-forces)）。攻擊隔天並未平息，8月7日再傳出至少12次飛彈與無人機攻擊，分析人士警告葉門正邁向一場新的全面內戰（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-attacks-on-govt-forces-hint-that-a-major-battle-in-yemen-is-brewing)）。
+葉門胡塞武裝8月6日對沙烏地支持的政府軍部隊發動大規模飛彈與無人機攻擊，馬里卜、哈德拉毛兩省至少30名士兵陣亡，維持近四年的停火局面瀕臨瓦解（[Al Jazeera](https://www.aljazeera.com/news/2026/8/6/houthis-claim-to-have-killed-45-in-attacks-on-yemeni-government-forces)）。攻擊隔天並未平息，8月7日再傳出至少12次飛彈與無人機攻擊，分析人士警告葉門正邁向一場新的全面內戰（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-attacks-on-govt-forces-hint-that-a-major-battle-in-yemen-is-brewing)）。**8月9日情勢再升溫**：胡塞武裝改以無人機直擊沙烏地境內紅海岸的吉贊阿美煉油廠，沙國能源部證實火警已撲滅、無人員傷亡，攻擊範圍首度從葉門境內戰場延伸到沙國本土能源設施（[Al Jazeera](https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan)）。
 
 ## 胡塞武裝是誰
 
@@ -53,6 +56,12 @@ risksAndLimits:
 ## 四年停火為何撐不住
 
 這波升溫並非一夕之間發生。7月13日，葉門政府軍轟炸薩那機場，阻止一架伊朗班機降落；胡塞武裝隨即展開報復性升級。7月20日，胡塞宣布對沙烏地實施「海上封鎖」，並攻擊沙國國營石油公司Aramco的設施，指控沙方對葉門實施「不公正且壓迫性的圍困」。8月5日，胡塞武裝再度宣稱對一艘沙烏地油輪發射飛彈（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-strikes-hit-yemen-as-saudi-arabia-braces-for-attacks-what-we-know)）。國際危機組織資深分析師艾哈邁德·納吉評論：「全面戰爭的威脅已不再遙遠，每一次升級行動都讓和平更難實現。」薩那戰略研究中心研究員阿德爾·達謝拉則警告，若衝突全面爆發，將導致「前所未有的血腥衝突」（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-attacks-on-govt-forces-hint-that-a-major-battle-in-yemen-is-brewing)）。馬里卜省是葉門重要的石油天然氣產區，長年被視為雙方「生死之戰」的關鍵戰場（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-attacks-on-govt-forces-hint-that-a-major-battle-in-yemen-is-brewing)）。
+
+## （更新8月9日）無人機直擊吉贊煉油廠，攻擊延伸到沙國本土能源設施
+
+胡塞武裝的攻勢並未止於馬里卜、哈德拉毛的地面部隊。8月9日凌晨，武裝改變戰場，直接以無人機打擊沙烏地境內紅海岸的吉贊（Jazan）阿美煉油廠，這是本輪衝突以來胡塞首度公開宣稱擊中沙國本土煉油設施（[Al Jazeera](https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan)）。胡塞軍事發言人葉海亞·薩雷在Telegram聲明中宣稱「成功以無人機打擊吉贊阿美煉油廠，達成精準打擊」，並稱此舉是為了回應沙烏地對葉門薩達、哈傑兩省領空的無人機入侵（[Tribune](https://www.tribuneindia.com/news/aramco-refinery/houthis-claim-responsibility-for-attack-on-saudis-aramco-facility-in-jazan)）。
+
+沙烏地能源部證實廠區內一場火警，阿美石油自有的消防隊隨即撲滅火勢，官方強調沒有人員傷亡（[Al Jazeera](https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan)）。吉贊煉油廠日煉油量達40萬桶，是阿美公司透過紅海出口煉製產品、不必繞經荷莫茲海峽的重要據點，整座設施造價約210億美元，距離葉門邊境約44英里（[Aaj英文台](https://english.aaj.tv/news/330467124/houthis-claim-drone-attack-on-saudi-aramcos-jazan-refinery)、[ZeroHedge](https://www.zerohedge.com/energy/fire-erupts-saudi-aramcos-jazan-refinery-iran-backed-houthis-claim-drone-strike)）。阿美執行長納瑟表示，這次攻擊造成部分生產中斷，但對快速恢復運營有信心，強調沒有實質性財務影響（[Aaj英文台](https://english.aaj.tv/news/330467124/houthis-claim-drone-attack-on-saudi-aramcos-jazan-refinery)）。這並非阿美設施今年首度遇襲，7月27日一波攻擊便曾損及廠內氣化聯合循環複合體與油槽區（[Aaj英文台](https://english.aaj.tv/news/330467124/houthis-claim-drone-attack-on-saudi-aramcos-jazan-refinery)）。
 
 ## 沙烏地的因應：一邊備戰、一邊拉盟友
 

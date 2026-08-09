@@ -50,3 +50,12 @@ export function activeSeasonalTopic(
   const day = taipeiDateKey(now);
   return campaigns.find((campaign) => day >= campaign.start && day <= campaign.end);
 }
+
+/**
+ * 七夕／中元仍占主入口時，提早露出開學叢集的次入口。
+ * 8/28 起主入口本身已切到開學，次入口必須關閉，避免首頁重複兩個相同專題。
+ */
+export function showBackToSchoolCompanion(now = new Date()): boolean {
+  const day = taipeiDateKey(now);
+  return day >= '2026-08-10' && day <= '2026-08-27';
+}

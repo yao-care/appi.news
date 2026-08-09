@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { activeSeasonalTopic, taipeiDateKey } from './seasonalTopics';
+import {
+  activeSeasonalTopic,
+  showBackToSchoolCompanion,
+  taipeiDateKey,
+} from './seasonalTopics';
 
 describe('seasonal topic rotation', () => {
   it('uses the Taipei calendar date at the UTC boundary', () => {
@@ -20,5 +24,14 @@ describe('seasonal topic rotation', () => {
 
   it('returns no expired campaign after the sprint', () => {
     expect(activeSeasonalTopic(new Date('2026-08-31T16:00:00Z'))).toBeUndefined();
+  });
+
+  it.each([
+    ['2026-08-09T15:59:59Z', false],
+    ['2026-08-09T16:00:00Z', true],
+    ['2026-08-27T15:59:59Z', true],
+    ['2026-08-27T16:00:00Z', false],
+  ])('controls the early back-to-school companion at %s', (iso, visible) => {
+    expect(showBackToSchoolCompanion(new Date(iso))).toBe(visible);
   });
 });

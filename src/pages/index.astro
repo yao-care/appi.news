@@ -22,7 +22,10 @@ import {
 import { url } from '@/utils/url';
 import { formatDate } from '@/utils/date';
 import { itemListLd } from '@/utils/jsonld';
-import { activeSeasonalTopic } from '@/utils/seasonalTopics';
+import {
+  activeSeasonalTopic,
+  showBackToSchoolCompanion,
+} from '@/utils/seasonalTopics';
 
 const all = await getPublishedArticles();
 const authorMap = await getAuthorMap();
@@ -49,12 +52,24 @@ const secondary = dedupe.take([...featuredArticles(all), ...all], 5);
 const latest = dedupe.take(all, 12, false);
 
 // 8 月衝刺入口依台北日期自動輪替；日期過後不留過期活動占首頁版位。
+const topics = await getTopics();
 const seasonalCampaign = activeSeasonalTopic();
 const seasonalTopic = seasonalCampaign
-  ? (await getTopics()).find((topic) => topic.id === seasonalCampaign.topicId)
+  ? topics.find((topic) => topic.id === seasonalCampaign.topicId)
   : undefined;
 const seasonalTopicCount = seasonalTopic
   ? new Set([...seasonalTopic.data.articles, ...byTopic(all, seasonalTopic.id).map(articleSlug)]).size
+  : 0;
+// 開學題需要預留收錄時間：8/10 起在七夕／中元主入口下方加一條較小的次入口；
+// 8/28 主入口切到開學後自動消失，不與主入口重複。
+const backToSchoolCompanion = showBackToSchoolCompanion()
+  ? topics.find((topic) => topic.id === 'back-to-school-2026')
+  : undefined;
+const backToSchoolCompanionCount = backToSchoolCompanion
+  ? new Set([
+      ...backToSchoolCompanion.data.articles,
+      ...byTopic(all, backToSchoolCompanion.id).map(articleSlug),
+    ]).size
   : 0;
 
 // 分類主題導覽：首頁過去只連到 7 個分類本身，分類底下的細分主題頁（如「科技／AI」）
@@ -173,6 +188,22 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
             </span>
             <span class="seasonal-topic-meta">{seasonalTopicCount} 篇指南　查看專題 →</span>
           </a>
+          {
+            backToSchoolCompanion && (
+              <a
+                class="seasonal-topic-companion"
+                href={url(`/topics/${backToSchoolCompanion.id}/`)}
+              >
+                <span>
+                  <span class="seasonal-topic-companion-eyebrow">提早準備｜8 月 31 日開學</span>
+                  <span class="seasonal-topic-companion-title">小一用品、收心與校園防疫</span>
+                </span>
+                <span class="seasonal-topic-companion-meta">
+                  {backToSchoolCompanionCount} 篇指南　查看專題 →
+                </span>
+              </a>
+            )
+          }
         </section>
       )
     }
@@ -453,6 +484,41 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
   .seasonal-topic-link:hover .seasonal-topic-meta {
     color: var(--appi-brand);
   }
+  .seasonal-topic-companion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+    padding: 12px 18px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    text-decoration: none;
+  }
+  .seasonal-topic-companion-eyebrow,
+  .seasonal-topic-companion-title {
+    display: block;
+  }
+  .seasonal-topic-companion-eyebrow,
+  .seasonal-topic-companion-meta {
+    color: var(--ink-3);
+    font-size: var(--text-xs);
+  }
+  .seasonal-topic-companion-title {
+    margin-top: 2px;
+    font-weight: 700;
+  }
+  .seasonal-topic-companion-meta {
+    flex: 0 0 auto;
+    font-weight: 600;
+  }
+  .seasonal-topic-companion:hover .seasonal-topic-companion-title,
+  .seasonal-topic-companion:hover .seasonal-topic-companion-meta {
+    color: var(--appi-brand);
+  }
 
   .home-latest :global(.acard--medium .acard-title) {
     font-size: 1.375rem; /* 22px */
@@ -540,6 +606,11 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
       flex-direction: column;
       gap: 14px;
       padding: 20px;
+    }
+    .seasonal-topic-companion {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 8px;
     }
   }
 

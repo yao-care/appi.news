@@ -1,12 +1,13 @@
 ---
-title: "雨後登革熱防治完整指南：孳生源清除、巡倒清刷與居家防蚊"
+title: "開學前登革熱防疫：校園與居家巡倒清刷清單"
 slug: "appi-news-376"
-description: "雨後為什麼登革熱風險升高？從積水容器孳生病媒蚊的原理，到巡倒清刷四步驟、居家防蚊熱點與社區動員，一次看懂雨後登革熱防治的完整做法。"
+description: "開學前防登革熱，校園與家庭應巡查積水容器、倒水、清除廢棄物並刷洗蟲卵；本文整理巡倒清刷步驟、常見孳生熱點與個人防蚊方法。"
 publishDate: 2026-07-13
-updatedDate: 2026-08-06
+updatedDate: 2026-08-09
 category: health
 subcategory: preventive
-tags: []
+tags: ["傳染病防治", "公共衛生"]
+topics: ["back-to-school-2026"]
 author: "huang-ziyan"
 coverImage: "covers/appi-news-376.webp"
 coverAlt: "雨後社區居民在陽台巡查花盆與容器中的積水"
@@ -24,7 +25,7 @@ references:
     url: "https://www.cdc.gov.tw/Category/QAPage/7EK9XTR8z3bCHl-ovNluEw"
 draft: false
 ---
-你有沒有發現，午後雷陣雨一停，社區廣播就開始提醒巡查積水？這不是巧合。對病媒蚊來說,一場雨等於一次「開店通知」:花盆底盤、廢棄容器、屋簷排水溝,只要能存住一灘水,幾天內就可能變成孑孓的育嬰房。把家戶想像成一間廚房,登革熱要防治,得先處理掉那些放到發臭的廚餘與死角,而不是等蟲子上門了才拍打。這篇文章把「為什麼會孳生」「怎麼巡倒清刷」「家裡哪裡最容易漏掉」「防蚊液和衣物怎麼選」「社區為什麼要一起做」五件事,一次講清楚。
+開學前防登革熱，校園與家庭應立刻完成「巡、倒、清、刷」：巡查所有積水容器、倒掉積水、清除不用的器具，再刷洗容器內壁去除蟲卵。花盆底盤、冷氣機集水盤、屋簷排水溝與廢棄容器都是常見死角；清除積水後，再搭配長袖衣物、紗窗紗門與合適的防蚊液。完成環境檢查後，可再看[8月31日開學收心與新生準備清單](/articles/back-to-school-syndrome-child-vision-checklist/)及[開學腸病毒重症前兆與漂白水比例](/articles/enterovirus-severe-warning-signs-2026/)，補齊開學健康準備。
 
 ## 一、雨後為什麼登革熱風險會升高？積水容器與病媒蚊孳生的關係
 

@@ -9,6 +9,9 @@ import {
   pageTypeBreakdown,
   articleCategoryBreakdown,
   seoHealth,
+  siteTraffic,
+  articleTrafficShape,
+  sprintStatus,
 } from './weekly-metrics.mjs';
 
 const ga = (path, views) => ({ dimensionValues: [{ value: path }], metricValues: [{ value: String(views) }] });
@@ -56,6 +59,45 @@ describe('topArticles', () => {
       { path: '/articles/a/', title: 'A', views: 100, avgEngagementSec: 5 },
       { path: '/articles/b/', title: 'B', views: 40, avgEngagementSec: 2 },
     ]);
+  });
+});
+
+describe('sprint metrics', () => {
+  it('calculates complete-week traffic and PV/session', () => {
+    const report = { rows: [{ metricValues: [{ value: '1131' }, { value: '900' }] }] };
+    expect(siteTraffic(report)).toEqual({ pageViews: 1131, sessions: 900, pvPerSession: 1.26 });
+    expect(siteTraffic({ rows: [] })).toEqual({ pageViews: 0, sessions: 0, pvPerSession: null });
+  });
+
+  it('calculates middle traffic pages and single-article concentration', () => {
+    const report = {
+      rows: [ga('/articles/a/', 100), ga('/articles/b/', 20), ga('/articles/c/', 9), ga('/', 400)],
+    };
+    expect(articleTrafficShape(report, 800)).toEqual({
+      pagesWithViews: 3,
+      pagesAtLeast10Pv: 2,
+      pagesAtLeast20Pv: 2,
+      topArticleViews: 100,
+      topArticleSharePct: 12.5,
+    });
+  });
+
+  it('selects the next milestone and reports the gap and concentration gate', () => {
+    expect(sprintStatus({ endDate: '2026-08-08', pageViews: 1200, sessions: 900, topArticleSharePct: 20 })).toEqual({
+      milestoneDate: '2026-08-16',
+      targetPageViews: 1800,
+      pageViews: 1200,
+      gapPageViews: 600,
+      targetMet: false,
+      monthlyRunRate: 5143,
+      sessions: 900,
+      pvPerSession: 1.33,
+      pvPerSessionTarget: 1.35,
+      topArticleSharePct: 20,
+      concentrationPass: true,
+    });
+    expect(sprintStatus({ endDate: '2026-08-24', pageViews: 4700, sessions: 3000, topArticleSharePct: 30 }).milestoneDate).toBe('2026-08-31');
+    expect(sprintStatus({ endDate: '2026-08-24', pageViews: 4700, sessions: 3000, topArticleSharePct: 30 }).concentrationPass).toBe(false);
   });
 });
 

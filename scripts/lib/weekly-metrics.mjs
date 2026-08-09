@@ -11,6 +11,63 @@ export function pctChange(cur, prev) {
   return Math.round(((cur - prev) / prev) * 100);
 }
 
+/** 無 dimensions 的 GA4 報告：metrics=[screenPageViews,sessions]。 */
+export function siteTraffic(report) {
+  const values = report?.rows?.[0]?.metricValues ?? [];
+  const pageViews = Number(values[0]?.value ?? 0);
+  const sessions = Number(values[1]?.value ?? 0);
+  return {
+    pageViews,
+    sessions,
+    pvPerSession: sessions ? Math.round((pageViews / sessions) * 100) / 100 : null,
+  };
+}
+
+/** 文章頁的腰部頁數與單篇集中度；集中度分母採全站 PV，對齊衝刺驗收口徑。 */
+export function articleTrafficShape(pageReport, sitePageViews = 0) {
+  const articleRows = rows(pageReport)
+    .map((r) => ({ path: dim(r, 0), views: met(r, 0) }))
+    .filter((r) => pageTypeOf(r.path) === 'article')
+    .sort((a, b) => b.views - a.views);
+  const topArticleViews = articleRows[0]?.views ?? 0;
+  return {
+    pagesWithViews: articleRows.length,
+    pagesAtLeast10Pv: articleRows.filter((r) => r.views >= 10).length,
+    pagesAtLeast20Pv: articleRows.filter((r) => r.views >= 20).length,
+    topArticleViews,
+    topArticleSharePct: sitePageViews
+      ? Math.round((topArticleViews / sitePageViews) * 1000) / 10
+      : null,
+  };
+}
+
+const SPRINT_MILESTONES = [
+  { date: '2026-08-16', targetPageViews: 1800 },
+  { date: '2026-08-23', targetPageViews: 3000 },
+  { date: '2026-08-31', targetPageViews: 4600 },
+];
+
+/** 依最近完整 7 天的窗尾，回目前應追的下一個里程碑與缺口。 */
+export function sprintStatus({ endDate, pageViews, sessions, topArticleSharePct }) {
+  const milestone =
+    SPRINT_MILESTONES.find((item) => endDate <= item.date) ??
+    SPRINT_MILESTONES[SPRINT_MILESTONES.length - 1];
+  const gapPageViews = Math.max(0, milestone.targetPageViews - pageViews);
+  return {
+    milestoneDate: milestone.date,
+    targetPageViews: milestone.targetPageViews,
+    pageViews,
+    gapPageViews,
+    targetMet: pageViews >= milestone.targetPageViews,
+    monthlyRunRate: Math.round((pageViews / 7) * 30),
+    sessions,
+    pvPerSession: sessions ? Math.round((pageViews / sessions) * 100) / 100 : null,
+    pvPerSessionTarget: 1.35,
+    topArticleSharePct,
+    concentrationPass: topArticleSharePct != null ? topArticleSharePct <= 25 : null,
+  };
+}
+
 /** 去 query/hash、補開頭斜線、收斂連續斜線。 */
 function normPath(p) {
   const clean = String(p || '').split(/[?#]/)[0];

@@ -9,17 +9,20 @@ import { CATEGORIES } from '@/config/categories';
 import {
   getPublishedArticles,
   getAuthorMap,
+  getTopics,
   featuredArticles,
   makeDeduper,
   articleSlug,
   byCategory,
   bySubcategory,
+  byTopic,
   coverImageFor,
   coverAltFor,
 } from '@/utils/content';
 import { url } from '@/utils/url';
 import { formatDate } from '@/utils/date';
 import { itemListLd } from '@/utils/jsonld';
+import { activeSeasonalTopic } from '@/utils/seasonalTopics';
 
 const all = await getPublishedArticles();
 const authorMap = await getAuthorMap();
@@ -44,6 +47,15 @@ const secondary = dedupe.take([...featuredArticles(all), ...all], 5);
 
 // 最新文章：單一等高大圖網格（補滿空間）
 const latest = dedupe.take(all, 12, false);
+
+// 8 月衝刺入口依台北日期自動輪替；日期過後不留過期活動占首頁版位。
+const seasonalCampaign = activeSeasonalTopic();
+const seasonalTopic = seasonalCampaign
+  ? (await getTopics()).find((topic) => topic.id === seasonalCampaign.topicId)
+  : undefined;
+const seasonalTopicCount = seasonalTopic
+  ? new Set([...seasonalTopic.data.articles, ...byTopic(all, seasonalTopic.id).map(articleSlug)]).size
+  : 0;
 
 // 分類主題導覽：首頁過去只連到 7 個分類本身，分類底下的細分主題頁（如「科技／AI」）
 // 完全沒有首頁內鏈入口，只能靠分類頁內部或站內搜尋找到，內鏈密度偏低。
@@ -150,6 +162,21 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
   }
 
   <div class="container">
+    {
+      seasonalCampaign && seasonalTopic && (
+        <section class="section seasonal-topic" aria-labelledby="seasonal-topic-title">
+          <a class="seasonal-topic-link" href={url(`/topics/${seasonalTopic.id}/`)}>
+            <span class="seasonal-topic-copy">
+              <span class="seasonal-topic-eyebrow">{seasonalCampaign.eyebrow}</span>
+              <span class="seasonal-topic-title" id="seasonal-topic-title">{seasonalTopic.data.title}</span>
+              <span class="seasonal-topic-desc">{seasonalCampaign.deadlineLabel}</span>
+            </span>
+            <span class="seasonal-topic-meta">{seasonalTopicCount} 篇指南　查看專題 →</span>
+          </a>
+        </section>
+      )
+    }
+
     <section class="section home-latest">
       <div class="section-head">
         <h2>最新文章</h2>
@@ -381,6 +408,52 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
   }
 
   /* ---------- 最新文章：恢復至先前較大的卡片標題字級 ---------- */
+  .seasonal-topic {
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+  .seasonal-topic-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 22px 26px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--appi-accent);
+    border-radius: var(--radius);
+    background: var(--appi-accent-soft);
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .seasonal-topic-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .seasonal-topic-eyebrow,
+  .seasonal-topic-meta {
+    color: var(--appi-accent-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: 600;
+  }
+  .seasonal-topic-title {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    font-weight: 700;
+  }
+  .seasonal-topic-desc {
+    color: var(--ink-2);
+    font-size: var(--text-sm);
+  }
+  .seasonal-topic-meta {
+    flex: 0 0 auto;
+  }
+  .seasonal-topic-link:hover .seasonal-topic-title,
+  .seasonal-topic-link:hover .seasonal-topic-meta {
+    color: var(--appi-brand);
+  }
+
   .home-latest :global(.acard--medium .acard-title) {
     font-size: 1.375rem; /* 22px */
   }
@@ -461,6 +534,12 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
     }
     .side-title {
       font-size: 1.125rem;
+    }
+    .seasonal-topic-link {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 14px;
+      padding: 20px;
     }
   }
 

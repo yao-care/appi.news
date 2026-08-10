@@ -1,6 +1,8 @@
 ---
 title: "海外地震後還能去嗎？行前判斷清單"
 slug: "overseas-disaster-travel-checklist"
+coverImage: "covers/overseas-disaster-travel-checklist.webp"
+coverAlt: "旅客在機場查看手機、地圖與隨身應急用品評估災後行程"
 description: "海外地震、火山或洪水後是否照常出發，應分別查旅遊警示、當地災防資訊、機場鐵路、住宿營業、航空退改與保險條款。本文提供出發前72小時到登機日的核對順序。"
 publishDate: 2026-08-10
 category: "international"

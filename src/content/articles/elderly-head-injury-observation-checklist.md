@@ -1,6 +1,8 @@
 ---
 title: "長輩撞到頭觀察多久？居家紀錄與警訊"
 slug: "elderly-head-injury-observation-checklist"
+coverImage: "covers/elderly-head-injury-observation-checklist.webp"
+coverAlt: "家人在明亮居家環境中陪伴長者並記錄撞頭後的意識狀況"
 description: "長輩跌倒撞頭後，當下正常仍可能延遲出現症狀。本文整理立即送醫警訊、前24小時居家觀察、接下來數週的步態與認知紀錄，以及服用抗凝血藥時要注意的事項。"
 publishDate: 2026-08-10
 category: "health"

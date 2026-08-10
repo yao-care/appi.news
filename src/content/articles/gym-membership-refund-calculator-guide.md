@@ -1,6 +1,8 @@
 ---
 title: "健身房退費怎麼算？月平均公式與申訴"
 slug: "gym-membership-refund-calculator-guide"
+coverImage: "covers/gym-membership-refund-calculator-guide.webp"
+coverAlt: "健身房會員在停業門口核對合約、收據、手機與退費試算"
 description: "健身房契約終止時，可先用契約總金額、總月數、已使用期間與法定手續費規則試算。本文提供月平均價格範例、應備證據、信用卡爭議款及1950申訴順序。"
 publishDate: 2026-08-10
 category: "lifestyle"

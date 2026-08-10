@@ -1,6 +1,8 @@
 ---
 title: "AI 加速器怎麼選？工作負載評估清單"
 slug: "ai-accelerator-workload-selection-checklist"
+coverImage: "covers/ai-accelerator-workload-selection-checklist.webp"
+coverAlt: "工程師在硬體實驗室比較多種伺服器與人工智慧加速器模組"
 description: "選GPU、ASIC或雲端加速器前，先量出模型變動頻率、延遲、吞吐、記憶體、軟體相容性與三年總成本。本文提供從工作負載到試跑驗證的採購評估表。"
 publishDate: 2026-08-10
 category: "tech"

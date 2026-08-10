@@ -1,6 +1,8 @@
 ---
 title: "台灣球員旅外怎麼選？日韓美路線比較"
 slug: "taiwan-baseball-overseas-league-path-guide"
+coverImage: "covers/taiwan-baseball-overseas-league-path-guide.webp"
+coverAlt: "棒球選手背著裝備從球場通道望向多條旅外發展路線"
 description: "台灣棒球選手評估KBO、NPB或美國體系時，不能只比簽約金。本文用出賽層級、發展資源、語言生活、合約控制、傷病支援與回台選項建立決策表。"
 publishDate: 2026-08-10
 category: "sports"

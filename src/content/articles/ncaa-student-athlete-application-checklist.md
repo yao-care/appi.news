@@ -1,6 +1,8 @@
 ---
 title: "NCAA 運動員申請清單：資格到獎學金"
 slug: "ncaa-student-athlete-application-checklist"
+coverImage: "covers/ncaa-student-athlete-application-checklist.webp"
+coverAlt: "學生運動員在校園旁準備申請文件、運動影片與訓練裝備"
 description: "台灣學生運動員赴美申請NCAA，需同時處理學校入學、Eligibility Center資格、學業文件、業餘身分、招募影片與財務方案。本文按時間整理可執行清單。"
 publishDate: 2026-08-10
 category: "sports"

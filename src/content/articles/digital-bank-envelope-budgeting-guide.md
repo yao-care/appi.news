@@ -1,6 +1,8 @@
 ---
 title: "數位銀行子帳戶怎麼分？信封理財設定法"
 slug: "digital-bank-envelope-budgeting-guide"
+coverImage: "covers/digital-bank-envelope-budgeting-guide.webp"
+coverAlt: "手機、五個彩色信封與分組硬幣構成數位信封理財配置"
 description: "用數位銀行子帳戶做信封理財，可把固定支出、日常生活、年度大額、緊急預備金與自由支出分開。本文提供命名、比例起點、自動轉帳及每月校正流程。"
 publishDate: 2026-08-10
 category: "finance"

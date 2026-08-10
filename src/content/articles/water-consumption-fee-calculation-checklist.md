@@ -1,6 +1,8 @@
 ---
 title: "耗水費怎麼算？三級費率與減徵清單"
 slug: "water-consumption-fee-calculation-checklist"
+coverImage: "covers/water-consumption-fee-calculation-checklist.webp"
+coverAlt: "工程人員在工業用水設施內檢查管線流量計與用水紀錄"
 description: "耗水費以枯水期單月用水門檻判斷，再依每度3元、2元或1元費率計算。本文用公式與範例整理徵收對象、用水回收率、再生水減徵、申報文件與繳費前核對項目。"
 publishDate: 2026-08-10
 category: "focus"

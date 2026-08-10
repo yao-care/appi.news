@@ -1,6 +1,8 @@
 ---
 title: "航空公司停飛退款怎麼申請？證據清單"
 slug: "airline-shutdown-refund-evidence-guide"
+coverImage: "covers/airline-shutdown-refund-evidence-guide.webp"
+coverAlt: "旅客在停飛櫃檯前以手機和付款資料整理航空退款證據"
 description: "航空公司停飛、停業或旅行社無法履約時，退款順序取決於付款對象與方式。本文整理向航空公司、旅行社、發卡行與消保單位提出申請時要準備的訂單、公告、對話與付款證明。"
 publishDate: 2026-08-10
 category: "international"

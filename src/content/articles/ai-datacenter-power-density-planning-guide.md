@@ -1,6 +1,8 @@
 ---
 title: "AI 機櫃電力密度怎麼規畫？設施清單"
 slug: "ai-datacenter-power-density-planning-guide"
+coverImage: "covers/ai-datacenter-power-density-planning-guide.webp"
+coverAlt: "資料中心工程師檢查高密度伺服器機櫃的供電與液冷管線"
 description: "AI伺服器進場前，機房要先核對每櫃功率、配電餘裕、散熱方式、網路、樓板載重與故障域。本文用容量表與驗收順序，避免設備到貨後才發現電力或冷卻不足。"
 publishDate: 2026-08-10
 category: "tech"

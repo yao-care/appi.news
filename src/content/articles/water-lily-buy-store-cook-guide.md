@@ -1,6 +1,8 @@
 ---
 title: "水蓮怎麼挑、怎麼保存？清脆料理指南"
 slug: "water-lily-buy-store-cook-guide"
+coverImage: "covers/water-lily-buy-store-cook-guide.webp"
+coverAlt: "料理者挑選與切整新鮮水蓮莖，後方炒鍋正在快炒水蓮"
 description: "買水蓮時挑葉柄翠綠、脆挺、切口不黏爛；回家後冷藏並儘快食用。本文整理清洗、切段、去除異味、快炒保脆與吃不完時的保存方式。"
 publishDate: 2026-08-10
 category: "lifestyle"

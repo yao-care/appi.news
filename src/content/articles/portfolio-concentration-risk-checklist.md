@@ -1,6 +1,8 @@
 ---
 title: "資產集中度怎麼算？投資部位檢查表"
 slug: "portfolio-concentration-risk-checklist"
+coverImage: "covers/portfolio-concentration-risk-checklist.webp"
+coverAlt: "投資人檢視一組明顯集中的資產方塊與市場走勢以評估集中風險"
 description: "資產集中度可用單一部位市值除以可投資資產計算，但同公司股票、ETF成分、退休帳戶與工作收入可能重複曝險。本文提供盤點表、壓力測試與再平衡步驟。"
 publishDate: 2026-08-10
 category: "finance"

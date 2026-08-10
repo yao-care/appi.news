@@ -9,6 +9,7 @@ import DisclaimerBox from '@/components/blocks/DisclaimerBox.astro';
 import ReferenceList from '@/components/blocks/ReferenceList.astro';
 import AuthorBioBox from '@/components/blocks/AuthorBioBox.astro';
 import ShareButtons from '@/components/blocks/ShareButtons.astro';
+import LineReaderCta from '@/components/blocks/LineReaderCta.astro';
 import RelatedArticles from '@/components/blocks/RelatedArticles.astro';
 import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
 import EditButton from '@/components/editor/EditButton.svelte';
@@ -332,6 +333,8 @@ const ogImg = article.data.coverImage ?? `og/${article.data.category}.png`;
         }
 
         <ShareButtons url={shareUrl} title={article.data.title} />
+
+        {!preview && <LineReaderCta />}
 
         {author && <AuthorBioBox author={author} />}
 

@@ -1,6 +1,8 @@
 ---
 title: "綠色證券認證怎麼準備？企業申請清單"
 slug: "green-securities-certification-application-guide"
+coverImage: "covers/green-securities-certification-application-guide.webp"
+coverAlt: "永續與財務團隊在太陽能廠房前檢視綠色認證申請資料"
 description: "綠色證券認證不是只填一個營收比率。本文整理上市櫃公司在初評前要盤點的綠色收入、化石燃料收入、第三方證明、ESG與公司治理淘汰條件，以及年度更新流程。"
 publishDate: 2026-08-10
 category: "focus"

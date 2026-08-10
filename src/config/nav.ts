@@ -28,6 +28,7 @@ export const FOOTER_COLUMNS = [
       { label: '生活', href: '/lifestyle/' },
       { label: '專欄', href: '/columns/' },
       { label: '專題', href: '/topics/' },
+      { label: 'LINE 每日新聞', href: '/line/' },
     ],
   },
   {

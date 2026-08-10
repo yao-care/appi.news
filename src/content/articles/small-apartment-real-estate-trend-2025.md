@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/small-apartment-real-estate-trend-2025.webp"
+coverAlt: "購屋者與房產顧問在都市住宅前檢視小宅格局模型"
 title: "買房該選大坪數還是小宅？內政部統計：2025年小坪數住宅成交易主力"
 description: "內政部與多份房市統計顯示，21～28坪的二房產品已是全台房屋交易主力，台北市更以14坪以下小宅奪冠，反映家庭規模縮小與高房價下的購屋現實。"
 publishDate: "2026-07-29T18:41:17.221Z"

@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/health-supplement-inspection-report-guide.webp"
+coverAlt: "消費者與檢驗人員在實驗室核對保健食品與檢驗資料"
 title: "保健食品怎麼查驗？食藥署字號查詢、第三方檢驗驗什麼一次看懂"
 description: "教你查健康食品字號是否為食藥署核准的A00000或000000格式，並整理第三方檢驗報告該有的重金屬、塑化劑、微生物等項目，避免只看營養標示就誤信保健食品合格。"
 publishDate: "2026-08-03T19:08:22.553Z"

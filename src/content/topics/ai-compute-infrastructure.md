@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/ai-compute-infrastructure.webp"
+coverAlt: "工程師在人工智慧資料中心檢查加速器、伺服器與液冷設施"
 title: "AI 算力與資料中心實務"
 description: "從GPU與ASIC選型、工作負載測試到機櫃配電、散熱與資料中心能源審查，整理AI基礎建設的技術與營運清單。"
 category: "tech"

@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/chinese-medicine-shop-transformation-taiwan.webp"
+coverAlt: "年輕店主在傳統中藥櫃前陳列草本冷飲、甜點與文創商品"
 title: "中藥行為什麼一直倒？從甜點、冷飲到文創看老字號怎麼轉型求生"
 description: "中藥商業同業公會統計，20年間全台中藥行家數少了超過一半，各地老字號正靠冷飲、甜點、文物館等方式找年輕客群，整理具體轉型案例與背後成因。"
 publishDate: "2026-08-01T19:21:12.468Z"

@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/police-good-deeds-2026-07-29.webp"
+coverAlt: "深夜道路旁服務人員為沒油的機車騎士提供燃油協助"
 title: "本週警察暖聞：屏東警護送迷途老翁返家、深夜供油助騎士脫困"
 slug: "police-good-deeds-2026-07-29"
 description: "整理屏東縣警察局公開新聞稿的好人好事：屏東分局崇蘭派出所協助迷途失智老翁平安返家，德協派出所深夜買油助燃油耗盡的機車騎士重新上路。"

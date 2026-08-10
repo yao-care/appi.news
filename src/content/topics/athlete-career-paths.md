@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/athlete-career-paths.webp"
+coverAlt: "年輕運動員與導師在校園球場入口規畫升學與職業路線"
 title: "運動員升學與職業路線"
 description: "整理台灣運動員赴美升學、NCAA資格、運動獎學金與日韓美職業旅外的文件、合約和發展資源評估。"
 category: "sports"

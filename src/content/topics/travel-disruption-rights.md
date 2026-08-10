@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/travel-disruption-rights.webp"
+coverAlt: "旅客在機場整理天氣、訂單、付款與保險資料準備退改"
 title: "旅遊中斷與退費權益"
 description: "從海外災害、航班停飛到業者停止服務，整理出發判斷、退款證據、信用卡爭議款與消費申訴的處理順序。"
 category: "international"

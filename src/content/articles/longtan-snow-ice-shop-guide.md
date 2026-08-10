@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/longtan-snow-ice-shop-guide.webp"
+coverAlt: "龍潭老店師傅操作古早製冰機刨出細緻雪冰"
 title: "雪冰是什麼？跟剉冰、雪花冰差在哪？龍潭老店古法製冰工序一次看懂"
 description: "桃園龍潭一家近90年老店至今仍用古法鹽水製冰機打雪冰，與常見的剉冰、雪花冰做法不同。整理雪冰的製作原理、差異與這間老店的地址、價格、營業時間。"
 publishDate: "2026-08-02T19:12:52.121Z"

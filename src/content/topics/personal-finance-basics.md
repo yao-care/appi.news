@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/personal-finance-basics.webp"
+coverAlt: "家庭以信封、硬幣和資產方塊規畫預算與投資配置"
 title: "個人財務基本功"
 description: "從數位分帳、預算與緊急預備金，到資產配置、集中度與再平衡，整理可定期重跑的個人財務檢查方法。"
 category: "finance"

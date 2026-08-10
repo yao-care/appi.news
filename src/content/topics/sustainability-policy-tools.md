@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/sustainability-policy-tools.webp"
+coverAlt: "企業團隊在水處理與太陽能設施前檢視永續政策資料"
 title: "永續政策實務工具"
 description: "把耗水費、綠色證券與永續揭露等政策，整理成可試算、可申報、可逐項核對的企業工作入口。"
 category: "focus"

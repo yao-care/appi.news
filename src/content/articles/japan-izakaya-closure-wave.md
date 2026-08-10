@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/japan-izakaya-closure-wave.webp"
+coverAlt: "日本小型居酒屋店主在空蕩吧台核對營運帳單"
 title: "日本居酒屋倒閉潮創新高：物價上漲、人手不足怎麼掏空小酒館獲利"
 description: "東京商工リサーチ與帝國數據銀行雙雙統計顯示，2026年上半年日本居酒屋倒閉數雙雙創下歷史新高。整理數字、成因與對消費者、旅客的實際影響。"
 publishDate: "2026-08-01T18:53:30.612Z"

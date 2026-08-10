@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/consumer-rights.webp"
+coverAlt: "消費者與顧問整理契約、收據、付款與申訴證據"
 title: "消費退費與申訴工具"
 description: "服務停擺、業者停業或契約無法履行時，整理退款試算、證據保存、信用卡爭議款與1950消費申訴流程。"
 category: "lifestyle"

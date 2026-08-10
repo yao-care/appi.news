@@ -4,6 +4,7 @@ slug: "shih-yu-hsiang-ncaa-golf-path"
 description: "施友翔在2026台灣青少年公開賽212桿奪冠後將赴美加入NCAA一級法蘭西斯馬瑞恩大學高球隊，解析NCAA高球招募制度、獎學金機制與亞洲選手面臨的挑戰。"
 publishDate: 2026-08-08
 category: sports
+topics: ["athlete-career-paths"]
 subcategory: events
 tags: ["學生賽事", "國際賽事", "教育"]
 author: "appi-editorial"
@@ -32,6 +33,8 @@ references:
 draft: false
 ---
 2026台灣青少年公開賽7日在林口美麗華高爾夫鄉村俱樂部落幕，台灣選手施友翔在男A組以總桿數212桿（低於標準桿4桿）奪冠，領先第2名陳秉承4桿。賽後他證實即將赴美，目標就讀NCAA第一級的法蘭西斯馬瑞恩大學（Francis Marion University）高爾夫球隊[1]。這場勝利不只是一座獎盃，更是台灣青少年高球選手透過賽事成績叩關美國大學體系的一個實例。
+
+申請工具：[NCAA 運動員資格、文件與獎學金清單](/articles/ncaa-student-athlete-application-checklist/)
 
 ## 一、施友翔奪冠：青少年公開賽的關鍵一役
 

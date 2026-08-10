@@ -15,6 +15,7 @@ contentType: "guide"
 sourceType: "editorial"
 status: "published"
 disclaimerType: "general"
+topics: ["consumer-rights"]
 disclosure: "本文由AI輔助起草，經人工查證編輯後發佈。"
 highlights:
   - "統一集團旗下BEING sport、BEING fit全台9館，9月2日晚間11時起停止服務，即日起受理退費或轉籍健身工廠"
@@ -59,6 +60,8 @@ updatedDate: "2026-08-06T05:55:28.112Z"
 8月3日，統一集團旗下統一佳佳宣布7家BEING sport與2家BEING fit健身房，[9月2日晚間11時起全台停止服務](https://udn.com/news/story/7266/9667947)，即日起至9月2日每天上午10時到晚間10時受理退費或轉籍健身工廠；轉籍方案免手續費、免入會費並加贈三個月會籍，未上完的教練課程可平轉使用。健身房收掉、被併購或轉讓經營權在台灣不算新鮮事，多數會員遇到時卻不清楚自己能主張什麼、該找誰申訴。
 
 <img src="/images/gym-closure-membership-refund-rights-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="健身房接待櫃檯，象徵業者停止營業辦理會員退費事宜" title="健身連鎖品牌歇業時，會員須在期限內辦理退費或轉籍（示意圖）">
+
+試算工具：[健身房月平均退費公式與申訴清單](/articles/gym-membership-refund-calculator-guide/)
 
 ## 政府訂的契約規範，業者不能自己說了算
 

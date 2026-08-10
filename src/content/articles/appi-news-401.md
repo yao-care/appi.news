@@ -5,6 +5,7 @@ description: "南韓Kospi指數今年漲幅驚人卻同時是全球波動度最�
 publishDate: 2026-07-28
 updatedDate: 2026-08-06
 category: finance
+topics: ["personal-finance-basics"]
 subcategory: investing-literacy
 tags: []
 author: "wu-fang-jun"
@@ -35,6 +36,8 @@ references:
 draft: false
 ---
 南韓Kospi指數今年一度上漲逾六成，是全球表現最亮眼的主要股市之一，卻同時被彭博（Bloomberg）點名為全球波動度最高的主要基準指數。漲幅與波動雙雙登頂，看似矛盾，實際上是同一個病灶：指數集中度過高。這個病灶並非南韓獨有，台灣投資人的退休金帳戶、保單連結標的與企業主閒置資金，結構上有相當程度的相似之處。
+
+實作延伸：[資產集中度公式與投資部位檢查表](/articles/portfolio-concentration-risk-checklist/)
 
 ## 一、南韓股市今年表現亮眼，卻同時是全球波動度最高的主要指數
 

@@ -16,6 +16,7 @@ contentType: "guide"
 sourceType: "editorial"
 status: "published"
 disclaimerType: "financial"
+topics: ["personal-finance-basics"]
 disclosure: "本文由AI輔助起草，經人工查證編輯後發佈。"
 highlights:
   - "LINE Bank口袋帳戶存款上限2026年6月調高到900萬元，年利率維持1.5%，優惠活動到2026年12月31日止"
@@ -51,6 +52,8 @@ coverImageCredit: "Photo by Sasun Bughdaryan on Unsplash"
 ---
 
 LINE Bank口袋帳戶（官方稱子帳戶）的活存優惠額度，2026年6月調高到900萬元，年利率維持1.5%，優惠活動期間到2026年12月31日。這是繼2025年9月調高到50萬元之後的第二次大幅放寬，九個月內上限放大18倍。額度變大之後，怎麼把主帳戶跟口袋帳戶的錢分開配置，是接下來該想的事。
+
+實作延伸：[數位銀行子帳戶信封理財設定法](/articles/digital-bank-envelope-budgeting-guide/)
 
 ## 這次額度調高了多少
 

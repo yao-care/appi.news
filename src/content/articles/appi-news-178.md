@@ -1,13 +1,17 @@
 ---
-title: "中醫美顏針是什麼？和醫美注射差在哪、真的有效嗎"
+title: "美顏針適合誰？從肩頸、睡眠到臉部張力的中醫評估"
 slug: "appi-news-178"
-description: "中醫美顏針源自顏面神經治療，從肩頸張力、睡眠、體質全方位調理，比較和肉毒、玻尿酸的差異，附臨床研究實證效果與常見問題解答。"
+description: "美顏針不只看臉部紋路。本文整理中醫師如何從睡眠、肩頸張力、過敏與生活狀態評估適合族群，也說明療程選擇重點與哪些期待不應過度延伸。"
 publishDate: 2026-06-21
-updatedDate: 2026-08-07
+updatedDate: 2026-08-10
 category: health
 subcategory: tcm-integrative
 tags: []
 author: "huang-ziyan"
+reviewedBy:
+  - "huang-ziyan"
+factCheckedBy:
+  - "appi-editorial"
 coverImage: "covers/appi-news-178.webp"
 coverAlt: "美顏針穴位分布示意圖，呈現臉部穴位與頸肩經絡的連動關係"
 status: published
@@ -21,11 +25,11 @@ references:
   - title: "Chen XY, Wang QY, Yan ZF, et al. (2025). Intranasal acupuncture therapy for allergic rhinitis: A systematic review and meta-analysis of randomized controlled trials. *Integrative Medicine Research"
     url: "https://pubmed.ncbi.nlm.nih.gov/40190741/"
 draft: false
-topics: ["tcm-acupuncture-pain"]
+topics: ["facial-acupuncture"]
 ---
-你可能聽過這個問題：「美顏針和打肉毒、打玻尿酸，差在哪裡？」
+美顏針適不適合，不能只看年齡或一條皺紋。中醫師通常還會問睡眠、過敏、肩頸張力、用藥與近期醫美療程，再判斷顏面針灸能處理哪一部分、哪些問題應先轉由其他專科評估。
 
-答案不只是工具不同，而是思考框架的差異。從針傷科出發的中醫視角，認為臉上看到的，是全身狀態的出口——脾胃、睡眠、肩頸張力、荷爾蒙週期，全都有份。改善的起點，不在臉，而在整個人。
+想先掌握效果數字、療程次數、費用與禁忌，可從[中醫美顏針完整指南](/articles/tcm-facial-acupuncture-guide/)開始；已經做完、正在處理瘀青或照護疑問，請看[美顏針術後照護與就醫警訊](/articles/appi-news-177/)。本文專注的是施作前的「整體評估」，不是承諾調整肩頸或睡眠就一定能改變臉型。
 
 ## 一、美顏針的出發點：找回自己，不是複製美
 

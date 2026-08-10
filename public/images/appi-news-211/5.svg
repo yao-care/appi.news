@@ -1,0 +1,61 @@
+<svg width="960" height="600" viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="46" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="700" fill="#1B5E4B">熱衰竭 vs 中暑：症狀對照</text>
+  <line x1="80" y1="62" x2="880" y2="62" stroke="#2E8B6F" stroke-width="2"/>
+
+  <!-- 左欄：熱衰竭 -->
+  <rect x="40" y="90" width="420" height="480" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+  <rect x="40" y="90" width="420" height="70" rx="16" fill="#C9A227"/>
+  <rect x="40" y="130" width="420" height="30" fill="#C9A227"/>
+  <text x="250" y="134" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">熱衰竭症狀</text>
+
+  <circle cx="100" cy="230" r="28" fill="#FFFFFF" stroke="#C9A227" stroke-width="3"/>
+  <path d="M100,214 C112,230 112,244 100,244 C88,244 88,230 100,214 Z" fill="#C9A227"/>
+  <text x="145" y="238" font-family="sans-serif" font-size="24" fill="#1F2A28">大量流汗</text>
+
+  <circle cx="100" cy="340" r="28" fill="#FFFFFF" stroke="#C9A227" stroke-width="3"/>
+  <path d="M88,340 q6,-14 12,0 q6,14 12,0" stroke="#C9A227" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="145" y="348" font-family="sans-serif" font-size="24" fill="#1F2A28">頭暈目眩</text>
+
+  <circle cx="100" cy="450" r="28" fill="#FFFFFF" stroke="#C9A227" stroke-width="3"/>
+  <path d="M100,434 C112,450 112,464 100,464 C88,464 88,450 100,434 Z" fill="none" stroke="#C9A227" stroke-width="3"/>
+  <circle cx="100" cy="450" r="5" fill="#C9A227"/>
+  <text x="145" y="458" font-family="sans-serif" font-size="24" fill="#1F2A28">皮膚濕冷</text>
+
+  <text x="250" y="540" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#6B7B77">應盡快移至陰涼處休息、補充水分</text>
+
+  <!-- 中央 VS -->
+  <circle cx="480" cy="340" r="34" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
+  <text x="480" y="349" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#1B5E4B">VS</text>
+
+  <!-- 右欄：中暑 -->
+  <rect x="500" y="90" width="420" height="480" rx="16" fill="#F2F7F5" stroke="#C0392B" stroke-width="2"/>
+  <rect x="500" y="90" width="420" height="70" rx="16" fill="#C0392B"/>
+  <rect x="500" y="130" width="420" height="30" fill="#C0392B"/>
+  <text x="710" y="134" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">中暑警訊症狀</text>
+
+  <circle cx="560" cy="220" r="28" fill="#FFFFFF" stroke="#C0392B" stroke-width="3"/>
+  <text x="560" y="230" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#C0392B">?</text>
+  <text x="605" y="228" font-family="sans-serif" font-size="24" fill="#1F2A28">意識混亂</text>
+
+  <circle cx="560" cy="310" r="28" fill="#FFFFFF" stroke="#C0392B" stroke-width="3"/>
+  <circle cx="560" cy="310" r="8" fill="#C0392B"/>
+  <line x1="560" y1="286" x2="560" y2="294" stroke="#C0392B" stroke-width="3"/>
+  <line x1="560" y1="326" x2="560" y2="334" stroke="#C0392B" stroke-width="3"/>
+  <line x1="536" y1="310" x2="544" y2="310" stroke="#C0392B" stroke-width="3"/>
+  <line x1="576" y1="310" x2="584" y2="310" stroke="#C0392B" stroke-width="3"/>
+  <line x1="543" y1="293" x2="549" y2="299" stroke="#C0392B" stroke-width="3"/>
+  <line x1="571" y1="321" x2="577" y2="327" stroke="#C0392B" stroke-width="3"/>
+  <text x="605" y="318" font-family="sans-serif" font-size="24" fill="#1F2A28">皮膚乾熱</text>
+
+  <circle cx="560" cy="400" r="28" fill="#FFFFFF" stroke="#C0392B" stroke-width="3"/>
+  <path d="M548,392 a12,12 0 1,0 0.1,0" fill="none" stroke="#C0392B" stroke-width="3"/>
+  <line x1="554" y1="404" x2="566" y2="404" stroke="#C0392B" stroke-width="3"/>
+  <text x="605" y="408" font-family="sans-serif" font-size="24" fill="#1F2A28">意識喪失</text>
+
+  <rect x="520" y="450" width="380" height="90" rx="14" fill="#C0392B"/>
+  <circle cx="565" cy="495" r="22" fill="#FFFFFF"/>
+  <rect x="558" y="486" width="14" height="18" rx="7" transform="rotate(45 565 495)" fill="#C0392B"/>
+  <text x="700" y="490" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">紅旗警訊</text>
+  <text x="700" y="520" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">立即撥打119送醫</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

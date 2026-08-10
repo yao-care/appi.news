@@ -1,9 +1,9 @@
 ---
-title: "周天成幾歲？36歲奪冠與生涯戰績、世界排名最高整理"
+title: "周天成幾歲？36歲奪冠、生涯獎金、世界排名與戰績"
 slug: "appi-news-453"
-description: "周天成2026年7月奪中國羽球公開賽男單冠軍時36歲又199天，是超級1000等級史上最年長冠軍。整理他的生涯戰績：世界排名最高第2、兩座超級1000冠軍、三度奧運8強、世錦賽銅牌，並看賽事等級怎麼分、8月世錦賽賽程。"
+description: "周天成2026年7月奪冠時36歲又199天；BWF公開頁列男單生涯賽事獎金130萬2846美元。整理其最高世界排名第2、兩座超級1000冠軍、三度奧運8強與世錦賽銅牌。"
 publishDate: 2026-07-28
-updatedDate: 2026-08-07
+updatedDate: 2026-08-10
 category: sports
 subcategory: events
 tags: ["國際賽事"]
@@ -30,8 +30,12 @@ references:
     url: "https://zh.wikipedia.org/zh-tw/%E5%91%A8%E5%A4%A9%E6%88%90"
   - title: "South China Morning Post (2026). Chinese Taipei's Chou Tien-chen becomes oldest Super 1000 winner at badminton's China Open"
     url: "https://www.scmp.com/sport/china/article/3361912/chinese-taipeis-chou-tien-chen-becomes-oldest-super-1000-winner-badmintons-china-open"
+  - title: "BWF. CHOU Tien Chen | Profile"
+    url: "https://bwfworldtourfinals.bwfbadminton.com/zh-cn/player/34810/chou-tien-chen/"
 draft: false
 ---
+周天成出生於1990年1月8日，2026年7月奪得中國羽球公開賽冠軍時是36歲又199天。[BWF公開個人頁](https://bwfworldtourfinals.bwfbadminton.com/zh-cn/player/34810/chou-tien-chen/)列出的男單生涯賽事獎金為**130萬2,846美元**，另有雙打879美元；這是BWF紀錄的賽事獎金，不等同薪資、代言收入或個人淨資產，且頁面統計更新時間可能落後最新一站賽事。
+
 ## 一、賽事回顧：奪冠關鍵一戰
 
 2026年超級1000等級賽事「中國羽球公開賽」7月27日在江蘇常州落幕，台灣羽球一哥周天成在男單決賽中，以21比15、7比21、21比13擊敗世界排名第16的法國選手波波夫（Toma Junior Popov），拿下本季首座冠軍。
@@ -123,5 +127,8 @@ BWF世界巡迴賽依獎金與積分分為超級1000、超級750、超級500、�
 ### Q4: 周天成的世界排名生涯最高紀錄是多少？
 他在2020年3月攀上生涯最高的世界排名第2名，這次奪冠後最新世界排名為第6名。
 
-### Q5: 周天成接下來會參加哪些重要賽事？
+### Q5: 周天成的生涯獎金累積多少？
+依BWF公開個人頁，周天成男單生涯賽事獎金為130萬2,846美元，雙打另有879美元。這個欄位只計BWF頁面所列賽事獎金，不包含薪資、代言收入或其他商業收益，最新一站獎金也可能尚未更新。
+
+### Q6: 周天成接下來會參加哪些重要賽事？
 這次奪冠已確保他在8月印度世界羽球錦標賽取得男單前8種子資格，可望避開同等級好手的過早對決。

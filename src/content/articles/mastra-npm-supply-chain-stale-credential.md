@@ -49,6 +49,7 @@ references:
     url: "https://www.aikido.dev/blog/over-140-popular-mastra-npm-packages-hit-by-supply-chain-attack"
     publisher: "Aikido Security"
     note: "第二階段常駐程式鎖定逾 160 個瀏覽器加密貨幣錢包外掛（MetaMask、Keplr、Coinbase 等）、^1.11.21 caret 解析自動拉到惡意 1.11.22"
+topics: ["ai-agent-governance"]
 ---
 
 <p>6 月 17 日凌晨，有人用一個早就沒在維護的前貢獻者帳號，在 88 分鐘內把 AI 開發框架 Mastra 的 npm 套件生態整批改寫。<a href="https://orca.security/resources/blog/mastra-npm-supply-chain-attack/" target="_blank" rel="noopener">142 個 @mastra 套件被重新發佈、塞進同一個惡意相依，連同 mastra 與 create-mastra 共 144 個套件受影響，時間落在 UTC 01:12 到 02:39 這 88 分鐘內</a>。這件事真正該記住的，不是手法多新，而是一個沒人回頭看的問題：離職貢獻者的發佈權限，從頭到尾沒有被收回。</p>

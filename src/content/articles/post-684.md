@@ -41,6 +41,7 @@ disclaimerType: "general"
 coverImage: "covers/post-684-stock.jpg"
 coverAlt: "工地重型機具作業的高角度空中俯瞰"
 coverImageCredit: "Photo by Pok Rie on Pexels"
+topics: ["taiwan-semiconductor-supply-chain"]
 ---
 
 2026年6月12日，屏東科學園區的一場動土典禮，標誌了台灣半導體版圖向南延伸的里程碑。台積電聯合七家供應鏈廠商共同宣告進駐，這座28公頃的半導體供應鏈專區，是台灣第一個以晶元廠廠房及設施為建置核心的產業鏈專屬園區，也是台積電有史以來第一次在園區規劃中直接統籌設計整座聚落的佈局。

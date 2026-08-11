@@ -44,6 +44,7 @@ references:
     url: "https://newtalk.tw/news/view/2026-07-23/1048959"
     publisher: "Newtalk新聞"
 draft: false
+topics: ["sustainability-policy-tools"]
 ---
 
 經濟部水利署近日公布最新清淤進度。[據水利署新聞稿](https://www.wra.gov.tw/News_Content.aspx?n=6430&sms=9122&s=293935)，115年（2026年）上半年，全台主要供水水庫已完成清淤1020萬立方公尺，達成全年清淤目標2006萬立方公尺的5成，整體執行進度超前。[中央社報導](https://www.cna.com.tw/news/afe/202607230180.aspx)同樣引述水利署數字，確認上半年清淤量已達全年目標一半。

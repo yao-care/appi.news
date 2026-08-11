@@ -45,6 +45,7 @@ references:
   - title: "Qwen 3.7 vs Kimi K2.7 vs MiniMax M3 vs GLM 5.2: China AI Models 2026"
     url: "https://jasonpollakmarketing.com/2026/06/18/qwen-3-7-vs-kimi-k2-7-vs-minimax-m3-vs-glm-5-2-china-ai-models-2026/"
     publisher: "Jason Pollak Marketing"
+topics: ["ai-agent-governance"]
 ---
 
 上海的 MiniMax 在 6 月 1 日推出 M3，新聞標題大多在比跑分。很多人第一個反應是「又一個開源模型贏了 GPT」。這個讀法沒錯，但只讀到這一層，會錯過真正的訊號。

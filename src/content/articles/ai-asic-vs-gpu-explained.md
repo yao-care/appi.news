@@ -24,7 +24,7 @@ status: "published"
 sourceType: "wire"
 contentType: "analysis"
 disclaimerType: "general"
-topics: ["ai-compute-infrastructure"]
+topics: ["ai-compute-infrastructure", "taiwan-semiconductor-supply-chain"]
 disclosure: "本文以 AI 輔助起草，所有數據、事實與引述來源均經人工逐條查證、編輯與校對後刊出。"
 highlights:
   - "ASIC 把電路在設計階段就針對單一任務刻死，用犧牲彈性換取更高每瓦效能與更低單位成本；GPU 是通用可程式化的平行運算器，什麼工作都能算但效率打折。"
@@ -51,7 +51,6 @@ references:
     url: "https://www.esunsec.com.tw/article/post/592"
     publisher: "玉山證券"
 originalContribution: "把 imec 的 ASIC/GPU 架構比較、Silicon Analysts 的先進製程流片成本拆解、創意電子官方揭露的設計服務範圍、日月光先進封裝營收目標，以及玉山證券整理的台廠受惠比重串成一條完整的「原理到台灣供應鏈」解釋線，並回答『什麼情況下仍該用 GPU』這個題材熱潮裡最常被忽略的問題。"
-topics: ["taiwan-semiconductor-supply-chain"]
 ---
 
 AI ASIC 是為單一運算任務把電路刻死的客製晶片，用犧牲彈性換取比通用 GPU 更高的每瓦效能與更低的單位成本。雲端巨頭把愈來愈多推論工作搬去自研 ASIC，理由很直接：那些工作負載上線後就固定重複，用不到 GPU 保留的彈性，卻要為那份彈性付電費。這條路線分流的是特定推論負載，訓練與還在快速變動的工作負載，仍是 GPU 的地盤。

@@ -1,10 +1,10 @@
 ---
 title: "美伊戰事急轉：川普喊停對伊朗新攻擊　開出荷莫茲海峽全面開放換停火條件"
 slug: "iran-jordan-base-attack-us-retaliates"
-description: "美伊戰事8月1日晚間急轉：川普在Truth Social宣布，中東盟友已達成協議框架，美方將暫緩原訂對伊朗的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅。這場逆轉來得突然：就在數小時前，川普才誓言對伊朗「狠狠打擊」，革命衛隊聲稱擊中2艘由美軍護航的油輪，美國並在至少10個中東國家發布撤離警示；促成轉折的關鍵是沙烏地王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮，沙國防長隨後赴華府與川普、副總統萬斯會商。半島電視台報導指出，美軍愛國者飛彈庫存告急也是考量之一；卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」，否則將遭「相稱回應」。8月3日局勢再添變數：川普宣布將展開涉及去核化與海峽開放的談判，伊朗官方隨即否認與美方直接會談，僅承認與阿曼磋商海峽安全通行路線。8月4日財政部長貝森特稱美伊「今天或明天」有望就開放海峽達成協議，同一時間賴比瑞亞籍散貨輪「Minoan Pioneer」號深夜於阿曼外海遭不明射彈擊中，三副下落不明。8月5日伊朗外交部宣布與阿曼協議進入「最後階段」，規劃船隻分道進出海峽並先清除水雷，但仍待最高領袖莫賈塔巴·哈梅內伊批准；總統佩澤希齊揚同日證實「聯繫他確實很困難」，外界並傳莫賈塔巴在2月28日空襲中重傷甚至毀容，惟未經伊朗官方證實。過境費用版本不一，川普稱協議「明天或後天」可望公布，參議院少數黨領袖舒默則質疑恐重演過去僅維持數天的模式。"
-excerpt: "美伊戰事8月1日晚間急轉：川普宣布中東盟友已達成協議框架，美方暫緩新一輪對伊朗攻擊，換取荷莫茲海峽全面開放及終止伊朗核威脅。逆轉前數小時，川普才誓言對伊朗「狠狠打擊」、美國並在至少10個中東國家發布撤離警示；沙烏地王儲週六致電川普表達對衝突升級的憂慮是關鍵轉折。卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」。伊朗8月3日再否認與美方有直接談判，稱僅與阿曼磋商海峽安全通行路線；8月4日貝森特稱美伊談判「今天或明天」有望達成海峽開放協議，同一時間又一艘散貨輪深夜遇襲，一名船員下落不明。8月5日伊朗宣布與阿曼協議進入「最後階段」，仍待最高領袖莫賈塔巴批准；總統佩澤希齊揚證實聯繫最高領袖「確實很困難」，外界並傳莫賈塔巴在開戰空襲中重傷，惟未經證實。"
+description: "美伊戰事8月1日晚間急轉：川普在Truth Social宣布，中東盟友已達成協議框架，美方將暫緩原訂對伊朗的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅。這場逆轉來得突然：就在數小時前，川普才誓言對伊朗「狠狠打擊」，革命衛隊聲稱擊中2艘由美軍護航的油輪，美國並在至少10個中東國家發布撤離警示；促成轉折的關鍵是沙烏地王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮，沙國防長隨後赴華府與川普、副總統萬斯會商。半島電視台報導指出，美軍愛國者飛彈庫存告急也是考量之一；卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」，否則將遭「相稱回應」。8月3日局勢再添變數：川普宣布將展開涉及去核化與海峽開放的談判，伊朗官方隨即否認與美方直接會談，僅承認與阿曼磋商海峽安全通行路線。8月4日財政部長貝森特稱美伊「今天或明天」有望就開放海峽達成協議，同一時間賴比瑞亞籍散貨輪「Minoan Pioneer」號深夜於阿曼外海遭不明射彈擊中，三副下落不明。8月5日伊朗外交部宣布與阿曼協議進入「最後階段」，規劃船隻分道進出海峽並先清除水雷，但仍待最高領袖莫賈塔巴·哈梅內伊批准；總統佩澤希齊揚同日證實「聯繫他確實很困難」，外界並傳莫賈塔巴在2月28日空襲中重傷甚至毀容，惟未經伊朗官方證實。過境費用版本不一，川普稱協議「明天或後天」可望公布，參議院少數黨領袖舒默則質疑恐重演過去僅維持數天的模式。8月9日伊朗總統佩澤希齊揚任命71歲、遭國際刑警組織通緝的前革命衛隊總司令莫森·雷扎伊接掌最高國家安全委員會秘書長，原秘書長佐爾加德爾轉任最高領袖政治顧問；佩澤希齊揚同日證實，他與最高領袖哈梅內伊近日進行近7小時會談，談及民生與制裁衝擊。"
+excerpt: "美伊戰事8月1日晚間急轉：川普宣布中東盟友已達成協議框架，美方暫緩新一輪對伊朗攻擊，換取荷莫茲海峽全面開放及終止伊朗核威脅。逆轉前數小時，川普才誓言對伊朗「狠狠打擊」、美國並在至少10個中東國家發布撤離警示；沙烏地王儲週六致電川普表達對衝突升級的憂慮是關鍵轉折。卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」。伊朗8月3日再否認與美方有直接談判，稱僅與阿曼磋商海峽安全通行路線；8月4日貝森特稱美伊談判「今天或明天」有望達成海峽開放協議，同一時間又一艘散貨輪深夜遇襲，一名船員下落不明。8月5日伊朗宣布與阿曼協議進入「最後階段」，仍待最高領袖莫賈塔巴批准；總統佩澤希齊揚證實聯繫最高領袖「確實很困難」，外界並傳莫賈塔巴在開戰空襲中重傷，惟未經證實。8月9日伊朗任命遭國際刑警通緝的前革命衛隊總司令雷扎伊接掌最高國安會秘書長，總統並證實與最高領袖近日密談近7小時。"
 publishDate: "2026-07-19T15:18:08.284Z"
-updatedDate: "2026-08-06T15:11:37.000Z"
+updatedDate: "2026-08-11T16:16:54.156Z"
 category: "international"
 subcategory: "middle-east"
 tags:
@@ -12,6 +12,9 @@ tags:
   - "美國"
   - "地緣政治"
 highlights:
+  - "伊朗總統佩澤希齊揚8月9日任命71歲前革命衛隊總司令莫森·雷扎伊接掌最高國家安全委員會秘書長，原秘書長佐爾加德爾轉任最高領袖政治顧問；雷扎伊自2007年起遭國際刑警組織列紅色通緝令，因被控涉入1994年阿根廷AMIA猶太社區中心爆炸案（85人罹難）的策劃與執行，他主張荷莫茲海峽控制權「比核武更重要」。總統佩澤希齊揚同日在國家電視台證實，與最高領袖哈梅內伊近日進行近7小時會談，談及民生、制裁衝擊與內部團結"
+  - "伊朗最高國家安全委員會秘書佐爾加德爾8月8日公布重新開放荷莫茲海峽的四項條件：美方永久終止軍事威脅並自區域撤軍、解除港口海軍封鎖、「完全賠償」戰爭損失、取消制裁並無條件釋放凍結資產；外交部發言人巴格海伊8月10日重申，只要美方其他違規行為持續，條件就不成熟稱荷莫茲海峽為安全水道"
+  - "川普8月10日在白宮橢圓形辦公室對伊朗賠償要求嗤之以鼻，聲稱美國海軍「百分之百」掌控荷莫茲海峽、封鎖「堅不可摧」如「鋼鐵牆」，並反向要求伊朗為50年來造成的損害賠償，對象包括遭伊朗支持武裝路邊炸彈等攻擊致死致傷的美軍，以及遭伊朗政府鎮壓致死的抗議者家屬；美方統計指出，1983年貝魯特美軍陸戰隊營區爆炸案241名美軍陣亡，2003至2011年伊拉克戰事期間另有至少603名美軍因伊朗相關攻擊喪生"
   - "伊朗外交部發言人巴格海伊8月5日表示，與阿曼的荷莫茲海峽協議已進入「最後階段」擬定；兩名知情官員向美聯社透露，伊朗與阿曼談判代表已敲定協議草案，仍待最高領袖莫賈塔巴·哈梅內伊最終批准，協議規劃船隻入灣走伊朗控制航線、出灣走阿曼一側航線，首30天將清除海峽內估計70至100枚水雷"
   - "伊朗總統佩澤希齊揚8月5日在國家電視台專訪中證實「目前與（最高領袖）聯繫確實很困難」，是官方首度鬆口承認接觸困難；外界據報莫賈塔巴在2月28日空襲中重傷、甚至毀容，惟伊朗當局尚未證實傷勢細節，他自接任以來從未公開露面"
   - "過境費用版本不一：一說臨時協議期間海峽「不收取任何費用或通行稅」，另一說伊朗原要求收取貨物價值5%至7%費率、阿曼提案約3%、美方堅持零費率，實際定案版本截至發稿仍有出入"
@@ -33,6 +36,8 @@ highlights:
   - "國際油價因戰事劇烈波動：布蘭特原油7月29日單日暴漲7.9%至每桶90.74美元，創數週最大漲幅，30日回落至87.3美元"
   - "美伊戰事自2月28日爆發以來已逾5個月：美軍陣亡人數累計至少17人、逾500人受傷，伊朗官方統計死亡人數逾55人、逾600人受傷"
 risksAndLimits:
+  - "雷扎伊接掌最高國家安全委員會秘書長對談判走向的實際影響，各方分析解讀不一，目前僅屬推測，尚待後續觀察"
+  - "川普提出的伊朗『50年損害賠償』求償僅為政治喊話，具體金額、計算方式與求償對象截至發稿尚未有正式協議條文或官方文件確認"
   - "過境費用具體定案版本各方說法不一：有官員稱協議期間「不收費」，另有報導指伊朗要求5%至7%費率仍未拍板，實際條款待正式簽署文件公布才能確認"
   - "莫賈塔巴·哈梅內伊受傷及毀容之說僅為外界援引消息人士報導，伊朗官方未證實傷勢細節，其健康狀況與履職能力仍是未知數"
   - "協議仍待伊朗最高領袖最終批准、尚未正式簽署，能否如川普所稱「明天或後天」公布仍待觀察；6月的臨時協議也曾在數週內瓦解"
@@ -201,6 +206,33 @@ references:
   - title: "Contact with Iran's supreme leader 'very difficult': Pezeshkian"
     url: "https://www.dailysabah.com/world/mid-east/contact-with-irans-supreme-leader-very-difficult-pezeshkian"
     publisher: "Daily Sabah"
+  - title: "Donald Trump scoffs at Iran's demand for war reparations"
+    url: "https://www.brentwoodlive.co.uk/news/national/26452542.donald-trump-scoffs-irans-demand-war-reparations/"
+    publisher: "Brentwood Live (PA)"
+  - title: "Trump demands compensation from Iran as talks on Strait of Hormuz continue"
+    url: "https://www.aljazeera.com/news/2026/8/11/trump-demands-compensation-from-iran-as-talks-on-strait-of-hormuz-continue"
+    publisher: "Al Jazeera"
+  - title: "Iran demands U.S. pay for war damage before agreeing to reopen Strait of Hormuz"
+    url: "https://www.pbs.org/newshour/show/iran-demands-u-s-pay-for-war-damage-before-agreeing-to-reopen-strait-of-hormuz"
+    publisher: "PBS NewsHour"
+  - title: "Iran issues long list of steep demands the U.S. must satisfy before the Strait of Hormuz will be reopened"
+    url: "https://fortune.com/2026/08/08/iran-demands-strait-of-hormuz-us-conditions-total-compensation-war-damage/"
+    publisher: "Fortune"
+  - title: "Iran should \"pay for damages\" it's done over 50 years: Trump claims \"100% control\" over Strait of Hormuz"
+    url: "https://www.tribuneindia.com/news/usa-news/iran-should-pay-for-damages-its-done-over-50-years-trump-claims-100-control-over-strait-of-hormuz/amp/"
+    publisher: "The Tribune (India)"
+  - title: "How significant is Mohsen Rezaee's appointment as Iran's security chief?"
+    url: "https://www.aljazeera.com/news/2026/8/10/who-is-mohsen-rezaei-and-how-significant-is-his-appointment"
+    publisher: "Al Jazeera"
+  - title: "Iran names new security chief who's wanted by Interpol in connection with deadly AMIA bombing"
+    url: "https://www.timesofisrael.com/iran-names-new-security-chief-whos-wanted-by-interpol-in-connection-with-deadly-amia-bombing/"
+    publisher: "The Times of Israel"
+  - title: "Iran won't reopen Strait of Hormuz without US concessions, and other Mideast developments"
+    url: "https://www.ksat.com/news/world/2026/08/10/iran-wont-reopen-strait-of-hormuz-without-us-concessions-and-other-mideast-developments/"
+    publisher: "KSAT (AP)"
+  - title: "Iran leadership reshuffles amid Hormuz talks, comes after rare meeting with President, Supreme Leader"
+    url: "https://www.tribuneindia.com/news/iran-diplomacy/iran-leadership-reshuffles-amid-hormuz-talks-comes-after-rare-meeting-with-president-supreeme-leader"
+    publisher: "The Tribune (India)"
 author: "appi-editorial"
 reviewedBy:
   - "luo-yang"
@@ -216,7 +248,7 @@ coverAlt: "約旦穆瓦法克薩爾蒂空軍基地內的美軍與約旦F-16戰�
 coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 ---
 
-美伊戰事在近5個月的軍事對抗後，於8月1日晚間出現轉折。美國總統川普宣布，中東盟友已達成結束戰爭的協議框架，美方將暫緩原訂對伊朗發動的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅；促成轉折的關鍵，是沙烏地阿拉伯王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮。這場戰事源於美軍中央司令部證實，伊朗7月17日（週五）以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地（Muwaffaq Salti Air Base，簡稱MSAB），造成2名美軍陣亡、1人失蹤、4人送醫，美國隨即展開報復性空襲，戰事一路升溫。7月28日晚間，伊朗再度以飛彈攻擊約旦美軍基地，美國與沙烏地阿拉伯隨即聯手空襲伊拉克境內親伊朗民兵，官方民兵聯盟PMF通報至少20死32傷，另有6名伊朗顧問喪生；美軍中央司令部30日凌晨再對伊朗本土發動新一輪空襲，規模較前次擴大約一倍，鎖定伊朗南部多處革命衛隊目標，伊朗官方通報格什姆島一處民宅遭擊中，造成一家3口罹難。戰事外溢範圍持續擴大：埃及地中海港口達米埃塔29日遭無人機攻擊，一艘美籍液化天然氣儲存船起火，是本輪衝突以來埃及領土首度遭波及；荷莫茲海峽3艘油輪遭伊朗革命衛隊攔停，科威特則通報1名工人在伊朗攻擊中喪生。國際油價單日暴漲7.9%，地緣政治風險同步攀升。逆轉來得突然：宣布暫停的數小時前，革命衛隊才聲稱擊中2艘由美軍護航的油輪，川普誓言對伊朗「狠狠打擊」，美國更在至少10個中東國家發布撤離警示，直到川普8月1日晚間喊停新攻擊、開出停火條件。不過這場外交轉折仍充滿變數：川普8月2日進一步宣布，將於隔日午後與伊朗展開涉及荷莫茲海峽開放與伊朗去核化的談判，但伊朗官方8月3日隨即否認雙方有直接會談，稱僅與阿曼磋商海峽安全通行路線，美伊雙方說法南轅北轍。局勢在8月4日又添新變數：財政部長貝森特稱美伊「今天或明天」有望就開放海峽達成協議，但就在樂觀訊息傳出的同時，賴比瑞亞籍散貨輪「Minoan Pioneer」號深夜於阿曼外海遭不明射彈擊中，三副下落不明，凸顯外交進展與海上風險同步並存的矛盾局面。談判進度持續推進：伊朗8月5日宣布與阿曼的協議已進入「最後階段」，規劃船隻分道進出海峽、先清水雷再全面開放，但協議仍待伊朗最高領袖莫賈塔巴·哈梅內伊批准，總統佩澤希齊揚同日證實「聯繫他確實很困難」，暴露伊朗最高領導層自2月28日開戰空襲以來的健康疑雲；過境費用等細節版本不一，川普稱協議「明天或後天」可望公布，但參議院少數黨領袖舒默對此仍抱持懷疑。
+美伊戰事在近5個月的軍事對抗後，於8月1日晚間出現轉折。美國總統川普宣布，中東盟友已達成結束戰爭的協議框架，美方將暫緩原訂對伊朗發動的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅；促成轉折的關鍵，是沙烏地阿拉伯王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮。這場戰事源於美軍中央司令部證實，伊朗7月17日（週五）以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地（Muwaffaq Salti Air Base，簡稱MSAB），造成2名美軍陣亡、1人失蹤、4人送醫，美國隨即展開報復性空襲，戰事一路升溫。7月28日晚間，伊朗再度以飛彈攻擊約旦美軍基地，美國與沙烏地阿拉伯隨即聯手空襲伊拉克境內親伊朗民兵，官方民兵聯盟PMF通報至少20死32傷，另有6名伊朗顧問喪生；美軍中央司令部30日凌晨再對伊朗本土發動新一輪空襲，規模較前次擴大約一倍，鎖定伊朗南部多處革命衛隊目標，伊朗官方通報格什姆島一處民宅遭擊中，造成一家3口罹難。戰事外溢範圍持續擴大：埃及地中海港口達米埃塔29日遭無人機攻擊，一艘美籍液化天然氣儲存船起火，是本輪衝突以來埃及領土首度遭波及；荷莫茲海峽3艘油輪遭伊朗革命衛隊攔停，科威特則通報1名工人在伊朗攻擊中喪生。國際油價單日暴漲7.9%，地緣政治風險同步攀升。逆轉來得突然：宣布暫停的數小時前，革命衛隊才聲稱擊中2艘由美軍護航的油輪，川普誓言對伊朗「狠狠打擊」，美國更在至少10個中東國家發布撤離警示，直到川普8月1日晚間喊停新攻擊、開出停火條件。不過這場外交轉折仍充滿變數：川普8月2日進一步宣布，將於隔日午後與伊朗展開涉及荷莫茲海峽開放與伊朗去核化的談判，但伊朗官方8月3日隨即否認雙方有直接會談，稱僅與阿曼磋商海峽安全通行路線，美伊雙方說法南轅北轍。局勢在8月4日又添新變數：財政部長貝森特稱美伊「今天或明天」有望就開放海峽達成協議，但就在樂觀訊息傳出的同時，賴比瑞亞籍散貨輪「Minoan Pioneer」號深夜於阿曼外海遭不明射彈擊中，三副下落不明，凸顯外交進展與海上風險同步並存的矛盾局面。談判進度持續推進：伊朗8月5日宣布與阿曼的協議已進入「最後階段」，規劃船隻分道進出海峽、先清水雷再全面開放，但協議仍待伊朗最高領袖莫賈塔巴·哈梅內伊批准，總統佩澤希齊揚同日證實「聯繫他確實很困難」，暴露伊朗最高領導層自2月28日開戰空襲以來的健康疑雲；過境費用等細節版本不一，川普稱協議「明天或後天」可望公布，但參議院少數黨領袖舒默對此仍抱持懷疑。談判仍未落幕：伊朗最高國家安全委員會秘書佐爾加德爾8月8日正式提出重新開放海峽的四項條件（永久終止軍事威脅並撤軍、解除港口封鎖、支付戰爭賠償、取消制裁並釋放凍結資產），川普8月10日在白宮嗤之以鼻，聲稱美國海軍已「百分之百」掌控荷莫茲海峽，並反向要求伊朗為50年來造成的損害付出賠償。
 
 ## 約旦基地遇襲：2死1失蹤4送醫
 
@@ -391,8 +423,27 @@ coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 
 局勢緩和的同時，區域海事風險並未完全解除。[NBC新聞轉發美聯社報導](https://www.nbcnews.com/world/iran/trump-iran-war-deal-strait-hormuz-deal-oman-rcna590920)指出，伊朗支持的葉門胡塞武裝8月5日宣稱，已對紅海上一艘航向沙國延布港附近海域的沙烏地阿拉伯油輪發射彈道飛彈，未提供證據，沙烏地阿拉伯官方未立即回應；英國海事貿易行動組織通報，亞丁灣海域一艘船隻回報附近傳出巨大爆炸聲，船員平安，胡塞武裝並宣稱另對一艘沙國油輪發射飛彈。
 
+## 伊朗開出四項條件重啟海峽　川普反嗆求償「50年損害」
+
+談判進入8月中旬後再添新變數。伊朗最高國家安全委員會秘書佐爾加德爾8月8日正式公布重新開放荷莫茲海峽的四項條件：美方須永久終止對伊朗及其區域武裝盟友的戰爭與軍事威脅、解除對伊朗港口的海軍封鎖並自區域撤軍、「完全賠償」伊朗的戰爭損失，以及取消制裁並「無條件」釋放遭凍結的伊朗資產（[Fortune報導](https://fortune.com/2026/08/08/iran-demands-strait-of-hormuz-us-conditions-total-compensation-war-damage/)）。伊朗外交部發言人巴格海伊8月10日（週一）進一步重申立場：「只要美方其他違規行為持續存在，條件就還不足以將荷莫茲海峽稱作安全水道。」[PBS新聞時刻報導](https://www.pbs.org/newshour/show/iran-demands-u-s-pay-for-war-damage-before-agreeing-to-reopen-strait-of-hormuz)指出，伊朗國安官員同時要求美方停止對伊朗代理武裝力量的攻擊，其中包括以色列對真主黨的打擊行動。
+
+川普總統8月10日在白宮橢圓形辦公室對伊朗的賠償要求嗤之以鼻，反過來向伊朗求償。他告訴記者：「目前唯一掌控荷莫茲海峽的，就是美國海軍。我們的封鎖堅不可摧，是一道鋼鐵牆……我們百分之百掌控荷莫茲海峽。」（[The Tribune引述](https://www.tribuneindia.com/news/usa-news/iran-should-pay-for-damages-its-done-over-50-years-trump-claims-100-control-over-strait-of-hormuz/amp/)）被問及損害賠償議題時，川普回應：「如果有損害需要賠償，我認為應該由伊朗來付。」他並表示：「他們要求賠償，我說這是個好主意，我們要為伊朗這50年造成的損害求償。」（[半島電視台報導](https://www.aljazeera.com/news/2026/8/11/trump-demands-compensation-from-iran-as-talks-on-strait-of-hormuz-continue)）[代表原文報導](https://www.brentwoodlive.co.uk/news/national/26452542.donald-trump-scoffs-irans-demand-war-reparations/)指出，川普提出的求償對象包括遭伊朗支持武裝以路邊炸彈及其他衝突造成傷亡的美軍，以及遭伊朗政府鎮壓致死的伊朗抗議者家屬；美方統計顯示，1983年貝魯特美軍陸戰隊營區爆炸案造成241名美軍陣亡，2003年至2011年伊拉克戰事期間，另有至少603名美軍因伊朗相關攻擊喪生。
+
+同一時間，海峽通行協議談判仍持續推進。[半島電視台報導](https://www.aljazeera.com/news/2026/8/11/trump-demands-compensation-from-iran-as-talks-on-strait-of-hormuz-continue)指出，巴格海伊表示，與阿曼就荷莫茲海峽航道圖的談判「進展順利且具建設性」，內容涵蓋領航安全、環境保護等服務項目，但仍有技術性問題待解決。6月簽署的臨時協議已在海峽控制權爭議下瓦解，這場美伊拉鋸自2月28日開戰以來已反覆多次，是否能真正落地仍有待觀察（詳見下方更新時間軸）。
+
+## 安全首長大風吹：雷扎伊接掌SNSC　佩澤希齊揚證實與最高領袖密談近7小時
+
+伊朗安全決策核心同步生變。據[半島電視台報導](https://www.aljazeera.com/news/2026/8/10/who-is-mohsen-rezaei-and-how-significant-is-his-appointment)，總統佩澤希齊揚8月9日任命71歲的前伊斯蘭革命衛隊總司令莫森·雷扎伊，接掌最高國家安全委員會秘書長一職；雷扎伊1981年至1997年兩伊戰爭期間擔任革命衛隊總司令，卸任後轉任「權宜委員會」成員，職司調解國會與監護委員會間的立法爭議。原秘書長佐爾加德爾則轉任最高領袖莫賈塔巴·哈梅內伊的政治顧問。
+
+雷扎伊的過往紀錄也引發國際關注。[以色列時報報導](https://www.timesofisrael.com/iran-names-new-security-chief-whos-wanted-by-interpol-in-connection-with-deadly-amia-bombing/)指出，雷扎伊自2007年起遭國際刑警組織列為紅色通緝令對象，原因是他被控在擔任革命衛隊總司令期間，涉入策劃並執行1994年阿根廷布宜諾斯艾利斯AMIA猶太社區中心爆炸案，該案造成85人喪生，調查人員認定攻擊由伊朗領導層策劃、真主黨執行；阿根廷2022年曾要求卡達逮捕雷扎伊，但未能如願。
+
+在荷莫茲海峽議題上，雷扎伊態度強硬。[半島電視台報導](https://www.aljazeera.com/news/2026/8/10/who-is-mohsen-rezaei-and-how-significant-is-his-appointment)指出，他曾形容掌控海峽的價值「超過數十枚原子彈」，並警告美方若持續維持對伊朗港口的封鎖，將「面臨嚴重風險與傷亡」；分析人士對他上任的意涵解讀不一，一派認為這代表伊朗軍事安全優先於外交，另一派認為由前革命衛隊將領出面談判，反而可能為潛在協議爭取到強硬派的政治掩護。
+
+與此同時，伊朗總統與最高領袖近期互動也罕見曝光。據[KSAT轉發美聯社報導](https://www.ksat.com/news/world/2026/08/10/iran-wont-reopen-strait-of-hormuz-without-us-concessions-and-other-mideast-developments/)，佩澤希齊揚8月10日在國家電視台IRIB專訪中證實，他與哈梅內伊近日進行了一場長達近7小時的會談，內容涵蓋「民眾生計、市場狀況、就業、民眾住房」，以及美方制裁造成的衝擊；他並轉述哈梅內伊格外強調「統一與凝聚力」，稱「敵人的計劃都旨在製造分裂，我們必須防止分裂出現」。[The Tribune (India)報導](https://www.tribuneindia.com/news/iran-diplomacy/iran-leadership-reshuffles-amid-hormuz-talks-comes-after-rare-meeting-with-president-supreeme-leader)指出，這場罕見公開證實的會面與安全高層人事同步發生，凸顯最高領袖辦公室正將政治與安全決策權，進一步集中在軍方信任人脈之中。
+
 ## 更新時間軸
 
+- （更新 2026-08-11：伊朗最高國家安全委員會秘書佐爾加德爾8月8日公布重新開放荷莫茲海峽的四項條件：美方永久終止軍事威脅並自區域撤軍、解除港口海軍封鎖、「完全賠償」戰爭損失、取消制裁並無條件釋放凍結資產；外交部發言人巴格海伊8月10日重申，只要美方其他違規行為持續，條件就不成熟稱海峽為安全水道，並要求美方停止對伊朗代理武裝力量（含以色列對真主黨）的攻擊。川普8月10日在白宮嗤之以鼻回應，聲稱美國海軍「百分之百」掌控荷莫茲海峽、封鎖「堅不可摧」如「鋼鐵牆」，並反向要求伊朗為50年來造成的損害賠償，對象包括遭伊朗支持武裝路邊炸彈等攻擊致死致傷的美軍，以及遭伊朗政府鎮壓致死的抗議者家屬；美方統計指出，1983年貝魯特美軍陸戰隊營區爆炸案241人陣亡，2003至2011年伊拉克戰事期間另有至少603名美軍因伊朗相關攻擊喪生。同一時間，巴格海伊表示與阿曼就海峽航道圖的談判「進展順利且具建設性」，仍有技術性問題待解決。伊朗安全高層同步大搬風：總統佩澤希齊揚8月9日任命71歲的前革命衛隊總司令莫森·雷扎伊接掌最高國家安全委員會秘書長，原秘書長佐爾加德爾改任最高領袖政治顧問；雷扎伊自2007年起遭國際刑警組織列紅色通緝令，因被控涉入1994年阿根廷AMIA猶太社區中心爆炸案（85人罹難）的策劃與執行，他向來主張荷莫茲海峽控制權「比核武更重要」，並警告美方若持續封鎖伊朗港口，將「面臨嚴重風險與傷亡」。同一時間，佩澤希齊揚8月10日在國家電視台專訪中證實，他與最高領袖哈梅內伊近日進行了一場近7小時的會談，內容涵蓋民生、市場、就業與住房及美方制裁衝擊，並轉述哈梅內伊強調防範「敵人製造分裂」的重要性。）（[Brentwood Live/PA](https://www.brentwoodlive.co.uk/news/national/26452542.donald-trump-scoffs-irans-demand-war-reparations/)、[Al Jazeera](https://www.aljazeera.com/news/2026/8/11/trump-demands-compensation-from-iran-as-talks-on-strait-of-hormuz-continue)、[PBS NewsHour](https://www.pbs.org/newshour/show/iran-demands-u-s-pay-for-war-damage-before-agreeing-to-reopen-strait-of-hormuz)、[Fortune](https://fortune.com/2026/08/08/iran-demands-strait-of-hormuz-us-conditions-total-compensation-war-damage/)、[The Tribune](https://www.tribuneindia.com/news/usa-news/iran-should-pay-for-damages-its-done-over-50-years-trump-claims-100-control-over-strait-of-hormuz/amp/)、[Al Jazeera](https://www.aljazeera.com/news/2026/8/10/who-is-mohsen-rezaei-and-how-significant-is-his-appointment)、[The Times of Israel](https://www.timesofisrael.com/iran-names-new-security-chief-whos-wanted-by-interpol-in-connection-with-deadly-amia-bombing/)、[KSAT/AP](https://www.ksat.com/news/world/2026/08/10/iran-wont-reopen-strait-of-hormuz-without-us-concessions-and-other-mideast-developments/)、[The Tribune (India)](https://www.tribuneindia.com/news/iran-diplomacy/iran-leadership-reshuffles-amid-hormuz-talks-comes-after-rare-meeting-with-president-supreeme-leader)）
 - （更新 2026-08-06：伊朗外交部宣布與阿曼的荷莫茲海峽協議已進入「最後階段」擬定，雙方就航道地理座標達成協議：船隻入灣走伊朗控制航線、出灣多走阿曼一側，協議生效前伊朗將先派油輪清除海峽內估計70至100枚水雷。協議仍待伊朗最高領袖莫賈塔巴·哈梅內伊批准；總統佩澤希齊揚證實「目前與他聯繫確實很困難」，是官方首度鬆口承認接觸困難，外界並傳莫賈塔巴在2月28日空襲中重傷甚至毀容，惟未經伊朗官方證實。過境費用版本不一：一說協議期間「不收取任何費用」，另一說伊朗原要求5%至7%費率、阿曼提案3%、美方堅持零費率，版本尚未統一。川普稱協議「明天或後天」可望公布，副總統萬斯稱談判「一團混亂」、需要時間；參議院少數黨領袖舒默質疑協議恐重演過去僅維持數天的模式。同一時間，葉門胡塞武裝再宣稱對沙烏地阿拉伯油輪發射飛彈，區域海事風險未歇。）（[NBC News/AP](https://www.nbcnews.com/world/iran/trump-iran-war-deal-strait-hormuz-deal-oman-rcna590920)、[The Irish Times](https://www.irishtimes.com/world/middle-east/2026/08/05/us-and-iran-having-very-good-discussions-trump-says/)、[The Washington Times](https://www.washingtontimes.com/news/2026/aug/5/iran-oman-agree-new-shipping-routes-hormuz-washington-tehran-circle/)、[CNBC](https://www.cnbc.com/2026/08/06/us-iran-war-hormuz-trump-bessent-deal.html)、[The National](https://www.thenationalnews.com/news/mena/2026/08/06/communication-with-iranian-supreme-leader-very-difficult-pezeshkian-says/)、[Daily Sabah](https://www.dailysabah.com/world/mid-east/contact-with-irans-supreme-leader-very-difficult-pezeshkian)）
 - （更新 2026-08-04：財政部長貝森特接受CNBC訪問表示，美伊「今天或明天」有望就開放荷莫茲海峽達成協議，內容應包含船隻「自由通行」且伊朗不得收費；美國國務卿盧比奧稱伊朗與阿曼談判「有進展但尚未定論」，卡達外交部僅稱「正在尋求外交解決方案」。惟伊朗仍要求主導海峽通行管制與出境路線監督，與美方「自由通行」原則相悖。同一時間，賴比瑞亞籍散貨輪「Minoan Pioneer」號8月3日晚間10時於阿曼卡薩卜東北方約37公里處遭不明射彈擊中引擎室，隨即失去動力並引發住宿區大火，三副下落不明，是穆桑達姆半島附近5天內第4起海事安全事件。市場對談判樂觀反應：布蘭特原油期貨跌至每桶約81.88美元，美股標普500指數創新高。）（[CNBC](https://www.cnbc.com/2026/08/04/bessent-says-there-may-be-deal-tuesday-or-wednesday-to-open-strait-of-hormuz-with-freedom-of-movement.html)、[Washington Times](https://www.washingtontimes.com/news/2026/aug/4/scott-bessent-says-us-iran-could-reach-deal-strait-hormuz-within-day/)、[Forbes](https://www.forbes.com/sites/zacharyfolk/2026/08/04/bessent-says-us-and-iran-could-reach-deal-to-open-strait-of-hormuz-today-or-tomorrow/)、[The Jerusalem Post](https://www.jpost.com/international/article-904534)、[Splash247](https://splash247.com/crewmember-missing-after-bulker-struck-in-hormuz/)）
 - （更新 2026-08-03：川普8月2日在空軍一號上宣布，將於8月3日午後與伊朗展開談判，內容涵蓋荷莫茲海峽開放與伊朗去核化；他稱沙烏地阿拉伯、阿聯酋、卡達與伊朗均要求美方取消原訂空襲，原訂規模堪稱「二戰以來最大規模攻擊」。但伊朗官方隨即否認與美方直接談判：外交部發言人巴格海伊表示「我們目前不與美國談判」，僅與阿曼就荷莫茲海峽安全通行路線磋商；伊朗外長阿拉格奇稱與阿曼談判已進入「最後階段」，討論替代運輸路線，卡達、巴基斯坦斡旋人士預計赴德黑蘭進行間接會談。專家評估，去核化協議「還遠得很」。）（[新華社](https://english.news.cn/20260803/2e4e6d354e1745dd8b0696e521ff0634/c.html)、[Al Jazeera](https://www.aljazeera.com/news/2026/8/3/trump-says-new-iran-negotiations-starting-what-we-know)、[CBS News](https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-kuwait-jordan-air-base/)、[CNBC](https://www.cnbc.com/2026/08/03/trump-iran-us-negotiations-peace-proposals-.html)）
@@ -405,6 +456,12 @@ coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 - （2026-07-19）美軍中央司令部證實，伊朗7月17日以彈道飛彈與無人機攻擊約旦穆瓦法克薩爾蒂空軍基地，造成2名美軍陣亡、1人失蹤、4人送醫；川普下令美軍18日晚間對伊朗革命衛隊目標展開報復空襲，伊朗最高領袖警告將給予「永誌不忘的教訓」。（[WWSB/AP](https://www.mysuncoast.com/2026/07/18/2-troops-are-dead-1-is-missing-after-iranian-attacks-base-jordan-us-military-says/)、[Military Times](https://www.militarytimes.com/flashpoints/2026/07/18/2-us-troops-killed-1-missing-after-iranian-missile-drone-attack-in-jordan/)、[Air & Space Forces Magazine](https://www.airandspaceforces.com/2-americans-killed-one-missing-as-iran-attacks-u-s-base-in-jordan/)、[The National](https://www.thenationalnews.com/news/us/2026/07/18/two-us-troops-killed-and-one-missing-following-iranian-attack-in-jordan/)）
 
 ## 常見問題
+
+### 伊朗開出哪些條件才願意重新開放荷莫茲海峽？
+伊朗要求美方永久終止軍事威脅並自區域撤軍、解除對伊朗港口的海軍封鎖、支付戰爭賠償，並取消制裁、無條件釋放遭凍結的資產；伊朗外交部另要求美方停止對伊朗代理武裝力量的攻擊。
+
+### 川普如何回應伊朗的賠償要求？
+川普8月10日在白宮對此嗤之以鼻，聲稱美國海軍已「百分之百」掌控荷莫茲海峽，並反過來要求伊朗為過去50年造成的損害賠償，對象包括遭伊朗攻擊致死致傷的美軍與遭伊朗政府鎮壓致死的抗議者家屬。
 
 ### 川普喊停對伊朗新攻擊的條件是什麼？
 川普宣布，只要中東盟友促成荷莫茲海峽立即、完全、全面開放，並終止伊朗對外的核威脅，美方就暫緩原訂對伊朗發動的新一輪攻擊。

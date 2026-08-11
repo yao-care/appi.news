@@ -3,6 +3,7 @@ import { CATEGORIES } from './categories';
 
 export const MAIN_NAV = [
   ...CATEGORIES.map((c) => ({ label: c.name, href: `/${c.slug}/` })),
+  { label: '專題', href: '/topics/' },
   { label: '作者群', href: '/authors/' },
 ];
 

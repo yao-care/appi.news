@@ -23,6 +23,7 @@ import { dirname } from 'node:path';
 import { generatePhotoRealImage, generatePersonImage, imgTag, toWebp, checkStockPhotoBuffer } from './lib/ai-image.mjs';
 import { searchStock } from './lib/stock.mjs';
 import { classifyImageSource } from './lib/image-sources.mjs';
+import { COVER_MIN_WIDTH, coverSpecProblem } from './lib/cover-spec.mjs';
 
 function arg(name, def) {
   const i = process.argv.indexOf(`--${name}`);
@@ -33,8 +34,10 @@ const has = (name) => process.argv.includes(`--${name}`);
 const topic = arg('topic');
 const context = arg('context', '');
 let out = arg('out');
-// 封面（covers/）需 ≥1200px（Discover/Top Stories 大圖門檻）；內文圖（images/）維持 960
-// （單篇多圖、且無 postbuild 縮圖，控文章頁重量）。--width 明確帶入時一律以其為準。
+// 封面（covers/）需橫式且 ≥1200px（Discover/Top Stories 大圖門檻，規格 SOT＝lib/cover-spec.mjs；
+// stock 候選不符自動淘汰換下一張、embed 不符 fail-closed 退非零、生成不符即炸）；
+// 內文圖（images/）維持 960（單篇多圖、且無 postbuild 縮圖，控文章頁重量）。
+// --width 明確帶入時以其為準，但封面帶 <1200 會直接報錯（防照抄內文圖參數）。
 const isCover = /(^|\/)covers\//.test(String(out ?? ''));
 const width = Number(arg('width', isCover ? '1200' : '960'));
 const query = arg('query', topic);
@@ -60,6 +63,19 @@ if (!Number.isFinite(width)) {
   console.error('--width must be a number');
   process.exit(1);
 }
+// 封面 --width 防呆：帶了小於門檻的寬（例如照抄內文圖的 --width 960）等於保證產出直接被
+// 封面規格 gate 擋下，這裡提前硬失敗、講清楚怎麼改，省一輪下載＋審查。
+if (isCover && width < COVER_MIN_WIDTH) {
+  console.error(
+    `封面（covers/）--width ${width} 低於 Discover 大圖門檻 ${COVER_MIN_WIDTH}px。請拿掉 --width（封面預設 ${COVER_MIN_WIDTH}）或帶 ≥${COVER_MIN_WIDTH} 的值。`,
+  );
+  process.exit(1);
+}
+
+/** 封面規格驗收（橫式 ≥1200；規格 SOT＝lib/cover-spec.mjs）。內文圖不套用。回 null＝過。 */
+function coverProblem(w, h) {
+  return isCover ? coverSpecProblem(w, h) : null;
+}
 // 一律輸出 webp（圖庫圖也轉 webp，確保 CLS 安全的尺寸與檔案大小）
 out = out.replace(/\.(jpe?g|png|webp)$/i, '') + '.webp';
 const src = '/' + out.replace(/^public\//, '');
@@ -84,6 +100,10 @@ async function generate(reason) {
   const r = await generatePhotoRealImage({
     topic, context, caption, alt: altText, articleContext, width, seed: out,
   });
+  // 封面規格驗收：生成走 worker 的 landscape（1536×1024）理論上必過，但 worker 是獨立部署，
+  // 契約變了這裡要炸出來，不能靜默寫出一張拿不到 Discover 版位的封面。
+  const genProblem = coverProblem(r.width, r.height);
+  if (genProblem) throw new Error(`生成封面規格不符（worker 契約異常？）：${genProblem}`);
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, r.buffer);
   return {
@@ -118,6 +138,13 @@ async function tryStock(cand) {
   } catch {
     return null;
   }
+  // 封面規格：toWebp 的 withoutEnlargement 會把不足寬的來源「原樣收下」（940 進來就 940 出去，
+  // 靜默通過），所以一定要在寫檔前驗成品尺寸；不符就淘汰這張換下一張候選。
+  const specProblem = coverProblem(webp.width, webp.height);
+  if (specProblem) {
+    console.error(`  圖庫候選淘汰（${cand.source ?? 'stock'}）：${specProblem}`);
+    return null;
+  }
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, webp.buffer);
   return {
@@ -142,7 +169,7 @@ async function embed() {
   const cls = classifyImageSource(embedUrl);
   if (!cls.allowed) {
     console.error(`embed 來源未授權，拒絕嵌入：${cls.reason}`);
-    process.exit(2); // 非 1：與一般錯誤區分，代表「來源不在白名單、請改用圖庫/AI」
+    process.exit(2); // 非 1：與一般錯誤區分，代表「這個來源不可用（白名單拒絕/規格不符）、請換來源或改用圖庫/AI」
   }
   if (!credit || !credit.trim()) {
     console.error(`embed 需 --credit（嵌入原圖一律署名）。此來源署名格式：${cls.source.creditHint}`);
@@ -168,6 +195,16 @@ async function embed() {
     process.exit(1);
   }
   const webp = await toWebp(raw, width);
+  // 封面規格：embed 是唯一由模型自選原圖的路徑，直式的 Wikimedia／政府公開照從這裡
+  // 一路漏了六週（2026-08 國際線直式封面全是它）。不符就 fail-closed 退非零，
+  // 讓起草端換一張橫式原圖或改走圖庫（與白名單拒絕同一種「換來源」語意）。
+  const embedSpecProblem = coverProblem(webp.width, webp.height);
+  if (embedSpecProblem) {
+    console.error(
+      `embed 封面規格不符，拒絕嵌入：${embedSpecProblem}。請換一張橫式、原圖寬 ≥${COVER_MIN_WIDTH}px 的可授權圖，或改用圖庫（拿掉 --embed-url）。`,
+    );
+    process.exit(2);
+  }
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, webp.buffer);
   return {
@@ -191,6 +228,9 @@ async function generatePerson() {
   const r = await generatePersonImage({
     topic, context, caption, alt: altText, articleContext, width,
   });
+  // 封面規格驗收：理由同 generate()（worker 契約異常要炸出來，不能靜默收）。
+  const personProblem = coverProblem(r.width, r.height);
+  if (personProblem) throw new Error(`人物生成封面規格不符（worker 契約異常？）：${personProblem}`);
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, r.buffer);
   return {
@@ -236,8 +276,9 @@ async function main() {
     return generate('no-stock-keys');
   }
   if (!candidates.length) return generate('no-stock-result');
-  // 依序試前幾張，第一張成功就用
-  for (const cand of candidates.slice(0, 4)) {
+  // 依序試前幾張，第一張成功就用。封面多試幾張：規格驗收（橫式 ≥1200）會再淘汰一輪，
+  // 只試 4 張容易全滅、白白退回生成（NO_AI_IMAGE 批次則整個失敗）。
+  for (const cand of candidates.slice(0, isCover ? 8 : 4)) {
     const r = await tryStock(cand);
     if (r) return r;
   }

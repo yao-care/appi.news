@@ -62,6 +62,7 @@
 | 沒有金鑰時要看流量／曝光趨勢 | 讀 repo 內的 `data/seo-daily/*.json`（seo-ops 每日實抓後 commit 進來，**不需金鑰**）。趨勢一次看完：<br>`node -e 'for (const f of process.argv.slice(1)) { const d = require("./" + f); console.log(d.date, "users", d.ga4?.users, "twOrganic", d.ga4?.taiwanOrganicSessions, "clicks", d.gsc?.totals?.clicks, "imp", d.gsc?.totals?.impressions) }' data/seo-daily/*.json`<br>⚠️ **日期有斷檔，不是連續序列**（先 `ls data/seo-daily/` 看有哪幾天）；`gsc` 區塊可能是 `{"error"}`（權限斷線時只記 error 不中斷，見 §數據與網路曝光量）|
 | GEO／AEO 每日體檢過了沒、卡在哪 | `node -e 'const d = require("./" + process.argv[1]); console.log(d.date, d.geo.ok, d.geo.gaps, d.geo.checks)' "$(ls data/seo-daily/*.json | tail -1)"`<br>⚠️ **看的是「這個 ❌ 有沒有變過」，不是「今天有沒有 ❌」**——同一句 gap 連續多天＝判準過期，不是站掛了。為什麼＝[`docs/lessons/duplicate-topic-gate.md`](./docs/lessons/duplicate-topic-gate.md) 2026-08-11 追記 |
 | 站上哪些地方會發 Slack | `grep -rn "lib/slack.mjs\|slack.com/api" --include=*.mjs --include=*.ts --include=*.yml . \| grep -v node_modules`（打 API 的出口）／`grep -rln "cron-report.mjs\|slack-post.mjs\|notify-pending-draft.mjs\|weekly-report-post.mjs" scripts .claude .github`（呼叫端）。分層與改法＝[`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §Slack 發訊地圖 |
+| 封面存量還有幾篇不符 Discover 規格（橫式 ≥1200） | `node scripts/check-cover-spec.mjs --all`（report-only 盤點；規格 SOT＝`scripts/lib/cover-spec.mjs`） |
 | 三關體檢：頁面分散度／回訪與品牌／週線與世代 | `pnpm growth:audit`（可加 `--gate1`／`--gate2`／`--gate3`／`--cohort`） |
 | 成長規則覆蓋率（零內鏈幾篇、topics 空幾篇…） | `pnpm growth:lint:all`；排工作清單用 `node scripts/growth-lint.mjs --all --worst 30` |
 | 成長工作還剩多少沒做、下一批該做誰 | `pnpm growth:backlog`（含與上次快照的增減；每週一台北 09:00 由 cron 自動發 Slack 提醒） |
@@ -214,7 +215,7 @@
 
 ### 鐵則（完整 checklist 見 [`docs/automation-invariants.md`](./docs/automation-invariants.md)）
 
-- **配圖 gate 不可繞過**：缺 `coverImage`／封面檔不存在／內文 0 圖／封面與內文圖重複 → 中止不發，改動留工作區待補。
+- **配圖 gate 不可繞過**：缺 `coverImage`／封面檔不存在／封面外連熱連結／封面不符 Discover 規格（非橫式或寬 <1200，SOT＝`scripts/lib/cover-spec.mjs`）／內文 0 圖／封面與內文圖重複 → 中止不發，改動留工作區待補。
 - **禁用 AI 生圖時用 `NO_AI_IMAGE=1`**（機械保證，prompt 講不算數）。禁生圖後封面與內文容易撞成同一張圖庫照，取圖 query 必須錯開。為什麼＝[`docs/lessons/no-ai-image-batch.md`](./docs/lessons/no-ai-image-batch.md)。
 - **改發佈端程式或 cron `.sh`**：push → `/root/appi.news-publisher` `git pull` → `pm2 restart appinews-slack-actions`；**只 push 不 pull／只 restart 都會跑到舊碼**。
 - **故障 ≠ 編輯判斷**：模型漏印結果行是 infra 故障，不可記進去重帳本、不可當終止條件。

@@ -122,6 +122,10 @@ async function main() {
   if (v.slug) {
     const missing = missingLocalAssets(v.slug);
     if (missing.length) die(`引用的本地圖檔不存在（${missing.join('、')}），不發佈（改動留工作區）`);
+    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻；警消封面可有可無，設了才驗）。
+    // 為什麼＝docs/lessons/discover-image-and-meta-signals.md（2026-08-11 追記）。
+    const _cover = spawnSync('node', ['scripts/check-cover-spec.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
+    if (_cover.status !== 0) die(`封面規格 gate 未過，不發佈（改動留工作區待換圖）：\n${_cover.stdout || _cover.stderr || ''}`);
     // 去 AI 腔硬 gate：機械可判的簽名句（破折號／自我辯白旁白）命中就不發，留工作區待改。
     // 為什麼＝docs/lessons/ai-tone-gate.md。
     const _tone = spawnSync('node', ['scripts/check-content.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });

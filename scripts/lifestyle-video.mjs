@@ -176,6 +176,9 @@ async function main() {
     if (_growth.stdout) console.log(_growth.stdout.trim());
     const tagGate = spawnSync('node', ['scripts/check-tags.mjs', file], { encoding: 'utf8' });
     if (tagGate.status !== 0) { console.error(`  ✖ 標籤 gate 未過，丟棄這篇：\n${(tagGate.stdout || tagGate.stderr || '').slice(-400)}`); dropArticle(v.slug); continue; }
+    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻；設了 coverImage 才驗）。為什麼＝docs/lessons/discover-image-and-meta-signals.md。
+    const coverGate = spawnSync('node', ['scripts/check-cover-spec.mjs', file], { encoding: 'utf8' });
+    if (coverGate.status !== 0) { console.error(`  ✖ 封面規格 gate 未過，丟棄這篇：\n${(coverGate.stdout || coverGate.stderr || '').slice(-400)}`); dropArticle(v.slug); continue; }
     written.push({ slug: v.slug, title: articleTitle(v.slug) || v.slug });
     console.log(`  ✓ 通過逐篇 gate`);
   }

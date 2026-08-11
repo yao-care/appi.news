@@ -27,6 +27,7 @@ references:
   - title: "黃帝內經 · 素問 · 生氣通天論. 中國哲學書電子化計劃"
     url: "https://ctext.org/huangdi-neijing/sheng-qi-tong-tian-lun/zh"
 draft: false
+topics: ["back-to-school-2026"]
 ---
 你有沒有發現，家裡的 LINE 群組只要一下雨，隔天一定會有人傳登革熱新聞連結，附一句「大家要小心」，然後就沒有然後了。提醒轉發出去了，陽台那盆積水，通常還在原地。
 

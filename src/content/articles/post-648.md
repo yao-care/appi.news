@@ -54,6 +54,8 @@ MGF的設計起點是一個明確的問題意識：主體型AI系統能夠串接
 
 延伸閱讀：[亞太城市人口至2050年再增九億，韌性治理才是決定性因素](/articles/asia-pacific-cities-2050-resilient-governance/)
 
+延伸閱讀：[跨廠牌 AI agent 各自為政，企業要的是統一中控：Cognizant 把 ServiceNow agent 接進單一編排層，再疊一層 AI Control Tower](/articles/enterprise-agent-orchestration-control-tower/)
+
 [根據Baker McKenzie的分析](https://www.bakermckenzie.com/en/insight/publications/2026/01/singapore-governance-framework-for-agentic-ai-launched)，MGF目前屬於自願遵循性質，但這個「自願」有清楚的法律底線：新加坡現行的個人資料保護法、消費者保護法規，以及特定行業的監理規定，對AI代理人造成的損害仍課以完整責任。換句話說，遵循MGF並不等於免責，但不遵循MGF卻在事後發生問題，合規紀錄的缺席會直接影響組織的法律處境。IMDA也同步公開徵求意見，邀請業界提交MGF的實際應用案例，預計在後續修訂中納入。
 
 ## 亞太AI治理領導權為何向新加坡集中

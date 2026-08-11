@@ -58,7 +58,9 @@
 | 發佈端（publisher）有沒有跟上最新程式 | `git -C /root/appi.news-publisher log -1 --oneline` 與 `git log -1 --oneline` 比對；Slack server `pm2 status appinews-slack-actions` |
 | 警消線實際掃哪些縣市、幾家 | `node -e 'import("./scripts/lib/lifestyle-police.mjs").then(m=>console.log(m.POLICE_SOURCES.length, m.POLICE_SOURCES.map(s=>s.city).join("、")))'` |
 | 站上掛了哪些官方社群連結（`org.sameAs`） | `sed -n '/sameAs: \[/,/\] as string\[\]/p' src/config/site.ts` |
-| 流量／搜尋曝光現況 | `node scripts/weekly-data.mjs`（**禁杜撰數據**，一律以實跑輸出為準） |
+| 流量／搜尋曝光現況 | `node scripts/weekly-data.mjs`（**禁杜撰數據**，一律以實跑輸出為準；**需要伺服器上的兩把金鑰**，別台機器跑會 403／ENOENT，見下一列） |
+| 沒有金鑰時要看流量／曝光趨勢 | 讀 repo 內的 `data/seo-daily/*.json`（seo-ops 每日實抓後 commit 進來，**不需金鑰**）。趨勢一次看完：<br>`node -e 'for (const f of process.argv.slice(1)) { const d = require("./" + f); console.log(d.date, "users", d.ga4?.users, "twOrganic", d.ga4?.taiwanOrganicSessions, "clicks", d.gsc?.totals?.clicks, "imp", d.gsc?.totals?.impressions) }' data/seo-daily/*.json`<br>⚠️ **日期有斷檔，不是連續序列**（先 `ls data/seo-daily/` 看有哪幾天）；`gsc` 區塊可能是 `{"error"}`（權限斷線時只記 error 不中斷，見 §數據與網路曝光量）|
+| GEO／AEO 每日體檢過了沒、卡在哪 | `node -e 'const d = require("./" + process.argv[1]); console.log(d.date, d.geo.ok, d.geo.gaps, d.geo.checks)' "$(ls data/seo-daily/*.json | tail -1)"`<br>⚠️ **看的是「這個 ❌ 有沒有變過」，不是「今天有沒有 ❌」**——同一句 gap 連續多天＝判準過期，不是站掛了。為什麼＝[`docs/lessons/duplicate-topic-gate.md`](./docs/lessons/duplicate-topic-gate.md) 2026-08-11 追記 |
 | 站上哪些地方會發 Slack | `grep -rn "lib/slack.mjs\|slack.com/api" --include=*.mjs --include=*.ts --include=*.yml . \| grep -v node_modules`（打 API 的出口）／`grep -rln "cron-report.mjs\|slack-post.mjs\|notify-pending-draft.mjs\|weekly-report-post.mjs" scripts .claude .github`（呼叫端）。分層與改法＝[`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §Slack 發訊地圖 |
 | 三關體檢：頁面分散度／回訪與品牌／週線與世代 | `pnpm growth:audit`（可加 `--gate1`／`--gate2`／`--gate3`／`--cohort`） |
 | 成長規則覆蓋率（零內鏈幾篇、topics 空幾篇…） | `pnpm growth:lint:all`；排工作清單用 `node scripts/growth-lint.mjs --all --worst 30` |
@@ -226,6 +228,7 @@
 |---|---|---|
 | 站上埋點 | `src/components/seo/Analytics.astro`、`SITE.gaId`（`src/config/site.ts`） | **不載 gtag.js**：inline 自送 GA4 `/g/collect` beacon（零第三方 JS、TBT 0）。改送出欄位前先讀該檔檔頭與 [`docs/lessons/ga4-beacon-instead-of-gtag.md`](./docs/lessons/ga4-beacon-instead-of-gtag.md) |
 | 數據抓取 | `scripts/weekly-data.mjs`、`scripts/lib/google-data.mjs` | 自簽 JWT 讀 GA4＋GSC，輸出四區塊 JSON |
+| 每日數據帳本（**唯一免金鑰的歷史來源**）| `data/seo-daily/*.json` | seo-ops 每日實抓 GA4／GSC／收錄／GEO 體檢後 commit 進 repo（`chore(seo): 每日數據 …`）。**離開伺服器就只剩這個**，查法見 §查現況 |
 | 週報技能 | `.claude/skills/weekly-report/SKILL.md`、`scripts/cron/weekly-report.sh` | 數據 → 熱題雷達 → 建議方向 → 發 Slack |
 | 設定常數 | `scripts/lib/report-config.mjs` | GA4 property、GSC 站台、Slack 一分類一頻道（`CATEGORY_CHANNELS`）、預設頻道、dev 頻道 |
 | 機密金鑰 | `~/.config/appi-news/` | **永不進 repo**；server 端設定見 `docs/SERVER_HANDOFF.md` |
@@ -233,6 +236,7 @@
 **注意**：
 
 - **GA4 與 GSC 是兩把不同的服務帳號金鑰**（GSC 用 appi 專屬專案那把，GA4 用共用那把）。細節見 `scripts/lib/report-config.mjs` 檔頭。
+- **金鑰缺檔不會 fallback，會直接 ENOENT 炸掉**（檔頭註解曾寫反，2026-08-11 更正）。所以 `weekly-data.mjs`／`growth:audit` 這類**只跑得動在那台伺服器上**；在 web session、CI、別台開發機一律讀不到，**這時要看數據就讀 `data/seo-daily/`，不可改用別站金鑰硬跑、更不可估算**。為什麼＝[`docs/lessons/google-indexing-api-gray-area.md`](./docs/lessons/google-indexing-api-gray-area.md) 2026-08-11 追記。
 - 週報「AI 轉介點擊」＝真人從 AI 答案點連結進站，**不等於**被 AI 爬蟲抓取／引用（GA 是 client-side JS，爬蟲不跑 JS）。真 AEO 量測需另案。
 - **禁杜撰數據**：報告曝光／流量一律以 `weekly-data.mjs` 實跑輸出為準，不可憑記憶或估算。
 

@@ -52,6 +52,7 @@ references:
     url: "https://pushsecurity.com/blog/analyzing-the-instructure-breach"
     publisher: "Push Security"
     note: "ShinyHunters 三大手法含 OAuth 供應鏈攻擊、授權第三方整合等於把安全邊界延伸到對方身上、Salesloft/Drift 戰役逾千個組織約 15 億筆 Salesforce 紀錄"
+topics: ["ai-agent-governance"]
 ---
 
 <p>柯達（Kodak）證實，公司近期發現一名未授權的第三方非法取得了有限資料的暫時存取權。這個說法，是在勒索集團 ShinyHunters 把柯達掛上外洩網站、聲稱握有逾 220 萬筆顧客個資與內部資料之後才出現的。一邊說「有限」，一邊喊「220 萬筆」，兩個數字對不起來，而柯達到今天也沒交代攻擊者是怎麼進來的。這篇要談的不是誰的數字準，是這波攻擊鎖定的位置：企業串接出去的第三方平台整合，那條沒人天天在看的信任鏈。</p>

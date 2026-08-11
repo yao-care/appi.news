@@ -46,6 +46,7 @@ references:
   - title: "對有價證券上市公司及境外指數股票型基金上市之境外基金機構資訊申報作業辦法（第6條違約金條文）"
     url: "https://www.selaw.com.tw/Chinese/LawDetail/LawArticleReference?lawDataid=5495687"
     publisher: "元照法律網"
+topics: ["sustainability-policy-tools"]
 ---
 
 上市（櫃）公司今年度的永續報告書，最晚要在8月31日前送進公開資訊觀測站，這是全體上市（櫃）公司不分資本額大小都得遵守的期限。依[證交所公司治理中心的即時統計](https://cgc.twse.com.tw/front/chPage)，截至8月1日，完成申報的公司只有109家，距離截止日僅剩最後三週。

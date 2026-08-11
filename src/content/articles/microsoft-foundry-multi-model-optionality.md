@@ -53,6 +53,7 @@ references:
   - title: "Gemini CLI and Code Assist shut down for consumers this week amid Antigravity focus"
     url: "https://9to5google.com/2026/06/17/gemini-cli-code-assist-shutting-down/"
     publisher: "9to5Google"
+topics: ["ai-agent-governance"]
 ---
 
 微軟六月做了兩件看起來沒什麼關係的事。一件是推出自家的程式碼模型 MAI-Code-1-Flash，一件是把雲端的 Foundry 模型目錄做到[逾一萬一千個模型](https://digitaldigest.com/microsoft-build-2026/)。分開看是兩條產品新聞，串起來看是同一個訊號：連最深綁 OpenAI 的微軟，都在平台層拆掉「一家供應商打天下」這件事。

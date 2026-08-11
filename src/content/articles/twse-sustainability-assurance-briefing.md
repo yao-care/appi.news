@@ -49,6 +49,7 @@ references:
     publisher: "時報資訊"
 coverImage: "covers/twse-sustainability-assurance-briefing-cover.webp"
 coverAlt: "證券交易所建築外觀，象徵台灣資本市場推動永續資訊確信與綠色證券認證制度"
+topics: ["sustainability-policy-tools"]
 ---
 
 台灣資本市場的永續揭露基礎建設，這個月又補上一塊。[台灣證券交易所公司治理中心公告](https://www.twse.com.tw/pressReleases/promoteNewsArticleCh/4622)，證交所與證券櫃檯買賣中心7月3日在台北、7月17日在台中，分別舉辦兩場「永續資訊確信機構宣導暨交流會」，邀集經認可的會計師事務所與查驗機構參加，會中詳細說明確信機構資格認可制度的取得與維持要點，以及執行確信業務時的注意事項。

@@ -52,6 +52,7 @@ references:
   - title: "BeyondTrust, LastPass Impacted by Klue-Salesforce Incident"
     url: "https://www.securityweek.com/beyondtrust-lastpass-impacted-by-klue-salesforce-incident/"
     publisher: "SecurityWeek"
+topics: ["ai-agent-governance"]
 ---
 
 LastPass 這次的客戶資料外洩，破口不在它自家系統。攻擊者打進的是 LastPass 行銷團隊在用的第三方競品情報平台 [Klue](https://cyberinsider.com/lastpass-says-customer-data-exposed-in-klue-supply-chain-breach/)，偷走 Klue 替客戶保管的 OAuth 長期權杖，再拿這些權杖直接讀走各家 Salesforce 裡的客戶資料。密碼庫沒事，出事的是企業給出去、卻沒人在盤的那一大把第三方整合授權。

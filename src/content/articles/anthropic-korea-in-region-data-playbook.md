@@ -48,6 +48,7 @@ references:
   - title: "Anthropic Seoul office faces early test as export controls seen easing within days"
     url: "https://www.digitaltoday.co.kr/en/view/66935/anthropic-seoul-office-faces-early-test-as-export-controls-seen-easing-within-days"
     publisher: "Digital Today"
+topics: ["ai-agent-governance"]
 ---
 
 2026 年 6 月 17 日，Anthropic 在首爾開了辦公室，是它在亞太繼東京、班加羅爾之後的第三個據點。同一天甩出來的企業名單才是重點：[Anthropic 官方公告](https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem)寫得清清楚楚，NAVER 已有上千名工程師用 Claude Code、Samsung SDS 把 Claude Cowork 與 Claude Code 推進三星電子、LG CNS 把 Claude 鋪給上千名員工、遊戲商 Nexon 用 Claude Code 開發線上遊戲、Hanwha Solutions 透過 AWS Bedrock 把 Claude 給全球員工。[Benzinga](https://www.benzinga.com/markets/tech/26/06/53267847/anthropic-eyes-south-korea-expansion-ahead-of-ipo-with-seoul-office-and-partnerships) 把這一連串動作放在 Anthropic 上市前衝亞洲市場的脈絡下看。

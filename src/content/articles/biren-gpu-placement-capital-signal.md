@@ -46,6 +46,7 @@ references:
     url: "https://www.scmp.com/business/banking-finance/article/3338447/biren-shares-soar-hong-kong-investors-seize-chinas-first-gpu-start-list"
     publisher: "South China Morning Post"
 originalContribution: "本文把壁仞這次配股放進『上市半年、IPO 募資還剩逾 42.8 億未用』的脈絡下重讀，主張其真實訊號是以股權折價換商轉速度，並拆解 212 億累計虧損中『紙面 vs 經營』的差異，再以『錢能加速商轉、但解不了製程與生態』的解對題框架，評估台灣代工、封測、記憶體在國產 GPU 鏈上的機會與被替代風險。"
+topics: ["taiwan-semiconductor-supply-chain"]
 ---
 
 壁仞科技上市不到半年、手上還有約 42.8 億港元 IPO 募資沒花完，卻選在這個時候折價近一成、再配股抽走 70 億港元。這不是缺錢，是「時間比錢貴」的訊號。國產 GPU 的窗口正在關，誰先把下一代產品送樣、拉上量產、把客戶綁死，誰才卡得進 Nvidia 讓出的那道縫。折價換速度，讀出來的是急，不是虛。

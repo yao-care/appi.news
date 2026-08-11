@@ -283,12 +283,21 @@ node -e 'import("./scripts/lib/verticals.mjs").then(m=>{for(const[k,v]of Object.
 | 數據抓取 | `scripts/weekly-data.mjs`、`scripts/lib/google-data.mjs` | 自簽 JWT 讀 GA4＋GSC，輸出四區塊 JSON（period / articlePerf / searchOpportunities / trafficHealth） |
 | 每週數據週報 | `.claude/skills/weekly-report/SKILL.md`、`scripts/cron/weekly-report.sh` | 數據 → 外部熱題雷達 → 建議寫作方向 → 發 Slack；排程見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §cron 總表 |
 | 設定常數 | `scripts/lib/report-config.mjs` | GA4 property、GSC 站台、Slack 一分類一頻道（`CATEGORY_CHANNELS`）、預設頻道、dev 頻道。**實際 ID 一律讀該檔，不抄進文件** |
-| 機密金鑰 | `~/.config/appi-news/ga4-sa.json`（GA4/GSC 私鑰）、`~/.config/appi-news/report.env`（Slack token） | **永不進 repo**；從原開發機 `scp` 過來、`chmod 600` |
+| 每日數據帳本 | `data/seo-daily/*.json` | seo-ops 每日實抓 GA4／GSC／收錄／GEO 體檢後 commit 進 repo，**不需金鑰就讀得到**，是離開伺服器時唯一的歷史來源。日期**有斷檔**、`gsc` 區塊在權限斷線時會是 `{"error"}` |
+| 機密金鑰 | `~/.config/appi-news/ga4-sa.json`（**GA4 專用**）、`~/.config/appi-news/indexing-sa.json`（**GSC／URL 檢查／Indexing 專用**，appi 專屬 GCP 專案）、`~/.config/appi-news/report.env`（Slack token） | **永不進 repo**；從原開發機 `scp` 過來、`chmod 600`。**兩把 GA4/GSC 金鑰不可互換**（各自在對方那邊沒有身分），且**缺檔不會 fallback、直接 ENOENT 中止**。為什麼分兩把＝[`docs/lessons/google-indexing-api-gray-area.md`](./docs/lessons/google-indexing-api-gray-area.md) |
 
-快速查數據（確認 GA/GSC 讀得到）：
+快速查數據（確認 GA/GSC 讀得到）——**只在放了金鑰的那台伺服器上跑得動**：
 
 ```bash
 GOOGLE_APPLICATION_CREDENTIALS=~/.config/appi-news/ga4-sa.json node scripts/weekly-data.mjs
+```
+
+不在那台機器上（web session、CI、別台開發機）就**不要硬跑、也不要估算**，改讀 repo 內的每日帳本：
+
+```bash
+ls data/seo-daily/                       # 先看有哪幾天（有斷檔）
+node -e 'const d=require("./data/seo-daily/2026-08-09.json");
+  console.log(d.ga4.users, d.ga4.taiwanOrganicSessions, d.gsc.totals, d.geo.ok, d.geo.gaps)'
 ```
 
 看「流量長不長得起來」（頁面分散度、回訪與品牌搜尋、週線與世代分析）另有一組指令與工作簿：

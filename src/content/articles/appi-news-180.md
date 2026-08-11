@@ -94,6 +94,8 @@ GLP-1 藥物本身經腎臟排泄比例並不高（主要靠酵素降解），�
 
 延伸閱讀：[瘦瘦針×中醫整合：體質調理、副作用管理、停藥後維持](/articles/appi-news-179/)
 
+延伸閱讀：[糖尿病前期可以逆轉：空腹血糖100-125的人該怎麼做](/articles/prediabetes-reversal-fasting-glucose/)
+
 ![瘦瘦針使用前必做六項抽血評估清單](https://appi.news/images/appi-news-180/2.svg)
 
 ---

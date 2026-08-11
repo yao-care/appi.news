@@ -66,6 +66,7 @@ references:
     url: "https://www.trendforce.com/price/dram/dram_spot"
     publisher: "TrendForce 集邦科技"
 updatedDate: "2026-08-06T05:55:28.112Z"
+topics: ["taiwan-semiconductor-supply-chain"]
 ---
 
 現在買顯卡或筆電比半年前貴一大截。根因是DRAM、NAND記憶體的合約價連續好幾季往上跳，AI資料中心把晶圓產能吃掉一大塊之後，成本一路往下游傳導到顯卡、筆電、手機。這波漲勢短期內看不到回頭跡象，急著要用的人不必特意等，不急的人該持續觀察記憶體合約價的季度走勢，顯卡標價的參考價值相對有限。

@@ -67,7 +67,11 @@ export const SA_KEY_PATH =
  * （腳本 exit 0、設計成有送才報）。給 appi 自己的專案才有獨立配額。
  * 完整排錯見 docs/lessons/google-indexing-api-gray-area.md 2026-07-31 追記。
  *
- * **fallback 到 SA_KEY_PATH**：專屬金鑰還沒放上來時照舊用共用那把（功能不中斷，只是繼續搶配額）。
+ * **沒有 fallback**（2026-08-11 更正）：本常數只是「路徑」，`loadServiceAccount()` 是直球
+ * `readFileSync`，檔案不在就 ENOENT 拋錯、整支中止。這裡曾註明「專屬金鑰還沒放上來時照舊用
+ * 共用那把」，但程式從來沒有 `existsSync` 判斷，照著讀會誤判缺檔是安全的。刻意不補這個
+ * fallback：共用金鑰自 2026-08-01 起對 appi.news 的 GSC 已無權限（見下方 GSC_SA_KEY_PATH），
+ * 退回去只會把「缺檔」換成更難查的 403。缺檔就該大聲炸掉。
  */
 export const INDEXING_SA_KEY_PATH =
   process.env.INDEXING_SA_KEY || `${process.env.HOME}/.config/appi-news/indexing-sa.json`;
@@ -82,7 +86,10 @@ export const INDEXING_SA_KEY_PATH =
  * 區塊連兩天只寫得出 {"error"}。新專案金鑰早在 07-31 就放上來了，但當時只接了 Indexing
  * API，GSC 這條沒切過去，且該專案未啟用 searchconsole.googleapis.com（已於本日啟用）。
  *
- * **fallback**：專屬金鑰不存在時退回 SA_KEY_PATH（行為同舊版，不會因缺檔而整條掛掉）。
+ * **沒有 fallback**（2026-08-11 更正）：這裡曾註明「專屬金鑰不存在時退回 SA_KEY_PATH，不會
+ * 因缺檔而整條掛掉」——程式沒有這段邏輯。實測未放金鑰時 `weekly-data.mjs` 直接
+ * `ENOENT: open '~/.config/appi-news/indexing-sa.json'` 中止。理由同上：退回共用金鑰只會拿到
+ * 403。要在非伺服器環境看歷史數據請讀 `data/seo-daily/`，不要試圖用別站金鑰硬跑。
  */
 export const GSC_SA_KEY_PATH = process.env.GSC_SA_KEY || INDEXING_SA_KEY_PATH;
 

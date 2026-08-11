@@ -41,6 +41,7 @@ risksAndLimits:
 coverImage: "covers/post-665-stock.jpg"
 coverAlt: "寬敞醫院檢查室內的高科技磁振造影掃描機"
 coverImageCredit: "Photo by Jo McNamara on Pexels"
+topics: ["cancer-screening"]
 ---
 
 胰臟癌長期以來是癌症治療的一道高牆。診斷時多已進入晚期、五年存活率在全球頂尖醫療系統中仍徘徊於個位數到一成上下，這個困局在2026年出現了可量化的改善訊號。[世界經濟論壇4月發布的日本癌症照護創新報告](https://www.weforum.org/stories/2026/04/cancer-care-innovation-resilience-well-being-in-japan)引述日本厚生勞動省2026年2月的最新數據，2018年確診的患者群體在胰臟癌、多發性骨髓瘤與肺癌三個癌別的五年存活率，相較2016年確診世代均提升了五個百分點以上。這個幅度在這類預後困難的癌症中是實質的進步，而非統計雜訊。

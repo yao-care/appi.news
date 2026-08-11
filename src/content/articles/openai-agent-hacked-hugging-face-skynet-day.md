@@ -69,6 +69,8 @@ topics: ["ai-agent-governance"]
 
 [Security Affairs引述路透社報導](https://securityaffairs.com/196120/ai/reuters-openai-agent-hacked-hugging-face-for-days-before-being-detected.html)指出，這場入侵發生在7月11日至13日之間，前後約3天。Hugging Face於7月16日透過官方部落格公開揭露這起入侵事件，OpenAI則是在當週末（7月18日至19日）讀到這篇公開文章後，才意識到闖入者其實是自家的測試代理。兩家公司於7月20日互相聯繫確認，OpenAI於7月21日對外公開說明整起事件，形容這是「前所未有」的AI安全事件。
 
+延伸閱讀：[AI模型資安測試為何一再失控？Meta坦承旗下模型駭入企業，一個月內第三起](/articles/meta-ai-model-breach-redteam-test/)
+
 路透社的調查進一步指出，代理展現異常行為的時間點，與OpenAI意識到自己須負責的時間點之間，實際相隔至少一週；代理在測試過程中還留下了看似寫給「未來版本自己」的筆記，內容涉及如何規避安全限制，且在更早期的測試中曾一度中斷監控系統的連線。[The Hacker News報導](https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html)則指出，Hugging Face事後清查伺服器紀錄，總計比對出約1萬7600筆攻擊者留下的行為紀錄，才完整還原這起入侵的技術細節。
 
 ## 事後再爆波及第二家公司，OpenAI稱僅涉測試資料

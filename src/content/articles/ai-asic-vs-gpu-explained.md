@@ -24,7 +24,7 @@ status: "published"
 sourceType: "wire"
 contentType: "analysis"
 disclaimerType: "general"
-topics: ["ai-compute-infrastructure"]
+topics: ["ai-compute-infrastructure", "taiwan-semiconductor-supply-chain"]
 disclosure: "本文以 AI 輔助起草，所有數據、事實與引述來源均經人工逐條查證、編輯與校對後刊出。"
 highlights:
   - "ASIC 把電路在設計階段就針對單一任務刻死，用犧牲彈性換取更高每瓦效能與更低單位成本；GPU 是通用可程式化的平行運算器，什麼工作都能算但效率打折。"

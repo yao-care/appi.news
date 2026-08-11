@@ -48,6 +48,7 @@ references:
     url: "https://www.trendforce.com/presscenter/news/20260601-13070.html"
     publisher: "TrendForce"
 originalContribution: "本文把 AMD 併購 MEXT 放進『記憶體牆』的座標裡，拆開多數報導混談的『容量瓶頸』與『頻寬瓶頸』兩個不同問題，指出 MEXT 只攻前者、破不了後者，並交叉 TrendForce 的算力與頻寬成長落差、以及 Q1 2026 DRAM 漲價與南亞、華邦、力積電的實際數字，評估台灣在成熟製程 DRAM 與 CoWoS 封裝這兩段的卡位點。"
+topics: ["taiwan-semiconductor-supply-chain"]
 ---
 
 AMD 買了一家做記憶體軟體的小公司，沒公布金額，新聞熱度也不高。但這筆案子讀起來，是 AI 加速器競爭的一個轉向：從比誰的晶片算力大，轉到比誰餵得動晶片。晶片再快，資料搬不進去就是空轉，而搬資料這件事，卡在一道叫「記憶體牆」的牆上。AMD 這一步是承認，再把錢砸在算力上，愈來愈是解錯題。

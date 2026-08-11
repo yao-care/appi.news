@@ -62,6 +62,8 @@ Quad由美國、日本、印度、澳洲四國組成，是近年印太地區討�
 
 聲明中一句話被外界反覆引用：「我們一致認為，印太海域的和平穩定是本區域安全與繁榮的基礎。」[報導](https://www.republicworld.com/world-news/quad-foreign-ministers-meet-in-manila-reaffirm-support-for-free-indo-pacific-and-asean-centrality-2026-07-22-133159)也提到，日本外相在會後談話中特別提及東海與南海局勢的發展，強調「強烈反對任何片面以武力或脅迫改變現狀的企圖」。美國國務卿盧比奧則表示，Quad仍是優先事項，四國將在今年稍後再次舉行會議。
 
+延伸閱讀：[兩韓鐵路合作卡在哪？南韓十年後重啟京元線，目標接軌北韓元山](/articles/two-koreas-railway-project-restart/)
+
 <figure>
 <img src="/images/quad-asean-south-china-sea-explained-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="海面上的船艦航行畫面">
 <figcaption>示意圖／南海海事安全是Quad聯合聲明列出的優先合作領域之一。（Photo by Serhat on Pexels）</figcaption>

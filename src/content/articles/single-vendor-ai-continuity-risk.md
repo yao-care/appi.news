@@ -57,6 +57,7 @@ references:
   - title: "Anthropic, Trump officials working toward deal to restore Fable 5 and Mythos 5"
     url: "https://www.theglobeandmail.com/business/article-anthropic-trump-officials-deal-restore-fable-5-mythos-5/"
     publisher: "The Globe and Mail"
+topics: ["ai-agent-governance"]
 ---
 
 六月九號，Anthropic 才把 Claude [Fable 5 與 Mythos 5 推上線](https://www.marktechpost.com/2026/06/13/anthropic-disables-claude-fable-5-and-mythos-5-after-us-government-order/)。三天後，這兩個模型在全世界消失。不是當機，不是下架改版，是被美國政府一[紙出口管制令](https://www.anthropic.com/news/fable-mythos-access)直接關掉。我想談的不是它們有多強，[那一面我寫過](/articles/claude-fable-5-mythos-class-model-tiering/)。這次要講的是另一件事：當你把一條關鍵流程綁在單一前沿模型上，它可能因為一個跟你完全無關的理由，在一夜之間停掉。營運連續性的風險，已經不只在價格和 API 額度，還在地緣政治。

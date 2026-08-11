@@ -42,6 +42,7 @@ risksAndLimits:
 coverImage: "covers/post-673-stock.jpg"
 coverAlt: "醫療人員為病患進行超音波掃描的診療畫面"
 coverImageCredit: "Photo by Pavel Danilyuk on Pexels"
+topics: ["cancer-screening"]
 ---
 
 台灣胃癌防治政策在2026年跨出關鍵一步。[衛生福利部國民健康署](https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=19802)宣布自115年（2026年）1月1日起，全面提供45歲至74歲民眾終身一次公費「糞便抗原檢測胃幽門螺旋桿菌」服務，預計超過60萬人受惠。這項新制讓公費癌症篩檢項目正式從五項擴大為六項，也是台灣癌症防治史上首度將胃癌納入系統性公費篩查範疇。

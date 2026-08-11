@@ -59,6 +59,8 @@ coverImageCredit: "Photo by Ivan Aleksic on Unsplash"
 
 西格爾2025年發布的計畫報告中，明確呼籲將大屠殺與反猶太主義教育納入國家與各州學校課綱，範圍橫跨政府、獨立與天主教三大學校體系，並要求為教師與公職人員提供相關指引與培訓，讓第一線人員具備辨識與處理反猶太主義事件的基礎知識。[The Nightly報導](https://thenightly.com.au/politics/anti-semitism-royal-commission-jillian-segal-to-testify-as-probe-examines-education-and-training-c-22648794)提到，這項計畫催生的「社會凝聚力教育樞紐」（Social Cohesion Education Hub）於6月30日正式上線，初期收錄50項教學資源，約半數聚焦反猶太主義主題，之後會持續為教師與學生新增內容。
 
+延伸閱讀：[極端主義怎麼形成？澳洲反猶太皇家調查委員會揭三大成因](/articles/australia-extremism-royal-commission-drivers/)
+
 <img src="/images/australia-antisemitism-envoy-education-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="政府聽證會議室（示意圖）">
 
 同場出席作證的還有民間反歧視組織「勇氣關懷」（Courage to Care）代表澤爾沃斯（Michael Zervos），他指出這項計畫全國已觸及逾50萬名學生。[Muswellbrook Chronicle報導](https://www.muswellbrookchronicle.com.au/story/9320396/anti-semitism-envoy-to-return-to-royal-commission/)提到，出席聽證的教師普遍反映，面對學生提問大屠殺與反猶太主義相關問題時，自己往往力不從心；部分學校甚至把反猶太事件淡化定調為「霸凌」而非仇恨犯罪，讓學生逐漸放棄通報。悉尼摩利亞學院（Moriah College）前校長哈梅（John Hamey，任內為2011年至2018年）與雪梨大學歷史學教授拉特蘭（Suzanne Rutland）也一併出庭，另有3名具親身經歷者將以化名作證，避免曝光身分。
@@ -72,6 +74,8 @@ coverImageCredit: "Photo by Ivan Aleksic on Unsplash"
 這起攻擊造成15人罹難，包含11名男性、3名女性與1名10歲女童，另有逾40人受傷。加害者為一對父子：50歲的薩吉德・阿克拉姆（Sajid Akram）是持澳洲永久居留權的印度籍人士，1998年以學生簽證移民澳洲、經營水果店，遭警方當場擊斃；24歲兒子納維德・阿克拉姆（Naveed Akram）是澳洲出生公民，中彈受傷後倖存，目前羈押於高貝恩超級監獄，面臨包括15項謀殺罪在內共59項控罪。兩人先前曾向伊斯蘭國宣誓效忠，車內並搜出2面伊斯蘭國旗幟，[維基百科](https://en.wikipedia.org/wiki/2025_Bondi_Beach_shooting)指出，這起事件被認定為受伊斯蘭國意識形態驅動、明確針對猶太社群的反猶太恐怖攻擊。
 
 事發後不到一個月，總理艾班尼斯於2026年1月8日宣布成立聯邦級「反猶太主義與社會凝聚力皇家調查委員會」，由前澳洲最高法院法官貝爾（Virginia Bell）主持，[Yahoo News報導](https://www.yahoo.com/news/articles/albanese-establishes-national-anti-semitism-094808835.html)指出，委員會除了追查反猶太主義的成因與盛行程度、檢視邦迪案發生經過外，也須就治安執法與強化社會凝聚力提出具體建議，報告須於今年底前提交聯邦政府。西格爾這次針對教育體系的作證，正是這場全國性調查往下一階段推進的其中一環。
+
+延伸閱讀：[泰國持槍管制多寬鬆？1030萬支槍逾4成未登記　校園槍擊釀8死再掀修法壓力](/articles/thailand-nonthaburi-school-shooting-gun-control/)
 
 ## 常見問題
 

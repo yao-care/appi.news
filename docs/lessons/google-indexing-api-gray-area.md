@@ -99,3 +99,38 @@ publish 回 200 就是這條管道能做到的全部，不要拿 404 當設定�
 - 又一次印證「成功不等於 exit code」：`{"error": ...}` 被安靜寫進資料檔兩天，
   是因為每日收集刻意設計成「單段失敗不影響其他段」。**這個容錯設計是對的，但它需要一個
   對應的告警**——目前沒有，只能靠人讀檔發現（待補）。
+
+## 2026-08-11 追記：檔頭註解承諾了程式沒寫的 fallback
+
+**問題**：在非伺服器環境（Claude Code web session）想確認 GA/GSC 現況，照 `CLAUDE.md`
+§查現況 跑 `node scripts/weekly-data.mjs`，直接 `ENOENT: no such file or directory, open
+'/root/.config/appi-news/indexing-sa.json'` 中止——**不是 403，是連檔案都沒有就炸了**。
+
+但 `scripts/lib/report-config.mjs` 檔頭在 `INDEXING_SA_KEY_PATH` 與 `GSC_SA_KEY_PATH`
+兩處都白紙黑字寫著會 fallback 回 `SA_KEY_PATH`，其中一句還特別保證「**不會因缺檔而整條掛掉**」。
+
+**原因**：那兩個常數只是**字串路徑**的組裝（`process.env.X || 預設路徑`），而真正開檔的
+`loadServiceAccount()` 是直球 `readFileSync`。整個 repo 沒有任何 `existsSync` 判斷——
+`grep -n existsSync scripts/lib/report-config.mjs scripts/lib/google-data.mjs` 回傳空。
+所謂 fallback 從來只存在於註解裡。在伺服器上金鑰都在，這個謊言不會咬人，所以躺了 9 天沒人發現。
+
+**解法**：**改註解、不補 fallback**。因為上一則追記已經確認共用金鑰 `ga4-insights@yaocare`
+對 appi.news 的 GSC 完全沒有身分，真的退回去只會把「缺檔」換成更難查的 403——
+`ENOENT` 講的是實話而且指名了缺哪一個檔，是比較好的失敗。兩處註解已改為明確寫「沒有 fallback」。
+
+**順帶確立**：離開那台伺服器就讀不到 GA4／GSC（實測拿手邊唯一的
+`etn-insights@evidencetoday` 金鑰去打，GA4 property 回 `PERMISSION_DENIED`、
+GSC 回 `User does not have sufficient permission for site`——那是別站的金鑰，本來就不該通）。
+**此時唯一合法的數據來源是 repo 內的 `data/seo-daily/*.json`**，那是 seo-ops 每日實抓後
+commit 進來的，不需金鑰。已寫進 `CLAUDE.md` §查現況與 §數據與網路曝光量、`README.md`
+§了解網路曝光量。
+
+**教訓：**
+
+- **註解裡的「不會掛掉」要當作待驗證的宣稱，不是事實。** 容錯行為特別容易被寫進註解卻沒實作，
+  因為在健康環境下兩者表現一模一樣，只有在故障當下才會發現差別——而那正是你最不想被騙的時候。
+  判準：**宣稱容錯的註解，旁邊要看得到那個 `if`**；看不到就是沒有。
+- **「金鑰不在」與「金鑰沒權限」是不同故障，不要用 fallback 把前者變成後者。** 缺檔的錯誤
+  訊息會指名檔案路徑，是排錯成本最低的一種失敗；退回一把注定 403 的金鑰只是把它弄糊。
+- 又一次同樣的形狀：**這個 repo 的文件裡「會變的東西」不可信，但「不會變的規則」也可能寫錯**。
+  `CLAUDE.md` 的鐵則是「數字去跑指令查」，本則補上另一半——**行為描述要去讀那段程式**。

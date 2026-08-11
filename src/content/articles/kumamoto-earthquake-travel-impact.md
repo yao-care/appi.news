@@ -20,6 +20,7 @@ status: "published"
 sourceType: "editorial"
 contentType: "guide"
 disclaimerType: "general"
+topics: ["travel-disruption-rights"]
 disclosure: "本文以 AI 輔助起草，經人工查證編輯。"
 highlights:
   - "熊本機場跑道地震當天一度關閉，經安全檢查後於當晚恢復起降，日本航空與全日空隔日起加開班機疏運滯留旅客；九州新幹線熊本至新水俣區間，JR九州7月31日公告8月中恢復通車有困難。"
@@ -75,6 +76,8 @@ updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 熊本強震後的旅遊決定，該看交通與住宿的實際復原進度，不是社群上的傳言。手上機票所屬的航空公司，對天災退改各有規定也各有期限，出發前直接查證日本氣象廳、熊本縣政府與航空公司三個官方來源，比論壇整理更準。地震本身的規模、死傷與海嘯警報經過，[APPI News先前已有完整報導](/articles/japan-kumamoto-earthquake-mall-collapse/)。
+
+操作延伸：[海外災害行前判斷清單](/articles/overseas-disaster-travel-checklist/)
 
 ## 熊本現在復原到哪：機場、新幹線、高速公路現況
 

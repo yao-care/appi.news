@@ -17,6 +17,7 @@ status: published
 sourceType: author
 contentType: guide
 disclaimerType: medical
+topics: ["first-aid-basics", "healthy-aging"]
 column: "evidence-based-health"
 highlights:
   - "老人頭部外傷後最危險的，是拖一到兩個月才發作的慢性硬腦膜下血腫，血慢慢滲、慢慢積，不是當下的急性出血最要命"
@@ -50,6 +51,8 @@ factCheckedBy:
 老人頭部撞到，當下看起來沒事，最該擔心的，是一種會拖上一到兩個月才發作的「慢性硬腦膜下血腫」，而不是當場的急性出血。它好發於腦部萎縮的長輩，尤其是有在吃抗凝血藥的人。血是慢慢滲、慢慢積的，不是一次大量噴出，等到頭痛、走路不穩、單側手腳無力、人變得像失智才被發現。好消息是，這個病多數靠一個小手術就能治好，早一點警覺是最要緊的事。
 
 這幾天聯電榮譽副董事長宣明智的病況，把這個平常沒人注意的題目推到眼前。我想趁這個機會，把它講清楚，因為它幾乎是每個有長輩的家庭都可能碰到的狀況。
+
+照護工具：[長輩撞頭後居家觀察與警訊紀錄](/articles/elderly-head-injury-observation-checklist/)
 
 ## 從一則新聞說起：為什麼血塊裡有「上個月的舊血」
 

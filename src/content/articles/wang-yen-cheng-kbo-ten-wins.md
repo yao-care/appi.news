@@ -5,6 +5,7 @@ description: "台灣左投王彥程效力韓華鷹，拿下個人在韓職KBO的
 excerpt: "王彥程拿下KBO個人第十勝，成為亞洲外援配額制度首位單季雙位數勝投投手。這項紀錄證明的是一條台灣投手過去很難走通的先發輪值路徑。"
 publishDate: "2026-08-06T05:55:28.112Z"
 category: "sports"
+topics: ["athlete-career-paths"]
 subcategory: "baseball"
 tags:
   - "棒球"
@@ -50,6 +51,8 @@ updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 台灣左投王彥程在韓職代表韓華鷹拿下個人本季第10勝，成為KBO自2026年實施亞洲外援配額制度以來，首位單季拿下雙位數勝投的亞洲外援投手。這項紀錄的意義，在於證明[KBO為亞洲外籍球員另闢的名額安排](https://sports.ltn.com.tw/news/breakingnews/5528621)真的能讓台灣投手拿到穩定先發輪值機會，這是日職與美職小聯盟體系過去不容易給的位置，重點不是單場投球內容本身。
+
+生涯規畫：[台灣球員日韓美旅外路線比較](/articles/taiwan-baseball-overseas-league-path-guide/)
 
 ## 六局無失分，十勝到手
 

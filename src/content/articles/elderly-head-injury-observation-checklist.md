@@ -1,0 +1,79 @@
+---
+title: "長輩撞到頭觀察多久？居家紀錄與警訊"
+slug: "elderly-head-injury-observation-checklist"
+coverImage: "covers/elderly-head-injury-observation-checklist.webp"
+coverAlt: "家人在明亮居家環境中陪伴長者並記錄撞頭後的意識狀況"
+description: "長輩跌倒撞頭後，當下正常仍可能延遲出現症狀。本文整理立即送醫警訊、前24小時居家觀察、接下來數週的步態與認知紀錄，以及服用抗凝血藥時要注意的事項。"
+publishDate: 2026-08-10
+category: "health"
+subcategory: "aging-health"
+tags: ["急救常識", "高齡健康", "居家安全"]
+author: "appi-editorial"
+reviewedBy: ["huang-ziyan"]
+factCheckedBy: ["appi-editorial"]
+status: "published"
+sourceType: "editorial"
+contentType: "guide"
+disclaimerType: "medical"
+topics: ["first-aid-basics", "healthy-aging"]
+readingTime: 7
+risksAndLimits:
+  - "居家觀察不能排除顱內出血，是否需影像檢查須由醫療人員依年齡、症狀、用藥與撞擊機轉判斷"
+  - "抗凝血或抗血小板藥不可因擔心出血自行停用，應由原開藥醫師評估"
+references:
+  - title: "淺談慢性硬腦膜下腔出血"
+    url: "https://www.tnhosp.mohw.gov.tw/page.asp?mainid={18F2AA30-666F-4C5B-A1A7-924725C3DD03}"
+    publisher: "衛生福利部臺南醫院"
+  - title: "慢性硬腦膜下血腫症狀多元恐致命"
+    url: "https://www.auh.org.tw/NewsInfo/NewsArticle?no=959"
+    publisher: "亞洲大學附屬醫院"
+---
+
+長輩撞到頭後，只要出現意識改變、反覆嘔吐、劇烈或加重頭痛、抽搐、單側無力、說話不清、瞳孔不對稱，應立即送急診。當下看似正常也要留下撞擊與症狀紀錄，因為慢性硬腦膜下血腫可能數週後才出現。病理與治療可看[老人慢性硬腦膜下血腫完整說明](/articles/chronic-subdural-hematoma-elderly/)。
+
+## 撞擊當下先記六件事
+
+記錄日期時間、跌倒原因、撞擊位置、是否短暫失去意識、是否記不得過程，以及目前服用的藥物。若有傷口，先用乾淨紗布加壓；懷疑頸部受傷時，避免任意搬動頭頸。
+
+藥袋或用藥清單要一起帶到醫院，特別標出抗凝血與抗血小板藥。這類藥物會影響醫療人員的風險判斷，但不可自行停藥。
+
+## 前 24 小時怎麼觀察
+
+安排熟悉長輩平常狀態的人陪同。每隔一段時間觀察是否能正常對話、走路、使用雙手、吃喝，以及頭痛或噁心是否加重。可以睡覺，但照顧者應能確認呼吸與反應沒有異常；醫院若提供特定喚醒或回診指示，以該指示為準。
+
+把變化寫成時間線，比「好像怪怪的」更容易讓急診判斷。也要檢查造成跌倒的環境，參考[高齡居家與肌力維持](/articles/anti-aging-muscle-metabolism-brain-guide/)降低再次撞擊機會。
+
+## 接下來一個月仍要留意
+
+[臺南醫院說明](https://www.tnhosp.mohw.gov.tw/page.asp?mainid={18F2AA30-666F-4C5B-A1A7-924725C3DD03})指出，慢性硬腦膜下出血可在頭部外傷後逐漸累積。家屬應觀察新出現的步態不穩、常跌倒、反應變慢、嗜睡、記憶或個性改變、單側手腳無力與持續頭痛。
+
+這些變化容易被當成老化或失智。[亞洲大學附屬醫院](https://www.auh.org.tw/NewsInfo/NewsArticle?no=959)把慢性硬腦膜下血腫稱為症狀多元的模仿者。若撞頭後數週出現上述變化，就醫時務必主動提起那次跌倒。
+
+## 可直接抄用的紀錄欄位
+
+- 撞擊日期、地點、原因與頭部位置。
+- 當下意識、記憶、嘔吐與傷口情形。
+- 每日頭痛程度、走路、說話、食慾與精神狀態。
+- 所有抗凝血、抗血小板、安眠及降壓藥名稱。
+- 新症狀發生時間與是否持續惡化。
+- 就醫院所、影像結果與醫師交代的回診條件。
+
+其他日常突發狀況，可從[家庭急救基礎主題](/topics/first-aid-basics/)找到燙傷、噎到與暈倒的處理方式。
+
+## 常見問題
+
+### 撞到頭沒腫包就沒事嗎？
+
+不能用有沒有腫包排除顱內出血，年齡、症狀、用藥與撞擊過程都要納入判斷。
+
+### 長輩撞頭後可以睡覺嗎？
+
+可以休息，但需要有人觀察反應與症狀，並遵照醫療人員給的喚醒、回診或急診指示。
+
+### 要觀察 24 小時還是一個月？
+
+急性警訊在前 24 小時尤其重要；長輩仍可能在數週後出現慢性硬腦膜下血腫症狀，因此後續變化也要留意。
+
+### 抗凝血藥要先停嗎？
+
+不要自行停藥。立即把藥名與最後服藥時間告訴醫療人員，由醫師衡量出血與血栓風險。

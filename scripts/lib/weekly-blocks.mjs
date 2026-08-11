@@ -58,6 +58,7 @@ function shortPath(p, max = 32) {
  * report 結構（皆可選，缺的區塊自動略過）：
  * {
  *   period: { start, end },
+ *   sprint: { milestoneDate,targetPageViews,pageViews,gapPageViews,targetMet,sessions,pvPerSession,pvPerSessionTarget,topArticleSharePct,concentrationPass,middleTrafficPages,topics },
  *   articlePerf: { topArticles:[{path,views,avgEngagementSec}], byPageType:[{type,views,wowPct}], byArticleCategory:[{category,views,wowPct}] },
  *   seoHealth: { pagesInSearch, totalImpressions, totalClicks, avgPosition },
  *   searchOpportunities: [{ query, impressions, ctr, position }],
@@ -79,6 +80,27 @@ export function weeklyReportBlocks(report = {}) {
     type: 'header',
     text: { type: 'plain_text', text: `📊 APPI News 週報　${mdShort(period.start)}–${mdShort(period.end)}`, emoji: true },
   });
+
+  // 衝刺期的唯一驗收口徑：最近完整 7 天 PV；同時把閱讀深度與集中度護欄放在旁邊。
+  const sprint = r.sprint;
+  if (sprint) {
+    const middle = sprint.middleTrafficPages || {};
+    const status = sprint.targetMet ? '達標' : `還差 ${num(sprint.gapPageViews)}`;
+    const depth = sprint.pvPerSession == null ? '—' : Number(sprint.pvPerSession).toFixed(2);
+    const concentration = sprint.topArticleSharePct == null ? '—' : `${sprint.topArticleSharePct}%`;
+    const lines = [
+      '*🚀 20,000 月 PV 衝刺*',
+      `${IND}最近 7 天 PV ${num(sprint.pageViews)} / ${num(sprint.targetPageViews)}（${mdShort(sprint.milestoneDate)}，${status}）`,
+      `${IND}sessions ${num(sprint.sessions)}・PV/session ${depth}（目標 ${sprint.pvPerSessionTarget}）`,
+      `${IND}腰部頁 ≥10PV ${num(middle.atLeast10Pv)}・≥20PV ${num(middle.atLeast20Pv)}`,
+      `${IND}單篇最高占比 ${concentration}（上限 25%，${sprint.concentrationPass ? '通過' : '未通過'}）`,
+    ];
+    for (const topic of sprint.topics || []) {
+      lines.push(`${IND}${topic.title}：PV ${num(topic.views)}・曝光 ${num(topic.impressions)}・點擊 ${num(topic.clicks)}・排名 ${pos(topic.position)}`);
+    }
+    blocks.push(section(lines.join('\n')));
+    blocks.push(divider());
+  }
 
   // ① 文章 / 分類表現 — Top 頁面 + 頁面類型 + 分類動能 併成一個 section（緊湊）
   const ap = r.articlePerf || {};
@@ -141,7 +163,12 @@ export function weeklyReportBlocks(report = {}) {
     const srcs = (th.sources || []).slice(0, 5).map((s) => `${s.source} ${num(s.users)}`).join('・');
     const ai = th.aiReferrals || [];
     const aiText = ai.length ? ai.map((s) => `${s.source} ${num(s.users)}`).join('・') : '無';
-    const lines = [`${IND}使用者 ${num(th.users)}${wow(th.usersWoWPct)}`];
+    const lines = [];
+    if (th.pageViews != null || th.sessions != null) {
+      const depth = th.pvPerSession == null ? '—' : Number(th.pvPerSession).toFixed(2);
+      lines.push(`${IND}PV ${num(th.pageViews)}${wow(th.pageViewsWoWPct)}・sessions ${num(th.sessions)}${wow(th.sessionsWoWPct)}・PV/session ${depth}`);
+    }
+    lines.push(`${IND}使用者 ${num(th.users)}${wow(th.usersWoWPct)}`);
     if (srcs) lines.push(`${IND}來源：${srcs}`);
     lines.push(`${IND}AI 轉介（真人點進站）：${aiText}`);
     blocks.push(section(`*③ 📈 流量健康度*\n${lines.join('\n')}`));

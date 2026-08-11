@@ -1,9 +1,10 @@
 ---
 title: "胡塞武裝是誰？葉門停火瓦解、沙烏地部隊遭大規模攻擊釀重大死傷"
 slug: "yemen-houthi-saudi-attack-marib"
-description: "葉門胡塞武裝8月6日對沙烏地支持部隊發動大規模飛彈與無人機攻擊，維持近四年的停火瀕臨瓦解。整理馬里卜、哈德拉毛傷亡數字、各方說法落差，以及與紅海封鎖、伊朗代理人戰爭的關聯。"
-excerpt: "葉門胡塞武裝8月6日對沙烏地支持部隊發動大規模飛彈與無人機攻擊，四年停火瀕臨瓦解，馬里卜、哈德拉毛傷亡數字各方說法落差極大。"
+description: "葉門胡塞武裝8月6日對沙烏地支持部隊發動大規模飛彈與無人機攻擊，8月9日再以無人機直擊沙國吉贊阿美煉油廠，同日兩波飛彈無人機襲擊葉門政府控制的默卡港。整理馬里卜、默卡港傷亡數字、各方說法落差，以及與紅海封鎖、伊朗代理人戰爭的關聯。"
+excerpt: "葉門胡塞武裝8月6日對沙烏地支持部隊發動大規模飛彈與無人機攻擊，四年停火瀕臨瓦解；8月9日再以無人機直擊沙國吉贊阿美煉油廠，同日兩波攻擊葉門政府控制的默卡港，戰火從沙國本土延燒回葉門紅海岸港口。"
 publishDate: "2026-08-07T17:51:19.651Z"
+updatedDate: "2026-08-10T16:37:27.503Z"
 category: "international"
 subcategory: "middle-east"
 tags:
@@ -22,13 +23,17 @@ highlights:
   - "8月7日攻擊持續延燒，至少再發動12次飛彈與無人機攻擊，AFP引述消息指死亡人數已上看58人，沙烏地支持的聯合作戰司令部則僅證實17人陣亡"
   - "胡塞同日對沙國納季蘭省發動無人機攻擊，造成11名平民受傷，其中一名4歲孩童二度燒傷"
   - "這是2022年聯合國停火協議生效、葉門維持近四年相對平靜以來最致命的一波攻擊，分析人士警告全面內戰風險已不再遙遠"
+  - "（更新8月9日）胡塞武裝再以無人機直擊沙國紅海岸吉贊阿美煉油廠，沙國能源部證實火警已撲滅、無人員傷亡，阿美執行長稱生產僅部分中斷"
+  - "（更新8月10日）胡塞武裝8月9日同日對葉門政府控制的默卡港發動兩波飛彈與無人機襲擊，半島電視台報導兩波合計至少18人死亡、逾60人受傷；葉門總統領導委員會主席阿利米痛批攻擊是「伊朗擴大升級的延伸」"
 risksAndLimits:
   - "葉門政府與胡塞武裝雙方公布的死傷數字落差極大，均未經第三方獨立查證"
   - "AFP與沙烏地支持的聯合作戰司令部公布的死亡人數也不一致（58人與17人），確切規模仍待釐清"
+  - "阿美執行長稱吉贊煉油廠攻擊「無實質性財務影響」為企業單方說法，實際產能損失尚未經第三方查證"
+  - "默卡港攻擊傷亡數字各家外電落差大：半島電視台報導兩波合計約18死62傷，《華盛頓時報》與Anews同日僅報單一波7死15至35傷，確切總數仍待官方統一公布"
   - "衝突仍在延燒，本文數字以查證當下最新外電為準，後續傷亡與情勢可能持續變動"
 ---
 
-葉門胡塞武裝8月6日對沙烏地支持的政府軍部隊發動大規模飛彈與無人機攻擊，馬里卜、哈德拉毛兩省至少30名士兵陣亡，維持近四年的停火局面瀕臨瓦解（[Al Jazeera](https://www.aljazeera.com/news/2026/8/6/houthis-claim-to-have-killed-45-in-attacks-on-yemeni-government-forces)）。攻擊隔天並未平息，8月7日再傳出至少12次飛彈與無人機攻擊，分析人士警告葉門正邁向一場新的全面內戰（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-attacks-on-govt-forces-hint-that-a-major-battle-in-yemen-is-brewing)）。
+葉門胡塞武裝8月6日對沙烏地支持的政府軍部隊發動大規模飛彈與無人機攻擊，馬里卜、哈德拉毛兩省至少30名士兵陣亡，維持近四年的停火局面瀕臨瓦解（[Al Jazeera](https://www.aljazeera.com/news/2026/8/6/houthis-claim-to-have-killed-45-in-attacks-on-yemeni-government-forces)）。攻擊隔天並未平息，8月7日再傳出至少12次飛彈與無人機攻擊，分析人士警告葉門正邁向一場新的全面內戰（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-attacks-on-govt-forces-hint-that-a-major-battle-in-yemen-is-brewing)）。**8月9日情勢再升溫**：胡塞武裝改以無人機直擊沙烏地境內紅海岸的吉贊阿美煉油廠，沙國能源部證實火警已撲滅、無人員傷亡，攻擊範圍首度從葉門境內戰場延伸到沙國本土能源設施（[Al Jazeera](https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan)）。**同一天戰火也燒回葉門本土**：胡塞武裝對政府控制的紅海岸默卡港接連發動兩波飛彈與無人機攻擊，半島電視台報導兩波合計至少18人死亡、逾60人受傷，葉門總統領導委員會主席阿利米痛批這是「伊朗擴大升級的延伸」（[Al Jazeera](https://www.aljazeera.com/news/2026/8/10/houthis-renew-missile-and-drone-attacks-on-yemens-port-of-al-makha)）。
 
 ## 胡塞武裝是誰
 
@@ -54,9 +59,23 @@ risksAndLimits:
 
 這波升溫並非一夕之間發生。7月13日，葉門政府軍轟炸薩那機場，阻止一架伊朗班機降落；胡塞武裝隨即展開報復性升級。7月20日，胡塞宣布對沙烏地實施「海上封鎖」，並攻擊沙國國營石油公司Aramco的設施，指控沙方對葉門實施「不公正且壓迫性的圍困」。8月5日，胡塞武裝再度宣稱對一艘沙烏地油輪發射飛彈（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-strikes-hit-yemen-as-saudi-arabia-braces-for-attacks-what-we-know)）。國際危機組織資深分析師艾哈邁德·納吉評論：「全面戰爭的威脅已不再遙遠，每一次升級行動都讓和平更難實現。」薩那戰略研究中心研究員阿德爾·達謝拉則警告，若衝突全面爆發，將導致「前所未有的血腥衝突」（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-attacks-on-govt-forces-hint-that-a-major-battle-in-yemen-is-brewing)）。馬里卜省是葉門重要的石油天然氣產區，長年被視為雙方「生死之戰」的關鍵戰場（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-attacks-on-govt-forces-hint-that-a-major-battle-in-yemen-is-brewing)）。
 
+## （更新8月9日）無人機直擊吉贊煉油廠，攻擊延伸到沙國本土能源設施
+
+胡塞武裝的攻勢並未止於馬里卜、哈德拉毛的地面部隊。8月9日凌晨，武裝改變戰場，直接以無人機打擊沙烏地境內紅海岸的吉贊（Jazan）阿美煉油廠，這是本輪衝突以來胡塞首度公開宣稱擊中沙國本土煉油設施（[Al Jazeera](https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan)）。胡塞軍事發言人葉海亞·薩雷在Telegram聲明中宣稱「成功以無人機打擊吉贊阿美煉油廠，達成精準打擊」，並稱此舉是為了回應沙烏地對葉門薩達、哈傑兩省領空的無人機入侵（[Tribune](https://www.tribuneindia.com/news/aramco-refinery/houthis-claim-responsibility-for-attack-on-saudis-aramco-facility-in-jazan)）。
+
+沙烏地能源部證實廠區內一場火警，阿美石油自有的消防隊隨即撲滅火勢，官方強調沒有人員傷亡（[Al Jazeera](https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan)）。吉贊煉油廠日煉油量達40萬桶，是阿美公司透過紅海出口煉製產品、不必繞經荷莫茲海峽的重要據點，整座設施造價約210億美元，距離葉門邊境約44英里（[Aaj英文台](https://english.aaj.tv/news/330467124/houthis-claim-drone-attack-on-saudi-aramcos-jazan-refinery)、[ZeroHedge](https://www.zerohedge.com/energy/fire-erupts-saudi-aramcos-jazan-refinery-iran-backed-houthis-claim-drone-strike)）。阿美執行長納瑟表示，這次攻擊造成部分生產中斷，但對快速恢復運營有信心，強調沒有實質性財務影響（[Aaj英文台](https://english.aaj.tv/news/330467124/houthis-claim-drone-attack-on-saudi-aramcos-jazan-refinery)）。這並非阿美設施今年首度遇襲，7月27日一波攻擊便曾損及廠內氣化聯合循環複合體與油槽區（[Aaj英文台](https://english.aaj.tv/news/330467124/houthis-claim-drone-attack-on-saudi-aramcos-jazan-refinery)）。
+
 ## 沙烏地的因應：一邊備戰、一邊拉盟友
 
 沙烏地軍方消息人士表示，情報顯示胡塞武裝可能與伊拉克什葉派武裝團體、在伊朗革命衛隊監督下協調發動攻擊，鎖定能源基礎設施、港口與機場，沙國「不會袖手旁觀」，強調聯盟「不尋求升級，但不會允許地面力量的平衡改變」（[CBS News](https://www.cbsnews.com/live-updates/iran-war-yemen-saudi-arabia-houthis-donald-trump-deadly-attacks/)）。就在同一天，[沙烏地也與土耳其、巴基斯坦在麥加簽署共同防禦協議](/articles/mecca-defense-pact-nuclear-umbrella/)，任一國遭武裝攻擊即視同對三國的攻擊，被視為沙國近期連環遇襲後強化區域安全網的動作之一。持續延燒的中東情勢，也讓[台灣國內油價因紅海危機承受壓力](/articles/taiwan-fuel-price-hike-red-sea-crisis/)，中油過去數月已為此吸收超過150億元差額，以維持國內油價穩定。
+
+## （更新8月10日）默卡港連兩波攻擊，死傷數字各家外電不一
+
+胡塞武裝的攻勢不只鎖定沙國本土，8月9日同一天也把戰火燒回葉門境內的默卡港，這是葉門政府控制的重要紅海港口，鄰近曼德海峽，近年整修後用來分擔胡塞掌控的荷台達港航運量（[Al Jazeera](https://www.aljazeera.com/news/2026/8/10/houthis-renew-missile-and-drone-attacks-on-yemens-port-of-al-makha)）。據半島電視台報導，胡塞軍事發言人葉海亞·薩雷表示，行動鎖定「沙烏地軍隊集中區與武器倉庫」，兩波攻擊相隔不到24小時：第一波以彈道飛彈與無人機襲擊，政府防空系統擊落11架無人機、另有2枚飛彈落海，仍造成至少11人死亡（8名軍人、3名平民）、32人受傷；第二波再造成7人死亡（4名軍人、3名平民）、30人受傷（[Al Jazeera](https://www.aljazeera.com/news/2026/8/10/houthis-renew-missile-and-drone-attacks-on-yemens-port-of-al-makha)）。胡塞方面則聲稱，這波行動是為回應沙烏地在葉門西部與塔伊茲省增兵。
+
+《華盛頓時報》的報導版本略有落差：引述葉門新聞部次長費耶德·納曼說法，稱攻擊「嚴重損毀港口建築物與碼頭」，並一度出動裝有爆裂物的無人艇突襲，該報統計死亡人數為7人（4名軍人、3名平民）、15名平民受傷（[The Washington Times](https://www.washingtontimes.com/news/2026/aug/9/iranian-backed-houthis-claim-attacks-saudi-oil-facility-yemeni-port/)）。土耳其安納杜魯旗下Anews則引述同一組7死數字，但受傷人數統計為35人（[Anews](https://www.anews.com.tr/middle-east/2026/08/09/yemen-calls-houthi-attack-on-mokha-port-extension-of-iranian-escalation)）。
+
+葉門總統領導委員會主席拉什德·阿利米就攻擊發表正式聲明，稱「針對曼德海峽附近這座重要海港的攻擊，是伊朗對區域經濟設施、海上航線與各國利益擴大升級的延伸」，並指控胡塞武裝對葉門資源發動「系統性戰爭」，呼籲美國與國際社會對胡塞的「來源與工具」施壓（[Anews](https://www.anews.com.tr/middle-east/2026/08/09/yemen-calls-houthi-attack-on-mokha-port-extension-of-iranian-escalation)）。默卡港受創，也讓[荷莫茲海峽與紅海航運風險](/articles/hormuz-tankers-oman-route-iran-threats/)再添一筆變數，凸顯這場衝突已從單一戰場擴散成沙烏地本土、葉門政府控制港口同步遇襲的多線危機。
 
 ## 常見問題
 

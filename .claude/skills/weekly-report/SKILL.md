@@ -8,7 +8,8 @@ description: APPI News 每週數據週報。讀 GA4+GSC 四區塊數據、跑外
 你是 APPI News 的每週數據編輯。全程繁體中文 + 台灣用語、去 AI 腔。被呼叫時跑完下列步驟，最後發一則 Slack 週報。
 
 ## 步驟 1：抓數據
-跑 `node scripts/weekly-data.mjs`，取得 JSON（period / articlePerf / seoHealth / searchOpportunities / trafficHealth）。
+跑 `node scripts/weekly-data.mjs`，取得 JSON（period / sprint / articlePerf / seoHealth / searchOpportunities / trafficHealth）。
+- `sprint`：最近完整 7 天的 PV、sessions、PV/session、當期里程碑與缺口、月化 run rate、腰部流量頁數、單篇集中度，以及七夕／中元／開學三個叢集的 PV、曝光、點擊、排名。這是 2026-08 月衝刺的驗收口徑，必須原封不動帶進週報。
 - `articlePerf.topArticles`：Top 頁面（含作者頁/首頁/admin 等，不只文章）。
 - `articlePerf.byPageType`：各**頁面類型**瀏覽（`home` 首頁 / `article` 文章內文 / `author` 作者頁 / `category` 分類索引 / `column` 專欄 / `topic` 專題 / `tag` 標籤 / `page` 其他靜態頁）。這份才看得出「流量是讀者在看文章，還是團隊在看作者頁/後台」。
 - `articlePerf.byArticleCategory`：**只算文章內文**（/articles/<slug>/）依文章真實分類彙整；`uncategorized`＝slug 對不到分類。這份才是真的「各分類文章動能」（舊版把文章全丟進 other，已修）。
@@ -62,6 +63,14 @@ description: APPI News 每週數據週報。讀 GA4+GSC 四區塊數據、跑外
   "text": "<純文字摘要（含建議標題，給通知預覽用）>",
   "report": {
     "period": { "start": "...", "end": "..." },                 // 來自 weekly-data
+    "sprint": {                                                     // 來自 weekly-data，原封不動帶入
+      "milestoneDate": "...", "targetPageViews": 0, "pageViews": 0,
+      "gapPageViews": 0, "targetMet": false, "sessions": 0,
+      "pvPerSession": 0, "pvPerSessionTarget": 1.35,
+      "topArticleSharePct": 0, "concentrationPass": true,
+      "middleTrafficPages": { "atLeast10Pv": 0, "atLeast20Pv": 0 },
+      "topics": [ /* {id,title,members,views,impressions,clicks,position} */ ]
+    },
     "articlePerf": { "topArticles": [...], "byPageType": [...], "byArticleCategory": [...] },
     "seoHealth": { "pagesInSearch": 0, "totalImpressions": 0, "totalClicks": 0, "avgPosition": 0 },
     "searchOpportunities": [ /* {query,impressions,clicks,ctr,position} */ ],
@@ -69,7 +78,7 @@ description: APPI News 每週數據週報。讀 GA4+GSC 四區塊數據、跑外
       "pageOpportunities": [ /* {page,category,impressions,position,ctr} */ ],
       "titleCtrCandidates": [ /* {query,page,category,impressions,position,ctr} */ ]
     },
-    "trafficHealth": { "users": 0, "usersWoWPct": null, "sources": [...], "aiReferrals": [...] },
+    "trafficHealth": { "pageViews": 0, "pageViewsWoWPct": null, "sessions": 0, "sessionsWoWPct": null, "pvPerSession": 0, "users": 0, "usersWoWPct": null, "sources": [...], "aiReferrals": [...] },
     "geoText": "<步驟 1c：被引用題數/總題數 + 被引用率 + 一個範例；無法實查則省略此欄>",
     "generatedAt": "<產生時間，如 2026-06-25 06:17>",
     "notes": {                                                   // 質性一句話，皆可選；以斜體接在對應區塊後

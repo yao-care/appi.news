@@ -3,15 +3,25 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import TopicCard from '@/components/blocks/TopicCard.astro';
 import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
 import EmptyState from '@/components/ui/EmptyState.astro';
-import { getTopics, getPublishedArticles, byTopic } from '@/utils/content';
+import { getTopics, getPublishedArticles, byTopic, articleSlug } from '@/utils/content';
 import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
 
 const topics = await getTopics();
 const all = await getPublishedArticles();
-const cards = topics.map((t) => ({
-  topic: t,
-  count: byTopic(all, t.id).length + t.data.articles.length,
-}));
+// 手動指定的 articles 與 article.topics 反向關聯常重疊，需去重後才是實際顯示篇數
+const cards = topics.map((t) => {
+  const manual = all.filter(
+    (a) => t.data.articles.includes(articleSlug(a)) || t.data.articles.includes(a.id),
+  );
+  const seen = new Set<string>();
+  const count = [...manual, ...byTopic(all, t.id)].filter((a) => {
+    const key = articleSlug(a);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  }).length;
+  return { topic: t, count };
+});
 
 const ld = [
   breadcrumbLd(Astro.site, [

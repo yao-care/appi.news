@@ -1,0 +1,3694 @@
+{
+  "date": "2026-08-11",
+  "generatedAt": "2026-08-10T21:20:09.694Z",
+  "ga4": {
+    "range": "7daysAgo..yesterday",
+    "sessions": 1247,
+    "users": 1135,
+    "views": 1410,
+    "avgDurationSec": 287,
+    "engagedSessions": 458,
+    "taiwanOrganicSessions": 660,
+    "channels": [
+      {
+        "channel": "Organic Search",
+        "sessions": 779,
+        "engaged": 395
+      },
+      {
+        "channel": "Direct",
+        "sessions": 368,
+        "engaged": 43
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 127,
+        "engaged": 0
+      },
+      {
+        "channel": "Referral",
+        "sessions": 41,
+        "engaged": 11
+      },
+      {
+        "channel": "Organic Social",
+        "sessions": 12,
+        "engaged": 3
+      },
+      {
+        "channel": "AI Assistant",
+        "sessions": 9,
+        "engaged": 6
+      },
+      {
+        "channel": "Cross-network",
+        "sessions": 1,
+        "engaged": 0
+      }
+    ],
+    "topPages": [
+      {
+        "path": "/",
+        "views": 163
+      },
+      {
+        "path": "/articles/gym-closure-membership-refund-rights/",
+        "views": 80
+      },
+      {
+        "path": "/articles/flu-vaccine-2026-public-guide/",
+        "views": 73
+      },
+      {
+        "path": "/articles/kumamoto-earthquake-travel-impact/",
+        "views": 39
+      },
+      {
+        "path": "/articles/appi-news-491/",
+        "views": 32
+      },
+      {
+        "path": "/articles/fengshan-youth-night-market-relocation/",
+        "views": 27
+      },
+      {
+        "path": "/articles/wearable-sleep-tracking-accuracy/",
+        "views": 24
+      },
+      {
+        "path": "/articles/天麻功效與副作用完整解析：5大保健用途、正確吃/",
+        "views": 24
+      },
+      {
+        "path": "/articles/thailand-nonthaburi-school-shooting-gun-control/",
+        "views": 21
+      },
+      {
+        "path": "/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "views": 19
+      },
+      {
+        "path": "/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "views": 17
+      },
+      {
+        "path": "/articles/mount-fuji-summit-hut-guide/",
+        "views": 16
+      },
+      {
+        "path": "/articles/elderly-health-industry-expo-guide/",
+        "views": 15
+      },
+      {
+        "path": "/articles/longtan-snow-ice-shop-guide/",
+        "views": 15
+      },
+      {
+        "path": "/health/",
+        "views": 15
+      }
+    ],
+    "aiReferrals": {
+      "range": "28daysAgo..yesterday",
+      "total": 20,
+      "engaged": 12,
+      "sources": [
+        {
+          "source": "chatgpt.com",
+          "sessions": 8,
+          "engaged": 5
+        },
+        {
+          "source": "gemini.google.com",
+          "sessions": 6,
+          "engaged": 5
+        },
+        {
+          "source": "perplexity.ai",
+          "sessions": 5,
+          "engaged": 2
+        },
+        {
+          "source": "claude.ai",
+          "sessions": 1,
+          "engaged": 0
+        }
+      ]
+    },
+    "daily": [
+      {
+        "date": "2026-06-16",
+        "sessions": 26,
+        "avgDurationSec": 531,
+        "engaged": 7,
+        "taiwanOrganic": 1
+      },
+      {
+        "date": "2026-06-17",
+        "sessions": 31,
+        "avgDurationSec": 116,
+        "engaged": 9,
+        "taiwanOrganic": 7
+      },
+      {
+        "date": "2026-06-18",
+        "sessions": 24,
+        "avgDurationSec": 406,
+        "engaged": 13,
+        "taiwanOrganic": 3
+      },
+      {
+        "date": "2026-06-19",
+        "sessions": 15,
+        "avgDurationSec": 10,
+        "engaged": 3,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-06-20",
+        "sessions": 27,
+        "avgDurationSec": 76,
+        "engaged": 6,
+        "taiwanOrganic": 3
+      },
+      {
+        "date": "2026-06-21",
+        "sessions": 24,
+        "avgDurationSec": 197,
+        "engaged": 7,
+        "taiwanOrganic": 1
+      },
+      {
+        "date": "2026-06-22",
+        "sessions": 38,
+        "avgDurationSec": 440,
+        "engaged": 26,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-06-23",
+        "sessions": 29,
+        "avgDurationSec": 154,
+        "engaged": 11,
+        "taiwanOrganic": 8
+      },
+      {
+        "date": "2026-06-24",
+        "sessions": 42,
+        "avgDurationSec": 333,
+        "engaged": 20,
+        "taiwanOrganic": 8
+      },
+      {
+        "date": "2026-06-25",
+        "sessions": 83,
+        "avgDurationSec": 73,
+        "engaged": 25,
+        "taiwanOrganic": 14
+      },
+      {
+        "date": "2026-06-26",
+        "sessions": 36,
+        "avgDurationSec": 178,
+        "engaged": 13,
+        "taiwanOrganic": 8
+      },
+      {
+        "date": "2026-06-27",
+        "sessions": 10,
+        "avgDurationSec": 33,
+        "engaged": 4,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-06-28",
+        "sessions": 38,
+        "avgDurationSec": 3,
+        "engaged": 3,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-06-29",
+        "sessions": 28,
+        "avgDurationSec": 152,
+        "engaged": 18,
+        "taiwanOrganic": 14
+      },
+      {
+        "date": "2026-06-30",
+        "sessions": 21,
+        "avgDurationSec": 108,
+        "engaged": 13,
+        "taiwanOrganic": 8
+      },
+      {
+        "date": "2026-07-01",
+        "sessions": 28,
+        "avgDurationSec": 174,
+        "engaged": 14,
+        "taiwanOrganic": 5
+      },
+      {
+        "date": "2026-07-02",
+        "sessions": 24,
+        "avgDurationSec": 167,
+        "engaged": 9,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-07-03",
+        "sessions": 22,
+        "avgDurationSec": 124,
+        "engaged": 9,
+        "taiwanOrganic": 5
+      },
+      {
+        "date": "2026-07-04",
+        "sessions": 11,
+        "avgDurationSec": 21,
+        "engaged": 4,
+        "taiwanOrganic": 4
+      },
+      {
+        "date": "2026-07-05",
+        "sessions": 17,
+        "avgDurationSec": 73,
+        "engaged": 4,
+        "taiwanOrganic": 7
+      },
+      {
+        "date": "2026-07-06",
+        "sessions": 33,
+        "avgDurationSec": 160,
+        "engaged": 10,
+        "taiwanOrganic": 9
+      },
+      {
+        "date": "2026-07-07",
+        "sessions": 31,
+        "avgDurationSec": 50,
+        "engaged": 9,
+        "taiwanOrganic": 10
+      },
+      {
+        "date": "2026-07-08",
+        "sessions": 34,
+        "avgDurationSec": 323,
+        "engaged": 15,
+        "taiwanOrganic": 8
+      },
+      {
+        "date": "2026-07-09",
+        "sessions": 14,
+        "avgDurationSec": 50,
+        "engaged": 6,
+        "taiwanOrganic": 3
+      },
+      {
+        "date": "2026-07-10",
+        "sessions": 51,
+        "avgDurationSec": 113,
+        "engaged": 23,
+        "taiwanOrganic": 6
+      },
+      {
+        "date": "2026-07-11",
+        "sessions": 26,
+        "avgDurationSec": 77,
+        "engaged": 4,
+        "taiwanOrganic": 3
+      },
+      {
+        "date": "2026-07-12",
+        "sessions": 29,
+        "avgDurationSec": 64,
+        "engaged": 11,
+        "taiwanOrganic": 2
+      },
+      {
+        "date": "2026-07-13",
+        "sessions": 17,
+        "avgDurationSec": 107,
+        "engaged": 6,
+        "taiwanOrganic": 5
+      },
+      {
+        "date": "2026-07-14",
+        "sessions": 31,
+        "avgDurationSec": 154,
+        "engaged": 18,
+        "taiwanOrganic": 11
+      },
+      {
+        "date": "2026-07-15",
+        "sessions": 47,
+        "avgDurationSec": 62,
+        "engaged": 8,
+        "taiwanOrganic": 6
+      },
+      {
+        "date": "2026-07-16",
+        "sessions": 22,
+        "avgDurationSec": 28,
+        "engaged": 6,
+        "taiwanOrganic": 7
+      },
+      {
+        "date": "2026-07-17",
+        "sessions": 13,
+        "avgDurationSec": 122,
+        "engaged": 5,
+        "taiwanOrganic": 3
+      },
+      {
+        "date": "2026-07-18",
+        "sessions": 26,
+        "avgDurationSec": 179,
+        "engaged": 13,
+        "taiwanOrganic": 10
+      },
+      {
+        "date": "2026-07-19",
+        "sessions": 22,
+        "avgDurationSec": 84,
+        "engaged": 13,
+        "taiwanOrganic": 14
+      },
+      {
+        "date": "2026-07-20",
+        "sessions": 51,
+        "avgDurationSec": 38,
+        "engaged": 27,
+        "taiwanOrganic": 12
+      },
+      {
+        "date": "2026-07-21",
+        "sessions": 46,
+        "avgDurationSec": 99,
+        "engaged": 20,
+        "taiwanOrganic": 17
+      },
+      {
+        "date": "2026-07-22",
+        "sessions": 27,
+        "avgDurationSec": 111,
+        "engaged": 9,
+        "taiwanOrganic": 17
+      },
+      {
+        "date": "2026-07-23",
+        "sessions": 48,
+        "avgDurationSec": 205,
+        "engaged": 22,
+        "taiwanOrganic": 15
+      },
+      {
+        "date": "2026-07-24",
+        "sessions": 34,
+        "avgDurationSec": 106,
+        "engaged": 14,
+        "taiwanOrganic": 14
+      },
+      {
+        "date": "2026-07-25",
+        "sessions": 63,
+        "avgDurationSec": 74,
+        "engaged": 18,
+        "taiwanOrganic": 9
+      },
+      {
+        "date": "2026-07-26",
+        "sessions": 20,
+        "avgDurationSec": 20,
+        "engaged": 4,
+        "taiwanOrganic": 6
+      },
+      {
+        "date": "2026-07-27",
+        "sessions": 46,
+        "avgDurationSec": 182,
+        "engaged": 15,
+        "taiwanOrganic": 21
+      },
+      {
+        "date": "2026-07-28",
+        "sessions": 58,
+        "avgDurationSec": 205,
+        "engaged": 29,
+        "taiwanOrganic": 31
+      },
+      {
+        "date": "2026-07-29",
+        "sessions": 49,
+        "avgDurationSec": 82,
+        "engaged": 23,
+        "taiwanOrganic": 26
+      },
+      {
+        "date": "2026-07-30",
+        "sessions": 46,
+        "avgDurationSec": 104,
+        "engaged": 20,
+        "taiwanOrganic": 26
+      },
+      {
+        "date": "2026-07-31",
+        "sessions": 75,
+        "avgDurationSec": 98,
+        "engaged": 34,
+        "taiwanOrganic": 53
+      },
+      {
+        "date": "2026-08-01",
+        "sessions": 77,
+        "avgDurationSec": 113,
+        "engaged": 44,
+        "taiwanOrganic": 51
+      },
+      {
+        "date": "2026-08-02",
+        "sessions": 81,
+        "avgDurationSec": 148,
+        "engaged": 32,
+        "taiwanOrganic": 51
+      },
+      {
+        "date": "2026-08-03",
+        "sessions": 149,
+        "avgDurationSec": 83,
+        "engaged": 50,
+        "taiwanOrganic": 69
+      },
+      {
+        "date": "2026-08-04",
+        "sessions": 129,
+        "avgDurationSec": 138,
+        "engaged": 68,
+        "taiwanOrganic": 80
+      },
+      {
+        "date": "2026-08-05",
+        "sessions": 114,
+        "avgDurationSec": 155,
+        "engaged": 58,
+        "taiwanOrganic": 66
+      },
+      {
+        "date": "2026-08-06",
+        "sessions": 145,
+        "avgDurationSec": 116,
+        "engaged": 70,
+        "taiwanOrganic": 93
+      },
+      {
+        "date": "2026-08-07",
+        "sessions": 181,
+        "avgDurationSec": 148,
+        "engaged": 85,
+        "taiwanOrganic": 115
+      },
+      {
+        "date": "2026-08-08",
+        "sessions": 221,
+        "avgDurationSec": 119,
+        "engaged": 66,
+        "taiwanOrganic": 90
+      },
+      {
+        "date": "2026-08-09",
+        "sessions": 172,
+        "avgDurationSec": 565,
+        "engaged": 107,
+        "taiwanOrganic": 84
+      },
+      {
+        "date": "2026-08-10",
+        "sessions": 283,
+        "avgDurationSec": 549,
+        "engaged": 4,
+        "taiwanOrganic": 134
+      }
+    ]
+  },
+  "gsc": {
+    "range": "2026-07-31..2026-08-07",
+    "totals": {
+      "clicks": 496,
+      "impressions": 16546,
+      "ctr": 0.029977033724162938,
+      "position": 8.602925178290825
+    },
+    "topQueries": [
+      {
+        "query": "n700st 內 裝",
+        "clicks": 3,
+        "impressions": 9,
+        "ctr": 0.3333333333333333,
+        "position": 8
+      },
+      {
+        "query": "n700st內裝",
+        "clicks": 3,
+        "impressions": 9,
+        "ctr": 0.3333333333333333,
+        "position": 5.666666666666667
+      },
+      {
+        "query": "雪花冰",
+        "clicks": 3,
+        "impressions": 119,
+        "ctr": 0.025210084033613446,
+        "position": 5.243697478991597
+      },
+      {
+        "query": "2026 流感疫苗",
+        "clicks": 2,
+        "impressions": 11,
+        "ctr": 0.18181818181818182,
+        "position": 10.454545454545455
+      },
+      {
+        "query": "2026流感疫苗",
+        "clicks": 2,
+        "impressions": 44,
+        "ctr": 0.045454545454545456,
+        "position": 9.227272727272727
+      },
+      {
+        "query": "8/9機票漲價",
+        "clicks": 2,
+        "impressions": 44,
+        "ctr": 0.045454545454545456,
+        "position": 8.431818181818182
+      },
+      {
+        "query": "chatgpt health 台灣",
+        "clicks": 2,
+        "impressions": 5,
+        "ctr": 0.4,
+        "position": 2.6
+      },
+      {
+        "query": "童羽之家",
+        "clicks": 2,
+        "impressions": 47,
+        "ctr": 0.0425531914893617,
+        "position": 6.042553191489362
+      },
+      {
+        "query": "蘇格蘭山火",
+        "clicks": 2,
+        "impressions": 6,
+        "ctr": 0.3333333333333333,
+        "position": 2.833333333333333
+      },
+      {
+        "query": "龍潭雪花冰",
+        "clicks": 2,
+        "impressions": 40,
+        "ctr": 0.05,
+        "position": 9.425
+      },
+      {
+        "query": "115年全國羽球團體錦標賽成績",
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 5
+      },
+      {
+        "query": "2026中元節拜拜",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 6
+      },
+      {
+        "query": "2026公費流感疫苗",
+        "clicks": 1,
+        "impressions": 14,
+        "ctr": 0.07142857142857142,
+        "position": 8.928571428571429
+      },
+      {
+        "query": "8/19 七夕",
+        "clicks": 1,
+        "impressions": 92,
+        "ctr": 0.010869565217391304,
+        "position": 6.978260869565218
+      },
+      {
+        "query": "800克飯糰",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 12.5
+      },
+      {
+        "query": "ai skynet",
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 11.666666666666666
+      },
+      {
+        "query": "ai 醫療",
+        "clicks": 1,
+        "impressions": 8,
+        "ctr": 0.125,
+        "position": 7.75
+      },
+      {
+        "query": "esg評鑑",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 11
+      },
+      {
+        "query": "line bank 口袋帳戶 900萬",
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 2
+      },
+      {
+        "query": "passkey",
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 17.25
+      },
+      {
+        "query": "tsh 1.12",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 7
+      },
+      {
+        "query": "tsh 2.6",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 8
+      },
+      {
+        "query": "七夕 2026",
+        "clicks": 1,
+        "impressions": 21,
+        "ctr": 0.047619047619047616,
+        "position": 5.428571428571429
+      },
+      {
+        "query": "中元節 2026",
+        "clicks": 1,
+        "impressions": 31,
+        "ctr": 0.03225806451612903,
+        "position": 7.32258064516129
+      },
+      {
+        "query": "中原普渡2026",
+        "clicks": 1,
+        "impressions": 10,
+        "ctr": 0.1,
+        "position": 3.9
+      }
+    ],
+    "topPages": [
+      {
+        "page": "https://appi.news/articles/flu-vaccine-2026-public-guide/",
+        "clicks": 34,
+        "impressions": 473,
+        "ctr": 0.07188160676532769,
+        "position": 6.676532769556025
+      },
+      {
+        "page": "https://appi.news/articles/kumamoto-earthquake-travel-impact/",
+        "clicks": 25,
+        "impressions": 166,
+        "ctr": 0.15060240963855423,
+        "position": 4.72289156626506
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "clicks": 19,
+        "impressions": 629,
+        "ctr": 0.030206677265500796,
+        "position": 8.222575516693164
+      },
+      {
+        "page": "https://appi.news/articles/jumbo-rice-ball-tainan-kaohsiung/",
+        "clicks": 19,
+        "impressions": 466,
+        "ctr": 0.0407725321888412,
+        "position": 8.023605150214593
+      },
+      {
+        "page": "https://appi.news/articles/longtan-snow-ice-shop-guide/",
+        "clicks": 14,
+        "impressions": 788,
+        "ctr": 0.017766497461928935,
+        "position": 8.360406091370558
+      },
+      {
+        "page": "https://appi.news/articles/wearable-sleep-tracking-accuracy/",
+        "clicks": 12,
+        "impressions": 193,
+        "ctr": 0.06217616580310881,
+        "position": 4.761658031088083
+      },
+      {
+        "page": "https://appi.news/articles/japan-izakaya-closure-wave/",
+        "clicks": 11,
+        "impressions": 142,
+        "ctr": 0.07746478873239436,
+        "position": 4.204225352112676
+      },
+      {
+        "page": "https://appi.news/articles/jiuzhaigou-mudslide-tourists-evacuated/",
+        "clicks": 11,
+        "impressions": 192,
+        "ctr": 0.057291666666666664,
+        "position": 7.71875
+      },
+      {
+        "page": "https://appi.news/articles/company-pudu-2026-guide/",
+        "clicks": 10,
+        "impressions": 268,
+        "ctr": 0.03731343283582089,
+        "position": 6.268656716417911
+      },
+      {
+        "page": "https://appi.news/articles/gym-closure-membership-refund-rights/",
+        "clicks": 10,
+        "impressions": 141,
+        "ctr": 0.07092198581560284,
+        "position": 6.212765957446808
+      },
+      {
+        "page": "https://appi.news/articles/qixi-2026-guide/",
+        "clicks": 10,
+        "impressions": 1414,
+        "ctr": 0.007072135785007072,
+        "position": 7.483026874115983
+      },
+      {
+        "page": "https://appi.news/articles/wang-yen-cheng-kbo-ten-wins/",
+        "clicks": 9,
+        "impressions": 137,
+        "ctr": 0.06569343065693431,
+        "position": 5.912408759124087
+      },
+      {
+        "page": "https://appi.news/articles/sushi-express-salmon-season-2026/",
+        "clicks": 8,
+        "impressions": 197,
+        "ctr": 0.04060913705583756,
+        "position": 6.573604060913706
+      },
+      {
+        "page": "https://appi.news/articles/world-breastfeeding-week-2026/",
+        "clicks": 8,
+        "impressions": 87,
+        "ctr": 0.09195402298850575,
+        "position": 6.517241379310345
+      },
+      {
+        "page": "https://appi.news/articles/zhongyuan-pudu-2026-guide/",
+        "clicks": 8,
+        "impressions": 687,
+        "ctr": 0.011644832605531296,
+        "position": 6.3755458515283845
+      },
+      {
+        "page": "https://appi.news/articles/new-taipei-toy-bank-donation-guide/",
+        "clicks": 7,
+        "impressions": 137,
+        "ctr": 0.051094890510948905,
+        "position": 8.306569343065693
+      },
+      {
+        "page": "https://appi.news/articles/thsr-n700st-new-train-interior/",
+        "clicks": 7,
+        "impressions": 126,
+        "ctr": 0.05555555555555555,
+        "position": 6.833333333333333
+      },
+      {
+        "page": "https://appi.news/articles/fuel-surcharge-hike-cheap-flights-japan-korea/",
+        "clicks": 6,
+        "impressions": 287,
+        "ctr": 0.020905923344947737,
+        "position": 7.2787456445993035
+      },
+      {
+        "page": "https://appi.news/articles/windows-11-ram-usage-fix/",
+        "clicks": 6,
+        "impressions": 54,
+        "ctr": 0.1111111111111111,
+        "position": 7.555555555555555
+      },
+      {
+        "page": "https://appi.news/articles/hba1c-prediabetes/",
+        "clicks": 5,
+        "impressions": 27,
+        "ctr": 0.18518518518518517,
+        "position": 13.444444444444445
+      },
+      {
+        "page": "https://appi.news/articles/taichung-power-plant-phase2-gas-units/",
+        "clicks": 5,
+        "impressions": 99,
+        "ctr": 0.050505050505050504,
+        "position": 7.828282828282828
+      },
+      {
+        "page": "https://appi.news/articles/taipei-summer-limited-edition-soft-serve-guide/",
+        "clicks": 5,
+        "impressions": 112,
+        "ctr": 0.044642857142857144,
+        "position": 10.205357142857142
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-heavy-power-user-storage-mandate/",
+        "clicks": 5,
+        "impressions": 83,
+        "ctr": 0.060240963855421686,
+        "position": 8.987951807228916
+      },
+      {
+        "page": "https://appi.news/articles/uk-tabloid-lawsuit-legal-costs/",
+        "clicks": 5,
+        "impressions": 19,
+        "ctr": 0.2631578947368421,
+        "position": 6
+      },
+      {
+        "page": "https://appi.news/",
+        "clicks": 4,
+        "impressions": 22,
+        "ctr": 0.18181818181818182,
+        "position": 2.7272727272727275
+      }
+    ],
+    "pageQueryCross": [
+      {
+        "page": "https://appi.news/articles/longtan-snow-ice-shop-guide/",
+        "query": "雪花冰",
+        "clicks": 3,
+        "impressions": 119,
+        "ctr": 0.025210084033613446,
+        "position": 5.243697478991597
+      },
+      {
+        "page": "https://appi.news/articles/thsr-n700st-new-train-interior/",
+        "query": "n700st 內 裝",
+        "clicks": 3,
+        "impressions": 9,
+        "ctr": 0.3333333333333333,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/thsr-n700st-new-train-interior/",
+        "query": "n700st內裝",
+        "clicks": 3,
+        "impressions": 9,
+        "ctr": 0.3333333333333333,
+        "position": 5.666666666666667
+      },
+      {
+        "page": "https://appi.news/articles/chatgpt-health-nhi-sdk-accountability/",
+        "query": "chatgpt health 台灣",
+        "clicks": 2,
+        "impressions": 5,
+        "ctr": 0.4,
+        "position": 2.6
+      },
+      {
+        "page": "https://appi.news/articles/flu-vaccine-2026-public-guide/",
+        "query": "2026 流感疫苗",
+        "clicks": 2,
+        "impressions": 11,
+        "ctr": 0.18181818181818182,
+        "position": 10.454545454545455
+      },
+      {
+        "page": "https://appi.news/articles/flu-vaccine-2026-public-guide/",
+        "query": "2026流感疫苗",
+        "clicks": 2,
+        "impressions": 44,
+        "ctr": 0.045454545454545456,
+        "position": 9.227272727272727
+      },
+      {
+        "page": "https://appi.news/articles/fuel-surcharge-hike-cheap-flights-japan-korea/",
+        "query": "8/9機票漲價",
+        "clicks": 2,
+        "impressions": 44,
+        "ctr": 0.045454545454545456,
+        "position": 8.431818181818182
+      },
+      {
+        "page": "https://appi.news/articles/longtan-snow-ice-shop-guide/",
+        "query": "龍潭雪花冰",
+        "clicks": 2,
+        "impressions": 40,
+        "ctr": 0.05,
+        "position": 9.425
+      },
+      {
+        "page": "https://appi.news/articles/scotland-wildfire-arthurs-seat/",
+        "query": "蘇格蘭山火",
+        "clicks": 2,
+        "impressions": 6,
+        "ctr": 0.3333333333333333,
+        "position": 2.833333333333333
+      },
+      {
+        "page": "https://appi.news/articles/taipei-tong-yu-home-child-longterm-care-guide/",
+        "query": "童羽之家",
+        "clicks": 2,
+        "impressions": 47,
+        "ctr": 0.0425531914893617,
+        "position": 6.042553191489362
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-465/",
+        "query": "115年全國羽球團體錦標賽成績",
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "加工肉",
+        "clicks": 1,
+        "impressions": 10,
+        "ctr": 0.1,
+        "position": 7.4
+      },
+      {
+        "page": "https://appi.news/articles/chronic-subdural-hematoma-elderly/",
+        "query": "高齡",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/eye-foreign-body/",
+        "query": "眼睛異物感刺痛",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 45
+      },
+      {
+        "page": "https://appi.news/articles/flu-vaccine-2026-public-guide/",
+        "query": "2026公費流感疫苗",
+        "clicks": 1,
+        "impressions": 14,
+        "ctr": 0.07142857142857142,
+        "position": 8.928571428571429
+      },
+      {
+        "page": "https://appi.news/articles/flu-vaccine-2026-public-guide/",
+        "query": "流感疫苗 2026",
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 0.2,
+        "position": 7.8
+      },
+      {
+        "page": "https://appi.news/articles/flu-vaccine-2026-public-guide/",
+        "query": "疫苗",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "公館 銅盤烤肉",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "公館韓國烤肉吃到飽",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 2
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "梅江烤肉",
+        "clicks": 1,
+        "impressions": 16,
+        "ctr": 0.0625,
+        "position": 2
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "梅江韓國銅盤烤肉 公館店",
+        "clicks": 1,
+        "impressions": 200,
+        "ctr": 0.005,
+        "position": 9.46
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "梅江韓國銅盤烤肉 公館店的圖片",
+        "clicks": 1,
+        "impressions": 13,
+        "ctr": 0.07692307692307693,
+        "position": 6.923076923076923
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "梅江韓國銅盤烤肉 公館店的菜單",
+        "clicks": 1,
+        "impressions": 56,
+        "ctr": 0.017857142857142856,
+        "position": 8.767857142857142
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "梅江韓國銅盤烤肉公館店的菜單",
+        "clicks": 1,
+        "impressions": 20,
+        "ctr": 0.05,
+        "position": 9.5
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "韓國烤肉",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "韓江烤肉",
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/gpu-memory-price-surge-2026/",
+        "query": "顯卡漲價原因",
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 6.333333333333333
+      },
+      {
+        "page": "https://appi.news/articles/green-securities-certification-taiwan-2026/",
+        "query": "esg評鑑",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 11
+      },
+      {
+        "page": "https://appi.news/articles/gym-closure-membership-refund-rights/",
+        "query": "統一健身房 倒閉",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 14
+      },
+      {
+        "page": "https://appi.news/articles/gym-closure-membership-refund-rights/",
+        "query": "統一健身房倒閉",
+        "clicks": 1,
+        "impressions": 19,
+        "ctr": 0.05263157894736842,
+        "position": 10.473684210526315
+      },
+      {
+        "page": "https://appi.news/articles/hba1c-prediabetes/",
+        "query": "醣化血色素5.7",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 30
+      },
+      {
+        "page": "https://appi.news/articles/jiuzhaigou-mudslide-tourists-evacuated/",
+        "query": "九寨溝 土石流",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/jumbo-rice-ball-tainan-kaohsiung/",
+        "query": "800克飯糰",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 12.5
+      },
+      {
+        "page": "https://appi.news/articles/jumbo-rice-ball-tainan-kaohsiung/",
+        "query": "台南巨無霸飯糰",
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 0.2,
+        "position": 12.4
+      },
+      {
+        "page": "https://appi.news/articles/jumbo-rice-ball-tainan-kaohsiung/",
+        "query": "台南巨無霸飯糰在哪裡",
+        "clicks": 1,
+        "impressions": 32,
+        "ctr": 0.03125,
+        "position": 10.4375
+      },
+      {
+        "page": "https://appi.news/articles/jumbo-rice-ball-tainan-kaohsiung/",
+        "query": "橄欖球飯糰",
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 3.75
+      },
+      {
+        "page": "https://appi.news/articles/kumamoto-earthquake-travel-impact/",
+        "query": "熊本 地震 交通",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/kumamoto-earthquake-travel-impact/",
+        "query": "熊本地震 交通",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 3
+      },
+      {
+        "page": "https://appi.news/articles/kumamoto-earthquake-travel-impact/",
+        "query": "熊本旅遊警示",
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/kumamoto-earthquake-travel-impact/",
+        "query": "熊本現在可以去嗎",
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 5.666666666666667
+      },
+      {
+        "page": "https://appi.news/articles/kumamoto-earthquake-travel-impact/",
+        "query": "熊本現況",
+        "clicks": 1,
+        "impressions": 6,
+        "ctr": 0.16666666666666666,
+        "position": 3.6666666666666665
+      },
+      {
+        "page": "https://appi.news/articles/linebank-pocket-account-limit/",
+        "query": "line bank 口袋帳戶 900萬",
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 2
+      },
+      {
+        "page": "https://appi.news/articles/meinong-water-lily-vegetable-guide/",
+        "query": "炒水蓮",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 23
+      },
+      {
+        "page": "https://appi.news/articles/michelin-taiwan-2026-taichung/",
+        "query": "頤宮",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 6
+      },
+      {
+        "page": "https://appi.news/articles/mount-fuji-summit-hut-guide/",
+        "query": "富士山最高山屋",
+        "clicks": 1,
+        "impressions": 6,
+        "ctr": 0.16666666666666666,
+        "position": 3
+      },
+      {
+        "page": "https://appi.news/articles/mount-fuji-summit-hut-guide/",
+        "query": "頂上富士館",
+        "clicks": 1,
+        "impressions": 32,
+        "ctr": 0.03125,
+        "position": 9.21875
+      },
+      {
+        "page": "https://appi.news/articles/new-taipei-toy-bank-donation-guide/",
+        "query": "玩具銀行",
+        "clicks": 1,
+        "impressions": 8,
+        "ctr": 0.125,
+        "position": 6.375
+      },
+      {
+        "page": "https://appi.news/articles/nhi-ai-diagnostic-tool-evaluation/",
+        "query": "ai 醫療",
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 0.14285714285714285,
+        "position": 7.428571428571429
+      },
+      {
+        "page": "https://appi.news/articles/openai-agent-hacked-hugging-face-skynet-day/",
+        "query": "ai skynet",
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 11.666666666666666
+      },
+      {
+        "page": "https://appi.news/articles/passkey-taiwan-sms-otp-replacement/",
+        "query": "passkey",
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 17.25
+      },
+      {
+        "page": "https://appi.news/articles/qixi-2026-guide/",
+        "query": "8/19 七夕",
+        "clicks": 1,
+        "impressions": 92,
+        "ctr": 0.010869565217391304,
+        "position": 6.978260869565218
+      },
+      {
+        "page": "https://appi.news/articles/qixi-2026-guide/",
+        "query": "七夕 2026",
+        "clicks": 1,
+        "impressions": 21,
+        "ctr": 0.047619047619047616,
+        "position": 5.428571428571429
+      },
+      {
+        "page": "https://appi.news/articles/qixi-2026-guide/",
+        "query": "八月七夕幾號",
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 4.666666666666666
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-heavy-power-user-storage-mandate/",
+        "query": "用電大戶2.0",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 20
+      },
+      {
+        "page": "https://appi.news/articles/taiwan-heavy-power-user-storage-mandate/",
+        "query": "能源管理法",
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 0.2,
+        "position": 13.2
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-subclinical/",
+        "query": "tsh 1.12",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 7
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-subclinical/",
+        "query": "tsh 2.6",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/thyroid-tsh-subclinical/",
+        "query": "甲狀腺 tsh 偏高",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 17
+      },
+      {
+        "page": "https://appi.news/articles/tsmc-water-usage-daily/",
+        "query": "台積電用水",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 3
+      },
+      {
+        "page": "https://appi.news/articles/uni-lions-18th-title-dynasty/",
+        "query": "統一7-eleven獅",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/wang-yen-cheng-kbo-ten-wins/",
+        "query": "王彥程",
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 4.666666666666666
+      },
+      {
+        "page": "https://appi.news/articles/zhongyuan-pudu-2026-guide/",
+        "query": "2026中元節拜拜",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 6
+      },
+      {
+        "page": "https://appi.news/articles/zhongyuan-pudu-2026-guide/",
+        "query": "中元節 2026",
+        "clicks": 1,
+        "impressions": 31,
+        "ctr": 0.03225806451612903,
+        "position": 7.32258064516129
+      },
+      {
+        "page": "https://appi.news/articles/zhongyuan-pudu-2026-guide/",
+        "query": "中原普渡2026",
+        "clicks": 1,
+        "impressions": 10,
+        "ctr": 0.1,
+        "position": 3.9
+      },
+      {
+        "page": "https://appi.news/",
+        "query": "appi news",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/about/",
+        "query": "appi news",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/%E5%8C%96%E7%B2%A7%E5%93%81-pif-%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F%E6%B6%88%E8%B2%BB%E8%80%85%E4%B8%80%E5%AE%9A%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E5%AE%89%E5%85%A8%E8%A9%95%E4%BC%B0%E9%97%9C/",
+        "query": "pif化妝品",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 118
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 68.33333333333333
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻 功效",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻 的 功效 和 副作用",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻中藥",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 58
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻功效",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻功效與禁忌",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 20.333333333333332
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻的副作用",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻的功效和副作用",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11.5
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "+",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "161kv",
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 6.212121212121212
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "161kv 電纜",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 6.8
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "161kv特高壓",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "161kv電纜",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "台電 強韌電網 計畫 5645 億 十年",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "台電 強韌電網計畫 5645億元 官方",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "台電161kv",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "page": "https://appi.news/articles/618-ecommerce-momo-shopee-coupang/",
+        "query": "momo 618",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 37.5
+      },
+      {
+        "page": "https://appi.news/articles/ac-temperature-energy-saving-guide/",
+        "query": "依能源署建議,冷氣機溫度以26~28°c為宜,並可視需要配合電風扇使用。請問,若每調高溫度1 °c時,可以達到什麼節電效益? 不會改變 只有1% 只有3% 至少6%以上",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/ac-temperature-energy-saving-guide/",
+        "query": "冷氣幾度最省電",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/ac-temperature-energy-saving-guide/",
+        "query": "冷氣開關",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/acute-constipation-nondrug/",
+        "query": "便秘",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 61
+      },
+      {
+        "page": "https://appi.news/articles/acute-constipation-nondrug/",
+        "query": "便秘 外来",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 97
+      },
+      {
+        "page": "https://appi.news/articles/acute-constipation-nondrug/",
+        "query": "吃大便",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 77
+      },
+      {
+        "page": "https://appi.news/articles/acute-constipation-nondrug/",
+        "query": "排便反射",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 39
+      },
+      {
+        "page": "https://appi.news/articles/acute-constipation-nondrug/",
+        "query": "浣腸",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 101
+      },
+      {
+        "page": "https://appi.news/articles/acute-diarrhea-rehydration/",
+        "query": "口服補水液",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/acute-diarrhea-rehydration/",
+        "query": "口服電解質",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://appi.news/articles/acute-diarrhea-rehydration/",
+        "query": "口服電解質水",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://appi.news/articles/acute-diarrhea-rehydration/",
+        "query": "口服電解質液",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5.75
+      },
+      {
+        "page": "https://appi.news/articles/acute-diarrhea-rehydration/",
+        "query": "口服電解質補充液",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/acute-diarrhea-rehydration/",
+        "query": "拉肚子",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/acute-diarrhea-rehydration/",
+        "query": "腹瀉",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/acute-diarrhea-rehydration/",
+        "query": "電解質口服液",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/acute-low-back-48h/",
+        "query": "還是很痛",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "page": "https://appi.news/articles/ai-asic-vs-gpu-explained/",
+        "query": "asic ai",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 66.4
+      },
+      {
+        "page": "https://appi.news/articles/ai-asic-vs-gpu-explained/",
+        "query": "asic 是 什麼",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 64.2
+      },
+      {
+        "page": "https://appi.news/articles/ai-asic-vs-gpu-explained/",
+        "query": "asic 是什麼",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 61
+      },
+      {
+        "page": "https://appi.news/articles/ai-asic-vs-gpu-explained/",
+        "query": "asic是什麼",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 58
+      },
+      {
+        "page": "https://appi.news/articles/ai-chemist-wet-lab-coupling/",
+        "query": "濕實驗室",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/ai-datacenter-800v-power-protection-chip/",
+        "query": "ai電源供應器",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "page": "https://appi.news/articles/ai-drug-discovery-fda-approval-gap/",
+        "query": "什麼藥",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/ai-drug-discovery-fda-approval-gap/",
+        "query": "哪種 ai 解決方案最值得投資，用於藥物研發與生醫研究？",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/ai-hallucination-what-is-it/",
+        "query": "所謂的「幻覺」代表生成式ai產出的所有內容必定全都是錯誤資訊，毫無任何參考價值",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/aircon-not-cooling-troubleshooting-guide/",
+        "query": "冷氣不冷",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://appi.news/articles/aircon-not-cooling-troubleshooting-guide/",
+        "query": "嘉義市冷氣清洗補助",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/airline-suspension-passenger-options/",
+        "query": "信用卡",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 84
+      },
+      {
+        "page": "https://appi.news/articles/airline-suspension-passenger-options/",
+        "query": "哪些航空公司在退款及賠償政策的執行上最守信用，承諾的補償都會兌現？",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "page": "https://appi.news/articles/airline-suspension-passenger-options/",
+        "query": "哪些航空公司在退款及賠償政策的執行上最守信用？",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "page": "https://appi.news/articles/alps-summer-coolcation-guide/",
+        "query": "多洛米蒂9月天氣",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "page": "https://appi.news/articles/alps-summer-coolcation-guide/",
+        "query": "現在夯什麼",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "page": "https://appi.news/articles/alps-summer-coolcation-guide/",
+        "query": "義大利熱浪",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "page": "https://appi.news/articles/alps-summer-coolcation-guide/",
+        "query": "阿爾卑斯山",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 11.75
+      },
+      {
+        "page": "https://appi.news/articles/alps-summer-coolcation-guide/",
+        "query": "高山避暑",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "page": "https://appi.news/articles/ankle-sprain-peace-love/",
+        "query": "腳扭傷",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://appi.news/articles/ankle-sprain-peace-love/",
+        "query": "腳扭到不能走路",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/ankle-sprain-peace-love/",
+        "query": "腳粿",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "中醫美顏針有效嗎",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 57.25
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美 颜 针",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美顏針",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-183/",
+        "query": "有吃高血壓藥",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-183/",
+        "query": "納豆 高血圧 効果",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 84
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-183/",
+        "query": "納豆降血壓",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-184/",
+        "query": "黑胡椒鹼",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-193/",
+        "query": "檳榔 的 危害",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 49.5
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-452/",
+        "query": "名單",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-453/",
+        "query": "周天成",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5.111111111111111
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-453/",
+        "query": "周天成 幾歲",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-453/",
+        "query": "周天成世界排名最高",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-453/",
+        "query": "周天成幾歲",
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 10.652173913043478
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-465/",
+        "query": "115年全國國中盃羽球錦標賽",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-465/",
+        "query": "115年全國羽球團體錦標賽",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 6.285714285714286
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-465/",
+        "query": "115年全國羽球團體錦標賽即時成績",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-465/",
+        "query": "全國羽球團體錦標賽",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-468/",
+        "query": "黑箱 ai",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 28.8
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-473/",
+        "query": "表達力 健檢",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 80
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-479/",
+        "query": "穩定幣",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 44
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-479/",
+        "query": "穩定幣 新聞",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-480/",
+        "query": "張",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-480/",
+        "query": "張雅佳",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 7.666666666666667
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-483/",
+        "query": "中國男雙",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-483/",
+        "query": "林昀儒",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-484/",
+        "query": "男生",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-486/",
+        "query": "智慧床墊",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-486/",
+        "query": "智慧床墊介紹",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-486/",
+        "query": "智慧床墊缺點",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 36
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-489/",
+        "query": "台灣經濟",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-493/",
+        "query": "健保署",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 31
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-493/",
+        "query": "李俊宏醫師",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 67
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-493/",
+        "query": "苯二氮平類藥物有哪些",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-493/",
+        "query": "長者認知訓練",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 146
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-496/",
+        "query": "痔瘡腫",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-496/",
+        "query": "痔瘡腫脹",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "如何放鬆腰部肌肉",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 46
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "居家性爱",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 58
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "痉挛性疼痛",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "肌肉松弛剂",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10.666666666666666
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "肌肉鬆弛劑 藥局",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "肌肉鬆弛劑藥局買的到嗎",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "腰",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 8.8
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "腰方肌拉傷治療",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "腰部",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "腰部肌肉",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "腰閃到吃什麼藥",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "蕉人科系",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 51
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "閃到腰止痛藥",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "閃到腰肌肉鬆弛劑藥局",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "靠腰",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 58
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-91/",
+        "query": "臗 部 疼痛",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 66
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-91/",
+        "query": "退化性髖關節炎",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 84
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-91/",
+        "query": "髖關節受傷症狀",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-91/",
+        "query": "髖關節唇",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-91/",
+        "query": "髖關節疼痛",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 64.5
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-91/",
+        "query": "髖關節疼痛 檢查",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 67.6
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-91/",
+        "query": "髖關節疼痛看哪一科",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-91/",
+        "query": "髖關節退化",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 74
+      },
+      {
+        "page": "https://appi.news/articles/asic-over-gpu-taiwan-ic-design/",
+        "query": "as ic",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://appi.news/articles/baduanjin-qigong-guide/",
+        "query": "八 段 錦 的 好處",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 39
+      },
+      {
+        "page": "https://appi.news/articles/baduanjin-qigong-guide/",
+        "query": "八段錦 慢慢練出好氣色",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 6.428571428571429
+      },
+      {
+        "page": "https://appi.news/articles/baduanjin-qigong-guide/",
+        "query": "八段錦的功效",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 35
+      },
+      {
+        "page": "https://appi.news/articles/bbq-food-safety-guide/",
+        "query": "雞肉中心溫度",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 11.142857142857142
+      },
+      {
+        "page": "https://appi.news/articles/bioshocking-ai-browser-credential-leak/",
+        "query": "bioshock ai",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 86
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "三種早餐最好不要吃",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "亞硝胺",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "加工肉制品",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "加工肉品",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.333333333333332
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "培根 致癌",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 34
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "精緻澱粉",
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 6.153846153846154
+      },
+      {
+        "page": "https://appi.news/articles/buffet-pricing-methods-guide/",
+        "query": "便當300",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/buffet-pricing-methods-guide/",
+        "query": "富橋自助餐的菜單",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://appi.news/articles/buffet-pricing-methods-guide/",
+        "query": "樹孝路自助餐",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/buffet-pricing-methods-guide/",
+        "query": "溪頭米堤大飯店的價格",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/buffet-pricing-methods-guide/",
+        "query": "自助餐怎麼算錢",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "page": "https://appi.news/articles/burn-first-aid-steps/",
+        "query": "一小時",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      }
+    ],
+    "strikingDistance": [
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "梅江韓國銅盤烤肉 公館店",
+        "clicks": 1,
+        "impressions": 200,
+        "ctr": 0.005,
+        "position": 9.46
+      },
+      {
+        "page": "https://appi.news/articles/longtan-snow-ice-shop-guide/",
+        "query": "雪花冰",
+        "clicks": 3,
+        "impressions": 119,
+        "ctr": 0.025210084033613446,
+        "position": 5.243697478991597
+      },
+      {
+        "page": "https://appi.news/articles/qixi-2026-guide/",
+        "query": "8/19 七夕",
+        "clicks": 1,
+        "impressions": 92,
+        "ctr": 0.010869565217391304,
+        "position": 6.978260869565218
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "梅江韓國銅盤烤肉 公館店的菜單",
+        "clicks": 1,
+        "impressions": 56,
+        "ctr": 0.017857142857142856,
+        "position": 8.767857142857142
+      },
+      {
+        "page": "https://appi.news/articles/taipei-tong-yu-home-child-longterm-care-guide/",
+        "query": "童羽之家",
+        "clicks": 2,
+        "impressions": 47,
+        "ctr": 0.0425531914893617,
+        "position": 6.042553191489362
+      },
+      {
+        "page": "https://appi.news/articles/flu-vaccine-2026-public-guide/",
+        "query": "2026流感疫苗",
+        "clicks": 2,
+        "impressions": 44,
+        "ctr": 0.045454545454545456,
+        "position": 9.227272727272727
+      },
+      {
+        "page": "https://appi.news/articles/fuel-surcharge-hike-cheap-flights-japan-korea/",
+        "query": "8/9機票漲價",
+        "clicks": 2,
+        "impressions": 44,
+        "ctr": 0.045454545454545456,
+        "position": 8.431818181818182
+      },
+      {
+        "page": "https://appi.news/articles/longtan-snow-ice-shop-guide/",
+        "query": "龍潭雪花冰",
+        "clicks": 2,
+        "impressions": 40,
+        "ctr": 0.05,
+        "position": 9.425
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "161kv",
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 6.212121212121212
+      },
+      {
+        "page": "https://appi.news/articles/jumbo-rice-ball-tainan-kaohsiung/",
+        "query": "台南巨無霸飯糰在哪裡",
+        "clicks": 1,
+        "impressions": 32,
+        "ctr": 0.03125,
+        "position": 10.4375
+      },
+      {
+        "page": "https://appi.news/articles/mount-fuji-summit-hut-guide/",
+        "query": "頂上富士館",
+        "clicks": 1,
+        "impressions": 32,
+        "ctr": 0.03125,
+        "position": 9.21875
+      },
+      {
+        "page": "https://appi.news/articles/zhongyuan-pudu-2026-guide/",
+        "query": "中元節 2026",
+        "clicks": 1,
+        "impressions": 31,
+        "ctr": 0.03225806451612903,
+        "position": 7.32258064516129
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-453/",
+        "query": "周天成幾歲",
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 10.652173913043478
+      },
+      {
+        "page": "https://appi.news/articles/qixi-2026-guide/",
+        "query": "七夕 2026",
+        "clicks": 1,
+        "impressions": 21,
+        "ctr": 0.047619047619047616,
+        "position": 5.428571428571429
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "梅江韓國銅盤烤肉公館店的菜單",
+        "clicks": 1,
+        "impressions": 20,
+        "ctr": 0.05,
+        "position": 9.5
+      },
+      {
+        "page": "https://appi.news/articles/gym-closure-membership-refund-rights/",
+        "query": "統一健身房倒閉",
+        "clicks": 1,
+        "impressions": 19,
+        "ctr": 0.05263157894736842,
+        "position": 10.473684210526315
+      },
+      {
+        "page": "https://appi.news/articles/flu-vaccine-2026-public-guide/",
+        "query": "2026公費流感疫苗",
+        "clicks": 1,
+        "impressions": 14,
+        "ctr": 0.07142857142857142,
+        "position": 8.928571428571429
+      },
+      {
+        "page": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "query": "梅江韓國銅盤烤肉 公館店的圖片",
+        "clicks": 1,
+        "impressions": 13,
+        "ctr": 0.07692307692307693,
+        "position": 6.923076923076923
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "精緻澱粉",
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 6.153846153846154
+      },
+      {
+        "page": "https://appi.news/articles/flu-vaccine-2026-public-guide/",
+        "query": "2026 流感疫苗",
+        "clicks": 2,
+        "impressions": 11,
+        "ctr": 0.18181818181818182,
+        "position": 10.454545454545455
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "加工肉",
+        "clicks": 1,
+        "impressions": 10,
+        "ctr": 0.1,
+        "position": 7.4
+      },
+      {
+        "page": "https://appi.news/articles/thsr-n700st-new-train-interior/",
+        "query": "n700st 內 裝",
+        "clicks": 3,
+        "impressions": 9,
+        "ctr": 0.3333333333333333,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/thsr-n700st-new-train-interior/",
+        "query": "n700st內裝",
+        "clicks": 3,
+        "impressions": 9,
+        "ctr": 0.3333333333333333,
+        "position": 5.666666666666667
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-453/",
+        "query": "周天成",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5.111111111111111
+      },
+      {
+        "page": "https://appi.news/articles/new-taipei-toy-bank-donation-guide/",
+        "query": "玩具銀行",
+        "clicks": 1,
+        "impressions": 8,
+        "ctr": 0.125,
+        "position": 6.375
+      },
+      {
+        "page": "https://appi.news/articles/alps-summer-coolcation-guide/",
+        "query": "阿爾卑斯山",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 11.75
+      },
+      {
+        "page": "https://appi.news/articles/nhi-ai-diagnostic-tool-evaluation/",
+        "query": "ai 醫療",
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 0.14285714285714285,
+        "position": 7.428571428571429
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-465/",
+        "query": "115年全國羽球團體錦標賽",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 6.285714285714286
+      },
+      {
+        "page": "https://appi.news/articles/baduanjin-qigong-guide/",
+        "query": "八段錦 慢慢練出好氣色",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 6.428571428571429
+      },
+      {
+        "page": "https://appi.news/articles/bbq-food-safety-guide/",
+        "query": "雞肉中心溫度",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 11.142857142857142
+      }
+    ],
+    "highImpZeroClick": [
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "161kv",
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 6.212121212121212
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-453/",
+        "query": "周天成幾歲",
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 10.652173913043478
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "精緻澱粉",
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 6.153846153846154
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-453/",
+        "query": "周天成",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5.111111111111111
+      },
+      {
+        "page": "https://appi.news/articles/alps-summer-coolcation-guide/",
+        "query": "阿爾卑斯山",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 11.75
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-465/",
+        "query": "115年全國羽球團體錦標賽",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 6.285714285714286
+      },
+      {
+        "page": "https://appi.news/articles/baduanjin-qigong-guide/",
+        "query": "八段錦 慢慢練出好氣色",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 6.428571428571429
+      },
+      {
+        "page": "https://appi.news/articles/bbq-food-safety-guide/",
+        "query": "雞肉中心溫度",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 11.142857142857142
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "+",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "161kv 電纜",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 6.8
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "腰",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 8.8
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "亞硝胺",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-468/",
+        "query": "黑箱 ai",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 28.8
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美 颜 针",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "page": "https://appi.news/articles/ai-asic-vs-gpu-explained/",
+        "query": "asic 是 什麼",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 64.2
+      },
+      {
+        "page": "https://appi.news/articles/ai-asic-vs-gpu-explained/",
+        "query": "asic ai",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 66.4
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-91/",
+        "query": "髖關節疼痛 檢查",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 67.6
+      },
+      {
+        "page": "https://appi.news/articles/acute-diarrhea-rehydration/",
+        "query": "口服電解質液",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5.75
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "中醫美顏針有效嗎",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 57.25
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-91/",
+        "query": "髖關節疼痛",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 64.5
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-496/",
+        "query": "痔瘡腫脹",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-480/",
+        "query": "張雅佳",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 7.666666666666667
+      },
+      {
+        "page": "https://appi.news/articles/161kv-taipower-grid-resilience-budget-breakdown/",
+        "query": "161kv特高壓",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://appi.news/articles/breakfast-cancer-risk-foods-guide/",
+        "query": "加工肉品",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.333333333333332
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "肌肉松弛剂",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10.666666666666666
+      },
+      {
+        "page": "https://appi.news/articles/asic-over-gpu-taiwan-ic-design/",
+        "query": "as ic",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-497/",
+        "query": "肌肉鬆弛劑藥局買的到嗎",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻功效與禁忌",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 20.333333333333332
+      },
+      {
+        "page": "https://appi.news/articles/appi-news-178/",
+        "query": "美顏針",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "page": "https://appi.news/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "query": "天麻",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 68.33333333333333
+      }
+    ]
+  },
+  "index": {
+    "sitemaps": [
+      {
+        "path": "https://kid.appi.news/news-sitemap.xml",
+        "submitted": 2,
+        "errors": "0",
+        "warnings": "0",
+        "lastDownloaded": "2026-08-10T06:59:51.788Z"
+      },
+      {
+        "path": "https://kid.appi.news/sitemap-index.xml",
+        "submitted": 77,
+        "errors": "0",
+        "warnings": "0",
+        "lastDownloaded": "2026-08-10T06:59:51.919Z",
+        "resubmit": "已重送（網址數 77→92）"
+      },
+      {
+        "path": "https://appi.news/sitemap-index.xml",
+        "submitted": 1191,
+        "errors": "0",
+        "warnings": "0",
+        "lastDownloaded": "2026-08-10T05:10:40.077Z",
+        "resubmit": "已重送（網址數 1191→1213、lastmod 2026-08-10T19:27:10.843Z 晚於 lastDownloaded 2026-08-10T05:10:40.077Z）"
+      },
+      {
+        "path": "https://jp.appi.news/news-sitemap.xml",
+        "submitted": 12,
+        "errors": "0",
+        "warnings": "0",
+        "lastDownloaded": "2026-08-10T02:50:10.101Z",
+        "resubmit": "已重送（網址數 12→6）"
+      },
+      {
+        "path": "https://jp.appi.news/sitemap-index.xml",
+        "submitted": 341,
+        "errors": "0",
+        "warnings": "0",
+        "lastDownloaded": "2026-08-10T02:50:09.801Z"
+      },
+      {
+        "path": "https://in.appi.news/news-sitemap.xml",
+        "submitted": 0,
+        "errors": "1",
+        "warnings": "0",
+        "lastDownloaded": null,
+        "resubmit": "已重送（網址數 0→5）"
+      },
+      {
+        "path": "https://in.appi.news/sitemap-index.xml",
+        "submitted": 337,
+        "errors": "0",
+        "warnings": "0",
+        "lastDownloaded": "2026-08-10T02:31:37.264Z"
+      },
+      {
+        "path": "https://en.appi.news/news-sitemap.xml",
+        "submitted": 10,
+        "errors": "0",
+        "warnings": "0",
+        "lastDownloaded": "2026-08-10T01:16:16.306Z",
+        "resubmit": "已重送（網址數 10→5）"
+      },
+      {
+        "path": "https://en.appi.news/sitemap-index.xml",
+        "submitted": 336,
+        "errors": "0",
+        "warnings": "0",
+        "lastDownloaded": "2026-08-10T01:16:16.057Z"
+      },
+      {
+        "path": "https://appi.news/news-sitemap.xml",
+        "submitted": 56,
+        "errors": "0",
+        "warnings": "0",
+        "lastDownloaded": "2026-08-09T21:20:15.771Z",
+        "resubmit": "已重送（網址數 56→33）"
+      }
+    ],
+    "coverage": [
+      {
+        "url": "https://appi.news/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-10T08:57:30Z"
+      },
+      {
+        "url": "https://appi.news/focus/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-07-25T14:14:11Z"
+      },
+      {
+        "url": "https://appi.news/international/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-07-26T14:00:22Z"
+      },
+      {
+        "url": "https://appi.news/health/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-10T08:57:45Z"
+      },
+      {
+        "url": "https://appi.news/tech/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-10T08:57:45Z"
+      },
+      {
+        "url": "https://appi.news/finance/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-07-19T07:08:57Z"
+      },
+      {
+        "url": "https://appi.news/sports/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-10T12:02:58Z"
+      },
+      {
+        "url": "https://appi.news/lifestyle/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-10T08:57:45Z"
+      },
+      {
+        "url": "https://appi.news/topics/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-07-24T05:35:05Z"
+      },
+      {
+        "url": "https://appi.news/articles/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-01T17:15:38Z"
+      },
+      {
+        "url": "https://appi.news/columns/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-06-25T16:21:11Z"
+      },
+      {
+        "url": "https://appi.news/articles/flu-vaccine-2026-public-guide/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-07-31T07:20:09Z",
+        "auto": true
+      },
+      {
+        "url": "https://appi.news/articles/kumamoto-earthquake-travel-impact/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-06T13:28:32Z",
+        "auto": true
+      },
+      {
+        "url": "https://appi.news/articles/gongguan-mei-jiang-korean-bbq-closing/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-07-28T19:28:20Z",
+        "auto": true
+      },
+      {
+        "url": "https://appi.news/articles/jumbo-rice-ball-tainan-kaohsiung/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-07-31T01:05:05Z",
+        "auto": true
+      },
+      {
+        "url": "https://appi.news/articles/longtan-snow-ice-shop-guide/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-03T14:53:03Z",
+        "auto": true
+      },
+      {
+        "url": "https://appi.news/articles/wearable-sleep-tracking-accuracy/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-03T18:32:24Z",
+        "auto": true
+      },
+      {
+        "url": "https://appi.news/articles/japan-izakaya-closure-wave/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-02T06:59:43Z",
+        "auto": true
+      },
+      {
+        "url": "https://appi.news/articles/jiuzhaigou-mudslide-tourists-evacuated/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-08T18:55:16Z",
+        "auto": true
+      },
+      {
+        "url": "https://appi.news/articles/company-pudu-2026-guide/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-07-31T09:38:32Z",
+        "auto": true
+      },
+      {
+        "url": "https://appi.news/articles/gym-closure-membership-refund-rights/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-06T13:23:06Z",
+        "auto": true
+      },
+      {
+        "url": "https://appi.news/articles/qixi-2026-guide/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-07-31T06:23:58Z",
+        "auto": true
+      },
+      {
+        "url": "https://appi.news/articles/wang-yen-cheng-kbo-ten-wins/",
+        "coverageState": "Submitted and indexed",
+        "lastCrawlTime": "2026-08-06T13:23:06Z",
+        "auto": true
+      }
+    ]
+  },
+  "targetTrend": {
+    "range": "2026-08-01..2026-08-07",
+    "prevRange": "2026-07-25..2026-07-31",
+    "rows": [
+      {
+        "query": "appi news",
+        "pinned": true,
+        "position": 1,
+        "prevPosition": 1,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "髖關節痛",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "髖關節疼痛看哪一科",
+        "pinned": true,
+        "position": null,
+        "prevPosition": 12.666666666666666,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "中醫美顏針",
+        "pinned": true,
+        "position": null,
+        "prevPosition": 82.5,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "美顏針",
+        "pinned": true,
+        "position": null,
+        "prevPosition": 64.4,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "prp 玻尿酸 比較",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "膝蓋退化打針",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "離岸風電 3-3",
+        "pinned": true,
+        "position": null,
+        "prevPosition": 24.73913043478261,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "耗水費",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "台電 161kv",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "小腿抽筋 怎麼辦",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "落枕 怎麼辦",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "閃到腰 冰敷 熱敷",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "腳踝扭傷 處理",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "運動後 肌肉痠痛",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "燙傷 處理",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "擦傷 傷口 照顧",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "曬傷 處理",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "蚊蟲叮咬 止癢",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "流鼻血 止血",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "中暑 處理",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "失溫 處理",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "腹瀉 補水",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "嘔吐後 進食",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "便秘 怎麼辦",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "打嗝 停不下來",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "喉嚨痛 舒緩",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "晚上咳嗽 睡不著",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "鼻塞 怎麼辦",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "哈姆立克 怎麼做",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "頭痛 舒緩 不吃藥",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "過度換氣 怎麼辦",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "暈車 怎麼辦",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "經痛 緩解",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "睡不著 怎麼辦",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "低血糖 處理",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "眼睛 進異物",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "天麻功效",
+        "pinned": true,
+        "position": 47,
+        "prevPosition": null,
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "油甘果 功效",
+        "pinned": true,
+        "position": null,
+        "prevPosition": null,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "pcp prp差異",
+        "pinned": true,
+        "position": 10,
+        "prevPosition": 11,
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "8/19七夕",
+        "pinned": false,
+        "position": 6.747572815533981,
+        "prevPosition": 5.402597402597403,
+        "impressions": 309,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "2026七夕",
+        "pinned": false,
+        "position": 9.066666666666666,
+        "prevPosition": 8.336134453781511,
+        "impressions": 210,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "梅江韓國銅盤烤肉 公館店",
+        "pinned": false,
+        "position": 9.854430379746836,
+        "prevPosition": 8.318471337579618,
+        "impressions": 158,
+        "clicks": 1,
+        "ctr": 0.006329113924050633
+      },
+      {
+        "query": "雪花冰",
+        "pinned": false,
+        "position": 5.243697478991597,
+        "prevPosition": null,
+        "impressions": 119,
+        "clicks": 3,
+        "ctr": 0.025210084033613446
+      },
+      {
+        "query": "8/19 七夕",
+        "pinned": false,
+        "position": 6.9772727272727275,
+        "prevPosition": 7,
+        "impressions": 88,
+        "clicks": 1,
+        "ctr": 0.011363636363636364
+      },
+      {
+        "query": "2026 七夕",
+        "pinned": false,
+        "position": 9.941176470588236,
+        "prevPosition": 8.763157894736842,
+        "impressions": 68,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "剉冰",
+        "pinned": false,
+        "position": 6.676470588235294,
+        "prevPosition": null,
+        "impressions": 68,
+        "clicks": 0,
+        "ctr": 0
+      },
+      {
+        "query": "8/9機票漲價",
+        "pinned": false,
+        "position": 8.431818181818182,
+        "prevPosition": null,
+        "impressions": 44,
+        "clicks": 2,
+        "ctr": 0.045454545454545456
+      },
+      {
+        "query": "童羽之家",
+        "pinned": false,
+        "position": 5.909090909090909,
+        "prevPosition": 8.400990099009901,
+        "impressions": 44,
+        "clicks": 2,
+        "ctr": 0.045454545454545456
+      },
+      {
+        "query": "梅江韓國銅盤烤肉 公館店的菜單",
+        "pinned": false,
+        "position": 8.976744186046512,
+        "prevPosition": 8.43956043956044,
+        "impressions": 43,
+        "clicks": 1,
+        "ctr": 0.023255813953488372
+      }
+    ]
+  },
+  "geo": {
+    "site": "appi.news",
+    "sampleUrl": "https://appi.news/articles/implantable-medical-device-circuit-board-material-breakthrough/",
+    "checks": {
+      "ai": {
+        "s": "✅"
+      },
+      "sitemap": {
+        "s": "✅"
+      },
+      "llms": {
+        "s": "✅"
+      },
+      "llmsFull": {
+        "s": "❌",
+        "note": "llms-full.txt 缺（AI 取全文用）"
+      },
+      "org": {
+        "s": "✅"
+      },
+      "sameAs": {
+        "s": "✅"
+      },
+      "content": {
+        "s": "✅"
+      },
+      "faq": {
+        "s": "✅"
+      },
+      "cite": {
+        "s": "✅"
+      },
+      "expect": {
+        "s": "—"
+      },
+      "targetQ": {
+        "s": "❌",
+        "note": "AI 目標問句未納入追蹤（2/2）：亞太 新聞、專業觀點 評論"
+      }
+    },
+    "gaps": [
+      "llms-full.txt 缺（AI 取全文用）",
+      "AI 目標問句未納入追蹤（2/2）：亞太 新聞、專業觀點 評論"
+    ],
+    "warns": [],
+    "ok": false
+  }
+}

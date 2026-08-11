@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/emotional-crisis-police-fire-rescue-2026-08-02.webp"
+coverAlt: "危機協助人員在安全河岸座椅旁陪伴情緒低落民眾"
 title: "察覺親友情緒低落、疑似有輕生念頭怎麼辦？警消如何搶時間介入化解危機"
 slug: "emotional-crisis-police-fire-rescue-2026-08-02"
 description: "整理臺東縣警察局公開新聞稿：關山分局池上聯合所警消攜手，耐心勸導一名在池上大橋情緒低落、疑似有生命安全之虞的民眾，協助他離開危險處所並安全返家；並整理一般民眾遇到親友情緒失控時可以先做的幾件事。"

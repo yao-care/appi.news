@@ -1,10 +1,11 @@
 ---
-title: "專訪張家誠醫師｜髖關節疼痛反覆發作？中醫針法如何結合物理治療改善"
+title: "髖部慢性疼痛整合治療：針刀、乾針、震波與復健"
 slug: "appi-news-97"
-description: "髖關節疼痛久治不癒？張家誠醫師解析整合治療思路：從鑑別診斷、超音波導引針刀與幹針，到磁波震波協同修復，6–12週療程如何降低手術風險。"
+description: "髖部慢性疼痛反覆發作，需先區分關節、腰椎、骶髂關節與足踝代償。張家誠醫師說明超音波導引針刀、乾針、震波與復健的分工、風險與 6–12 週療程限制。"
 publishDate: 2026-06-21
+updatedDate: 2026-08-10
 category: health
-topics: ["tcm-acupuncture-pain"]
+topics: ["tcm-acupuncture-pain", "joint-pain"]
 subcategory: tcm-integrative
 tags:
   - "復健治療"
@@ -30,12 +31,27 @@ risksAndLimits:
   - "震波治療的隨機對照試驗對象為大轉子疼痛症候群患者，不等於所有髖關節疼痛皆適用"
   - "超音波導引幹針的系統性回顧聚焦肌骨疼痛管理，結論範圍未涵蓋所有髖關節病灶類型"
   - "文中觀點與案例來自單一醫師 2026 年 5 月專訪，治療成效因個人狀況而異"
+references:
+  - title: "Clinical Effectiveness of Dry Needling in Patients with Musculoskeletal Pain—An Umbrella Review"
+    url: "https://pubmed.ncbi.nlm.nih.gov/36769852/"
+    publisher: "Journal of Clinical Medicine"
+    note: "Chys M, et al. (2023)，幹針處理肌骨疼痛之系統性回顧的傘狀回顧"
+  - title: "Greater trochanteric pain syndrome: focused shockwave therapy versus an ultrasound guided injection: a randomised control trial"
+    url: "https://pubmed.ncbi.nlm.nih.gov/34784804/"
+    publisher: "Hip International"
+    note: "Heaver C, et al. (2023)，震波與超音波導引類固醇注射比較，對象限於大轉子疼痛症候群"
+  - title: "Musculoskeletal health"
+    url: "https://www.who.int/news-room/fact-sheets/detail/musculoskeletal-conditions"
+    publisher: "World Health Organization"
+    note: "肌骨疾病與全球失能負擔概覽"
 ---
 你有沒有發現，很多人的髖關節疼痛，治了一輪又一輪，症狀卻始終繞回來？換過不知多少療法，有時好一點、有時又更痛，就是找不到真正的出口。
 
 髖關節的問題其實比想像中複雜。它像身體的「樞紐」，連接骨盆、脊椎、大腿，承受你每一步的重量。一旦出問題，走路會受影響，甚至牽動整個下肢的力學鏈。
 
 本篇整理自 2026 年 5 月與張家誠醫師的專訪對談。張醫師具備檢驗科背景，長期鑽研中西醫整合治療，擅長以超音波導引結合針刀、幹針與物理治療儀器處理各類深層肌骨問題。這次專訪，他從鑑別診斷談起，完整拆解髖關節整合治療的思路與流程。
+
+本篇聚焦已經進入慢性期、正在評估針刀、乾針、震波與功能重建的讀者。如果還沒有完成病因鑑別，先看[髖關節痛完整指南](/articles/hip-pain-complete-guide/)；如果主要是久坐後的深層臀痛與大腿後側放射感，則進入[深臀症候群的針灸與物理治療](/articles/appi-news-96/)。
 
 ![骨盆與兩側髖關節的X光影像，清楚呈現股骨頭與髖臼的骨骼結構](https://images.unsplash.com/photo-1763198302745-57cb94135f11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODgwMzN8MHwxfHNlYXJjaHwzfHxoaXAlMjBqb2ludCUyMHBoeXNpY2FsJTIwdGhlcmFweSUyMHJlaGFiaWxpdGF0aW9ufGVufDB8MHx8fDE3NzY5NDY3MTd8MA&ixlib=rb-4.1.0&q=80&w=1080)
 

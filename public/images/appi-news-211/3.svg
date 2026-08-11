@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="52" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="bold" fill="#1B5E4B">夏日防護：遮陽・補水・通風・休息</text>
+  <text x="480" y="78" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">四大防護支柱：要做與不要做對照</text>
+
+  <rect x="40" y="100" width="205" height="460" rx="10" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
+  <rect x="40" y="100" width="205" height="42" fill="#1B5E4B"/>
+  <text x="142" y="127" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#FFFFFF">遮陽</text>
+  <circle cx="70" cy="168" r="15" fill="#2E8B6F"/>
+  <path d="M63,168 L68,173 L78,160" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="92" y="174" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1B5E4B">要做</text>
+  <text x="55" y="200" font-family="sans-serif" font-size="14" fill="#1F2A28">撐傘戴帽</text>
+  <text x="55" y="220" font-family="sans-serif" font-size="14" fill="#1F2A28">尋找陰涼處</text>
+  <line x1="55" y1="235" x2="230" y2="235" stroke="#2E8B6F" stroke-width="1" stroke-dasharray="4,3"/>
+  <circle cx="70" cy="265" r="15" fill="#FFFFFF" stroke="#6B7B77" stroke-width="2"/>
+  <path d="M62,257 L78,273 M78,257 L62,273" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+  <text x="92" y="271" font-family="sans-serif" font-size="16" font-weight="bold" fill="#6B7B77">不要</text>
+  <text x="55" y="297" font-family="sans-serif" font-size="14" fill="#1F2A28">正午曝曬</text>
+  <text x="55" y="317" font-family="sans-serif" font-size="14" fill="#1F2A28">不做防曬</text>
+
+  <rect x="265" y="100" width="205" height="460" rx="10" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
+  <rect x="265" y="100" width="205" height="42" fill="#1B5E4B"/>
+  <text x="367" y="127" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#FFFFFF">補水</text>
+  <circle cx="295" cy="168" r="15" fill="#2E8B6F"/>
+  <path d="M288,168 L293,173 L303,160" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="317" y="174" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1B5E4B">要做</text>
+  <text x="280" y="200" font-family="sans-serif" font-size="14" fill="#1F2A28">少量多次</text>
+  <text x="280" y="220" font-family="sans-serif" font-size="14" fill="#1F2A28">補充水分</text>
+  <line x1="280" y1="235" x2="455" y2="235" stroke="#2E8B6F" stroke-width="1" stroke-dasharray="4,3"/>
+  <circle cx="295" cy="265" r="15" fill="#FFFFFF" stroke="#6B7B77" stroke-width="2"/>
+  <path d="M287,257 L303,273 M303,257 L287,273" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+  <text x="317" y="271" font-family="sans-serif" font-size="16" font-weight="bold" fill="#6B7B77">不要</text>
+  <text x="280" y="297" font-family="sans-serif" font-size="14" fill="#1F2A28">口渴才喝</text>
+  <text x="280" y="317" font-family="sans-serif" font-size="14" fill="#1F2A28">狂飲含糖飲料</text>
+
+  <rect x="490" y="100" width="205" height="460" rx="10" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
+  <rect x="490" y="100" width="205" height="42" fill="#1B5E4B"/>
+  <text x="592" y="127" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#FFFFFF">通風</text>
+  <circle cx="520" cy="168" r="15" fill="#2E8B6F"/>
+  <path d="M513,168 L518,173 L528,160" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="542" y="174" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1B5E4B">要做</text>
+  <text x="505" y="200" font-family="sans-serif" font-size="14" fill="#1F2A28">保持空氣</text>
+  <text x="505" y="220" font-family="sans-serif" font-size="14" fill="#1F2A28">流通開窗</text>
+  <line x1="505" y1="235" x2="680" y2="235" stroke="#2E8B6F" stroke-width="1" stroke-dasharray="4,3"/>
+  <circle cx="520" cy="265" r="15" fill="#FFFFFF" stroke="#6B7B77" stroke-width="2"/>
+  <path d="M512,257 L528,273 M528,257 L512,273" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+  <text x="542" y="271" font-family="sans-serif" font-size="16" font-weight="bold" fill="#6B7B77">不要</text>
+  <text x="505" y="297" font-family="sans-serif" font-size="14" fill="#1F2A28">門窗緊閉</text>
+  <text x="505" y="317" font-family="sans-serif" font-size="14" fill="#1F2A28">悶熱不透氣</text>
+
+  <rect x="715" y="100" width="205" height="460" rx="10" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="1.5"/>
+  <rect x="715" y="100" width="205" height="42" fill="#1B5E4B"/>
+  <text x="817" y="127" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#FFFFFF">休息</text>
+  <circle cx="745" cy="168" r="15" fill="#2E8B6F"/>
+  <path d="M738,168 L743,173 L753,160" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="767" y="174" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1B5E4B">要做</text>
+  <text x="730" y="200" font-family="sans-serif" font-size="14" fill="#1F2A28">適度休息</text>
+  <text x="730" y="220" font-family="sans-serif" font-size="14" fill="#1F2A28">避免過勞</text>
+  <line x1="730" y1="235" x2="905" y2="235" stroke="#2E8B6F" stroke-width="1" stroke-dasharray="4,3"/>
+  <circle cx="745" cy="265" r="15" fill="#FFFFFF" stroke="#6B7B77" stroke-width="2"/>
+  <path d="M737,257 L753,273 M753,257 L737,273" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+  <text x="767" y="271" font-family="sans-serif" font-size="16" font-weight="bold" fill="#6B7B77">不要</text>
+  <text x="730" y="297" font-family="sans-serif" font-size="14" fill="#1F2A28">長時間</text>
+  <text x="730" y="317" font-family="sans-serif" font-size="14" fill="#1F2A28">高強度活動</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

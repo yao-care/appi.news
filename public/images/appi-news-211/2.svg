@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <rect x="0" y="0" width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="48" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="bold" fill="#1B5E4B">熱危害風險等級指南</text>
+  <text x="480" y="78" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#6B7B77">依目前等級採取對應防護行動</text>
+
+  <rect x="30" y="94" width="225" height="14" rx="7" fill="#2E8B6F"/>
+  <rect x="255" y="94" width="225" height="14" fill="#C9A227"/>
+  <rect x="480" y="94" width="225" height="14" fill="#D97B29"/>
+  <rect x="705" y="94" width="225" height="14" rx="7" fill="#C0392B"/>
+  <text x="30" y="120" font-family="sans-serif" font-size="13" fill="#6B7B77">低</text>
+  <text x="930" y="120" text-anchor="end" font-family="sans-serif" font-size="13" fill="#6B7B77">危險</text>
+
+  <g>
+    <rect x="30" y="140" width="210" height="410" rx="16" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="3"/>
+    <rect x="30" y="140" width="210" height="66" rx="16" fill="#2E8B6F"/>
+    <circle cx="135" cy="173" r="24" fill="#FFFFFF"/>
+    <text x="135" y="182" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#2E8B6F">1</text>
+    <text x="135" y="238" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1F2A28">低度提醒</text>
+    <text x="135" y="262" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">氣溫略高，注意保水</text>
+    <path d="M135,300 C122,322 122,340 135,340 C148,340 148,322 135,300 Z" fill="#2E8B6F"/>
+    <text x="135" y="470" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1F2A28">建議行動</text>
+    <text x="135" y="496" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1F2A28">適度補充水分</text>
+  </g>
+
+  <g>
+    <rect x="260" y="140" width="210" height="410" rx="16" fill="#F2F7F5" stroke="#C9A227" stroke-width="3"/>
+    <rect x="260" y="140" width="210" height="66" rx="16" fill="#C9A227"/>
+    <circle cx="365" cy="173" r="24" fill="#FFFFFF"/>
+    <text x="365" y="182" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#C9A227">2</text>
+    <text x="365" y="238" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1F2A28">中度注意</text>
+    <text x="365" y="262" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">日照強烈，體感偏熱</text>
+    <circle cx="365" cy="320" r="16" fill="#C9A227"/>
+    <line x1="365" y1="292" x2="365" y2="300" stroke="#C9A227" stroke-width="4"/>
+    <line x1="365" y1="340" x2="365" y2="348" stroke="#C9A227" stroke-width="4"/>
+    <line x1="337" y1="320" x2="345" y2="320" stroke="#C9A227" stroke-width="4"/>
+    <line x1="385" y1="320" x2="393" y2="320" stroke="#C9A227" stroke-width="4"/>
+    <text x="365" y="470" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1F2A28">建議行動</text>
+    <text x="365" y="496" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1F2A28">減少戶外曝曬</text>
+  </g>
+
+  <g>
+    <rect x="490" y="140" width="210" height="410" rx="16" fill="#F2F7F5" stroke="#D97B29" stroke-width="3"/>
+    <rect x="490" y="140" width="210" height="66" rx="16" fill="#D97B29"/>
+    <circle cx="595" cy="173" r="24" fill="#FFFFFF"/>
+    <text x="595" y="182" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#D97B29">3</text>
+    <text x="595" y="238" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1F2A28">高度警戒</text>
+    <text x="595" y="262" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">正午前後風險升高</text>
+    <circle cx="595" cy="320" r="24" fill="#FFFFFF" stroke="#D97B29" stroke-width="4"/>
+    <line x1="595" y1="320" x2="595" y2="305" stroke="#D97B29" stroke-width="3"/>
+    <line x1="595" y1="320" x2="607" y2="326" stroke="#D97B29" stroke-width="3"/>
+    <text x="595" y="470" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1F2A28">建議行動</text>
+    <text x="595" y="496" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1F2A28">避免正午外出</text>
+  </g>
+
+  <g>
+    <rect x="720" y="140" width="210" height="410" rx="16" fill="#F2F7F5" stroke="#C0392B" stroke-width="3"/>
+    <rect x="720" y="140" width="210" height="66" rx="16" fill="#C0392B"/>
+    <circle cx="825" cy="173" r="24" fill="#FFFFFF"/>
+    <text x="825" y="182" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#C0392B">4</text>
+    <text x="825" y="238" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1F2A28">危險警報</text>
+    <text x="825" y="262" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6B7B77">極端高溫，風險最高</text>
+    <path d="M825,296 L847,338 L803,338 Z" fill="#C0392B"/>
+    <rect x="822" y="308" width="6" height="16" fill="#FFFFFF"/>
+    <circle cx="825" cy="330" r="3" fill="#FFFFFF"/>
+    <text x="825" y="470" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1F2A28">建議行動</text>
+    <text x="825" y="496" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1F2A28">立即尋找陰涼處</text>
+  </g>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

@@ -5,6 +5,7 @@ description: "日本、香港、中國遊客近期在社群大讚台灣「細長
 excerpt: "日本、香港、中國遊客近期在社群大讚台灣「細長清脆蔬菜」水蓮。整理水蓮（野蓮）的身世、高雄美濃九成產地與瀕危復育史、營養成分與正確料理方式。"
 publishDate: "2026-08-03T18:41:52.419Z"
 category: "lifestyle"
+topics: ["food-safety-storage"]
 subcategory: "life"
 tags:
   - "美食"
@@ -63,6 +64,8 @@ references:
   </a>
   <figcaption>影片來源：民視新聞網 Formosa TV News network（YouTube）　<a href="https://www.youtube.com/watch?v=79yrEJErLSo" target="_blank" rel="noopener nofollow">觀看原影片</a></figcaption>
 </figure>
+
+料理延伸：[水蓮挑選、保存與快炒保脆指南](/articles/water-lily-buy-store-cook-guide/)
 
 ## 水蓮到底是什麼菜
 

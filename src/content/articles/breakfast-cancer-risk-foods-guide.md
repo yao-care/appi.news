@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/breakfast-cancer-risk-foods-guide.webp"
+coverAlt: "加工肉、白吐司與高脂乳品早餐和蔬果全穀早餐並列比較"
 title: "早餐這3類食物致癌風險？加工肉、精緻澱粉與高脂乳品"
 description: "日本醫師點名3類早餐食物與癌症風險有關，加工肉品的亞硝胺、精緻澱粉的血糖飆升、高脂乳品的復發風險機轉各是什麼？整理成因、實際數據與台灣醫師的均衡吃法建議。"
 publishDate: "2026-08-02T19:29:57.253Z"

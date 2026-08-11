@@ -1,8 +1,19 @@
 # GEO 洞察：健康（health）
 
 > 由 `cited-teardown` 產出。拆解「健康題被 AI 引用、我方沒有」的競品/贏家頁，歸納它們一致的寫法。
-> **起草健康稿前讀這份，把「檢查表」當硬規則套用。** 最近一次跑：2026-08-02（重跑確認，見下方新段落；無新增動作項）。上次實質更新：2026-07-26（固定題重跑；§骨關節 2026-07-09 補拆維持不動）。
-> 誠實邊界：引擎＝Claude WebSearch（US 區偏差、可能低估台灣站）、n 小（07-26 輪 3 題中僅 2 題有競品被引用，各 1 頁；08-02 輪僅 1 題有競品）；`commonhealth.com.tw`／`health.ltn.com.tw` 直接 WebFetch 皆 403（bot 擋），改走 `r.jina.ai` reader 代理成功取得全文。**AI 引用結果本身會隨時間換人**（07-26 輪 Q1／Q3 的被引 URL 都跟 07-09 那輪不同），檢查表要看「跨輪一致的訊號」，不要盯著單一 URL。方向性參考，非定論。
+> **起草健康稿前讀這份，把「檢查表」當硬規則套用。** 最近一次跑：2026-08-09（第四輪重跑確認，見下方新段落；無新增動作項）。上次實質更新：2026-07-26（固定題重跑；§骨關節 2026-07-09 補拆維持不動）。
+> 誠實邊界：引擎＝Claude WebSearch（US 區偏差、可能低估台灣站）、n 小（07-26 輪 3 題中僅 2 題有競品被引用，各 1 頁；08-02、08-09 輪皆僅 1 題有競品）；`commonhealth.com.tw`／`health.ltn.com.tw` 直接 WebFetch 皆 403（bot 擋），改走 `r.jina.ai` reader 代理成功取得全文。**AI 引用結果本身會隨時間換人**（07-26 輪 Q1／Q3 的被引 URL 都跟 07-09 那輪不同），檢查表要看「跨輪一致的訊號」，不要盯著單一 URL。方向性參考，非定論。
+
+## 本輪重跑確認（2026-08-09）
+
+第四輪，三題重跑，結果**與前兩輪（07-26、08-02）持平，無新訊號**：
+
+- **Q1（中醫 AI 診斷）**：AI**連續第三輪引用同一個 URL**——康健雜誌 `commonhealth.com.tw/article/93722`（BBC News 中文授權）。用 `r.jina.ai` 重新側寫，結構與前兩輪一致：故事案例開場、5 個 H2、JAMA Internal Medicine＋德國醫生團隊研究等一手來源、香港中藥中毒統計佐證、BBC News 中文署名、2026-03-12、約 5,000–6,000 字。`classifyCitedUrls` 確認 `cited:false, competitors:["commonhealth.com.tw"]`；`gapVsOurs`（對 `wp-577.md`）再次算出 `[]`——**連續四輪空缺口**，機械訊號這條線可以停止追蹤，槓桿已不在補訊號。
+  - 覆核前三輪點名的「未落地」項目：`wp-577.md` **category 仍是 `tech`**（未併健康分類或出姊妹稿）；`<h2>常見問題</h2>` 底下 4 個問句**仍是純文字段落，未包成 `<h3>`**。兩項都還沒做。
+- **Q2（保健食品）**：AI 仍只引 `law.moj.gov.tw`／`fda.gov.tw`（×2）／`funaicare.com`／`xcomply.ai`／`taiwanhealth.org`，`classifyCitedUrls` 回 `competitors:[]`——第四輪同一結論，無媒體競品可拆。
+- **Q3（肌少症）**：本輪 AI 引用的 6 個來源是醫院衛教（`org.ptvgh.gov.tw`、`wd.vghtpe.gov.tw`、`ihealth.vghtc.gov.tw`）與機構／個人網站（`otandp.com`、`icareyou.com.tw`、`wphp.doctor`），`classifyCitedUrls` 回 `competitors:[]`——連續第二輪無媒體競品，這題近期不在拆解範圍。順帶覆核 `sarcopenia-prevention-evidence-elderly.md` 現況：**08-02 輪點名的兩個缺口仍未補**——作者仍是通用 `appi-editorial`（`reviewedBy: huang-ziyan` 只在中繼資料，正文未引述具名營養師/醫師）；三條參考連結（照護線上、千禧之愛、亞大附醫）仍**無一命中 `isPrimarySourceHost`**，一手來源掛零沒有改善。
+
+**依步驟 1 判準，本輪只有 Q1 符合，且連續四輪重複同一結論，故不產生新的落地動作。** 有效的舊 backlog：Q1 的 category／FAQ h3 化（見上）、Q3 的具名專家引述＋補一手來源（見下方 Q3 段落）——這兩項一直沒人動手，比繼續重跑更值得優先處理。
 
 ## 本輪重跑確認（2026-08-02）
 

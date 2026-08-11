@@ -1,4 +1,6 @@
 ---
+coverImage: "covers/police-good-deeds-2026-07-27.webp"
+coverAlt: "捷運服務人員將尋回的行李箱與皮夾交還旅客"
 title: "捷警接力尋回失物 行李箱、皮夾都物歸原主"
 slug: "police-good-deeds-2026-07-27"
 description: "整理臺北市政府警察局捷運警察隊公開新聞稿的好人好事：第三分隊調閱監視器助女子在板橋站尋回遺落行李箱，第二分隊一小時內助男子尋回內有現金的皮夾。"

@@ -41,6 +41,7 @@
 
 - `src/components/seo/Analytics.astro` + `src/layouts/BaseLayout.astro`:**不載入 gtag.js**,inline 自送 GA4 `/g/collect` beacon(page_view/user_engagement/自訂事件),帶 **`content_group`=中文分類名**(封包欄位是 `ep.content_group`;BaseLayout 由 category slug 走 `getCategoryName`,其餘 path 推導;新分類自動涵蓋)。值**消毒**只移除會破壞 inline script 的字元(引號/反斜線/角括號/換行),允許中文。為什麼＝[`lessons/ga4-beacon-instead-of-gtag.md`](./lessons/ga4-beacon-instead-of-gtag.md)。
 - `src/pages/submit.astro`:AJAX 送出成功發 `gtag('event','generate_lead')`(非同步、不帶 PII)。`window.gtag` 由 `Analytics.astro` 提供同介面墊片,呼叫端不必知道底下換了實作。
+- `src/pages/index.astro`:首頁季節專題入口點擊發 `seasonal_topic_click`,帶 `topic_id`、`slot=primary|companion`、`link_url`,並把 `content_group` 編為 `首頁季節入口｜slot｜topicId`;`weekly-data.mjs` 可在不新增 GA4 自訂維度下輸出 `sprint.seasonalTopicClicks`。不攔截導頁,由既有 `sendBeacon` 墊片送出。
 - **沒有 GA4 自動增強型評估**(scroll/outbound click/file_download/影片):拆掉 gtag.js 就沒有了,目前無報表消費。要哪一個就在該互動點自己呼叫 `gtag('event', ...)` 墊片,不要把整包 gtag.js 請回來。
 - **資料不回溯**:埋點只從部署後累積。
 

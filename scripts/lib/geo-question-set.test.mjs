@@ -10,16 +10,20 @@ import {
 } from './geo-question-set.mjs';
 
 describe('題庫', () => {
-  it('7 分類、每類 3 題、皆非空、不含專欄', () => {
+  it('7 分類、每類 5 題、皆非空、不含專欄', () => {
     expect(QUESTION_SET).toHaveLength(7);
-    for (const c of QUESTION_SET) expect(c.questions).toHaveLength(3);
+    for (const c of QUESTION_SET) expect(c.questions).toHaveLength(5);
     expect(QUESTION_SET.map((c) => c.category)).not.toContain('columns');
   });
-  it('flatQuestions 攤平成 21 題、每題帶 category', () => {
+  it('flatQuestions 攤平成 35 題、每題帶 category', () => {
     const f = flatQuestions();
-    expect(f).toHaveLength(21);
+    expect(f).toHaveLength(35);
     expect(f[0]).toHaveProperty('question');
     expect(f[0]).toHaveProperty('category');
+  });
+  it('題目不重複', () => {
+    const questions = flatQuestions().map((x) => x.question);
+    expect(new Set(questions).size).toBe(questions.length);
   });
 });
 

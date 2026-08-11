@@ -1,15 +1,16 @@
 ---
-title: "腸病毒（enterovirus）8大重症前兆：5歲以下（含1歲）都要注意"
+title: "開學腸病毒防疫：8大重症前兆與漂白水消毒比例"
 slug: "enterovirus-severe-warning-signs-2026"
-description: "疾管署最新監測顯示腸病毒疫情持續處於流行期，社區以克沙奇A6型為主，今年累計6例重症。整理5歲以下（含1歲）幼兒的8大重症前兆、各型別症狀差異、D68型初期像感冒的辨識重點，以及開學防疫與酒精無效改用漂白水消毒的做法。"
+description: "開學防腸病毒要用肥皂洗手，環境以500ppm漂白水消毒，分泌物污染處用1,000ppm；本文也整理孩子8大重症前兆，任一項出現應立即送大醫院。"
 publishDate: "2026-07-30T09:01:59.408Z"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-09
 category: "health"
 subcategory: "medical"
 tags:
   - "傳染病防治"
   - "育兒健康"
   - "公共衛生"
+topics: ["back-to-school-2026"]
 author: "appi-editorial"
 reviewedBy:
   - "huang-ziyan"
@@ -49,7 +50,7 @@ references:
     publisher: "ETtoday健康雲"
 ---
 
-疾管署最新監測顯示，國內腸病毒疫情在暑假期間持續處於流行階段，8月底陸續開學、幼兒重回團體生活，是家長最該搞懂重症前兆的時候。這篇整理疾管署官方資料，從目前疫情現況、一般症狀、各型別差異，到5歲以下幼兒的8大重症前兆病徵與開學防疫做法，一次看懂。
+開學防腸病毒，最重要的是用肥皂正確洗手，並以500ppm漂白水清潔一般環境；碰到病童分泌物、嘔吐物或排泄物污染則用1,000ppm。孩子若出現嗜睡、意識不清、肌抽躍、持續嘔吐等8大重症前兆任一項，應立即送往大醫院。家長也可搭配[8月31日開學收心與新生準備清單](/articles/back-to-school-syndrome-child-vision-checklist/)、[小一文具餐具與指定文件清單](/articles/first-grade-school-supplies-2026/)及[校園與居家登革熱巡倒清刷清單](/articles/appi-news-376/)，一次完成開學前的用品和健康檢查。本文疫情數字沿用疾管署7月資料，並在下文標明統計期間，不代表即時疫情。
 
 ## 目前疫情：第28週就診7,534人次，社區以克沙奇A6型為主
 

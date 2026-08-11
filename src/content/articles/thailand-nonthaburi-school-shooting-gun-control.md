@@ -1,9 +1,10 @@
 ---
 title: "泰國持槍管制多寬鬆？1030萬支槍逾4成未登記　校園槍擊釀8死再掀修法壓力"
 slug: "thailand-nonthaburi-school-shooting-gun-control"
-description: "泰國暖武里德布西林高中8月7日發生校園槍擊，14歲少年持祖父合法登記的手槍，先殺害祖父母、再赴校開火，造成8人死亡、30多人受傷、9人命危。泰國估計流通1030萬支槍、逾4成未登記，近年雖新增購槍醫學評估仍難擋悲劇，總理阿努廷承諾儘速修法。"
-excerpt: "泰國暖武里高中8月7日發生校園槍擊，14歲少年先殺害同住的祖父母、再赴校開火後飲彈自盡，共8人死亡、30多人受傷；泰國估計流通1030萬支槍、逾4成未登記，總理承諾儘速修法。"
+description: "泰國暖武里德布西林高中8月7日發生校園槍擊，14歲少年持祖父合法登記的手槍，先殺害祖父母、再赴校開火，造成8人死亡、30多人受傷、9人命危。警方8月9日公布最新調查，指少年鑽研槍械已1到2年、電腦查出瀏覽暴力社群內容，泰國估計流通1030萬支槍逾4成未登記，總理承諾儘速修法。"
+excerpt: "泰國暖武里高中8月7日發生校園槍擊，14歲少年先殺害同住的祖父母、再赴校開火後飲彈自盡，共8人死亡、30多人受傷；警方最新調查指少年曾瀏覽暴力社群內容、去年遭教師沒收空氣槍，泰國估計流通1030萬支槍逾4成未登記，總理承諾儘速修法。"
 publishDate: "2026-08-07T17:51:19.651Z"
+updatedDate: "2026-08-09T16:59:38.892Z"
 category: "international"
 subcategory: "asia"
 tags:
@@ -16,11 +17,13 @@ highlights:
   - "警方指槍手至少開了26槍，現場另查獲34發備用子彈；同學形容他是「受困擾」且「遭霸凌」的學生，總理阿努廷則說他「承受與學業相關的壓力」"
   - "教育部長坦言「我們的安全級別並不那麼嚴格」，承諾提供心理健康協助並加強校園安全措施；學校宣布8月10日至14日停課"
   - "半島電視台引述官方數據指出，泰國估計流通1030萬支槍，逾4成未登記，非法持槍最高判10年徒刑，近年已修法要求購槍或換發持槍證須通過醫學評估"
+  - "（更新）警方8月9日公布最新調查，指少年鑽研槍械使用已「1到2年」、透過社群媒體自學，電腦內查出瀏覽暴力社群內容，但無證據曾實際打靶；去年一名教師曾沒收他帶到校內的空氣槍"
 risksAndLimits:
   - "死傷人數事發後數小時內數度修正，各家媒體通報從5人到10人不等，本文採8月7日CBS新聞、美聯社彙整版本，後續恐再調整"
-  - "槍手作案動機官方僅以「課業壓力」概括、同學受訪稱其「遭霸凌」，尚無正式心理鑑定或警方調查結論"
+  - "槍手作案動機官方僅以「課業壓力」概括、同學受訪稱其「遭霸凌」，警方8月9日補充其鑽研槍械已1到2年，正式心理鑑定或起訴書尚未公布"
   - "泰國1030萬支槍、逾4成未登記為既有槍枝流通推估值，非本案專屬統計，實際數字難以精確查核"
   - "總理承諾修法屬口頭宣示，具體法案內容、時程與能否過國會尚未公布"
+  - "警方訪談17名證人的說法為8月9日對媒體的口頭簡報，尚無正式書面調查報告可查核"
 references:
   - title: "Student kills six in shooting at Thailand high school"
     url: "https://www.thecourier.com.au/story/9326003/student-kills-six-in-shooting-at-thailand-high-school/"
@@ -37,6 +40,15 @@ references:
   - title: "Thailand school shooting: Student kills 6 after killing grandparents near Bangkok"
     url: "https://www.nbcnews.com/world/asia/two-dead-gunman-school-shooting-thailand-officials-say-rcna591309"
     publisher: "NBC News"
+  - title: "Thai school shooter had watched violent online content"
+    url: "https://www.illawarramercury.com.au/story/9326822/thai-school-shooter-had-watched-violent-online-content/"
+    publisher: "Illawarra Mercury"
+  - title: "Accused Thai school shooter had watched violent content online, police say"
+    url: "https://tribune.com.pk/story/2622910/accused-thai-school-shooter-had-watched-violent-content-online-police-say"
+    publisher: "The Express Tribune"
+  - title: "Accused Thai school shooter had watched violent content online, police say"
+    url: "https://www.gmanetwork.com/news/topstories/world/997921/accused-thai-school-shooter-had-watched-violent-content-online-police-say/story/"
+    publisher: "GMA News Online"
 author: "appi-editorial"
 reviewedBy:
   - "luo-yang"
@@ -46,14 +58,14 @@ status: "published"
 sourceType: "wire"
 contentType: "news"
 disclaimerType: "general"
-disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 The Courier、CBS News、半島電視台、美聯社（經KBTX轉載）與NBC新聞等公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
+disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 The Courier、CBS News、半島電視台、美聯社（經KBTX轉載）、NBC新聞、Illawarra Mercury、The Express Tribune與GMA News Online等公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/thailand-nonthaburi-school-shooting-gun-control-cover.webp"
 coverAlt: "上鎖的槍械保險箱示意圖"
 coverImageCredit: "Photo by Maxim Potkin on Unsplash"
 originalContribution: "本文整合The Courier、CBS新聞、半島電視台、美聯社與NBC新聞對泰國暖武里校園槍擊案的報導，交叉比對事發後數度修正的死傷數字，並補充泰國槍枝流通與購槍醫學評估修法的制度背景，供台灣讀者理解事件全貌與其代表的政策爭議。"
 ---
 
-泰國暖武里府一所高中8月7日上午發生校園槍擊案，一名14歲少年持祖父合法登記的手槍，先在住家槍殺祖父母，再赴校開火，最終飲彈自盡。綜合CBS新聞與美聯社（經KBTX轉載）8月7日彙整的說法，這起事件共造成8人死亡、30多人受傷、9人命危，是泰國近幾年最嚴重的校園槍擊案之一。（[The Courier](https://www.thecourier.com.au/story/9326003/student-kills-six-in-shooting-at-thailand-high-school/)、[CBS新聞](https://www.cbsnews.com/news/thailand-high-school-shooting-dead-injured-nonthaburi/)）美國西雅圖今年稍早也發生[美食節槍擊案並引爆警局究責風暴](/articles/seattle-festival-shooting-bullet-mismatch/)，泰國這起校園槍案同樣把焦點拉回一個老問題：這個國家的槍枝到底有多容易到手。
+泰國暖武里府一所高中8月7日上午發生校園槍擊案，一名14歲少年持祖父合法登記的手槍，先在住家槍殺祖父母，再赴校開火，最終飲彈自盡。綜合CBS新聞與美聯社（經KBTX轉載）8月7日彙整的說法，這起事件共造成8人死亡、30多人受傷、9人命危，是泰國近幾年最嚴重的校園槍擊案之一。（[The Courier](https://www.thecourier.com.au/story/9326003/student-kills-six-in-shooting-at-thailand-high-school/)、[CBS新聞](https://www.cbsnews.com/news/thailand-high-school-shooting-dead-injured-nonthaburi/)）警方8月9日再度對外簡報，證實少年鑽研槍械使用已「1到2年」，電腦裡也查出曾瀏覽暴力社群內容。（[Illawarra Mercury](https://www.illawarramercury.com.au/story/9326822/thai-school-shooter-had-watched-violent-online-content/)）美國西雅圖今年稍早也發生[美食節槍擊案並引爆警局究責風暴](/articles/seattle-festival-shooting-bullet-mismatch/)，泰國這起校園槍案同樣把焦點拉回一個老問題：這個國家的槍枝到底有多容易到手。
 
 ## 事發經過：清晨先殺祖父母，再赴校開火
 
@@ -82,6 +94,17 @@ originalContribution: "本文整合The Courier、CBS新聞、半島電視台、�
 
 美聯社報導指出，這是泰國自2022年北欖坡（Nong Bua Lamphu）幼兒園大屠殺（造成38人死亡）以來最嚴重的集體殺害事件，也是泰國2026年內第二起校園槍擊案。今年2月，泰國南部合艾一所學校也曾發生槍擊，造成1名教師死亡、1名學生受傷。（[The Courier](https://www.thecourier.com.au/story/9326003/student-kills-six-in-shooting-at-thailand-high-school/)）
 
+## 警方最新調查：鑽研槍械逾一年、電腦查出瀏覽暴力內容
+
+案發後兩天，警方對外說明調查進度，讓外界更清楚這名少年的犯案軌跡。第一區警察局副局長阿塔波爾·阿努西特（Atthapol Anusit）8月9日對媒體表示，警方已訪談17名證人，發現少年「對鑽研槍械使用產生興趣已有一段時間，約一到兩年」，且透過社群媒體自學開槍方法；檢查少年的電腦後，也查出他曾瀏覽涉及暴力的社群媒體內容，但目前沒有證據顯示他曾實際進行過射擊練習。（[Illawarra Mercury](https://www.illawarramercury.com.au/story/9326822/thai-school-shooter-had-watched-violent-online-content/)、[The Express Tribune](https://tribune.com.pk/story/2622910/accused-thai-school-shooter-had-watched-violent-content-online-police-say)）
+
+警方也證實，去年曾有教師沒收這名少年攜帶到學校的空氣槍（BB槍）；案發現場除了凶槍與空彈殼，也在他的書包裡搜出刀具。少年與祖父母同住已有12年，起因是父母分居。（[GMA News Online](https://www.gmanetwork.com/news/topstories/world/997921/accused-thai-school-shooter-had-watched-violent-content-online-police-say/story/)、[The Express Tribune](https://tribune.com.pk/story/2622910/accused-thai-school-shooter-had-watched-violent-content-online-police-say)）這些細節補上了原先「課業壓力」說法之外的犯案脈絡，但警方尚未公布正式的心理鑑定結論或起訴進度。
+
+## 更新時間軸
+
+- （更新2026-08-09：警方對外簡報最新調查結果，指少年鑽研槍械已1到2年、電腦查出瀏覽暴力社群內容，去年曾遭教師沒收空氣槍，書包內另搜出刀具）
+- 2026-08-07：暖武里德布西林高中發生校園槍擊案，14歲少年先殺祖父母、再赴校開火後飲彈自盡，8人死亡、30多人受傷
+
 ## 常見問題
 
 ### 泰國暖武里校園槍擊案發生在哪裡、什麼時候？
@@ -91,7 +114,7 @@ originalContribution: "本文整合The Courier、CBS新聞、半島電視台、�
 綜合CBS新聞與美聯社報導，共8人死亡（2名祖父母、5名校內教職員、槍手本人），30多人受傷、約9人傷勢危急；官方通報數字事發後曾數度修正。
 
 ### 槍手為什麼犯案？
-官方目前僅以「課業壓力」概括，總理阿努廷指他與祖父母同住、承受學業壓力，同學則形容他是遭霸凌的學生，正式的調查結論尚未公布。
+總理阿努廷指他與祖父母同住、承受學業壓力，同學則形容他是遭霸凌的學生；警方8月9日補充，少年鑽研槍械使用已1到2年、電腦查出瀏覽暴力社群內容，去年還曾被教師沒收攜帶到校的空氣槍，但正式的心理鑑定與起訴結論尚未公布。
 
 ### 泰國的槍枝管制有多嚴格？
 泰國估計流通1030萬支槍、逾4成未登記，非法持槍最高判10年徒刑，近年已修法要求購槍或換發持槍證須通過醫學評估，但這次凶槍本身是合法登記的槍枝。

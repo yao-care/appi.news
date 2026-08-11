@@ -21,6 +21,7 @@ status: "published"
 sourceType: "wire"
 contentType: "news"
 disclaimerType: "general"
+topics: ["sustainability-policy-tools"]
 disclosure: "本文整理自臺灣證券交易所、證券櫃檯買賣中心公開新聞稿與主流財經媒體報導，制度內容、分級標準與時程以官方原文為準，皆附出處連結。"
 highlights:
   - "臺灣證券交易所與櫃買中心自2026年推動「綠色證券認證制度」，依金管會「綠色及轉型金融行動方案」規劃，適用國內全體上市櫃公司（金融保險業暫不納入）。"
@@ -48,6 +49,8 @@ draft: false
 ---
 
 臺灣證券交易所與證券櫃檯買賣中心（櫃買中心）聯手推動的「綠色證券認證制度」，正進入今年第一次審核倒數。[依臺灣證券交易所新聞稿](https://cgc.twse.com.tw/pressReleases/promoteNewsArticleCh/4588)，這項制度配合金管會「綠色及轉型金融行動方案」規劃，自115年（2026年）正式上路，適用國內全體上市櫃公司，金融保險業暫不納入。兩交易所今年7月間已辦理線上及實體宣導會，[據工商時報報導](https://www.ctee.com.tw/news/20260717701630-430201)，宣導會逐一說明綠色收入認定標準、計算公式與歐盟永續分類規則的適用方式，協助企業提前準備申請。
+
+操作延伸：[綠色證券認證申請資料清單](/articles/green-securities-certification-application-guide/)
 
 ## 一級、二級怎麼分：看綠色收入比率
 

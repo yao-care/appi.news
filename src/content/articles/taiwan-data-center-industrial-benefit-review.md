@@ -45,10 +45,12 @@ references:
     url: "https://www.chinatimes.com/newspapers/20260702000656-260110"
     publisher: "中國時報"
 draft: false
-topics: ["energy-policy"]
+topics: ["energy-policy", "ai-compute-infrastructure"]
 ---
 
 經濟部能源署 7 月 1 日發布新聞稿，[預告修正《能源開發及使用評估準則》第九條附表七](https://www.moeaea.gov.tw/ECW/populace/news/News.aspx?kind=1&menu_id=41&news_id=34504)，將「產業效益評估」正式納入資料中心能源使用說明書的審查範疇。這項修法鎖定能源使用數量達 5MW 以上的超大型與主機代管資料中心，是因應全球 AI 發展帶動用電需求持續攀升，經濟部進一步調整資料中心能源治理規範的最新一步。
+
+設施工具：[AI 機櫃電力密度與驗收清單](/articles/ai-datacenter-power-density-planning-guide/)
 
 ## 5 項產業效益指標
 

@@ -3,6 +3,13 @@ import { weeklyReportBlocks } from './weekly-blocks.mjs';
 
 const sample = {
   period: { start: '2026-06-18', end: '2026-06-24' },
+  sprint: {
+    milestoneDate: '2026-08-16', targetPageViews: 1800, pageViews: 1131,
+    gapPageViews: 669, targetMet: false, sessions: 1019, pvPerSession: 1.11,
+    pvPerSessionTarget: 1.35, topArticleSharePct: 6, concentrationPass: true,
+    middleTrafficPages: { atLeast10Pv: 15, atLeast20Pv: 5 },
+    topics: [{ id: 'qixi-2026', title: '2026七夕與七娘媽指南', members: 1, views: 12, impressions: 953, clicks: 2, position: 7.4 }],
+  },
   articlePerf: {
     topArticles: [
       { path: '/', views: 154, avgEngagementSec: 13 },
@@ -27,6 +34,7 @@ const sample = {
     titleCtrCandidates: [{ query: '髖關節痛', page: 'https://appi.news/articles/post-426/', category: 'uncategorized', impressions: 25, position: 78.4, ctr: 0 }],
   },
   trafficHealth: {
+    pageViews: 1131, pageViewsWoWPct: 151, sessions: 1019, sessionsWoWPct: 174, pvPerSession: 1.11,
     users: 118, usersWoWPct: 157,
     sources: [{ source: '(direct)', users: 69 }, { source: 'google', users: 28 }],
     aiReferrals: [{ source: 'gemini.google.com', users: 2 }],
@@ -42,6 +50,15 @@ describe('weeklyReportBlocks', () => {
     const b = weeklyReportBlocks(sample);
     expect(b[0].type).toBe('header');
     expect(b[0].text.text).toContain('6/18–6/24');
+  });
+
+  it('衝刺看板列出完整週口徑、里程碑缺口、閱讀深度與集中度', () => {
+    const t = allText(weeklyReportBlocks(sample));
+    expect(t).toContain('最近 7 天 PV 1,131 / 1,800（8/16，還差 669）');
+    expect(t).toContain('sessions 1,019・PV/session 1.11（目標 1.35）');
+    expect(t).toContain('腰部頁 ≥10PV 15・≥20PV 5');
+    expect(t).toContain('單篇最高占比 6%（上限 25%，通過）');
+    expect(t).toContain('2026七夕與七娘媽指南：PV 12・曝光 953・點擊 2・排名 7.4');
   });
 
   it('粗體鐵律：任何 section/context 文字裡 closing `*` 後面都不接全形標點或全形空格', () => {
@@ -99,6 +116,10 @@ describe('weeklyReportBlocks', () => {
     expect(allText(weeklyReportBlocks(sample))).toContain('AI 轉介（真人點進站）：gemini.google.com 2');
     const noAi = { ...sample, trafficHealth: { ...sample.trafficHealth, aiReferrals: [] } };
     expect(allText(weeklyReportBlocks(noAi))).toContain('AI 轉介（真人點進站）：無');
+  });
+
+  it('流量健康度固定比較 PV、sessions 與 PV/session', () => {
+    expect(allText(weeklyReportBlocks(sample))).toContain('PV 1,131（+151%）・sessions 1,019（+174%）・PV/session 1.11');
   });
 
   it('缺區塊不炸、仍出 header 與頁尾', () => {

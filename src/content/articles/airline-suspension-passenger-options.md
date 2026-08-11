@@ -19,6 +19,7 @@ status: "published"
 sourceType: "editorial"
 contentType: "guide"
 disclaimerType: "financial"
+topics: ["travel-disruption-rights", "consumer-rights"]
 disclosure: "本文以 AI 輔助起草，經人工查證編輯。"
 highlights:
   - "越竹航空自 2026 年 8 月 1 日起官網主要航線全面顯示無可用航班，機隊從高峰期 44 架縮減到帳面僅剩 3 架、實際只有 1 架空中巴士 A321 持續運營。"
@@ -65,6 +66,8 @@ updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 航空公司無預警停止營運時，直接向航空公司申請退款通常最慢也最不確定，消費者實際可行的優先順序是信用卡爭議款、透過旅行社代訂的契約責任求償，最後才是向主管機關申訴。事前用信用卡付款並保留完整交易憑證，是唯一能提高求償成功率的預防動作。
+
+操作延伸：[停飛退款證據清單](/articles/airline-shutdown-refund-evidence-guide/)
 
 ## 越竹航空為什麼機票變壁紙
 

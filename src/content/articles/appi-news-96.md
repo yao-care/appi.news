@@ -3,9 +3,9 @@ title: "王威鵬醫師專訪：深臀症候群針灸與物理治療整合療法
 slug: appi-news-96
 description: "王威鵬醫師專訪，說明深臀症候群為何常被誤診為坐骨神經痛或腰椎問題，解析針灸、乾針與物理治療如何分階段整合，從止痛走到臀肌功能重建，並提供就診前自我檢查重點。"
 publishDate: 2026-06-21T00:00:00.000Z
-updatedDate: 2026-08-07
+updatedDate: 2026-08-10
 category: health
-topics: ["tcm-acupuncture-pain"]
+topics: ["tcm-acupuncture-pain", "joint-pain"]
 subcategory: tcm-integrative
 tags:
   - "骨骼關節"
@@ -32,11 +32,22 @@ risksAndLimits:
   - "肌肉短縮與過度拉長兩型的判別依賴臨床觸診，非本人可自行準確分辨"
   - "中藥調理與物理治療儀器的實證強度不一，內文未列具體療效數據"
   - "內容以王威鵬醫師個人臨床觀點為主要來源，尚未見獨立研究驗證"
+references:
+  - title: "Deep gluteal syndrome: anatomy, imaging, and management of sciatic nerve entrapments in the subgluteal space"
+    url: "https://pubmed.ncbi.nlm.nih.gov/25820850/"
+    publisher: "Skeletal Radiology"
+    note: "Hernando MF, et al. (2015)，深臀空間解剖、影像與坐骨神經壓迫處置回顧"
+  - title: "Deep gluteal space problems: piriformis syndrome, ischiofemoral impingement and sciatic nerve release"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5267396/"
+    publisher: "Muscles, Ligaments and Tendons Journal"
+    note: "Carro LP, et al. (2016)，梨狀肌症候群與深臀空間問題的鑑別"
 ---
 
 你有沒有遇過這樣的情況：臀部深處隱隱作痛，有時放射到大腿後側，做了好幾次腰部的治療，卻始終沒有顯著改善？這種「找不到原因的臀痛」，很可能不是腰的問題，而是深臀症候群（Deep Gluteal Syndrome）的訊號。
 
 本文彙整王威鵬醫師的臨床診療觀點，說明深臀症候群的辨識關鍵、常見誤解，以及針灸、乾針與物理治療如何形成有效的整合治療策略。
+
+如果痛點在鼠蹊部、髖外側，或還不能確定是關節、腰椎還是臀部軟組織問題，請先從[髖關節痛完整指南](/articles/hip-pain-complete-guide/)的疼痛位置與就醫警訊開始排除；本篇專門處理「深層臀痛、久坐加劇、可能向大腿後側放射」的深臀症候群。
 <img src="https://images.unsplash.com/photo-1618914241652-ff0a094b5a86?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w4ODgwMzN8MHwxfHNlYXJjaHwxfHwlRTklQUIlOTYlRTklOTclOUMlRTclQUYlODB8ZW58MHx8fHwxNzgyMDg1NjIzfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080">
 攝影：Sasun Bughdaryan
 

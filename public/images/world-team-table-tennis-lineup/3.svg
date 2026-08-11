@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="法國男團亞歷克西・勒布倫、費利克斯・勒布倫與西蒙・高茲的三欄陣容卡">
+  <style>
+    text{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+    .card{fill:#F2F7F5;stroke:#1B5E4B;stroke-width:2}
+    .name{fill:#1F2A28;font-size:23px;font-weight:700}
+    .role{fill:#6B7B77;font-size:17px}
+    .tag{fill:#FFFFFF;font-size:16px;font-weight:700}
+    .skin{fill:#E7B995}
+    .hair{fill:#5A4034}
+    .shirt{fill:#1B5E4B}
+  </style>
+
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <rect x="40" y="34" width="880" height="96" rx="18" fill="#1B5E4B"/>
+  <text x="70" y="77" fill="#FFFFFF" font-size="30" font-weight="700">法國男團前三場出賽陣容</text>
+  <text x="70" y="108" fill="#DCEBE6" font-size="16">倫敦 2026 世界桌球團體錦標賽</text>
+  <circle cx="870" cy="82" r="24" fill="#FFFFFF"/>
+  <path d="M870 58 A24 24 0 0 1 870 106 Z" fill="#2E8B6F"/>
+  <path d="M870 58 A24 24 0 0 0 870 106 Z" fill="#1B5E4B"/>
+
+  <g>
+    <rect class="card" x="40" y="158" width="280" height="396" rx="20"/>
+    <rect x="58" y="176" width="92" height="32" rx="16" fill="#C9A227"/>
+    <text class="tag" x="104" y="198" text-anchor="middle">第一場</text>
+    <circle cx="180" cy="296" r="82" fill="#DDECE7"/>
+    <path class="shirt" d="M99 390 Q113 343 180 340 Q247 343 261 390 Z"/>
+    <rect class="skin" x="162" y="323" width="36" height="38" rx="12"/>
+    <ellipse class="skin" cx="180" cy="284" rx="49" ry="58"/>
+    <path class="hair" d="M132 278 Q128 224 178 222 Q233 222 229 280 Q213 257 196 246 Q168 265 132 278 Z"/>
+    <path d="M156 288 Q164 293 171 288 M189 288 Q197 293 204 288 M168 313 Q180 320 192 313" fill="none" stroke="#1F2A28" stroke-width="3" stroke-linecap="round"/>
+    <text class="name" x="180" y="439" text-anchor="middle">亞歷克西・勒布倫</text>
+    <line x1="88" y1="460" x2="272" y2="460" stroke="#B8CEC7"/>
+    <text class="role" x="180" y="493" text-anchor="middle">開局角色</text>
+  </g>
+
+  <g>
+    <rect class="card" x="340" y="158" width="280" height="396" rx="20"/>
+    <rect x="358" y="176" width="92" height="32" rx="16" fill="#2E8B6F"/>
+    <text class="tag" x="404" y="198" text-anchor="middle">第二場</text>
+    <circle cx="480" cy="296" r="82" fill="#DDECE7"/>
+    <path class="shirt" d="M399 390 Q413 343 480 340 Q547 343 561 390 Z"/>
+    <rect class="skin" x="462" y="323" width="36" height="38" rx="12"/>
+    <ellipse class="skin" cx="480" cy="284" rx="47" ry="58"/>
+    <path class="hair" d="M434 274 Q432 226 477 220 Q530 222 528 274 Q507 250 480 245 Q456 251 434 274 Z"/>
+    <circle cx="461" cy="287" r="15" fill="none" stroke="#1F2A28" stroke-width="4"/>
+    <circle cx="499" cy="287" r="15" fill="none" stroke="#1F2A28" stroke-width="4"/>
+    <line x1="476" y1="287" x2="484" y2="287" stroke="#1F2A28" stroke-width="4"/>
+    <path d="M468 314 Q480 320 492 314" fill="none" stroke="#1F2A28" stroke-width="3" stroke-linecap="round"/>
+    <text class="name" x="480" y="439" text-anchor="middle">費利克斯・勒布倫</text>
+    <line x1="388" y1="460" x2="572" y2="460" stroke="#B8CEC7"/>
+    <text class="role" x="480" y="493" text-anchor="middle">中段角色</text>
+  </g>
+
+  <g>
+    <rect class="card" x="640" y="158" width="280" height="396" rx="20"/>
+    <rect x="658" y="176" width="92" height="32" rx="16" fill="#1B5E4B"/>
+    <text class="tag" x="704" y="198" text-anchor="middle">第三場</text>
+    <circle cx="780" cy="296" r="82" fill="#DDECE7"/>
+    <path class="shirt" d="M699 390 Q713 343 780 340 Q847 343 861 390 Z"/>
+    <rect class="skin" x="762" y="323" width="36" height="38" rx="12"/>
+    <ellipse class="skin" cx="780" cy="282" rx="48" ry="58"/>
+    <path class="hair" d="M733 272 Q734 224 780 221 Q827 224 828 272 Q805 245 780 244 Q754 245 733 272 Z"/>
+    <path d="M743 300 Q748 341 780 343 Q812 341 817 300 Q806 327 780 330 Q754 327 743 300 Z" fill="#5A4034"/>
+    <path d="M755 285 Q763 290 770 285 M790 285 Q798 290 805 285 M769 311 Q780 316 791 311" fill="none" stroke="#1F2A28" stroke-width="3" stroke-linecap="round"/>
+    <text class="name" x="780" y="439" text-anchor="middle">西蒙・高茲</text>
+    <line x1="688" y1="460" x2="872" y2="460" stroke="#B8CEC7"/>
+    <text class="role" x="780" y="493" text-anchor="middle">收尾角色</text>
+  </g>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

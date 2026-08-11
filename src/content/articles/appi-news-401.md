@@ -33,6 +33,7 @@ references:
   - title: "Korea JoongAng Daily (2026年7月16日). Bank of Korea raises interest rate to 2.75% and signals more rate hikes as inflation rises"
     url: "https://www.koreajoongangdaily.com/business/bok-signals-further-rate-hikes-after-first-increase-in-three-and-half-years/12777037"
 draft: false
+topics: ["taiwan-macro-economy"]
 ---
 南韓Kospi指數今年一度上漲逾六成，是全球表現最亮眼的主要股市之一，卻同時被彭博（Bloomberg）點名為全球波動度最高的主要基準指數。漲幅與波動雙雙登頂，看似矛盾，實際上是同一個病灶：指數集中度過高。這個病灶並非南韓獨有，台灣投資人的退休金帳戶、保單連結標的與企業主閒置資金，結構上有相當程度的相似之處。
 
@@ -71,6 +72,8 @@ Kospi指數約有八百三十檔成分股，但真正主導指數走勢的只有
 **台灣加權指數的權重結構與Kospi高度相似，台積電單一個股占比逾四成，前五大成分股合計占比超過五成，而退休金、保單連結標的、企業主閒置資金常因熟悉度偏誤重壓相同的產業結構。**
 
 延伸閱讀：[退休金半導體集中度完整指南：南韓出口熱潮下的資產配置對策](/articles/appi-news-490/)
+
+延伸閱讀：[複盤 2025 ETF 市場：AI 超級週期下台灣投資人的配置策略](/articles/2025-etf-ai-supercycle-allocation/)
 
 台灣證券交易所公開的成分股權重顯示，台積電目前占加權指數比重約41.6%，加上聯發科、台達電、鴻海、日月光投控等前五大成分股，合計占比約54%。這個集中程度與Kospi前兩大個股合計逾五成的結構相近，只是台灣的集中對象更單一，幾乎繫於台積電一檔個股與其供應鏈。
 

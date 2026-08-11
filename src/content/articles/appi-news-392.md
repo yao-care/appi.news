@@ -21,6 +21,7 @@ references:
   - title: "Board of Governors of the Federal Reserve System (2026). H.15 Selected Interest Rates (Daily). *Federal Reserve"
     url: "https://www.federalreserve.gov/releases/h15/"
 draft: false
+topics: ["taiwan-macro-economy"]
 ---
 紐西蘭央行在 2026 年 7 月 8 日宣布升息一碼，是三年來首次調升利率。這個動作看似區域性的貨幣政策決定，對正在考慮海外開戶、外幣資產配置的家庭卻是一個訊號：已開發經濟體的通膨壓力並未如市場預期般全面退場，全球利率環境正在走向分歧。這篇文章從紐西蘭央行的決策出發，對照美國聯邦資金利率與公債殖利率數據，說明這對外幣定存、債券配置的幣別與存續期選擇代表什麼，以及退休規劃族群現在該用什麼標準判斷是否需要調整。
 

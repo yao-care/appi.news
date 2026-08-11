@@ -53,6 +53,8 @@ coverImageCredit: "Gippsland Water — CC BY-SA 2.0，引用自 Wikimedia Common
 
 據[The Nightly報導](https://thenightly.com.au/politics/former-victoria-premier-jacinta-allans-allies-harriet-shing-and-lily-dambrosio-to-quit-politics-after-labor-coup-c-22652939)，卡羅爾是在本週稍早艾倫辭職後接任總理，距離11月的州選舉只剩約四個月。辛選擇在卡羅爾宣誓就職後幾個小時、也就是週二下午，就親自與他會面，告知自己的決定。
 
+延伸閱讀：[老闆可以拒絕居家上班嗎？澳洲維多利亞州9月起立法保障每週兩天](/articles/victoria-wfh-law-two-days/)
+
 <img src="/images/victoria-labor-ministers-quit-politics-s1.webp" width="960" height="720" loading="lazy" decoding="async" alt="維州能源部長莉莉．迪安布羅西奧（資料照）">
 
 辛在聲明中表示，她與同僚始終只是這些職位的「受託人」，如今是時候把機會與責任交棒給下一位。她在文中特別感謝了另一半、前總理丹尼爾．安德魯斯（Daniel Andrews）與艾倫，以及卡羅爾與黨團同僚。據[Yahoo News Australia報導](https://au.news.yahoo.com/senior-victorian-mps-quit-parliament-054746060.html)，辛自2014年當選以來，是維州國會史上首位公開同志身分的議員。

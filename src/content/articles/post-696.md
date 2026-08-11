@@ -43,6 +43,7 @@ disclaimerType: "general"
 coverImage: "covers/post-696-stock.jpg"
 coverAlt: "大型廠房建設工地的空中俯瞰"
 coverImageCredit: "Photo by JGC Indonesia on Unsplash"
+topics: ["taiwan-semiconductor-supply-chain"]
 ---
 
 台積電的全球擴張計畫，在2025年進入最密集的執行階段。美國亞利桑那第一廠正式進入量產，日本熊本廠持續出貨，德國德勒斯登廠在2024年9月動工後正穩步推進，目標2027年底開始量產。這三個地點不是偶然選擇，背後各自對應一套地緣政治邏輯，也各自面對不同的技術與成本壓力。

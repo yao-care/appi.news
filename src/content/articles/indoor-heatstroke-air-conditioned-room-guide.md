@@ -23,6 +23,8 @@ topics: ["first-aid-basics"]
 
 延伸閱讀：[冷氣溫度調高多少最省電？開開關關和持續運轉怎麼選一次看懂](/articles/ac-temperature-energy-saving-guide/)
 
+延伸閱讀：[中暑處理第一步：先降溫再送醫，泡冷水是最快的方法](/articles/heat-illness-cooling/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=FdGug_acGUA" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：冷氣房也會中暑? 醫揭「忘記喝水」成關鍵 長者更要當心｜十點不一樣20260806">
     <img src="/images/indoor-heatstroke-air-conditioned-room-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="冷氣房也會中暑? 醫揭「忘記喝水」成關鍵 長者更要當心｜十點不一樣20260806">

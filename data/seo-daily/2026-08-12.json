@@ -1,62 +1,71 @@
 {
-  "date": "2026-08-11",
-  "generatedAt": "2026-08-11T15:41:47.761Z",
+  "date": "2026-08-12",
+  "generatedAt": "2026-08-11T21:20:10.156Z",
   "ga4": {
     "range": "7daysAgo..yesterday",
-    "sessions": 1256,
-    "users": 1147,
-    "views": 1462,
-    "avgDurationSec": 300,
-    "engagedSessions": 665,
-    "taiwanOrganicSessions": 682,
+    "sessions": 1396,
+    "users": 1272,
+    "views": 1619,
+    "avgDurationSec": 511,
+    "engagedSessions": 599,
+    "taiwanOrganicSessions": 752,
     "channels": [
       {
         "channel": "Organic Search",
-        "sessions": 804,
-        "engaged": 537
+        "sessions": 888,
+        "engaged": 482
       },
       {
         "channel": "Direct",
-        "sessions": 380,
-        "engaged": 86
+        "sessions": 410,
+        "engaged": 84
+      },
+      {
+        "channel": "Unassigned",
+        "sessions": 137,
+        "engaged": 0
       },
       {
         "channel": "Referral",
-        "sessions": 44,
-        "engaged": 30
+        "sessions": 50,
+        "engaged": 27
       },
       {
         "channel": "Organic Social",
-        "sessions": 12,
+        "sessions": 11,
         "engaged": 3
       },
       {
         "channel": "AI Assistant",
-        "sessions": 9,
-        "engaged": 8
+        "sessions": 5,
+        "engaged": 3
       },
       {
-        "channel": "Unassigned",
-        "sessions": 6,
+        "channel": "Cross-network",
+        "sessions": 4,
         "engaged": 0
       }
     ],
     "topPages": [
       {
         "path": "/",
-        "views": 167
+        "views": 188
       },
       {
         "path": "/articles/gym-closure-membership-refund-rights/",
-        "views": 92
+        "views": 105
       },
       {
         "path": "/articles/flu-vaccine-2026-public-guide/",
-        "views": 73
+        "views": 80
       },
       {
         "path": "/articles/kumamoto-earthquake-travel-impact/",
-        "views": 39
+        "views": 43
+      },
+      {
+        "path": "/articles/taishin-shinkong-bank-merger-account-guide/",
+        "views": 37
       },
       {
         "path": "/articles/appi-news-491/",
@@ -64,64 +73,60 @@
       },
       {
         "path": "/articles/fengshan-youth-night-market-relocation/",
-        "views": 27
+        "views": 31
+      },
+      {
+        "path": "/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
+        "views": 30
       },
       {
         "path": "/articles/wearable-sleep-tracking-accuracy/",
         "views": 25
       },
       {
-        "path": "/articles/天麻功效與副作用完整解析：5大保健用途、正確吃/",
-        "views": 24
-      },
-      {
-        "path": "/articles/%E5%A4%A9%E9%BA%BB%E5%8A%9F%E6%95%88%E8%88%87%E5%89%AF%E4%BD%9C%E7%94%A8%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90%EF%BC%9A5%E5%A4%A7%E4%BF%9D%E5%81%A5%E7%94%A8%E9%80%94%E3%80%81%E6%AD%A3%E7%A2%BA%E5%90%83/",
-        "views": 21
+        "path": "/articles/mount-fuji-summit-hut-guide/",
+        "views": 22
       },
       {
         "path": "/articles/thailand-nonthaburi-school-shooting-gun-control/",
         "views": 21
       },
       {
+        "path": "/articles/天麻功效與副作用完整解析：5大保健用途、正確吃/",
+        "views": 20
+      },
+      {
+        "path": "/articles/eu-ppwr-packaging-regulation-taiwan-exporters/",
+        "views": 19
+      },
+      {
         "path": "/articles/elderly-health-industry-expo-guide/",
+        "views": 18
+      },
+      {
+        "path": "/articles/%E6%B2%B9%E7%94%98%E6%9E%9C%E5%8A%9F%E6%95%88%E4%B8%80%E6%AC%A1%E7%9C%8B%E6%87%82%EF%BC%9A%E6%8A%97%E6%B0%A7%E5%8C%96%E3%80%81%E9%99%8D%E8%A1%80%E8%84%82%E3%80%81%E8%AD%B7%E8%82%9D%E8%88%87%E6%94%B9/",
         "views": 17
-      },
-      {
-        "path": "/articles/gongguan-mei-jiang-korean-bbq-closing/",
-        "views": 17
-      },
-      {
-        "path": "/articles/mount-fuji-summit-hut-guide/",
-        "views": 16
-      },
-      {
-        "path": "/articles/longtan-snow-ice-shop-guide/",
-        "views": 15
-      },
-      {
-        "path": "/articles/rice-ball-oil-recall-check-guide/",
-        "views": 15
       }
     ],
     "aiReferrals": {
       "range": "28daysAgo..yesterday",
       "total": 20,
-      "engaged": 13,
+      "engaged": 12,
       "sources": [
         {
           "source": "chatgpt.com",
-          "sessions": 8,
+          "sessions": 10,
           "engaged": 6
-        },
-        {
-          "source": "gemini.google.com",
-          "sessions": 6,
-          "engaged": 5
         },
         {
           "source": "perplexity.ai",
           "sessions": 5,
           "engaged": 2
+        },
+        {
+          "source": "gemini.google.com",
+          "sessions": 4,
+          "engaged": 4
         },
         {
           "source": "claude.ai",
@@ -131,13 +136,6 @@
       ]
     },
     "daily": [
-      {
-        "date": "2026-06-16",
-        "sessions": 26,
-        "avgDurationSec": 531,
-        "engaged": 7,
-        "taiwanOrganic": 1
-      },
       {
         "date": "2026-06-17",
         "sessions": 31,
@@ -522,6 +520,13 @@
         "avgDurationSec": 588,
         "engaged": 213,
         "taiwanOrganic": 159
+      },
+      {
+        "date": "2026-08-11",
+        "sessions": 266,
+        "avgDurationSec": 1331,
+        "engaged": 2,
+        "taiwanOrganic": 147
       }
     ]
   },
@@ -2993,35 +2998,40 @@
         "submitted": 66,
         "errors": "0",
         "warnings": "0",
-        "lastDownloaded": "2026-08-10T21:20:16.217Z"
+        "lastDownloaded": "2026-08-11T17:55:17.169Z",
+        "resubmit": "已重送（網址數 66→34）"
       },
       {
         "path": "https://en.appi.news/news-sitemap.xml",
         "submitted": 10,
         "errors": "0",
         "warnings": "0",
-        "lastDownloaded": "2026-08-10T21:20:14.945Z"
+        "lastDownloaded": "2026-08-10T21:20:14.945Z",
+        "resubmit": "已重送（網址數 10→5）"
       },
       {
         "path": "https://in.appi.news/news-sitemap.xml",
         "submitted": 10,
         "errors": "0",
         "warnings": "0",
-        "lastDownloaded": "2026-08-10T21:20:14.541Z"
+        "lastDownloaded": "2026-08-10T21:20:14.541Z",
+        "resubmit": "已重送（網址數 10→5）"
       },
       {
         "path": "https://jp.appi.news/news-sitemap.xml",
         "submitted": 12,
         "errors": "0",
         "warnings": "0",
-        "lastDownloaded": "2026-08-10T21:20:13.315Z"
+        "lastDownloaded": "2026-08-10T21:20:13.315Z",
+        "resubmit": "已重送（網址數 12→6）"
       },
       {
         "path": "https://appi.news/sitemap-index.xml",
         "submitted": 1217,
         "errors": "0",
         "warnings": "0",
-        "lastDownloaded": "2026-08-10T21:20:12.909Z"
+        "lastDownloaded": "2026-08-10T21:20:12.909Z",
+        "resubmit": "已重送（網址數 1217→1236、lastmod 2026-08-11T18:55:36.372Z 晚於 lastDownloaded 2026-08-10T21:20:12.909Z）"
       },
       {
         "path": "https://kid.appi.news/sitemap-index.xml",
@@ -3035,7 +3045,8 @@
         "submitted": 4,
         "errors": "0",
         "warnings": "0",
-        "lastDownloaded": "2026-08-11T06:59:44.510Z"
+        "lastDownloaded": "2026-08-11T06:59:44.510Z",
+        "resubmit": "已重送（網址數 4→3）"
       },
       {
         "path": "https://jp.appi.news/sitemap-index.xml",
@@ -3068,7 +3079,7 @@
       {
         "url": "https://appi.news/focus/",
         "coverageState": "Submitted and indexed",
-        "lastCrawlTime": "2026-07-25T14:14:11Z"
+        "lastCrawlTime": "2026-08-11T20:44:33Z"
       },
       {
         "url": "https://appi.news/international/",
@@ -3118,7 +3129,7 @@
       {
         "url": "https://appi.news/articles/kumamoto-earthquake-travel-impact/",
         "coverageState": "Submitted and indexed",
-        "lastCrawlTime": "2026-08-06T13:28:32Z",
+        "lastCrawlTime": "2026-08-11T16:35:42Z",
         "auto": true
       },
       {
@@ -3178,7 +3189,7 @@
       {
         "url": "https://appi.news/articles/qixi-2026-guide/",
         "coverageState": "Submitted and indexed",
-        "lastCrawlTime": "2026-07-31T06:23:58Z",
+        "lastCrawlTime": "2026-08-11T18:19:21Z",
         "auto": true
       },
       {

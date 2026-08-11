@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="輝達5000億美元融資的資金流向：退休基金、保單準備金與私募信貸出資，經六大金融機構與輝達合組的運算融資平台，撥款給AI資料中心採購GPU；若晶片使用率下滑或抵押品貶值，虧損沿原路回流出資方">
+<style>
+text{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;}
+.title{font-size:26px;font-weight:700;fill:#1e2030;}
+.deck{font-size:15px;fill:#6e7276;}
+.badge{font-size:16px;font-weight:700;fill:#ffffff;}
+.stage{font-size:19px;font-weight:700;fill:#1e2030;}
+.item{font-size:14px;fill:#1e2030;}
+.arrowlabel{font-size:14px;font-weight:700;fill:#a87515;}
+.risklabel{font-size:13.5px;fill:#a12a2a;}
+.foot{font-size:13px;fill:#6e7276;}
+</style>
+<rect width="960" height="600" fill="#ffffff"/>
+
+<!-- 標題列 -->
+<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="58" y="60" class="title">這筆5000億美元怎麼流動</text>
+<text x="58" y="90" class="deck">從退休金與保單準備金出發，經融資平台撥給資料中心；風險沿原路回流</text>
+
+<!-- 三個階段方塊 -->
+<rect x="40" y="140" width="255" height="300" rx="12" fill="#f4f4f4" stroke="#1f3a5f" stroke-width="2"/>
+<rect x="352" y="140" width="255" height="300" rx="12" fill="#eaf0f8" stroke="#1f3a5f" stroke-width="2"/>
+<rect x="378" y="140" width="203" height="3" rx="1.5" fill="#a87515"/>
+<rect x="664" y="140" width="255" height="300" rx="12" fill="#f4f4f4" stroke="#1f3a5f" stroke-width="2"/>
+
+<!-- 階段一：出資方 -->
+<rect x="70" y="164" width="100" height="30" rx="15" fill="#1f3a5f"/>
+<text x="120" y="184" text-anchor="middle" class="badge">出資方</text>
+<text x="167" y="232" text-anchor="middle" class="stage">機構資本</text>
+<text x="167" y="272" text-anchor="middle" class="item">壽險保單準備金</text>
+<text x="167" y="298" text-anchor="middle" class="item">退休基金／年金帳戶</text>
+<text x="167" y="324" text-anchor="middle" class="item">私募信貸基金</text>
+<text x="167" y="350" text-anchor="middle" class="item">（機構信貸為主要工具）</text>
+<text x="167" y="400" text-anchor="middle" class="item">追求長期穩定收益</text>
+<text x="167" y="422" text-anchor="middle" class="item">承作AI基礎建設放款</text>
+
+<!-- 階段二：融資平台 -->
+<rect x="382" y="164" width="140" height="30" rx="15" fill="#1f3a5f"/>
+<text x="452" y="184" text-anchor="middle" class="badge">運算融資平台</text>
+<text x="479" y="232" text-anchor="middle" class="stage">輝達＋六大機構</text>
+<text x="479" y="272" text-anchor="middle" class="item">Apollo・BlackRock・Blackstone</text>
+<text x="479" y="298" text-anchor="middle" class="item">Brookfield・Goldman Sachs・KKR</text>
+<text x="479" y="332" text-anchor="middle" class="stage" fill="#a87515">目標逾5000億美元</text>
+<text x="479" y="368" text-anchor="middle" class="item">GPU與資料中心作抵押品</text>
+<text x="479" y="394" text-anchor="middle" class="item">比照商用不動產、收費公路</text>
+<text x="479" y="420" text-anchor="middle" class="item">等基礎建設放款模式估價</text>
+
+<!-- 階段三：用途 -->
+<rect x="694" y="164" width="120" height="30" rx="15" fill="#1f3a5f"/>
+<text x="754" y="184" text-anchor="middle" class="badge">資金用途</text>
+<text x="791" y="232" text-anchor="middle" class="stage">AI資料中心</text>
+<text x="791" y="272" text-anchor="middle" class="item">前沿AI實驗室</text>
+<text x="791" y="298" text-anchor="middle" class="item">雲端服務業者</text>
+<text x="791" y="324" text-anchor="middle" class="item">企業與政府客戶</text>
+<text x="791" y="360" text-anchor="middle" class="item">借款採購輝達GPU</text>
+<text x="791" y="386" text-anchor="middle" class="item">不必全靠自有</text>
+<text x="791" y="408" text-anchor="middle" class="item">資產負債表出資</text>
+
+<!-- 正向箭頭 -->
+<line x1="297" y1="230" x2="348" y2="230" stroke="#a87515" stroke-width="4" stroke-linecap="round"/>
+<polygon points="348,230 336,224 336,236" fill="#a87515"/>
+<text x="322" y="216" text-anchor="middle" class="arrowlabel">出資</text>
+
+<line x1="609" y1="230" x2="660" y2="230" stroke="#a87515" stroke-width="4" stroke-linecap="round"/>
+<polygon points="660,230 648,224 648,236" fill="#a87515"/>
+<text x="634" y="216" text-anchor="middle" class="arrowlabel">撥款</text>
+
+<!-- 風險回流箭頭（底部反向） -->
+<line x1="660" y1="470" x2="609" y2="470" stroke="#a12a2a" stroke-width="3" stroke-linecap="round"/>
+<polygon points="609,470 621,464 621,476" fill="#a12a2a"/>
+<line x1="348" y1="470" x2="297" y2="470" stroke="#a12a2a" stroke-width="3" stroke-linecap="round"/>
+<polygon points="297,470 309,464 309,476" fill="#a12a2a"/>
+<line x1="609" y1="470" x2="348" y2="470" stroke="#a12a2a" stroke-width="3"/>
+<text x="479" y="494" text-anchor="middle" class="risklabel">使用率下滑或晶片抵押品貶值時，虧損沿原路回流出資方</text>
+
+<!-- 頁尾 -->
+<line x1="40" y1="526" x2="920" y2="526" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="556" class="foot">製圖：APPI News</text>
+<text x="920" y="556" text-anchor="end" class="foot">資料時點：2026年8月・NVIDIA Newsroom、鉅亨網公開報導</text>
+</svg>

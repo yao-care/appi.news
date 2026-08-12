@@ -125,6 +125,10 @@ function gate(wrote) {
     const toneGate = spawnSync('node', ['scripts/check-content.mjs', file], { encoding: 'utf8' });
     if (toneGate.status !== 0) { drop(`去 AI 腔硬 tell\n${toneGate.stdout || toneGate.stderr || ''}`); continue; }
 
+    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻）。為什麼＝docs/lessons/discover-image-and-meta-signals.md。
+    const coverGate = spawnSync('node', ['scripts/check-cover-spec.mjs', file], { encoding: 'utf8' });
+    if (coverGate.status !== 0) { drop(`封面不符 Discover 規格\n${coverGate.stdout || coverGate.stderr || ''}`); continue; }
+
     kept.push(v);
   }
   return kept;

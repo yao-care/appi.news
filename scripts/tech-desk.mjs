@@ -201,6 +201,13 @@ function main() {
       if (existsSync(file)) rmSync(file);
       continue;
     }
+    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻）。為什麼＝docs/lessons/discover-image-and-meta-signals.md。
+    const coverGate = spawnSync('node', ['scripts/check-cover-spec.mjs', file], { encoding: 'utf8' });
+    if (coverGate.status !== 0) {
+      console.log(`  ⚠️ 剔除 ${v.slug}：封面不符 Discover 規格\n${coverGate.stdout || coverGate.stderr || ''}`);
+      if (existsSync(file)) rmSync(file);
+      continue;
+    }
     kept.push(v);
   }
   if (kept.length === 0) { console.log('\n✓ 本批全部被關卡剔除，無發佈。'); return; }

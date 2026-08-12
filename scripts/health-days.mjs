@@ -304,6 +304,14 @@ async function main() {
       continue;
     }
 
+    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻）。為什麼＝docs/lessons/discover-image-and-meta-signals.md。
+    const coverGate = spawnSync('node', ['scripts/check-cover-spec.mjs', file], { encoding: 'utf8' });
+    if (coverGate.status !== 0) {
+      console.log(`  ⚠️ 剔除 ${w.slug}：封面不符 Discover 規格\n${coverGate.stdout || coverGate.stderr || ''}`);
+      rmSync(file);
+      continue;
+    }
+
     // 跨年撞圖：只警告不剔除（文章是好的，換張圖就好；排程稿還有兩天可人工處理）。
     const clash = await priorYearCoverClash(w.entry, Number(w.date.slice(0, 4)));
     if (clash) {

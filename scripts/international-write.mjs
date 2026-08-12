@@ -361,6 +361,15 @@ async function main() {
       wrote = wrote.filter((w) => w !== x);
       continue;
     }
+    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻）：embed 直式原圖曾從這條線連漏六週。
+    // 為什麼＝docs/lessons/discover-image-and-meta-signals.md（2026-08-11 追記）。
+    const _cover = spawnSync('node', ['scripts/check-cover-spec.mjs', join(ARTICLES_DIR, `${x.slug}.md`)], { encoding: 'utf8' });
+    if (_cover.status !== 0) {
+      console.log(`  ⚠️ 剔除 ${x.slug}：封面不符 Discover 規格，不發這篇、不拖垮整批\n${_cover.stdout || _cover.stderr || ''}`);
+      dropArticle(x.slug, x.action);
+      wrote = wrote.filter((w) => w !== x);
+      continue;
+    }
   }
   if (!produced || wrote.length === 0) {
     console.log(`\n✓ 本批無有效產出（全部跳過/無進展，或缺圖被剔除）。`);

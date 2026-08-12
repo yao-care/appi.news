@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">蘇柏陵三項長距離自由式金牌成績</title>
+  <desc id="desc">三張並列資訊卡列出蘇柏陵在400、800與1500公尺自由式奪金並破大會紀錄的成績。</desc>
+  <style>
+    text{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+    .card{fill:#F2F7F5;stroke:#1B5E4B;stroke-width:3}
+    .distance{fill:#1B5E4B;font-size:28px;font-weight:700;text-anchor:middle}
+    .event{fill:#2E8B6F;font-size:18px;font-weight:600;text-anchor:middle}
+    .time{fill:#1F2A28;font-size:38px;font-weight:700;text-anchor:middle}
+    .record{fill:#1B5E4B;font-size:16px;font-weight:700;text-anchor:middle}
+    .wave{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-linecap:round}
+  </style>
+
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <rect x="40" y="34" width="880" height="118" rx="20" fill="#1B5E4B"/>
+  <text x="480" y="82" fill="#FFFFFF" font-size="30" font-weight="700" text-anchor="middle">蘇柏陵｜長距離自由式三金</text>
+  <text x="480" y="121" fill="#DDECE7" font-size="18" text-anchor="middle">2026 全國中等學校運動會</text>
+
+  <rect class="card" x="40" y="180" width="280" height="330" rx="22"/>
+  <circle cx="180" cy="246" r="42" fill="#2E8B6F"/>
+  <path class="wave" d="M153 241 Q166 231 180 241 T207 241"/>
+  <path class="wave" d="M153 255 Q166 245 180 255 T207 255"/>
+  <text class="distance" x="180" y="320">400 公尺</text>
+  <text class="event" x="180" y="351">自由式｜金牌</text>
+  <line x1="82" y1="376" x2="278" y2="376" stroke="#C9A227" stroke-width="3"/>
+  <text class="time" x="180" y="427">3:58.51</text>
+  <rect x="101" y="454" width="158" height="36" rx="18" fill="#C9A227"/>
+  <text class="record" x="180" y="478">締造大會紀錄</text>
+
+  <rect class="card" x="340" y="180" width="280" height="330" rx="22"/>
+  <circle cx="480" cy="246" r="42" fill="#2E8B6F"/>
+  <path class="wave" d="M450 236 Q460 226 470 236 T490 236 T510 236"/>
+  <path class="wave" d="M450 250 Q460 240 470 250 T490 250 T510 250"/>
+  <path class="wave" d="M450 264 Q460 254 470 264 T490 264 T510 264"/>
+  <text class="distance" x="480" y="320">800 公尺</text>
+  <text class="event" x="480" y="351">自由式｜金牌</text>
+  <line x1="382" y1="376" x2="578" y2="376" stroke="#C9A227" stroke-width="3"/>
+  <text class="time" x="480" y="427">8:13.80</text>
+  <rect x="401" y="454" width="158" height="36" rx="18" fill="#C9A227"/>
+  <text class="record" x="480" y="478">締造大會紀錄</text>
+
+  <rect class="card" x="640" y="180" width="280" height="330" rx="22"/>
+  <circle cx="780" cy="246" r="42" fill="#2E8B6F"/>
+  <path class="wave" d="M747 234 Q755 224 763 234 T779 234 T795 234 T813 234"/>
+  <path class="wave" d="M747 246 Q755 236 763 246 T779 246 T795 246 T813 246"/>
+  <path class="wave" d="M747 258 Q755 248 763 258 T779 258 T795 258 T813 258"/>
+  <text class="distance" x="780" y="320">1500 公尺</text>
+  <text class="event" x="780" y="351">自由式｜金牌</text>
+  <line x1="682" y1="376" x2="878" y2="376" stroke="#C9A227" stroke-width="3"/>
+  <text class="time" x="780" y="427">15:45.75</text>
+  <rect x="701" y="454" width="158" height="36" rx="18" fill="#C9A227"/>
+  <text class="record" x="780" y="478">締造大會紀錄</text>
+
+  <rect x="40" y="536" width="880" height="38" rx="19" fill="#F2F7F5"/>
+  <circle cx="315" cy="555" r="6" fill="#C9A227"/>
+  <text x="480" y="562" fill="#6B7B77" font-size="17" font-weight="600" text-anchor="middle">三項並列奪金｜每項皆刷新大會紀錄</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

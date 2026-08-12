@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">早療服務量能的四個互補面向</title>
+  <desc id="desc">四個並列圖卡分別以時鐘、台灣地圖、評估勾選單與家庭支持圖示呈現早療服務量能指標。</desc>
+  <style>
+    .card{fill:#F2F7F5;stroke:#1B5E4B;stroke-width:3}
+    .main{fill:none;stroke:#1B5E4B;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+    .sub{fill:none;stroke:#2E8B6F;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+    .accent{fill:#C9A227;stroke:#1B5E4B;stroke-width:3}
+    .label{fill:#1F2A28;font:700 24px sans-serif;text-anchor:middle}
+    .note{fill:#6B7B77;font:500 17px sans-serif;text-anchor:middle}
+  </style>
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="62" fill="#1B5E4B" font-family="sans-serif" font-size="34" font-weight="700" text-anchor="middle">早療服務量能的四個互補面向</text>
+  <line x1="324" y1="80" x2="636" y2="80" stroke="#C9A227" stroke-width="5" stroke-linecap="round"/>
+
+  <rect class="card" x="35" y="115" width="210" height="410" rx="22"/>
+  <text class="label" x="140" y="165">等候時間</text>
+  <rect class="main" x="78" y="202" width="124" height="105" rx="10"/>
+  <line class="main" x1="79" y1="234" x2="201" y2="234"/>
+  <line class="sub" x1="105" y1="190" x2="105" y2="215"/>
+  <line class="sub" x1="175" y1="190" x2="175" y2="215"/>
+  <circle class="accent" cx="140" cy="354" r="48"/>
+  <line class="main" x1="140" y1="354" x2="140" y2="325"/>
+  <line class="main" x1="140" y1="354" x2="166" y2="369"/>
+  <text class="note" x="140" y="457">從提出需求到獲得服務</text>
+
+  <rect class="card" x="265" y="115" width="210" height="410" rx="22"/>
+  <text class="label" x="370" y="165">地理可近性</text>
+  <path class="main" d="M389 194 C412 218 403 247 418 269 C430 289 409 311 401 334 C392 360 380 390 357 424 C344 443 328 431 334 408 C342 378 339 354 350 329 C361 303 356 278 367 252 C376 230 371 207 389 194 Z"/>
+  <circle class="accent" cx="382" cy="245" r="8"/>
+  <circle class="accent" cx="368" cy="329" r="8"/>
+  <circle class="accent" cx="347" cy="407" r="8"/>
+  <path class="sub" d="M382 253 C396 275 384 301 368 321 M366 337 C361 361 352 382 347 399"/>
+  <text class="note" x="370" y="457">服務據點與往返便利性</text>
+
+  <rect class="card" x="495" y="115" width="210" height="410" rx="22"/>
+  <text class="label" x="600" y="165">完成評估</text>
+  <path class="main" d="M540 222 H579 L593 205 H660 V420 H540 Z"/>
+  <line class="sub" x1="565" y1="277" x2="635" y2="277"/>
+  <line class="sub" x1="565" y1="315" x2="635" y2="315"/>
+  <line class="sub" x1="565" y1="353" x2="606" y2="353"/>
+  <circle class="accent" cx="622" cy="365" r="31"/>
+  <path class="main" d="M608 365 L619 376 L638 352"/>
+  <text class="note" x="600" y="457">需求確認與評估完成度</text>
+
+  <rect class="card" x="725" y="115" width="200" height="410" rx="22"/>
+  <text class="label" x="825" y="165">家庭支持延續</text>
+  <circle class="accent" cx="787" cy="245" r="21"/>
+  <circle class="accent" cx="835" cy="235" r="25"/>
+  <circle class="accent" cx="876" cy="249" r="18"/>
+  <path class="main" d="M757 326 C760 286 812 282 817 326 M803 326 C808 276 868 276 873 326 M854 326 C858 291 899 291 902 326"/>
+  <circle cx="825" cy="382" r="25" fill="#2E8B6F" stroke="#1B5E4B" stroke-width="3"/>
+  <path class="main" d="M790 330 L813 366 M860 330 L837 366"/>
+  <line class="sub" x1="778" y1="430" x2="872" y2="430"/>
+  <circle cx="787" cy="430" r="8" fill="#C9A227"/>
+  <circle cx="825" cy="430" r="8" fill="#C9A227"/>
+  <circle cx="863" cy="430" r="8" fill="#C9A227"/>
+  <text class="note" x="825" y="480">家庭與個案協調持續連結</text>
+
+  <text x="480" y="565" fill="#6B7B77" font-family="sans-serif" font-size="18" text-anchor="middle">四個面向並重，呈現整體服務承接能力</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

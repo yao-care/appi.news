@@ -1,0 +1,80 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">專款帳戶與家庭照護信託比較</title>
+  <desc id="desc">專款帳戶與家庭照護信託以雙欄方式比較資金控制、契約給付、費用、彈性及法律效果。</desc>
+  <style>
+    text { font-family: Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif; fill: #1F1F1F; }
+    .title { font-size: 30px; font-weight: 700; fill: #003A93; }
+    .subtitle { font-size: 15px; fill: #6B7280; }
+    .head { font-size: 22px; font-weight: 700; fill: #FFFFFF; }
+    .tag { font-size: 14px; font-weight: 700; fill: #3D6BB5; }
+    .body { font-size: 16px; font-weight: 600; }
+    .small { font-size: 14px; fill: #6B7280; }
+    .accent { fill: #D1482A; font-weight: 700; }
+    .num { font-size: 13px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+  </style>
+
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="43" class="title" text-anchor="middle">專款帳戶 vs. 家庭照護信託</text>
+  <text x="480" y="70" class="subtitle" text-anchor="middle">五個面向，快速理解資金安排的差異</text>
+
+  <rect x="45" y="96" width="425" height="428" rx="12" fill="#FFFFFF" stroke="#003A93" stroke-width="2"/>
+  <rect x="490" y="96" width="425" height="428" rx="12" fill="#FFFFFF" stroke="#003A93" stroke-width="2"/>
+  <path d="M45 108Q45 96 57 96H458Q470 96 470 108V158H45Z" fill="#003A93"/>
+  <path d="M490 108Q490 96 502 96H903Q915 96 915 108V158H490Z" fill="#3D6BB5"/>
+  <circle cx="82" cy="127" r="17" fill="#FFFFFF"/>
+  <path d="M70 123H94M73 123V136M82 123V136M91 123V136M68 137H96M70 118L82 112L94 118Z" fill="none" stroke="#003A93" stroke-width="2"/>
+  <text x="112" y="135" class="head">專款帳戶</text>
+  <circle cx="527" cy="127" r="17" fill="#FFFFFF"/>
+  <path d="M527 112L539 117V126C539 134 534 139 527 142C520 139 515 134 515 126V117Z" fill="none" stroke="#3D6BB5" stroke-width="2"/>
+  <text x="557" y="135" class="head">家庭照護信託</text>
+
+  <rect x="46" y="159" width="423" height="72" fill="#F4F4F4"/>
+  <rect x="491" y="159" width="423" height="72" fill="#F4F4F4"/>
+  <circle cx="72" cy="195" r="13" fill="#003A93"/><text x="72" y="200" class="num">1</text>
+  <text x="94" y="185" class="tag">資金控制</text>
+  <text x="94" y="210" class="body">本人管理；<tspan class="accent">仍可自行轉出</tspan></text>
+  <circle cx="517" cy="195" r="13" fill="#3D6BB5"/><text x="517" y="200" class="num">1</text>
+  <text x="539" y="185" class="tag">資金控制</text>
+  <text x="539" y="210" class="body">由受託人依約管理</text>
+
+  <line x1="45" y1="231" x2="470" y2="231" stroke="#D1D5DB"/>
+  <line x1="490" y1="231" x2="915" y2="231" stroke="#D1D5DB"/>
+  <circle cx="72" cy="267" r="13" fill="#003A93"/><text x="72" y="272" class="num">2</text>
+  <text x="94" y="257" class="tag">契約給付</text>
+  <text x="94" y="282" class="body">自行安排，非信託契約給付</text>
+  <circle cx="517" cy="267" r="13" fill="#3D6BB5"/><text x="517" y="272" class="num">2</text>
+  <text x="539" y="257" class="tag">契約給付</text>
+  <text x="539" y="282" class="body">依信託契約約定給付</text>
+
+  <rect x="46" y="303" width="423" height="72" fill="#F4F4F4"/>
+  <rect x="491" y="303" width="423" height="72" fill="#F4F4F4"/>
+  <circle cx="72" cy="339" r="13" fill="#003A93"/><text x="72" y="344" class="num">3</text>
+  <text x="94" y="329" class="tag">設立與管理費用</text>
+  <text x="94" y="354" class="body">依銀行帳戶方案計費</text>
+  <circle cx="517" cy="339" r="13" fill="#3D6BB5"/><text x="517" y="344" class="num">3</text>
+  <text x="539" y="329" class="tag">設立與管理費用</text>
+  <text x="539" y="354" class="body accent">可能有費用與服務門檻</text>
+
+  <line x1="45" y1="375" x2="470" y2="375" stroke="#D1D5DB"/>
+  <line x1="490" y1="375" x2="915" y2="375" stroke="#D1D5DB"/>
+  <circle cx="72" cy="411" r="13" fill="#003A93"/><text x="72" y="416" class="num">4</text>
+  <text x="94" y="401" class="tag">調整彈性</text>
+  <text x="94" y="426" class="body">安排調整較具彈性</text>
+  <circle cx="517" cy="411" r="13" fill="#3D6BB5"/><text x="517" y="416" class="num">4</text>
+  <text x="539" y="401" class="tag">調整彈性</text>
+  <text x="539" y="426" class="body">變更受契約與程序限制</text>
+
+  <rect x="46" y="447" width="423" height="76" fill="#F4F4F4"/>
+  <rect x="491" y="447" width="423" height="76" fill="#F4F4F4"/>
+  <circle cx="72" cy="483" r="13" fill="#003A93"/><text x="72" y="488" class="num">5</text>
+  <text x="94" y="473" class="tag">資產法律地位</text>
+  <text x="94" y="498" class="body">仍屬帳戶持有人財產</text>
+  <circle cx="517" cy="483" r="13" fill="#3D6BB5"/><text x="517" y="488" class="num">5</text>
+  <text x="539" y="473" class="tag">資產法律地位</text>
+  <text x="539" y="498" class="body">具信託財產獨立性</text>
+
+  <rect x="45" y="544" width="870" height="36" rx="8" fill="#FFF1ED" stroke="#D1482A"/>
+  <circle cx="68" cy="562" r="10" fill="#D1482A"/>
+  <text x="68" y="567" class="num">!</text>
+  <text x="88" y="567" class="small">兩者皆不保證已轉出款項可追回；選擇前請確認契約、費用與實際法律效果。</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>

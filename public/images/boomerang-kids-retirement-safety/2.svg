@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">成年子女搬回家後的三類財務支援</title>
+  <desc id="desc">三張並列卡片分別呈現日常家用、債務或租金代墊，以及購屋頭期款等大額金援。</desc>
+  <style>
+    text { font-family: Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif; }
+    .card { fill: #F4F4F4; stroke: #003A93; stroke-width: 2; }
+    .heading { fill: #003A93; font-size: 25px; font-weight: 700; }
+    .body { fill: #1F1F1F; font-size: 19px; }
+    .note { fill: #6B7280; font-size: 16px; }
+    .tag { fill: #FFFFFF; font-size: 16px; font-weight: 700; }
+    .icon { fill: none; stroke: #003A93; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <rect x="48" y="42" width="10" height="72" rx="5" fill="#D1482A"/>
+  <text x="78" y="72" fill="#003A93" font-size="32" font-weight="700">成年子女搬回家後</text>
+  <text x="78" y="108" fill="#1F1F1F" font-size="25">家庭常見的三類財務支援</text>
+  <line x1="48" y1="140" x2="912" y2="140" stroke="#3D6BB5" stroke-width="2"/>
+
+  <g aria-label="日常家用，每月持續支出">
+    <rect class="card" x="48" y="170" width="272" height="360" rx="18"/>
+    <rect x="72" y="194" width="88" height="32" rx="16" fill="#003A93"/>
+    <text class="tag" x="116" y="216" text-anchor="middle">每月</text>
+    <circle cx="184" cy="286" r="50" fill="#FFFFFF"/>
+    <path class="icon" d="M154 276h60l-7 33h-46z"/>
+    <path class="icon" d="M162 276l9-19m34 19-9-19"/>
+    <circle cx="171" cy="319" r="4" fill="#D1482A" stroke="none"/>
+    <circle cx="198" cy="319" r="4" fill="#D1482A" stroke="none"/>
+    <text class="heading" x="184" y="374" text-anchor="middle">日常家用</text>
+    <text class="body" x="184" y="414" text-anchor="middle">食材採買</text>
+    <text class="body" x="184" y="446" text-anchor="middle">水電與生活費</text>
+    <text class="note" x="184" y="493" text-anchor="middle">持續分擔家庭開銷</text>
+  </g>
+
+  <g aria-label="臨時代墊，不定期支出">
+    <rect class="card" x="344" y="170" width="272" height="360" rx="18"/>
+    <rect x="368" y="194" width="88" height="32" rx="16" fill="#3D6BB5"/>
+    <text class="tag" x="412" y="216" text-anchor="middle">不定期</text>
+    <circle cx="480" cy="286" r="50" fill="#FFFFFF"/>
+    <rect class="icon" x="448" y="262" width="64" height="48" rx="8"/>
+    <path class="icon" d="M448 274h64"/>
+    <circle cx="499" cy="292" r="5" fill="#D1482A" stroke="none"/>
+    <text class="heading" x="480" y="374" text-anchor="middle">臨時代墊</text>
+    <text class="body" x="480" y="414" text-anchor="middle">債務或租金</text>
+    <text class="body" x="480" y="446" text-anchor="middle">緊急費用</text>
+    <text class="note" x="480" y="493" text-anchor="middle">因需要提供短期協助</text>
+  </g>
+
+  <g aria-label="大額金援，一次性支出">
+    <rect class="card" x="640" y="170" width="272" height="360" rx="18"/>
+    <rect x="664" y="194" width="88" height="32" rx="16" fill="#D1482A"/>
+    <text class="tag" x="708" y="216" text-anchor="middle">一次性</text>
+    <circle cx="776" cy="286" r="50" fill="#FFFFFF"/>
+    <path class="icon" d="M740 282l36-29 36 29"/>
+    <path class="icon" d="M748 278v34h56v-34"/>
+    <rect x="768" y="290" width="16" height="22" fill="#D1482A"/>
+    <text class="heading" x="776" y="374" text-anchor="middle">大額金援</text>
+    <text class="body" x="776" y="414" text-anchor="middle">購屋頭期款</text>
+    <text class="body" x="776" y="446" text-anchor="middle">重大單筆支出</text>
+    <text class="note" x="776" y="493" text-anchor="middle">集中提供一筆資金</text>
+  </g>
+
+  <text x="480" y="570" text-anchor="middle" fill="#6B7280" font-size="16">支援方式不同，對家庭財務的影響也不同</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>

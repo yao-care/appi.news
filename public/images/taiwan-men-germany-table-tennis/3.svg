@@ -1,0 +1,79 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">台灣男子桌球代表隊五人名單</title>
+  <desc id="desc">林昀儒、馮翊新與郭冠宏為德國戰取分者；徐絃家與洪敬愷為德國戰未上場選手。</desc>
+  <style>
+    text{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+    .name{font-size:24px;font-weight:700;fill:#1F2A28;text-anchor:middle}
+    .tag{font-size:15px;font-weight:700;text-anchor:middle}
+    .note{font-size:13px;fill:#6B7B77;text-anchor:middle}
+    .head{fill:#2E8B6F}
+    .body{fill:#1B5E4B}
+  </style>
+
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <rect x="40" y="34" width="8" height="78" rx="4" fill="#C9A227"/>
+  <text x="68" y="68" font-size="30" font-weight="800" fill="#1B5E4B">台灣男子桌球代表隊</text>
+  <text x="68" y="100" font-size="17" fill="#6B7B77">德國戰五人名單與出賽角色</text>
+  <line x1="40" y1="130" x2="920" y2="130" stroke="#1B5E4B" stroke-width="2"/>
+
+  <rect x="40" y="154" width="520" height="42" rx="10" fill="#1B5E4B"/>
+  <circle cx="62" cy="175" r="6" fill="#C9A227"/>
+  <text x="78" y="182" font-size="18" font-weight="700" fill="#FFFFFF">德國戰取分者</text>
+  <rect x="574" y="154" width="346" height="42" rx="10" fill="#F2F7F5" stroke="#2E8B6F"/>
+  <text x="594" y="182" font-size="18" font-weight="700" fill="#1B5E4B">德國戰未上場</text>
+
+  <g transform="translate(40 214)">
+    <rect width="168" height="314" rx="14" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+    <rect width="168" height="12" rx="6" fill="#C9A227"/>
+    <circle cx="84" cy="83" r="34" class="head"/>
+    <path d="M35 166 Q42 119 84 119 Q126 119 133 166 Z" class="body"/>
+    <text x="84" y="213" class="name">林昀儒</text>
+    <rect x="28" y="238" width="112" height="30" rx="15" fill="#1B5E4B"/>
+    <text x="84" y="259" class="tag" fill="#FFFFFF">取分者</text>
+  </g>
+
+  <g transform="translate(216 214)">
+    <rect width="168" height="314" rx="14" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+    <rect width="168" height="12" rx="6" fill="#C9A227"/>
+    <circle cx="84" cy="83" r="34" class="head"/>
+    <path d="M35 166 Q42 119 84 119 Q126 119 133 166 Z" class="body"/>
+    <text x="84" y="213" class="name">馮翊新</text>
+    <rect x="28" y="238" width="112" height="30" rx="15" fill="#1B5E4B"/>
+    <text x="84" y="259" class="tag" fill="#FFFFFF">取分者</text>
+    <text x="84" y="288" class="note">首點落敗</text>
+    <text x="84" y="306" class="note">第四點拿下制勝分</text>
+  </g>
+
+  <g transform="translate(392 214)">
+    <rect width="168" height="314" rx="14" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="2"/>
+    <rect width="168" height="12" rx="6" fill="#C9A227"/>
+    <circle cx="84" cy="83" r="34" class="head"/>
+    <path d="M35 166 Q42 119 84 119 Q126 119 133 166 Z" class="body"/>
+    <text x="84" y="213" class="name">郭冠宏</text>
+    <rect x="28" y="238" width="112" height="30" rx="15" fill="#1B5E4B"/>
+    <text x="84" y="259" class="tag" fill="#FFFFFF">取分者</text>
+  </g>
+
+  <g transform="translate(576 214)">
+    <rect width="168" height="314" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+    <rect width="168" height="12" rx="6" fill="#2E8B6F"/>
+    <circle cx="84" cy="83" r="34" fill="#6B7B77"/>
+    <path d="M35 166 Q42 119 84 119 Q126 119 133 166 Z" fill="#2E8B6F"/>
+    <text x="84" y="213" class="name">徐絃家</text>
+    <rect x="28" y="238" width="112" height="30" rx="15" fill="#FFFFFF" stroke="#2E8B6F"/>
+    <text x="84" y="259" class="tag" fill="#1B5E4B">未上場</text>
+  </g>
+
+  <g transform="translate(752 214)">
+    <rect width="168" height="314" rx="14" fill="#F2F7F5" stroke="#2E8B6F" stroke-width="2"/>
+    <rect width="168" height="12" rx="6" fill="#2E8B6F"/>
+    <circle cx="84" cy="83" r="34" fill="#6B7B77"/>
+    <path d="M35 166 Q42 119 84 119 Q126 119 133 166 Z" fill="#2E8B6F"/>
+    <text x="84" y="213" class="name">洪敬愷</text>
+    <rect x="28" y="238" width="112" height="30" rx="15" fill="#FFFFFF" stroke="#2E8B6F"/>
+    <text x="84" y="259" class="tag" fill="#1B5E4B">未上場</text>
+  </g>
+
+  <line x1="40" y1="554" x2="920" y2="554" stroke="#D8E5E1"/>
+  <text x="480" y="580" font-size="14" fill="#6B7B77" text-anchor="middle">五名選手皆為代表隊成員，色彩標籤僅區分德國戰出賽角色</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

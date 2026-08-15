@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">退休規劃工具比較</title>
+  <desc id="desc">三欄資訊圖並列美元債券、美元存款與外幣保單的流動性、可動用時間、利率敏感度、提前退出成本及匯率風險。</desc>
+  <style>
+    text{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#1F1F1F}
+    .head{font-size:28px;font-weight:700;fill:#003A93}
+    .sub{font-size:14px;fill:#6B7280}
+    .card-title{font-size:21px;font-weight:700;fill:#FFFFFF}
+    .label{font-size:13px;font-weight:700;fill:#003A93}
+    .body{font-size:14px}
+    .note{font-size:12px;fill:#6B7280}
+    .key{font-size:14px;font-weight:700;fill:#D1482A}
+    .footer{font-size:16px;font-weight:700;fill:#FFFFFF}
+  </style>
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text id="main-title" class="head" x="480" y="45" text-anchor="middle">退休規劃工具比較</text>
+  <text class="sub" x="480" y="70" text-anchor="middle">美元資產的動用條件與提前退出考量</text>
+
+  <g id="bond-card">
+    <rect x="30" y="95" width="290" height="410" rx="14" fill="#F4F4F4" stroke="#003A93" stroke-width="2"/>
+    <rect x="30" y="95" width="290" height="64" rx="14" fill="#003A93"/>
+    <rect x="30" y="139" width="290" height="20" fill="#003A93"/>
+    <circle cx="63" cy="127" r="17" fill="#FFFFFF"/>
+    <path d="M54 133h18M57 128h12M60 123h6M63 116v7" fill="none" stroke="#003A93" stroke-width="2"/>
+    <text class="card-title" x="91" y="134">美元債券</text>
+    <text class="label" x="52" y="194">流動性</text>
+    <text class="body" x="52" y="217">可於市場交易，成交價格會變動</text>
+    <line x1="52" y1="235" x2="298" y2="235" stroke="#D7DCE3"/>
+    <text class="label" x="52" y="263">可動用時間</text>
+    <text class="body" x="52" y="286">到期領回；到期前可出售</text>
+    <line x1="52" y1="304" x2="298" y2="304" stroke="#D7DCE3"/>
+    <text class="label" x="52" y="332">利率敏感度</text>
+    <text class="key" x="52" y="355">存續期間愈長，價格波動愈明顯</text>
+    <line x1="52" y1="373" x2="298" y2="373" stroke="#D7DCE3"/>
+    <text class="label" x="52" y="401">提前退出成本</text>
+    <text class="body" x="52" y="424">承擔市價、價差與交易費用</text>
+    <text class="note" x="52" y="463">到期前出售，結果取決於當時市場價格</text>
+  </g>
+
+  <g id="deposit-card">
+    <rect x="335" y="95" width="290" height="410" rx="14" fill="#F4F4F4" stroke="#003A93" stroke-width="2"/>
+    <rect x="335" y="95" width="290" height="64" rx="14" fill="#3D6BB5"/>
+    <rect x="335" y="139" width="290" height="20" fill="#3D6BB5"/>
+    <circle cx="368" cy="127" r="17" fill="#FFFFFF"/>
+    <path d="M358 123h20l-10-6zM360 127v8M368 127v8M376 127v8M357 136h22" fill="none" stroke="#3D6BB5" stroke-width="2"/>
+    <text class="card-title" x="396" y="134">美元存款</text>
+    <text class="label" x="357" y="194">流動性</text>
+    <text class="body" x="357" y="217">活存可動用；定存受期別約束</text>
+    <line x1="357" y1="235" x2="603" y2="235" stroke="#D7DCE3"/>
+    <text class="label" x="357" y="263">可動用時間</text>
+    <text class="key" x="357" y="286">依固定到期日或存款約定</text>
+    <line x1="357" y1="304" x2="603" y2="304" stroke="#D7DCE3"/>
+    <text class="label" x="357" y="332">利率敏感度</text>
+    <text class="body" x="357" y="355">約定利率期間內相對明確</text>
+    <line x1="357" y1="373" x2="603" y2="373" stroke="#D7DCE3"/>
+    <text class="label" x="357" y="401">提前退出成本</text>
+    <text class="key" x="357" y="424">提前解約可能損失部分利息</text>
+    <text class="note" x="357" y="463">實際計息方式依銀行約定</text>
+  </g>
+
+  <g id="insurance-card">
+    <rect x="640" y="95" width="290" height="410" rx="14" fill="#F4F4F4" stroke="#003A93" stroke-width="2"/>
+    <rect x="640" y="95" width="290" height="64" rx="14" fill="#003A93"/>
+    <rect x="640" y="139" width="290" height="20" fill="#003A93"/>
+    <circle cx="673" cy="127" r="17" fill="#FFFFFF"/>
+    <path d="M673 115l11 5v8c0 7-5 11-11 14-6-3-11-7-11-14v-8z" fill="none" stroke="#003A93" stroke-width="2"/>
+    <text class="card-title" x="701" y="134">外幣保單</text>
+    <text class="label" x="662" y="194">流動性</text>
+    <text class="body" x="662" y="217">受保單條款與解約程序限制</text>
+    <line x1="662" y1="235" x2="908" y2="235" stroke="#D7DCE3"/>
+    <text class="label" x="662" y="263">可動用時間</text>
+    <text class="key" x="662" y="286">依契約約定，動用時點受限</text>
+    <line x1="662" y1="304" x2="908" y2="304" stroke="#D7DCE3"/>
+    <text class="label" x="662" y="332">利率敏感度</text>
+    <text class="body" x="662" y="355">受商品設計與宣告機制影響</text>
+    <line x1="662" y1="373" x2="908" y2="373" stroke="#D7DCE3"/>
+    <text class="label" x="662" y="401">提前退出成本</text>
+    <text class="key" x="662" y="424">解約金、費用與契約條件須留意</text>
+    <text class="note" x="662" y="463">解約可領金額以當時保單價值為準</text>
+  </g>
+
+  <g id="shared-risk">
+    <rect x="30" y="525" width="900" height="52" rx="10" fill="#D1482A"/>
+    <circle cx="62" cy="551" r="14" fill="#FFFFFF"/>
+    <text x="62" y="557" text-anchor="middle" font-size="17" font-weight="700" fill="#D1482A">匯</text>
+    <text class="footer" x="86" y="557">共同風險：三者換回新臺幣時，皆承擔美元兌新臺幣匯率變動</text>
+  </g>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>

@@ -2,6 +2,7 @@
 import { SITE } from '@/config/site';
 import { absoluteUrl, asset } from '@/utils/url';
 import { ogImageSize } from '@/utils/og-image-size';
+import mirrorAlternates from '../../data/mirror-alternates.json';
 
 interface Props {
   title: string;
@@ -54,6 +55,29 @@ const ogSize = await ogImageSize(ogImagePath);
 
 // 與 JSON-LD keywords 一致：過濾空字串
 const keywordList = (keywords ?? []).filter(Boolean);
+
+/**
+ * hreflang 回指：文章若有多語鏡像版（jp／en／in.appi.news），列出它們＋自我參照。
+ *
+ * 為什麼：hreflang 是成對宣告。鏡像站已掛 `hreflang="zh-Hant"` 指回本站，
+ * 本站不回指的話整組宣告對 Google 無效（沒有回指＝無效宣告），
+ * 站長 2026-08-15 裁示補上。緣由與資料流見 docs/lessons/hreflang-mirror-return-links.md。
+ *
+ * 資料來源 `src/data/mirror-alternates.json` 由 appi.news-mirror 產線在部署後
+ * 自動同步（scripts/sync-hreflang-to-publisher.mjs，有差異才 commit）——
+ * **不要手改**，改了下一輪同步就被蓋掉。kid.appi.news 刻意不在表裡：
+ * 它與本站同為 zh-Hant，hreflang 沒有「閱讀難度」維度，硬掛是錯誤訊號。
+ *
+ * 只有「查得到鏡像版」的文章頁才輸出；自我參照（zh-Hant → canonical）是
+ * Google 的要求（每個版本都要列出含自己的完整清單）。noindex 頁不輸出。
+ */
+const articleMatch = /^\/articles\/([^/]+)\/?$/.exec(path.split(/[?#]/)[0]);
+const mirrorEntries: { hreflang: string; href: string }[] =
+  !noindex && articleMatch
+    ? ((mirrorAlternates as Record<string, { hreflang: string; href: string }[]>)[
+        decodeURIComponent(articleMatch[1])
+      ] ?? [])
+    : [];
 ---
 
 <meta charset="utf-8" />
@@ -71,6 +95,11 @@ const keywordList = (keywords ?? []).filter(Boolean);
 {keywordList.length > 0 && <meta name="keywords" content={keywordList.join(', ')} />}
 <link rel="canonical" href={canonical} />
 <link rel="license" href={SITE.license.url} />
+<!-- hreflang 回指（多語鏡像站；見 frontmatter 註解與 docs/lessons/hreflang-mirror-return-links.md） -->
+{mirrorEntries.length > 0 && <link rel="alternate" hreflang="zh-Hant" href={canonical} />}
+{mirrorEntries.map((m) => (
+  <link rel="alternate" hreflang={m.hreflang} href={m.href} />
+))}
 {
   noindex ? (
     <meta name="robots" content="noindex, nofollow" />

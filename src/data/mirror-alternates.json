@@ -681,6 +681,12 @@
       "href": "https://jp.appi.news/articles/brewdog-james-watt-data-watchdog-complaint/"
     }
   ],
+  "brics-ndb-dedollarization-jaipur": [
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/brics-ndb-dedollarization-jaipur/"
+    }
+  ],
   "burn-first-aid-steps": [
     {
       "hreflang": "ja",
@@ -869,6 +875,12 @@
       "href": "https://jp.appi.news/articles/colombia-earthquake-magnitude-depth-explained/"
     }
   ],
+  "colorectal-cancer-screening-fit": [
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/colorectal-cancer-screening-fit/"
+    }
+  ],
   "cuba-havana-blackout-electricity-crisis": [
     {
       "hreflang": "en",
@@ -1007,6 +1019,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/ebola-bundibugyo-no-vaccine-congo/"
+    }
+  ],
+  "ecuador-china-relations-noboa-visit": [
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/ecuador-china-relations-noboa-visit/"
     }
   ],
   "edinburgh-woman-athens-suitcase-death": [
@@ -1471,6 +1489,10 @@
     {
       "hreflang": "id",
       "href": "https://in.appi.news/articles/hungary-nuclear-plant-heatwave-shutdown/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/hungary-nuclear-plant-heatwave-shutdown/"
     }
   ],
   "hypertension-diabetes-cholesterol-diet-guide": [
@@ -1495,6 +1517,12 @@
     {
       "hreflang": "id",
       "href": "https://in.appi.news/articles/hyperventilation-response/"
+    }
+  ],
+  "hypoglycemia-response": [
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/hypoglycemia-response/"
     }
   ],
   "hypothermia-first-steps": [
@@ -1763,6 +1791,12 @@
       "href": "https://jp.appi.news/articles/kenya-tata-chemicals-magadi-suspended/"
     }
   ],
+  "ktc-aoc-monitor-price-hike": [
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/ktc-aoc-monitor-price-hike/"
+    }
+  ],
   "kumamoto-earthquake-travel-impact": [
     {
       "hreflang": "en",
@@ -1885,6 +1919,12 @@
       "href": "https://jp.appi.news/articles/madagascar-cable-car-transit-failure/"
     }
   ],
+  "mali-separatist-hostage-release": [
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/mali-separatist-hostage-release/"
+    }
+  ],
   "mecca-defense-pact-nuclear-umbrella": [
     {
       "hreflang": "en",
@@ -1911,6 +1951,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/medical-ai-compliance-lessons/"
+    }
+  ],
+  "medical-device-cybersecurity-taiwan": [
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/medical-device-cybersecurity-japan/"
     }
   ],
   "medical-endorsement-clinical-patent-claims": [
@@ -2157,6 +2203,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/nosebleed-correct-position/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/nosebleed-correct-position/"
     }
   ],
   "nvidia-lancium-power-stake": [
@@ -2715,6 +2765,10 @@
     {
       "hreflang": "id",
       "href": "https://in.appi.news/articles/summer-food-safety-five-rules-family-defense/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/summer-food-safety-five-rules-family-defense/"
     }
   ],
   "summer-takeout-food-safety-tips": [
@@ -3369,6 +3423,12 @@
       "href": "https://jp.appi.news/articles/wearable-sleep-tracking-accuracy/"
     }
   ],
+  "west-bank-settler-siege-qusra": [
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/west-bank-settler-siege-qusra/"
+    }
+  ],
   "when-to-eat-after-vomiting": [
     {
       "hreflang": "en",
@@ -3479,6 +3539,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/yemen-houthi-saudi-attack-marib/"
+    }
+  ],
+  "zambia-election-violence-vote-count": [
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/zambia-election-violence-vote-count/"
     }
   ],
   "zero-trust-architecture-taiwan": [

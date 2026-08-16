@@ -99,7 +99,7 @@ draft: false
 
 <img src="/images/back-to-school-syndrome-child-vision-checklist-s3.webp" width="960" height="638" loading="lazy" decoding="async" alt="兩名小學生揹著書包並肩走路，象徵書包重量情境" />
 
-另一張清單是疫苗紀錄。國小新生入學後，學校護理師會依[兒童健康手冊裡的「預防接種時程及紀錄表」（俗稱黃卡）核對接種紀錄](https://www.cdc.gov.tw/File/Get/C21MgK68kNl1C4ORnYLhmQ)，項目涵蓋卡介苗、B型肝炎疫苗、五合一或六合一疫苗（白喉、破傷風、百日咳、b型嗜血桿菌、小兒麻痺）、麻疹腮腺炎德國麻疹混合疫苗（MMR）、水痘疫苗，以及日本腦炎疫苗；[完整的常規接種時程可在疾管署網站查詢](https://www.cdc.gov.tw/Category/List/IpWZqtnmkJfQPfgnaP4lnw)。如果學前應完成的劑次沒補齊，學校會發補種通知單，與其等學校聯繫，家長可以開學前先自己翻出黃卡對一遍，發現有缺漏就提早帶孩子到院所補接種，避免開學後被通知才臨時請假跑一趟。
+另一張清單是疫苗紀錄。國小新生入學後，學校護理師會依[兒童健康手冊裡的「預防接種時程及紀錄表」（俗稱黃卡）核對接種紀錄](https://www.cdc.gov.tw/File/Get/C21MgK68kNl1C4ORnYLhmQ)，項目涵蓋卡介苗、B型肝炎疫苗、五合一或六合一疫苗（白喉、破傷風、百日咳、b型嗜血桿菌、小兒麻痺）、麻疹腮腺炎德國麻疹混合疫苗（MMR）、水痘疫苗，以及日本腦炎疫苗；[完整的常規接種時程可在疾管署網站查詢](https://www.cdc.gov.tw/Category/List/IpWZqtnmkJfQPfgnaP4lnw)。如果學前應完成的劑次沒補齊，學校會發補種通知單，與其等學校聯繫，家長可以開學前先自己翻出黃卡對一遍，發現有缺漏就提早帶孩子到院所補接種，避免開學後被通知才臨時請假跑一趟。開學也是流感疫苗接種季的起點，國小、國中、高中（職）學生都在115年度公費對象名單內，可以參考[2026流感疫苗公費資格、開打時間、自費行情一次看](/articles/flu-vaccine-2026-public-guide/)，把接種時程一起排進開學準備清單。
 
 ## 常見問題
 

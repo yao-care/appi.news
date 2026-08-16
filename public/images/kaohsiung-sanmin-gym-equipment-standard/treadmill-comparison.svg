@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="長條圖：高雄三民運動中心跑步機數量從啟用時4台擴充至15台，與鼓山運動中心12台、楠仔坑運動中心15台相近">
+<style>
+.title{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:26px;font-weight:700;fill:#1e2030;}
+.subtitle{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:15px;fill:#6e7276;}
+.label{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:16px;font-weight:700;fill:#1e2030;}
+.sublabel{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:13px;fill:#6e7276;}
+.value{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:22px;font-weight:700;fill:#1e2030;}
+.foot{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:13px;fill:#6e7276;}
+</style>
+<rect x="0" y="0" width="960" height="600" fill="#ffffff"/>
+
+<rect x="40" y="34" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="56" y="57" class="title">三民運動中心跑步機數量擴充後與同級場館相近</text>
+<text x="56" y="82" class="subtitle">啟用時僅4台，議員與民眾反映後擴充至15台，與鼓山、楠仔坑運動中心規模相當</text>
+<line x1="40" y1="104" x2="920" y2="104" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- focus tint behind bar 2 -->
+<rect x="300" y="120" width="160" height="410" rx="12" fill="#eaf0f8"/>
+<rect x="300" y="120" width="160" height="3" fill="#a87515"/>
+
+<!-- baseline -->
+<line x1="80" y1="500" x2="880" y2="500" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- bar1: 三民（啟用時）4台 -->
+<rect x="120" y="407" width="120" height="93" rx="4" fill="#1f3a5f"/>
+<text x="180" y="392" text-anchor="middle" class="value">4台</text>
+<text x="180" y="525" text-anchor="middle" class="label">三民運動中心</text>
+<text x="180" y="545" text-anchor="middle" class="sublabel">2026年8月1日啟用時</text>
+
+<!-- bar2: 三民（擴充後）15台 focus -->
+<rect x="320" y="150" width="120" height="350" rx="4" fill="#a87515"/>
+<text x="380" y="135" text-anchor="middle" class="value">15台</text>
+<text x="380" y="525" text-anchor="middle" class="label">三民運動中心</text>
+<text x="380" y="545" text-anchor="middle" class="sublabel">擴充後（2026年8月中）</text>
+
+<!-- bar3: 鼓山 12台 -->
+<rect x="540" y="220" width="120" height="280" rx="4" fill="#1f3a5f"/>
+<text x="600" y="205" text-anchor="middle" class="value">12台</text>
+<text x="600" y="525" text-anchor="middle" class="label">鼓山運動中心</text>
+<text x="600" y="545" text-anchor="middle" class="sublabel">既有場館</text>
+
+<!-- bar4: 楠仔坑 15台 -->
+<rect x="740" y="150" width="120" height="350" rx="4" fill="#1f3a5f"/>
+<text x="800" y="135" text-anchor="middle" class="value">15台</text>
+<text x="800" y="525" text-anchor="middle" class="label">楠仔坑運動中心</text>
+<text x="800" y="545" text-anchor="middle" class="sublabel">既有場館</text>
+
+<line x1="40" y1="565" x2="920" y2="565" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="585" class="foot">製圖：APPI News</text>
+<text x="920" y="585" text-anchor="end" class="foot">資料來源：中央社、聯合報報導（2026-08-16）</text>
+</svg>

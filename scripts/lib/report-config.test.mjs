@@ -25,7 +25,7 @@ describe('channelForCategory — 分類路由', () => {
   it('各分類對到自己的頻道', () => {
     expect(channelForCategory('tech')).toBe('C0BC105LB18');
     expect(channelForCategory('international')).toBe('C0BBKF9TN23');
-    expect(channelForCategory('sports')).toBe('C0BC106C42E');
+    expect(channelForCategory('sports')).toBe('C0BP04QD4TE');
     expect(channelForCategory('lifestyle')).toBe('C0BBKFCD6MV');
   });
   it('未知/未給 → 預設頻道', () => {

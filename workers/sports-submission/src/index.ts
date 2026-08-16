@@ -13,7 +13,7 @@
 export interface Env {
   ALLOWED_ORIGIN: string; // 例：https://appi.news
   SLACK_BOT_TOKEN: string; // wrangler secret：bot token（與全站一致，chat.postMessage 轉投稿給編輯審）
-  SLACK_CHANNEL: string; // wrangler.toml var：收投稿的頻道 ID（運動台 C0BC106C42E）
+  SLACK_CHANNEL: string; // wrangler.toml var：收投稿的頻道 ID（運動台 C0BP04QD4TE）
   TURNSTILE_SECRET?: string; // wrangler secret：設了才驗 Turnstile（防機器人灌投稿）
 }
 

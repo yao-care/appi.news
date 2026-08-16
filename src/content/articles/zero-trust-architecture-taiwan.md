@@ -4,7 +4,7 @@ slug: "zero-trust-architecture-taiwan"
 description: "零信任怎麼運作？拆解身分鑑別、設備鑑別、信任推斷三個階段，說明台灣政府機關導入進度，以及金管會從指引走到金融資安韌性發展藍圖，逐步納入自律規範的最新進度。"
 excerpt: "零信任不預設任何人事物可信任，每次存取都要重新驗證身分、設備與情境。台灣政府機關與金融業都已啟動導入，但走的是分階段路線，不是一步到位的強制令。"
 publishDate: "2026-07-31T17:02:17.582Z"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-16
 category: "tech"
 subcategory: "security"
 tags:
@@ -62,7 +62,7 @@ originalContribution: "把 NIST SP 800-207 對零信任的官方定義、數位�
 
 <h2>零信任在解決什麼問題</h2>
 
-<p>傳統資安思維像蓋城牆：只要守住網路邊界，內網裡的人事物就自動被信任，防火牆之外才需要層層盤查。<a href="https://www.nist.gov/publications/zero-trust-architecture" target="_blank" rel="noopener">美國國家標準與技術研究院（NIST）在 SP 800-207 標準文件裡把零信任定義為「一套逐漸演進的資安典範，把防禦重心從靜態的網路邊界，轉向使用者、資產與資源本身」</a>，理由很直接：<a href="https://www.nist.gov/publications/zero-trust-architecture" target="_blank" rel="noopener">遠距工作、員工自帶設備（BYOD）、雲端服務讓愈來愈多資產本來就在傳統企業網路邊界之外，「城牆」早就守不住真正的資料與應用系統</a>。零信任不再問「你是不是從內網連進來」，改問「這次存取，憑什麼值得信任」。</p>
+<p>傳統資安思維像蓋城牆：只要守住網路邊界，內網裡的人事物就自動被信任，防火牆之外才需要層層盤查。<a href="https://www.nist.gov/publications/zero-trust-architecture" target="_blank" rel="noopener">美國國家標準與技術研究院（NIST）在 SP 800-207 標準文件裡把零信任定義為「一套逐漸演進的資安典範，把防禦重心從靜態的網路邊界，轉向使用者、資產與資源本身」</a>，理由很直接：<a href="https://www.nist.gov/publications/zero-trust-architecture" target="_blank" rel="noopener">遠距工作、員工自帶設備（BYOD）、雲端服務讓愈來愈多資產本來就在傳統企業網路邊界之外，「城牆」早就守不住真正的資料與應用系統</a>。零信任不再問「你是不是從內網連進來」，改問「這次存取，憑什麼值得信任」。台灣近期關於<a href="/articles/byod-laptop-work-labor-rights/">自備筆電上班的權益爭議</a>，正是這套邊界瓦解現象在勞動現場的其中一種呈現。</p>
 
 <p>這個轉向也改變了究責的對象。<a href="https://www.nist.gov/publications/zero-trust-architecture" target="_blank" rel="noopener">NIST 明確指出零信任「不因物理或網路位置、或資產所有權，就對資產或使用者帳號給予預設信任」，防護重點放在保護資源本身，而不是防守某一段網路區段</a>，因為在攻擊者假設已經滲透進網路的前提下，網路位置早就不能當成安全與否的判準。</p>
 
@@ -103,7 +103,7 @@ originalContribution: "把 NIST SP 800-207 對零信任的官方定義、數位�
 
 <h2>企業與一般使用者該注意什麼</h2>
 
-<p>零信任常被誤解成「買一套產品裝上就叫零信任」，實際上它是一組原則，落地方式因組織規模差很多。對中小企業而言，不必比照金融業或政府機關的完整三層架構，<a href="https://moda.gov.tw/press/multimedia/blog/9773" target="_blank" rel="noopener">從身分鑑別這一層開始最務實：把重要系統的登入方式從密碼換成雙因子或 FIDO2 硬體金鑰</a>，成本相對低，卻能直接擋掉最常見的帳密外洩型攻擊。設備鑑別與信任推斷牽涉的系統整合與維運複雜度高得多，適合等身分鑑別穩定之後再逐步疊加。</p>
+<p>零信任常被誤解成「買一套產品裝上就叫零信任」，實際上它是一組原則，落地方式因組織規模差很多。對中小企業而言，不必比照金融業或政府機關的完整三層架構，<a href="https://moda.gov.tw/press/multimedia/blog/9773" target="_blank" rel="noopener">從身分鑑別這一層開始最務實：把重要系統的登入方式從密碼換成雙因子或 FIDO2 硬體金鑰</a>，成本相對低，卻能直接擋掉最常見的帳密外洩型攻擊。台灣行動自然人憑證等<a href="/articles/passkey-passwordless-login/">密碼金鑰（Passkey）應用</a>，走的正是同一套去密碼化邏輯。設備鑑別與信任推斷牽涉的系統整合與維運複雜度高得多，適合等身分鑑別穩定之後再逐步疊加。</p>
 
 <p>對一般使用者來說，零信任在日常工作裡的體感，多半是登入次數變多、多了設備確認的提示。<a href="https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202512300002&dtable=News" target="_blank" rel="noopener">這不是系統故障或 IT 在找麻煩，是「連進公司內網」不再等於「自動被信任」</a>的設計結果。反過來，這也代表過去「只要人在辦公室、接的是公司 Wi-Fi 就比較安全」的直覺假設，在零信任的邏輯下不再成立，遠距與行動辦公環境的防護基準，理論上會被拉到跟辦公室內一樣高。</p>
 

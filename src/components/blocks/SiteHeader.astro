@@ -59,12 +59,10 @@ function isActive(href: string): boolean {
     <div class="header-actions">
       <a
         class="line-link"
-        href="https://line.me/R/ti/p/@832sacsk"
-        target="_blank"
-        rel="noopener"
-        aria-label="加入 APPI News LINE 官方帳號"
+        href={navUrl('/line/')}
+        aria-label="LINE 每日新聞"
       >
-        加入 LINE
+        LINE 每日新聞
       </a>
       <a class="search-link" href={navUrl('/search/')} aria-label="搜尋">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>

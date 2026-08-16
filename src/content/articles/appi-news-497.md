@@ -3,10 +3,11 @@ title: "閃到腰吃肌肉鬆弛劑有效嗎？痙攣、副作用一次看懂"
 slug: "appi-news-497"
 description: "閃到腰吃肌肉鬆弛劑到底有沒有用？從最新系統性回顧看實際止痛效果、常見副作用與該注意的警訊症狀，並整理日常該怎麼照顧發炎的腰，不只是靠一顆藥。"
 publishDate: 2026-08-04
-updatedDate: 2026-08-07
+updatedDate: 2026-08-17
 category: health
 subcategory: preventive
 tags: ["疼痛治療", "藥物研發", "醫病關係", "職場健康"]
+topics: ["first-aid-basics"]
 author: "huang-ziyan"
 coverImage: "covers/appi-news-497.webp"
 coverAlt: "下背部脊椎與周邊肌肉的簡化解剖示意圖，標示腰部肌肉緊繃區域"

@@ -1,8 +1,9 @@
 ---
-title: "隔夜菜可以吃嗎？亞硝酸鹽致癌迷思逐條查證：食安中心實測冷藏免驚，正確保存這樣做"
+title: "隔夜菜致癌？食安中心實測亞硝酸鹽，正確保存這樣做"
 slug: "leftover-food-myths-2026"
 description: "隔夜菜會不會致癌、營養是不是全流失、隔夜等於壞掉嗎？逐條查證香港食物安全中心亞硝酸鹽實測數據、衛福部食藥署闢謠說明與臺北市政府衛生局食品中毒五要原則，整理熟食冷藏天數、危險溫度帶、復熱溫度等正確做法。"
 publishDate: "2026-07-30T12:14:01.619Z"
+updatedDate: 2026-08-17
 category: health
 topics: ["food-safety-storage"]
 subcategory: medical

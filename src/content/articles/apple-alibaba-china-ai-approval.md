@@ -1,8 +1,9 @@
 ---
-title: "蘋果為何找阿里巴巴做AI？Apple Intelligence中國方案葫蘆裡賣什麼藥"
+title: "蘋果找阿里巴巴做AI？中國Apple Intelligence方案內幕"
 slug: "apple-alibaba-china-ai-approval"
 description: "中國網信辦2026年7月核准蘋果的Apple Intelligence上線，條件是與阿里巴巴、百度整合本地AI模型。這篇整理核准經過、中國生成式AI監理要求，以及兩家中國業者各自負責的功能分工。"
 publishDate: "2026-08-09T06:05:40.077Z"
+updatedDate: 2026-08-17
 category: "tech"
 subcategory: "ai"
 tags:

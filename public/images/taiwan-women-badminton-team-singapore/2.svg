@@ -1,0 +1,69 @@
+<svg viewBox="0 0 960 600" width="960" height="600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">中華台北對新加坡五點出賽陣容</title>
+  <desc id="desc">五張並列卡片列出台灣女團三個單打點與兩個雙打點的七名出賽球員。</desc>
+  <style>
+    text{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;fill:#1F2A28}
+    .label{font-size:14px;font-weight:700;letter-spacing:1px}
+    .name{font-size:22px;font-weight:700}
+    .sub{font-size:13px;fill:#6B7B77}
+    .court{fill:none;stroke:#2E8B6F;stroke-width:2;opacity:.12}
+  </style>
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <rect x="24" y="24" width="912" height="552" rx="24" fill="#F2F7F5" stroke="#1B5E4B" stroke-width="2"/>
+  <path class="court" d="M55 105H905V545H55ZM480 105V545M55 325H905M210 105V545M750 105V545"/>
+  <text x="480" y="76" text-anchor="middle" font-size="16" font-weight="700" fill="#2E8B6F">中華台北女子羽球代表隊</text>
+  <text x="480" y="116" text-anchor="middle" font-size="32" font-weight="800" fill="#1B5E4B">對新加坡｜五點出賽陣容</text>
+  <rect x="334" y="140" width="292" height="42" rx="21" fill="#1B5E4B"/>
+  <text x="480" y="167" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">7 名台灣選手・出任 5 個對戰點</text>
+
+  <g>
+    <rect x="36" y="214" width="168" height="282" rx="18" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
+    <circle cx="120" cy="255" r="20" fill="#C9A227"/>
+    <text x="120" y="261" text-anchor="middle" font-size="18" font-weight="800" fill="#FFFFFF">單</text>
+    <text class="label" x="120" y="303" text-anchor="middle" fill="#1B5E4B">女子單打一</text>
+    <line x1="64" y1="326" x2="176" y2="326" stroke="#C9A227" stroke-width="3"/>
+    <text class="name" x="120" y="382" text-anchor="middle">邱品蒨</text>
+    <text class="sub" x="120" y="454" text-anchor="middle">單打選手</text>
+  </g>
+  <g>
+    <rect x="216" y="214" width="168" height="282" rx="18" fill="#E2F0EB" stroke="#2E8B6F" stroke-width="3"/>
+    <circle cx="300" cy="255" r="20" fill="#2E8B6F"/>
+    <text x="300" y="261" text-anchor="middle" font-size="18" font-weight="800" fill="#FFFFFF">雙</text>
+    <text class="label" x="300" y="303" text-anchor="middle" fill="#1B5E4B">女子雙打一</text>
+    <line x1="244" y1="326" x2="356" y2="326" stroke="#C9A227" stroke-width="3"/>
+    <text class="name" x="300" y="370" text-anchor="middle">林芷昀</text>
+    <text x="300" y="402" text-anchor="middle" font-size="16" font-weight="700" fill="#2E8B6F">搭檔</text>
+    <text class="name" x="300" y="438" text-anchor="middle">許尹鏸</text>
+  </g>
+  <g>
+    <rect x="396" y="214" width="168" height="282" rx="18" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
+    <circle cx="480" cy="255" r="20" fill="#C9A227"/>
+    <text x="480" y="261" text-anchor="middle" font-size="18" font-weight="800" fill="#FFFFFF">單</text>
+    <text class="label" x="480" y="303" text-anchor="middle" fill="#1B5E4B">女子單打二</text>
+    <line x1="424" y1="326" x2="536" y2="326" stroke="#C9A227" stroke-width="3"/>
+    <text class="name" x="480" y="382" text-anchor="middle">林湘緹</text>
+    <text class="sub" x="480" y="454" text-anchor="middle">單打選手</text>
+  </g>
+  <g>
+    <rect x="576" y="214" width="168" height="282" rx="18" fill="#E2F0EB" stroke="#2E8B6F" stroke-width="3"/>
+    <circle cx="660" cy="255" r="20" fill="#2E8B6F"/>
+    <text x="660" y="261" text-anchor="middle" font-size="18" font-weight="800" fill="#FFFFFF">雙</text>
+    <text class="label" x="660" y="303" text-anchor="middle" fill="#1B5E4B">女子雙打二</text>
+    <line x1="604" y1="326" x2="716" y2="326" stroke="#C9A227" stroke-width="3"/>
+    <text class="name" x="660" y="370" text-anchor="middle">張淨惠</text>
+    <text x="660" y="402" text-anchor="middle" font-size="16" font-weight="700" fill="#2E8B6F">搭檔</text>
+    <text class="name" x="660" y="438" text-anchor="middle">楊景惇</text>
+  </g>
+  <g>
+    <rect x="756" y="214" width="168" height="282" rx="18" fill="#FFFFFF" stroke="#1B5E4B" stroke-width="3"/>
+    <circle cx="840" cy="255" r="20" fill="#C9A227"/>
+    <text x="840" y="261" text-anchor="middle" font-size="18" font-weight="800" fill="#FFFFFF">單</text>
+    <text class="label" x="840" y="303" text-anchor="middle" fill="#1B5E4B">女子單打三</text>
+    <line x1="784" y1="326" x2="896" y2="326" stroke="#C9A227" stroke-width="3"/>
+    <text class="name" x="840" y="382" text-anchor="middle">許玟琪</text>
+    <text class="sub" x="840" y="454" text-anchor="middle">單打選手</text>
+  </g>
+  <circle cx="445" cy="535" r="4" fill="#C9A227"/>
+  <text x="480" y="541" text-anchor="middle" font-size="15" font-weight="700" fill="#1B5E4B">三個單打點・兩個雙打點</text>
+  <circle cx="515" cy="535" r="4" fill="#C9A227"/>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7B77" fill-opacity="0.45" font-weight="600">appi.news</text></svg>

@@ -100,6 +100,10 @@ const mirrorEntries: { hreflang: string; href: string }[] =
 {mirrorEntries.map((m) => (
   <link rel="alternate" hreflang={m.hreflang} href={m.href} />
 ))}
+<!-- x-default 指正本（本站）：訪客語言對不上叢集任何語版時的預設。鏡像站端
+     （appi.news-mirror 的 src/utils/hreflang.ts）同步輸出 x-default 指本站原文，
+     兩邊宣告一致；改這行記得對面也要看（2026-08-16 一起加的）。 -->
+{mirrorEntries.length > 0 && <link rel="alternate" hreflang="x-default" href={canonical} />}
 {
   noindex ? (
     <meta name="robots" content="noindex, nofollow" />

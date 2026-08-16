@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="長條圖比較長和系2026年三筆英國資產交易金額：UK-Rails鐵路租賃110億港元、UK Power Networks電網1107億港元、Vodafone Three電訊股權455億港元，合計約1672億港元">
+<style>
+.title{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:26px;font-weight:700;fill:#1e2030;}
+.subtitle{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:15px;font-weight:400;fill:#6e7276;}
+.label{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:20px;font-weight:700;fill:#1e2030;}
+.sub{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:14px;font-weight:400;fill:#6e7276;}
+.value{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:22px;font-weight:700;fill:#1e2030;}
+.valuegold{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:22px;font-weight:700;fill:#a87515;}
+.foot{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:13px;font-weight:400;fill:#6e7276;}
+</style>
+<rect x="0" y="0" width="960" height="600" fill="#ffffff"/>
+
+<rect x="40" y="34" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="56" y="56" class="title">長和系 2026 年英國三筆資產交易金額</text>
+<text x="56" y="86" class="subtitle">單位：億港元，三筆交易合計套現約 1,672 億港元</text>
+
+<line x1="40" y1="112" x2="920" y2="112" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- Row 1: UK-Rails 110 -->
+<text x="240" y="188" text-anchor="end" class="label">UK-Rails</text>
+<text x="240" y="212" text-anchor="end" class="sub">英國鐵路車輛租賃</text>
+<rect x="260" y="155" width="56" height="60" rx="4" fill="#1f3a5f"/>
+<text x="332" y="193" text-anchor="start" class="value">110 億</text>
+
+<!-- Row 2: UK Power Networks 1107 (focus) -->
+<rect x="216" y="270" width="644" height="90" rx="12" fill="#eaf0f8"/>
+<rect x="216" y="270" width="644" height="3" fill="#a87515"/>
+<text x="240" y="308" text-anchor="end" class="label">UK Power Networks</text>
+<text x="240" y="332" text-anchor="end" class="sub">英國電網（持有16年）</text>
+<rect x="260" y="285" width="560" height="60" rx="4" fill="#a87515"/>
+<text x="836" y="323" text-anchor="start" class="valuegold">1,107 億</text>
+
+<!-- Row 3: Vodafone Three 455 -->
+<text x="240" y="428" text-anchor="end" class="label">Vodafone Three</text>
+<text x="240" y="452" text-anchor="end" class="sub">電訊業務49%股權</text>
+<rect x="260" y="395" width="230" height="60" rx="4" fill="#1f3a5f"/>
+<text x="506" y="433" text-anchor="start" class="value">455 億</text>
+
+<line x1="40" y1="560" x2="920" y2="560" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="582" text-anchor="start" class="foot">製圖：APPI News</text>
+<text x="920" y="582" text-anchor="end" class="foot">資料時點：2026年8月15日｜資料來源：自由財經、香港01</text>
+</svg>

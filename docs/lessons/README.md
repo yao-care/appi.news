@@ -48,6 +48,7 @@
 **自動化 / 發佈 / git**
 | 篇目 | 一句話 |
 |---|---|
+| [slack-channel-id-drift.md](./slack-channel-id-drift.md) | `not_in_channel` 第一步排查是核對頻道 ID 而非猜「bot 沒被邀」：運動台 ID 誤植且散落 4 處（SOT／測試斷言／worker toml／文件），改 SOT 要 grep 全 repo；新頻道首次接線先丟測試訊息驗收 |
 | [automation-model-and-account-split.md](./automation-model-and-account-split.md) | 帳號切換洗掉排程行＋全 Opus 燒爆週額度＋claude-appi 撞限額會 exit 0：cron 一律帶 --model、判成功不能只看 exit code；續：偵測到限額只 continue → 逐項批次變 24 次空打，須遇限額即 break 中止整批 |
 | [forum-signals-radar.md](./forum-signals-radar.md) | 論壇熱議當選題來源：每小時跑的關鍵是把抓取/過濾/去重做成零 LLM 的純 script，沒新題就 exit 0；政治過濾要三層，純字串比對做不到 100%（PTT 標題會截斷）；ptt.cc 封 IP 後只剩 pttweb.cc 單一來源、實測找不到能給推文數的第二來源，改用「帶連續輪數」的失敗告警補可見度 |
 | [no-ai-image-batch.md](./no-ai-image-batch.md) | 禁用 AI 生圖後才浮現的坑：prompt 不是保證要有 NO_AI_IMAGE 機械開關；同 query 圖庫回同一張導致封面與內文撞圖；sharp 剝掉 metadata 所以事後無法驗證哪張是生成的；平行批次要禁止模型自己跑 build |

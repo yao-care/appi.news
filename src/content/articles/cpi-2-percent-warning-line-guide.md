@@ -1,7 +1,8 @@
 ---
-title: "CPI是什麼？消費者物價指數怎麼算，「2%通膨警戒線」代表什麼一次看懂"
-description: "主計總處公布7月CPI年增2.54%，連續3個月站上2%通膨警戒線，外食與房租漲幅最明顯。這篇整理CPI怎麼計算、警戒線代表什麼，以及這波物價上漲的成因。"
+title: "CPI怎麼算？「2%通膨警戒線」代表什麼一次看懂"
+description: "通膨警戒線是什麼、CPI怎麼算？主計總處公布7月CPI年增2.54%，連續3個月站上2%通膨警戒線，外食與房租漲幅最明顯。這篇整理CPI怎麼計算、警戒線代表什麼，以及這波物價上漲的成因。"
 publishDate: "2026-08-06T19:04:22.726Z"
+updatedDate: "2026-08-17T09:00:00.000Z"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"

@@ -13,7 +13,7 @@ export const CATEGORY_CHANNELS = {
   health: 'C0BC4JP7G84', // 健康
   tech: 'C0BC105LB18', // 科技
   finance: 'C0BC4JR40A0', // 財經
-  sports: 'C0BC106C42E', // 運動
+  sports: 'C0BP04QD4TE', // 運動
   lifestyle: 'C0BBKFCD6MV', // 生活
 };
 

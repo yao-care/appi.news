@@ -50,6 +50,8 @@
 | 急性症狀衛教有幾題／哪些待寫 | `node -e 'import("./scripts/lib/acute-care.mjs").then(m=>console.log(m.TOPICS.length))'` |
 | 論壇雷達掃哪些看板、涵蓋哪些分類 | `node -e 'import("./scripts/lib/forum-signals.mjs").then(m=>console.table(m.BOARDS))'` |
 | 論壇雷達此刻撈到什麼（純資料、不喚 LLM） | `node scripts/forum-radar.mjs`（dry-run） |
+| 高爾夫雷達掃哪些來源、台灣選手名冊有誰 | `node -e 'import("./scripts/lib/golf-signals.mjs").then(m=>{console.log(m.SOURCES.map(s=>s.name).join("、"));console.log(m.TAIWAN_PLAYERS.map(p=>p.zh).join("、"))})'` |
+| 高爾夫雷達此刻撈到什麼（純資料、不喚 LLM） | `node scripts/golf-radar.mjs`（dry-run） |
 | GA4 property／GSC 站台／Slack 頻道 ID | `grep -nE "GA4_PROPERTY_ID\|GSC_SITE\|CHANNEL" scripts/lib/report-config.mjs` |
 | 站上埋的 GA4 評估 ID | `grep -n gaId src/config/site.ts` |
 | 有哪些 appi cron、排在幾點 | `crontab -l \| grep "appi.news-publisher/scripts/cron"`（**crontab 是 UTC，台北 +8**） |
@@ -191,6 +193,7 @@
 |---|---|---|
 | 科技選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選，主訊號是 GSC 站內搜尋需求；以「可贏性」而非熱度選題 |
 | 論壇選題雷達 | `scripts/lib/forum-signals.mjs`（純資料）＋`scripts/forum-radar.mjs`＋`scripts/cron/forum-radar.sh` | 掃 PTT 白名單看板 → 選題 → **自動撰寫並上架**（站長裁示，同國際／警消／便民，不設每日上限）→ 回報各分類台。**抓取／政治過濾／去重全是純 node，沒有新熱題就 exit 0、完全不喚 Claude**。改看板或門檻＝改 `BOARDS`。**政治排除三層**（看板白名單／標題關鍵字／LLM 判斷），第三層不可省。**配圖禁 OpenAI 生圖**（`NO_AI_IMAGE=1`，`.sh` 與 `writeAndPublish` 雙重保險）。為什麼＝[`docs/lessons/forum-signals-radar.md`](./docs/lessons/forum-signals-radar.md) |
+| 高爾夫選手動態雷達 | `scripts/lib/golf-signals.mjs`（純資料）＋`scripts/golf-radar.mjs`＋`scripts/cron/golf-radar.sh` | 掃 TPGA／PGA TOUR／LPGA 官方 YouTube RSS＋ESPN／Golf.com 新聞 RSS → 台灣選手（`TAIWAN_PLAYERS` 名冊，SOT 在該檔）命中標記 mustCover → 選題 → **自動撰寫並上架**（站長 2026-08-16 裁示，分類掛 sports，不走待審）→ 回報運動台。**台灣選手動態一律必報導**（有新料就寫，同選手/同賽事多條合併成一篇）；**其他高爾夫題視情況**，選題模型判斷夠重大（冠軍產生／破紀錄）才寫。**抓取／選手命中比對／去重全是純 node，沒有新資料就 exit 0、完全不喚 Claude**。台灣三大高球協會官網無 RSS，改換來源前先實測連線（見該檔檔頭）。**配圖禁 OpenAI 生圖**（真實選手不可 AI 生圖，`NO_AI_IMAGE=1`，`.sh` 與 `writeAndPublish` 雙重保險）|
 | 去重帳本 | `scripts/topic-ledger.mjs` | 雷達與週報共用，避免撞題 |
 | 國際寫作前閘門 | `scripts/lib/international-gate.mjs` | 同批同事件去重 → 跨日 seen 帳本 → 一次 Haiku 批次篩選，砍掉注定被判 SKIP 的題才動用寫作。**壞掉一律 fail-open**。為什麼＝[`docs/lessons/auto-publish-pipeline-traps.md`](./docs/lessons/auto-publish-pipeline-traps.md) §G |
 

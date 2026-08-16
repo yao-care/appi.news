@@ -40,6 +40,10 @@ export const TAIWAN_PLAYERS = [
   { zh: '李旻', en: ['Min Lee'], tour: 'TLPGA／國際賽事' },
   { zh: '吳佳晏', en: ['Chia-Yen Wu', 'Wu Chia-Yen', 'Chia Yen Wu'], tour: 'LPGA of Japan Tour／TLPGA' },
   { zh: '曾雅妮', en: ['Yani Tseng'], tour: 'LPGA（資深）' },
+  // 國內線（TPGA 台巡）——首輪 dry-run 驗收即發現 TPGA 源的奪冠影片沒被名冊接住，國內現役也要收
+  { zh: '王偉軒', en: ['Wang Wei-hsuan', 'Wei-Hsuan Wang'], tour: 'TPGA 台巡' },
+  { zh: '詹世昌', en: ['Chan Shih-chang', 'Shih-Chang Chan'], tour: '亞巡／TPGA' },
+  { zh: '洪健堯', en: ['Hung Chien-yao', 'Chien-Yao Hung'], tour: '亞巡／TPGA' },
 ];
 
 /**

@@ -1,10 +1,10 @@
 ---
-title: "西雅圖槍擊案掀政治風暴　警局長辭職　彈道鑑定翻案"
+title: "西雅圖槍擊案警局長辭職，彈道鑑定翻案關鍵整理"
 slug: "seattle-festival-shooting-bullet-mismatch"
-description: "上週日西雅圖美食節發生槍擊案，警方延遲近5小時才對外說明，市長威爾森一度誤稱已逮捕2名嫌犯、隨後撤回；警察局長巴恩斯7月30日在市長要求下辭職，副局長沙爾斯代理局長；彈道鑑定顯示，致命子彈並非來自遭逮捕15歲少年的槍，案情出現逆轉。"
+description: "西雅圖美食節7月26日發生槍擊案，警方延遲近5小時才對外說明；市長威爾森一度誤稱已逮捕2名嫌犯、隨後撤回，警察局長巴恩斯7月30日在市長要求下辭職，副局長沙爾斯代理局長。彈道鑑定顯示致命子彈並非來自遭逮捕15歲少年的槍，案情出現逆轉。"
 excerpt: "西雅圖警察局長巴恩斯在市長威爾森要求下7月30日辭職，起因是美食節槍擊案通報延遲近5小時、市長一度誤報逮捕人數；威爾森任命副局長沙爾斯代理局長，案件彈道鑑定先前已出現逆轉。"
 publishDate: "2026-07-30T16:58:48.148Z"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-16
 category: "international"
 subcategory: "americas"
 tags:
@@ -59,7 +59,7 @@ topics: ["police-good-deeds"]
 
 ## 局長請辭：通報延遲近5小時、誤報逮捕人數
 
-槍擊案發生在晚間6點左右的西雅圖中心，但警方直到近5小時後才對外提供進一步資訊，且未發出任何緊急示警。[PBS NewsHour報導](https://www.pbs.org/newshour/nation/seattle-mayor-says-police-chief-has-resigned-after-criticism-of-festival-shooting-response)指出，市長威爾森一度公開表示警方已逮捕2名嫌犯，但實際上僅逮捕1人，這項錯誤訊息隨後緊急撤回，加深外界對警局溝通失能的質疑。
+槍擊案發生在晚間6點左右的西雅圖中心，但警方直到近5小時後才對外提供進一步資訊，且未發出任何緊急示警。[PBS NewsHour報導](https://www.pbs.org/newshour/nation/seattle-mayor-says-police-chief-has-resigned-after-criticism-of-festival-shooting-response)指出，市長威爾森一度公開表示警方已逮捕2名嫌犯，但實際上僅逮捕1人，這項錯誤訊息隨後緊急撤回，加深外界對警局溝通失能的質疑。美國近期另一起涉及公眾人物的案件[曼吉翁認聯邦跟蹤罪一案](/articles/mangione-guilty-plea-double-jeopardy/)，同樣凸顯美國司法體系裡州與聯邦、少年與成人法庭之間複雜的管轄劃分，這起西雅圖案件後續同樣要面對類似的法庭歸屬爭議。
 
 <img src="/images/seattle-festival-shooting-bullet-mismatch-s1.webp" width="867" height="1300" loading="lazy" decoding="async" alt="警方封鎖線示意圖">
 *警方封鎖線示意圖（示意圖）。Photo by Srujan J. on Pexels*
@@ -92,7 +92,7 @@ Click2Houston引述法院文件描述，這名少年被警方制伏投降前，�
 
 PBS NewsHour另指出，案發後還有第8名傷者自行前往醫院檢查、隨後出院，但警方至今無法確認其身分，警方已公開呼籲這名人士主動聯繫協助調查。（[PBS NewsHour](https://www.pbs.org/newshour/nation/police-say-bullets-that-killed-2-at-seattle-festival-were-not-fired-from-arrested-teens-gun)）
 
-警方研判整起事件與幫派衝突有關，目前仍在追查是否有其他槍手涉案，案件持續調查中。（[Post Register](http://www.postregister.com/news/national/police-bullets-that-killed-2-bystanders-at-seattle-festival-werent-from-teen-shooters-gun/article_d1235203-e91a-5ddf-9450-24663205cc5d.html)）
+警方研判整起事件與幫派衝突有關，目前仍在追查是否有其他槍手涉案，案件持續調查中。（[Post Register](http://www.postregister.com/news/national/police-bullets-that-killed-2-bystanders-at-seattle-festival-werent-from-teen-shooters-gun/article_d1235203-e91a-5ddf-9450-24663205cc5d.html)）未成年人涉入槍枝暴力事件並非美國獨有的爭議，[泰國校園槍擊案掀修法壓力](/articles/thailand-nonthaburi-school-shooting-gun-control/)同樣顯示槍枝流入未成年人手中後，各國修法與究責的節奏往往追不上事件發生的速度。
 
 ## 更新時間軸
 

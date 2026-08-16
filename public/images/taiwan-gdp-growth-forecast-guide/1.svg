@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="台灣2026年各季經濟成長率長條圖：第1季15.43%、第2季12.93%、第3季預測11.42%、第4季預測5.37%；全年預測上修至11.05%，較5月預測上修1.41個百分點">
+<style>
+.title{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:26px;font-weight:700;fill:#1e2030;}
+.subtitle{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:15px;font-weight:400;fill:#6e7276;}
+.value{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:22px;font-weight:700;fill:#1e2030;}
+.qlabel{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:20px;font-weight:700;fill:#1e2030;}
+.tag{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:14px;font-weight:400;fill:#6e7276;}
+.desc{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:15px;font-weight:400;fill:#6e7276;}
+.desclabel{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:13px;font-weight:400;fill:#6e7276;}
+.footer{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:13px;font-weight:400;fill:#6e7276;}
+</style>
+<rect x="0" y="0" width="960" height="600" fill="#ffffff"/>
+
+<rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="56" y="62" class="title">台灣2026年各季經濟成長率</text>
+<text x="56" y="90" class="subtitle">上半年成長率站上13%以上，主計總處估下半年動能逐季趨緩</text>
+<line x1="40" y1="108" x2="920" y2="108" stroke="#e8e9ed" stroke-width="1"/>
+
+<line x1="40" y1="460" x2="920" y2="460" stroke="#e8e9ed" stroke-width="1"/>
+
+<path d="M130,460 L130,136 Q130,132 134,132 L266,132 Q270,132 270,136 L270,460 Z" fill="#1f3a5f"/>
+<text x="200" y="118" text-anchor="middle" class="value">15.43%</text>
+<text x="200" y="485" text-anchor="middle" class="qlabel">第1季</text>
+<text x="200" y="505" text-anchor="middle" class="tag">實際（修正值）</text>
+
+<path d="M330,460 L330,189 Q330,185 334,185 L466,185 Q470,185 470,189 L470,460 Z" fill="#1f3a5f"/>
+<text x="400" y="171" text-anchor="middle" class="value">12.93%</text>
+<text x="400" y="485" text-anchor="middle" class="qlabel">第2季</text>
+<text x="400" y="505" text-anchor="middle" class="tag">實際（概估）</text>
+
+<path d="M530,460 L530,221 Q530,217 534,217 L666,217 Q670,217 670,221 L670,460 Z" fill="#1f3a5f"/>
+<text x="600" y="203" text-anchor="middle" class="value">11.42%</text>
+<text x="600" y="485" text-anchor="middle" class="qlabel">第3季</text>
+<text x="600" y="505" text-anchor="middle" class="tag">預測</text>
+
+<path d="M730,460 L730,350 Q730,346 734,346 L866,346 Q870,346 870,350 L870,460 Z" fill="#1f3a5f"/>
+<text x="800" y="332" text-anchor="middle" class="value">5.37%</text>
+<text x="800" y="485" text-anchor="middle" class="qlabel">第4季</text>
+<text x="800" y="505" text-anchor="middle" class="tag">預測</text>
+
+<rect x="40" y="520" width="880" height="4" fill="#a87515"/>
+<rect x="40" y="524" width="880" height="50" rx="10" fill="#eaf0f8"/>
+<text x="64" y="541" class="desclabel">全年經濟成長率預測</text>
+<text x="64" y="565" class="value">11.05%</text>
+<line x1="240" y1="534" x2="240" y2="564" stroke="#e8e9ed" stroke-width="1"/>
+<text x="260" y="554" class="desc">較5月預測上修1.41個百分點，創39年新高</text>
+
+<line x1="40" y1="585" x2="920" y2="585" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="598" class="footer">製圖：APPI News</text>
+<text x="920" y="598" text-anchor="end" class="footer">資料來源：行政院主計總處 2026年8月14日新聞稿</text>
+</svg>

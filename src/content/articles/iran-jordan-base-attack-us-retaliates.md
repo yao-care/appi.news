@@ -1,10 +1,10 @@
 ---
 title: "美伊戰事急轉：川普喊停對伊朗新攻擊　開出荷莫茲海峽全面開放換停火條件"
 slug: "iran-jordan-base-attack-us-retaliates"
-description: "美伊戰事8月1日晚間急轉：川普在Truth Social宣布，中東盟友已達成協議框架，美方將暫緩原訂對伊朗的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅。這場逆轉來得突然：就在數小時前，川普才誓言對伊朗「狠狠打擊」，革命衛隊聲稱擊中2艘由美軍護航的油輪，美國並在至少10個中東國家發布撤離警示；促成轉折的關鍵是沙烏地王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮，沙國防長隨後赴華府與川普、副總統萬斯會商。半島電視台報導指出，美軍愛國者飛彈庫存告急也是考量之一；卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」，否則將遭「相稱回應」。8月3日局勢再添變數：川普宣布將展開涉及去核化與海峽開放的談判，伊朗官方隨即否認與美方直接會談，僅承認與阿曼磋商海峽安全通行路線。8月4日財政部長貝森特稱美伊「今天或明天」有望就開放海峽達成協議，同一時間賴比瑞亞籍散貨輪「Minoan Pioneer」號深夜於阿曼外海遭不明射彈擊中，三副下落不明。8月5日伊朗外交部宣布與阿曼協議進入「最後階段」，規劃船隻分道進出海峽並先清除水雷，但仍待最高領袖莫賈塔巴·哈梅內伊批准；總統佩澤希齊揚同日證實「聯繫他確實很困難」，外界並傳莫賈塔巴在2月28日空襲中重傷甚至毀容，惟未經伊朗官方證實。過境費用版本不一，川普稱協議「明天或後天」可望公布，參議院少數黨領袖舒默則質疑恐重演過去僅維持數天的模式。8月9日伊朗總統佩澤希齊揚任命71歲、遭國際刑警組織通緝的前革命衛隊總司令莫森·雷扎伊接掌最高國家安全委員會秘書長，原秘書長佐爾加德爾轉任最高領袖政治顧問；佩澤希齊揚同日證實，他與最高領袖哈梅內伊近日進行近7小時會談，談及民生與制裁衝擊。情勢8月14日再度升溫：川普在紐約拿騷郡警察學院演說時揚言，待「徹底打敗」伊朗後將宣布荷莫茲海峽為美國領土，稱美方封鎖「牢不可破，是一道鋼鐵牆」；伊朗副外長加里巴巴迪隨即反嗆，海峽「不會被一則推文、一艘航空母艦、一紙命令，或一場競選演說奪走」。海峽航運同時近乎停擺：8月平均每日僅約8至12艘船通過，遠低於開戰前逾130艘的常態；美國防長赫格塞斯8月13日宣布封鎖可「無限期」維持，財政部長貝森特同日預告下週將加碼「歷史上前所未見」的經濟孤立措施。"
-excerpt: "美伊戰事8月1日晚間急轉：川普宣布中東盟友已達成協議框架，美方暫緩新一輪對伊朗攻擊，換取荷莫茲海峽全面開放及終止伊朗核威脅。逆轉前數小時，川普才誓言對伊朗「狠狠打擊」、美國並在至少10個中東國家發布撤離警示；沙烏地王儲週六致電川普表達對衝突升級的憂慮是關鍵轉折。卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」。伊朗8月3日再否認與美方有直接談判，稱僅與阿曼磋商海峽安全通行路線；8月4日貝森特稱美伊談判「今天或明天」有望達成海峽開放協議，同一時間又一艘散貨輪深夜遇襲，一名船員下落不明。8月5日伊朗宣布與阿曼協議進入「最後階段」，仍待最高領袖莫賈塔巴批准；總統佩澤希齊揚證實聯繫最高領袖「確實很困難」，外界並傳莫賈塔巴在開戰空襲中重傷，惟未經證實。8月9日伊朗任命遭國際刑警通緝的前革命衛隊總司令雷扎伊接掌最高國安會秘書長，總統並證實與最高領袖近日密談近7小時。8月14日川普揚言戰後將宣布荷莫茲海峽為美國領土，伊朗副外長反嗆「推文奪不走海峽」；同一時間海峽航運近乎停擺，美國防長宣布封鎖可無限期維持、財政部長預告加碼經濟孤立措施。"
+description: "美伊戰事8月1日晚間急轉：川普在Truth Social宣布，中東盟友已達成協議框架，美方將暫緩原訂對伊朗的新一輪攻擊，換取「荷莫茲海峽立即、完全、全面開放」及終止伊朗核威脅。這場逆轉來得突然：就在數小時前，川普才誓言對伊朗「狠狠打擊」，革命衛隊聲稱擊中2艘由美軍護航的油輪，美國並在至少10個中東國家發布撤離警示；促成轉折的關鍵是沙烏地王儲穆罕默德·本·沙爾曼週六致電川普，表達對衝突升級、伊朗恐報復波灣能源設施的憂慮，沙國防長隨後赴華府與川普、副總統萬斯會商。半島電視台報導指出，美軍愛國者飛彈庫存告急也是考量之一；卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」，否則將遭「相稱回應」。8月3日局勢再添變數：川普宣布將展開涉及去核化與海峽開放的談判，伊朗官方隨即否認與美方直接會談，僅承認與阿曼磋商海峽安全通行路線。8月4日財政部長貝森特稱美伊「今天或明天」有望就開放海峽達成協議，同一時間賴比瑞亞籍散貨輪「Minoan Pioneer」號深夜於阿曼外海遭不明射彈擊中，三副下落不明。8月5日伊朗外交部宣布與阿曼協議進入「最後階段」，規劃船隻分道進出海峽並先清除水雷，但仍待最高領袖莫賈塔巴·哈梅內伊批准；總統佩澤希齊揚同日證實「聯繫他確實很困難」，外界並傳莫賈塔巴在2月28日空襲中重傷甚至毀容，惟未經伊朗官方證實。過境費用版本不一，川普稱協議「明天或後天」可望公布，參議院少數黨領袖舒默則質疑恐重演過去僅維持數天的模式。8月9日伊朗總統佩澤希齊揚任命71歲、遭國際刑警組織通緝的前革命衛隊總司令莫森·雷扎伊接掌最高國家安全委員會秘書長，原秘書長佐爾加德爾轉任最高領袖政治顧問；佩澤希齊揚同日證實，他與最高領袖哈梅內伊近日進行近7小時會談，談及民生與制裁衝擊。情勢8月14日再度升溫：川普在紐約拿騷郡警察學院演說時揚言，待「徹底打敗」伊朗後將宣布荷莫茲海峽為美國領土，稱美方封鎖「牢不可破，是一道鋼鐵牆」；伊朗副外長加里巴巴迪隨即反嗆，海峽「不會被一則推文、一艘航空母艦、一紙命令，或一場競選演說奪走」。海峽航運同時近乎停擺：8月平均每日僅約8至12艘船通過，遠低於開戰前逾130艘的常態；美國防長赫格塞斯8月13日宣布封鎖可「無限期」維持，財政部長貝森特同日預告下週將加碼「歷史上前所未見」的經濟孤立措施。海峽衝突8月中旬持續加溫：阿聯酋外交部指控伊朗8月14日再度攻擊國營能源公司ADNOC旗下兩艘油輪，痛批是「海盜行為」，過去一週內已是第三度對ADNOC船隻下手，本輪衝突以來累計遭攻擊船隻已達15艘；同一時間，伊朗軍方首度公開要求卡達釋放3月間遭擊落俘虜的三名飛行員，卡達外交部否認扣人，僅稱已尋獲其中一人遺骸並邀伊朗檢視搜救結果。"
+excerpt: "美伊戰事8月1日晚間急轉：川普宣布中東盟友已達成協議框架，美方暫緩新一輪對伊朗攻擊，換取荷莫茲海峽全面開放及終止伊朗核威脅。逆轉前數小時，川普才誓言對伊朗「狠狠打擊」、美國並在至少10個中東國家發布撤離警示；沙烏地王儲週六致電川普表達對衝突升級的憂慮是關鍵轉折。卡達、巴基斯坦持續斡旋，伊朗外長阿拉格奇則警告美方勿「冒險行動」。伊朗8月3日再否認與美方有直接談判，稱僅與阿曼磋商海峽安全通行路線；8月4日貝森特稱美伊談判「今天或明天」有望達成海峽開放協議，同一時間又一艘散貨輪深夜遇襲，一名船員下落不明。8月5日伊朗宣布與阿曼協議進入「最後階段」，仍待最高領袖莫賈塔巴批准；總統佩澤希齊揚證實聯繫最高領袖「確實很困難」，外界並傳莫賈塔巴在開戰空襲中重傷，惟未經證實。8月9日伊朗任命遭國際刑警通緝的前革命衛隊總司令雷扎伊接掌最高國安會秘書長，總統並證實與最高領袖近日密談近7小時。8月14日川普揚言戰後將宣布荷莫茲海峽為美國領土，伊朗副外長反嗆「推文奪不走海峽」；同一時間海峽航運近乎停擺，美國防長宣布封鎖可無限期維持、財政部長預告加碼經濟孤立措施。8月14日阿聯酋再控ADNOC油輪遭攻擊、痛批「海盜行為」，伊朗同步首度公開要求卡達放人，卡達否認扣留、稱僅尋獲一具遺骸。"
 publishDate: "2026-07-19T15:18:08.284Z"
-updatedDate: "2026-08-15T17:21:52.730Z"
+updatedDate: "2026-08-16T16:21:20.665Z"
 category: "international"
 subcategory: "middle-east"
 tags:
@@ -12,6 +12,7 @@ tags:
   - "美國"
   - "地緣政治"
 highlights:
+  - "阿聯酋外交部8月14日指控伊朗攻擊國營能源公司ADNOC旗下兩艘油輪，痛批『海盜行為』，稱構成『對地區穩定與全球能源供應的直接威脅』；這是過去一週內第三度有ADNOC船隻遭攻擊（前次為8月9日週六），本輪衝突以來累計遭攻擊的ADNOC船隻已達15艘，攻擊均未傳出人員傷亡。同一時間，伊朗武裝部隊總參謀部首度公開指控卡達扣留三名伊朗飛行員（薩雷希、達什提安、貝赫拉維希安），稱三人所駕蘇愷-24戰機3月間遭擊落後遭卡達部隊『活捉』，已被拘留近6個月且無法與家屬聯繫，伊朗已向紅十字國際委員會求助；卡達外交部發言人安薩里在X平台反駁，稱三名飛行員3月初違反卡達領空遭擊落，卡達搜救隊已尋獲其中一人遺骸，並已聯繫伊朗協調交接，正邀伊朗檢視搜救結果"
   - "荷莫茲海峽航運8月中旬近乎停擺：8月9日（週四）僅9艘船通過、隔日降至5艘，8月12日（週二）當天僅8艘，過去10天平均每日約12艘，較開戰前每日130至140艘的常態大減逾九成。美國防長赫格塞斯8月13日在巴拿馬出席PANAMAX 2026聯合軍演時宣布，美國海軍能『無限期』維持對伊朗港口的封鎖，靠艦隊輪替進出；美軍自封鎖以來已攔阻逾55艘試圖突破封鎖的商船，其中3艘遭迫失去動力、2艘遭登船檢查。財政部長貝森特同日預告下週將加碼『歷史上從未見過』的經濟孤立措施，未說明具體制裁對象"
   - "川普8月14日在紐約拿騷郡警察學院演說時揚言，待『徹底打敗』伊朗後，將宣布荷莫茲海峽為美國領土；他稱美方封鎖『牢不可破，是一道鋼鐵牆』。伊朗副外長加里巴巴迪隨即在社群平台反嗆：『荷莫茲海峽不會被一則推文、一艘航空母艦、一紙命令，或一場競選演說奪走』，強調伊朗『不畏懼威脅，也不會被武力展示嚇倒』；法律專家指出，片面宣布他國領海為己方領土缺乏國際法依據"
   - "伊朗總統佩澤希齊揚8月9日任命71歲前革命衛隊總司令莫森·雷扎伊接掌最高國家安全委員會秘書長，原秘書長佐爾加德爾轉任最高領袖政治顧問；雷扎伊自2007年起遭國際刑警組織列紅色通緝令，因被控涉入1994年阿根廷AMIA猶太社區中心爆炸案（85人罹難）的策劃與執行，他主張荷莫茲海峽控制權「比核武更重要」。總統佩澤希齊揚同日在國家電視台證實，與最高領袖哈梅內伊近日進行近7小時會談，談及民生、制裁衝擊與內部團結"
@@ -38,6 +39,8 @@ highlights:
   - "國際油價因戰事劇烈波動：布蘭特原油7月29日單日暴漲7.9%至每桶90.74美元，創數週最大漲幅，30日回落至87.3美元"
   - "美伊戰事自2月28日爆發以來已逾5個月：美軍陣亡人數累計至少17人、逾500人受傷，伊朗官方統計死亡人數逾55人、逾600人受傷"
 risksAndLimits:
+  - "ADNOC油輪本輪衝突以來累計遭攻擊次數各方說法不一：半島電視台稱15艘，Business Today則稱8月14日是『過去一週內第三度』攻擊，統計口徑與時間範圍未必一致，僅供判讀量級參考"
+  - "伊朗指控卡達扣留三名飛行員一事，僅為伊朗軍方單方說法，卡達官方已否認並提出遺骸尋獲、搜救佐證，兩造說法互相矛盾，飛行員實際下落截至發稿尚未獨立查證"
   - "海峽航運量各方統計基準日不同：Examiner／澳洲聯合通訊社稱8月9日9艘、隔日5艘，Yahoo／美聯社稱8月12日8艘、10天均12艘，並非同一套連續序列數據，僅供判讀量級趨勢參考"
   - "貝森特『下週更多公告』僅為口頭預告，具體制裁對象、內容與生效時間截至發稿尚未公布"
   - "川普聲稱將把荷莫茲海峽劃為美國領土，僅屬公開演說發言，未見具體法律程序、行政命令或國會授權，能否落實及國際法效力均屬未知數"
@@ -256,6 +259,15 @@ references:
   - title: "US eyes indefinite Iran naval blockade, Bessent warns of new economic curbs"
     url: "https://www.yahoo.com/news/articles/us-eyes-indefinite-iran-naval-215834289.html"
     publisher: "Yahoo News (AP)"
+  - title: "UAE accuses Iran of attacks on two ADNOC vessels in Strait of Hormuz"
+    url: "https://www.aljazeera.com/news/2026/8/14/uae-accuses-iran-of-attacks-on-two-adnoc-vessels-in-strait-of-hormuz"
+    publisher: "Al Jazeera"
+  - title: "Iran calls on Qatar to free its pilots who were downed in war with US and Israel"
+    url: "https://www.timesofisrael.com/iran-calls-on-qatar-to-free-its-pilots-who-were-downed-in-war-with-us-and-israel/"
+    publisher: "The Times of Israel"
+  - title: "Another tanker attacked in Hormuz; Iran says Qatar is holding 3 missing pilots"
+    url: "https://www.businesstoday.in/world/story/another-tanker-attacked-in-hormuz-iran-says-qatar-is-holding-3-missing-pilots-549440-2026-08-16"
+    publisher: "Business Today"
 author: "appi-editorial"
 reviewedBy:
   - "luo-yang"
@@ -478,8 +490,19 @@ coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 
 財政部長貝森特8月14日同步加碼經濟施壓。[Yahoo新聞引述美聯社報導](https://www.yahoo.com/news/articles/us-eyes-indefinite-iran-naval-215834289.html)指出，他表示「下週會有更多公告，因為我們將採取歷史上從未見過的經濟孤立措施」，但未進一步說明具體制裁對象與內容。海峽航運停滯與經濟施壓加碼的同時，川普當天稍晚在紐約發表待戰後將荷莫茲海峽劃為美國領土的言論（詳見上文），凸顯美方正同步以軍事封鎖、外交表態與經濟制裁對伊朗施壓，但截至發稿，雙方仍未就海峽正式開放協議達成共識。
 
+## ADNOC油輪再遇襲　阿聯酋痛批「海盜行為」
+
+海峽衝突8月14日再添新事端。據[半島電視台報導](https://www.aljazeera.com/news/2026/8/14/uae-accuses-iran-of-attacks-on-two-adnoc-vessels-in-strait-of-hormuz)，阿聯酋外交部當天發布聲明，強烈譴責「針對兩艘ADNOC船舶的伊朗敵對攻擊」，痛批這等同「海盜行為」，構成「對地區穩定與全球能源供應的直接威脅」；攻擊發生在荷莫茲海峽，未傳出人員傷亡。這是本輪衝突以來，ADNOC旗下船隻累計第15艘遭攻擊，也是過去一週內第二度有ADNOC船隻遇襲，前次攻擊發生在8月9日週六。[Business Today報導](https://www.businesstoday.in/world/story/another-tanker-attacked-in-hormuz-iran-says-qatar-is-holding-3-missing-pilots-549440-2026-08-16)則統計，這是過去一週內第三次對ADNOC運營油輪的攻擊，兩者統計口徑略有出入。伊朗方面未立即回應阿聯酋的指控。
+
+## 伊朗首度公開喊話：卡達扣留三名飛行員近半年
+
+同一時間，一場延燒近半年的爭議首度浮上檯面。[Times of Israel報導](https://www.timesofisrael.com/iran-calls-on-qatar-to-free-its-pilots-who-were-downed-in-war-with-us-and-israel/)指出，伊朗武裝部隊總參謀部8月15日（週六）正式發函，指控卡達部隊自3月起俘虜三名伊朗飛行員，分別是薩雷希（Javad Salehi）、達什提安（Abdolmajid Dashtian）與貝赫拉維希安（Omran Behraveshian），三人所駕蘇愷-24戰機在美以與伊朗開戰初期遭擊落，據信是在卡達軍方回應美以對伊朗攻擊的行動中被活捉；伊朗將領巴格扎德表示，三人已遭拘留近6個月，且無法與家屬聯繫，伊朗已正式向紅十字國際委員會提出協尋要求。
+
+卡達隨即否認這項指控。同一篇報導指出，卡達外交部發言人安薩里在社群平台X回應，三名飛行員是3月初違反卡達領空遭擊落，卡達方面多次嘗試聯繫伊朗未獲回應；卡達搜救隊已在事發海域尋獲其中一名飛行員的遺骸，並已聯繫伊朗協調交接事宜，邀請伊朗檢視搜救結果。這起爭議與3月間伊朗飛彈攻擊卡達境內、美軍中央司令部前沿指揮部所在的烏代德空軍基地（Al Udeid Air Base）密切相關（詳見上方内文戰事脈絡）；截至發稿，雙方對飛行員生死與扣留與否的說法仍互相矛盾。
+
 ## 更新時間軸
 
+- （更新 2026-08-16：阿聯酋外交部8月14日發布聲明，強烈譴責伊朗攻擊兩艘ADNOC旗下船舶，痛批等同「海盜行為」，構成「對地區穩定與全球能源供應的直接威脅」，攻擊未傳出人員傷亡；本輪衝突以來ADNOC船隻累計遭攻擊已達15艘，是過去一週內第二至第三度遇襲（前次為8月9日）。同一時間，伊朗武裝部隊總參謀部8月15日首度正式發函，指控卡達部隊自3月起俘虜三名伊朗飛行員薩雷希、達什提安、貝赫拉維希安，稱三人所駕蘇愷-24戰機遭擊落後被卡達部隊活捉，已拘留近6個月且無法聯繫家屬，伊朗已向紅十字國際委員會求助；卡達外交部發言人安薩里否認扣人，稱三人是3月初違反卡達領空遭擊落，卡達搜救隊已尋獲其中一人遺骸並已聯繫伊朗協調交接。截至發稿，雙方對飛行員下落的說法仍互相矛盾，海峽航運與封鎖僵局同步持續。）（[Al Jazeera](https://www.aljazeera.com/news/2026/8/14/uae-accuses-iran-of-attacks-on-two-adnoc-vessels-in-strait-of-hormuz)、[The Times of Israel](https://www.timesofisrael.com/iran-calls-on-qatar-to-free-its-pilots-who-were-downed-in-war-with-us-and-israel/)、[Business Today](https://www.businesstoday.in/world/story/another-tanker-attacked-in-hormuz-iran-says-qatar-is-holding-3-missing-pilots-549440-2026-08-16)）
 - （更新 2026-08-15：川普8月14日在紐約拿騷郡警察學院演說時揚言，待「徹底打敗」伊朗後，將宣布荷莫茲海峽為美國領土，稱美方封鎖「牢不可破，是一道鋼鐵牆」。伊朗副外長加里巴巴迪隨即在社群平台反嗆：「荷莫茲海峽不會被一則推文、一艘航空母艦、一紙命令，或一場競選演說奪走」，強調伊朗「既不畏懼威脅，也不會被武力展示嚇倒」；法律專家質疑，片面宣布他國領海主權與徵收通行費均與國際海事法原則相悖。同一時間，荷莫茲海峽航運近乎停擺：8月9日（週四）僅9艘船通過、隔日降至5艘，8月12日（週二）當天僅8艘，過去10天平均每日約12艘，較開戰前每日130至140艘的常態大減逾九成。美國防長赫格塞斯8月13日在巴拿馬出席PANAMAX 2026聯合軍演時宣布，美國海軍能「無限期」維持對伊朗港口的封鎖，靠艦隊輪替進出；美軍自封鎖以來已攔阻逾55艘試圖突破封鎖的商船，其中3艘遭迫失去動力、2艘遭登船檢查。財政部長貝森特同日預告下週將加碼「歷史上從未見過」的經濟孤立措施，未說明具體制裁對象。截至發稿，美方封鎖與伊朗攔查仍持續，雙方尚未就海峽正式開放協議定案。）（[KATU/The National Desk](https://katu.com/news/nation-world/trump-says-hell-declare-strait-of-hormuz-a-us-territory-when-iran-war-ends-tehran-war-conflict-waterway-gasoline-gas-oil-fuel-nuclear-weapon-department-of-war-secretary-pete-hegseth-president-donald-trump)、[Al Jazeera](https://www.aljazeera.com/news/2026/8/14/trump-says-he-will-declare-strait-of-hormuz-a-us-territory)、[Just The News](https://justthenews.com/government/security/trump-declare-strait-hormuz-us-territory)、[Examiner/AAP](https://www.examiner.com.au/story/9330792/hormuz-slows-as-us-threatens-economic-pressure-on-iran/)、[WSAU/Reuters](https://wsau.com/2026/08/13/us-can-keep-naval-blockade-on-iranian-ports-indefinitely-pentagon-chief-says/)、[Yahoo News/AP](https://www.yahoo.com/news/articles/us-eyes-indefinite-iran-naval-215834289.html)）
 - （更新 2026-08-11：伊朗最高國家安全委員會秘書佐爾加德爾8月8日公布重新開放荷莫茲海峽的四項條件：美方永久終止軍事威脅並自區域撤軍、解除港口海軍封鎖、「完全賠償」戰爭損失、取消制裁並無條件釋放凍結資產；外交部發言人巴格海伊8月10日重申，只要美方其他違規行為持續，條件就不成熟稱海峽為安全水道，並要求美方停止對伊朗代理武裝力量（含以色列對真主黨）的攻擊。川普8月10日在白宮嗤之以鼻回應，聲稱美國海軍「百分之百」掌控荷莫茲海峽、封鎖「堅不可摧」如「鋼鐵牆」，並反向要求伊朗為50年來造成的損害賠償，對象包括遭伊朗支持武裝路邊炸彈等攻擊致死致傷的美軍，以及遭伊朗政府鎮壓致死的抗議者家屬；美方統計指出，1983年貝魯特美軍陸戰隊營區爆炸案241人陣亡，2003至2011年伊拉克戰事期間另有至少603名美軍因伊朗相關攻擊喪生。同一時間，巴格海伊表示與阿曼就海峽航道圖的談判「進展順利且具建設性」，仍有技術性問題待解決。伊朗安全高層同步大搬風：總統佩澤希齊揚8月9日任命71歲的前革命衛隊總司令莫森·雷扎伊接掌最高國家安全委員會秘書長，原秘書長佐爾加德爾改任最高領袖政治顧問；雷扎伊自2007年起遭國際刑警組織列紅色通緝令，因被控涉入1994年阿根廷AMIA猶太社區中心爆炸案（85人罹難）的策劃與執行，他向來主張荷莫茲海峽控制權「比核武更重要」，並警告美方若持續封鎖伊朗港口，將「面臨嚴重風險與傷亡」。同一時間，佩澤希齊揚8月10日在國家電視台專訪中證實，他與最高領袖哈梅內伊近日進行了一場近7小時的會談，內容涵蓋民生、市場、就業與住房及美方制裁衝擊，並轉述哈梅內伊強調防範「敵人製造分裂」的重要性。）（[Brentwood Live/PA](https://www.brentwoodlive.co.uk/news/national/26452542.donald-trump-scoffs-irans-demand-war-reparations/)、[Al Jazeera](https://www.aljazeera.com/news/2026/8/11/trump-demands-compensation-from-iran-as-talks-on-strait-of-hormuz-continue)、[PBS NewsHour](https://www.pbs.org/newshour/show/iran-demands-u-s-pay-for-war-damage-before-agreeing-to-reopen-strait-of-hormuz)、[Fortune](https://fortune.com/2026/08/08/iran-demands-strait-of-hormuz-us-conditions-total-compensation-war-damage/)、[The Tribune](https://www.tribuneindia.com/news/usa-news/iran-should-pay-for-damages-its-done-over-50-years-trump-claims-100-control-over-strait-of-hormuz/amp/)、[Al Jazeera](https://www.aljazeera.com/news/2026/8/10/who-is-mohsen-rezaei-and-how-significant-is-his-appointment)、[The Times of Israel](https://www.timesofisrael.com/iran-names-new-security-chief-whos-wanted-by-interpol-in-connection-with-deadly-amia-bombing/)、[KSAT/AP](https://www.ksat.com/news/world/2026/08/10/iran-wont-reopen-strait-of-hormuz-without-us-concessions-and-other-mideast-developments/)、[The Tribune (India)](https://www.tribuneindia.com/news/iran-diplomacy/iran-leadership-reshuffles-amid-hormuz-talks-comes-after-rare-meeting-with-president-supreeme-leader)）
 - （更新 2026-08-06：伊朗外交部宣布與阿曼的荷莫茲海峽協議已進入「最後階段」擬定，雙方就航道地理座標達成協議：船隻入灣走伊朗控制航線、出灣多走阿曼一側，協議生效前伊朗將先派油輪清除海峽內估計70至100枚水雷。協議仍待伊朗最高領袖莫賈塔巴·哈梅內伊批准；總統佩澤希齊揚證實「目前與他聯繫確實很困難」，是官方首度鬆口承認接觸困難，外界並傳莫賈塔巴在2月28日空襲中重傷甚至毀容，惟未經伊朗官方證實。過境費用版本不一：一說協議期間「不收取任何費用」，另一說伊朗原要求5%至7%費率、阿曼提案3%、美方堅持零費率，版本尚未統一。川普稱協議「明天或後天」可望公布，副總統萬斯稱談判「一團混亂」、需要時間；參議院少數黨領袖舒默質疑協議恐重演過去僅維持數天的模式。同一時間，葉門胡塞武裝再宣稱對沙烏地阿拉伯油輪發射飛彈，區域海事風險未歇。）（[NBC News/AP](https://www.nbcnews.com/world/iran/trump-iran-war-deal-strait-hormuz-deal-oman-rcna590920)、[The Irish Times](https://www.irishtimes.com/world/middle-east/2026/08/05/us-and-iran-having-very-good-discussions-trump-says/)、[The Washington Times](https://www.washingtontimes.com/news/2026/aug/5/iran-oman-agree-new-shipping-routes-hormuz-washington-tehran-circle/)、[CNBC](https://www.cnbc.com/2026/08/06/us-iran-war-hormuz-trump-bessent-deal.html)、[The National](https://www.thenationalnews.com/news/mena/2026/08/06/communication-with-iranian-supreme-leader-very-difficult-pezeshkian-says/)、[Daily Sabah](https://www.dailysabah.com/world/mid-east/contact-with-irans-supreme-leader-very-difficult-pezeshkian)）
@@ -521,3 +544,6 @@ coverImageCredit: "Tech. Sgt. Caycee Cook, U.S. Air Force — Public Domain"
 
 ### 荷莫茲海峽現在的航運量剩下多少？
 根據8月中旬多方報導，海峽平均每日僅約8至12艘船通過，較開戰前每日130至140艘的常態大減逾九成；美國防長赫格塞斯稱美國海軍能「無限期」維持封鎖，美軍並已攔阻逾55艘試圖突破封鎖的商船。
+
+### 伊朗指控卡達扣留飛行員是怎麼回事？
+伊朗軍方稱三名飛行員駕駛的蘇愷-24戰機3月間遭擊落，被卡達部隊活捉並拘留近6個月；卡達否認扣人，稱三人是違反卡達領空遭擊落，已尋獲其中一人遺骸，正協調將遺體與相關結果交還伊朗。

@@ -1,8 +1,8 @@
 ---
 title: "阿爾卑斯山夏天最夯？歐洲熱浪把旅客推向高山避暑"
-description: "Google Trends顯示「阿爾卑斯山夏天」搜尋量年增82%，瑞士2025年住宿晚數首度破2500萬，歐洲熱浪正把旅客從海灘推向山區，整理趨勢數據、熱門地區與規劃重點。"
+description: "阿爾卑斯山為什麼變成今年夏天最夯的避暑地？Google Trends顯示「阿爾卑斯山夏天」搜尋量年增82%，瑞士2025年住宿晚數首度破2500萬，歐洲熱浪正把旅客從海灘推向山區，整理趨勢數據、熱門地區與規劃重點。"
 publishDate: "2026-08-02T18:49:51.148Z"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-17
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"

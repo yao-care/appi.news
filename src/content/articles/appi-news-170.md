@@ -1,14 +1,15 @@
 ---
 title: "熱衰竭和中暑差在哪？分辨症狀、緊急急救與預防指南"
 slug: "appi-news-170"
-description: "熱衰竭與中暑代表截然不同的危險程度，卻常被混用。了解兩者核心差異、如何判斷緊急程度，以及戶外工作者與運動愛好者的具體預防步驟。"
+description: "熱衰竭和中暑分別是什麼、差在哪？兩者代表截然不同的危險程度，卻常被混用。了解皮膚濕冷與乾熱的判斷關鍵、如何辨別緊急程度，以及戶外工作者與運動愛好者的具體預防步驟。"
 publishDate: 2026-06-18
-updatedDate: 2026-06-18
+updatedDate: 2026-08-17
 category: health
 subcategory: preventive
 tags:
   - "極端高溫"
   - "居家安全"
+topics: ["first-aid-basics"]
 author: "appi-editorial"
 reviewedBy:
   - "huang-ziyan"

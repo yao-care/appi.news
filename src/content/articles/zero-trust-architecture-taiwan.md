@@ -103,7 +103,7 @@ originalContribution: "把 NIST SP 800-207 對零信任的官方定義、數位�
 
 <h2>企業與一般使用者該注意什麼</h2>
 
-<p>零信任常被誤解成「買一套產品裝上就叫零信任」，實際上它是一組原則，落地方式因組織規模差很多。對中小企業而言，不必比照金融業或政府機關的完整三層架構，<a href="https://moda.gov.tw/press/multimedia/blog/9773" target="_blank" rel="noopener">從身分鑑別這一層開始最務實：把重要系統的登入方式從密碼換成雙因子或 FIDO2 硬體金鑰</a>，成本相對低，卻能直接擋掉最常見的帳密外洩型攻擊。台灣行動自然人憑證等[密碼金鑰（Passkey）應用](/articles/passkey-passwordless-login/)，走的正是同一套去密碼化邏輯。設備鑑別與信任推斷牽涉的系統整合與維運複雜度高得多，適合等身分鑑別穩定之後再逐步疊加。</p>
+<p>零信任常被誤解成「買一套產品裝上就叫零信任」，實際上它是一組原則，落地方式因組織規模差很多。對中小企業而言，不必比照金融業或政府機關的完整三層架構，<a href="https://moda.gov.tw/press/multimedia/blog/9773" target="_blank" rel="noopener">從身分鑑別這一層開始最務實：把重要系統的登入方式從密碼換成雙因子或 FIDO2 硬體金鑰</a>，成本相對低，卻能直接擋掉最常見的帳密外洩型攻擊。台灣行動自然人憑證等<a href="/articles/passkey-passwordless-login/">密碼金鑰（Passkey）應用</a>，走的正是同一套去密碼化邏輯。設備鑑別與信任推斷牽涉的系統整合與維運複雜度高得多，適合等身分鑑別穩定之後再逐步疊加。</p>
 
 <p>對一般使用者來說，零信任在日常工作裡的體感，多半是登入次數變多、多了設備確認的提示。<a href="https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0%2C2&mcustomize=news_view.jsp&dataserno=202512300002&dtable=News" target="_blank" rel="noopener">這不是系統故障或 IT 在找麻煩，是「連進公司內網」不再等於「自動被信任」</a>的設計結果。反過來，這也代表過去「只要人在辦公室、接的是公司 Wi-Fi 就比較安全」的直覺假設，在零信任的邏輯下不再成立，遠距與行動辦公環境的防護基準，理論上會被拉到跟辦公室內一樣高。</p>
 

@@ -1,6 +1,10 @@
 {
   "abrasion-wound-care": [
     {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/abrasion-wound-care/"
+    },
+    {
       "hreflang": "id",
       "href": "https://in.appi.news/articles/abrasion-wound-care/"
     },
@@ -687,6 +691,10 @@
   ],
   "brics-ndb-dedollarization-jaipur": [
     {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/brics-ndb-dedollarization-jaipur/"
+    },
+    {
       "hreflang": "id",
       "href": "https://in.appi.news/articles/brics-ndb-dedollarization-jaipur/"
     },
@@ -697,12 +705,22 @@
   ],
   "burn-first-aid-steps": [
     {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/burn-first-aid-steps/"
+    },
+    {
       "hreflang": "id",
       "href": "https://in.appi.news/articles/burn-first-aid-steps/"
     },
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/burn-first-aid-steps/"
+    }
+  ],
+  "cbt-i-insomnia-first-line": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/cbt-i-insomnia-first-line/"
     }
   ],
   "central-asia-critical-minerals-us-strategy": [
@@ -1663,6 +1681,12 @@
       "href": "https://jp.appi.news/articles/indonesia-bromo-volcano-fire-park-closure/"
     }
   ],
+  "indonesia-earthquake-shallow-depth-tsunami": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/indonesia-earthquake-shallow-depth-tsunami/"
+    }
+  ],
   "indonesia-ferry-fire-safety-standards": [
     {
       "hreflang": "en",
@@ -1787,6 +1811,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/japan-kumamoto-earthquake-mall-collapse/"
+    }
+  ],
+  "japan-yasukuni-shrine-visit": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/japan-yasukuni-shrine-visit/"
     }
   ],
   "japan-zoo-lions-heat-death": [
@@ -1981,6 +2011,18 @@
       "href": "https://jp.appi.news/articles/mali-separatist-hostage-release/"
     }
   ],
+  "mangione-guilty-plea-double-jeopardy": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/mangione-guilty-plea-double-jeopardy/"
+    }
+  ],
+  "mastercard-payment-outage-tap-to-pay-declined": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/mastercard-payment-outage-tap-to-pay-declined/"
+    }
+  ],
   "mecca-defense-pact-nuclear-umbrella": [
     {
       "hreflang": "en",
@@ -2123,6 +2165,10 @@
   ],
   "motion-sickness": [
     {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/motion-sickness/"
+    },
+    {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/motion-sickness/"
     }
@@ -2223,6 +2269,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/nhi-ai-diagnostic-tool-evaluation/"
+    }
+  ],
+  "nigeria-osun-election-violence": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/nigeria-osun-election-violence/"
     }
   ],
   "night-cough-sleep": [
@@ -2327,6 +2379,12 @@
     {
       "hreflang": "id",
       "href": "https://in.appi.news/articles/openai-lifescibench-self-graded/"
+    }
+  ],
+  "openai-price-cut-china-ai-competition": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/openai-price-cut-china-ai-competition/"
     }
   ],
   "optus-triple-zero-outage-lawsuit": [
@@ -2735,6 +2793,12 @@
       "href": "https://jp.appi.news/articles/smartwatch-afib-detection-accuracy-japan/"
     }
   ],
+  "somalia-tps-deportation-protections": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/somalia-tps-deportation-protections/"
+    }
+  ],
   "sore-throat-home-relief": [
     {
       "hreflang": "en",
@@ -2858,6 +2922,10 @@
     }
   ],
   "sunburn-first-24h": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/sunburn-first-24h/"
+    },
     {
       "hreflang": "id",
       "href": "https://in.appi.news/articles/sunburn-first-24h/"
@@ -3297,6 +3365,12 @@
       "href": "https://jp.appi.news/articles/us-birthright-citizenship-explained/"
     }
   ],
+  "us-carrier-pacific-gap": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/us-carrier-pacific-gap/"
+    }
+  ],
   "us-cdc-director-schwartz-confirmed": [
     {
       "hreflang": "en",
@@ -3477,6 +3551,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/victoria-wfh-law-two-days/"
+    }
+  ],
+  "vietnam-airlines-vn34-tail-strike": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/vietnam-airlines-vn34-tail-strike/"
     }
   ],
   "waist-visceral-fat-vs-bmi": [

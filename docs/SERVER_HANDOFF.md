@@ -163,6 +163,7 @@ grep -n "notify(\|notifyBlocks(\|devReply(" scripts/slack-actions-server.mjs
 | 便民市政 | lifestyle-civic.sh | 各縣市政府 RSS（清單＝civic-feeds.mjs；本機境外 IP 只抓得到一部分，餘待台灣 proxy）+ civic-ledger 去重 | **全自動上架**（跨縣市統整一篇、有新資料才寫）| ✅有新資料發**生活**台/失敗哨兵 |
 | 影片線索整理 | lifestyle-video.sh | 訂閱 YouTube 頻道 RSS（video-feeds.mjs `VIDEO_FEEDS`）+ video-ledger 依 videoId 去重；**抓不到逐字稿**，影片只當線索、事實靠 LLM 上網交叉查證 | **全自動上架**（一片一篇、無篇數上限、≥2 個獨立來源才寫，否則 SKIP）| ✅有上架發**生活**台（列出每一篇，等線上 200 才發）/失敗哨兵；**無產出＝完全靜默**（站長 2026-07-27 明確裁示：只要有文章發就好，**不要**加靜默日心跳，別再提議）|
 | 颱風停班課 | lifestyle-typhoon.sh | 人事行政總處 nds.html + NCDR CAP feed | 事實稿→**待審草稿+發佈鈕** | ✅有停課時發**生活**台/失敗哨兵 |
+| 高爾夫選手動態雷達 | golf-radar.sh | TPGA/PGA TOUR/LPGA 官方 YouTube RSS＋ESPN／Golf.com 新聞 RSS（清單＝golf-signals.mjs 的 `SOURCES`）+ golf-seen 去重；台灣選手命中＝`TAIWAN_PLAYERS` 名冊 | **全自動上架**（台灣選手動態必報導、其他高爾夫題視情況選題判斷是否夠重大） | ✅有上架發**運動**台（一篇一行帶連結）/失敗哨兵；**無新資料完全靜默** |
 | 新文章送 Indexing API | indexing-submit.sh | 線上 sitemap | n/a（送 Google 收錄）| 有送才報 **dev 台** |
 | 數據報告 | weekly-report.sh | GA4+GSC | n/a（數據）| ✅報告到**作者群** |
 | 維運心跳 | heartbeat.sh | 本地內容存量 + GA（8 區塊儀表板）| n/a（維運）| ✅📊數據心跳＋📊數據總覽兩則到 **dev 台**（皆無 LLM。2026-07-23 移除原步驟③🤖大腦優化，改由 seo-ops 大腦層 UTC 22:20 取代升級）|

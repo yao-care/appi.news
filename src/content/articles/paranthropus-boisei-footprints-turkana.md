@@ -4,7 +4,7 @@ slug: "paranthropus-boisei-footprints-turkana"
 description: "肯亞圖爾卡納湖GaJi10遺址挖出21個化石足跡，查塔姆大學團隊確認屬南方古猿粗壯種，估計個體最高183公分、75公斤，8個足跡多數來自成年雄性、疑似集體移動，顛覆過去對這支古人類矮小的認知，研究刊登於PNAS。"
 excerpt: "肯亞圖爾卡納湖畔挖出21個、來自8個個體的化石足跡，屬於南方古猿粗壯種，顯示這支古人類旁支其實高達183公分，且以成年雄性隊伍集體行動，改寫科學界對牠體型與社會行為的認知。"
 publishDate: "2026-07-28T16:09:30.000Z"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-17
 category: "international"
 subcategory: "global-focus"
 tags: []
@@ -49,6 +49,8 @@ coverImageCredit: "Henry Sanderson Viyuyi — Pexels"
 ---
 
 肯亞北部圖爾卡納湖畔的一處泥灘上，143萬年前留下的一串足跡，如今讓科學家重新認識一支早已滅絕的古人類旁支。查塔姆大學（Chatham University）團隊分析後確認，這批足跡屬於南方古猿粗壯種（Paranthropus boisei），研究27日刊登於《美國國家科學院院刊》（PNAS）。（[Yahoo News](https://www.yahoo.com/news/science/articles/footprints-reshape-scientists-know-extinct-190300250.html)）
+
+延伸閱讀：[南島語族起源自台灣是真的嗎？從馬達加斯加DNA看「出台灣說」的證據與爭議](/articles/austronesian-migration-taiwan-madagascar/)
 
 ## GaJi10遺址：21個足跡、8個個體
 

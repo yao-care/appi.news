@@ -3,7 +3,7 @@ title: "躁鬱症完整指南：從辨識誤診警訊到長期穩定管理"
 slug: "appi-news-192"
 description: "躁鬱症（雙向情緒障礙）因情緒起伏劇烈常被誤認為個性問題，平均延誤診斷多年。本文帶你認識三種類型、常見誤診成因、中醫情志觀點，以及整合藥物、心理與生活調整的實用管理策略。"
 publishDate: 2026-06-18
-updatedDate: 2026-08-06
+updatedDate: 2026-08-17
 category: health
 subcategory: tcm-integrative
 tags: ["心理健康"]
@@ -31,6 +31,8 @@ draft: false
 根據世界衛生組織（WHO）的資料，全球目前約有 3,700 萬人帶著雙向情緒障礙生活，但全球治療覆蓋率仍嚴重偏低。更讓人憂心的是，這類疾病從出現症狀到得到正確診斷，中間往往隔著漫長的誤診與等待——有時以年計算，有時超過十年。
 
 正確認識躁鬱症，是邁向穩定生活的第一步。
+
+延伸閱讀：[AI 心理諮商合法嗎？美國各州忙著立法，台灣目前無專法規範](/articles/ai-mental-health-chatbot-regulation-gap/)、[睡不著怎麼辦？躺滿20分鐘還醒著先離床](/articles/acute-insomnia-tonight/)
 
 ## 一、什麼是躁鬱症？情緒的波動不只是「高低」
 

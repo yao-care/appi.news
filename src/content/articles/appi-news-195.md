@@ -3,10 +3,11 @@ title: "AI 服務禁用與中斷已成常態：4 個讓工作流維持韌性的�
 slug: "appi-news-195"
 description: "最強 AI 模型被比照核彈等級管制禁用，加上各版本服務持續出現錯誤率攀升，正在揭露一個更根本的問題：工作流對單一 AI 服務的過度依賴。本文從備援設計、容錯邏輯、管制趨勢應對、Prompt 跨模型可移植性四個面向，提出可執行的準備原則。"
 publishDate: 2026-06-22
-updatedDate: 2026-08-06
+updatedDate: 2026-08-17
 category: tech
 subcategory: ai
 tags: []
+topics: ["ai-agent-governance"]
 author: "lightman"
 coverImage: "covers/appi-news-195.webp"
 coverAlt: "單點依賴與分散韌性工作流的結構對比示意"
@@ -31,6 +32,8 @@ draft: false
 在這之前，Opus 和 Sonnet 各版本也接連出現 elevated error rates，服務時不時不穩定。這些事情加在一起說明的，不是「這次特別倒楣」，而是 AI 服務的可用性從來就不是一個可以固定假設的前提。要先把問題定義清楚，才能找到正確的準備方向。
 
 本文從四個面向拆解：不把單一 AI 服務當唯一命脈、設計容錯與降級的工作流邏輯、面對高管制趨勢的預期調整，以及如何處理同樣的 Prompt 在不同 LLM 跑出不同結果的問題。
+
+延伸閱讀：[美國一紙出口管制令讓 Claude Fable 5、Mythos 5 全球下線：把關鍵流程綁單一雲模型的風險浮上檯面](/articles/single-vendor-ai-continuity-risk/)、[KPMG 把 AI agent 推給 27.6 萬員工：全員部署之後，治理才是真考題](/articles/kpmg-agent-365-workforce-governance/)
 
 ---
 

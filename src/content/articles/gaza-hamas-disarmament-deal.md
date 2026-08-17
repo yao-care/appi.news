@@ -46,6 +46,8 @@ coverImageCredit: "Photo by Mahmoud Ayad on Unsplash"
 
 美國主導的加薩看板委員會（Board of Peace）7月31日宣布，哈馬斯已同意解除武裝，由埃及、卡達、土耳其與美國調停人共同敲定下一階段停火路線圖。[川普在Truth Social發文](https://worldtribune.com/trump-hails-gaza-milestone-agreement-to-disarm-hamas/)稱：「今日，和平委員會達成歷史性協議，完全解除哈馬斯及加薩所有武裝團體的武裝。這是實現持久和平與安全的重大步驟。」委員會主席姆拉德諾夫則語帶保留：「協議內容很重要，接下來會發生什麼更重要。實施和驗證必須是真的。」
 
+延伸閱讀：[國際穩定部隊（ISF）是什麼？烏干達批准派兵加薩，20000人維和部隊仍在集結](/articles/uganda-gaza-stabilization-force/)
+
 ## 解除武裝怎麼進行：14天造冊、最長350天清除
 
 根據[半島電視台的整理報導](https://www.aljazeera.com/news/2026/7/31/gaza-board-of-peace-announces-hamas-disarmament-agreement-what-we-know)，協議要求哈馬斯在14天內提交武器庫存清單，由巴勒斯坦民族委員會監督儲存過程，國際驗證委員會、國際穩定部隊與新建的巴勒斯坦警察部隊則負責查核進度，優先處理重型武器、軍事生產設施與隧道網絡。半島電視台引述時間表估計整個解除武裝過程需200到300天，[Spectrum News的報導](https://spectrumlocalnews.com/me/maine/international/2026/07/31/hamas-agreement-disarm-gaza)則引述一名看板委員會官員的說法，指清除重型武器與隧道基礎設施可能需時200到350天。哈馬斯談判代表哈馬德向《華爾街日報》表示，該組織同意將武器存放在由加薩國家管理委員會監督的儲存設施內，交出隧道地圖、武器工廠與儲存點資訊。
@@ -70,3 +72,5 @@ coverImageCredit: "Photo by Mahmoud Ayad on Unsplash"
 ## 專家觀察：內塔尼亞胡的沉默與10月大選
 
 Spectrum News報導引述中東專家奎利亞姆的分析：「內塔尼亞胡的沉默意義重大，這是他必須做出的重大決定。」奎利亞姆指出，以色列預定2026年10月舉行大選，選舉前景正影響著以色列領導人在這份協議上的立場。哈馬斯過去從未同意過具體的解除武裝方案，若這次真能落實，將是加薩戰後和平進程的關鍵一步；但以色列是否真的撤軍、其餘巴勒斯坦武裝團體是否跟進，眼下都還是問號。
+
+延伸閱讀：[加薩撤軍卡在哪？內塔尼亞胡正式拒絕川普15點方案，堅持哈瑪斯先解除武裝再撤軍](/articles/gaza-hamas-disarmament-deal-israel-concerns/)

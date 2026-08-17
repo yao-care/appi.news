@@ -60,6 +60,8 @@ originalContribution: "本文整合美聯社、半島電視台、《雅加達郵
 
 [美聯社報導](https://www.winnipegfreepress.com/world/2026/08/02/a-blaze-engulfs-an-indonesian-passenger-ferry-off-java-leaving-at-5-dead-and-dozens-missing)指出，渡輪Mutiara Sentosa 2號8月2日（週日）當地時間清晨6時至7時之間起火，當時船隻正從印尼第二大城、東爪哇的蘇拉巴亞，開往南蘇拉威西的馬卡薩，船上載有232名乘客與39名船員，合計271人。[CBS News報導](https://www.cbsnews.com/news/indonesia-passenger-ferry-fire-mutiara-sentosa-2/)提到，起火地點位於印尼松梅內普縣（Sumenep）海域，在馬都拉島北端附近、Sapudi群島中的Buruan Sapudi島以北約19海浬（約35公里）處；營運這艘渡輪的公司為PT Atosim Lampung Pelayaran。[《雅加達郵報》報導](https://www.thejakartapost.com/indonesia/2026/08/02/five-dead-41-missing-after-ferry-catches-fire-off-east-java)則指出，這條航線平時主要服務東爪哇與南蘇拉威西之間的國內旅客與貨運。
 
+延伸閱讀：[淺層地震為什麼特別致命？印尼規模7.7強震釀47死](/articles/indonesia-earthquake-shallow-depth-tsunami/)
+
 ## 5死41人失蹤　225人獲救
 
 [半島電視台報導](https://www.aljazeera.com/news/2026/8/2/at-least-five-dead-41-missing-after-ferry-catches-fire-off-indonesia)指出，附近船隻趕往現場協助疏散，成功救起225名乘客與船員，並打撈5具遺體，仍有41人下落不明。[NBC News報導](https://www.nbcnews.com/world/asia/fire-indonesian-ferry-leaves-least-5-dead-dozens-missing-rcna590452)描述，現場影像顯示船隻冒出濃密黑煙，部分乘客為了逃生直接跳海，附近船隻隨即將人救起。[The National報導](https://www.thenationalnews.com/news/2026/08/02/five-dead-and-41-missing-as-indonesian-ferry-catches-fire-authorities-say/)補充，截至當地時間上午11時20分，仍有約40人留在船上等待撤離，貨物與人員持續轉移至救援船隻。
@@ -81,6 +83,8 @@ originalContribution: "本文整合美聯社、半島電視台、《雅加達郵
 <img src="/images/indonesia-ferry-fire-safety-s2.webp" width="960" height="540" loading="lazy" decoding="async" alt="東南亞港口停泊多艘船隻，岸邊堆放貨櫃與作業設施（示意圖）" title="印尼渡輪是連結上萬座島嶼的重要交通方式，監理量能長期跟不上航運需求（示意圖）">
 
 搜救行動截至發稿時仍在進行，41名失蹤者的下落與確切死傷人數，仍待印尼搜救機構後續公布。
+
+延伸閱讀：[印尼婆羅摩火山還能去嗎？野火燒逾900公頃、國家公園全面關閉最新狀況](/articles/indonesia-bromo-volcano-fire-park-closure/)
 
 ## 常見問題
 

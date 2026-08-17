@@ -50,6 +50,8 @@ originalContribution: "本文整合 CBS News、Newsweek、PJ Media、The Boston 
 
 赫恩住在馬里蘭州貝塞斯達，曾三度代表美國參加夏季奧運獨木舟迴轉賽，退役後投身槳類運動產業。6月19日，他騎自行車行經反射池畔，發現池底新裝的藍色防水塗層已在剝落，好奇伸手觸摸一塊鬆脫碎片，園區工作人員上前制止後他隨即放手。即便如此，他仍被國民警衛隊與園區警察拘留約5小時。赫恩事後表示：「我沒做錯任何事，我只是一個好奇的公民。」（[Newsweek](https://www.newsweek.com/charges-to-be-dropped-for-olympian-david-hearn-in-reflecting-pool-vandalism-12272907)）
 
+延伸閱讀：[林肯紀念堂倒影池整修後爆漆面剝落、池水變綠　川普指「破壞」遭質疑無證據　內政部稱5人被捕](/articles/lincoln-reflecting-pool-vandalism-claim/)
+
 ## 7月2日起訴：重罪指控，最高判10年
 
 7月2日，華府聯邦檢察官皮羅（Jeanine Pirro）以「聯邦財產毀壞」重罪起訴赫恩，指控他「用雙手強行拉起並移除池底襯里」，造成損害逾1000美元，依法最高可判10年徒刑。案件原訂9月28日開庭審理。（[PJ Media](https://pjmedia.com/david-manney/2026/07/31/the-reflecting-pool-case-sank-under-the-weight-of-its-own-facts-n4955680)）

@@ -67,6 +67,8 @@ updatedDate: "2026-08-06T05:55:28.112Z"
 
 現行「健身中心定型化契約應記載及不得記載事項」由[教育部110年11月1日修正、111年1月1日生效](https://www.ey.gov.tw/Page/DFB720D019CCCB0A/a8a9e88e-6f7a-49bc-a4d7-d990a1d9840d)，主管業務已隨體育署升格[於2025年9月9日移交運動部](https://www.ey.gov.tw/Page/9277F759E41CCD91/15750e30-8a07-4537-9cea-cfdd110b266c)。規範要求業者提供至少三日以上的契約審閱期，並禁止「終身」「永久」字眼、片面調漲費用或修改契約內容等條款。
 
+延伸閱讀：[演唱會旺季飯店漲價多離譜？「先關房再漲價」是否違法整理](/articles/concert-hotel-price-surge-consumer-rights/)
+
 ## 業者搬遷、縮編或歇業，消費者可以終止契約
 
 依[消基會整理的條文內容](https://www.consumers.org.tw/product-detail-3079102.html)，業者搬遷、營業場所縮減二成以上，或提供的器材、指導員數量比約定少二成以上，消費者可免手續費終止契約；業者若直接停業，[同樣可依規定主張終止契約並要求退費](https://www.gov.taipei/News_Content.aspx?n=EEC70A4186D4C828&s=19A51E57F9CC6173)，不必等業者主動說明。

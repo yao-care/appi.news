@@ -63,6 +63,8 @@ LINE Bank口袋帳戶（官方稱子帳戶）的活存優惠額度，2026年6月
 
 在這次調高之前，口袋帳戶的額度是[2025年9月才剛從較低的門檻調高到50萬元](https://corp.linebank.com.tw/news/e97e381d-d3fa-4234-845c-f09ec76f2f64)，同樣是1.5%年利率、1元起息，也不收開辦費或帳戶管理費。等於在不到一年的時間裡，LINE Bank把口袋帳戶的上限連續調高了兩次。
 
+延伸閱讀：[階梯型活存是什麼？王道銀行額度調高後怎麼比較高利活存](/articles/obank-tiered-savings-limit-hike/)
+
 <img src="/images/linebank-pocket-account-limit-s1.webp" width="960" height="720" loading="lazy" decoding="async" alt="手持智慧型手機查看通知訊息，畫面聚焦於手部與螢幕" title="多數用戶是透過App推播通知得知額度調高（示意圖）">
 
 ## 口袋帳戶（子帳戶）是什麼機制

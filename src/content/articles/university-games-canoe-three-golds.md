@@ -57,6 +57,8 @@ SSU所列賽事成績確認三項金牌得主；聯合新聞網與民視運動�
 
 依國際輕艇總會（ICF）規則，kayak只能以雙葉槳推進，canoe只能以單葉槳推進，槳不得固定在艇上。
 
+延伸閱讀：[周亞瑄全大運奪金達亞運標準：放下成績執念是關鍵轉折](/articles/chou-ya-hsuan-shooting-gold-standard/)
+
 「Kayaks must be propelled solely by means of a double-bladed paddle. Canoes must be propelled solely by means of a single-bladed paddle.」國際輕艇總會《ICF Canoe Sprint Competition Rules 2025》第10.1.1至10.1.2條規定。
 
 全大運將canoe稱為加拿大艇，以C表示；kayak稱為愛斯基摩艇，以K表示。字母後的數字代表艇上人數，因此C1是單人加拿大艇，K1與K2是單人、雙人愛斯基摩艇。
@@ -119,3 +121,5 @@ SSU所列賽事成績確認三項金牌得主；聯合新聞網與民視運動�
 ### Q4：兩人已經取得亞運資格嗎？
 
 目前引用資料沒有顯示兩人已取得亞運資格。曾俐芩把亞運列為下一階段目標，金潔儀則表示希望提升國際賽表現，正式資格仍應以協會與代表隊選拔公告為準。
+
+延伸閱讀：[全中運男子跳高紀錄怎麼改寫？陳建愷2公尺06關鍵試跳](/articles/chen-chien-kai-high-jump-record/)

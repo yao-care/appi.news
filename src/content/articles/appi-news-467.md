@@ -46,6 +46,8 @@ draft: false
 
 延伸閱讀：[關於社區健康篩查，你需要知道的6件事](/articles/appi-news-482/)
 
+延伸閱讀：[兒童發展篩檢異常後怎麼辦？6個早療不漏接關鍵](/articles/child-development-screening-follow-up/)
+
 ### 0-6歲語言發展里程碑簡表
 
 | 年齡階段 | 語言發展重點 | 對應篩檢時程（國健署） |

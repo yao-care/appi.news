@@ -65,6 +65,8 @@ updatedDate: "2026-08-06T05:55:28.112Z"
 
 這股趨勢也吹進台灣。2026 年 7 月，台灣第三方支付公會攜手藍新科技、綠界科技等四大金流業者宣布，網購結帳與公益捐款將逐步改用 Passkey 刷臉或指紋確認（見 [TVBS 報導](https://news.tvbs.com.tw/life/3269001)）。這則新聞轉貼到 PTT 信用卡板累積超過 80 則推文，討論多集中在換手機怎麼辦、被脅迫刷臉的風險（見 [PTT 原文](https://www.ptt.cc/bbs/creditcard/M.1785431040.A.983.html)）。
 
+延伸閱讀：[零信任架構三階段：台灣政府機關、金融業做到哪](/articles/zero-trust-architecture-taiwan/)
+
 <img src="/images/passkey-taiwan-sms-otp-replacement-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="使用者以指紋辨識解鎖智慧型手機（示意圖）">
 
 ## Passkey 是什麼、台灣哪些服務已經能用

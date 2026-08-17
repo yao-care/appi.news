@@ -56,6 +56,8 @@ coverImageCredit: "Yuya360 — CC BY 3.0, Wikimedia Commons"
 
 當地景區管理單位公告：「因土石流，自7月27日起，日則溝箭竹海（含箭竹海）以上區域，以及則查窪溝全區景區暫時關閉。」（[inkl／Reuters](https://www.inkl.com/news/stranded-tourists-evacuated-from-chinas-famed-jiuzhaigou-world-heritage-site-after-mudslides-heavy-rain)）滯留在關閉區域內的遊客已由當局安排緊急疏散，[報導](https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/27/stranded-tourists-evacuated-from-china039s-famed-jiuzhaigou-world-heritage-site-after-mudslides-heavy-rain)未提供具體疏散人數，但證實遊客已安全撤離受土石流影響的路段。
 
+延伸閱讀：[印尼婆羅摩火山還能去嗎？野火燒逾900公頃、國家公園全面關閉最新狀況](/articles/indonesia-bromo-volcano-fire-park-closure/)
+
 <figure>
 <img src="/images/jiuzhaigou-mudslide-evacuation-s1.webp" width="960" height="720" loading="lazy" decoding="async" alt="九寨溝諾日朗瀑布層疊景觀">
 <figcaption>九寨溝以層疊瀑布與多彩湖泊聞名，此次因土石流暫時關閉的箭竹海、則查窪溝均屬園區核心景點區域。（AlexHe34／CC BY-SA 3.0，Wikimedia Commons）</figcaption>
@@ -74,6 +76,8 @@ coverImageCredit: "Yuya360 — CC BY 3.0, Wikimedia Commons"
 [Plataforma Media報導](https://www.plataformamedia.com/en/2026/07/27/typhoon-noul-china-flood-warnings-inland/)並統計，本月以來中國多地天災頻傳：廣西因颱風梅莎克（Maysak）相關雨災已知至少39人死亡；甘肅稍早另一起山崩造成21人死亡；湖北暴雨與龍捲風釀11人死亡。同一報導提到，因應連日豪雨，全國已疏散超過75萬人，廣東香港一帶也傳出21人受傷，廣東境內另有11條河流、13個水文站水位超過警戒線。
 
 九寨溝景區目前僅暫時關閉受土石流影響的箭竹海以上區域與則查窪溝全區，其餘景區運作情形，以及關閉區域何時重新開放，當局尚未公布明確時間表。
+
+延伸閱讀：[線狀降水帶是什麼？千葉破紀錄豪雨癱瘓成田機場](/articles/japan-chiba-record-rain-narita-airport/)
 
 ## 常見問題
 

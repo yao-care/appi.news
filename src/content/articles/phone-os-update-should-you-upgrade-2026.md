@@ -46,6 +46,8 @@ updatedDate: "2026-08-06T05:55:28.112Z"
 
 延伸閱讀：[Windows 11 記憶體吃太兇？微軟承認最佳化有問題，先看這幾個實際能降的設定](/articles/windows-11-ram-usage-fix/)
 
+延伸閱讀：[長輩手機怎麼選？軟體更新年限與耐用規格比較](/articles/elderly-phone-buying-guide-2026/)
+
 <img src="/images/phone-os-update-should-you-upgrade-2026-s2.webp" width="960" height="720" loading="lazy" decoding="async" alt="手機螢幕顯示安全鎖與盾牌圖示（示意圖）">
 
 ## 判斷該不該現在升級的四個步驟

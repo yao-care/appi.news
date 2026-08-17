@@ -25,7 +25,7 @@ references:
     url: "https://www.cdc.gov.tw/Category/QAPage/7EK9XTR8z3bCHl-ovNluEw"
 draft: false
 ---
-開學前防登革熱，校園與家庭應立刻完成「巡、倒、清、刷」：巡查所有積水容器、倒掉積水、清除不用的器具，再刷洗容器內壁去除蟲卵。花盆底盤、冷氣機集水盤、屋簷排水溝與廢棄容器都是常見死角；清除積水後，再搭配長袖衣物、紗窗紗門與合適的防蚊液。完成環境檢查後，可再看[8月31日開學收心與新生準備清單](/articles/back-to-school-syndrome-child-vision-checklist/)、[小一文具餐具與指定文件清單](/articles/first-grade-school-supplies-2026/)及[開學腸病毒重症前兆與漂白水比例](/articles/enterovirus-severe-warning-signs-2026/)，補齊開學用品與健康準備。
+開學前防登革熱，校園與家庭應立刻完成「巡、倒、清、刷」：巡查所有積水容器、倒掉積水、清除不用的器具，再刷洗容器內壁去除蟲卵。花盆底盤、冷氣機集水盤、屋簷排水溝與廢棄容器都是常見死角；清除積水後，再搭配長袖衣物、紗窗紗門與合適的防蚊液。這篇是[2026開學準備專題](/topics/back-to-school-2026/)裡的環境防疫清單，完成環境檢查後，可再看[8月31日開學收心與新生準備清單](/articles/back-to-school-syndrome-child-vision-checklist/)、[小一文具餐具與指定文件清單](/articles/first-grade-school-supplies-2026/)及[開學腸病毒重症前兆與漂白水比例](/articles/enterovirus-severe-warning-signs-2026/)，補齊開學用品與健康準備。
 
 ## 一、雨後為什麼登革熱風險會升高？積水容器與病媒蚊孳生的關係
 

@@ -55,6 +55,8 @@ references:
 
 延伸閱讀：[航空公司客戶不滿意，資方就能開除員工？工程師遭新加坡航空施壓解職，澳洲仲裁庭判賠4萬澳元](/articles/singapore-airlines-engineer-unfair-dismissal/)
 
+延伸閱讀：[雪梨機場為何頻傳近距離擦撞？人力短缺釀飛安意外，兩週內二度驚魂](/articles/sydney-airport-near-miss-staffing-crisis/)
+
 [SBS News報導](https://www.sbs.com.au/news/article/acma-sues-optus-over-2025-netword-outage-and-failed-triple-zero-calls/t2ty0fm4v)引述的數字顯示，故障期間共有600通000電話受影響，其中455通未能成功接通。獨立調查報告指出，Optus內部至少出現10項疏失，包括客服人員未將至少5起用戶反映000無法接通的案例往上呈報，導致問題延誤許久才被正視。[Canberra Times（AAP）報導](https://www.canberratimes.com.au/story/9320674/optus-sued-by-watchdog-over-triple-zero-network-outage/)並提到，南澳警方直到當天下午1點50分才接獲Optus通知，而政府部門更是等到隔日Optus發布公開聲明後才得知詳情。
 
 <figure>

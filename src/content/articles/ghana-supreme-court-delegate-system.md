@@ -46,6 +46,8 @@ coverImageCredit: "Guido Sohne — CC BY-SA 2.0, via Wikimedia Commons"
 
 迦納最高法院7月29日（週三）以5比2的多數意見，裁定政黨長年沿用的「代表制」選舉團違憲，往後所有信譽良好的註冊黨員都必須有權直接投票選出總統與國會候選人。[《迦納時報》報導](https://ghanaiantimes.com.gh/sc-landmark-ruling-all-card-bearing-members-can-vote-ndc-npp-welcome-decision/)指出，這起判決由首席法官巴弗邦尼（Paul Baffoe-Bonnie）主持，被告涵蓋執政黨新愛國黨（NPP）、在野黨全國民主大會（NDC）及人民大會黨（CPP）三大政黨，等於一舉推翻迦納政壇行之有年的初選制度。
 
+延伸閱讀：[贊比亞選舉為何喊停計票？選票遭竊、軍方介入爭議一次看](/articles/zambia-election-violence-vote-count/)
+
 <figure>
 <img src="/images/ghana-supreme-court-delegate-system-s1.webp" width="960" height="720" loading="lazy" decoding="async" alt="迦納最高法院建築外觀，殖民時期風格的白色建築物與周邊街景">
 <figcaption>迦納最高法院位於首都阿克拉，此次判決推翻政黨沿用多年的代表制選舉團制度。（Photo by aripeskoe2, CC BY 2.0, via Wikimedia Commons）</figcaption>

@@ -83,6 +83,8 @@ Windows 11電腦一開機記憶體用量就衝到六、七成，這件事本身�
 
 延伸閱讀：[手機系統更新前先看這篇：舊機該不該升，出事了怎麼退回](/articles/phone-os-update-should-you-upgrade-2026/)
 
+延伸閱讀：[長輩手機怎麼選？軟體更新年限與耐用規格比較](/articles/elderly-phone-buying-guide-2026/)
+
 <img src="/images/windows-11-ram-usage-fix-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="筆記型電腦螢幕與鍵盤特寫（示意圖）">
 
 ## 依效果排序，這幾個設定真的能降

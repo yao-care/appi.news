@@ -49,6 +49,8 @@ references:
 
 延伸閱讀：[中年幸福感為何最低？跨國研究揭「U型曲線」：40至50歲谷底、晚年反超年輕人](/articles/midlife-happiness-u-curve/)
 
+延伸閱讀：[0到18歲成長津貼是什麼？每月5000元、2027年上路一次看懂](/articles/taiwan-0-18-growth-allowance-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=_wiPQ5I_8t8" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：手機成癮侵蝕愛情? 恐影響出生率">
     <img src="/images/smartphone-birth-rate-decline-study-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="手機成癮侵蝕愛情? 恐影響出生率">

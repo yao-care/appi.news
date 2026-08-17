@@ -48,6 +48,8 @@ references:
 
 半夜莫名驚醒、心臟撲通撲通跳，檢查卻找不出心臟本身有問題。這種經驗不一定是單純睡不好，背後可能是心理創傷留下的生理痕跡。TVBS NEWS《十點不一樣》日前訪問醫師談心理創傷如何影響失眠、心悸與過度警覺，這篇整理醫院衛教資料，把背後的機制與求助管道講清楚。
 
+延伸閱讀：[熱恐慌是什麼？高溫誘發恐慌發作的原因與緩解方法整理](/articles/heat-panic-symptoms-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=82FTJoKZ65I" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：心理創傷會影響一生? 醫師解析失眠.心悸與過度警覺背後原因">
     <img src="/images/trauma-hypervigilance-insomnia-recovery-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="心理創傷會影響一生? 醫師解析失眠.心悸與過度警覺背後原因">

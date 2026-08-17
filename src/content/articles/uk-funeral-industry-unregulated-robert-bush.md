@@ -49,6 +49,8 @@ coverImageCredit: "Photo by Pavel Danilyuk — Pexels"
 
 布希經營的Legacy Independent Funeral Directors位在赫爾Hessle Road，2024年3月警方接獲對遺體照護的檢舉後上門查訪，赫然發現31具早該火化的遺體仍留在現場，其中一具死產嬰兒的遺體，已用紙袋裝著放在地板上將近2年。警方同時在現場尋獲逾百套骨灰，部分骨灰罈雖貼有姓名標籤，法院審理時卻指出「沒有人能確定自己拿到的是正確的骨灰」。布希當時人在美國，返國後在希斯洛機場被捕。（[Hull City Council](https://news.hull.gov.uk/31/07/2026/robert-bush-sentenced-following-legacy-independent-funeral-directors-investigation/)、[AOL News](https://www.aol.com/articles/hundreds-victims-crooked-funeral-director-132745558.html)）
 
+延伸閱讀：[蘇格蘭婦人克里特島陳屍17年後終定罪、判10年徒刑　希臘上訴制度下仍未收押，家屬痛批『太離譜』](/articles/jean-hanlon-crete-murder-conviction/)
+
 <img src="/images/uk-funeral-industry-unregulated-robert-bush-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="英國法院外觀，示意司法審判">
 
 ## 67項罪名、20年徒刑，長者被詐騙上百人
@@ -64,3 +66,5 @@ coverImageCredit: "Photo by Pavel Danilyuk — Pexels"
 ## 政府誓言修法，Hull市議會籲訂全國標準
 
 面對輿論壓力，衛生暨社會照護大臣古柏（Yvette Cooper）表示，鑑於此案「令人髮指」，政府將提出全面方案，「確保逝者在各種場所都能獲得應有的尊重與尊嚴，包括對殯葬業的適當監管」。Hull市議會領導人也公開呼籲，全國層級的標準修訂勢在必行，以防止類似事件再度發生，並承諾持續支援受害家屬。目前政府尚未公布具體修法時間表與內容細節。（[Irish News](https://www.irishnews.com/news/uk/victims-call-robert-bush-jail-term-atrocious-as-government-vows-regulation-XI6TWB2WTBOWJFPCAFZBH2FB4I/)、[Hull City Council](https://news.hull.gov.uk/31/07/2026/robert-bush-sentenced-following-legacy-independent-funeral-directors-investigation/)）
+
+延伸閱讀：[雅典行李箱陳屍案嫌犯被控謀殺　26歲阿富汗拳擊手法院裁定羈押候審](/articles/edinburgh-woman-athens-suitcase-death/)

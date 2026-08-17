@@ -66,6 +66,8 @@ coverImageCredit: "Russell Watkins / DFID — CC BY 2.0, Wikimedia Commons"
 
 哈希娜2024年8月因學生主導的起義垮台，乘直升機逃往印度，結束她長達15年的鐵腕統治。據[The Star報導](https://www.thestar.com.my/aseanplus/aseanplus-news/2026/07/29/bangladesh-ex-premier-hasina-vows-to-return-despite-fearing-for-life)，聯合國估計，她試圖鞏固權力期間，鎮壓行動造成約1,400人死亡。
 
+延伸閱讀：[跨國引渡怎麼運作？教會領袖遭美國通緝　須服完菲律賓刑期才移交](/articles/us-philippines-extradition-treaty-explained/)
+
 法律追責隨後而來。據[CNN報導](https://www.cnn.com/2025/11/17/asia/bangladesh-sheikh-hasina-verdict-intl-hnk)，達卡的國際罪行法庭（International Crimes Tribunal，ICT）三名法官組成的合議庭，於2025年11月17日裁定哈希娜須為執法人員執行的多起法外處決負起煽動責任，判她死刑；她被控的罪名主要與煽動殺害示威者、下令吊死示威者、以及動用致命武器、無人機與直升機鎮壓騷亂有關。[人權觀察（Human Rights Watch）報導](https://www.hrw.org/news/2025/11/17/bangladesh-hasina-found-guilty-of-crimes-against-humanity)指出，這起審判以缺席方式進行；同案被告、前內政部長阿薩杜扎曼．汗．卡邁勒（Asaduzzaman Khan Kamal）同樣被判死刑，另一被告喬杜里．阿卜杜拉．馬蒙（Chowdhury Abdullah Al-Mamun）則判處5年徒刑。人權觀察並批評，這起審判未達國際公平審判標準。
 
 <img src="/images/bangladesh-hasina-vows-return-s1.webp" width="960" height="648" loading="lazy" decoding="async" alt="2024年8月哈希娜辭職後，孟加拉學生與民眾在達卡沙赫巴格廣場的勝利遊行（資料照）">

@@ -1,5 +1,5 @@
 ---
-title: "AST正常值多少？GOT、GPT紅字前兆與肝癌盲點一次看"
+title: "GOT、GPT正常值多少？AST肝指數紅字與正常盲點"
 slug: "liver-enzymes-got-gpt"
 description: "AST（GOT）、GPT正常值台灣報告最常見上限是40 U/L，國際ACG指引標準更嚴格（男29到33、女19到25）。但GOT、GPT是「肝發炎指標」不是「肝功能指標」，肝癌初期、肝硬化緩解期都可能正常。這篇教你讀懂正常值範圍、紅字最常見原因（脂肪肝），以及B、C肝帶原等高風險族群該加做的檢查。"
 publishDate: 2026-07-16T20:00:00+08:00

@@ -2,6 +2,7 @@
 title: 尿布可以回收嗎？台灣廢棄尿布回收技術怎麼把長照垃圾變原料
 description: 台灣一天產生約1300噸廢棄尿布，長照機構就占400多噸。桃園業者拿到全國第一張醫療廢棄物再利用許可，整理這套回收技術怎麼運作、規模多大、目前誰能用。
 publishDate: "2026-07-31T18:38:31.823Z"
+updatedDate: "2026-08-17"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -16,6 +17,7 @@ coverImage: "/covers/can-diapers-be-recycled-taiwan-cover.webp"
 coverAlt: "回收工廠內分選再生原料，示意圖"
 coverImageCredit: "Photo by Gaurav Ranjitkar on Pexels"
 tags: ["循環經濟", "長照", "超高齡社會", "環境汙染", "桃園市"]
+topics: ["sustainability-policy-tools"]
 disclosure: "線索來自 華視新聞 CH52 YouTube 影片，內容經公開資料查證整理、附原始出處。"
 risksAndLimits:
   - "這套系統目前僅開放長照機構與醫療院所使用，一般家庭尿布垃圾還無法自行送交回收"
@@ -24,6 +26,8 @@ risksAndLimits:
 ---
 
 台灣邁入超高齡社會，長照與育兒需求同時墊高尿布用量，用過即丟的尿布也跟著變成處理系統的難題。[中央社報導](https://www.cna.com.tw/news/afe/202505080058.aspx)，台灣一天產生的廢棄尿布約1300噸，其中長照機構就占400多噸。這些尿布混雜塑膠、紙纖維、高吸水分子（SAP）與排泄物，含水量高，過去只能當一般垃圾焚化或掩埋，如今桃園有業者拿到全國第一張醫療廢棄物再利用許可，把這批垃圾變回可用原料。
+
+延伸閱讀：[資源循環推動法6月17日公布：2年緩衝期到2028年，逾百項子法怎麼訂、罰則怎麼算](/articles/resource-circulation-act-two-year-buffer/)、[循環標誌上路：紡織、塑膠等5大類12項規格出爐，廠商7月起可申請、政府採購優先選用](/articles/taiwan-circular-label-launch/)
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=wG2j__KBYh8" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：丟掉還是重生? 一片尿布的循環革命｜華視新聞 20260731">

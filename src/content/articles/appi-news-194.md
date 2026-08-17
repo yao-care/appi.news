@@ -1,14 +1,15 @@
 ---
-title: "Android 17 的 Gemini Intelligence：5 項讓手機 AI 從輔助升級為主動代理的能力"
+title: "Android 17 Gemini Intelligence：手機AI主動代理5項能力"
 slug: "appi-news-194"
 description: "Android 17 把 Gemini AI 整合進系統層級，推出 Gemini Intelligence 功能套件。本文拆解五項核心能力、硬體門檻，以及裝置端 AI 推論對使用者隱私與實際使用的意義。"
 publishDate: 2026-06-18
-updatedDate: 2026-06-18
+updatedDate: 2026-08-17
 category: tech
 subcategory: ai
 tags:
   - "AI基礎建設"
   - "生成式AI"
+topics: ["ai-agent-governance"]
 author: "appi-editorial"
 reviewedBy:
   - "lightman"
@@ -50,6 +51,8 @@ draft: false
 過去的語音助理，包括 Google Assistant 的早期版本，運作邏輯是「使用者下指令，系統執行單一動作」。這個設計在概念上夠清楚，但在實際使用上有個根本問題：使用者必須先知道自己要說什麼，說得夠精確，才能得到有用的結果。助理的能力頂多延伸到「問題→答覆」這一個循環。
 
 Gemini Intelligence 要把這個循環擴展成「感知情境→規劃步驟→跨應用執行→請使用者確認」的代理流程。它不等待明確的單一指令，而是嘗試在使用者需要之前感知情境並提供建議，甚至代為完成多步驟任務。這在技術上需要 AI 具備幾個條件：理解當前螢幕畫面的視覺上下文、讀取跨應用資料（郵件、日曆、訊息）、在不同 App 之間協調動作。
+
+延伸閱讀：[Apple 新 Siri 借 Gemini 的腦、卻在歐盟和中國缺席：把核心助理外包給對手模型的取捨](/articles/apple-siri-gemini-vendor-lock-in/)、[美國一紙出口管制令讓 Claude Fable 5、Mythos 5 全球下線：把關鍵流程綁單一雲模型的風險浮上檯面](/articles/single-vendor-ai-continuity-risk/)
 
 這是從「工具」走向「代理人」的轉變，但邊界設計是清楚的：所有任務最終仍需使用者確認才會執行，系統不會自行完成可能帶來後果的動作。這個邊界既是安全考量，也是維持使用者信任與控制感的設計選擇。
 

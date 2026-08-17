@@ -3,10 +3,11 @@ title: "「紅黃綠」食品標示真能降低慢性病風險嗎？"
 slug: "appi-news-188"
 description: "衛福部推動的食品紅黃綠三色分級標示，預計2026年下半年以自願制上路。從國際研究證據到台灣制度設計，解析前端警示標示能否真正幫助消費者降低慢性病風險，以及消費者現在能做的事。"
 publishDate: 2026-06-18
-updatedDate: 2026-08-06
+updatedDate: 2026-08-17
 category: health
 subcategory: tcm-integrative
 tags: []
+topics: ["health-marketing-literacy"]
 author: "huang-ziyan"
 coverImage: "covers/appi-news-188.webp"
 coverAlt: "台灣食品紅黃綠標示制度：糖、鈉、飽和脂肪三色分級閾值說明圖"
@@ -32,6 +33,8 @@ draft: false
 你有沒有發現，超市貨架上的食品，多數人拿起來看的是價格標籤，不是背面那張密密麻麻的營養成分表？那個表格，早就被大多數人的眼睛跳過了。
 
 這正是衛福部決定推動「紅黃綠」食品標示的出發點。從2026年下半年開始，業者可自願在包裝正面標示三色分級，讓消費者「3秒看懂」食品的糖、鈉、飽和脂肪含量是否超標（1）。直觀設計的背後，有一個更大的公共衛生命題：前端警示標示，真的能降低慢性病風險嗎？
+
+延伸閱讀：[手搖飲的果糖為什麼特別傷代謝？「微糖、無糖」的真相](/articles/sugary-drinks-fructose-metabolism/)、[超加工食品有多可怕？NOVA 分類與台灣人的實際風險](/articles/ultra-processed-food-nova/)
 
 ## 一、台灣「紅黃綠」標示是什麼制度？
 

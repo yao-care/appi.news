@@ -3,10 +3,11 @@ title: "赴歐美旅遊被蜱蟲咬，就一定會得萊姆病嗎？"
 slug: "appi-news-189"
 description: "2026年台灣首例境外移入萊姆病來自瑞典森林活動。了解蜱蟲傳播條件、遊走性紅斑辨識、24小時黃金移除窗口，以及赴歐美旅遊的完整防護清單。"
 publishDate: 2026-06-18
-updatedDate: 2026-08-06
+updatedDate: 2026-08-17
 category: health
 subcategory: tcm-integrative
 tags: []
+topics: ["first-aid-basics"]
 author: "huang-ziyan"
 coverImage: "covers/appi-news-189.webp"
 coverAlt: "萊姆病傳播路徑示意圖：蜱蟲在野生動物宿主與人類之間的傳染循環，並顯示幼蜱、若蜱、成蜱的大小比較"
@@ -31,6 +32,8 @@ draft: false
 很多人的第一個反應是：台灣又沒有萊姆病，這跟我有什麼關係？但這個問題的精準問法應該是：如果你計畫前往北歐、北美的山林健行，被蜱蟲叮咬之後，哪些條件才會讓螺旋菌真的傳到你身上？
 
 答案不是「被咬就會感染」，關鍵是一個時間窗口——掌握它，風險就大幅降低。
+
+延伸閱讀：[蚊蟲叮咬止癢怎麼辦？抓破皮膚出現這些徵兆要就醫](/articles/insect-bite-itch/)、[海外地震後還能去嗎？行前判斷清單](/articles/overseas-disaster-travel-checklist/)
 
 ## 一、萊姆病是什麼？從森林帶回的螺旋菌
 

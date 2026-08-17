@@ -59,3 +59,9 @@ export function showBackToSchoolCompanion(now = new Date()): boolean {
   const day = taipeiDateKey(now);
   return day >= '2026-08-10' && day <= '2026-08-27';
 }
+
+/** 8/17 起把開學專題提升為首頁主入口，直到 8/31 開學日。 */
+export function shouldPromoteBackToSchool(now = new Date()): boolean {
+  const day = taipeiDateKey(now);
+  return day >= '2026-08-17' && day <= '2026-08-31';
+}

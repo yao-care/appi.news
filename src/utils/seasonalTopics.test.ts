@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   activeSeasonalTopic,
+  shouldPromoteBackToSchool,
   showBackToSchoolCompanion,
   taipeiDateKey,
 } from './seasonalTopics';
@@ -33,5 +34,14 @@ describe('seasonal topic rotation', () => {
     ['2026-08-27T16:00:00Z', false],
   ])('controls the early back-to-school companion at %s', (iso, visible) => {
     expect(showBackToSchoolCompanion(new Date(iso))).toBe(visible);
+  });
+
+  it.each([
+    ['2026-08-16T15:59:59Z', false],
+    ['2026-08-16T16:00:00Z', true],
+    ['2026-08-31T15:59:59Z', true],
+    ['2026-08-31T16:00:00Z', false],
+  ])('promotes back-to-school as the homepage primary at %s', (iso, promoted) => {
+    expect(shouldPromoteBackToSchool(new Date(iso))).toBe(promoted);
   });
 });

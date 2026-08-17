@@ -84,7 +84,18 @@ const ld = [
     <Breadcrumbs items={[{ name: '專題', path: '/topics/' }, { name: topic.data.title }]} />
 
     <header class="topic-hero">
-      <ImageWithFallback src={cover} alt={topic.data.title} fallback="og/focus.png" class="topic-hero-cover" />
+      <div class="topic-hero-media">
+        <ImageWithFallback
+          src={cover}
+          alt={topic.data.title}
+          fallback="og/focus.png"
+          class="topic-hero-cover"
+          loading="eager"
+          fetchpriority="high"
+          width={1280}
+          height={720}
+        />
+      </div>
       <div class="topic-hero-info">
         {cat && <span class="topic-hero-cat">{cat.name}・專題</span>}
         <h1>{topic.data.title}</h1>
@@ -124,16 +135,30 @@ const ld = [
 
 <style>
   .topic-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
     margin: 18px 0 28px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-soft);
+  }
+  .topic-hero-media {
+    min-height: 320px;
+    background: var(--line-2);
   }
   :global(.topic-hero-cover) {
     width: 100%;
-    aspect-ratio: 3 / 1;
+    height: 100%;
+    min-height: 320px;
+    display: block;
     object-fit: cover;
-    border-radius: var(--radius);
   }
   .topic-hero-info {
-    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
   }
   .topic-hero-cat {
     font-family: var(--font-sans);
@@ -157,5 +182,19 @@ const ld = [
   }
   .topic-lead {
     margin-bottom: 16px;
+  }
+
+  @media (max-width: 720px) {
+    .topic-hero {
+      display: block;
+    }
+    .topic-hero-media,
+    :global(.topic-hero-cover) {
+      min-height: 0;
+      aspect-ratio: 16 / 9;
+    }
+    .topic-hero-info {
+      padding: 22px 20px 24px;
+    }
   }
 </style>

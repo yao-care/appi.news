@@ -1,9 +1,10 @@
 ---
-title: "纜車能解決城市塞車嗎？　馬達加斯加首都砸1.73億美元蓋空中纜車，通車數週後乘客不埋單"
+title: "馬達加斯加都市纜車為何沒人搭？1.73億美元交通建設失敗"
 slug: "madagascar-cable-car-transit-failure"
-description: "馬達加斯加首都塔那那利佛耗資約1.73億美元、靠法國貸款興建的都市纜車系統，通車僅數週便乘客稀少，如今纜線在天空中閒置。美聯社報導指出，票價是傳統迷你巴士的6到8倍，在人均月薪僅約72美元、逾7成人口貧窮的國家難以推廣；系統催生者前總統拉喬利納已在政變中下台，過渡政府迄今未表態如何處置這套系統。"
+description: "馬達加斯加首都塔那那利佛斥資1.73億美元興建都市纜車，通車數週後卻乏人問津。整理票價是迷你巴士6至8倍、貧窮人口與交通規劃落差，以及政變後這套系統的去留。"
 excerpt: "馬達加斯加首都斥資1.73億美元蓋纜車解決塞車，通車數週後幾乎沒人搭，票價是迷你巴士6到8倍；催生者已因政變下台，纜車去留成謎。"
 publishDate: "2026-08-06T17:03:21.286Z"
+updatedDate: "2026-08-17"
 category: "international"
 subcategory: "global-focus"
 tags:
@@ -48,6 +49,8 @@ coverImageCredit: "Photo by Bradley Andrews on Unsplash"
 ---
 
 在非洲東岸外海島國馬達加斯加的首都塔那那利佛，一排排纜車車廂如今掛在半空，幾乎空無一人。[美聯社（AP）記者實地採訪報導](https://www.the-messenger.com/news/world/article_770bc243-967f-5c5a-bbf9-a300d70f72eb.html)指出，這套耗資約1.73億美元興建的都市纜車系統，通車才短短幾週就乏人問津，如今被外界視為這個全球最貧窮國家之一的一次重大誤判。
+
+延伸閱讀：[南島語族起源自台灣是真的嗎？從馬達加斯加DNA看「出台灣說」的證據與爭議](/articles/austronesian-migration-taiwan-madagascar/)
 
 ## 前總統力推的「空中艾菲爾鐵塔」
 

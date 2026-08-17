@@ -1,9 +1,10 @@
 ---
-title: "BrewDog創辦人華特買回計畫惹議：聯繫前股東遭投訴資料來源不明　英國ICO介入調查"
+title: "BrewDog華特買回計畫惹議：前股東個資來源遭英國ICO調查"
 slug: "brewdog-james-watt-data-watchdog-complaint"
-description: "BrewDog共同創辦人華特（James Watt）7月15日透過新公司Second Best提出買回要約，自稱獲4.3萬名「股權龐克」投資人支持。《衛報》7月17日報導，部分遭他聯繫的前股東不清楚他如何取得聯絡資料，已向英國資訊專員辦公室（ICO）投訴，ICO證實正在評估相關資訊。收購方Tilray否認提供任何資料，並強調品牌並非待售。"
+description: "BrewDog創辦人James Watt提出買回計畫，卻因聯繫前股東的個資來源不明遭投訴，英國ICO已介入評估。整理4.3萬名投資人支持、Tilray否認提供資料，以及企業收購中的個資治理問題。"
 excerpt: "BrewDog共同創辦人華特提出買回要約，自稱獲4.3萬名投資人支持，卻因聯繫前股東的資料來源不明遭投訴，英國ICO證實正評估相關資訊；收購方Tilray否認外流資料。"
 publishDate: "2026-07-18T15:18:21.808Z"
+updatedDate: "2026-08-17"
 category: "international"
 subcategory: "europe"
 tags:
@@ -52,6 +53,8 @@ topics: ["startups-and-vc"]
 ---
 
 蘇格蘭精釀啤酒品牌BrewDog共同創辦人華特（James Watt），近日因試圖買回公司而聯繫前股東，卻惹上資料保護爭議。據[Irvine Times報導](https://www.irvinetimes.com/news/national/26290665.brewdog-co-founder-james-watt-faces-complaints-uk-data-watchdog/)，華特7月15日（週三）透過新成立的啤酒公司Second Best提出新一輪收購要約，自稱已獲4.3萬名「股權龐克」（Equity Punk）投資人支持買回這間他一手創立的公司。但《衛報》7月17日（週五）披露，部分遭他聯繫的前股東表示不清楚自己的聯絡資料從何而來，已向英國資訊專員辦公室（Information Commissioner's Office，ICO）投訴；ICO證實正在評估相關資訊。
+
+延伸閱讀：[智慧眼鏡怎麼看出對方在錄影？澳洲89元平價款熱賣掀隱私調查](/articles/smart-glasses-privacy-detection/)
 
 ## 買回攻勢：4.3萬名股東力挺，資料來源卻惹議
 

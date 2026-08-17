@@ -1,9 +1,9 @@
 ---
-title: "雞肉中心溫度要幾度？74°C對照豬牛72°C，生熟食分開重點"
+title: "烤肉食安怎麼做？雞肉中心溫度74°C、豬牛72°C一次看"
 slug: "bbq-food-safety-guide"
-description: "雞肉中心溫度要達74°C、豬肉牛肉要72°C，內附探針溫度計插法、木炭預熱時機、隔夜烤肉仙人掌桿菌風險，以及烤焦致癌物多環芳香烴的降低方法，一次分清食物安全該注意的重點。"
+description: "烤肉食安怎麼做？整理雞肉中心溫度74°C、豬肉牛肉72°C的判斷方法，並說明探針溫度計插法、生熟食分開、木炭預熱、隔夜保存與烤焦降低風險的重點。"
 publishDate: "2026-07-30T12:14:33.625Z"
-updatedDate: 2026-08-16
+updatedDate: 2026-08-17
 category: lifestyle
 topics: ["food-safety-storage"]
 subcategory: life

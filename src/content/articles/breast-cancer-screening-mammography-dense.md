@@ -2,7 +2,7 @@
 title: "緻密乳房做乳房攝影會看不到嗎？乳癌篩檢與要不要加超音波"
 slug: "breast-cancer-screening-mammography-dense"
 description: "乳房攝影是實證最強的乳癌篩檢工具，定期做能降 41% 死亡率，2025 年起 40 歲就能免費做。但東方女性常見的緻密乳房在乳房攝影上一片白、和腫瘤同色，可能看不清楚。這篇教你看懂乳癌篩檢，以及緻密乳房要不要加做超音波。"
-publishDate: 2026-08-18T20:00:00+08:00
+publishDate: 2026-08-24T20:00:00+08:00
 category: health
 subcategory: preventive
 tags:

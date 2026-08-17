@@ -2,7 +2,7 @@
 title: "睡不好不只是累：睡眠債和血糖、失智、免疫的關係"
 slug: "sleep-debt-health-consequences"
 description: "睡不好的代價遠不只是隔天很累。長期睡眠不足會累積成睡眠債，悄悄推高你的血糖、失智和感染風險。睡眠壓到 4 到 5.5 小時幾天血糖就變差、睡眠不足失智風險高 4 倍、睡眠債的人更常感染。成人一晚建議睡 7 到 9 小時。"
-publishDate: 2026-08-25T20:00:00+08:00
+publishDate: 2026-08-31T20:00:00+08:00
 category: health
 subcategory: preventive
 tags:

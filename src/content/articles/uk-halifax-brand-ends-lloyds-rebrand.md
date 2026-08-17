@@ -46,7 +46,7 @@ coverImageCredit: "Phil Champion — CC BY-SA 2.0, Wikimedia Commons"
 originalContribution: "本文整合 Lloyds Banking Group 官方新聞稿與三家英國媒體（Yahoo Finance UK、City A.M.、Eastern Eye）的公開報導，以繁中讀者為對象整理分行轉換對客戶的具體影響（帳號、分行代碼不變），並補充 Halifax 自 1853 年建築協會起家、1928 年全球最大規模、至 2009 年金融海嘯期間由勞埃德收購的完整品牌沿革。"
 ---
 
-英國勞埃德銀行集團（Lloyds Banking Group）7月1日（週三）宣布，旗下擁有173年歷史的Halifax品牌將走入歷史，全面整併為集團的Lloyds單一品牌。這代表英國高街上其中一個最為人熟知的銀行招牌，將自2027年起逐步從街頭消失。（[Lloyds Banking Group](https://www.lloydsbankinggroup.com/media/press-releases/2026/lloyds-banking-group/halifax-rebrand-to-lloyds.html)）
+英國勞埃德銀行集團（Lloyds Banking Group）7月1日（週三）宣布，旗下擁有173年歷史的Halifax品牌將走入歷史，全面整併為集團的Lloyds單一品牌。這代表英國高街上其中一個最為人熟知的銀行招牌，將自2027年起逐步從街頭消失。（[Lloyds Banking Group](https://www.lloydsbankinggroup.com/media/press-releases/2026/lloyds-banking-group/halifax-rebrand-to-lloyds.html)）老品牌整併、招牌走入歷史的取捨，和台灣[「阿成鵝肉」商標之爭](/articles/achenggoose-trademark-split/)一樣，都是品牌識別的價值課題。
 
 ## 190間分行明年起換招牌
 

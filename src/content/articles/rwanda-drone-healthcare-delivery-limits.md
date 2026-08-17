@@ -49,7 +49,7 @@ coverAlt: "Zipline醫療配送無人機從發射架起飛瞬間（示意圖）"
 coverImageCredit: "Roksenhorn — CC BY-SA 4.0, Wikimedia Commons"
 ---
 
-東非內陸國盧安達近1500萬人口，多年來靠著和美國機器人公司Zipline合作，建立起全球數一數二綿密的無人機醫療配送網。[NPR記者實地採訪報導](https://www.npr.org/2026/08/04/g-s1-136906/theyre-a-world-leader-in-using-drones-for-healthcare-but-drones-cant-do-it-all)指出，這套系統平均每50秒就有一架無人機起飛，運送血液、疫苗、藥品與診斷試劑，30分鐘內可到達全國任何地點。但同一篇報導也點出，無人機能解決「運送最後一哩」，解決不了基層醫療站缺人力、缺設備的根本問題。
+東非內陸國盧安達近1500萬人口，多年來靠著和美國機器人公司Zipline合作，建立起全球數一數二綿密的無人機醫療配送網。[NPR記者實地採訪報導](https://www.npr.org/2026/08/04/g-s1-136906/theyre-a-world-leader-in-using-drones-for-healthcare-but-drones-cant-do-it-all)指出，這套系統平均每50秒就有一架無人機起飛，運送血液、疫苗、藥品與診斷試劑，30分鐘內可到達全國任何地點。但同一篇報導也點出，無人機能解決「運送最後一哩」，解決不了基層醫療站缺人力、缺設備的根本問題。科技能延伸醫療的觸角、卻補不了人力，這一點在台灣的[AI 糖尿病視網膜病變篩檢](/articles/ai-diabetic-retinopathy-screening-taiwan/)也是同樣的課題。
 
 ## 送血只要5分鐘，救回大出血產婦
 

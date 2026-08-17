@@ -41,7 +41,7 @@ coverAlt: "深色房間裡紅光背光鍵盤與電腦螢幕上的程式碼畫面
 coverImageCredit: "Photo by Rahul Pandit on Pexels"
 ---
 
-北韓長年靠偽造身分「借殼上班」賺外匯的手法，這次被美國與10個盟國一次攤在陽光下。[KATU轉發的報導](https://katu.com/news/nation-world/us-allies-issue-alert-over-north-korean-it-workers-funding-countrys-weapons-programs-fbi-state-department)指出，美國FBI與國務院於2026年7月31日（週五）聯合日本、南韓、英國、澳洲、紐西蘭、法國、德國、義大利、荷蘭與加拿大等10國政府機關，共同發布警告：北韓IT工作者長期利用偽造身分，混入各國企業的線上接案與遠端就業平台工作，再把賺得的薪資直接匯回北韓政府機構，資助其非法飛彈與核武計畫。[半島電視台報導](https://www.aljazeera.com/news/2026/7/31/western-allies-warn-north-korean-it-workers-funding-nuclear-arsenal)指出，這次警告由9國另加美國，合計11國、19個政府機關聯署，是近年同類警告中規模最大的一次。
+北韓長年靠偽造身分「借殼上班」賺外匯的手法，這次被美國與10個盟國一次攤在陽光下。[KATU轉發的報導](https://katu.com/news/nation-world/us-allies-issue-alert-over-north-korean-it-workers-funding-countrys-weapons-programs-fbi-state-department)指出，美國FBI與國務院於2026年7月31日（週五）聯合日本、南韓、英國、澳洲、紐西蘭、法國、德國、義大利、荷蘭與加拿大等10國政府機關，共同發布警告：北韓IT工作者長期利用偽造身分，混入各國企業的線上接案與遠端就業平台工作，再把賺得的薪資直接匯回北韓政府機構，資助其非法飛彈與核武計畫。[半島電視台報導](https://www.aljazeera.com/news/2026/7/31/western-allies-warn-north-korean-it-workers-funding-nuclear-arsenal)指出，這次警告由9國另加美國，合計11國、19個政府機關聯署，是近年同類警告中規模最大的一次。這類遠端身分與帳號被濫用的資安風險，也出現在[AI 瀏覽器憑證外洩](/articles/bioshocking-ai-browser-credential-leak/)這類新型攻擊上。
 
 ## 手法解析：代理人面試、筆記型電腦農場、AI造假
 

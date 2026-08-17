@@ -1,9 +1,10 @@
 ---
-title: "狗過敏原可以用基因編輯消除嗎？兩隻米格魯實測結果一次看懂"
+title: "狗過敏能靠基因編輯消除嗎？兩隻米格魯實測"
 slug: "dog-allergen-gene-editing-beagle-guide"
 description: "美國新創公司用CRISPR基因編輯技術剔除米格魯體內主要致敏蛋白Can f 1，兩隻小犬唾液與毛髮測不到過敏原，整理技術原理、驗證方式與距離消費者還有多遠。"
 excerpt: "美國新創公司用CRISPR基因編輯技術剔除米格魯體內主要致敏蛋白Can f 1，兩隻小犬唾液與毛髮測不到過敏原，整理技術原理、驗證方式與距離消費者還有多遠。"
 publishDate: "2026-08-06T19:08:45.795Z"
+updatedDate: "2026-08-17"
 category: "lifestyle"
 subcategory: "life"
 tags:
@@ -43,6 +44,8 @@ references:
 ---
 
 不少人想養狗，卻因為對狗過敏而卻步。美國一間生技新創最近用基因編輯技術培育出兩隻米格魯，唾液與毛髮都測不到主要致敏蛋白，研究也已發表在同儕審查期刊。這件事剛好切中很多過敏族的痛點，值得先弄清楚這項技術實際做了什麼，以及一般人多久之後才可能真的養得到。
+
+延伸閱讀：[過敏反覆發作停不下來？揪出隱藏過敏原](/articles/過敏反覆發作停不下來？揪出隱藏過敏原！米粒營/)、[桃園動保處8月1日開放特殊寵物認養：15隻找新家](/articles/taoyuan-special-pet-adoption-august/)
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=yNgAMBtOog0" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：基因編輯培育「低過敏」米格魯 助圓養狗夢">

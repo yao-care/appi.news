@@ -2,7 +2,7 @@
 title: "睡眠科技是什麼？助眠睡衣、智慧床原理與市場規模"
 description: "日本人平均睡眠時間全球倒數第一，帶動助眠睡衣、智慧床、睡眠感測器等睡眠科技市場快速成長，整理市場規模、代表商品與專家對實際效果的提醒。"
 publishDate: "2026-07-31T18:55:49.880Z"
-updatedDate: 2026-08-07
+updatedDate: "2026-08-17"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -17,6 +17,7 @@ coverImage: "/covers/japan-sleep-tech-explained-cover.webp"
 coverAlt: "臥室裡的床鋪與床頭燈，睡眠情境示意圖"
 coverImageCredit: "Photo by Jp Valery on Unsplash"
 tags: ["睡眠與疲勞", "職場健康", "穿戴科技", "日本"]
+topics: ["sleep-science"]
 disclosure: "線索來自 台視新聞 TTV NEWS YouTube 影片，內容經公開資料查證整理、附原始出處。"
 risksAndLimits:
   - "矢野經濟研究所與日經的市場規模估算為日本國內數字，不代表台灣市場現況"
@@ -26,6 +27,8 @@ risksAndLimits:
 ---
 
 日本人的睡眠時間在已開發國家中長年墊底，這幾年當地興起一批打著「睡眠科技」（スリープテック）名號的商品，從助眠外套、感測睡衣到會自動調整角度的智慧床都有，背後是一個規模上看百億日圓、還在持續擴大的產業。這篇整理這波熱潮從哪裡來、實際在賣什麼、政府與企業怎麼看，以及專家提醒讀者要注意的地方。
+
+延伸閱讀：[睡不好不只是累：睡眠債和血糖、失智、免疫的關係](/articles/sleep-debt-health-consequences/)、[睡不著怎麼辦？躺滿20分鐘還醒著先離床](/articles/acute-insomnia-tonight/)
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=Nm9Qn_eFzNs" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：解決睡眠不足危機！日本科技業者推助眠產品">

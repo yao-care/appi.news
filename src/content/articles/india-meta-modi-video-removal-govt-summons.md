@@ -1,9 +1,10 @@
 ---
-title: "莫迪NEET影片遭Meta誤刪又惡火重燃　印度政府傳喚高層限期10天說明"
+title: "莫迪NEET影片遭Meta誤刪：印度政府限10天要求說明"
 slug: "india-meta-modi-video-removal-govt-summons"
-description: "印度總理莫迪7月23日發布首支直接對Z世代喊話的NEET-UG洩題影片，7月28日凌晨一度遭Meta下架、用戶端還一度顯示「因法律要求限制存取」的訊息，數小時後才恢復；Meta將原因歸咎為自動內容過濾系統的技術錯誤並致歉，但印度電子與資訊科技部（MeitY）認為說法「不能令人滿意」，要求Meta在7到10天內派出最高層代表到部會說明政策與技術細節，並承諾為官方認證帳號建立更強防護。事件發生在NEET-UG 2026考試洩題爭議延燒逾50天、教育部長已因抗爭壓力下台的背景之下。"
+description: "莫迪NEET-UG考試洩題影片一度遭Meta誤刪，印度政府認為「技術錯誤」說法不能接受，要求Meta高層限期10天說明內容審核與防護機制。"
 excerpt: "莫迪7月23日發布NEET-UG洩題影片，7月28日一度遭Meta誤下架，印度政府認為Meta「技術錯誤」說法不能令人滿意，要求高層限期10天到部說明。"
 publishDate: "2026-07-30T16:58:48.148Z"
+updatedDate: "2026-08-17"
 category: "international"
 subcategory: "asia"
 tags:
@@ -29,6 +30,8 @@ risksAndLimits:
 ---
 
 印度總理莫迪一支談論考試洩題問題的Facebook影片，7月28日凌晨一度遭Meta下架，數小時後才恢復上線；Meta將原因歸咎為自動內容過濾系統的「技術錯誤」並公開致歉，但印度電子與資訊科技部（MeitY）認為這個說法「不能令人滿意」，已要求Meta在7到10天內派出公司最高層代表到部會，當面說明政策與技術層面的細節。這起事件發生在印度NEET-UG 2026醫學院入學考試洩題爭議延燒超過50天、教育部長已在抗爭壓力下辭職的敏感時刻，也讓外界重新關注社群平台對政府要員帳號的內容審核機制。
+
+延伸閱讀：[AI深偽騷擾算網路霸凌嗎？中國反網路暴力法草案](/articles/china-ai-deepfake-cyberbullying-law/)、[開源AI是什麼？祖克柏發表宣言、Meta同步發布兩款新模型](/articles/meta-open-source-ai-manifesto-zuckerberg/)
 
 ## 深夜下架又恢復，用戶一度見「法律要求」訊息
 

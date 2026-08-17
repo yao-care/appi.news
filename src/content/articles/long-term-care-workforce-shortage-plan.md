@@ -22,6 +22,8 @@ risksAndLimits:
 
 延伸閱讀：[全台首座兒童住宿型長照機構「童羽之家」：收治資格、床位現況與申請費用整理](/articles/taipei-tong-yu-home-child-longterm-care-guide/)
 
+延伸閱讀：[長輩照顧警訊有哪些？失智溝通與日照中心整理一次看懂](/articles/elderly-care-warning-signs-dementia-daycare/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=GE3RcWWo174" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：超高齡時代來臨 長照缺工危機爆發! 衛福部擬納外籍勞動力「3階段補人力缺口」｜十點不一樣20260804">
     <img src="/images/long-term-care-workforce-shortage-plan-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="超高齡時代來臨 長照缺工危機爆發! 衛福部擬納外籍勞動力「3階段補人力缺口」｜十點不一樣20260804">

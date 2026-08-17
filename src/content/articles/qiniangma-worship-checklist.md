@@ -1,7 +1,7 @@
 ---
-title: "七娘媽拜拜流程：供品、金紙與七娘媽亭清單"
+title: "七娘媽拜拜怎麼準備？供品、金紙、七娘媽亭與流程"
 slug: "qiniangma-worship-checklist"
-description: "2026年8月19日七夕拜七娘媽怎麼準備？本文依政府與文獻資料整理供品、花卉、女妝用品、金紙、七娘媽亭與祭拜步驟，並區分一般祈福和做十六歲成年禮。"
+description: "2026年8月19日七夕拜七娘媽怎麼準備？供品、花卉、女妝用品、金紙、七娘媽亭與祭拜流程一次列出，並區分一般祈福與做十六歲成年禮。"
 publishDate: "2026-08-09T16:30:00.000Z"
 category: lifestyle
 subcategory: life

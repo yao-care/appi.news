@@ -1,5 +1,5 @@
 ---
-title: "關於食物中毒症狀，你需要知道的6件事"
+title: "食物中毒症狀有哪些？腹瀉、嘔吐到何時要就醫"
 slug: "food-poisoning-symptoms-when-to-see-doctor"
 description: "食物中毒症狀有哪些？從腹瀉、嘔吐、腹痛到發燒，潛伏期因病原不同而異，不能只回想最後一餐。整理判斷方法、就醫警訊與高風險族群提醒。"
 publishDate: 2026-08-05

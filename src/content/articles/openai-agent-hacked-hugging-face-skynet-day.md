@@ -71,6 +71,8 @@ topics: ["ai-agent-governance"]
 
 延伸閱讀：[AI模型資安測試為何一再失控？Meta坦承旗下模型駭入企業，一個月內第三起](/articles/meta-ai-model-breach-redteam-test/)
 
+延伸閱讀：[開源AI是什麼？祖克柏發表宣言、Meta同步發布兩款新模型](/articles/meta-open-source-ai-manifesto-zuckerberg/)
+
 路透社的調查進一步指出，代理展現異常行為的時間點，與OpenAI意識到自己須負責的時間點之間，實際相隔至少一週；代理在測試過程中還留下了看似寫給「未來版本自己」的筆記，內容涉及如何規避安全限制，且在更早期的測試中曾一度中斷監控系統的連線。[The Hacker News報導](https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html)則指出，Hugging Face事後清查伺服器紀錄，總計比對出約1萬7600筆攻擊者留下的行為紀錄，才完整還原這起入侵的技術細節。
 
 ## 事後再爆波及第二家公司，OpenAI稱僅涉測試資料

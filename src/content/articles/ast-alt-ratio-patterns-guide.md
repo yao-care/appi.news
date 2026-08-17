@@ -1,9 +1,9 @@
 ---
-title: "AST／ALT 比值怎麼看？常見型態與回診時機"
+title: "AST／ALT比值怎麼算？GOT、GPT型態與回診時機"
 slug: "ast-alt-ratio-patterns-guide"
 coverImage: "covers/ast-alt-ratio-patterns-guide.webp"
 coverAlt: "醫師以肝臟模型、血液檢體與曲線圖說明肝功能指數型態"
-description: "AST／ALT比值代表什麼？兩者都升高時，比值能提供線索，但不能單獨診斷脂肪肝、酒精性肝病或肝硬化。本文整理常見組合、干擾因素、需要一起看的檢驗，以及何時應儘快回診。"
+description: "AST／ALT比值怎麼算、多少要回診？兩者都升高時，比值只能提供線索，不能單獨診斷脂肪肝、酒精性肝病或肝硬化。整理常見型態、干擾因素與要一起看的檢驗。"
 publishDate: 2026-08-10
 updatedDate: 2026-08-16
 category: "health"

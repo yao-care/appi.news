@@ -53,6 +53,8 @@ coverImageCredit: "Ilovetheeu — CC BY-SA 4.0, Wikimedia Commons"
 
 延伸閱讀：[華盛頓接受英軍投降親筆信首度在倫敦展出　見證美國獨立起點、1880年起藏於英國檔案](/articles/washington-yorktown-surrender-note-london/)
 
+延伸閱讀：[施凱爾前幕僚長蘇·格雷示警「我為斯托蒙特擔憂」　倡貝爾法斯特、德里設都會市長下放權力](/articles/sue-gray-fears-stormont-metro-mayor/)
+
 ## 「經濟損害巨大、驚人」
 
 定調這場遊行氣氛的，是曾任工黨黨魁的金諾克勳爵。據[Nation.Cymru報導](https://nation.cymru/news/brexit-branded-unprecedented-continuing-disaster-as-marchers-call-to-rejoin-eu/)，他對群眾表示：「脫歐一直是一場毫無緩解、空前且持續的災難。經濟損害巨大，驚人。」他並稱英國「卡在脫歐裡，被困住，成了與我們所在大陸其餘部分隔絕的局外人」。

@@ -54,6 +54,8 @@ references:
 
 最近不少中醫師在節目、社群上示範一套動作和緩的養生操「八段錦」，強調每天花10分鐘就能練。這套功法其實不是新玩意，[相傳源於宋代、流傳至今已超過800年](https://www.medicaleme.com/post/%E5%85%AB%E6%AE%B5%E9%8C%A6%E7%B3%BB%E5%88%97part-1%EF%BC%9A%E4%BB%80%E9%BA%BC%E6%98%AF%E5%85%AB%E6%AE%B5%E9%8C%A6%EF%BC%9F)，近年更被衛福部相中，改編成男女老少都能上手的居家運動。
 
+延伸閱讀：[高齡健康博覽會怎麼免費入場？世貿一館開放時間與看展重點整理](/articles/elderly-health-industry-expo-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=B9qso_NUmRQ" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：中醫講解「八段錦」養生功法">
     <img src="/images/baduanjin-qigong-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="中醫講解「八段錦」養生功法">
@@ -83,6 +85,8 @@ references:
 ## 誰適合練，誰要先問過醫師
 
 八段錦動作和緩，[Heho健康的報導](https://heho.com.tw/archives/66527)提到各年齡層都能嘗試，中國醫藥大學附設醫院甚至找舞蹈老師把[傳統動作改編成兒童版本](https://www.cmuh.cmu.edu.tw/HealthEdus/Detail?no=9127)，讓小朋友也能練。但動作幅度不見得人人都適合。[醫ME的整理](https://www.medicaleme.com/post/%E5%85%AB%E6%AE%B5%E9%8C%A6%E7%B3%BB%E5%88%97part-1%EF%BC%9A%E4%BB%80%E9%BA%BC%E6%98%AF%E5%85%AB%E6%AE%B5%E9%8C%A6%EF%BC%9F)提醒，關節發炎、骨質疏鬆、曾有骨折或受傷病史、剛動完手術的人，練習時動作要放輕、放慢，最好先請專業人員評估、視情況調整或改用坐式練習。血壓不穩、心臟病未受控制的人也建議先諮詢醫師，練習中若有頭暈、喘不過氣要立刻停下。八段錦強調自然呼吸,練習時不要刻意憋氣,以免因為用力屏息造成血壓波動。
+
+延伸閱讀：[銀髮跑酷是什麼？新加坡長者防跌訓練怎麼練一次看懂](/articles/singapore-senior-parkour-elderly-fitness/)
 
 ## 讀者實用資訊：怎麼開始練
 

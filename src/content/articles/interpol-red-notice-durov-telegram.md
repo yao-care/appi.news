@@ -71,6 +71,8 @@ references:
 
 指控最具體的部分，落在一款叫「Dayvinchik」（俄文原名近似「Leo」）的Telegram交友聊天機器人上。[Meduza報導](https://meduza.io/en/news/2026/07/29/fsb-says-ukrainian-intelligence-is-recruiting-russians-for-sabotage-via-popular-telegram-dating-bot)還原了俄方描述的招募手法：烏克蘭情報人員先假扮年輕女性透過機器人搭訕，取得對方信任後傳送「政府帳戶」相關的釣魚連結，藉此騙取受害人所在位置；接著另一批人冒充俄羅斯執法人員聯繫同一批受害人，用「已涉案」的恐嚇脅迫對方縱火攻擊交通、能源、通訊或金融設施。俄方稱，自2025年7月起，這套手法已在16個地區導致46名12至22歲人士遭拘留。
 
+延伸閱讀：[貝爾哥羅德是俄羅斯哪個邊境州？烏克蘭無人機頻襲，俄烏夜間互擊最新增至7死](/articles/belgorod-russia-ukraine-drone-strikes/)
+
 這個數字並非俄羅斯官方口徑一致的結果。[Meduza另一篇報導](https://meduza.io/en/feature/2026/07/29/russia-accuses-telegram-founder-pavel-durov-of-aiding-terrorism-what-the-fsb-alleges-why-two-agencies-report-different-numbers-and-what-it-means-for-russians-still-using-the-app)指出，俄羅斯偵查委員會公布的被拘留人數是19名青少年，FSB自己說的卻是46人，兩個機構對同一批案件給出的數字對不上。該報導也引述俄羅斯官方媒體塔斯社（TASS）的說法：光是持有Telegram帳號或經營頻道，本身並不構成「協助恐怖主義」罪，只有透過帳號從事具體違法行為的人才會被追究刑責。就算FSB的指控成立，一般俄羅斯Telegram用戶也不會因此人人自危。
 
 ## 逮捕令發出隔天，杜羅夫又多了一個新身分
@@ -92,3 +94,5 @@ references:
 [Al Jazeera報導](https://www.aljazeera.com/news/2026/7/29/russia-charges-telegram-founder-pavel-durov-with-aiding-terrorism)指出，俄羅斯今年2月起已開始限制Telegram與WhatsApp的流量速度，同時大力推廣官方支持的通訊軟體MAX；與Telegram不同，MAX並未採用端對端加密，等於讓當局更容易掌握使用者的通訊內容。這起恐怖主義指控與資產凍結，發生在俄羅斯已經在推動「軟性封鎖」的時間點上，也讓杜羅夫「政治操作」的說法多了一層背景可以對照。
 
 接下來值得觀察的，是俄方會不會正式向Interpol提出紅色通緝令申請、申請後是否通過審查，以及杜羅夫在法國、阿聯酋等地的行動是否因此受到實質限制。在那之前，這張「國際逮捕令」目前看起來更像是一份政治聲明，而不是一張立刻生效的拘票。
+
+延伸閱讀：[羅斯托夫州是俄羅斯哪裡？烏克蘭炸飛彈燃料廠，創年度最大規模空襲](/articles/rostov-russia-drone-attack-samara-plant/)

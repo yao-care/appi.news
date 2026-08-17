@@ -53,6 +53,8 @@ coverImageCredit: "Tony Webster — CC BY 2.0，引用自 Wikimedia Commons"
 
 然而成效並未如預期。同篇[ABC News報導](https://abcnews.com/US/reflecting-pool-renovations-cost-16-million/story?id=134024265)指出，工程完工、重新注水後沒多久，新漆便開始剝落，藻類也再度生長。據[PBS NewsHour報導](https://www.pbs.org/newshour/politics/trump-tries-to-blame-reflecting-poll-woes-on-vandalism-without-offering-substantiation)，川普原本希望把池底漆成「美國國旗藍」（American flag blue），讓水面更能映出華盛頓紀念碑，但池水很快又轉回常見的綠色。
 
+延伸閱讀：[公共工程趕工出包，為什麼先被究責的是路人？林肯紀念堂反射池案撤告，起底未經比價的1300萬美元合約](/articles/us-lincoln-memorial-pool-contractor-blame/)
+
 ![華盛頓特區國家廣場與林肯紀念堂（資料照）](/images/lincoln-reflecting-pool-vandalism-claim-s1.webp)
 
 ## 川普稱有人「割出350英尺裂痕」，未提證據

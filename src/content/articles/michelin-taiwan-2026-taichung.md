@@ -61,6 +61,8 @@ updatedDate: "2026-08-06T05:55:28.112Z"
 
 很多人以為米其林只有「星星」，其實指南把餐廳分成三個層級。**星級**（一星到三星）是最高等級，代表整體用餐體驗達到頂尖水準，價位通常也最高。**必比登推介**（Bib Gourmand）強調[「輕鬆自在、價格合理且具有在地特色的餐飲體驗」](https://udn.com/news/story/7270/9626403)，[超過八成入選店家是台灣在地美食與街頭小吃](https://udn.com/news/story/7270/9626403)，這正是多數讀者搜尋「CP值高又好吃」時真正想找的類型。**入選餐廳**（Michelin Selected）則是台灣米其林[自2022年起取代先前「餐盤推薦」的評級](https://margaret.tw/the-plate-michelin-taichung/)，代表評審認為「值得一試」，但尚未達到摘星門檻，其中不少後來會晉升星級。台中的「山与」就是一例，去年還是入選餐廳，今年直接摘下一星。
 
+延伸閱讀：[米其林餐廳為什麼要看降雨量出菜？巴西三星餐廳Tuju的氣候菜單一次看懂](/articles/brazil-michelin-climate-menu-tuju/)
+
 ## 2026台灣米其林指南整體概況
 
 <img src="/images/michelin-taiwan-2026-taichung-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="典雅的餐廳用餐空間" title="2026台灣米其林指南涵蓋七座城市共434家餐廳入榜（示意圖）">

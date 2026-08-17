@@ -65,6 +65,8 @@ C5+1並不是新玩意。[CSIS分析](https://www.csis.org/analysis/ten-years-c5
 
 延伸閱讀：[四方安全對話（Quad）是什麼？東盟首度同台表態，馬尼拉峰會牽動南海台海局勢](/articles/quad-asean-south-china-sea-explained/)
 
+延伸閱讀：[西太平洋為何暫無美軍航艦？伊朗戰事拖累部署，牽動台海嚇阻](/articles/us-carrier-pacific-gap/)
+
 <figure>
 <img src="/images/central-asia-critical-minerals-us-strategy-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="地質勘探取得的礦石樣本近照">
 <figcaption>中亞五國近年積極對外揭露地質勘探數據，盼吸引國際礦業投資。（示意圖／Photo by USGS on Unsplash）</figcaption>

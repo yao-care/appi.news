@@ -5,6 +5,7 @@ description: "2026流感疫苗（115年度）公費資格有哪些人、什麼�
 publishDate: "2026-07-30T10:09:40.344Z"
 updatedDate: 2026-08-16
 category: health
+topics: ["back-to-school-2026"]
 subcategory: medical
 tags: ["傳染病防治", "公共衛生", "預防醫學", "高齡健康"]
 author: "appi-editorial"
@@ -69,7 +70,7 @@ draft: false
 
 依[疾管署公布的115年度實施對象](https://www.cdc.gov.tw/Category/MPage/JNTC9qza3F_rgt9sRHqV2Q)，公費流感疫苗涵蓋以下類別（沿用歷年分類架構）：
 
-延伸閱讀：[腸病毒症狀與重症前兆完整整理：5歲以下8大警訊，開學防疫怎麼做](/articles/enterovirus-severe-warning-signs-2026/)
+延伸閱讀：[腸病毒症狀與重症前兆完整整理：5歲以下8大警訊，開學防疫怎麼做](/articles/enterovirus-severe-warning-signs-2026/)；[孩子感冒怎麼照顧、什麼情況能返校](/articles/back-to-school-child-cold-care-guide/)
 
 - 醫事及衛生防疫相關人員
 - 65歲以上長者

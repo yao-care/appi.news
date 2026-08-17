@@ -57,6 +57,8 @@ coverImageCredit: "Photo by JOSHUA COLEMAN on Unsplash"
 
 [Arab News引述美聯社報導](https://www.arabnews.com/node/2653066/world)，哥倫比亞警察總長威廉·林孔（William Rincon）上將稱這是一起「可恥的恐怖攻擊」，「我們不會停下來，直到找到並起訴負責的人」。國防部長佩德羅·桑切斯（Pedro Sanchez）在社群平台上把矛頭指向哥倫比亞現存最大游擊隊「民族解放軍」（ELN），稱其為「毒品恐怖分子」，並開出逾6萬美元懸賞緝拿線索。目前尚未有嫌疑人遭逮捕或起訴，攻擊者身分仍是政府單方指控，未經司法程序證實。
 
+延伸閱讀：[哈利斯科新一代卡特爾（CJNG）是什麼？美國砸逾1億美元懸賞緝毒梟8首腦](/articles/cjng-jalisco-cartel-reward-25-million/)
+
 <img src="/images/colombia-cucuta-police-truck-bombing-s1.webp" width="960" height="719" loading="lazy" decoding="async" alt="爆炸損毀的建築外觀，窗戶破裂（示意圖）">
 
 ## ELN是什麼？從工運農運組織變毒品游擊隊

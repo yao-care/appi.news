@@ -56,6 +56,8 @@ originalContribution: "本文整合 WGME、CBS News、KUTV、The Salt Lake Tribu
 
 檢方指控，里欽斯2022年3月在猶他州帕克城（Park City）郊外住家，將芬太尼摻入丈夫埃里克（Eric Richins）愛喝的莫斯科騾子（Moscow Mule）雞尾酒中，法庭文件顯示飲料中的芬太尼劑量約為致死劑量的5倍。埃里克死亡一年多後，里欽斯才遭到逮捕。（[CBS News](https://www.cbsnews.com/news/kouri-richins-sentenced-husbands-murder-fentanyl-laced-cocktail-murder/)）
 
+延伸閱讀：[美國「一罪不二罰」是什麼？曼吉翁認聯邦跟蹤罪，紐約州謀殺案還能照告](/articles/mangione-guilty-plea-double-jeopardy/)
+
 今年3月16日，猶他州第三地區法院陪審團商議約3小時後，裁定里欽斯加重謀殺罪、謀殺未遂罪、偽造罪與兩項保險詐欺罪全部成立。（[KUTV](https://kutv.com/news/local/jury-reaches-verdict-in-kouri-richins-murder-trial)）5月13日，也就是埃里克的生日當天，法院正式宣判她終身監禁、不得假釋。主審法官梅拉齊克（Richard Mrazik）在宣判時表示，像里欽斯這樣的罪犯「太危險，永遠不應獲釋」，並指出她第一次下毒未遂後「在接下來的17天內沒有改變方向，反而加倍努力，最終完成了行為，為了什麼？金錢」。（[CBS News](https://www.cbsnews.com/news/kouri-richins-sentenced-husbands-murder-fentanyl-laced-cocktail-murder/)）
 
 <img src="/images/utah-kouri-richins-judge-recusal-denied-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="美國地方法院大樓外觀，示意本案審理法院">
@@ -75,6 +77,8 @@ originalContribution: "本文整合 WGME、CBS News、KUTV、The Salt Lake Tribu
 接手審理迴避聲請的代理法官佩蒂特裁定，里欽斯的律師團隊未在猶他州法律規定的21天期限內提出動議，也未附上規定要求的誠信證明。佩蒂特並表示，即使程序要件已滿足，現有證據也不足以證明梅拉齊克法官存在足以要求迴避的偏見程度。她在裁定書中寫道：「即使梅拉齊克法官的行為可視為對辯護律師表現出憤怒或沮喪，這也不是迴避的理由。」（[WGME](https://wgme.com/news/nation-world/court-rejects-request-to-disqualify-judge-in-kouri-richins-murder-case)）
 
 截至7月30日，法院尚未就里欽斯的新審判動議本身做出裁決。里欽斯目前在獄中服刑，持續堅稱自己無罪，律師團隊也已表態計畫對定罪與判決提起上訴。（[WGME](https://wgme.com/news/nation-world/court-rejects-request-to-disqualify-judge-in-kouri-richins-murder-case)）
+
+延伸閱讀：[社群媒體怎麼傷害青少年心理健康？Meta判賠近10億美元創紀錄](/articles/meta-instagram-teen-safety-court-order/)
 
 ## 常見問題
 

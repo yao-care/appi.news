@@ -52,6 +52,8 @@ coverImageCredit: "Photo by Nihar Reddy Jangam on Unsplash"
 
 延伸閱讀：[Optus挨告：澳洲通訊監管機關控000緊急電話中斷逾千次違規　最高恐罰8.5億台幣](/articles/optus-triple-zero-outage-lawsuit/)
 
+延伸閱讀：[雪梨機場為何頻傳近距離擦撞？人力短缺釀飛安意外，兩週內二度驚魂](/articles/sydney-airport-near-miss-staffing-crisis/)
+
 <img src="/images/singapore-airlines-engineer-unfair-dismissal-1.webp" width="960" height="641" loading="lazy" decoding="async" alt="客機駕駛艙儀表板示意圖">
 *客機駕駛艙儀表板示意圖（示意圖）。Photo by Moritz Mentges on Unsplash*
 

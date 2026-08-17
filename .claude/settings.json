@@ -5,7 +5,14 @@
       "Bash(curl:*)",
       "Bash(gh pr merge:*)",
       "WebFetch",
-      "WebSearch"
+      "WebSearch",
+      "Bash(pnpm vitest:*)",
+      "Bash(pnpm exec vitest run:*)",
+      "Bash(crontab -l)",
+      "Bash(pnpm check:links)",
+      "Bash(pnpm growth:audit:*)",
+      "Bash(pnpm growth:backlog)",
+      "Bash(pnpm growth:lint:all)"
     ]
   }
 }

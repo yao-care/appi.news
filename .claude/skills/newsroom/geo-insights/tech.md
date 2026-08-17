@@ -1,10 +1,20 @@
 # GEO 洞察：科技（tech）
 
 > 由 `cited-teardown` 產出。拆解「科技題被 AI 引用、我方沒有」的競品/贏家頁，歸納它們一致的寫法。
-> **起草科技稿前讀這份，把「檢查表」當硬規則套用。** 首次產出：2026-07-27。最近一次跑：2026-08-10（題庫從 3 題擴充到 5 題，新增 Q4 ASIC/GPU、Q5 800V 供電；見下方新段落）。上次重跑：2026-08-03。
-> 誠實邊界：引擎＝Claude WebSearch/WebFetch（US 區偏差、可能低估台灣站）；5 題中僅 Q2、Q4 命中已知競品清單且都是同一家（聯合新聞網 udn.com），樣本小且不夠多元，方向性參考非定論。08-03 輪 `cw.com.tw` 直接 WebFetch 被 403 擋，改用 WebSearch 摘要側寫，本輪未再重跑 Q2 的天下頁，沿用舊記錄。
+> **起草科技稿前讀這份，把「檢查表」當硬規則套用。** 首次產出：2026-07-27。最近一次跑：2026-08-17（見下方新段落）。上次重跑：2026-08-10（題庫從 3 題擴充到 5 題，新增 Q4 ASIC/GPU、Q5 800V 供電）。
+> 誠實邊界：引擎＝Claude WebSearch/WebFetch（US 區偏差、可能低估台灣站）；5 題中僅 Q2、Q4 命中已知競品清單且都是同一家（聯合新聞網 udn.com，Q2 本輪再加天下 cw.com.tw），樣本小且不夠多元，方向性參考非定論。`cw.com.tw` 直接 WebFetch 連續多輪被 403 擋，只能沿用 WebSearch 摘要側寫，不編造機械訊號。
 
-## 本輪重跑確認（2026-08-10，題庫擴充至 5 題）
+## 本輪重跑確認（2026-08-17，5 題）
+
+五題全部重跑，`classifyCitedUrls` 結果：
+
+- **Q1（生成式 AI 資安風險）、Q3（中小企業導入 AI）、Q5（800V 供電）：`competitors: []`**，與過去三輪（07-27、08-03、08-10）完全一致——排名前列仍是垂直媒體/顧問/廠商部落格（Q1：MIC、TrendMicro 部落格、CIO Taiwan、Schneider Electric、Acer 資安；Q3：中小企業行銷部落格；Q5：財報狗、蕃新聞、eettaiwan.com、DigiKey 論壇），沒有一個命中本站追蹤的競品清單。連續四輪同一結果，判斷穩定：這三題暫無可拆解的媒體標竿，不列入本輪行動項。
+- **Q2（先進封裝）：這輪 udn.com、cw.com.tw 同時命中。** udn.com 這次是 <https://money.udn.com/money/story/5612/9262552>（國研院台灣半導體中心「晶片級先進封裝研發平台」發表新聞；開頭即給結論；無小標；0 條一手來源；無數據表格，多為定性描述；記者董俞佳具名；2026/01/13；約 1,200 字——與 08-10 輪命中的同一篇），cw.com.tw 是 <https://www.cw.com.tw/article/5135023>（與 07-27、08-03 輪同一篇，WebFetch 本輪再度 403，無法重新側寫）。額外用 08-03 輪存檔的另一篇 udn.com 標竿（<https://money.udn.com/money/story/124512/7795813>，CoWoS／CPO 整理包，7 個 H2、有數據表格）一起納入本輪聚合，湊齊 3 篇可側寫標竿做檢查表（詳下）。跑 `gapVsOurs` 對 `sk-hynix-packaging-hbm-tsmc.md`（目前我方在此子領域內容最完整的既有稿）結果仍是 `[]`——機械訊號全數達標，**但這篇文章對「台灣先進封裝競爭優勢」這個命題的直接回答被擺在文末（「台灣該從這條戰線讀出什麼」段落），不是開頭破題**，對這一題而言 `answerUpfront` 實質不成立，即使 checklist 布林值算 true。08-10、08-03 輪指出的**選題缺口（無正面解釋型 evergreen 稿）截至本輪仍未落地**——查 08-10 之後新發的 tech 文章（`ai-accelerator-workload-selection-checklist.md`、`ai-datacenter-power-density-planning-guide.md`、`deepfake-voice-face-scam-taiwan.md`、`windows-oem-license-fee-hike.md`、`ai-medical-scribe-liability-taiwan.md`、`ktc-aoc-monitor-price-hike.md`、`medical-device-cybersecurity-taiwan.md`、`openai-price-cut-china-ai-competition.md`、`intel-memory-market-return.md`、`rtx-5090-upgrade-hardware-checklist.md`）沒有一篇是這個命題，缺口原樣保留，已連續 3 輪（08-03、08-10、08-17）未排進選題。
+- **Q4（ASIC 和 GPU）：命中的還是同一篇** <https://money.udn.com/money/story/124512/9181358>（與 08-10 輪記錄同一篇整理包，內容未變）。我方 `ai-asic-vs-gpu-explained.md` 沒有變動，`gapVsOurs` 仍是 `[]`。與 08-10 輪的結論一致：機械訊號滿分仍未被引用，指向網域信任/索引因素而非寫法問題，本輪未查證 GSC 收錄或反向連結狀態，維持上輪的「下一步查索引/反向連結」建議不變。
+
+**本輪新發現**：Q2 的 `answerUpfront` 判定要對照「問題本身」而非泛用的「文章開頭有沒有結論」——`sk-hynix-packaging-hbm-tsmc.md` 開頭破題的是「SK 海力士砸錢蓋封裝廠」這件事，不是「台灣的優勢是什麼」，兩者不是同一個答案。這解釋了為什麼機械訊號滿分文章仍答不中這題：**布林值型 checklist 會錯誤地判定達標，但對照題目原文重讀就看得出實質沒有直接回答**。這比「網域信任度不夠」更立即可行——新選題稿只要開頭第一句就正面回答「台灣先進封裝的競爭優勢是什麼」，不需要等網域信任分數的長期因素。
+
+## 上輪重跑確認（2026-08-10，題庫擴充至 5 題）
 
 `scripts/lib/geo-question-set.mjs` 的 tech 題庫已從 3 題擴充為 5 題（新增 Q4「ASIC 和 GPU 有什麼差別」、Q5「AI 資料中心為什麼轉向 800V 供電」）。本輪五題全部重跑：
 
@@ -70,4 +80,4 @@ Q2 兩個標竿頁（threshold 0.6）一致具備：
 - 本輪結果：`classifyCitedUrls` 回 `competitors: []`——排名前列是財報狗、電子工程專輯 `eettaiwan.com`、鈺創新聞、新電子科技雜誌、DigiKey 論壇，皆非本站追蹤的媒體競品清單成員（`eettaiwan.com` 雖是道地科技媒體但目前不在 `CATEGORY_COMPETITORS.tech` 清單內）。依步驟 1 判準不在本輪拆解範圍，略過；若這題持續熱門，可考慮把 `eettaiwan.com` 加進 tech 競品清單觀察。
 
 ## 給 newsroom 的一句話
-Q1、Q3、Q5 這輪沒有可學的媒體競品標竿，暫不列入升級動作。Q2、Q4 這兩題本輪合起來給出一個比單題更清楚的結論：**先進封裝／半導體子領域，appi.news 在機械訊號上已經追平甚至壓過聯合新聞網標竿（兩題 `gapVsOurs` 皆為 `[]`），但仍未被引用**——Q2 舊解釋是「事件型角度答不了概念型問題」，但 Q4 我方文章正是概念型 evergreen 稿仍未中，代表**單靠疊格式訊號已經到頂**，真正的槓桿轉移到選題覆蓋（Q2 仍缺一篇正面解釋稿）與網域層級的信任/索引/反向連結，不是繼續在既有稿加 H2 或補數據。newsroom 起草這個子領域的新稿時，維持既有檢查表寫法即可（已達標），但不要期待光靠寫法優化就能翻轉這兩題的引用結果。
+Q1、Q3、Q5 連續四輪沒有可學的媒體競品標竿，暫不列入升級動作。Q2、Q4 這兩題合起來給出一個比單題更清楚的結論：**先進封裝／半導體子領域，appi.news 在機械訊號上已經追平甚至壓過聯合新聞網標竿（兩題 `gapVsOurs` 皆為 `[]`），但仍未被引用**——Q4 我方文章是概念型 evergreen 稿仍未中，代表**單靠疊格式訊號已經到頂**，真正的槓桿轉移到網域層級的信任/索引/反向連結。但 08-17 輪對 Q2 有新校正：**checklist 的布林值會漏抓「答錯題」**——`sk-hynix-packaging-hbm-tsmc.md` 機械訊號打勾，但實際開頭回答的是別的問題，不是「台灣先進封裝優勢是什麼」。newsroom 起草這個子領域的新稿時，除了維持既有檢查表寫法，**動筆前先把題目原文貼在稿子第一句要回答的位置自問一次「這句話有沒有正面回答這一題」**，不要只套版面結構卻答偏題。Q2 這篇正面解釋稿已經連續 3 輪待辦未落地，是本 beat 目前最具體的新選題缺口。

@@ -1,5 +1,5 @@
 ---
-title: "摺疊機到底實用在哪：2026 年該不該換，哪些人買了會後悔"
+title: "摺疊機值得買嗎？2026年實用情境、重量與維修成本"
 slug: "foldable-phone-worth-it-2026"
 description: "摺疊機的實用價值集中在多工分割視窗、長時間閱讀與外螢幕快速操作三種情境，其餘使用者要天天承擔重量、厚度、螢幕摺痕與較高的維修、折舊成本。用『一天怎麼用手機』取代規格比較表，整理換機前該衡量的取捨。"
 publishDate: "2026-08-06T05:55:28.112Z"
@@ -27,10 +27,12 @@ risksAndLimits:
   - "文中列出的三種划算情境為一般歸納，是否受用需依個人實際使用習慣判斷"
 draft: false
 status: "published"
-updatedDate: "2026-08-06T05:55:28.112Z"
+updatedDate: "2026-08-17"
 ---
 
 摺疊機的實用價值集中在三種情境：同時開兩到三個視窗處理工作、把大螢幕當電子書長時間閱讀、靠外螢幕不展開就處理通知。多數人的一天沒有落在這幾種情境裡，摺疊機買回去多半只是每天多扛一份重量、厚度與螢幕摺痕。
+
+延伸閱讀：[手機系統更新前先看這篇：舊機該不該升，出事了怎麼退回](/articles/phone-os-update-should-you-upgrade-2026/)、[智慧眼鏡怎麼看出對方在錄影？澳洲89元平價款熱賣掀隱私調查](/articles/smart-glasses-privacy-detection/)
 
 <img src="/images/foldable-phone-worth-it-2026-s0.webp" width="960" height="640" loading="lazy" decoding="async" alt="一隻手拿著閤起的摺疊手機（示意圖）">
 

@@ -1,9 +1,10 @@
 ---
-title: "印度前總統顧問科學家籲普及AI政策　批評過度依賴IIT、直言AI已成「商業戰場」"
+title: "印度AI為何要普及？科學家批評過度依賴IIT"
 slug: "india-ai-democratize-access"
-description: "印度已故總統卡蘭生前顧問、科學家Srijan Pal Singh接受RT India節目「In Conversation」訪問時表示，印度要在AI領域有所突破，必須讓AI「普及化」；他點名印度理工學院（IIT）獨大是政策隱憂，主張把資源分散到更多高等教育機構、並讓私部門加入競爭。Singh肯定印度在AI訓練量能上的成績（近2500萬小時訓練時數）與半導體、硬體佈局，但提醒不能滿足於統一支付介面（UPI）的成功，「這不是我們的終點目標」。"
+description: "印度科學家Srijan Pal Singh主張AI應普及到更多高校與私部門，批評政策過度依賴印度理工學院（IIT）。整理印度AI人才、訓練量能與半導體布局的現況與限制。"
 excerpt: "印度已故總統卡蘭生前顧問、科學家Srijan Pal Singh受訪指出，印度AI要有突破得先解決過度依賴IIT的政策問題，並警告不能只滿足於UPI的成功，「這不是我們的終點目標」。"
 publishDate: "2026-07-29T16:30:08.380Z"
+updatedDate: "2026-08-17"
 category: "international"
 subcategory: "asia"
 tags:
@@ -43,6 +44,8 @@ coverImageCredit: "Photo by Growtika on Unsplash"
 ---
 
 印度要在人工智慧領域急起直追，得先解決「太依賴少數名校」的政策問題。印度已故總統卡蘭（A.P.J. Abdul Kalam）生前顧問、科學家Srijan Pal Singh接受[RT India節目「In Conversation」訪問](https://www.rt.com/india/643583-india-ai-kalam-srijanpal/)時表示，印度需要讓AI「普及化」（democratize），才能在這個快速變動的領域站穩腳步；他也點出印度理工學院（IIT）獨大的問題，主張把政策資源分散到更多高等教育機構，並讓私部門一起加入競爭。
+
+延伸閱讀：[台灣AI技能調查：認證者薪資溢價，企業為AI素養付出對價](/articles/taiwan-ai-skills-salary-premium/)、[開源AI是什麼？祖克柏發表宣言、Meta同步發布兩款新模型](/articles/meta-open-source-ai-manifesto-zuckerberg/)
 
 ## 過度依賴IIT　Singh：我們要IIT做所有事
 

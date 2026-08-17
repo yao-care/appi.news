@@ -1,9 +1,10 @@
 ---
 coverImage: "covers/chinese-medicine-shop-transformation-taiwan.webp"
 coverAlt: "年輕店主在傳統中藥櫃前陳列草本冷飲、甜點與文創商品"
-title: "中藥行為什麼一直倒？從甜點、冷飲到文創看老字號怎麼轉型求生"
+title: "中藥行為何一直倒？老字號靠甜點、冷飲與文創轉型"
 description: "中藥商業同業公會統計，20年間全台中藥行家數少了超過一半，各地老字號正靠冷飲、甜點、文物館等方式找年輕客群，整理具體轉型案例與背後成因。"
 publishDate: "2026-08-01T19:21:12.468Z"
+updatedDate: "2026-08-17"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -19,6 +20,8 @@ risksAndLimits:
 ---
 
 台灣的中藥行正在快速消失，同時也有一批老字號正在轉型求生，把中藥材做成冷飲、甜點、香氛包，甚至改建成文物館。這支切入點，就是東森新聞近日一則深度報導提到的「漢方保養新商機」，但比起單一數字，更值得讀者知道的是這波轉型背後的具體樣貌，以及為什麼中藥行會走到這一步。
+
+延伸閱讀：[黃耆有哪些保健功效？從現代營養學解析免疫與健康作用](/articles/黃耆有哪些保健功效？從現代營養學解析免疫與健/)、[保健食品怎麼選才不踩雷？5個關鍵原則一次看懂](/articles/supplements-five-buying-principles/)
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=CFoY3r4xbMk" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：搶200億漢方美容保養新商機 中藥行拚轉型【東森深度報導】">

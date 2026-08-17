@@ -1,10 +1,10 @@
 ---
-title: "中國共產黨員人數破1億129萬人　年增僅1%創5年最慢"
+title: "中國共產黨員破1億：年增僅1%，黨內結構同步老化"
 slug: "china-communist-party-aging-membership"
 description: "中共中央組織部公報顯示，截至2025年底，中國共產黨黨員總數達1億129萬人，年增率僅1%，創至少5年來最慢紀錄。61歲以上黨員占比逼近3成創新高，35歲以下僅占22%，新入黨者雖八成是青年仍難扭轉老化，執政黨結構正與中國社會同步老化。"
 excerpt: "中共中央組織部統計，截至2025年底黨員總數破1億，年增僅1%創5年最慢，61歲以上黨員占近3成創新高，35歲以下僅占22%。新黨員雖八成為青年，仍難扭轉整體老化，反映中國社會人口結構危機已延伸進執政黨內部。"
 publishDate: "2026-08-02T16:57:24.799Z"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-17
 category: "international"
 subcategory: "asia"
 tags:
@@ -56,6 +56,8 @@ originalContribution: "本文整合IANS、南華早報、印度斯坦新聞對�
 ---
 
 中國共產黨黨員總數在2025年底突破1億人，但成長速度卻創下至少5年來最慢紀錄。[IANS報導](https://ianslive.in/chinas-communist-party-growing-at-slower-pace-and-its-members-getting-older-report--20260802161401)指出，中共中央組織部近期發布的黨內統計公報顯示，黨員年增率僅1%，且61歲以上黨員占比逼近3成，創下新高。這份數字被解讀為執政黨人口結構正與中國社會整體同步老化的訊號。
+
+延伸閱讀：[台灣出生率創新低：老人養老人如何拖垮退休金](/articles/appi-news-398/)、[台灣2025年生育率跌至0.695，創全球主要經濟體最低](/articles/taiwan-2025-fertility-rate-lowest/)
 
 ## 黨員破1億人　年增率創5年新低
 

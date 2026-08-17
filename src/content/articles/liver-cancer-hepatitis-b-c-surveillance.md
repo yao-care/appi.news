@@ -2,7 +2,7 @@
 title: "B、C 肝帶原者，肝癌的追蹤時鐘怎麼設？"
 slug: "liver-cancer-hepatitis-b-c-surveillance"
 description: "台灣死於肝癌的人約七成是 B 肝帶原、兩成是慢性 C 肝。肝癌是沉默殺手，早期沒症狀。但如果你是 B、C 肝帶原者，每 6 個月做腹部超音波加抽血驗甲型胎兒蛋白，就能在肝癌還小時抓到。這篇教你設好追蹤時鐘。"
-publishDate: 2026-08-26T20:00:00+08:00
+publishDate: 2026-09-01T20:00:00+08:00
 category: health
 subcategory: preventive
 tags:

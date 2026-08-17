@@ -2,7 +2,7 @@
 title: "口腔黏膜檢查在檢查什麼？嚼檳榔、吸菸者最該做的口腔癌篩檢"
 slug: "oral-cancer-screening-mucosa"
 description: "口腔癌幾乎都跟嚼檳榔、吸菸、喝酒有關。30 歲以上有嚼檳榔（含已戒）或吸菸的人，有每 2 年一次的公費口腔黏膜檢查，醫師看一看、摸一摸就能揪出癌前病變。這篇以牙醫角度教你看懂口腔癌篩檢，以及自己在家能留意什麼。"
-publishDate: 2026-08-24T20:00:00+08:00
+publishDate: 2026-08-30T20:00:00+08:00
 category: health
 subcategory: preventive
 tags:

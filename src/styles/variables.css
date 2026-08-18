@@ -22,6 +22,15 @@
      免責標籤實測 color-contrast 失敗）。本值對 #f7efdd 為 4.92:1。
      大字（≥18.66px 粗體，門檻 3:1）仍可直接用 --appi-accent，例如站名的金色字。 */
   --appi-accent-ink: #8a5f10;
+  /* 品牌青。--appi-accent 是暖的（金），這個是冷的那一支：iconography 的高光與強調用。
+     來源是 2026-08-18 的 LINE 官方帳號圖文選單美術稿，從稿子上取樣得出（眾數 #026b8d，
+     報紙色塊與準星中心兩個定點取樣皆收斂到同值）。對白底 6.02:1、對 --bg-soft 5.56:1，
+     小字也過 WCAG AA，白字壓在它上面同樣是 6.02:1。
+     ⚠️ 不要跟底下遷移期的 --color-teal 搞混：那個名字叫 teal，值卻是 --appi-brand（深藍），
+     是 evidencetoday 編輯器的相容別名，與這個色無關。
+     ⚠️ 這一支的**原始值是 hex**（取樣自稿子），oklch 是換算來的，與本檔其餘「oklch 主要、
+     hex fallback」的方向相反。改它時以 hex 為準。 */
+  --appi-highlight: #026b8d;
   /* 深色底（品牌底）上的文字 */
   --on-brand: #d7e0ec;
   --on-brand-dim: #9fb2cc;
@@ -50,6 +59,7 @@
     --appi-accent: oklch(0.60 0.10 75);
     --appi-accent-soft: oklch(0.95 0.03 80);
     --appi-accent-ink: oklch(0.51 0.09 75); /* 對 accent-soft 5.04:1（見上方 hex fallback 說明） */
+    --appi-highlight: oklch(0.49 0.10 229); /* 由 #026b8d 換算（見上方 hex fallback 說明） */
     --on-brand: oklch(0.88 0.02 252);
     --on-brand-dim: oklch(0.74 0.03 252);
 

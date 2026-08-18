@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" role="img" aria-label="長條圖比較本金100萬元、年利率同為2.2%時，定存6個月單利可得約11,030元利息，定存12個月則約22,000元，天期長度直接決定實拿利息，同一個年利率數字不能直接比較">
+<style>
+.title{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:26px;font-weight:700;fill:#1e2030;}
+.subtitle{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:15px;fill:#6e7276;}
+.value{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:22px;font-weight:700;fill:#1e2030;}
+.label{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:20px;font-weight:700;fill:#1e2030;}
+.desc{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:14px;fill:#6e7276;}
+.foot{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:13px;fill:#6e7276;}
+</style>
+<rect x="0" y="0" width="960" height="640" fill="#ffffff"/>
+
+<rect x="40" y="34" width="4" height="30" fill="#a87515"/>
+<text x="56" y="58" class="title">同樣年利率2.2%，天期不同、利息差近一倍</text>
+<text x="56" y="82" class="subtitle">本金100萬元、單利試算，未計入所得稅與到期後續存的變動</text>
+
+<rect x="230" y="369" width="200" height="191" rx="4" fill="#eef0f3" stroke="#5e6070" stroke-width="1.5"/>
+<text x="330" y="354" text-anchor="middle" class="value">約11,030元</text>
+<text x="330" y="588" text-anchor="middle" class="label">定存6個月</text>
+<text x="330" y="610" text-anchor="middle" class="desc">183天／年利率2.2%</text>
+
+<rect x="530" y="180" width="200" height="380" rx="4" fill="#a87515"/>
+<text x="630" y="165" text-anchor="middle" class="value">約22,000元</text>
+<text x="630" y="588" text-anchor="middle" class="label">定存12個月</text>
+<text x="630" y="610" text-anchor="middle" class="desc">365天／年利率2.2%</text>
+
+<line x1="40" y1="560" x2="920" y2="560" stroke="#e8e9ed" stroke-width="1"/>
+
+<line x1="40" y1="620" x2="920" y2="620" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="640" class="foot" transform="translate(0,-5)">製圖：APPI News</text>
+<text x="920" y="640" text-anchor="end" class="foot" transform="translate(0,-5)">資料來源：台新銀行官網公告年利率換算試算（2026-08-18）</text>
+</svg>

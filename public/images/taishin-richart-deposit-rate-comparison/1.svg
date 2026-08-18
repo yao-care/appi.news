@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 660" width="960" height="660" role="img" aria-label="表格比較六家銀行2026年8月高利定存促案：台新Richart年利率2.2%、天期6個月；王道銀行2.35%、9個月；將來銀行2.2%、12個月；樂天銀行2.2%、12個月；LINE Bank 2.2%、13個月；匯豐銀行2.2%至3.0%、3至6個月，各自有新資金、筆數或客群等限制">
+<style>
+.title{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:26px;font-weight:700;fill:#1e2030;}
+.subtitle{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:15px;fill:#6e7276;}
+.head{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:15px;font-weight:700;fill:#6e7276;}
+.bank{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:18px;font-weight:700;fill:#1e2030;}
+.rate{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:20px;font-weight:700;fill:#a87515;}
+.term{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:16px;fill:#1e2030;}
+.limit{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:14px;fill:#6e7276;}
+.foot{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:13px;fill:#6e7276;}
+</style>
+<rect x="0" y="0" width="960" height="660" fill="#ffffff"/>
+
+<rect x="40" y="34" width="4" height="30" fill="#a87515"/>
+<text x="56" y="58" class="title">六家銀行高利定存促案比較</text>
+<text x="56" y="82" class="subtitle">牌告利率約1.48%~1.81%，促案都設有新資金、筆數或客群等條件，2026年8月18日整理</text>
+
+<rect x="40" y="147" width="880" height="73" rx="10" fill="#eaf0f8"/>
+<rect x="40" y="147" width="880" height="3" fill="#a87515"/>
+
+<text x="56" y="140" class="head">銀行</text>
+<text x="216" y="140" class="head">年利率</text>
+<text x="336" y="140" class="head">天期</text>
+<text x="436" y="140" class="head">主要限制</text>
+
+<line x1="200" y1="110" x2="200" y2="570" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="320" y1="110" x2="320" y2="570" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="420" y1="110" x2="420" y2="570" stroke="#e8e9ed" stroke-width="1"/>
+
+<line x1="40" y1="150" x2="920" y2="150" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="40" y1="220" x2="920" y2="220" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="40" y1="290" x2="920" y2="290" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="40" y1="360" x2="920" y2="360" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="40" y1="430" x2="920" y2="430" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="40" y1="500" x2="920" y2="500" stroke="#e8e9ed" stroke-width="1"/>
+<line x1="40" y1="570" x2="920" y2="570" stroke="#e8e9ed" stroke-width="1"/>
+
+<text x="56" y="192" class="bank">台新Richart</text>
+<text x="216" y="192" class="rate">2.2%</text>
+<text x="336" y="192" class="term">6個月</text>
+<text x="436" y="184" class="limit">新資金・可多筆承作</text>
+<text x="436" y="204" class="limit">單筆1萬~200萬・全案上限200筆</text>
+
+<text x="56" y="262" class="bank">王道銀行</text>
+<text x="216" y="262" class="rate">2.35%</text>
+<text x="336" y="262" class="term">9個月</text>
+<text x="436" y="254" class="limit">新資金・單筆2萬~1,000萬</text>
+<text x="436" y="274" class="limit">99筆上限</text>
+
+<text x="56" y="332" class="bank">將來銀行</text>
+<text x="216" y="332" class="rate">2.2%</text>
+<text x="336" y="332" class="term">12個月</text>
+<text x="436" y="324" class="limit">新資金・50筆上限</text>
+<text x="436" y="344" class="limit">累計上限3,000萬</text>
+
+<text x="56" y="402" class="bank">樂天銀行</text>
+<text x="216" y="402" class="rate">2.2%</text>
+<text x="336" y="402" class="term">12個月</text>
+<text x="436" y="394" class="limit">新資金・單筆上限300萬</text>
+<text x="436" y="414" class="limit">不限承作筆數</text>
+
+<text x="56" y="472" class="bank">LINE Bank</text>
+<text x="216" y="472" class="rate">2.2%</text>
+<text x="336" y="472" class="term">13個月</text>
+<text x="436" y="464" class="limit">限本行活存客戶</text>
+<text x="436" y="484" class="limit">單筆300萬・10筆上限</text>
+
+<text x="56" y="542" class="bank">匯豐銀行</text>
+<text x="216" y="542" class="rate">2.2%~3.0%</text>
+<text x="336" y="542" class="term">3~6個月</text>
+<text x="436" y="534" class="limit">限卓越理財客戶</text>
+<text x="436" y="554" class="limit">限額1,500萬~3,000萬</text>
+
+<line x1="40" y1="595" x2="920" y2="595" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="615" class="foot">製圖：APPI News</text>
+<text x="920" y="615" text-anchor="end" class="foot">資料來源：台新銀行官網、王道銀行官網、Mr.Market市場先生整理（2026-08-03）</text>
+</svg>

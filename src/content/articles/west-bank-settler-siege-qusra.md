@@ -1,9 +1,10 @@
 ---
 title: "以色列定居者暴力為何屢禁不止？美國大使罕見痛批「恐怖分子」"
 slug: "west-bank-settler-siege-qusra"
-description: "美國駐以色列大使赫卡比8月13日罕見痛批以色列定居者是「恐怖分子」，起因是西岸庫斯拉鎮3戶巴勒斯坦家庭遭圍困斷水斷電逾5個晚上。整理事件經過、以色列軍方後續處置成效受質疑之處，以及2026年西岸定居者攻擊事件創新高的背景數據。"
-excerpt: "美國駐以色列大使赫卡比8月13日罕見痛批以色列定居者是「恐怖分子」，起因是西岸庫斯拉鎮3戶巴勒斯坦家庭遭圍困斷水斷電逾5個晚上，聯合國記錄該鎮是2026年西岸定居者攻擊最頻繁的社區。"
+description: "美國駐以色列大使赫卡比8月13日痛批以色列定居者是「恐怖分子」，起因是西岸庫斯拉鎮巴勒斯坦家庭遭圍困斷水斷電；屋主之一、俄亥俄州美籍巴勒斯坦人里迪8月17日返家對峙定居者，仍被要求返回屋內。整理事件經過與最新進展。"
+excerpt: "美國駐以色列大使赫卡比8月13日罕見痛批以色列定居者是「恐怖分子」；美籍屋主里迪8月17日返抵庫斯拉與定居者對峙，仍遭以色列軍方以軍事管制區為由要求返回屋內，圍困進入第二週。"
 publishDate: "2026-08-14T16:48:43.102Z"
+updatedDate: "2026-08-18T16:26:41.753Z"
 category: "international"
 subcategory: "middle-east"
 tags:
@@ -15,6 +16,7 @@ highlights:
   - "西岸北部庫斯拉鎮3戶巴勒斯坦家庭（共15人，含2名兒童）自8月9日週日晚間起遭數十名定居者包圍住宅、切斷水電，受困長達5個晚上，其中一戶親屬持美國籍"
   - "以色列軍方8月11日週二先譴責包圍行為「非法、應受譴責且不可接受」並宣布庫斯拉為軍事禁區，8月13日週四再宣布拆除2處非法據點、逮捕1名以色列人，但居民與市長質疑軍方實際上放任定居者往返"
   - "聯合國人道事務協調辦公室（OCHA）今年4月已記錄，庫斯拉是2026年西岸遭定居者攻擊次數最多的社區；巴勒斯坦當局統計2026年全年已有87名巴勒斯坦人遭定居者與以軍殺害、1,476起定居者攻擊事件"
+  - "更新：事件屋主之一、俄亥俄州巴勒斯坦裔美國人里迪（Loui Ridi）8月17日週一晚間返抵庫斯拉，隔天與定居者對峙後仍被以色列軍方以「軍事管制區」為由要求返回屋內，軍方稱已清空現場但未回應定居者是否仍在附近，圍困已進入第二週"
 author: "appi-editorial"
 reviewedBy:
   - "luo-yang"
@@ -33,6 +35,7 @@ risksAndLimits:
   - "以色列軍方稱已拆除2處據點、逮捕1人，惟居民與市長質疑定居者離開後仍可能返回，實際成效待後續觀察"
   - "本文聚焦庫斯拉鎮這起個案，不代表西岸其他地區定居者與巴勒斯坦居民關係的整體樣貌"
   - "事件發展快速，以色列軍方後續處置範圍與美方是否進一步施壓，發稿後仍可能有新進展"
+  - "里迪返家對峙經過與以色列軍方『已清空現場』的說法，分別來自當事人受訪與軍方單方聲明，雙方說法尚未見獨立查證"
 references:
   - title: "Israeli settlers' siege of Palestinian homes draws sharp US rebuke"
     url: "https://www.london-now.co.uk/news/national/26463199.israeli-settlers-siege-palestinian-homes-draws-sharp-us-rebuke/"
@@ -46,9 +49,15 @@ references:
   - title: "Huckabee calls Israeli settlers 'terrorists': Can US push end Qusra siege?"
     url: "https://www.aljazeera.com/news/2026/8/14/huckabee-calls-israeli-settlers-terrorists-can-us-push-end-qusra-siege"
     publisher: "Al Jazeera"
+  - title: "Palestinian American returns to besieged West Bank home but Israeli settlers remain"
+    url: "https://www.clickondetroit.com/news/world/2026/08/18/palestinian-american-returns-to-besieged-west-bank-home-but-israeli-settlers-remain/"
+    publisher: "Associated Press / ClickOnDetroit"
+  - title: "Palestinian American returns to his West Bank home, under siege by Israeli settlers"
+    url: "https://www.wlrn.org/npr-breaking-news/2026-08-18/palestinian-american-returns-to-his-west-bank-home-under-siege-by-israeli-settlers"
+    publisher: "NPR / WLRN"
 ---
 
-美國駐以色列大使赫卡比（Mike Huckabee）8月13日週四公開把以色列定居者稱為「恐怖分子」，這個字眼美國官員通常只用在巴勒斯坦武裝分子身上，直接用在以色列定居者身上相當罕見。[半島電視台報導](https://www.aljazeera.com/news/2026/8/13/us-diplomat-calls-israeli-settler-siege-of-west-bank-homes-act-of-terror)引述赫卡比的話：「這種恐怖行為令人厭惡，沒有任何藉口。」起因是西岸北部庫斯拉鎮3戶巴勒斯坦家庭，從8月9日週日晚間起遭數十名定居者包圍住宅、切斷水電，受困長達5個晚上。
+西岸庫斯拉鎮的圍困事件持續逾一週仍未落幕。美國駐以色列大使赫卡比（Mike Huckabee）8月13日週四公開把以色列定居者稱為「恐怖分子」，這個字眼美國官員通常只用在巴勒斯坦武裝分子身上，直接用在以色列定居者身上相當罕見。[半島電視台報導](https://www.aljazeera.com/news/2026/8/13/us-diplomat-calls-israeli-settler-siege-of-west-bank-homes-act-of-terror)引述赫卡比的話：「這種恐怖行為令人厭惡，沒有任何藉口。」起因是西岸北部庫斯拉鎮3戶巴勒斯坦家庭，從8月9日週日晚間起遭數十名定居者包圍住宅、切斷水電，受困長達5個晚上。事件屋主之一、俄亥俄州巴勒斯坦裔美國人里迪（Loui Ridi）8月17日週一晚間從美國返抵庫斯拉，隔天與定居者對峙後，[美聯社報導](https://www.clickondetroit.com/news/world/2026/08/18/palestinian-american-returns-to-besieged-west-bank-home-but-israeli-settlers-remain/)指出他仍被以色列軍方以「軍事管制區」為由要求返回屋內，顯示圍困進入第二週依然沒有解方。
 
 ## 圍困5個晚上：斷水斷電、出入口遭封鎖
 
@@ -76,6 +85,10 @@ references:
 ## 2026年西岸定居者攻擊創新高
 
 半島電視台8月13日報導引述聯合國人道事務協調辦公室（OCHA）今年4月的統計，庫斯拉鎮是2026年西岸遭定居者攻擊次數最多的社區。巴勒斯坦當局同時通報，2026年全年迄今已有87名巴勒斯坦人遭以色列定居者與士兵殺害，全年累計1,476起定居者攻擊事件。西岸目前居住著逾56萬名持以色列籍的定居者，以及約280萬名生活在以色列軍事統治下的巴勒斯坦人。一個以色列人權團體向美聯社表示，定居者對巴勒斯坦男女老幼「每天都在施加恐怖」，而「若沒有（以色列）軍方的支持，這種恐怖與族群清洗根本不可能發生」。
+
+## 更新時間軸
+
+- （2026-08-18）事件屋主之一、俄亥俄州巴勒斯坦裔美國人里迪（Loui Ridi）8月17日週一晚間從美國返抵庫斯拉，在以色列本古里昂國際機場受訪時說：「我無法入睡」「我不能讓定居者在我眼前偷走我的房子」，強調自己「應該能隨時自由前往我的房子」。隔天週二他外出與定居者對峙、高聲要求對方離開並稱其為「恐怖分子」，以色列士兵請定居者自願撤離未果，隨後告知里迪該地已劃為軍事管制區，要求他返回屋內；軍方聲稱週二已「清空」現場，但未回應定居者是否仍在附近徘徊。里迪擔心定居者被驅離後「當天或幾小時後」又會回來在他房子前搭起同樣的帳篷，目擊者影片則顯示以色列士兵與定居者互動友好，圍困已持續超過一週、進入第二週。（[美聯社／ClickOnDetroit](https://www.clickondetroit.com/news/world/2026/08/18/palestinian-american-returns-to-besieged-west-bank-home-but-israeli-settlers-remain/)、[NPR／WLRN](https://www.wlrn.org/npr-breaking-news/2026-08-18/palestinian-american-returns-to-his-west-bank-home-under-siege-by-israeli-settlers)）
 
 ## 常見問題
 

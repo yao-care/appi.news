@@ -267,6 +267,7 @@
 | 內容 gate 的集合、順序與失敗語意 | `scripts/lib/publish-pipeline.mjs`（`runArticleGates`；各產線經它跑 gate，勿逐線自排 spawn 序列） |
 | 文章「現在公開嗎」（isPublic／排程草稿判斷） | `src/utils/visibility.mjs`（content.ts、astro.config、scripts 各腳本共用同一份，**勿手抄鏡像**；漂移史＝[`docs/lessons/deploy-cadence.md`](./docs/lessons/deploy-cadence.md) 2026-08-20 追記） |
 | 文章目錄唯讀索引（單篇 title／近 N 天標題） | `scripts/lib/article-index.mjs` |
+| cron `.sh` 共用外殼（boot／worktree 進場／逾時捕捉／失敗偵測與 ❌ 回報／等部署 200） | `scripts/cron/_runner.sh`（timeout／tail 等參數在呼叫端具名；worktree 生命週期另在 `scripts/cron/_worktree.sh`） |
 | 寫作成長規則（內鏈／topics／標題／開頭／FAQ） | `scripts/lib/growth-prompt.mjs` 的 `GROWTH_PROMPT`（所有產線共用，新增產線必接）|
 | 成長工作項目與 SOP（B 站內導流／A 存量升級／C 回訪） | [`docs/growth-playbook.md`](./docs/growth-playbook.md) |
 | 存量批次回填工具（內鏈／常見問題／主題中樞） | `scripts/growth-backfill-links.mjs`、`scripts/backfill-faq.mjs`、`scripts/topic-hub-radar.mjs`（判準與踩過的坑＝[`docs/lessons/mechanical-backfill-traps.md`](./docs/lessons/mechanical-backfill-traps.md)）|

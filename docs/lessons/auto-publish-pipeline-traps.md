@@ -84,6 +84,7 @@
   1. `scripts/lib/claude-cli.mjs`：`runClaudeArticle()`→`classifyClaudeRun()` 三態（`quota` 中止整批／`fail` 跳過該則／`ok`）＋`parseSentinelResult()`（哨兵解析，`infra` 旗標一律有）。
   2. `scripts/lib/publish-pipeline.mjs`：`runArticleGates()`＝gate 集合、順序與 report-only 與否的唯一定義點；失敗語意統一「回報不決定」，呼叫端剔除該篇、永不整批陪葬。
   3. `scripts/lib/article-index.mjs`：`articleTitle`／`recentTitles` 等文章索引小工具。
+  4. `scripts/cron/_runner.sh`（2026-08-20 同日補）：cron `.sh` 的共用外殼——boot、worktree 進場、逾時捕捉、失敗偵測（`CRON_LIMIT_RE` 在 .sh 層只此一份）與 ❌ 回報、等部署 200；timeout／`tail -c` 從「無名數字＋註解」變成具名參數。
 - **怎麼避免重犯**：
   - **同一段 regex／spawn 序列第二次出現，就是抽正本的時機**——第三次出現後每一份都會開始各自演化，屆時要靠 grep 考古才能判斷哪份是對的。
   - **新增產線接線清單**：喚模型走 `runClaudeArticle`、gate 走 `runArticleGates`、索引走 `article-index`——發現任何新產線自己 spawn `claude-appi` 或自排 gate 序列，視同踩本節的坑，當場改。

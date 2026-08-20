@@ -16,34 +16,21 @@
 # 只有真的撈到新資料才往下喚 Sonnet 選題 + 逐篇 newsroom-write。
 #
 # 🔴 **配圖一律禁 OpenAI 生圖**（真實選手與賽事不可 AI 生圖，站長明確要求）：
-#    由 golf-radar.mjs 的 writeAndPublish 在 spawn 時強制帶 NO_AI_IMAGE=1，不靠這裡設；
+#    由 radar-shared 的 writeAndPublish 在 spawn 時強制帶 NO_AI_IMAGE=1，不靠這裡設；
 #    這裡仍手動帶一次是雙重保險（同論壇雷達的作法，任一邊被改掉都還有另一邊擋著）。
 #
 # 🔴 **本線會寫 repo**（產文＋配圖），所以走 worktree（同論壇雷達／影片線），不是純資料腳本例外。
 TASK="高爾夫選手動態雷達"
-set -uo pipefail
-# 本檔在 scripts/cron/ 底下，往上兩層才是 repo 根（少一層會 MODULE_NOT_FOUND）。
-REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
-source "$(dirname "$0")/_worktree.sh"
-cron_enter_worktree "golf-radar" || { node "$PUBLISHER/scripts/cron-report.mjs" --dev --text "⚠️ $TASK：無法建 worktree，略過本次" 2>/dev/null || true; exit 0; }
+source "$(dirname "$0")/_runner.sh"
+cron_worktree "golf-radar" "--dev" || exit 0
+cron_env
 
-set -a
-# shellcheck disable=SC1090
-source "$HOME/.config/appi-news/report.env"
-set +a
+# tail 800 同論壇雷達：全源失敗訊息含來源清單與連續輪數，500 會把最需要的開頭切掉。
+cron_run "--dev" --timeout 3600 --tail 800 --fail-re "$CRON_LIMIT_RE|GOLF_RESULT=FAIL" \
+  -- env NO_AI_IMAGE=1 node scripts/golf-radar.mjs --go
 
-ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
-out="$(NO_AI_IMAGE=1 timeout 3600 node scripts/golf-radar.mjs --go 2>&1)"; rc=$?
-[ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 3600s 被中止"
-printf '%s\n' "$out"
-
-# 失敗偵測：rc 非 0，或輸出含 API/拒答/用量上限字樣（claude-appi 撞上限會 exit 0 只印訊息）。
-if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|GOLF_RESULT=FAIL|hit your .*limit|weekly limit|usage limit' <<<"$out"; then
-  # 成功一律不發額外訊息：
-  #   - 有上架 → **內容已經由 golf-radar.mjs 一篇一行帶連結報到運動台**，重複再發一份到 dev 是講兩次。
-  #   - 沒有新資料 → 多數時段是這個狀態（尤其台灣選手非賽季週），發了會洗頻。
-  # 上架清單仍完整留在 /var/log/appi-news/golf-radar.log（PUBLISHED= 行），事後要查有紀錄。
-  exit 0
-fi
-node scripts/cron-report.mjs --dev --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 800 <<<"$out")")" || true
-exit "$rc"
+# 成功一律不發額外訊息：
+#   - 有上架 → **內容已經由 golf-radar.mjs 一篇一行帶連結報到運動台**，重複再發一份到 dev 是講兩次。
+#   - 沒有新資料 → 多數時段是這個狀態（尤其台灣選手非賽季週），發了會洗頻。
+# 上架清單仍完整留在 /var/log/appi-news/golf-radar.log（PUBLISHED= 行），事後要查有紀錄。
+exit 0

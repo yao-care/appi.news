@@ -645,6 +645,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/australia-antisemitism-social-media-trust/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/australia-antisemitism-social-media-trust/"
     }
   ],
   "australia-extremism-royal-commission-drivers": [
@@ -1583,6 +1587,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/fhir-ai-medical-data-japan/"
+    }
+  ],
+  "fhir-box-medical-ai-certification": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/fhir-box-medical-ai-certification/"
     }
   ],
   "flu-vaccine-2026-public-guide": [
@@ -2951,6 +2961,12 @@
       "href": "https://in.appi.news/articles/nvidia-sb-energy-ohio-datacenter/"
     }
   ],
+  "older-adult-function-assessment": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/older-adult-function-assessment/"
+    }
+  ],
   "openai-42-ags-ipo-probe": [
     {
       "hreflang": "en",
@@ -3235,6 +3251,12 @@
       "href": "https://jp.appi.news/articles/plt-platelet-therapy-for-pain/"
     }
   ],
+  "pneumococcal-vaccine-elderly": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/pneumococcal-vaccine-elderly/"
+    }
+  ],
   "postpartum-partner-support-breastfeeding": [
     {
       "hreflang": "en",
@@ -3441,6 +3463,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/shingles-vaccine-adults/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/shingles-vaccine-adults/"
     }
   ],
   "singapore-airlines-engineer-unfair-dismissal": [

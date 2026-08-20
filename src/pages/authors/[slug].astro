@@ -8,12 +8,12 @@ import EmptyState from '@/components/ui/EmptyState.astro';
 import {
   getAuthors,
   getPublishedArticles,
-  getAuthorMap,
+  getAuthorNames,
   byAuthor,
   authorHasPage,
   authorHasColumnPage,
   authorAvatar,
-  articleSlug,
+  articleListItems,
 } from '@/utils/content';
 import { getColumns } from '@/utils/content';
 import { url, asset } from '@/utils/url';
@@ -28,10 +28,7 @@ export async function getStaticPaths() {
 
 const { author } = Astro.props;
 const all = await getPublishedArticles();
-const authorMap = await getAuthorMap();
-const authorNames = new Map(
-  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
-);
+const authorNames = await getAuthorNames();
 const articles = byAuthor(all, author.id);
 const path = `/authors/${author.id}/`;
 const avatar = authorAvatar(author);
@@ -77,14 +74,9 @@ const ld = [
   ]),
   ...(articles.length > 0
     ? [
-        itemListLd(
-          Astro.site,
-          articles.map((a) => ({
-            name: a.data.title,
-            path: `/articles/${articleSlug(a)}/`,
-          })),
-          { name: `${author.data.name}的文章` },
-        ),
+        itemListLd(Astro.site, articleListItems(articles), {
+          name: `${author.data.name}的文章`,
+        }),
       ]
     : []),
 ];

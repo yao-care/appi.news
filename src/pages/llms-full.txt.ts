@@ -1,6 +1,6 @@
 import type { APIContext } from 'astro';
 import { SITE } from '@/config/site';
-import { getPublishedArticles, articleSlug } from '@/utils/content';
+import { getPublishedArticles, articlePath } from '@/utils/content';
 import { getCategoryName } from '@/config/categories';
 import { absoluteUrl } from '@/utils/url';
 import { isoDate } from '@/utils/date';
@@ -14,7 +14,7 @@ export async function GET(context: APIContext) {
     homeUrl: absoluteUrl('/', site),
     articles: articles.map((a) => ({
       title: a.data.title,
-      url: absoluteUrl(`/articles/${articleSlug(a)}/`, site),
+      url: absoluteUrl(articlePath(a), site),
       date: isoDate(a.data.publishDate).slice(0, 10),
       category: getCategoryName(a.data.category),
       description: a.data.description,

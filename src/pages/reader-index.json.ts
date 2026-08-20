@@ -2,6 +2,7 @@ import type { APIContext } from 'astro';
 import {
   getPublishedArticles,
   articleSlug,
+  articlePath,
   coverImageFor,
   readingTime,
   type Article,
@@ -58,7 +59,7 @@ function toEntry(a: Article, site: URL | undefined): ReaderIndexArticle {
   const slug = articleSlug(a);
   const entry: ReaderIndexArticle = {
     slug,
-    url: absoluteUrl(`/articles/${slug}/`, site),
+    url: absoluteUrl(articlePath(a), site),
     title: a.data.title,
     category: a.data.category,
     publish_date: a.data.publishDate.toISOString(),

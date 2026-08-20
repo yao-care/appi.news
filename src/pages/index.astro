@@ -8,32 +8,26 @@ import { SITE } from '@/config/site';
 import { CATEGORIES } from '@/config/categories';
 import {
   getPublishedArticles,
-  getAuthorMap,
+  getAuthorNames,
   getTopics,
   featuredArticles,
   makeDeduper,
   articleSlug,
+  articlePath,
+  articleListItems,
+  articlesForTopic,
   byCategory,
   bySubcategory,
-  byTopic,
   coverImageFor,
   coverAltFor,
 } from '@/utils/content';
 import { url } from '@/utils/url';
 import { formatDate } from '@/utils/date';
 import { itemListLd } from '@/utils/jsonld';
-import {
-  activeSeasonalTopic,
-  SEASONAL_TOPIC_CAMPAIGNS,
-  shouldPromoteBackToSchool,
-  showBackToSchoolCompanion,
-} from '@/utils/seasonalTopics';
+import { resolveSeasonalSlots } from '@/utils/seasonalTopics';
 
 const all = await getPublishedArticles();
-const authorMap = await getAuthorMap();
-const authorNames = new Map(
-  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
-);
+const authorNames = await getAuthorNames();
 const authorName = (id: string) => authorNames.get(id) ?? 'APPI 編輯部';
 
 const dedupe = makeDeduper();
@@ -54,49 +48,22 @@ const secondary = dedupe.take([...featuredArticles(all), ...all], 5);
 const latest = dedupe.take(all, 12, false);
 
 // 8 月衝刺入口依台北日期自動輪替；日期過後不留過期活動占首頁版位。
+// 槽位決策（主打／當令／次入口）全在 resolveSeasonalSlots，這裡只把 topicId 對回實體後渲染。
 const topics = await getTopics();
-const seasonalCampaign = activeSeasonalTopic();
-const seasonalTopic = seasonalCampaign
-  ? topics.find((topic) => topic.id === seasonalCampaign.topicId)
+const { primary: primarySlot, companion: companionSlot } = resolveSeasonalSlots(new Date());
+const primaryTopic = primarySlot
+  ? topics.find((topic) => topic.id === primarySlot.topicId)
   : undefined;
-const topicCount = (topic: (typeof topics)[number]) =>
-  new Set([...topic.data.articles, ...byTopic(all, topic.id).map(articleSlug)]).size;
-const backToSchoolTopic = topics.find((topic) => topic.id === 'back-to-school-2026');
-const backToSchoolCampaign = SEASONAL_TOPIC_CAMPAIGNS.find(
-  (campaign) => campaign.topicId === 'back-to-school-2026',
-);
-const backToSchoolLead = all.find(
-  (article) => articleSlug(article) === 'first-grade-school-supplies-2026',
-);
-const backToSchoolIsPrimary = Boolean(
-  shouldPromoteBackToSchool() && backToSchoolTopic && backToSchoolCampaign,
-);
-const primaryCampaign = backToSchoolIsPrimary ? backToSchoolCampaign : seasonalCampaign;
-const primaryTopic = backToSchoolIsPrimary ? backToSchoolTopic : seasonalTopic;
-const primaryTopicCount = primaryTopic ? topicCount(primaryTopic) : 0;
-const primaryDisplayTitle = backToSchoolIsPrimary
-  ? '2026 開學準備清單'
-  : primaryTopic?.data.title ?? '';
-
-// 開學主打期間，仍保留七夕／中元的次入口；更早日期則沿用原本的開學 companion。
-const secondaryTopic = backToSchoolIsPrimary
-  ? seasonalTopic && seasonalTopic.id !== backToSchoolTopic?.id
-    ? seasonalTopic
-    : undefined
-  : showBackToSchoolCompanion()
-    ? backToSchoolTopic
-    : undefined;
-const secondaryCampaign = secondaryTopic
-  ? secondaryTopic.id === 'back-to-school-2026'
-    ? backToSchoolCampaign
-    : seasonalCampaign
+const companionTopic = companionSlot
+  ? topics.find((topic) => topic.id === companionSlot.topicId)
   : undefined;
-const secondaryTopicCount = secondaryTopic ? topicCount(secondaryTopic) : 0;
-const secondaryDisplayTitle = secondaryTopic
-  ? secondaryTopic.id === 'back-to-school-2026'
-    ? '小一用品、收心與校園防疫'
-    : secondaryTopic.data.title
-  : '';
+const primaryLead = primarySlot?.leadArticleSlug
+  ? all.find((article) => articleSlug(article) === primarySlot.leadArticleSlug)
+  : undefined;
+const primaryTopicCount = primaryTopic ? articlesForTopic(all, primaryTopic).length : 0;
+const companionTopicCount = companionTopic
+  ? articlesForTopic(all, companionTopic).length
+  : 0;
 
 // 分類主題導覽：首頁過去只連到 7 個分類本身，分類底下的細分主題頁（如「科技／AI」）
 // 完全沒有首頁內鏈入口，只能靠分類頁內部或站內搜尋找到，內鏈密度偏低。
@@ -114,13 +81,10 @@ const topicGroups = CATEGORIES.filter((c) => c.slug !== 'columns')
   .filter((g) => g.subs.length > 0);
 
 const heroCover = hero ? coverImageFor(hero) : '';
-const heroHref = hero ? url(`/articles/${articleSlug(hero)}/`) : '#';
+const heroHref = hero ? url(articlePath(hero)) : '#';
 
 // 首頁精選＋最新文章的 ItemList，讓答案引擎能列舉本站當前的重點內容（依畫面順序）。
-const homeListItems = [...(hero ? [hero] : []), ...secondary, ...latest].map((a) => ({
-  name: a.data.title,
-  path: `/articles/${articleSlug(a)}/`,
-}));
+const homeListItems = articleListItems([...(hero ? [hero] : []), ...secondary, ...latest]);
 const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選與最新文章' });
 ---
 
@@ -144,9 +108,9 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
   </section>
 
   {
-    primaryCampaign && primaryTopic && (
+    primarySlot && primaryTopic && (
       <section
-        class:list={['home-seasonal', { 'home-seasonal--with-image': backToSchoolIsPrimary }]}
+        class:list={['home-seasonal', { 'home-seasonal--with-image': primarySlot.promoted }]}
         aria-labelledby="seasonal-topic-title"
       >
         <div class="container">
@@ -157,11 +121,11 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
             data-seasonal-slot="primary"
           >
             {
-              backToSchoolIsPrimary && backToSchoolLead && (
+              primarySlot.promoted && primaryLead && (
                 <span class="seasonal-topic-media">
                   <ImageWithFallback
-                    src={coverImageFor(backToSchoolLead)}
-                    alt={coverAltFor(backToSchoolLead)}
+                    src={coverImageFor(primaryLead)}
+                    alt={coverAltFor(primaryLead)}
                     fallback="og/health.png"
                     class="seasonal-topic-image"
                     loading="eager"
@@ -174,35 +138,33 @@ const homeLd = itemListLd(Astro.site, homeListItems, { name: 'APPI News 精選�
             }
             <span class="seasonal-topic-primary-copy">
               <span class="seasonal-topic-primary-marker">
-                {backToSchoolIsPrimary ? '現在主打｜' : ''}{primaryCampaign.eyebrow}
+                {primarySlot.eyebrow}
               </span>
               <span class="seasonal-topic-primary-title" id="seasonal-topic-title">
-                {primaryDisplayTitle}
+                {primarySlot.title ?? primaryTopic.data.title}
               </span>
-              <span class="seasonal-topic-primary-desc">{primaryCampaign.deadlineLabel}</span>
+              <span class="seasonal-topic-primary-desc">{primarySlot.description}</span>
               <span class="seasonal-topic-primary-meta">
                 {primaryTopicCount} 篇指南　查看專題 →
               </span>
             </span>
           </a>
           {
-            secondaryTopic && secondaryCampaign && (
+            companionSlot && companionTopic && (
               <a
                 class="seasonal-topic-secondary"
-                href={url(`/topics/${secondaryTopic.id}/`)}
-                data-seasonal-topic-id={secondaryTopic.id}
+                href={url(`/topics/${companionTopic.id}/`)}
+                data-seasonal-topic-id={companionTopic.id}
                 data-seasonal-slot="companion"
               >
                 <span class="seasonal-topic-secondary-copy">
                   <span class="seasonal-topic-secondary-eyebrow">
-                    {secondaryTopic.id === 'back-to-school-2026'
-                      ? '提早準備｜8 月 31 日開學'
-                      : secondaryCampaign.eyebrow}
+                    {companionSlot.eyebrow}
                   </span>
-                  <span class="seasonal-topic-secondary-title">{secondaryDisplayTitle}</span>
+                  <span class="seasonal-topic-secondary-title">{companionSlot.title ?? companionTopic.data.title}</span>
                 </span>
                 <span class="seasonal-topic-secondary-meta">
-                  {secondaryTopicCount} 篇指南　查看專題 →
+                  {companionTopicCount} 篇指南　查看專題 →
                 </span>
               </a>
             )

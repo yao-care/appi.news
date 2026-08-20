@@ -5,7 +5,7 @@ import {
   getPublishedArticles,
   getAuthors,
   authorHasPage,
-  articleSlug,
+  articlePath,
 } from '@/utils/content';
 import { absoluteUrl } from '@/utils/url';
 import { buildLlmsTxt } from '@/utils/llms';
@@ -43,7 +43,7 @@ export async function GET(context: APIContext) {
     })),
     articles: featuredArticles.map((a) => ({
       title: a.data.title,
-      url: absoluteUrl(`/articles/${articleSlug(a)}/`, site),
+      url: absoluteUrl(articlePath(a), site),
       description: a.data.description,
     })),
   });

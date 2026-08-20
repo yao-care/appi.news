@@ -10,6 +10,7 @@ import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
 import {
   getPublishedArticles,
   getAuthorMap,
+  getAuthorNames,
   byColumn,
   tagStats,
 } from '@/utils/content';
@@ -27,9 +28,7 @@ export async function getStaticPaths() {
 const { column } = Astro.props;
 const all = await getPublishedArticles();
 const authorMap = await getAuthorMap();
-const authorNames = new Map(
-  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
-);
+const authorNames = await getAuthorNames();
 // 顯式標記 column 的文章；個人專欄則涵蓋擁有者的所有文章
 const tagged = byColumn(all, column.id);
 const ownerArticles =

@@ -4,16 +4,14 @@ import CategoryChannel from '@/components/blocks/CategoryChannel.astro';
 import { CATEGORIES } from '@/config/categories';
 import {
   getPublishedArticles,
-  getAuthorMap,
+  getAuthorNames,
   byCategory,
-  articleSlug,
+  articleListItems,
+  PAGE_SIZE,
 } from '@/utils/content';
 import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
 
-const PAGE_SIZE = 18;
-
 export async function getStaticPaths() {
-  const PAGE_SIZE = 18;
   const all = await getPublishedArticles();
   const paths: any[] = [];
   for (const c of CATEGORIES) {
@@ -33,10 +31,7 @@ export async function getStaticPaths() {
 
 const { category, page, totalPages } = Astro.props;
 const all = await getPublishedArticles();
-const authorMap = await getAuthorMap();
-const authorNames = new Map(
-  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
-);
+const authorNames = await getAuthorNames();
 
 const inCat = byCategory(all, category.slug);
 const start = (page - 1) * PAGE_SIZE;
@@ -48,11 +43,9 @@ const ld = [
     { name: category.name, path: `/${category.slug}/` },
     { name: `第 ${page} 頁`, path: `/${category.slug}/page/${page}/` },
   ]),
-  itemListLd(
-    Astro.site,
-    pageArticles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
-    { name: `${category.name}最新文章（第 ${page} 頁）` },
-  ),
+  itemListLd(Astro.site, articleListItems(pageArticles), {
+    name: `${category.name}最新文章（第 ${page} 頁）`,
+  }),
 ];
 ---
 <BaseLayout

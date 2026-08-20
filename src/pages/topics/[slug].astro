@@ -8,9 +8,9 @@ import TagList from '@/components/ui/TagList.astro';
 import ImageWithFallback from '@/components/ui/ImageWithFallback.astro';
 import {
   getPublishedArticles,
-  getAuthorMap,
-  byTopic,
-  articleSlug,
+  getAuthorNames,
+  articlesForTopic,
+  articleListItems,
 } from '@/utils/content';
 import { getCategory } from '@/config/categories';
 import { asset } from '@/utils/url';
@@ -25,23 +25,10 @@ export async function getStaticPaths() {
 
 const { topic } = Astro.props;
 const all = await getPublishedArticles();
-const authorMap = await getAuthorMap();
-const authorNames = new Map(
-  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
-);
+const authorNames = await getAuthorNames();
 
-// 文章來源：article.topics 反向關聯 + frontmatter 手動指定的 articles
-const byRelation = byTopic(all, topic.id);
-const manual = all.filter(
-  (a) => topic.data.articles.includes(articleSlug(a)) || topic.data.articles.includes(a.id),
-);
-const seen = new Set<string>();
-const articles = [...manual, ...byRelation].filter((a) => {
-  const k = articleSlug(a);
-  if (seen.has(k)) return false;
-  seen.add(k);
-  return true;
-});
+// 文章來源：article.topics 反向關聯 + frontmatter 手動指定的 articles（去重見 articlesForTopic）
+const articles = articlesForTopic(all, topic);
 
 const path = `/topics/${topic.id}/`;
 const cover = topic.data.coverImage
@@ -61,14 +48,9 @@ const ld = [
   ]),
   ...(articles.length > 0
     ? [
-        itemListLd(
-          Astro.site,
-          articles.map((a) => ({
-            name: a.data.title,
-            path: `/articles/${articleSlug(a)}/`,
-          })),
-          { name: `專題：${topic.data.title}` },
-        ),
+        itemListLd(Astro.site, articleListItems(articles), {
+          name: `專題：${topic.data.title}`,
+        }),
       ]
     : []),
 ];

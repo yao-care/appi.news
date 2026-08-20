@@ -1,6 +1,6 @@
 import type { APIContext } from 'astro';
 import { SITE } from '@/config/site';
-import { getPublishedArticles, articleSlug } from '@/utils/content';
+import { getPublishedArticles, articlePath } from '@/utils/content';
 import { absoluteUrl } from '@/utils/url';
 import { isGoogleNewsEligible } from '@/utils/jsonld';
 
@@ -40,7 +40,7 @@ export async function GET(context: APIContext) {
 
   const urls = articles
     .map((a) => {
-      const loc = absoluteUrl(`/articles/${articleSlug(a)}/`, site);
+      const loc = absoluteUrl(articlePath(a), site);
       return [
         '  <url>',
         `    <loc>${xmlEscape(loc)}</loc>`,

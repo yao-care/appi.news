@@ -18,7 +18,9 @@ import {
   getPublishedArticles,
   getScheduledPreviewArticles,
   getAuthorMap,
+  getAuthorNames,
   articleSlug,
+  articlePath,
   coverImageFor,
   coverAltFor,
   readingTime,
@@ -98,12 +100,10 @@ const expertNoteHeading = author?.data.isOrganization
 
 const rt = readingTime(article);
 const cover = coverImageFor(article);
-const path = `/articles/${articleSlug(article)}/`;
+const path = articlePath(article);
 
 const related = relatedArticles(all, article, 3);
-const authorNames = new Map(
-  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
-);
+const authorNames = await getAuthorNames();
 // 編輯器作者下拉用
 const authorOptions = [...authorMap.values()].map((a) => ({
   id: a.id,

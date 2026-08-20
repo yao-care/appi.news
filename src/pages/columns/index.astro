@@ -8,6 +8,7 @@ import {
   getColumns,
   getPublishedArticles,
   getAuthorMap,
+  getAuthorNames,
   byColumn,
   byCategory,
 } from '@/utils/content';
@@ -17,9 +18,7 @@ import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
 const columns = await getColumns();
 const all = await getPublishedArticles();
 const authorMap = await getAuthorMap();
-const authorNames = new Map(
-  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
-);
+const authorNames = await getAuthorNames();
 const cat = getCategory('columns')!;
 const columnArticles = byCategory(all, 'columns');
 

@@ -69,6 +69,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/adult-vaccines-overview/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/adult-vaccines-overview/"
     }
   ],
   "ai-accelerator-workload-selection-checklist": [
@@ -171,6 +175,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/ai-drug-partnership-mou-checklist/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/ai-drug-partnership-mou-checklist/"
     }
   ],
   "ai-hallucination-what-is-it": [
@@ -191,6 +199,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/ai-mammography-screening-taiwan/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/ai-mammography-screening-japan/"
     },
     {
       "hreflang": "vi",
@@ -613,6 +625,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/australia-antisemitism-social-media-trust/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/australia-antisemitism-social-media-trust/"
     }
   ],
   "australia-extremism-royal-commission-drivers": [
@@ -937,6 +953,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/chatgpt-suicide-risk-mental-health/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/chatgpt-suicide-risk-mental-health/"
     }
   ],
   "child-development-screening-follow-up": [
@@ -2041,6 +2061,10 @@
       "href": "https://en.appi.news/articles/infant-mosquito-repellent-guide/"
     },
     {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/infant-mosquito-repellent-guide/"
+    },
+    {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/infant-mosquito-repellent-guide/"
     }
@@ -2705,6 +2729,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/myanmar-rohingya-repatriation-verification/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/myanmar-rohingya-repatriation-verification/"
     }
   ],
   "nasal-congestion-nondrug": [
@@ -3135,6 +3163,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/phone-camera-lens-protector-worth-it/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/phone-camera-lens-protector-worth-it/"
     }
   ],
   "phone-os-update-should-you-upgrade-2026": [
@@ -3363,6 +3395,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/shingles-vaccine-adults/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/shingles-vaccine-adults/"
     }
   ],
   "singapore-airlines-engineer-unfair-dismissal": [
@@ -3397,6 +3433,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/sleeping-pills-dependence-tapering/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/sleeping-pills-dependence-tapering/"
     },
     {
       "hreflang": "vi",
@@ -3953,6 +3993,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/uk-fringe-venue-belief-discrimination-ruling/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/uk-fringe-venue-belief-discrimination-ruling/"
     }
   ],
   "uk-navy-channel-migrant-plan": [
@@ -3987,6 +4031,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/uk-pm-burnham-trump-aide-impersonator/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/uk-pm-burnham-trump-aide-impersonator/"
     }
   ],
   "uk-tabloid-lawsuit-legal-costs": [
@@ -4303,12 +4351,20 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/us-south-korea-joint-drills-scaled-back/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/us-south-korea-joint-drills-scaled-back/"
     }
   ],
   "us-south-korea-military-drills-scale-back": [
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/us-south-korea-military-drills-scale-back/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/us-south-korea-military-drills-scale-back/"
     }
   ],
   "utah-kouri-richins-judge-recusal-denied": [
@@ -4599,6 +4655,10 @@
     {
       "hreflang": "en",
       "href": "https://en.appi.news/articles/youtube-family-plan-residency-check/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/youtube-family-plan-residency-check/"
     }
   ],
   "zambia-election-violence-vote-count": [

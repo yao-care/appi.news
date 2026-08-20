@@ -1,6 +1,6 @@
 # 自動發佈管線的正確性陷阱（build、日期、並發、持續事件）
 
-> 摘要：worktree 沒殘留 dist 會讓 check:links 整批失敗；模型填的 publishDate 會排到未來被濾掉；多工線不可加 flock，要用自癒重試；持續事件（颱風）每變更產新文章會洗出多篇重複，要改滾動更新同一篇；**撰寫型 cron 的外層 `timeout 1200` 是舊 flock 模型的殘留，全 worktree 化後只會砍掉快完成的 build、白燒 token，已移除（§E）**；**一篇缺封面 webp 的文章會讓 check:links 擋掉「整條」共用部署佇列、害別線排程文也上不了線，要在進 main 前就攔（§F）**；**移除限制時要回頭清掉為它而生的補丁——為已移除 timeout 而設的時間預算變成減產器，加上「故障被當成模型判斷」與「去重擺在最貴的那一端」，讓國際線 2026-07-27 整晚 0 篇（§G）**。｜ 範圍：自動化/發佈 ｜ 狀態：已解決 ｜ 日期：2026-06-25（§E 補於 2026-07-09、§F 補於 2026-07-13、§G 補於 2026-07-28）
+> 摘要：worktree 沒殘留 dist 會讓 check:links 整批失敗；模型填的 publishDate 會排到未來被濾掉；多工線不可加 flock，要用自癒重試；持續事件（颱風）每變更產新文章會洗出多篇重複，要改滾動更新同一篇；**撰寫型 cron 的外層 `timeout 1200` 是舊 flock 模型的殘留，全 worktree 化後只會砍掉快完成的 build、白燒 token，已移除（§E）**；**一篇缺封面 webp 的文章會讓 check:links 擋掉「整條」共用部署佇列、害別線排程文也上不了線，要在進 main 前就攔（§F）**；**移除限制時要回頭清掉為它而生的補丁——為已移除 timeout 而設的時間預算變成減產器，加上「故障被當成模型判斷」與「去重擺在最貴的那一端」，讓國際線 2026-07-27 整晚 0 篇（§G）**；**「Claude 成功了嗎」的判定 regex 與 gate 序列在各產線各抄一份、漂移成多種語意，收斂為 claude-cli 三態／publish-pipeline 單一正本（§H）**。｜ 範圍：自動化/發佈 ｜ 狀態：已解決 ｜ 日期：2026-06-25（§E 補於 2026-07-09、§F 補於 2026-07-13、§G 補於 2026-07-28、§H 補於 2026-08-20）
 
 對應 SOP：[`docs/SERVER_HANDOFF.md`](../SERVER_HANDOFF.md) §子專案 3（cron 總表）。
 
@@ -75,3 +75,16 @@
     - `lifestyle-police`：單則、無帳本，主要損失是已寫好的稿被丟掉 → 補撿回。
     - 共用救援抽成 `scripts/lib/changed-articles.mjs`（`salvageArticle`），五線同一套。判準＝**「這個 break／return／記帳本的分支，故障和判斷會不會走到同一條路？」**
   - **靜默的 0 產出要能被看見**：這班的「無產出安靜不報」讓整天掛零沒有任何告警，是隔天才由站長人工發現的。
+
+## H. 同一條知識抄 N 份必漂移：判定與 gate 收斂為單一正本
+
+- **問題**（2026-08-20 架構體檢實測）：「claude-appi 成功了嗎」的判定 regex 在 `.mjs`＋`.sh` 共 17 處各抄一份，且已漂移成 4 種語意——撞限額時有的線 `die` 整支、有的 `continue` 逐則狂打（帳號層級的限額會把整批 20+ 則打成空跑，燒共用額度）、有的 `break`、有的只丟單篇；唯一正確的兩段式判斷（限額→中止整批；單則 API error→跳過續跑）只寫在國際線的註解裡，其他線的作者看不到。同病的還有：哨兵行解析 7 份逐字複本＋1 份漂移（`health-days` 版不回 `infra` 旗標、也沒接 `salvageArticle`，模型漏印結果行時已寫好的稿隨 worktree 被刪）；四道內容 gate 的 spawn 序列 8 份，跑出 4 種順序、2 種失敗語意（civic/police 一篇違規會把整批陪葬）；國際線的標籤 gate 剔除時漏了把該篇移出 `wrote`，會對已刪的稿印 `PUBLISHED=`。近兩個月「加一道 gate／補一條規則」的 commit 每次都要同時改 3~8 條產線，漏一條就是隱性分裂。
+- **原因**：知識的載體是**註解**而不是 **interface**。每份複本誕生時都正確，之後各自演化；沒有任何機制讓「改了正本」自動傳到複本，也沒有測試把複本釘在一起。
+- **解法**（同日）：三個單一正本，各產線一律 import、不再自抄——
+  1. `scripts/lib/claude-cli.mjs`：`runClaudeArticle()`→`classifyClaudeRun()` 三態（`quota` 中止整批／`fail` 跳過該則／`ok`）＋`parseSentinelResult()`（哨兵解析，`infra` 旗標一律有）。
+  2. `scripts/lib/publish-pipeline.mjs`：`runArticleGates()`＝gate 集合、順序與 report-only 與否的唯一定義點；失敗語意統一「回報不決定」，呼叫端剔除該篇、永不整批陪葬。
+  3. `scripts/lib/article-index.mjs`：`articleTitle`／`recentTitles` 等文章索引小工具。
+- **怎麼避免重犯**：
+  - **同一段 regex／spawn 序列第二次出現，就是抽正本的時機**——第三次出現後每一份都會開始各自演化，屆時要靠 grep 考古才能判斷哪份是對的。
+  - **新增產線接線清單**：喚模型走 `runClaudeArticle`、gate 走 `runArticleGates`、索引走 `article-index`——發現任何新產線自己 spawn `claude-appi` 或自排 gate 序列，視同踩本節的坑，當場改。
+  - **正確語意寫進回傳值，不要寫進註解**：「限額要中止整批」這件事現在由 `kind: 'quota'` 這個型別承載，呼叫端想錯也寫不出「對 quota continue」的自然寫法。

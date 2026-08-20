@@ -7,7 +7,7 @@
 ## 帳號與模型
 - **全站單一帳號 `claude-appi`**（`CLAUDE_CONFIG_DIR=~/.claude-appi`）：cron／自動產文與人的互動開發都走它（2026-07-28 起取消雙帳號分工）。用量池與憑證因此共用——互動作業會吃到產線配額，憑證失效則兩邊一起啞。
 - 每個 `claude-appi -p` 呼叫**必帶 `--model`**：產文／選題／週報 → `claude-sonnet-5`、newsroom viewpoint 查核 gate → `haiku`。**不帶就會吃全域預設 Opus、燒爆週用量上限**（出過事 → [`automation-model-and-account-split.md`](./lessons/automation-model-and-account-split.md)）。
-- **判斷成功不能只看 exit code**：`claude-appi` 撞用量上限／拒答會 **exit 0** 且只印 stdout。`.sh` 用失敗 regex（含 `weekly limit|usage limit`）、`.mjs` 掃 `stdout` 限額字樣，才算失敗。
+- **判斷成功不能只看 exit code**：`claude-appi` 撞用量上限／拒答會 **exit 0** 且只印 stdout。`.mjs` 一律走 `scripts/lib/claude-cli.mjs` 的 `runClaudeArticle` 三態（**quota＝帳號層級，中止整批**；fail＝單則失敗，跳過該則；ok），不自抄 regex——曾漂移成 4 種語意，7 條線撞限額後照樣逐則狂打空跑（[§H](./lessons/auto-publish-pipeline-traps.md)）。`.sh` 維持失敗 regex（含 `weekly limit|usage limit`）當第二道網。
 
 ## 排程與時區
 - server cron 一律以 **UTC** 計（這台 Vixie cron 忽略 `CRON_TZ`），寫排程手動換算台北（UTC+8）。

@@ -169,7 +169,7 @@
 
 **模型**：所有 `claude-appi` 呼叫**一律明確帶 `--model`**——產文／選題／週報用 `claude-sonnet-5`、查核類 gate 用 `haiku`。全域預設是 Opus，**不帶 `--model` 就會默默吃 Opus 燒爆週額度**（出過事＝[`docs/lessons/automation-model-and-account-split.md`](./docs/lessons/automation-model-and-account-split.md)）。
 
-**判斷自動化成功不能只看 exit code**：`claude-appi` 撞用量上限／拒答會 **exit 0** 只印 stdout；`.sh` 要用失敗 regex（含 `weekly limit`）、`.mjs` 要掃 stdout。
+**判斷自動化成功不能只看 exit code**：`claude-appi` 撞用量上限／拒答會 **exit 0** 只印 stdout。`.mjs` 一律用 `scripts/lib/claude-cli.mjs` 的三態判定（`runClaudeArticle`：quota＝中止整批／fail＝跳過該則／ok），**不要自抄 regex**（曾漂移成 4 種語意，見 [`docs/lessons/auto-publish-pipeline-traps.md`](./docs/lessons/auto-publish-pipeline-traps.md) §H）；`.sh` 層維持失敗 regex（含 `weekly limit`）當第二道網。
 
 **額度視窗**：`claude-appi` 的 session 額度是**每 5 小時一個共用視窗**，日更線刻意攤開排程。**新增會喚 Claude 的高頻 cron 前，先想「這一輪一定要喚模型嗎」**——能用純資料判斷的先做完（見論壇雷達與颱風線的前置 gate 作法）。排程現況查法見 §查現況。
 
@@ -201,6 +201,7 @@
 
 | 元件 | 路徑 | 角色 |
 |---|---|---|
+| 產線共用核心 | `scripts/lib/claude-cli.mjs`＋`scripts/lib/publish-pipeline.mjs`＋`scripts/lib/article-index.mjs` | 喚模型三態判定與哨兵解析／內容 gate 集合與順序／文章唯讀索引。**新增產線一律 import 這三支**，不自抄 regex、不自排 gate 序列。為什麼＝[`docs/lessons/auto-publish-pipeline-traps.md`](./docs/lessons/auto-publish-pipeline-traps.md) §H |
 | 起草引擎 | `.claude/skills/newsroom/` | 文風、人格、跨文記憶；`/newsroom` 互動寫作也走它 |
 | 自動產文 | `scripts/newsroom-write.mjs` | headless 起草＋逐篇 gate，完成寫 `result.json`。`--go` 發佈／`--stage` 只 commit／`--write-only` 只寫檔（給平行批次用，build 交外層做一次） |
 | Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文；也收 GitHub webhook。**事實稿候選（含 health／finance）也掛按鈕**：kind=factual 時 modal 看法改選填、`validateJob` 與 `newsroom-write` 皆帶 `--allow-any-category`，產**待審草稿**而非直接上線（放寬的是「誰能開單」不是「誰能上線」） |
@@ -222,6 +223,7 @@
 - **禁用 AI 生圖時用 `NO_AI_IMAGE=1`**（機械保證，prompt 講不算數）。禁生圖後封面與內文容易撞成同一張圖庫照，取圖 query 必須錯開。為什麼＝[`docs/lessons/no-ai-image-batch.md`](./docs/lessons/no-ai-image-batch.md)。
 - **改發佈端程式或 cron `.sh`**：push → `/root/appi.news-publisher` `git pull` → `pm2 restart appinews-slack-actions`；**只 push 不 pull／只 restart 都會跑到舊碼**。
 - **故障 ≠ 編輯判斷**：模型漏印結果行是 infra 故障，不可記進去重帳本、不可當終止條件。
+- **撞限額 ≠ 單則失敗**：限額是帳號層級，判定走 `runClaudeArticle` 的三態（quota＝中止整批），別對 quota 逐則 continue 狂打空跑。
 - 其餘（UTC 換算、各自 worktree 並行不用 flock、成功≠exit code、publishDate 用系統時間蓋…）見正本 checklist。
 
 ## 數據與網路曝光量
@@ -261,6 +263,10 @@
 | 為什麼這樣做（踩過的坑、重大決策） | [`docs/lessons/`](./docs/lessons/) |
 | 日更流程與作者人格 | `.claude/skills/newsroom/` |
 | 自動化鐵則（帳號／模型／cron／發佈端） | [`docs/automation-invariants.md`](./docs/automation-invariants.md) |
+| 喚 Claude 的成功判定（quota/fail/ok）與哨兵行解析 | `scripts/lib/claude-cli.mjs`（`runClaudeArticle`／`classifyClaudeRun`／`parseSentinelResult`；限額 regex 只准改這裡） |
+| 內容 gate 的集合、順序與失敗語意 | `scripts/lib/publish-pipeline.mjs`（`runArticleGates`；各產線經它跑 gate，勿逐線自排 spawn 序列） |
+| 文章「現在公開嗎」（isPublic／排程草稿判斷） | `src/utils/visibility.mjs`（content.ts、astro.config、scripts 各腳本共用同一份，**勿手抄鏡像**；漂移史＝[`docs/lessons/deploy-cadence.md`](./docs/lessons/deploy-cadence.md) 2026-08-20 追記） |
+| 文章目錄唯讀索引（單篇 title／近 N 天標題） | `scripts/lib/article-index.mjs` |
 | 寫作成長規則（內鏈／topics／標題／開頭／FAQ） | `scripts/lib/growth-prompt.mjs` 的 `GROWTH_PROMPT`（所有產線共用，新增產線必接）|
 | 成長工作項目與 SOP（B 站內導流／A 存量升級／C 回訪） | [`docs/growth-playbook.md`](./docs/growth-playbook.md) |
 | 存量批次回填工具（內鏈／常見問題／主題中樞） | `scripts/growth-backfill-links.mjs`、`scripts/backfill-faq.mjs`、`scripts/topic-hub-radar.mjs`（判準與踩過的坑＝[`docs/lessons/mechanical-backfill-traps.md`](./docs/lessons/mechanical-backfill-traps.md)）|

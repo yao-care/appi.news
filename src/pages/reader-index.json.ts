@@ -11,7 +11,7 @@ import { absoluteUrl } from '@/utils/url';
 /**
  * appinews-reader 候選池索引（build 期產出的靜態 JSON）。
  *
- * 契約正本：/root/appinews-reader/contracts/reader-index.schema.json
+ * 契約正本：/root/my-line-bot-customer/reader/contracts/reader-index.schema.json（reader 2026-08-13 併入該 repo）
  * 生產者＝本檔；消費者＝appinews-reader 的 feed/sync.js。
  * **這是兩個服務之間的唯一契約，任一方要改欄位都得先改那份 schema**——
  * 單方面改這裡會靜默壞掉（reader 拿不到欄位只會降級，不會報錯）。

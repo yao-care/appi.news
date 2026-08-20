@@ -240,7 +240,7 @@ describe('buildHealthDayPrompt', () => {
 describe('parseHealthDayResult', () => {
   it('解得出 OK 與 slug', () => {
     const r = parseHealthDayResult('前面雜訊\nHEALTHDAY_RESULT=OK｜world-cancer-day-2027\n後面查證報告');
-    expect(r).toEqual({ action: 'ok', slug: 'world-cancer-day-2027', note: '已寫' });
+    expect(r).toMatchObject({ action: 'ok', slug: 'world-cancer-day-2027', note: '已寫' });
   });
 
   it('解得出 SKIP 與原因', () => {

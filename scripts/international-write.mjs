@@ -7,7 +7,7 @@
 //
 // 一天一次由 cron 呼叫。
 
-import { readFileSync, readdirSync, writeFileSync, existsSync, rmSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, rmSync, mkdirSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -15,7 +15,9 @@ import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildIntlPrompt, parseIntlResult } from './lib/international-write.mjs';
 import { dedupeByEvent, filterSeen, mergeSeen, buildTriagePrompt, parseTriage } from './lib/international-gate.mjs';
-import { runClaudeOnce } from './lib/claude-cli.mjs';
+import { runClaudeOnce, runClaudeArticle } from './lib/claude-cli.mjs';
+import { runArticleGates } from './lib/publish-pipeline.mjs';
+import { listArticleFrontmatters } from './lib/article-index.mjs';
 import { salvageArticle } from './lib/changed-articles.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
@@ -55,19 +57,6 @@ function stampDateAndTitle(slug, action, nowIso) {
   }
   writeFileSync(file, raw);
   return title;
-}
-
-/**
- * 回傳該篇文章「引用了、但 public/ 下不存在」的本地圖檔清單（封面＋內文）。
- * 用來在 build/check:links 之前就攔下「有引用卻沒存到圖」的半成品，避免一篇壞圖拖垮整批。
- */
-function missingLocalAssets(slug) {
-  const file = join(ARTICLES_DIR, `${slug}.md`);
-  if (!existsSync(file)) return ['（文章檔不存在）'];
-  const raw = readFileSync(file, 'utf8');
-  const refs = new Set();
-  for (const m of raw.matchAll(/(covers|images)\/[A-Za-z0-9._-]+\.(?:webp|png|jpe?g|avif)/gi)) refs.add(m[0]);
-  return [...refs].filter((r) => !existsSync(join('public', r)));
 }
 
 /** 剔除一篇有問題的文章：UPDATE 還原、NEW 刪除，使它不進這次發佈批次。 */
@@ -181,28 +170,11 @@ function runSelection(hours, maxPer) {
 /** 近 N 天「進行中」國際文：category=international 且 updatedDate||publishDate 在 N 天內。 */
 function recentActiveIntl(days = 30) {
   const cutoff = Date.now() - days * 86400 * 1000;
-  let files = [];
-  try {
-    files = readdirSync(ARTICLES_DIR).filter((f) => f.endsWith('.md'));
-  } catch {
-    return [];
-  }
   const out = [];
-  for (const f of files) {
-    let data;
-    try {
-      const txt = readFileSync(join(ARTICLES_DIR, f), 'utf8');
-      const m = txt.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-      if (!m) continue;
-      data = yaml.load(m[1]);
-    } catch {
-      continue;
-    }
-    if (!data || data.category !== 'international') continue;
+  for (const { slug, data } of listArticleFrontmatters()) {
+    if (data.category !== 'international') continue;
     const when = new Date(data.updatedDate || data.publishDate || 0).getTime();
-    if (when >= cutoff) {
-      out.push({ slug: f.replace(/\.md$/, ''), title: data.title || '', updatedDate: data.updatedDate || data.publishDate || '' });
-    }
+    if (when >= cutoff) out.push({ slug, title: data.title || '', updatedDate: data.updatedDate || data.publishDate || '' });
   }
   return out.sort((a, b) => (a.updatedDate < b.updatedDate ? 1 : -1));
 }
@@ -284,19 +256,15 @@ async function main() {
     const prompt = buildIntlPrompt(s, recent);
     console.log(`\n→ [${s.region}] ${s.numSources}家 | ${s.fullName}`);
     const t0 = Date.now();
-    const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
-    const stdout = r.stdout || '';
-    // 撞用量上限是「帳號層級」：這則被擋，本批剩下每則都會被擋。限流訊息秒回（吃不到時間預算），
-    // 若照單則錯誤 continue 下去會把整批 20+ 則狂打成空跑（見 docs/lessons）。→ 立刻中止整批。
-    // claude-appi 撞上限時會 exit 0 只印限額訊息 → 必須查 stdout，不能只看 exit code。
-    if (/hit your .*limit|weekly limit|usage limit/i.test(stdout)) {
+    // 成功判定三態的正本＝lib/claude-cli.mjs：quota（帳號層級）中止整批；fail（單則）跳過續跑。
+    const c = runClaudeArticle({ prompt });
+    if (c.kind === 'quota') {
       skipped = stories.length - i;
-      console.log(`  ⛔ 撞用量上限，中止本輪（剩 ${skipped} 則不處理；額度重置後由下輪重新選題）：${stdout.slice(-160)}`);
+      console.log(`  ⛔ 撞用量上限，中止本輪（剩 ${skipped} 則不處理；額度重置後由下輪重新選題）：${c.detail}`);
       break;
     }
-    // 其餘（單則 API error / 拒答）才跳過這一則、續跑下一則。
-    if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond/i.test(stdout)) { console.log(`  ⚠️ claude 失敗（跳過此則）：${(r.stderr || stdout || r.error?.message || '').slice(-200)}`); results.push({ s, action: 'error' }); continue; }
-    const v = parseIntlResult(r.stdout);
+    if (c.kind === 'fail') { console.log(`  ⚠️ claude 失敗（跳過此則）：${c.detail}`); results.push({ s, action: 'error' }); continue; }
+    const v = parseIntlResult(c.stdout);
     // 沒有可解析的 INTL_RESULT＝基礎設施級失敗，不是「編輯判斷跳過」，兩件事要分開處理：
     //  ① 模型很可能已經把稿寫進工作區（讀原文/交叉查證的 token 早就燒完了），照舊碼會隨
     //     worktree 一起被丟掉 → 這裡撿回來，一樣走底下的缺圖／去 AI 腔／check:links 各關。
@@ -333,42 +301,16 @@ async function main() {
   let wrote = results.filter((x) => x.action === 'new' || x.action === 'update');
   // 逐篇驗證引用的本地圖檔（封面＋內文）真的存在；缺圖的整篇剔除，不讓一篇壞圖在 check:links
   // 把整批一起擋掉（呼應「沒圖就不發」：封面是動筆前的前置關卡，但 AI 不穩，這裡是程式保險）。
+  // gate 集合與順序的正本＝lib/publish-pipeline.mjs（缺圖→growth report-only→標籤→去 AI 腔→封面規格）。
+  // 失敗只剔除該篇、不拖垮整批。舊碼的標籤 gate 剔除時漏了把該篇移出 wrote（會對已刪的稿印
+  // PUBLISHED= 並計入 commit 訊息），收攏後此類漏洞不再可能發生。
   for (const x of wrote.slice()) {
     if (!x.slug) continue;
-    const missing = missingLocalAssets(x.slug);
-    if (missing.length) {
-      console.log(`  ⚠️ 剔除 ${x.slug}：缺本地圖檔（${missing.join('、')}），不發這篇、不拖垮整批`);
+    const g = runArticleGates(x.slug, { log: (m) => console.log(m) });
+    if (!g.ok) {
+      console.log(`  ⚠️ 剔除 ${x.slug}：${g.label}，不發這篇、不拖垮整批${g.detail ? `\n${g.detail}` : ''}`);
       dropArticle(x.slug, x.action);
       wrote = wrote.filter((w) => w !== x);
-      continue;
-    }
-    // 去 AI 腔硬 gate：命中機械可判的簽名句（破折號／自我辯白旁白）就剔除這篇，不拖垮整批。
-    // 為什麼＝docs/lessons/ai-tone-gate.md。
-    // 成長規則自檢（report-only，永不擋發佈）：站內導流／topics／標題長度有沒有做到，印進 cron log 供事後回收。
-    // 規則正本＝scripts/lib/growth-prompt.mjs（GROWTH_PROMPT），盤點與工作清單＝docs/growth-playbook.md。
-    const _growth = spawnSync('node', ['scripts/growth-lint.mjs', join(ARTICLES_DIR, `${x.slug}.md`)], { encoding: 'utf8' });
-    if (_growth.stdout) console.log(_growth.stdout.trim());
-    const _tags = spawnSync('node', ['scripts/check-tags.mjs', join(ARTICLES_DIR, `${x.slug}.md`)], { encoding: 'utf8' });
-    if (_tags.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${x.slug}：標籤不在受控詞彙表，不發這篇、不拖垮整批\n${_tags.stdout || _tags.stderr || ''}`);
-      dropArticle(x.slug, x.action);
-      continue;
-    }
-    const _tone = spawnSync('node', ['scripts/check-content.mjs', join(ARTICLES_DIR, `${x.slug}.md`)], { encoding: 'utf8' });
-    if (_tone.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${x.slug}：去 AI 腔硬 tell，不發這篇、不拖垮整批\n${_tone.stdout || _tone.stderr || ''}`);
-      dropArticle(x.slug, x.action);
-      wrote = wrote.filter((w) => w !== x);
-      continue;
-    }
-    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻）：embed 直式原圖曾從這條線連漏六週。
-    // 為什麼＝docs/lessons/discover-image-and-meta-signals.md（2026-08-11 追記）。
-    const _cover = spawnSync('node', ['scripts/check-cover-spec.mjs', join(ARTICLES_DIR, `${x.slug}.md`)], { encoding: 'utf8' });
-    if (_cover.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${x.slug}：封面不符 Discover 規格，不發這篇、不拖垮整批\n${_cover.stdout || _cover.stderr || ''}`);
-      dropArticle(x.slug, x.action);
-      wrote = wrote.filter((w) => w !== x);
-      continue;
     }
   }
   if (!produced || wrote.length === 0) {

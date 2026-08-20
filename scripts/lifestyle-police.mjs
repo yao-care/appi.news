@@ -6,13 +6,15 @@
 //   node scripts/lifestyle-police.mjs --stage    # 產樣稿（不上線）
 //   node scripts/lifestyle-police.mjs --go        # 自動上架
 
-import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
-import yaml from 'js-yaml';
 import { buildPolicePrompt, parsePoliceResult } from './lib/lifestyle-police.mjs';
 import { fetchPoliceCandidates } from './lib/police-fetch.mjs';
+import { runClaudeArticle } from './lib/claude-cli.mjs';
+import { runArticleGates } from './lib/publish-pipeline.mjs';
+import { articleTitle, recentTitles } from './lib/article-index.mjs';
 import { salvageArticle } from './lib/changed-articles.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
@@ -26,40 +28,8 @@ function sh(cmd, args, opts = {}) {
   return (r.stdout || '').trim();
 }
 
-/** 回傳該篇引用了、但 public/ 下不存在的本地圖檔（封面＋內文）。空陣列＝都在。 */
-function missingLocalAssets(slug) {
-  const file = join(ARTICLES_DIR, `${slug}.md`);
-  if (!existsSync(file)) return ['（文章檔不存在）'];
-  const raw = readFileSync(file, 'utf8');
-  const refs = new Set();
-  for (const m of raw.matchAll(/(covers|images)\/[A-Za-z0-9._-]+\.(?:webp|png|jpe?g|avif)/gi)) refs.add(m[0]);
-  return [...refs].filter((r) => !existsSync(join('public', r)));
-}
-
-/** 讀文章 title（給 Slack 回報帶標題用）。 */
-function articleTitle(slug) {
-  try {
-    const m = readFileSync(join(ARTICLES_DIR, `${slug}.md`), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
-    return (m && (yaml.load(m[1]) || {}).title) || '';
-  } catch { return ''; }
-}
-
-/** 近 N 天已發的警消好人好事整理（slug 以 police-good-deeds 起頭）標題，給去重。 */
-function recentPoliceTitles(days = 30) {
-  const cutoff = Date.now() - days * 86400 * 1000;
-  let files = [];
-  try { files = readdirSync(ARTICLES_DIR).filter((f) => f.startsWith('police-good-deeds') && f.endsWith('.md')); } catch { return []; }
-  const out = [];
-  for (const f of files) {
-    try {
-      const m = readFileSync(join(ARTICLES_DIR, f), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
-      if (!m) continue;
-      const d = yaml.load(m[1]);
-      if (new Date(d.publishDate || 0).getTime() >= cutoff) out.push(d.title || f);
-    } catch { /* skip */ }
-  }
-  return out;
-}
+/** 近 N 天已發的警消好人好事整理（slug 以 police-good-deeds 起頭）標題，給去重（索引正本＝lib/article-index.mjs）。 */
+const recentPoliceTitles = (days = 30) => recentTitles({ days, filter: (e) => e.slug.startsWith('police-good-deeds') });
 
 async function main() {
   const go = has('go');
@@ -89,10 +59,11 @@ async function main() {
   if (sh('git', ['status', '--porcelain'])) die('工作區不乾淨，請先清乾淨再跑');
   const branch = sh('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
   console.log(`→ 警消好人好事整理（分支 ${branch}，${go ? '上架' : 'stage 不 push'}）`);
-  const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
-  // claude-appi 撞「每週用量上限」時會 exit 0 但只印限額訊息 → 必須查 stdout，否則被誤判成「無產出」。
-  if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) die(`claude 失敗：${(r.stderr || r.stdout || r.error?.message || '').slice(-200)}`);
-  const v = parsePoliceResult(r.stdout);
+  // 成功判定三態的正本＝lib/claude-cli.mjs。單發線 quota/fail 都中止（候選下輪重抓）。
+  const c = runClaudeArticle({ prompt });
+  if (c.kind === 'quota') die(`撞用量上限（候選下輪重抓）：${c.detail}`);
+  if (c.kind === 'fail') die(`claude 失敗：${c.detail}`);
+  const v = parsePoliceResult(c.stdout);
   console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
 
   const produced = sh('git', ['status', '--porcelain', ARTICLES_DIR]);
@@ -117,25 +88,11 @@ async function main() {
     if (existsSync(file)) writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${new Date().toISOString()}"`));
   }
 
-  // 缺圖驗證：引用了卻沒存到檔的本地圖（封面／內文）→ 不發（避免 check:links 壞連結）。
-  // 警消封面可有可無，但「設了 coverImage 就要有檔」；缺就中止、留工作區待查。
+  // gate 集合與順序的正本＝lib/publish-pipeline.mjs（缺圖→growth report-only→標籤→去 AI 腔→封面規格）。
+  // 單發線一篇＝整批，未過即中止（改動留工作區待修）。
   if (v.slug) {
-    const missing = missingLocalAssets(v.slug);
-    if (missing.length) die(`引用的本地圖檔不存在（${missing.join('、')}），不發佈（改動留工作區）`);
-    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻；警消封面可有可無，設了才驗）。
-    // 為什麼＝docs/lessons/discover-image-and-meta-signals.md（2026-08-11 追記）。
-    const _cover = spawnSync('node', ['scripts/check-cover-spec.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
-    if (_cover.status !== 0) die(`封面規格 gate 未過，不發佈（改動留工作區待換圖）：\n${_cover.stdout || _cover.stderr || ''}`);
-    // 去 AI 腔硬 gate：機械可判的簽名句（破折號／自我辯白旁白）命中就不發，留工作區待改。
-    // 為什麼＝docs/lessons/ai-tone-gate.md。
-    const _tone = spawnSync('node', ['scripts/check-content.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
-    if (_tone.status !== 0) die(`去 AI 腔 gate 未過，不發佈（改動留工作區待改）：\n${_tone.stdout || _tone.stderr || ''}`);
-    // 成長規則自檢（report-only，永不擋發佈）：站內導流／topics／標題長度有沒有做到，印進 cron log 供事後回收。
-    // 規則正本＝scripts/lib/growth-prompt.mjs（GROWTH_PROMPT），盤點與工作清單＝docs/growth-playbook.md。
-    const _growth = spawnSync('node', ['scripts/growth-lint.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
-    if (_growth.stdout) console.log(_growth.stdout.trim());
-    const _tags = spawnSync('node', ['scripts/check-tags.mjs', join(ARTICLES_DIR, `${v.slug}.md`)], { encoding: 'utf8' });
-    if (_tags.status !== 0) die(`標籤 gate 未過，不發佈（改動留工作區待改）：\n${_tags.stdout || _tags.stderr || ''}`);
+    const g = runArticleGates(v.slug, { log: (m) => console.log(m) });
+    if (!g.ok) die(`${g.label} 未過，不發佈（改動留工作區）：${g.detail || ''}`);
   }
 
   // worktree 無殘留 dist → 先 build 再 check:links；失敗時同步最新 main 自癒重試一次（並發防護，不序列化）。

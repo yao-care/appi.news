@@ -17,6 +17,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { isScheduledPreviewFrontmatter } from '../src/utils/visibility.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ARTICLES = path.join(ROOT, 'src/content/articles');
@@ -34,9 +35,9 @@ for (const f of readdirSync(ARTICLES).filter((x) => /\.mdx?$/.test(x))) {
   const fm = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
   const get = (k) => fm.match(new RegExp(`^${k}:\\s*["']?([^"'\\n]*)`, 'm'))?.[1]?.trim() ?? '';
   const status = get('status') || 'published';
-  if (status === 'draft' || status === 'archived' || get('draft') === 'true') continue;
+  // 「尚未公開」判準走可見性正本（src/utils/visibility.mjs），不再手抄。
+  if (!isScheduledPreviewFrontmatter({ status, draft: get('draft'), publishDate: get('publishDate') })) continue;
   const d = new Date(get('publishDate'));
-  if (Number.isNaN(d.getTime()) || d.getTime() <= Date.now()) continue; // 已公開
   rows.push({ f, d, status, kind: get('kind'), category: get('category'), title: get('title') });
 }
 rows.sort((a, b) => a.d - b.d);

@@ -141,7 +141,7 @@ describe('videoEmbed', () => {
 
 describe('parseVideoResult', () => {
   it('解析 NEW', () => {
-    expect(parseVideoResult('...\nVIDEO_RESULT=NEW｜habu-michelin-herbal')).toEqual({
+    expect(parseVideoResult('...\nVIDEO_RESULT=NEW｜habu-michelin-herbal')).toMatchObject({
       action: 'new', slug: 'habu-michelin-herbal', note: 'habu-michelin-herbal',
     });
   });

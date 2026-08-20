@@ -21,7 +21,7 @@
 
 ## 解法（怎麼修 + 現在怎麼維持）
 
-**契約正本在 `/root/appinews-reader/contracts/`**（`reader-index.schema.json`、`beacon.schema.json`），不是在本 repo。兩支檔頭都指過去了，改欄位要先改那份 schema。
+**契約正本在 `/root/my-line-bot-customer/reader/contracts/`**（`reader-index.schema.json`、`beacon.schema.json`；reader 於 2026-08-13 併入該 repo，原 `/root/appinews-reader` 已不存在），不是在本 repo。兩支檔頭都指過去了，改欄位要先改那份 schema。
 
 - `src/pages/reader-index.json.ts`：走 Astro endpoint 而非 postbuild 腳本，因為 postbuild 拿不到 content collections，得自己重解 frontmatter 並重寫一份 `isPublic()`——`astro.config.mjs` 已經為了 sitemap filter 維護第二份同邏輯判斷了，不開第三份。候選池＝**各分類最新 40 篇的聯集**，另外機械保證涵蓋每個 featured slug。「當日精選」用 `Intl.DateTimeFormat` 以 `Asia/Taipei` 判日：build 跑在 UTC，用 `getDate()` 會讓台北傍晚發佈的精選整批漏掉。
 - `src/components/seo/ReadingBeacon.astro`：捲動全程只記原始 `maxY`（O(1)、不讀 layout、不碰 DOM），**送出當下才用最終文件高度換算一次比例**。這樣既避開上面第 2 點，也讓 rAF 節流變成多餘的。停留計時改用獨立 `running` 旗標，不用時間戳的真值。

@@ -169,13 +169,10 @@ export function buildTechDeskPrompt({ track, recentTitles = [], striking = [], d
 }
 
 /** 解析 TECH_RESULT 行。回 {action:'new'|'skip', slug, targetQuery, note, infra?}。 */
+import { parseSentinelResult } from './claude-cli.mjs';
+
+// 哨兵解析正本＝lib/claude-cli.mjs parseSentinelResult；tech 多帶一欄 targetQuery。
 export function parseTechDeskResult(stdout) {
-  const m = String(stdout || '').match(/TECH_RESULT\s*=\s*(NEW|SKIP)\s*[｜|:：]\s*(.*)$/im);
-  if (!m) return { action: 'skip', slug: null, note: '無法解析 TECH_RESULT（視為跳過）', infra: true };
-  const action = m[1].toLowerCase();
-  const rest = (m[2] || '').trim();
-  if (action === 'skip') return { action: 'skip', slug: null, note: rest };
-  const parts = rest.split(/[｜|]/).map((x) => x.trim());
-  const slug = (parts[0] || '').toLowerCase().replace(/[^a-z0-9-]/g, '').replace(/^-+|-+$/g, '') || null;
-  return { action: 'new', slug, targetQuery: parts[1] || '', note: rest };
+  const v = parseSentinelResult(stdout, 'TECH');
+  return v.action === 'new' ? { ...v, targetQuery: v.fields[1] || '' } : v;
 }

@@ -9,14 +9,16 @@
 //
 // 「有新片才寫」：候選經帳本濾掉近 60 天看過的；濾完為 0 → 不呼叫 LLM、安靜結束。
 
-import { readFileSync, readdirSync, writeFileSync, existsSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
-import yaml from 'js-yaml';
 import { buildVideoPrompt, parseVideoResult } from './lib/lifestyle-video.mjs';
 import { fetchVideoCandidates } from './lib/video-fetch.mjs';
 import { loadSeen, filterNew, recordSeen } from './lib/video-ledger.mjs';
+import { runClaudeArticle } from './lib/claude-cli.mjs';
+import { runArticleGates } from './lib/publish-pipeline.mjs';
+import { articleTitle, recentTitles } from './lib/article-index.mjs';
 import { salvageArticle } from './lib/changed-articles.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
@@ -36,26 +38,6 @@ function sh(cmd, args, opts = {}) {
   return (r.stdout || '').trim();
 }
 
-/** 該篇引用了、但 public/ 下不存在的本地圖檔。空陣列＝都在。 */
-function missingLocalAssets(slug) {
-  const file = join(ARTICLES_DIR, `${slug}.md`);
-  if (!existsSync(file)) return ['（文章檔不存在）'];
-  const raw = readFileSync(file, 'utf8');
-  const refs = new Set();
-  for (const m of raw.matchAll(/(covers|images)\/[A-Za-z0-9._-]+\.(?:webp|png|jpe?g|avif)/gi)) refs.add(m[0]);
-  return [...refs].filter((r) => !existsSync(join('public', r)));
-}
-
-function frontmatter(file) {
-  try {
-    const m = readFileSync(file, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
-    return m ? (yaml.load(m[1]) || {}) : null;
-  } catch { return null; }
-}
-
-function articleTitle(slug) {
-  return (frontmatter(join(ARTICLES_DIR, `${slug}.md`)) || {}).title || '';
-}
 
 /**
  * 丟掉本輪剛產出、但沒過逐篇 gate 的一篇（不連累同批其他篇）。
@@ -74,24 +56,10 @@ function dropArticle(slug) {
 }
 
 /**
- * 近 N 天這條線已發過的標題，給去重。
+ * 近 N 天這條線已發過的標題，給去重（索引正本＝lib/article-index.mjs）。
  * 這條線的 slug 是主題式的（沒有固定前綴），改以「正文帶影片出處卡」當識別。
  */
-function recentVideoTitles(days = 14) {
-  const cutoff = Date.now() - days * 86400 * 1000;
-  let files = [];
-  try { files = readdirSync(ARTICLES_DIR).filter((f) => f.endsWith('.md')); } catch { return []; }
-  const out = [];
-  for (const f of files) {
-    const path = join(ARTICLES_DIR, f);
-    let raw = '';
-    try { raw = readFileSync(path, 'utf8'); } catch { continue; }
-    if (!raw.includes('class="video-embed"')) continue;
-    const d = frontmatter(path);
-    if (d && new Date(d.publishDate || 0).getTime() >= cutoff) out.push(d.title || f);
-  }
-  return out;
-}
+const recentVideoTitles = (days = 14) => recentTitles({ days, filter: (e) => e.raw.includes('class="video-embed"') });
 
 async function main() {
   const go = has('go');
@@ -134,19 +102,19 @@ async function main() {
   for (const [i, c] of fresh.entries()) {
     console.log(`\n[${i + 1}/${fresh.length}] ${c.source}｜${c.title}`);
     const prompt = buildVideoPrompt(c, [...recent, ...written.map((w) => w.title)]);
-    const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
-    // claude-appi 撞用量上限時 exit 0 只印限額訊息 → 必須查 stdout。
-    if (/API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) {
-      console.error(`  ✖ 撞用量上限，中止整批（已寫 ${written.length} 篇）：${(r.stdout || '').slice(-200)}`);
+    // 成功判定三態的正本＝lib/claude-cli.mjs：quota 中止整批；fail 跳過這支（不記帳本）。
+    const run = runClaudeArticle({ prompt });
+    if (run.kind === 'quota') {
+      console.error(`  ✖ 撞用量上限，中止整批（已寫 ${written.length} 篇）：${run.detail}`);
       quotaHit = true;
       break;
     }
-    if (r.error || r.status !== 0) {
-      console.error(`  ✖ claude 失敗（exit ${r.status}），跳過這支：${(r.stderr || r.error?.message || '').slice(-200)}`);
+    if (run.kind === 'fail') {
+      console.error(`  ✖ claude 失敗，跳過這支：${run.detail}`);
       failed.add(c);
       continue;
     }
-    const v = parseVideoResult(r.stdout);
+    const v = parseVideoResult(run.stdout);
     console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
     // 解析不出 VIDEO_RESULT＝故障，不是「這支不值得寫」：不可記進帳本（記了就永遠不再被提），
     // 且模型可能已把稿寫好在工作區 → 先撿回來走既有 gate。
@@ -165,20 +133,9 @@ async function main() {
     // 用系統時間蓋掉模型寫的 publishDate（模型無可靠時鐘，常把「現在」填成未來 → 變排程稿）。
     writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${new Date().toISOString()}"`));
 
-    // 逐篇自己的 gate：不合格的**只丟這一篇**，不連累同批其他篇。
-    const missing = missingLocalAssets(v.slug);
-    if (missing.length) { console.error(`  ✖ 引用的本地圖檔不存在（${missing.join('、')}），丟棄這篇`); dropArticle(v.slug); continue; }
-    const tone = spawnSync('node', ['scripts/check-content.mjs', file], { encoding: 'utf8' });
-    if (tone.status !== 0) { console.error(`  ✖ 去 AI 腔 gate 未過，丟棄這篇：\n${(tone.stdout || tone.stderr || '').slice(-400)}`); dropArticle(v.slug); continue; }
-    // 成長規則自檢（report-only，永不擋發佈）：站內導流／topics／標題長度有沒有做到，印進 cron log 供事後回收。
-    // 規則正本＝scripts/lib/growth-prompt.mjs（GROWTH_PROMPT），盤點與工作清單＝docs/growth-playbook.md。
-    const _growth = spawnSync('node', ['scripts/growth-lint.mjs', file], { encoding: 'utf8' });
-    if (_growth.stdout) console.log(_growth.stdout.trim());
-    const tagGate = spawnSync('node', ['scripts/check-tags.mjs', file], { encoding: 'utf8' });
-    if (tagGate.status !== 0) { console.error(`  ✖ 標籤 gate 未過，丟棄這篇：\n${(tagGate.stdout || tagGate.stderr || '').slice(-400)}`); dropArticle(v.slug); continue; }
-    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻；設了 coverImage 才驗）。為什麼＝docs/lessons/discover-image-and-meta-signals.md。
-    const coverGate = spawnSync('node', ['scripts/check-cover-spec.mjs', file], { encoding: 'utf8' });
-    if (coverGate.status !== 0) { console.error(`  ✖ 封面規格 gate 未過，丟棄這篇：\n${(coverGate.stdout || coverGate.stderr || '').slice(-400)}`); dropArticle(v.slug); continue; }
+    // 逐篇 gate（集合與順序的正本＝lib/publish-pipeline.mjs）：不合格的**只丟這一篇**，不連累同批其他篇。
+    const g = runArticleGates(v.slug, { log: (m) => console.log(m) });
+    if (!g.ok) { console.error(`  ✖ ${g.label} 未過，丟棄這篇：${(g.detail || '').slice(-400)}`); dropArticle(v.slug); continue; }
     written.push({ slug: v.slug, title: articleTitle(v.slug) || v.slug });
     console.log(`  ✓ 通過逐篇 gate`);
   }

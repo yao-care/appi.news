@@ -17,6 +17,7 @@
 
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
+import { isPublicFrontmatter } from '../src/utils/visibility.mjs';
 import { fileURLToPath } from 'node:url';
 
 // 換網域時改這裡（或設環境變數 SITE_ORIGIN）。與 astro.config.mjs 的 SITE 一致。
@@ -56,12 +57,9 @@ async function collectUrls() {
     if (!fmMatch) continue;
     const fm = fmMatch[1];
 
-    const draft = field(fm, 'draft') === 'true';
-    const status = field(fm, 'status');
-    if (draft || status === 'draft' || status === 'archived') continue;
-
+    // 公開判準走可見性正本（src/utils/visibility.mjs），不再手抄。
+    if (!isPublicFrontmatter({ draft: field(fm, 'draft'), status: field(fm, 'status'), publishDate: field(fm, 'publishDate') }, now)) continue;
     const publish = Date.parse(field(fm, 'publishDate') ?? '');
-    if (!Number.isFinite(publish) || publish > now) continue; // 尚未上線
 
     const updated = Date.parse(field(fm, 'updatedDate') ?? '');
     const lastChange = Number.isFinite(updated) ? Math.max(publish, updated) : publish;

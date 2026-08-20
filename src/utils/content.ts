@@ -1,5 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { asset } from './url';
+import { isPublicFrontmatter, isScheduledPreviewFrontmatter } from './visibility.mjs';
 
 export { extractFaq, type FaqItem } from './faq';
 
@@ -23,11 +24,10 @@ function isDementiaFriendlyCommunityActivitiesArticle(a: Article): boolean {
  * 因此 future 排程文章會在「其日期之後的某次 build」自動上線
  * （搭配 GitHub Actions 每日 cron 重建）。
  * draft / archived 永遠隱藏。
+ * 判準實作＝src/utils/visibility.mjs（astro.config 與 scripts 各腳本共用同一份，勿再手抄）。
  */
 function isPublic(a: Article): boolean {
-  if (a.data.draft) return false;
-  if (a.data.status === 'draft' || a.data.status === 'archived') return false;
-  return a.data.publishDate.getTime() <= Date.now();
+  return isPublicFrontmatter(a.data);
 }
 
 /** 取得文章 slug（frontmatter slug 優先，否則用檔名 id） */
@@ -50,11 +50,7 @@ export async function getPublishedArticles(): Promise<Article[]> {
  */
 export async function getScheduledPreviewArticles(): Promise<Article[]> {
   const all = await getCollection('articles');
-  return all.filter((a) => {
-    if (a.data.draft) return false;
-    if (a.data.status === 'draft' || a.data.status === 'archived') return false;
-    return a.data.publishDate.getTime() > Date.now(); // 尚未到發佈時間
-  });
+  return all.filter((a) => isScheduledPreviewFrontmatter(a.data));
 }
 
 export function byCategory(articles: Article[], category: string): Article[] {

@@ -6,12 +6,14 @@
 //   node scripts/focus-esg.mjs --stage    # 產樣稿（不上線）
 //   node scripts/focus-esg.mjs --go        # 自動上架
 
-import { readFileSync, readdirSync, writeFileSync, existsSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
-import yaml from 'js-yaml';
 import { buildFocusEsgPrompt, parseFocusEsgResult } from './lib/focus-esg.mjs';
+import { runClaudeArticle } from './lib/claude-cli.mjs';
+import { runArticleGates } from './lib/publish-pipeline.mjs';
+import { articleTitle, recentTitles } from './lib/article-index.mjs';
 import { salvageArticle } from './lib/changed-articles.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
@@ -26,41 +28,8 @@ function sh(cmd, args, opts = {}) {
   return (r.stdout || '').trim();
 }
 
-/** 回傳該篇引用了、但 public/ 下不存在的本地圖檔（封面＋內文）。空陣列＝都在。 */
-function missingLocalAssets(slug) {
-  const file = join(ARTICLES_DIR, `${slug}.md`);
-  if (!existsSync(file)) return ['（文章檔不存在）'];
-  const raw = readFileSync(file, 'utf8');
-  const refs = new Set();
-  for (const m of raw.matchAll(/(covers|images)\/[A-Za-z0-9._-]+\.(?:webp|png|jpe?g|avif)/gi)) refs.add(m[0]);
-  return [...refs].filter((r) => !existsSync(join('public', r)));
-}
-
-/** 讀文章 title（給 Slack 回報帶標題用）。 */
-function articleTitle(slug) {
-  try {
-    const m = readFileSync(join(ARTICLES_DIR, `${slug}.md`), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
-    return (m && (yaml.load(m[1]) || {}).title) || '';
-  } catch { return ''; }
-}
-
-/** 近 N 天已發的「焦點」文章標題，給去重。 */
-function recentFocusTitles(days = 30) {
-  const cutoff = Date.now() - days * 86400 * 1000;
-  let files = [];
-  try { files = readdirSync(ARTICLES_DIR).filter((f) => f.endsWith('.md')); } catch { return []; }
-  const out = [];
-  for (const f of files) {
-    try {
-      const m = readFileSync(join(ARTICLES_DIR, f), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
-      if (!m) continue;
-      const d = yaml.load(m[1]);
-      if (d.category !== 'focus') continue;
-      if (new Date(d.publishDate || 0).getTime() >= cutoff) out.push(d.title || f);
-    } catch { /* skip */ }
-  }
-  return out;
-}
+/** 近 N 天已發的「焦點」文章標題，給去重（索引正本＝lib/article-index.mjs）。 */
+const recentFocusTitles = (days = 30) => recentTitles({ days, filter: (e) => e.data.category === 'focus' });
 
 /**
  * 站上「差一步」的焦點頁（GSC pos 10.5~20.5，補深度就能進第一頁）。
@@ -132,10 +101,12 @@ function main() {
     const t0 = Date.now();
     const prompt = buildFocusEsgPrompt(excludeTitles, 7, striking, topic);
     console.log(`\n→ 第 ${i + 1} 篇…`);
-    const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
-    // claude-appi 撞「每週用量上限」時會 exit 0 但只印限額訊息 → 必須查 stdout，否則被誤判成「無題、安靜」。
-    if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) { console.log(`  ⚠️ claude 失敗，停止本批：${(r.stderr || r.stdout || r.error?.message || '').slice(-200)}`); break; }
-    const v = parseFocusEsgResult(r.stdout);
+    // 成功判定三態的正本＝lib/claude-cli.mjs：quota（帳號層級）中止整批；fail（單則）跳過續跑。
+    // 舊碼兩者都 break——單則 API error 也整批收工，白白放掉後面的題。
+    const c = runClaudeArticle({ prompt });
+    if (c.kind === 'quota') { console.log(`  ⛔ 撞用量上限，中止本批（已寫 ${wrote.length} 篇）：${c.detail}`); break; }
+    if (c.kind === 'fail') { wastedMs += Date.now() - t0; console.log(`  ⚠️ claude 失敗（跳過此篇，續跑下一篇）：${c.detail}`); continue; }
+    const v = parseFocusEsgResult(c.stdout);
     // 解析不出 FOCUS_RESULT＝故障，不是「沒更多題」：舊碼在這裡 break，等於一次漏印就收工，
     // 而且模型可能已經把稿寫好在工作區、隨 worktree 被刪掉。→ 撿回稿、不計時間、續跑下一篇。
     if (v.infra) {
@@ -173,33 +144,10 @@ function main() {
   for (const v of wrote) {
     const file = join(ARTICLES_DIR, `${v.slug}.md`);
     if (existsSync(file)) writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${nowIso}"`));
-    const missing = missingLocalAssets(v.slug);
-    if (missing.length) {
-      console.log(`  ⚠️ 剔除 ${v.slug}：缺本地圖檔（${missing.join('、')}）`);
-      if (existsSync(file)) rmSync(file);
-      continue;
-    }
-    // 去 AI 腔硬 gate：命中機械可判的簽名句就剔除這篇，不拖垮整批。為什麼＝docs/lessons/ai-tone-gate.md。
-    // 成長規則自檢（report-only，永不擋發佈）：站內導流／topics／標題長度有沒有做到，印進 cron log 供事後回收。
-    // 規則正本＝scripts/lib/growth-prompt.mjs（GROWTH_PROMPT），盤點與工作清單＝docs/growth-playbook.md。
-    const _growth = spawnSync('node', ['scripts/growth-lint.mjs', file], { encoding: 'utf8' });
-    if (_growth.stdout) console.log(_growth.stdout.trim());
-    const _tags = spawnSync('node', ['scripts/check-tags.mjs', file], { encoding: 'utf8' });
-    if (_tags.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${v.slug}：標籤不在受控詞彙表，不發這篇、不拖垮整批\n${_tags.stdout || _tags.stderr || ''}`);
-      if (existsSync(file)) rmSync(file);
-      continue;
-    }
-    const _tone = spawnSync('node', ['scripts/check-content.mjs', file], { encoding: 'utf8' });
-    if (_tone.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${v.slug}：去 AI 腔硬 tell，不發這篇、不拖垮整批\n${_tone.stdout || _tone.stderr || ''}`);
-      if (existsSync(file)) rmSync(file);
-      continue;
-    }
-    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻；設了 coverImage 才驗）。為什麼＝docs/lessons/discover-image-and-meta-signals.md。
-    const _cover = spawnSync('node', ['scripts/check-cover-spec.mjs', file], { encoding: 'utf8' });
-    if (_cover.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${v.slug}：封面不符 Discover 規格，不發這篇、不拖垮整批\n${_cover.stdout || _cover.stderr || ''}`);
+    // gate 集合與順序的正本＝lib/publish-pipeline.mjs；失敗剔除該篇、不拖垮整批。
+    const g = runArticleGates(v.slug, { log: (m) => console.log(m) });
+    if (!g.ok) {
+      console.log(`  ⚠️ 剔除 ${v.slug}：${g.label}，不發這篇、不拖垮整批${g.detail ? `\n${g.detail}` : ''}`);
       if (existsSync(file)) rmSync(file);
       continue;
     }

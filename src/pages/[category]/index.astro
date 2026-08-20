@@ -32,9 +32,11 @@ const totalPages = Math.max(1, Math.ceil(inCat.length / PAGE_SIZE));
 const pageArticles = inCat.slice(0, PAGE_SIZE);
 
 // 分類頁補「相關專題」內鏈入口：只列同分類、已上線的專題，沒有就不顯示（不留空區塊）
+// 精選（featured）專題排最前面，讓已有實績的主題優先被看到、集中內鏈權重，而不是被同分類底下大量主題平均分散
 const relatedTopics = (await getTopics())
   .filter((t) => t.data.category === category.slug)
-  .map((t) => ({ topic: t, count: articlesForTopic(all, t).length }));
+  .map((t) => ({ topic: t, count: articlesForTopic(all, t).length }))
+  .sort((a, b) => Number(b.topic.data.featured) - Number(a.topic.data.featured) || b.count - a.count);
 
 const ld = [
   breadcrumbLd(Astro.site, [

@@ -65,6 +65,12 @@
       "href": "https://jp.appi.news/articles/acute-low-back-48h/"
     }
   ],
+  "adult-vaccines-overview": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/adult-vaccines-overview/"
+    }
+  ],
   "ai-accelerator-workload-selection-checklist": [
     {
       "hreflang": "en",
@@ -161,6 +167,12 @@
       "href": "https://jp.appi.news/articles/ai-drug-discovery-fda-approval-gap/"
     }
   ],
+  "ai-drug-partnership-mou-checklist": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/ai-drug-partnership-mou-checklist/"
+    }
+  ],
   "ai-hallucination-what-is-it": [
     {
       "hreflang": "en",
@@ -176,6 +188,10 @@
     }
   ],
   "ai-mammography-screening-taiwan": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/ai-mammography-screening-taiwan/"
+    },
     {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/ai-mammography-screening-taiwan/"
@@ -593,6 +609,12 @@
       "href": "https://jp.appi.news/articles/australia-antisemitism-envoy-education/"
     }
   ],
+  "australia-antisemitism-social-media-trust": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/australia-antisemitism-social-media-trust/"
+    }
+  ],
   "australia-extremism-royal-commission-drivers": [
     {
       "hreflang": "en",
@@ -909,6 +931,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/chatgpt-health-nhi-sdk-accountability/"
+    }
+  ],
+  "chatgpt-suicide-risk-mental-health": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/chatgpt-suicide-risk-mental-health/"
     }
   ],
   "child-development-screening-follow-up": [
@@ -2009,6 +2037,10 @@
   ],
   "infant-mosquito-repellent-guide": [
     {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/infant-mosquito-repellent-guide/"
+    },
+    {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/infant-mosquito-repellent-guide/"
     }
@@ -2669,6 +2701,12 @@
       "href": "https://vi.appi.news/articles/musk-terafab-chip-fab-plan/"
     }
   ],
+  "myanmar-rohingya-repatriation-verification": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/myanmar-rohingya-repatriation-verification/"
+    }
+  ],
   "nasal-congestion-nondrug": [
     {
       "hreflang": "en",
@@ -3093,6 +3131,12 @@
       "href": "https://jp.appi.news/articles/peru-fujimori-inauguration/"
     }
   ],
+  "phone-camera-lens-protector-worth-it": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/phone-camera-lens-protector-worth-it/"
+    }
+  ],
   "phone-os-update-should-you-upgrade-2026": [
     {
       "hreflang": "en",
@@ -3315,6 +3359,12 @@
       "href": "https://jp.appi.news/articles/sensitive-teeth-dentin/"
     }
   ],
+  "shingles-vaccine-adults": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/shingles-vaccine-adults/"
+    }
+  ],
   "singapore-airlines-engineer-unfair-dismissal": [
     {
       "hreflang": "en",
@@ -3344,6 +3394,10 @@
     }
   ],
   "sleeping-pills-dependence-tapering": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/sleeping-pills-dependence-tapering/"
+    },
     {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/sleeping-pills-dependence-tapering/"
@@ -3895,6 +3949,12 @@
       "href": "https://jp.appi.news/articles/uk-china-embassy-royal-mint-court/"
     }
   ],
+  "uk-fringe-venue-belief-discrimination-ruling": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/uk-fringe-venue-belief-discrimination-ruling/"
+    }
+  ],
   "uk-navy-channel-migrant-plan": [
     {
       "hreflang": "en",
@@ -3921,6 +3981,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/uk-palestine-action-ban-supreme-court/"
+    }
+  ],
+  "uk-pm-burnham-trump-aide-impersonator": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/uk-pm-burnham-trump-aide-impersonator/"
     }
   ],
   "uk-tabloid-lawsuit-legal-costs": [
@@ -4233,6 +4299,18 @@
       "href": "https://jp.appi.news/articles/us-senate-confirmation-power-blanche/"
     }
   ],
+  "us-south-korea-joint-drills-scaled-back": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/us-south-korea-joint-drills-scaled-back/"
+    }
+  ],
+  "us-south-korea-military-drills-scale-back": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/us-south-korea-military-drills-scale-back/"
+    }
+  ],
   "utah-kouri-richins-judge-recusal-denied": [
     {
       "hreflang": "en",
@@ -4515,6 +4593,12 @@
     {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/yemen-houthi-saudi-attack-marib/"
+    }
+  ],
+  "youtube-family-plan-residency-check": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/youtube-family-plan-residency-check/"
     }
   ],
   "zambia-election-violence-vote-count": [

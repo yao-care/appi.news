@@ -164,7 +164,7 @@
 
 **寫作文章＝codex**（站長 2026-08-22 裁示全換）：所有「文章起草」呼叫走 `codex exec`，**參數／模型／三態判定正本＝`scripts/lib/writer-cli.mjs`**（`runWriterArticle`／`writerExecArgs`，一律明確帶 `-m`）。憑證＝`~/.codex/auth.json`，失效＝所有寫作線一起啞，`codex login` 重登。**每日大腦層（seo-ops）不換、維持 claude**（站長同日裁示）。
 
-**產圖全走 codex**（站長 2026-08-22 兩度裁示）：生圖本體＝codex 原生 `image_generation` 工具（`scripts/lib/ai-image.mjs` `generateViaCodex`；失敗退 worker → OpenAI API 雙備援）；prompt 展開與視覺審查走 `runWriterOnce`（`scripts/lib/writer-cli.mjs`，`-i` 附圖、prompt 走 stdin）。
+**產圖全走 codex**（站長 2026-08-22 兩度裁示）：生圖唯一路徑＝codex 原生 `image_generation`（`scripts/lib/ai-image.mjs` `generateViaCodex`；**無備援**，失敗即 throw 由配圖 gate 中止不發）；prompt 展開與視覺審查走 `runWriterOnce`（`scripts/lib/writer-cli.mjs`，`-i` 附圖、prompt 走 stdin）。
 
 **非寫作＝`claude-appi`（`CLAUDE_CONFIG_DIR=~/.claude-appi`）**：選題雷達、週報、大腦體檢、AEO 探針、各查核 gate，與互動開發、commit、crontab 都走它。兩個推論不變：
 

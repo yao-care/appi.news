@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="國道150公里速限規劃分為現行速限、提案試辦方向與長期目標三個階段，目前沒有公布150公里試辦路段">
+  <rect width="960" height="600" fill="#ffffff"/>
+  <rect x="40" y="42" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="62" y="66" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="26" font-weight="700" fill="#1e2030">國道 150 公里規劃目前走到哪一步？</text>
+  <text x="62" y="99" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="15" fill="#6e7276">現行速限、公開提案與長期目標，尚未代表已核定的上路路段</text>
+
+  <line x1="88" y1="168" x2="872" y2="168" stroke="#e8e9ed" stroke-width="1"/>
+  <line x1="88" y1="322" x2="872" y2="322" stroke="#e8e9ed" stroke-width="1"/>
+  <line x1="88" y1="476" x2="872" y2="476" stroke="#e8e9ed" stroke-width="1"/>
+
+  <rect x="88" y="138" width="784" height="112" rx="12" fill="#eef0f3"/>
+  <circle cx="136" cy="194" r="30" fill="#5e6070"/>
+  <path d="M124 194h24M140 184l10 10-10 10" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="190" y="181" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="20" font-weight="700" fill="#1e2030">現行國道主線</text>
+  <text x="190" y="215" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="22" font-weight="700" fill="#1e2030">80～110 公里／小時</text>
+  <text x="610" y="202" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14" fill="#6e7276">依路段與現場標誌行駛</text>
+
+  <rect x="88" y="292" width="784" height="112" rx="12" fill="#eaf0f8"/>
+  <rect x="88" y="292" width="784" height="3" rx="2" fill="#a87515"/>
+  <circle cx="136" cy="348" r="30" fill="#a87515"/>
+  <path d="M124 356l12-16 8 8 12-18" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="190" y="335" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="20" font-weight="700" fill="#1e2030">公開提案的試辦方向</text>
+  <text x="190" y="369" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="22" font-weight="700" fill="#1e2030">內線、中線 130～140 公里／小時</text>
+  <text x="654" y="356" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14" fill="#6e7276">先評估可行性</text>
+
+  <rect x="88" y="446" width="784" height="112" rx="12" fill="#ffffff"/>
+  <circle cx="136" cy="502" r="30" fill="#a87515"/>
+  <path d="M124 510l12-16 8 8 12-18" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="190" y="489" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="20" font-weight="700" fill="#1e2030">長期目標</text>
+  <text x="190" y="523" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="22" font-weight="700" fill="#1e2030">150 公里／小時</text>
+  <text x="610" y="510" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14" fill="#6e7276">目前未公布核定試辦路段</text>
+
+  <line x1="40" y1="570" x2="920" y2="570" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="40" y="590" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="13" fill="#6e7276">製圖：APPI News</text>
+  <text x="920" y="590" text-anchor="end" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="13" fill="#6e7276">資料時點：2026-08-21／來源：高速公路局、公共政策網路參與平臺</text>
+</svg>

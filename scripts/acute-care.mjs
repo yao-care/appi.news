@@ -18,7 +18,7 @@ import { join, dirname } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import { TOPICS, GROUPS, topicByKey, pendingTopics, buildAcuteCarePrompt, parseAcuteCareResult } from './lib/acute-care.mjs';
-import { runClaudeArticle } from './lib/claude-cli.mjs';
+import { runWriterArticle } from './lib/writer-cli.mjs'; // 寫作＝codex（站長 2026-08-22 裁示），查核仍走 claude-cli
 import { runArticleGates } from './lib/publish-pipeline.mjs';
 import { articleFrontmatter } from './lib/article-index.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
@@ -66,7 +66,7 @@ function writeOne(topic, recentTitles) {
   console.log(`\n→ ${topic.title}${topic.caution ? '（⚑ 高風險題）' : ''}…`);
   const prompt = buildAcuteCarePrompt(topic, { recentTitles });
   // 成功判定三態的正本＝lib/claude-cli.mjs：quota 回哨兵給 main 中止整批（未寫的題留在題目表）。
-  const c = runClaudeArticle({ prompt });
+  const c = runWriterArticle({ prompt });
   if (c.kind === 'quota') { console.log(`  ⛔ 撞用量上限：${c.detail}`); return { quota: true }; }
   if (c.kind === 'fail') { console.log(`  ⚠️ claude 失敗：${c.detail}`); return null; }
   const v = parseAcuteCareResult(c.stdout);

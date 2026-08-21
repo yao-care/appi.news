@@ -11,7 +11,7 @@ import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import { buildFocusEsgPrompt, parseFocusEsgResult } from './lib/focus-esg.mjs';
-import { runClaudeArticle } from './lib/claude-cli.mjs';
+import { runWriterArticle } from './lib/writer-cli.mjs'; // 寫作＝codex（站長 2026-08-22 裁示），查核仍走 claude-cli
 import { runArticleGates } from './lib/publish-pipeline.mjs';
 import { articleTitle, recentTitles } from './lib/article-index.mjs';
 import { salvageArticle } from './lib/changed-articles.mjs';
@@ -103,7 +103,7 @@ function main() {
     console.log(`\n→ 第 ${i + 1} 篇…`);
     // 成功判定三態的正本＝lib/claude-cli.mjs：quota（帳號層級）中止整批；fail（單則）跳過續跑。
     // 舊碼兩者都 break——單則 API error 也整批收工，白白放掉後面的題。
-    const c = runClaudeArticle({ prompt });
+    const c = runWriterArticle({ prompt });
     if (c.kind === 'quota') { console.log(`  ⛔ 撞用量上限，中止本批（已寫 ${wrote.length} 篇）：${c.detail}`); break; }
     if (c.kind === 'fail') { wastedMs += Date.now() - t0; console.log(`  ⚠️ claude 失敗（跳過此篇，續跑下一篇）：${c.detail}`); continue; }
     const v = parseFocusEsgResult(c.stdout);

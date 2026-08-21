@@ -28,10 +28,11 @@ CRON_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
 ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
 
-# 「Claude 撞限額／拒答」偵測（exit 0 也會發生，不能只看 rc）。第二道網；正本在 lib/claude-cli.mjs。
-CRON_LIMIT_RE='API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit'
+# 「LLM 撞限額／拒答」偵測（exit 0 也會發生，不能只看 rc）。第二道網；
+# claude 樣態正本＝lib/claude-cli.mjs，codex（寫作線）樣態正本＝lib/writer-cli.mjs，這裡是兩者聯集。
+CRON_LIMIT_RE='API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit|rate limit|quota (exceeded|reached)|too many requests|stream (error|disconnected)'
 # 其中「用量上限」子集（暫時性、額度重置自癒）；typhoon 這類高頻線用它決定靜默。
-CRON_QUOTA_RE='hit your .*limit|weekly limit|usage limit'
+CRON_QUOTA_RE='hit your .*limit|weekly limit|usage limit|rate limit|quota (exceeded|reached)|too many requests'
 
 # cron_report <report-flags> <text>：發 Slack（cron-report.mjs），永不讓回報失敗弄死主流程。
 # flags 傳一整個字串（如 "--category tech"、"--dev"、""＝預設頻道），這裡刻意 word-split。

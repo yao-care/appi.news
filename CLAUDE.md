@@ -160,18 +160,20 @@
 - **維護分工**：跨站規則改核心模板（一處全站生效，改完同步各站）；appi 專屬只改本 repo 檔頭 SITE 區塊，**別動核心**。新增硬 tell 只加零誤判的，語氣類留 WARN。
 - **核心比舊 appi gate 嚴，對 cron 新產文有過嚴風險**：若某幾條開始頻繁擋掉合理新聞稿，處置順序＝①先在 newsroom persona／SKILL 教模型避開（首選）②SITE 擴充點只能「加嚴」或用 `ALLOW` 整行白名單，**無法**把核心 ERROR 降級為 WARN；真要放寬得改核心模板（影響全站）。命中統計與脈絡＝[`docs/lessons/ai-tone-gate.md`](./docs/lessons/ai-tone-gate.md)。
 
-## 帳號與模型政策（自動化必讀）
+## 帳號與模型政策（自動化必讀；2026-08-22 起雙引擎）
 
-**單一帳號：`claude-appi`（`CLAUDE_CONFIG_DIR=~/.claude-appi`）。** 互動開發、commit、改 crontab、cron／自動產文全走同一個帳號。兩個推論：
+**寫作文章＝codex**（站長 2026-08-22 裁示全換）：所有「文章起草」呼叫走 `codex exec`，**參數／模型／三態判定正本＝`scripts/lib/writer-cli.mjs`**（`runWriterArticle`／`writerExecArgs`，一律明確帶 `-m`）。憑證＝`~/.codex/auth.json`，失效＝所有寫作線一起啞，`codex login` 重登。**每日大腦層（seo-ops）不換、維持 claude**（站長同日裁示）。
 
-- **用量池共用**：互動開發花掉的額度會直接吃到自動產線配額。撞週限時 cron 會整批空跑（且 exit 0 靜默），所以大批量互動作業前先想一下當日還有沒有產線要跑。
-- **憑證是單點**：`~/.claude-appi/.credentials.json` 失效＝互動與自動化一起啞掉。無備份，只能 `CLAUDE_CONFIG_DIR=/root/.claude-appi claude` → `/login` 重新登入。
+**非寫作＝`claude-appi`（`CLAUDE_CONFIG_DIR=~/.claude-appi`）**：選題雷達、週報、大腦體檢、AEO 探針、`get-image` 配圖、各查核 gate，與互動開發、commit、crontab 都走它。兩個推論不變：
 
-**模型**：所有 `claude-appi` 呼叫**一律明確帶 `--model`**——產文／選題／週報用 `claude-sonnet-5`、查核類 gate 用 `haiku`。全域預設是 Opus，**不帶 `--model` 就會默默吃 Opus 燒爆週額度**（出過事＝[`docs/lessons/automation-model-and-account-split.md`](./docs/lessons/automation-model-and-account-split.md)）。
+- **用量池共用**：互動開發花掉的額度會直接吃到（非寫作）產線配額。撞週限時 cron 會整批空跑（且 exit 0 靜默）。寫作線改吃 codex 額度，兩邊分開計。
+- **憑證各是單點**：`~/.claude-appi/.credentials.json` 失效＝互動與非寫作自動化一起啞（`CLAUDE_CONFIG_DIR=/root/.claude-appi claude` → `/login` 重登）；`~/.codex/auth.json` 失效＝寫作線全啞（`codex login` 重登）。
 
-**判斷自動化成功不能只看 exit code**：`claude-appi` 撞用量上限／拒答會 **exit 0** 只印 stdout。`.mjs` 一律用 `scripts/lib/claude-cli.mjs` 的三態判定（`runClaudeArticle`：quota＝中止整批／fail＝跳過該則／ok），**不要自抄 regex**（曾漂移成 4 種語意，見 [`docs/lessons/auto-publish-pipeline-traps.md`](./docs/lessons/auto-publish-pipeline-traps.md) §H）；`.sh` 層維持失敗 regex（含 `weekly limit`）當第二道網。
+**模型**：`claude-appi` 呼叫**一律明確帶 `--model`**——選題／週報用 `claude-sonnet-5`、查核類 gate 用 `haiku`（全域預設是 Opus，不帶就默默燒爆週額度，出過事＝[`docs/lessons/automation-model-and-account-split.md`](./docs/lessons/automation-model-and-account-split.md)）。`codex exec` 同理**一律明確帶 `-m`**（不帶就吃 `~/.codex/config.toml` 的互動預設，互動改設定會默默污染產線）；寫作模型只改 `writer-cli.mjs` 的 `WRITER_MODEL` 一處。
 
-**額度視窗**：`claude-appi` 的 session 額度是**每 5 小時一個共用視窗**，日更線刻意攤開排程。**新增會喚 Claude 的高頻 cron 前，先想「這一輪一定要喚模型嗎」**——能用純資料判斷的先做完（見論壇雷達與颱風線的前置 gate 作法）。排程現況查法見 §查現況。
+**判斷自動化成功不能只看 exit code**：兩個引擎撞用量上限／拒答都可能 **exit 0** 只印 stdout。`.mjs` 寫作用 `scripts/lib/writer-cli.mjs`、非寫作用 `scripts/lib/claude-cli.mjs` 的三態判定（quota＝中止整批／fail＝跳過該則／ok），**不要自抄 regex**（曾漂移成 4 種語意，見 [`docs/lessons/auto-publish-pipeline-traps.md`](./docs/lessons/auto-publish-pipeline-traps.md) §H）；`.sh` 層第二道網＝`_runner.sh` 的 `CRON_LIMIT_RE`（claude＋codex 樣態聯集）。
+
+**額度視窗**：`claude-appi` 的 session 額度是**每 5 小時一個共用視窗**，日更線刻意攤開排程（排程沿革是按此設計的，寫作改 codex 後暫不重排）。**新增會喚模型的高頻 cron 前，先想「這一輪一定要喚模型嗎」**——能用純資料判斷的先做完（見論壇雷達與颱風線的前置 gate 作法）。排程現況查法見 §查現況。
 
 > 完整不可違反規則見 [`docs/automation-invariants.md`](./docs/automation-invariants.md)；排程／模型總表見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §cron 總表。
 

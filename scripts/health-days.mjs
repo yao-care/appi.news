@@ -30,7 +30,7 @@ import {
   buildHealthDayPrompt,
   parseHealthDayResult,
 } from './lib/health-days.mjs';
-import { runClaudeArticle } from './lib/claude-cli.mjs';
+import { runWriterArticle } from './lib/writer-cli.mjs'; // 寫作＝codex（站長 2026-08-22 裁示），查核仍走 claude-cli
 import { runArticleGates } from './lib/publish-pipeline.mjs';
 import { articleFrontmatter } from './lib/article-index.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
@@ -215,7 +215,7 @@ async function main() {
     const prompt = buildHealthDayPrompt(entry, date, { priorTitles: priorTitlesFor(entry) });
     // 成功判定三態的正本＝lib/claude-cli.mjs：quota（帳號層級）中止整批（後面幾天下輪重試）；
     // fail（單則）跳過這一天、續寫下一天。
-    const c = runClaudeArticle({ prompt });
+    const c = runWriterArticle({ prompt });
     if (c.kind === 'quota') { console.log(`  ⛔ 撞用量上限，中止本輪（未寫的紀念日由明天的 cron 重試）：${c.detail}`); break; }
     if (c.kind === 'fail') { console.log(`  ⚠️ claude 失敗：${c.detail}`); continue; }
     const v = parseHealthDayResult(c.stdout);

@@ -34,7 +34,9 @@ echo "前置 gate：偵測到可能停班課或抓取不確定 → 進入完整�
 cron_worktree "typhoon" "--silent" || exit 0
 cron_env
 
-cron_capture -- claude-appi --model claude-sonnet-5 -p "/lifestyle-typhoon"
+# 寫作＝codex（站長 2026-08-22 裁示）：codex 不吃 /skill 斜線指令，改成指示它讀 SKILL.md 照做。
+cron_capture -- codex exec --dangerously-bypass-approvals-and-sandbox --skip-git-repo-check -m gpt-5.6-luna -c 'model_reasoning_effort="high"' \
+  "打開 .claude/skills/lifestyle-typhoon/SKILL.md，完整遵照其中規則執行本輪任務。執行結束時，把過程中的關鍵輸出行（例如 sent ts=...）原樣印在你的最終回覆裡。"
 if ! cron_failed "$CRON_LIMIT_RE"; then
   # 安靜模式：只在「有停課」才報；無停課的時段不發，避免每小時洗頻。
   if grep -q 'sent ts=' <<<"$CRON_OUT"; then
@@ -51,10 +53,10 @@ if ! cron_failed "$CRON_LIMIT_RE"; then
   if [ -n "${CUR_SIG:-}" ]; then mkdir -p "$(dirname "$SIG_FILE")"; printf '%s\n' "$CUR_SIG" > "$SIG_FILE"; fi
   exit 0
 fi
-# 用量上限（claude-appi 撞週/日額度）是暫時性、會自癒——額度重置後下一輪就恢復。颱風每 15 分鐘跑，
+# 用量上限（codex/claude 撞額度或速率）是暫時性、會自癒——額度重置後下一輪就恢復。颱風每 15 分鐘跑，
 # 停班課持續期間若照報，會每 15 分鐘洗一則 ❌（實測一天洗了 266 則）。故這類失敗只留 log、不發 Slack。
 if grep -qiE "$CRON_QUOTA_RE" <<<"$CRON_OUT"; then
-  echo "失敗＝claude-appi 用量上限（暫時性，額度重置後自癒）→ 靜默不報 Slack，僅留 log。"
+  echo "失敗＝LLM 用量上限（暫時性，額度重置後自癒）→ 靜默不報 Slack，僅留 log。"
   exit "$CRON_RC"
 fi
 # 其餘真實錯誤（抓取失敗/資料錯/程式錯）只發 dev 頻道（站長指示：抓不到資料/出錯不要洗作者群與生活台）。

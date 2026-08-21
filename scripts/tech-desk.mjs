@@ -19,7 +19,7 @@ import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import { buildTechDeskPrompt, parseTechDeskResult, TECH_TRACKS } from './lib/tech-desk.mjs';
-import { runClaudeArticle } from './lib/claude-cli.mjs';
+import { runWriterArticle } from './lib/writer-cli.mjs'; // 寫作＝codex（站長 2026-08-22 裁示），查核仍走 claude-cli
 import { runArticleGates } from './lib/publish-pipeline.mjs';
 import { articleTitle, recentTitles } from './lib/article-index.mjs';
 import { salvageArticle } from './lib/changed-articles.mjs';
@@ -82,7 +82,7 @@ function runTrack(track, { go, topic, recent, signals, wrote }) {
   });
   console.log(`\n→ ${TECH_TRACKS[track].label}…`);
   // 成功判定三態的正本＝lib/claude-cli.mjs：quota 是帳號層級，回傳給 main 停掉剩下的 track（別空打）。
-  const c = runClaudeArticle({ prompt });
+  const c = runWriterArticle({ prompt });
   if (c.kind === 'quota') { console.log(`  ⛔ 撞用量上限：${c.detail}`); return 'quota'; }
   if (c.kind === 'fail') { console.log(`  ⚠️ claude 失敗：${c.detail}`); return false; }
   const v = parseTechDeskResult(c.stdout);

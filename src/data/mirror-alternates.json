@@ -1591,6 +1591,10 @@
   ],
   "fhir-box-medical-ai-certification": [
     {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/fhir-box-medical-ai-certification/"
+    },
+    {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/fhir-box-medical-ai-certification/"
     }
@@ -1663,6 +1667,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/food-poisoning-symptoms-when-to-see-doctor/"
+    }
+  ],
+  "gaza-aid-worker-accountability-reparations": [
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/gaza-aid-worker-accountability-reparations/"
     }
   ],
   "gaza-hamas-disarmament-deal-israel-concerns": [
@@ -2963,6 +2973,10 @@
   ],
   "older-adult-function-assessment": [
     {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/older-adult-function-assessment/"
+    },
+    {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/older-adult-function-assessment/"
     }
@@ -3252,6 +3266,10 @@
     }
   ],
   "pneumococcal-vaccine-elderly": [
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/pneumococcal-vaccine-elderly/"
+    },
     {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/pneumococcal-vaccine-elderly/"
@@ -3743,6 +3761,12 @@
     {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/sydney-airport-near-miss-staffing-crisis/"
+    }
+  ],
+  "synthetic-data-medical-ai-taiwan": [
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/synthetic-data-medical-ai-indonesia/"
     }
   ],
   "syria-world-bank-financial-modernization": [
@@ -4339,6 +4363,12 @@
     {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/us-ebola-entry-ban-explained/"
+    }
+  ],
+  "us-farmers-costs-iran-war-tariffs": [
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/us-farmers-costs-iran-war-tariffs/"
     }
   ],
   "us-marine-russia-humanitarian-release": [

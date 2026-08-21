@@ -1,12 +1,13 @@
-// 生成圖視覺自檢：人物照產出後，用 Haiku（帶 Read/vision 讀圖）檢查有無明顯破綻
+// 生成圖視覺自檢：人物照產出後，用 codex（-i 附圖 vision）檢查有無明顯破綻
 // （手指/五官/肢體變形、圖內文字浮水印、明顯 AI 破綻、人物是否東亞面孔）。不合格由呼叫端
 // 決定重生一次；檢查本身失敗（CLI 錯誤）一律放行，不阻斷出圖。
+// 產圖相關 LLM 呼叫全走 codex＝站長 2026-08-22 追加裁示（原為 claude haiku＋Read 讀圖）。
 //
 // 移植自 /root/agent.writer/scripts/lib/images/visual-check.ts 的 realism 分支。
-// ⚠️ Read/vision 讀 webp 支援不保證 → 呼叫端須傳「PNG/JPG」臨時檔給本函式（非最終 webp）。
+// ⚠️ vision 讀 webp 支援不保證 → 呼叫端須傳「PNG/JPG」臨時檔給本函式（非最終 webp）。
 
 import path from 'node:path';
-import { runClaudeAgentText } from './claude-cli.mjs';
+import { runWriterOnce } from './writer-cli.mjs';
 
 /** 解析 Haiku 回覆：第一行 ok/no；no 時第二行為中文原因。純函式，供測試。 */
 export function parseVerdict(text) {
@@ -20,7 +21,7 @@ export function parseVerdict(text) {
 
 /** 組人物擬真照的檢查指令。純函式，供測試。 */
 export function buildCheckPrompt(file, prompt, alt) {
-  return `用 Read 工具讀取圖片檔 ${file}，檢查這張「擬真照片」配圖有沒有明顯破綻。
+  return `檢視附上的圖片（檔名 ${file}），檢查這張「擬真照片」配圖有沒有明顯破綻。
 
 這張圖想呈現的內容（英文需求）：${prompt}
 中文圖說：${alt || ''}
@@ -39,7 +40,7 @@ export function buildCheckPrompt(file, prompt, alt) {
  *  2026-07 站長裁示：圖庫命中的人物若明顯是外國人形象，一律不用（改走生成）；
  *  「真實但不相關」比「生成但精準」更傷專業感，相關度不合格也淘汰。 */
 export function buildStockCheckPrompt(file, topic, context) {
-  return `用 Read 工具讀取圖片檔 ${file}，判斷這張「圖庫真實照片」適不適合當台灣新聞網站的文章配圖。
+  return `檢視附上的圖片（檔名 ${file}），判斷這張「圖庫真實照片」適不適合當台灣新聞網站的文章配圖。
 
 配圖主題：${topic}
 文章脈絡：${context || ''}
@@ -59,12 +60,11 @@ export function buildStockCheckPrompt(file, topic, context) {
  * 回 {ok, reason?}；CLI 錯誤時回 {ok:true}（fail-open，不阻斷配圖流程）。
  */
 export async function stockPhotoCheck(imagePath, topic, context) {
-  const dir = path.dirname(imagePath);
+
   const file = path.basename(imagePath);
   try {
-    const out = await runClaudeAgentText(dir, buildStockCheckPrompt(file, topic, context), {
-      model: 'haiku',
-      tools: 'Read',
+    const out = await runWriterOnce(buildStockCheckPrompt(file, topic, context), {
+      images: [imagePath],
       timeoutMs: 120_000,
     });
     return parseVerdict(out.trim());
@@ -78,12 +78,11 @@ export async function stockPhotoCheck(imagePath, topic, context) {
  * 回 {ok, reason?}；CLI 錯誤時回 {ok:true}（不阻斷出圖）。
  */
 export async function visualCheck(imagePath, prompt, alt) {
-  const dir = path.dirname(imagePath);
+
   const file = path.basename(imagePath);
   try {
-    const out = await runClaudeAgentText(dir, buildCheckPrompt(file, prompt, alt), {
-      model: 'haiku',
-      tools: 'Read',
+    const out = await runWriterOnce(buildCheckPrompt(file, prompt, alt), {
+      images: [imagePath],
       timeoutMs: 120_000,
     });
     return parseVerdict(out.trim());

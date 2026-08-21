@@ -16,6 +16,9 @@
 //     config.toml 預設，互動改設定就會默默污染產線）。reasoning effort 固定 high：
 //     config 全域是 max，那是互動用，產文用 max 只換到更慢更貴。
 import { spawnSync } from 'node:child_process';
+import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
 
 /** 產線預設寫作模型。要換模型改這裡一處（並同步 docs/automation-invariants.md）。 */
 export const WRITER_MODEL = 'gpt-5.6-luna';
@@ -57,6 +60,38 @@ export function classifyWriterRun({ error, status, stdout, stderr } = {}) {
  * 產文用的一次性 codex exec（同步、無重試——重試語意交給「下輪 cron 重新選題」，同 claude 版）。
  * 有 45 分鐘保險絲：codex 卡死不該讓 cron 永久掛著（claude 版沒有是歷史遺留，別學）。
  */
+/**
+ * 一次性 codex 小任務（產圖 prompt 展開、圖片視覺審查等輔助呼叫；站長 2026-08-22 追加裁示：
+ * 產圖相關的 LLM 呼叫也全走 codex）。與 runWriterArticle 的差異：
+ *   - read-only 沙箱（這類任務不寫檔、不跑指令），effort 預設 low 控時延與成本。
+ *   - 用 -o 把「最終回覆」寫到暫存檔再讀回——stdout 是整段 transcript，直接解析會被雜訊咬到。
+ *   - images: 以 -i 附圖（視覺審查用；codex 原生吃 PNG/JPG）。
+ *   - 失敗（非 0 退出/撞額度/逾時）一律 throw，重試語意交給呼叫端（沿用各呼叫端既有的
+ *     兩次重試或 fail-open 行為，不在這裡疊一層）。
+ */
+export async function runWriterOnce(prompt, { model = WRITER_MODEL, timeoutMs = 180_000, images = [], effort = 'low', spawnImpl = spawnSync } = {}) {
+  const dir = mkdtempSync(join(tmpdir(), 'appi-codex-once-'));
+  const outFile = join(dir, 'last.txt');
+  try {
+    const args = [
+      'exec', '-s', 'read-only', '--skip-git-repo-check',
+      '-m', model, '-c', `model_reasoning_effort="${effort}"`,
+      '-o', outFile,
+    ];
+    for (const img of images) args.push('-i', img);
+    // prompt 一律走 stdin：`-i <FILE>...` 是變長參數，位置參數的 prompt 會被吞成圖片路徑
+    // （實測 2026-08-21：帶 -i 時 codex 回「No prompt provided via stdin」）。
+    const r = spawnImpl(WRITER_CMD, args, { encoding: 'utf8', input: prompt, maxBuffer: 16 * 1024 * 1024, timeout: timeoutMs, killSignal: 'SIGKILL' });
+    const c = classifyWriterRun(r);
+    if (c.kind !== 'ok') throw new Error(`codex once ${c.kind}：${c.detail || ''}`);
+    let text = '';
+    try { text = readFileSync(outFile, 'utf8'); } catch { /* 讀不到就退回 stdout */ }
+    return (text.trim() || c.stdout || '').trim();
+  } finally {
+    try { rmSync(dir, { recursive: true, force: true }); } catch { /* 忽略 */ }
+  }
+}
+
 export function runWriterArticle({ prompt, model = WRITER_MODEL, maxBufferMB = 64, timeoutMs = 45 * 60_000, spawnImpl = spawnSync }) {
   const r = spawnImpl(WRITER_CMD, writerExecArgs(prompt, { model }), {
     encoding: 'utf8',

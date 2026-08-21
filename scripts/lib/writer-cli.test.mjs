@@ -27,6 +27,20 @@ describe('classifyWriterRun — codex 三態分類（語意對齊 classifyClaude
   });
 });
 
+describe('runWriterOnce — prompt 走 stdin（-i 變長參數會吞位置參數）', () => {
+  it('prompt 進 input、argv 不含 prompt；每張圖各帶一個 -i', async () => {
+    const { runWriterOnce } = await import('./writer-cli.mjs');
+    let seen;
+    const spawnImpl = (cmd, args, opts) => { seen = { cmd, args, opts }; return { status: 0, stdout: 'ok' }; };
+    await runWriterOnce('MY PROMPT', { images: ['/tmp/a.jpg', '/tmp/b.jpg'], spawnImpl });
+    expect(seen.opts.input).toBe('MY PROMPT');
+    expect(seen.args).not.toContain('MY PROMPT');
+    expect(seen.args.filter((a) => a === '-i')).toHaveLength(2);
+    expect(seen.args[seen.args.indexOf('-i') + 1]).toBe('/tmp/a.jpg');
+    expect(seen.args).toContain('read-only');
+  });
+});
+
 describe('writerExecArgs — codex exec 參數正本', () => {
   it('必帶 bypass 沙箱、skip git check、明確 -m 模型與 effort', () => {
     const args = writerExecArgs('PROMPT');

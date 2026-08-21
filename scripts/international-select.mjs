@@ -16,7 +16,9 @@ import { pathToFileURL } from 'node:url';
 import { parseEventRow, selectHotByRegion, REGIONS } from './lib/international-select.mjs';
 
 const UA = 'Mozilla/5.0 (appi-news intl-radar)';
-const BASE = 'http://data.gdeltproject.org/gdeltv2';
+// 2026-08-21 起 GDELT 對 http 回 301 轉 https、body 為空，沒帶 -L 的 curl 會拿到空字串
+// 被誤判成「不可達」。改走 https 為主，curl 一律帶 -L 讓未來再改向也活得下去。
+const BASE = 'https://data.gdeltproject.org/gdeltv2';
 
 function arg(name, def) {
   const i = process.argv.indexOf(`--${name}`);
@@ -26,7 +28,7 @@ const has = (n) => process.argv.includes(`--${n}`);
 
 /** 取最新 export 檔的時間戳（YYYYMMDDHHMMSS）。 */
 function latestStamp() {
-  const r = spawnSync('curl', ['-s', '-A', UA, `${BASE}/lastupdate.txt`], { encoding: 'utf8' });
+  const r = spawnSync('curl', ['-sL', '-A', UA, `${BASE}/lastupdate.txt`], { encoding: 'utf8' });
   const m = (r.stdout || '').match(/(\d{14})\.export\.CSV\.zip/);
   if (!m) throw new Error('取不到 lastupdate（GDELT 不可達？）');
   return m[1];
@@ -49,7 +51,7 @@ function priorStamps(latest, count) {
 /** 下載 + 解壓一個 export 檔，回傳 CSV 文字（失敗回 ''）。 */
 function fetchExport(stamp, dir) {
   const zip = join(dir, `${stamp}.zip`);
-  const dl = spawnSync('curl', ['-s', '-A', UA, `${BASE}/${stamp}.export.CSV.zip`, '-o', zip], { encoding: 'utf8' });
+  const dl = spawnSync('curl', ['-sL', '-A', UA, `${BASE}/${stamp}.export.CSV.zip`, '-o', zip], { encoding: 'utf8' });
   if (dl.status !== 0) return '';
   const un = spawnSync('unzip', ['-p', zip], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
   return un.status === 0 ? un.stdout || '' : '';

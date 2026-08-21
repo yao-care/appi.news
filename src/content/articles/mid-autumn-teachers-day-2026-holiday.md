@@ -2,7 +2,7 @@
 title: "2026中秋節連假放幾天？9月25日到28日，教師節接著放"
 slug: "mid-autumn-teachers-day-2026-holiday"
 description: "2026年中秋節連假從9月25日（週五、中秋節）放到9月28日（週一、教師節），共4天不需要補班。整理人事行政總處官方日曆表依據、台鐵加開158班次與國道疏運查詢入口，並提醒烤肉與月餅的食安重點。"
-publishDate: "2026-08-21T08:00:00+08:00"
+publishDate: "2026-08-21T02:49:09.577Z"
 category: "lifestyle"
 subcategory: "life"
 tags: ["節慶", "交通", "便民措施", "食品安全"]
@@ -10,7 +10,7 @@ author: "appi-editorial"
 coverImage: "covers/mid-autumn-teachers-day-2026-holiday.webp"
 coverAlt: "月曆頁面上以紅筆圈起9月25日至28日的連續假期（示意圖）"
 coverImageCredit: "Photo by Towfiqu barbhuiya on Unsplash"
-status: "scheduled"
+status: "published"
 sourceType: "editorial"
 contentType: "guide"
 disclaimerType: "general"
@@ -40,6 +40,7 @@ references:
     url: "https://www.thsrc.com.tw/"
     publisher: "台灣高鐵"
 draft: false
+updatedDate: "2026-08-21T02:49:09.577Z"
 ---
 
 2026年中秋節連假從9月25日（週五、中秋節）放到9月28日（週一、教師節），共放4天，不需要補班。這個日期依行政院人事行政總處公告的[《115年中華民國政府行政機關辦公日曆表》](https://data.gov.tw/dataset/14718)排定，中秋節與教師節剛好落在同一週的頭尾，加上週末兩天，串成一段少見的四天連假。

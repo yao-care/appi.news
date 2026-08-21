@@ -2,13 +2,13 @@
 title: "2026教師節祭孔大典哪裡看？全台孔廟儀式差異一次看"
 slug: "confucius-ceremony-teachers-day-2026"
 description: "整理台北、台南、彰化、高雄左營、桃園五座孔廟教師節釋奠典禮的清晨時間、佾舞規格與拔智慧毛等祈福習俗差異，並說明教師節為何訂在9月28日、2026年為何連上中秋節放4天。"
-publishDate: "2027-08-21T08:00:00+08:00"
+publishDate: "2026-08-21T02:49:11.589Z"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
 contentType: "guide"
 sourceType: "editorial"
-status: "scheduled"
+status: "published"
 disclaimerType: "general"
 disclosure: "本文以AI輔助起草，經人工查證編輯；內容整理自各孔廟官網、地方政府新聞稿與媒體報導，2026年各廟正式公告發布前，時間與活動內容以近年慣例整理。"
 tags:
@@ -78,6 +78,7 @@ references:
     url: "https://tourism.chcg.gov.tw/AttractionsContent.aspx?id=22&chk=f0f97bd8-a457-499a-b869-614c9aa68709&l=TW"
     publisher: "彰化縣政府旅遊網"
 draft: false
+updatedDate: "2026-08-21T02:49:11.589Z"
 ---
 
 全台孔廟教師節都會舉行祭孔（釋奠）典禮，但細節不一樣：台北孔廟跳全台少見的八佾舞，台南孔廟是少數維持春秋二祭、仍使用真牛真羊真豬古禮牲禮的孔廟，彰化、高雄左營舊城、桃園孔廟則各有六佾舞與智慧糕等祈福贈品。多數典禮都在教師節（9月28日）清晨5點到7點之間開始，想到場觀禮得先查好各廟時間與地點再出門。

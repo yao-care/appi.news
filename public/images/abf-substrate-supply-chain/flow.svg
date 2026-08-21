@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="ABF材料從味之素到台灣載板廠，再進入AI晶片與伺服器供應鏈的流程圖；中國部分客戶約30%減供仍屬未獲證實消息">
+  <title>ABF材料到AI伺服器的供應鏈傳導</title>
+  <desc>流程由味之素ABF增層膜，經台灣ABF載板廠，連到高階CPU、GPU、ASIC與AI伺服器。圖中標示中國部分客戶可能減供約30%，該幅度尚未獲味之素證實。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6e7276"/>
+    </marker>
+  </defs>
+  <rect width="960" height="600" fill="#ffffff"/>
+  <rect x="34" y="34" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="56" y="58" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="26" font-weight="700" fill="#1e2030">ABF材料到AI伺服器的供應鏈傳導</text>
+  <text x="56" y="91" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" fill="#6e7276">材料供應變動會先碰到載板製造，再傳到晶片封裝與伺服器交付</text>
+
+  <rect x="52" y="160" width="190" height="154" rx="12" fill="#eaf0f8"/>
+  <rect x="52" y="160" width="190" height="5" rx="2" fill="#a87515"/>
+  <text x="76" y="202" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#1e2030">上游材料</text>
+  <text x="76" y="238" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" fill="#1e2030">味之素 ABF</text>
+  <text x="76" y="268" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="14" fill="#6e7276">層間絕緣薄膜</text>
+  <text x="76" y="292" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="14" fill="#6e7276">微細線路成形材料</text>
+
+  <line x1="242" y1="237" x2="328" y2="237" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="328" y="160" width="220" height="154" rx="12" fill="#ffffff"/>
+  <rect x="328" y="160" width="220" height="5" rx="2" fill="#1f3a5f"/>
+  <text x="352" y="202" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#1e2030">中游製造</text>
+  <text x="352" y="238" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" fill="#1e2030">ABF 載板廠</text>
+  <text x="352" y="268" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="14" fill="#6e7276">多層銅線路與覆晶基板</text>
+  <text x="352" y="292" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="14" fill="#6e7276">台廠：欣興、南亞電路板、景碩</text>
+
+  <line x1="548" y1="237" x2="634" y2="237" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="634" y="160" width="274" height="154" rx="12" fill="#ffffff"/>
+  <rect x="634" y="160" width="274" height="5" rx="2" fill="#1f3a5f"/>
+  <text x="658" y="202" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#1e2030">下游應用</text>
+  <text x="658" y="238" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="17" fill="#1e2030">CPU、GPU、ASIC</text>
+  <text x="658" y="268" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="14" fill="#6e7276">AI 加速器與高效能運算</text>
+  <text x="658" y="292" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="14" fill="#6e7276">伺服器、資料中心</text>
+
+  <rect x="150" y="376" width="660" height="92" rx="12" fill="#fff8eb"/>
+  <text x="178" y="412" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#1e2030">市場消息的傳導點</text>
+  <text x="178" y="444" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" fill="#1e2030">部分中國客戶可能減供約 30%，幅度截至 2026 年 8 月 20 日仍未獲味之素證實</text>
+  <line x1="438" y1="314" x2="438" y2="376" stroke="#a87515" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="52" y1="520" x2="908" y2="520" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="52" y="550" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#6e7276">製圖：APPI News</text>
+  <text x="908" y="550" text-anchor="end" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#6e7276">資料時點：2026-08-20；來源：味之素官方、經濟日報</text>
+</svg>

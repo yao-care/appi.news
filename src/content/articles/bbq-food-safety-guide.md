@@ -5,7 +5,7 @@ description: "烤肉食安怎麼做？整理雞肉中心溫度74°C、豬肉牛�
 publishDate: "2026-07-30T12:14:33.625Z"
 updatedDate: 2026-08-17
 category: lifestyle
-topics: ["food-safety-storage"]
+topics: ["food-safety-storage", "mid-autumn-teachers-day-2026"]
 subcategory: life
 tags: ["食品安全", "美食"]
 author: "appi-editorial"

@@ -5,6 +5,7 @@ description: "2026年中秋節連假從9月25日（週五、中秋節）放到9�
 publishDate: "2026-08-21T02:49:09.577Z"
 category: "lifestyle"
 subcategory: "life"
+topics: ["mid-autumn-teachers-day-2026"]
 tags: ["節慶", "交通", "便民措施", "食品安全"]
 author: "appi-editorial"
 coverImage: "covers/mid-autumn-teachers-day-2026-holiday.webp"

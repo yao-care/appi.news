@@ -11,6 +11,7 @@ sourceType: "editorial"
 status: "published"
 disclaimerType: "general"
 disclosure: "本文以AI輔助起草，經人工查證編輯；內容整理自各孔廟官網、地方政府新聞稿與媒體報導，2026年各廟正式公告發布前，時間與活動內容以近年慣例整理。"
+topics: ["mid-autumn-teachers-day-2026"]
 tags:
   - "節慶"
   - "教育"

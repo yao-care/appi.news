@@ -28,6 +28,7 @@ import { pushToMain } from './lib/git-publish.mjs';
 import { nextOpenPublishDate, takenDatesFromContents } from './lib/publish-slot.mjs';
 import { coverDuplicatesInline } from './lib/image-dedupe.mjs';
 import { checkCoverFile } from './lib/cover-spec.mjs';
+import { runArticleGates } from './lib/publish-pipeline.mjs';
 import { RISKS_PROMPT } from "./lib/risks-prompt.mjs";
 import { EXPERT_NOTE_PROMPT } from "./lib/expert-note-prompt.mjs";
 import { GROWTH_PROMPT } from "./lib/growth-prompt.mjs";

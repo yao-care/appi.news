@@ -1,7 +1,8 @@
 ---
-title: "哈利斯科新一代卡特爾（CJNG）是什麼？美國砸逾1億美元懸賞緝毒梟8首腦"
+title: "CJNG是什麼？美國懸賞逾1億美元緝哈利斯科卡特爾8首腦"
 slug: "cjng-jalisco-cartel-reward-25-million"
-description: "美國國務院、司法部與緝毒局8月5日宣布，對墨西哥哈利斯科新一代卡特爾（CJNG）8名高階首腦合計開出逾1億美元懸賞，其中現任首腦、美墨雙重國籍的岡薩雷斯（「Pelón」）懸賞金從500萬美元一口氣提高到2500萬美元。這是前首腦「梟哥」今年2月遭墨西哥軍方擊斃後，美方針對接班人展開的最大規模緝拿行動之一，同時也對卡特爾成員的家屬與商業夥伴祭出簽證限制。"
+description: "CJNG（哈利斯科新一代卡特爾）是墨西哥最具武力的販毒集團之一。美國8月5日對其8名首腦合計懸賞逾1億美元，現任首腦岡薩雷斯一人就達2500萬美元。整理CJNG的背景、懸賞名單與美方掃毒行動。"
+updatedDate: 2026-08-20
 excerpt: "美國8月5日對CJNG（哈利斯科新一代卡特爾）8名首腦開出逾1億美元懸賞，接掌組織的岡薩雷斯（「Pelón」）懸賞金從500萬美元漲至2500萬美元，是前首腦「梟哥」身亡後美方最大規模緝拿行動之一。"
 publishDate: "2026-08-09T16:59:38.892Z"
 category: "international"
@@ -53,7 +54,7 @@ coverAlt: "成疊美元現金示意圖（非本案實際懸賞獎金照片）"
 coverImageCredit: "Photo by John Guccione www.advergroup.com on Pexels"
 ---
 
-美國國務院、司法部與緝毒局（DEA）8月5日聯合宣布，對墨西哥哈利斯科新一代卡特爾（Cártel de Jalisco Nueva Generación，CJNG）8名高階首腦合計開出逾1億美元懸賞。[NBC News報導](https://www.nbcnews.com/world/mexico/us-offers-25-million-reward-targeting-us-citizen-reportedly-leads-mexi-rcna591045)指出，現任首腦胡安·卡洛斯·岡薩雷斯（Juan Carlos González，別名「Pelón」）的懸賞金從500萬美元一口氣提高到2500萬美元，是這波公告中金額最高的一人。想了解武裝組織懸賞緝拿的操作模式，可對照[哥倫比亞游擊隊ELN涉嫌卡車炸彈攻擊、政府懸賞逾6萬美元緝兇](/articles/colombia-cucuta-police-truck-bombing/)的案例，兩者都是拉丁美洲政府或美方對犯罪武裝組織開出賞金的常見手法，只是CJNG這次金額高出百倍以上。
+哈利斯科新一代卡特爾（Cártel de Jalisco Nueva Generación，CJNG）是墨西哥最具武力的販毒集團之一，也是美方近年掃毒行動的頭號目標。美國國務院、司法部與緝毒局（DEA）8月5日聯合宣布，對CJNG的8名高階首腦合計開出逾1億美元懸賞。[NBC News報導](https://www.nbcnews.com/world/mexico/us-offers-25-million-reward-targeting-us-citizen-reportedly-leads-mexi-rcna591045)指出，現任首腦胡安·卡洛斯·岡薩雷斯（Juan Carlos González，別名「Pelón」）的懸賞金從500萬美元一口氣提高到2500萬美元，是這波公告中金額最高的一人。想了解武裝組織懸賞緝拿的操作模式，可對照[哥倫比亞游擊隊ELN涉嫌卡車炸彈攻擊、政府懸賞逾6萬美元緝兇](/articles/colombia-cucuta-police-truck-bombing/)的案例，兩者都是拉丁美洲政府或美方對犯罪武裝組織開出賞金的常見手法，只是CJNG這次金額高出百倍以上。
 
 ## 岡薩雷斯是誰？美墨雙重國籍，繼承亡父版圖
 

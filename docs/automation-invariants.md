@@ -6,7 +6,7 @@
 
 ## 帳號與模型（2026-08-22 起雙引擎）
 - **寫作文章一律用 codex**（站長 2026-08-22 裁示）：文章起草的呼叫（8 條 `.mjs` 產線＋`newsroom-write.mjs`＋deals/typhoon 兩條 skill 型 `.sh`）全走 `codex exec`，參數與模型正本＝`scripts/lib/writer-cli.mjs`（`runWriterArticle`／`writerExecArgs`，模型 `WRITER_MODEL`，一律明確帶 `-m`）。codex 憑證＝`~/.codex/auth.json`，失效＝所有寫作線一起啞，`codex login` 重登。
-- **產圖相關 LLM 呼叫也全走 codex**（站長 2026-08-22 追加裁示）：生圖本體本來就是 OpenAI（`gpt-image-2`）；prompt 展開與圖庫/生成圖視覺審查改走 `runWriterOnce`（`lib/writer-cli.mjs`，read-only 沙箱、`-i` 附圖、prompt 一律走 stdin——`-i` 是變長參數會吞位置參數，2026-08-21 踩過）。
+- **產圖全走 codex**（站長 2026-08-22 兩度裁示）：**生圖本體＝codex 原生 `image_generation` 工具**（`lib/ai-image.mjs` 的 `generateViaCodex`，1536x1024 橫式；失敗才退 worker → 本機 OpenAI API 雙備援，退回時 log 印原因）；prompt 展開與圖庫/生成圖視覺審查走 `runWriterOnce`（`lib/writer-cli.mjs`，read-only 沙箱、`-i` 附圖、prompt 一律走 stdin——`-i` 是變長參數會吞位置參數，2026-08-21 踩過）。
 - **非寫作呼叫維持 `claude-appi`**（`CLAUDE_CONFIG_DIR=~/.claude-appi`）：查核 gate（viewpoint／國際線 triage／論壇政治過濾）→ `haiku`；選題雷達、週報、大腦體檢、AEO 探針 → `claude-sonnet-5`。每個 `claude-appi -p` 呼叫**必帶 `--model`**，不帶就吃全域預設 Opus、燒爆週用量上限（出過事 → [`automation-model-and-account-split.md`](./lessons/automation-model-and-account-split.md)）。**每日大腦層（seo-ops）不在此範圍、維持 claude**（站長同日裁示）。
 - **判斷成功不能只看 exit code**：兩個引擎撞用量上限／拒答都可能 **exit 0** 只印 stdout。`.mjs` 端寫作走 `scripts/lib/writer-cli.mjs` 的 `runWriterArticle` 三態、非寫作走 `scripts/lib/claude-cli.mjs`（**quota＝帳號層級，中止整批**；fail＝單則失敗，跳過該則；ok），不自抄 regex——曾漂移成 4 種語意，7 條線撞限額後照樣逐則狂打空跑（[§H](./lessons/auto-publish-pipeline-traps.md)）。`.sh` 的第二道網＝`scripts/cron/_runner.sh` 的 `CRON_LIMIT_RE`（claude＋codex 樣態聯集，經 `cron_run`／`cron_failed`），別在各 `.sh` 重抄 regex。
 

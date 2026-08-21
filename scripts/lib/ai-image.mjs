@@ -1,10 +1,11 @@
 import sharp from 'sharp';
-import { readFileSync, writeFileSync, unlinkSync, mkdtempSync } from 'node:fs';
+import { readFileSync, writeFileSync, unlinkSync, mkdtempSync, existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { homedir, tmpdir } from 'node:os';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import { expandPhotoPrompt, composePhotoPrompt, varietyHints } from './photo-prompt.mjs';
 import { visualCheck, stockPhotoCheck } from './visual-check.mjs';
+import { WRITER_CMD, WRITER_MODEL, classifyWriterRun } from './writer-cli.mjs';
 
 // 生圖專門機制：Cloudflare Worker（與前端 src/utils/editor/ai-worker.ts 同一個，
 // OpenAI/Fal 金鑰已設在 worker 上）。換網域時兩邊一起改。
@@ -78,20 +79,61 @@ async function generateViaWorker({ prompt, width, token, quality }) {
   return toWebp(Buffer.from(b64, 'base64'), width);
 }
 
+/** 解析 codex 生圖回覆的 IMG=<path> 行。純函式，供測試。 */
+export function parseImgResult(stdout) {
+  const m = String(stdout || '').match(/^IMG=(\S+)$/m);
+  return m ? m[1] : null;
+}
+
+// codex 原生生圖（image_generation 工具，stable、額度走 codex 訂閱）。
+// 站長 2026-08-22 裁示：生圖本體改用 codex；worker / OpenAI API 僅作備援。
+// 產出 1536x1024 橫式 PNG（實測 0.149），toWebp 再縮到目標寬。
+// prompt 走 stdin（與 runWriterOnce 同理由：避免特殊字元/長度咬到 argv）。
+async function generateViaCodex({ prompt, width, timeoutMs = 12 * 60_000 }) {
+  const dir = mkdtempSync(join(tmpdir(), 'appi-codeximg-'));
+  const out = join(dir, 'gen.png');
+  try {
+    const instruction = `用你的 image_generation 工具生成一張圖片。圖片需求（英文 prompt，照用、不要改寫）：
+
+${prompt}
+
+要求：橫式（landscape）。生成後用 shell 把產出的圖檔複製到 ${out}，最後只回覆一行：IMG=${out}`;
+    const r = spawnSync(WRITER_CMD, [
+      'exec', '--dangerously-bypass-approvals-and-sandbox', '--skip-git-repo-check',
+      '-m', WRITER_MODEL, '-c', 'model_reasoning_effort="low"',
+    ], { encoding: 'utf8', input: instruction, maxBuffer: 32 * 1024 * 1024, timeout: timeoutMs, killSignal: 'SIGKILL' });
+    const c = classifyWriterRun(r);
+    if (c.kind !== 'ok') throw new Error(`codex 生圖 ${c.kind}：${(c.detail || '').slice(0, 150)}`);
+    const path = parseImgResult(c.stdout);
+    const file = path && existsSync(path) ? path : (existsSync(out) ? out : null);
+    if (!file) throw new Error('codex 生圖無產出檔（回覆缺 IMG= 行且暫存路徑無檔案）');
+    return toWebp(readFileSync(file), width);
+  } finally {
+    try { rmSync(dir, { recursive: true, force: true }); } catch { /* 忽略 */ }
+  }
+}
+
 // 整合（不單元測試）：生圖 → webp。
-// 優先走專門機制（worker，金鑰已配好）；無 GitHub token 才退回本機 OpenAI 金鑰。
+// 主路徑＝codex 原生生圖；失敗才退 worker（金鑰在 worker 上）→ 本機 OpenAI 金鑰（雙備援，
+// 產線不因單一引擎故障斷炊；退回時印原因，方便對 log 追）。
 export async function generateImage({
   topic,
   context = '',
   width = 1200,
   model = 'gpt-image-2',
   size = '1536x1024',
-  quality = 'low', // 段落圖多，用 low 控成本
+  quality = 'low', // 段落圖多，用 low 控成本（僅備援路徑使用；codex 路徑無此參數）
   prompt: prebuiltPrompt, // 人物 photoreal 路徑傳 composePhotoPrompt 組好的完整 prompt
 }) {
   const prompt = prebuiltPrompt && String(prebuiltPrompt).trim()
     ? String(prebuiltPrompt).trim()
     : buildImagePrompt({ topic, context });
+
+  try {
+    return await generateViaCodex({ prompt, width });
+  } catch (err) {
+    console.warn(`     ⚠️ codex 生圖失敗，退回備援（worker/API）：${String(err.message || err).slice(0, 150)}`);
+  }
 
   const token = githubToken();
   if (token) {

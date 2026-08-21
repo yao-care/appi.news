@@ -64,3 +64,11 @@ describe('imgTag', () => {
     expect(t2).toContain('alt=""');
   });
 });
+
+describe('parseImgResult — codex 生圖回覆解析', () => {
+  it('抓 IMG= 行、忽略 transcript 雜訊', async () => {
+    const { parseImgResult } = await import('./ai-image.mjs');
+    expect(parseImgResult('blah\nIMG=/tmp/x/gen.png\ntokens used\n123')).toBe('/tmp/x/gen.png');
+    expect(parseImgResult('沒有結果行')).toBe(null);
+  });
+});

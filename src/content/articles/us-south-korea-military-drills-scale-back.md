@@ -1,7 +1,8 @@
 ---
-title: "美韓聯合軍演為何說縮就縮？川普政策牽動同盟互信"
+title: "韓國軍演為何被川普下令縮減？烏爾奇自由盾如期展開"
 slug: "us-south-korea-military-drills-scale-back"
-description: "美國總統川普下令縮減美韓聯合軍演規模，為期11天的烏爾奇自由盾演習仍如期展開、18000名南韓官兵參與。整理川普縮減軍演背後的三個理由、南韓官方與退役將領的回應，以及這對美韓同盟互信可能留下的疑慮。"
+description: "韓國年度美韓聯合軍演烏爾奇自由盾8月17日如期展開，18000名南韓官兵參與，川普卻同日下令大幅縮減美軍參與規模。整理川普的三個理由、南韓國防部與總統李在明的回應，以及退役將領對同盟互信的警告。"
+updatedDate: "2026-08-22"
 excerpt: "川普下令縮減美韓聯合軍演，南韓國防部強調演習「如期進行」；整理縮減背後的三個理由、南韓總統李在明與退役將領的回應。"
 publishDate: "2026-08-18T16:26:41.753Z"
 category: "international"
@@ -41,7 +42,7 @@ risksAndLimits:
   - "退役將領與智庫對同盟信任衝擊的評估屬個人研判，非美韓兩國官方公開表態"
 ---
 
-美國總統川普8月17日下令國防部長黑格賽斯「大幅縮減」美軍參與美韓聯合軍演的規模，理由是他與北韓領導人金正恩關係良好、演習成本太高，還加上南韓先前沒有協助美國[對伊朗的軍事行動](/articles/us-missile-stockpile-shortage-asia-defense/)（[Yahoo News](https://www.yahoo.com/news/politics/articles/major-exercise-south-korea-continues-205015103.html)）。命令一出，南韓國防部隨即回應，為期11天的烏爾奇自由盾演習仍照原訂計畫8月17日展開（Yahoo News）。
+韓國年度大型美韓聯合軍演「烏爾奇自由盾」8月17日照原訂計畫展開，為期11天，並未因川普的縮減命令喊卡。美國總統川普同日下令國防部長黑格賽斯「大幅縮減」美軍參與規模，理由是他與北韓領導人金正恩關係良好、演習成本太高，還加上南韓先前沒有協助美國[對伊朗的軍事行動](/articles/us-missile-stockpile-shortage-asia-defense/)（[Yahoo News](https://www.yahoo.com/news/politics/articles/major-exercise-south-korea-continues-205015103.html)）。
 
 川普在Truth Social發文說，演習「花費龐大」，還向北韓「傳遞了完全不恰當且帶敵意的訊號」，強調金正恩「這段期間對美國一直很客氣、不帶威脅性」。他也點名南韓沒有在對伊朗的軍事行動中出手相助，是他不滿的原因之一（Yahoo News）。不過川普也坦言，演習當下已經來不及全面取消，才改口是「縮減」而非喊停。
 

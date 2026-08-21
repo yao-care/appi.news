@@ -109,16 +109,13 @@ id 對照表（`scripts/lib/topic-hub-ids.json`，**id 進網址、上線後不�
 **SOP**：`ls src/content/topics/` 看現有叢集 → 對 `growth-lint` 標 `G2-cluster` 的文章逐篇判斷能不能歸入 → 能就補 frontmatter，不能就留空。**不要自創不存在的 topic id**（會產生壞連結）。
 某個主題叢集夠厚但沒有對應 topic 檔時，才在 `src/content/topics/` 新增（schema 見 `src/content.config.ts`）。
 
-### B4. 延伸閱讀的版位（站長 2026-08-07 裁示：先不動，兩週後看數字再決定）
+### B4. 延伸閱讀的版位（站長 2026-08-22 二次裁示：啟用「文中插入」）
 
-目前「延伸閱讀」只出現在文末（`src/pages/articles/[slug].astro`），跳出率高的讀者根本滑不到。可選作法：文中插入（讀到一半的段落間）、桌機側欄常駐、讀完浮出推薦條——**每一種都會動到版面與效能，動手前必須先讀 [`PERFORMANCE.md`](../PERFORMANCE.md)，且屬於「要先問站長」的改動。**
+決策沿革：2026-08-07 裁示先不動、兩週後看 PV/session；2026-08-21 到期時 PV/session 仍在原地（未達 1.35 目標），依當時約定回來評估文中插入，站長 2026-08-22 裁示啟用。
 
-**現行決策**：先不動版位，改用零風險的 B1（新文內建內鏈，已上線）＋B2／B3（存量補內鏈與 topics）推同一個指標，**2026-08-21 之後**跑 `pnpm growth:audit` 對照 PV/session：
+**實作＝postbuild 注入，不動模板、零 client JS、零 CLS**：`scripts/insert-midread.mjs`（接在 postbuild 鏈最末、pagefind 之後，注入的連結不進搜尋索引）。從每頁文末已渲染的延伸閱讀抽前 2 條連結，插在 article-body 第 3 個 h2 之前；body 內 h2 不足 3 個的短文不插。樣式＝`global.css` 的 `.midread`（全 token）。為什麼做在 postbuild：延伸閱讀清單是頁面層算的，這樣做零邏輯重複、永不與 `relatedArticles()` 漂移。
 
-- 有往上動 → 版位不必改，繼續做 B2／B3。
-- 沒動 → 代表內文內鏈救不到，再回來評估文中插入版位（那時才需要站長二次裁示）。
-
-基準值＝2026-08-07 當時的量測，記在 [`lessons/growth-three-gates.md`](./lessons/growth-three-gates.md)（歷史證據，不是現況）。
+**驗收**：上線 2~4 週後跑 `pnpm growth:audit` 看 PV/session 是否從基準往 1.35 移動；同時 PSI 抽測文章頁 mobile 不得低於既有基準（`PERFORMANCE.md` §3）。沒效就拆（postbuild 拿掉一行即回復）。
 
 ---
 

@@ -216,7 +216,8 @@
 
 | 線 | 路徑 | 驅動方式 |
 |---|---|---|
-| 科技台 | `scripts/tech-desk.mjs`＋`scripts/lib/tech-desk.mjs` | GSC 訊號選題。兩條 track：`editorial`（編輯部事實型概念解釋）／`lightman`（AI 醫療現場觀點）；cron **每天只跑一條、日期奇偶輪替**（避免單日雙倍吃額度）。為什麼＝[`docs/lessons/query-targeting-event-vs-concept.md`](./docs/lessons/query-targeting-event-vs-concept.md) |
+| 科技台 | `scripts/tech-desk.mjs`＋`scripts/lib/tech-desk.mjs` | GSC 訊號選題。兩條 track：`editorial`（編輯部事實型概念解釋）／`lightman`（AI 醫療現場觀點）；cron **每天兩條都跑**（2026-08-22 站長裁示解除奇偶輪替——當初限制是為 claude 5 小時額度視窗，寫作改 codex 後理由消失）。為什麼選題這樣設計＝[`docs/lessons/query-targeting-event-vs-concept.md`](./docs/lessons/query-targeting-event-vs-concept.md) |
+| 民俗節慶佈局 | `scripts/lib/festival-days.mjs`（年曆純資料）＋`scripts/festival-radar.mjs`＋`scripts/cron/festival-radar.sh` | **年曆驅動**（站長 2026-08-22 裁示開線）：節點進入 21 天窗（`LEAD_DAYS`）即自動撰寫成員文上架（factual、生活台回報、帳本防重複），複製七夕/中元/中秋提前佈局套路；hub 由人工/後續輪建。**新增節點日期必逐筆查證**，禁自行換算農曆。窗內無節點純資料 exit 0 不喚模型 |
 | 健康紀念日 | `scripts/lib/health-days.mjs`＋`scripts/health-days.mjs`＋`scripts/cron/health-days{,-publish}.sh` | **日期驅動**（年曆表）。T-2 寫成排程稿，當天由**另一支純 shell cron** 戳 `workflow_dispatch` 才真正上線；**兩支 cron 不可合併**。配圖依站長指定一律 OpenAI 生圖。為什麼＝[`docs/lessons/annual-observance-scheduling.md`](./docs/lessons/annual-observance-scheduling.md) |
 | 急性症狀衛教 | `scripts/lib/acute-care.mjs`＋`scripts/acute-care.mjs`＋`scripts/acute-care-batch.sh`＋`scripts/acute-care-audit.mjs` | **清單驅動、非 cron**。要開題就往 `TOPICS` 加再跑 batch。醫療界線寫在 `BOUNDARY` 常數、原文進 prompt，要收緊改一處。合規用 `acute-care-audit.mjs` 機械驗，不靠人抽驗。為什麼＝[`docs/lessons/acute-care-line-traps.md`](./docs/lessons/acute-care-line-traps.md) |
 | 國際／生活各線 | `scripts/international-*.mjs`、`scripts/lifestyle-*.mjs`、`.claude/skills/lifestyle-*/` | 各自綁定資料源（GDELT、政府 RSS、警局、YouTube RSS、人事行政總處、假日曆）。逐線說明見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |

@@ -65,6 +65,8 @@ export const SITE = {
       'https://www.instagram.com/appi.news/',
       // threads.com 與 threads.net 目前都通（皆 200）；用 .com 這個現行網域。
       'https://www.threads.com/@appi.news',
+      // 官方 LINE 帳號（2026-08-22 加入；站上 LineReaderCta 與 /line 頁同一帳號 @832sacsk）。
+      'https://line.me/R/ti/p/@832sacsk',
     ] as string[],
     /** 機構聯絡信箱（給 schema.org contactPoint 用；留空則不輸出） */
     contactEmail: 'appi.newsdesk@gmail.com',

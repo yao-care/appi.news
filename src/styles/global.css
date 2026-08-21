@@ -373,3 +373,22 @@ h4 {
 .btn--ghost:hover {
   background: var(--bg-tint);
 }
+
+/* 文中「繼續閱讀」小卡（postbuild insert-midread.mjs 注入；B4 版位實驗 2026-08-22） */
+.midread {
+  margin: 1.5rem 0;
+  padding: 0.9rem 1.1rem;
+  background: var(--bg-soft);
+  border-left: 3px solid var(--appi-accent);
+  border-radius: 6px;
+}
+.midread-label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--appi-accent-ink);
+  margin-bottom: 0.35rem;
+}
+.midread ul { margin: 0; padding-left: 1.1rem; }
+.midread li { margin: 0.25rem 0; }
+.midread a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }

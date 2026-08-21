@@ -18,6 +18,9 @@ import {
   seasonalTopicClicks,
 } from './lib/weekly-metrics.mjs';
 import { loadArticleCategoryMap } from './lib/article-category-map.mjs';
+import { warnIfStaleCheckout } from './lib/checkout-freshness.mjs';
+
+warnIfStaleCheckout();
 import { parseArticle, parseTopic, membersOf, aggregate } from './lib/topic-tracker.mjs';
 
 const SPRINT_TOPIC_IDS = ['qixi-2026', 'zhongyuan-2026', 'back-to-school-2026'];

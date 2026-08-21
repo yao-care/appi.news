@@ -3,12 +3,13 @@ title: "關於夏季食物中毒，你需要知道的5件事：從危險溫度�
 slug: "summer-food-poisoning-danger-zone-bacteria"
 description: "高雄春捲食物中毒案累計173人送醫、驗出沙門氏菌。食藥署定義7°C–60°C為危險溫度帶，細菌20分鐘可分裂一次，2小時內菌數能暴增64倍。從生物學機制拆解夏季食安風險，給出室溫、冷藏、冷凍的實用保存判準。"
 publishDate: 2026-08-05
-updatedDate: 2026-08-06
+updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags: ["食品安全", "公共衛生", "傳染病防治", "預防醫學"]
 author: "appi-editorial"
-coverImage: "covers/summer-food-poisoning-danger-zone-bacteria.webp"
+coverImage: "covers/summer-food-poisoning-danger-zone-bacteria-cover.webp"
+coverImageCredit: "Photo by Cheng Shi Song on Pexels"
 coverAlt: "聚餐後的菜餚留在餐桌上，於室溫下持續放置的情境照"
 status: published
 sourceType: editorial

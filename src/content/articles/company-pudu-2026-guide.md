@@ -3,7 +3,7 @@ title: "2026公司普渡怎麼拜：日期、供品清單與完整流程"
 slug: "company-pudu-2026-guide"
 description: "2026年公司普渡可在8月13日至9月10日擇日進行，不必只選8月27日。本文整理祭拜時間、戶外場地、不同公司規模的供品清單、金紙順序與人員分工。"
 publishDate: "2026-07-30T10:04:05.155Z"
-updatedDate: 2026-08-09
+updatedDate: 2026-08-21
 category: lifestyle
 subcategory: life
 tags: ["節慶"]
@@ -15,7 +15,6 @@ factCheckedBy:
   - "appi-editorial"
 coverImage: "covers/company-pudu-2026-guide-cover.webp"
 coverAlt: "台灣商辦大樓外觀，象徵企業辦公環境（示意圖）"
-coverImageCredit: "Photo by Bingqian Li on Pexels"
 status: published
 sourceType: editorial
 contentType: guide

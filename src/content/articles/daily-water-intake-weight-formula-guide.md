@@ -4,7 +4,7 @@ slug: "daily-water-intake-weight-formula-guide"
 description: "衛福部建議成人每天喝6至8杯水（240ml/杯），約1500至2000ml；體重×30cc是常見的個人化算法，50公斤約1500cc、60公斤約1800cc。這篇整理國健署最新總水分攝取量標準、食物與含糖飲料算不算水分、流汗天熱該多補多少，以及水中毒風險與哪些人該限水。"
 excerpt: "體重×30cc怎麼算？50公斤約1500cc、60公斤約1800cc，再依流汗與天熱酌量增加。整理國健署最新標準、食物飲料算不算水分，以及喝太多水的風險。"
 publishDate: "2026-07-30T12:11:13.651Z"
-updatedDate: "2026-08-07T09:40:00.000Z"
+updatedDate: 2026-08-22
 category: "health"
 subcategory: "medical"
 tags:
@@ -22,7 +22,7 @@ sourceType: "editorial"
 disclaimerType: "medical"
 coverImage: "covers/daily-water-intake-weight-formula-guide-cover.webp"
 coverAlt: "透明玻璃杯裝水，水花與光線交錯，示意每日飲水（示意圖）"
-coverImageCredit: "Photo by KOBU Agency on Unsplash"
+coverImageCredit: "Photo by Nguyen Ngoc Tien on Pexels"
 highlights:
   - "衛福部建議成人每天喝6至8杯水（240ml/杯），約1500至2000ml；國健署最新草案則以「總水分」細分，19歲以上男性建議3200ml、女性2700ml，且已把食物中的水分算進去"
   - "體重×30cc是常見的個人化算法：50公斤約1500cc、60公斤約1800cc；部分營養師建議放寬到體重×30至40cc的區間"

@@ -4,7 +4,7 @@ slug: "colombia-earthquake-magnitude-depth-explained"
 description: "哥倫比亞規模7.4強震8月10日襲擊喬科省，震源深達107公里理論上該減少地表破壞，死亡人數截至8月14日晚間已攀升至287人。整理死傷數字、佩雷拉受困新郎不幸罹難，以及聯合國對迫遷風險的警告。"
 excerpt: "哥倫比亞規模7.4強震震源深達107公里，理論上該減少地表破壞，死亡人數截至8月14日晚間已攀升至287人。佩雷拉一間倒塌旅館內受困的準新郎確認罹難，聯合國難民署也警告震災恐加劇迫遷風險。"
 publishDate: "2026-08-11T16:16:54.156Z"
-updatedDate: "2026-08-15T09:00:00.000Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "americas"
 tags: ["天然災害", "交通"]
@@ -17,7 +17,6 @@ disclaimerType: "general"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/colombia-earthquake-magnitude-depth-explained-cover.webp"
 coverAlt: "美國地質調查所發布的哥倫比亞規模7.4強震震度圖，顯示搖晃範圍擴及鄰近國家"
-coverImageCredit: "美國地質調查所（USGS）— 公眾領域，取自 Wikimedia Commons"
 risksAndLimits:
   - "死傷與失蹤人數為8月14日晚間哥倫比亞當局彙整統計，搜救仍在進行，後續數字預期會再修正"
   - "震源深度美國地質調查所測得107公里、哥倫比亞地質局測得96公里，兩機構讀數本身就有落差"

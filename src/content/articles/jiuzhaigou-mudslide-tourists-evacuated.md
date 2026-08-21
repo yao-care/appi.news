@@ -43,9 +43,10 @@ sourceType: "wire"
 contentType: "news"
 disclaimerType: "general"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 Reuters、Plataforma Media 等外媒公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
-coverImage: "covers/jiuzhaigou-mudslide-evacuation-cover.webp"
+updatedDate: 2026-08-21
+coverImage: "covers/jiuzhaigou-mudslide-tourists-evacuated-cover.webp"
 coverAlt: "中國四川九寨溝國家公園山谷湖泊景觀，示意土石流事件發生地"
-coverImageCredit: "Yuya360 — CC BY 3.0, Wikimedia Commons"
+coverImageCredit: "Photo by Collins Zhao on Pexels"
 ---
 
 中國四川的世界遺產景區九寨溝，因颱風諾爾（Noul）帶來的豪雨引發土石流，當局7月27日起緊急關閉部分景區，受困遊客已被緊急疏散。這波豪雨同時在甘肅釀成10死23傷，是諾爾登陸中國以來已知傷亡最重的單一事件。

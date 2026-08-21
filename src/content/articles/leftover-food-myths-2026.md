@@ -3,7 +3,7 @@ title: "隔夜菜會致癌嗎？冷藏多久、亞硝酸鹽與復熱方法"
 slug: "leftover-food-myths-2026"
 description: "隔夜菜會致癌嗎？整理香港食物安全中心亞硝酸鹽實測、食藥署闢謠與台灣熟食保存原則，說明冷藏多久、危險溫度帶、復熱中心溫度，以及哪些情況應該直接丟掉。"
 publishDate: "2026-07-30T12:14:01.619Z"
-updatedDate: 2026-08-17
+updatedDate: 2026-08-22
 category: health
 topics: ["food-safety-storage", "mid-autumn-teachers-day-2026"]
 subcategory: medical
@@ -15,7 +15,7 @@ factCheckedBy:
   - "appi-editorial"
 coverImage: "covers/leftover-food-myths-2026-cover.webp"
 coverAlt: "廚房裡整理保存容器裝盛的熟食，象徵隔夜菜正確冷藏保存（示意圖）"
-coverImageCredit: "Photo by Darrien Staton on Unsplash"
+coverImageCredit: "Photo by Pew Nguyen on Pexels"
 status: published
 sourceType: wire
 contentType: news

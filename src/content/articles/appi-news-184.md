@@ -3,12 +3,13 @@ title: "關於黑胡椒，你需要知道的 5 件事"
 slug: "appi-news-184"
 description: "黑胡椒不只是調味料。從胡椒鹼的抗脂肪機制、提升吸收力，到中醫的辛熱性味，一次整理功效、營養價值與正確吃法，讓你今晚就用得上。"
 publishDate: 2026-07-13
-updatedDate: 2026-08-17
+updatedDate: 2026-08-21
 category: health
 subcategory: tcm-integrative
 tags: []
 author: "huang-ziyan"
-coverImage: "covers/appi-news-184.webp"
+coverImage: "covers/appi-news-184-cover.webp"
+coverImageCredit: "Photo by Marta Branco on Pexels"
 coverAlt: "整粒黑胡椒與手動研磨器放在木碗旁，光線自然溫暖"
 status: published
 sourceType: author

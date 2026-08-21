@@ -3,12 +3,13 @@ title: "蓮霧功效、禁忌與升糖指數：糖尿病友怎麼吃"
 slug: "appi-news-186"
 description: "蓮霧的功效、禁忌與缺點一次看：升糖指數偏低、含水量高，但糖尿病患者仍要留意份量與時機。整理黑珍珠與粉紅蓮霧差異、脾胃虛寒者的禁忌提醒，並附學術研究佐證。"
 publishDate: 2026-06-18
-updatedDate: 2026-08-16
+updatedDate: 2026-08-22
 category: health
 subcategory: tcm-integrative
 tags: []
 author: "huang-ziyan"
-coverImage: "covers/appi-news-186.webp"
+coverImage: "covers/appi-news-186-cover.webp"
+coverImageCredit: "Photo by Jeffry Surianto on Pexels"
 coverAlt: "新鮮粉紅蓮霧排列在木質桌面上，光澤飽滿，呈現台灣夏日常見水果樣貌"
 status: published
 sourceType: author

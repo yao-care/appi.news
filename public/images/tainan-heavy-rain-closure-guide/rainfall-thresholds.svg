@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="中央氣象署雨量分級與台南停班停課雨量參考基準比較">
+  <title>雨量特報與台南停班停課基準</title>
+  <desc>中央氣象署大雨、豪雨、大豪雨、超大豪雨分級，以及台南市政府停止上班上課雨量參考基準。</desc>
+  <rect width="960" height="600" fill="#ffffff"/>
+  <rect x="42" y="44" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="62" y="68" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="26" font-weight="700" fill="#1e2030">雨量特報與台南停班停課基準</text>
+  <text x="62" y="98" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="15" fill="#6e7276">特報分級提供氣象警示，停班停課還要看地方基準與致災風險</text>
+
+  <rect x="42" y="126" width="876" height="82" rx="12" fill="#eaf0f8"/>
+  <rect x="42" y="126" width="876" height="3" rx="1.5" fill="#a87515"/>
+  <text x="68" y="158" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="20" font-weight="700" fill="#1e2030">台南市政府</text>
+  <text x="68" y="190" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="22" font-weight="700" fill="#1f3a5f">未來24小時累積雨量預測 350毫米</text>
+  <text x="602" y="180" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14" fill="#6e7276">參考基準，不代表達標即自動放假</text>
+  <text x="602" y="201" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14" fill="#6e7276">仍須評估致災或通行安全風險</text>
+
+  <text x="62" y="254" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="20" font-weight="700" fill="#1e2030">中央氣象署雨量分級</text>
+  <line x1="62" y1="276" x2="898" y2="276" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="76" y="306" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="16" font-weight="700" fill="#6e7276">分級</text>
+  <text x="250" y="306" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="16" font-weight="700" fill="#6e7276">24小時累積雨量</text>
+  <text x="550" y="306" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="16" font-weight="700" fill="#6e7276">短時間條件</text>
+
+  <line x1="62" y1="322" x2="898" y2="322" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="76" y="352" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" font-weight="700" fill="#1e2030">大雨</text>
+  <text x="250" y="352" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" fill="#1e2030">80毫米以上</text>
+  <text x="550" y="352" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" fill="#1e2030">1小時40毫米以上</text>
+  <line x1="62" y1="370" x2="898" y2="370" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="76" y="400" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" font-weight="700" fill="#1e2030">豪雨</text>
+  <text x="250" y="400" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" fill="#1e2030">200毫米以上</text>
+  <text x="550" y="400" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" fill="#1e2030">3小時100毫米以上</text>
+  <line x1="62" y1="418" x2="898" y2="418" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="76" y="448" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" font-weight="700" fill="#1e2030">大豪雨</text>
+  <text x="250" y="448" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" fill="#1e2030">350毫米以上</text>
+  <text x="550" y="448" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" fill="#1e2030">3小時200毫米以上</text>
+  <line x1="62" y1="466" x2="898" y2="466" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="76" y="496" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" font-weight="700" fill="#1e2030">超大豪雨</text>
+  <text x="250" y="496" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" fill="#1e2030">500毫米以上</text>
+  <text x="550" y="496" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" fill="#1e2030">未另列短時條件</text>
+
+  <line x1="62" y1="530" x2="898" y2="530" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="62" y="555" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="13" fill="#6e7276">製圖：APPI News　資料時點：2026年8月21日　資料來源：中央氣象署、全國法規資料庫</text>
+</svg>

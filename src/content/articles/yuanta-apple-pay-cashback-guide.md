@@ -1,7 +1,7 @@
 ---
 title: "元大信用卡綁Apple Pay回饋20%怎麼領？登錄條件與上限整理"
 slug: "yuanta-apple-pay-cashback-guide"
-description: "元大信用卡首度開放綁定Apple Pay，這波20%刷卡金回饋要先登錄才生效。整理登錄期間、卡別限制、每人200元回饋上限與常見漏領原因，照著查對就不會白刷卡。"
+description: "元大Apple Pay綁定回饋怎麼領？元大信用卡首度開放綁定Apple Pay，這波20%刷卡金回饋要先登錄才生效。整理登錄期間、卡別限制、每人200元回饋上限與常見漏領原因，照著查對就不會白刷卡。"
 excerpt: "元大信用卡綁Apple Pay消費20%回饋要先登錄才生效，登錄期間、回饋上限與漏領原因一次看懂。"
 publishDate: "2026-08-18T15:05:53.520Z"
 category: "finance"

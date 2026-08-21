@@ -71,6 +71,8 @@ SMART App Launch以OAuth 2.0為基礎，規範第三方應用如何取得授權�
 
 依衛福部公開說明，FHIR Box整合資料轉換、儲存與交換，並串接健康資料、規則及應用空間（來源：參考文獻2）。
 
+延伸閱讀：[如何評估AI製藥跨國合作：MOU後必看7個重點](/articles/ai-drug-partnership-mou-checklist/)
+
 ![三欄資訊圖並列說明FHIR資料標準、SMART on FHIR應用授權介接與FHIR Box資料整合架構。](https://appi.news/images/fhir-box-medical-ai-certification/2.png "三者分工不同，FHIR統一資料語言，SMART on FHIR管理應用存取，FHIR Box負責整合既有系統。")
 
 醫療AI跨院測試需要把相同臨床概念對應到可比較資料。FHIR可降低格式差異，卻不會消除族群、設備、流程及資料品質差異，外部驗證仍不可省略。
@@ -145,6 +147,8 @@ SMART App Launch以OAuth 2.0為基礎，規範第三方應用如何取得授權�
 ![五道依序排列的醫療AI導入關卡，涵蓋資料、證據、認證、監測以及責任與退場。](https://appi.news/images/fhir-box-medical-ai-certification/4.png "醫院不應把取得認證視為終點，五道關卡都通過後，才具備較完整的導入與退場準備。")
 
 國家級驗證制度與FHIR Box仍在導入階段。待測試規範、合格名單、版本管理及稽核結果公布後，才能判斷制度是否降低導入成本。
+
+延伸閱讀：[醫療 AI 合規上線前的六個坑，台灣健康網路平台一個都躲不掉](/articles/medical-ai-compliance-lessons/)
 
 ### 常見問題
 

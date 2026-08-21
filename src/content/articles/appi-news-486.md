@@ -50,6 +50,8 @@ draft: false
 
 延伸閱讀：[什麼是ICOPE六力評估？一分鐘自評後更重要的事](/articles/icope-six-capacity-screening-guide/)
 
+延伸閱讀：[如何預防長者失能：握力、步態與用藥安全完整指南](/articles/older-adult-function-assessment/)
+
 ### 系統如何運作：感測技術與示警機制
 
 ![智慧床墊離床偵測三階段流程圖，依序為坐姿、床緣、離床三個動作階段，並以箭頭串接](https://appi.news/images/appi-news-486/3.png "從坐起到真正離床，只隔幾個動作，系統搶的就是這段反應時間")

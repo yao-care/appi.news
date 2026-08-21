@@ -49,6 +49,8 @@ draft: false
 
 部分股票 ETF 與高股息 ETF 可能重複持有大型權值股。市場承壓時，高股息部位也可能跌價或減配。應盤點實際持股、國家、產業及收入來源。
 
+延伸閱讀：[台灣經濟成長13.72%：資產配置該怎麼因應](/articles/taiwan-growth-portfolio-stress-test/)
+
 美國財政部資料顯示，10 年期公債殖利率由 2026 年 8 月 7 日的 4.65% 升至 8 月 10 日的 4.72%。[SEC 投資人教育資料](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-86)指出，市場利率與固定利率債券價格通常反向，長天期債券對利率更敏感。
 
 這項短期變化不能證明股債即將同步崩跌，也與基金警語沒有直接因果；影響仍取決於存續期間、信用風險與持有方式。
@@ -93,6 +95,8 @@ draft: false
 - 安全感來自數字，安心感來自財務系統；先診斷，再決定工具組合。
 
 若聯合不利情境已影響基本生活，可尋求合格財務專業人士協助評估。本文提供一般教育資訊，不構成個別投資、稅務或法律建議。
+
+延伸閱讀：[聯準會九月降息就該先買長債是真的嗎？](/articles/fed-rate-cut-long-bonds-myth/)
 
 ### 常見問題
 

@@ -76,6 +76,8 @@ draft: false
 
 延伸閱讀：[醫療 AI 合規上線前的六個坑，台灣健康網路平台一個都躲不掉](/articles/medical-ai-compliance-lessons/)
 
+延伸閱讀：[如何評估AI製藥跨國合作：MOU後必看7個重點](/articles/ai-drug-partnership-mou-checklist/)
+
 ## 檢查點二:SMART on FHIR 的 state 與 PKCE code_verifier
 
 **PKCE 機制的全部安全性,建立在 code_verifier 這串亂數字串不可被預測這一個前提上;亂數產生器出問題,授權流程外觀依然完整,依然核發看似正常的存取權杖。**

@@ -50,6 +50,8 @@ references:
 
 延伸閱讀：[熱恐慌是什麼？高溫誘發恐慌發作的原因與緩解方法整理](/articles/heat-panic-symptoms-guide/)
 
+延伸閱讀：[慢性失眠怎麼判斷？每週3次、持續3個月的診斷標準與健康代價](/articles/chronic-insomnia-diagnosis-criteria/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=82FTJoKZ65I" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：心理創傷會影響一生? 醫師解析失眠.心悸與過度警覺背後原因">
     <img src="/images/trauma-hypervigilance-insomnia-recovery-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="心理創傷會影響一生? 醫師解析失眠.心悸與過度警覺背後原因">

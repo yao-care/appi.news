@@ -1,7 +1,8 @@
 ---
 title: "靖國神社是什麼？終戰81週年防衛相參拜再掀中日韓外交風波"
 slug: "japan-yasukuni-shrine-visit"
-description: "日本防衛大臣小泉進次郎、經濟安保大臣小野田紀美8月15日終戰81週年參拜靖國神社，首相高市早苗改以自民黨總裁身分私費奉納「玉串料」、未親自到場。靖國神社供奉250萬戰死者，其中14人是二戰甲級戰犯；中國外交部提出「強烈抗議」，南韓外交部批評此舉「不合時宜」，兩國幾乎年年為政要參拜發正式抗議。"
+description: "靖國神社是什麼？為什麼參拜靖國神社年年引發外交風波？靖國神社供奉約250萬名戰死者，其中14人是二戰甲級戰犯，這是中韓抗議的根源。本文整理終戰81週年日本防衛大臣小泉進次郎等人參拜的經過、首相高市早苗為何改以私費奉納「玉串料」未親自到場，以及中國「強烈抗議」與南韓批「不合時宜」的官方反應。"
+updatedDate: "2026-08-21"
 excerpt: "終戰81週年，日本防衛相小泉進次郎、經濟安保相小野田紀美參拜靖國神社，高市早苗改私費奉納「玉串料」未親自到場；中國提出「強烈抗議」，南韓批「不合時宜」，兩國年年為此發正式抗議。"
 publishDate: "2026-08-15T17:21:52.730Z"
 category: "international"
@@ -49,7 +50,7 @@ coverAlt: "靖國神社拜殿正面，木造建築與參道石燈籠"
 coverImageCredit: "Maarten Heerlien — CC BY 2.0, via Wikimedia Commons"
 ---
 
-日本8月15日迎來二戰投降81週年，防衛大臣小泉進次郎、經濟安全保障擔當大臣小野田紀美當天參拜靖國神社，[Al Jazeera報導](https://www.aljazeera.com/news/2026/8/15/japanese-minister-visits-shrine-to-war-dead-angering-china-south-korea)指出，中國外交部隨即表示「強烈譴責」並已向日方提出「強烈抗議」，南韓外交部則稱此舉「不合時宜」。首相高市早苗本人未親自到場，改以自民黨總裁身分私費奉納祭祀費「玉串料」，[日本經濟新聞報導](https://www.nikkei.com/article/DGXZQOUA138NX0T10C26A8000000/)指出，這份供品是透過自民黨幹事長鈴木俊一代為轉呈，鈴木本人隨後前往參拜。延伸閱讀：[非核三原則是什麼？廣島長崎原爆81週年　長崎市長槓核武是「絕對之惡」](/articles/hiroshima-81st-non-nuclear-principles/)，同樣是日本8月的戰爭記憶爭議。
+靖國神社供奉約250萬名戰死者，其中14人是二戰後被遠東國際軍事法庭判定犯下最嚴重戰爭罪行的甲級戰犯，這正是日本政要每次參拜都引發中韓抗議的根源。日本8月15日迎來二戰投降81週年，防衛大臣小泉進次郎、經濟安全保障擔當大臣小野田紀美當天參拜靖國神社，[Al Jazeera報導](https://www.aljazeera.com/news/2026/8/15/japanese-minister-visits-shrine-to-war-dead-angering-china-south-korea)指出，中國外交部隨即表示「強烈譴責」並已向日方提出「強烈抗議」，南韓外交部則稱此舉「不合時宜」。首相高市早苗本人未親自到場，改以自民黨總裁身分私費奉納祭祀費「玉串料」，[日本經濟新聞報導](https://www.nikkei.com/article/DGXZQOUA138NX0T10C26A8000000/)指出，這份供品是透過自民黨幹事長鈴木俊一代為轉呈，鈴木本人隨後前往參拜。延伸閱讀：[非核三原則是什麼？廣島長崎原爆81週年　長崎市長槓核武是「絕對之惡」](/articles/hiroshima-81st-non-nuclear-principles/)，同樣是日本8月的戰爭記憶爭議。
 
 <figure>
 <img src="/images/japan-yasukuni-shrine-visit-s1.webp" width="960" height="720" loading="lazy" decoding="async" alt="從高處俯瞰東京靖國神社境內建築群與周邊綠地">

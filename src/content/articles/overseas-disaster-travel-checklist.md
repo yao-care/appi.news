@@ -1,10 +1,11 @@
 ---
-title: "海外地震後還能去嗎？行前判斷清單"
+title: "地震後還能去旅遊嗎？出發前72小時判斷清單"
 slug: "overseas-disaster-travel-checklist"
 coverImage: "covers/overseas-disaster-travel-checklist.webp"
 coverAlt: "旅客在機場查看手機、地圖與隨身應急用品評估災後行程"
-description: "海外地震、火山或洪水後是否照常出發，應分別查旅遊警示、當地災防資訊、機場鐵路、住宿營業、航空退改與保險條款。本文提供出發前72小時到登機日的核對順序。"
+description: "地震後還能去旅遊嗎？別只看新聞嚴不嚴重，出發前依序查旅遊警示、災區範圍、機場鐵路、住宿營業、航空退改與保險條款六項再決定。本文提供出發前72小時到登機日的核對順序、該保存哪些截圖證據，日本等海外災後行程都適用。"
 publishDate: 2026-08-10
+updatedDate: 2026-08-21
 category: "international"
 subcategory: "global-trends"
 tags: ["旅遊", "天然災害", "亞太"]
@@ -28,7 +29,7 @@ references:
     publisher: "日本氣象廳"
 ---
 
-海外發生地震後，不能只用「新聞很嚴重」或「旅行社沒通知」決定是否出發。至少要核對官方旅遊警示、災區範圍、交通節點、住宿營業、航空退改與保險六項資料。熊本個案的即時資訊可看[熊本地震交通與旅遊現況](/articles/kumamoto-earthquake-travel-impact/)；這份清單可套用到其他國家與災害。
+地震後還能去旅遊嗎？答案取決於六項可以查證的資料：官方旅遊警示、災區範圍、交通節點、住宿營業、航空退改與保險，逐一核對後才決定出發或改期。不能只用「新聞很嚴重」或「旅行社沒通知」判斷。熊本個案的即時資訊可看[熊本地震交通與旅遊現況](/articles/kumamoto-earthquake-travel-impact/)；這份清單可套用到其他國家與災害。
 
 ## 出發前 72 小時：先判斷目的地是否在影響區
 

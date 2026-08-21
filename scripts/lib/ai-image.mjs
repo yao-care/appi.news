@@ -1,7 +1,7 @@
 import sharp from 'sharp';
 import { readFileSync, writeFileSync, unlinkSync, mkdtempSync, existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
-import { homedir, tmpdir } from 'node:os';
+import { tmpdir } from 'node:os';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { expandPhotoPrompt, composePhotoPrompt, varietyHints } from './photo-prompt.mjs';
 import { visualCheck, stockPhotoCheck } from './visual-check.mjs';
@@ -45,14 +45,8 @@ export function imgTag({ src, width, height, alt = '' }) {
   return `<img src="${src}" width="${width}" height="${height}" loading="lazy" decoding="async" alt="${safeAlt}">`;
 }
 
-export function readOpenAIKey() {
-  const path = join(homedir(), '.config/appi-news/ai-worker.secrets');
-  const m = readFileSync(path, 'utf8').match(/^OPENAI_API_KEY=(.+)$/m);
-  if (!m) throw new Error(`OPENAI_API_KEY not found in ${path}`);
-  return m[1].trim().replace(/^["']|["']$/g, '');
-}
-
-// 取 GitHub token（worker 以 repo push 權限防付費 API 被濫用）：env 優先，否則 gh auth token。
+// 取 GitHub token（worker 的圖庫搜尋 /stock-search 以 repo push 權限防付費 API 被濫用）：
+// env 優先，否則 gh auth token。（生圖已不走 worker，此 token 只剩 stock.mjs 在用。）
 export function githubToken() {
   if (process.env.GITHUB_TOKEN) return process.env.GITHUB_TOKEN.trim();
   if (process.env.GH_TOKEN) return process.env.GH_TOKEN.trim();
@@ -61,22 +55,6 @@ export function githubToken() {
   } catch {
     return '';
   }
-}
-
-// 經 worker 同步生圖（POST /generate → {b64,mime}），回 webp。worker 端會強制台灣人物鐵律。
-// quality 明確帶入時附進 body（人物 photoreal 用 'medium'）；省略則由 worker 用其 env 預設（low）。
-async function generateViaWorker({ prompt, width, token, quality }) {
-  const body = { prompt, size: 'landscape' };
-  if (quality) body.quality = quality;
-  const res = await fetch(`${AI_WORKER}/generate`, {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${token}`, 'content-type': 'application/json' },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) throw new Error(`worker 生圖失敗（${res.status}）：${(await res.text()).slice(0, 200)}`);
-  const { b64 } = await res.json();
-  if (!b64) throw new Error('worker 未回傳圖片');
-  return toWebp(Buffer.from(b64, 'base64'), width);
 }
 
 /** 解析 codex 生圖回覆的 IMG=<path> 行。純函式，供測試。 */
@@ -114,43 +92,23 @@ ${prompt}
 }
 
 // 整合（不單元測試）：生圖 → webp。
-// 主路徑＝codex 原生生圖；失敗才退 worker（金鑰在 worker 上）→ 本機 OpenAI 金鑰（雙備援，
-// 產線不因單一引擎故障斷炊；退回時印原因，方便對 log 追）。
+// 🔴 生圖唯一路徑＝codex 原生 image_generation（站長 2026-08-22 裁示：100% 走 codex，
+// 不得退回 gpt-image-2 API／worker）。codex 失敗就 throw，讓配圖 gate 照紅線「中止不發、
+// 改動留工作區待補」，不准靜默改用其他引擎。model/size/quality 參數已停用，
+// 僅為呼叫端簽名相容而保留。
 export async function generateImage({
   topic,
   context = '',
   width = 1200,
-  model = 'gpt-image-2',
-  size = '1536x1024',
-  quality = 'low', // 段落圖多，用 low 控成本（僅備援路徑使用；codex 路徑無此參數）
+  model: _model, // 停用（僅簽名相容）
+  size: _size, // 停用（僅簽名相容）
+  quality: _quality, // 停用（僅簽名相容）
   prompt: prebuiltPrompt, // 人物 photoreal 路徑傳 composePhotoPrompt 組好的完整 prompt
 }) {
   const prompt = prebuiltPrompt && String(prebuiltPrompt).trim()
     ? String(prebuiltPrompt).trim()
     : buildImagePrompt({ topic, context });
-
-  try {
-    return await generateViaCodex({ prompt, width });
-  } catch (err) {
-    console.warn(`     ⚠️ codex 生圖失敗，退回備援（worker/API）：${String(err.message || err).slice(0, 150)}`);
-  }
-
-  const token = githubToken();
-  if (token) {
-    return generateViaWorker({ prompt, width, token, quality });
-  }
-
-  // fallback：本機 OpenAI 金鑰直打
-  const key = readOpenAIKey();
-  const res = await fetch('https://api.openai.com/v1/images/generations', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${key}`, 'content-type': 'application/json' },
-    body: JSON.stringify({ model, prompt, size, quality, n: 1 }),
-  });
-  if (!res.ok) throw new Error(`OpenAI ${res.status}: ${(await res.text()).slice(0, 150)}`);
-  const b64 = (await res.json()).data?.[0]?.b64_json;
-  if (!b64) throw new Error('no image returned');
-  return toWebp(Buffer.from(b64, 'base64'), width);
+  return generateViaCodex({ prompt, width });
 }
 
 // 生成圖 → 暫存成 jpg（Read/vision 讀 webp 支援不保證）→ 視覺自檢 → 清暫存。

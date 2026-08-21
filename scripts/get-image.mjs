@@ -42,7 +42,7 @@ const isCover = /(^|\/)covers\//.test(String(out ?? ''));
 const width = Number(arg('width', isCover ? '1200' : '960'));
 const query = arg('query', topic);
 const wantPeople = has('people');
-// --generate：跳過圖庫，直接走 OpenAI 生圖（gpt-image-2）。給「圖庫命中率低或要求全站生成風格統一」
+// --generate：跳過圖庫，直接走 codex 原生生圖（唯一生圖路徑）。給「圖庫命中率低或要求全站生成風格統一」
 // 的產線用（健康紀念日線，站長 2026-07-28 指定）。預設仍是圖庫優先，不影響其餘產線。
 const forceGenerate = has('generate');
 const dryRun = has('dry-run');

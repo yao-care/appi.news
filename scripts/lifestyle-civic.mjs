@@ -16,7 +16,7 @@ import { pathToFileURL } from 'node:url';
 import { buildCivicPrompt, parseCivicResult } from './lib/lifestyle-civic.mjs';
 import { fetchCivicCandidates } from './lib/civic-fetch.mjs';
 import { loadSeen, filterNew, recordSeen } from './lib/civic-ledger.mjs';
-import { runClaudeArticle } from './lib/claude-cli.mjs';
+import { runWriterArticle } from './lib/writer-cli.mjs'; // 寫作＝codex（站長 2026-08-22 裁示），查核仍走 claude-cli
 import { runArticleGates } from './lib/publish-pipeline.mjs';
 import { articleTitle, recentTitles } from './lib/article-index.mjs';
 import { salvageArticle } from './lib/changed-articles.mjs';
@@ -63,7 +63,7 @@ async function main() {
   const branch = sh('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
   console.log(`→ 便民市政整理（分支 ${branch}，${go ? '上架' : 'stage 不 push'}）`);
   // 成功判定三態的正本＝lib/claude-cli.mjs。單發線 quota/fail 都中止（infra 失敗，不記帳本、下輪重試）。
-  const c = runClaudeArticle({ prompt });
+  const c = runWriterArticle({ prompt });
   if (c.kind === 'quota') die(`撞用量上限（不記帳本、候選保留下輪重試）：${c.detail}`);
   if (c.kind === 'fail') die(`claude 失敗：${c.detail}`);
   const v = parseCivicResult(c.stdout);

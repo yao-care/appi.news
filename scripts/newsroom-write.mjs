@@ -29,6 +29,7 @@ import { nextOpenPublishDate, takenDatesFromContents } from './lib/publish-slot.
 import { coverDuplicatesInline } from './lib/image-dedupe.mjs';
 import { checkCoverFile } from './lib/cover-spec.mjs';
 import { runArticleGates } from './lib/publish-pipeline.mjs';
+import { WRITER_CMD, writerExecArgs } from './lib/writer-cli.mjs';
 import { RISKS_PROMPT } from "./lib/risks-prompt.mjs";
 import { EXPERT_NOTE_PROMPT } from "./lib/expert-note-prompt.mjs";
 import { GROWTH_PROMPT } from "./lib/growth-prompt.mjs";
@@ -299,9 +300,11 @@ async function main() {
   }
   console.log(writeOnly ? `→ 在分支 ${branch} 上起草（--write-only：不 build、不碰 git）` : `→ 在分支 ${branch} 上起草並發佈`);
 
-  console.log('→ claude 起草中…');
-  const draft = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { stdio: 'inherit' });
-  if (draft.status !== 0) die(`claude 起草失敗（exit ${draft.status}）`);
+  console.log('→ codex 起草中…');
+  // 寫作＝codex（站長 2026-08-22 裁示）；參數正本＝lib/writer-cli.mjs 的 writerExecArgs。
+  // stdio inherit 讓起草過程直接進 cron log；額度/失敗樣態由外層 _runner.sh 第二道網掃。
+  const draft = spawnSync(WRITER_CMD, writerExecArgs(prompt), { stdio: 'inherit' });
+  if (draft.status !== 0) die(`codex 起草失敗（exit ${draft.status}）`);
 
   // 必須真的產出了文章。
   // --write-only 平行批次下，`git status src/content/articles/` 會同時看到**別篇**的產物，

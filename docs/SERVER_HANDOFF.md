@@ -144,7 +144,7 @@ grep -n "notify(\|notifyBlocks(\|devReply(" scripts/slack-actions-server.mjs
 
 ### cron 總表（全部跑在 publisher checkout、UTC 計時）
 
-> **模型**：所有 cron 一律用 **Sonnet 5（`claude-sonnet-5`）**（newsroom 主稿 Sonnet、viewpoint gate Haiku），**不再用 Opus**——全 Opus 曾把 claude-appi 週用量額度燒爆、自動化全失敗，背景見 [`docs/lessons/automation-model-and-account-split.md`](./lessons/automation-model-and-account-split.md)。新增任何 `claude-appi -p` 呼叫**務必帶 `--model`**，別吃全域預設。
+> **模型（2026-08-22 起雙引擎，站長裁示）**：**寫作文章＝codex**（`codex exec`，模型與參數正本＝`scripts/lib/writer-cli.mjs`，一律明確帶 `-m`）；**非寫作（選題雷達／查核 gate／週報／大腦體檢／配圖）＝claude-appi**（主力 `claude-sonnet-5`、查核 `haiku`，**不再用 Opus**——全 Opus 曾把週用量額度燒爆、自動化全失敗，背景見 [`docs/lessons/automation-model-and-account-split.md`](./lessons/automation-model-and-account-split.md)）。新增任何 `claude-appi -p` 呼叫**務必帶 `--model`**、任何 `codex exec` 呼叫**務必帶 `-m`**，別吃全域預設。每日大腦層（seo-ops）維持 claude、不在此範圍。
 > **日誌**：集中在 `/var/log/appi-news/<job>.log`（不放 `/tmp`，方便稽核）。
 > **crontab 排版**：所有 appi.news 行收在 crontab 末段同一個「APPI NEWS」區塊，勿再散落到其他專案之間。
 

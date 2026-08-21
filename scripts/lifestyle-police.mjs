@@ -12,7 +12,7 @@ import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import { buildPolicePrompt, parsePoliceResult } from './lib/lifestyle-police.mjs';
 import { fetchPoliceCandidates } from './lib/police-fetch.mjs';
-import { runClaudeArticle } from './lib/claude-cli.mjs';
+import { runWriterArticle } from './lib/writer-cli.mjs'; // 寫作＝codex（站長 2026-08-22 裁示），查核仍走 claude-cli
 import { runArticleGates } from './lib/publish-pipeline.mjs';
 import { articleTitle, recentTitles } from './lib/article-index.mjs';
 import { salvageArticle } from './lib/changed-articles.mjs';
@@ -60,7 +60,7 @@ async function main() {
   const branch = sh('git', ['rev-parse', '--abbrev-ref', 'HEAD']);
   console.log(`→ 警消好人好事整理（分支 ${branch}，${go ? '上架' : 'stage 不 push'}）`);
   // 成功判定三態的正本＝lib/claude-cli.mjs。單發線 quota/fail 都中止（候選下輪重抓）。
-  const c = runClaudeArticle({ prompt });
+  const c = runWriterArticle({ prompt });
   if (c.kind === 'quota') die(`撞用量上限（候選下輪重抓）：${c.detail}`);
   if (c.kind === 'fail') die(`claude 失敗：${c.detail}`);
   const v = parsePoliceResult(c.stdout);

@@ -16,7 +16,7 @@ import { pathToFileURL } from 'node:url';
 import { buildVideoPrompt, parseVideoResult } from './lib/lifestyle-video.mjs';
 import { fetchVideoCandidates } from './lib/video-fetch.mjs';
 import { loadSeen, filterNew, recordSeen } from './lib/video-ledger.mjs';
-import { runClaudeArticle } from './lib/claude-cli.mjs';
+import { runWriterArticle } from './lib/writer-cli.mjs'; // 寫作＝codex（站長 2026-08-22 裁示），查核仍走 claude-cli
 import { runArticleGates } from './lib/publish-pipeline.mjs';
 import { articleTitle, recentTitles } from './lib/article-index.mjs';
 import { salvageArticle } from './lib/changed-articles.mjs';
@@ -103,7 +103,7 @@ async function main() {
     console.log(`\n[${i + 1}/${fresh.length}] ${c.source}｜${c.title}`);
     const prompt = buildVideoPrompt(c, [...recent, ...written.map((w) => w.title)]);
     // 成功判定三態的正本＝lib/claude-cli.mjs：quota 中止整批；fail 跳過這支（不記帳本）。
-    const run = runClaudeArticle({ prompt });
+    const run = runWriterArticle({ prompt });
     if (run.kind === 'quota') {
       console.error(`  ✖ 撞用量上限，中止整批（已寫 ${written.length} 篇）：${run.detail}`);
       quotaHit = true;

@@ -15,7 +15,8 @@ import { pathToFileURL } from 'node:url';
 import yaml from 'js-yaml';
 import { buildIntlPrompt, parseIntlResult } from './lib/international-write.mjs';
 import { dedupeByEvent, filterSeen, mergeSeen, buildTriagePrompt, parseTriage } from './lib/international-gate.mjs';
-import { runClaudeOnce, runClaudeArticle } from './lib/claude-cli.mjs';
+import { runClaudeOnce } from './lib/claude-cli.mjs';
+import { runWriterArticle } from './lib/writer-cli.mjs'; // 寫作＝codex（站長 2026-08-22 裁示），haiku 批次篩選仍走 claude-cli
 import { runArticleGates } from './lib/publish-pipeline.mjs';
 import { listArticleFrontmatters } from './lib/article-index.mjs';
 import { salvageArticle } from './lib/changed-articles.mjs';
@@ -257,7 +258,7 @@ async function main() {
     console.log(`\n→ [${s.region}] ${s.numSources}家 | ${s.fullName}`);
     const t0 = Date.now();
     // 成功判定三態的正本＝lib/claude-cli.mjs：quota（帳號層級）中止整批；fail（單則）跳過續跑。
-    const c = runClaudeArticle({ prompt });
+    const c = runWriterArticle({ prompt });
     if (c.kind === 'quota') {
       skipped = stories.length - i;
       console.log(`  ⛔ 撞用量上限，中止本輪（剩 ${skipped} 則不處理；額度重置後由下輪重新選題）：${c.detail}`);

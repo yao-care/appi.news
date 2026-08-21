@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="貨櫃航運三個景氣訊號：馬士基海運利用率96%，Drewry全球貨櫃指數一週上升4%至4526美元，亞洲至美東運力8月較7月下降9%">
+  <title>貨櫃航運三個景氣訊號</title>
+  <desc>截至2026年8月20日，馬士基第二季海運利用率為96%；Drewry世界貨櫃指數一週上升4%至每40呎櫃4526美元；Drewry資料顯示亞洲至美東運力8月較7月下降9%。</desc>
+  <rect width="960" height="600" fill="#ffffff"/>
+  <rect x="48" y="48" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="68" y="70" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="26" font-weight="700" fill="#1e2030">貨櫃航運三個景氣訊號</text>
+  <text x="68" y="101" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" fill="#6e7276">利用率、現貨運價與航線運力同時指向市場偏緊，但不同航線的方向並不一致</text>
+
+  <rect x="48" y="140" width="864" height="118" rx="12" fill="#eaf0f8"/>
+  <rect x="48" y="140" width="864" height="3" rx="1.5" fill="#a87515"/>
+  <text x="78" y="177" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#1e2030">馬士基海運利用率</text>
+  <text x="78" y="224" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="38" font-weight="700" fill="#1e2030">96%</text>
+  <text x="238" y="219" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" fill="#6e7276">2026 年第二季，前季 94%</text>
+  <circle cx="824" cy="199" r="30" fill="#a87515"/>
+  <path d="M812 207 L824 191 L836 207 M824 191 V216" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <line x1="48" y1="286" x2="912" y2="286" stroke="#e8e9ed"/>
+  <text x="78" y="326" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#1e2030">Drewry 世界貨櫃指數</text>
+  <text x="78" y="374" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="38" font-weight="700" fill="#1e2030">+4%</text>
+  <text x="238" y="369" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" fill="#6e7276">一週至 4,526 美元／40 呎櫃</text>
+  <circle cx="824" cy="349" r="30" fill="#a87515"/>
+  <path d="M812 357 L824 341 L836 357 M824 341 V366" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <line x1="48" y1="416" x2="912" y2="416" stroke="#e8e9ed"/>
+  <text x="78" y="456" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#1e2030">亞洲至美東航線運力</text>
+  <text x="78" y="504" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="38" font-weight="700" fill="#1e2030">-9%</text>
+  <text x="238" y="499" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" fill="#6e7276">8 月較 7 月，Drewry 月比資料</text>
+  <circle cx="824" cy="479" r="30" fill="#eef0f3"/>
+  <path d="M812 469 L824 485 L836 469 M824 485 V460" fill="none" stroke="#5e6070" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <line x1="48" y1="540" x2="912" y2="540" stroke="#e8e9ed"/>
+  <text x="48" y="565" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#6e7276">製圖：APPI News</text>
+  <text x="912" y="565" text-anchor="end" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="13" fill="#6e7276">資料時點：2026/8/20；馬士基 Q2、Drewry WCI</text>
+</svg>

@@ -1,9 +1,10 @@
 ---
-title: "社群媒體怎麼傷害青少年心理健康？Meta判賠近10億美元創紀錄"
+title: "社群媒體如何傷害青少年？Meta加州審判焦點"
 slug: "meta-instagram-teen-safety-court-order"
-description: "新墨西哥州法院8月6日裁定Meta賠5.67億美元，加計3月陪審團判決的3.75億美元，合計近9.42億美元。法官要求Meta五年內開發未成年年齡預測模型、刪除13歲以下個資，但拒絕強制年齡驗證與演算法改造；Meta已表態上訴。"
-excerpt: "新墨西哥州法院裁定Meta因傷害青少年心理健康賠5.67億美元，加計3月判決合計近9.42億美元；法官同時要求五年內改造未成年保護機制，Meta已表態上訴。"
+description: "美國29州控告Meta讓Instagram與Facebook以成癮式設計留住未成年使用者，奧克蘭聯邦審判8月18日開庭；前工程主管Arturo Béjar作證指公司把成長放在兒少安全前，本文整理指控、Meta答辯與1.4兆美元潛在賠償爭議。"
+excerpt: "Meta在加州奧克蘭接受29州聯邦訴訟審理，前工程主管Arturo Béjar作證指公司把用戶成長置於兒少安全前；Meta否認指控，州方估算潛在賠償最高可達1.4兆美元。"
 publishDate: "2026-08-07T17:51:19.651Z"
+updatedDate: "2026-08-21T07:18:34.079Z"
 category: "international"
 subcategory: "americas"
 tags:
@@ -11,30 +12,27 @@ tags:
   - "司法"
   - "科技政策"
 highlights:
-  - "新墨西哥州法院8月6日裁定Meta須支付5.67億美元，加計3月陪審團判決的3.75億美元，兩案合計近9.42億美元，是美國近年社群媒體傷害訴訟金額最高的案例之一"
-  - "法官Bryan Biedscheid認定Instagram與Facebook對青少年構成「公共妨害」，5.67億美元中4.2億美元指定用於青少年心理健康治療服務，其餘用於5年期的宣導、篩檢與轉介"
-  - "法院拒絕強制Meta做身分年齡驗證與改造內容推薦演算法，法官認為前者可能牴觸聯邦法律、後者「不合理干擾」Meta的商業營運"
-  - "改採替代方案：Meta須兩年內開發13歲以下使用者的AI年齡預測模型、加註教育警示橫幅、與學校或兒少安全組織合作建立可疑帳號舉報管道，並刪除13歲以下使用者已蒐集的個資"
-  - "Meta回應「不同意」判決並將提起上訴；新墨西哥州檢察長托雷茲稱這是「每個曾擔心社群媒體如何影響孩子的家長的勝利」"
-  - "案件源於新墨西哥州2023年提告，全美另有29州就類似指控提聯邦集體訴訟、8州各自在州法院起訴，Meta本月稍後還要在加州奧克蘭聯邦法院出庭應訊"
+  - "8月18日，加州、科羅拉多、肯塔基與紐澤西4州在奧克蘭代表29州對Meta開庭，指控Instagram與Facebook以設計留住未成年使用者並違反兒童資料保護規定"
+  - "前Meta工程主管Arturo Béjar 8月19日作證，指Instagram對13歲以下使用者採取「不問、不說」態度，產品團隊績效多看用戶數與使用時間"
+  - "州方訴訟提出的潛在賠償估算最高達1.4兆美元；Meta否認指控，主張州方斷章取義，並稱已提供青少年隱私設定與使用時間工具"
 risksAndLimits:
-  - "Meta已表態上訴，5.67億美元金額與具體改革要求可能因上訴審理而調整，非最終定案"
-  - "本案僅涵蓋新墨西哥州；美國另有29州聯邦集體訴訟與8州個別州訴訟仍在審理，各州結果可能不同"
-  - "法院要求的13歲以下年齡預測模型訂為「兩年內開發」，目前尚未實際上線，成效無法驗證"
-  - "判決書全文達67頁，本文引用的改革內容係綜合多家美國媒體對判決書的整理，非逐字比對原始判決書"
+  - "案件仍在審理，Béjar證詞屬州方證人陳述，陪審團尚未作成裁決"
+  - "Meta否認指控，主張州方挑選資料與研究，並稱已提供青少年保護功能"
+  - "29州訴訟先由4州出庭，其餘25州案件預定後續審理，進度與結果可能不同"
+  - "1.4兆美元是訴訟提出的潛在賠償估算，法院尚未裁定這筆金額"
 references:
-  - title: "Court orders Meta to pay $567M to address kids' mental health and safety online"
-    url: "https://abcnews.com/US/wireStory/court-orders-instagram-facebooks-meta-pay-567m-address-135441473"
-    publisher: "ABC News（美聯社供稿）"
-  - title: "New Mexico court orders Meta to pay $567 million over mental health harms to kids online"
-    url: "https://www.pbs.org/newshour/nation/new-mexico-court-orders-meta-to-pay-567-million-over-mental-health-harms-to-kids-online"
-    publisher: "PBS NewsHour"
-  - title: "Judge orders Meta to pay $567 million over harm to New Mexico youth"
-    url: "https://www.abqjournal.com/news/judge-orders-meta-to-pay-567-million-over-harm-to-new-mexico-youth/3098391"
-    publisher: "Albuquerque Journal"
-  - title: "Court orders Meta to pay $567 million to address kids mental health and safety on Instagram, Facebook"
-    url: "http://www.goskagit.com/news/nation/court-orders-meta-to-pay-567-million-to-address-kids-mental-health-and-safety-on/article_07bd964e-2bb3-5238-9e42-e4d300b3dda0.html"
-    publisher: "Skagit Valley Herald（美聯社供稿）"
+  - title: "Former Meta engineer says Instagram took a 'don't ask, don't tell' approach on kids under 13"
+    url: "https://apnews.com/article/meta-trial-teens-instagram-bejar-oakland-858e260ddbcc45532afc6194e48a54b6"
+    publisher: "Associated Press"
+  - title: "Zuckerberg lied about concern for child safety, Meta whistleblower testifies at landmark trial"
+    url: "https://www.theguardian.com/technology/2026/aug/19/meta-safety-trial-whistleblower-testimony"
+    publisher: "The Guardian"
+  - title: "'Profits won.' The child safety trial against Meta kicks off in federal court"
+    url: "https://www.wusf.org/2026-08-18/profits-won-the-child-safety-trial-against-meta-kicks-off-in-federal-court"
+    publisher: "NPR／WUSF"
+  - title: "Ahead of Opening Statements, Attorney General Bonta Lays Out Case Against Meta"
+    url: "https://oag.ca.gov/news/press-releases/ahead-opening-statements-attorney-general-bonta-lays-out-case-against-meta-over"
+    publisher: "加州司法部"
 author: "appi-editorial"
 reviewedBy:
   - "luo-yang"
@@ -44,57 +42,70 @@ status: "published"
 sourceType: "wire"
 contentType: "news"
 disclaimerType: "general"
-disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
+disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 AP、衛報、NPR及加州司法部公開資料而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/meta-instagram-teen-safety-court-order-cover.webp"
 coverAlt: "手機螢幕顯示多款社群媒體應用程式圖示（示意圖）"
 coverImageCredit: "Photo by dole777 on Unsplash"
 ---
 
-新墨西哥州法院8月6日（週四）裁定Meta須支付5.67億美元，賠償Instagram與Facebook對青少年心理健康造成的傷害，加計今年3月陪審團另外判賠的3.75億美元民事罰款，兩筆合計逼近9.42億美元，是美國近年社群媒體傷害訴訟金額最高的案例之一。據[ABC News（美聯社供稿）報導](https://abcnews.com/US/wireStory/court-orders-instagram-facebooks-meta-pay-567m-address-135441473)，第一司法區首席法官Bryan Biedscheid同時要求Meta在往後五年內，逐步改造Instagram與Facebook處理未成年使用者的多項機制。
+Meta在加州奧克蘭的青少年安全聯邦審判已於8月18日開庭，前Meta工程主管Arturo Béjar於8月19日作證，指Instagram對13歲以下使用者採取「不問、不說」態度，並把用戶數與使用時間放在安全前面。[美聯社報導](https://apnews.com/article/meta-trial-teens-instagram-bejar-oakland-858e260ddbcc45532afc6194e48a54b6)
 
-這不是新墨西哥州檢察長托雷茲今年唯一一次對兒少保護出手。今年7月他才[控告自家的兒童、青少年暨家庭部門，指工作人員把一名患心臟病的15歲美籍少年送過墨西哥邊境找母親](/articles/new-mexico-foster-teen-border-lawsuit/)；這次矛頭轉向全球市值最高的科技公司之一。托雷茲8月6日回應判決時說：「這起案件從頭到尾都是為了保護兒童，確保全球最大的科技公司之一不能靠傷害年輕人的做法獲利卻不用負責。」[Albuquerque Journal引述](https://www.abqjournal.com/news/judge-orders-meta-to-pay-567-million-over-harm-to-new-mexico-youth/3098391)他另外表示，這場判決「是每個曾擔心社群媒體如何影響孩子的家長的勝利，也是每個值得在網路上更安全成長的孩子的勝利」。
+這場訴訟由加州、科羅拉多、肯塔基與紐澤西4州出庭，代表2023年提告Meta的29州聯盟；州方指控Instagram與Facebook以無限捲動、推薦演算法等設計留住未成年使用者，並在未取得家長同意下蒐集13歲以下兒童資料。[NPR報導](https://www.wusf.org/2026-08-18/profits-won-the-child-safety-trial-against-meta-kicks-off-in-federal-court)指出，州方提出的潛在賠償估算最高達1.4兆美元，但目前尚未有法院裁決金額。
 
-## 判決怎麼來的：67頁裁定書拆成兩階段
+這起聯邦案與新墨西哥州先前的Meta判決分開，前案可參考[ABC News的美聯社供稿](https://abcnews.com/US/wireStory/court-orders-instagram-facebooks-meta-pay-567m-address-135441473)。APPI也整理過[紐墨西哥州檢察長提告兒童福利機構的兒童安全案件](/articles/new-mexico-foster-teen-border-lawsuit/)，兩案都涉及州政府如何追究兒少保護責任，但被告與訴訟內容不同。
 
-據Albuquerque Journal報導，這起訴訟2023年由新墨西哥州司法部提起，指控Meta明知Instagram與Facebook的設計會傷害青少年心理健康，卻仍隱瞞平台上兒童性剝削的相關資訊。案件先由陪審團審理，今年3月裁定Meta須支付3.75億美元民事罰款；緊接著5月4日至22日進行第二階段的法官獨任審理（不設陪審團），聚焦在具體的損害填補金額與整改措施，最終由Biedscheid法官寫出這份長達67頁的裁定書，8月6日晚間公布。
+## 事件概要
 
-金額分配上，[PBS NewsHour報導](https://www.pbs.org/newshour/nation/new-mexico-court-orders-meta-to-pay-567-million-over-mental-health-harms-to-kids-online)指出，5.67億美元中4.2億美元指定用於青少年治療服務，其餘1.47億美元在5年內用於提升意識、預防、篩檢評估、轉介等費用。這個金額其實低於新墨西哥州原本要求的10億美元，州政府原本希望用這筆錢支應更大規模的州心理健康改善計畫，但法官未全數採納。
+截至8月21日，案件仍在加州北區聯邦地方法院審理，預計歷時約6週。[美聯社](https://apnews.com/article/meta-trial-teens-instagram-bejar-oakland-858e260ddbcc45532afc6194e48a54b6)與[加州司法部](https://oag.ca.gov/news/press-releases/ahead-opening-statements-attorney-general-bonta-lays-out-case-against-meta-over)的資料顯示，州方主張Meta明知平台可能傷害兒童與青少年，仍以提高使用時間與廣告收益為導向設計產品；Meta否認指控，認為州方把內部資料、聲明與研究斷章取義。
 
-## 拒絕年齡驗證、演算法改造，但要求AI年齡預測與資料刪除
+## 更新時間軸
 
-法官在整改要求上做出明顯取捨。Albuquerque Journal引述裁定書內容，Biedscheid法官認定強制用戶提交身分文件做年齡驗證「超出法院權限」，且可能牴觸聯邦法律，明確寫道「監管解決方案應由行政與立法部門負責」；他也拒絕要求Meta改造內容推薦演算法，理由是這會「不合理干擾」Meta的商業運營。
+- （更新 2026-08-21：Arturo Béjar在第二天作證時指Instagram對13歲以下使用者採「不問、不說」態度，並稱員工考核與薪酬多聚焦用戶數及使用時間；Meta表示公司長期投入青少年安全。）[美聯社](https://apnews.com/article/meta-trial-teens-instagram-bejar-oakland-858e260ddbcc45532afc6194e48a54b6)
 
-法官改採較窄的替代方案，PBS NewsHour與goskagit（美聯社供稿）的報導合併來看，具體要求包括：
+## 這場審判在審什麼？
 
-- Meta須在兩年內改進以AI為基礎的年齡確保工具，並開發鎖定13歲以下使用者的年齡預測模型
-- Facebook與Instagram須加註教育警示橫幅，明確說明平台既有的保護功能、最佳實踐與工具
-- Meta須與學校或兒童安全組織合作，建立管道讓校方人員可標記疑似13歲以下的使用者帳號
-- 須刪除已對13歲以下使用者蒐集到的個人資料
-- 改進Meta既有的兒童性剝削舉報審查系統
-- 每半年（6月30日與12月31日）向法院提交一次合規進度報告，為期5年
-- 每半年為執法單位提供一次網路兒童犯罪相關培訓，並為新墨西哥州司法部的網路兒童犯罪部門維持24小時聯絡窗口
+州方在8月18日開庭時表示，Meta透過Facebook與Instagram的無限捲動、推薦內容、照片濾鏡與按讚功能，鼓勵未成年人持續使用平台，並淡化產品對心理健康的風險。[NPR](https://www.wusf.org/2026-08-18/profits-won-the-child-safety-trial-against-meta-kicks-off-in-federal-court)報導，州方也指控Meta違反《兒童線上隱私保護法》（COPPA），蒐集13歲以下使用者個資時未取得家長同意。
 
-![法槌與法律書籍，象徵法院判決（示意圖）](/images/meta-instagram-teen-safety-court-order-s1.webp)
+加州檢察長羅布・邦塔在開庭前公布的訴訟說明指出，這起2023年提起的案件還涉及加州虛假廣告法與不公平競爭法；加州、科羅拉多、肯塔基與紐澤西4州負責在本輪審理中出庭。[加州司法部公告](https://oag.ca.gov/news/press-releases/ahead-opening-statements-attorney-general-bonta-lays-out-case-against-meta-over)列出的州方主張包括平台設計造成過度使用、非法使用13歲以下兒童資料，以及對平台安全程度作出誤導性說明。
 
-## Meta回應：不同意、將上訴
+Meta律師保羅・施密特則表示，公司已提供加強隱私設定與Instagram一小時提醒等工具；他主張州方挑選部分資料、聲明與研究，沒有呈現Meta處理青少年風險的完整脈絡。[NPR報導](https://www.wusf.org/2026-08-18/profits-won-the-child-safety-trial-against-meta-kicks-off-in-federal-court)記載，Meta承認部分青少年難以管理社群使用時間，但否認州方對產品設計與違法行為的指控。
 
-Meta發言人回應本次判決時表示：「我們一直努力維護用戶在平台上的安全，也對辨識與移除不良行為者及有害內容的挑戰保持透明。我們對自己保護青少年的紀錄有信心，也會持續為那些扭曲事實的指控辯護。」[ABC News報導](https://abcnews.com/US/wireStory/court-orders-instagram-facebooks-meta-pay-567m-address-135441473)指出，Meta已表態將對判決提起上訴。
+## 前Meta工程主管指控：安全被放到後面
 
-從財務規模看，9.42億美元的總賠償金額，相對Meta 2025年度約600億美元的年利潤只佔一小部分；判決公布後，Meta股價在盤後交易僅下跌不到0.5%，收在589.44美元。
+Béjar曾在Facebook任職，2009年至2015年負責與網路霸凌相關的工作，2019年至2021年以承包商身分回到Meta處理安全議題；他也在2023年向美國國會作證，談及Instagram對青少年的傷害。[美聯社](https://apnews.com/article/meta-trial-teens-instagram-bejar-oakland-858e260ddbcc45532afc6194e48a54b6)整理他的工作經歷與本次證詞。
 
-## 這不是唯一一起：美國各州正對科技巨頭與未成年人問題出手
+Béjar在法庭上形容Instagram對13歲以下使用者的態度是「不問、不說」，並說公司在產品設計上持續把獲利放在安全前面。他表示，員工績效評估與薪酬多依據用戶數及使用時間，因而讓安全成為事後才處理的事項。[美聯社](https://apnews.com/article/meta-trial-teens-instagram-bejar-oakland-858e260ddbcc45532afc6194e48a54b6)
 
-新墨西哥州的判決只是這波訴訟浪潮的其中一站。ABC News報導指出，全美另有29州2023年起就類似指控提出聯邦多地訴訟（MDL），其中4州的求償將於本月稍後在加州奧克蘭聯邦法院開庭；另有8州選擇各自在州法院單獨起訴，新墨西哥州是首個打贏官司的州。此外，還有4個家庭因青少年自殺案件，另外對Meta、TikTok、Snap與YouTube提告。
+年齡辨識也是證詞焦點。Béjar表示，他在研究中找到「數以萬計」的13歲以下Instagram使用者，並稱公司內部知道這類使用者存在，但沒有設定辨識疑似未成年帳號的目標與衡量指標。[美聯社](https://apnews.com/article/meta-trial-teens-instagram-bejar-oakland-858e260ddbcc45532afc6194e48a54b6)
 
-這股監理壓力也不只針對Meta。7月間，[42州檢察長聯手向OpenAI開出傳票](/articles/openai-42-ags-ipo-probe/)，理由同樣鎖定對話式AI如何蒐集未成年人的健康與心理資料；不同科技巨頭，同樣的未成年人保護爭點正在美國各州法院與檢察總長辦公室同步升溫。
+《衛報》報導，Béjar估計自己曾至少100次向Meta執行長祖克柏簡報產品問題；他也曾在2021年寄信警告青少年接觸有害內容與心理健康風險，但作證時表示沒有收到祖克柏回覆。[衛報](https://www.theguardian.com/technology/2026/aug/19/meta-safety-trial-whistleblower-testimony)指出，Béjar的證詞屬州方傳喚的證人陳述，尚待陪審團與後續證據評估。
+
+![法槌與法律書籍，象徵法院審理（示意圖）](/images/meta-instagram-teen-safety-court-order-s1.webp)
+
+## Meta怎麼回應？
+
+Meta否認州方指控，表示公司要求使用者年滿13歲才能建立帳號，並已停用超過100萬個被判定為13歲以下的帳號。[衛報](https://www.theguardian.com/technology/2026/aug/19/meta-safety-trial-whistleblower-testimony)報導，Meta律師表示公司會在審理過程中說明自身的安全措施與改進紀錄。
+
+Meta也向NPR表示，州方的主張沒有充分根據，公司相信自己已建立青少年保護機制；法庭上，Meta則主張州方把資料、研究與內部說法抽離原本脈絡。[NPR](https://www.wusf.org/2026-08-18/profits-won-the-child-safety-trial-against-meta-kicks-off-in-federal-court)
+
+如果想比較另一個法域如何檢視社群平台與公共信任，可延伸閱讀[澳洲反猶太主義皇家調查委員會對社群媒體的調查整理](/articles/australia-antisemitism-social-media-trust/)。
+
+## 這場官司接下來看什麼？
+
+審理將繼續釐清Meta內部研究、產品設計與青少年使用經驗之間的關聯，州方也尋求改變Facebook與Instagram的使用體驗及金錢賠償。[美聯社](https://apnews.com/article/meta-trial-teens-instagram-bejar-oakland-858e260ddbcc45532afc6194e48a54b6)報導，包含祖克柏、Instagram執行長Adam Mosseri在內的Meta主管預計可能出庭作證。
+
+案件最終結果可能影響Meta在年齡辨識、推薦功能、家長工具與兒童資料處理上的法律責任，但目前尚無裁決可確認平台必須採取哪些具體改變。[加州司法部](https://oag.ca.gov/news/press-releases/ahead-opening-statements-attorney-general-bonta-lays-out-case-against-meta-over)與[NPR](https://www.wusf.org/2026-08-18/profits-won-the-child-safety-trial-against-meta-kicks-off-in-federal-court)均指出，本案仍處審理階段。
 
 ## 常見問題
 
-### Meta這次總共要付多少錢？
-新墨西哥州這起案件Meta合計要付近9.42億美元，包含8月6日裁定的5.67億美元（第二階段損害填補）與今年3月陪審團判決的3.75億美元民事罰款。這筆錢僅涵蓋新墨西哥州一州，不包含Meta在其他州面臨的訴訟。
+### 這是新墨西哥州判Meta近10億美元的同一案件嗎？
 
-### 法院有沒有要求Meta做年齡驗證或改演算法？
-沒有。法官明確拒絕強制Meta對用戶做身分年齡驗證，理由是可能牴觸聯邦法律、超出法院權限；也拒絕要求改造內容推薦演算法，認為會不合理干擾Meta的商業營運。法院改採較窄的替代方案，例如兩年內開發AI年齡預測模型與刪除13歲以下使用者個資。
+兩案分開審理。本文更新的是29州聯邦訴訟在加州奧克蘭的審判，前案則由新墨西哥州政府在州法院提起，訴訟爭點與法院不同。[美聯社](https://apnews.com/article/meta-trial-teens-instagram-bejar-oakland-858e260ddbcc45532afc6194e48a54b6)
 
-### Meta會不會真的照做？
-Meta已表態不同意判決並將提起上訴，5.67億美元金額與各項整改要求都可能在上訴過程中被調整或延後執行，目前尚非最終定案。
+### Meta已經被判賠1.4兆美元了嗎？
+
+還沒有。1.4兆美元是州方提出的潛在賠償估算，案件仍在審理，法院尚未作成最終金額裁決。[NPR](https://www.wusf.org/2026-08-18/profits-won-the-child-safety-trial-against-meta-kicks-off-in-federal-court)
+
+### Béjar的證詞能直接證明Meta違法嗎？
+
+不能直接下這個結論。Béjar是州方證人，他的說法會與Meta的答辯、內部文件及其他證據一併交由陪審團評估。[美聯社](https://apnews.com/article/meta-trial-teens-instagram-bejar-oakland-858e260ddbcc45532afc6194e48a54b6)

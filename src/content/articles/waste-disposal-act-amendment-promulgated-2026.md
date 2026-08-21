@@ -16,9 +16,10 @@ reviewedBy:
   - "lightman"
 factCheckedBy:
   - "appi-editorial"
+updatedDate: 2026-08-22
 coverImage: "covers/waste-disposal-act-amendment-promulgated-2026-cover.webp"
 coverAlt: "資源回收處理設施，象徵廢棄物清理與循環經濟管理"
-coverImageCredit: "Photo by Elbert Lora on Unsplash"
+coverImageCredit: "Photo by yating yang on Pexels"
 status: "published"
 sourceType: "wire"
 contentType: "news"

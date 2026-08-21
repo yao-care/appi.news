@@ -4,7 +4,7 @@ slug: "spain-ceuta-migrant-crisis"
 description: "西班牙北非飛地休達7月30日爆發移民潮，源頭是最高法院一項限制海上移民遣返的裁決，遭人口販運集團利用煽動偷渡；死亡人數上修至67人，多數溺斃或死於防波堤推擠。西班牙8月1日在Tarajal海域架設500公尺海上圍欄封鎖路線，約4萬8300人自願返回摩洛哥，22個歐盟國並聯名要求緊急協調因應。"
 excerpt: "西班牙北非飛地休達越境潮死亡人數上修至67人，西班牙8月1日在Tarajal防波堤安裝500公尺海上圍欄封鎖，官方統計已有約4萬8300人自願返回摩洛哥。22個歐盟成員國聯名要求協調應對，義大利威脅暫停申根協議並恢復邊境管制。"
 publishDate: "2026-07-31T17:22:13.433Z"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "europe"
 tags:
@@ -55,7 +55,7 @@ disclaimerType: "general"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/spain-ceuta-migrant-crisis-cover.webp"
 coverAlt: "休達邊境圍欄，多層鐵絲網與監控設施沿山坡延伸"
-coverImageCredit: "Youtryandyoutry — CC BY-SA 4.0，引用自 Wikimedia Commons"
+coverImageCredit: "Photo by ZhiCheng Zhang on Pexels"
 originalContribution: "本文整合 PBS NewsHour、Al Jazeera、Fortune對西班牙安裝休達海上圍欄、死亡人數上修至67人的最新報導，與先前半島電視台、富比世、新聞週刊、福斯新聞對7月30日越境潮首日的報導併成完整時間軸，呈現這起危機從爆發、死亡人數修正到歐盟政治角力的全貌，供台灣讀者理解。"
 ---
 

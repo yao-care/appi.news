@@ -22,9 +22,9 @@ factCheckedBy:
 sourceType: "editorial"
 contentType: "guide"
 status: "published"
-coverImage: "covers/typhoon-closures-kaohsiung-pingtung-chiayi.webp"
+coverImage: "covers/typhoon-closures-kaohsiung-pingtung-chiayi-cover.webp"
 coverAlt: "颱風強降雨下積水的城市街道"
-coverImageCredit: "Photo by yusrizal iskadi on Unsplash"
+coverImageCredit: "Photo by Jimmy Liao on Pexels"
 disclaimerType: "general"
 disclosure: "本文以 AI 輔助起草，停班停課縣市、地區、日期與適用時間均逐項比對行政院人事行政總處官方公告，經人工查證後編輯發佈。"
 highlights:
@@ -46,7 +46,7 @@ references:
   - title: "天然災害停止上班及上課作業辦法（全國法規資料庫）"
     url: "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=S0110022"
     publisher: "法務部全國法規資料庫"
-updatedDate: "2026-06-26T11:12:44.603+08:00"
+updatedDate: 2026-08-22
 ---
 
 依行政院人事行政總處彙整的[天然災害停止上班及上課情形](https://www.dgpa.gov.tw/typh/daily/nds.html)，6 月 26 日颱風停班停課情形如下：臺南市、高雄市、屏東縣三個縣市全境都停止上班、停止上課；新竹縣竹北市、芎林鄉今天中午 12 時起全境停止上班、停止上課，另有四所學校個別停課；嘉義縣則照常上班、照常上課。這是同一場颱風的滾動更新，南部維持臺南、高雄、屏東三縣市全境停班停課，本次再新增新竹縣竹北市、芎林鄉午後全境停止上班上課。相較稍早的公告，新竹縣由原先的個別學校停課，擴大為竹北市、芎林鄉兩個鄉鎮市全境停班停課。本文以縣市為單位，整理 6 月 26 日的適用範圍與官方查詢方式。

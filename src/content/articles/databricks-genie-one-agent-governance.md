@@ -11,7 +11,9 @@ tags:
   - "開發工具"
   - "資料治理"
   - "企業經營"
-coverImage: "covers/databricks-genie-one-agent-governance.webp"
+updatedDate: 2026-08-22
+coverImage: "covers/databricks-genie-one-agent-governance-cover.webp"
+coverImageCredit: "Photo by Daniil Komov on Pexels"
 coverAlt: "Databricks 把 AI agent 做成企業同事，背後靠 Unity Catalog 治理層守住資料權限邊界的示意"
 author: "appi-editorial"
 reviewedBy:

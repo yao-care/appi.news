@@ -12,9 +12,10 @@ factCheckedBy:
 contentType: "news"
 sourceType: "wire"
 status: "published"
-coverImage: "/covers/taoyuan-special-pet-adoption-august-cover.webp"
+updatedDate: 2026-08-22
+coverImage: "covers/taoyuan-special-pet-adoption-august-cover.webp"
 coverAlt: "柯爾鴨特寫，示意圖"
-coverImageCredit: "Photo by Ross Sokolovski on Unsplash"
+coverImageCredit: "Photo by Denys Gromov on Pexels"
 tags: ["寵物與動物", "桃園市"]
 disclosure: "線索來自 東森新聞 CH51 YouTube 影片，內容經公開資料查證整理、附原始出處。"
 risksAndLimits:

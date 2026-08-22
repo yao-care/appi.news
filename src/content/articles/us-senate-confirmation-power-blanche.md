@@ -15,8 +15,9 @@ reviewedBy:
   - "luo-yang"
 factCheckedBy:
   - "appi-editorial"
+updatedDate: 2026-08-22
 coverImage: "covers/us-senate-confirmation-power-blanche-cover.webp"
-coverImageCredit: "Ryan M. Biller / U.S. Department of Justice（公有領域）"
+coverImageCredit: "Photo by david hou on Pexels"
 featured: false
 hero: false
 sourceType: "wire"

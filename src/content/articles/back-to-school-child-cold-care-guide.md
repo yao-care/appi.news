@@ -12,7 +12,9 @@ tags:
   - "公共衛生"
   - "急救常識"
 author: "appi-editorial"
-coverImage: "covers/back-to-school-syndrome-child-vision-checklist-cover.webp"
+updatedDate: 2026-08-22
+coverImage: "covers/back-to-school-child-cold-care-guide-cover.webp"
+coverImageCredit: "Photo by yi lu on Pexels"
 coverAlt: "背著書包、準備走進校園的學童（示意圖）"
 status: "published"
 sourceType: "editorial"

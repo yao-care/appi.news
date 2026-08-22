@@ -3,12 +3,13 @@ title: "PLT凍晶治療3大應用：疼痛管理、運動傷害到退化性關�
 slug: "plt-platelet-therapy-for-pain"
 description: "PLT凍晶治療原理是什麼？與PRP差異在哪？整理疼痛管理、運動傷害修復、退化性關節保養3大臨床應用場景，以及治療前評估與不適用族群提醒。"
 publishDate: 2026-08-05
-updatedDate: 2026-08-06
+updatedDate: 2026-08-22
 category: health
 subcategory: medtech
 tags: ["再生醫療", "疼痛治療", "骨骼關節", "復健治療", "運動醫學"]
 author: "appi-editorial"
-coverImage: "covers/plt-platelet-therapy-for-pain.webp"
+coverImage: "covers/plt-platelet-therapy-for-pain-cover.webp"
+coverImageCredit: "Photo by Lespa số 1 về điều trị   mụn, nám, sẹo rỗ on Pexels"
 coverAlt: "PLT凍晶治療流程示意圖，抽血、離心濃縮血小板、注射患部釋放生長因子三步驟以箭頭依序連接"
 status: published
 sourceType: editorial

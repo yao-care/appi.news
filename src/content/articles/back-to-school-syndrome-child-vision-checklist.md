@@ -4,7 +4,7 @@ slug: "back-to-school-syndrome-child-vision-checklist"
 description: "2026年8月31日開學，家長可提早調整孩子作息，依3010120原則護眼，並檢查書包重量與新生疫苗紀錄；本文整理開學前可逐項完成的準備清單。"
 excerpt: "2026年8月31日開學，從作息調整、3010120護眼原則，到書包減重與新生疫苗紀錄，開學前準備一次整理。"
 publishDate: "2026-07-30T09:10:13.960Z"
-updatedDate: 2026-08-09
+updatedDate: 2026-08-22
 category: "health"
 subcategory: "medical"
 tags:
@@ -21,7 +21,7 @@ factCheckedBy:
   - "appi-editorial"
 coverImage: "covers/back-to-school-syndrome-child-vision-checklist-cover.webp"
 coverAlt: "一群小學生揹著書包走向校園，象徵開學情境"
-coverImageCredit: "Photo by note thanun on Unsplash"
+coverImageCredit: "Photo by JIUN-JE LIN on Pexels"
 status: "published"
 sourceType: "wire"
 contentType: "guide"

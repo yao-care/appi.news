@@ -17,8 +17,9 @@ reviewedBy:
   - "luo-yang"
 factCheckedBy:
   - "appi-editorial"
+updatedDate: 2026-08-22
 coverImage: "covers/us-cdc-director-schwartz-confirmed-cover.webp"
-coverImageCredit: "U.S. Department of Health and Human Services（公眾領域）"
+coverImageCredit: "Photo by John Guccione www.advergroup.com on Pexels"
 coverAlt: "美國CDC新任主任史瓦茲（Erica Schwartz）官方肖像照"
 featured: false
 hero: false

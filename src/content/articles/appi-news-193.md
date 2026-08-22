@@ -3,13 +3,14 @@ title: "檳榔危害完整指南：成癮機制、口腔癌風險與戒除方法
 slug: "appi-news-193"
 description: "全球約6億人習慣性嚼食檳榔，台灣男性口腔癌發生率高居亞洲前列。本文解析 arecoline 如何造成成癮、檳榔與口腔癌的科學關聯，以及實際可行的戒除方法。"
 publishDate: 2026-06-18
-updatedDate: 2026-08-07
+updatedDate: 2026-08-22
 category: health
 subcategory: tcm-integrative
 tags: []
 topics: ["oral-care"]
 author: "huang-ziyan"
-coverImage: "covers/appi-news-193.webp"
+coverImage: "covers/appi-news-193-cover.webp"
+coverImageCredit: "Photo by cottonbro studio on Pexels"
 coverAlt: "市場中的新鮮檳榔果實，部分切開顯示白色果肉截面"
 status: published
 sourceType: author

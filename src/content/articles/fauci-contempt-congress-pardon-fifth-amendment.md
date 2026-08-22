@@ -15,8 +15,8 @@ reviewedBy:
   - "luo-yang"
 factCheckedBy:
   - "appi-editorial"
+updatedDate: 2026-08-22
 coverImage: "covers/fauci-contempt-congress-pardon-fifth-amendment-cover.webp"
-coverImageCredit: "Christopher Michel — CC BY-SA 4.0, Wikimedia Commons"
 featured: false
 hero: false
 sourceType: "wire"

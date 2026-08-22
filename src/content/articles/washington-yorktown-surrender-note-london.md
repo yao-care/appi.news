@@ -38,9 +38,10 @@ sourceType: "wire"
 contentType: "news"
 disclaimerType: "general"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體公開報導及英國國家檔案館官方資料而成，已逐條附上原文出處供查證；編輯部不持立場。"
+updatedDate: 2026-08-22
 coverImage: "covers/washington-yorktown-surrender-note-london-cover.webp"
 coverAlt: "約翰·特朗布爾畫作《康沃利斯投降》，描繪1781年英軍在約克鎮投降的場景"
-coverImageCredit: "John Trumbull《康沃利斯投降》— 公眾領域，引用自 Wikimedia Commons"
+coverImageCredit: "Photo by Kirk Cameron on Unsplash"
 ---
 
 一封讓英國當年「不得不放手」的親筆信，如今回到倫敦展出。據[英國國家檔案館（The National Archives）官方資料](https://www.nationalarchives.gov.uk/whats-on/exhibitions/revolution-250-americas-independence-story-1763-1783/)，一封由美國開國領袖喬治·華盛頓（George Washington）親筆簽署、接受英軍投降的信件，首度在倫敦公開展出。這封信寫於1781年10月、英軍在維吉尼亞州約克鎮（Yorktown）戰敗之後，被視為英國在北美十三州統治走向終結的起點。

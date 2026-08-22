@@ -16,9 +16,10 @@ reviewedBy:
   - "lightman"
 factCheckedBy:
   - "appi-editorial"
+updatedDate: 2026-08-22
 coverImage: "covers/urban-canopy-climate-adaptation-network-launch-cover.webp"
 coverAlt: "樹蔭茂密的行道樹人行道，象徵都市林與氣候調適"
-coverImageCredit: "Photo by daniel mironov on Unsplash"
+coverImageCredit: "Photo by Eugene Lee on Pexels"
 status: "published"
 sourceType: "wire"
 contentType: "news"

@@ -3,12 +3,12 @@ title: "AI時代白袍自媒體的3個新機會：如何用內容傳遞正確健
 slug: "medical-self-media-ai-health-communication"
 description: "醫療專業人士投入自媒體與AI工具傳播健康知識，正成為對抗網路偽科學的新力量。從資訊管道轉移、AI降低創作門檻，到內容經營策略與法規界線，完整解析白袍創作者該注意的機會與挑戰。"
 publishDate: 2026-08-05
-updatedDate: 2026-08-06
+updatedDate: 2026-08-22
 category: health
 subcategory: health-policy
 tags: ["醫療AI", "數位健康", "公共衛生", "醫病關係", "AI", "搜尋與內容策略", "醫療政策"]
 author: "appi-editorial"
-coverImage: "covers/medical-self-media-ai-health-communication.webp"
+coverImage: "covers/medical-self-media-ai-health-communication-cover.webp"
 coverAlt: "健康資訊獲取管道從報紙電視轉向社群平台與短影音的時間軸示意圖"
 status: published
 sourceType: editorial

@@ -3,12 +3,13 @@ title: "液態金屬電路和傳統電路板差在哪？植入式醫療裝置材
 slug: "implantable-medical-device-circuit-board-material-breakthrough"
 description: "彎折疲勞長期困擾植入式與穿戴式醫療裝置，液態金屬電路與有機電晶體兩條材料路徑正在改寫電路板的物理極限。拆解技術原理、研發進度與臨床應用限制。"
 publishDate: 2026-08-05
-updatedDate: 2026-08-06
+updatedDate: 2026-08-22
 category: health
 subcategory: medtech
 tags: ["醫療AI", "數位健康", "心血管健康", "醫療政策"]
 author: "appi-editorial"
-coverImage: "covers/implantable-medical-device-circuit-board-material-breakthrough.webp"
+coverImage: "covers/implantable-medical-device-circuit-board-material-breakthrough-cover.webp"
+coverImageCredit: "Photo by Avni Alptekin on Pexels"
 coverAlt: "一片薄型可撓式醫療感測貼片貼附在人體胸口皮膚上，可見半透明薄膜下的細緻電路紋路"
 status: published
 sourceType: editorial

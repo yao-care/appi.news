@@ -4,7 +4,7 @@ slug: "europe-wildfire-crisis-france-greece"
 description: "歐洲野火危機東線持續惡化：雅典近郊普薩塔（Psatha）野火陣線，兩架貝爾滅火直升機8月2日空中相撞、其中一架墜地，機組員1名希臘籍、1名丹麥籍罹難，另1名希臘籍、1名英國籍生還，總理米佐塔基斯哀悼「希臘協調員與丹麥飛行員」；加計本週稍早殉職的3名消防員，希臘野火本週死亡人數已增至5人。波爾圖日爾梅諾一帶野火延燒面積達40至50平方公里，消防隊已由海路撤離266人；法國吉倫特大火22萬撤離居民逾九成已返家，西班牙、葡萄牙火勢仍在延燒。"
 excerpt: "希臘雅典近郊兩架滅火直升機8月2日空中相撞，1希臘籍、1丹麥籍機組員罹難，加計消防員殉職，希臘野火本週死亡人數增至5人；法國22萬撤離居民逾九成已返家，西班牙、葡萄牙火勢仍未撲滅。"
 publishDate: "2026-08-02T16:57:24.799Z"
-updatedDate: "2026-08-03T16:39:48.586Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "europe"
 tags:
@@ -63,7 +63,7 @@ disclaimerType: "general"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 Euronews、AP、RTÉ News、Times of Israel、PBS NewsHour、Irish News、The Boston Globe 等外媒公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/europe-wildfire-crisis-france-greece-cover.webp"
 coverAlt: "法國朗德省索莫斯（Saumos）野火燒過後的焦黑植被與村莊入口景象"
-coverImageCredit: "Mikani — CC BY-SA 4.0, Wikimedia Commons"
+coverImageCredit: "Photo by Big Dee on Pexels"
 ---
 
 歐洲野火危機出現東西兩極反差。西線的法國、西班牙、葡萄牙火勢逐漸受控，法國吉倫特（Gironde）大火22萬撤離居民已有逾九成返家；東線的希臘卻急速惡化，強風把火舌一路吹到雅典近郊度假勝地的海邊，兩架滅火直升機週日在空中相撞，最終造成2死2傷，加計稍早殉職的消防員，希臘野火本週死亡人數已增至5人。

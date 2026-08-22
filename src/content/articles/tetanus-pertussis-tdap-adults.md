@@ -3,7 +3,6 @@ title: "破傷風、百日咳：受傷才想到打來得及嗎？成人 Tdap 幾
 slug: "tetanus-pertussis-tdap-adults"
 description: "破傷風不是踩到生鏽鐵釘才會得，百日咳大人得了症狀輕卻可能傳染給家裡沒打疫苗的新生兒。成人三合一疫苗 Tdap 建議每 10 年追加一劑，孕婦每胎打一劑保護寶寶。這篇破解破傷風迷思、講成人 Tdap 該幾年打、以及家有新生兒為什麼要打。"
 publishDate: 2026-08-23T20:00:00+08:00
-updatedDate: "2026-08-22"
 category: health
 subcategory: preventive
 tags:

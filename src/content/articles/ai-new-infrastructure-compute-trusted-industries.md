@@ -66,7 +66,7 @@ references:
 
 <p>先把錢往哪裡擺講清楚。國科會公告 2026 年度科技發展計畫，<a href="https://naipnews.naipo.com/2845" target="_blank" rel="noopener">編列科技預算 1800 億元，整合跨部會落實推展五大信賴產業與國家希望工程</a>，要讓台灣半導體的優勢連結本土產業需求，目標是把台灣做成「人工智慧之島」。這裡的 1800 億是規畫數字，實際還要看財政與立院怎麼編，但量級跟方向已經定調。</p>
 
-<p>方向就是 AI 新十大建設那三條主軸。國科會主委吳誠文把策略講成「以硬帶軟」，方案<a href="https://www.rti.org.tw/news?uid=3&pid=206471" target="_blank" rel="noopener">涵蓋數位基磐、關鍵技術與智慧應用三大建設主軸</a>。數位基磐是發展 AI 的先決條件，講的是超級電腦、[資料中心](/articles/taiwan-data-center-industrial-benefit-review/)跟公私協力的 AI 應用平台；關鍵技術押在前瞻領域；智慧應用則要把 AI 推進百工百業。一句話，先把地基跟算力鋪好，再讓產業踩著它長出應用。</p>
+<p>方向就是 AI 新十大建設那三條主軸。國科會主委吳誠文把策略講成「以硬帶軟」，方案<a href="https://www.rti.org.tw/news?uid=3&pid=206471" target="_blank" rel="noopener">涵蓋數位基磐、關鍵技術與智慧應用三大建設主軸</a>。數位基磐是發展 AI 的先決條件，講的是超級電腦、<a href="/articles/taiwan-data-center-industrial-benefit-review/">資料中心</a>跟公私協力的 AI 應用平台；關鍵技術押在前瞻領域；智慧應用則要把 AI 推進百工百業。一句話，先把地基跟算力鋪好，再讓產業踩著它長出應用。</p>
 
 <img src="/images/ai-new-infrastructure-compute-trusted-industries-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="國科會 2026 年度科技預算 1800 億元，數位基磐、關鍵技術、智慧應用三大主軸">
 

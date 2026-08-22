@@ -1,7 +1,8 @@
 ---
 title: 廟裡為什麼拜雞、拜大砲？台灣動物與器物成神信仰一次看懂
-description: 從嘉義大天宮金雞神、東石福靈宮鐵嘴將軍大砲兩個實例，看台灣廟宇如何把動物與器物請上神龕，附傳說由來、供品與參拜資訊。
+description: 從嘉義大天宮金雞神、東石福靈宮鐵嘴將軍大砲兩個實例，看台灣廟宇如何把動物與器物請上神龕成神，附傳說由來、供品內容與交通參拜資訊整理。
 publishDate: "2026-07-31T18:48:23.045Z"
+updatedDate: "2026-08-22"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"

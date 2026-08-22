@@ -4,6 +4,7 @@ slug: "us-cyber-privateers-hack-back-order"
 description: "川普8月12日簽署總統備忘錄「擴展打擊跨國網路犯罪的能力」，首度授權通過審查的民間企業對外國網路犯罪集團發動監視與破壞性網路行動，由司法部與國土安全部共同審核，企業須存入至少100萬美元保證金、60天內訂出作業程序。多名資安專家對目標鎖定與法律責任提出重大疑慮。整理政策內容、限制條件與正反意見。"
 excerpt: "川普8月12日簽署備忘錄，首度授權通過審查的民間企業對外國網路犯罪集團發動監視與破壞行動，須存至少100萬美元保證金、60天內訂出作業程序，但目標鎖定與法律責任歸屬仍有重大疑慮。"
 publishDate: "2026-08-16T16:21:20.665Z"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "americas"
 tags:
@@ -54,7 +55,7 @@ originalContribution: "本文以白宮官方備忘錄原文為主軸事實來源
 
 ## 備忘錄授權企業做什麼
 
-[白宮備忘錄](https://www.whitehouse.gov/presidential-actions/2026/08/expanding-capabilities-to-combat-transnational-cyber-enabled-crime/)明訂，通過審查的美國企業可對政府指定的外國犯罪組織執行兩類行動：一是「網路監視行動」，蒐集情報、掌握對方組織動態；二是「網路效應行動」，也就是操控、中斷、拒止、降級甚至摧毀對方的資訊系統。[TechCrunch報導](https://techcrunch.com/2026/08/13/in-a-first-us-will-allow-some-private-firms-to-carry-out-cyberattacks/)指出，這意味企業可以用間諜軟體蒐集犯罪集團的情報，也可以直接出手破壞對方用來詐騙、勒索的資料與系統。這類行動因此被媒體與國安圈稱為「網路私掠者」，借用16世紀國家授權民間船隻攻擊敵國商船的「私掠許可證」概念。
+[白宮備忘錄](https://www.whitehouse.gov/presidential-actions/2026/08/expanding-capabilities-to-combat-transnational-cyber-enabled-crime/)明訂，通過審查的美國企業可對政府指定的外國犯罪組織執行兩類行動：一是「網路監視行動」，蒐集情報、掌握對方組織動態；二是「網路效應行動」，也就是操控、中斷、拒止、降級甚至摧毀對方的資訊系統。[TechCrunch報導](https://techcrunch.com/2026/08/13/in-a-first-us-will-allow-some-private-firms-to-carry-out-cyberattacks/)指出，這意味企業可以用間諜軟體蒐集犯罪集團的情報，也可以直接出手破壞對方用來詐騙、勒索的資料與系統。這類行動因此被媒體與國安圈稱為「網路私掠者」，借用16世紀國家授權民間船隻攻擊敵國商船的「私掠許可證」概念。授權民間出手攻擊的風險並非空談，[AI企業自家資安測試就曾意外入侵他人系統](/articles/meta-ai-model-breach-redteam-test/)，顯示攻擊性行動一旦失控的代價。
 
 <figure>
 <img src="/images/us-cyber-privateers-hack-back-order-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="辦公大樓與伺服器機房示意畫面">

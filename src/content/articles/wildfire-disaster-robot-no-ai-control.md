@@ -4,7 +4,7 @@ slug: "wildfire-disaster-robot-no-ai-control"
 description: "加州新創Satyress Robotics打造半人馬造型機器人Threehalves，四足底盤加人形上半身，設計用於野火現場、倒塌建物與毒物洩漏等危險任務，卻刻意不搭載自主AI、全程仰賴遠端操作員手持搖桿控制，官網甚至詳列如何讓機器人停止運作的方法，本文整理設計細節、消防從業者觀點與目前開發進度。"
 excerpt: "加州新創Satyress曝光半人馬造型機器人Threehalves，設計替人類進入野火與災難現場執行高風險任務，卻刻意不裝AI自主、全靠搖桿操作，官網還詳列如何讓它停下；消防從業社群對地面機器人能否勝任野火現場仍持保留態度。"
 publishDate: "2026-08-03T16:39:48.586Z"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "global-trends"
 tags:
@@ -58,7 +58,7 @@ topics: ["startups-and-vc"]
 
 [Ynetnews報導](https://www.ynetnews.com/tech-and-digital/article/r1hzyy6sml)指出，Threehalves高約2公尺，設計理念是把四足機器人的穩定性和人形機器人操作工具的靈活性結合在一起：四足底盤提供較低的重心，方便在瓦礫或崎嶇地面站穩；上半身則保留人形結構，能直接操作原本為人類設計的鏈鋸、鑽頭與螺絲刀等工具，不必另外開發專用機具。機器人採模組化肢體，工具可快速拆換，全機使用標準化零件，方便現場維修；機身也能折疊收進一般皮卡車的貨斗載運。
 
-[Dallas Express報導](https://dallasexpress.com/business-markets/horned-threehalves-robot-unveiled-for-wildfires-and-toxic-disaster-sites/)補充了更多設計細節：開發公司Satyress Robotics位於加州奧本（Auburn），機器人頭部的角狀造型內建廣角鏡頭，提供操作員多角度的備援視野；關節採摩擦制動設計，斷電時不需額外耗能就能維持姿勢；腕部則是快拆系統，方便現場快速換裝工具。
+[Dallas Express報導](https://dallasexpress.com/business-markets/horned-threehalves-robot-unveiled-for-wildfires-and-toxic-disaster-sites/)補充了更多設計細節：開發公司Satyress Robotics位於加州奧本（Auburn），機器人頭部的角狀造型內建廣角鏡頭，提供操作員多角度的備援視野；關節採摩擦制動設計，斷電時不需額外耗能就能維持姿勢；腕部則是快拆系統，方便現場快速換裝工具。人形上半身走進真實產線的案例已有先例，[Figure的人形機器人在BMW廠參與組裝逾三萬輛車](/articles/humanoid-robots-figure-bmw-production-line/)，但那是相對可控的廠房環境，跟野火現場的變數不可同日而語。
 
 <img src="/images/wildfire-disaster-robot-no-ai-control-1.webp" width="960" height="479" loading="lazy" decoding="async" alt="金屬骨架的四足機械腳部特寫（示意圖）" title="Threehalves採四足底盤搭配人形上半身的半人馬式設計（示意圖）">
 

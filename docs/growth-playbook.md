@@ -175,10 +175,16 @@ B 和 A 都只影響「這一次來的人多看幾頁」，**不會讓人回來*
 把重複性的產線內容明確歸進 `column`／`topics`，並在文末寫出下一集的預告或系列入口。已有系列可查：`ls src/content/columns/`、`ls src/content/topics/`。
 這一項與 B3 共用同一批工作，做 B3 時順手完成。
 
-### C2. 訂閱管道（需要站長裁示）
+### C2. 訂閱管道（LINE 已上線，維持即可；其他管道仍需站長裁示）
 
-目前站上有 RSS。要不要做電子報／LINE／Threads 定期推送，屬於**新產品方向**，依專案規則要先問站長再動手。
-可查的既有非搜尋入口：`node scripts/growth-audit.mjs --gate2` 之外，用 `node scripts/weekly-data.mjs` 看 `trafficHealth.sources` 有哪些社群來源已經在帶人。
+站上非搜尋的固定回訪管道＝**LINE 官方帳號「APPI News 每日精選」**（@832sacsk），2026-08 已整條打通：
+
+- 推薦引擎：`/root/my-line-bot-customer`（多租戶 LINE bot 的 `appinews` 租戶，引擎在 `reader/`）；站台 build 期產出 `src/pages/reader-index.json.ts` 餵它。
+- 站內入口：每篇文章文末 `src/components/blocks/LineReaderCta.astro` ＋ `/line` 說明頁；`org.sameAs`（`src/config/site.ts`）已掛 LINE 帳號。
+- 健康查法：`pm2 status | grep -E "my-line-bot-customer|appinews-reader"`（主 bot 要 online；reader-sync／embed／retention 是批次工作，平時 stopped 屬正常）；最近同步 `pm2 logs appinews-reader-sync --lines 5 --nostream`。
+- 帶回多少人：`node scripts/weekly-data.mjs` 看 `trafficHealth.sources`。
+
+RSS 照舊（`/rss.xml`）。**電子報等其他管道仍屬新產品方向，做之前先問站長**；社群自動推播站長已裁示不做，不再提案。
 
 ### C3. 品牌記憶點
 

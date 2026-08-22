@@ -1,9 +1,10 @@
 ---
-title: "研究問「AI agent 懂不懂省錢」：當 agent 自己花你的 token，預算意識該不該寫進設計"
+title: "AI agent不懂省錢？預算意識該寫進系統設計"
 slug: "ai-agents-budget-aware-design"
-description: "2026 上半年一連串 agent 帳單失控（Uber 四月燒光整年預算、某公司單月五億美元），逼出一個更根本的研究題：放著不管的 AI agent 會直接違反預算上限，光在提示裡叫它省錢沒用。省錢不是模型會自己長出來的美德，是要在設計階段寫進系統的硬約束。"
+description: "AI agent不會自己省錢，放著不管會直接違反預算上限，光在提示裡叫它省錢也沒用。研究顯示省錢意識得寫進系統設計的硬約束，不能指望模型自律。本文整理2026上半年Uber、微軟等帳單失控案例與四篇預算研究，給出企業導入AI agent前該做的三件事。"
 excerpt: "你給 agent 一個任務，它把該花不該花的 token 一起燒掉，帳單月底才來。研究發現叫它「省一點」根本守不住預算，那預算意識到底該擺在哪一層？"
 publishDate: "2026-07-10T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "digital-tools"
 tags:

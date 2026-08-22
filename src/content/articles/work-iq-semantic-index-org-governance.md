@@ -1,9 +1,10 @@
 ---
-title: "微軟 Work IQ 讓 AI 讀懂你公司的工作脈絡：組織行為被做成索引，資料邊界怎麼守"
+title: "微軟Work IQ讓AI讀懂公司工作脈絡：資料邊界怎麼守"
 slug: "work-iq-semantic-index-org-governance"
 description: "微軟 Work IQ 把 email、會議、聊天與協作模式做成語意索引，讓 AI agent 讀懂組織怎麼運作。好處是 agent 更懂你公司，代價是『誰能查到誰的工作軌跡』成為新的隱私與權限治理對象。"
 excerpt: "微軟 Work IQ 把 email、會議、聊天與協作模式做成語意索引，讓 AI agent 讀懂組織怎麼運作。好處是 agent 更懂你公司，代價是『誰能查到誰的工作軌跡』成為新的隱私與權限治理對象。"
 publishDate: "2026-06-25T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "digital-tools"
 tags:
@@ -48,7 +49,7 @@ topics: ["ai-agent-governance"]
 
 <h2>它索引的是「怎麼運作」，不是「有哪些檔案」</h2>
 
-<p>過去企業內的 AI 大多停在翻檔案、查資料這一層。Work IQ 往前走了一步：它索引的是行為與關係，誰跟誰常開會、一個決策在哪些人之間流動、哪一封信牽動了哪個檔案。<a href="https://devblogs.microsoft.com/microsoft365dev/work-iq-production-ready-intelligence-for-every-agent/" target="_blank" rel="noopener">技術上它把上百個資料專用工具收斂成 10 個泛用工具，透過 MCP（Model Context Protocol，模型脈絡協定）漸進揭露，還給 agent 一個 getSchema，讓它在執行的當下就能問「這份資料長什麼樣、怎麼組」，不必預先把資料模型寫死</a>。對開發者這是省事，對組織的意義卻不只是省事。</p>
+<p>過去企業內的 AI 大多停在翻檔案、查資料這一層。Work IQ 往前走了一步：它索引的是行為與關係，誰跟誰常開會、一個決策在哪些人之間流動、哪一封信牽動了哪個檔案。<a href="https://devblogs.microsoft.com/microsoft365dev/work-iq-production-ready-intelligence-for-every-agent/" target="_blank" rel="noopener">技術上它把上百個資料專用工具收斂成 10 個泛用工具，透過 MCP（Model Context Protocol，模型脈絡協定）漸進揭露，還給 agent 一個 getSchema，讓它在執行的當下就能問「這份資料長什麼樣、怎麼組」，不必預先把資料模型寫死</a>。這跟我先前談 MCP 的立場是同一條線：協定底定之後，<a href="/articles/mcp-de-facto-standard-agent-governance/">每一台接進來的 server 都該被當成一個新的權限治理對象</a>。對開發者這是省事，對組織的意義卻不只是省事。</p>
 
 <img src="/images/work-iq-semantic-index-org-governance-s2.webp" width="960" height="509" loading="lazy" decoding="async" alt="節點與連線構成的關係網路圖，象徵 Work IQ 索引的是組織的行為與關係而非單純檔案">
 
@@ -60,7 +61,7 @@ topics: ["ai-agent-governance"]
 
 <h2>權力會轉移到「索引結構」本身</h2>
 
-<p>再往裡看一層。當組織行為被語意化、建立索引之後，真正的權力不再只存在於資料本身，而是轉移到索引結構與它的設計方式。誰能定義索引、誰能決定查詢與組合的方式，誰就能在實質上影響「組織記憶」如何被建構、又如何被讀取。這跟我先前談 MCP 的立場是同一條線：協定底定之後，<a href="/articles/mcp-de-facto-standard-agent-governance/">每一台接進來的 server 都該被當成一個新的權限治理對象</a>。Work IQ 把這件事又推進一層：要治理的不只是工具，是組織記憶的索引本身。</p>
+<p>再往裡看一層。當組織行為被語意化、建立索引之後，真正的權力不再只存在於資料本身，而是轉移到索引結構與它的設計方式。誰能定義索引、誰能決定查詢與組合的方式，誰就能在實質上影響「組織記憶」如何被建構、又如何被讀取。延續前面 MCP 的治理邏輯，Work IQ 把這件事又推進一層：要治理的不只是工具，是組織記憶的索引本身。</p>
 
 <img src="/images/work-iq-semantic-index-org-governance-s4.webp" width="960" height="1280" loading="lazy" decoding="async" alt="資料庫與索引結構的抽象視覺，象徵權力轉移到索引結構與其設計方式">
 

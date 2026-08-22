@@ -1,9 +1,9 @@
 ---
-title: "關於黃金資產配置，你需要知道的6件事"
+title: "黃金資產配置比例怎麼抓？金價回落是否代表多頭反轉"
 slug: "appi-news-478"
-description: "金價從高點回落，黃金多頭是否已經反轉？從央行買盤、Fed利率決策到個人風險屬性，整理黃金資產配置該看懂的6個重點。"
+description: "金價從高點回落，黃金資產配置的多頭結構是否已經反轉？從央行買盤、地緣政治風險到Fed利率決策，整理黃金資產配置比例怎麼抓的6個重點，兼顧不同風險屬性的實務參考。"
 publishDate: 2026-08-02
-updatedDate: 2026-08-06
+updatedDate: 2026-08-22
 category: finance
 subcategory: investing-literacy
 tags: ["投資理財", "總體經濟", "退休規劃", "資本市場"]

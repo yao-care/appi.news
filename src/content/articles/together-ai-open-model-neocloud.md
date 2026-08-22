@@ -1,10 +1,10 @@
 ---
-title: "Together AI是什麼公司？估值83億美元怎麼來"
+title: "Together AI是什麼公司？估值83億美元一次看懂"
 slug: "together-ai-open-model-neocloud"
-description: "Together AI是做開源模型雲端代管的neocloud公司，7月最新一輪估值衝上83億美元，由沙烏地Aramco Ventures領投，Nvidia、台灣和碩都入股。文章拆解83億估值怎麼算出來、和碩投資對台灣供應鏈代表什麼。"
+description: "Together AI是一家代管開源模型的雲端公司（neocloud），最新一輪估值衝上83億美元，由沙烏地Aramco Ventures領投，Nvidia、台灣和碩都入股。文章拆解估值怎麼算出來、和碩投資對台灣供應鏈代表什麼。"
 excerpt: "為什麼投資人搶的不是下一個大模型，而是一個租 GPU、代管開源模型的平台？因為開源模型正在把模型本身變成商品，價值移到了『誰能把它跑起來』那一層。"
 publishDate: "2026-07-10T08:00:00+08:00"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "startup"
 tags:
@@ -47,7 +47,7 @@ references:
 originalContribution: "本文以『開源模型商品化、價值往推論代管層移動』為分析框架，拆解 Together AI C 輪出資名單（Aramco 領投、Nvidia 與和碩跟投）背後的護城河邏輯，並以『預約金額不等於認列營收、neocloud 資本密集』踩剎車，最後回扣台灣在這條鏈上該從組裝往推論營運層卡位的在地判斷。"
 ---
 
-Together AI 這輪 8 億美元、估值衝上 83 億，真正的訊號不是金額，是市場在賭「把開源模型跑起來」這一層基礎建設。開源模型正在把「模型」本身變成隨手可下載的商品，價值就往「誰能把它跑得又便宜又穩又可信」那一層移動。而這份出資名單裡，有一個台灣名字：和碩。
+Together AI 是一家把開源模型代管上雲端出租算力的公司（neocloud），這輪剛募得 8 億美元、估值衝上 83 億。真正的訊號不是金額，是市場在賭「把開源模型跑起來」這一層基礎建設。開源模型正在把「模型」本身變成隨手可下載的商品，價值就往「誰能把它跑得又便宜又穩又可信」那一層移動。而這份出資名單裡，有一個台灣名字：和碩。
 
 7 月 1 日，做 AI 雲端代管的 Together AI 宣布[拿到 8 億美元 C 輪、投後估值 83 億美元](https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/)，領投的是沙烏地阿美旗下的 Aramco Ventures，跟投名單有 Vista Equity、General Catalyst、Nvidia，以及台灣的和碩（Pegatron）。這家公司大約 16 個月前的 B 輪，估值還只有 33 億美元，一年多翻了兩倍半。
 

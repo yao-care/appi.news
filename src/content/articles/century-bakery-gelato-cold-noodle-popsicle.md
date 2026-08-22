@@ -1,9 +1,10 @@
 ---
-title: "漢餅為什麼做起義式冰淇淋？從舊振南Gelato到涼麵雪糕，這波老字號跨界甜點一次看懂"
+title: "漢餅為什麼做起義式冰淇淋？舊振南Gelato到涼麵雪糕"
 slug: "century-bakery-gelato-cold-noodle-popsicle"
 description: "百年漢餅品牌舊振南跨界推出義式冰淇淋、全家攜手嘉義老店做出「白醋涼麵雪糕」。整理這波老字號與超商跨界消暑甜點：為什麼做、口味有哪些、哪裡買得到。"
 excerpt: "百年漢餅品牌舊振南跨界推出義式冰淇淋、全家攜手嘉義老店做出「白醋涼麵雪糕」。整理這波老字號與超商跨界消暑甜點：為什麼做、口味有哪些、哪裡買得到。"
 publishDate: "2026-08-05T18:36:41.524Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 tags:

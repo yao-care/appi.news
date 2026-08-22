@@ -1,8 +1,9 @@
 ---
-title: "全英公開賽混雙全記錄：葉宏蔚、詹又蓁直落二逆轉封王"
+title: "葉宏蔚、詹又蓁全英公開賽封王：混雙決賽全記錄"
 slug: "all-england-ye-chan-mixed-doubles"
-description: "2026年全英公開賽，台灣混雙組合葉宏蔚、詹又蓁以21比19、21比18直落二擊敗法國第5種子吉奎爾／德爾魯，寫下台灣首度登頂全英公開賽混雙項目的紀錄。整理決賽關鍵時刻、搭檔歷程與後續賽程。"
+description: "台灣混雙組合葉宏蔚、詹又蓁2026年全英公開賽決賽以21比19、21比18直落二擊敗法國第5種子吉奎爾／德爾魯，寫下台灣首度登頂全英公開賽混雙項目的紀錄。整理決賽關鍵時刻、搭檔歷程與後續賽程。"
 publishDate: 2026-08-08
+updatedDate: 2026-08-22
 category: sports
 subcategory: events
 tags: ["國際賽事", "英國", "日本", "台北市"]
@@ -29,7 +30,7 @@ references:
     url: "https://tsna.com/article/130292"
 draft: false
 ---
-英國伯明罕Utilita Arena Birmingham傳來捷報，台灣羽球混雙組合葉宏蔚（Ye Hong Wei）、詹又蓁（Nicole Gonzales Chan）在2026年全英公開賽決賽以21比19、21比18直落二擊敗法國第5種子吉奎爾（Thom Gicquel）／德爾魯（Delphine Delrue），寫下台灣選手首度登頂全英公開賽混雙項目的紀錄。這對僅搭檔一年多的組合，是以非種子身份闖進決賽，最終逆轉拿下生涯最高等級的冠軍。
+台灣羽球混雙組合葉宏蔚（Ye Hong Wei）、詹又蓁（Nicole Gonzales Chan）在英國伯明罕Utilita Arena Birmingham舉行的2026年全英公開賽決賽，以21比19、21比18直落二擊敗法國第5種子吉奎爾（Thom Gicquel）／德爾魯（Delphine Delrue），寫下台灣選手首度登頂全英公開賽混雙項目的紀錄。這對僅搭檔一年多的組合，是以非種子身份闖進決賽，最終逆轉拿下生涯最高等級的冠軍。
 
 ## 決賽關鍵時刻：直落二21:19、21:18逆轉封王
 

@@ -1,8 +1,9 @@
 ---
-title: "波昂氣候談判陷僵局：正義轉型成唯一進展，適應目標卡關推給 COP31，台灣以 NDC 3.0 自主接軌"
+title: "波昂氣候談判陷僵局，適應目標卡關推給COP31"
 slug: "bonn-climate-talks-2026-stall-road-to-cop31"
 description: "聯合國 2026 年波昂氣候會議（SB64）於 6 月 18 日閉幕，兩週談判被外界評為陷入僵局。正義轉型機制取得進展、留下交付 COP31 的文本，但全球適應目標（GGA）無法達成共識、依議事規則第 16 條推給年底在土耳其安塔利亞舉行的 COP31，氣候資金分歧加深。台灣雖非氣候公約締約方，已以 2035 年減 38±2% 的 NDC 3.0 自主接軌國際規範。"
 publishDate: "2026-06-23T13:05:35.237Z"
+updatedDate: "2026-08-22T00:00:00+08:00"
 category: "focus"
 subcategory: "policy-watch"
 tags:

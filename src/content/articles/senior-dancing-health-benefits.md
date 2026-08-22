@@ -4,6 +4,7 @@ slug: "senior-dancing-health-benefits"
 description: "義大利羅馬一對70歲與79歲的舞者街頭共舞影片爆紅，帶出跳舞對銀髮族健康的實證效果：認知功能、平衡感、憂鬱情緒都有改善，但研究也點出跌倒預防效果並不一致。整理具體研究發現與怎麼開始。"
 excerpt: "義大利羅馬一對70歲與79歲的舞者街頭共舞爆紅，帶出跳舞對銀髮族認知、平衡、情緒的實證效果，也點出研究尚未證實的部分。"
 publishDate: "2026-08-14T19:12:28.800Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -22,7 +23,7 @@ risksAndLimits:
   - "義大利高齡化數據反映當地國情，中位年齡與出生率數字不能直接套用到台灣。"
 ---
 
-義大利羅馬一對舞者的街頭共舞影片，因為主角是70歲與79歲的長輩而在網路爆紅，也讓「跳舞對銀髮族到底有沒有實際好處」重新被討論。[《精神醫學前沿》期刊2026年刊出的一篇文獻回顧](https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1862532/full)整理發現，規律跳舞能改善長者的認知功能、平衡感與情緒，但跌倒預防的效果目前證據並不一致。
+義大利羅馬一對舞者的街頭共舞影片，因為主角是70歲與79歲的長輩而在網路爆紅，也讓「跳舞對銀髮族到底有沒有實際好處」重新被討論，這類討論也呼應近年愈來愈多聚焦長者[肌肉量、代謝與大腦刺激](/articles/anti-aging-muscle-metabolism-brain-guide/)的研究方向。[《精神醫學前沿》期刊2026年刊出的一篇文獻回顧](https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1862532/full)整理發現，規律跳舞能改善長者的認知功能、平衡感與情緒，但跌倒預防的效果目前證據並不一致。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=H6gG-nDekrw" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：義大利銀髮師生共舞紅上電視 盼激勵同齡者活動身體">
@@ -35,7 +36,7 @@ risksAndLimits:
 
 70歲的退休舞蹈老師帕斯夸勒（Pasquale Iannotta）與79歲的舞伴愛麗莎（Elisa Fava）兩人在舞蹈課上結識，此後每到夏天就固定在羅馬工人階級聚居的[特拉斯提弗列區泰斯塔喬廣場（Testaccio）](https://www.thelocal.it/20260813/italian-senior-couple-dancing-in-roman-piazza-become-internet-sensation)街頭共舞麥可傑克森與貓王的歌曲。一位社群媒體行銷導遊「The Tour Guy」上週把兩人共舞的片段上傳Instagram，短短幾天累積近37萬個讚與數千則留言，[羅馬市長古阿爾提耶里（Roberto Gualtieri）也公開讚揚兩人是「傑出舞者」](https://www.canadianaffairs.news/2026/08/14/if-you-can-move-say-romes-viral-dancing-seniors/)，兩人此後更受邀上義大利國家廣播公司Rai Uno的晨間節目表演。
 
-義大利是全歐盟人口最老的國家，[中位年齡達49.1歲，去年出生率創80年新低、下降近4%](https://www.canadianaffairs.news/2026/08/14/if-you-can-move-say-romes-viral-dancing-seniors/)。愛麗莎接受採訪時直言，只要還能動就該動一動，尤其跳舞這種活動特別有益身心。這句話恰好呼應了近年愈來愈多針對長者的[肌肉量、代謝與大腦刺激](/articles/anti-aging-muscle-metabolism-brain-guide/)研究方向，也讓跳舞這種老派休閒重新被拿出來檢視實際效果。
+義大利是全歐盟人口最老的國家，[中位年齡達49.1歲，去年出生率創80年新低、下降近4%](https://www.canadianaffairs.news/2026/08/14/if-you-can-move-say-romes-viral-dancing-seniors/)。愛麗莎接受採訪時直言，只要還能動就該動一動，尤其跳舞這種活動特別有益身心。這句話恰好呼應了近年愈來愈多針對長者的肌肉量、代謝與大腦刺激研究方向，也讓跳舞這種老派休閒重新被拿出來檢視實際效果。
 
 ## 研究怎麼說：跳舞對長者身心的具體效果
 

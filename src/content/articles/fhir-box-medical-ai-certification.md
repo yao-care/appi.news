@@ -1,8 +1,9 @@
 ---
-title: "如何評估醫療AI：FHIR Box與智慧醫療認證要看5個關卡"
+title: "什麼是FHIR？醫療AI認證與FHIR Box要看5個關卡"
 slug: "fhir-box-medical-ai-certification"
-description: "台灣啟動國家數位健康互通性與效能認證實驗室，並推進FHIR Box。解析資料互通、三類認證、AI治理與不同層級醫院的導入落差。"
+description: "FHIR（Fast Healthcare Interoperability Resources）是台灣推動醫療資料互通的核心標準，衛福部並啟動國家數位健康互通性與效能認證實驗室、推進FHIR Box。解析資料標準、三類認證、AI治理與不同層級醫院的導入落差。"
 publishDate: 2026-08-20
+updatedDate: 2026-08-22
 category: health
 subcategory: health-policy
 tags: ["醫療AI", "數位健康", "醫療政策", "AI治理", "資料治理", "資安", "個資保護"]
@@ -31,7 +32,7 @@ references:
     url: "https://hl7.org/fhir/smart-app-launch/"
 draft: false
 ---
-衛生福利部於2026年8月舉行國家數位健康互通性與效能認證實驗室成立大會，FHIR Box正擴大導入。官方並規劃未來推動軟體、硬體及整體解決方案廠商三類認證。
+FHIR（Fast Healthcare Interoperability Resources）是HL7訂定的醫療資料交換標準；台灣的FHIR Box則是整合資料轉換、儲存與交換的在地架構。衛生福利部於2026年8月舉行國家數位健康互通性與效能認證實驗室成立大會，FHIR Box正擴大導入。官方並規劃未來推動軟體、硬體及整體解決方案廠商三類認證。
 
 制度可提供驗測基礎，AI偏差、模型漂移與導入成效仍待規範及實證回答。
 

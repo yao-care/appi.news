@@ -1,7 +1,7 @@
 ---
-title: "Gemini 3.5 Pro 帶 200 萬 token 脈絡逼近 GA：超長脈絡到底在哪些場景才真的有用"
+title: "Gemini 3.5 Pro 200萬token脈絡：哪些場景真的有用"
 slug: "long-context-landing-scenarios"
-description: "Gemini 3.5 Pro 帶 200 萬 token 脈絡逼近正式發布，是量產旗艦最長的脈絡視窗。但把整包資料倒進去不等於贏。這篇拆長脈絡真正划算的三類落地場景，以及哪些場景其實是解錯題、用 RAG 或混合架構更省更準，給台灣團隊一個選型判準。"
+description: "Gemini 3.5 Pro 是Google目前脈絡視窗最長的旗艦模型，達200萬token並逼近正式發布。但脈絡長度不等於好用，這篇拆解真正划算的三類落地場景，以及哪些場景該用RAG或混合架構更省更準，給台灣團隊一個選型判準。"
 excerpt: "200 萬 token 是量產最長脈絡，但廣告脈絡不等於可用脈絡。長脈絡真正划算的只有幾類場景，其餘知識庫問答用 RAG 更省更準。這篇給一個先分清楚任務類型的選型判準。"
 publishDate: "2026-07-12T08:00:00+08:00"
 category: "tech"
@@ -22,6 +22,7 @@ sourceType: "editorial"
 contentType: "analysis"
 disclaimerType: "general"
 disclosure: "本文以 AI 輔助起草，所有數據、事實與引述來源均經人工逐條查證、編輯與校對後刊出。"
+updatedDate: 2026-08-22
 highlights:
   - "Gemini 3.5 Pro 帶 200 萬 token 脈絡與 Deep Think 推理逼近 GA，是量產前沿模型最長的脈絡視窗；但官方定價未公布，超過 20 萬 token 的長脈絡段是估算加價區。"
   - "廣告脈絡長度不等於可用脈絡：RULER 基準顯示宣稱 32K 以上的模型只有一半能在 32K 撐住，資訊埋在中段還會出現 lost in the middle 的注意力衰退。"
@@ -50,7 +51,7 @@ references:
 originalContribution: "本文把『廣告脈絡長度 ≠ 可用脈絡』這個常被行銷蓋過的落差，接上 RULER 有效脈絡、Databricks 逐長度衰退點與 lost in the middle 三份證據，整理成一張『哪類任務值得用長脈絡、哪類該用 RAG 或混合』的落地場景判準表，並換算台灣團隊在 20 萬 token 加價區的成本考量。"
 ---
 
-Google 的 Gemini 3.5 Pro 帶 [200 萬 token 脈絡與 Deep Think 推理逼近正式發布](https://theairankings.com/google/gemini-3-5-pro/)，是目前量產前沿模型裡最長的脈絡視窗。但長脈絡不是「把整包資料倒進去就贏」。它真正划算的落地場景只有幾類：單一長文件的整體理解、整包程式碼的跨檔推理、長時程 agent 的記憶。其餘像知識庫問答這種要精準檢索又要引用出處的活，用 RAG（檢索增強生成）或混合架構通常更省、也更準。選錯場景，你付的是 20 萬 token 以上的長脈絡加價，換來的卻是資訊埋在中段就失憶的風險。
+Google 的 Gemini 3.5 Pro 帶 [200 萬 token 脈絡與 Deep Think 推理逼近正式發布](https://theairankings.com/google/gemini-3-5-pro/)，是目前量產前沿模型裡最長的脈絡視窗。但長脈絡不是「把整包資料倒進去就贏」。它真正划算的落地場景只有幾類：單一長文件的整體理解、整包程式碼的跨檔推理、長時程 agent 的記憶。其餘像知識庫問答這種要精準檢索又要引用出處的活，用 RAG（檢索增強生成）或混合架構通常更省、也更準。選錯場景，你付的是 20 萬 token 以上的長脈絡加價，換來的卻是資訊埋在中段就失憶的風險。這場「脈絡視窗軍備賽」不只 Google 一家在跑，[MiniMax M3 用開源權重打出百萬脈絡與砍半定價](/articles/minimax-m3-open-weights-cost-structure/)，是同一場競賽的另一個切角。
 
 <img src="/images/long-context-landing-scenarios-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="AI 語言模型介面在螢幕上運作，象徵長脈絡旗艦模型逼近正式發布">
 

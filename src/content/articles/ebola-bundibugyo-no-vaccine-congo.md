@@ -1,10 +1,10 @@
 ---
-title: "Ervebo伊波拉疫苗能防Bundibugyo病毒株嗎？剛果一次拿到7萬劑，確診破5200例死亡逾2400人"
+title: "伊波拉疫情最新：剛果7萬劑疫苗防得住嗎"
 slug: "ebola-bundibugyo-no-vaccine-congo"
-description: "世界衛生組織與國際疫苗供應協調小組8月19日證實，剛果將取得7萬劑默沙東Ervebo伊波拉疫苗，2萬劑用於第三期臨床試驗、5萬劑供第一線醫護與高風險民眾接種；但Ervebo原本核准對象是薩伊病毒株，對本波疫情元凶Bundibugyo病毒株的保護力仍待驗證。疫情累計確診已達5208例、死亡2476人，致死率47.5%。"
+description: "伊波拉疫情持續在剛果延燒，世界衛生組織與國際疫苗供應協調小組8月19日證實，剛果將取得7萬劑默沙東Ervebo伊波拉疫苗，2萬劑用於第三期臨床試驗、5萬劑供第一線醫護與高風險民眾接種；但Ervebo對本波疫情元凶Bundibugyo病毒株的保護力仍待驗證。疫情累計確診5208例、死亡2476人，致死率47.5%。"
 excerpt: "剛果將取得7萬劑Ervebo伊波拉疫苗，2萬劑做臨床試驗、5萬劑供醫護與高風險民眾接種，但對Bundibugyo病毒株的保護力仍待驗證。疫情累計確診破5200例、死亡逾2400人。"
 publishDate: "2026-08-04T16:27:31.005Z"
-updatedDate: "2026-08-20T15:37:00.382Z"
+updatedDate: "2026-08-22T00:00:00.000Z"
 category: "international"
 subcategory: "global-focus"
 tags:
@@ -83,6 +83,8 @@ coverImageCredit: "Photo by Arion Reyvonputra on Unsplash"
 
 世衛強調，目前並不清楚Ervebo是否真能保護人體對抗Bundibugyo病毒株，但「早期實驗室與動物數據顯示它可能提供部分保護」，這也是為何要同步啟動第三期臨床試驗來驗證實際成效。[KSAT報導](https://www.ksat.com/health/2026/08/20/congo-to-receive-70000-doses-of-ervebo-ebola-vaccine-which-has-been-effective-in-past-outbreaks/)指出，截至8月20日，本波疫情累計確診5208例、死亡2476人，致死率47.5%，北基伍省致死率更達70%；官方研判疫情最早可能自2月從礦業城鎮蒙布瓦盧開始傳播，5月15日才正式宣布爆發。這批疫苗被視為官員口中「史上擴散最快」伊波拉疫情應變工作的一項重要工具，但實際能否壓制疫情，仍要看試驗結果與接種覆蓋率能否跟上傳播速度。
 
+延伸閱讀：[剛果、烏干達伊波拉破 500 例，WHO 宣告全球公衛緊急事件](/articles/congo-uganda-ebola-who-emergency/)
+
 ## 金沙薩近郊河船匡列，32歲旅客染疫身亡
 
 剛果民主共和國衛生部8月6日證實，一艘沿剛果河航行近三週的客船，在距首都金沙薩約65公里的馬盧庫遭攔查隔離，起因是一名32歲男性乘客7月25日在蒙加拉省皮穆地區出現症狀、下船後死亡，死因疑似伊波拉病毒感染。[TimesLIVE報導](https://www.timeslive.co.za/news/2026-08-06-congo-tests-boat-passengers-after-traveller-dies-with-ebola-like-symptoms/)指出，船上近200名乘客全數接受伊波拉檢測並隔離等候結果；[南華早報進一步報導](https://www.scmp.com/news/world/africa/article/3363217/dr-congo-tests-over-300-passengers-after-suspected-ebola-death-boat)則指出，實際受檢人數超過300人，其中4名出現發燒等症狀的乘客已採檢送驗，結果預計8月7日公布。
@@ -94,8 +96,6 @@ coverImageCredit: "Photo by Arion Reyvonputra on Unsplash"
 [Border Mail引述澳洲聯合通訊社報導](https://www.bordermail.com.au/story/9324058/ebola-kills-1700-in-eastern-congo-as-outbreak-surges/)，這波疫情5月15日正式宣布爆發，主要集中在剛果東部偏遠的伊圖裡省，占全國近9成病例；其餘5個省份也陸續出現確診，範圍已擴及該國最大城市之一基桑加尼。[世界衛生組織非洲區辦公室資料](https://www.afro.who.int/health-topics/ebola-disease/outbreak-drc-26)顯示，這是剛果自1976年以來第17次伊波拉疫情爆發，也是國際關注公共衛生緊急事件（PHEIC），疫情已跨境擴散到鄰國烏干達。
 
 根據[Al Jazeera彙整美聯社與路透社報導](https://www.aljazeera.com/news/2026/8/4/dr-congo-ebola-outbreak-kills-more-than-1700-as-who-accelerates-trials)，本波疫情在啟動應變後40天內，確診數就突破1000例；相較之下，2018年剛果的伊波拉疫情花了約235天才達到同樣的千例里程碑，等於這次擴散速度快了近6倍，是目前有紀錄以來擴散最快的一次。
-
-延伸閱讀：[剛果、烏干達伊波拉破 500 例，WHO 宣告全球公衛緊急事件](/articles/congo-uganda-ebola-who-emergency/)
 
 <figure>
 <img src="/images/ebola-bundibugyo-no-vaccine-congo-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="一名衛教人員手持圖卡，向社區民眾說明防疫注意事項">

@@ -1,9 +1,10 @@
 ---
 coverImage: "covers/taiwan-flavor-savory-ice-cream-guide-cover.webp"
 coverAlt: "冰淇淋店冰櫃陳列多種口味冰淇淋球"
-title: "鹹口味冰淇淋為什麼紅？肉鬆、豬腳冰淇淋怎麼來的一次看懂"
+title: "台灣重口味冰淇淋為什麼紅？肉鬆豬腳一次看懂"
 description: "台北西門町一間77年老冰店把肉鬆、豬腳、麻油雞做成冰淇淋口味，吸引外國遊客朝聖挑戰。整理這股「台灣味冰品」的由來、代表店家的地址價格，以及為什麼重口味在地食材特別能吸引旅客。"
 publishDate: "2026-08-20T18:33:51.753Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"

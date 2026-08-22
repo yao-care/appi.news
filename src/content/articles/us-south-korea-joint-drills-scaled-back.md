@@ -1,10 +1,10 @@
 ---
-title: "美韓聯合軍演為何忽然縮減？川普稱看好北韓核武對話"
+title: "美韓軍演為何縮減？北韓現況與南韓表態全整理"
 slug: "us-south-korea-joint-drills-scaled-back"
-description: "川普8月16日下令縮減美韓聯合軍演「烏爾奇自由盾」，演習已提前於8月21日結束，北韓金與正稱這不算「善意舉措」；南韓總統李在明8月20日改口力挺川普決定，宣布願任美朝調停者、國防支出拉高到GDP的3.5%。整理縮減爭議、北韓最新回應與南韓表態轉折。"
+description: "川普8月16日下令縮減美韓聯合軍演「烏爾奇自由盾」，演習提前於8月21日結束，北韓金與正稱不算善意舉措；南韓總統李在明8月20日改口力挺縮減、宣布願任美朝調停者。整理北韓最新回應與南韓表態轉折。"
 excerpt: "美韓軍演已提前結束，北韓金與正稱不視為善意舉措；南韓總統李在明轉向力挺川普縮減決定，宣布願任美朝調停者並拉高國防支出。"
 publishDate: "2026-08-19T02:45:15.813Z"
-updatedDate: "2026-08-20T15:37:00.382Z"
+updatedDate: "2026-08-22T00:00:00+08:00"
 category: "international"
 subcategory: "asia"
 tags:
@@ -27,7 +27,7 @@ risksAndLimits:
   - "川普稱北韓有「57枚非常強大的核武器」為其單方數字，未見獨立來源驗證"
 ---
 
-川普8月16日晚間在Truth Social發文，下令戰爭部長（原國防部長）皮特．赫格塞斯「大幅縮減」正在進行的美韓聯合軍演「烏爾奇自由盾」，理由是南韓拒絕協助美國對伊朗去核化施壓，加上他自認與北韓領導人金正恩「關係良好」（[PBS NewsHour](https://www.pbs.org/newshour/politics/trump-orders-pentagon-to-scale-back-joint-exercises-with-south-korea)）。南韓國防部隨即回應，軍演仍會按照原訂計畫進行，雙方說法出現明顯落差（[Al Jazeera](https://www.aljazeera.com/news/2026/8/17/trump-says-us-to-substantially-reduce-military-drills-with-south-korea)）。
+美韓聯合軍演縮減後，北韓最新反應與南韓表態成為外界關注焦點。川普8月16日晚間在Truth Social發文，下令戰爭部長（原國防部長）皮特．赫格塞斯「大幅縮減」正在進行的美韓聯合軍演「烏爾奇自由盾」，理由是南韓拒絕協助美國對伊朗去核化施壓，加上他自認與北韓領導人金正恩「關係良好」（[PBS NewsHour](https://www.pbs.org/newshour/politics/trump-orders-pentagon-to-scale-back-joint-exercises-with-south-korea)）。南韓國防部隨即回應，軍演仍會按照原訂計畫進行，雙方說法出現明顯落差（[Al Jazeera](https://www.aljazeera.com/news/2026/8/17/trump-says-us-to-substantially-reduce-military-drills-with-south-korea)）。
 
 這不是川普今年第一次牽動南韓周邊的軍事部署。稍早才有[南韓、日本部署的防空攔截彈被抽調去補中東戰場缺口](/articles/us-missile-stockpile-shortage-asia-defense/)，如今又輪到年度規模最大的美韓聯合軍演被要求縮減，凸顯伊朗戰事的外溢效應持續延燒到朝鮮半島。
 

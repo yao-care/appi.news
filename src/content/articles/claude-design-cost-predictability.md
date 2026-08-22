@@ -1,9 +1,10 @@
 ---
-title: "Claude Design 改版修掉「25 分鐘燒掉 80% 週額度」：AI 設計工具的成本可預期性成了產品命門"
+title: "Claude Design 改版修掉「25分鐘燒80%週額度」痛點"
 slug: "claude-design-cost-predictability"
 description: "Claude Design 六月改版，把「25 分鐘做三個變體就燒掉 80% 週額度」這種沒人敢用的成本結構壓下來。修的不是設計品質，是單位成本的可預期性。對任何靠訂閱制賣 AI 的產品，這一格才是命門，台灣做 AI SaaS 的團隊該看懂。"
 excerpt: "PCWorld 記者拿 Claude Pro 試用 Claude Design，25 分鐘做出三個變體就燒掉 80% 週額度。真正致命的不是貴，是不可預期。六月改版修的正是這一格。"
 publishDate: "2026-07-13T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "software-products"
 tags:

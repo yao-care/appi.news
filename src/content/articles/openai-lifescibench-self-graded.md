@@ -1,9 +1,10 @@
 ---
-title: "OpenAI 端出 LifeSciBench：AI 做生命科學研究只過三成，而且裁判是自家"
+title: "LifeSciBench：AI做生科研究僅過三成，裁判是自家"
 slug: "openai-lifescibench-self-graded"
 description: "OpenAI 發布自家設計的生命科學研究評測 LifeSciBench，750 題真實研究任務，連自家最強模型 GPT-Rosalind 都只過 36.1%、失敗近六成四。這個數字值得看，但更該看的是握尺的人：出題、評分、秀成績的都是 OpenAI 自己。"
 excerpt: "AI 連自家出的生命科學考卷都只過三成，這件事該怎麼讀？分數是一回事，出題兼改考卷兼頒獎的是同一個人，又是另一回事。"
 publishDate: "2026-07-15T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "ai"
 tags:
@@ -51,7 +52,7 @@ column: "ai-healthcare"
 topics: ["medical-ai-frontline"]
 ---
 
-OpenAI 剛端出一套自己設計的生命科學研究評測 LifeSciBench，結果連它家最強的模型都只過了 36.1% 的題目，[等於六成四的真實研究任務直接不及格](https://science.slashdot.org/story/26/06/20/202204/openai-announces-benchmarks-for-ai-life-sciences-research-its-best-model-failed-639-of-the-test)。這個數字本身值得看。但更值得看的是握尺的人：出題的是 OpenAI、改考卷的是 OpenAI、被拿出來當範例秀成績的還是 OpenAI 自家模型。一份自己出題、自己改考卷、自己頒獎的成績單，不管分數高低，先天就少一層可信度。
+OpenAI 剛端出一套自己設計的生命科學研究評測 LifeSciBench，結果連它家最強的模型都只過了 36.1% 的題目，[等於六成四的真實研究任務直接不及格](https://science.slashdot.org/story/26/06/20/202204/openai-announces-benchmarks-for-ai-life-sciences-research-its-best-model-failed-639-of-the-test)。這個數字本身值得看。但更值得看的是握尺的人：出題的是 OpenAI、改考卷的是 OpenAI、被拿出來當範例秀成績的還是 OpenAI 自家模型。一份自己出題、自己改考卷、自己頒獎的成績單，不管分數高低，先天就少一層可信度，這正好對應[先前談 LLM 不會打從心底佔你便宜那篇](/articles/llm-no-incentive-to-exploit/)提過的判準：要不要信任一個系統，看的是誘因結構，不是能力高低。
 
 <img src="/covers/openai-lifescibench-self-graded.webp" width="868" height="1300" loading="lazy" decoding="async" alt="AI 進入生命科學實驗室、接受真實研究任務評測的示意">
 
@@ -81,7 +82,7 @@ LifeSciBench 不是那種「請問這個基因的功能是什麼」的問答題�
 
 <img src="/images/openai-lifescibench-self-graded-s3.webp" width="960" height="640" loading="lazy" decoding="async" alt="哨子與裁判意象，象徵出題與評分由同一方掌握的利益衝突">
 
-我不是在說數字造假。有 453 位外部專家審過題目品質，題目本身可信。要踩剎車的是另一件事：當出題、選手名單、改考卷、寫新聞稿全在同一家手上，這份東西的性質就從「評測」滑向「行銷」。判斷一個訊號值不值得信，看的不是它聰不聰明，而是它的[運作機制裡有沒有讓它需要粉飾的結構性理由](/articles/llm-no-incentive-to-exploit/)。自家握尺、又拿自家模型當範例，粉飾的動機就結構性地存在，跟誠不誠實無關。你看一份基準之前，得先問一句：這把尺是誰做的、誰在量。
+我不是在說數字造假。有 453 位外部專家審過題目品質，題目本身可信。要踩剎車的是另一件事：當出題、選手名單、改考卷、寫新聞稿全在同一家手上，這份東西的性質就從「評測」滑向「行銷」。判斷一個訊號值不值得信，看的是它的運作機制裡有沒有讓它需要粉飾的結構性理由，不是聰不聰明。自家握尺、又拿自家模型當範例，粉飾的動機就結構性地存在，跟誠不誠實無關。你看一份基準之前，得先問一句：這把尺是誰做的、誰在量。
 
 ## 台灣生技要從這讀出什麼
 

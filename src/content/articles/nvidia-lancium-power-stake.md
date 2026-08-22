@@ -1,8 +1,9 @@
 ---
-title: "AI資料中心電力吃緊？輝達砸30億美元入股電力商卡位電網"
-description: "輝達計畫最高砸30億美元入股德州電力開發商Lancium，先出資20億美元換2成股權，達成電網併網等里程碑後可再加碼10億美元。Lancium的土地是OpenAI、甲骨文、軟銀合資Stargate資料中心園區首個運轉基地，企業價值約100億美元，這筆交易凸顯電力已成AI晶片龍頭擴張的新戰場。"
+title: "輝達入股Lancium是什麼？30億美元卡位AI電力版圖"
+description: "Lancium是輝達計畫入股的德州電力開發商，最高砸30億美元、先出資20億美元換取約2成股權，達成電網併網等里程碑後可再加碼10億美元。這筆交易鎖定的是OpenAI、甲骨文、軟銀合資Stargate資料中心園區首個運轉基地，企業價值約100億美元，凸顯電力已成AI晶片龍頭擴張的新戰場。"
 excerpt: "輝達最高砸30億美元入股電力開發商Lancium，先取得約2成股權，鎖定Stargate資料中心園區的電網命脈，凸顯電力已成AI晶片龍頭最新戰場。"
 publishDate: "2026-08-10T16:37:27.503Z"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "americas"
 author: "appi-editorial"
@@ -31,7 +32,7 @@ highlights:
   - "園區完整建成後電力容量達1.2吉瓦、可容納逾45萬顆輝達GB200 GPU，凸顯電力已成AI資料中心擴張最大瓶頸"
 ---
 
-輝達計畫最高砸30億美元入股電力基礎設施開發商Lancium，換取這家德州公司約2成股權，用意很直接，搶下人工智慧資料中心最新的稀缺資源：電力（[Market Business News](https://marketbusinessnews.com/nvidia-reportedly-plans-up-to-3-billion-investment-in-lancium/450489/)）。這筆交易由科技媒體《The Information》披露，多家財經媒體8月8日跟進報導。
+Lancium是一家德州電力基礎設施開發商，輝達計畫最高砸30億美元入股，換取這家公司約2成股權，用意很直接，搶下人工智慧資料中心最新的稀缺資源：電力（[Market Business News](https://marketbusinessnews.com/nvidia-reportedly-plans-up-to-3-billion-investment-in-lancium/450489/)）。這筆交易由科技媒體《The Information》披露，多家財經媒體8月8日跟進報導。
 
 資料中心缺電不是美國獨有的煩惱。台灣同樣正因AI伺服器用電暴增，研議[要求契約容量5MW以上的用電大戶強制設置儲能或替代電力方案](/articles/taiwan-heavy-power-user-storage-mandate/)，估計四百到七百家業者受影響。
 

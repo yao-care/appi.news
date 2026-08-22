@@ -1,9 +1,10 @@
 ---
-title: "博弈廣告要怎麼管才夠？澳洲電視廣告限量新法卡參院，跨黨派下最後通牒逼工黨表態"
+title: "澳洲博弈廣告新法卡參院　跨黨派下最後通牒逼工黨"
 slug: "australia-gambling-ad-reform-senate-showdown"
 description: "澳洲聯邦政府提案把電視博弈廣告限制在尖峰時段每小時3則、封殺球員與網紅代言，法案卻卡在參議院委員會審查，綠黨與跨黨派議員嫌力度不足、揚言自己動手修法。整理具體條文、聽證會證詞攻防與工黨、聯盟黨的回應。"
 excerpt: "澳洲電視博弈廣告限量新法卡在參議院，綠黨參議員漢森楊放話工黨若不加碼就自己修法，跨黨派也嫌力度不如已故議員墨菲報告的全面禁令建議。"
 publishDate: "2026-08-09T16:59:38.892Z"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "global-focus"
 tags:

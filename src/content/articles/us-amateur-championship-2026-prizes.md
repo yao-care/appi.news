@@ -1,7 +1,7 @@
 ---
-title: "美國業餘錦標賽戰報：英格蘭好手封王，冠軍拿到哪些資格"
+title: "美國業餘錦標賽英格蘭好手封王，冠軍拿到哪些資格"
 slug: "us-amateur-championship-2026-prizes"
-description: "2026美國業餘錦標賽在賓州梅里恩高爾夫俱樂部落幕，22歲英格蘭選手Jack Whaley以「4 & 3」擊敗史丹佛大學選手Jay Leng Jr.封王。整理決賽戰報、梅里恩球場的歷史意義，並列出冠軍、亞軍、四強與八強選手各自可取得的美國公開賽、名人賽、英國公開賽等資格與獎勵。"
+description: "2026美國業餘錦標賽戰報：22歲英格蘭好手Jack Whaley在梅里恩球場以「4 & 3」擊敗史丹佛大學選手封王。整理決賽戰況、球場歷史意義，並列出冠軍到八強選手可取得的美國公開賽、名人賽、英國公開賽資格。"
 publishDate: "2026-08-17T06:19:15.325Z"
 category: sports
 subcategory: events
@@ -32,9 +32,10 @@ references:
     url: "https://golf.com/news/2026-us-amateur-winner-runner-up-get/"
     publisher: "Golf.com"
 draft: false
+updatedDate: "2026-08-22T00:00:00+08:00"
 ---
 
-英格蘭選手Jack Whaley（傑克・懷利）在賓州阿德莫爾的梅里恩高爾夫俱樂部，於36洞決賽以「4 & 3」（領先達4洞、僅剩3洞未打完比賽即結束）擊敗史丹佛大學選手Jay Leng Jr.（傑伊・倫恩二世），奪下2026美國業餘錦標賽冠軍。[Golf.com賽後報導](https://golf.com/news/england-jack-whaley-wins-us-amateur-no-surprise/)指出，這場賽事同時依名次公布可取得的美國公開賽、名人賽與英國公開賽等資格，對業餘好手而言是通往職業舞台的重要跳板。
+2026美國業餘錦標賽由英格蘭選手Jack Whaley（傑克・懷利）封王，賽事同時依名次公布冠軍到八強選手各自可取得的美國公開賽、名人賽與英國公開賽等資格，對業餘好手而言是通往職業舞台的重要跳板。他在賓州阿德莫爾的梅里恩高爾夫俱樂部，於36洞決賽以「4 & 3」（領先達4洞、僅剩3洞未打完比賽即結束）擊敗史丹佛大學選手Jay Leng Jr.（傑伊・倫恩二世）奪冠，詳見[Golf.com賽後報導](https://golf.com/news/england-jack-whaley-wins-us-amateur-no-surprise/)。
 
 ## 決賽戰報：雨戰梅里恩，22歲小將封王
 

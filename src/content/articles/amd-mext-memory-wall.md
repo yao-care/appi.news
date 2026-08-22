@@ -1,9 +1,10 @@
 ---
-title: "AMD 買下記憶體新創 Mext：AI 加速器的下一場仗，從算力打到記憶體牆"
+title: "AMD併購Mext：AI加速器戰場轉向記憶體牆"
 slug: "amd-mext-memory-wall"
 description: "AMD 六月中旬併購記憶體最佳化軟體公司 MEXT，用 AI 預測式分層把快閃記憶體當 DRAM 用。這筆沒公布金額的小案子，訊號比金額重要：AI 晶片的競爭正從堆算力，轉到餵不餵得動晶片的記憶體牆。台灣站在這條記憶體軍備賽上，該看懂容量與頻寬是兩個不同的問題。"
 excerpt: "為什麼 AMD 不是再買一家算力公司，而是買記憶體軟體？因為堆更多 FLOPS 正在解錯題。晶片再快，資料餵不進去就是空轉，而餵資料這件事，卡在記憶體牆。"
 publishDate: "2026-07-13T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "semiconductor"
 tags:
@@ -57,11 +58,11 @@ AMD 買了一家做記憶體軟體的小公司，沒公布金額，新聞熱度�
 
 <img src="/images/amd-mext-memory-wall-s1.webp" width="960" height="720" loading="lazy" decoding="async" alt="伺服器記憶體模組與儲存硬體特寫，象徵預測式分層把快閃記憶體當 DRAM 延伸">
 
-為什麼是現在買、買這個？因為記憶體變貴到誇張。[Gartner 的數字是，記憶體價格從 2025 年第三季起漲了近四倍](https://www.networkworld.com/article/4186201/amd-acquires-mext-to-add-predictive-memory-optimization-to-its-ai-stack.html)，並預估到 2026 年底 DRAM 加 SSD 的合計價格還要再漲一倍多。這不是一般缺貨。[TrendForce 統計，2026 年第一季 DRAM 產業營收季增 81%、衝到 970 億美元，標準型 DRAM 合約價一季就漲了 93% 到 98%](https://www.trendforce.com/presscenter/news/20260601-13070.html)。當一顆料的成本在幾個月內翻倍，任何能少用一點這顆料的軟體，價值都被放大。AMD 買 MEXT，買的就是在漲價潮裡幫客戶少加 DRAM 的能力。
+為什麼是現在買、買這個？因為記憶體變貴到誇張。[Gartner 的數字是，記憶體價格從 2025 年第三季起漲了近四倍](https://www.networkworld.com/article/4186201/amd-acquires-mext-to-add-predictive-memory-optimization-to-its-ai-stack.html)，並預估到 2026 年底 DRAM 加 SSD 的合計價格還要再漲一倍多。這不是一般缺貨。[TrendForce 統計，2026 年第一季 DRAM 產業營收季增 81%、衝到 970 億美元，標準型 DRAM 合約價一季就漲了 93% 到 98%](https://www.trendforce.com/presscenter/news/20260601-13070.html)。當一顆料的成本在幾個月內翻倍，任何能少用一點這顆料的軟體，價值都被放大。AMD 買 MEXT，買的就是在漲價潮裡幫客戶少加 DRAM 的能力。這波記憶體漲價潮的全貌，可參考[顯卡與記憶體同步齊漲，電腦為何變貴](/articles/gpu-memory-price-surge-2026/)。
 
 <img src="/images/amd-mext-memory-wall-s2.webp" width="960" height="1280" loading="lazy" decoding="async" alt="資料中心伺服器機櫃排列，象徵記憶體頻寬跟不上算力成長的瓶頸">
 
-但這裡要先踩一個剎車，因為多數報導把兩件不一樣的事混在一起講。記憶體其實有兩個瓶頸：一個是容量與成本（記憶體不夠大、DRAM 太貴），一個是頻寬（資料搬進搬出的速度不夠快）。真正被叫做「記憶體牆」的是後者。[TrendForce 的分析講得很清楚：AI 晶片算力兩年成長了三倍，記憶體頻寬只增加一點六倍，於是愈來愈多運算不是卡在算力，而是卡在等資料到位](https://www.trendforce.com/insights/memory-wall)。這才是那道牆。MEXT 攻的是前一個問題，容量與成本；它讓 flash 分擔 DRAM 的活，減少要買的 DRAM 量。它並沒有、也不宣稱能把資料搬得更快去打破頻寬牆。
+但這裡要先踩一個剎車，因為多數報導把兩件不一樣的事混在一起講。記憶體其實有兩個瓶頸：一個是容量與成本（記憶體不夠大、DRAM 太貴），一個是頻寬（資料搬進搬出的速度不夠快）。真正被叫做「記憶體牆」的是後者。[TrendForce 的分析講得很清楚：AI 晶片算力兩年成長了三倍，記憶體頻寬只增加一點六倍，於是愈來愈多運算卡住的不是算力，是等資料到位](https://www.trendforce.com/insights/memory-wall)。這才是那道牆。MEXT 攻的是前一個問題，容量與成本；它讓 flash 分擔 DRAM 的活，減少要買的 DRAM 量。它並沒有、也不宣稱能把資料搬得更快去打破頻寬牆。
 
 <img src="/images/amd-mext-memory-wall-s3.webp" width="960" height="720" loading="lazy" decoding="async" alt="DRAM 記憶體模組特寫，象徵容量成本與頻寬是兩個不同的記憶體問題">
 
@@ -69,7 +70,7 @@ AMD 買了一家做記憶體軟體的小公司，沒公布金額，新聞熱度�
 
 <img src="/images/amd-mext-memory-wall-s4.webp" width="960" height="640" loading="lazy" decoding="async" alt="AI 加速器晶片與處理器特寫，象徵 AMD 用軟硬整合堆疊對抗對手">
 
-那 AMD 為什麼是買軟體，不是再蓋一條算力晶片產線？因為這場仗的形狀變了。過去比的是單顆晶片的規格，現在比的是整個堆疊：硬體加上把硬體榨到極致的軟體。Nvidia 的護城河從來不只是 GPU，是 CUDA 那一整套軟體生態把客戶黏住。AMD 補記憶體軟體這一塊，是在補自己堆疊的完整度，讓 Instinct 系列不是只賣一顆晶片，而是賣一套「同樣的 HBM 能撐更多工作、TCO 更低」的方案。這跟我先前寫[台積電 CoWoS 產能被 Nvidia 訂走逾七成](/articles/tsmc-cowos-nvidia-capacity-booking/)是同一條線的兩端：一端是把更多 HBM 疊上去的封裝軍備，一端是想辦法用同樣的記憶體做更多事的軟體軍備。兩邊都在圍著記憶體打。
+那 AMD 為什麼是買軟體，不是再蓋一條算力晶片產線？因為這場仗的形狀變了。過去比的是單顆晶片的規格，現在比的是整個堆疊：硬體加上把硬體榨到極致的軟體。Nvidia 的護城河從來不只是 GPU，是 CUDA 那一整套軟體生態把客戶黏住。AMD 補記憶體軟體這一塊，是在補自己堆疊的完整度，讓 Instinct 系列不只賣一顆晶片，還賣一套「同樣的 HBM 能撐更多工作、TCO 更低」的方案。這跟我先前寫[台積電 CoWoS 產能被 Nvidia 訂走逾七成](/articles/tsmc-cowos-nvidia-capacity-booking/)是同一條線的兩端：一端是把更多 HBM 疊上去的封裝軍備，一端是想辦法用同樣的記憶體做更多事的軟體軍備。兩邊都在圍著記憶體打。
 
 <img src="/images/amd-mext-memory-wall-s5.webp" width="960" height="640" loading="lazy" decoding="async" alt="半導體晶圓廠生產線，象徵台灣在記憶體軍備賽的成熟製程 DRAM 與封裝位置">
 

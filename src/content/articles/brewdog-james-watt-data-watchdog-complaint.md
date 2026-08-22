@@ -4,7 +4,7 @@ slug: "brewdog-james-watt-data-watchdog-complaint"
 description: "BrewDog創辦人James Watt提出買回計畫，卻因聯繫前股東的個資來源不明遭投訴，英國ICO已介入評估。整理4.3萬名投資人支持、Tilray否認提供資料，以及企業收購中的個資治理問題。"
 excerpt: "BrewDog共同創辦人華特提出買回要約，自稱獲4.3萬名投資人支持，卻因聯繫前股東的資料來源不明遭投訴，英國ICO證實正評估相關資訊；收購方Tilray否認外流資料。"
 publishDate: "2026-07-18T15:18:21.808Z"
-updatedDate: "2026-08-17"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "europe"
 tags:

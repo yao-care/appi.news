@@ -1,9 +1,10 @@
 ---
-title: "GPT-5.6 還沒公開就先被下注：模型發布變成賭盤標的，選型別被謠言牽著走"
+title: "GPT-5.6發布日被下注：選型別被謠言牽著走"
 slug: "ai-model-release-prediction-markets"
-description: "OpenAI 的 GPT-5.6 六月底才發有限預覽，公開發布日期還沒定，Polymarket 上已經押進六十幾萬美元賭它哪天上線。賭盤賠率反映的是謠言共識，不是內部路線圖；把選型決策綁在下一個模型什麼時候發，是解錯題。"
+description: "OpenAI的GPT-5.6還沒公開發布，Polymarket卻已押進六十幾萬美元賭它哪天上線。賭盤賠率反映的是謠言共識不是內部路線圖，台灣團隊把選型決策綁在下一個模型什麼時候發，其實是解錯題。"
 excerpt: "為什麼一個還沒公開發布的模型，賭盤能開到六十幾萬美元？因為不確定性被商品化了。但賠率不是路線圖，跟著它調整選型是把工程問題交給賭客投票。"
 publishDate: "2026-07-08T08:00:00+08:00"
+updatedDate: "2026-08-22T00:00:00+08:00"
 category: "tech"
 subcategory: "ai"
 tags:
@@ -54,7 +55,7 @@ references:
 originalContribution: "本文把『模型發布日期被開成賭盤』這個新現象，接回選型的老問題：拆解賭盤賠率為什麼不是路線圖（薄市場、噪音、結算定義模糊），並用『先定義問題再選工具』的順序，給台灣團隊一套不被發布謠言牽著走的選型判準。"
 ---
 
-一個還沒公開發布的模型，賭盤已經開到六十幾萬美元。這不是路線圖，是謠言被商品化。台灣團隊如果因為「聽說下週有更強的」就延後決策或推翻既有落地，那是把工程問題交給賭客投票，解錯題。
+GPT-5.6還沒公開發布，賭盤已經開到六十幾萬美元。這不是路線圖，是謠言被商品化。台灣團隊如果因為「聽說下週有更強的」就延後決策或推翻既有落地，那是把工程問題交給賭客投票，解錯題。
 
 先講事件。OpenAI 在六月底發表了 GPT-5.6，[三款變體 Sol、Terra、Luna 同時亮相](https://www.engadget.com/2203102/openai-starts-previewing-gpt-56-and-its-three-variants/)，Sol 是旗艦、Terra 主打日常、Luna 便宜快速。但它不是一般的上線，而是[在美國政府要求下先做有限預覽，只給少數合作夥伴，名單還要報備給政府](https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/)。OpenAI 自己也不滿意，說這種政府審查流程「不該變成長期預設，會把最好的工具擋在使用者、開發者與企業之外」。至於什麼時候讓 ChatGPT、Codex 和 API 的一般使用者用到，官方只給了一句「未來幾週內」。
 

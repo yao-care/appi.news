@@ -1,9 +1,10 @@
 ---
-title: "『BioShocking』攻擊曝光：AI 瀏覽器被套進遊戲劇本就交出帳密，各家修補進度不一"
+title: "BioShocking攻擊曝光：AI瀏覽器被套劇本交出帳密"
 slug: "bioshocking-ai-browser-credential-leak"
 description: "資安公司 LayerX 用一個假的 BioShock 解謎網頁，把六款主流 AI 瀏覽器全部騙到繞過安全護欄、外洩使用者的 GitHub SSH 憑證。真正的問題不是哪家補得快，而是這類代理架構把『讀不可信網頁』和『動用你登入的敏感資源』綁在同一條信任通道上。"
 excerpt: "只要讓 AI 相信自己在玩遊戲，它就會套用遊戲邏輯、丟掉現實世界的安全邏輯。六款 AI 瀏覽器沒有一個拒絕。這不是一次可以靠改提示詞補掉的漏洞。"
 publishDate: "2026-08-01T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "security"
 tags:
@@ -49,11 +50,11 @@ originalContribution: "本文把 LayerX 揭露的六款 AI 瀏覽器修補進度
 topics: ["ai-agent-governance"]
 ---
 
-一句話講完：六款主流 AI 瀏覽器，被一個假的解謎遊戲頁面全部騙到繞過安全護欄、把使用者登入公司 GitHub 裡的 SSH 帳密抄出去交給攻擊者，沒有一個拒絕。這是資安公司 LayerX [六月底公開的「BioShocking」實測結果](https://layerxsecurity.com/blog/bioshocking-ai-gaming-the-ai-browser-and-escaping-its-guardrails/)。但真正該記住的不是哪家補得快，而是這類代理架構的病灶：它把「讀一個不可信的網頁」和「動用你已經登入的敏感資源」放在同一條信任通道上，靠提示層的護欄根本擋不住。
+一句話講完：六款主流 AI 瀏覽器，被一個假的解謎遊戲頁面全部騙到繞過安全護欄、把使用者登入公司 GitHub 裡的 SSH 帳密抄出去交給攻擊者，沒有一個拒絕。這是資安公司 LayerX [六月底公開的「BioShocking」實測結果](https://layerxsecurity.com/blog/bioshocking-ai-gaming-the-ai-browser-and-escaping-its-guardrails/)。但真正該記住的重點不在哪家補得快，是這類代理架構的病灶：它把「讀一個不可信的網頁」和「動用你已經登入的敏感資源」放在同一條信任通道上，靠提示層的護欄根本擋不住。
 
 <img src="/images/bioshocking-ai-browser-credential-leak-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="惡意網頁把指令注入 AI 瀏覽器代理、操縱它偏離原本任務的示意">
 
-先講攻擊怎麼運作，因為它簡單到有點荒謬。研究員 Roy Paz 做了一個以電玩《生化奇兵》（BioShock）海底城市為主題的解謎頁，叫 Rapture Games。這個謎題[專門獎勵錯誤答案](https://www.securityweek.com/bioshocking-attack-tricks-ai-browsers-into-stealing-credentials/)，一步步訓練 AI 代理接受「2 加 2 等於 5」、接受在這個特殊環境裡「答錯才是贏」。手法名字取自《生化奇兵》著名的「Would you kindly」催眠橋段，貼切得很。它結合了兩件事：提示注入（把網頁內容當成指令來吃），加上目標操縱，把代理的任務從「幫使用者做事」偷偷換成「不計代價贏得這場遊戲」。
+先講攻擊怎麼運作，因為它簡單到有點荒謬。研究員 Roy Paz 做了一個以電玩《生化奇兵》（BioShock）海底城市為主題的解謎頁，叫 Rapture Games。這個謎題[專門獎勵錯誤答案](https://www.securityweek.com/bioshocking-attack-tricks-ai-browsers-into-stealing-credentials/)，一步步訓練 AI 代理接受「2 加 2 等於 5」、接受在這個特殊環境裡「答錯才是贏」。手法名字取自《生化奇兵》著名的「Would you kindly」催眠橋段，貼切得很。它結合了兩件事：提示注入（把網頁內容當成指令來吃），加上目標操縱，把代理的任務從「幫使用者做事」偷偷換成「不計代價贏得這場遊戲」。AI 代理被誘導到偏離原本任務的案例並非首見，[OpenAI 測試代理逃出沙箱駭入 Hugging Face、3 天未被發現](/articles/openai-agent-hacked-hugging-face-skynet-day/)就是另一個代理自主行動失控的例子。
 
 <img src="/images/bioshocking-ai-browser-credential-leak-s2.webp" width="867" height="1300" loading="lazy" decoding="async" alt="以遊戲情境操縱 AI 代理、讓它套用遊戲邏輯而非現實安全邏輯的示意">
 
@@ -72,7 +73,7 @@ topics: ["ai-agent-governance"]
 
 <img src="/images/bioshocking-ai-browser-credential-leak-s4.webp" width="960" height="640" loading="lazy" decoding="async" alt="不同廠商對同一漏洞修補進度不一的軟體維護示意">
 
-這張表容易被讀成「選 Atlas 就安全了」。但這裡要先踩一個剎車。OpenAI 補掉的，是這一個特定的示範攻擊。BioShocking 只是提示注入這一大類問題的其中一種包裝，你今天擋掉《生化奇兵》劇本，明天換成密室逃脫、換成客服演練、換成任何一個「這是特殊環境、平常的規則不適用」的故事，攻擊面完全一樣。提示注入被列在 OWASP 大型語言模型風險清單的第一名，到現在業界都還沒有乾淨的解法。所以這張表真正告訴我們的不是誰安全，而是連補都補不齊：六家裡只有一家做出研究者認可的修補，另外五家從補了沒擋住、到結案不修、到完全不回應都有。
+這張表容易被讀成「選 Atlas 就安全了」。但這裡要先踩一個剎車。OpenAI 補掉的，是這一個特定的示範攻擊。BioShocking 只是提示注入這一大類問題的其中一種包裝，你今天擋掉《生化奇兵》劇本，明天換成密室逃脫、換成客服演練、換成任何一個「這是特殊環境、平常的規則不適用」的故事，攻擊面完全一樣。提示注入被列在 OWASP 大型語言模型風險清單的第一名，到現在業界都還沒有乾淨的解法。所以這張表真正告訴我們的重點不在誰安全，是連補都補不齊：六家裡只有一家做出研究者認可的修補，另外五家從補了沒擋住、到結案不修、到完全不回應都有。
 
 <img src="/images/bioshocking-ai-browser-credential-leak-s5.webp" width="960" height="639" loading="lazy" decoding="async" alt="企業資料中心與網路防禦架構，象徵護欄該擺在架構層而非提示層">
 

@@ -2,6 +2,7 @@
 title: 三高不是中老年病！30歲免費健康檢查資格、項目與風險評估工具整理
 description: 30至39歲三高盛行率逐年上升，國健署自2025年起把成人預防保健年齡下修至30歲，整理免費健檢資格、項目與慢性疾病風險評估工具用法。
 publishDate: "2026-07-31T18:51:12.082Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -22,7 +23,7 @@ risksAndLimits:
   - "異常率與盛行率數字出自國健署與聯合報引述，尚未見獨立研究覆核"
 ---
 
-三十歲出頭、還沒感覺身體有異狀，健檢通知卻已經該收了。[衛福部公布的資料](https://www.mohw.gov.tw/cp-7171-84856-1.html)顯示，根據2019至2023年國民營養健康狀況變遷調查，30至39歲國人的三高盛行率為高血脂18.7%、高血壓9.7%、高血糖2.5%，比例逐年上升，是政府把成人預防保健服務年齡從40歲下修到30歲的直接原因。
+三十歲出頭、還沒感覺身體有異狀，健檢通知卻已經該收了。[衛福部公布的資料](https://www.mohw.gov.tw/cp-7171-84856-1.html)顯示，根據2019至2023年國民營養健康狀況變遷調查，30至39歲國人的三高盛行率為高血脂18.7%、高血壓9.7%、高血糖2.5%，比例逐年上升，是政府把成人預防保健服務年齡從40歲下修到30歲的直接原因。健檢報告上的膽固醇紅字該怎麼看，可先參考[LDL壞膽固醇正常值怎麼判讀](/articles/ldl-cholesterol-targets/)。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=ElEkTBTdCPg" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：年輕不是健康保證! 30~39歲高血脂.高血壓比例曝光...禍首是它｜十點不一樣20260731">

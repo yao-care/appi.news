@@ -1,7 +1,7 @@
 ---
-title: "英國平等法信仰歧視怎麼認定？愛丁堡藝穗節猶太喜劇演員控告場地勝訴"
+title: "猶太喜劇演員控告愛丁堡場地信仰歧視勝訴"
 slug: "uk-fringe-venue-belief-discrimination-ruling"
-description: "猶太喜劇演員菲利普·西蒙控告愛丁堡演出場地Banshee Labyrinth，因他聲援10月7日以色列人質的社群貼文取消他的藝穗節演出；8月17日開庭前夕，場地認栽違反《2010年平等法》信仰歧視條款，須以較高的「律師與委託人」費率支付訴訟費。整理案件經過、場地方引用哪些貼文當理由、原本開出的和解條件為何遭拒，以及這起案例對英國演出場所處理以巴議題爭議的意義。"
+description: "猶太喜劇演員菲利普·西蒙控告愛丁堡場地Banshee Labyrinth歧視，因聲援10月7日以色列人質貼文遭取消演出；開庭前夕場地認栽違反英國《2010年平等法》，須負擔較高費率訟費。"
 excerpt: "猶太喜劇演員菲利普·西蒙控告愛丁堡場地Banshee Labyrinth因他聲援以色列人質取消演出，開庭前夕場地認栽違反《2010年平等法》信仰歧視條款，須負擔較高費率訟費；他原訂主持的猶太喜劇秀也遭另一場地取消。"
 publishDate: "2026-08-19T02:45:15.813Z"
 category: "international"
@@ -46,15 +46,16 @@ disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體�
 coverImage: "covers/uk-fringe-venue-belief-discrimination-ruling-cover.webp"
 coverAlt: "愛丁堡郡法院外觀"
 coverImageCredit: "alljengi — CC BY-SA 2.0, 引用自 Wikimedia Commons"
+updatedDate: "2026-08-22T00:00:00+08:00"
 ---
 
-愛丁堡演出場地Banshee Labyrinth認栽了。8月17日在愛丁堡郡法院開庭前夕，場地經營者Morrison Bros Ltd透過雙方聯合聲明書承認，去年取消猶太喜劇演員菲利普·西蒙（Philip Simon）演出的決定，違反英國《2010年平等法》的信仰歧視條款。據[《猶太紀事報》（The Jewish Chronicle）報導](https://www.thejc.com/news/uk/edinburgh-fringe-venue-discriminated-cancelled-jewish-comedian-owbzjwzh)，法官Sheriff Roderick Flinn當庭表示：「雙方已透過聯合聲明書同意，被告確實對原告構成歧視，違反《平等法》的相關規定。」
+英國愛丁堡演出場地Banshee Labyrinth因歧視猶太喜劇演員菲利普·西蒙（Philip Simon）認栽了。8月17日在愛丁堡郡法院開庭前夕，場地經營者Morrison Bros Ltd透過雙方聯合聲明書承認，去年取消他演出的決定違反英國《2010年平等法》的信仰歧視條款。這起案件也讓外界重新關注英國演出場所如何處理以巴議題爭議，可參考[英國把抗議團體列「恐怖組織」合法嗎？巴勒斯坦行動禁令案送最高法院](/articles/uk-palestine-action-ban-supreme-court/)一文。據[《猶太紀事報》（The Jewish Chronicle）報導](https://www.thejc.com/news/uk/edinburgh-fringe-venue-discriminated-cancelled-jewish-comedian-owbzjwzh)，法官Sheriff Roderick Flinn當庭表示：「雙方已透過聯合聲明書同意，被告確實對原告構成歧視，違反《平等法》的相關規定。」
 
 ## 一則守夜貼文，換來演出被取消
 
 西蒙原訂在2025年愛丁堡藝穗節期間，於愛丁堡尼德里街（Niddry Street）的Banshee Labyrinth演出獨角喜劇秀《Shall I Compere Thee In A Funny Way》。據[北威爾斯先驅報（North Wales Pioneer）報導](https://www.northwalespioneer.co.uk/news/national/26470811.venue-accepts-discriminated-jewish-comedian-pulled-show/)，場地後來取消這場演出，理由是西蒙的社群媒體言論「與人道侵害相關團體的言論和象徵一致」。
 
-場地具體引用了哪些貼文？據《猶太紀事報》報導，包括西蒙出席特拉法加廣場一場紀念10月7日哈瑪斯攻擊滿百日的守夜活動、一則呼籲外界「堅定對抗恐怖主義」的貼文，以及另一則提醒外界別遺忘10月7日遭性侵婦女的貼文，場地方也提到他針對近期一場（加薩）船隊行動所開的玩笑。西蒙反駁，自己談的其實是加薩持續的人道危機，立場是支持釋放人質並尋求和平。這起案件也讓外界重新對照英國近期另一起牽動言論尺度的司法爭議，可參考[英國把抗議團體列「恐怖組織」合法嗎？巴勒斯坦行動禁令案送最高法院](/articles/uk-palestine-action-ban-supreme-court/)一文，同樣是以巴議題延燒到英國國內言論管制的案例。
+場地具體引用了哪些貼文？據《猶太紀事報》報導，包括西蒙出席特拉法加廣場一場紀念10月7日哈瑪斯攻擊滿百日的守夜活動、一則呼籲外界「堅定對抗恐怖主義」的貼文，以及另一則提醒外界別遺忘10月7日遭性侵婦女的貼文，場地方也提到他針對近期一場（加薩）船隊行動所開的玩笑。西蒙反駁，自己談的其實是加薩持續的人道危機，立場是支持釋放人質並尋求和平。
 
 ## 場地拖到開庭前夕才低頭，訟費因此加重
 

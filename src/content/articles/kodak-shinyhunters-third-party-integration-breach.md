@@ -1,9 +1,10 @@
 ---
-title: "柯達證實遭入侵、ShinyHunters 聲稱握 220 萬筆資料：第三方平台整合又成外洩破口"
+title: "柯達遭駭220萬筆外洩　ShinyHunters鎖定第三方整合"
 slug: "kodak-shinyhunters-third-party-integration-breach"
 description: "柯達證實遭未授權存取，勒索集團 ShinyHunters 聲稱握有逾 220 萬筆顧客個資並設下外洩期限。這波鎖定的不是核心系統，而是企業串接出去的第三方平台整合那條信任鏈，企業該盤的是每個整合的存取邊界。"
 excerpt: "柯達承認外部人士短暫存取有限資料，ShinyHunters 卻喊 220 萬筆。兩個數字對不起來，但真正該記的是攻擊鎖定的位置：第三方平台整合的信任鏈。"
 publishDate: "2026-07-12T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "security"
 tags:
@@ -55,7 +56,7 @@ references:
 topics: ["ai-agent-governance"]
 ---
 
-<p>柯達（Kodak）證實，公司近期發現一名未授權的第三方非法取得了有限資料的暫時存取權。這個說法，是在勒索集團 ShinyHunters 把柯達掛上外洩網站、聲稱握有逾 220 萬筆顧客個資與內部資料之後才出現的。一邊說「有限」，一邊喊「220 萬筆」，兩個數字對不起來，而柯達到今天也沒交代攻擊者是怎麼進來的。這篇要談的不是誰的數字準，是這波攻擊鎖定的位置：企業串接出去的第三方平台整合，那條沒人天天在看的信任鏈。</p>
+<p>柯達（Kodak）證實，公司近期發現一名未授權的第三方非法取得了有限資料的暫時存取權。這個說法，是在勒索集團 ShinyHunters 把柯達掛上外洩網站、聲稱握有逾 220 萬筆顧客個資與內部資料之後才出現的。一邊說「有限」，一邊喊「220 萬筆」，兩個數字對不起來，而柯達到今天也沒交代攻擊者是怎麼進來的。這不是今年第一起第三方整合出包，上個月[ServiceNow 八個月內第三次認證設定出包](/articles/servicenow-saas-api-auth-misconfiguration-breach/)才剛示範過同一個破口。這篇要談的不是誰的數字準，是這波攻擊鎖定的位置：企業串接出去的第三方平台整合，那條沒人天天在看的信任鏈。</p>
 
 <h2>先把時間軸講清楚</h2>
 
@@ -71,7 +72,7 @@ topics: ["ai-agent-governance"]
 
 <p>把柯達放進這個脈絡，<a href="https://techjacksolutions.com/scc-intel/shinyhunters-breaches-kodak-in-ongoing-enterprise-platform-campaign-targeting-third-party-integrations/" target="_blank" rel="noopener">資安分析把這起事件歸進 ShinyHunters 一場鎖定企業 SaaS 整合的持續性活動，點名的標的包含 Salesforce Aura、Salesloft Drift、Snowflake 與 Oracle PeopleSoft，並指出只要在用這些平台的第三方整合，曝險程度就被拉高，跟有沒有直接跟柯達往來無關</a>。換句話說，攻擊者要的不是攻破某一道城牆，是走那條串在平台之間的信任關係。</p>
 
-<p>這條路去年已經演過很大一齣。<a href="https://pushsecurity.com/blog/analyzing-the-instructure-breach" target="_blank" rel="noopener">ShinyHunters 在 Salesloft 與 Drift 的戰役裡竊取第三方整合的 OAuth 權杖，再拿這些權杖存取下游客戶環境，逾千個組織受害、聲稱取得超過 15 億筆 Salesforce 紀錄，核心一句就點破了：你授權一個第三方整合的當下，安全邊界就延伸到把那家廠商也包進來</a>。柯達沒揭露自家是不是同一條路進來，我不替它認定，但同一個攻擊者、同一類標的、同一段時間，這個方向值得先當主要假設來盤。這也是上個月 <a href="/articles/servicenow-saas-api-auth-misconfiguration-breach/">ServiceNow 八個月內第三次認證設定出包</a>講的同一件事：外洩入口越來越不在核心系統，而在串接出去那一層。</p>
+<p>這條路去年已經演過很大一齣。<a href="https://pushsecurity.com/blog/analyzing-the-instructure-breach" target="_blank" rel="noopener">ShinyHunters 在 Salesloft 與 Drift 的戰役裡竊取第三方整合的 OAuth 權杖，再拿這些權杖存取下游客戶環境，逾千個組織受害、聲稱取得超過 15 億筆 Salesforce 紀錄，核心一句就點破了：你授權一個第三方整合的當下，安全邊界就延伸到把那家廠商也包進來</a>。柯達沒揭露自家是不是同一條路進來，我不替它認定，但同一個攻擊者、同一類標的、同一段時間，這個方向值得先當主要假設來盤。這幾起事件講的都是同一件事：外洩入口越來越不在核心系統，而在串接出去那一層。</p>
 
 <img src="/images/kodak-shinyhunters-third-party-integration-breach-s2.webp" width="960" height="540" loading="lazy" decoding="async" alt="SaaS 串 SaaS、webhook 與 API 串接形成的信任鏈，第三方平台整合成為企業的主要攻擊面">
 

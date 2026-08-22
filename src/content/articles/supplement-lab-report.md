@@ -1,8 +1,9 @@
 ---
-title: "「少添加」不等於「沒有殘留」：買保健食品前，教你看懂第三方檢驗報告"
+title: "「少添加」不等於沒殘留：保健食品第三方檢驗報告怎麼看"
 slug: "supplement-lab-report"
 description: "「少添加」「無添加」和「沒有殘留」是兩回事。教你看懂保健食品第三方檢驗報告怎麼看重金屬、農藥殘留，附購買前自我查證清單。"
 publishDate: 2026-07-08
+updatedDate: 2026-08-22
 category: health
 subcategory: supplement-regulation
 tags:

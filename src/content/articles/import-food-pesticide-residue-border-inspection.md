@@ -1,9 +1,10 @@
 ---
 coverImage: "covers/import-food-pesticide-residue-border-inspection-cover.webp"
 coverAlt: "檢驗人員在實驗室檢視香料粉樣本，示意食品邊境查驗"
-title: "進口食品農藥殘留超標會怎樣？食藥署邊境查驗與監視查驗機制一次看懂"
+title: "進口食品農藥殘留超標會怎樣？邊境查驗機制一次看懂"
 description: "食藥署8月11日公布最新邊境查驗結果，13批進口食品與容器不合格，其中知名印度料理業者的香料粉驗出不得檢出的農藥愛殺松。整理「不得檢出」的認定標準、監視查驗如何啟動，以及消費者怎麼查詢邊境查驗不合格名單。"
 publishDate: "2026-08-11T18:42:46.004Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"

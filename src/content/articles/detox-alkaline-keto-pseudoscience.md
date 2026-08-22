@@ -1,8 +1,9 @@
 ---
-title: "排毒、鹼性體質、生酮飲食：三個最會賺你錢的健康話術，逐條拆給你看"
+title: "排毒、鹼性體質、生酮飲食：三個最會賺你錢的健康話術"
 slug: "detox-alkaline-keto-pseudoscience"
 description: "排毒產品、鹼性體質、生酮飲食是台灣人最常中招的三個健康話術。身體本來就會排毒、食物改不了血液酸鹼、生酮原本是拿來治癲癇的醫療飲食。這篇用一手資料逐條拆給你看，並教你怎麼一眼認出這類話術。"
 publishDate: 2026-08-08T20:00:00+08:00
+updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

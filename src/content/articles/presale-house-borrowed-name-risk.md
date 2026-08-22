@@ -1,9 +1,10 @@
 ---
-title: "預售屋掛親人名下卻拒絕貸款怎麼辦？借名登記的法律風險一次看懂"
+title: "借名登記法律風險：預售屋登記親人名下拒貸怎麼辦"
 slug: "presale-house-borrowed-name-risk"
 description: "預售屋登記在親友名下，若對方拒絕配合貸款或過戶，出資人求償常因舉證困難卡關。整理借名登記的法律性質、舉證責任分配、常見糾紛型態，以及出資人該留存的證據與求助管道。"
 excerpt: "借名登記出了問題，出資人往往不是輸在道理，而是輸在證據。留存匯款紀錄、及早聲請保全，比事後打官司更關鍵。"
 publishDate: "2026-08-07T12:23:24.227Z"
+updatedDate: 2026-08-22
 category: "finance"
 subcategory: "real-estate"
 tags:

@@ -4,7 +4,7 @@ slug: "yemen-houthi-saudi-attack-marib"
 description: "葉門胡塞武裝8月6日對沙烏地支持部隊發動大規模飛彈與無人機攻擊，8月9日再以無人機直擊沙國吉贊阿美煉油廠，同日兩波飛彈無人機襲擊葉門政府控制的默卡港。整理馬里卜、默卡港傷亡數字、各方說法落差，以及與紅海封鎖、伊朗代理人戰爭的關聯。"
 excerpt: "葉門胡塞武裝8月6日對沙烏地支持部隊發動大規模飛彈與無人機攻擊，四年停火瀕臨瓦解；8月9日再以無人機直擊沙國吉贊阿美煉油廠，同日兩波攻擊葉門政府控制的默卡港，戰火從沙國本土延燒回葉門紅海岸港口。"
 publishDate: "2026-08-07T17:51:19.651Z"
-updatedDate: "2026-08-10T16:37:27.503Z"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "middle-east"
 tags:
@@ -33,7 +33,7 @@ risksAndLimits:
   - "衝突仍在延燒，本文數字以查證當下最新外電為準，後續傷亡與情勢可能持續變動"
 ---
 
-葉門胡塞武裝8月6日對沙烏地支持的政府軍部隊發動大規模飛彈與無人機攻擊，馬里卜、哈德拉毛兩省至少30名士兵陣亡，維持近四年的停火局面瀕臨瓦解（[Al Jazeera](https://www.aljazeera.com/news/2026/8/6/houthis-claim-to-have-killed-45-in-attacks-on-yemeni-government-forces)）。攻擊隔天並未平息，8月7日再傳出至少12次飛彈與無人機攻擊，分析人士警告葉門正邁向一場新的全面內戰（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-attacks-on-govt-forces-hint-that-a-major-battle-in-yemen-is-brewing)）。**8月9日情勢再升溫**：胡塞武裝改以無人機直擊沙烏地境內紅海岸的吉贊阿美煉油廠，沙國能源部證實火警已撲滅、無人員傷亡，攻擊範圍首度從葉門境內戰場延伸到沙國本土能源設施（[Al Jazeera](https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan)）。**同一天戰火也燒回葉門本土**：胡塞武裝對政府控制的紅海岸默卡港接連發動兩波飛彈與無人機攻擊，半島電視台報導兩波合計至少18人死亡、逾60人受傷，葉門總統領導委員會主席阿利米痛批這是「伊朗擴大升級的延伸」（[Al Jazeera](https://www.aljazeera.com/news/2026/8/10/houthis-renew-missile-and-drone-attacks-on-yemens-port-of-al-makha)）。
+胡塞武裝（Houthis）是葉門北部信奉什葉派的武裝組織，正式名稱為「真主之黨」，背後由伊朗提供武器與資金支持。葉門胡塞武裝8月6日對沙烏地支持的政府軍部隊發動大規模飛彈與無人機攻擊，馬里卜、哈德拉毛兩省至少30名士兵陣亡，維持近四年的停火局面瀕臨瓦解（[Al Jazeera](https://www.aljazeera.com/news/2026/8/6/houthis-claim-to-have-killed-45-in-attacks-on-yemeni-government-forces)）。攻擊隔天並未平息，8月7日再傳出至少12次飛彈與無人機攻擊，分析人士警告葉門正邁向一場新的全面內戰（[Al Jazeera](https://www.aljazeera.com/news/2026/8/7/houthi-attacks-on-govt-forces-hint-that-a-major-battle-in-yemen-is-brewing)）。**8月9日情勢再升溫**：胡塞武裝改以無人機直擊沙烏地境內紅海岸的吉贊阿美煉油廠，沙國能源部證實火警已撲滅、無人員傷亡，攻擊範圍首度從葉門境內戰場延伸到沙國本土能源設施（[Al Jazeera](https://www.aljazeera.com/news/2026/8/9/saudi-arabia-says-fire-extinguished-at-aramco-facility-in-jizan)）。**同一天戰火也燒回葉門本土**：胡塞武裝對政府控制的紅海岸默卡港接連發動兩波飛彈與無人機攻擊，半島電視台報導兩波合計至少18人死亡、逾60人受傷，葉門總統領導委員會主席阿利米痛批這是「伊朗擴大升級的延伸」（[Al Jazeera](https://www.aljazeera.com/news/2026/8/10/houthis-renew-missile-and-drone-attacks-on-yemens-port-of-al-makha)）。
 
 ## 胡塞武裝是誰
 

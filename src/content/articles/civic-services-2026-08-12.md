@@ -1,8 +1,9 @@
 ---
-title: "屏東六大癌篩健檢一站式服務上路，各地便民措施整理（2026-08-12）"
+title: "屏東六大癌篩健檢一站式服務上路，各地便民措施整理"
 slug: "civic-services-2026-08-12"
 description: "整理今日屏東縣、基隆市、臺北市便民市政措施，涵蓋屏東六大癌症篩檢與成人健檢一站式服務、基隆深澳坑路新增路側停車收費、臺北8月13日防空演習期間停車APP服務提醒，附各縣市政府原文出處。"
 publishDate: "2026-08-12T10:05:02.944Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 coverImage: "covers/civic-services-2026-08-12-cover.webp"

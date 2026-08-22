@@ -48,7 +48,6 @@ references:
 coverImage: "covers/fsc-personal-loan-tightening-2026.webp"
 coverAlt: "銀行行員在櫃檯審視貸款申請文件，象徵金管會加強理財周轉金貸款查核"
 coverImageCredit: "Photo by Anastassia Anufrieva on Unsplash"
-updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 金管會要求本國銀行從10月起，按月申報「個人理財周轉金貸款」總額，鎖定的是掛在周轉金名下、卻被拿去買股票、基金或其他金融商品的資金。銀行要做的是把資金用途問清楚、記清楚，不是把貸款額度全面收緊。對單純要辦房貸增貸、信用貸款周轉的一般人來說，影響主要落在文件與用途說明變嚴，核准機率不會因此大幅下降。

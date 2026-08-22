@@ -94,3 +94,5 @@ topics: ["civic-services"]
 
 - [行政院人事行政總處：天然災害停止上班及上課情形查詢](https://www.dgpa.gov.tw/typh/daily/nds.html)
 - [法務部全國法規資料庫：天然災害停止上班及上課作業辦法](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=S0110022)
+
+停班課情形以人事行政總處及各縣市政府最新公告為準，請以官方為依據。

@@ -52,7 +52,7 @@ references:
     publisher: "Intertek"
 ---
 
-歐盟包裝新規進入倒數。《包裝與包裝廢棄物法規》（PPWR，正式編號Regulation (EU) 2025/40）將於[2026年8月12日起全面適用](https://eur-lex.europa.eu/EN/legal-content/summary/packaging-and-packaging-waste.html)，取代施行逾30年的舊版《包裝廢棄物指令》。這部法規不分產地，只要包裝商品要進入歐盟市場，台灣出口商同樣適用。
+歐盟包裝新規進入倒數。《包裝與包裝廢棄物法規》（PPWR，正式編號Regulation (EU) 2025/40）將於[2026年8月12日起全面適用](https://eur-lex.europa.eu/EN/legal-content/summary/packaging-and-packaging-waste.html)，取代施行逾30年的舊版《包裝廢棄物指令》。這部法規不分產地，只要包裝商品要進入歐盟市場，台灣出口商同樣適用，也是[本站持續追蹤的全球循環經濟法制化浪潮](/articles/eu-japan-circular-economy-laws/)裡最先落地、對出口商最直接有感的一環。
 
 ## PFAS限值25微克、重金屬維持百毫克，8月12日同步上路
 

@@ -4,6 +4,7 @@ slug: "elderly-social-media-influencer-training"
 description: "台灣出現專門訓練55至75歲長者拍片、剪輯、經營社群的熟齡網紅培訓班，已捧紅退休教師、護理師等多位素人創作者。整理培訓內容、報名門檻與已經走紅的案例。"
 excerpt: "台灣出現專門訓練55至75歲長者拍片、剪輯、經營社群的熟齡網紅培訓班，已捧紅退休教師、護理師等多位素人創作者。整理培訓內容、報名門檻與已經走紅的案例。"
 publishDate: "2026-08-07T19:00:00.075Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 tags:
@@ -25,7 +26,7 @@ risksAndLimits:
   - "培訓時數等細節出自不同時間點的報導，可能因梯次、課程調整而與現況有出入。"
 ---
 
-台灣近年冒出專門訓練中高齡素人拍片、剪輯、經營社群帳號的「熟齡網紅」培訓班，鎖定55到75歲的長者，教他們用手機說自己的故事，已經捧紅好幾位退休教師、護理師出身的網路創作者。這股風潮不是單一個案，背後有經紀公司系統化培訓在推動。
+台灣近年冒出專門訓練中高齡素人拍片、剪輯、經營社群帳號的「熟齡網紅」培訓班，鎖定55到75歲的長者，教他們用手機說自己的故事，已經捧紅好幾位退休教師、護理師出身的網路創作者，這種持續學習與社交參與的生活方式，也呼應[抗老怎麼顧？醫學實證的三個關鍵：肌肉量、代謝健康與大腦刺激](/articles/anti-aging-muscle-metabolism-brain-guide/)提到的終身學習效應。這股風潮不是單一個案，背後有經紀公司系統化培訓在推動。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=m5oVxEBqt84" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：銀髮族也能當網紅! 76歲阿嬤分享日常 圈粉3萬人｜十點不一樣20260807">
@@ -34,7 +35,7 @@ risksAndLimits:
   <figcaption>影片來源：TVBS NEWS（YouTube）　<a href="https://www.youtube.com/watch?v=m5oVxEBqt84" target="_blank" rel="noopener nofollow">觀看原影片</a></figcaption>
 </figure>
 
-TVBS《十點不一樣》介紹的「Pipia阿嬤」是其中一個案例。她原是退休國中老師，2023年參加熟齡網紅選拔脫穎而出，接受長達300小時的培訓，內容涵蓋穿搭、肢體表演、手機操作、拍攝剪輯，之後才把這些技巧用在臉書分享料理、穿搭與日常生活，累積起追蹤人數，[早安樂活的報導](https://edh.tw/lohas/article/32164)指出她起步時已75歲。持續學新東西、保持社交參與，本來就是延緩認知退化的關鍵之一，這點與[抗老怎麼顧？醫學實證的三個關鍵：肌肉量、代謝健康與大腦刺激](/articles/anti-aging-muscle-metabolism-brain-guide/)提到的終身學習效應相呼應。
+TVBS《十點不一樣》介紹的「Pipia阿嬤」是其中一個案例。她原是退休國中老師，2023年參加熟齡網紅選拔脫穎而出，接受長達300小時的培訓，內容涵蓋穿搭、肢體表演、手機操作、拍攝剪輯，之後才把這些技巧用在臉書分享料理、穿搭與日常生活，累積起追蹤人數，[早安樂活的報導](https://edh.tw/lohas/article/32164)指出她起步時已75歲。持續學新東西、保持社交參與，本來就是延緩認知退化的關鍵之一。
 
 ## 培訓班怎麼教：從素人到能獨立經營帳號
 

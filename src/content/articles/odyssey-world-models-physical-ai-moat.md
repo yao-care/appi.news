@@ -4,6 +4,7 @@ slug: "odyssey-world-models-physical-ai-moat"
 description: "Odyssey 6/17 拿到 3.1 億美元 B 輪，投資人含 Amazon、AMD Ventures、GV、EQT。資金正從消費級對話應用，移到能驅動機器人、模擬與感知的世界模型底層；台灣以硬體與機器人供應鏈見長，該看懂這波實體 AI 基礎層要的是什麼。"
 excerpt: "為什麼 Amazon 和 AMD 投的不是下一個 ChatGPT？答案可能是：聊天模型正在商品化，而世界模型要真實世界資料、感測器、機器人、模擬環境，護城河更深。"
 publishDate: "2026-07-02T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "industry-tech"
 tags:
@@ -62,7 +63,7 @@ topics: ["startups-and-vc"]
 
 這份名單裡，沒有一個是衝著「下一個 ChatGPT」來的。
 
-先把名詞講清楚。我們熟悉的聊天機器人，背後是大型語言模型（LLM），它學的是「文字接下來最可能接什麼字」。世界模型（world model）學的是另一件事：[這個世界接下來會怎麼動](https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/)。一顆球丟出去會怎麼掉、機械手臂抓這個角度會不會打滑、車子轉這個彎路面摩擦力夠不夠，它要在內部建一個能預測物理變化的模型，再把這套能力餵給機器人、模擬器和遊戲。Odyssey 兩位創辦人，一個出身自駕車公司 Voyage 與 Cruise、一個來自自駕新創 Wayve，他們蒐集資料的方式也很實體：派人背著相機到真實世界走一圈，像錄 Google 地圖那樣把世界錄下來。這跟爬網路文字來訓練聊天模型，是完全不同的工。
+先把名詞講清楚。我們熟悉的聊天機器人，背後是大型語言模型（LLM），它學的是「文字接下來最可能接什麼字」。世界模型（world model）學的是另一件事：[這個世界接下來會怎麼動](https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/)。一顆球丟出去會怎麼掉、機械手臂抓這個角度會不會打滑、車子轉這個彎路面摩擦力夠不夠，它要在內部建一個能預測物理變化的模型，再把這套能力餵給機器人、模擬器和遊戲，[人形機器人走進真實產線](/articles/humanoid-robots-figure-bmw-production-line/)靠的正是這套物理預測能力。Odyssey 兩位創辦人，一個出身自駕車公司 Voyage 與 Cruise、一個來自自駕新創 Wayve，他們蒐集資料的方式也很實體：派人背著相機到真實世界走一圈，像錄 Google 地圖那樣把世界錄下來。這跟爬網路文字來訓練聊天模型，是完全不同的工。
 
 <img src="/images/odyssey-world-models-physical-ai-moat-s2.webp" width="960" height="474" loading="lazy" decoding="async" alt="世界模型在內部建立可預測物理變化的模擬環境示意">
 

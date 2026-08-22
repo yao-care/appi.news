@@ -1,8 +1,9 @@
 ---
 title: "家族信託入門指南：財產、規則與長期複利如何安排"
 slug: "family-trust-wealth-continuity"
-description: "本文說明家族信託如何分開管理與受益、設定分配規則，以及債務、婚姻、稅務與長期資產管理上的限制。"
+description: "家族信託不是點石成金的工具，而是把資產管理、決策權限與利益分配交給不同角色，並用契約規則執行的治理安排。本文說明家族信託如何分工管理與分配收益、設定給付規則，以及在債務、婚姻、稅務與長期資產管理上有哪些法律限制與注意事項。"
 publishDate: 2026-08-11
+updatedDate: 2026-08-22
 category: finance
 subcategory: investing-literacy
 tags: ["投資理財", "退休規劃", "保險"]

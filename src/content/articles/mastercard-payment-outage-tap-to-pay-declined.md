@@ -4,6 +4,7 @@ slug: "mastercard-payment-outage-tap-to-pay-declined"
 description: "Mastercard 8月15日在澳洲因「排定系統更新」出包，逾2千人在3小時內回報刷卡被拒，聯邦銀行緊急籲改用插卡付款。整理事發經過，以及信用卡感應付款忽然被拒時，一般消費者現場可以怎麼應變。"
 excerpt: "Mastercard排定系統更新出包，澳洲逾2千人3小時內回報刷卡被拒，銀行緊急籲改插卡付款；整理事發經過與感應式付款被拒時的現場應變作法。"
 publishDate: "2026-08-15T17:21:52.730Z"
+updatedDate: 2026-08-22T12:00:00+08:00
 category: "international"
 subcategory: "global-focus"
 tags:
@@ -43,13 +44,13 @@ references:
     publisher: "Illawarra Mercury（AAP）"
 ---
 
-Mastercard的感應式付款8月15日週六下午在澳洲大規模被拒，公司證實起因是「排定的系統更新」，故障約3小時後恢復正常。這類刷卡忽然被拒的狀況不是只有澳洲人會遇到，現場該怎麼應變，本文一併整理。
+Mastercard的感應式付款8月15日週六下午在澳洲大規模被拒，公司證實起因是「排定的系統更新」，故障約3小時後恢復正常。這類刷卡忽然被拒的狀況不是只有澳洲人會遇到，銀行端系統出包時持卡人常常摸不著頭緒，先前[合庫信用卡舊系統缺失事件](/articles/tcb-credit-card-system-flaw/)就是一例，現場該怎麼應變，本文一併整理。
 
 ## 事發經過：從2000多則回報到3小時後恢復
 
 故障從當地時間8月15日下午2時左右開始明顯出現，監測平台Downdetector在尖峰時段收到超過2000則澳洲用戶回報，其中又以轉帳與行動銀行相關功能的問題最多，其次是應用程式異常（[Camden Courier](https://www.camdencourier.com.au/story/9330905/mastercard-payments-declined-due-to-global-issue/)）。
 
-澳洲聯邦銀行（Commonwealth Bank）在網站上緊急發布警示，建議客戶暫時別用感應式付款，改成插卡並選擇「儲蓄」帳戶完成EFTPOS交易；銀行同時強調ATM提款與其他銀行服務都沒有受到波及（[The Canberra Times](https://www.canberratimes.com.au/story/9330905/mastercard-payments-declined-due-to-global-issue/)）。若想多了解一般信用卡系統出包時銀行與持卡人各自該做什麼，可參考先前[合庫信用卡舊系統缺失事件](/articles/tcb-credit-card-system-flaw/)的整理。
+澳洲聯邦銀行（Commonwealth Bank）在網站上緊急發布警示，建議客戶暫時別用感應式付款，改成插卡並選擇「儲蓄」帳戶完成EFTPOS交易；銀行同時強調ATM提款與其他銀行服務都沒有受到波及（[The Canberra Times](https://www.canberratimes.com.au/story/9330905/mastercard-payments-declined-due-to-global-issue/)）。
 
 到了下午5時前，Downdetector上的回報量已降到172則，Mastercard發言人證實「情況已解決，所有系統運作正常」，並說明整起事件是「排定的系統更新」所引起（[Illawarra Mercury](https://www.illawarramercury.com.au/story/9330905/mastercard-payments-declined-due-to-global-issue/)）。從回報高峰到公司宣布恢復，整起事件大約持續3小時。
 

@@ -4,7 +4,7 @@ slug: "asic-over-gpu-taiwan-ic-design"
 description: "摩根大通估2026年ASIC晶片出貨年增109%、2027年以53%超車GPU，台灣世芯目標價喊到6200元、創意6800元，法人重估IC設計服務族群，但真正該問的是誰接到CSP專案、客戶集中度與製程位階。"
 excerpt: "為什麼雲端巨頭寧可自己設計晶片也不多買 GPU？答案不在演算法，在電費。當每瓦效能變成天花板，專用 ASIC 就贏了，而台灣卡的是設計服務這道別人繞不過的工序。"
 publishDate: "2026-07-12T08:00:00+08:00"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "semiconductor"
 tags:
@@ -53,7 +53,7 @@ originalContribution: "本文把摩根大通的 ASIC 出貨與市占預測、KuC
 topics: ["ai-compute-infrastructure"]
 ---
 
-AI 的錢正在換跑道。摩根大通（小摩）估 2026 年客製化 ASIC 晶片[出貨量年增 109%，遠高於 GPU 約 39% 的增速](https://news.cnyes.com/news/id/6506040)，占全球 AI 晶片出貨比重衝上約 42%，到 2027 年更以 53% 正式超車 GPU。這件事對台灣的直接後果，是世芯、創意、智原這群 IC 設計服務公司被法人重新估值，目標價與 EPS 一路上修。但要先把一件事講清楚：這不是輝達被取代，是雲端巨頭在替特定工作分流，追的是每瓦效能和成本，不是誰的晶片比較全能。
+AI 的錢正在換跑道。摩根大通（小摩）估 2026 年客製化 ASIC 晶片[出貨量年增 109%，遠高於 GPU 約 39% 的增速](https://news.cnyes.com/news/id/6506040)，占全球 AI 晶片出貨比重衝上約 42%，到 2027 年更以 53% 正式超車 GPU。這件事對台灣的直接後果，是世芯、創意、智原這群 IC 設計服務公司被法人重新估值，目標價與 EPS 一路上修，這股資本流向也呼應了我先前寫過的[台灣端出 AI 新十大建設](/articles/ai-new-infrastructure-compute-trusted-industries/)佈局。但要先把一件事講清楚：這不是輝達被取代，是雲端巨頭在替特定工作分流，追的是每瓦效能和成本，不是誰的晶片比較全能。
 
 先把 ASIC 跟 GPU 的差別講白。GPU 是通用加速器，什麼 AI 工作都能算，彈性高，但為了通用會犧牲效率；ASIC（特殊應用積體電路）是為單一任務量身打造的晶片，只做一件事，但做得又快又省電。雲端巨頭現在不缺演算法，缺的是把自家那幾樣固定的訓練與推論工作用最低電費跑完的晶片，所以乾脆自己下海設計。小摩估 Google 自研的 TPU 出貨量會[從 2026 年的 450 萬顆跳到 2027 年的 800 萬顆](https://news.cnyes.com/news/id/6506040)，亞馬遜的 Trainium 系列從 190 萬顆增到 330 萬顆，微軟與 Meta 的自研晶片也進量產。把這些加起來，[2027 年全球 AI 加速器總出貨估 2,330 萬顆，其中 ASIC／XPU 占 1,240 萬顆、GPU 剩 1,090 萬顆](https://www.kucoin.com/news/flash/jpmorgan-ai-asic-shipments-to-surpass-gpus-by-2027)，客製晶片第一次在數量上贏過通用 GPU。
 
@@ -63,7 +63,7 @@ AI 的錢正在換跑道。摩根大通（小摩）估 2026 年客製化 ASIC �
 
 <img src="/images/asic-over-gpu-taiwan-ic-design-s2.webp" width="960" height="639" loading="lazy" decoding="async" alt="雲端資料中心機櫃，象徵雲端巨頭自研晶片大規模放量">
 
-台灣被重估的，是 IC 設計服務這一段。CSP（雲端服務商）有想法、有訂單，但不見得有能力把晶片從設計送進台積電的先進製程、再封裝出來，這道工序外包給誰做？世芯拿的是亞馬遜的 Trainium，創意接的是微軟與 CSP 的案子，加上智原、晶心科，構成台灣的 [ASIC 設計服務族群](https://news.cnyes.com/news/id/6303221)。法人的估值直接反映了這個轉向：[世芯-KY 被喊到 6,200 元、2026／2027 EPS 上看 133／153.6 元；創意目標價 6,800 元、EPS 估 46.22／98.55 元](https://tw.stock.yahoo.com/news/asic%E5%8F%96%E4%BB%A3gpu-%E4%BB%8A%E5%B9%B4%E5%B8%82%E5%8D%A0%E8%A1%9D3%E6%88%90-%E5%89%B5%E6%84%8F-%E4%B8%96%E8%8A%AF%E8%82%89%E5%A4%9A%E5%A4%9A-%E9%87%8D%E9%87%8F%E7%B4%9A%E6%B3%95%E4%BA%BA%E6%9B%9D%E6%9C%80%E6%96%B0%E7%9B%AE%E6%A8%99%E5%83%B9eps-024742851.html)。整個產業的體感也熱，DIGITIMES 估 [2026 年第二季台灣 IC 設計業營收年增 11.8%](https://www.digitimes.com.tw/research/report/?v=20260630-199)，AI ASIC 是主要拉動力之一。我先前寫[中國 AI 資本這盤棋台廠該怎麼讀](/articles/deepseek-capital-taiwan-supply-chain/)、寫[台灣端出 AI 新十大建設](/articles/ai-new-infrastructure-compute-trusted-industries/)，講的都是同一條線：台灣的價值不在追題材，在供應鏈上某一段別人繞不過去的能力。ASIC 設計服務就是這種能力。
+台灣被重估的，是 IC 設計服務這一段。CSP（雲端服務商）有想法、有訂單，但不見得有能力把晶片從設計送進台積電的先進製程、再封裝出來，這道工序外包給誰做？世芯拿的是亞馬遜的 Trainium，創意接的是微軟與 CSP 的案子，加上智原、晶心科，構成台灣的 [ASIC 設計服務族群](https://news.cnyes.com/news/id/6303221)。法人的估值直接反映了這個轉向：[世芯-KY 被喊到 6,200 元、2026／2027 EPS 上看 133／153.6 元；創意目標價 6,800 元、EPS 估 46.22／98.55 元](https://tw.stock.yahoo.com/news/asic%E5%8F%96%E4%BB%A3gpu-%E4%BB%8A%E5%B9%B4%E5%B8%82%E5%8D%A0%E8%A1%9D3%E6%88%90-%E5%89%B5%E6%84%8F-%E4%B8%96%E8%8A%AF%E8%82%89%E5%A4%9A%E5%A4%9A-%E9%87%8D%E9%87%8F%E7%B4%9A%E6%B3%95%E4%BA%BA%E6%9B%9D%E6%9C%80%E6%96%B0%E7%9B%AE%E6%A8%99%E5%83%B9eps-024742851.html)。整個產業的體感也熱，DIGITIMES 估 [2026 年第二季台灣 IC 設計業營收年增 11.8%](https://www.digitimes.com.tw/research/report/?v=20260630-199)，AI ASIC 是主要拉動力之一。我先前寫[中國 AI 資本這盤棋台廠該怎麼讀](/articles/deepseek-capital-taiwan-supply-chain/)，講的都是同一條線：台灣的價值不在追題材，在供應鏈上某一段別人繞不過去的能力。ASIC 設計服務就是這種能力。
 
 <img src="/images/asic-over-gpu-taiwan-ic-design-s4.webp" width="960" height="640" loading="lazy" decoding="async" alt="半導體晶圓與晶片製造，象徵台灣 IC 設計族群受惠 ASIC 商機被重估">
 

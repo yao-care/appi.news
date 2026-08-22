@@ -4,6 +4,7 @@ slug: "irhythm-phi-breach-third-party-perimeter"
 description: "服務美歐約 800 萬名心律不整病患的 iRhythm 證實，6/8 偵測到第三方代管商業應用遭未授權存取、隔日有人聲稱竊得病患 PHI 並勒索。事件再次顯示醫療資料外洩的入口多半不在核心系統，而在串接出去的第三方平台與社交工程，企業該優先盤點對外邊界與供應商存取權限。"
 excerpt: "iRhythm 的臨床與醫材系統都沒事，被攻破的是第三方代管的商業應用、入口是社交工程。醫療資料外洩越來越少發生在資料所在的地方，而在資料流動的地方。"
 publishDate: "2026-06-19T01:11:10.088Z"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "security"
 tags:
@@ -61,7 +62,7 @@ column: "ai-healthcare"
 topics: ["ai-medical-regulation"]
 ---
 
-<p>一家心臟監測公司被勒索，最值得記住的細節不是駭客喊了多少錢，而是他們從哪裡進來的。<a href="https://www.securityweek.com/irhythm-confirms-data-stolen-in-hack/" target="_blank" rel="noopener">心律監測廠 iRhythm 在 6 月 8 日偵測到，由第三方平台代管的某些商業應用上，出現了未授權的活動，隔天 6 月 9 日就有人發來訊息，聲稱已經竊得包含病患受保護健康資訊（PHI）在內的敏感資料，要脅付錢換取不公開</a>。被攻破的不是它的醫材，不是它的雲端心電圖演算法，是一個掛在別人平台上、平常沒人盯著的商業應用。這一點，才是醫療業現在真正該抄起來的功課。</p>
+<p>一家心臟監測公司被勒索，比駭客喊了多少錢更值得記住的細節，是他們從哪裡進來的。<a href="https://www.securityweek.com/irhythm-confirms-data-stolen-in-hack/" target="_blank" rel="noopener">心律監測廠 iRhythm 在 6 月 8 日偵測到，由第三方平台代管的某些商業應用上，出現了未授權的活動，隔天 6 月 9 日就有人發來訊息，聲稱已經竊得包含病患受保護健康資訊（PHI）在內的敏感資料，要脅付錢換取不公開</a>。被攻破的不是它的醫材，不是它的雲端心電圖演算法，是一個掛在別人平台上、平常沒人盯著的商業應用。這一點，才是醫療業現在真正該抄起來的功課，也呼應<a href="/articles/servicenow-saas-api-auth-misconfiguration-breach/" target="_blank" rel="noopener">本站上一篇報導 ServiceNow 認證設定連環出包</a>時歸納的同一個模式：出事的從來不是核心系統，是串接出去的那層邊界。</p>
 
 <h2>iRhythm 這次到底發生什麼事</h2>
 

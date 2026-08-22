@@ -4,6 +4,7 @@ slug: "ai-mammography-screening-taiwan"
 description: "瑞典 MASAI 試驗追蹤逾 10 萬名女性的隨機對照結果顯示，AI 輔助判讀乳房攝影能讓期間癌少 12%、侵襲性亞型少 27%，放射科工作量減 44%。整理這套技術實際做什麼、可信度多高，以及台灣核准現況與該注意的限制。"
 excerpt: "瑞典 10 萬人試驗證實 AI 輔助判讀乳房攝影能少漏診多發現癌症，還能砍掉近半判讀工作量。台灣已核准同類醫材，但公費篩檢流程還沒把它排進去。"
 publishDate: "2026-08-17T16:58:57.215Z"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "ai"
 tags:
@@ -62,7 +63,7 @@ coverAlt: "放射科醫師在電腦螢幕前檢視乳房攝影影像"
 coverImageCredit: "Photo by Charlss GonzHu on Pexels"
 ---
 
-<p>AI 輔助判讀乳房攝影，有沒有用？瑞典一項追蹤逾 10 萬名女性的隨機對照試驗給出目前最完整的答案：讓 AI 參與判讀後，篩檢期間之間被診斷出的乳癌，侵襲性亞型少了 27%、大型腫瘤少了 21%，整體期間癌下降 12%；放射科醫師的判讀工作量則減少 44%。台灣食藥署已經核准同類 AI 醫材上市，但公費篩檢的標準流程還沒把它排進去。</p>
+<p>AI 輔助判讀乳房攝影，有沒有用？瑞典一項追蹤逾 10 萬名女性的隨機對照試驗給出目前最完整的答案：讓 AI 參與判讀後，篩檢期間之間被診斷出的乳癌，侵襲性亞型少了 27%、大型腫瘤少了 21%，整體期間癌下降 12%；放射科醫師的判讀工作量則減少 44%。這類技術特別受矚目的原因之一，是東亞女性常見、容易讓判讀變困難的<a href="/articles/breast-cancer-screening-mammography-dense/">緻密乳房篩檢限制</a>，AI 被寄望能多抓出人眼容易漏看的病灶。台灣食藥署已經核准同類 AI 醫材上市，但公費篩檢的標準流程還沒把它排進去。</p>
 
 <h2>這場試驗實際測了什麼</h2>
 
@@ -76,7 +77,7 @@ coverImageCredit: "Photo by Charlss GonzHu on Pexels"
 
 <p>MASAI 用的 AI 不是取代醫師獨立出報告，是「加入」判讀流程：AI 先給出一個異常評分，醫師再依評分決定要不要優先複閱、或直接搭配 AI 的標記做出最終判斷。<a href="https://www.biospace.com/therapixel-receives-fda-510-k-clearance-for-mammoscreen" target="_blank" rel="noopener">美國 FDA 核准的同類工具 MammoScreen 也是同樣的定位，官方文件明確寫著這是「並行判讀」軟體，用來提升醫師判讀時的表現，單獨測出來的效能數字不能直接換算成醫師實際表現的提升</a>。AI 給的是分數與標記，責任仍在醫師身上。</p>
 
-<p>乳房攝影本身有個罩門，是東亞女性常見的緻密乳房會讓影像一片白、和腫瘤同色，容易看不清楚，這塊我在<a href="/articles/breast-cancer-screening-mammography-dense/">乳房攝影與緻密乳房該不該加做超音波</a>那篇拆過細節。這正是 AI 被寄予期待的地方：訓練資料裡看過大量異常病灶的模型，理論上能在緻密組織裡多抓出人眼容易漏看的可疑點。<a href="https://theimagingwire.com/2026/03/11/numbers-from-the-fda-show-radiology-is-maintaining-its-lead/" target="_blank" rel="noopener">截至 2025 年底，FDA 累計核准的放射科 AI 醫材已達 1,104 件，占全部 AI 醫材核准的 76%，是所有醫療科別裡核准數量最多的一塊</a>，乳房攝影 AI 只是這波浪潮裡的一個子項目，不是特例。</p>
+<p>乳房攝影本身有個罩門，是東亞女性常見的緻密乳房會讓影像一片白、和腫瘤同色，容易看不清楚。這正是 AI 被寄予期待的地方：訓練資料裡看過大量異常病灶的模型，理論上能在緻密組織裡多抓出人眼容易漏看的可疑點。<a href="https://theimagingwire.com/2026/03/11/numbers-from-the-fda-show-radiology-is-maintaining-its-lead/" target="_blank" rel="noopener">截至 2025 年底，FDA 累計核准的放射科 AI 醫材已達 1,104 件，占全部 AI 醫材核准的 76%，是所有醫療科別裡核准數量最多的一塊</a>，乳房攝影 AI 只是這波浪潮裡的一個子項目，不是特例。</p>
 
 <img src="/images/ai-mammography-screening-taiwan-s3.webp" width="960" height="640" loading="lazy" decoding="async" alt="醫院放射科人員操作電腦影像判讀系統">
 

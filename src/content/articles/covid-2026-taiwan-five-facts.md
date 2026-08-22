@@ -1,8 +1,9 @@
 ---
 title: "2026 新冠疫情完整指南：重新認識 5 件事"
 slug: "covid-2026-taiwan-five-facts"
-description: "台灣新冠疫情仍在流行，讀懂門急診趨勢、PQ.16.1.1、高風險族群、早期治療與疫苗角色，才能把防疫力氣用在真正重要的地方。"
+description: "台灣新冠疫情仍在流行，讀懂門急診趨勢、PQ.16.1.1變異株風險、高風險族群警訊、早期治療時機與疫苗角色這五件事，才能把防疫力氣用在真正重要的地方，不必被數字牽著恐慌。"
 publishDate: 2026-08-21
+updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags: ["傳染病防治", "公共衛生", "預防醫學", "高齡健康"]

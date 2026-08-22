@@ -3,6 +3,7 @@ title: "青光眼：無聲的視力小偷，眼壓正常也可能得"
 slug: "glaucoma-eye-pressure-silent"
 description: "青光眼被叫無聲的視力小偷不是誇飾。它初期幾乎沒感覺，視野從周邊一點一點被偷走，等發現時受損的視神經已經回不來。而且它不只是眼壓高才會得，正常眼壓也可能罹病。這篇講青光眼為什麼無聲、眼壓的角色、誰是高危險群，以及怎麼早期發現與控制。"
 publishDate: 2026-09-10T20:00:00+08:00
+updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:
@@ -65,7 +66,7 @@ draft: false
 
 ## 如何早期發現與控制
 
-早期發現只能靠定期檢查，沒有捷徑。羅東博愛醫院建議，[40 歲以上民眾每年至少進行一次眼科檢查](https://www.pohai.org.tw/health_detail.php?PKey=2659)；Heho 健康也建議[年滿 40 歲應做含眼壓、視野、視神經的完整篩檢](https://heho.com.tw/archives/208666)。重點是「完整」，只量眼壓不夠，要一起看視神經和視野，才抓得到正常眼壓性青光眼。馬偕提到[視野檢查需追蹤至少一年一次](https://www.mmh.org.tw/know_health_view.php?docid=948)。
+早期發現只能靠定期檢查，沒有捷徑。羅東博愛醫院建議，[40 歲以上民眾每年至少進行一次眼科檢查](https://www.pohai.org.tw/health_detail.php?PKey=2659)；Heho 健康也建議[年滿 40 歲應做含眼壓、視野、視神經的完整篩檢](https://heho.com.tw/archives/208666)。重點是「完整」，只量眼壓不夠，要一起看視神經和視野，才抓得到正常眼壓性青光眼。這類定期檢查也能一併揪出[黃斑部病變](/articles/macular-degeneration-warning-signs/)，同樣是中老年常見、視力受損不可逆的眼疾。馬偕提到[視野檢查需追蹤至少一年一次](https://www.mmh.org.tw/know_health_view.php?docid=948)。
 
 確診之後，治療分三線。馬偕與羅東博愛都說明，[治療分點藥或口服藥（減少房水生成或促進排出）、雷射、以及手術（重建排水管道）](https://www.mmh.org.tw/know_health_view.php?docid=948)。多數人靠規律點藥就能把眼壓控制好、把病情穩住。青光眼這個小偷雖然安靜，但它有跡可循：家族史、高度近視、上了年紀就去做完整眼檢，把它逮住在還沒偷走太多之前。已經在治療的人，按時點藥、規律回診，就是守住視力最實在的方法。
 

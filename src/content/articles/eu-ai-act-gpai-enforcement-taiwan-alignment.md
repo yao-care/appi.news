@@ -4,6 +4,7 @@ slug: "eu-ai-act-gpai-enforcement-taiwan-alignment"
 description: "2026 年 8 月 2 日起，歐盟 AI 辦公室正式取得對通用型 AI（GPAI）供應商的執法權，可開罰至全球營收 3% 或 1,500 萬歐元。原訂同日上路的 Annex III 高風險義務則被 Digital Omnibus 緩到 2027。出口歐盟的台廠該怎麼用一套盤點同時對接歐盟與台灣的風險分類。"
 excerpt: "8/2 真正長出牙齒的是 GPAI 執法權，高風險義務則被緩到 2027；但台廠該做的盤點不會因為緩衝而變少，而且能一套對接歐盟與台灣。"
 publishDate: "2026-06-19T00:57:51.695Z"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "tech-policy"
 tags:
@@ -75,7 +76,7 @@ references:
 
 <p>歐盟 AI 法 8 月 2 日要開罰，這句話這幾週被講到爛，但多數轉述都把重點抓錯。真正在那天發生的，不是憑空冒出一套新義務，而是歐盟補上了一台能執行的機器。對通用型 AI（General Purpose AI，簡稱 GPAI，泛指 GPT、Claude、Gemini 這類底層大模型）的供應商來說，<a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-gpai-enforcement-20260509-csa-st/" target="_blank" rel="noopener">義務早在 2025 年 8 月就生效，2026 年 8 月 2 日才輪到歐盟執委會的 AI 辦公室正式取得監督與執法權</a>。先有規矩、後給牙齒，這是兩件事。</p>
 
-<p>還有一個更常見的誤會要先拆掉：很多人以為招募、信用評分、生物辨識這些「高風險」義務也在同一天一起上路。原本確實是這樣排的，但歐盟的 Digital Omnibus 已經把這塊往後挪了。義務與罰則是不是「同日到位」，答案比標題複雜，而這個差別正好決定你接下來要先做什麼。</p>
+<p>還有一個更常見的誤會要先拆掉：很多人以為招募、信用評分、生物辨識這些「高風險」義務也在同一天一起上路。原本確實是這樣排的，但歐盟的 Digital Omnibus 已經把這塊往後挪了。義務與罰則是不是「同日到位」，答案比標題複雜，而這個差別正好決定你接下來要先做什麼，也牽動台廠自己的[AI 基本法上路後：數位部的風險分類框架，企業現在該準備什麼](/articles/ai-basic-law-risk-classification-enterprise-checklist/)準備進度。</p>
 
 <h2>義務早就在，變的是執法機器</h2>
 

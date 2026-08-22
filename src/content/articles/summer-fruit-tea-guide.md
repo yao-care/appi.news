@@ -4,6 +4,7 @@ slug: "summer-fruit-tea-guide"
 description: "2026年夏季水果系手搖飲集中在蜜桃、芒果、西瓜、葡萄與莓果，整理清爽果茶、冰沙奶香與咀嚼配料的差異，並列出麻古、可不可、珍煮丹等品項的上市日、價格、糖冰限制與過敏原資訊。"
 excerpt: "今年夏季水果茶新品從蜜桃、芒果一路延伸到西瓜、葡萄和莓果，價格約35至95元。本文整理各品牌上市時間、區域售價、口味組成與點單前要確認的糖度、冰量及成分。"
 publishDate: "2026-08-21T18:42:10.743Z"
+updatedDate: "2026-08-22"
 category: "lifestyle"
 subcategory: "life"
 tags:
@@ -40,7 +41,7 @@ references:
     note: "官方公告仲夏莓果系列上市日、價格、咖啡因與糖度限制。"
 ---
 
-2026年夏季水果系手搖飲的主軸集中在蜜桃、芒果、西瓜、葡萄與莓果，查到的品項價格約35至95元。公開報導與品牌公告顯示，消費者可以從清爽果茶、冰沙奶香和咀嚼配料三種方向挑選，上市檔期則多落在5月至7月。[TVBS報導夏季白桃烏龍等新品](https://news.tvbs.com.tw/local/3260551)，[NOWnews整理西瓜、葡萄、芒果與美濃瓜飲品](https://www.nownews.com/news/6839461)，可對照出今年水果風味的產品分布。
+2026年夏季水果系手搖飲的主軸集中在蜜桃、芒果、西瓜、葡萄與莓果，查到的品項價格約35至95元。這類水果茶多半仍含糖，挑選前可先了解[奶茶為什麼有果糖？手搖飲的糖一半是果糖，最傷代謝](/articles/sugary-drinks-fructose-metabolism/)。公開報導與品牌公告顯示，消費者可以從清爽果茶、冰沙奶香和咀嚼配料三種方向挑選，上市檔期則多落在5月至7月。[TVBS報導夏季白桃烏龍等新品](https://news.tvbs.com.tw/local/3260551)，[NOWnews整理西瓜、葡萄、芒果與美濃瓜飲品](https://www.nownews.com/news/6839461)，可對照出今年水果風味的產品分布。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=zEzq2y1p5Gw" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：（2026-08-21）夏日掀「鮮果系」飲品戰！　酸甜風味搶攻消暑商機｜華視新聞 20260821 @CtsTw">

@@ -4,6 +4,7 @@ slug: "enterprise-app-agents-department-order"
 description: "Gartner 估 2026 年底 40% 企業應用內建任務型 agent，2025 年還不到 5%。市場焦點已從『agent 是不是真的』轉向『哪個部門先被 agent 化』；先被 agent 化的是客服到財務這條接單、查料、跑流程的線，真正的落差不是技術，是治理跟不上部署速度。"
 excerpt: "Gartner 估 2026 年底 40% 企業 app 內建 agent，市場焦點從『agent 是不是真的』轉向『哪個部門先被 agent 化』；真正的落差不是技術，是治理跟不上部署速度。"
 publishDate: "2026-06-29T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "industry-tech"
 tags:
@@ -48,7 +49,7 @@ topics: ["ai-agent-governance"]
 
 <img src="/images/enterprise-app-agents-department-order-s1.webp" width="960" height="638" loading="lazy" decoding="async" alt="市場焦點從 agent 是否真實轉向哪個部門先導入的趨勢轉折概念圖">
 
-這個轉折值得寫，是因為它不是單一廠商的行銷話術。AWS、Google Cloud、微軟、GitHub、IBM、Databricks 現在描述 agent 的方式幾乎是同一套詞：有目標、有記憶、會規劃、能用工具、帶部分自主。[當這些彼此競爭的平台開始用同一套語言](https://blog.mean.ceo/ai-agents-news-june-2026/)，那不是巧合，是市場結構成形的訊號。詞彙一旦統一，採用門檻就掉下來。市場規模也跟著走，[AI agent 市場 2026 年估約 115.5 億美元，2025 年是 79.2 億](https://www.precedenceresearch.com/ai-agents-market)，年增四成以上。錢和語言都對齊的時候，agent 內建會變成軟體的預設配備，不是加購選項。
+這個轉折值得寫，是因為它不是單一廠商的行銷話術。AWS、Google Cloud、微軟、GitHub、IBM、Databricks 現在描述 agent 的方式幾乎是同一套詞：有目標、有記憶、會規劃、能用工具、帶部分自主，能把這些工具串起來的關鍵之一正是[MCP 成 AI agent 事實標準：企業現在要治理什麼](/articles/mcp-de-facto-standard-agent-governance/)這樣的協定。[當這些彼此競爭的平台開始用同一套語言](https://blog.mean.ceo/ai-agents-news-june-2026/)，那不是巧合，是市場結構成形的訊號。詞彙一旦統一，採用門檻就掉下來。市場規模也跟著走，[AI agent 市場 2026 年估約 115.5 億美元，2025 年是 79.2 億](https://www.precedenceresearch.com/ai-agents-market)，年增四成以上。錢和語言都對齊的時候，agent 內建會變成軟體的預設配備，不是加購選項。
 
 <img src="/images/enterprise-app-agents-department-order-s2.webp" width="960" height="539" loading="lazy" decoding="async" alt="雲端與軟體大廠用同一套語言描述 agent，象徵市場結構成形">
 

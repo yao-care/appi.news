@@ -1,8 +1,9 @@
 ---
 title: "關於兒童發展篩檢，你需要知道的6件事"
 slug: "child-development-referral-network"
-description: "雲林培訓早療篩檢種子人員，能把兒童發展觀察帶進托育與社區現場；但篩檢異常後，仍須接上通報、聯合評估、療育及家庭支持。"
+description: "雲林培訓早療篩檢種子人員，能把兒童發展觀察帶進托育與社區現場；但篩檢異常後，仍須接上通報、聯合評估、療育及家庭支持，本文整理第一線人員能做與不能做的界線。"
 publishDate: 2026-08-21
+updatedDate: 2026-08-22
 category: health
 subcategory: health-policy
 tags: ["育兒健康", "公共衛生", "醫療政策", "雲林縣", "教育"]

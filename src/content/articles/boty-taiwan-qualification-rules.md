@@ -1,8 +1,9 @@
 ---
 title: "BOTY台灣資格怎麼取得？2026雄爭舞鬥賽制與結果查核"
 slug: "boty-taiwan-qualification-rules"
-description: "整理2026雄爭舞鬥Crew Breaking Battle賽制、BOTY台灣代表資格規則，以及HRC Sniper Force賽後結果目前可核實到哪一步。"
+description: "整理2026雄爭舞鬥Crew Breaking Battle賽制、BOTY台灣代表資格規則，以及HRC Sniper Force在高雄展覽館賽後奪冠報導目前可核實到哪一步，含冠軍代表資格與後續查證節點。"
 publishDate: 2026-08-17
+updatedDate: 2026-08-22
 category: sports
 subcategory: events
 tags: ["高雄市"]

@@ -4,6 +4,7 @@ slug: "openai-deployment-simulation-evaluation-gap"
 description: "OpenAI 6/16 發表 Deployment Simulation，拿真實使用者對話重放、剝掉舊回覆再餵給待上線的新模型，比合成測題更能在上線前抓到行為漂移。這把上線前驗收從跑分搬回真實情境，也點出企業導入 AI 不能只信 benchmark。"
 excerpt: "OpenAI 拿約 130 萬則真實對話重放、餵給待上線的新模型測試，比合成測題更早抓到行為漂移。上線前驗收該從跑分搬回真實情境，企業導入 AI 也一樣。"
 publishDate: "2026-06-21T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "ai"
 tags:
@@ -57,7 +58,7 @@ references:
 
 <h2>它到底做了什麼</h2>
 
-<p>方法本身不複雜，反而是它樸素的地方最有意思。<a href="https://www.marktechpost.com/2026/06/16/openai-deployment-simulation/" target="_blank" rel="noopener">OpenAI 拿近期去識別過的真實使用者對話，把原本那個模型給的回覆整段拿掉，改用即將上線的候選模型重新生成一次回覆</a>，再<a href="https://the-decoder.com/openai-researchers-want-to-predict-how-often-ai-models-will-fail-before-launch/" target="_blank" rel="noopener">用自動分類器去掃這些新回覆裡，有沒有冒出新的、或變多的不當行為</a>。等於是讓還沒上線的模型，先去面對真實使用者真的會丟過來的那些問題，而不是工程師預先寫好的測試題。</p>
+<p>方法本身不複雜，反而是它樸素的地方最有意思。<a href="https://www.marktechpost.com/2026/06/16/openai-deployment-simulation/" target="_blank" rel="noopener">OpenAI 拿近期去識別過的真實使用者對話，把原本那個模型給的回覆整段拿掉，改用即將上線的候選模型重新生成一次回覆</a>，再<a href="https://the-decoder.com/openai-researchers-want-to-predict-how-often-ai-models-will-fail-before-launch/" target="_blank" rel="noopener">用自動分類器去掃這些新回覆裡，有沒有冒出新的、或變多的不當行為</a>。等於是讓還沒上線的模型，先去面對真實使用者真的會丟過來的那些問題，而不是工程師預先寫好的測試題。這跟 OpenAI 自己出題自己評分的<a href="/articles/openai-lifescibench-self-graded/">生命科學評測 LifeSciBench</a>剛好是兩種驗收邏輯的對照。</p>
 
 <img src="/images/openai-deployment-simulation-evaluation-gap-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="把真實使用者對話的舊回覆剝掉，改用待上線的新模型重新生成回覆再掃不當行為">
 

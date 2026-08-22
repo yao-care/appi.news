@@ -4,7 +4,7 @@ slug: "cgm-ai-glucose-prediction-taiwan-access"
 description: "華廣生技 iFree2 是台灣少數取得食藥署許可證的連續血糖監測系統，但沒有 AI 功能；Abbott CES 2026 發表的 Libre Assist 用生成式 AI 預測血糖，綁定的感測器台灣沒有許可證，健保給付範圍也窄。整理台灣現在真正買得到的 CGM 選項與健保給付門檻。"
 excerpt: "生成式 AI 預測食物血糖反應的 CGM 功能，綁定的感測器台灣沒有許可證；台灣人買得到的連續血糖監測，健保給付窄、普及率不到 1%。AI 預測與台灣現況之間，隔著一道法規與給付的落差。"
 publishDate: "2026-08-03T17:12:33.096Z"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "ai"
 tags:
@@ -90,7 +90,7 @@ topics: ["ai-medical-regulation"]
 
 <h2>CGM 的 AI，目前做到哪裡</h2>
 
-<p>連續血糖監測用貼在皮膚上的感測器每隔幾分鐘量一次組織液葡萄糖濃度，取代傳統扎手指驗血糖的方式，長期以來最核心的智慧功能是「預測性警示」：<a href="https://ca.provider.dexcom.com/articles/getting-know-urgent-low-soon-alert" target="_blank" rel="noopener">Dexcom 的 Urgent Low Soon 警示能在血糖預測降到 3.1 mmol/L 以下的嚴重低血糖事件發生前，最快提前 20 分鐘示警</a>，讓使用者有時間喝糖水或吃東西補救。這個功能存在多年，本質是趨勢推算，不是這篇要談的重點。</p>
+<p>連續血糖監測用貼在皮膚上的感測器每隔幾分鐘量一次組織液葡萄糖濃度，取代傳統扎手指驗血糖的方式，長期以來最核心的智慧功能是「預測性警示」：<a href="https://ca.provider.dexcom.com/articles/getting-know-urgent-low-soon-alert" target="_blank" rel="noopener">Dexcom 的 Urgent Low Soon 警示能在血糖預測降到 3.1 mmol/L 以下的嚴重低血糖事件發生前，最快提前 20 分鐘示警</a>，讓使用者有時間喝糖水或吃東西補救。這個功能存在多年，本質是趨勢推算，不是這篇要談的重點。低血糖一旦真的發生，正確的<a href="/articles/hypoglycemia-response/">低血糖處理原則</a>比裝置的示警功能更關鍵。</p>
 
 <p>真正把「AI」這兩個字用到具體功能上的，是 Abbott 在 CES 2026 發表的 Libre Assist。<a href="https://www.barchart.com/story/news/36885825/abbott-s-new-libre-assist-app-feature-tackles-a-top-need-for-people-living-with-diabetes-in-the-moment-food-decisions" target="_blank" rel="noopener">這項功能分三步驟運作：使用者拍下食物照片或輸入描述，演算法辨識成分並預測可能造成的血糖影響；App 用綠、黃、橙三色顯示影響程度，給出個人化飲食建議；吃完之後，再用 Libre CGM 感測器的實際數據回頭驗證預測準不準</a>。這是目前 CGM 產品線裡少數明確標示「使用生成式 AI」、且說得清楚運作邏輯的功能，重點在吃之前先提醒，而不是吃完才知道。Abbott 也在說明裡加了警語：生成式 AI 的預測可能不準，不能拿來當作治療決策的依據。</p>
 
@@ -118,7 +118,7 @@ topics: ["ai-medical-regulation"]
 
 <h2>該注意什麼</h2>
 
-<p>Libre Assist 這類生成式 AI 功能值得關注，因為它是少數把「AI」用在具體、可驗證步驟上的健康科技產品，而不是行銷詞彙。但它現在跟台灣消費者中間隔著三層落差：功能綁定的感測器沒有台灣許可證、繞道取得的管道曾經撞上真實的安全回收事件、而本土可以合法買到的 CGM 走的是硬體可靠度路線、跟 AI 預測完全是兩件事。想追這類新功能的使用者，該先查的是這款感測器有沒有台灣醫療器材許可證，而不是它有沒有打上 AI 兩個字。生成式 AI 的食物血糖預測終究只是輔助建議，實際用藥與胰島素劑量的判斷，仍然得回到醫療專業與傳統血糖機的驗證。</p>
+<p>Libre Assist 這類生成式 AI 功能值得關注，因為它是少數把「AI」用在具體、可驗證步驟上的健康科技產品，而不是行銷詞彙。但它現在跟台灣消費者中間隔著三層落差：功能綁定的感測器沒有台灣許可證、繞道取得的管道曾經撞上真實的安全回收事件、而本土可以合法買到的 CGM 走的是硬體可靠度路線、跟 AI 預測完全是兩件事。想追這類新功能的使用者，該先查的是這款感測器有沒有台灣醫療器材許可證，而不是它有沒有打上 AI 兩個字。生成式 AI 的食物血糖預測終究只是輔助建議，實際用藥與胰島素劑量的判斷，仍然得回到醫療專業與傳統血糖機的驗證。這種「AI 功能先於台灣法規到位」的落差，並非 CGM 獨有，<a href="/articles/ai-diabetic-retinopathy-screening-taiwan/">眼科 AI 篩檢在台灣的處境</a>也面臨類似問題。</p>
 
 <h2>常見問題</h2>
 

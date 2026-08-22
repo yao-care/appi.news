@@ -1,8 +1,9 @@
 ---
 title: "如何檢查人民幣曝險：5 步重算外幣資產成本"
 slug: "rmb-assets-risk-checklist"
-description: "人民幣跨境使用增加，儲備功能仍有限。持有人民幣存款、中國債券或貿易部位者，可從匯率、流動性、政策與資金用途重新健檢。"
+description: "人民幣跨境使用增加，但儲備貨幣功能仍有限。持有人民幣存款、中國債券或兩岸貿易部位者，可依匯率、流動性、政策與資金用途五個步驟重新健檢曝險，而非只看使用熱度。"
 publishDate: 2026-08-18
+updatedDate: 2026-08-22
 category: finance
 subcategory: investing-literacy
 tags: ["投資理財", "資本市場", "總體經濟", "貿易政策", "企業經營", "中國"]

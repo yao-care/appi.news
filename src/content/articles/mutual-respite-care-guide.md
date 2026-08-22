@@ -8,6 +8,7 @@ contentType: "news"
 sourceType: "wire"
 status: "published"
 publishDate: "2026-08-20T18:47:35.960Z"
+updatedDate: 2026-08-22T12:00:00+08:00
 coverImage: "/covers/mutual-respite-care-guide-cover.webp"
 coverImageCredit: "Photo by Qing Luo on Pexels"
 tags: ["長照", "高齡健康", "超高齡社會"]
@@ -19,7 +20,7 @@ risksAndLimits:
   - "換休時數當年度未用完會於年底歸零，不會累積到隔年"
 ---
 
-家中長輩需要人照顧，自己卻連喘口氣的空檔都找不到，是許多照顧者的日常。衛福部推動的「互助喘息服務」試辦計畫，讓照顧者只要撥出時間陪照服員一起照顧其他長輩，值班1個時段就能換到2個時段的喘息，最低4小時起跳，也就是顧4小時、換8小時有人幫忙照顧家中長輩。這項服務目前在全國16縣市約50處據點試辦，[聯合報報導](https://udn.com/news/story/7266/9406664)指出，衛福部政務次長呂建德說明，計畫結合「喘息服務」與「時間銀行」概念，目的是同時解決照顧人力不足與照顧者喘息機會太少的問題。
+家中長輩需要人照顧，自己卻連喘口氣的空檔都找不到，是許多照顧者的日常，也是[長照分工與申請流程](/articles/long-term-care-family-planning/)裡最常被忽略的一環。衛福部推動的「互助喘息服務」試辦計畫，讓照顧者只要撥出時間陪照服員一起照顧其他長輩，值班1個時段就能換到2個時段的喘息，最低4小時起跳，也就是顧4小時、換8小時有人幫忙照顧家中長輩。這項服務目前在全國16縣市約50處據點試辦，[聯合報報導](https://udn.com/news/story/7266/9406664)指出，衛福部政務次長呂建德說明，計畫結合「喘息服務」與「時間銀行」概念，目的是同時解決照顧人力不足與照顧者喘息機會太少的問題。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=_tKorALaOGA" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：照顧者鬆口氣! 互助喘息「做1休2」納長照3.0">

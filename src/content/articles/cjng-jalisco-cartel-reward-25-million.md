@@ -1,8 +1,8 @@
 ---
-title: "CJNG是什麼？美國懸賞逾1億美元緝哈利斯科卡特爾8首腦"
+title: "CJNG是什麼？墨西哥卡特爾8首腦遭美國懸賞逾1億美元"
 slug: "cjng-jalisco-cartel-reward-25-million"
 description: "CJNG（哈利斯科新一代卡特爾）是墨西哥最具武力的販毒集團之一。美國8月5日對其8名首腦合計懸賞逾1億美元，現任首腦岡薩雷斯一人就達2500萬美元。整理CJNG的背景、懸賞名單與美方掃毒行動。"
-updatedDate: 2026-08-20
+updatedDate: 2026-08-22
 excerpt: "美國8月5日對CJNG（哈利斯科新一代卡特爾）8名首腦開出逾1億美元懸賞，接掌組織的岡薩雷斯（「Pelón」）懸賞金從500萬美元漲至2500萬美元，是前首腦「梟哥」身亡後美方最大規模緝拿行動之一。"
 publishDate: "2026-08-09T16:59:38.892Z"
 category: "international"

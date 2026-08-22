@@ -76,7 +76,7 @@ references:
 
 <p>歐盟 AI 法 8 月 2 日要開罰，這句話這幾週被講到爛，但多數轉述都把重點抓錯。真正在那天發生的，不是憑空冒出一套新義務，而是歐盟補上了一台能執行的機器。對通用型 AI（General Purpose AI，簡稱 GPAI，泛指 GPT、Claude、Gemini 這類底層大模型）的供應商來說，<a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-gpai-enforcement-20260509-csa-st/" target="_blank" rel="noopener">義務早在 2025 年 8 月就生效，2026 年 8 月 2 日才輪到歐盟執委會的 AI 辦公室正式取得監督與執法權</a>。先有規矩、後給牙齒，這是兩件事。</p>
 
-<p>還有一個更常見的誤會要先拆掉：很多人以為招募、信用評分、生物辨識這些「高風險」義務也在同一天一起上路。原本確實是這樣排的，但歐盟的 Digital Omnibus 已經把這塊往後挪了。義務與罰則是不是「同日到位」，答案比標題複雜，而這個差別正好決定你接下來要先做什麼，也牽動台廠自己的[AI 基本法上路後：數位部的風險分類框架，企業現在該準備什麼](/articles/ai-basic-law-risk-classification-enterprise-checklist/)準備進度。</p>
+<p>還有一個更常見的誤會要先拆掉：很多人以為招募、信用評分、生物辨識這些「高風險」義務也在同一天一起上路。原本確實是這樣排的，但歐盟的 Digital Omnibus 已經把這塊往後挪了。義務與罰則是不是「同日到位」，答案比標題複雜，而這個差別正好決定你接下來要先做什麼，也牽動台廠自己的<a href="/articles/ai-basic-law-risk-classification-enterprise-checklist/">AI 基本法上路後：數位部的風險分類框架，企業現在該準備什麼</a>準備進度。</p>
 
 <h2>義務早就在，變的是執法機器</h2>
 

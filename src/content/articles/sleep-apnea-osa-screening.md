@@ -3,7 +3,6 @@ title: "會打呼就是睡眠呼吸中止嗎？五個警訊與該不該做睡眠
 slug: "sleep-apnea-osa-screening"
 description: "打呼不一定是病，但如果打呼還伴隨睡眠中呼吸停止、白天怎麼睡都累、晨起頭痛，可能是睡眠呼吸中止症。它讓你整夜反覆缺氧，長期拉高高血壓、中風、糖尿病風險。這篇教你分辨打呼和 OSA、什麼時候該做睡眠檢查。"
 publishDate: 2026-08-25T20:00:00+08:00
-updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

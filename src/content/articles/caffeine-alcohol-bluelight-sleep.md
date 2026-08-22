@@ -3,7 +3,6 @@ title: "咖啡因、酒精、藍光：三個偷走你深睡的日常習慣"
 slug: "caffeine-alcohol-bluelight-sleep"
 description: "你以為睡了 7 小時，但可能睡得很淺。咖啡因、酒精、睡前滑手機的藍光，這三個日常習慣正在偷走你的深睡。咖啡因半衰期長達 6 到 8 小時，酒精讓你快睡著卻在後半夜把你叫醒，藍光讓大腦誤以為還是白天。這篇教你避開三個睡眠小偷。"
 publishDate: 2026-08-27T20:00:00+08:00
-updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

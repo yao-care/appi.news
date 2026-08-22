@@ -3,7 +3,6 @@ title: "幽門螺旋桿菌驗到陽性要根除嗎？胃癌篩檢新納公費怎
 slug: "stomach-cancer-h-pylori-screening"
 description: "胃癌約 8 到 9 成與幽門螺旋桿菌有關，它是 WHO 認證的一級致癌物。好消息是它可以驗、也可以除。2026 年起 45 到 74 歲有終身一次公費糞便抗原檢測，驗出陽性就根除，能降低胃癌風險，而且可以和大腸癌篩檢一起做。"
 publishDate: 2026-08-28T20:00:00+08:00
-updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

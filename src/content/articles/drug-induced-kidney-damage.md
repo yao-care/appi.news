@@ -3,7 +3,6 @@ title: "止痛藥、來路不明補品最傷腎：安全用藥的四個原則"
 slug: "drug-induced-kidney-damage"
 description: "台灣人愛吃止痛藥、也愛買來路不明的補品和草藥，這兩件事都在傷腎。消炎止痛藥（NSAIDs）長期或過量用會讓腎絲球血流變少，含馬兜鈴酸的中藥更是政府明令禁用的傷腎物。這篇講哪些藥物物質傷腎、哪些人特別危險，以及安全用藥的四個原則。"
 publishDate: 2026-09-11T20:00:00+08:00
-updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

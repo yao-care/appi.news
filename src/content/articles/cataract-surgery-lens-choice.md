@@ -3,7 +3,6 @@ title: "白內障是老化必經？開刀時機與人工水晶體怎麼選"
 slug: "cataract-surgery-lens-choice"
 description: "白內障幾乎是老化必經，但很多人一聽到開刀就怕，又糾結要不要等熟一點、人工水晶體選健保還是自費。其實影響生活就可以開，不必等熟；水晶體則看你的用眼需求與預算。這篇講白內障成因、開刀時機、單焦點與多焦點水晶體差別與費用。"
 publishDate: 2026-09-04T20:00:00+08:00
-updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

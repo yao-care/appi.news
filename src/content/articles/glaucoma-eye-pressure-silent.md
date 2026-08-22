@@ -3,7 +3,6 @@ title: "青光眼：無聲的視力小偷，眼壓正常也可能得"
 slug: "glaucoma-eye-pressure-silent"
 description: "青光眼被叫無聲的視力小偷不是誇飾。它初期幾乎沒感覺，視野從周邊一點一點被偷走，等發現時受損的視神經已經回不來。而且它不只是眼壓高才會得，正常眼壓也可能罹病。這篇講青光眼為什麼無聲、眼壓的角色、誰是高危險群，以及怎麼早期發現與控制。"
 publishDate: 2026-09-10T20:00:00+08:00
-updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

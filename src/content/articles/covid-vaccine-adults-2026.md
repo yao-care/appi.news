@@ -3,7 +3,6 @@ title: "疫情又升溫，新冠疫苗現在還要再打嗎？"
 slug: "covid-vaccine-adults-2026"
 description: "新冠疫情最近又升溫，很多人問都打過那麼多劑了現在還要再打嗎。答案看你是誰：65 歲以上、慢性病、孕婦、免疫低下者該打，因為本土重症九成以上都是沒打本季疫苗的人。病毒一直突變、疫苗一直更新，過去打過不代表現在有保護。公費延長到 9 月 28 日。"
 publishDate: 2026-08-22T20:00:00+08:00
-updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

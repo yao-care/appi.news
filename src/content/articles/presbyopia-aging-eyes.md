@@ -3,7 +3,6 @@ title: "老花眼幾歲開始？近視的人會不會抵銷老花？"
 slug: "presbyopia-aging-eyes"
 description: "老花眼有明確的開始年齡（40 歲上下）和原因（水晶體調節力下降），還有一個超多人誤會的問題：近視的人會不會抵銷老花、以後不用戴老花眼鏡？答案是不會，而且近視 400 度以上兩者無法互相矯正。這篇講老花的成因、症狀、近視抵銷迷思與矯正方式。"
 publishDate: 2026-09-06T20:00:00+08:00
-updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

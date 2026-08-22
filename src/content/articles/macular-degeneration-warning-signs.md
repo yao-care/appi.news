@@ -3,7 +3,6 @@ title: "黃斑部病變：看直線變扭曲就要當心，中老年失明主因
 slug: "macular-degeneration-warning-signs"
 description: "黃斑部病變是中老年失明主因之一，可怕在初期不痛不癢，等到看東西直線變扭曲、中央有暗點才發現。它跟年齡、抽菸、高度近視有關，3C 時代還有年輕化趨勢。這篇教你認識乾性與濕性、三個警訊、阿姆斯勒方格自我檢測，以及怎麼護眼。"
 publishDate: 2026-09-08T20:00:00+08:00
-updatedDate: 2026-08-22T12:00:00+08:00
 category: health
 subcategory: preventive
 tags:

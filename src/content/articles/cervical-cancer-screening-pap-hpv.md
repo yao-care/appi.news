@@ -3,7 +3,6 @@ title: "打了 HPV 疫苗還要做子宮頸抹片嗎？子宮頸癌篩檢與 HPV
 slug: "cervical-cancer-screening-pap-hpv"
 description: "打了 HPV 疫苗還是要定期做子宮頸抹片。因為疫苗只防得了部分 HPV 型別、約七成子宮頸癌，但 HPV 有上百種，疫苗加抹片一起才是完整保護。2025 年起抹片公費下修到 25 歲、還新增公費 HPV 檢測。這篇教你看懂子宮頸癌篩檢。"
 publishDate: 2026-08-26T20:00:00+08:00
-updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

@@ -3,7 +3,6 @@ title: "輪班、熬夜、時差把生理時鐘打亂了，怎麼調回來"
 slug: "circadian-rhythm-shift-work-jetlag"
 description: "睡不好有時不是失眠，而是生理時鐘被打亂。人體內建約 24 到 25 小時的生理時鐘，靠光線每天校準。輪班、熬夜、時差會讓它和外界對不上。好消息是它可以調，最強的工具是光線。這篇教你把生理時鐘調回來。"
 publishDate: 2026-08-29T20:00:00+08:00
-updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

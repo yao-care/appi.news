@@ -1,8 +1,9 @@
 ---
 title: "全大運輕艇3金看點：曾俐芩單日雙冠、C艇K艇差異"
 slug: "university-games-canoe-three-golds"
-description: "115年全大運輕艇賽事在日月潭登場，金潔儀與曾俐芩首度參賽合拿3金。整理三項成績、C艇與K艇差異、亞錦賽經驗及亞運目標。"
+description: "115年全大運輕艇賽事在日月潭登場，金潔儀、曾俐芩首度參賽合拿3金，曾俐芩單日完成雙冠。整理三項成績、C艇與K艇差異、亞錦賽經驗及亞運目標。"
 publishDate: 2026-08-11
+updatedDate: 2026-08-22
 category: sports
 subcategory: events
 tags: ["學生賽事", "國際賽事"]

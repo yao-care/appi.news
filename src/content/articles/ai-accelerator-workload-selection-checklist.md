@@ -1,10 +1,11 @@
 ---
-title: "AI 加速器怎麼選？工作負載評估清單"
+title: "AI 訓練加速器怎麼選？企業工作負載評估清單"
 slug: "ai-accelerator-workload-selection-checklist"
 coverImage: "covers/ai-accelerator-workload-selection-checklist.webp"
 coverAlt: "工程師在硬體實驗室比較多種伺服器與人工智慧加速器模組"
-description: "選GPU、ASIC或雲端加速器前，先量出模型變動頻率、延遲、吞吐、記憶體、軟體相容性與三年總成本。本文提供從工作負載到試跑驗證的採購評估表。"
+description: "企業評估AI訓練加速器，該選GPU、ASIC或雲端服務前，先量出模型變動頻率、延遲、吞吐、記憶體與三年總成本。本文提供從工作負載盤點到試跑驗證的採購評估流程。"
 publishDate: 2026-08-10
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "ai"
 tags: ["AI基礎建設", "半導體", "數位轉型"]
@@ -29,7 +30,7 @@ references:
     publisher: "imec IC-Link"
 ---
 
-AI 加速器選型先回答六個問題：模型多久改一次、是訓練還是推論、可接受延遲、尖峰吞吐、記憶體需求、軟體能否移植。GPU 與 ASIC 的原理差異可讀[ASIC 和 GPU 完整比較](/articles/ai-asic-vs-gpu-explained/)；這一頁提供採購與架構評估流程。
+企業選 AI 訓練加速器沒有單一標準答案，要先回答六個問題：模型多久改一次、是訓練還是推論、可接受延遲、尖峰吞吐、記憶體需求、軟體能否移植。答案會決定該評估 GPU、ASIC 還是雲端服務。GPU 與 ASIC 的原理差異可讀[ASIC 和 GPU 完整比較](/articles/ai-asic-vs-gpu-explained/)；這一頁提供採購與架構評估流程。
 
 ## 把工作負載量成一張表
 

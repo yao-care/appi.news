@@ -1,8 +1,9 @@
 ---
-title: "印尼羽球公開賽周天成闖4強，單站成績為何不等於亞運資格？"
+title: "2026印尼羽球公開賽戰績：周天成闖4強，台灣4項目晉8強"
 slug: "indonesia-open-taiwan-badminton-results"
-description: "2026印尼羽球公開賽，周天成闖進男單4強，另有女單、男雙與混雙名列8強。從日本羽協公布賽果說明單站成績與名古屋亞運遴選的差異。"
+description: "2026印尼羽球公開賽戰績出爐，周天成闖進男單4強，邱品蒨、李芳至／李芳任、葉宏蔚／詹又蓁同進8強，整理台灣選手晉級戰況並解析亞運資格認定方式。"
 publishDate: 2026-08-14
+updatedDate: 2026-08-22
 category: sports
 subcategory: events
 tags: ["國際賽事"]
@@ -29,7 +30,7 @@ references:
     url: "https://oca.asia/news/7343-world-broadcasters-meeting-participants-visit-20th-asian-games-main-stadium.html"
 draft: false
 ---
-2026印尼羽球公開賽的台灣成績，不只包括周天成闖進男單4強。邱品蒨、李芳至／李芳任、葉宏蔚／詹又蓁也分別在女單、男雙及混雙打進8強，讓台灣選手在四個項目進入賽事後段。
+2026印尼羽球公開賽戰績出爐：周天成闖進男單4強，邱品蒨、李芳至／李芳任、葉宏蔚／詹又蓁也分別在女單、男雙及混雙打進8強，讓台灣選手在四個項目進入賽事後段。
 
 相較2025年由周天成挺進男單決賽、其餘台將止於前兩輪，2026年的差異在晉級項目變多。這項結果呈現單站的戰力廣度，不足以證明整體實力持續提升。
 

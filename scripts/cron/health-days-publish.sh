@@ -9,19 +9,13 @@
 # 純 shell、不動用 Claude：先確認今天真的有排程稿要轉正，沒有就安靜結束。
 # 從觸發到線上可讀約 3-5 分鐘，故文章時間戳是 06:17、實際可見約 06:21（站長 2026-07-28 拍板的取捨）。
 TASK="健康紀念日上線"
-set -uo pipefail
-REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
+source "$(dirname "$0")/_runner.sh"
 PUBLISHER="${PUBLISHER:-/root/appi.news-publisher}"
 GH_REPO="yao-care/appi.news"
-
-set -a
-# shellcheck disable=SC1090
-source "$HOME/.config/appi-news/report.env"
-set +a
+cron_env
 
 # 台北的「今天」（此刻是 UTC 22:17，+8h 落在隔天 06:17）。
 D="$(date -u -d '+8 hours' '+%F')"
-ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
 
 # 有沒有排在今天 06:17 的稿？直接查 origin/main，不依賴本地 checkout 新舊。
 git -C "$PUBLISHER" fetch -q origin --prune 2>/dev/null || true
@@ -34,7 +28,7 @@ printf '%s\n' "$files"
 
 # 戳一次部署。文章 publishDate 已到 → 這次 build 就會把它從排程預覽頁轉成正式文章。
 if ! gh workflow run deploy.yml --repo "$GH_REPO" --ref main 2>&1; then
-  node scripts/cron-report.mjs --category health --text "$(printf '❌ %s：觸發 deploy 失敗（%s），%s 篇排程稿沒能準時上線，請手動跑 deploy workflow' "$TASK" "$ts" "$n")" || true
+  cron_report "--category health" "$(printf '❌ %s：觸發 deploy 失敗（%s），%s 篇排程稿沒能準時上線，請手動跑 deploy workflow' "$TASK" "$ts" "$n")"
   exit 1
 fi
 echo "✓ 已觸發 deploy，等文章線上可讀…"
@@ -45,13 +39,9 @@ for f in $files; do
   slug=$(basename "$f" .md)
   url="https://appi.news/articles/${slug}/"
   title=$(git -C "$PUBLISHER" show "origin/main:$f" 2>/dev/null | sed -n 's/^title:[[:space:]]*"\?\([^"]*\)"\?[[:space:]]*$/\1/p' | head -1)
-  deadline=$(( $(date +%s) + 600 ))
-  until [ "$(curl -s -4 -o /dev/null -w '%{http_code}' "$url")" = "200" ]; do
-    [ "$(date +%s)" -ge "$deadline" ] && { echo "⚠️ 等逾時，$url 仍非 200，仍照常回報"; break; }
-    sleep 20
-  done
+  cron_wait_200 "$url" || true
   lines+="• ${title:-$slug}"$'\n'"  $url"$'\n'
 done
 
-node scripts/cron-report.mjs --category health --text "$(printf '🗓 %s 的健康紀念日文章已上線（%s 篇）：\n%s' "$D" "$n" "$lines")" || true
+cron_report "--category health" "$(printf '🗓 %s 的健康紀念日文章已上線（%s 篇）：\n%s' "$D" "$n" "$lines")"
 exit 0

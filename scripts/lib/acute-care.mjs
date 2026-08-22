@@ -169,13 +169,12 @@ export function buildAcuteCarePrompt(topic, { recentTitles = [] } = {}) {
 }
 
 /** 解析 ACUTE_RESULT 行。回 {action:'new'|'skip', slug, note, infra?}。 */
+import { parseSentinelResult } from './claude-cli.mjs';
+
+// 哨兵解析正本＝lib/claude-cli.mjs parseSentinelResult。它的 slug 清洗（只留 [a-z0-9-]）
+// 已涵蓋下方 cleanSlug 擋的反引號/粗體案（2026-08-03），cleanSlug 留著給既有呼叫端。
 export function parseAcuteCareResult(stdout) {
-  const m = String(stdout || '').match(/ACUTE_RESULT\s*=\s*(NEW|SKIP)\s*[｜|:：]\s*(.*)$/im);
-  if (!m) return { action: 'skip', slug: null, note: '無法解析 ACUTE_RESULT（視為跳過）', infra: true };
-  const action = m[1].toLowerCase();
-  const rest = (m[2] || '').trim();
-  if (action === 'skip') return { action: 'skip', slug: null, note: rest };
-  return { action: 'new', slug: cleanSlug(rest.split(/[｜|]/)[0]), note: rest };
+  return parseSentinelResult(stdout, 'ACUTE');
 }
 
 /**

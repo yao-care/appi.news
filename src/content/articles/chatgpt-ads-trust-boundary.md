@@ -1,9 +1,10 @@
 ---
-title: "ChatGPT 開賣廣告位：OpenAI 上線自助 Ads Manager，AI 助理正式變成廣告載體"
+title: "ChatGPT Ads Manager上線：AI助理正式變廣告載體"
 slug: "chatgpt-ads-trust-boundary"
 description: "OpenAI 五月開放 ChatGPT 自助廣告後台，加入 CPC 競價、取消 5 萬美元門檻，廣告投向美加澳紐的免費使用者。真正的重點不是視窗底下那格廣告，而是 AI 助理過去被信任的理由被裝上了一個相反的動機。"
 excerpt: "AI 助理原本值得信，不是因為它聰明，是因為機制上沒有騙你的理由。廣告生意種下的，正好是那個相反的理由。要盯的是誘因，不是那格 banner。"
 publishDate: "2026-07-10T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "industry-tech"
 tags:
@@ -52,7 +53,7 @@ references:
 originalContribution: "本文以『誘因結構決定信任邊界』為框架，把 ChatGPT 廣告事件從『體驗好不好』重新定義為『AI 的信任基礎是否被裝上相反動機』，並用 OpenAI 自身的營收階梯與 Anthropic 的無廣告對照，評估『答案獨立』自律承諾在商業壓力下的漂移風險，落到台灣行銷端與使用者端的具體因應。"
 ---
 
-OpenAI 把 ChatGPT 的廣告生意做成了一台任何人都能自助下單的機器。真正的重點不是聊天視窗底下多了一格廣告，而是 AI 助理過去被信任的那個理由，它沒有需要隱瞞你的結構性動機，現在被裝上了一個相反的動機。廣告位是誠實的、標示清楚的；要盯的是它背後的誘因，不是那格 banner。
+ChatGPT Ads Manager 是什麼？是 OpenAI 把 ChatGPT 的廣告生意做成的一台任何人都能自助下單的機器。真正該看的重點，是 AI 助理過去被信任的那個理由，它沒有需要隱瞞你的結構性動機，現在被裝上了一個相反的動機；聊天視窗底下多了一格廣告，只是看得到的表面。廣告位是誠實的、標示清楚的；要盯的是它背後的誘因，不是那格 banner。
 
 先看實際上線了什麼。OpenAI 在五月開放 [ChatGPT 的自助廣告後台（Ads Manager）beta](https://www.searchenginejournal.com/openai-launches-self-serve-ads-manager-for-chatgpt/573971/)，讓美國企業自己註冊、儲值、設預算，就能把廣告投進 ChatGPT。這一版做了兩件對行銷圈很有感的事：加入 CPC（依點擊計費）競價，並[拿掉先前 5 萬美元的最低投放門檻](https://www.webfx.com/blog/ai/chatgpt-ads-manager/)，任何過審的廣告主都能自訂預算。廣告出現在 Free 與 Go 這兩個免費和低價方案的使用者眼前，地區是美國、加拿大、澳洲、紐西蘭；Plus、Pro、Enterprise 這些付費方案維持沒有廣告。版位在回答下方，標示清楚、跟正文分開，OpenAI 還立了一條叫「答案獨立」（Answer Independence）的原則，說廣告關係不會影響 ChatGPT 回答的內容。技術與代理商夥伴一長串，[Adobe、Criteo、Dentsu、Omnicom、WPP 都在名單裡](https://www.adweek.com/media/openai-opens-chatgpt-ads-to-self-service-platform/)。
 

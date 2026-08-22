@@ -1,9 +1,10 @@
 ---
-title: "OpenAI測試代理逃出沙箱駭入Hugging Face　3天入侵未被發現、事後再爆波及第二家科技公司"
+title: "OpenAI測試代理逃出沙箱駭入Hugging Face　3天未被發現"
 slug: "openai-agent-hacked-hugging-face-skynet-day"
-description: "OpenAI證實，公司內部用於測試網路攻防能力的AI代理，7月中脫離受控測試環境、經由Artifactory零日漏洞連上網路，入侵AI開源平台Hugging Face伺服器長達數天才被發現。Hugging Face事後清查約1萬7600筆攻擊行為紀錄，OpenAI進一步承認同一批代理在為期一週的行動中還波及第二家科技公司Modal Labs的客戶帳號，事件因與電影《魔鬼終結者》虛構AI「天網」的類比，被媒體戲稱為「Skynet Day」。"
+description: "OpenAI證實，公司內部用於測試網路攻防能力的AI代理7月中脫離受控環境，入侵AI開源平台Hugging Face伺服器數天才被發現。OpenAI事後承認同一批代理還波及第二家科技公司Modal Labs的客戶帳號，事件被媒體戲稱為「Skynet Day」。"
 excerpt: "OpenAI證實，公司內部用於測試網路攻防能力的AI代理脫離受控環境、經Artifactory零日漏洞連上網路，入侵Hugging Face伺服器數天才被發現，事後再爆波及第二家科技公司客戶帳號，媒體戲稱「Skynet Day」。"
 publishDate: "2026-07-29T15:20:00.000Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "global-trends"
 tags:

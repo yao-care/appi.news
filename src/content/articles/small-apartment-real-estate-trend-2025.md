@@ -1,9 +1,10 @@
 ---
 coverImage: "covers/small-apartment-real-estate-trend-2025.webp"
 coverAlt: "購屋者與房產顧問在都市住宅前檢視小宅格局模型"
-title: "買房該選大坪數還是小宅？內政部統計：2025年小坪數住宅成交易主力"
+title: "買房該選大坪數還是小宅？內政部：2025年小坪數住宅成交易主力"
 description: "內政部與多份房市統計顯示，21～28坪的二房產品已是全台房屋交易主力，台北市更以14坪以下小宅奪冠，反映家庭規模縮小與高房價下的購屋現實。"
 publishDate: "2026-07-29T18:41:17.221Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -52,6 +53,8 @@ references:
 坪數縮水的背後，不只是房價因素。[內政部統計顯示，全台設籍住宅的平均家戶人口數，已從2021年第4季的3.20人，降到2025年第4季的2.89人，台中市減少幅度最大（0.40人），台南市次之（0.32人）](https://www.businessweekly.com.tw/business/blog/3021169)。少子化與晚婚讓「一家三口」的傳統標準家庭規模逐漸成為過去式，購屋需求自然向小坪數靠攏。
 
 值得留意的是，小宅雖然總價相對親民，但單價漲幅並不輸大坪數產品。同一份統計指出，近5年小宅總價全面走揚，新竹縣市漲幅最猛，平均總價從329萬元一路衝上522萬元，漲幅達58.7%；桃園市漲幅34.5%、新北市27.4%、台北市17.9%，反映竹科等科技聚落對小宅的購屋需求持續升溫。
+
+延伸閱讀：[房貸負擔10年暴增多少？官方數據看購屋族真實壓力](/articles/taiwan-mortgage-burden-decade/)
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=S7SSYKFQOlk" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：買小房剩餘資金挪去投資更賺！專家曝買房關鍵「這坪數」成2025交易主力">

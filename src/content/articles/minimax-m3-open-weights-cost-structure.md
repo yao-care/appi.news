@@ -1,8 +1,9 @@
 ---
 slug: "minimax-m3-open-weights-cost-structure"
-title: "MiniMax M3 把『智慧成本』打到地板：開源權重、百萬脈絡、原生多模態一次到齊"
+title: "MiniMax M3 把智慧成本打到地板：開源權重、百萬脈絡一次到齊"
 description: "上海 MiniMax 6/1 推出開源權重的 M3，前沿級 coding、百萬 token 脈絡、原生多模態一次到齊，定價只有西方旗艦零頭。但對台灣團隊真正的訊號不是又一個跑分新王，而是自架可行性與選型的成本結構被重寫。"
 publishDate: "2026-07-11T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "ai"
 tags:
@@ -66,9 +67,9 @@ M3 的標準 API 定價是 [$0.60 input／$2.40 output per 1M token，首週五�
 
 閉源的便宜模型，你還是只能透過別人的 API 用，資料要送出去。開源權重不一樣。[M3 一旦權重落地，會是同級裡唯一帶原生多模態的開源權重模型，可以自己架、甚至做到 air-gapped 的封閉部署](https://codersera.com/blog/minimax-m3-developer-guide/)。對受監管的場景，這一句才是重點。
 
-我關心的不是它能不能在雲端跑得更快，是它讓「資料不出境」從理想變成務實選項。醫療、金融這類場景，資料能不能留在自家機房，常常不是工程問題而是合規問題。過去要嘛用昂貴的閉源旗艦、把資料送出去，要嘛退而用能力差一截的本地小模型。M3 這類前沿級開源權重，第一次讓「能力夠用、資料又守得住」這兩件事有機會同時成立。
+我關心的不是它能不能在雲端跑得更快，是它讓「資料不出境」從理想變成務實選項，這個立場我在[LLM 在醫療場景的承諾與限制](/articles/llm-healthcare-promise-limits/)與[醫療 AI 合規守門引擎](/articles/medical-ai-compliance-gatekeeper-engine/)寫過很多次。醫療、金融這類場景，資料能不能留在自家機房，關鍵常常在合規，不在工程能力。過去要嘛用昂貴的閉源旗艦、把資料送出去，要嘛退而用能力差一截的本地小模型。M3 這類前沿級開源權重，第一次讓「能力夠用、資料又守得住」這兩件事有機會同時成立。
 
-不過先踩一個剎車。開源權重給了你自架的「可行性」，不等於你架得起、守得住。權重要 GPU、要有人維運、要接驗證機制；模型強只是前提，落地設計才是決定性的那一格。這個立場我寫過很多次了，可信度靠落地流程不是靠模型大小（延續 [LLM 在醫療場景的承諾與限制](/articles/llm-healthcare-promise-limits/)、[醫療 AI 合規守門引擎](/articles/medical-ai-compliance-gatekeeper-engine/)）。便宜跟開源，把門票發給更多人，但門後的工程一點都沒變簡單。
+不過先踩一個剎車。開源權重給了你自架的「可行性」，不等於你架得起、守得住。權重要 GPU、要有人維運、要接驗證機制；模型強只是前提，落地設計才是決定性的那一格。可信度靠的是落地流程，不是模型大小。便宜跟開源，把門票發給更多人，但門後的工程一點都沒變簡單。
 
 <img src="/images/minimax-m3-open-weights-cost-structure-s3.webp" width="960" height="685" loading="lazy" decoding="async" alt="機房伺服器機櫃，象徵自架模型與資料留在自家的部署">
 

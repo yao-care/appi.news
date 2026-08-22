@@ -1,8 +1,9 @@
 ---
-title: "健檢甲狀腺 TSH 偏高，是生病了嗎？看懂亞臨床甲狀腺低下該追蹤還是治療"
+title: "健檢TSH偏高是生病了嗎？亞臨床甲狀腺低下怎麼辦"
 slug: "thyroid-tsh-subclinical"
 description: "健檢 TSH 偏高不一定是生病。多數是亞臨床甲狀腺低下，可能自行恢復，TSH 小於 10 又沒危險因子時常只需追蹤。教你看懂 TSH、T4，並破除多吃海帶紫菜補碘的迷思。"
 publishDate: 2026-07-20T20:00:00+08:00
+updatedDate: 2026-08-22
 category: health
 subcategory: medical
 tags:

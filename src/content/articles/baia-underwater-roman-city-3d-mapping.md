@@ -8,9 +8,10 @@ author: "appi-editorial"
 contentType: "news"
 sourceType: "wire"
 status: "published"
-coverImage: "/covers/baia-underwater-roman-city-3d-mapping-cover.webp"
+updatedDate: 2026-08-22
+coverImage: "covers/baia-underwater-roman-city-3d-mapping-cover.webp"
 coverAlt: "海底羅馬式遺跡與蔚藍海水，示意圖"
-coverImageCredit: "Photo by Diego HG on Pexels"
+coverImageCredit: "Photo by Harvey Clements on Pexels"
 tags: ["旅遊", "文化藝術"]
 disclosure: "線索來自 公視新聞網 YouTube 影片，內容經公開資料查證整理、附原始出處。"
 risksAndLimits:

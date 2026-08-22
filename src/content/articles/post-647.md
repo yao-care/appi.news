@@ -1,7 +1,7 @@
 ---
-title: "NASA ESCAPADE 雙星升空，JAXA 火衛一採樣同步備戰：火星探索新局"
+title: "NASA ESCAPADE升空：雙衛星解密火星大氣消失謎團"
 slug: "nasa-escapade-jaxa-mars-missions"
-description: "2026年3月14日，NASA委由Blue Origin New Glenn火箭發射ESCAPADE雙子衛星，首度以協調飛行模式研究太陽風如何剝蝕火星大氣。JAXA的MMX任務同期備戰，預計以H3火箭前往火衛一Phobos採樣，並於2031年返回地球。兩個任務代表亞太太空機構與美方協作的行星科學新模式，也為台灣衛星供應鏈帶來具體參照座標。"
+description: "NASA的ESCAPADE雙子衛星2026年3月14日以Blue Origin New Glenn火箭升空，首度以協調飛行模式研究太陽風如何剝蝕火星大氣；JAXA的MMX任務同期備戰，預計以H3火箭前往火衛一Phobos採樣，2031年返回地球。兩個任務也為台灣衛星供應鏈帶來具體參照座標。"
 excerpt: "2026年3月14日，NASA委由Blue Origin New Glenn火箭發射ESCAPADE雙子衛星，首度以協調飛行模式研究太陽風如何剝蝕火星大氣。JAXA的MMX任務同期備戰，預計以H3火箭前往火衛一Phobos採樣，並於2031年返回地球。兩個任務代表亞太太空機構與美方協作的行星科學新模式，也為台灣衛星供應鏈帶來具體參照座標。"
 publishDate: "2026-03-14T09:00:00+08:00"
 category: "international"
@@ -39,9 +39,10 @@ disclaimerType: "general"
 coverImage: "covers/post-647-stock.jpg"
 coverAlt: "火箭升空時噴射火焰與濃煙的戲劇性畫面"
 coverImageCredit: "Photo by SpaceX on Pexels"
+updatedDate: "2026-08-22"
 ---
 
-火星大氣為什麼消失了？這個問題困擾行星科學家幾十年。現在有兩組太空船正在從不同角度逼近答案。2026年3月14日，[NASA的ESCAPADE任務](https://www.nasa.gov/news-release/nasa-blue-origin-launch-two-spacecraft-to-study-mars-solar-wind)以Blue Origin New Glenn火箭升空，送出一對被命名為Blue與Gold的衛星，開始長達18個月的飛行，目標是2027年9月進入火星軌道。與此同時，JAXA的火星衛星探索任務MMX正在種子島完成最終整備，等待H3火箭在日本財政年度2026年的發射窗口。兩個任務在時間軸上高度重疊，在科學目標上彼此互補，構成近年來行星科學合作中難得一見的格局。
+NASA的ESCAPADE任務用兩顆衛星同步測量太陽風如何剝蝕火星大氣，這正是困擾行星科學家幾十年的謎題：火星大氣為什麼消失了？現在有兩組太空船正在從不同角度逼近答案。2026年3月14日，[NASA的ESCAPADE任務](https://www.nasa.gov/news-release/nasa-blue-origin-launch-two-spacecraft-to-study-mars-solar-wind)以Blue Origin New Glenn火箭升空，送出一對被命名為Blue與Gold的衛星，開始長達18個月的飛行，目標是2027年9月進入火星軌道。與此同時，JAXA的火星衛星探索任務MMX正在種子島完成最終整備，等待H3火箭在日本財政年度2026年的發射窗口。兩個任務在時間軸上高度重疊，在科學目標上彼此互補，構成近年來行星科學合作中難得一見的格局。
 
 ## ESCAPADE升空：NASA雙子衛星解開火星大氣失落之謎
 

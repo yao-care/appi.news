@@ -1,10 +1,10 @@
 ---
-title: "加薩撤軍卡在哪？內塔尼亞胡正式拒絕川普15點方案，堅持哈瑪斯先解除武裝再撤軍"
+title: "內塔尼亞胡拒絕川普加薩15點方案 堅持先解除武裝"
 slug: "gaza-hamas-disarmament-deal-israel-concerns"
 description: "以色列總理內塔尼亞胡8月9日內閣會議上正式拒絕美方「和平委員會」提出的加薩15點停火方案，重申哈瑪斯真正解除武裝前國防軍不會撤軍，任內也不會有巴勒斯坦國。這是以色列從月初表達「嚴重疑慮」一路升高到公開拒絕整份文件；內塔尼亞胡同時面臨執政聯盟右翼盟友要求終止協議的壓力，以色列10月將舉行選舉，哈瑪斯則回應仍致力於原方案。"
 excerpt: "內塔尼亞胡8月9日正式宣布拒絕川普「和平委員會」提出的加薩15點停火方案，重申哈瑪斯真正解除武裝前不撤軍、任內不設巴勒斯坦國；他同時面臨右翼盟友要求終止協議的選前壓力，哈瑪斯回應仍致力於原方案。"
 publishDate: "2026-08-03T16:39:48.586Z"
-updatedDate: "2026-08-09T16:59:38.892Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "middle-east"
 tags:
@@ -60,7 +60,6 @@ disclaimerType: "general"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/gaza-hamas-disarmament-deal-israel-concerns-cover.webp"
 coverAlt: "查獲後集中堆放的AK-47步槍與彈藥，象徵武器繳械與解除武裝"
-coverImageCredit: "Israel Defense Forces — CC BY-SA 2.0, Wikimedia Commons"
 ---
 
 以色列總理內塔尼亞胡8月9日在耶路撒冷內閣會議上正式表態：「以色列拒絕這份15點文件」，川普政府「和平委員會」提出、原規劃讓以軍隨哈瑪斯解除武裝分階段撤出加薩的方案，就此卡關。[半島電視台報導](https://www.aljazeera.com/news/2026/8/9/israel-rejects-trumps-15-point-plan-for-gaza)引述內塔尼亞胡的說法，以軍在哈瑪斯「真正解除武裝」前不會撤軍，他還加碼強調，只要自己還是總理，加薩就不會出現巴勒斯坦國。

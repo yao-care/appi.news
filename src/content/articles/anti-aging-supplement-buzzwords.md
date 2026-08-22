@@ -1,8 +1,9 @@
 ---
-title: "NAD⁺、幹細胞、外泌體：抗老聖品的生技名詞越來越潮，實證卻常跟不上"
+title: "NAD⁺、幹細胞、外泌體：抗老聖品的名詞話術"
 slug: "anti-aging-supplement-buzzwords"
 description: "抗老市場最愛用聽起來很尖端的生技名詞：NAD⁺、胜肽、幹細胞、外泌體。這些字多半來自真的研究，但「研究裡看到潛力」跟「這罐吃了會逆齡」差很遠。外泌體在台灣連當食品成分都還沒被核准。這篇教你怎麼看抗老聖品的名詞話術。"
 publishDate: 2026-08-12T20:00:00+08:00
+updatedDate: 2026-08-22
 category: health
 subcategory: supplement-regulation
 tags:

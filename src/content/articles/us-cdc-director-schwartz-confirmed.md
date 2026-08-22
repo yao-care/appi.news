@@ -1,7 +1,7 @@
 ---
-title: "美國CDC是什麼？防疫最高機關一年內換三位主任，新主任史瓦茲要接的公衛缺口"
+title: "美國CDC是什麼？新主任史瓦茲接手一年換三主任的公衛缺口"
 slug: "us-cdc-director-schwartz-confirmed"
-description: "美國參議院8月5日以51票對44票確認史瓦茲（Erica Schwartz）出任CDC（疾病管制與預防中心）主任，是這個機關近一年來首位獲參院同意的正式主任。她的前兩任人選一位聽證會臨陣取消、一位上任不到一個月遭撤換；CDC同一時間流失逾3,000名員工，超過四分之一人力，還得同時應付剛果民主共和國伊波拉疫情、麻疹疫情擴大與15州環孢子蟲群聚感染。史瓦茲聽證時也被質疑是否會抵擋不符科學的疫苗政策指令。"
+description: "美國參議院8月5日以51比44票確認史瓦茲（Erica Schwartz）出任CDC主任，是該機關近一年來首位獲同意的正式主任。她接手的CDC已流失逾3,000名員工，同時要應付剛果伊波拉、麻疹疫情擴大與15州環孢子蟲群聚感染，聽證時還被質疑能否擋下不符科學的疫苗政策指令。"
 excerpt: "美國參議院51比44確認史瓦茲出任CDC主任，填補近一年領導真空；她接手的機關同時流失四分之一人力、面對多起疫情，聽證時還被質疑能否頂住疫苗政策壓力。"
 publishDate: "2026-08-06T17:03:21.286Z"
 category: "international"
@@ -17,8 +17,9 @@ reviewedBy:
   - "luo-yang"
 factCheckedBy:
   - "appi-editorial"
+updatedDate: 2026-08-22
 coverImage: "covers/us-cdc-director-schwartz-confirmed-cover.webp"
-coverImageCredit: "U.S. Department of Health and Human Services（公眾領域）"
+coverImageCredit: "Photo by John Guccione www.advergroup.com on Pexels"
 coverAlt: "美國CDC新任主任史瓦茲（Erica Schwartz）官方肖像照"
 featured: false
 hero: false

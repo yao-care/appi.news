@@ -1,9 +1,10 @@
 ---
-title: "台灣美食展飯店餐券怎麼挑最划算？14家五星飯店優惠、日期與票價整理"
+title: "台灣美食展飯店餐券怎麼挑？14家優惠、日期票價整理"
 slug: "taiwan-food-expo-hotel-vouchers-guide"
 description: "2026台灣美食展7月31日至8月3日在台北世貿一館登場，集結14家米其林必比登餐廳與多家五星飯店限定餐券、住宿券優惠，整理票價、地點與各飯店折扣內容。"
 excerpt: "台灣美食展在台北世貿一館登場，多家五星飯店祭出展場限定餐券與住宿優惠，整理日期地點、票價與各飯店折扣重點。"
 publishDate: "2026-08-01T18:36:44.901Z"
+updatedDate: "2026-08-22"
 category: "lifestyle"
 subcategory: "life"
 tags:

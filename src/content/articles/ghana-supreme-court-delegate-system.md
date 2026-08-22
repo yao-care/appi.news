@@ -1,9 +1,10 @@
 ---
-title: "迦納最高法院裁定政黨代表制違憲：黨員全面「一人一票」選總統候選人　NDC、NPP同聲歡迎"
+title: "迦納最高法院裁定政黨代表制違憲，改採一人一票選候選人"
 slug: "ghana-supreme-court-delegate-system"
 description: "迦納最高法院7月29日以5比2裁定，執政黨與在野黨行之有年的黨代表選舉團制度違憲，判定政黨必須在一年內改為由所有註冊在案的黨員直接投票選出總統與國會候選人。這起訴訟由三名新愛國黨資深黨員提出，全國民主大會、新愛國黨、人民大會黨等主要政黨同聲歡迎判決，法院並訂於8月5日公布完整判決理由。"
 excerpt: "迦納最高法院5比2裁定黨代表選舉團制度違憲，政黨須一年內改採全體黨員直接投票選候選人，NDC與NPP皆表歡迎。"
 publishDate: "2026-07-30T16:58:48.148Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "global-focus"
 tags:
@@ -68,6 +69,8 @@ coverImageCredit: "Guido Sohne — CC BY-SA 2.0, via Wikimedia Commons"
 ## 影響範圍：政黨須修章程、選委會須監督合規
 
 [迦納通訊社報導](https://gna.org.gh/2026/07/supreme-court-declares-political-parties-delegates-system-unconstitutional/)指出，法院認為代表制容易滋生賄選與貪腐疑慮，往後迦納選舉委員會須確保各政黨的內部選舉制度符合憲法規範。這項判決意味著新愛國黨、全國民主大會、人民大會黨等主要政黨都必須在一年期限內修改黨章，改採「一人一票」模式，直接牽動下一輪總統與國會候選人初選的遊戲規則。
+
+延伸閱讀：[奈及利亞選舉為何買票、暴力頻傳？奧松州長選舉投票所爆衝突](/articles/nigeria-osun-election-violence/)
 
 ## 常見問題
 

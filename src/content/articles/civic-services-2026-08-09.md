@@ -1,8 +1,9 @@
 ---
-title: "台中敬老愛心卡10月起搭計程車最高補助100點，各地便民措施整理（2026-08-09）"
+title: "台中敬老愛心卡10月起搭計程車補助100點｜便民整理"
 slug: "civic-services-2026-08-09"
 description: "整理今日台中市、高雄市便民市政措施，涵蓋台中敬老愛心卡自10月起搭乘計程車每趟最高補助調整為100點、高雄與日本八王子締盟20週年推出景點互惠，高雄市民持身分證可免費參觀八王子夢美術館，附各縣市政府原文出處。"
 publishDate: "2026-08-09T10:07:23.872Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 coverImage: "/covers/civic-services-2026-08-09-cover.webp"

@@ -1,9 +1,10 @@
 ---
-title: "小型模組化核反應爐商業賽局啟動，NuScale完成史上最大6GW部署承諾"
+title: "小型模組化核反應爐商業賽局：NuScale完成史上最大6GW部署"
 slug: "nuscale-smr-tva-6gw-deployment"
 description: "2025年9月，ENTRA1 Energy與田納西河流域管理局（TVA）達成協議，計畫在TVA七州服務區部署最多6 GW的NuScale SMR容量，創下美國史上最大的SMR部署承諾。Amazon、Google相繼簽約，AI資料中心的24小時用電需求正在把核能從政策討論拉向商業訂單。台灣能源組合爭論的背景，因此多了一個具體的國際座標。"
 excerpt: "2025年9月，ENTRA1 Energy與田納西河流域管理局（TVA）達成協議，計畫在TVA七州服務區部署最多6 GW的NuScale SMR容量，創下美國史上最大的SMR部署承諾。Amazon、Google相繼簽約，AI資料中心的24小時用電需求正在把核能從政策討論拉向商業訂單。台灣能源組合爭論的背景，因此多了一個具體的國際座標。"
 publishDate: "2025-10-26T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "global-trends"
 tags:

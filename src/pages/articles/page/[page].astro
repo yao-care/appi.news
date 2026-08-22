@@ -3,13 +3,15 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import ArticleCard from '@/components/blocks/ArticleCard.astro';
 import Breadcrumbs from '@/components/ui/Breadcrumbs.astro';
 import Pagination from '@/components/ui/Pagination.astro';
-import { getPublishedArticles, getAuthorMap, articleSlug } from '@/utils/content';
+import {
+  getPublishedArticles,
+  getAuthorNames,
+  articleListItems,
+  PAGE_SIZE,
+} from '@/utils/content';
 import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
 
-const PAGE_SIZE = 18;
-
 export async function getStaticPaths() {
-  const PAGE_SIZE = 18;
   const all = await getPublishedArticles();
   const totalPages = Math.max(1, Math.ceil(all.length / PAGE_SIZE));
   const paths: any[] = [];
@@ -22,10 +24,7 @@ export async function getStaticPaths() {
 
 const { page, totalPages } = Astro.props;
 const all = await getPublishedArticles();
-const authorMap = await getAuthorMap();
-const authorNames = new Map(
-  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
-);
+const authorNames = await getAuthorNames();
 
 const start = (page - 1) * PAGE_SIZE;
 const pageArticles = all.slice(start, start + PAGE_SIZE);
@@ -36,11 +35,9 @@ const ld = [
     { name: '所有文章', path: '/articles/' },
     { name: `第 ${page} 頁`, path: `/articles/page/${page}/` },
   ]),
-  itemListLd(
-    Astro.site,
-    pageArticles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
-    { name: `APPI News 所有文章（第 ${page} 頁）` },
-  ),
+  itemListLd(Astro.site, articleListItems(pageArticles), {
+    name: `APPI News 所有文章（第 ${page} 頁）`,
+  }),
 ];
 ---
 <BaseLayout

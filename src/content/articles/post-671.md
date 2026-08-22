@@ -1,9 +1,10 @@
 ---
-title: "健保署攜 Google Cloud 推糖尿病 AI，風險評估從 20 分鐘縮到 25 秒"
+title: "健保署攜手Google推糖尿病AI，評估縮至25秒"
 slug: "nhi-google-cloud-diabetes-ai"
-description: "健保署與Google Cloud 2024年6月合作啟動「AI-on-DM」計畫，以23年、2,300萬筆健保資料訓練糖尿病AI模型，將風險評估從20分鐘壓縮至25秒，是台灣首個政府主導的全國性預防性AI醫療整合。"
+description: "健保署攜手Google Cloud推出糖尿病AI風險評估系統「AI-on-DM」，用23年、2,300萬筆健保資料訓練模型，把每人評估時間從20分鐘壓縮到25秒。整理計畫怎麼運作、資料如何把關，以及2026年擴大目標。"
 excerpt: "健保署與Google Cloud 2024年6月合作啟動「AI-on-DM」計畫，以23年、2,300萬筆健保資料訓練糖尿病AI模型，將風險評估從20分鐘壓縮至25秒，是台灣首個政府主導的全國性預防性AI醫療整合。"
 publishDate: "2025-12-20T00:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "health"
 subcategory: "medtech"
 tags:
@@ -46,7 +47,7 @@ coverAlt: "手持採血筆與血糖儀進行血糖測試的近距離特寫"
 coverImageCredit: "Photo by Artem Podrez on Pexels"
 ---
 
-糖尿病是台灣健保的最大單一成本負擔。全台約每10人就有1人受到糖尿病影響，第二型糖尿病患者超過130萬人，長期藥物、定期檢查與相關併發症的照護費用，每年耗用的健保資源遠超過多數慢性病。2024年6月，中央健康保險署與Google Cloud、Google Health共同宣布啟動「AI-on-DM」（AI on Diabetes Mellitus）計畫，用台灣的健保資料庫訓練AI糖尿病管理模型。[這是台灣首次以NHI資料進行AI模型訓練的政府級合作，也是台灣與Google在醫療領域的第一個全國性政府合作案](https://www.taipeitimes.com/News/taiwan/archives/2024/06/14/2003819332)。
+健保署攜手Google Cloud推出的糖尿病AI風險評估系統，把每人評估時間從20分鐘壓縮到25秒。這套名為「AI-on-DM」（AI on Diabetes Mellitus）的計畫，由中央健康保險署與Google Cloud、Google Health在2024年6月共同宣布啟動，用台灣的健保資料庫訓練AI糖尿病管理模型。糖尿病是台灣健保的最大單一成本負擔，全台約每10人就有1人受到糖尿病影響，第二型糖尿病患者超過130萬人，長期藥物、定期檢查與相關併發症的照護費用，每年耗用的健保資源遠超過多數慢性病。[這是台灣首次以NHI資料進行AI模型訓練的政府級合作，也是台灣與Google在醫療領域的第一個全國性政府合作案](https://www.taipeitimes.com/News/taiwan/archives/2024/06/14/2003819332)。
 
 ## AI-on-DM計畫做了什麼，效果有多顯著
 

@@ -4,6 +4,7 @@ slug: "south-korea-dog-meat-ban-2027"
 description: "南韓將於2027年2月全面禁止以食用為目的飼養、屠宰、流通與販售犬隻，違者最重判3年徒刑。整理禁令時程、罰則金額、業者補助方案，以及數十萬隻食用犬去向未明的爭議。"
 excerpt: "南韓將於2027年2月全面禁止以食用為目的飼養、屠宰、流通與販售犬隻，違者最重判3年徒刑。整理禁令時程、罰則金額、業者補助方案，以及數十萬隻食用犬去向未明的爭議。"
 publishDate: "2026-08-14T18:40:09.680Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 tags:

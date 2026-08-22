@@ -1,9 +1,10 @@
 ---
-title: "AI 證出數學定理、還用 Lean 4 逐行機器驗證：AI 做研究的產物第一次能被查證"
+title: "AI 證出數學定理，Lean 4 逐行機器驗證"
 slug: "ai-theorem-proving-lean-verifiable"
 description: "2024 年 AlphaProof 在奧數拿相當於銀牌的成績，整份證明跑在 Lean 形式化環境逐步驗證；2026 年初 AxiomProver 用 Lean/Mathlib 解掉四個未解猜想。真正的突破不是 AI 更會算數學，而是它的產物第一次能被機器查證，不必靠人相信它沒在唬爛。"
 excerpt: "AI 拿奧數金牌很亮眼，但那是自然語言、靠人工評審判對錯。用 Lean 4 逐行驗證的證明才解掉了難題：不用人幫忙也知道它是對的。這才是 AI 可信度第一次有的工程解法。"
 publishDate: "2026-07-12T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "ai"
 tags:
@@ -53,7 +54,7 @@ references:
 originalContribution: "本文把 2024 年 AlphaProof（Lean 驗證、銀牌）與 2025 年 Gemini Deep Think（自然語言、金牌但靠人工評審）並置，提出『拿金牌 ≠ 可被機器驗證』的分辨框架，接上 Terence Tao 生成／驗證／消化三段的速度落差，延伸主張台灣的機會在把形式化驗證方法接進晶片與關鍵軟體驗證，而非搶著訓練證明模型。"
 ---
 
-AI 現在不只解得出國際數學奧林匹亞的金牌題，還能把整份證明寫成 Lean 這種形式化語言，讓機器逐行檢查每一步對不對。這件事真正的意義不是「AI 更會算數學」，而是 AI 做研究的產物第一次能被機器查證，不必靠你相信它沒在唬爛。長年卡住 AI 的那個老問題，它講得頭頭是道但你不知道是不是幻覺，在數學這一塊，第一次有了工程上的解法。
+AI 現在不只解得出國際數學奧林匹亞的金牌題，還能把整份證明寫成 Lean 這種形式化語言，讓機器逐行檢查每一步對不對。這件事真正的意義，在於 AI 做研究的產物第一次能被機器查證，不必靠你相信它沒在唬爛。這不只是「AI 更會算數學」而已，也是我在[醫療 AI 合規守門引擎](/articles/medical-ai-compliance-gatekeeper-engine/)裡談過的驗證機制邏輯。長年卡住 AI 的那個老問題，它講得頭頭是道但你不知道是不是幻覺，在數學這一塊，第一次有了工程上的解法。
 
 先看這一年多發生了什麼。2024 年 Google DeepMind 的 AlphaProof [在國際數學奧林匹亞拿到相當於銀牌的成績](https://deepmind.google/blog/ai-solves-imo-problems-at-silver-medal-level/)，解掉六題裡的三題（含全場最難那題），加上 AlphaGeometry 解掉一題幾何，合計 28 分。關鍵在它怎麼解：AlphaProof 整個跑在 Lean 這個形式化環境裡，DeepMind 講得很白，形式語言的好處就是涉及數學推理的證明可以被形式化地驗證正確性。到 2026 年初，一個叫 AxiomProver 的系統更進一步，[解掉四個過去沒人解出來的數學猜想、外加 2025 年 Putnam 競賽全部十二題](https://wal.sh/research/axiomprover-2026/)，每一份證明都在 Lean/Mathlib 裡驗過。連數學界的未解問題都開始倒：2025 年底那一週，[三個 Erdős 問題被 AI 攻下，並用 Lean 完成形式化](https://xenaproject.wordpress.com/2025/12/05/formalization-of-erdos-problems/)。
 
@@ -63,7 +64,7 @@ AI 現在不只解得出國際數學奧林匹亞的金牌題，還能把整份�
 
 <img src="/images/ai-theorem-proving-lean-verifiable-s3.webp" width="960" height="640" loading="lazy" decoding="async" alt="金牌與打勾符號，象徵拿金牌與可被機器驗證是兩件不同的事">
 
-Lean 到底把問題解在哪？它把「可信」從「相信模型」換成「檢查憑證」。[Lean 是一套定理證明器兼形式化驗證系統](https://lean-lang.org/fro/about/)，一份證明能不能在 Lean 裡編譯通過，是機器說了算，沒有模糊空間。有數學家講得很直接，形式化過的證明拿到的是一張形式驗證憑證，一份能編譯的 Lean 證明[沒辦法被幻覺出來](https://xenaproject.wordpress.com/2025/12/05/formalization-of-erdos-problems/)，這就把主觀的「這證明看起來對不對」變成客觀的計算結果。這正是我一直講的那件事：AI 值不值得信，關鍵從來不是模型多大，而是有沒有一道能攔住它的驗證機制。我在寫[醫療 AI 合規守門引擎](/articles/medical-ai-compliance-gatekeeper-engine/)時就是這個立場，缺了驗證這一關，再強的模型都不該直接信。Lean 之於數學，就是那道機制。
+Lean 到底把問題解在哪？它把「可信」從「相信模型」換成「檢查憑證」。[Lean 是一套定理證明器兼形式化驗證系統](https://lean-lang.org/fro/about/)，一份證明能不能在 Lean 裡編譯通過，是機器說了算，沒有模糊空間。有數學家講得很直接，形式化過的證明拿到的是一張形式驗證憑證，一份能編譯的 Lean 證明[沒辦法被幻覺出來](https://xenaproject.wordpress.com/2025/12/05/formalization-of-erdos-problems/)，這就把主觀的「這證明看起來對不對」變成客觀的計算結果。這正是我一直講的那件事：AI 值不值得信，關鍵從來不在模型多大，在於有沒有一道能攔住它的驗證機制。我在寫醫療 AI 合規守門引擎時就是這個立場，缺了驗證這一關，再強的模型都不該直接信。Lean 之於數學，就是那道機制。
 
 <img src="/images/ai-theorem-proving-lean-verifiable-s4.webp" width="960" height="640" loading="lazy" decoding="async" alt="程式碼在螢幕上，象徵 Lean 把可信變成檢查憑證，能不能編譯就是對錯">
 

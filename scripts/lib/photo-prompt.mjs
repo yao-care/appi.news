@@ -9,7 +9,7 @@
 // 展開失敗（CLI 錯、兩次都太短）回 null，呼叫端退回「短 detail + 同一組技術規格」組裝——
 // 仍是 photoreal，只是細節較少；本模組只提升品質，絕不成為配圖管線的新故障點。
 
-import { runClaudeOnce } from './claude-cli.mjs';
+import { runWriterOnce } from './writer-cli.mjs'; // 產圖 prompt 展開＝codex（站長 2026-08-22 追加裁示）
 
 /** 固定攝影技術規格串（品質關鍵詞；鏡頭焦段由展開後的構圖段落決定，這裡保持通用） */
 export const PHOTO_TECH_SPEC =
@@ -177,10 +177,11 @@ ${varietyBlock}
  * 把 brief（連同 caption／文章主題）展開成扣住內容的細節段落（純細節，不含技術規格與 Avoid，
  * 由 composePhotoPrompt 組裝）。兩次都失敗回 null，呼叫端退回短 detail。
  */
-export async function expandPhotoPrompt(ctx, model = 'claude-sonnet-5') {
+export async function expandPhotoPrompt(ctx, model = undefined) {
+  // model 參數保留簽名相容；未帶時用 writer-cli 的 WRITER_MODEL（單一正本）。
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
-      const out = await runClaudeOnce(buildWriterPrompt(ctx, attempt === 2), model, 180_000);
+      const out = await runWriterOnce(buildWriterPrompt(ctx, attempt === 2), { ...(model ? { model } : {}), timeoutMs: 180_000, effort: 'medium' });
       const detail = sanitizeDetail(out);
       if (detailOk(detail)) return detail;
     } catch {

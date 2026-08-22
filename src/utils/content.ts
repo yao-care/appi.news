@@ -1,5 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { asset } from './url';
+import { isPublicFrontmatter, isScheduledPreviewFrontmatter } from './visibility.mjs';
 
 export { extractFaq, type FaqItem } from './faq';
 
@@ -23,16 +24,28 @@ function isDementiaFriendlyCommunityActivitiesArticle(a: Article): boolean {
  * 因此 future 排程文章會在「其日期之後的某次 build」自動上線
  * （搭配 GitHub Actions 每日 cron 重建）。
  * draft / archived 永遠隱藏。
+ * 判準實作＝src/utils/visibility.mjs（astro.config 與 scripts 各腳本共用同一份，勿再手抄）。
  */
 function isPublic(a: Article): boolean {
-  if (a.data.draft) return false;
-  if (a.data.status === 'draft' || a.data.status === 'archived') return false;
-  return a.data.publishDate.getTime() <= Date.now();
+  return isPublicFrontmatter(a.data);
 }
 
 /** 取得文章 slug（frontmatter slug 優先，否則用檔名 id） */
 export function articleSlug(a: Article): string {
   return a.data.slug ?? a.id;
+}
+
+/** 文章頁的站內路徑（未含 base，交給 url()/absoluteUrl() 處理） */
+export function articlePath(a: Article): string {
+  return `/articles/${articleSlug(a)}/`;
+}
+
+/** 全站列表頁（/articles/、分類頁與其分頁）共用的分頁大小 */
+export const PAGE_SIZE = 18;
+
+/** 給 itemListLd 用的 { name, path } 清單（依傳入順序） */
+export function articleListItems(articles: Article[]): { name: string; path: string }[] {
+  return articles.map((a) => ({ name: a.data.title, path: articlePath(a) }));
 }
 
 /** 所有已發佈文章，依發佈日期新到舊排序 */
@@ -50,11 +63,7 @@ export async function getPublishedArticles(): Promise<Article[]> {
  */
 export async function getScheduledPreviewArticles(): Promise<Article[]> {
   const all = await getCollection('articles');
-  return all.filter((a) => {
-    if (a.data.draft) return false;
-    if (a.data.status === 'draft' || a.data.status === 'archived') return false;
-    return a.data.publishDate.getTime() > Date.now(); // 尚未到發佈時間
-  });
+  return all.filter((a) => isScheduledPreviewFrontmatter(a.data));
 }
 
 export function byCategory(articles: Article[], category: string): Article[] {
@@ -198,6 +207,12 @@ export async function getAuthorMap(): Promise<Map<string, Author>> {
   return new Map(authors.map((a) => [a.id, a]));
 }
 
+/** authorId → 顯示名（列表頁掛名用；getAuthorMap 的精簡投影） */
+export async function getAuthorNames(): Promise<Map<string, string>> {
+  const authorMap = await getAuthorMap();
+  return new Map([...authorMap.entries()].map(([id, a]) => [id, a.data.name]));
+}
+
 /** 是否可連到作者頁（等級 + showAuthorPage 控制） */
 export function authorHasPage(author: Author | undefined): boolean {
   if (!author) return false;
@@ -271,4 +286,22 @@ export async function getColumns(): Promise<Column[]> {
 
 export async function getTopics(): Promise<Topic[]> {
   return (await getCollection('topics')).filter((t) => t.data.status === 'active');
+}
+
+/**
+ * 專題實際涵蓋的文章：frontmatter 手動指定的 articles（可填 slug 或檔名 id）
+ * 與 article.topics 反向關聯常重疊，需以 slug 去重後才是實際顯示的清單。
+ * 手動指定者排前（專題頁以此決定 lead 文章順位）。
+ */
+export function articlesForTopic(all: Article[], topic: Topic): Article[] {
+  const manual = all.filter(
+    (a) => topic.data.articles.includes(articleSlug(a)) || topic.data.articles.includes(a.id),
+  );
+  const seen = new Set<string>();
+  return [...manual, ...byTopic(all, topic.id)].filter((a) => {
+    const key = articleSlug(a);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }

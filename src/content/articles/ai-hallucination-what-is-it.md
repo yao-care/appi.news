@@ -1,9 +1,10 @@
 ---
 title: "AI 幻覺是什麼？為什麼聊天機器人會一本正經說錯話"
 slug: "ai-hallucination-what-is-it"
-description: "AI 幻覺是語言模型用自信語氣生成錯誤內容的現象。OpenAI 研究團隊 2025 年 9 月發表的論文指出，這是訓練與評分機制鼓勵猜測、而不是承認不確定所造成的統計結果。《BMJ Open》2026 年研究實測五個聊天機器人回答健康問題，發現半數答案被判定有問題、參考文獻完整度中位數僅四成。台灣衛福部同年 5 月已要求醫療機構主動揭露 AI 幻覺風險。拆解幻覺怎麼被訓練出來、健康資訊查詢有多常中招，以及一般人與企業該怎麼自保。"
+description: "AI 幻覺是語言模型用自信語氣生成錯誤內容的現象，成因是訓練與評分機制鼓勵猜測、不鼓勵承認不確定。《BMJ Open》2026年研究發現聊天機器人回答健康問題半數有問題，台灣衛福部已要求醫院主動揭露這個風險。"
 excerpt: "AI 幻覺不是模型故障，是訓練與評分機制鼓勵猜測、而不是承認不確定所造成的結果。實測發現問 AI 健康問題，半數答案有問題；台灣衛福部已要求醫院主動揭露這個風險。"
 publishDate: "2026-08-04T17:07:03.994Z"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "ai"
 tags:
@@ -58,7 +59,7 @@ originalContribution: "把 OpenAI 2025 年 9 月幻覺成因論文原文、台�
 topics: ["medical-ai-frontline"]
 ---
 
-<p>AI 聊天機器人有時候會用非常肯定的語氣，說出根本不存在的事實，這種現象叫做 AI 幻覺（AI hallucination）。根本原因在於訓練與評分方式本身鼓勵模型用猜的，不鼓勵它承認不知道，模型並沒有真的故障。台灣衛福部 2026 年 5 月已要求醫療機構導入生成式 AI 時，主動揭露這個風險並提醒病人不要照單全收。</p>
+<p>AI 聊天機器人有時候會用非常肯定的語氣，說出根本不存在的事實，這種現象叫做 AI 幻覺（AI hallucination）。根本原因在於訓練與評分方式本身鼓勵模型用猜的，不鼓勵它承認不知道，模型並沒有真的故障。台灣衛福部 2026 年 5 月已要求醫療機構導入生成式 AI 時，主動揭露這個風險並提醒病人不要照單全收；想自己查證 AI 給的健康資訊，可參考<a href="/articles/verify-health-claim-toolkit/">五步驟查證健康聲稱</a>。</p>
 
 <h2>AI 幻覺是什麼</h2>
 
@@ -80,7 +81,7 @@ topics: ["medical-ai-frontline"]
 
 <p>這套機制在健康資訊查詢上特別容易出事，因為使用者通常缺乏足夠背景知識去識破一段聽起來很專業、實際上錯誤的回答。<a href="https://bmjgroup.com/substantial-amount-of-medical-information-provided-by-popular-chatbots-inaccurate-and-incomplete/" target="_blank" rel="noopener">來自美國、加拿大與英國的研究團隊 2026 年 4 月在《BMJ Open》發表研究，測試 ChatGPT、Gemini、Meta AI、Grok、DeepSeek 五個聊天機器人，針對癌症、疫苗、幹細胞、營養、運動表現五大類別各提出開放式與封閉式問題，結果半數（50%）回答被判定有問題，其中 20% 屬於高度有問題</a>。<a href="https://bmjgroup.com/substantial-amount-of-medical-information-provided-by-popular-chatbots-inaccurate-and-incomplete/" target="_blank" rel="noopener">Grok 產生高度有問題回答的比例最高，達 58%（29/50），Gemini 表現相對最佳</a>。</p>
 
-<p>更麻煩的是引用來源本身也靠不住：<a href="https://bmjgroup.com/substantial-amount-of-medical-information-provided-by-popular-chatbots-inaccurate-and-incomplete/" target="_blank" rel="noopener">研究發現所有聊天機器人的參考文獻完整度中位數只有 40%，沒有一個模型能針對任何一題提供完整且準確的參考文獻清單，原因正是幻覺與捏造的引用</a>。也就是說，就算使用者想點連結查證，連結指向的文獻本身也可能是編出來的，光靠「有附來源」判斷可信度並不安全。</p>
+<p>更麻煩的是引用來源本身也靠不住：<a href="https://bmjgroup.com/substantial-amount-of-medical-information-provided-by-popular-chatbots-inaccurate-and-incomplete/" target="_blank" rel="noopener">研究發現所有聊天機器人的參考文獻完整度中位數只有 40%，沒有一個模型能針對任何一題提供完整且準確的參考文獻清單，原因正是幻覺與捏造的引用</a>。也就是說，就算使用者想點連結查證，連結指向的文獻本身也可能是編出來的，光靠「有附來源」判斷可信度並不安全。這也是為什麼<a href="/articles/chatgpt-health-beats-doctors-evaluation-gap/">用 AI 自評方式比較聊天機器人與醫師答案準確度的研究，方法論本身要先被檢視</a>，評分機制若同樣鼓勵模型猜測，數字就會失真。</p>
 
 <img src="/images/ai-hallucination-what-is-it-s4.webp" width="960" height="640" loading="lazy" decoding="async" alt="一名民眾坐在家中沙發上，手持平板電腦瀏覽健康資訊網頁（示意圖）">
 

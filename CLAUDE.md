@@ -162,18 +162,22 @@
 - **維護分工**：跨站規則改核心模板（一處全站生效，改完同步各站）；appi 專屬只改本 repo 檔頭 SITE 區塊，**別動核心**。新增硬 tell 只加零誤判的，語氣類留 WARN。
 - **核心比舊 appi gate 嚴，對 cron 新產文有過嚴風險**：若某幾條開始頻繁擋掉合理新聞稿，處置順序＝①先在 newsroom persona／SKILL 教模型避開（首選）②SITE 擴充點只能「加嚴」或用 `ALLOW` 整行白名單，**無法**把核心 ERROR 降級為 WARN；真要放寬得改核心模板（影響全站）。命中統計與脈絡＝[`docs/lessons/ai-tone-gate.md`](./docs/lessons/ai-tone-gate.md)。
 
-## 帳號與模型政策（自動化必讀）
+## 帳號與模型政策（自動化必讀；2026-08-22 起雙引擎）
 
-**單一帳號：`claude-appi`（`CLAUDE_CONFIG_DIR=~/.claude-appi`）。** 互動開發、commit、改 crontab、cron／自動產文全走同一個帳號。兩個推論：
+**寫作文章＝codex**（站長 2026-08-22 裁示全換）：所有「文章起草」呼叫走 `codex exec`，**參數／模型／三態判定正本＝`scripts/lib/writer-cli.mjs`**（`runWriterArticle`／`writerExecArgs`，一律明確帶 `-m`）。憑證＝`~/.codex/auth.json`，失效＝所有寫作線一起啞，`codex login` 重登。**每日大腦層（seo-ops）不換、維持 claude**（站長同日裁示）。
 
-- **用量池共用**：互動開發花掉的額度會直接吃到自動產線配額。撞週限時 cron 會整批空跑（且 exit 0 靜默），所以大批量互動作業前先想一下當日還有沒有產線要跑。
-- **憑證是單點**：`~/.claude-appi/.credentials.json` 失效＝互動與自動化一起啞掉。無備份，只能 `CLAUDE_CONFIG_DIR=/root/.claude-appi claude` → `/login` 重新登入。
+**產圖全走 codex**（站長 2026-08-22 兩度裁示）：生圖唯一路徑＝codex 原生 `image_generation`（`scripts/lib/ai-image.mjs` `generateViaCodex`；**無備援**，失敗即 throw 由配圖 gate 中止不發）；prompt 展開與視覺審查走 `runWriterOnce`（`scripts/lib/writer-cli.mjs`，`-i` 附圖、prompt 走 stdin）。
 
-**模型**：所有 `claude-appi` 呼叫**一律明確帶 `--model`**——產文／選題／週報用 `claude-sonnet-5`、查核類 gate 用 `haiku`。全域預設是 Opus，**不帶 `--model` 就會默默吃 Opus 燒爆週額度**（出過事＝[`docs/lessons/automation-model-and-account-split.md`](./docs/lessons/automation-model-and-account-split.md)）。
+**非寫作＝`claude-appi`（`CLAUDE_CONFIG_DIR=~/.claude-appi`）**：選題雷達、週報、大腦體檢、AEO 探針、各查核 gate，與互動開發、commit、crontab 都走它。兩個推論不變：
 
-**判斷自動化成功不能只看 exit code**：`claude-appi` 撞用量上限／拒答會 **exit 0** 只印 stdout；`.sh` 要用失敗 regex（含 `weekly limit`）、`.mjs` 要掃 stdout。
+- **用量池共用**：互動開發花掉的額度會直接吃到（非寫作）產線配額。撞週限時 cron 會整批空跑（且 exit 0 靜默）。寫作線改吃 codex 額度，兩邊分開計。
+- **憑證各是單點**：`~/.claude-appi/.credentials.json` 失效＝互動與非寫作自動化一起啞（`CLAUDE_CONFIG_DIR=/root/.claude-appi claude` → `/login` 重登）；`~/.codex/auth.json` 失效＝寫作線全啞（`codex login` 重登）。
 
-**額度視窗**：`claude-appi` 的 session 額度是**每 5 小時一個共用視窗**，日更線刻意攤開排程。**新增會喚 Claude 的高頻 cron 前，先想「這一輪一定要喚模型嗎」**——能用純資料判斷的先做完（見論壇雷達與颱風線的前置 gate 作法）。排程現況查法見 §查現況。
+**模型**：`claude-appi` 呼叫**一律明確帶 `--model`**——選題／週報用 `claude-sonnet-5`、查核類 gate 用 `haiku`（全域預設是 Opus，不帶就默默燒爆週額度，出過事＝[`docs/lessons/automation-model-and-account-split.md`](./docs/lessons/automation-model-and-account-split.md)）。`codex exec` 同理**一律明確帶 `-m`**（不帶就吃 `~/.codex/config.toml` 的互動預設，互動改設定會默默污染產線）；寫作模型只改 `writer-cli.mjs` 的 `WRITER_MODEL` 一處。
+
+**判斷自動化成功不能只看 exit code**：兩個引擎撞用量上限／拒答都可能 **exit 0** 只印 stdout。`.mjs` 寫作用 `scripts/lib/writer-cli.mjs`、非寫作用 `scripts/lib/claude-cli.mjs` 的三態判定（quota＝中止整批／fail＝跳過該則／ok），**不要自抄 regex**（曾漂移成 4 種語意，見 [`docs/lessons/auto-publish-pipeline-traps.md`](./docs/lessons/auto-publish-pipeline-traps.md) §H）；`.sh` 層第二道網＝`_runner.sh` 的 `CRON_LIMIT_RE`（claude＋codex 樣態聯集）。
+
+**額度視窗**：`claude-appi` 的 session 額度是**每 5 小時一個共用視窗**，日更線刻意攤開排程（排程沿革是按此設計的，寫作改 codex 後暫不重排）。**新增會喚模型的高頻 cron 前，先想「這一輪一定要喚模型嗎」**——能用純資料判斷的先做完（見論壇雷達與颱風線的前置 gate 作法）。排程現況查法見 §查現況。
 
 > 完整不可違反規則見 [`docs/automation-invariants.md`](./docs/automation-invariants.md)；排程／模型總表見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §cron 總表。
 
@@ -204,6 +208,7 @@
 
 | 元件 | 路徑 | 角色 |
 |---|---|---|
+| 產線共用核心 | `scripts/lib/claude-cli.mjs`＋`scripts/lib/publish-pipeline.mjs`＋`scripts/lib/article-index.mjs` | 喚模型三態判定與哨兵解析／內容 gate 集合與順序／文章唯讀索引。**新增產線一律 import 這三支**，不自抄 regex、不自排 gate 序列。為什麼＝[`docs/lessons/auto-publish-pipeline-traps.md`](./docs/lessons/auto-publish-pipeline-traps.md) §H |
 | 起草引擎 | `.claude/skills/newsroom/` | 文風、人格、跨文記憶；`/newsroom` 互動寫作也走它 |
 | 自動產文 | `scripts/newsroom-write.mjs` | headless 起草＋逐篇 gate，完成寫 `result.json`。`--go` 發佈／`--stage` 只 commit／`--write-only` 只寫檔（給平行批次用，build 交外層做一次） |
 | Slack server | `scripts/slack-actions-server.mjs`、pm2 `appinews-slack-actions` | 收按鈕事件觸發產文；也收 GitHub webhook。**事實稿候選（含 health／finance）也掛按鈕**：kind=factual 時 modal 看法改選填、`validateJob` 與 `newsroom-write` 皆帶 `--allow-any-category`，產**待審草稿**而非直接上線（放寬的是「誰能開單」不是「誰能上線」） |
@@ -214,7 +219,8 @@
 
 | 線 | 路徑 | 驅動方式 |
 |---|---|---|
-| 科技台 | `scripts/tech-desk.mjs`＋`scripts/lib/tech-desk.mjs` | GSC 訊號選題。兩條 track：`editorial`（編輯部事實型概念解釋）／`lightman`（AI 醫療現場觀點）；cron **每天只跑一條、日期奇偶輪替**（避免單日雙倍吃額度）。為什麼＝[`docs/lessons/query-targeting-event-vs-concept.md`](./docs/lessons/query-targeting-event-vs-concept.md) |
+| 科技台 | `scripts/tech-desk.mjs`＋`scripts/lib/tech-desk.mjs` | GSC 訊號選題。兩條 track：`editorial`（編輯部事實型概念解釋）／`lightman`（AI 醫療現場觀點）；cron **每天兩條都跑**（2026-08-22 站長裁示解除奇偶輪替——當初限制是為 claude 5 小時額度視窗，寫作改 codex 後理由消失）。為什麼選題這樣設計＝[`docs/lessons/query-targeting-event-vs-concept.md`](./docs/lessons/query-targeting-event-vs-concept.md) |
+| 民俗節慶佈局 | `scripts/lib/festival-days.mjs`（年曆純資料）＋`scripts/festival-radar.mjs`＋`scripts/cron/festival-radar.sh` | **年曆驅動**（站長 2026-08-22 裁示開線）：節點進入 21 天窗（`LEAD_DAYS`）即自動撰寫成員文上架（factual、生活台回報、帳本防重複），複製七夕/中元/中秋提前佈局套路；hub 由人工/後續輪建。**新增節點日期必逐筆查證**，禁自行換算農曆。窗內無節點純資料 exit 0 不喚模型 |
 | 健康紀念日 | `scripts/lib/health-days.mjs`＋`scripts/health-days.mjs`＋`scripts/cron/health-days{,-publish}.sh` | **日期驅動**（年曆表）。T-2 寫成排程稿，當天由**另一支純 shell cron** 戳 `workflow_dispatch` 才真正上線；**兩支 cron 不可合併**。配圖依站長指定一律 OpenAI 生圖。為什麼＝[`docs/lessons/annual-observance-scheduling.md`](./docs/lessons/annual-observance-scheduling.md) |
 | 急性症狀衛教 | `scripts/lib/acute-care.mjs`＋`scripts/acute-care.mjs`＋`scripts/acute-care-batch.sh`＋`scripts/acute-care-audit.mjs` | **清單驅動、非 cron**。要開題就往 `TOPICS` 加再跑 batch。醫療界線寫在 `BOUNDARY` 常數、原文進 prompt，要收緊改一處。合規用 `acute-care-audit.mjs` 機械驗，不靠人抽驗。為什麼＝[`docs/lessons/acute-care-line-traps.md`](./docs/lessons/acute-care-line-traps.md) |
 | 國際／生活各線 | `scripts/international-*.mjs`、`scripts/lifestyle-*.mjs`、`.claude/skills/lifestyle-*/` | 各自綁定資料源（GDELT、政府 RSS、警局、YouTube RSS、人事行政總處、假日曆）。逐線說明見 [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
@@ -225,6 +231,7 @@
 - **禁用 AI 生圖時用 `NO_AI_IMAGE=1`**（機械保證，prompt 講不算數）。禁生圖後封面與內文容易撞成同一張圖庫照，取圖 query 必須錯開。為什麼＝[`docs/lessons/no-ai-image-batch.md`](./docs/lessons/no-ai-image-batch.md)。
 - **改發佈端程式或 cron `.sh`**：push → `/root/appi.news-publisher` `git pull` → `pm2 restart appinews-slack-actions`；**只 push 不 pull／只 restart 都會跑到舊碼**。
 - **故障 ≠ 編輯判斷**：模型漏印結果行是 infra 故障，不可記進去重帳本、不可當終止條件。
+- **撞限額 ≠ 單則失敗**：限額是帳號層級，判定走 `runClaudeArticle` 的三態（quota＝中止整批），別對 quota 逐則 continue 狂打空跑。
 - 其餘（UTC 換算、各自 worktree 並行不用 flock、成功≠exit code、publishDate 用系統時間蓋…）見正本 checklist。
 
 ## 數據與網路曝光量
@@ -264,6 +271,11 @@
 | 為什麼這樣做（踩過的坑、重大決策） | [`docs/lessons/`](./docs/lessons/) |
 | 日更流程與作者人格 | `.claude/skills/newsroom/` |
 | 自動化鐵則（帳號／模型／cron／發佈端） | [`docs/automation-invariants.md`](./docs/automation-invariants.md) |
+| 喚 Claude 的成功判定（quota/fail/ok）與哨兵行解析 | `scripts/lib/claude-cli.mjs`（`runClaudeArticle`／`classifyClaudeRun`／`parseSentinelResult`；限額 regex 只准改這裡） |
+| 內容 gate 的集合、順序與失敗語意 | `scripts/lib/publish-pipeline.mjs`（`runArticleGates`；各產線經它跑 gate，勿逐線自排 spawn 序列） |
+| 文章「現在公開嗎」（isPublic／排程草稿判斷） | `src/utils/visibility.mjs`（content.ts、astro.config、scripts 各腳本共用同一份，**勿手抄鏡像**；漂移史＝[`docs/lessons/deploy-cadence.md`](./docs/lessons/deploy-cadence.md) 2026-08-20 追記） |
+| 文章目錄唯讀索引（單篇 title／近 N 天標題） | `scripts/lib/article-index.mjs` |
+| cron `.sh` 共用外殼（boot／worktree 進場／逾時捕捉／失敗偵測與 ❌ 回報／等部署 200） | `scripts/cron/_runner.sh`（timeout／tail 等參數在呼叫端具名；worktree 生命週期另在 `scripts/cron/_worktree.sh`） |
 | 寫作成長規則（內鏈／topics／標題／開頭／FAQ） | `scripts/lib/growth-prompt.mjs` 的 `GROWTH_PROMPT`（所有產線共用，新增產線必接）|
 | 成長工作項目與 SOP（B 站內導流／A 存量升級／C 回訪） | [`docs/growth-playbook.md`](./docs/growth-playbook.md) |
 | 外部搜尋趨勢選題與導流 SOP | [`docs/search-trend-sop.md`](./docs/search-trend-sop.md)；執行入口 `pnpm search:trends` |

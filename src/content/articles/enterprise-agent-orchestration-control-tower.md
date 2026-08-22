@@ -1,9 +1,10 @@
 ---
-title: "跨廠牌 AI agent 各自為政，企業要的是統一中控：Cognizant 把 ServiceNow agent 接進單一編排層，再疊一層 AI Control Tower"
+title: "AI agent各自為政：Cognizant接ServiceNow做統一編排"
 slug: "enterprise-agent-orchestration-control-tower"
 description: "Cognizant 六月連走兩步：先把 Neuro AI Trust 接進 ServiceNow 的 AI Control Tower 做治理，再讓 ServiceNow agent 和自家 Neuro 多代理加速器互通，湊出一個跨 ServiceNow、第三方與自建系統的單一編排層。方向抓對了，企業真正的痛是 agent 各自為政；但統一中控要小心做成新的鎖定或一套規則套死所有 agent。"
 excerpt: "企業手上不缺 agent，缺的是有人把它們統一中控。但『統一到單一廠商的層』和『一套治理套所有 agent』，可能正好是解錯題的兩種方式。"
 publishDate: "2026-07-11T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "digital-tools"
 tags:
@@ -56,7 +57,7 @@ originalContribution: "本文把 Cognizant 六月兩則分開發佈的公告（6
 topics: ["ai-agent-governance"]
 ---
 
-企業手上真正的問題，不是 agent 不夠多，是沒人把它們統一中控。每套 SaaS 都塞了自己的 agent，各帶各的連接器、各講各的話，湊在一起就是一團各自為政。Cognizant 六月連走的兩步，剛好踩在這個痛點上：先把治理層接好，再把編排層打通，方向抓對了。但這裡要先踩一個剎車，統一中控有兩種很容易解錯題的做法，等一下說。
+企業手上真正的問題，不是 agent 不夠多，是沒人把它們統一中控。每套 SaaS 都塞了自己的 agent，各帶各的連接器、各講各的話，湊在一起就是一團各自為政，這也是<a href="/articles/mcp-de-facto-standard-agent-governance/" target="_blank" rel="noopener">跨廠牌串接標準逐漸成形的背景</a>。Cognizant 六月連走的兩步，剛好踩在這個痛點上：先把治理層接好，再把編排層打通，方向抓對了。但這裡要先踩一個剎車，統一中控有兩種很容易解錯題的做法，等一下說。
 
 先看它做了什麼。第一步在 6 月 4 日，Cognizant 把自家的 Neuro AI Trust [接進 ServiceNow 的 AI Control Tower](https://news.cognizant.com/2026-06-04-Cognizant-announces-ServiceNow-partnership-to-accelerate-scalable,-operationalized-AI-governance-at-enterprise-scale)。Control Tower 這個東西的定位是「治理與觀測的統一底座」，把散在企業各處的 AI 系統、agent 和身分找出來、看得到、管得動；Cognizant 疊上去的是一批「責任式 AI」與 Guardian agent，負責在 AI 運作時即時盯公平、安全、資安、透明與合規。Cognizant 雲端與基礎設施服務全球負責人 Sriram Kumaresan 講得直接：市場已經解決了「用得到 AI」這件事，企業現在要的是「用得負責、又快又大規模」。
 

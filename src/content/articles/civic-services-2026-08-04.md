@@ -1,10 +1,11 @@
 ---
 coverImage: "covers/civic-services-2026-08-04.webp"
 coverAlt: "長者在社區服務櫃檯使用敬老福利卡辦理便民服務"
-title: "敬老愛心卡明年升級：兩百點折抵農會消費、百點折抵醫療補助，各地便民措施整理（2026-08-04）"
+title: "敬老愛心卡明年升級：各地便民措施整理（2026-08-04）"
 slug: "civic-services-2026-08-04"
 description: "整理今日台北市、桃園市、台中市、屏東縣便民市政措施，涵蓋桃園敬老愛心卡明年擴大加碼、台北市立圖書館逾期違約金線上支付服務、台中歌劇院與國美館周邊路邊停車全面無紙化、屏東長照3.0出院銜接照護網，附各縣市政府原文出處。"
 publishDate: "2026-08-04T10:08:32.077Z"
+updatedDate: "2026-08-22"
 category: "lifestyle"
 subcategory: "life"
 tags:

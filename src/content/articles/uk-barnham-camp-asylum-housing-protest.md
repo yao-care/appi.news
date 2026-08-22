@@ -1,9 +1,10 @@
 ---
-title: "英國退役軍事基地收容庇護者為何頻惹社區抗議？索福克Barnham營區計畫掀Thetford三夜警民衝突、5人被捕"
+title: "英國Barnham營區收容案　Thetford3夜衝突5人被捕"
 slug: "uk-barnham-camp-asylum-housing-protest"
 description: "英國內政部6月宣布考慮用索福克郡Barnham營區收容18至65歲男性尋求庇護者，消息一出，鄰近的諾福克郡Thetford鎮連續三晚爆發示威衝突：3名警員受傷、2人送醫，5人被捕，警方一度護送居民撤離住處保平安。週日數十人再度聚集營區大門外抗議，改革黨議員到場聲援，隔天又有2人在營區外遭逮捕。"
 excerpt: "英國內政部擬用索福克Barnham營區收容尋求庇護者，消息曝光後Thetford連三晚爆發警民衝突，3警受傷、5人被捕，週日抗議持續延燒。"
 publishDate: "2026-08-10T16:37:27.503Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "europe"
 tags:

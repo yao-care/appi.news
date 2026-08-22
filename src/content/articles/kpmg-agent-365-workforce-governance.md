@@ -1,9 +1,10 @@
 ---
-title: "KPMG 把 AI agent 推給 27.6 萬員工：全員部署之後，治理才是真考題"
+title: "KPMG把AI agent推給27.6萬員工，治理才是真考題"
 slug: "kpmg-agent-365-workforce-governance"
 description: "KPMG 6/9 宣布把 Microsoft 365 Copilot 與 Agent 365 鋪給全球 27.6 萬名員工。真正難的不是導入，是 27 萬人同時用 agent 時，權限、稽核與責任歸屬要怎麼一次到位。"
 excerpt: "KPMG 6/9 把 Copilot 與 Agent 365 推給全球 27.6 萬名員工。導入不難，難在 27 萬人同時用 agent，權限、稽核與責任歸屬要一次到位。治理不是附加題，是這場部署的真正考題。"
 publishDate: "2026-06-23T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "industry-tech"
 tags:

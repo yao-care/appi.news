@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="台股AI榮景檢查表，列出本益比、科技市值集中、台積電市值權重與台積電高效能運算營收占比四項數字">
+  <rect width="960" height="600" fill="#ffffff"/>
+  <rect x="40" y="34" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="58" y="57" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="26" font-weight="700" fill="#1e2030">AI 榮景檢查表：先看四個數字</text>
+  <text x="58" y="84" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="15" fill="#6e7276">單一數字不能判定泡沫，估值、集中度與獲利來源要一起核對。</text>
+
+  <line x1="40" y1="112" x2="920" y2="112" stroke="#e8e9ed"/>
+  <rect x="40" y="113" width="880" height="42" fill="#eaf0f8"/>
+  <text x="58" y="140" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" font-weight="700" fill="#1e2030">指標</text>
+  <text x="285" y="140" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" font-weight="700" fill="#1e2030">數字</text>
+  <text x="470" y="140" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" font-weight="700" fill="#1e2030">讀法</text>
+  <text x="800" y="140" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="18" font-weight="700" fill="#1e2030">來源</text>
+
+  <g font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" fill="#1e2030">
+    <line x1="40" y1="155" x2="920" y2="155" stroke="#e8e9ed"/>
+    <text x="58" y="185" font-size="18" font-weight="700">台股前瞻本益比</text>
+    <text x="285" y="185" font-size="22" font-weight="700" fill="#a87515">約 20 倍</text>
+    <text x="470" y="180" font-size="14">約高於歷史平均</text>
+    <text x="470" y="201" font-size="14">1 個標準差</text>
+    <text x="800" y="190" font-size="14" fill="#6e7276">FSM Global</text>
+    <line x1="40" y1="227" x2="920" y2="227" stroke="#e8e9ed"/>
+
+    <rect x="40" y="228" width="880" height="72" rx="8" fill="#eaf0f8"/>
+    <rect x="40" y="228" width="880" height="3" fill="#a87515"/>
+    <text x="58" y="258" font-size="18" font-weight="700">科技相關市值</text>
+    <text x="285" y="258" font-size="22" font-weight="700" fill="#a87515">81.44%</text>
+    <text x="470" y="253" font-size="14">TWSE 上市公司市值</text>
+    <text x="470" y="274" font-size="14">集中於科技相關產業</text>
+    <text x="800" y="263" font-size="14" fill="#6e7276">TWSE</text>
+    <line x1="40" y1="300" x2="920" y2="300" stroke="#e8e9ed"/>
+
+    <text x="58" y="330" font-size="18" font-weight="700">台積電市值權重</text>
+    <text x="285" y="330" font-size="22" font-weight="700" fill="#a87515">約 40%</text>
+    <text x="470" y="325" font-size="14">單一公司波動</text>
+    <text x="470" y="346" font-size="14">會放大指數起伏</text>
+    <text x="800" y="335" font-size="14" fill="#6e7276">Al Jazeera</text>
+    <line x1="40" y1="372" x2="920" y2="372" stroke="#e8e9ed"/>
+
+    <text x="58" y="402" font-size="18" font-weight="700">台積電 HPC 營收</text>
+    <text x="285" y="402" font-size="22" font-weight="700" fill="#a87515">66%</text>
+    <text x="470" y="397" font-size="14">高效能運算占第 2 季</text>
+    <text x="470" y="418" font-size="14">營收比重，連動 AI 需求</text>
+    <text x="800" y="407" font-size="14" fill="#6e7276">TSMC 法說</text>
+    <line x1="40" y1="444" x2="920" y2="444" stroke="#e8e9ed"/>
+  </g>
+
+  <line x1="40" y1="490" x2="920" y2="490" stroke="#e8e9ed"/>
+  <text x="40" y="520" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="13" fill="#6e7276">製圖：APPI News</text>
+  <text x="920" y="520" text-anchor="end" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="13" fill="#6e7276">資料時點：2026 年 6 至 8 月</text>
+  <text x="40" y="548" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="13" fill="#6e7276">來源：FSM Global、TWSE、Al Jazeera、台積電 2026 年第 2 季法說資料</text>
+</svg>

@@ -1,10 +1,10 @@
 ---
-title: "雅典行李箱陳屍案嫌犯被控謀殺　26歲阿富汗拳擊手法院裁定羈押候審"
+title: "雅典行李箱陳屍案：阿富汗拳擊手遭控謀殺羈押候審"
 slug: "edinburgh-woman-athens-suitcase-death"
-description: "希臘檢方本週依故意殺人、搶劫與非法持有武器罪名，正式起訴26歲阿富汗籍拳擊手沙里夫．艾哈邁扎伊，指控他殺害38歲蘇格蘭援助工作者伊麗莎白珍．羅斯並將遺體棄置行李箱。艾哈邁扎伊週三首度出庭、週四遭法官裁定羈押候審，坦承移動遺體但否認殺人；警方指控他在羅斯死後盜刷其銀行卡提領逾1萬歐元，並疑似冒用她的手機發送訊息掩人耳目。案件此前僅列刑事調查，如今正式進入司法程序，審判日期尚未排定。"
+description: "希臘檢方本週依故意殺人、搶劫與非法持有武器罪名，正式起訴26歲阿富汗籍拳擊手，指控他殺害38歲蘇格蘭援助工作者羅斯並將遺體棄置行李箱。嫌犯坦承移動遺體但否認殺人，法官裁定羈押候審，審判日期尚未排定。"
 excerpt: "雅典行李箱陳屍案嫌犯確定被控謀殺：26歲阿富汗拳擊手艾哈邁扎伊坦承移動遺體但否認殺人，法官裁定羈押候審，調查指他盜領死者銀行帳戶並冒用手機發訊。"
 publishDate: "2026-07-30T16:58:48.148Z"
-updatedDate: "2026-08-06T17:03:21.286Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "europe"
 tags:
@@ -23,7 +23,6 @@ disclaimerType: "general"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 ITV News、STV News、Denbighshire Free Press、PrismNews、The Irish Times、Press Association（經 Yahoo News 轉載）等外媒公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/edinburgh-woman-athens-suitcase-death-cover.webp"
 coverAlt: "希臘雅典市區街景（示意圖，不代表實際案發地點）"
-coverImageCredit: "Photo by Ivan Karpov on Unsplash"
 originalContribution: "本文整合 ITV News、STV News、Denbighshire Free Press、PrismNews 等對嫌犯遭起訴、出庭與羈押裁定的最新報導，並延續先前整合 The Irish Times、Press Association 對死者身分確認過程的報導，梳理案件從刑事調查升級為正式起訴的完整脈絡，供台灣讀者理解事件全貌與最新進展。"
 risksAndLimits:
   - "羈押候審不等於定罪，案件仍在司法程序初期，法院尚未進入實質審理"

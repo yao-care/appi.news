@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { url } from '@/utils/url';
-import { articleSlug, getPublishedArticles } from '@/utils/content';
+import { articlePath, getPublishedArticles } from '@/utils/content';
 import AdminLogin from '@/components/editor/AdminLogin.svelte';
 import NewArticle from '@/components/editor/NewArticle.svelte';
 
@@ -10,7 +10,7 @@ import NewArticle from '@/components/editor/NewArticle.svelte';
 // 隱藏 draft/archived 與未到 publishDate 的排程文）。否則會連到沒 build 的排程文 → 壞連結擋部署。
 const quickLinks = (await getPublishedArticles()).slice(0, 5).map((e) => ({
   title: e.data.title,
-  href: url(`/articles/${articleSlug(e)}/`),
+  href: url(articlePath(e)),
 }));
 // 編輯器作者下拉用：id + 名稱 + GitHub 登入（對應預設作者）
 const authorOptions = (await getCollection('authors')).map((a) => ({

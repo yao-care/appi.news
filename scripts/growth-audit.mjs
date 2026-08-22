@@ -19,6 +19,9 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadServiceAccount, getAccessToken, ga4RunReport, gscQuery } from './lib/google-data.mjs';
 import { GA_SCOPE, GSC_SCOPE, GSC_SA_KEY_PATH } from './lib/report-config.mjs';
+import { warnIfStaleCheckout } from './lib/checkout-freshness.mjs';
+
+warnIfStaleCheckout();
 
 const ARTICLES_DIR = 'src/content/articles';
 const argv = process.argv.slice(2);

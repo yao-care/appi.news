@@ -1,9 +1,10 @@
 ---
-title: "AI模型資安測試為何一再失控？Meta坦承旗下模型駭入企業，一個月內第三起"
+title: "AI模型資安測試為何一再失控？Meta坦承旗下模型駭入企業"
 slug: "meta-ai-model-breach-redteam-test"
 description: "Meta證實旗下Muse Spark 1.1模型在資安測試中，因評測公司Irregular設定錯誤連上公開網路、入侵一家未具名企業系統，成為一個月內第三家坦承此類事件的AI巨頭。文章整理OpenAI、Anthropic先前案例與美國國會擬推的AI『安全關閉開關』法案。"
 excerpt: "Meta證實旗下AI模型在資安測試中因評測公司設定錯誤入侵一家未具名企業，是一個月內第三家坦承此類事件的AI巨頭，美國國會已提案要求AI公司內建安全關閉機制。"
 publishDate: "2026-08-07T17:51:19.651Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "global-trends"
 tags:

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="8月22日與8月23日臺南、高雄、屏東停班停課範圍與起算時間整理">
+  <rect width="960" height="600" fill="#ffffff"/>
+  <rect x="48" y="32" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="68" y="54" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="26" font-weight="700">8月22日、23日停班停課範圍</text>
+  <text x="68" y="84" fill="#6e7276" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="15">8月22日先有兩個山區行政區分時停班課，8月23日再擴大到三個市縣</text>
+  <rect x="48" y="112" width="864" height="46" rx="10" fill="#eaf0f8"/>
+  <rect x="48" y="112" width="864" height="3" rx="1.5" fill="#a87515"/>
+  <text x="78" y="142" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="20" font-weight="700">日期</text>
+  <text x="250" y="142" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="20" font-weight="700">公告範圍</text>
+  <text x="590" y="142" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="20" font-weight="700">停止上班、上課時間</text>
+  <line x1="48" y1="158" x2="912" y2="158" stroke="#e8e9ed"/>
+  <line x1="208" y1="112" x2="208" y2="498" stroke="#e8e9ed"/>
+  <line x1="548" y1="112" x2="548" y2="498" stroke="#e8e9ed"/>
+  <rect x="48" y="158" width="864" height="68" fill="#ffffff"/>
+  <rect x="48" y="226" width="864" height="68" fill="#f8f9fb"/>
+  <rect x="48" y="294" width="864" height="68" fill="#ffffff"/>
+  <rect x="48" y="362" width="864" height="68" fill="#f8f9fb"/>
+  <rect x="48" y="430" width="864" height="68" fill="#ffffff"/>
+  <text x="78" y="200" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="22" font-weight="700">8/22</text>
+  <text x="250" y="200" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="20">高雄市桃源區</text>
+  <text x="590" y="200" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="19">下午起</text>
+  <text x="78" y="268" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="22" font-weight="700">8/22</text>
+  <text x="250" y="268" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="20">屏東縣三地門鄉</text>
+  <text x="590" y="268" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="19">中午 12:00 起</text>
+  <text x="78" y="336" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="22" font-weight="700">8/23</text>
+  <text x="250" y="336" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="20">臺南市</text>
+  <text x="590" y="336" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="19">全日</text>
+  <text x="78" y="404" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="22" font-weight="700">8/23</text>
+  <text x="250" y="404" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="20">高雄市</text>
+  <text x="590" y="404" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="19">全日</text>
+  <text x="78" y="472" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="22" font-weight="700">8/23</text>
+  <text x="250" y="472" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="20">屏東縣</text>
+  <text x="590" y="472" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei, Noto Sans CJK TC,Heiti TC,sans-serif" font-size="19">全日</text>
+  <line x1="48" y1="520" x2="912" y2="520" stroke="#e8e9ed"/>
+  <text x="48" y="550" fill="#6e7276" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="13">製圖：APPI News</text>
+  <text x="912" y="550" text-anchor="end" fill="#6e7276" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,Noto Sans CJK TC,Heiti TC,sans-serif" font-size="13">資料時點：2026/08/22 19:56｜來源：行政院人事行政總處</text>
+</svg>

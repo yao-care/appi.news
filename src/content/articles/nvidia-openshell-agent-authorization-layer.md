@@ -1,9 +1,10 @@
 ---
-title: "NVIDIA 把 agent 護欄做進開源平台：OpenShell 加 Nemotron 3，17 家軟體大廠一起賭『自我進化』的 agent"
+title: "NVIDIA OpenShell 是什麼？把 agent 護欄做進 runtime 層"
 slug: "nvidia-openshell-agent-authorization-layer"
-description: "NVIDIA 這波開源 agent 平台的重點不是又一個 toolkit，而是把安全、網路、隱私護欄做成 runtime（OpenShell），配上為長任務調過的 Nemotron 3 Ultra。真正要看的是治理被往工具層下沉，而不是模型跑分。"
+description: "NVIDIA OpenShell 是把安全、網路、隱私護欄從提示詞改寫成 runtime 層強制執行的開源平台，搭配為長任務調校的 Nemotron 3 Ultra，Adobe、Salesforce 等 17 家軟體大廠已採用；重點是治理正在往工具層下沉，而不是模型跑分。"
 excerpt: "NVIDIA 把安全、網路、隱私護欄做成 runtime（OpenShell），配上為長任務調過的 Nemotron 3 Ultra。真正要看的是治理被往工具層下沉，不是模型跑分。"
 publishDate: "2026-06-27T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "digital-tools"
 tags:
@@ -45,7 +46,7 @@ references:
 topics: ["ai-agent-governance"]
 ---
 
-NVIDIA 這次端出來的東西，很容易被當成「又一個 agent 工具包」掃過去。但這次值得停一下。它在[一個開源 agent 開發平台](https://nvidianews.nvidia.com/news/ai-agents)裡放了兩塊真正的重點：一個叫 OpenShell 的 runtime，和一顆為長任務調過的開源模型 Nemotron 3 Ultra；採用名單上有 Adobe、Salesforce、SAP、ServiceNow、CrowdStrike、Red Hat 在內、NVIDIA 列出的 17 家軟體大廠。重點不在它多了哪些功能，而在它把安全、網路、隱私的護欄，從提示詞裡的叮嚀，改寫成 runtime 層強制執行的規則。真正要看的，是治理被往工具層下沉，不是模型又跑了幾分。
+NVIDIA OpenShell 是一個把安全、網路、隱私護欄做進 runtime 層、讓 agent 自己改不掉的開源平台，很容易被當成「又一個 agent 工具包」掃過去，但這次值得停一下。它在[一個開源 agent 開發平台](https://nvidianews.nvidia.com/news/ai-agents)裡放了兩塊真正的重點：一個叫 OpenShell 的 runtime，和一顆為長任務調過的開源模型 Nemotron 3 Ultra；採用名單上有 Adobe、Salesforce、SAP、ServiceNow、CrowdStrike、Red Hat 在內、NVIDIA 列出的 17 家軟體大廠。重點不在它多了哪些功能，而在它把安全、網路、隱私的護欄，從提示詞裡的叮嚀，改寫成 runtime 層強制執行的規則。真正要看的，是治理被往工具層下沉，不是模型又跑了幾分。這種下沉不只發生在軟體商這端，[KPMG 把 agent 推給 27.6 萬員工後也面對同一道治理考題](/articles/kpmg-agent-365-workforce-governance/)。
 
 <img src="/images/nvidia-openshell-agent-authorization-layer-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="多家軟體大廠採用 NVIDIA 開源 agent 開發平台，象徵生態串接">
 

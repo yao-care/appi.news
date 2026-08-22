@@ -1,8 +1,8 @@
 ---
-title: 珊瑚白化怎麼救？中研院發現「益生菌」能提升珊瑚耐熱力
-description: 中央研究院生物多樣性研究中心團隊耗時近10年,證實珊瑚體內共生菌 Endozoicomonas acroporae Acr-14 具抗氧化能力、能提升珊瑚耐熱表現,為珊瑚白化的復育與益生菌保育策略提供關鍵科學證據。
+title: 珊瑚白化怎麼救？中研院發現益生菌可提升耐熱力
+description: 珊瑚白化怎麼救？中央研究院生物多樣性研究中心團隊耗時近10年，證實珊瑚體內共生菌 Endozoicomonas acroporae Acr-14 具抗氧化能力、能提升珊瑚耐熱表現，為珊瑚白化復育與益生菌保育策略提供關鍵科學證據。
 publishDate: "2026-08-03T18:59:18.086Z"
-updatedDate: "2026-08-16T12:00:00+08:00"
+updatedDate: "2026-08-22T12:00:00+08:00"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -34,7 +34,7 @@ references:
     publisher: "中央研究院"
 ---
 
-海水年年變熱，珊瑚白化幾乎已經是氣候變遷新聞裡最常見的畫面之一。中央研究院一項最新研究從珊瑚體內找到轉機：讓珊瑚補充特定共生菌，竟然能提升牠面對高溫的耐受力，為珊瑚礁復育多開一條路。
+珊瑚白化怎麼救？中央研究院一項最新研究從珊瑚體內找到轉機：讓珊瑚補充特定共生菌，竟然能提升牠面對高溫的耐受力，為珊瑚礁復育多開一條路。海水年年變熱，珊瑚白化幾乎已經是氣候變遷新聞裡最常見的畫面之一。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=jAG9QQDb5Nk" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：珊瑚補充益生菌可提升耐熱性">

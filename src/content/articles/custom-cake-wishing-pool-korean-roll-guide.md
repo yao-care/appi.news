@@ -2,16 +2,16 @@
 title: "許願池蛋糕怎麼挑？造型蛋糕工作室從套房做到三間門市"
 description: "許願池蛋糕、韓系蛋糕捲是這幾年最紅的造型蛋糕款式，這篇整理款式差異、訂購流程與注意事項，並看一間從套房廚房做起、開到台北板橋桃園三間門市的蛋糕工作室故事。"
 publishDate: "2026-08-02T19:06:23.734Z"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
 contentType: "news"
 sourceType: "wire"
 status: "published"
-coverImage: "/covers/custom-cake-wishing-pool-korean-roll-guide-cover.webp"
+coverImage: "covers/custom-cake-wishing-pool-korean-roll-guide-cover.webp"
 coverAlt: "客製化裝飾生日蛋糕擺在桌上，示意圖"
-coverImageCredit: "Photo by David Holifield on Unsplash"
+coverImageCredit: "Photo by Nilantha  Lokunarangodage on Pexels"
 tags: ["美食", "桃園市", "消費趨勢", "節慶"]
 disclosure: "線索來自 台視新聞 TTV NEWS YouTube 影片，內容經公開資料查證整理、附原始出處。"
 risksAndLimits:

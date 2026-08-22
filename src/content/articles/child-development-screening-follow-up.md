@@ -59,6 +59,8 @@ draft: false
 
 延伸閱讀：[「大隻雞慢啼」是真的嗎？學齡前語言發展黃金期與早期療育資源指南](/articles/appi-news-467/)
 
+延伸閱讀：[關於兒童發展篩檢，你需要知道的6件事](/articles/child-development-referral-network/)
+
 ![五個圖示以箭頭串連，呈現兒童從日常觀察、發展篩檢、專業評估、轉介媒合到早療與家庭支持的路徑。](https://appi.news/images/child-development-screening-follow-up/2.png "篩檢只是辨識風險的起點，後續還要完成評估、轉介與持續支持，才算真正接住孩子。")
 
 聯合評估可依孩子狀況涵蓋醫療、心理、語言、動作與社會適應等面向。服務計畫應回應個別需求，不是所有篩檢陽性的兒童都會接受相同項目或頻率。

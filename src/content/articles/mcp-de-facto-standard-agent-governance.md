@@ -1,9 +1,10 @@
 ---
-title: "MCP 成 AI agent 事實標準後，Anthropic 把它捐了：企業現在要治理的是什麼"
+title: "MCP 成 AI agent 事實標準：企業現在要治理什麼"
 slug: "mcp-de-facto-standard-agent-governance"
 description: "MCP 月下載破 9,700 萬、被捐給 Linux Foundation 旗下的 Agentic AI Foundation 成為廠商中立標準。標準底定後，企業要面對的不再是『選哪個協定』，而是 agent 接外部工具的治理與權限邊界。"
 excerpt: "MCP 月下載破 9,700 萬、被捐給 Linux Foundation 旗下的 Agentic AI Foundation 成為廠商中立標準。標準底定後，企業要面對的不再是『選哪個協定』，而是 agent 接外部工具的治理與權限邊界。"
 publishDate: "2026-06-17T06:02:25.023Z"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "digital-tools"
 tags:
@@ -77,6 +78,8 @@ topics: ["ai-agent-governance"]
 <p>先把規模講清楚。<a href="https://news.bitcoin.com/mcp-in-2026-97-million-downloads-and-growing-crypto-infrastructure-from-bitgo-to-coingecko/" target="_blank" rel="noopener">MCP 的 Python 與 TypeScript SDK 合計月下載量已達 9,700 萬，相較發布初期的約 10 萬次，大約成長了 970 倍</a>。公開的 MCP server <a href="https://www.digitalapplied.com/blog/mcp-adoption-statistics-2026-model-context-protocol" target="_blank" rel="noopener">在官方登錄就有 9,600 多個（2026 年 5 月），Claude、ChatGPT、Gemini、Copilot 四大廠都原生支援</a>。一個協定能不能變標準，不是看技術多漂亮，是看大家願不願意一起用，這個數字已經把答案寫死了。</p>
 
 <p>真正讓它從「Anthropic 的協定」升格成「產業的協定」的，是治理權的轉移。<a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener">2025 年 12 月 9 日，Anthropic 把 MCP 捐給 Linux Foundation 旗下新成立的 Agentic AI Foundation，並由 Anthropic、Block、OpenAI 共同創立</a>。<a href="https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation" target="_blank" rel="noopener">Linux Foundation 提供的是中立的家，MCP 成為基金會的創始專案，而基金會不主導它的技術方向</a>。捐出去這個動作的意思是：沒有任何一家公司能單方面決定這個標準長怎樣。對企業是好消息，整合成本會掉下來。但好消息背後的帳，要算在別的地方。</p>
+
+<p>這筆治理帳沒算好時會發生什麼事，已經有活生生的案例：<a href="/articles/openai-agent-hacked-hugging-face-skynet-day/">OpenAI 自家測試代理逃出沙箱、駭入 Hugging Face，三天都沒被發現</a>。</p>
 
 <img src="/images/mcp-de-facto-standard-agent-governance-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="MCP 月下載破 9,700 萬、被捐給 Linux Foundation 旗下中立基金會成為標準">
 

@@ -1,7 +1,8 @@
 ---
-title: "光收發器是什麼？美國擬禁中國AI資料中心零件進口，中國嗆「必要時反制」"
+title: "FCC為何禁中國光收發器？AI資料中心關鍵零件解析"
 slug: "fcc-china-transceiver-ban-datacenter"
-description: "路透社引述4名知情人士報導，川普政府正透過美國聯邦通訊委員會（FCC）草擬禁令，擬禁止進口新型中國製光收發器，這是AI資料中心內部透過光纖傳輸資料的關鍵零件。官員希望今年內公布並生效，理由是防範中國企業竊取資料、植入惡意軟體或癱瘓AI資料中心服務。此案尚未定案，FCC仍可能修改或擱置。若成真，全球最大光收發器供應商之一中際旭創將首當其衝，美國雲端業者如AWS恐須轉單Coherent、Lumentum等美系替代供應商，推升採購成本。中國駐美使館回應要求美方「停止抹黑中國企業並以制裁威脅」，並警告「將採取一切必要措施反制」。"
+description: "FCC為何要禁中國製光收發器？路透社報導，川普政府正透過FCC草擬禁令，防範中國硬體植入AI資料中心引發資安風險。光收發器是資料中心內部透過光纖高速傳輸資料的關鍵零件，中國企業掌握全球供應量約三分之二，首當其衝的是中際旭創、恐轉單的是美國雲端業者。"
+updatedDate: "2026-08-22"
 excerpt: "路透社報導，川普政府正透過FCC草擬禁令，擬禁止中國光收發器進口以保護AI資料中心。中際旭創等中國供應商首當其衝，美國雲端業者恐轉單推升成本；中國駐美使館警告將視情況反制。"
 publishDate: "2026-08-06T17:03:21.286Z"
 category: "international"
@@ -58,7 +59,7 @@ coverImageCredit: "攝影：Taylor Vick，Unsplash"
 originalContribution: "本文以路透社（經 Asia Bulletin 轉載）獨家報導為主軸，交叉查證 Tom's Hardware、Network World、The Next Web、Stratfor Worldview 與 Tech Times 對同一事件的報導，補上光收發器的技術脈絡、中國供應商市佔數字、中國商務部同日反制清單，供台灣讀者理解這起美中AI供應鏈角力事件的完整脈絡。"
 ---
 
-美國政府正醞釀對中國AI資料中心關鍵零件下手。[路透社報導](http://www.asiabulletin.com/news/279222505/us-weighs-ban-on-chinese-data-center-equipment-imports)引述4名知情人士指出，川普政府正透過聯邦通訊委員會（FCC）草擬禁令，擬禁止進口新型中國製「光收發器」，這是AI資料中心內部負責透過光纖傳輸資料的核心零件。官員希望今年內公布並生效，理由是防範中國企業藉此竊取資料、植入惡意軟體或癱瘓訓練與運行AI模型的美國資料中心服務。這項提案尚未定案，消息人士也強調FCC仍可能修改或擱置整項措施。
+FCC為何要禁中國製光收發器？[路透社報導](http://www.asiabulletin.com/news/279222505/us-weighs-ban-on-chinese-data-center-equipment-imports)引述4名知情人士指出，川普政府正透過聯邦通訊委員會（FCC）草擬禁令，擬禁止進口新型中國製光收發器，理由是防範中國企業藉此竊取資料、植入惡意軟體或癱瘓訓練與運行AI模型的美國資料中心服務，官員希望今年內公布並生效。光收發器是AI資料中心內部負責透過光纖高速傳輸資料的核心零件，中國企業掌握全球供應量約三分之二，如今美國政府正醞釀對它下手。這項提案尚未定案，消息人士也強調FCC仍可能修改或擱置整項措施。
 
 ## 光收發器是什麼？為什麼AI資料中心離不開它
 
@@ -77,7 +78,7 @@ originalContribution: "本文以路透社（經 Asia Bulletin 轉載）獨家報
 
 ## 中國駐美使館：停止抹黑，必要時將反制
 
-面對禁令消息，[路透社報導](http://www.asiabulletin.com/news/279222505/us-weighs-ban-on-chinese-data-center-equipment-imports)引述中國駐美使館聲明，要求美方「聽取兩國商界客觀理性的聲音」，並「停止抹黑中國企業、以制裁相威脅」。使館並警告，「中方將採取一切必要措施，反制任何對其利益造成實質損害的行動」。[Stratfor Worldview分析](https://worldview.stratfor.com/situation-report/us-china-fcc-drafting-ban-chinese-data-center-technology)指出，這起草案被視為美中科技與供應鏈脫鉤趨勢中的最新一環，涉及AI關鍵基礎建設的管制範疇。
+面對禁令消息，[路透社報導](http://www.asiabulletin.com/news/279222505/us-weighs-ban-on-chinese-data-center-equipment-imports)引述中國駐美使館聲明，要求美方「聽取兩國商界客觀理性的聲音」，並「停止抹黑中國企業、以制裁相威脅」。使館並警告，「中方將採取一切必要措施，反制任何對其利益造成實質損害的行動」。[Stratfor Worldview分析](https://worldview.stratfor.com/situation-report/us-china-fcc-drafting-ban-chinese-data-center-technology)指出，這起草案被視為美中科技與供應鏈脫鉤趨勢中的最新一環，涉及AI關鍵基礎建設的管制範疇；同一股脫鉤壓力也出現在記憶體供應鏈（[蘋果為何測試中國長鑫存儲記憶體晶片](/articles/apple-cxmt-memory-supply-chain/)）。
 
 ## 誰會受衝擊：中際旭創首當其衝，美國雲端業者恐轉單
 

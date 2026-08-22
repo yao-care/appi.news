@@ -1,9 +1,10 @@
 ---
-title: "澤倫斯基撤換烏克蘭總司令　敘爾斯基下台、德拉帕蒂接掌　連日抗議後軍方大搬風"
+title: "伊斯坎德爾飛彈奪12命　德拉帕蒂接掌烏克蘭總司令"
 slug: "ukraine-zelensky-fires-syrskyi-drapatyi"
-description: "烏克蘭總統澤倫斯基7月21日解除敘爾斯基（Oleksandr Syrskyi）三軍總司令職務，改由43歲少將德拉帕蒂（Mykhailo Drapatyi）接任。人事案發生在基輔及全國多城市連日抗議之後，抗議者不滿敘爾斯基被指延續蘇聯式高層微觀管理、不顧人員傷亡堅守陣地；前一週國防部長費多羅夫才因與敘爾斯基「矛盾難解」遭撤換。德拉帕蒂曾在2025年一次訓練場遭俄軍飛彈擊中、造成12死60餘傷後主動請辭地面部隊司令，以示負責。"
+description: "烏克蘭總統澤倫斯基7月21日撤換總司令敘爾斯基，改由德拉帕蒂接任；德拉帕蒂曾在2025年一枚俄軍伊斯坎德爾飛彈擊中訓練基地、造成12死60傷後主動請辭負責，因而在軍中累積信任，此次臨危受命接掌總司令。"
 excerpt: "澤倫斯基7月21日解除敘爾斯基三軍總司令職務，改由曾為訓練場死傷主動請辭負責的少將德拉帕蒂接任，人事案發生在連日抗議之後，前一週國防部長費多羅夫也才因與敘爾斯基不合遭撤換。"
 publishDate: "2026-07-22T15:11:42.941Z"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "europe"
 tags:
@@ -53,7 +54,7 @@ coverAlt: "烏克蘭新任三軍總司令德拉帕蒂少將（資料照）"
 coverImageCredit: "armyinform.com.ua — CC BY 4.0, Wikimedia Commons"
 ---
 
-烏克蘭總統澤倫斯基（Volodymyr Zelenskyy）7月21日宣布解除敘爾斯基（Oleksandr Syrskyi）烏克蘭武裝部隊總司令職務，改由43歲少將德拉帕蒂（Mykhailo Drapatyi）接任。據[PBS NewsHour報導](https://www.pbs.org/newshour/world/ukraines-zelenskyy-fires-his-army-chief-after-protests-and-names-a-replacement)，這起人事案發生在基輔與全國多個城市連日爆發大規模抗議之後，抗議者要求敘爾斯基下台。澤倫斯基透過社群媒體發布聲明公布人事案，[ABC News引述其聲明](https://abcnews.com/International/wireStory/ukraines-zelenskyy-fires-military-chief-after-protests-names-134962594)指出，他期盼「共同的目標，是打贏敵人，讓前線與對俄施壓的態勢，能把俄羅斯逼向和平」。
+一枚俄軍伊斯坎德爾（Iskander）彈道飛彈，牽動了烏克蘭這次的三軍總司令人事案。烏克蘭總統澤倫斯基（Volodymyr Zelenskyy）7月21日宣布解除敘爾斯基（Oleksandr Syrskyi）烏克蘭武裝部隊總司令職務，改由43歲少將德拉帕蒂（Mykhailo Drapatyi）接任，他正是2025年6月一枚伊斯坎德爾飛彈擊中訓練基地、造成12死60餘傷後主動請辭負責的指揮官。據[PBS NewsHour報導](https://www.pbs.org/newshour/world/ukraines-zelenskyy-fires-his-army-chief-after-protests-and-names-a-replacement)，這起人事案發生在基輔與全國多個城市連日爆發大規模抗議之後，抗議者要求敘爾斯基下台。澤倫斯基透過社群媒體發布聲明公布人事案，[ABC News引述其聲明](https://abcnews.com/International/wireStory/ukraines-zelenskyy-fires-military-chief-after-protests-names-134962594)指出，他期盼「共同的目標，是打贏敵人，讓前線與對俄施壓的態勢，能把俄羅斯逼向和平」。
 
 ## 抗議為何而起：蘇聯式指揮文化惹議
 

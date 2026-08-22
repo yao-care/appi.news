@@ -79,7 +79,9 @@ describe('civic-ledger', () => {
   });
   it('recordSeen 寫入並可再讀回', () => {
     const path = join(mkdtempSync(join(tmpdir(), 'civic-led-')), 'seen.json');
-    recordSeen([{ url: 'https://a/1' }, { url: 'https://a/2' }], { path, nowIso: '2026-07-20T00:00:00Z' });
+    // nowIso 必須用動態近期時間：recordSeen 會用「真實現在」剪 30 天前的紀錄，
+    // 寫死日期的版本在 30 天後開始必然紅（2026-08-20 實際發生過）。
+    recordSeen([{ url: 'https://a/1' }, { url: 'https://a/2' }], { path, nowIso: new Date().toISOString() });
     const seen = loadSeen(path);
     expect(Object.keys(seen).sort()).toEqual(['https://a/1', 'https://a/2']);
   });
@@ -95,7 +97,7 @@ describe('civic-ledger', () => {
 
 describe('parseCivicResult', () => {
   it('NEW 帶 slug', () => {
-    expect(parseCivicResult('CIVIC_RESULT=NEW｜civic-services-2026-07-20')).toEqual({
+    expect(parseCivicResult('CIVIC_RESULT=NEW｜civic-services-2026-07-20')).toMatchObject({
       action: 'new', slug: 'civic-services-2026-07-20', note: 'civic-services-2026-07-20',
     });
   });

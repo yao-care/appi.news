@@ -4,7 +4,7 @@ slug: "back-to-school-syndrome-child-vision-checklist"
 description: "2026年8月31日開學，家長可提早調整孩子作息，依3010120原則護眼，並檢查書包重量與新生疫苗紀錄；本文整理開學前可逐項完成的準備清單。"
 excerpt: "2026年8月31日開學，從作息調整、3010120護眼原則，到書包減重與新生疫苗紀錄，開學前準備一次整理。"
 publishDate: "2026-07-30T09:10:13.960Z"
-updatedDate: 2026-08-09
+updatedDate: 2026-08-22
 category: "health"
 subcategory: "medical"
 tags:
@@ -21,7 +21,7 @@ factCheckedBy:
   - "appi-editorial"
 coverImage: "covers/back-to-school-syndrome-child-vision-checklist-cover.webp"
 coverAlt: "一群小學生揹著書包走向校園，象徵開學情境"
-coverImageCredit: "Photo by note thanun on Unsplash"
+coverImageCredit: "Photo by JIUN-JE LIN on Pexels"
 status: "published"
 sourceType: "wire"
 contentType: "guide"
@@ -67,9 +67,9 @@ references:
 draft: false
 ---
 
-8月開學準備不只有作息與視力。家中若有年滿16歲的孩子，2026年七夕在8月19日，台南家庭可同步查看[做十六歲成年禮的日期、流程與報名核對方式](/articles/tainan-coming-of-age-2026/)，把暑假尾聲的證件、交通與返校安排一起排進家庭行事曆。
-
 2026年開學日是8月31日。家長現在先完成三件事：逐步調回睡眠作息、恢復3010120護眼習慣，以及檢查書包重量和新生疫苗紀錄；文具、餐具與指定文件可照[2026小一開學用品清單](/articles/first-grade-school-supplies-2026/)準備。若孩子仍有咳嗽、流鼻水或發燒，可先看[開學前孩子感冒怎麼辦](/articles/back-to-school-child-cold-care-guide/)；若也在處理校園防疫，可接著查看[開學腸病毒8大重症前兆與漂白水比例](/articles/enterovirus-severe-warning-signs-2026/)及[開學前登革熱巡倒清刷清單](/articles/appi-news-376/)。以下把每一步整理成可直接照做的清單，並保留官方資料來源。
+
+8月開學準備不只有作息與視力。家中若有年滿16歲的孩子，2026年七夕在8月19日，台南家庭可同步查看[做十六歲成年禮的日期、流程與報名核對方式](/articles/tainan-coming-of-age-2026/)，把暑假尾聲的證件、交通與返校安排一起排進家庭行事曆。
 
 ## 第一件事：把作息拉回上學模式，別留到開學前一天
 

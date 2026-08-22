@@ -28,6 +28,8 @@ topics: ["civic-services"]
 
 延伸閱讀：[青安3.0房貸怎麼貸？申請資格、額度分級與利率補貼一次看懂](/articles/qingan-3-housing-loan-guide/)
 
+延伸閱讀：[住宅貸款利息補貼怎麼申請？各地便民措施整理](/articles/civic-services-2026-08-21/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=giyk944WdcE" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：志工家庭一日服務心體驗">
     <img src="/images/new-taipei-toy-bank-donation-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="志工家庭一日服務心體驗">

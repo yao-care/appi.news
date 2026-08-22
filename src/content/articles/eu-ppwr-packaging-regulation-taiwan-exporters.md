@@ -1,9 +1,10 @@
 ---
-title: "歐盟包裝法規PPWR 8月12日上路：食品包裝PFAS限值25微克，台灣出口商要準備什麼"
+title: "歐盟PPWR包裝法規8月12日上路：台灣出口商要準備什麼"
 slug: "eu-ppwr-packaging-regulation-taiwan-exporters"
 description: "歐盟《包裝與包裝廢棄物法規》（PPWR，Regulation 2025/40）2026年8月12日起取代舊指令全面適用，食品接觸包裝PFAS濃度上限25微克/公斤、電商與運輸包裝空隙率不得逾50%，違規恐被擋在歐盟市場外。經濟部中小企業處與環境部皆已發布因應說明，出口歐盟的台灣業者要留意合規期限。"
 excerpt: "歐盟PPWR包裝法規8月12日全面適用，食品包裝PFAS限值25微克/公斤、空隙率不得逾50%，台灣出口商合規倒數。"
 publishDate: "2026-08-05T02:05:57.951Z"
+updatedDate: "2026-08-22"
 category: "focus"
 subcategory: "policy-watch"
 tags:
@@ -51,7 +52,7 @@ references:
     publisher: "Intertek"
 ---
 
-歐盟包裝新規進入倒數。《包裝與包裝廢棄物法規》（PPWR，正式編號Regulation (EU) 2025/40）將於[2026年8月12日起全面適用](https://eur-lex.europa.eu/EN/legal-content/summary/packaging-and-packaging-waste.html)，取代施行逾30年的舊版《包裝廢棄物指令》。這部法規不分產地，只要包裝商品要進入歐盟市場，台灣出口商同樣適用。
+歐盟包裝新規進入倒數。《包裝與包裝廢棄物法規》（PPWR，正式編號Regulation (EU) 2025/40）將於[2026年8月12日起全面適用](https://eur-lex.europa.eu/EN/legal-content/summary/packaging-and-packaging-waste.html)，取代施行逾30年的舊版《包裝廢棄物指令》。這部法規不分產地，只要包裝商品要進入歐盟市場，台灣出口商同樣適用，也是[本站持續追蹤的全球循環經濟法制化浪潮](/articles/eu-japan-circular-economy-laws/)裡最先落地、對出口商最直接有感的一環。
 
 ## PFAS限值25微克、重金屬維持百毫克，8月12日同步上路
 

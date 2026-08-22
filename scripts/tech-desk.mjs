@@ -14,12 +14,14 @@
 //
 // --topic：跳過自動選題，照指定方向寫（補寫既有缺口用）。
 
-import { readFileSync, readdirSync, writeFileSync, existsSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
-import yaml from 'js-yaml';
 import { buildTechDeskPrompt, parseTechDeskResult, TECH_TRACKS } from './lib/tech-desk.mjs';
+import { runWriterArticle } from './lib/writer-cli.mjs'; // 寫作＝codex（站長 2026-08-22 裁示），查核仍走 claude-cli
+import { runArticleGates } from './lib/publish-pipeline.mjs';
+import { articleTitle, recentTitles } from './lib/article-index.mjs';
 import { salvageArticle } from './lib/changed-articles.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
@@ -37,40 +39,8 @@ function sh(cmd, args, opts = {}) {
   return (r.stdout || '').trim();
 }
 
-/** 該篇引用了、但 public/ 下不存在的本地圖檔。空陣列＝都在。 */
-function missingLocalAssets(slug) {
-  const file = join(ARTICLES_DIR, `${slug}.md`);
-  if (!existsSync(file)) return ['（文章檔不存在）'];
-  const raw = readFileSync(file, 'utf8');
-  const refs = new Set();
-  for (const m of raw.matchAll(/(covers|images)\/[A-Za-z0-9._-]+\.(?:webp|png|jpe?g|avif)/gi)) refs.add(m[0]);
-  return [...refs].filter((r) => !existsSync(join('public', r)));
-}
-
-function articleTitle(slug) {
-  try {
-    const m = readFileSync(join(ARTICLES_DIR, `${slug}.md`), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
-    return (m && (yaml.load(m[1]) || {}).title) || '';
-  } catch { return ''; }
-}
-
-/** 近 N 天已發的 tech 文章標題，給去重。 */
-function recentTechTitles(days = 30) {
-  const cutoff = Date.now() - days * 86400 * 1000;
-  let files = [];
-  try { files = readdirSync(ARTICLES_DIR).filter((f) => f.endsWith('.md')); } catch { return []; }
-  const out = [];
-  for (const f of files) {
-    try {
-      const m = readFileSync(join(ARTICLES_DIR, f), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
-      if (!m) continue;
-      const d = yaml.load(m[1]);
-      if (d.category !== 'tech') continue;
-      if (new Date(d.publishDate || 0).getTime() >= cutoff) out.push(d.title || f);
-    } catch { /* skip */ }
-  }
-  return out;
-}
+/** 近 N 天已發的 tech 文章標題，給去重（索引正本＝lib/article-index.mjs）。 */
+const recentTechTitles = (days = 30) => recentTitles({ days, filter: (e) => e.data.category === 'tech' });
 
 /**
  * GSC 訊號：差一步的 tech 頁（pos 10.5~20.5）＋有需求沒吃到點擊的 query。
@@ -111,13 +81,11 @@ function runTrack(track, { go, topic, recent, signals, wrote }) {
     topic,
   });
   console.log(`\n→ ${TECH_TRACKS[track].label}…`);
-  const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
-  // claude-appi 撞用量上限時會 exit 0 只印限額訊息 → 必須查 stdout，否則被誤判成「無題、安靜」。
-  if (r.error || r.status !== 0 || /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) {
-    console.log(`  ⚠️ claude 失敗：${(r.stderr || r.stdout || r.error?.message || '').slice(-200)}`);
-    return false;
-  }
-  const v = parseTechDeskResult(r.stdout);
+  // 成功判定三態的正本＝lib/claude-cli.mjs：quota 是帳號層級，回傳給 main 停掉剩下的 track（別空打）。
+  const c = runWriterArticle({ prompt });
+  if (c.kind === 'quota') { console.log(`  ⛔ 撞用量上限：${c.detail}`); return 'quota'; }
+  if (c.kind === 'fail') { console.log(`  ⚠️ claude 失敗：${c.detail}`); return false; }
+  const v = parseTechDeskResult(c.stdout);
   if (v.infra) {
     // 解析不出＝故障，不是「沒題」：模型可能已把稿寫在工作區，撿回來走既有關卡。
     const found = salvageArticle(ARTICLES_DIR, wrote.map((w) => w.slug).filter(Boolean));
@@ -162,7 +130,9 @@ function main() {
   console.log(`→ 科技台（分支 ${branch}，${go ? '上架' : 'stage 不 push'}，track：${tracks.join(' + ')}）`);
 
   const wrote = [];
-  for (const t of tracks) runTrack(t, { go, topic, recent, signals, wrote });
+  for (const t of tracks) {
+    if (runTrack(t, { go, topic, recent, signals, wrote }) === 'quota') break; // 帳號層級：第二條 track 一樣會被擋
+  }
 
   // 只看 wrote，**不要**用 `git status` 當「有沒有產出」的判準。
   // 2026-07-29 實測：模型有時會無視「不要 commit」的指示，自己把稿 commit 掉；此時
@@ -173,38 +143,16 @@ function main() {
     console.log('  ℹ️ 工作區乾淨但有產出＝模型自行 commit 過；照常跑完所有關卡（關卡吃的是檔案，不是 diff）。');
   }
 
-  // 用系統時間蓋掉模型寫的 publishDate；逐篇過圖／標籤／去 AI 腔三關，不合格的整篇剔除（不拖垮整批）。
+  // 用系統時間蓋掉模型寫的 publishDate；逐篇過 gate（集合與順序的正本＝lib/publish-pipeline.mjs），
+  // 不合格的整篇剔除、不拖垮整批。
   const nowIso = new Date().toISOString();
   const kept = [];
   for (const v of wrote) {
     const file = join(ARTICLES_DIR, `${v.slug}.md`);
     if (existsSync(file)) writeFileSync(file, readFileSync(file, 'utf8').replace(/^publishDate:.*$/m, `publishDate: "${nowIso}"`));
-    const missing = missingLocalAssets(v.slug);
-    if (missing.length) {
-      console.log(`  ⚠️ 剔除 ${v.slug}：缺本地圖檔（${missing.join('、')}）`);
-      if (existsSync(file)) rmSync(file);
-      continue;
-    }
-    // 成長規則自檢（report-only，永不擋發佈）：站內導流／topics／標題長度有沒有做到，印進 cron log 供事後回收。
-    // 規則正本＝scripts/lib/growth-prompt.mjs（GROWTH_PROMPT），盤點與工作清單＝docs/growth-playbook.md。
-    const _growth = spawnSync('node', ['scripts/growth-lint.mjs', file], { encoding: 'utf8' });
-    if (_growth.stdout) console.log(_growth.stdout.trim());
-    const tagGate = spawnSync('node', ['scripts/check-tags.mjs', file], { encoding: 'utf8' });
-    if (tagGate.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${v.slug}：標籤不在受控詞彙表\n${tagGate.stdout || tagGate.stderr || ''}`);
-      if (existsSync(file)) rmSync(file);
-      continue;
-    }
-    const toneGate = spawnSync('node', ['scripts/check-content.mjs', file], { encoding: 'utf8' });
-    if (toneGate.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${v.slug}：去 AI 腔硬 tell\n${toneGate.stdout || toneGate.stderr || ''}`);
-      if (existsSync(file)) rmSync(file);
-      continue;
-    }
-    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻）。為什麼＝docs/lessons/discover-image-and-meta-signals.md。
-    const coverGate = spawnSync('node', ['scripts/check-cover-spec.mjs', file], { encoding: 'utf8' });
-    if (coverGate.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${v.slug}：封面不符 Discover 規格\n${coverGate.stdout || coverGate.stderr || ''}`);
+    const g = runArticleGates(v.slug, { log: (m) => console.log(m) });
+    if (!g.ok) {
+      console.log(`  ⚠️ 剔除 ${v.slug}：${g.label}${g.detail ? `\n${g.detail}` : ''}`);
       if (existsSync(file)) rmSync(file);
       continue;
     }

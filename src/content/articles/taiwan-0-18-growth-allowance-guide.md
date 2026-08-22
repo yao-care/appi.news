@@ -2,6 +2,7 @@
 title: "0到18歲成長津貼是什麼？每月5000元、2027年上路一次看懂"
 description: "衛福部規劃0到18歲兒少每月可領5000元成長津貼，最快2027年上路、不排富，還能與現行育兒津貼同時請領。整理津貼怎麼算、幾歲開始入專戶、跟舊制差在哪，以及多子女家庭的實際請領試算。"
 publishDate: "2026-08-09T19:03:48.719Z"
+updatedDate: "2026-08-22"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -21,14 +22,14 @@ risksAndLimits:
 
 衛福部規劃中的「0到18歲成長津貼」，讓每名兒童從出生到18歲、每月可領5000元，最快2027年上路，且初步規劃不設所得排富門檻。這筆津貼近日隨著一支訪問新竹一對育有十名子女夫妻的YouTube節目引發討論：若十個孩子同時符合資格，一個月最多可望多領5萬元、一年60萬元。
 
+節目中受訪的新竹夫妻林沂澂、徐千祥兩人皆38歲，育有4男6女共10名子女，最大13歲、最小2歲，平均每年生一胎。[三立新聞網報導](https://www.setn.com/News.aspx?NewsID=1852273)指出，媽媽出門前得先逐一「報數」確認孩子都在，伙食費靠貨比三家控制在2萬5千至3萬元之間。[《媽媽寶寶》整理](https://www.mababy.com/knowledge-detail?id=17120)也提到，這個家庭若遇上規劃中的成長津貼，十個孩子加總確實會落在每月5萬元的區間。與此同時，養育多名子女的家庭常同步關注房貸與購屋補貼，這類政策工具可參考[青安3.0房貸怎麼貸的整理](/articles/qingan-3-housing-loan-guide/)。
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=beF5vBqQzOY" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：直擊十寶爸媽的日常！月領5萬津貼難擋物價飆">
     <img src="/images/taiwan-0-18-growth-allowance-guide-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="直擊十寶爸媽的日常！月領5萬津貼難擋物價飆">
   </a>
   <figcaption>影片來源：三立新聞網SETN（YouTube）　<a href="https://www.youtube.com/watch?v=beF5vBqQzOY" target="_blank" rel="noopener nofollow">觀看原影片</a></figcaption>
 </figure>
-
-節目中受訪的新竹夫妻林沂澂、徐千祥兩人皆38歲，育有4男6女共10名子女，最大13歲、最小2歲，平均每年生一胎。[三立新聞網報導](https://www.setn.com/News.aspx?NewsID=1852273)指出，媽媽出門前得先逐一「報數」確認孩子都在，伙食費靠貨比三家控制在2萬5千至3萬元之間。[《媽媽寶寶》整理](https://www.mababy.com/knowledge-detail?id=17120)也提到，這個家庭若遇上規劃中的成長津貼，十個孩子加總確實會落在每月5萬元的區間。與此同時，養育多名子女的家庭常同步關注房貸與購屋補貼，這類政策工具可參考[青安3.0房貸怎麼貸的整理](/articles/qingan-3-housing-loan-guide/)。
 
 ## 「0到18歲成長津貼」是什麼政策
 

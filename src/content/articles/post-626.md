@@ -4,7 +4,7 @@ slug: "offshore-wind-r3-3-esg-scoring"
 description: "經濟部R3.3選商草案取消強制國產化，改採ESG規劃、履約與財務能力評分，ESG相關項目佔20分、須達70分門檻才有資格分配容量；律師示警若缺乏可量化標準恐流於作文比賽，本文整理轉向邏輯、爭議與後續觀察重點。"
 excerpt: "2026年1月經濟部公布離岸風電區塊開發第三期（R3.3）選商草案，將強制國產化改為加分項，ESG相關評分拉高至20分。這場政策轉向牽動能源轉型路徑、本土供應鏈存亡，以及ESG評分標準能否填補原本國產化政策保護空間的核心問題。"
 publishDate: "2026-06-14T21:37:20+08:00"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-21
 category: "focus"
 subcategory: "policy-watch"
 tags:
@@ -41,9 +41,9 @@ factCheckedBy:
 status: "published"
 sourceType: "editorial"
 disclaimerType: "general"
-coverImage: "covers/post-626-stock.jpg"
+coverImage: "covers/offshore-wind-r3-3-esg-scoring-cover.webp"
 coverAlt: "海面上離岸風機群的廣角全景"
-coverImageCredit: "Photo by Damir K . on Pexels"
+coverImageCredit: "Photo by lange x on Pexels"
 topics: ["energy-policy"]
 ---
 

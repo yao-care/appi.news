@@ -3,12 +3,12 @@ title: "AI時代白袍自媒體的3個新機會：如何用內容傳遞正確健
 slug: "medical-self-media-ai-health-communication"
 description: "醫療專業人士投入自媒體與AI工具傳播健康知識，正成為對抗網路偽科學的新力量。從資訊管道轉移、AI降低創作門檻，到內容經營策略與法規界線，完整解析白袍創作者該注意的機會與挑戰。"
 publishDate: 2026-08-05
-updatedDate: 2026-08-06
+updatedDate: 2026-08-22
 category: health
 subcategory: health-policy
 tags: ["醫療AI", "數位健康", "公共衛生", "醫病關係", "AI", "搜尋與內容策略", "醫療政策"]
 author: "appi-editorial"
-coverImage: "covers/medical-self-media-ai-health-communication.webp"
+coverImage: "covers/medical-self-media-ai-health-communication-cover.webp"
 coverAlt: "健康資訊獲取管道從報紙電視轉向社群平台與短影音的時間軸示意圖"
 status: published
 sourceType: editorial
@@ -91,7 +91,7 @@ AI 工具能縮短產製時間，但無法替代醫療專業人士對個案適�
 
 世界衛生組織將「資訊疫情管理」定義為「有系統地運用以風險與證據為基礎的分析方法，管理資訊疫情並降低其對健康行為的影響」，並指出這項工作包含傾聽社群關切、促進大眾理解專業建議、建立對錯誤資訊的抵抗力，以及讓社群參與正向行動四個面向。
 
-一份彙整 2012 年至 2024 年間、共 70 篇相關文獻的回顧研究指出，健康錯誤資訊在社群平台上持續擴散是一個明確的共識性問題，而醫療專業人士雖然是對抗錯誤資訊最有利的角色，卻常受限於工作負荷而難以投入。這項研究也強調，提升大眾的健康與數位識能，需要跨領域的長期協作，而不是單一措施就能解決。
+一份彙整 2012 年至 2024 年間、共 70 篇相關文獻的回顧研究指出，健康錯誤資訊在社群平台上持續擴散是一個明確的共識性問題，而醫療專業人士雖然是對抗錯誤資訊最有利的角色，卻常受限於工作負荷而難以投入。這項研究也強調，提升大眾的健康與數位識能，需要跨領域的長期協作，而不是單一措施就能解決。像排毒、鹼性體質、生酮飲食這類[反覆出現的健康話術](/articles/detox-alkaline-keto-pseudoscience/)，正是白袍創作者最常被讀者追問、也最需要出面澄清的類型。
 
 ### 提升大眾健康識能
 

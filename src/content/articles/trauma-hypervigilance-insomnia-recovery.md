@@ -1,6 +1,7 @@
 ---
-title: "心理創傷為什麼會失眠、心悸？過度警覺背後的自律神經機制與復原方法"
+title: "心理創傷為什麼會失眠、心悸？自律神經機制與復原方法"
 slug: "trauma-hypervigilance-insomnia-recovery"
+updatedDate: "2026-08-22"
 description: "長期情感忽視、職場霸凌或重大意外留下的心理創傷，常以失眠、心悸、易受驚等生理症狀反覆出現。整理醫院衛教資料解析大腦警報系統為何持續拉響，以及自律神經失調的具體症狀與求助管道。"
 excerpt: "長期情感忽視、職場霸凌或重大意外留下的心理創傷，常以失眠、心悸、易受驚等生理症狀反覆出現。整理醫院衛教資料解析大腦警報系統為何持續拉響，以及自律神經失調的具體症狀與求助管道。"
 publishDate: "2026-08-03T18:51:38.986Z"
@@ -49,6 +50,8 @@ references:
 半夜莫名驚醒、心臟撲通撲通跳，檢查卻找不出心臟本身有問題。這種經驗不一定是單純睡不好，背後可能是心理創傷留下的生理痕跡。TVBS NEWS《十點不一樣》日前訪問醫師談心理創傷如何影響失眠、心悸與過度警覺，這篇整理醫院衛教資料，把背後的機制與求助管道講清楚。
 
 延伸閱讀：[熱恐慌是什麼？高溫誘發恐慌發作的原因與緩解方法整理](/articles/heat-panic-symptoms-guide/)
+
+延伸閱讀：[慢性失眠怎麼判斷？每週3次、持續3個月的診斷標準與健康代價](/articles/chronic-insomnia-diagnosis-criteria/)
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=82FTJoKZ65I" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：心理創傷會影響一生? 醫師解析失眠.心悸與過度警覺背後原因">

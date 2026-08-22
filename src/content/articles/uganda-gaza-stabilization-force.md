@@ -1,9 +1,10 @@
 ---
-title: "國際穩定部隊（ISF）是什麼？烏干達批准派兵加薩，20000人維和部隊仍在集結"
+title: "國際穩定部隊（ISF）是什麼？烏干達批准派兵加薩"
 slug: "uganda-gaza-stabilization-force"
-description: "烏干達國會8月6日投票通過派兵，加入摩洛哥、印尼、哈薩克、科索沃、阿爾巴尼亞等國，成為聯合國安理會第2803號決議授權、由美軍少將傑斯帕·傑佛斯領導的加薩國際穩定部隊（ISF）最新一個承諾出兵國。文章整理這支目標20000人部隊的成軍進度、指揮架構，以及烏干達國內為何有議員質疑派兵決定。"
+description: "國際穩定部隊（ISF）是聯合國安理會授權、加薩戰後維和的多國部隊，烏干達國會8月6日投票通過派兵加入，成為摩洛哥、印尼、哈薩克、科索沃、阿爾巴尼亞之後最新一個承諾出兵國，由美軍少將傑斯帕·傑佛斯領導。文章整理這支目標20000人部隊的成軍進度、指揮架構，以及烏干達國內為何有議員質疑派兵決定。"
 excerpt: "烏干達國會8月6日投票通過派兵，加入加薩國際穩定部隊（ISF），成為安理會授權、目標20000人維和部隊的最新承諾出兵國，國內議員則質疑派兵恐惹外交爭議。"
 publishDate: "2026-08-07T17:51:19.651Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "middle-east"
 tags:
@@ -43,7 +44,7 @@ coverAlt: "身著迷彩服的烏干達特種部隊隊員持槍站立的畫面"
 coverImageCredit: "Ilyas Ahmed / AMISOM Public Information — CC0, via Wikimedia Commons"
 ---
 
-烏干達國會8月6日投票通過派兵，加入加薩國際穩定部隊（ISF），[成為摩洛哥、印尼、哈薩克、科索沃、阿爾巴尼亞之後最新一個公開承諾出兵的國家](https://www.pbs.org/newshour/world/uganda-approves-sending-troops-to-gaza-for-international-force-proposed-by-trumps-board-of-peace)。這支由聯合國安理會授權、目標規模20000人的多國部隊,要等以色列完成分階段撤軍才會真正進駐加薩，眼前[以色列才剛就哈瑪斯解除武裝方案提出新的安全疑慮，加薩停火協議走向仍有變數](/articles/gaza-hamas-disarmament-deal-israel-concerns/)。
+國際穩定部隊（ISF）是聯合國安理會授權、負責加薩戰後維和的多國部隊，目標規模20000人。烏干達國會8月6日投票通過派兵，加入這支部隊，[成為摩洛哥、印尼、哈薩克、科索沃、阿爾巴尼亞之後最新一個公開承諾出兵的國家](https://www.pbs.org/newshour/world/uganda-approves-sending-troops-to-gaza-for-international-force-proposed-by-trumps-board-of-peace)。這支部隊要等以色列完成分階段撤軍才會真正進駐加薩，眼前[以色列才剛就哈瑪斯解除武裝方案提出新的安全疑慮，加薩停火協議走向仍有變數](/articles/gaza-hamas-disarmament-deal-israel-concerns/)。
 
 ## 烏干達國會怎麼決定的：拿索馬利亞經驗當說帖，議員質疑「幫哪一邊打仗」
 

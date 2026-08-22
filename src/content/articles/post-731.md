@@ -1,9 +1,10 @@
 ---
-title: "World Gym 2025 淨利成長 16.3%，配息 5.95 元創新高"
+title: "World Gym（2762）2025淨利年增16.3%　配息5.95元"
 slug: "world-gym-2025-profit-dividend"
-description: "World Gym Corporation（2762.TW）2025年全年淨利達新台幣4.09億元，年增16.3%，全年股利5.95元，第四季獲利幾乎是前三季總和的翻倍。這份年報不只展示台灣健身龍頭的財務韌性，更是後疫情東亞健身消費回溫最具說服力的市場指標。"
-excerpt: "World Gym Corporation（2762.TW）2025年全年淨利達新台幣4.09億元，年增16.3%，全年股利5.95元，第四季獲利幾乎是前三季總和的翻倍。這份年報不只展示台灣健身龍頭的財務韌性，更是後疫情東亞健身消費回溫最具說服力的市場指標。"
+description: "World Gym Corporation（2762.TW）公布2025年全年財報，淨利達新台幣4.09億元、年增16.3%，全年股利5.95元創新高，第四季獲利幾乎是前三季總和的兩倍。財報反映台灣健身產業從疫情谷底回溫的市場趨勢。"
+excerpt: "World Gym Corporation（2762.TW）2025年全年淨利達新台幣4.09億元，年增16.3%，全年股利5.95元創新高，第四季獲利幾乎是前三季總和的兩倍，是台灣健身產業從疫情谷底回溫的重要指標。"
 publishDate: "2026-02-01T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "sports"
 subcategory: "sports-industry"
 tags:
@@ -47,7 +48,7 @@ coverImageCredit: "Photo by Victor Freitas on Pexels"
 
 ## 第四季爆發與全年結構性轉變
 
-[Yahoo Finance報導](https://finance.yahoo.com/news/world-gym-corp-posts-16-123530379.html)顯示，World Gym 2025年最亮眼的數字集中在第四季：單季營收年增13.2%至29億元，單季淨利幾乎是前一年同期的三倍，達1.67億元。這種加速態勢並非偶發，而是2025全年逐季放大的毛利率擴張邏輯的體現。全年累計營收突破109.8億元，年增11.9%，是公司掛牌以來最高的年度收入紀錄。
+[Yahoo Finance報導](https://finance.yahoo.com/news/world-gym-corp-posts-16-123530379.html)顯示，World Gym 2025年最亮眼的數字集中在第四季：單季營收年增13.2%至29億元，單季淨利幾乎是前一年同期的三倍，達1.67億元。這種加速態勢延續了2025全年逐季放大的毛利率擴張邏輯，不是單一季度的偶發表現。全年累計營收突破109.8億元，年增11.9%，是公司掛牌以來最高的年度收入紀錄。
 
 延伸閱讀：[台灣運動服務業銷售額創新高，整體產值逼近 8000 億元](/articles/taiwan-sports-services-record-sales/)
 

@@ -17,9 +17,10 @@ reviewedBy:
   - "lightman"
 factCheckedBy:
   - "appi-editorial"
+updatedDate: 2026-08-22
 coverImage: "covers/carbon-fee-technology-subsidy-cover.webp"
 coverAlt: "工業廠房與排放設施，象徵企業投入減碳技術轉型"
-coverImageCredit: "Photo by Alex Simpson on Unsplash"
+coverImageCredit: "Photo by jason hu on Pexels"
 status: "published"
 sourceType: "wire"
 contentType: "news"

@@ -1,10 +1,11 @@
 ---
-title: "數位銀行子帳戶怎麼分？信封理財設定法"
+title: "信封理財法：數位銀行子帳戶怎麼分薪水"
 slug: "digital-bank-envelope-budgeting-guide"
 coverImage: "covers/digital-bank-envelope-budgeting-guide.webp"
 coverAlt: "手機、五個彩色信封與分組硬幣構成數位信封理財配置"
-description: "用數位銀行子帳戶做信封理財，可把固定支出、日常生活、年度大額、緊急預備金與自由支出分開。本文提供命名、比例起點、自動轉帳及每月校正流程。"
+description: "用數位銀行子帳戶做信封理財，薪資入帳後自動分流到固定支出、日常生活、年度大額、緊急預備金與自由支出五個信封。本文提供命名、比例起點、自動轉帳與每月校正流程。"
 publishDate: 2026-08-10
+updatedDate: 2026-08-22
 category: "finance"
 subcategory: "consumer-finance"
 tags: ["投資理財", "金融科技", "消費趨勢"]
@@ -28,7 +29,7 @@ references:
     publisher: "LINE Bank"
 ---
 
-數位銀行子帳戶最實用的分法，是把「用途與動用時間」分開：固定支出、日常生活、年度大額、緊急預備金、自由支出。薪資入帳後自動分流，花費時只看對應信封，能降低月底才發現超支的機率。若使用 LINE Bank，可先看[口袋帳戶額度與操作限制](/articles/linebank-pocket-account-limit/)。
+用數位銀行子帳戶做信封理財，最實用的分法是把「用途與動用時間」分開：固定支出、日常生活、年度大額、緊急預備金、自由支出。薪資入帳後自動分流到這五個信封，花費時只看對應信封，能降低月底才發現超支的機率。若使用 LINE Bank，可先看[口袋帳戶額度與操作限制](/articles/linebank-pocket-account-limit/)。
 
 ## 先算可分配收入
 

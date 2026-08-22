@@ -1,9 +1,10 @@
 ---
-title: "孟加拉前總理哈希娜誓言年底前返國　自認「可能被殺」仍不退讓、死刑判決在身"
+title: "孟加拉前總理哈希娜誓言年底前返國　死刑判決在身仍不退讓"
 slug: "bangladesh-hasina-vows-return"
-description: "流亡印度的孟加拉前總理哈希娜（78歲）向法新社表示，儘管自認可能遭殺害、逮捕或入獄，仍決心在2026年12月前返回孟加拉。她已於2025年11月被達卡國際罪行法庭以違反人道罪缺席判處死刑，孟加拉政府已正式向印度提出引渡請求，新德里稱「正在審查中」。哈希娜稱判決是「披著法律外衣的政治報復」，否認過度使用武力，為2024年鎮壓學生示威的紀錄辯護。孟加拉去年8月因學生主導的起義垮台，聯合國估計鎮壓期間約1,400人喪生；今年2月大選由哈希娜政敵所屬的孟加拉民族主義黨（BNP）勝選，黨魁塔里克．拉赫曼已就任總理。"
+description: "流亡印度的孟加拉前總理哈希娜向法新社表示，儘管自認可能遭殺害、逮捕或入獄，仍決心在2026年12月前返回孟加拉。她已被達卡國際罪行法庭以違反人道罪缺席判處死刑，孟加拉政府已正式向印度提出引渡請求，新德里稱「正在審查中」。"
 excerpt: "流亡印度的孟加拉前總理哈希娜誓言年底前返國，儘管她已被達卡法院以違反人道罪判處死刑；孟加拉正式向印度提出引渡請求，新德里稱案件「正在審查中」。"
 publishDate: "2026-07-29T16:30:08.380Z"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "asia"
 tags:
@@ -78,7 +79,7 @@ coverImageCredit: "Russell Watkins / DFID — CC BY 2.0, Wikimedia Commons"
 
 孟加拉政府已正式向印度提出引渡哈希娜的請求。據[SCMP報導](https://www.scmp.com/news/asia/south-asia/article/3362236/bangladeshs-sheikh-hasina-vows-return-despite-believing-she-may-be-killed)，新德里對此回應稱該請求「正在審查中」，尚未給出明確答覆。哈希娜則表示，印度當局並未就此與她討論，她目前仍住在印度境內一處未公開的地點；[Hürriyet Daily News報導](https://www.hurriyetdailynews.com/bangladesh-ex-premier-hasina-vows-to-return-despite-fearing-for-life-224954)提到，她堅稱自己並未受到任何要她返國的壓力。孟加拉政府則承諾，若她真的返國，將確保她獲得合法的法律程序。
 
-值得對照的是，孟加拉政局在過去半年已出現重大翻盤。據[半島電視台（Al Jazeera）報導](https://www.aljazeera.com/news/2026/2/14/bnp-wins-bangladesh-election-tarique-rahman-set-to-be-prime-minister)，孟加拉今年2月12日舉行2024年起義後的首次大選，由孟加拉民族主義黨（BNP）拿下國會299席中的212席，取得壓倒性勝利；黨魁塔里克．拉赫曼（Tarique Rahman）2月17日宣誓就任總理，接替此前的尤努斯（Muhammad Yunus）看守政府。[半島電視台另一篇報導](https://www.aljazeera.com/news/2026/2/14/tarique-rahman-from-17-year-exile-to-landslide-win-in-bangladesh-election)指出，拉赫曼本人同樣曾流亡海外17年，直到2025年12月才結束在英國的流亡生涯返國參選，如今換成昔日政敵哈希娜期盼循同樣路徑重返家園，形成強烈對比。
+值得對照的是，孟加拉政局在過去半年已出現重大翻盤。據[半島電視台（Al Jazeera）報導](https://www.aljazeera.com/news/2026/2/14/bnp-wins-bangladesh-election-tarique-rahman-set-to-be-prime-minister)，孟加拉今年2月12日舉行2024年起義後的首次大選，由孟加拉民族主義黨（BNP）拿下國會299席中的212席，取得壓倒性勝利；黨魁塔里克．拉赫曼（Tarique Rahman）2月17日宣誓就任總理，接替此前的尤努斯（Muhammad Yunus）看守政府。[半島電視台另一篇報導](https://www.aljazeera.com/news/2026/2/14/tarique-rahman-from-17-year-exile-to-landslide-win-in-bangladesh-election)指出，拉赫曼本人同樣曾流亡海外17年，直到2025年12月才結束在英國的流亡生涯返國參選，如今換成昔日政敵哈希娜期盼循同樣路徑重返家園，形成強烈對比。放眼其他曾入獄或流亡的政治強人家族，[秘魯藤森家族在藤森因貪腐入獄16年後仍重返總統府](/articles/peru-fujimori-inauguration/)，也是類似的政治還魂案例。
 
 ## 常見問題
 

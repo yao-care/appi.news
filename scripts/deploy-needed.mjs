@@ -18,25 +18,24 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { execSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
+import { isPublicFrontmatter } from '../src/utils/visibility.mjs';
 
 const ARTICLES_DIR = 'src/content/articles';
 
 /**
- * 有沒有排程稿在（after, now] 這段區間到期。純函式，方便測試。
- * @param {Array<{status?:string, publishDate?:string}>} entries 文章 frontmatter 摘要
+ * 有沒有文章在（after, now] 這段區間「從隱藏轉為公開」。純函式，方便測試。
+ * 判準走可見性正本（src/utils/visibility.mjs）：**任何 status** 只要 publishDate 落在區間內
+ * 都算到期——舊碼只認 status: scheduled，frontmatter 寫 published＋未來日期的排程稿
+ * 站台會隱藏、CI 卻不重建，到期不上線（2026-08-20 架構體檢修正）。
+ * @param {Array<{status?:string, publishDate?:string, draft?:boolean}>} entries 文章 frontmatter 摘要
  */
 export function hasDueScheduled(entries, after, now = new Date()) {
   const from = new Date(after).getTime();
-  const to = now.getTime();
   if (!Number.isFinite(from)) return true; // 上次時間不可解讀 → fail-open
-  return (entries || []).some((e) => {
-    if (e?.status !== 'scheduled' || !e?.publishDate) return false;
-    const t = new Date(e.publishDate).getTime();
-    return Number.isFinite(t) && t > from && t <= to;
-  });
+  return (entries || []).some((e) => !isPublicFrontmatter(e, from) && isPublicFrontmatter(e, now));
 }
 
-/** 讀出每篇文章的 status / publishDate（只讀 frontmatter 前幾行，不解析全文）。 */
+/** 讀出每篇文章的 status / publishDate / draft（只讀 frontmatter，不解析全文）。 */
 export function readArticleSchedule(dir = ARTICLES_DIR) {
   let files = [];
   try { files = readdirSync(dir).filter((f) => f.endsWith('.md')); } catch { return null; }
@@ -50,6 +49,7 @@ export function readArticleSchedule(dir = ARTICLES_DIR) {
       out.push({
         status: fm.match(/^status:\s*["']?([\w-]+)/m)?.[1],
         publishDate: fm.match(/^publishDate:\s*["']?([^"'\n]+)/m)?.[1]?.trim(),
+        draft: /^draft:\s*true\b/m.test(fm),
       });
     } catch { /* 單篇壞掉不影響判斷 */ }
   }

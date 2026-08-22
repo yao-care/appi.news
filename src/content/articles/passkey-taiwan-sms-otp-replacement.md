@@ -1,8 +1,9 @@
 ---
-title: "Passkey 是什麼、怎麼設定：簡訊 OTP 為什麼要退場，台灣哪些服務已經能用"
+title: "Passkey 是什麼、怎麼設定？簡訊 OTP 退場台灣現況"
 slug: "passkey-taiwan-sms-otp-replacement"
 description: "簡訊一次性密碼擋不住即時釣魚與門號竊取，台灣的銀行與網購結帳正陸續改用 Passkey 刷臉或指紋登入。整理原因、台灣現有服務清單、逐步設定教學與換手機的備援作法。"
 publishDate: "2026-08-06T05:55:28.112Z"
+updatedDate: "2026-08-22T00:00:00.000Z"
 status: "published"
 category: "tech"
 subcategory: "security"
@@ -52,7 +53,6 @@ references:
   - title: "FIDO 在臺落地規模擴大，逾 300 個政府與企業系統支援"
     url: "https://www.ithome.com.tw/news/172885"
     publisher: "iThome"
-updatedDate: "2026-08-06T05:55:28.112Z"
 ---
 
 簡訊一次性密碼（SMS OTP）擋不住兩種現在很常見的攻擊：即時把驗證碼轉貼到真網站的釣魚手法，以及把電話號碼過戶到別人 SIM 卡上的門號竊取。Passkey 用手機或電腦內建的生物辨識搭配裝置端的公開金鑰配對取代密碼與簡訊驗證碼，讓這兩種攻擊都偷不到可用的東西。台灣的銀行、網購結帳已陸續開通這套機制，設定門檻不高，真正容易卡關的反而是換手機時要怎麼把 Passkey 帶過去。

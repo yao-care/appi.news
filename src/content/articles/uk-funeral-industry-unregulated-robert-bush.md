@@ -1,9 +1,10 @@
 ---
-title: "英國殯葬業為什麼能無照無監管？囤積31具遺體、詐騙上百長者，赫爾殯儀館老闆判20年"
+title: "英國殯葬業無照無監管？囤積31具遺體老闆判20年"
 slug: "uk-funeral-industry-unregulated-robert-bush"
 description: "英格蘭、威爾斯與北愛爾蘭至今沒有法律要求殯儀館持照或設冷藏設施。赫爾殯儀館老闆布希囤積31具遺體、亂發骨灰、詐騙上百名長者購買假葬禮計畫，7月31日被判20年徒刑，政府誓言修法監管全國殯葬業。"
 excerpt: "英國殯葬業至今無需持照即可合法經營，赫爾一名殯儀館老闆囤積31具遺體、詐騙上百長者，7月31日判20年徒刑，政府誓言修法監管。"
 publishDate: "2026-08-01T17:05:08.925Z"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "europe"
 tags: ["英國", "司法", "防詐"]
@@ -68,3 +69,20 @@ coverImageCredit: "Photo by Pavel Danilyuk — Pexels"
 面對輿論壓力，衛生暨社會照護大臣古柏（Yvette Cooper）表示，鑑於此案「令人髮指」，政府將提出全面方案，「確保逝者在各種場所都能獲得應有的尊重與尊嚴，包括對殯葬業的適當監管」。Hull市議會領導人也公開呼籲，全國層級的標準修訂勢在必行，以防止類似事件再度發生，並承諾持續支援受害家屬。目前政府尚未公布具體修法時間表與內容細節。（[Irish News](https://www.irishnews.com/news/uk/victims-call-robert-bush-jail-term-atrocious-as-government-vows-regulation-XI6TWB2WTBOWJFPCAFZBH2FB4I/)、[Hull City Council](https://news.hull.gov.uk/31/07/2026/robert-bush-sentenced-following-legacy-independent-funeral-directors-investigation/)）
 
 延伸閱讀：[雅典行李箱陳屍案嫌犯被控謀殺　26歲阿富汗拳擊手法院裁定羈押候審](/articles/edinburgh-woman-athens-suitcase-death/)
+
+## 常見問題
+
+### 英國殯儀館為什麼能無照無監管經營12年？
+英格蘭、威爾斯與北愛爾蘭至今沒有法律要求殯儀館持照、具資格或設冷藏設施，也沒有全國登記制度，業者是否加入NAFD或SAIF等同業公會純屬自願，讓布希得以無照經營長達12年才被查獲。
+
+### 警方在赫爾殯儀館現場發現了什麼？
+2024年3月警方接獲檢舉上門查訪，發現31具早該火化的遺體仍留在現場，其中一具死產嬰兒遺體已用紙袋裝著放在地板上將近2年，現場另尋獲逾百套骨灰。
+
+### 布希最終被判什麼刑？
+布希承認67項罪名，包括妨礙合法埋葬、虛假陳述詐欺與竊取慈善捐款，7月31日被赫爾皇家法院判處20年徒刑，並禁止擔任公司董事14年。
+
+### 受害者主要是什麼人、如何被騙？
+受害者多為長者，遭以較低價格吸引後付款購買根本沒有落實的葬禮計畫，詐欺橫跨2012到2024年共12年，約150人受害於假葬禮計畫，其中一項罪名就涵蓋172名受害人。
+
+### 政府對這起事件有什麼回應？
+衛生暨社會照護大臣古柏表示此案「令人髮指」，政府將提出全面方案，確保逝者在各種場所都能獲得應有尊重，並對殯葬業做出適當監管，但尚未公布具體修法時間表與內容。

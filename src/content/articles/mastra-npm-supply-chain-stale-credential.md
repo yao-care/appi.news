@@ -1,9 +1,10 @@
 ---
-title: "AI 開發框架 Mastra 的 npm 套件遭大規模投毒：舊貢獻者權限沒收回，成了供應鏈破口"
+title: "Mastra npm 供應鏈攻擊：144套件遭投毒"
 slug: "mastra-npm-supply-chain-stale-credential"
-description: "6 月 17 日有人用一個沒被收回的前貢獻者帳號，在 88 分鐘內把 Mastra AI 框架的 140+ 個 npm 套件重新發佈、塞進惡意相依。重點不是手法多新，而是離職貢獻者的 scope 權限從沒被撤掉這種權限殘留，正成為 AI 開發供應鏈最常見的破口。"
+description: "Mastra npm 套件在 2026 年 6 月 17 日遭供應鏈攻擊，144 個套件在 88 分鐘內被塞進惡意相依，起因是一個沒被收回的前貢獻者帳號權限。整理事件經過、真正破口，以及可以馬上盤點的三件治理事。"
 excerpt: "一個放了 16 個月、沒人記得的舊帳號，撬開了週下載破百萬的 @mastra 套件生態。AI 供應鏈最大的漏洞不是程式碼，是沒人收回的權限。"
 publishDate: "2026-07-01T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "security"
 tags:
@@ -52,7 +53,7 @@ references:
 topics: ["ai-agent-governance"]
 ---
 
-<p>6 月 17 日凌晨，有人用一個早就沒在維護的前貢獻者帳號，在 88 分鐘內把 AI 開發框架 Mastra 的 npm 套件生態整批改寫。<a href="https://orca.security/resources/blog/mastra-npm-supply-chain-attack/" target="_blank" rel="noopener">142 個 @mastra 套件被重新發佈、塞進同一個惡意相依，連同 mastra 與 create-mastra 共 144 個套件受影響，時間落在 UTC 01:12 到 02:39 這 88 分鐘內</a>。這件事真正該記住的，不是手法多新，而是一個沒人回頭看的問題：離職貢獻者的發佈權限，從頭到尾沒有被收回。</p>
+<p>Mastra npm 供應鏈攻擊發生在 6 月 17 日凌晨，有人用一個早就沒在維護的前貢獻者帳號，在 88 分鐘內把 AI 開發框架 Mastra 的 npm 套件生態整批改寫。<a href="https://orca.security/resources/blog/mastra-npm-supply-chain-attack/" target="_blank" rel="noopener">142 個 @mastra 套件被重新發佈、塞進同一個惡意相依，連同 mastra 與 create-mastra 共 144 個套件受影響，時間落在 UTC 01:12 到 02:39 這 88 分鐘內</a>。這件事真正該記住的，是一個沒人回頭看的問題：離職貢獻者的發佈權限，從頭到尾沒有被收回，手法本身並不新。</p>
 
 <h2>88 分鐘，144 個套件</h2>
 
@@ -64,7 +65,7 @@ topics: ["ai-agent-governance"]
 
 <h2>真正的破口：沒人收回的權限</h2>
 
-<p>套件規模看著嚇人，但根因一點都不高科技。<a href="https://snyk.io/blog/a-forgotten-contributor-account-compromised-the-entire-mastra-npm-package-scope/" target="_blank" rel="noopener">出事的帳號 ehindero 在 2024 年底到 2025 年初還有正常發佈紀錄，之後就沒再動；問題是 npm 不會因為閒置就收回 scope 的發佈權限，一個放著大約 16 個月的舊憑證，就足以推送到整個 scope 底下的每一個套件</a>。Snyk 把話講得很白：<a href="https://snyk.io/blog/a-forgotten-contributor-account-compromised-the-entire-mastra-npm-package-scope/" target="_blank" rel="noopener">真正的根因是專案的權限衛生，不是什麼零時差漏洞</a>。</p>
+<p>套件規模看著嚇人，但根因一點都不高科技，跟<a href="/articles/servicenow-saas-api-auth-misconfiguration-breach/">我先前拆過的 ServiceNow 預設值外洩事件</a>是同一種病：一個沒人回頭檢查的權限，功能照跑，就不會有人多看一眼。<a href="https://snyk.io/blog/a-forgotten-contributor-account-compromised-the-entire-mastra-npm-package-scope/" target="_blank" rel="noopener">出事的帳號 ehindero 在 2024 年底到 2025 年初還有正常發佈紀錄，之後就沒再動；問題是 npm 不會因為閒置就收回 scope 的發佈權限，一個放著大約 16 個月的舊憑證，就足以推送到整個 scope 底下的每一個套件</a>。Snyk 把話講得很白：<a href="https://snyk.io/blog/a-forgotten-contributor-account-compromised-the-entire-mastra-npm-package-scope/" target="_blank" rel="noopener">真正的根因是專案的權限衛生，不是什麼零時差漏洞</a>。</p>
 
 <p>@mastra/core 這種週下載約 91 萬、<a href="https://orca.security/resources/blog/mastra-npm-supply-chain-attack/" target="_blank" rel="noopener">整個 Mastra 生態合計週下載超過 110 萬的套件</a>，背後的破口竟然是一把沒人記得要拔掉的鑰匙。能不能攻破，跟有沒有人把鑰匙收回來，是兩件事，這次是後者沒做。</p>
 
@@ -74,7 +75,7 @@ topics: ["ai-agent-governance"]
 
 <p>這就是我看這件事最在意的地方。Mastra 投毒事件，是 AI 生態系開始重演企業 IT 三十年的老問題；而它延伸出來的，是 AI 供應鏈最大的漏洞，不是程式碼，而是沒人記得的權限。</p>
 
-<p>離職的人權限沒收、放著不管的存取憑證、沒人回頭審的預設值，這些在傳統 IT 治理裡是講到爛的東西，可是換到 AI 開發這條新管道，又從頭發生一次。我先前寫 ServiceNow 那篇講的是同一種病：<a href="/articles/servicenow-saas-api-auth-misconfiguration-breach/">一個沒人回頭檢查的預設值，功能照跑，就不會有人多看一眼，直到資料被查走</a>。Mastra 這次只是把場景換成 npm 套件供應鏈，病灶一樣。</p>
+<p>離職的人權限沒收、放著不管的存取憑證、沒人回頭審的預設值，這些在傳統 IT 治理裡是講到爛的東西，可是換到 AI 開發這條新管道，又從頭發生一次：一個沒人回頭檢查的預設值，功能照跑，就不會有人多看一眼，直到資料被查走。Mastra 這次只是把場景換成 npm 套件供應鏈，病灶一樣。</p>
 
 <p>而且 AI 開發把它放大了。<a href="/articles/mcp-de-facto-standard-agent-governance/">每一個接進來的外部相依，都該被當成一個新的權限治理對象</a>，但用 AI 一句話就拉進一堆套件的速度，讓相依清單長得比任何人盤得動的還快。沒人記得自己的專案到底拉進了哪些套件、哪些舊帳號還握著發佈權，這就是新破口的養成方式。</p>
 

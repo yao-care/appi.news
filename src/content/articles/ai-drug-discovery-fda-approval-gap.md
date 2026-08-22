@@ -4,6 +4,7 @@ slug: "ai-drug-discovery-fda-approval-gap"
 description: "AI 藥物研發近期吸引超過 20 億美元投資，業界宣稱把開發時程從 4-5 年壓到 12-18 個月、臨床成功率翻倍。但自 2019 年至今已投入約 600 億美元、175 個 AI 起源藥物進入人體試驗，仍沒有一款拿到 FDA 核准。拆解這波熱潮真正做到哪一步，還卡在哪。"
 excerpt: "20 億美元砸進 AI 藥物研發，聽起來像是新藥要量產了。但拉長時間軸看，600 億美元、175 個 AI 藥物進了人體試驗，核准欄還是掛零。判讀這波熱潮，該看的是核准數字，不是募資金額。"
 publishDate: "2026-08-04T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "ai"
 tags:
@@ -64,7 +65,7 @@ topics: ["drug-repurposing"]
 
 <h2>175 個藥物進了人體試驗，核准欄還是掛零</h2>
 
-<p>把鏡頭拉遠一點看，數字更不好看。<a href="https://medcitynews.com/2026/06/the-ai-drug-discovery-race-is-heating-up-not-in-the-way-you-think/" target="_blank" rel="noopener">MedCity News 在 2026 年 6 月 30 日的報導</a>指出，自 2019 年起，AI 藥物研發領域累計投入約 600 億美元，大約 175 個 AI 起源的藥物程式已經進入人體試驗，但「FDA 核准的數字是零」。這不代表產業沒有進展，報導也提到接下來兩年會有一批進度最快的 AI 設計藥物陸續讀出中後期試驗結果，2026 到 2028 是真正能判斷 AI 有沒有兌現承諾的關鍵窗口。但現在這個時間點，投入金額跟核准數字之間的落差，就是這麼大。</p>
+<p>把鏡頭拉遠一點看，數字更不好看，這跟<a href="/articles/metformin-macular-repurposing-ai/">台灣老藥新用用 AI 找二甲雙胍新用途的案例</a>踩到的是同一種訊號與驗證落差。<a href="https://medcitynews.com/2026/06/the-ai-drug-discovery-race-is-heating-up-not-in-the-way-you-think/" target="_blank" rel="noopener">MedCity News 在 2026 年 6 月 30 日的報導</a>指出，自 2019 年起，AI 藥物研發領域累計投入約 600 億美元，大約 175 個 AI 起源的藥物程式已經進入人體試驗，但「FDA 核准的數字是零」。這不代表產業沒有進展，報導也提到接下來兩年會有一批進度最快的 AI 設計藥物陸續讀出中後期試驗結果，2026 到 2028 是真正能判斷 AI 有沒有兌現承諾的關鍵窗口。但現在這個時間點，投入金額跟核准數字之間的落差，就是這麼大。</p>
 
 <table>
 <thead>

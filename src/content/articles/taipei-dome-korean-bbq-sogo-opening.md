@@ -9,6 +9,7 @@ contentType: "news"
 sourceType: "wire"
 status: "published"
 publishDate: "2026-08-15T18:37:58.894Z"
+updatedDate: "2026-08-22"
 coverImage: "/covers/taipei-dome-korean-bbq-sogo-opening-cover.webp"
 coverImageCredit: "Photo by Himal Rana on Unsplash"
 tags:
@@ -21,7 +22,7 @@ risksAndLimits:
   - "SOGO Garden City總營業面積各家媒體引用3.6萬坪至3.8萬坪不等，以遠東官方後續公告為準。"
 ---
 
-首爾三大烤肉名店之一「囕盈豚」確定在台北大巨蛋插旗台灣首店，[店員私下透露開幕日期落在9月12日](https://travel.udn.com/travel/story/7193/9692860)。同一時間，[遠東SOGO大巨蛋商場Garden City的B區也將於8月22日展開試營運](https://udn.com/news/story/7241/9691029)，全區營業面積達3.8萬坪、進駐品牌數突破500家。兩件事加起來，代表大巨蛋周邊的美食商圈進入一波密集開店期。
+首爾三大烤肉名店之一「囕盈豚」確定在台北大巨蛋插旗台灣首店，[店員私下透露開幕日期落在9月12日](https://travel.udn.com/travel/story/7193/9692860)。同一時間，[遠東SOGO大巨蛋商場Garden City的B區也將於8月22日展開試營運](https://udn.com/news/story/7241/9691029)，全區營業面積達3.8萬坪、進駐品牌數突破500家。兩件事加起來，代表大巨蛋周邊的美食商圈進入一波密集開店期。台北的韓式烤肉版圖其實同步在洗牌，公館商圈經營逾30年的[平價韓式銅盤烤肉「梅江」10月底就要歇業](/articles/gongguan-mei-jiang-korean-bbq-closing/)，大巨蛋這頭卻迎來首爾直送的高人氣品牌，形成明顯的世代交替。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=G72ozE2q6Bo" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：韓首爾三大燒肉之一「囕盈豚」插旗大巨蛋 店員曝:9/12開幕">
@@ -29,8 +30,6 @@ risksAndLimits:
   </a>
   <figcaption>影片來源：TVBS NEWS（YouTube）　<a href="https://www.youtube.com/watch?v=G72ozE2q6Bo" target="_blank" rel="noopener nofollow">觀看原影片</a></figcaption>
 </figure>
-
-台北的韓式烤肉版圖其實同步在洗牌，公館商圈經營逾30年的[平價韓式銅盤烤肉「梅江」10月底就要歇業](/articles/gongguan-mei-jiang-korean-bbq-closing/)，大巨蛋這頭卻迎來首爾直送的高人氣品牌，形成明顯的世代交替。
 
 ## 囕盈豚是什麼來頭
 

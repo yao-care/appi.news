@@ -1,5 +1,5 @@
 ---
-title: "健身房收掉、被併購，會員權益怎麼辦：定型化契約給你的保障與退費怎麼算"
+title: "健身房倒閉退費怎麼算：定型化契約給你的保障"
 slug: "gym-closure-membership-refund-rights"
 description: "統一集團旗下BEING sport、BEING fit健身房9月2日晚間起停止服務，會員面臨退費或轉籍的抉擇。政府訂有「健身中心定型化契約應記載及不得記載事項」，明訂業者停業、轉讓或搬遷時的終止契約權、退費公式、手續費上限與申訴管道，整理消費者實際可以主張的權利。"
 excerpt: "健身房會員契約受政府訂定的定型化契約規範保障，業者停業、轉讓或搬遷時，退費金額有固定公式可算，不是業者說了算。"
@@ -52,7 +52,7 @@ references:
 coverImage: "covers/gym-closure-membership-refund-rights.webp"
 coverAlt: "健身房內部空間，象徵健身房歇業或轉讓時的會員權益"
 coverImageCredit: "Photo by Samuel Girven on Unsplash"
-updatedDate: "2026-08-06T05:55:28.112Z"
+updatedDate: "2026-08-22"
 ---
 
 健身房會員契約受政府訂定的「健身中心定型化契約應記載及不得記載事項」規範，業者停業、轉讓或搬遷時，消費者有終止契約並按比例退費的權利，退費金額也有固定公式可算，不是業者說了算，關鍵在於保留繳費證明並主動依規定程序申請，而不是等業者通知才行動。

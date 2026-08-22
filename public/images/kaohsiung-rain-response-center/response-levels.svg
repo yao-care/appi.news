@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-label="高雄市水災應變中心擴大三級、二級與一級開設條件比較">
+  <rect width="960" height="640" fill="#ffffff"/>
+  <rect x="48" y="48" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="72" y="72" fill="#1e2030" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="26" font-weight="700">高雄市水災應變中心怎麼分級</text>
+  <text x="72" y="108" fill="#6e7276" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="15">水利局依豪雨警戒、雨量與災情研判，決定開設層級與進駐範圍</text>
+
+  <line x1="48" y1="144" x2="912" y2="144" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="72" y="178" fill="#6e7276" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14">層級</text>
+  <text x="250" y="178" fill="#6e7276" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14">高雄市水災開設條件</text>
+  <text x="760" y="178" fill="#6e7276" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14">應變意義</text>
+  <line x1="48" y1="196" x2="912" y2="196" stroke="#e8e9ed" stroke-width="1"/>
+
+  <rect x="48" y="212" width="864" height="94" rx="12" fill="#f7f8fa"/>
+  <rect x="48" y="212" width="5" height="94" rx="2" fill="#6e7276"/>
+  <text x="72" y="250" fill="#1e2030" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="22" font-weight="700">擴大三級</text>
+  <text x="250" y="242" fill="#1e2030" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="16">豪雨特報將高雄列入警戒區，或警戒解除後仍需應變</text>
+  <text x="250" y="270" fill="#6e7276" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14">由水利局成立應變小組，視情況通知相關單位進駐</text>
+  <text x="760" y="258" fill="#1e2030" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="16">先行整備</text>
+
+  <rect x="48" y="326" width="864" height="112" rx="12" fill="#eaf0f8"/>
+  <rect x="48" y="326" width="5" height="112" rx="2" fill="#a87515"/>
+  <text x="72" y="368" fill="#1e2030" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="22" font-weight="700">二級開設</text>
+  <text x="250" y="356" fill="#1e2030" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="16">大豪雨警戒＋24 小時累積雨量達 350 毫米以上</text>
+  <text x="250" y="384" fill="#6e7276" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14">或水利局研判可能發生水災且有開設必要</text>
+  <text x="760" y="364" fill="#1e2030" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="16">跨局處進駐</text>
+  <text x="760" y="390" fill="#6e7276" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14">聯合應變</text>
+
+  <rect x="48" y="458" width="864" height="94" rx="12" fill="#f7f8fa"/>
+  <rect x="48" y="458" width="5" height="94" rx="2" fill="#a12a2a"/>
+  <text x="72" y="496" fill="#1e2030" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="22" font-weight="700">一級開設</text>
+  <text x="250" y="488" fill="#1e2030" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="16">超大豪雨警戒＋24 小時累積雨量達 500 毫米以上</text>
+  <text x="250" y="516" fill="#6e7276" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14">或發生重大水災，經水利局研判有開設必要</text>
+  <text x="760" y="500" fill="#1e2030" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="16">擴大動員</text>
+
+  <line x1="48" y1="584" x2="912" y2="584" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="48" y="610" fill="#6e7276" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="13">製圖：APPI News</text>
+  <text x="912" y="610" text-anchor="end" fill="#6e7276" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="13">資料來源：高雄市災害應變中心作業要點</text>
+</svg>

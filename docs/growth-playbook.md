@@ -119,16 +119,13 @@ id 對照表（`scripts/lib/topic-hub-ids.json`，**id 進網址、上線後不�
 **SOP**：`ls src/content/topics/` 看現有叢集 → 對 `growth-lint` 標 `G2-cluster` 的文章逐篇判斷能不能歸入 → 能就補 frontmatter，不能就留空。**不要自創不存在的 topic id**（會產生壞連結）。
 某個主題叢集夠厚但沒有對應 topic 檔時，才在 `src/content/topics/` 新增（schema 見 `src/content.config.ts`）。
 
-### B4. 延伸閱讀的版位（站長 2026-08-07 裁示：先不動，兩週後看數字再決定）
+### B4. 延伸閱讀的版位（站長 2026-08-22 二次裁示：啟用「文中插入」）
 
-目前「延伸閱讀」只出現在文末（`src/pages/articles/[slug].astro`），跳出率高的讀者根本滑不到。可選作法：文中插入（讀到一半的段落間）、桌機側欄常駐、讀完浮出推薦條——**每一種都會動到版面與效能，動手前必須先讀 [`PERFORMANCE.md`](../PERFORMANCE.md)，且屬於「要先問站長」的改動。**
+決策沿革：2026-08-07 裁示先不動、兩週後看 PV/session；2026-08-21 到期時 PV/session 仍在原地（未達 1.35 目標），依當時約定回來評估文中插入，站長 2026-08-22 裁示啟用。
 
-**現行決策**：先不動版位，改用零風險的 B1（新文內建內鏈，已上線）＋B2／B3（存量補內鏈與 topics）推同一個指標，**2026-08-21 之後**跑 `pnpm growth:audit` 對照 PV/session：
+**實作＝postbuild 注入，不動模板、零 client JS、零 CLS**：`scripts/insert-midread.mjs`（接在 postbuild 鏈最末、pagefind 之後，注入的連結不進搜尋索引）。從每頁文末已渲染的延伸閱讀抽前 2 條連結，插在 article-body 第 3 個 h2 之前；body 內 h2 不足 3 個的短文不插。樣式＝`global.css` 的 `.midread`（全 token）。為什麼做在 postbuild：延伸閱讀清單是頁面層算的，這樣做零邏輯重複、永不與 `relatedArticles()` 漂移。
 
-- 有往上動 → 版位不必改，繼續做 B2／B3。
-- 沒動 → 代表內文內鏈救不到，再回來評估文中插入版位（那時才需要站長二次裁示）。
-
-基準值＝2026-08-07 當時的量測，記在 [`lessons/growth-three-gates.md`](./lessons/growth-three-gates.md)（歷史證據，不是現況）。
+**驗收**：上線 2~4 週後跑 `pnpm growth:audit` 看 PV/session 是否從基準往 1.35 移動；同時 PSI 抽測文章頁 mobile 不得低於既有基準（`PERFORMANCE.md` §3）。沒效就拆（postbuild 拿掉一行即回復）。
 
 ---
 
@@ -188,10 +185,16 @@ B 和 A 都只影響「這一次來的人多看幾頁」，**不會讓人回來*
 把重複性的產線內容明確歸進 `column`／`topics`，並在文末寫出下一集的預告或系列入口。已有系列可查：`ls src/content/columns/`、`ls src/content/topics/`。
 這一項與 B3 共用同一批工作，做 B3 時順手完成。
 
-### C2. 訂閱管道（需要站長裁示）
+### C2. 訂閱管道（LINE 已上線，維持即可；其他管道仍需站長裁示）
 
-目前站上有 RSS。要不要做電子報／LINE／Threads 定期推送，屬於**新產品方向**，依專案規則要先問站長再動手。
-可查的既有非搜尋入口：`node scripts/growth-audit.mjs --gate2` 之外，用 `node scripts/weekly-data.mjs` 看 `trafficHealth.sources` 有哪些社群來源已經在帶人。
+站上非搜尋的固定回訪管道＝**LINE 官方帳號「APPI News 每日精選」**（@832sacsk），2026-08 已整條打通：
+
+- 推薦引擎：`/root/my-line-bot-customer`（多租戶 LINE bot 的 `appinews` 租戶，引擎在 `reader/`）；站台 build 期產出 `src/pages/reader-index.json.ts` 餵它。
+- 站內入口：每篇文章文末 `src/components/blocks/LineReaderCta.astro` ＋ `/line` 說明頁；`org.sameAs`（`src/config/site.ts`）已掛 LINE 帳號。
+- 健康查法：`pm2 status | grep -E "my-line-bot-customer|appinews-reader"`（主 bot 要 online；reader-sync／embed／retention 是批次工作，平時 stopped 屬正常）；最近同步 `pm2 logs appinews-reader-sync --lines 5 --nostream`。
+- 帶回多少人：`node scripts/weekly-data.mjs` 看 `trafficHealth.sources`。
+
+RSS 照舊（`/rss.xml`）。**電子報等其他管道仍屬新產品方向，做之前先問站長**；社群自動推播站長已裁示不做，不再提案。
 
 ### C3. 品牌記憶點
 

@@ -3,9 +3,9 @@ title: "隔夜菜會致癌嗎？冷藏多久、亞硝酸鹽與復熱方法"
 slug: "leftover-food-myths-2026"
 description: "隔夜菜會致癌嗎？整理香港食物安全中心亞硝酸鹽實測、食藥署闢謠與台灣熟食保存原則，說明冷藏多久、危險溫度帶、復熱中心溫度，以及哪些情況應該直接丟掉。"
 publishDate: "2026-07-30T12:14:01.619Z"
-updatedDate: 2026-08-17
+updatedDate: 2026-08-22
 category: health
-topics: ["food-safety-storage"]
+topics: ["food-safety-storage", "mid-autumn-teachers-day-2026"]
 subcategory: medical
 tags: ["食品安全", "營養", "公共衛生"]
 author: "appi-editorial"
@@ -15,7 +15,7 @@ factCheckedBy:
   - "appi-editorial"
 coverImage: "covers/leftover-food-myths-2026-cover.webp"
 coverAlt: "廚房裡整理保存容器裝盛的熟食，象徵隔夜菜正確冷藏保存（示意圖）"
-coverImageCredit: "Photo by Darrien Staton on Unsplash"
+coverImageCredit: "Photo by Pew Nguyen on Pexels"
 status: published
 sourceType: wire
 contentType: news
@@ -59,7 +59,7 @@ references:
 draft: false
 ---
 
-冰箱裡放了一夜的滷味、炒青菜，隔天到底能不能吃？「隔夜菜致癌」「隔夜菜沒營養」「隔夜菜等於壞掉」是台灣餐桌上流傳最廣的三個說法，也是每次有人提便當就會被提醒一次的老話題。這篇逐條比對香港食物安全中心的實測數據、衛福部食藥署的闢謠說明，以及臺北市政府衛生局的食品安全原則，把這三個迷思拆開來看，順便整理一份真正該注意的保存清單。
+隔夜菜會致癌嗎？答案是不會，只要妥善冷藏、沒有放到壞掉，這個說法查無實據，真正該注意的是儲存溫度與時間，不是有沒有過夜。冰箱裡放了一夜的滷味、炒青菜，隔天到底能不能吃？「隔夜菜致癌」「隔夜菜沒營養」「隔夜菜等於壞掉」是台灣餐桌上流傳最廣的三個說法，也是每次有人提便當就會被提醒一次的老話題。這篇逐條比對香港食物安全中心的實測數據、衛福部食藥署的闢謠說明，以及臺北市政府衛生局的食品安全原則，把這三個迷思拆開來看，順便整理一份真正該注意的保存清單。
 
 ## 逐條查證：3個最常聽到的隔夜菜迷思
 

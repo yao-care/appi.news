@@ -32,6 +32,7 @@ references:
   - title: "鴻海衝伺服器 增資墨國"
     url: "https://money.udn.com/money/story/5612/9398464"
     publisher: "經濟日報"
+updatedDate: 2026-08-22
 author: "appi-editorial"
 reviewedBy:
   - "lightman"
@@ -48,7 +49,7 @@ topics: ["taiwan-semiconductor-supply-chain"]
 
 AI伺服器的競爭是雙層次的：晶片算力的競爭，以及決定晶片在哪裡組裝、從哪裡出貨的地緣布局競爭。
 
-鴻海近期公告，透過旗下新加坡子公司Cloud Network Technology Singapore Pte. Ltd.，增資墨西哥子公司FII AMC MEXICO S. DE R.L. DE C.V.，交易金額1.68億美元，折合[新台幣約51.2億元](https://tw.stock.yahoo.com/news/%E9%B4%BB%E6%B5%B7%E7%A0%B851%E5%84%84%E5%8A%A0%E7%A2%BC%E5%A2%A8%E8%A5%BF%E5%93%A5-ai%E4%BC%BA%E6%9C%8D%E5%99%A8%E4%BE%9B%E6%87%89%E9%8F%88%E5%86%8D%E5%8D%87%E7%B4%9A-%E8%81%AF%E6%89%8B%E8%BC%9D%E9%81%94%E5%8D%A1%E4%BD%8D%E5%8C%97%E7%BE%8E%E5%A4%A7%E5%96%AE-143500868.html)。鴻海說明，此次增資目的為長期投資，資金來源為自有資金。市場的解讀比公告本身更直接：這是鴻海搶佔北美AI伺服器供應鏈關鍵位置的積極動作。
+鴻海近期公告，透過旗下新加坡子公司Cloud Network Technology Singapore Pte. Ltd.，增資位於墨西哥哈利斯科州（Jalisco）的子公司FII AMC MEXICO S. DE R.L. DE C.V.，交易金額1.68億美元，折合[新台幣約51.2億元](https://tw.stock.yahoo.com/news/%E9%B4%BB%E6%B5%B7%E7%A0%B851%E5%84%84%E5%8A%A0%E7%A2%BC%E5%A2%A8%E8%A5%BF%E5%93%A5-ai%E4%BC%BA%E6%9C%8D%E5%99%A8%E4%BE%9B%E6%87%89%E9%8F%88%E5%86%8D%E5%8D%87%E7%B4%9A-%E8%81%AF%E6%89%8B%E8%BC%9D%E9%81%94%E5%8D%A1%E4%BD%8D%E5%8C%97%E7%BE%8E%E5%A4%A7%E5%96%AE-143500868.html)。鴻海說明，此次增資目的為長期投資，資金來源為自有資金。市場的解讀比公告本身更直接：這是鴻海搶佔北美AI伺服器供應鏈關鍵位置的積極動作。
 
 延伸閱讀：[台灣AI伺服器EMS廠年增率超過一倍重塑全球代工產業版圖](/articles/taiwan-ai-server-ems-doubling/)
 

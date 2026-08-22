@@ -5,16 +5,15 @@ import TopicCard from '@/components/blocks/TopicCard.astro';
 import { CATEGORIES } from '@/config/categories';
 import {
   getPublishedArticles,
-  getAuthorMap,
+  getAuthorNames,
   getTopics,
   byCategory,
-  byTopic,
-  articleSlug,
+  articlesForTopic,
+  articleListItems,
+  PAGE_SIZE,
 } from '@/utils/content';
 import { url } from '@/utils/url';
 import { breadcrumbLd, itemListLd } from '@/utils/jsonld';
-
-const PAGE_SIZE = 18;
 
 export async function getStaticPaths() {
   // 'columns' 由 /columns/ 專屬頁處理，這裡排除避免路由衝突
@@ -26,43 +25,27 @@ export async function getStaticPaths() {
 
 const { category } = Astro.props;
 const all = await getPublishedArticles();
-const authorMap = await getAuthorMap();
-const authorNames = new Map(
-  [...authorMap.entries()].map(([id, a]) => [id, a.data.name]),
-);
+const authorNames = await getAuthorNames();
 
 const inCat = byCategory(all, category.slug);
 const totalPages = Math.max(1, Math.ceil(inCat.length / PAGE_SIZE));
 const pageArticles = inCat.slice(0, PAGE_SIZE);
 
 // 分類頁補「相關專題」內鏈入口：只列同分類、已上線的專題，沒有就不顯示（不留空區塊）
-// 手動指定的 articles 與 article.topics 反向關聯常重疊，需去重後才是實際顯示篇數
+// 精選（featured）專題排最前面，讓已有實績的主題優先被看到、集中內鏈權重，而不是被同分類底下大量主題平均分散
 const relatedTopics = (await getTopics())
   .filter((t) => t.data.category === category.slug)
-  .map((t) => {
-    const manual = all.filter(
-      (a) => t.data.articles.includes(articleSlug(a)) || t.data.articles.includes(a.id),
-    );
-    const seen = new Set<string>();
-    const count = [...manual, ...byTopic(all, t.id)].filter((a) => {
-      const key = articleSlug(a);
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    }).length;
-    return { topic: t, count };
-  });
+  .map((t) => ({ topic: t, count: articlesForTopic(all, t).length }))
+  .sort((a, b) => Number(b.topic.data.featured) - Number(a.topic.data.featured) || b.count - a.count);
 
 const ld = [
   breadcrumbLd(Astro.site, [
     { name: '首頁', path: '/' },
     { name: category.name, path: `/${category.slug}/` },
   ]),
-  itemListLd(
-    Astro.site,
-    pageArticles.map((a) => ({ name: a.data.title, path: `/articles/${articleSlug(a)}/` })),
-    { name: `${category.name}最新文章` },
-  ),
+  itemListLd(Astro.site, articleListItems(pageArticles), {
+    name: `${category.name}最新文章`,
+  }),
   ...(relatedTopics.length > 0
     ? [
         itemListLd(

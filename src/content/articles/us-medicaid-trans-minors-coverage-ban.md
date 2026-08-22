@@ -1,9 +1,10 @@
 ---
-title: "美國Medicaid為何砍跨性別未成年人性別肯認治療給付？10月上路、6個月轉銜期一次看"
+title: "美國Medicaid為何砍跨性別未成年性別肯認治療？10月上路"
 slug: "us-medicaid-trans-minors-coverage-ban"
 description: "川普政府8月11日宣布，聯邦醫療補助（Medicaid）與兒童健保（CHIP）10月13日起停止給付未成年人青春期阻斷劑、荷爾蒙治療與手術，正在治療者有6個月轉銜期。整理政策範圍、官方與反對方說法、受影響規模與後續法律爭議。"
 excerpt: "川普政府宣布Medicaid與CHIP自10月13日起停止給付未成年人性別肯認治療，正在接受荷爾蒙治療者有6個月轉銜期；多州檢察長已提告，醫界團體也公開反對。"
 publishDate: "2026-08-12T15:36:28.593Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "americas"
 tags:

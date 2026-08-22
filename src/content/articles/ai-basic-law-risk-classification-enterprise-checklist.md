@@ -4,6 +4,7 @@ slug: "ai-basic-law-risk-classification-enterprise-checklist"
 description: "《人工智慧基本法》把高風險應用交給數位部訂分類框架、各部會再依框架立規。但企業真正要做的不是等規則，而是先盤點自家 AI 用途落在哪一級，並把 ISO/IEC 42001 當成可對接的管理骨架。"
 excerpt: "《人工智慧基本法》把高風險應用交給數位部訂分類框架、各部會再依框架立規。但企業真正要做的不是等規則，而是先盤點自家 AI 用途落在哪一級，並把 ISO/IEC 42001 當成可對接的管理骨架。"
 publishDate: "2026-06-19T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "tech-policy"
 tags:
@@ -66,7 +67,7 @@ references:
 
 <h2>框架由誰訂、規則何時真的會到</h2>
 
-<p>把時間表攤開看會清楚很多。<a href="https://technews.tw/2025/12/23/artificial-intelligence-basic-law/" target="_blank" rel="noopener">基本法在民國 114 年 12 月 23 日三讀通過，主管機關是國科會，數位部負責推動與國際介接的風險分類框架</a>。這套框架<a href="https://money.udn.com/money/story/7307/9517192" target="_blank" rel="noopener">已提報行政院待核定，會參考歐盟等國際認定標準，並提供評估工具協助各部會做領域風險評估</a>。針對被歸到高風險的應用，<a href="https://money.udn.com/money/story/7307/9517192" target="_blank" rel="noopener">政府不只要求標示警語，還要釐清責任歸屬、建立救濟補償機制</a>。</p>
+<p>把時間表攤開看會清楚很多。<a href="https://technews.tw/2025/12/23/artificial-intelligence-basic-law/" target="_blank" rel="noopener">基本法在民國 114 年 12 月 23 日三讀通過，主管機關是國科會，數位部負責推動與國際介接的風險分類框架</a>。這套框架<a href="https://money.udn.com/money/story/7307/9517192" target="_blank" rel="noopener">已提報行政院待核定，會參考歐盟等國際認定標準，並提供評估工具協助各部會做領域風險評估</a>。針對被歸到高風險的應用，<a href="https://money.udn.com/money/story/7307/9517192" target="_blank" rel="noopener">政府不只要求標示警語，還要釐清責任歸屬、建立救濟補償機制</a>。分階段訂出高風險義務的上路時程，不是台灣獨有的做法，<a href="/articles/eu-ai-act-gpai-enforcement-taiwan-alignment/">歐盟 AI 法對通用型 AI（GPAI）的執行時程同樣是分批到位</a>，對有意跟國際規範對齊的台廠來說是可以拿來對照的案例。</p>
 
 <p>關鍵的數字在後面：<a href="https://money.udn.com/money/story/7307/9517192" target="_blank" rel="noopener">各目的事業主管機關將在 2 年內視需求訂定風險管理規範，並協助產業自訂指引</a>。換句話說，真正管到你那一行的規則，最長要等兩年才會齊。對企業來說，這兩年不是空窗，是準備期。</p>
 

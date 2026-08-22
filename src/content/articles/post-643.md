@@ -1,7 +1,7 @@
 ---
-title: "ASCO 2026：胰臟癌新藥 daraxonrasib 中位存活期從 6.7 個月倍增至 13.2 個月"
+title: "ASCO 2026：胰臟癌新藥daraxonrasib存活期倍增"
 slug: "asco-pancreatic-daraxonrasib-survival"
-description: "2026年ASCO年會上，Revolution Medicines的daraxonrasib三期RASolute 302試驗數據正式發表，針對曾接受治療的轉移性胰臟癌患者，中位整體存活期從化療的6.7個月提升至13.2個月，風險比0.40。這個結果是RAS抑制劑領域的突破，也為台灣精準醫療藥物研發提供可借鑑的策略藍圖。"
+description: "胰臟癌新藥daraxonrasib三期RASolute 302試驗數據在2026年ASCO年會正式發表，曾接受治療的轉移性胰臟癌患者中位整體存活期從化療的6.7個月提升至13.2個月，風險比0.40。這是RAS抑制劑領域的突破，也為台灣精準醫療藥物研發提供可借鑑的策略藍圖。"
 excerpt: "2026年ASCO年會上，Revolution Medicines的daraxonrasib三期RASolute 302試驗數據正式發表，針對曾接受治療的轉移性胰臟癌患者，中位整體存活期從化療的6.7個月提升至13.2個月，風險比0.40。這個結果是RAS抑制劑領域的突破，也為台灣精準醫療藥物研發提供可借鑑的策略藍圖。"
 publishDate: "2026-06-15T00:23:33+08:00"
 category: "international"
@@ -42,9 +42,10 @@ disclaimerType: "general"
 coverImage: "covers/post-643-stock.jpg"
 coverAlt: "身穿防護裝備的女性科學家在實驗室使用顯微鏡檢視樣本"
 coverImageCredit: "Photo by Pavel Danilyuk on Pexels"
+updatedDate: "2026-08-22"
 ---
 
-胰臟癌長期以來是癌症治療領域最難突破的堡壘。確診後五年存活率長期徘徊在12%以下，轉移性患者的中位整體存活期在過去二十年幾乎沒有本質改善。2026年ASCO年會的Plenary Session在這個背景下出現了一個罕見的場景：當Brian Wolpin醫師展示RASolute 302試驗的Kaplan-Meier曲線時，全場爆發42秒的起立鼓掌。
+胰臟癌新藥daraxonrasib讓曾接受治療的轉移性患者中位整體存活期從6.7個月倍增至13.2個月，是這個長期難有突破的癌別在治療史上首見的格局改變。胰臟癌長期以來是癌症治療領域最難突破的堡壘，確診後五年存活率長期徘徊在12%以下，轉移性患者的中位整體存活期在過去二十年幾乎沒有本質改善；[日本近年靠篩檢與治療創新讓胰臟癌五年存活率逐步回升](/articles/japan-cancer-care-pancreatic-screening/)，也顯示這個癌別並非全無進展空間。2026年ASCO年會的Plenary Session在這個背景下出現了一個罕見的場景：當Brian Wolpin醫師展示RASolute 302試驗的Kaplan-Meier曲線時，全場爆發42秒的起立鼓掌。
 
 [ASCO Post的完整報導](https://ascopost.com/issues/june-10-2026/daraxonrasib-nearly-doubles-survival-in-previously-treated-metastatic-pancreatic-cancer)記錄了這個時刻，也詳細呈現了數字背後的臨床意義。daraxonrasib組的中位整體存活期達13.2個月，對比化療組的6.7個月，風險比0.40，P值達到4.6×10⁻¹¹這個量級的統計顯著性。這個數字在轉移性胰臟癌的治療史上，是第一次看到真正的治療格局改變，而且改變的幅度遠超過任何人的預期。
 

@@ -4,6 +4,7 @@ slug: "fhir-ai-medical-data-taiwan"
 description: "FHIR 是把病歷拆成機器讀得懂的「資源」的醫療資料標準。AI 直接讀病歷文字猜代碼，準確率不到五成；讀結構化的 FHIR 資料，準確率能拉到九成以上。台灣衛福部的 FHIR Box 計畫已完成三大醫學中心跨院互通示範，2026 年底要擴大到全台醫學中心。拆解 FHIR 怎麼運作、AI 為什麼非它不可、台灣現在做到哪、還有哪些沒補齊。"
 excerpt: "FHIR 把病歷拆成機器讀得懂的「資源」。AI 讀結構化 FHIR 資料的代碼準確率能拉到九成以上，遠高於直接讀病歷文字猜代碼。台灣的 FHIR Box 計畫正把這套語言鋪進全台醫學中心。"
 publishDate: "2026-07-30T17:06:47.256Z"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "ai"
 tags:
@@ -79,6 +80,8 @@ topics: ["ai-medical-regulation"]
 ---
 
 <p>FHIR 是醫療資料的共同語言，全名 Fast Healthcare Interoperability Resources，由國際醫療資料交換標準組織 HL7 制定，把病歷拆成一個一個叫做 Resource 的模組，讓不同醫院、不同系統能用同一套規則組合、查詢、交換資料。AI 要在醫療現場派上用場，得先讀得懂這套語言：把病歷文字直接丟給模型去猜代碼，準確率不到五成；改讀結構化的 FHIR 資源，準確率能拉到九成以上。台灣衛福部正把這套語言鋪進全國醫學中心，目標 2026 年底前讓病歷真的能跨院互通。</p>
+
+<p>互通打通之後，接下來要顧的是誰能碰這些資料。<a href="/articles/irhythm-phi-breach-third-party-perimeter/" target="_blank" rel="noopener">本站先前報導過，心臟監測商 iRhythm 就是栽在第三方應用的存取權限上</a>，顯示資料標準統一之後，權限與稽核沒補齊一樣會出事，這也是本文最後要談的重點。</p>
 
 <h2>FHIR 到底在解決什麼問題</h2>
 

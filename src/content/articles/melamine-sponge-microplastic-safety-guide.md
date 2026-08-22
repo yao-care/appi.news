@@ -3,6 +3,7 @@ title: "科技海綿能洗碗嗎？微塑膠釋放量與美耐皿使用禁忌整
 slug: "melamine-sponge-microplastic-safety-guide"
 description: "南京大學團隊實測發現，科技海綿磨損時每公克釋放約650萬根微塑膠纖維，全球估計每月釋出逾1.55兆根；醫師也提醒美耐皿遇熱、酸、油恐溶出三聚氰胺與甲醛，整理研究數據與正確用法。"
 publishDate: "2026-08-07T19:05:19.973Z"
+updatedDate: 2026-08-22T12:00:00+08:00
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -21,7 +22,7 @@ risksAndLimits:
   - "美耐皿餐具的三聚氰胺溶出風險與溫度、酸鹼度相關，實際安全邊界因產品品質與使用情境而異，本文整理的溫度門檻為業界與醫師普遍提醒值，非單一法規標準。"
 ---
 
-科技海綿（美耐皿海綿）好用是好用，但研究發現它在磨損時會釋放大量微塑膠纖維，加上材質本身遇熱、遇酸、遇油可能溶出三聚氰胺與甲醛，醫師普遍不建議拿來洗碗盤、鍋具與蔬果。這支結論來自南京大學與東南大學的最新期刊研究，加上台灣多位醫師與藥師的提醒整理而成。
+科技海綿（美耐皿海綿）好用是好用，但研究發現它在磨損時會釋放大量微塑膠纖維，加上材質本身遇熱、遇酸、遇油可能溶出三聚氰胺與甲醛，醫師普遍不建議拿來洗碗盤、鍋具與蔬果。這支結論來自南京大學與東南大學的最新期刊研究，加上台灣多位醫師與藥師的提醒整理而成，跟[保健食品第三方檢驗報告怎麼看](/articles/health-supplement-inspection-report-guide/)一樣，都是消費者該學會看懂的檢驗數據。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=VjzAMcMgsBY" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：洗碗科技海綿每月釋放數兆微塑膠｜十點不一樣">
@@ -34,7 +35,7 @@ risksAndLimits:
 
 南京大學與東南大學聯合團隊買了三個知名品牌的科技海綿，反覆磨擦有紋理的金屬表面模擬日常使用磨損，測量脫落下來的微塑膠纖維數量。結果發表在期刊《Environmental Science & Technology》（2024年第58卷第24期），[TechNews 科技新報](https://technews.tw/2025/08/08/magic-cleaning-sponges-found-to-release-trillions-of-microplastic-fibers/)報導指出，海綿每磨損1公克，就會釋放約650萬根微塑膠纖維；密度較高的海綿磨損較慢，釋放量也相對較少。
 
-研究團隊接著以2023年8月亞馬遜的海綿銷售數據為基礎，假設所有售出的海綿平均磨損10%，推算全球每月光是科技海綿就可能向環境釋放超過1.55兆根微塑膠纖維，最終隨廢水進入河川、海洋乃至食物鏈。[ScienceDaily](https://www.sciencedaily.com/releases/2026/04/260417085404.htm)整理同一份研究時特別提醒，這個數字只以單一零售平台推估，實際全球排放量很可能更高。若想了解一般消費性產品的第三方檢驗報告該怎麼看門道，可參考[保健食品第三方檢驗報告怎麼看](/articles/health-supplement-inspection-report-guide/)這篇整理。
+研究團隊接著以2023年8月亞馬遜的海綿銷售數據為基礎，假設所有售出的海綿平均磨損10%，推算全球每月光是科技海綿就可能向環境釋放超過1.55兆根微塑膠纖維，最終隨廢水進入河川、海洋乃至食物鏈。[ScienceDaily](https://www.sciencedaily.com/releases/2026/04/260417085404.htm)整理同一份研究時特別提醒，這個數字只以單一零售平台推估，實際全球排放量很可能更高。
 
 ## 科技海綿是什麼做的，為什麼好用又有疑慮
 

@@ -1,9 +1,10 @@
 ---
-title: "「AI 健康答案贏過醫師」怎麼讀：OpenAI 自評勝出，但每週 2.3 億人已在問才是重點"
+title: "ChatGPT健康答案贏過醫師？OpenAI自評的方法論陷阱"
 slug: "chatgpt-health-beats-doctors-evaluation-gap"
 description: "OpenAI 6 月用自家評測說 GPT-5.5 Instant 的健康回答在五項評比全面勝過醫師親手寫的、健康陳述錯誤率降 71%。但真正該注意的不是這個自評分數，而是每週逾 2.3 億人已經拿 ChatGPT 問健康，落地把關（誰驗、何時轉診）比跑分更關鍵。本文拆解自評的方法論陷阱、對照 Evaluation Gap，給一般人與診所一份 AI 健康答案的判讀框架。"
 excerpt: "OpenAI 說新模型的健康答案贏過醫師，但分數全在它自家內部跑、未公開外審。真正的重點不是它贏了幾項，是每週 2.3 億人已在用 ChatGPT 問健康。AI 取代的不是醫師，而是 Google 搜尋。"
 publishDate: "2026-07-03T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "ai"
 tags:
@@ -54,7 +55,7 @@ column: "ai-healthcare"
 topics: ["medical-ai-frontline"]
 ---
 
-<p>OpenAI 在 6 月放出一個很搶眼的說法：新模型寫的健康答案，比醫師親手寫的還好。<a href="https://the-decoder.com/chatgpts-new-health-upgrade-beats-doctor-written-answers-openai-says/" target="_blank" rel="noopener">它說 GPT-5.5 Instant 在五項評比裡，全面勝過 GPT-4o 與醫師親手寫的答案</a>。這句話很容易讓人立刻選邊站，一邊喊 AI 要取代醫師了，一邊罵這是行銷話術。但我想先把焦點從分數上移開。真正該記住的數字不是它贏了幾項，是<a href="https://techcrunch.com/2026/01/07/openai-unveils-chatgpt-health-says-230-million-users-ask-about-health-each-week/" target="_blank" rel="noopener">每週已經有超過 2.3 億人拿 ChatGPT 問健康與保健問題</a>。這 2.3 億人問完之後，誰來把關、什麼時候該回到醫師，才是會真正影響到人的地方。跑分高不高，是其次。</p>
+<p>OpenAI 在 6 月放出一個很搶眼的說法：新模型寫的健康答案，比醫師親手寫的還好。<a href="https://the-decoder.com/chatgpts-new-health-upgrade-beats-doctor-written-answers-openai-says/" target="_blank" rel="noopener">它說 GPT-5.5 Instant 在五項評比裡，全面勝過 GPT-4o 與醫師親手寫的答案</a>。這句話很容易讓人立刻選邊站，一邊喊 AI 要取代醫師了，一邊罵這是行銷話術。我先前寫過，<a href="/articles/llm-healthcare-promise-limits/" target="_blank" rel="noopener">AI 在健康場景的可信度，靠的是落地設計而非模型多強</a>，這份自評正好是個檢驗案例。但我想先把焦點從分數上移開。真正該記住的數字不是它贏了幾項，是<a href="https://techcrunch.com/2026/01/07/openai-unveils-chatgpt-health-says-230-million-users-ask-about-health-each-week/" target="_blank" rel="noopener">每週已經有超過 2.3 億人拿 ChatGPT 問健康與保健問題</a>。這 2.3 億人問完之後，誰來把關、什麼時候該回到醫師，才是會真正影響到人的地方。跑分高不高，是其次。</p>
 
 <h2>先看 OpenAI 到底測了什麼</h2>
 

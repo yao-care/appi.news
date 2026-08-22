@@ -1,9 +1,10 @@
 ---
-title: "你的健檢報告丟給 ChatGPT 解讀合理嗎：台灣健保SDK vs OpenAI自建的兩種資料開放模式"
+title: "你的健檢報告丟給ChatGPT解讀合理嗎？健保SDK vs OpenAI"
 slug: "chatgpt-health-nhi-sdk-accountability"
 description: "OpenAI 的 ChatGPT Health 走「自建電子病歷連結」，台灣健保健康存摺SDK 走「政府認證第三方App生態」（31家介接單位、64款App上架），兩種模式在資料主權、責任歸屬與可稽核性上的取捨截然不同。拆解兩條資料流路徑的責任歸屬與稽核設計差異，給讀者一份用AI解讀健檢報告前該確認的三件事。"
 excerpt: "健檢報告解讀準不準，不是你該先問的問題。先問清楚：這套系統出錯了，你找得到誰負責嗎？ChatGPT Health 與健保健康存摺SDK，是兩種完全不同的資料主權設計。"
 publishDate: "2026-08-05T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "ai"
 tags:
@@ -65,7 +66,7 @@ column: "ai-healthcare"
 topics: ["ai-medical-regulation"]
 ---
 
-<p>兩種資料開放模式，責任歸屬完全不同。OpenAI 的 ChatGPT Health 讓你自己把病歷、穿戴裝置資料接進一個獨立分艙，出了問題只有一家公司要交代；台灣健保健康存摺SDK 讓政府認證過的第三方App來接你的就醫紀錄，31家單位、64款App已經上架，出了問題衛福部與健保署可以撤照、可以究責。這篇不比較哪一種 AI 解讀得比較準，比的是「出錯了，你找不找得到人負責」。</p>
+<p>兩種資料開放模式，責任歸屬完全不同。OpenAI 的 ChatGPT Health 讓你自己把病歷、穿戴裝置資料接進一個獨立分艙，出了問題只有一家公司要交代；台灣健保健康存摺SDK 讓政府認證過的第三方App來接你的就醫紀錄，31家單位、64款App已經上架，出了問題衛福部與健保署可以撤照、可以究責。這篇不比較哪一種 AI 解讀得比較準，比的是「出錯了，你找不找得到人負責」。這正是我先前拆解<a href="/articles/medical-ai-compliance-gatekeeper-engine/" target="_blank" rel="noopener">醫療AI合規守門引擎</a>時反覆強調的立場。</p>
 
 <h2>兩條完全不同的資料流路徑</h2>
 
@@ -98,7 +99,7 @@ topics: ["ai-medical-regulation"]
 
 <p>這是整篇文章最關鍵的一段：出錯了，你找不找得到人負責。健康存摺SDK 的責任鏈是分散但明確的：資料出在哪個App的問題，衛福部與健保署有權撤銷該業者的介接資格，<a href="https://www.ctee.com.tw/news/20221227700821-431401" target="_blank" rel="noopener">民眾也可以要求第三方App停止蒐集或刪除個人資料</a>。出問題的單位是可以被指認、可以被處分的。</p>
 
-<p>ChatGPT Health 的責任鏈集中在一家公司身上，但跨境監理的機制目前還沒有清楚答案。<a href="https://techcrunch.com/2026/01/07/openai-unveils-chatgpt-health-says-230-million-users-ask-about-health-each-week/" target="_blank" rel="noopener">OpenAI 的服務條款明確聲明這項工具不打算用於診斷或治療任何健康狀況</a>，這句話的另一面是：如果 AI 解讀錯了、使用者因此做出錯誤的健康決定，責任邊界在哪裡，目前沒有一套像健保署撤照那樣具體的究責機制。台灣使用者一旦在 ChatGPT Health 上出了資料或解讀爭議，能訴諸的監理管道，遠不如向健保署或數位發展部申訴來得清楚。這呼應<a href="/articles/medical-ai-compliance-gatekeeper-engine/" target="_blank" rel="noopener">我先前拆解醫療AI合規守門引擎</a>時的立場：守門機制的核心不是判斷準不準，是出問題時能不能回溯、能不能問責。</p>
+<p>ChatGPT Health 的責任鏈集中在一家公司身上，但跨境監理的機制目前還沒有清楚答案。<a href="https://techcrunch.com/2026/01/07/openai-unveils-chatgpt-health-says-230-million-users-ask-about-health-each-week/" target="_blank" rel="noopener">OpenAI 的服務條款明確聲明這項工具不打算用於診斷或治療任何健康狀況</a>，這句話的另一面是：如果 AI 解讀錯了、使用者因此做出錯誤的健康決定，責任邊界在哪裡，目前沒有一套像健保署撤照那樣具體的究責機制。台灣使用者一旦在 ChatGPT Health 上出了資料或解讀爭議，能訴諸的監理管道，遠不如向健保署或數位發展部申訴來得清楚。守門機制的核心不是判斷準不準，是出問題時能不能回溯、能不能問責。</p>
 
 <img src="/images/chatgpt-health-nhi-sdk-accountability-s4.webp" width="960" height="640" loading="lazy" decoding="async" alt="桌上攤開蓋章公文與稽核紀錄表（示意圖）" title="稽核紀錄與責任歸屬文件，象徵資料出錯時究責的可追溯設計（示意圖）">
 

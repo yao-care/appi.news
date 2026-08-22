@@ -3,12 +3,13 @@ title: "瘦瘦針原理與GLP-1副作用：用藥前中後完整指南"
 slug: "appi-news-180"
 description: "瘦瘦針靠GLP-1調節食慾與血糖來減重，原理是模擬腸道天然荷爾蒙訊號。這篇整理用藥常見的噁心、腹瀉等副作用怎麼因應，以及事前抽血評估、飲食蛋白質補充的完整照護重點。"
 publishDate: 2026-06-21
-updatedDate: 2026-08-07
+updatedDate: 2026-08-22
 category: health
 subcategory: tcm-integrative
 tags: []
 author: "huang-ziyan"
-coverImage: "covers/appi-news-180.webp"
+coverImage: "covers/appi-news-180-cover.webp"
+coverImageCredit: "Photo by Tara Winstead on Pexels"
 coverAlt: "GLP-1 受體促效劑三大作用機制：促進胰島素分泌、抑制食慾、延遲胃排空"
 status: published
 sourceType: author

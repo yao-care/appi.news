@@ -94,3 +94,16 @@ on:
 - **查限制要看實際數字對上限的比例**，不要憑印象說「太大了」。392 MB 對 1 GB＝33%。
 - **調節奏時同時看「尖峰」與「總量」**。壓尖峰的手段（提高排程頻率）很容易把總量推高，
   兩個指標要一起算過再改。
+
+## 2026-08-20 追記：變動偵測的第二條件曾經只認 `status: scheduled`
+
+`deploy-needed.mjs` 的「有排程稿到期」判斷原本寫成 `status === 'scheduled'`，但站台的
+`isPublic`（`src/utils/content.ts`）語意是「**任何 status** 只要 `publishDate` 在未來就隱藏」。
+於是 frontmatter 寫 `status: published`＋未來日期的稿，站台把它當排程稿隱藏、CI 卻不會為它
+觸發重建——**到期不上線，直到下一次剛好有別的 commit**。靜默失效，沒有任何告警。
+
+修法不是把 regex 對齊，而是消滅鏡像：可見性判斷抽成 `src/utils/visibility.mjs` 單一正本
+（.mjs 讓站台 TS 與 node 腳本都能 import），`deploy-needed` 的判準改成「這篇在（上次部署,
+現在] 之間**從隱藏轉為公開**」（`!isPublic(e, last) && isPublic(e, now)`）。教訓＝**兩份程式
+要「表達同一個判斷」時，手抄對齊撐不過三個月；要嘛 import 同一份，要嘛寫跨檔比對測試**
+（後者的範本＝`scripts/lib/faq-detect.mjs` 檔頭）。

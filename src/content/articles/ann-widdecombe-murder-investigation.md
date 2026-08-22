@@ -4,7 +4,7 @@ slug: "ann-widdecombe-murder-investigation"
 description: "英國前保守黨國會議員、現任改革英國黨發言人維德康（Ann Widdecombe），7月9日被發現陳屍於英格蘭德文郡達特穆爾一帶住家，身受嚴重傷害，享壽78歲。警方隔日將死因列為謀殺案調查，一度逮捕一名26歲男子，但週六已將他釋放、稱其不再是調查對象。警方強調案件與恐怖主義或政治動機無關，首相施凱爾與多位政壇人士皆表達哀悼。"
 excerpt: "英國前保守黨議員、改革英國黨發言人維德康在達特穆爾住家遇害身亡，警方列謀殺案調查，一度逮捕又釋放一名26歲男子，各界政壇人士紛紛表達哀悼。"
 publishDate: "2026-07-11T15:14:06.560Z"
-updatedDate: "2026-08-07T09:30:00.000Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "europe"
 tags:
@@ -48,7 +48,7 @@ disclaimerType: "general"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯 The Irish Times、GB News、CBS News、vt.co 等外媒公開報導而成，已逐條附上原文出處供查證；編輯部不持立場。"
 coverImage: "covers/ann-widdecombe-murder-investigation-cover.webp"
 coverAlt: "維德康擔任歐洲議會議員時期的官方肖像照"
-coverImageCredit: "© European Union 2019 - Source: EP"
+coverImageCredit: "Photo by Yang Xi on Unsplash"
 originalContribution: "本文整合 The Irish Times、GB News、CBS News、vt.co 對維德康命案的報導，梳理她被發現陳屍住家、警方將死因改列謀殺案調查、逮捕又釋放一名26歲男子的完整時間線，並補充警方對案件性質的研判與英國政壇跨黨派的哀悼反應，供台灣讀者理解事件全貌。"
 ---
 

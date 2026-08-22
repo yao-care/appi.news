@@ -65,6 +65,20 @@
       "href": "https://jp.appi.news/articles/acute-low-back-48h/"
     }
   ],
+  "adult-vaccines-overview": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/adult-vaccines-overview/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/adult-vaccines-overview/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/adult-vaccines-overview/"
+    }
+  ],
   "ai-accelerator-workload-selection-checklist": [
     {
       "hreflang": "en",
@@ -77,6 +91,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/ai-accelerator-workload-selection-checklist/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/ai-accelerator-workload-selection-checklist/"
     }
   ],
   "ai-asic-vs-gpu-explained": [
@@ -119,6 +137,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/ai-datacenter-power-density-planning-guide/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/ai-datacenter-power-density-planning-guide/"
     }
   ],
   "ai-diabetic-retinopathy-screening-taiwan": [
@@ -133,6 +155,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/ai-diabetic-retinopathy-screening-japan/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/ai-diabetic-retinopathy-screening-taiwan/"
     }
   ],
   "ai-drug-discovery-fda-approval-gap": [
@@ -149,6 +175,20 @@
       "href": "https://jp.appi.news/articles/ai-drug-discovery-fda-approval-gap/"
     }
   ],
+  "ai-drug-partnership-mou-checklist": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/ai-drug-partnership-mou-checklist/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/ai-drug-partnership-mou-checklist/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/ai-drug-partnership-mou-checklist/"
+    }
+  ],
   "ai-hallucination-what-is-it": [
     {
       "hreflang": "en",
@@ -163,6 +203,24 @@
       "href": "https://jp.appi.news/articles/ai-hallucination-what-is-it/"
     }
   ],
+  "ai-mammography-screening-taiwan": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/ai-mammography-screening-taiwan/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/ai-mammography-screening-indonesia/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/ai-mammography-screening-japan/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/ai-mammography-screening-taiwan/"
+    }
+  ],
   "ai-medical-scribe-liability-taiwan": [
     {
       "hreflang": "en",
@@ -175,6 +233,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/ai-medical-scribe-liability-japan/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/ai-medical-scribe-liability-taiwan/"
     }
   ],
   "ai-mental-health-chatbot-regulation-gap": [
@@ -203,6 +265,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/airline-shutdown-refund-evidence-guide/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/airline-shutdown-refund-evidence-guide/"
     }
   ],
   "airline-suspension-passenger-options": [
@@ -259,6 +325,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/anti-aging-supplement-buzzwords/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/anti-aging-supplement-buzzwords/"
     }
   ],
   "appi-news-183": [
@@ -293,6 +363,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/appi-news-211/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/appi-news-211/"
     }
   ],
   "appi-news-376": [
@@ -473,6 +547,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/apple-alibaba-china-ai-approval/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/apple-alibaba-china-ai-approval/"
     }
   ],
   "apple-cxmt-memory-supply-chain": [
@@ -487,6 +565,22 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/apple-cxmt-memory-supply-chain/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/apple-cxmt-memory-supply-chain/"
+    }
+  ],
+  "asia-pacific-cities-2050-resilient-governance": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/asia-pacific-cities-2050-resilient-governance/"
+    }
+  ],
+  "asia-pacific-next-gen-cancer-therapy": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/asia-pacific-next-gen-cancer-therapy/"
     }
   ],
   "ast-alt-ratio-patterns-guide": [
@@ -501,6 +595,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/ast-alt-ratio-patterns-guide/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/ast-alt-ratio-patterns-guide/"
     }
   ],
   "australia-ai-royal-commission": [
@@ -515,6 +613,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/australia-ai-royal-commission/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/australia-ai-royal-commission/"
     }
   ],
   "australia-antisemitism-envoy-education": [
@@ -531,6 +633,24 @@
       "href": "https://jp.appi.news/articles/australia-antisemitism-envoy-education/"
     }
   ],
+  "australia-antisemitism-social-media-trust": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/australia-antisemitism-social-media-trust/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/australia-antisemitism-social-media-trust/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/australia-antisemitism-social-media-trust/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/australia-antisemitism-social-media-trust/"
+    }
+  ],
   "australia-extremism-royal-commission-drivers": [
     {
       "hreflang": "en",
@@ -543,6 +663,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/australia-antisemitism-royal-commission-extremism/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/australia-extremism-royal-commission-drivers/"
     }
   ],
   "australia-fiji-pacific-alliance": [
@@ -571,6 +695,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/australia-gambling-ad-reform-senate-showdown/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/australia-gambling-ad-reform-senate-showdown/"
     }
   ],
   "australia-whistleblower-protection-law": [
@@ -585,6 +713,28 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/australia-whistleblower-protection-law/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/australia-whistleblower-protection-law/"
+    }
+  ],
+  "back-to-school-child-cold-care-guide": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/back-to-school-child-cold-care-guide/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/back-to-school-child-cold-care-guide/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/back-to-school-child-cold-care-guide/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/back-to-school-child-cold-care-guide/"
     }
   ],
   "back-to-school-syndrome-child-vision-checklist": [
@@ -627,6 +777,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/barbie-ken-realistic-body-proportions-study/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/barbie-ken-realistic-body-proportions-study/"
     }
   ],
   "bc-wildfire-evacuation-order-alert": [
@@ -641,6 +795,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/bc-wildfire-evacuation-order-alert/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/bc-wildfire-evacuation-order-alert/"
     }
   ],
   "belgorod-russia-ukraine-drone-strikes": [
@@ -655,6 +813,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/belgorod-russia-ukraine-drone-strikes/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/belgorod-russia-ukraine-drone-strikes/"
     }
   ],
   "bioshocking-ai-browser-credential-leak": [
@@ -741,6 +903,12 @@
       "href": "https://jp.appi.news/articles/burn-first-aid-steps/"
     }
   ],
+  "cancer-screening-expanded-stomach": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/cancer-screening-expanded-stomach/"
+    }
+  ],
   "cbt-i-insomnia-first-line": [
     {
       "hreflang": "en",
@@ -801,6 +969,20 @@
       "href": "https://jp.appi.news/articles/chatgpt-health-nhi-sdk-accountability/"
     }
   ],
+  "chatgpt-suicide-risk-mental-health": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/chatgpt-suicide-risk-mental-health/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/chatgpt-suicide-risk-mental-health/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/chatgpt-suicide-risk-mental-health/"
+    }
+  ],
   "child-development-screening-follow-up": [
     {
       "hreflang": "en",
@@ -813,6 +995,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/child-development-screening-follow-up/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/child-development-screening-follow-up/"
     }
   ],
   "china-communist-party-aging-membership": [
@@ -883,6 +1069,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/cjng-jalisco-cartel-reward-25-million/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/cjng-jalisco-cartel-reward-25-million/"
     }
   ],
   "coldcard-silent-degradation-rng-root-cause": [
@@ -939,6 +1129,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/colombia-earthquake-magnitude-depth-explained/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/colombia-earthquake-magnitude-depth-explained/"
     }
   ],
   "colorectal-cancer-screening-fit": [
@@ -953,6 +1147,16 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/colorectal-cancer-screening-fit/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/colorectal-cancer-screening-fit/"
+    }
+  ],
+  "ct-inspection-ai-server-yield": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/ct-inspection-ai-server-yield/"
     }
   ],
   "cuba-havana-blackout-electricity-crisis": [
@@ -967,6 +1171,16 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/cuba-havana-blackout-electricity-crisis/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/cuba-havana-blackout-electricity-crisis/"
+    }
+  ],
+  "cybersecurity-ma-cools-ai-revalues": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/cybersecurity-ma-cools-ai-revalues/"
     }
   ],
   "daca-status-termination-unauthorized-travel": [
@@ -1023,6 +1237,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/deepfake-voice-face-scam-japan/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/deepfake-voice-face-scam-taiwan/"
     }
   ],
   "dental-implant-cost-materials": [
@@ -1051,6 +1269,16 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/detox-alkaline-keto-health-claims-japan/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/detox-alkaline-keto-pseudoscience/"
+    }
+  ],
+  "digital-health-tools-elderly-care": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/digital-health-tools-elderly-care/"
     }
   ],
   "digital-therapeutics-taiwan-status": [
@@ -1065,6 +1293,16 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/digital-therapeutics-taiwan-status/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/digital-therapeutics-taiwan-status/"
+    }
+  ],
+  "disasters-h1-losses-supply-resilience": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/disasters-h1-losses-supply-resilience/"
     }
   ],
   "doms-after-exercise": [
@@ -1153,6 +1391,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/el-nino-wfp-food-crisis-warning/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/el-nino-food-crisis-warning/"
     }
   ],
   "elderly-head-injury-observation-checklist": [
@@ -1167,6 +1409,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/elderly-head-injury-observation-checklist/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/elderly-head-injury-observation-checklist/"
     }
   ],
   "elderly-phone-buying-guide-2026": [
@@ -1181,6 +1427,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/elderly-phone-buying-guide-2026/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/elderly-phone-buying-guide-2026/"
     }
   ],
   "enterovirus-severe-warning-signs-2026": [
@@ -1239,6 +1489,16 @@
       "href": "https://jp.appi.news/articles/fatty-liver-masld-reversal/"
     }
   ],
+  "fauci-adviser-morens-covid-records-guilty-plea": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/fauci-adviser-morens-covid-records-guilty-plea/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/fauci-adviser-morens-covid-records-guilty-plea/"
+    }
+  ],
   "fauci-contempt-congress-pardon-fifth-amendment": [
     {
       "hreflang": "en",
@@ -1251,6 +1511,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/fauci-contempt-congress-pardon-fifth-amendment/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/fauci-contempt-congress-pardon-fifth-amendment/"
     }
   ],
   "fcc-china-transceiver-ban-datacenter": [
@@ -1265,6 +1529,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/fcc-china-transceiver-ban-datacenter/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/fcc-china-transceiver-ban-datacenter/"
     }
   ],
   "fda-ai-medical-device-taiwan-eu": [
@@ -1293,6 +1561,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/fda-tempo-ai-device-medicare/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/fda-tempo-ai-device-medicare/"
     }
   ],
   "federated-learning-medical-ai-taiwan": [
@@ -1307,6 +1579,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/federated-learning-medical-ai-japan/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/federated-learning-medical-ai-taiwan/"
     }
   ],
   "fhir-ai-medical-data-taiwan": [
@@ -1321,6 +1597,24 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/fhir-ai-medical-data-japan/"
+    }
+  ],
+  "fhir-box-medical-ai-certification": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/fhir-box-medical-ai-certification/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/fhir-box-medical-ai-certification/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/fhir-box-medical-ai-certification/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/fhir-box-medical-ai-certification/"
     }
   ],
   "flu-vaccine-2026-public-guide": [
@@ -1393,6 +1687,20 @@
       "href": "https://jp.appi.news/articles/food-poisoning-symptoms-when-to-see-doctor/"
     }
   ],
+  "gaza-aid-worker-accountability-reparations": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/gaza-aid-worker-accountability-reparations/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/gaza-aid-worker-accountability-reparations/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/gaza-aid-worker-accountability-reparations/"
+    }
+  ],
   "gaza-hamas-disarmament-deal-israel-concerns": [
     {
       "hreflang": "en",
@@ -1419,6 +1727,18 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/ghana-supreme-court-delegate-system/"
+    }
+  ],
+  "global-ai-medical-device-regulation-decade": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/global-ai-medical-device-regulation-decade/"
+    }
+  ],
+  "global-cancer-trials-taiwan-ind": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/global-cancer-trials-taiwan-ind/"
     }
   ],
   "gpt5-immunology-hypothesis-engine": [
@@ -1545,6 +1865,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/hiroshima-81st-non-nuclear-principles/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/hiroshima-81st-non-nuclear-principles/"
     }
   ],
   "home-blood-pressure-722": [
@@ -1601,6 +1925,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/hypertension-diabetes-cholesterol-diet-guide/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/hypertension-diabetes-cholesterol-diet-guide/"
     }
   ],
   "hyperventilation-response": [
@@ -1671,6 +1999,16 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/icope-six-capacity-screening-guide/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/icope-six-capacity-screening-guide/"
+    }
+  ],
+  "imo-shipping-net-zero-delay": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/imo-shipping-net-zero-delay/"
     }
   ],
   "implantable-medical-device-circuit-board-material-breakthrough": [
@@ -1717,6 +2055,18 @@
   ],
   "indiana-white-river-record-flood-aid": [
     {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/indiana-white-river-record-flood-aid/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/indiana-white-river-record-flood-aid/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/indiana-white-river-record-flood-aid/"
+    },
+    {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/indiana-white-river-record-flood-aid/"
     }
@@ -1733,6 +2083,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/indonesia-bromo-volcano-fire-park-closure/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/indonesia-bromo-volcano-fire-park-closure/"
     }
   ],
   "indonesia-earthquake-shallow-depth-tsunami": [
@@ -1767,6 +2121,24 @@
       "href": "https://jp.appi.news/articles/indonesia-ferry-fire-safety-standards/"
     }
   ],
+  "infant-mosquito-repellent-guide": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/infant-mosquito-repellent-guide/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/infant-mosquito-repellent-guide/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/infant-mosquito-repellent-guide/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/infant-mosquito-repellent-guide/"
+    }
+  ],
   "influencer-supplement-endorsement": [
     {
       "hreflang": "en",
@@ -1779,6 +2151,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/influencer-supplement-endorsement/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/influencer-supplement-endorsement/"
     }
   ],
   "insect-bite-itch": [
@@ -1795,7 +2171,25 @@
       "href": "https://jp.appi.news/articles/insect-bite-itch/"
     }
   ],
+  "insilico-ai-drug-phase-two-data": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/insilico-ai-drug-phase-two-data/"
+    }
+  ],
   "intel-memory-market-return": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/intel-memory-market-return/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/intel-memory-market-return/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/intel-memory-market-return/"
+    },
     {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/intel-memory-market-return/"
@@ -1827,6 +2221,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/iran-espionage-law-journalist-jailed/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/iran-espionage-law-journalist-jailed/"
     }
   ],
   "iran-jordan-base-attack-us-retaliates": [
@@ -1872,6 +2270,18 @@
     }
   ],
   "japan-chiba-record-rain-narita-airport": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/japan-chiba-record-rain-narita-airport/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/japan-chiba-record-rain-narita-airport/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/japan-chiba-record-rain-narita-airport/"
+    },
     {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/japan-chiba-record-rain-narita-airport/"
@@ -2009,6 +2419,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/lebanon-journalist-israel-war-crime/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/lebanon-journalist-israel-war-crime/"
     }
   ],
   "leftover-food-myths-2026": [
@@ -2069,6 +2483,18 @@
   ],
   "lung-cancer-ldct-screening": [
     {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/lung-cancer-ldct-screening/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/lung-cancer-ldct-screening/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/lung-cancer-ldct-screening/"
+    },
+    {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/lung-cancer-ldct-screening/"
     }
@@ -2099,6 +2525,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/madagascar-cable-car-transit-failure/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/madagascar-cable-car-transit-failure/"
     }
   ],
   "mali-separatist-hostage-release": [
@@ -2113,6 +2543,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/mali-separatist-hostage-release/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/mali-separatist-hostage-release/"
     }
   ],
   "mangione-guilty-plea-double-jeopardy": [
@@ -2163,6 +2597,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/mecca-defense-pact-nuclear-umbrella/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/mecca-defense-pact-nuclear-umbrella/"
     }
   ],
   "medical-ai-compliance-lessons": [
@@ -2209,6 +2647,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/medical-endorsement-clinical-patent-claims/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/medical-endorsement-clinical-patent-claims/"
     }
   ],
   "medical-self-media-ai-health-communication": [
@@ -2237,6 +2679,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/meta-ai-model-breach-redteam-test/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/meta-ai-model-breach-redteam-test/"
     }
   ],
   "meta-instagram-teen-safety-court-order": [
@@ -2251,6 +2697,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/meta-instagram-teen-safety-court-order/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/meta-instagram-teen-safety-court-order/"
     }
   ],
   "meta-open-source-ai-manifesto-zuckerberg": [
@@ -2265,6 +2715,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/meta-open-source-ai-manifesto-zuckerberg/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/meta-open-source-ai-manifesto-zuckerberg/"
     }
   ],
   "mexico-firefighters-bc-wildfire-aid": [
@@ -2335,6 +2789,24 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/musk-terafab-chip-fab-plan/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/musk-terafab-chip-fab-plan/"
+    }
+  ],
+  "myanmar-rohingya-repatriation-verification": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/myanmar-rohingya-repatriation-verification/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/myanmar-rohingya-repatriation-verification/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/myanmar-rohingya-repatriation-verification/"
     }
   ],
   "nasal-congestion-nondrug": [
@@ -2363,6 +2835,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/natural-additive-free-label-claims/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/natural-additive-free-label-claims/"
     }
   ],
   "nepal-avalanche-body-recovery": [
@@ -2377,6 +2853,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/nepal-avalanche-body-recovery/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/nepal-avalanche-body-recovery/"
     }
   ],
   "new-mexico-foster-teen-border-lawsuit": [
@@ -2405,6 +2885,22 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/nhi-ai-diagnostic-tool-evaluation/"
+    }
+  ],
+  "nhi-google-cloud-diabetes-ai": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/nhi-google-cloud-diabetes-ai/"
+    }
+  ],
+  "ni-donaldson-single-review-call": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/ni-donaldson-single-review-call/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/ni-donaldson-single-review-call/"
     }
   ],
   "nigeria-osun-election-violence": [
@@ -2461,6 +2957,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/north-korea-heatwave-traditional-food/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/north-korea-heatwave-traditional-food/"
     }
   ],
   "nosebleed-correct-position": [
@@ -2477,6 +2977,12 @@
       "href": "https://jp.appi.news/articles/nosebleed-correct-position/"
     }
   ],
+  "nuscale-smr-tva-6gw-deployment": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/nuscale-smr-tva-6gw-deployment/"
+    }
+  ],
   "nvidia-lancium-power-stake": [
     {
       "hreflang": "en",
@@ -2489,6 +2995,38 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/nvidia-lancium-power-stake/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/nvidia-lancium-power-stake/"
+    }
+  ],
+  "nvidia-sb-energy-ohio-datacenter": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/nvidia-sb-energy-ohio-datacenter/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/nvidia-sb-energy-ohio-datacenter/"
+    }
+  ],
+  "older-adult-function-assessment": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/older-adult-function-assessment/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/older-adult-function-assessment/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/older-adult-function-assessment/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/older-adult-function-assessment/"
     }
   ],
   "openai-42-ags-ipo-probe": [
@@ -2573,6 +3111,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/orthodontics-adult-clear-aligner/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/orthodontics-adult-clear-aligner/"
     }
   ],
   "overseas-disaster-travel-checklist": [
@@ -2587,6 +3129,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/overseas-disaster-travel-checklist/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/overseas-disaster-travel-checklist/"
     }
   ],
   "pakistan-balochistan-violence-surge": [
@@ -2601,6 +3147,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/pakistan-balochistan-violence-surge/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/pakistan-balochistan-violence-surge/"
     }
   ],
   "pakistan-coal-mine-safety-crisis": [
@@ -2643,6 +3193,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/paranthropus-boisei-footprints-turkana/"
+    }
+  ],
+  "parker-probe-solar-wind-origin": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/parker-probe-solar-wind-origin/"
     }
   ],
   "passkey-taiwan-sms-otp-replacement": [
@@ -2715,6 +3271,20 @@
       "href": "https://jp.appi.news/articles/peru-fujimori-inauguration/"
     }
   ],
+  "phone-camera-lens-protector-worth-it": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/phone-camera-lens-protector-worth-it/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/phone-camera-lens-protector-worth-it/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/phone-camera-lens-protector-worth-it/"
+    }
+  ],
   "phone-os-update-should-you-upgrade-2026": [
     {
       "hreflang": "en",
@@ -2741,6 +3311,20 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/plt-platelet-therapy-for-pain/"
+    }
+  ],
+  "pneumococcal-vaccine-elderly": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/pneumococcal-vaccine-elderly/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/pneumococcal-vaccine-elderly/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/pneumococcal-vaccine-elderly/"
     }
   ],
   "postpartum-partner-support-breastfeeding": [
@@ -2829,8 +3413,38 @@
   ],
   "rostov-russia-drone-attack-samara-plant": [
     {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/rostov-russia-drone-attack-samara-plant/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/rostov-russia-drone-attack-samara-plant/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/rostov-russia-drone-attack-samara-plant/"
+    },
+    {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/rostov-russia-drone-attack-samara-plant/"
+    }
+  ],
+  "rtx-5090-upgrade-hardware-checklist": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/rtx-5090-upgrade-hardware-checklist/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/rtx-5090-upgrade-hardware-checklist/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/rtx-5090-upgrade-hardware-checklist/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/rtx-5090-upgrade-hardware-checklist/"
     }
   ],
   "rwanda-drone-healthcare-delivery-limits": [
@@ -2873,6 +3487,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/scottish-labour-leadership-contest/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/scottish-labour-leadership-contest/"
     }
   ],
   "seattle-festival-shooting-bullet-mismatch": [
@@ -2903,6 +3521,24 @@
       "href": "https://jp.appi.news/articles/sensitive-teeth-dentin/"
     }
   ],
+  "shingles-vaccine-adults": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/shingles-vaccine-adults/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/shingles-vaccine-adults/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/shingles-vaccine-adults/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/shingles-vaccine-adults/"
+    }
+  ],
   "singapore-airlines-engineer-unfair-dismissal": [
     {
       "hreflang": "en",
@@ -2931,6 +3567,24 @@
       "href": "https://jp.appi.news/articles/sleep-heat-cooling-methods/"
     }
   ],
+  "sleeping-pills-dependence-tapering": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/sleeping-pills-dependence-tapering/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/sleeping-pills-dependence-tapering/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/sleeping-pills-dependence-tapering/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/sleeping-pills-dependence-tapering/"
+    }
+  ],
   "smart-glasses-privacy-detection": [
     {
       "hreflang": "en",
@@ -2943,6 +3597,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/smart-glasses-privacy-japan-law/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/smart-glasses-privacy-detection/"
     }
   ],
   "smartwatch-afib-detection-accuracy-taiwan": [
@@ -2957,6 +3615,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/smartwatch-afib-detection-accuracy-japan/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/smartwatch-afib-detection-accuracy-taiwan/"
     }
   ],
   "somalia-tps-deportation-protections": [
@@ -3031,6 +3693,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/steam-refund-policy-consumer-rights/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/steam-refund-policy-consumer-rights/"
     }
   ],
   "stiff-neck-first-day": [
@@ -3143,6 +3809,24 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/sydney-airport-near-miss-staffing-crisis/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/sydney-airport-near-miss-staffing-crisis/"
+    }
+  ],
+  "synthetic-data-medical-ai-taiwan": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/synthetic-data-medical-ai-taiwan/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/synthetic-data-medical-ai-indonesia/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/synthetic-data-medical-ai-japan/"
     }
   ],
   "syria-world-bank-financial-modernization": [
@@ -3157,6 +3841,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/syria-world-bank-financial-modernization/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/syria-world-bank-financial-modernization/"
     }
   ],
   "taiwan-health-data-platform-join": [
@@ -3187,6 +3875,12 @@
       "href": "https://jp.appi.news/articles/taiwan-health-data-why-now/"
     }
   ],
+  "taiwan-precision-medicine-han-biobank": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/taiwan-precision-medicine-han-biobank/"
+    }
+  ],
   "tatarstan-russia-drone-attack-oil-refinery": [
     {
       "hreflang": "en",
@@ -3199,6 +3893,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/tatarstan-russia-drone-attack-oil-refinery/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/tatarstan-russia-drone-attack-oil-refinery/"
     }
   ],
   "tate-brothers-extradition-hearing-delay": [
@@ -3213,6 +3911,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/tate-brothers-extradition-hearing-delay/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/tate-brothers-extradition-hearing-delay/"
     }
   ],
   "tcm-ai-credibility-checklist": [
@@ -3237,6 +3939,12 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/tcm-facial-acupuncture-guide/"
+    }
+  ],
+  "techman-humanoid-robot-xplore": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/techman-humanoid-robot-xplore/"
     }
   ],
   "teeth-whitening-safety": [
@@ -3267,6 +3975,12 @@
       "href": "https://jp.appi.news/articles/tension-headache-nondrug/"
     }
   ],
+  "tfda-160-ai-medical-devices-approved": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/tfda-160-ai-medical-devices-approved/"
+    }
+  ],
   "thailand-nonthaburi-school-shooting-gun-control": [
     {
       "hreflang": "en",
@@ -3279,6 +3993,20 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/thailand-nonthaburi-school-shooting-gun-control/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/thailand-nonthaburi-school-shooting-gun-control/"
+    }
+  ],
+  "third-country-deportation-mexicans": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/third-country-deportation-mexicans/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/third-country-deportation-mexicans/"
     }
   ],
   "thyroid-tsh-subclinical": [
@@ -3323,6 +4051,24 @@
       "href": "https://jp.appi.news/articles/trump-new-tariffs-60-countries/"
     }
   ],
+  "tsmc-cowos-nvidia-capacity-booking": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/tsmc-cowos-nvidia-capacity-booking/"
+    }
+  ],
+  "tsmc-q3-profit-ai-record": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/tsmc-q3-profit-ai-record/"
+    }
+  ],
+  "tsmc-three-site-overseas-fabs": [
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/tsmc-three-site-overseas-fabs/"
+    }
+  ],
   "two-koreas-railway-project-restart": [
     {
       "hreflang": "en",
@@ -3335,6 +4081,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/korea-gyeongwon-line-restart-wonsan/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/two-koreas-railway-project-restart/"
     }
   ],
   "ubs-bank-secrecy-act-fine": [
@@ -3349,6 +4099,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/ubs-bank-secrecy-act-fine/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/ubs-bank-secrecy-act-fine/"
     }
   ],
   "uganda-gaza-stabilization-force": [
@@ -3363,6 +4117,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/uganda-gaza-stabilization-force/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/uganda-gaza-stabilization-force/"
     }
   ],
   "uk-barnham-camp-asylum-housing-protest": [
@@ -3377,6 +4135,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/uk-barnham-camp-asylum-housing-protest/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/uk-barnham-camp-asylum-housing-protest/"
     }
   ],
   "uk-china-embassy-royal-mint-court": [
@@ -3391,6 +4153,20 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/uk-china-embassy-royal-mint-court/"
+    }
+  ],
+  "uk-fringe-venue-belief-discrimination-ruling": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/uk-fringe-venue-belief-discrimination-ruling/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/uk-fringe-venue-belief-discrimination-ruling/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/uk-fringe-venue-belief-discrimination-ruling/"
     }
   ],
   "uk-navy-channel-migrant-plan": [
@@ -3421,6 +4197,20 @@
       "href": "https://jp.appi.news/articles/uk-palestine-action-ban-supreme-court/"
     }
   ],
+  "uk-pm-burnham-trump-aide-impersonator": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/uk-pm-burnham-trump-aide-impersonator/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/uk-pm-burnham-trump-aide-impersonator/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/uk-pm-burnham-trump-aide-impersonator/"
+    }
+  ],
   "uk-tabloid-lawsuit-legal-costs": [
     {
       "hreflang": "en",
@@ -3449,6 +4239,16 @@
       "href": "https://jp.appi.news/articles/uk-teen-charged-piloting-mega-dinghy/"
     }
   ],
+  "uk-terrorism-act-38b-manchester-synagogue": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/uk-terrorism-act-38b-manchester-synagogue/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/uk-terrorism-act-38b-manchester-synagogue/"
+    }
+  ],
   "uk-us-special-relationship-miliband-trump": [
     {
       "hreflang": "en",
@@ -3461,6 +4261,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/uk-us-special-relationship-miliband-trump/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/uk-us-special-relationship-miliband-trump/"
     }
   ],
   "ukraine-patriot-interceptor-shortage": [
@@ -3545,6 +4349,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/us-birthright-citizenship-explained/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/us-birthright-citizenship-explained/"
     }
   ],
   "us-carrier-pacific-gap": [
@@ -3577,6 +4385,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/us-cdc-director-schwartz-confirmed/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/us-cdc-director-schwartz-confirmed/"
     }
   ],
   "us-childhood-vaccine-schedule-overhaul": [
@@ -3591,9 +4403,25 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/us-childhood-vaccine-schedule-overhaul/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/us-childhood-vaccine-schedule-overhaul/"
     }
   ],
   "us-cyber-privateers-hack-back-order": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/us-cyber-privateers-hack-back-order/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/us-cyber-privateers-hack-back-order/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/us-cyber-privateers-hack-back-order/"
+    },
     {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/us-cyber-privateers-hack-back-order/"
@@ -3611,6 +4439,34 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/us-ebola-entry-ban-explained/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/us-ebola-entry-ban-explained/"
+    }
+  ],
+  "us-farmers-costs-iran-war-tariffs": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/us-farmers-costs-iran-war-tariffs/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/us-farmers-costs-iran-war-tariffs/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/us-farmers-costs-iran-war-tariffs/"
+    }
+  ],
+  "us-food-safety-cyclosporiasis-outbreak": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/us-food-safety-cyclosporiasis-outbreak/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/us-food-safety-cyclosporiasis-outbreak/"
     }
   ],
   "us-marine-russia-humanitarian-release": [
@@ -3625,6 +4481,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/us-marine-russia-humanitarian-release/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/us-marine-russia-humanitarian-release/"
     }
   ],
   "us-medicaid-trans-minors-coverage-ban": [
@@ -3639,6 +4499,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/us-medicaid-trans-minors-coverage-ban/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/us-medicaid-trans-minors-coverage-ban/"
     }
   ],
   "us-missile-stockpile-shortage-asia-defense": [
@@ -3653,6 +4517,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/us-missile-stockpile-shortage-asia-defense/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/us-missile-stockpile-shortage-asia-defense/"
     }
   ],
   "us-philippines-extradition-treaty-explained": [
@@ -3667,6 +4535,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/us-philippines-extradition-treaty-explained/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/us-philippines-extradition-treaty-explained/"
     }
   ],
   "us-senate-confirmation-power-blanche": [
@@ -3681,6 +4553,34 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/us-senate-confirmation-power-blanche/"
+    }
+  ],
+  "us-south-korea-joint-drills-scaled-back": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/us-south-korea-joint-drills-scaled-back/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/us-south-korea-joint-drills-scaled-back/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/us-south-korea-joint-drills-scaled-back/"
+    }
+  ],
+  "us-south-korea-military-drills-scale-back": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/us-south-korea-military-drills-scale-back/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/us-south-korea-military-drills-scale-back/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/us-south-korea-military-drills-scale-back/"
     }
   ],
   "utah-kouri-richins-judge-recusal-denied": [
@@ -3723,6 +4623,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/verify-health-claim-toolkit/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/verify-health-claim-toolkit/"
     }
   ],
   "victoria-labor-ministers-quit-politics": [
@@ -3751,6 +4655,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/victoria-wfh-law-two-days/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/victoria-wfh-law-two-days/"
     }
   ],
   "vietnam-airlines-vn34-tail-strike": [
@@ -3772,6 +4680,18 @@
     }
   ],
   "virginia-state-university-shooting-hbcu-dorm-security": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/virginia-state-university-shooting-hbcu-dorm-security/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/virginia-state-university-shooting-hbcu-dorm-security/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/virginia-state-university-shooting-hbcu-dorm-security/"
+    },
     {
       "hreflang": "vi",
       "href": "https://vi.appi.news/articles/virginia-state-university-shooting-hbcu-dorm-security/"
@@ -3817,6 +4737,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/west-bank-settler-siege-qusra/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/west-bank-settler-siege-qusra/"
     }
   ],
   "when-to-eat-after-vomiting": [
@@ -3833,6 +4757,16 @@
       "href": "https://jp.appi.news/articles/when-to-eat-after-vomiting/"
     }
   ],
+  "white-house-congress-liaison-braid-exit": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/white-house-congress-liaison-braid-exit/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/white-house-congress-liaison-braid-exit/"
+    }
+  ],
   "white-house-press-secretary-leavitt-exit": [
     {
       "hreflang": "en",
@@ -3845,6 +4779,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/white-house-press-secretary-leavitt-exit/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/white-house-press-secretary-leavitt-exit/"
     }
   ],
   "wildfire-disaster-robot-no-ai-control": [
@@ -3887,6 +4825,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/windows-oem-license-fee-hike/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/windows-oem-license-fee-hike/"
     }
   ],
   "wisdom-tooth-extraction": [
@@ -3929,6 +4871,24 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/yemen-houthi-saudi-attack-marib/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/yemen-houthi-saudi-attack-marib/"
+    }
+  ],
+  "youtube-family-plan-residency-check": [
+    {
+      "hreflang": "en",
+      "href": "https://en.appi.news/articles/youtube-family-plan-residency-check/"
+    },
+    {
+      "hreflang": "id",
+      "href": "https://in.appi.news/articles/youtube-family-plan-residency-check/"
+    },
+    {
+      "hreflang": "ja",
+      "href": "https://jp.appi.news/articles/youtube-family-plan-residency-check/"
     }
   ],
   "zambia-election-violence-vote-count": [
@@ -3943,6 +4903,10 @@
     {
       "hreflang": "ja",
       "href": "https://jp.appi.news/articles/zambia-election-violence-vote-count/"
+    },
+    {
+      "hreflang": "vi",
+      "href": "https://vi.appi.news/articles/zambia-election-violence-vote-count/"
     }
   ],
   "zero-trust-architecture-taiwan": [

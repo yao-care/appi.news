@@ -1,9 +1,10 @@
 ---
-title: "Halifax併入Lloyds、173年英國銀行品牌走入歷史　190分行2027年起換招牌、帳號代碼不變"
+title: "Halifax併入Lloyds，173年品牌走入歷史"
 slug: "uk-halifax-brand-ends-lloyds-rebrand"
 description: "英國勞埃德銀行集團（Lloyds Banking Group）宣布，旗下擁有173年歷史的Halifax品牌將走入歷史，全數整併為Lloyds單一品牌。全英190間Halifax分行預計自2027年起陸續換招牌或併入鄰近Lloyds分行，集團強調帳戶號碼、分行代碼不變、客戶不須採取任何行動，也不涉及裁員。"
 excerpt: "英國勞埃德銀行集團宣布，旗下擁有173年歷史的Halifax品牌將走入歷史，全數整併為Lloyds單一品牌。全英190間Halifax分行預計自2027年起陸續換招牌或併入鄰近Lloyds分行，集團強調帳戶號碼、分行代碼不變，也不涉及裁員。"
 publishDate: "2026-07-02T02:41:35.109Z"
+updatedDate: "2026-08-22T00:00:00+08:00"
 category: "international"
 subcategory: "europe"
 tags:
@@ -46,7 +47,7 @@ coverImageCredit: "Phil Champion — CC BY-SA 2.0, Wikimedia Commons"
 originalContribution: "本文整合 Lloyds Banking Group 官方新聞稿與三家英國媒體（Yahoo Finance UK、City A.M.、Eastern Eye）的公開報導，以繁中讀者為對象整理分行轉換對客戶的具體影響（帳號、分行代碼不變），並補充 Halifax 自 1853 年建築協會起家、1928 年全球最大規模、至 2009 年金融海嘯期間由勞埃德收購的完整品牌沿革。"
 ---
 
-英國勞埃德銀行集團（Lloyds Banking Group）7月1日（週三）宣布，旗下擁有173年歷史的Halifax品牌將走入歷史，全面整併為集團的Lloyds單一品牌。這代表英國高街上其中一個最為人熟知的銀行招牌，將自2027年起逐步從街頭消失。（[Lloyds Banking Group](https://www.lloydsbankinggroup.com/media/press-releases/2026/lloyds-banking-group/halifax-rebrand-to-lloyds.html)）
+英國勞埃德銀行集團（Lloyds Banking Group）7月1日（週三）宣布，旗下擁有173年歷史的Halifax品牌將走入歷史，全面整併為集團的Lloyds單一品牌。這代表英國高街上其中一個最為人熟知的銀行招牌，將自2027年起逐步從街頭消失。（[Lloyds Banking Group](https://www.lloydsbankinggroup.com/media/press-releases/2026/lloyds-banking-group/halifax-rebrand-to-lloyds.html)）老品牌整併、招牌走入歷史的取捨，和台灣[「阿成鵝肉」商標之爭](/articles/achenggoose-trademark-split/)一樣，都是品牌識別的價值課題。
 
 ## 190間分行明年起換招牌
 
@@ -60,7 +61,7 @@ Halifax也將同步停止開立新帳戶，既有客戶則會在未來數月起�
 
 Lloyds Banking Group消費者關係執行長辛格（Jas Singh）表示：「隨著Halifax改為Lloyds，我們的Halifax客戶會保留今天所熟悉、所喜愛的一切：同樣優秀的App設計、分行裡同樣親切的面孔，甚至同樣的分行代碼與帳戶號碼。」（[City A.M.](https://www.cityam.com/halifax-ends-173-year-high-street-run-as-lloyds-ditches-branding/)）
 
-集團也強調，這次公告不涉及先前已宣布的分行計畫變動，此次整併亦不涉及裁員。目前集團在Halifax鎮（West Yorkshire）仍有約3,000名員工。（[City A.M.](https://www.cityam.com/halifax-ends-173-year-high-street-run-as-lloyds-ditches-branding/)）
+集團也強調，這次公告不涉及先前已宣布的分行計畫變動，此次整併亦不涉及裁員。目前集團在Halifax鎮（West Yorkshire）仍有約3,000名員工。（[City A.M.](https://www.cityam.com/halifax-ends-173-year-high-street-run-as-lloyds-ditches-branding/)）台灣也有類似案例：[台新銀行合併新光銀行，同樣強調存款與信用卡權益過渡期間原則不變](/articles/taishin-shinkong-bank-merger-account-guide/)。
 
 ## 為何整併：品牌界線早已模糊
 

@@ -1,8 +1,9 @@
 ---
-title: "綠色證券標章8月31日初評倒數：ESG評鑑末20%淘汰，12月公布一級二級認證名單"
+title: "綠色證券標章8月31日初評倒數：ESG末20%淘汰"
 slug: "green-securities-certification-taiwan-2026"
 description: "臺灣證交所與櫃買中心推動的綠色證券認證制度，8月31日前完成今年首次初評，適用國內全體上市櫃公司（金融保險業除外）。制度依綠色收入比率分一級、二級標章，公司治理或ESG評鑑排名落在後20%者直接淘汰，年度營收未達全體及所屬產業前90%者也不合格。認證每年12月公布、效期一年，須逐年重新審核。"
 publishDate: "2026-08-06T02:15:05.520Z"
+updatedDate: "2026-08-22"
 category: "focus"
 subcategory: "trend-watch"
 tags:

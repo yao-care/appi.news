@@ -1,41 +1,23 @@
 #!/usr/bin/env bash
 # 每日 cron：國際編譯台（GDELT→事實編譯→自動上架）。台北 10:30 = UTC 02:30。
 TASK="國際編譯台"
-set -uo pipefail
-REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
-# 多工：在自己的臨時 worktree 裡跑（off origin/main），與其他 publisher cron 並行、互不洗檔。
-source "$(dirname "$0")/_worktree.sh"
-cron_enter_worktree "intl" || { node "$PUBLISHER/scripts/cron-report.mjs" --category international --text "⚠️ $TASK：無法建 worktree，略過本次" 2>/dev/null || true; exit 0; }
-set -a
-# shellcheck disable=SC1090
-source "$HOME/.config/appi-news/report.env"
-set +a
-ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
-out="$(node scripts/international-write.mjs --go 2>&1)"; rc=$?
-printf '%s\n' "$out"
-if [ "$rc" -eq 0 ]; then
-  # PUBLISHED 行格式：PUBLISHED=<url> ｜ <title>。取整行內容，組成「• 標題 + 連結」。
-  pub=$(grep '^PUBLISHED=' <<<"$out" | sed 's/^PUBLISHED=//')
-  if [ -n "$pub" ]; then
-    n=$(grep -c . <<<"$pub")
-    # 送 Slack 前，先等 GitHub Pages 部署完成、文章線上真的讀得到（HTTP 200）再發，
-    # 避免作者一點連結還是 404（push 後到部署上線約 3-5 分鐘）。最多等 10 分鐘，逾時仍發。
-    deadline=$(( $(date +%s) + 600 ))
-    for u in $(awk -F' ｜ ' '{print $1}' <<<"$pub"); do
-      until [ "$(curl -s -4 -o /dev/null -w '%{http_code}' "$u")" = "200" ]; do
-        [ "$(date +%s)" -ge "$deadline" ] && { echo "⚠️ 等逾時，$u 仍非 200，仍照常發 Slack"; break; }
-        sleep 20
-      done
-    done
-    list=$(awk -F' ｜ ' '{printf "• %s\n  %s\n", $2, $1}' <<<"$pub")
-    node scripts/cron-report.mjs --category international --text "$(printf '🌍 國際編譯自動上架 %s 篇（%s）：\n%s' "$n" "$ts" "$list")" || true
-  else
-    # 0 篇不再全靜默：2026-07-27 整晚 0 篇沒有任何告警，隔天才由站長人工發現（lesson §G）。
-    # 內容頻道仍不吵（沒東西可看），但維運訊號要進 dev 台，附閘門與逐則結論供判讀。
-    echo "（本次無產出，發 dev 台）"
-    node scripts/cron-report.mjs --dev --text "$(printf '🌍 國際編譯 %s：0 篇上架\n```\n%s\n```' "$ts" "$(grep -E '^(→ 寫作前閘門|  ⇒ 通過閘門|→ \[|  (NEW|UPDATE|SKIP|⚠️|⛔)|✓ 閘門後無題可寫|✓ 本批無有效產出)' <<<"$out" | tail -30)")" || true
-  fi
-  exit 0
+source "$(dirname "$0")/_runner.sh"
+cron_worktree "intl" "--category international" || exit 0
+cron_env
+
+cron_run "--category international" --tail 500 -- node scripts/international-write.mjs --go
+
+# PUBLISHED 行格式：PUBLISHED=<url> ｜ <title>。取整行內容，組成「• 標題 + 連結」。
+pub=$(cron_published)
+if [ -n "$pub" ]; then
+  n=$(grep -c . <<<"$pub")
+  for u in $(awk -F' ｜ ' '{print $1}' <<<"$pub"); do cron_wait_200 "$u" || true; done
+  list=$(awk -F' ｜ ' '{printf "• %s\n  %s\n", $2, $1}' <<<"$pub")
+  cron_report "--category international" "$(printf '🌍 國際編譯自動上架 %s 篇（%s）：\n%s' "$n" "$ts" "$list")"
+else
+  # 0 篇不再全靜默：2026-07-27 整晚 0 篇沒有任何告警，隔天才由站長人工發現（lesson §G）。
+  # 內容頻道仍不吵（沒東西可看），但維運訊號要進 dev 台，附閘門與逐則結論供判讀。
+  echo "（本次無產出，發 dev 台）"
+  cron_report "--dev" "$(printf '🌍 國際編譯 %s：0 篇上架\n```\n%s\n```' "$ts" "$(grep -E '^(→ 寫作前閘門|  ⇒ 通過閘門|→ \[|  (NEW|UPDATE|SKIP|⚠️|⛔)|✓ 閘門後無題可寫|✓ 本批無有效產出)' <<<"$CRON_OUT" | tail -30)")"
 fi
-node scripts/cron-report.mjs --category international --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 500 <<<"$out")")" || true
-exit "$rc"
+exit 0

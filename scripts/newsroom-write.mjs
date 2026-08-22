@@ -28,6 +28,8 @@ import { pushToMain } from './lib/git-publish.mjs';
 import { nextOpenPublishDate, takenDatesFromContents } from './lib/publish-slot.mjs';
 import { coverDuplicatesInline } from './lib/image-dedupe.mjs';
 import { checkCoverFile } from './lib/cover-spec.mjs';
+import { runArticleGates } from './lib/publish-pipeline.mjs';
+import { WRITER_CMD, writerExecArgs } from './lib/writer-cli.mjs';
 import { RISKS_PROMPT } from "./lib/risks-prompt.mjs";
 import { EXPERT_NOTE_PROMPT } from "./lib/expert-note-prompt.mjs";
 import { GROWTH_PROMPT } from "./lib/growth-prompt.mjs";
@@ -298,9 +300,11 @@ async function main() {
   }
   console.log(writeOnly ? `→ 在分支 ${branch} 上起草（--write-only：不 build、不碰 git）` : `→ 在分支 ${branch} 上起草並發佈`);
 
-  console.log('→ claude 起草中…');
-  const draft = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], { stdio: 'inherit' });
-  if (draft.status !== 0) die(`claude 起草失敗（exit ${draft.status}）`);
+  console.log('→ codex 起草中…');
+  // 寫作＝codex（站長 2026-08-22 裁示）；參數正本＝lib/writer-cli.mjs 的 writerExecArgs。
+  // stdio inherit 讓起草過程直接進 cron log；額度/失敗樣態由外層 _runner.sh 第二道網掃。
+  const draft = spawnSync(WRITER_CMD, writerExecArgs(prompt), { stdio: 'inherit' });
+  if (draft.status !== 0) die(`codex 起草失敗（exit ${draft.status}）`);
 
   // 必須真的產出了文章。
   // --write-only 平行批次下，`git status src/content/articles/` 會同時看到**別篇**的產物，
@@ -350,32 +354,13 @@ async function main() {
     die(`配圖 gate 未過，不發佈（改動留工作區待補圖）：\n  - ${imgProblems.join('\n  - ')}`);
   }
 
-  // 選題重複 gate：擋「站上已有一篇幾乎同標題」的新文（ERROR），同主題只警告不擋
-  // （新聞追蹤報導是正當的，硬擋會誤傷離岸風電那種續報）。WARN 會印進 log 供作者判斷。
-  // 為什麼＝docs/lessons/duplicate-topic-gate.md（髖關節痛被 5 個 URL 瓜分、全卡 pos 76-83）。
-  const dup = spawnSync('node', ['scripts/check-duplicate-topic.mjs', articleFile], { encoding: 'utf8' });
-  if (dup.stdout) console.log(dup.stdout);
-  if (dup.status !== 0) {
-    die(`選題重複 gate 未過，不發佈（改動留工作區待處理）：\n${(dup.stdout || '') + (dup.stderr || '')}`);
-  }
-
-  // 去 AI 腔硬性 gate（只擋機械可判的簽名句：破折號／自我辯白 meta 旁白）。
-  // 語氣類 tell 靠 SKILL 步驟三.7 自檢，這關只兜住模型漏掉的那幾條硬 tell。
-  // 為什麼＝docs/lessons/ai-tone-gate.md（「先揭露，免得你覺得我在夾帶」上線事件）。
-  const tone = spawnSync('node', ['scripts/check-content.mjs', articleFile], { encoding: 'utf8' });
-  if (tone.status !== 0) {
-    die(`去 AI 腔 gate 未過，不發佈（改動留工作區待改）：\n${(tone.stdout || '') + (tone.stderr || '')}`);
-  }
-
-  // 標籤 gate：tags 必須落在 src/config/tags.ts 的受控詞彙表內。
-  // 為什麼＝docs/lessons/tag-taxonomy.md（1,883 個自由標籤、85.9% 只出現一次的碎片化事故）。
-  // 成長規則自檢（report-only，永不擋發佈）：站內導流／topics／標題長度有沒有做到，印進 cron log 供事後回收。
-  // 規則正本＝scripts/lib/growth-prompt.mjs（GROWTH_PROMPT），盤點與工作清單＝docs/growth-playbook.md。
-  const _growth = spawnSync('node', ['scripts/growth-lint.mjs', articleFile], { encoding: 'utf8' });
-  if (_growth.stdout) console.log(_growth.stdout.trim());
-  const tagGate = spawnSync('node', ['scripts/check-tags.mjs', articleFile], { encoding: 'utf8' });
-  if (tagGate.status !== 0) {
-    die(`標籤 gate 未過，不發佈（改動留工作區待改）：\n${(tagGate.stdout || '') + (tagGate.stderr || '')}`);
+  // 內容 gate（集合與順序的正本＝lib/publish-pipeline.mjs）。cover:false＝沿用本檔上面
+  // 自己的配圖 gate（熱連結／內文 0 圖／封面撞內文圖，比 cover-spec 廣），不疊 Discover 尺寸關。
+  // dup 為什麼開：擋「站上已有一篇幾乎同標題」的新文（ERROR），同主題只警告不擋
+  // （新聞追蹤報導是正當的）。為什麼＝docs/lessons/duplicate-topic-gate.md。
+  const g = runArticleGates(slug, { dup: true, cover: false, log: (m) => console.log(m) });
+  if (!g.ok) {
+    die(`${g.label} 未過，不發佈（改動留工作區）：\n${g.detail || ''}`);
   }
 
   // 真人觀點硬性 gate（只擋觀點稿 kind: column）：Q3 作者觀點必須真的反映在內文，

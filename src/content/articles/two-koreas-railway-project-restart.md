@@ -59,7 +59,7 @@ originalContribution: "本文整合路透社（經Daily Maverick轉載）、Nikk
 
 不過現實條件並不樂觀。[Nikkei Asia的報導](https://asia.nikkei.com/spotlight/north-korea-tensions/south-korea-revives-rail-project-aimed-at-linking-it-to-north)提到，北韓2024年已經炸毀連接兩韓的邊境公路與鐵路設施，並修改憲法將南韓重新定義為敵對國家，等於放棄過去對外宣示的和平統一目標。南韓總統李在明對此次重啟工程的表態相當坦率，他形容這種對北韓喊話的處境「可能像是對著無回音的虛空呼喊，但和平與共存仍是重要課題」。
 
-延伸閱讀：[四方安全對話（Quad）是什麼？東盟首度同台表態，馬尼拉峰會牽動南海台海局勢](/articles/quad-asean-south-china-sea-explained/)
+延伸閱讀：[四方安全對話（Quad）是什麼？東協首度同台表態，馬尼拉峰會牽動南海台海局勢](/articles/quad-asean-south-china-sea-explained/)
 
 ## 北韓那一端：元山葛麻已經蓋好度假區
 

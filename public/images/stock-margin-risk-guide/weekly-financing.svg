@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="長條圖比較2026年7月31日至8月7日上市與上櫃市場融資金額增加，上市市場增加302.02億元，上櫃市場增加90.56億元，合計增加392.58億元">
+  <title>一週融資金額增加近392.6億元</title>
+  <desc>2026年7月31日至8月7日，上市市場融資金額增加302.02億元，櫃買市場增加90.56億元，合計增加392.58億元。</desc>
+  <style>
+    text { font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif; fill: #1e2030; }
+    .muted { fill: #6e7276; }
+    .small { font-size: 14px; }
+    .value { font-size: 22px; font-weight: 700; }
+    .label { font-size: 20px; font-weight: 700; }
+  </style>
+  <rect width="960" height="600" fill="#ffffff"/>
+  <rect x="32" y="42" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="54" y="65" font-size="26" font-weight="700">一週融資金額增加近392.6億元</text>
+  <text x="54" y="94" class="muted" font-size="15">2026/7/31 至 2026/8/7，上市與櫃買市場的融資餘額都上升</text>
+
+  <rect x="52" y="132" width="856" height="336" rx="12" fill="#eaf0f8"/>
+  <line x1="148" y1="408" x2="850" y2="408" stroke="#e8e9ed" stroke-width="1"/>
+  <line x1="148" y1="326" x2="850" y2="326" stroke="#e8e9ed" stroke-width="1"/>
+  <line x1="148" y1="244" x2="850" y2="244" stroke="#e8e9ed" stroke-width="1"/>
+  <line x1="148" y1="162" x2="850" y2="162" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="132" y="413" class="muted small" text-anchor="end">0</text>
+  <text x="132" y="331" class="muted small" text-anchor="end">100</text>
+  <text x="132" y="249" class="muted small" text-anchor="end">200</text>
+  <text x="132" y="167" class="muted small" text-anchor="end">300 億元</text>
+
+  <rect x="252" y="160" width="190" height="248" rx="4" fill="#1f3a5f"/>
+  <rect x="558" y="334" width="190" height="74" rx="4" fill="#a87515"/>
+  <text x="347" y="145" class="value" text-anchor="middle">+302.02 億元</text>
+  <text x="653" y="319" class="value" text-anchor="middle">+90.56 億元</text>
+  <text x="347" y="446" class="label" text-anchor="middle">上市市場</text>
+  <text x="653" y="446" class="label" text-anchor="middle">櫃買市場</text>
+  <text x="480" y="500" font-size="22" font-weight="700" text-anchor="middle">合計：+392.58 億元</text>
+
+  <line x1="52" y1="536" x2="908" y2="536" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="52" y="563" class="muted small">製圖：APPI News</text>
+  <text x="908" y="563" class="muted small" text-anchor="end">資料時點：2026/8/7；來源：TWSE、TPEx</text>
+</svg>

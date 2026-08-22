@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="複委託與海外券商投資台股的下單流程：投資人先向券商下單，券商或合作券商送單到台灣市場，再依契約完成保管、交割與稅務紀錄">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6e7276"/>
+    </marker>
+  </defs>
+  <rect width="960" height="520" fill="#ffffff"/>
+  <rect x="48" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="70" y="61" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="26" font-weight="700" fill="#1e2030">投資台股時，複委託多了一層受託關係</text>
+  <text x="70" y="91" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="15" fill="#6e7276">比較服務時，要把下單、保管、交割與稅務紀錄拆開看</text>
+
+  <rect x="58" y="156" width="190" height="96" rx="12" fill="#eaf0f8"/>
+  <rect x="58" y="156" width="190" height="3" rx="2" fill="#a87515"/>
+  <text x="153" y="192" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="20" font-weight="700" fill="#1e2030">投資人</text>
+  <text x="153" y="220" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="14" fill="#6e7276">送出買賣委託</text>
+
+  <line x1="248" y1="204" x2="326" y2="204" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="326" y="156" width="190" height="96" rx="12" fill="#ffffff" stroke="#e8e9ed"/>
+  <text x="421" y="192" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="20" font-weight="700" fill="#1e2030">券商</text>
+  <text x="421" y="220" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="14" fill="#6e7276">受理、換匯、送單</text>
+
+  <line x1="516" y1="204" x2="594" y2="204" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="594" y="156" width="190" height="96" rx="12" fill="#ffffff" stroke="#e8e9ed"/>
+  <text x="689" y="192" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="20" font-weight="700" fill="#1e2030">台灣市場</text>
+  <text x="689" y="220" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="14" fill="#6e7276">撮合成交、產生交易紀錄</text>
+
+  <line x1="689" y1="252" x2="689" y2="326" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="58" y="326" width="190" height="96" rx="12" fill="#ffffff" stroke="#e8e9ed"/>
+  <text x="153" y="362" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="20" font-weight="700" fill="#1e2030">成本</text>
+  <text x="153" y="390" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="14" fill="#6e7276">佣金、最低費用、匯差</text>
+
+  <rect x="326" y="326" width="190" height="96" rx="12" fill="#ffffff" stroke="#e8e9ed"/>
+  <text x="421" y="362" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="20" font-weight="700" fill="#1e2030">交割</text>
+  <text x="421" y="390" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="14" fill="#6e7276">幣別、日期、保管方式</text>
+
+  <rect x="594" y="326" width="190" height="96" rx="12" fill="#ffffff" stroke="#e8e9ed"/>
+  <text x="689" y="362" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="20" font-weight="700" fill="#1e2030">稅務</text>
+  <text x="689" y="390" text-anchor="middle" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="14" fill="#6e7276">賣出稅、股利、申報資料</text>
+
+  <line x1="248" y1="374" x2="326" y2="374" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="516" y1="374" x2="594" y2="374" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="48" y1="462" x2="912" y2="462" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="48" y="487" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="13" fill="#6e7276">製圖：APPI News</text>
+  <text x="912" y="487" text-anchor="end" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="13" fill="#6e7276">資料時點：2026年8月</text>
+</svg>

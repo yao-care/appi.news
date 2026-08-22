@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="比較南韓與台灣AI行情如何連到稅收與政策運用的流程圖">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6e7276"/>
+    </marker>
+  </defs>
+  <rect width="960" height="520" fill="#ffffff"/>
+  <rect x="42" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="64" y="61" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="26" font-weight="700" fill="#1e2030">AI行情如何連到政府稅收</text>
+  <text x="64" y="92" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="15" fill="#6e7276">兩地都出現稅收增加，政策運用方向仍有差異</text>
+  <rect x="42" y="124" width="876" height="142" rx="12" fill="#eaf0f8"/>
+  <rect x="42" y="124" width="876" height="3" rx="2" fill="#a87515"/>
+  <text x="70" y="160" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="20" font-weight="700" fill="#1f3a5f">南韓</text>
+  <text x="70" y="199" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="17" fill="#1e2030">AI半導體熱潮</text>
+  <line x1="220" y1="191" x2="292" y2="191" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="318" y="199" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="17" fill="#1e2030">額外稅收</text>
+  <line x1="455" y1="191" x2="527" y2="191" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="553" y="199" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="17" fill="#1e2030">未來應對基金規劃</text>
+  <text x="70" y="238" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14" fill="#6e7276">2026年KOSPI交易稅：0% → 0.05%；基金規模尚未定案</text>
+  <rect x="42" y="292" width="876" height="142" rx="12" fill="#ffffff" stroke="#e8e9ed"/>
+  <text x="70" y="328" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="20" font-weight="700" fill="#1f3a5f">台灣</text>
+  <text x="70" y="367" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="17" fill="#1e2030">AI供應鏈與股市量能</text>
+  <line x1="260" y1="359" x2="332" y2="359" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="358" y="367" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="17" fill="#1e2030">證交稅增加2,181億元</text>
+  <line x1="595" y1="359" x2="667" y2="359" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="692" y="367" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="17" fill="#1e2030">財政部公布稅收效應</text>
+  <text x="70" y="406" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="14" fill="#6e7276">2026年上半年全國實徵淨額年增81.5%；AI只是多項背景因素之一</text>
+  <line x1="42" y1="466" x2="918" y2="466" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="42" y="493" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="13" fill="#6e7276">製圖：APPI News</text>
+  <text x="918" y="493" text-anchor="end" font-family="Noto Sans TC, PingFang TC, Microsoft JhengHei, sans-serif" font-size="13" fill="#6e7276">資料時點：2026-08-21；來源：韓聯社、財政部</text>
+</svg>

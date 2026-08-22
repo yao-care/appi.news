@@ -4,6 +4,7 @@ slug: "singapore-senior-parkour-elderly-fitness"
 description: "新加坡教練Tan Shie Boon把公園跑酷改造成長者防跌訓練，目前約35名學員年齡橫跨40多歲到75歲。整理課程內容、費用地點、安全紀錄與新加坡邁入超高齡社會的背景。"
 excerpt: "新加坡教練Tan Shie Boon把公園跑酷改造成長者防跌訓練，目前約35名學員年齡橫跨40多歲到75歲。整理課程內容、費用地點、安全紀錄與新加坡邁入超高齡社會的背景。"
 publishDate: "2026-08-11T18:55:36.372Z"
+updatedDate: "2026-08-22"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -21,7 +22,7 @@ risksAndLimits:
   - "有嚴重骨質疏鬆、近期骨折病史或平衡機能明顯退化者，翻滾與跳躍動作可能增加受傷風險，開始前建議先經醫師評估體能狀況。"
 ---
 
-新加坡教練Tan Shie Boon把公園跑酷改造成專屬長者的防跌訓練，取名「[Movement Singapore](https://www.movement.sg/)」，目前固定教約35名學員，年齡橫跨40多歲到75歲，多數是女性。這套課程近期在社群媒體爆紅，也讓外界重新思考高齡社會的健身選項可以怎麼設計。
+新加坡教練Tan Shie Boon把公園跑酷改造成專屬長者的防跌訓練，取名「[Movement Singapore](https://www.movement.sg/)」，目前固定教約35名學員，年齡橫跨40多歲到75歲，多數是女性。這套課程近期在社群媒體爆紅，也讓外界重新思考高齡社會的健身選項可以怎麼設計，延伸閱讀：[高齡者怎麼預防肌少症？阻力訓練、蛋白質與維生素 D 的實證方法一次看](/articles/sarcopenia-prevention-evidence-elderly/)。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=eztg1De8mYM" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：鍛鍊肌力及反應速度！「銀髮跑酷」在新加坡爆紅">

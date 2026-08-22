@@ -1,5 +1,5 @@
 ---
-title: "顯卡與記憶體同步漲價：2026下半年為什麼買電腦變貴，什麼時候該出手"
+title: "顯卡價格走勢2026：記憶體同步齊漲，電腦為何變貴"
 slug: "gpu-memory-price-surge-2026"
 description: "NVIDIA顯卡在台累計漲幅逾120%，記憶體合約價連季走高。這波漲價的源頭是AI資料中心把DRAM晶圓產能吃掉近兩成後，一路往下游傳導到顯卡、筆電、手機。整理漲價全貌、該看哪些指標，以及什麼時候該出手。"
 excerpt: "顯卡漲、記憶體也漲，兩件事其實是同一條供應鏈上的同一場擠壓。追到源頭，才知道該盯緊哪個數字。"
@@ -65,7 +65,7 @@ references:
   - title: "DRAM Spot Price"
     url: "https://www.trendforce.com/price/dram/dram_spot"
     publisher: "TrendForce 集邦科技"
-updatedDate: "2026-08-06T05:55:28.112Z"
+updatedDate: "2026-08-22"
 topics: ["taiwan-semiconductor-supply-chain"]
 ---
 

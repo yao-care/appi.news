@@ -1,5 +1,5 @@
 ---
-title: "川普對60國課10%至12.5%新關稅　印度稅率因加強反強迫勞動下修、巴西智利揚言反制"
+title: "川普新關稅上路：60國課10~12.5%，印度降稅、巴西智利揚言反制"
 slug: "trump-new-tariffs-60-countries"
 description: "美國總統川普宣布對占進口總額99%、逾60個貿易夥伴課徵10%至12.5%新關稅，7月25日凌晨生效，取代即將到期的臨時10%全球關稅。白宮以貿易夥伴「未充分執行強迫勞動商品禁令」為由開徵，印度因加強執法稅率由12.5%下修至10%；巴西、智利已批評此舉並揚言報復。"
 excerpt: "美國新關稅10%至12.5%於7月25日生效，涵蓋60個貿易夥伴；印度因加強反強迫勞動執法獲下修至10%，巴西、智利則批評措施武斷並揚言反制。"
@@ -46,6 +46,7 @@ disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體�
 coverImage: "covers/trump-new-tariffs-60-countries-cover.webp"
 coverAlt: "美國相關情境（示意圖）"
 coverImageCredit: "Photo by Zifeng Xiong on Pexels"
+updatedDate: 2026-08-22
 ---
 
 美國總統川普（Donald Trump）新一波關稅措施7月25日（週五）凌晨12:01正式生效，對占美國進口總額99%、多達60個貿易夥伴課徵10%至12.5%不等的關稅，理由是這些國家未充分執行禁止進口強迫勞動商品的規定。據[PBS NewsHour報導](https://www.pbs.org/newshour/politics/trump-imposes-double-digit-tariffs-on-dozens-of-countries-as-stopgap-10-levies-expire-friday)，新關稅上路的同一時刻，正是他先前祭出的臨時10%全球關稅到期失效之際。
@@ -68,7 +69,7 @@ coverImageCredit: "Photo by Zifeng Xiong on Pexels"
 
 新關稅一出爐即引來反彈。據[Manila Times報導](https://www.manilatimes.net/2026/07/24/world/americas-emea/trump-imposes-double-digit-tariffs-on-dozens-of-countries-as-his-10-levies-are-set-to-expire-friday/2390886)，巴西政府批評此舉「武斷且無根據」，並表示將啟動報復性關稅反制；智利官員則指出，這項以強迫勞動為由的措施，與該國自身的勞動標準並不一致。美國國會眾議院民主黨高層也提出質疑，認為政府拿強迫勞動當理由「太方便」，難以被認真看待。
 
-同一篇報導也提到，進口商通常會將關稅成本轉嫁到商品售價上，而美國民眾早已對生活成本上升感到不滿；在明年期中選舉前實施新一波關稅，對執政黨而言存在政治風險。目前尚未有具體物價衝擊數據公布，後續發展有待觀察。
+同一篇報導也提到，進口商通常會將關稅成本轉嫁到商品售價上，而美國民眾早已對生活成本上升感到不滿；在明年期中選舉前實施新一波關稅，對執政黨而言存在政治風險。目前尚未有具體物價衝擊數據公布，後續發展有待觀察。關稅政策的連鎖效應也已反映在美國國內產業成本上，例如[美國農業成本為何飆升？伊朗戰事與關稅衝擊農民選票](/articles/us-farmers-costs-iran-war-tariffs/)一文即整理了關稅如何改變農產品出口市場、推高農民生產成本。
 
 ## 常見問題
 

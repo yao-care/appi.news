@@ -22,8 +22,13 @@ describe('hasDueScheduled：排程稿有沒有在這段區間到期', () => {
     expect(hasDueScheduled(e, last, now)).toBe(false);
   });
 
-  it('已發佈的文章不影響判斷', () => {
+  it('status: published 但日期落在區間內＝也是到期（舊碼只認 scheduled，這類稿到期不上線）', () => {
     const e = [{ status: 'published', publishDate: '2026-08-06T14:30:00Z' }];
+    expect(hasDueScheduled(e, last, now)).toBe(true);
+  });
+
+  it('draft 旗標的稿永遠不觸發（時間到也不會轉公開）', () => {
+    const e = [{ status: 'published', publishDate: '2026-08-06T14:30:00Z', draft: true }];
     expect(hasDueScheduled(e, last, now)).toBe(false);
   });
 

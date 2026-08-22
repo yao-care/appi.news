@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import svelte from '@astrojs/svelte';
 import { rehypeFigcaption } from './src/utils/rehype-figcaption.mjs';
+import { isPublicFrontmatter, isScheduledPreviewFrontmatter } from './src/utils/visibility.mjs';
 
 /**
  * 舊 post-NNN 文章網址 → 語意化 slug 的轉址表（由 src/redirects.json 維護）。
@@ -46,8 +47,7 @@ function scheduledPreviewPaths() {
     }
     if (!parsed || typeof parsed !== 'object') continue;
     const d = /** @type {Record<string, any>} */ (parsed);
-    if (d.draft || d.status === 'draft' || d.status === 'archived') continue;
-    if (!d.publishDate || new Date(d.publishDate).getTime() <= now) continue;
+    if (!isScheduledPreviewFrontmatter(d, now)) continue; // 可見性正本＝src/utils/visibility.mjs
     const slug = d.slug || f.replace(/\.mdx?$/, '');
     paths.add(`/articles/${slug}/`);
   }
@@ -77,10 +77,8 @@ function articleLastmods() {
     }
     if (!parsed || typeof parsed !== 'object') continue;
     const d = /** @type {Record<string, any>} */ (parsed);
-    if (d.draft || d.status === 'draft' || d.status === 'archived') continue;
-    if (!d.publishDate) continue;
+    if (!isPublicFrontmatter(d, now)) continue; // 排程草稿不進 sitemap；可見性正本＝src/utils/visibility.mjs
     const pub = new Date(d.publishDate).getTime();
-    if (pub > now) continue; // 排程草稿不進 sitemap
     const slug = d.slug || f.replace(/\.mdx?$/, '');
     const last = d.updatedDate && new Date(d.updatedDate).getTime() > pub ? d.updatedDate : d.publishDate;
     const iso = new Date(last).toISOString();
@@ -124,9 +122,8 @@ function thinTagPaths() {
     }
     if (!parsed || typeof parsed !== 'object') continue;
     const d = /** @type {Record<string, any>} */ (parsed);
-    // 與 getPublishedArticles 同樣的公開判斷：draft/archived 或未到 publishDate 者不計入
-    if (d.draft || d.status === 'draft' || d.status === 'archived') continue;
-    if (!d.publishDate || new Date(d.publishDate).getTime() > now) continue;
+    // 與 getPublishedArticles 同一份公開判斷（正本＝src/utils/visibility.mjs）
+    if (!isPublicFrontmatter(d, now)) continue;
     const tags = Array.isArray(d.tags) ? d.tags : [];
     for (const t of tags) {
       if (typeof t !== 'string') continue;

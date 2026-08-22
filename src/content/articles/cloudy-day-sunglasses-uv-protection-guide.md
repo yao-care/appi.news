@@ -3,6 +3,7 @@ title: "陰天也要戴墨鏡？紫外線穿透雲層原理與怎麼挑一次看
 slug: "cloudy-day-sunglasses-uv-protection-guide"
 description: "陰天雲層只能擋住兩三成紫外線，七成以上照樣穿透到地面。整理眼科醫師解析的墨鏡防曬原理、UV400怎麼辨識、鏡片顏色的迷思與選購重點，附查證來源。"
 publishDate: "2026-08-07T19:44:23.743Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -22,7 +23,7 @@ risksAndLimits:
   - "UV400、抗UV塗層等技術規格以各品牌標示為準，本文未逐一檢驗市售商品的實際防護力。"
 ---
 
-陰天出門常有人覺得「太陽沒那麼烈，墨鏡可以省了」，但眼科醫師提醒，這個判斷是錯的。雲層能擋住的主要是可見光，紫外線波長更短、穿透力更強，就算是厚雲層也只能阻隔約兩三成紫外線，剩下七成以上照樣會落到地面、直射眼睛（[TVBS新聞網](https://news.tvbs.com.tw/health/3218837)、[壹蘋新聞網](https://news.nextapple.com/life/20260527/F338D014E6E99E2F70C931934249CFDE)）。這也是為什麼台視新聞近期一則報導特別把墨鏡的防曬原理挑出來講清楚。
+陰天出門常有人覺得「太陽沒那麼烈，墨鏡可以省了」，但眼科醫師提醒，這個判斷是錯的。雲層能擋住的主要是可見光，紫外線波長更短、穿透力更強，就算是厚雲層也只能阻隔約兩三成紫外線，剩下七成以上照樣會落到地面、直射眼睛（[TVBS新聞網](https://news.tvbs.com.tw/health/3218837)、[壹蘋新聞網](https://news.nextapple.com/life/20260527/F338D014E6E99E2F70C931934249CFDE)）。長期紫外線曝曬更是[黃斑部病變](/articles/macular-degeneration-warning-signs/)的風險因子之一，這也是為什麼台視新聞近期一則報導特別把墨鏡的防曬原理挑出來講清楚。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=G_89_lHew20" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：陰天眼睛也要防曬 揭墨鏡材料護眼原理">

@@ -1,15 +1,16 @@
 ---
 title: "納豆降血壓有效嗎？納豆激酶機轉、臨床證據與吃法5重點"
 slug: "appi-news-183"
-description: "納豆降血壓有效嗎？高血壓可以吃納豆嗎？這篇從納豆激酶抑制 ACE 的作用機轉、臨床試驗數據的誠實解讀、維生素 K2 的心血管角色，到每日參考量、傍晚食用的理由，以及正在吃高血壓藥或抗凝血藥的人該注意什麼，一次講清楚。"
+description: "納豆降血壓有效嗎？高血壓可以吃納豆嗎？這篇從納豆激酶抑制 ACE 的作用機轉、臨床試驗數據的誠實解讀、維生素 K2 的心血管角色，到每日參考量、傍晚食用的理由，以及已經有吃高血壓藥或抗凝血藥的人該注意什麼，一次講清楚。"
 publishDate: 2026-07-13
-updatedDate: 2026-08-17
+updatedDate: 2026-08-22
 category: health
 subcategory: tcm-integrative
 tags: []
 topics: ["smart-supplements"]
 author: "huang-ziyan"
-coverImage: "covers/appi-news-183.webp"
+coverImage: "covers/appi-news-183-cover.webp"
+coverImageCredit: "Photo by MOROCCAN PHOTOGRAPHER on Pexels"
 coverAlt: "用筷子拉起納豆絲，傳統日式納豆的黏絲質感，背景為木質桌面"
 status: published
 sourceType: author

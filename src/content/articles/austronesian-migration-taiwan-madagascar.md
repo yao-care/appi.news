@@ -1,5 +1,5 @@
 ---
-title: "南島語族起源自台灣是真的嗎？從馬達加斯加DNA看「出台灣說」的證據與爭議"
+title: "南島語族起源台灣是真的嗎？出台灣說證據"
 description: "語言學、考古學與基因學多數證據指向台灣是南島語族原鄉，5000年前開始向外擴散、最遠抵達非洲外海的馬達加斯加。整理「出台灣說」的具體證據、馬拉加斯人血緣組成的真實比例，以及學界仍存在的不同看法。"
 category: "lifestyle"
 subcategory: "life"
@@ -8,6 +8,7 @@ contentType: "news"
 sourceType: "wire"
 status: "published"
 publishDate: "2026-08-09T18:46:08.246Z"
+updatedDate: "2026-08-22T00:00:00.000Z"
 coverImage: "/covers/austronesian-migration-taiwan-madagascar-cover.webp"
 coverImageCredit: "Photo by Jared Rice on Unsplash"
 tags: ["文化藝術", "台東縣", "亞太"]

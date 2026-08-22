@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import MarkdownIt from 'markdown-it';
 import sanitizeHtml from 'sanitize-html';
 import { SITE } from '@/config/site';
-import { articleSlug } from '@/utils/content';
+import { articlePath } from '@/utils/content';
 import { url, absoluteUrl } from '@/utils/url';
 import type { Article, Author } from '@/utils/content';
 
@@ -65,7 +65,7 @@ export function toRssItems(
       title: a.data.title,
       description: a.data.description,
       pubDate: a.data.publishDate,
-      link: url(`/articles/${articleSlug(a)}/`),
+      link: url(articlePath(a)),
       categories: a.data.tags,
       author: author?.data.name ?? `${SITE.name} 編輯部`,
       content: absolutizeAssets(html, site),

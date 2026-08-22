@@ -1,9 +1,10 @@
 ---
-title: "美國要打造首個 FDA 授權的『會自己改藥改療程』臨床 AI agent，還配一個監督 agent 盯著它"
+title: "FDA首個授權臨床AI agent：自主改藥配監督agent"
 slug: "fda-clinical-ai-agent-overseer"
-description: "ARPA-H 的 ADVOCATE 計畫要做第一個 FDA 授權、能自主調整門診用藥飲食的臨床 AI agent，再配一個監督 agent 盯著它。當醫療 AI 從回答問題走到自己動手改療程，監理重點就從演算法準不準，移到誰來監督這個會行動的 agent。"
+description: "FDA首個授權的臨床AI agent要來了：ARPA-H的ADVOCATE計畫能自主調整門診用藥飲食，再配一個監督agent盯著它。當醫療AI從回答問題走到自己動手改療程，監理重點就從演算法準不準，移到誰來監督這個會行動的agent。"
 excerpt: "把行動 agent 配上監督 agent，等於把企業治理的 Maker-Checker 雙人覆核搬進 AI。問題是，當會出錯的人和盯著它的人都換成 AI，這套覆核真的夠成熟了嗎。"
 publishDate: "2026-07-07T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "tech-policy"
 tags:

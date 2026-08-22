@@ -1,14 +1,15 @@
 ---
 title: "黑箱AI是什麼？和可解釋AI差在哪，醫療怎麼選才安全"
 slug: "appi-news-468"
-description: "黑箱AI指模型無法說明推論過程，一般商業場景頂多影響效率，但醫療診斷牽動病患安全風險倍增。用AI老藥新用案例看可解釋性工具如何讓決策路徑可追溯、值得信任。"
+description: "黑箱AI是什麼？指AI模型無法說明推論過程，一般商業場景頂多影響效率，但醫療診斷牽動病患安全，風險大幅升高。用AI老藥新用案例，看可解釋性工具如何讓決策路徑可追溯、值得信任。"
 publishDate: 2026-07-29
-updatedDate: 2026-08-07
+updatedDate: 2026-08-22
 category: health
 subcategory: medtech
 tags: ["醫療AI", "AI治理", "AI", "數位健康", "藥物研發", "醫病關係", "醫療政策", "心理健康"]
 author: "appi-editorial"
-coverImage: "covers/appi-news-468.webp"
+coverImage: "covers/appi-news-468-cover.webp"
+coverImageCredit: "Photo by Jimmy Liao on Pexels"
 coverAlt: "醫師在診間查看AI輔助診斷系統畫面，畫面顯示決策推論流程"
 status: published
 sourceType: editorial
@@ -32,7 +33,7 @@ references:
     url: "https://finance.technews.tw/2026/07/16/beyond-ai-hype-sober-reflections-black-box-risks-enterprise-adoption-realities/"
 draft: false
 ---
-醫療AI的黑箱決策問題，近期隨企業級AI導入熱潮再度被攤上檯面。一篇分析企業導入AI現況的報導指出，多數AI系統存在「黑箱」問題：即使開發者本身，也無法完整說明模型為何得出特定答案（[Technews報導](https://finance.technews.tw/2026/07/16/beyond-ai-hype-sober-reflections-black-box-risks-enterprise-adoption-realities/)）。報導同時點出，AI在自信語氣下產出錯誤資訊（幻覺）的問題，至今仍未被業界完全解決。這類黑箱風險在行銷發想等低風險場景影響有限，但一旦進入醫療診斷等高風險領域，容錯空間就大幅縮小。
+黑箱AI是什麼？指的是AI模型即使開發者本身，也無法完整說明它為何得出特定答案的現象。這個問題近期隨企業級AI導入熱潮再度被攤上檯面。一篇分析企業導入AI現況的報導指出，多數AI系統存在「黑箱」問題（[Technews報導](https://finance.technews.tw/2026/07/16/beyond-ai-hype-sober-reflections-black-box-risks-enterprise-adoption-realities/)）。報導同時點出，AI在自信語氣下產出錯誤資訊（幻覺）的問題，至今仍未被業界完全解決。這類黑箱風險在行銷發想等低風險場景影響有限，但一旦進入醫療診斷等高風險領域，容錯空間就大幅縮小。
 
 ## 企業AI的黑箱焦慮，為何在醫療場域被放大
 

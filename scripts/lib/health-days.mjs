@@ -823,9 +823,13 @@ export function buildHealthDayPrompt(entry, date, opts = {}) {
 }
 
 /** 解析 claude 回傳的 HEALTHDAY_RESULT 行。 */
+import { parseSentinelResult } from './claude-cli.mjs';
+
+// 哨兵解析正本＝lib/claude-cli.mjs parseSentinelResult。這裡曾是唯一漂移的複本：
+// 舊 regex 不吃空白／半形直線，且**不回 infra 旗標**——模型漏印結果行時被當成「編輯判斷跳過」，
+// 寫好的稿會隨 worktree 被刪。改走正本後 infra 一律有旗標，主流程據此走檔案保底撿稿。
 export function parseHealthDayResult(stdout) {
-  const m = String(stdout || '').match(/HEALTHDAY_RESULT=(OK|SKIP)｜([^\n\r]*)/);
-  if (!m) return { action: 'skip', note: '找不到 HEALTHDAY_RESULT 行', slug: '' };
-  if (m[1] === 'OK') return { action: 'ok', slug: m[2].trim(), note: '已寫' };
-  return { action: 'skip', slug: '', note: m[2].trim() || '未說明' };
+  const v = parseSentinelResult(stdout, 'HEALTHDAY', { verdicts: ['OK', 'SKIP'] });
+  if (v.action === 'ok') return { ...v, slug: v.slug || '', note: '已寫' };
+  return { ...v, slug: '', note: v.infra ? v.note : v.note || '未說明' };
 }

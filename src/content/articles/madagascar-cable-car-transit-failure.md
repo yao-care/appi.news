@@ -1,10 +1,10 @@
 ---
-title: "馬達加斯加都市纜車為何沒人搭？1.73億美元交通建設失敗"
+title: "馬達加斯加纜車為何沒人搭？斥資1.73億美元交通建設失敗"
 slug: "madagascar-cable-car-transit-failure"
-description: "馬達加斯加首都塔那那利佛斥資1.73億美元興建都市纜車，通車數週後卻乏人問津。整理票價是迷你巴士6至8倍、貧窮人口與交通規劃落差，以及政變後這套系統的去留。"
+description: "馬達加斯加首都塔那那利佛斥資1.73億美元興建都市纜車，通車數週後票價是迷你巴士6至8倍讓乘客卻步。整理當地貧窮人口與交通規劃落差，以及政變後這套系統的去留。"
 excerpt: "馬達加斯加首都斥資1.73億美元蓋纜車解決塞車，通車數週後幾乎沒人搭，票價是迷你巴士6到8倍；催生者已因政變下台，纜車去留成謎。"
 publishDate: "2026-08-06T17:03:21.286Z"
-updatedDate: "2026-08-17"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "global-focus"
 tags:
@@ -48,7 +48,7 @@ coverAlt: "都市纜車行經城市上空（示意圖）"
 coverImageCredit: "Photo by Bradley Andrews on Unsplash"
 ---
 
-在非洲東岸外海島國馬達加斯加的首都塔那那利佛，一排排纜車車廂如今掛在半空，幾乎空無一人。[美聯社（AP）記者實地採訪報導](https://www.the-messenger.com/news/world/article_770bc243-967f-5c5a-bbf9-a300d70f72eb.html)指出，這套耗資約1.73億美元興建的都市纜車系統，通車才短短幾週就乏人問津，如今被外界視為這個全球最貧窮國家之一的一次重大誤判。
+馬達加斯加首都塔那那利佛砸下約1.73億美元蓋的都市纜車，通車才短短幾週幾乎沒人搭，關鍵原因是票價高達迷你巴士的6到8倍，讓月薪僅約72美元的通勤族望之卻步。[美聯社（AP）記者實地採訪報導](https://www.the-messenger.com/news/world/article_770bc243-967f-5c5a-bbf9-a300d70f72eb.html)指出，這套系統如今被外界視為這個全球最貧窮國家之一的一次重大誤判。
 
 延伸閱讀：[南島語族起源自台灣是真的嗎？從馬達加斯加DNA看「出台灣說」的證據與爭議](/articles/austronesian-migration-taiwan-madagascar/)
 
@@ -76,7 +76,7 @@ coverImageCredit: "Photo by Bradley Andrews on Unsplash"
 
 塔那那利佛的通勤困境並非特例。當地人口自1960年代以來已成長逾10倍，是[非洲各地普遍出現的鄉村人口移入都市現象](https://apnews.com/article/rwanda-urbanization-population-growth-agriculture-farming-d3bc1112e81558a722cfc92d53c70c5d)之一。根據跨政府組織經濟合作暨發展組織（OECD）估計，非洲目前約7億都市人口，到2050年可能倍增，也將帶來對公共運輸、住宅、醫療、教育、用水與電力等服務的龐大需求。
 
-研究機構Transport Africa指出，儘管非洲都市化速度居全球前段班，公共運輸系統發展卻是全球最落後之一。翁德瓦特說，非洲各國政府普遍把交通運輸交給民間市場，而南非的「kombi」、肯亞的「matatu」、奈及利亞的「danfo」等迷你巴士車隊，實際上撐起了大多數民眾的通勤需求，相對運作得還算有效。
+研究機構Transport Africa指出，儘管非洲都市化速度居全球前段班，公共運輸系統發展卻是全球最落後之一，[盧安達的無人機送血網一樣卡在道路、電力與人力這關](/articles/rwanda-drone-healthcare-delivery-limits/)，顯示基礎建設落差不只出現在交通這一項服務上。翁德瓦特說，非洲各國政府普遍把交通運輸交給民間市場，而南非的「kombi」、肯亞的「matatu」、奈及利亞的「danfo」等迷你巴士車隊，實際上撐起了大多數民眾的通勤需求，相對運作得還算有效。
 
 塔那那利佛部分通勤族坦言，曾對能飛越日常塞車車陣感到新奇，但成本、可靠度、[強烈風暴（包括熱帶氣旋）](https://apnews.com/article/madagascar-cyclone-tropical-storm-climate-weather-aa7468bb22c8418cb60f92bcc50eae74)來襲時的安全性等現實考量，很快把他們拉回地面。上班族赫里．拉齊姆巴扎菲（Hery Ratsimbazafy）告訴美聯社，纜車路線不直達市中心，根本不符合他的通勤需求：「它沒辦法帶我到我需要去的地方。」
 

@@ -1,8 +1,9 @@
 ---
-title: "撞到頭當下沒事，怎麼一兩個月後才腦出血？老人跌倒最該警覺的「慢性硬腦膜下血腫」"
+title: "慢性硬腦膜下血腫：老人跌倒撞頭最該警覺什麼"
 slug: "chronic-subdural-hematoma-elderly"
 description: "老人頭部撞到當下看起來沒事，最怕的是拖一到兩個月才發作的慢性硬腦膜下血腫。它好發於腦部萎縮、又在吃抗凝血藥的長輩，常被誤當成失智或中風。教你認出警訊、分清硬腦膜外與硬腦膜下的差別，以及該什麼時候帶長輩就醫。"
 publishDate: 2026-07-20T14:00:00+08:00
+updatedDate: 2026-08-22T00:00:00+08:00
 category: health
 subcategory: aging-health
 tags:

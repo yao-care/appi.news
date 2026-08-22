@@ -1,9 +1,10 @@
 ---
-title: "北韓為何靠狗肉湯抗暑？平壤飆36.7度創氣象紀錄"
+title: "北韓熱浪飆36.7度創紀錄，官媒推狗肉湯抗暑"
 slug: "north-korea-heatwave-traditional-food"
 description: "北韓國營媒體在破紀錄熱浪中大力推薦狗肉湯、參雞湯等傳統食物消暑，還搬出「三伏天狗肉湯灑到腳背都成藥」的老諺語；官方電視台稱平壤飆上攝氏36.7度，創該國有氣象紀錄以來新高，但北韓未公布本國熱傷害死亡數字，同一波熱浪下南韓已通報逾20起熱浪相關死亡案例。"
 excerpt: "北韓官媒開出狗肉湯、參雞湯等消暑菜單迎戰破紀錄熱浪，平壤飆上36.7度創氣象紀錄；南韓同波熱浪已通報逾20起死亡，北韓官方則未公布本國數字。"
 publishDate: "2026-08-10T16:37:27.503Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "asia"
 tags:
@@ -45,7 +46,7 @@ coverImageCredit: "Photo by ROMAN ODINTSOV on Pexels"
 originalContribution: "本文交叉比對Free Malaysia Today、Yahoo News、KFGO三家轉載路透社（Thomson Reuters記者Kyu-seok Shim）對北韓官媒消暑報導的內容，核對氣溫數據、引述句與南韓熱浪死亡人數是否一致，並補充兩韓官方應對熱浪邏輯的落差脈絡，供台灣讀者理解北韓官媒宣傳手法。"
 ---
 
-北韓官媒這波熱浪裡開出一張消暑菜單：狗肉湯、參雞湯、西瓜、黃瓜、綠豆粥全數搬上檯面。北韓國家電視台同時報稱平壤氣溫飆上攝氏36.7度（華氏98.1度），是這個國家有氣象紀錄以來的最高溫。
+北韓國家電視台報稱平壤氣溫飆上攝氏36.7度（華氏98.1度），創這個國家有氣象紀錄以來最高溫。北韓官媒同時在這波熱浪裡開出一張消暑菜單：狗肉湯、參雞湯、西瓜、黃瓜、綠豆粥全數搬上檯面。
 
 這則報導由路透社（Thomson Reuters）記者Kyu-seok Shim發出，經[Free Malaysia Today](https://www.freemalaysiatoday.com/category/world/2026/08/07/north-koreans-urged-to-beat-record-heat-with-dog-meat-soup)、[Yahoo News](https://www.yahoo.com/news/articles/north-koreans-urged-beat-heat-051600453.html)、[KFGO](https://kfgo.com/2026/08/07/north-koreans-urged-to-beat-heat-with-dog-meat-soup/)等多家媒體轉載，三篇報導對氣溫數字與引述內容一致。北韓與南韓氣候同步進入酷熱期，但兩韓官方應對熱浪的邏輯明顯不同，這種落差也呼應了兩韓關係長期以來的疏離，例如南韓近日[重啟停擺十年的京元線鐵路修復工程](/articles/two-koreas-railway-project-restart/)，也是一種在冰凍關係裡各走各路的縮影。
 

@@ -1,5 +1,5 @@
 ---
-title: "王彥程 KBO 十勝寫紀錄：台灣投手在韓職的位置，和旅外選擇的現實"
+title: "王彥程KBO十勝寫紀錄：台灣投手在韓職的位置"
 slug: "wang-yen-cheng-kbo-ten-wins"
 description: "台灣左投王彥程效力韓華鷹，拿下個人在韓職KBO的第十勝，成為2026年實施亞洲外援配額制度以來首位單季雙位數勝投的亞洲外援投手。整理這項配額制度怎麼運作、與日職NPB、美職小聯盟體系的差異，以及台灣投手旅外時實際面對的機會結構。"
 excerpt: "王彥程拿下KBO個人第十勝，成為亞洲外援配額制度首位單季雙位數勝投投手。這項紀錄證明的是一條台灣投手過去很難走通的先發輪值路徑。"
@@ -47,7 +47,7 @@ references:
   - title: "2026 MLB「台灣球員」有誰？22人球隊層級一覽 鄧愷威大聯盟開季"
     url: "https://www.nownews.com/news/6799800"
     publisher: "NOWnews今日新聞"
-updatedDate: "2026-08-06T05:55:28.112Z"
+updatedDate: "2026-08-22"
 ---
 
 台灣左投王彥程在韓職代表韓華鷹拿下個人本季第10勝，成為KBO自2026年實施亞洲外援配額制度以來，首位單季拿下雙位數勝投的亞洲外援投手。這項紀錄的意義，在於證明[KBO為亞洲外籍球員另闢的名額安排](https://sports.ltn.com.tw/news/breakingnews/5528621)真的能讓台灣投手拿到穩定先發輪值機會，這是日職與美職小聯盟體系過去不容易給的位置，重點不是單場投球內容本身。
@@ -61,6 +61,8 @@ updatedDate: "2026-08-06T05:55:28.112Z"
 <img src="/images/wang-yen-cheng-kbo-ten-wins-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="棒球投手在投手丘上投球的動作瞬間" title="王彥程本季在先發輪值中穩定輪轉，累計投球局數居隊內第一（示意圖）">
 
 更受討論的是他的身價。王彥程今年以10萬美元（約新台幣318萬元）年薪加盟韓華鷹，是本季所有亞洲外援中薪資最低的球員之一，遠低於起亞虎美籍投手奈爾（James Naile）的200萬美元年薪。韓媒因此形容他是「[沒有比較對象的最強亞援](https://tw.sports.yahoo.com/news/%E9%9F%93%E8%81%B7%E3%80%8B%E7%8E%8B%E5%BD%A5%E7%A8%8B%E5%B9%B4%E8%96%AA10%E8%90%AC%E7%BE%8E%E5%85%83%E6%8B%BF10%E5%8B%9D-%E9%9F%93%E5%AA%92%EF%BC%9A%E6%B2%92%E6%9C%89%E6%AF%94%E8%BC%83%E5%B0%8D%E8%B1%A1%E7%9A%84%E6%9C%80%E5%BC%B7%E4%BA%9E%E6%8F%B4-131209562.html)」。
+
+延伸閱讀：[李灝宇刷新台灣球員MLB單季安打紀錄，這項紀錄怎麼算？](/articles/lee-hao-yu-mlb-hits-record/)
 
 ## KBO亞洲外援配額怎麼運作
 

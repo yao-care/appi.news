@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" role="img" aria-labelledby="title desc">
+  <title id="title">台灣虎航9月1日起票務費用比較</title>
+  <desc id="desc">台灣虎航訂位服務費非旺季由每人每航段300元調整為350元，旺季由400元調整為450元；桃園與高雄另新增專屬報到櫃台服務，每人每航段500元。</desc>
+  <style>
+    text { font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif; }
+    .title { font-size: 26px; font-weight: 700; fill: #1e2030; }
+    .deck { font-size: 15px; fill: #6e7276; }
+    .label { font-size: 20px; font-weight: 700; fill: #1e2030; }
+    .value { font-size: 22px; font-weight: 700; fill: #1e2030; }
+    .note { font-size: 14px; fill: #6e7276; }
+    .foot { font-size: 13px; fill: #6e7276; }
+  </style>
+  <rect width="960" height="640" fill="#ffffff"/>
+  <rect x="40" y="38" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="58" y="60" class="title">台灣虎航9月1日起票務費用比較</text>
+  <text x="58" y="90" class="deck">訂位服務費每人每航段增加50元，另新增兩座機場的專屬報到櫃台服務</text>
+
+  <line x1="90" y1="480" x2="870" y2="480" stroke="#e8e9ed" stroke-width="1"/>
+  <line x1="90" y1="200" x2="90" y2="480" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="74" y="484" class="note" text-anchor="end">0</text>
+  <text x="74" y="344" class="note" text-anchor="end">250</text>
+  <text x="74" y="204" class="note" text-anchor="end">500元</text>
+  <line x1="84" y1="340" x2="870" y2="340" stroke="#e8e9ed" stroke-width="1" stroke-dasharray="4 6"/>
+  <line x1="84" y1="200" x2="870" y2="200" stroke="#e8e9ed" stroke-width="1" stroke-dasharray="4 6"/>
+
+  <rect x="180" y="312" width="90" height="168" rx="4" fill="#eef0f3"/>
+  <rect x="290" y="284" width="90" height="196" rx="4" fill="#a87515"/>
+  <text x="225" y="294" class="value" text-anchor="middle">300元</text>
+  <text x="335" y="266" class="value" text-anchor="middle">350元</text>
+  <text x="280" y="520" class="label" text-anchor="middle">非旺季訂位服務費</text>
+  <text x="280" y="546" class="note" text-anchor="middle">9月1日起 +50元</text>
+
+  <rect x="470" y="256" width="90" height="224" rx="4" fill="#eef0f3"/>
+  <rect x="580" y="228" width="90" height="252" rx="4" fill="#1f3a5f"/>
+  <text x="515" y="238" class="value" text-anchor="middle">400元</text>
+  <text x="625" y="210" class="value" text-anchor="middle">450元</text>
+  <text x="570" y="520" class="label" text-anchor="middle">旺季訂位服務費</text>
+  <text x="570" y="546" class="note" text-anchor="middle">9月1日起 +50元</text>
+
+  <rect x="760" y="200" width="90" height="280" rx="4" fill="#a87515"/>
+  <text x="805" y="182" class="value" text-anchor="middle">500元</text>
+  <text x="805" y="520" class="label" text-anchor="middle">專屬報到櫃台</text>
+  <text x="805" y="546" class="note" text-anchor="middle">桃園、高雄新增</text>
+
+  <line x1="40" y1="580" x2="920" y2="580" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="40" y="610" class="foot">製圖：APPI News</text>
+  <text x="920" y="610" class="foot" text-anchor="end">資料時點：2026年8月21日；來源：台灣虎航、PTT Japan_Travel</text>
+</svg>

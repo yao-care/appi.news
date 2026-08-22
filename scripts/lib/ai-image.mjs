@@ -1,10 +1,11 @@
 import sharp from 'sharp';
-import { readFileSync, writeFileSync, unlinkSync, mkdtempSync } from 'node:fs';
+import { readFileSync, writeFileSync, unlinkSync, mkdtempSync, existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
-import { homedir, tmpdir } from 'node:os';
-import { execFileSync } from 'node:child_process';
+import { tmpdir } from 'node:os';
+import { execFileSync, spawnSync } from 'node:child_process';
 import { expandPhotoPrompt, composePhotoPrompt, varietyHints } from './photo-prompt.mjs';
 import { visualCheck, stockPhotoCheck } from './visual-check.mjs';
+import { WRITER_CMD, WRITER_MODEL, classifyWriterRun } from './writer-cli.mjs';
 
 // 生圖專門機制：Cloudflare Worker（與前端 src/utils/editor/ai-worker.ts 同一個，
 // OpenAI/Fal 金鑰已設在 worker 上）。換網域時兩邊一起改。
@@ -44,14 +45,8 @@ export function imgTag({ src, width, height, alt = '' }) {
   return `<img src="${src}" width="${width}" height="${height}" loading="lazy" decoding="async" alt="${safeAlt}">`;
 }
 
-export function readOpenAIKey() {
-  const path = join(homedir(), '.config/appi-news/ai-worker.secrets');
-  const m = readFileSync(path, 'utf8').match(/^OPENAI_API_KEY=(.+)$/m);
-  if (!m) throw new Error(`OPENAI_API_KEY not found in ${path}`);
-  return m[1].trim().replace(/^["']|["']$/g, '');
-}
-
-// 取 GitHub token（worker 以 repo push 權限防付費 API 被濫用）：env 優先，否則 gh auth token。
+// 取 GitHub token（worker 的圖庫搜尋 /stock-search 以 repo push 權限防付費 API 被濫用）：
+// env 優先，否則 gh auth token。（生圖已不走 worker，此 token 只剩 stock.mjs 在用。）
 export function githubToken() {
   if (process.env.GITHUB_TOKEN) return process.env.GITHUB_TOKEN.trim();
   if (process.env.GH_TOKEN) return process.env.GH_TOKEN.trim();
@@ -62,53 +57,58 @@ export function githubToken() {
   }
 }
 
-// 經 worker 同步生圖（POST /generate → {b64,mime}），回 webp。worker 端會強制台灣人物鐵律。
-// quality 明確帶入時附進 body（人物 photoreal 用 'medium'）；省略則由 worker 用其 env 預設（low）。
-async function generateViaWorker({ prompt, width, token, quality }) {
-  const body = { prompt, size: 'landscape' };
-  if (quality) body.quality = quality;
-  const res = await fetch(`${AI_WORKER}/generate`, {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${token}`, 'content-type': 'application/json' },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) throw new Error(`worker 生圖失敗（${res.status}）：${(await res.text()).slice(0, 200)}`);
-  const { b64 } = await res.json();
-  if (!b64) throw new Error('worker 未回傳圖片');
-  return toWebp(Buffer.from(b64, 'base64'), width);
+/** 解析 codex 生圖回覆的 IMG=<path> 行。純函式，供測試。 */
+export function parseImgResult(stdout) {
+  const m = String(stdout || '').match(/^IMG=(\S+)$/m);
+  return m ? m[1] : null;
+}
+
+// codex 原生生圖（image_generation 工具，stable、額度走 codex 訂閱）。
+// 站長 2026-08-22 裁示：生圖本體改用 codex；worker / OpenAI API 僅作備援。
+// 產出 1536x1024 橫式 PNG（實測 0.149），toWebp 再縮到目標寬。
+// prompt 走 stdin（與 runWriterOnce 同理由：避免特殊字元/長度咬到 argv）。
+async function generateViaCodex({ prompt, width, timeoutMs = 12 * 60_000 }) {
+  const dir = mkdtempSync(join(tmpdir(), 'appi-codeximg-'));
+  const out = join(dir, 'gen.png');
+  try {
+    const instruction = `用你的 image_generation 工具生成一張圖片。圖片需求（英文 prompt，照用、不要改寫）：
+
+${prompt}
+
+要求：橫式（landscape）。生成後用 shell 把產出的圖檔複製到 ${out}，最後只回覆一行：IMG=${out}`;
+    const r = spawnSync(WRITER_CMD, [
+      'exec', '--dangerously-bypass-approvals-and-sandbox', '--skip-git-repo-check',
+      '-m', WRITER_MODEL, '-c', 'model_reasoning_effort="low"',
+    ], { encoding: 'utf8', input: instruction, maxBuffer: 32 * 1024 * 1024, timeout: timeoutMs, killSignal: 'SIGKILL' });
+    const c = classifyWriterRun(r);
+    if (c.kind !== 'ok') throw new Error(`codex 生圖 ${c.kind}：${(c.detail || '').slice(0, 150)}`);
+    const path = parseImgResult(c.stdout);
+    const file = path && existsSync(path) ? path : (existsSync(out) ? out : null);
+    if (!file) throw new Error('codex 生圖無產出檔（回覆缺 IMG= 行且暫存路徑無檔案）');
+    return toWebp(readFileSync(file), width);
+  } finally {
+    try { rmSync(dir, { recursive: true, force: true }); } catch { /* 忽略 */ }
+  }
 }
 
 // 整合（不單元測試）：生圖 → webp。
-// 優先走專門機制（worker，金鑰已配好）；無 GitHub token 才退回本機 OpenAI 金鑰。
+// 🔴 生圖唯一路徑＝codex 原生 image_generation（站長 2026-08-22 裁示：100% 走 codex，
+// 不得退回 gpt-image-2 API／worker）。codex 失敗就 throw，讓配圖 gate 照紅線「中止不發、
+// 改動留工作區待補」，不准靜默改用其他引擎。model/size/quality 參數已停用，
+// 僅為呼叫端簽名相容而保留。
 export async function generateImage({
   topic,
   context = '',
   width = 1200,
-  model = 'gpt-image-2',
-  size = '1536x1024',
-  quality = 'low', // 段落圖多，用 low 控成本
+  model: _model, // 停用（僅簽名相容）
+  size: _size, // 停用（僅簽名相容）
+  quality: _quality, // 停用（僅簽名相容）
   prompt: prebuiltPrompt, // 人物 photoreal 路徑傳 composePhotoPrompt 組好的完整 prompt
 }) {
   const prompt = prebuiltPrompt && String(prebuiltPrompt).trim()
     ? String(prebuiltPrompt).trim()
     : buildImagePrompt({ topic, context });
-
-  const token = githubToken();
-  if (token) {
-    return generateViaWorker({ prompt, width, token, quality });
-  }
-
-  // fallback：本機 OpenAI 金鑰直打
-  const key = readOpenAIKey();
-  const res = await fetch('https://api.openai.com/v1/images/generations', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${key}`, 'content-type': 'application/json' },
-    body: JSON.stringify({ model, prompt, size, quality, n: 1 }),
-  });
-  if (!res.ok) throw new Error(`OpenAI ${res.status}: ${(await res.text()).slice(0, 150)}`);
-  const b64 = (await res.json()).data?.[0]?.b64_json;
-  if (!b64) throw new Error('no image returned');
-  return toWebp(Buffer.from(b64, 'base64'), width);
+  return generateViaCodex({ prompt, width });
 }
 
 // 生成圖 → 暫存成 jpg（Read/vision 讀 webp 支援不保證）→ 視覺自檢 → 清暫存。

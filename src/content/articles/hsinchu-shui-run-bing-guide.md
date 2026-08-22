@@ -2,8 +2,9 @@
 coverImage: "covers/hsinchu-shui-run-bing-guide-cover.webp"
 coverAlt: "傳統手工薄餅點心示意圖"
 coverImageCredit: "Photo by JC Daily on Unsplash"
-title: "水潤餅是什麼？新竹限定古早味的由來、成分與全台僅存店家整理"
-description: "新竹水潤餅是用麵粉、糖、肉桂粉做成的薄餅，源自城隍廟供品文化，全台目前只剩北區「德龍商行」在做。整理水潤餅的由來、成分、跟牛舌餅的差異，以及地址、價格與保存方式。"
+title: "水潤餅是什麼？由來、成分、保存多久與新竹僅存店家"
+description: "新竹水潤餅是用麵粉、糖、肉桂粉做成的薄餅，源自城隍廟供品文化，全台目前只剩北區「德龍商行」在做。整理水潤餅的成分、由來、跟牛舌餅的差異、常溫可以放多久（約3到4天，冷凍3至6個月），以及地址與價格。"
+updatedDate: 2026-08-22
 publishDate: "2026-08-10T18:47:30.458Z"
 category: "lifestyle"
 subcategory: "life"

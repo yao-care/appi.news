@@ -1,9 +1,10 @@
 ---
-title: "高鐵新車N700ST內裝一次看：全車插座、免治馬桶、114個行李箱空間，最快2027年7月上路"
+title: "高鐵新車N700ST內裝一次看：全車插座、免治馬桶升級"
 slug: "thsr-n700st-new-train-interior"
 description: "台灣高鐵新世代列車N700ST於2026年7月30日在日本山口縣出廠，預計8月中運抵高雄港。整理新車座椅、插座、免治馬桶、行李空間、無障礙與哺集乳設施等內裝升級重點，以及上路時程與運能提升幅度。"
 excerpt: "台灣高鐵新世代列車N700ST於2026年7月30日在日本山口縣出廠，預計8月中運抵高雄港。整理新車座椅、插座、免治馬桶、行李空間、無障礙與哺集乳設施等內裝升級重點，以及上路時程與運能提升幅度。"
 publishDate: "2026-07-30T19:01:12.100Z"
+updatedDate: "2026-08-22"
 category: "lifestyle"
 subcategory: "life"
 tags:
@@ -49,6 +50,8 @@ references:
 
 台灣高鐵相隔22年再引進全新車款。新世代列車N700ST於2026年7月30日在日本山口縣的日立笠戶工廠正式出廠，這是繼700T之後高鐵首度換上新世代車型，內裝從座椅、插座到洗手間全面升級。三立新聞網SETN的YouTube頻道搶先曝光了車廂內裝畫面，不少乘客關心的是新車何時能搭到、到底差在哪裡。以下整理新車的具體規格與上路時程。
 
+延伸閱讀：[花蓮航線為何客源不足？在地人解釋沒有高鐵、多改搭火車](/articles/hualien-flight-suspension-transport-options/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=fFLM-6xT6EU" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：高鐵新車內裝開箱！新世代列車N700ST不只顏值升級">
     <img src="/images/thsr-n700st-new-train-interior-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="高鐵新車內裝開箱！新世代列車N700ST不只顏值升級">
@@ -73,6 +76,8 @@ references:
 首組N700ST於2026年7月30日出廠後，[預計8月15日運抵高雄港](https://www.cna.com.tw/news/ahel/202607300123.aspx)，接下來要在台灣進行一系列測試。高鐵董事長史哲表示，希望測試完成後於**2027年7月1日正式上線**。[台灣高鐵這次向日立東芝聯盟採購12組新車，總金額約1,240.91億日圓](https://www.cna.com.tw/news/ahel/202607290163.aspx)，[2027年、2028年各投入6組，屆時車隊規模將從現行34組擴增到46組](https://money.udn.com/money/story/5612/9659307)。
 
 運能方面，[高鐵目前每週約1,134班次，新車全數到位後將逐步增加到超過1,400班，尖峰時段運能可提升約25%](https://www.cna.com.tw/news/ahel/202607300123.aspx)，目標是緩解尖峰時段一票難求的狀況。想搭到內裝全面升級的N700ST，最快也要等到2027年下半年，行李箱尺寸與充電需求可以先記下來，等售票資訊公布後再規劃行程。
+
+延伸閱讀：[2026中秋節連假放幾天？高鐵疏運資訊與台鐵加開班次查詢](/articles/mid-autumn-teachers-day-2026-holiday/)
 
 ## 常見問題
 

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="四位台灣籍大聯盟野手單季最高安打數對照：胡金龍2008年21支、林哲瑄2012年3支、張育成2021年54支、李灝宇2026年至少56支">
+<style>
+.title{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:26px;font-weight:700;fill:#1e2030;}
+.subtitle{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:15px;fill:#6e7276;}
+.name{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:20px;font-weight:700;fill:#1e2030;}
+.year{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:14px;fill:#6e7276;}
+.value{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:22px;font-weight:700;fill:#1e2030;}
+.foot{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:13px;fill:#6e7276;}
+</style>
+<rect x="0" y="0" width="960" height="600" fill="#ffffff"/>
+
+<rect x="40" y="34" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="56" y="56" class="title">旅美台灣野手單季安打紀錄怎麼變化</text>
+<text x="56" y="82" class="subtitle">四位台灣籍大聯盟野手，生涯單一球季最高安打數對照</text>
+
+<line x1="40" y1="104" x2="920" y2="104" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- row 1: 胡金龍 2008 -->
+<text x="56" y="150" class="name">胡金龍</text>
+<text x="56" y="170" class="year">2008年・道奇</text>
+<rect x="280" y="132" width="231" height="34" rx="4" fill="#eef0f3"/>
+<text x="521" y="156" class="value">21支</text>
+
+<!-- row 2: 林哲瑄 2012 -->
+<text x="56" y="238" class="name">林哲瑄</text>
+<text x="56" y="258" class="year">2012年・紅襪</text>
+<rect x="280" y="220" width="33" height="34" rx="4" fill="#eef0f3"/>
+<text x="323" y="244" class="value">3支</text>
+
+<!-- row 3: 張育成 2021 -->
+<text x="56" y="326" class="name">張育成</text>
+<text x="56" y="346" class="year">2021年・克里夫蘭印地安人</text>
+<rect x="280" y="308" width="594" height="34" rx="4" fill="#eef0f3"/>
+<text x="884" y="332" class="value">54支</text>
+
+<!-- row 4: 李灝宇 2026（焦點列） -->
+<rect x="20" y="382" width="900" height="94" rx="12" fill="#eaf0f8"/>
+<rect x="20" y="382" width="900" height="4" rx="2" fill="#a87515"/>
+<text x="56" y="428" class="name">李灝宇</text>
+<text x="56" y="448" class="year">2026年・老虎（球季進行中）</text>
+<rect x="280" y="410" width="616" height="34" rx="4" fill="#a87515"/>
+<text x="906" y="434" class="value">56支</text>
+
+<line x1="40" y1="510" x2="920" y2="510" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="536" class="foot">製圖：APPI News</text>
+<text x="920" y="536" text-anchor="end" class="foot">資料來源：MLB官方季賽數據、Baseball-Reference　統計至2026年8月18日（李灝宇球季未結束，數字持續增加）</text>
+</svg>

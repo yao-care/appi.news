@@ -4,6 +4,7 @@ slug: "microsoft-foundry-multi-model-optionality"
 description: "微軟六月推自研程式碼模型 MAI-Code-1-Flash，並把 Foundry 模型目錄做到逾一萬一千個（含 Claude Opus 4.8），明講降低對 OpenAI 的依賴、替開發者壓低成本。連綁 OpenAI 最深的微軟都在平台層去單一供應商，企業選型該對齊的是可換性與成本，不是無腦追單一最強模型。"
 excerpt: "以前一家公司配一顆模型：Google 是 Gemini、OpenAI 是 GPT。現在三大雲全走 multi-model，模型正在商品化；企業未來買的不是模型，而是切換模型的能力。"
 publishDate: "2026-07-04T08:00:00+08:00"
+updatedDate: 2026-08-22T12:00:00+08:00
 category: "tech"
 subcategory: "software-products"
 tags:
@@ -60,7 +61,7 @@ topics: ["ai-agent-governance"]
 
 <img src="/images/microsoft-foundry-multi-model-optionality-s1.webp" width="960" height="539" loading="lazy" decoding="async" alt="雲端資料中心的伺服器機櫃，象徵微軟同時推自研模型與擴大模型目錄的平台動作">
 
-先看自研模型。[微軟在六月初的 Build 大會推出 MAI-Code-1-Flash](https://www.resultsense.com/news/2026-06-03-microsoft-mai-models-build/)，一個小而快的程式碼模型，能把文字描述直接生成應用程式與網站的程式碼，已經塞進 GitHub Copilot 與 Visual Studio Code。微軟講得很直白：這是為了[降低對 OpenAI 的依賴、替開發者壓低成本](https://www.resultsense.com/news/2026-06-03-microsoft-mai-models-build/)。微軟 AI 主管甚至宣稱，針對特定情境調校後，成本效率比 OpenAI 的 GPT-5.5 高出十倍。執行長 Nadella 給的框架是「從消費一個前沿模型，變成完整參與在前沿」。翻成白話就是：以前每一次 Copilot 補完都要付錢給別人，現在自己也下場做一顆，把這條成本線抓回自己手上。
+先看自研模型。[微軟在六月初的 Build 大會推出 MAI-Code-1-Flash](https://www.resultsense.com/news/2026-06-03-microsoft-mai-models-build/)，一個小而快的程式碼模型，能把文字描述直接生成應用程式與網站的程式碼，已經塞進 GitHub Copilot 與 Visual Studio Code。微軟講得很直白：這是為了[降低對 OpenAI 的依賴、替開發者壓低成本](https://www.resultsense.com/news/2026-06-03-microsoft-mai-models-build/)。微軟 AI 主管甚至宣稱，針對特定情境調校後，成本效率比 OpenAI 的 GPT-5.5 高出十倍。執行長 Nadella 給的框架是「從消費一個前沿模型，變成完整參與在前沿」。翻成白話就是：以前每一次 Copilot 補完都要付錢給別人，現在自己也下場做一顆，把這條成本線抓回自己手上。這跟我寫[Claude Fable 5 依任務分級的模型分層策略](/articles/claude-fable-5-mythos-class-model-tiering/)時講的省錢邏輯是同一件事：不是每個任務都要動用最貴的那顆模型。
 
 <img src="/images/microsoft-foundry-multi-model-optionality-s2.webp" width="960" height="615" loading="lazy" decoding="async" alt="螢幕上的程式碼編輯畫面，象徵自研程式碼模型把文字描述生成程式">
 

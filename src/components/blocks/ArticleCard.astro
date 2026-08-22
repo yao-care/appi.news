@@ -1,7 +1,7 @@
 ---
 import type { Article } from '@/utils/content';
 import {
-  articleSlug,
+  articlePath,
   coverImageFor,
   coverAltFor,
   readingTime,
@@ -24,8 +24,7 @@ const {
   showExcerpt = true,
 } = Astro.props;
 
-const slug = articleSlug(article);
-const href = url(`/articles/${slug}/`);
+const href = url(articlePath(article));
 const cover = coverImageFor(article);
 const alt = coverAltFor(article);
 const rt = readingTime(article);

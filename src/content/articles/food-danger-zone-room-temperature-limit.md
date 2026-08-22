@@ -1,10 +1,11 @@
 ---
-title: "食物室溫能放多久？危險溫度帶7至60°C，便當天熱超過32°C只能放1小時"
+title: "食物室溫放多久？危險溫度帶7至60°C，天熱只能放1小時"
 slug: "food-danger-zone-room-temperature-limit"
 description: "食藥署與衛福部將攝氏7度至60度定義為食物「危險溫度帶」，細菌在此區間可快速增殖；熟食調製後於室溫下建議不超過2小時，氣溫達32度以上要縮短為1小時。外帶便當、自助餐與隔夜炒飯都在食藥署列管的3至8月高風險名單上，本文整理沙門氏桿菌、金黃色葡萄球菌、仙人掌桿菌各自的潛伏期與症狀，並附官方原文出處。"
 publishDate: "2026-07-30T12:14:35.344Z"
+updatedDate: "2026-08-22"
 category: "health"
-topics: ["food-safety-storage"]
+topics: ["food-safety-storage", "mid-autumn-teachers-day-2026"]
 subcategory: "medical"
 tags:
   - "食品安全"

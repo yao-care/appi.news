@@ -17,13 +17,19 @@
 //   node scripts/forum-radar.mjs --go      # 完整流程
 //   node scripts/forum-radar.mjs --go --max 12   # 限制送進 LLM 的候選數（預設 40）
 
-import { writeFileSync, readFileSync, readdirSync, mkdtempSync, mkdirSync } from 'node:fs';
-import { tmpdir, homedir } from 'node:os';
-import { join } from 'node:path';
-import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
-import yaml from 'js-yaml';
 import { runClaudeOnce } from './lib/claude-cli.mjs';
+import {
+  CATEGORY_NAMES,
+  parseSuggestions,
+  recentSiteTitles,
+  writeAndPublish,
+  postToSlack,
+  fetchAlertPath,
+  noteFetchFailure,
+  clearFetchFailure,
+  describeStreak,
+} from './lib/radar-shared.mjs';
 import {
   collectCandidates,
   filterUnseen,
@@ -38,74 +44,9 @@ const arg = (n, d) => {
   return i >= 0 ? process.argv[i + 1] : d;
 };
 
-// 全板抓取失敗的告警節流。與 forum-seen 同一個 state 目錄。
-//
-// 🔴 **一波故障的第 1 輪一定要報，之後才節流**——只看「距上次報過多久」會讓
-// 「剛壞掉」與「壞了一整夜」長得一模一樣。2026-08-08 站長收到一則 ❌ 無法判斷那是
-// 單次還是連續第 8 輪，得翻 log 才知道，所以訊息一律帶連續輪數與起始時間。
-const FETCH_ALERT_PATH = join(
-  process.env.XDG_STATE_HOME || join(homedir(), '.local', 'state'),
-  'appi-news', 'forum-fetch-alert.json',
-);
-const ALERT_COOLDOWN_MS = 6 * 3600 * 1000;
-// 隔太久沒失敗就算新一波（cron 停擺／主機重開後不該把舊 streak 接著算）。
-const STREAK_GAP_MS = 6 * 3600 * 1000;
-
-function readAlertState() {
-  try { return JSON.parse(readFileSync(FETCH_ALERT_PATH, 'utf8')) || {}; } catch { return {}; }
-}
-
-function writeAlertState(state) {
-  try {
-    mkdirSync(join(FETCH_ALERT_PATH, '..'), { recursive: true });
-    writeFileSync(FETCH_ALERT_PATH, JSON.stringify(state));
-  } catch { /* 寫不進去不影響本輪判斷，寧可多報不可不報 */ }
-}
-
-/**
- * 記一次「全板抓取失敗」，回報這一波的連續狀況與這輪該不該出聲。
- * 寫不進帳本時 streak 會退回 1、shouldAlert 恆真——寧可多報不可不報。
- *
- * `persist=false`（dry-run）只算不寫：手動跑 dry-run 剛好撞上故障時，
- * 若寫進帳本會把 lastAlertMs 蓋成現在，**吃掉下一輪 cron 的告警**。
- */
-export function noteFetchFailure(now = Date.now(), { persist = true } = {}) {
-  const prev = readAlertState();
-  const continued = prev.lastFailMs && now - prev.lastFailMs <= STREAK_GAP_MS;
-  const streak = continued ? (prev.streak || 1) + 1 : 1;
-  const streakStartMs = continued ? (prev.streakStartMs || now) : now;
-  // 第 1 輪一定報；同一波之後每 ALERT_COOLDOWN_MS 才再報一次。
-  const shouldAlert = streak === 1 || now - (prev.lastAlertMs || 0) >= ALERT_COOLDOWN_MS;
-  if (persist) {
-    writeAlertState({
-      streak,
-      streakStartMs,
-      lastFailMs: now,
-      lastAlertMs: shouldAlert ? now : (prev.lastAlertMs || 0),
-    });
-  }
-  return { streak, streakStartMs, shouldAlert, elapsedMs: now - streakStartMs };
-}
-
-/** 抓得到東西就結束這一波，下次失敗要從第 1 輪重新算（也才會立刻出聲）。 */
-export function clearFetchFailure() {
-  const prev = readAlertState();
-  if (prev.lastFailMs) writeAlertState({});
-}
-
-export function describeStreak({ streak, streakStartMs, elapsedMs }) {
-  const hours = elapsedMs / 3600000;
-  const span = hours < 1 ? '不到 1 小時' : `約 ${Math.round(hours)} 小時`;
-  const since = new Date(streakStartMs).toISOString().slice(0, 16).replace('T', ' ');
-  return streak === 1
-    ? '本波第 1 輪（剛開始失敗）'
-    : `連續第 ${streak} 輪、${span}（起於 ${since} UTC）`;
-}
-
-const CATEGORY_NAMES = {
-  tech: '科技', finance: '財經', health: '健康',
-  lifestyle: '生活', international: '國際', sports: '運動',
-};
+// 全板抓取失敗的告警節流 state（與 forum-seen 同一個 state 目錄）。
+// 機制與 2026-08-08 事故緣由見 lib/radar-shared.mjs（第 1 輪一定報，之後每 6 小時再報一次）。
+const FETCH_ALERT_PATH = fetchAlertPath('forum');
 
 /** 地方板逐則政治判斷（Haiku，一次批次呼叫）。回傳「應排除」的 index Set。
  *  解析失敗＝infra 故障：**保守全部排除**（地方板本來就是加值，寧可少推也不要漏政治）。 */
@@ -156,54 +97,10 @@ async function judgeLocal(localCands) {
   };
 }
 
-/**
- * 近期已發文章標題（餵進選題 prompt 做去重）。
- *
- * **為什麼一定要有**：forum-seen 帳本只記「這則 PTT 文推過沒」，記不住「這個題目站上已經寫過」。
- * 2026-08-06 首次實跑就推薦了當天稍早才發佈的同一題（手術機器人）。寫作端的
- * check-duplicate-topic gate 雖然擋得下來，但那是**整篇寫完才擋**，白燒一篇額度，
- * 還佔掉 Slack 清單一個位子。
- */
-function recentTitles(days = 45, limit = 150) {
-  const cutoff = Date.now() - days * 86400 * 1000;
-  let files = [];
-  try {
-    files = readdirSync('src/content/articles').filter((f) => f.endsWith('.md'));
-  } catch {
-    return []; // 讀不到就當沒有，不因去重資料缺失而中斷選題
-  }
-  const out = [];
-  for (const f of files) {
-    try {
-      const m = readFileSync(join('src/content/articles', f), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
-      if (!m) continue;
-      const d = yaml.load(m[1]) || {};
-      const t = new Date(d.publishDate || 0).getTime();
-      if (t >= cutoff && d.title) out.push({ t, title: d.title });
-    } catch {
-      /* 單篇壞掉不影響其餘 */
-    }
-  }
-  // 由新到舊取上限：本線每小時可能跑一次，整窗塞進 prompt 太肥
-  // （實測 45 天窗有數百篇），而撞題風險本來就集中在最近幾天。
-  return out.sort((a, b) => b.t - a.t).slice(0, limit).map((x) => x.title);
-}
-
-/** 解析選題結果：模型回一段 JSON 陣列。解析不出來＝infra 故障（不是「今天沒題」）。 */
-export function parseSuggestions(stdout) {
-  const s = String(stdout || '');
-  const fence = s.match(/```(?:json)?\s*([\s\S]*?)```/);
-  const raw = fence ? fence[1] : s.slice(s.indexOf('['), s.lastIndexOf(']') + 1);
-  try {
-    const j = JSON.parse(raw);
-    return Array.isArray(j) ? { ok: true, suggestions: j } : { ok: false, suggestions: [] };
-  } catch {
-    return { ok: false, suggestions: [] };
-  }
-}
-
 async function selectTopics(cands, max) {
-  const recent = recentTitles();
+  // 近期已發標題餵進 prompt 做去重（緣由見 radar-shared 的 recentSiteTitles；
+  // 本線窗開 45 天，比高爾夫線寬——PTT 熱議常翻炒一個多月前的舊題）。
+  const recent = recentSiteTitles({ days: 45 });
   const list = cands
     .slice(0, max)
     .map((c, i) => `${i + 1}. [${CATEGORY_NAMES[c.category]}/${c.board}] (${c.push}推) ${c.title}`)
@@ -248,55 +145,20 @@ async function selectTopics(cands, max) {
   return parseSuggestions(out);
 }
 
-/**
- * 逐則自動產文並上架（站長 2026-08-06 裁示：論壇雷達走全自動上架，同國際／警消／便民；不設每日上限）。
- *
- * **配圖鐵則**：一律 `NO_AI_IMAGE=1`，禁 OpenAI 生圖，只用站內既有圖或圖庫
- * （站長明確要求）。這裡在 spawn 時強制帶上，不依賴呼叫端的環境——`.sh` 忘了設也不會破功。
- *
- * 走 newsroom-write 而不是自己寫一套：配圖／選題重複／去 AI 腔／標籤四道 gate 全部保留。
- * 單篇失敗只丟那一篇（回 false），不連累同批——比照影片線的作法。
- */
-function writeAndPublish(s) {
-  const dir = mkdtempSync(join(tmpdir(), 'forum-radar-'));
-  const jobPath = join(dir, 'job.json');
-  // publishDate 明確給「今天（台北）」＝立刻上線。不給的話 newsroom-write 會退回
-  // 「下一個還沒有文章的日子」，而日更早把未來一週佔滿，結果會排到八天後才見天日——
-  // 那不是全自動上架。自動線一律用系統時間蓋日期（docs/automation-invariants.md）。
-  const today = new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0, 10);
-  writeFileSync(jobPath, JSON.stringify({ ...s, kind: 'factual', autoPublish: true, publishDate: today }));
-  const r = spawnSync('node', ['scripts/newsroom-write.mjs', jobPath, '--go', '--allow-any-category'], {
-    encoding: 'utf8',
-    env: { ...process.env, NO_AI_IMAGE: '1' },
-  });
-  const out = (r.stdout || '') + (r.stderr || '');
-  const url = out.match(/PUBLISHED_URL=(\S+)/)?.[1] || null;
-  const ok = r.status === 0 && !!url;
-  if (!ok) {
-    const why = out.match(/✖ [^\n]+/)?.[0] || `exit ${r.status}`;
-    console.error(`  ✖ 未產出：${s.title}｜${why.slice(0, 160)}`);
-  }
-  return ok ? url : null;
-}
+// 逐則自動產文並上架（站長 2026-08-06 裁示：論壇雷達走全自動上架，同國際／警消／便民；不設每日上限）。
+// 機制（配圖鐵則 NO_AI_IMAGE、publishDate 給今天、四道 gate）在 radar-shared 的 writeAndPublish。
+const publishOne = (s) => writeAndPublish(s, { tmpPrefix: 'forum-radar-' });
 
-// 上架回報一律「一篇一行、標題帶連結」（站長 2026-08-08 裁示：自動上架訊息不可只報篇數）。
-// 刻意不走 suggestionBlocks：那是給「還沒寫的候選」用的，會渲染切角/依據並掛上「我要寫這題」鈕，
-// 對已經上架的文章既沒有連結、按鈕也是誤導。
-function postToSlack(published, category) {
+// 上架回報發各分類台（訊息格式與 2026-08-08「不可只報篇數」裁示見 radar-shared 的 postToSlack）。
+function reportToSlack(published, category) {
   const name = CATEGORY_NAMES[category] || category;
-  const list = published.map((s) => `• <${s.url}|${s.title}>`).join('\n');
-  const body = `🧭 *論壇選題雷達*（${name}）\n來源：PTT 熱門討論，以下已自動撰寫並上架。要改就進編輯器。\n\n${list}`;
-  const payload = {
+  return postToSlack(published, {
     category,
-    text: `🧭 論壇選題雷達｜${name}（已上架 ${published.length} 篇）`,
-    blocks: [{ type: 'section', text: { type: 'mrkdwn', text: body } }],
-  };
-  const path = `/tmp/forum-radar-${category}.json`;
-  writeFileSync(path, JSON.stringify(payload));
-  const r = spawnSync('node', ['scripts/slack-post.mjs', path], { encoding: 'utf8' });
-  const ok = r.status === 0 && /sent ts=/.test(r.stdout || '');
-  if (!ok) console.error(`  ✖ ${name}台發送失敗：${(r.stderr || r.stdout || '').trim().slice(0, 200)}`);
-  return ok;
+    heading: `🧭 *論壇選題雷達*（${name}）`,
+    notifyTitle: `🧭 論壇選題雷達｜${name}`,
+    sourceNote: '來源：PTT 熱門討論',
+    payloadPath: `/tmp/forum-radar-${category}.json`,
+  });
 }
 
 async function main() {
@@ -317,7 +179,7 @@ async function main() {
   // 且訊息一律帶連續輪數與起始時間，讓收到的人不必翻 log 就知道壞多久了。
   const allFailed = candidates.length === 0 && failures.length >= scanned && scanned > 0;
   if (allFailed) {
-    const wave = noteFetchFailure(Date.now(), { persist: go }); // dry-run 只算不寫，免得吃掉 cron 的告警
+    const wave = noteFetchFailure(FETCH_ALERT_PATH, Date.now(), { persist: go }); // dry-run 只算不寫，免得吃掉 cron 的告警
     if (wave.shouldAlert) {
       console.log(`FETCH_ALL_FAILED ${failures.length}/${scanned}｜${describeStreak(wave)}`);
       console.log('FORUM_RESULT=FAIL'); // → .sh 判定失敗 → ❌ 進 dev 台
@@ -326,7 +188,7 @@ async function main() {
     }
     console.log(`（全板抓取失敗｜${describeStreak(wave)}；6 小時內已報過一次，本輪靜默）`);
   } else if (candidates.length > 0 && go) {
-    clearFetchFailure(); // 抓得到就結束這一波，下次壞掉才會立刻出聲
+    clearFetchFailure(FETCH_ALERT_PATH); // 抓得到就結束這一波，下次壞掉才會立刻出聲
   }
 
   // 沒有新題就收工——**這是每小時跑也不燒額度的關鍵**，不要改成「照樣問一次 LLM」。
@@ -392,12 +254,12 @@ async function main() {
   for (const [cat, list] of byCat) {
     const done = [];
     for (const s of list) {
-      const url = writeAndPublish(s);
+      const url = publishOne(s);
       // PUBLISHED= 行給 cron `.sh` 組「標題＋連結」清單用（格式與其他自動線一致，勿改）。
       if (url) { done.push({ ...s, url }); published++; console.log(`  ✓ 已上架：${s.title}`); console.log(`PUBLISHED=${url} ｜ ${s.title}`); }
     }
     // 只回報真的上架的；一篇都沒成功就不吵那個分類台。
-    if (done.length && postToSlack(done, cat)) console.log(`  ✓ ${CATEGORY_NAMES[cat]}台：回報 ${done.length} 篇`);
+    if (done.length && reportToSlack(done, cat)) console.log(`  ✓ ${CATEGORY_NAMES[cat]}台：回報 ${done.length} 篇`);
   }
 
   // 只有真的產出文章才記帳本（全軍覆沒＝可能是 infra 問題，留著下輪重試）。

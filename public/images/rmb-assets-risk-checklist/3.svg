@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">三類人民幣部位檢查表</title>
+  <desc id="desc">三張並列檢查卡分別列出人民幣存款、中國債券與兩岸貿易部位的用途及容易漏算的成本。</desc>
+  <style>
+    text{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;fill:#1F1F1F}
+    .card{fill:#FFFFFF;stroke:#003A93;stroke-width:2}
+    .head{fill:#003A93}
+    .purpose{fill:#F4F4F4}
+    .title{font-size:28px;font-weight:700;fill:#003A93}
+    .sub{font-size:15px;fill:#6B7280}
+    .cardtitle{font-size:21px;font-weight:700;fill:#FFFFFF}
+    .label{font-size:13px;font-weight:700;fill:#D1482A;letter-spacing:1px}
+    .body{font-size:16px}
+    .check{font-size:15px}
+    .note{font-size:13px;fill:#6B7280}
+  </style>
+
+  <rect width="960" height="600" fill="#FFFFFF"/>
+  <text x="480" y="48" text-anchor="middle" class="title">三類人民幣部位檢查表</text>
+  <text x="480" y="78" text-anchor="middle" class="sub">不同持有目的，對應不同報酬來源與風險清單</text>
+  <line x1="330" y1="94" x2="630" y2="94" stroke="#D1482A" stroke-width="4"/>
+
+  <g aria-label="人民幣存款">
+    <rect x="30" y="120" width="290" height="440" rx="14" class="card"/>
+    <path d="M30 134Q30 120 44 120H306Q320 120 320 134V190H30Z" class="head"/>
+    <circle cx="68" cy="155" r="19" fill="#FFFFFF"/>
+    <circle cx="68" cy="155" r="12" fill="none" stroke="#D1482A" stroke-width="3"/>
+    <text x="68" y="161" text-anchor="middle" font-size="16" font-weight="700" fill="#D1482A">存</text>
+    <text x="98" y="163" class="cardtitle">人民幣存款</text>
+    <rect x="48" y="210" width="254" height="82" rx="9" class="purpose"/>
+    <text x="64" y="236" class="label">收益／用途</text>
+    <text x="64" y="268" class="body">利息、預備人民幣支出</text>
+    <text x="48" y="330" class="label">容易漏算的成本</text>
+    <text x="48" y="363" class="check"><tspan fill="#D1482A">●</tspan><tspan dx="10">換回新臺幣後淨額</tspan></text>
+    <text x="48" y="400" class="check"><tspan fill="#D1482A">●</tspan><tspan dx="10">買賣價差</tspan></text>
+    <text x="48" y="437" class="check"><tspan fill="#D1482A">●</tspan><tspan dx="10">費用</tspan></text>
+    <text x="48" y="474" class="check"><tspan fill="#D1482A">●</tspan><tspan dx="10">提前解約</tspan></text>
+  </g>
+
+  <g aria-label="中國債券">
+    <rect x="335" y="120" width="290" height="440" rx="14" class="card"/>
+    <path d="M335 134Q335 120 349 120H611Q625 120 625 134V190H335Z" class="head"/>
+    <rect x="354" y="136" width="38" height="38" rx="6" fill="#FFFFFF"/>
+    <path d="M364 146H382M364 154H382M364 162H377" fill="none" stroke="#D1482A" stroke-width="3" stroke-linecap="round"/>
+    <text x="405" y="163" class="cardtitle">中國債券</text>
+    <rect x="353" y="210" width="254" height="82" rx="9" class="purpose"/>
+    <text x="369" y="236" class="label">收益／用途</text>
+    <text x="369" y="268" class="body">票息、資產配置</text>
+    <text x="353" y="330" class="label">風險檢查</text>
+    <text x="353" y="363" class="check"><tspan fill="#D1482A">●</tspan><tspan dx="10">利率　信用　匯率</tspan></text>
+    <text x="353" y="400" class="check"><tspan fill="#D1482A">●</tspan><tspan dx="10">流動性　政策</tspan></text>
+    <rect x="353" y="433" width="254" height="91" rx="9" fill="#F4F4F4" stroke="#3D6BB5"/>
+    <text x="369" y="459" font-size="13" font-weight="700" fill="#3D6BB5">基金持有人加查</text>
+    <text x="369" y="486" class="note">槓桿、贖回條款</text>
+    <text x="369" y="508" class="note">避險比例</text>
+  </g>
+
+  <g aria-label="兩岸貿易部位">
+    <rect x="640" y="120" width="290" height="440" rx="14" class="card"/>
+    <path d="M640 134Q640 120 654 120H916Q930 120 930 134V190H640Z" class="head"/>
+    <path d="M660 147L680 137L700 147V169L680 179L660 169ZM660 147L680 157L700 147M680 157V179" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+    <text x="716" y="163" class="cardtitle">兩岸貿易部位</text>
+    <rect x="658" y="210" width="254" height="82" rx="9" class="purpose"/>
+    <text x="674" y="236" class="label">主要用途</text>
+    <text x="674" y="268" class="body">收取貨款</text>
+    <text x="658" y="330" class="label">營運風險檢查</text>
+    <text x="658" y="363" class="check"><tspan fill="#D1482A">●</tspan><tspan dx="10">收支幣別是否一致</tspan></text>
+    <text x="658" y="400" class="check"><tspan fill="#D1482A">●</tspan><tspan dx="10">帳期　換匯</tspan></text>
+    <text x="658" y="437" class="check"><tspan fill="#D1482A">●</tspan><tspan dx="10">避險</tspan></text>
+    <text x="658" y="474" class="check"><tspan fill="#D1482A">●</tspan><tspan dx="10">客戶或供應商集中</tspan></text>
+  </g>
+
+  <text x="480" y="588" text-anchor="middle" class="note">先辨識部位用途，再逐項核對成本與風險</text>
+<text x="940.8" y="585" text-anchor="end" font-family="sans-serif" font-size="17" fill="#6B7280" fill-opacity="0.45" font-weight="600">dreamer868.com</text></svg>

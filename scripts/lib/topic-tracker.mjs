@@ -8,6 +8,8 @@
 // 版面用 Slack 原生 table block（限 100 列 / 20 欄 / 全表 10,000 字元）。
 // 🔴 不要退回用 `|` 排的假表格——手機換行會全崩，2026-06-25 踩過（lessons/weekly-report-mobile-layout.md）。
 
+import { isPublicFrontmatter } from '../../src/utils/visibility.mjs';
+
 /** frontmatter 區塊（沒有就回空字串）。 */
 export function frontmatterOf(raw) {
   return String(raw ?? '').match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
@@ -39,15 +41,15 @@ export function parseArticle(raw, fileSlug, now = new Date()) {
   const status = fmValue(fm, 'status') || 'published';
   const draft = /^draft:\s*true\s*$/m.test(fm);
   const publishDate = fmValue(fm, 'publishDate');
-  const future = publishDate ? new Date(publishDate).getTime() > now.getTime() : false;
   return {
     slug,
     title: fmValue(fm, 'title') || slug,
     category: fmValue(fm, 'category'),
     topics: fmList(fm, 'topics'),
     publishDate,
-    // 與站上 getPublishedArticles() 對齊：排程稿（未到時間）與 draft 不算數。
-    isPublic: !draft && !(status === 'scheduled' && future),
+    // 與站上 getPublishedArticles() 同一份判斷（正本＝src/utils/visibility.mjs）。
+    // 舊碼只把 status: scheduled 的未來稿當隱藏——published＋未來日期的稿會被誤算成已公開。
+    isPublic: isPublicFrontmatter({ status, draft, publishDate }, now),
   };
 }
 

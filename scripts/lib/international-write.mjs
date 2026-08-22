@@ -79,15 +79,9 @@ export function buildIntlPrompt(story, recentActive = []) {
 }
 
 /** 解析 Claude 輸出的 INTL_RESULT 行。回 {action:'new'|'update'|'skip', slug, note}。 */
+import { parseSentinelResult } from './claude-cli.mjs';
+
+// 哨兵解析正本＝lib/claude-cli.mjs parseSentinelResult（各產線共用，別在這裡重抄 regex）。
 export function parseIntlResult(stdout) {
-  const m = String(stdout || '').match(/INTL_RESULT\s*=\s*(NEW|UPDATE|SKIP)\s*[｜|:：]\s*(.*)$/im);
-  if (!m) return { action: 'skip', slug: null, note: '無法解析 INTL_RESULT（視為跳過）', infra: true };
-  const action = m[1].toLowerCase();
-  const rest = (m[2] || '').trim();
-  if (action === 'skip') return { action: 'skip', slug: null, note: rest };
-  // NEW/UPDATE 後面是 slug；清掉模型偶爾帶出的反引號/引號/標點（曾見 `uk-starmer-resigns``），
-  // 只留合法 slug 字元（小寫英數與連字號），避免產出壞 URL／壞資料夾名。
-  const raw = rest.split(/[\s｜|]/)[0] || '';
-  const slug = raw.toLowerCase().replace(/[^a-z0-9-]/g, '').replace(/^-+|-+$/g, '') || null;
-  return { action, slug, note: rest };
+  return parseSentinelResult(stdout, 'INTL', { verdicts: ['NEW', 'UPDATE', 'SKIP'] });
 }

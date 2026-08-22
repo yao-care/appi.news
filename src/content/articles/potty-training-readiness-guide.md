@@ -4,6 +4,7 @@ slug: "potty-training-readiness-guide"
 description: "戒尿布沒有固定年齡，觀察孩子的生理與行為準備訊號比看月齡更準。整理國內外兒科與衛教資料的判準、循序漸進的訓練步驟，以及反覆尿濕、抗拒馬桶等常見卡關的處理方式。"
 excerpt: "戒尿布沒有固定年齡，觀察孩子的生理與行為準備訊號比看月齡更準。整理國內外兒科與衛教資料的判準、循序漸進的訓練步驟，以及反覆尿濕、抗拒馬桶等常見卡關的處理方式。"
 publishDate: "2026-08-06T16:05:50.810Z"
+updatedDate: "2026-08-22"
 category: "lifestyle"
 subcategory: "family"
 tags:
@@ -50,7 +51,7 @@ references:
     publisher: "Mamaway媽咪愛"
 ---
 
-戒尿布沒有固定的開始年齡，觀察孩子的生理與行為準備訊號，會比死盯月齡數字準確。家長最常卡關的反覆尿濕、抗拒坐馬桶，多半代表訓練節奏走太快，可以退一步再試，不必當成孩子學不會如廁。
+戒尿布沒有固定的開始年齡，觀察孩子的生理與行為準備訊號，會比死盯月齡數字準確。家長最常卡關的反覆尿濕、抗拒坐馬桶，多半代表訓練節奏走太快，可以退一步再試，不必當成孩子學不會如廁。從[母乳哺育](/articles/world-breastfeeding-week-2026/)到戒尿布，育兒的每一關都是節奏問題。
 
 ## 幾歲開始戒尿布？月齡不是最準的判準
 
@@ -64,7 +65,7 @@ references:
 
 表達能力上，訓練通常分兩階段：孩子一開始只會在尿完、便完之後用動作或語言表示，接著才會進展到事前主動說想尿尿，第二階段出現才是真正適合開始練習的時間點。AAP也列出類似指標，包括孩子會抗拒濕尿布的不舒服感、能聽懂並跟著簡單指令做動作、想穿一般內褲。
 
-環境穩定度也常被忽略。[AAP建議](https://www.healthychildren.org/English/ages-stages/toddler/toilet-training/Pages/the-right-age-to-toilet-train.aspx)，如果孩子正經歷搬家、家裡添新生兒、生病或其他重大變化，最好先暫緩開始，等生活穩定下來再訓練；KidPro也提到，悶熱潮濕的季節反而有利，孩子更能感受到尿布悶濕的不適，少穿幾件衣服也方便隨時脫褲子如廁。
+環境穩定度也常被忽略。[AAP建議](https://www.healthychildren.org/English/ages-stages/toddler/toilet-training/Pages/the-right-age-to-toilet-train.aspx)，如果孩子正經歷搬家、家裡添新生兒、生病或其他重大變化，最好先暫緩開始，等生活穩定下來再訓練；KidPro也提到，悶熱潮濕的季節反而有利，孩子更能感受到尿布悶濕的不適，少穿幾件衣服也方便隨時脫褲子如廁。如果孩子在戒尿布之外，動作、語言或社交發展也讓家長有疑慮，可以參考[兒童發展篩檢異常後的追蹤流程](/articles/child-development-screening-follow-up/)，及早釐清是不是單純訓練節奏問題。
 
 <img src="/images/potty-training-readiness-guide-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="家長陪孩子坐在地上翻閱繪本，準備搭配故事書引導如廁訓練（示意圖）">
 

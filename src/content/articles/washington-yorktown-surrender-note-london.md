@@ -1,5 +1,5 @@
 ---
-title: "華盛頓接受英軍投降親筆信首度在倫敦展出　見證美國獨立起點、1880年起藏於英國檔案"
+title: "華盛頓接受英軍投降信倫敦首展　見證美國獨立起點"
 slug: "washington-yorktown-surrender-note-london"
 description: "一封喬治·華盛頓1781年10月接受英軍在約克鎮投降的親筆信，首度在倫敦邱園的英國國家檔案館公開展出。展覽「Revolution 250」6月24日開展至11月29日、免費入場，紀念美國獨立宣言250週年。"
 excerpt: "一封喬治·華盛頓1781年10月接受英軍在約克鎮投降的親筆信，首度在倫敦邱園的英國國家檔案館公開展出。展覽「Revolution 250」6月24日開展至11月29日、免費入場，紀念美國獨立宣言250週年。"
@@ -38,9 +38,10 @@ sourceType: "wire"
 contentType: "news"
 disclaimerType: "general"
 disclosure: "本篇由 APPI News 編輯部以 AI 工具編譯多家國際媒體公開報導及英國國家檔案館官方資料而成，已逐條附上原文出處供查證；編輯部不持立場。"
+updatedDate: 2026-08-22
 coverImage: "covers/washington-yorktown-surrender-note-london-cover.webp"
 coverAlt: "約翰·特朗布爾畫作《康沃利斯投降》，描繪1781年英軍在約克鎮投降的場景"
-coverImageCredit: "John Trumbull《康沃利斯投降》— 公眾領域，引用自 Wikimedia Commons"
+coverImageCredit: "Photo by Kirk Cameron on Unsplash"
 ---
 
 一封讓英國當年「不得不放手」的親筆信，如今回到倫敦展出。據[英國國家檔案館（The National Archives）官方資料](https://www.nationalarchives.gov.uk/whats-on/exhibitions/revolution-250-americas-independence-story-1763-1783/)，一封由美國開國領袖喬治·華盛頓（George Washington）親筆簽署、接受英軍投降的信件，首度在倫敦公開展出。這封信寫於1781年10月、英軍在維吉尼亞州約克鎮（Yorktown）戰敗之後，被視為英國在北美十三州統治走向終結的起點。
@@ -70,7 +71,7 @@ coverImageCredit: "John Trumbull《康沃利斯投降》— 公眾領域，引�
 
 ## 對台灣讀者的意義
 
-對台灣讀者而言，這封信是一個觀察「歷史檔案如何跨國保存與展出」的具體案例：一份標誌美國誕生的關鍵文件，卻在戰勝國長年由戰敗一方的後人收藏，最終進入國家檔案體系並公開展示。對同樣重視史料保存與檔案開放的社會來說，這檔兼採大西洋兩岸視角、並刻意納入原住民與黑人效忠派等「傳統敘事中常被忽略者」的展覽，提供了一種處理爭議性歷史的參考方式。
+對台灣讀者而言，這封信是一個觀察「歷史檔案如何跨國保存與展出」的具體案例：一份標誌美國誕生的關鍵文件，卻在戰勝國長年由戰敗一方的後人收藏，最終進入國家檔案體系並公開展示。台灣同樣有歷史文獻公開展出掀起熱潮的例子，可參考[故宮《龍藏經》特展因「七世福報」說法引發排隊潮的報導](/articles/longzangjing-npm-exhibition-culture-expo-guide/)。對同樣重視史料保存與檔案開放的社會來說，這檔兼採大西洋兩岸視角、並刻意納入原住民與黑人效忠派等「傳統敘事中常被忽略者」的展覽，提供了一種處理爭議性歷史的參考方式。
 
 ## 常見問題
 

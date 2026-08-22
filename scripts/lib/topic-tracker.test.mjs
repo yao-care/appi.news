@@ -15,7 +15,8 @@ describe('frontmatter 解析', () => {
   });
 
   it('文章：slug 缺就用檔名、topics 讀得到', () => {
-    const a = parseArticle(article('title: "標題"\ncategory: "health"\ntopics: ["t1"]'), 'file-slug');
+    // publishDate 是 schema 必填欄；可見性正本把「缺日期」視為不公開，fixture 要照真實形狀給。
+    const a = parseArticle(article('title: "標題"\ncategory: "health"\ntopics: ["t1"]\npublishDate: 2026-08-01T00:00:00Z'), 'file-slug');
     expect(a.slug).toBe('file-slug');
     expect(a.title).toBe('標題');
     expect(a.topics).toEqual(['t1']);

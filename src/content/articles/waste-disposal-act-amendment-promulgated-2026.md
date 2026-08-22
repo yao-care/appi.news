@@ -1,7 +1,7 @@
 ---
-title: "廢棄物清理法修正案總統公布：光電板、風機葉片納管，非法棄置最重關7年"
+title: "廢棄物清理法修正公布：光電板風機葉片納管，棄置最重關7年"
 slug: "waste-disposal-act-amendment-promulgated-2026"
-description: "總統賴清德7月15日以華總一義字第11500064491號令，正式公布修正《廢棄物清理法》部分條文，增訂第10-1、16-1、39-2至39-5等條文並刪除第21、61、64條。修法將太陽能光電板、風機葉片等再生能源設備廢棄物納入責任業者管理範圍，非法棄置最高可處7年徒刑併科1500萬元罰金，並導入電子圍籬科技執法；子法研修編列2年緩衝期。這是繼6月17日《資源循環推動法》公布後，「循環雙法」到齊的最後一塊拼圖。"
+description: "總統賴清德7月15日公布修正《廢棄物清理法》，將太陽能光電板、風機葉片等再生能源設備廢棄物納入責任業者管理範圍，非法棄置最高可處7年徒刑併科1500萬元罰金，並導入電子圍籬科技執法，子法研修編列2年緩衝期。這是繼《資源循環推動法》後「循環雙法」到齊的最後一塊拼圖。"
 publishDate: "2026-07-17T01:44:52.721Z"
 category: "focus"
 subcategory: "policy-watch"
@@ -16,9 +16,10 @@ reviewedBy:
   - "lightman"
 factCheckedBy:
   - "appi-editorial"
+updatedDate: 2026-08-22
 coverImage: "covers/waste-disposal-act-amendment-promulgated-2026-cover.webp"
 coverAlt: "資源回收處理設施，象徵廢棄物清理與循環經濟管理"
-coverImageCredit: "Photo by Elbert Lora on Unsplash"
+coverImageCredit: "Photo by yating yang on Pexels"
 status: "published"
 sourceType: "wire"
 contentType: "news"

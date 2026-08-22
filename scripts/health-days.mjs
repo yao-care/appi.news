@@ -20,7 +20,6 @@ import { join, dirname } from 'node:path';
 import { homedir } from 'node:os';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
-import yaml from 'js-yaml';
 import {
   HEALTH_DAYS,
   resolveHealthDate,
@@ -31,6 +30,9 @@ import {
   buildHealthDayPrompt,
   parseHealthDayResult,
 } from './lib/health-days.mjs';
+import { runWriterArticle } from './lib/writer-cli.mjs'; // 寫作＝codex（站長 2026-08-22 裁示），查核仍走 claude-cli
+import { runArticleGates } from './lib/publish-pipeline.mjs';
+import { articleFrontmatter } from './lib/article-index.mjs';
 import { pushToMain } from './lib/git-publish.mjs';
 import { buildCheckWithResync } from './lib/build-check.mjs';
 import { aHashFile, isDuplicateHash } from './lib/image-dedupe.mjs';
@@ -62,23 +64,8 @@ function taipeiToday() {
   return new Date(Date.now() + TAIPEI_OFFSET_MS).toISOString().slice(0, 10);
 }
 
-/** 讀文章 frontmatter；讀不到回 null。 */
-function frontmatter(slug) {
-  try {
-    const m = readFileSync(join(ARTICLES_DIR, `${slug}.md`), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/);
-    return m ? yaml.load(m[1]) : null;
-  } catch { return null; }
-}
-
-/** 回傳該篇引用了、但 public/ 下不存在的本地圖檔（封面＋內文）。空陣列＝都在。 */
-function missingLocalAssets(slug) {
-  const file = join(ARTICLES_DIR, `${slug}.md`);
-  if (!existsSync(file)) return ['（文章檔不存在）'];
-  const raw = readFileSync(file, 'utf8');
-  const refs = new Set();
-  for (const m of raw.matchAll(/(covers|images)\/[A-Za-z0-9._-]+\.(?:webp|png|jpe?g|avif)/gi)) refs.add(m[0]);
-  return [...refs].filter((r) => !existsSync(join('public', r)));
-}
+/** 讀文章 frontmatter（正本＝lib/article-index.mjs；讀不到回空物件）。 */
+const frontmatter = (slug) => articleFrontmatter(slug);
 
 /** 歷年同一紀念日已寫過的標題（餵給 prompt，避免年復一年寫同一篇）。 */
 function priorTitlesFor(entry) {
@@ -226,20 +213,20 @@ async function main() {
     const slug = articleSlugFor(entry, Number(date.slice(0, 4)));
     console.log(`\n→ 寫「${entry.name}」（${slug}）…`);
     const prompt = buildHealthDayPrompt(entry, date, { priorTitles: priorTitlesFor(entry) });
-    const r = spawnSync('claude-appi', ['--model', 'claude-sonnet-5', '-p', prompt], {
-      encoding: 'utf8',
-      maxBuffer: 64 * 1024 * 1024,
-    });
-    // claude-appi 撞用量上限時會 exit 0 但只印限額訊息 → 必須查 stdout，否則被誤判成「寫不出來」。
-    if (r.error || r.status !== 0
-      || /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i.test(r.stdout || '')) {
-      console.log(`  ⚠️ claude 失敗：${(r.stderr || r.stdout || r.error?.message || '').slice(-300)}`);
-      continue;
-    }
-    const v = parseHealthDayResult(r.stdout);
+    // 成功判定三態的正本＝lib/claude-cli.mjs：quota（帳號層級）中止整批（後面幾天下輪重試）；
+    // fail（單則）跳過這一天、續寫下一天。
+    const c = runWriterArticle({ prompt });
+    if (c.kind === 'quota') { console.log(`  ⛔ 撞用量上限，中止本輪（未寫的紀念日由明天的 cron 重試）：${c.detail}`); break; }
+    if (c.kind === 'fail') { console.log(`  ⚠️ claude 失敗：${c.detail}`); continue; }
+    const v = parseHealthDayResult(c.stdout);
     console.log(`  ${v.action.toUpperCase()}｜${v.note}${v.slug ? `（${v.slug}）` : ''}`);
-    if (v.action !== 'ok') continue;
-    if (v.slug !== slug) {
+    if (v.action !== 'ok') {
+      // 保底（同 acute-care 2026-08-03 的教訓）：這條線的 slug 由企劃決定，不必信模型那行字。
+      // 模型漏印 HEALTHDAY_RESULT（infra 故障）或回報異常、但企劃 slug 的檔案已寫好 → 撿回，
+      // 別讓寫好的稿隨 worktree 被刪（故障 ≠ 編輯判斷）。
+      if (!existsSync(join(ARTICLES_DIR, `${slug}.md`))) continue;
+      console.log(`  ⚠️ 模型回報「${v.note.slice(0, 60)}」但 ${slug}.md 已寫好 → 保底撿回，續走既有關卡`);
+    } else if (v.slug !== slug) {
       console.log(`  ⚠️ 模型回的 slug（${v.slug}）與企劃不符（應為 ${slug}），以企劃為準檢查檔案`);
     }
     wrote.push({ entry, date, slug });
@@ -272,42 +259,11 @@ async function main() {
       continue;
     }
 
-    // 配圖硬性 gate（比照其餘產線）：設了 coverImage 卻沒圖檔＝壞連結，整篇不發。
-    const missing = missingLocalAssets(w.slug);
-    if (missing.length) {
-      console.log(`  ⚠️ 剔除 ${w.slug}：缺本地圖檔（${missing.join('、')}）`);
-      rmSync(file);
-      continue;
-    }
-
-    // 成長規則自檢（report-only，永不擋發佈）：站內導流／topics／標題長度有沒有做到，印進 cron log 供事後回收。
-    // 規則正本＝scripts/lib/growth-prompt.mjs（GROWTH_PROMPT），盤點與工作清單＝docs/growth-playbook.md。
-    const _growth = spawnSync('node', ['scripts/growth-lint.mjs', file], { encoding: 'utf8' });
-    if (_growth.stdout) console.log(_growth.stdout.trim());
-    const tagGate = spawnSync('node', ['scripts/check-tags.mjs', file], { encoding: 'utf8' });
-    if (tagGate.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${w.slug}：標籤不在受控詞彙表\n${tagGate.stdout || tagGate.stderr || ''}`);
-      rmSync(file);
-      continue;
-    }
-    const tone = spawnSync('node', ['scripts/check-content.mjs', file], { encoding: 'utf8' });
-    if (tone.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${w.slug}：去 AI 腔硬 tell\n${tone.stdout || tone.stderr || ''}`);
-      rmSync(file);
-      continue;
-    }
-
-    const dup = spawnSync('node', ['scripts/check-duplicate-topic.mjs', file], { encoding: 'utf8' });
-    if (dup.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${w.slug}：與站上既有文章重複\n${dup.stdout || dup.stderr || ''}`);
-      rmSync(file);
-      continue;
-    }
-
-    // 封面規格 gate（橫式 ≥1200，Discover 大圖門檻）。為什麼＝docs/lessons/discover-image-and-meta-signals.md。
-    const coverGate = spawnSync('node', ['scripts/check-cover-spec.mjs', file], { encoding: 'utf8' });
-    if (coverGate.status !== 0) {
-      console.log(`  ⚠️ 剔除 ${w.slug}：封面不符 Discover 規格\n${coverGate.stdout || coverGate.stderr || ''}`);
+    // gate 集合與順序的正本＝lib/publish-pipeline.mjs。這條線是「一題一篇」，多開 dup gate
+    // （每日 roundup 型產線不開，理由見該檔檔頭）。失敗剔除該篇、不拖垮其他天。
+    const g = runArticleGates(w.slug, { dup: true, log: (m) => console.log(m) });
+    if (!g.ok) {
+      console.log(`  ⚠️ 剔除 ${w.slug}：${g.label}${g.detail ? `\n${g.detail}` : ''}`);
       rmSync(file);
       continue;
     }

@@ -1,9 +1,10 @@
 ---
-title: "KDDI 信箱系統外洩延燒六家 ISP：1,422 萬筆帳密外流，真正的問題不是漏洞"
+title: "KDDI ISP信箱外洩：1,422萬筆帳密外流真相"
 slug: "kddi-email-breach-shared-infrastructure"
 description: "KDDI 提供給 ISP 的信箱系統遭入侵，6/17 發現、7/6 確認外洩 1,223 萬筆信箱與 761 萬筆密碼，波及 @nifty、BIGLOBE、J:COM 等六家業者。事件的重點不在哪套軟體有洞，在共用基礎設施的爆破半徑、密碼儲存方式與第三方供應鏈信任邊界，台灣有一模一樣的結構。"
 excerpt: "一套信箱系統同時服務六家 ISP，一個第三方軟體的未知漏洞就撈走 1,223 萬筆信箱、761 萬筆密碼。問題不在「哪套軟體有洞」，在為什麼一個洞可以炸這麼大、撈出來的密碼還能直接用。"
 publishDate: "2026-07-13T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "security"
 tags:
@@ -59,6 +60,8 @@ originalContribution: "本文把 KDDI 外洩拆成集中度（單一系統服務
 <img src="/images/kddi-email-breach-shared-infrastructure-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="資安與資料外洩概念，鎖頭圖示象徵帳號密碼遭竊">
 
 先把事件講清楚。日本電信商 KDDI 在 6 月 17 日發現[提供給 ISP 業者的信箱系統遭到不正存取](https://www.itmedia.co.jp/news/articles/2606/23/news114.html)，當天就修補系統止血，6 月 23 日對外公布，最初估計最多 1,422 萬筆信箱與密碼可能外洩，含已停用與長期休眠的帳號。經過詳細調查，KDDI 在 [7 月 6 日確認實際外洩 12,233,087 筆信箱、7,616,173 筆密碼](https://finance.biggo.com/news/576ce4ec-db71-4d7f-adbe-ec6361cd0093)。這套系統是 KDDI 賣給多家 ISP 共用的信箱平台，波及自家與另外五家業者，[包含 @nifty、BIGLOBE、J:COM、STNet 的 Pikara、Chubu Telecommunications 的 Commufa、KDDI Web Communications 的租用主機](https://www.infosecurity-magazine.com/news/kddi-breach-japanese-telcos/)。KDDI 自營的 au mail、UQ mobile mail、au one net 走不同基礎設施，沒被波及。日本總務省已依電気通信事業法[要求 KDDI 提交發生原因與再發防止對策報告](https://k-tai.watch.impress.co.jp/docs/news/2119914.html)。
+
+延伸閱讀：[柯達證實遭入侵、ShinyHunters 聲稱握 220 萬筆資料：第三方平台整合又成外洩破口](/articles/kodak-shinyhunters-third-party-integration-breach/)
 
 <img src="/images/kddi-email-breach-shared-infrastructure-s2.webp" width="868" height="1300" loading="lazy" decoding="async" alt="筆電上的信箱登入畫面，象徵外洩的帳號密碼登入資訊">
 

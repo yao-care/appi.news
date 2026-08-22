@@ -1,10 +1,10 @@
 ---
-title: "Claude Fable 5是什麼？Mythos級差在哪、為何變笨"
+title: "Claude Fable 5為何被說變笨？跟Opus差在哪"
 slug: "claude-fable-5-mythos-class-model-tiering"
-description: "Fable 5是Anthropic定價比Opus 4.8貴一倍的新層級Mythos級，任務越難、步驟越長，領先幅度才會明顯拉開。這篇整理Mythos級跟Opus 4.8到底差在哪、哪些工作值得多付這筆錢、哪些留在Opus 4.8就夠，並解釋為什麼最近有人覺得Claude變笨，其實是安全限制變多，不是模型退步。"
+description: "很多人覺得最近Claude變笨了，其實是Anthropic在新推出、比Opus 4.8貴一倍的Mythos級Fable 5裡加了更多安全限制，不是模型退步。這篇整理Mythos級跟Opus 4.8到底差在哪、哪些工作值得多付這筆錢、哪些留在Opus 4.8就夠。"
 excerpt: "Anthropic 6 月 9 日把 Fable 5 推上「Mythos 級」，一個比 Opus 高一階的正式產品層。真正該看的不是 80.3 這種跑分，而是它在長任務、agentic coding 上的領先會隨任務難度拉開。這篇拆解這個分層對開發者選型的實際意義。"
 publishDate: "2026-06-16T22:56:27.649Z"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "ai"
 tags:
@@ -61,9 +61,9 @@ references:
 topics: ["ai-agent-governance"]
 ---
 
-<p>Anthropic 在 6 月 9 日上線 <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">Claude Fable 5，並順手開了一個新的產品層級叫「Mythos 級」</a>。很多人第一個反應是去翻跑分表，看它贏 Opus 4.8 幾分。這個方向沒有錯，但只盯著分數，很容易看錯重點。</p>
+<p>最近不少人覺得 Claude 變笨了，原因跟 Anthropic 在 6 月 9 日上線 <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">Claude Fable 5，並順手開了一個新的產品層級叫「Mythos 級」</a>有關。很多人第一個反應是去翻跑分表，看它贏 Opus 4.8 幾分。這個方向沒有錯，但只盯著分數，很容易看錯重點，也漏看了「變笨」感受真正的成因。</p>
 
-<p>我想先踩一個剎車。一個模型贏對手 11 分，對你每天的工作幾乎沒有意義；真正會改變決策的，是「這多出來的能力到底在什麼任務上才看得出來」。Fable 5 最關鍵的訊號不是它考了幾分，而是官方自己講的一句話：<a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">任務越長、越複雜，它領先其他模型的幅度就越大</a>。這句話才是分層的重點，也是這篇要拆的東西。</p>
+<p>我想先踩一個剎車。一個模型贏對手 11 分，對你每天的工作幾乎沒有意義；真正會改變決策的，是「這多出來的能力到底在什麼任務上才看得出來」。Fable 5 最關鍵的訊號來自官方自己講的一句話：<a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">任務越長、越複雜，它領先其他模型的幅度就越大</a>。這句話才是分層的重點，也是這篇要拆的東西。這跟我在<a href="/articles/what-is-claw-llm-client-tool/">先前談 LLM 工具選型那篇</a>提過的道理一樣：先看清任務再決定要不要多付這筆錢，別看到分數就急著套用。</p>
 
 <h2>Mythos 級是什麼：一個比 Opus 高一階的正式產品層</h2>
 
@@ -85,7 +85,7 @@ topics: ["ai-agent-governance"]
 
 <h2>先把「任務難度」分清楚，再回頭挑哪一階模型</h2>
 
-<p>這裡是我一直在講的老毛病：選工具的順序常常被倒過來。正確的順序是先定義你要解的任務長什麼樣，再看哪一階模型符合前提，最後才比較具體選項。把順序倒過來，先看誰跑分高、再硬找任務塞給它，是選型最常見的失敗模式。我在<a href="/articles/what-is-claw-llm-client-tool/">先前談 LLM 工具選型那篇</a>講過同一件事：工具能力跟底層模型能力是兩回事，選型要從使用情境的前提出發，不是從功能清單出發。</p>
+<p>這裡是我一直在講的老毛病：選工具的順序常常被倒過來。正確的順序是先定義你要解的任務長什麼樣，再看哪一階模型符合前提，最後才比較具體選項。把順序倒過來，先看誰跑分高、再硬找任務塞給它，是選型最常見的失敗模式。我先前談 LLM 工具選型時也講過同一件事：工具能力跟底層模型能力是兩回事，選型要從使用情境的前提出發，不是從功能清單出發。</p>
 
 <p>套到這次的分層，問題就很具體：你手上這個任務，到底落在「難題」那一端，還是「日常重複」那一端？如果是一句話能講清楚、改一個函式、產一段固定格式的東西，Fable 5 的領先在這種任務上幾乎看不出來，多付的那一倍錢是純浪費。但如果是要跨很多檔案、連續判斷很多步、還得自己驗證自己的那種長鏈 agentic 任務（讓模型自己一路規劃、動手、再檢查的工作型態），領先幅度才會真的反映在結果上。先把任務難度分清楚，再回頭挑模型，順序不能倒。</p>
 

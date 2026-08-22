@@ -1,9 +1,10 @@
 ---
-title: "FDA『TEMPO 試辦』7 月上路：AI 醫材免走完整核准，就能先進 Medicare 慢性病照護"
+title: "FDA TEMPO試辦：AI醫材免完整核准搶進Medicare慢性病照護"
 slug: "fda-tempo-ai-device-medicare"
 description: "美國 FDA 的 TEMPO 試辦搭配 CMS 的 ACCESS 給付模式，7 月 1 日上路，讓未取得 510(k)／PMA 核准的 AI 數位醫材，能先用在傳統 Medicare 的慢性病病患身上。機制是『執法裁量』而非新核准，換的是真實世界資料。本文拆解它鬆綁了哪幾關、風險在哪，並對照台灣 TFDA 與健保的路線。"
 excerpt: "FDA 不是發給 AI 醫材一張通行證，是選擇『暫時不追究』。這句話怎麼讀，決定你把 TEMPO 看成鬆綁，還是換了名字的臨床試驗。"
 publishDate: "2026-08-07T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "tech-policy"
 tags:

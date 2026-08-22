@@ -4,6 +4,7 @@ slug: "opencode-overtakes-commercial-ide"
 description: "LogRocket 六月榜單上，開源的 OpenCode 把 Cursor 擠下第一，160K+ GitHub stars、7.5M 月活。這不是又一個更花俏的工具，而是開發者在用腳投票：要的是不被單一 IDE 綁死的可組合工作流。這篇用台灣小團隊的選型情境，拆 OpenCode、Cursor、Claude Code 三條路線的設計前提，給你『先選 agent、再選殼』的判斷依據。"
 excerpt: "LogRocket 六月榜單上，開源的 OpenCode 把 Cursor 擠下第一。這不是又一個更花俏的工具，而是開發者在用腳投票：要的是不被單一 IDE 綁死的可組合工作流。這篇用台灣小團隊的選型情境，拆三條路線的設計前提。"
 publishDate: "2026-06-16T23:27:12.751Z"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "digital-tools"
 tags:
@@ -58,7 +59,7 @@ topics: ["ai-agent-governance"]
 
 <p>先把數字攤開。<a href="https://www.developersdigest.tech/blog/opencode-developer-guide-2026" target="_blank" rel="noopener">OpenCode 累積了超過 16 萬個 GitHub stars，每月有 750 萬名開發者在用</a>，<a href="https://blog.logrocket.com/ai-dev-tool-power-rankings/" target="_blank" rel="noopener">LogRocket 直接稱它是「史上最多人採用的開源 coding agent」</a>。它是這份榜單上的新進者，一上來就站上第一，而被它擠下去的 Cursor，<a href="https://blog.logrocket.com/ai-dev-tool-power-rankings/" target="_blank" rel="noopener">在榜單上的定位仍是「最好的全 IDE 體驗」，只是從第一掉到第二</a>。</p>
 
-<p>它強在哪？不是某個炫技功能，而是設計前提。<a href="https://www.developersdigest.tech/blog/opencode-developer-guide-2026" target="_blank" rel="noopener">OpenCode 是 model-agnostic（不綁特定模型）、terminal-native（生在終端機裡）、完全開源，一套設定可以接上 75 個以上的模型供應商</a>，從 Anthropic、OpenAI、Google 到本地用 Ollama 跑的模型都行。<a href="https://www.abhs.in/blog/opencode-160k-github-stars-7-5m-developers-ai-coding-agent-june-2026" target="_blank" rel="noopener">它甚至能完全跑在本地模型上、零外連，讓在意程式碼外流的團隊有得選</a>。這些加起來指向同一個方向：它把「用哪個模型、跑在哪裡」的開關交還給你，而不是替你綁好。</p>
+<p>它強在哪？重點不在某個炫技功能，是設計前提。<a href="https://www.developersdigest.tech/blog/opencode-developer-guide-2026" target="_blank" rel="noopener">OpenCode 是 model-agnostic（不綁特定模型）、terminal-native（生在終端機裡）、完全開源，一套設定可以接上 75 個以上的模型供應商</a>，從 Anthropic、OpenAI、Google 到本地用 Ollama 跑的模型都行。<a href="https://www.abhs.in/blog/opencode-160k-github-stars-7-5m-developers-ai-coding-agent-june-2026" target="_blank" rel="noopener">它甚至能完全跑在本地模型上、零外連，讓在意程式碼外流的團隊有得選</a>。這些加起來指向同一個方向：它把「用哪個模型、跑在哪裡」的開關交還給你，而不是替你綁好。<a href="/articles/microsoft-foundry-multi-model-optionality/">連綁 OpenAI 最深的微軟都在平台層走向去單一供應商</a>，開發工具這層也吹著同一股風。</p>
 
 <img src="/images/opencode-overtakes-commercial-ide-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="一個開源終端機工具衝上開發工具排行榜第一名，把商業 IDE 擠到後面">
 

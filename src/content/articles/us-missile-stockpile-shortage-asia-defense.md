@@ -1,9 +1,10 @@
 ---
-title: "美軍飛彈存量告急　伊朗戰事拖累台海與南韓防禦部署"
+title: "美軍愛國者飛彈存量告急　伊朗戰事拖累台海南韓防禦"
 slug: "us-missile-stockpile-shortage-asia-defense"
 description: "美伊戰爭開打七週，愛國者、THAAD等防空攔截彈庫存已消耗近半，戰斧巡弋飛彈也用掉850至1000枚；南韓、日本部署的攔截彈被調往中東，原本留給台海情境的武器也被動用。整理五角大廈公開否認背後的具體數字與重建時程。"
 excerpt: "美伊戰爭七週燒掉近半愛國者與THAAD攔截彈庫存，南韓、日本的防空裝備被抽調中東，留給台海情境的戰斧飛彈也被動用；五角大廈公開否認短缺，但補產需2至5年。"
 publishDate: "2026-08-09T16:59:38.892Z"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "asia"
 tags:

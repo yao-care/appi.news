@@ -1,9 +1,10 @@
 ---
-title: "美國寄養機構為何能讓公民少年獨自跨越墨西哥邊境？紐墨西哥州告自家機構求返還15歲少年"
+title: "紐墨西哥州告自家寄養機構　求返還跨境15歲少年"
 slug: "new-mexico-foster-teen-border-lawsuit"
-description: "紐墨西哥州檢察長托雷茲7月28日對州立兒童、青少年暨家庭部門（CYFD）提告，指控工作人員7月6日把一名患心臟病的15歲美國公民少年送到德州艾爾帕索邊境橋，要求他獨自步行過境找母親；少年折返時遭拒收，被告知已是「德州的問題」。訴狀要求法院命CYFD協助少年返美，並核發限制令禁止未經法院核准的跨國安置。案件正值新墨西哥司法部今年4月才發布200頁報告，指出CYFD長年把家庭團聚看得比兒童安全更重要。"
+description: "紐墨西哥州檢察長托雷茲7月28日對州立兒童福利機構CYFD提告，指控工作人員把患心臟病的15歲美國公民少年送到德州艾爾帕索邊境橋、要求他獨自步行過境找母親，少年折返時遭拒收，被告知已是「德州的問題」；訴狀要求法院命CYFD協助少年返美，並禁止未經法院核准的跨國安置。"
 excerpt: "紐墨西哥州檢察長告自家兒少福利機構，指控工作人員把患心臟病的15歲美籍少年送過墨西哥邊境找母親，少年一度被拒收、稱是「德州的問題」；案件凸顯移民執法趨嚴下，兒童保護機構的監督漏洞。"
 publishDate: "2026-07-31T17:22:13.433Z"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "americas"
 tags:
@@ -48,7 +49,7 @@ coverAlt: "行人徒步跨越邊境橋的示意畫面，橋面設有黃白相間
 coverImageCredit: "Chris Johnson — Unsplash"
 ---
 
-美國新墨西哥州檢察長托雷茲（Raúl Torrez）7月28日對州政府自家的兒童、青少年暨家庭部門（CYFD）提起民事訴訟，指控該機構工作人員7月6日把一名15歲美國公民少年送到德州艾爾帕索的美墨邊境橋，要求他獨自步行過境去找母親。[WBOC報導](https://www.wboc.com/news/national/new-mexico-ag-sues-for-return-of-teen-forced-to-cross-border-by-foster-care/article_c50e5e5c-77a7-5480-ba5c-68fdbede70f8.html)指出，少年當時沒能立刻找到母親，折返美方一側時卻遭CYFD人員拒收，被告知他已經是「德州的問題」。[美聯社供稿、經Bangor Daily News刊出的報導](https://www.bangordailynews.com/2026/07/30/nation/new-mexico-ag-sues-for-return-of-teen-forced-to-cross-border-by-foster-care-staff/)指出，訴狀要求法院命令CYFD協助少年返美，並核發臨時限制令，禁止機構未經法官核准就把兒童安置到國外。
+一名患有心臟病的15歲美國公民少年，被自家的寄養機構要求獨自走過美墨邊境橋去找母親。這起個案，讓美國新墨西哥州檢察長托雷茲（Raúl Torrez）7月28日對州政府自家的兒童、青少年暨家庭部門（CYFD）提起民事訴訟。訴狀指控該機構工作人員7月6日把少年送到德州艾爾帕索的美墨邊境橋，要求他獨自步行過境去找母親。[WBOC報導](https://www.wboc.com/news/national/new-mexico-ag-sues-for-return-of-teen-forced-to-cross-border-by-foster-care/article_c50e5e5c-77a7-5480-ba5c-68fdbede70f8.html)指出，少年當時沒能立刻找到母親，折返美方一側時卻遭CYFD人員拒收，被告知他已經是「德州的問題」。[美聯社供稿、經Bangor Daily News刊出的報導](https://www.bangordailynews.com/2026/07/30/nation/new-mexico-ag-sues-for-return-of-teen-forced-to-cross-border-by-foster-care-staff/)指出，訴狀要求法院命令CYFD協助少年返美，並核發臨時限制令，禁止機構未經法官核准就把兒童安置到國外。
 
 ## 從寄養安置到邊境橋：一個月內發生了什麼
 

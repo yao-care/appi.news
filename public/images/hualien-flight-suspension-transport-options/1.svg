@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="長條圖顯示立榮航空台北至花蓮航線載客率變化：2025年全年平均29%，2026年上半年降至24.2%，2026年7月暑假旺季僅剩17%">
+<style>
+.title{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:26px;font-weight:700;fill:#1e2030;}
+.subtitle{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:15px;fill:#6e7276;}
+.colname{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:20px;font-weight:700;fill:#1e2030;}
+.value{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:22px;font-weight:700;fill:#1e2030;}
+.desc{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:14px;fill:#6e7276;}
+.foot{font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei','Noto Sans CJK TC','Heiti TC',sans-serif;font-size:13px;fill:#6e7276;}
+</style>
+<rect x="0" y="0" width="960" height="600" fill="#ffffff"/>
+
+<rect x="40" y="34" width="4" height="28" rx="2" fill="#a87515"/>
+<text x="56" y="56" class="title">台北－花蓮航線載客率探底</text>
+<text x="56" y="82" class="subtitle">立榮航空表示今年7月暑假旺季載客率僅17%，較去年全年平均29%明顯下滑</text>
+
+<line x1="40" y1="106" x2="920" y2="106" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- baseline -->
+<line x1="40" y1="500" x2="920" y2="500" stroke="#e8e9ed" stroke-width="1"/>
+
+<!-- column 1: 2025 全年平均 -->
+<text x="180" y="140" text-anchor="middle" class="colname">2025年全年平均</text>
+<text x="180" y="162" text-anchor="middle" class="desc">（立榮航空公布數字）</text>
+<rect x="130" y="184" width="100" height="316" rx="4" fill="#1f3a5f"/>
+<text x="180" y="164" text-anchor="middle" class="value">29%</text>
+
+<!-- column 2: 2026上半年 -->
+<text x="480" y="140" text-anchor="middle" class="colname">2026年1～6月</text>
+<text x="480" y="162" text-anchor="middle" class="desc">（今年上半年平均）</text>
+<rect x="430" y="236" width="100" height="264" rx="4" fill="#1f3a5f"/>
+<text x="480" y="222" text-anchor="middle" class="value">24.2%</text>
+
+<!-- column 3: 2026年7月 focus -->
+<rect x="680" y="118" width="200" height="382" rx="12" fill="#eaf0f8"/>
+<rect x="680" y="118" width="200" height="4" rx="2" fill="#a87515"/>
+<text x="780" y="150" text-anchor="middle" class="colname">2026年7月</text>
+<text x="780" y="172" text-anchor="middle" class="desc">（暑假旺季，數字最新）</text>
+<rect x="730" y="315" width="100" height="185" rx="4" fill="#a87515"/>
+<text x="780" y="301" text-anchor="middle" class="value">17%</text>
+
+<line x1="40" y1="530" x2="920" y2="530" stroke="#e8e9ed" stroke-width="1"/>
+<text x="40" y="556" class="foot">製圖：APPI News</text>
+<text x="920" y="556" text-anchor="end" class="foot">資料時點：2026年8月17日｜來源：中央社報導引用立榮航空、民航局數據</text>
+</svg>

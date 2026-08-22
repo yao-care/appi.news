@@ -9,7 +9,7 @@
 //     這裡再 spawn claude-appi ＝巢狀；刪掉 CLAUDECODE 讓子進程當獨立會話（同 writer）。
 //   - claude-appi 撞用量上限時會 exit 0 只印限額訊息 → 視為暫時性失敗交給 withRetry 退避。
 
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 
 function cleanEnv() {
   const env = { ...process.env };
@@ -17,8 +17,67 @@ function cleanEnv() {
   return env;
 }
 
-// claude-appi 撞週/日額度會 exit 0 只印限額訊息；與 newsroom-write.mjs 的偵測一致。
-const LIMIT_RE = /API Error|Usage Policy|unable to respond|hit your .*limit|weekly limit|usage limit/i;
+// 「Claude 成功了嗎」的判定正本（全站唯一，別在各產線重抄 regex）。
+// 撞額度是**帳號層級**：這一則被擋，同批剩下每一則都會被擋，呼叫端必須中止整批，
+// 不可照單則錯誤 continue（會把 20+ 則狂打成空跑，見 docs/lessons/automation-model-and-account-split.md）。
+// claude-appi 撞上限時會 exit 0 只印限額訊息 → 必須查 stdout，不能只看 exit code。
+export const QUOTA_RE = /hit your .*limit|weekly limit|usage limit/i;
+// 單則失敗（API error／拒答）：只影響這一則，呼叫端跳過該則、續跑下一則即可。
+export const CLAUDE_FAIL_RE = /API Error|Usage Policy|unable to respond/i;
+// 兩者聯集：runClaudeOnce 的退避重試沿用（重試對兩類都適用——限額會在額度重置後自癒）。
+const LIMIT_RE = new RegExp(`${CLAUDE_FAIL_RE.source}|${QUOTA_RE.source}`, 'i');
+
+/**
+ * 把一次 claude-appi spawnSync 的結果分類成三態（純函式，可測）：
+ *   { kind: 'quota', detail }  撞用量上限 → 呼叫端**中止整批**
+ *   { kind: 'fail',  detail }  單則失敗（API error／拒答／非 0 退出）→ 呼叫端跳過該則
+ *   { kind: 'ok',    stdout }  正常 → 交給 parseSentinelResult
+ */
+export function classifyClaudeRun({ error, status, stdout, stderr } = {}) {
+  const out = stdout || '';
+  if (QUOTA_RE.test(out)) return { kind: 'quota', detail: out.trim().slice(-200) };
+  if (error || status !== 0 || CLAUDE_FAIL_RE.test(out)) {
+    return { kind: 'fail', detail: (stderr || out || error?.message || `exit ${status}`).trim().slice(-200) };
+  }
+  return { kind: 'ok', stdout: out };
+}
+
+/**
+ * 產文用的一次性 claude-appi（同步、無重試——一篇要 6~9 分鐘，重試語意交給「下輪 cron 重新選題」）。
+ * 回傳 classifyClaudeRun 的三態。model 一律明確帶入（不帶 --model 會默默吃 Opus 燒爆週額度）。
+ */
+export function runClaudeArticle({ prompt, model = 'claude-sonnet-5', maxBufferMB = 64, spawnImpl = spawnSync }) {
+  const r = spawnImpl('claude-appi', ['--model', model, '-p', prompt], {
+    encoding: 'utf8',
+    maxBuffer: maxBufferMB * 1024 * 1024,
+    env: cleanEnv(),
+  });
+  return classifyClaudeRun(r);
+}
+
+/**
+ * 解析產線哨兵行（`<SENTINEL>_RESULT=NEW｜slug ｜ 說明`）的共用實作。
+ * 各產線的 parseXResult 一律薄包這支，別再各自抄 regex（曾漂移出 8 個變體）。
+ *
+ * 回傳 { action, slug, note, fields, infra? }：
+ *   - action：動詞小寫（new/update/skip/ok…，依 verdicts）
+ *   - slug：第一欄洗到只剩 [a-z0-9-]（模型常包反引號/粗體，見 lib/acute-care.mjs 2026-08-03 教訓）
+ *   - fields：rest 以全半形直線切開的各欄（tech 的 targetQuery 這類附加欄位由呼叫端取用）
+ *   - infra: true ＝ 整行解析不出來 → **故障，不是編輯判斷**：不可記帳本、不可當終止條件，
+ *     先 salvageArticle 撿稿（模型常已把稿寫好在工作區）。
+ */
+export function parseSentinelResult(stdout, sentinel, { verdicts = ['NEW', 'SKIP'] } = {}) {
+  const re = new RegExp(`${sentinel}_RESULT\\s*=\\s*(${verdicts.join('|')})\\s*[｜|:：]\\s*(.*)$`, 'im');
+  const m = String(stdout || '').match(re);
+  if (!m) return { action: 'skip', slug: null, note: `無法解析 ${sentinel}_RESULT（視為跳過）`, fields: [], infra: true };
+  const action = m[1].toLowerCase();
+  const rest = (m[2] || '').trim();
+  const fields = rest.split(/[｜|]/).map((x) => x.trim());
+  if (action === 'skip') return { action: 'skip', slug: null, note: rest, fields };
+  const raw = rest.split(/[\s｜|]/)[0] || '';
+  const slug = raw.toLowerCase().replace(/[^a-z0-9-]/g, '').replace(/^-+|-+$/g, '') || null;
+  return { action, slug, note: rest, fields };
+}
 
 const MAX_ATTEMPTS = 4;
 const BASE_DELAY_MS = 4_000;

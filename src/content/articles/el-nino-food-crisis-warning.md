@@ -1,7 +1,8 @@
 ---
-title: "聖嬰現象是什麼？聯合國示警恐讓全球4900萬人陷入糧食危機"
+title: "美國歐洲縮減援助、聖嬰現象夾擊全球糧食危機"
 slug: "el-nino-food-crisis-warning"
-description: "世界糧食計畫署（WFP）8月5日示警，本輪聖嬰現象發生機率達81%，恐讓全球45國近4900萬人在2027年底前陷入急性飢餓，脆弱人口暴增22%；中美洲增幅最重達83%，東非索馬利亞等地同步面臨洪患風險，捐助縮水更讓監測缺口擴大。"
+description: "美國與歐洲主要捐助國近年縮減對世界糧食計畫署（WFP）的資金，加上本輪聖嬰現象發生機率達81%，恐讓全球45國近4900萬人在2027年底前陷入急性飢餓，脆弱人口暴增22%。整理捐助縮水如何拖累WFP監測能力，以及中美洲、東非受衝擊分布與預警行動。"
+updatedDate: "2026-08-22"
 excerpt: "WFP警告本輪聖嬰現象機率達81%，恐讓全球45國近4900萬人在2027年底前陷入急性飢餓，中美洲增幅最重達83%，捐助縮水讓監測缺口同步擴大。"
 publishDate: "2026-08-08T16:03:07.812Z"
 category: "international"
@@ -47,7 +48,7 @@ coverAlt: "乾裂的沙漠地面上，兩棵枯死的樹矗立在橘紅色沙丘
 coverImageCredit: "Photo by Rafael Peier on Unsplash"
 ---
 
-聯合國世界糧食計畫署（WFP）8月5日發布最新分析警告，本輪持續增強的聖嬰現象，恐在2027年底前讓全球45個受評估的脆弱國家，額外近4900萬人陷入急性糧食不安全，使原本已達2.25億人的脆弱人口暴增22%、來到2.74億人。[WFP官方新聞稿指出](https://www.wfp.org/news/world-food-programme-ramps-preparedness-and-response-plans-el-nino-threatens-push-tens-of-millions-into-acute-hunger)，這波衝擊預計在2026年9月至12月間達到高峰，影響會延續到2027年。
+美國與歐洲主要捐助國近年縮減對聯合國世界糧食計畫署（WFP）的援助資金，讓國際社會因應糧食危機的量能出現缺口，而這個缺口即將遇上新一波衝擊：WFP 8月5日發布最新分析警告，本輪持續增強的聖嬰現象，恐在2027年底前讓全球45個受評估的脆弱國家，額外近4900萬人陷入急性糧食不安全，使原本已達2.25億人的脆弱人口暴增22%、來到2.74億人。[WFP官方新聞稿指出](https://www.wfp.org/news/world-food-programme-ramps-preparedness-and-response-plans-el-nino-threatens-push-tens-of-millions-into-acute-hunger)，這波衝擊預計在2026年9月至12月間達到高峰，影響會延續到2027年。
 
 ## 聖嬰現象是什麼，為什麼牽動全球糧食供應
 

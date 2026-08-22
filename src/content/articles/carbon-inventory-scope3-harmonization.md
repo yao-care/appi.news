@@ -1,8 +1,9 @@
 ---
-title: "環境部與金管會調和碳盤查規範：合建範疇三本土係數、年底前訂反漂綠指引"
+title: "環境部金管會調和碳盤查規範：合建範疇三係數、訂反漂綠指引"
 slug: "carbon-inventory-scope3-harmonization"
 description: "環境部6月17日發布新聞稿，宣布與金管會調和企業溫室氣體盤查規範：金管會可直接引用環境部列管事業的範疇一、二查驗結果，確信申報期限放寬至每年10月底，並由環境部、經濟部、金管會合作建置範疇三本土排放係數，半導體與電子零組件業優先；環境部另預計115年底前訂定反漂綠指引。"
 publishDate: "2026-06-24T01:45:17.280Z"
+updatedDate: 2026-08-22
 category: "focus"
 subcategory: "policy-watch"
 tags:

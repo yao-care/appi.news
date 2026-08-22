@@ -10,38 +10,23 @@
 # 只有真的撈到新題才往下喚 Haiku（地方板判斷）＋ Sonnet（選題）＋ 逐篇 newsroom-write。
 #
 # 🔴 **配圖一律禁 OpenAI 生圖**（站長明確要求）：只用站內既有圖或圖庫。
-#    由 forum-radar.mjs 的 writeAndPublish 在 spawn 時強制帶 NO_AI_IMAGE=1，不靠這裡設。
+#    由 radar-shared 的 writeAndPublish 在 spawn 時強制帶 NO_AI_IMAGE=1，不靠這裡設。
 #
 # 🔴 **本線會寫 repo**（產文＋配圖），所以**必須走 worktree**，不在「純資料腳本」例外之列。
 #    2026-08-06 只產候選時曾是純讀，改成自動產文後一併改掉，別再退回去。
 TASK="論壇選題雷達"
-set -uo pipefail
-# 本檔在 scripts/cron/ 底下，往上兩層才是 repo 根（少一層會 MODULE_NOT_FOUND，
-# 連 cron-report.mjs 都找不到 → 失敗告警一起啞掉，2026-08-06 踩過）。
-REPO="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$REPO"
-source "$(dirname "$0")/_worktree.sh"
-cron_enter_worktree "forum-radar" || { node "$PUBLISHER/scripts/cron-report.mjs" --dev --text "⚠️ $TASK：無法建 worktree，略過本次" 2>/dev/null || true; exit 0; }
+source "$(dirname "$0")/_runner.sh"
+cron_worktree "forum-radar" "--dev" || exit 0
+cron_env
 
-set -a
-# shellcheck disable=SC1090
-source "$HOME/.config/appi-news/report.env"
-set +a
-
-ts="$(date -u '+%Y-%m-%d %H:%M UTC')"
-out="$(timeout 3600 node scripts/forum-radar.mjs --go 2>&1)"; rc=$?
-[ "$rc" = 124 ] && out="$out"$'\n'"⏱ 逾時 3600s 被中止"
-printf '%s\n' "$out"
-
-# 失敗偵測：rc 非 0，或輸出含 API/拒答/用量上限字樣（claude-appi 撞上限會 exit 0 只印訊息）。
-if [ "$rc" -eq 0 ] && ! grep -qiE 'API Error|Usage Policy|unable to respond|FORUM_RESULT=FAIL|hit your .*limit|weekly limit|usage limit' <<<"$out"; then
-  # 成功一律不發 Slack：
-  #   - 有上架 → **內容已經由 forum-radar.mjs 一篇一行帶連結報到各分類台**，dev 再收一份
-  #     跨分類總表是同一批東西講兩次（2026-08-08 拿掉；分類台放產出、dev 只放失敗與維運）。
-  #   - 沒有新熱題 → 每小時跑一次，一天大部分時段都是這個狀態，發了會洗爆頻道。
-  # 上架清單仍完整留在 /var/log/appi-news/forum-radar.log（PUBLISHED= 行），事後要查有紀錄。
-  exit 0
-fi
-# tail 上限 800 而非 500：全板失敗的訊息含 30 個板名（約 470 bytes），500 只剩 30 bytes 餘裕，
+# tail 上限 800 而非 500：全板失敗的訊息含全部板名（約 470 bytes），500 只剩 30 bytes 餘裕，
 # 加一個看板就會從開頭切掉「掃 N 板」與連續輪數那幾行——那正是收到告警時最需要看的資訊。
-node scripts/cron-report.mjs --dev --text "$(printf '❌ %s 失敗（exit %s，%s）\n%s' "$TASK" "$rc" "$ts" "$(tail -c 800 <<<"$out")")" || true
-exit "$rc"
+cron_run "--dev" --timeout 3600 --tail 800 --fail-re "$CRON_LIMIT_RE|FORUM_RESULT=FAIL" \
+  -- node scripts/forum-radar.mjs --go
+
+# 成功一律不發 Slack：
+#   - 有上架 → **內容已經由 forum-radar.mjs 一篇一行帶連結報到各分類台**，dev 再收一份
+#     跨分類總表是同一批東西講兩次（2026-08-08 拿掉；分類台放產出、dev 只放失敗與維運）。
+#   - 沒有新熱題 → 每小時跑一次，一天大部分時段都是這個狀態，發了會洗爆頻道。
+# 上架清單仍完整留在 /var/log/appi-news/forum-radar.log（PUBLISHED= 行），事後要查有紀錄。
+exit 0

@@ -24,6 +24,7 @@ cd /root/appi.news
 pnpm growth:backlog          # 還剩多少沒做 + 下一批該做哪 10 篇（先跑這個就夠）
 pnpm growth:audit            # 三關現況＋世代分析（GA4＋GSC 實跑，禁憑記憶）
 pnpm growth:lint:all         # 存量覆蓋率盤點（零內鏈幾篇、topics 空幾篇…）
+pnpm search:trends           # 外部熱門／上升搜尋候選（純資料、不喚 LLM）
 ```
 
 看完上面的輸出，再回來讀 §2 決定這一輪要推哪一條路線。**不要憑記憶報數字。**
@@ -58,11 +59,20 @@ pnpm growth:lint:all         # 存量覆蓋率盤點（零內鏈幾篇、topics 
 
 | 路線 | 解哪一關 | 一句話 |
 |---|---|---|
+| **A0. 外部趨勢選題** | A 的需求捕捉＋B 的導流入口 | 把搜尋引擎正在升溫的需求，交叉到既有曝光頁與專題；完整步驟＝[`search-trend-sop.md`](./search-trend-sop.md) |
 | **B. 站內導流** | 關卡 1 的 PV 深度 | 把「一次只看一頁就走」變成「一次看兩三頁」，零新內容成本 |
 | **A. 存量頁升級** | 關卡 1 的廣度＋總流量 | 有曝光但 0 點擊的那批頁，改標題／description／開頭把點擊吃回來 |
 | **C. 回訪資產** | 關卡 2（唯一解） | 給讀者「下次還會回來」的理由與管道；B 和 A 都救不到這一關 |
 
 ---
+
+## 路線 A0：外部搜尋趨勢選題
+
+完整操作、分數語意、查證門檻、部署驗收與 Codex 交付格式，唯一正本是 [`docs/search-trend-sop.md`](./search-trend-sop.md)。
+
+固定順序是：`pnpm search:trends` → `pnpm growth:backlog` → 判斷 update/new → 查第一手來源 → 套用 `GROWTH_PROMPT` → 內鏈與部署 gate → GSC／GA4 回收。趨勢雷達只產候選，不把熱搜直接變成文章；這樣才能同時取得短期搜尋需求與長期主題資產。
+
+**完成判準**：本輪候選有 `GO／REVIEW／WATCH` 決策，已和既有高曝光或零點擊頁交叉；凡實際改稿的頁面都通過 `growth-lint`、build、broken-link 與正式網址驗收。
 
 ## 路線 B：站內導流
 

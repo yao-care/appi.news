@@ -34,6 +34,7 @@
 | 改 Slack 訊息：發給誰（頻道路由）、發什麼（文案／版面／按鈕）、誰能按 | 🤖 自動化 | [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §Slack 發訊地圖（四層分工＋盤點指令＋三個逃出頻道表的孤島）→ 頻道 SOT＝`scripts/lib/report-config.mjs` |
 | 了解網路曝光量：流量、搜尋曝光、AI 轉介、週報 | 📊 數據 | 本檔 §數據與網路曝光量 → `.claude/skills/weekly-report/SKILL.md` → [`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) |
 | 讓流量長大：站內導流、存量頁升級、回訪與品牌 | 📈 成長 | [`docs/growth-playbook.md`](./docs/growth-playbook.md)（工作項目＋SOP，先跑 `pnpm growth:audit`）→ 為什麼＝[`docs/lessons/growth-three-gates.md`](./docs/lessons/growth-three-gates.md) |
+| 利用熱門／上升搜尋趨勢選題、更新開學或時效內容 | 📈 成長 | **先讀 [`docs/search-trend-sop.md`](./docs/search-trend-sop.md) 並跑 `pnpm search:trends`** → 再接 [`docs/growth-playbook.md`](./docs/growth-playbook.md)；來源、評分與去重只認 `scripts/lib/search-trends.mjs` |
 | 判斷「某項 SEO／存量優化做了沒」 | 🤖 自動化 | 🔴 **先確認 appi.news 自己也掛在 seo-ops**：`/etc/cron.d/seo-ops` 每天跑 collect／reflect／**brain**（`--site appi.news`，用 `claude-appi` 帳號），大腦層會**實際改單篇內容、跑 gate、commit、push**，產出就是 `[auto-claude-seo]` 開頭的 commit。查法見下方 §查現況。**不查這條就回答「沒做過」必錯**（2026-08-07 踩過）|
 
 ## 查現況：一律跑指令，不要相信任何文件裡的數字
@@ -50,6 +51,7 @@
 | 急性症狀衛教有幾題／哪些待寫 | `node -e 'import("./scripts/lib/acute-care.mjs").then(m=>console.log(m.TOPICS.length))'` |
 | 論壇雷達掃哪些看板、涵蓋哪些分類 | `node -e 'import("./scripts/lib/forum-signals.mjs").then(m=>console.table(m.BOARDS))'` |
 | 論壇雷達此刻撈到什麼（純資料、不喚 LLM） | `node scripts/forum-radar.mjs`（dry-run） |
+| 外部搜尋趨勢此刻撈到什麼（純資料、不喚 LLM） | `pnpm search:trends`；機器格式用 `pnpm search:trends -- --json --save`；完整流程＝[`docs/search-trend-sop.md`](./docs/search-trend-sop.md) |
 | 高爾夫雷達掃哪些來源、台灣選手名冊有誰 | `node -e 'import("./scripts/lib/golf-signals.mjs").then(m=>{console.log(m.SOURCES.map(s=>s.name).join("、"));console.log(m.TAIWAN_PLAYERS.map(p=>p.zh).join("、"))})'` |
 | 高爾夫雷達此刻撈到什麼（純資料、不喚 LLM） | `node scripts/golf-radar.mjs`（dry-run） |
 | GA4 property／GSC 站台／Slack 頻道 ID | `grep -nE "GA4_PROPERTY_ID\|GSC_SITE\|CHANNEL" scripts/lib/report-config.mjs` |
@@ -196,6 +198,7 @@
 | 元件 | 路徑 | 角色 |
 |---|---|---|
 | 科技選題雷達 | `.claude/skills/tech-radar/`、`scripts/cron/tech-radar.sh` | 只產 tech 候選，主訊號是 GSC 站內搜尋需求；以「可贏性」而非熱度選題 |
+| 外部搜尋趨勢雷達 | `scripts/lib/search-trends.mjs`、`scripts/search-trends.mjs`、`scripts/cron/search-trends.sh` | Google Trends 台灣 RSS → 純資料去重／評分／撞題標記 → 候選清單；**不因熱搜直接寫稿或上線**，後續走 [`docs/search-trend-sop.md`](./docs/search-trend-sop.md) |
 | 論壇選題雷達 | `scripts/lib/forum-signals.mjs`（純資料）＋`scripts/forum-radar.mjs`＋`scripts/cron/forum-radar.sh` | 掃 PTT 白名單看板 → 選題 → **自動撰寫並上架**（站長裁示，同國際／警消／便民，不設每日上限）→ 回報各分類台。**抓取／政治過濾／去重全是純 node，沒有新熱題就 exit 0、完全不喚 Claude**。改看板或門檻＝改 `BOARDS`。**政治排除三層**（看板白名單／標題關鍵字／LLM 判斷），第三層不可省。**配圖禁 OpenAI 生圖**（`NO_AI_IMAGE=1`，`.sh` 與 `writeAndPublish` 雙重保險）。為什麼＝[`docs/lessons/forum-signals-radar.md`](./docs/lessons/forum-signals-radar.md) |
 | 高爾夫選手動態雷達 | `scripts/lib/golf-signals.mjs`（純資料）＋`scripts/golf-radar.mjs`＋`scripts/cron/golf-radar.sh` | 掃 TPGA／PGA TOUR／LPGA 官方 YouTube RSS＋ESPN／Golf.com 新聞 RSS → 台灣選手（`TAIWAN_PLAYERS` 名冊，SOT 在該檔）命中標記 mustCover → 選題 → **自動撰寫並上架**（站長 2026-08-16 裁示，分類掛 sports，不走待審）→ 回報運動台。**台灣選手動態一律必報導**（有新料就寫，同選手/同賽事多條合併成一篇）；**其他高爾夫題視情況**，選題模型判斷夠重大（冠軍產生／破紀錄）才寫。**抓取／選手命中比對／去重全是純 node，沒有新資料就 exit 0、完全不喚 Claude**。台灣三大高球協會官網無 RSS，改換來源前先實測連線（見該檔檔頭）。**配圖禁 OpenAI 生圖**（真實選手不可 AI 生圖，`NO_AI_IMAGE=1`，`.sh` 與 `writeAndPublish` 雙重保險）|
 | 去重帳本 | `scripts/topic-ledger.mjs` | 雷達與週報共用，避免撞題 |
@@ -275,6 +278,7 @@
 | cron `.sh` 共用外殼（boot／worktree 進場／逾時捕捉／失敗偵測與 ❌ 回報／等部署 200） | `scripts/cron/_runner.sh`（timeout／tail 等參數在呼叫端具名；worktree 生命週期另在 `scripts/cron/_worktree.sh`） |
 | 寫作成長規則（內鏈／topics／標題／開頭／FAQ） | `scripts/lib/growth-prompt.mjs` 的 `GROWTH_PROMPT`（所有產線共用，新增產線必接）|
 | 成長工作項目與 SOP（B 站內導流／A 存量升級／C 回訪） | [`docs/growth-playbook.md`](./docs/growth-playbook.md) |
+| 外部搜尋趨勢選題與導流 SOP | [`docs/search-trend-sop.md`](./docs/search-trend-sop.md)；執行入口 `pnpm search:trends` |
 | 存量批次回填工具（內鏈／常見問題／主題中樞） | `scripts/growth-backfill-links.mjs`、`scripts/backfill-faq.mjs`、`scripts/topic-hub-radar.mjs`（判準與踩過的坑＝[`docs/lessons/mechanical-backfill-traps.md`](./docs/lessons/mechanical-backfill-traps.md)）|
 | 主題中樞的 id 對照表（**id 進網址，上線後不能改**） | `scripts/lib/topic-hub-ids.json` |
 | 主題追蹤的呈現規格（總表欄位、thread 只記異動、table block 與退路） | `scripts/lib/topic-tracker.mjs` 檔頭（純轉換層）＋`scripts/topic-tracker.mjs`（I/O、帳本）|
@@ -282,3 +286,13 @@
 | Slack 收件頻道／授權按鈕的人 | `scripts/lib/report-config.mjs`（`SLACK_CHANNEL`／`CATEGORY_CHANNELS`／`DEV_CHANNEL`／`NEWSROOM_AUTHORIZED_SLACK_USERS`；**ID 只改這裡、不抄進文件**）。全站發訊分層與改法＝[`docs/SERVER_HANDOFF.md`](./docs/SERVER_HANDOFF.md) §Slack 發訊地圖 |
 | 數據／網路曝光量 | `scripts/weekly-data.mjs`＋`.claude/skills/weekly-report/`＋`scripts/lib/report-config.mjs` |
 | 機密金鑰位置 | `.env`（PSI）、`~/.config/appi-news/`（GA4／GSC／Slack）— 永不進 repo |
+
+## Agent skills
+
+### Issue tracker
+
+工程 issue 追蹤在 GitHub Issues（`gh` CLI）；label `article-draft` 是內容產線工單，工程技能不要碰。See `docs/agents/issue-tracker.md`.
+
+### Domain docs
+
+Single-context：根目錄 `CONTEXT.md` + `docs/adr/`（皆為 lazy 建立，缺檔時安靜略過）；本 repo 既有「為什麼」正本在 `docs/lessons/`。See `docs/agents/domain.md`.

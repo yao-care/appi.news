@@ -1,8 +1,9 @@
 ---
-title: "洪健堯國賓ADT逆轉奪冠：你需要知道的5件事"
+title: "洪健堯國賓ADT公開賽逆轉奪冠：你需要知道的5件事"
 slug: "hong-chien-yao-adt-comeback-champion"
-description: "洪健堯在2026國賓ADT公開賽最終回從落後五桿逆轉奪冠，寫下生涯第三座ADT冠軍。整理逆轉關鍵、賽事地位、過往戰績與對台灣高爾夫的意義。"
+description: "洪健堯在仰德集團贊助的2026國賓ADT公開賽最終回，從落後五桿逆轉奪冠，寫下生涯第三座ADT冠軍。整理逆轉關鍵、賽事地位、過往戰績與對台灣高爾夫的意義。"
 publishDate: 2026-08-18
+updatedDate: 2026-08-22
 category: sports
 subcategory: events
 tags: ["桃園市", "運動產業", "國際賽事"]

@@ -1,9 +1,10 @@
 ---
-title: "外交豁免權一出，規劃許可的附加條件還管用嗎？英國中國『超級大使館』官司敗訴，居民誓言上訴"
+title: "RMCRA挑戰中國超級大使館規劃許可敗訴"
 slug: "uk-china-embassy-royal-mint-court"
-description: "英國高等法院7月31日（週五）駁回皇家鑄幣廠居民協會（RMCRA）對中國駐英「超級大使館」規劃許可的司法覆核挑戰，由資深法官Lieven與上訴法院法官Dingemans組成的合議庭認定住房大臣核准決定並未違法，RMCRA隨即宣布上訴。這場官司的核心爭點是外交豁免權：居民主張根據《維也納外交關係公約》，中國作為使館所在地不受英國國內法約束，規劃許可附加的各項條件在法律上恐怕形同虛設；住房大臣則回應仍有外交救濟手段可用，包括宣布使館人員為不受歡迎人物、甚至斷絕外交關係。倫敦塔對面的皇家鑄幣廠舊址2018年由中國政府以2.55億英鎊購入，原始擴大版申請2022年、2024年兩度遭Tower Hamlets議會否決，2026年1月20日仍由住房大臣里德核准約2萬平方公尺的建案，落成後將成為歐洲最大中國外交機構。"
+description: "皇家鑄幣廠居民協會（RMCRA）挑戰中國駐英「超級大使館」規劃許可的司法覆核，英國高等法院7月31日駁回，核心爭點是外交豁免權下規劃條件恐難強制執行；RMCRA已籌得逾22萬英鎊經費並宣布上訴，這場自2018年購地以來的七年爭議尚未落幕。"
 excerpt: "英國高等法院7月31日駁回居民對中國「超級大使館」規劃許可的司法覆核挑戰，核心爭點是外交豁免權下規劃條件恐難強制執行；居民已宣布上訴，這場自2018年購地以來的七年爭議尚未落幕。"
 publishDate: "2026-07-31T17:22:13.433Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "europe"
 tags:
@@ -61,7 +62,7 @@ coverAlt: "倫敦皇家鑄幣廠舊址建築外觀，19世紀新古典主義風�
 coverImageCredit: "Steve Cadman — CC BY-SA 2.0，引用自 Wikimedia Commons"
 ---
 
-英國高等法院7月31日（週五）駁回皇家鑄幣廠居民協會（Royal Mint Court Residents' Association，RMCRA）對中國駐英「超級大使館」規劃許可的司法覆核挑戰。據[Cotswold Journal報導](https://www.cotswoldjournal.co.uk/news/national/26426552.chinese-super-embassy-planning-permission-decision-upheld-high-court/)，由法官Lieven（Mrs Justice Lieven）與上訴法院法官Dingemans（Lord Justice Dingemans）組成的合議庭認定，住房、社區與地方政府部核准這項規劃案的過程並未違法。法官特別針對居民一方指未公開兩份安全相關文件一事表示，「申請人並未因這些文件未經揭露而遭受不公平待遇」。這場官司尚未落幕：據[AOL UK報導](https://www.aol.co.uk/articles/chinese-super-embassy-london-ahead-113750000.html)，RMCRA已宣布立即提出上訴，代理律師表示希望上級法院能「更有勇氣」重新考慮這些理由。
+皇家鑄幣廠居民協會（Royal Mint Court Residents' Association，簡稱RMCRA）對中國駐英「超級大使館」規劃許可提出的司法覆核挑戰，英國高等法院7月31日（週五）駁回。據[Cotswold Journal報導](https://www.cotswoldjournal.co.uk/news/national/26426552.chinese-super-embassy-planning-permission-decision-upheld-high-court/)，由法官Lieven（Mrs Justice Lieven）與上訴法院法官Dingemans（Lord Justice Dingemans）組成的合議庭認定，住房、社區與地方政府部核准這項規劃案的過程並未違法。法官特別針對居民一方指未公開兩份安全相關文件一事表示，「申請人並未因這些文件未經揭露而遭受不公平待遇」。這場官司尚未落幕：據[AOL UK報導](https://www.aol.co.uk/articles/chinese-super-embassy-london-ahead-113750000.html)，RMCRA已宣布立即提出上訴，代理律師表示希望上級法院能「更有勇氣」重新考慮這些理由。
 
 ## 官司在吵什麼：外交豁免權讓規劃條件形同虛設？
 

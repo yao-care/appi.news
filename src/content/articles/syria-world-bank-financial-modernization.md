@@ -26,7 +26,7 @@ risksAndLimits:
   - "2160億美元重建需求是世銀初估，實際規模隨局勢與各國援助承諾持續變動"
 ---
 
-敘利亞經濟正處於重建起步階段：金融體系經過14年內戰仍高度仰賴現金、缺乏現代數位基礎設施。世界銀行執行董事會8月7日核准一筆1億美元無償補助，用於敘利亞金融部門現代化，這是阿薩德政權垮台、國際制裁陸續解除後，世銀重啟對敘利亞放款以來規模最大的其中一筆（[World Bank](https://www.worldbank.org/en/news/press-release/2026/08/07/syria-world-bank-approves-us-100-million-grant-for-financial-sector-modernization)）。資金由國際開發協會（IDA）提供，鎖定銀行體系數位化、支付系統重建與金融監理三大方向（World Bank）。
+敘利亞經濟現況如何？金融體系經過14年內戰仍高度仰賴現金、缺乏現代數位基礎設施，正處於重建起步階段。世界銀行執行董事會8月7日核准一筆1億美元無償補助，用於敘利亞金融部門現代化，這是阿薩德政權垮台、國際制裁陸續解除後，世銀重啟對敘利亞放款以來規模最大的其中一筆（[World Bank](https://www.worldbank.org/en/news/press-release/2026/08/07/syria-world-bank-approves-us-100-million-grant-for-financial-sector-modernization)）。資金由國際開發協會（IDA）提供，鎖定銀行體系數位化、支付系統重建與金融監理三大方向（World Bank）。
 
 根據世銀新聞稿，這筆補助將投入支付基礎設施現代化、中央銀行核心系統升級、銀行監理強化，以及反洗錢與打擊資恐（AML/CFT）能力建置，包括監控系統與分析工具的投資（World Bank）。反洗錢監理是已開發國家銀行圈近來也緊盯的一塊，[美國金融犯罪執法網日前才對瑞銀開出史上最重反洗錢罰單](/articles/ubs-bank-secrecy-act-fine/)，可見這套能力連成熟市場都還在補洞，對剛要重建金融體系的敘利亞而言等於要從零練起。
 

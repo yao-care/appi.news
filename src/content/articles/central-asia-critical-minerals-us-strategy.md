@@ -1,9 +1,10 @@
 ---
-title: "C5+1是什麼？美國拉攏中亞五國搶關鍵礦產，一趟印度中亞行看懂印太外交棋局"
+title: "C5+1是什麼？美國拉攏中亞五國搶關鍵礦產卡位印太"
 slug: "central-asia-critical-minerals-us-strategy"
-description: "美國國務院南亞暨中亞事務助理國務卿Paul Kapur自8月5日起展開一週行程，走訪印度、烏茲別克、吉爾吉斯與哈薩克，聚焦貿易與關鍵礦產合作。這趟行程背後是美國近兩年加碼經營的「C5+1」機制：2024年啟動關鍵礦產對話、2025年11月十週年峰會創下紀錄性投資協議、2026年2月比什凱克B5+1論壇簽下逾15份合作備忘錄。中亞五國握有從稀土到鈾礦的龐大礦藏，長期被中俄勢力範圍主導，美國此時加碼，正是要在供應鏈這場長期賽局卡位。"
+description: "美國國務院官員Paul Kapur自8月5日起走訪印度、烏茲別克、吉爾吉斯與哈薩克，聚焦貿易與關鍵礦產合作。這趟行程延續美國近兩年加碼經營的C5+1機制，從關鍵礦產對話到破紀錄投資協議，卡位中亞供應鏈賽局。"
 excerpt: "美國官員一週內走訪印度與中亞三國，背後是華府近兩年加碼經營的C5+1機制。從關鍵礦產對話到破紀錄投資協議，中亞五國的礦藏正成為美中角力的新戰場。"
 publishDate: "2026-08-05T16:35:42.395Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "asia"
 tags:
@@ -63,7 +64,7 @@ coverImageCredit: "Dominik Vanyi — Unsplash"
 
 C5+1並不是新玩意。[CSIS分析](https://www.csis.org/analysis/ten-years-c51-us-central-asia-minerals-cooperation)指出，這個由美國與哈薩克、吉爾吉斯、塔吉克、土庫曼、烏茲別克五國組成的區域外交平台成立於2015年，原本涵蓋經濟、能源與安全合作等廣泛議題。真正讓它變成礦產外交主戰場的轉折點在2024年2月，美國在這個框架下另外啟動「C5+1關鍵礦產對話」，目標是強化地質勘探合作、吸引採礦投資，並協助中亞五國建立地質數據透明度。同一年，哈薩克與烏茲別克也加入美國主導的礦產安全夥伴關係（Minerals Security Partnership），[CSIS分析](https://www.csis.org/analysis/ten-years-c51-us-central-asia-minerals-cooperation)指出，美方並在部分共同開發的礦床上取得優先議約權。
 
-延伸閱讀：[四方安全對話（Quad）是什麼？東盟首度同台表態，馬尼拉峰會牽動南海台海局勢](/articles/quad-asean-south-china-sea-explained/)
+延伸閱讀：[四方安全對話（Quad）是什麼？東協首度同台表態，馬尼拉峰會牽動南海台海局勢](/articles/quad-asean-south-china-sea-explained/)
 
 延伸閱讀：[西太平洋為何暫無美軍航艦？伊朗戰事拖累部署，牽動台海嚇阻](/articles/us-carrier-pacific-gap/)
 

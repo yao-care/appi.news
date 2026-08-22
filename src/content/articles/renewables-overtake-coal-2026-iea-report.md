@@ -1,8 +1,9 @@
 ---
-title: "IEA最新報告：全球用電需求加速成長，再生能源今年首度超車燃煤成最大電力來源"
+title: "再生能源今年超車燃煤 躍全球最大電力來源"
 slug: "renewables-overtake-coal-2026-iea-report"
-description: "國際能源署（IEA）7月22日發布《Electricity Mid-Year Update 2026》指出，全球用電需求今明兩年將加速成長，2027年將達3萬700太瓦時；再生能源發電在歷經2025年與燃煤幾近打平後，今年可望首度超車，成為全球最大電力來源。同時荷莫茲海峽危機一度重創全球近兩成液化天然氣供應，把亞洲與歐洲天然氣價格推上2022至2023年能源危機以來新高，也連帶推高台灣同屬的亞洲燃氣依賴型電力系統風險。"
+description: "國際能源署（IEA）最新報告指出，再生能源發電今年可望首度超車燃煤，成為全球最大電力來源；同時全球用電需求加速成長，本文整理IEA數據並對照台灣電力結構，說明荷莫茲海峽危機如何推高亞洲天然氣價格與台灣發電成本。"
 publishDate: "2026-07-27T01:47:12.435Z"
+updatedDate: 2026-08-22
 category: "focus"
 subcategory: "trend-watch"
 tags:
@@ -51,7 +52,7 @@ draft: false
 topics: ["energy-policy"]
 ---
 
-國際能源署（IEA）7月22日發布年中更新報告《Electricity Mid-Year Update 2026》，[報告原文指出](https://iea.blob.core.windows.net/assets/3c66a000-244c-4efb-aaeb-cda33eb833da/ElectricityMid-YearUpdate2026.pdf)，全球電力供應版圖正出現一個關鍵轉折：再生能源發電在2025年已與燃煤幾近打平，今年可望首度超車，成為全球最大的電力來源。與此同時，全球用電需求也在加速成長，成長動能來自工業、家電、空調、資料中心與電動車的用電擴張。[Electrek報導整理](https://electrek.co/2026/07/22/iea-global-power-demand-is-surging-and-renewables-are-passing-coal/)這份報告，稱這是全球電力供應史上少見的交叉時刻。
+再生能源發電今年可望首度超車燃煤，成為全球最大電力來源。這是國際能源署（IEA）7月22日發布年中更新報告《Electricity Mid-Year Update 2026》的核心結論，[報告原文指出](https://iea.blob.core.windows.net/assets/3c66a000-244c-4efb-aaeb-cda33eb833da/ElectricityMid-YearUpdate2026.pdf)，再生能源發電在2025年已與燃煤幾近打平，全球電力供應版圖正出現一個關鍵轉折。與此同時，全球用電需求也在加速成長，成長動能來自工業、家電、空調、資料中心與電動車的用電擴張。[Electrek報導整理](https://electrek.co/2026/07/22/iea-global-power-demand-is-surging-and-renewables-are-passing-coal/)這份報告，稱這是全球電力供應史上少見的交叉時刻。
 
 ## 用電需求加速：資料中心、空調與電動車是主要動能
 

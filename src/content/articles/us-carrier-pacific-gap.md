@@ -48,7 +48,7 @@ NPR報導指出，林肯號260天不間斷部署期間，中東傳統補給樞�
 
 戰略暨國際研究中心（CSIS）東南亞項目主任葛瑞格．波林則批評，美國這波調度做的恰好是與自身宣稱目標相反的事（WHEC；[Union-Bulletin](https://www.union-bulletin.com/news/national/us-pulls-last-aircraft-carrier-in-asia-as-trump-focuses-on-iran-and-the-western/article_9a857061-a260-5fdd-aa1a-bf5b4e1ffd64.html)）。Union-Bulletin的報導也提及，北京始終將台灣視為自身聲稱的領土、有意將其納入管轄，這正是美軍在西太平洋維持航艦存在的核心考量之一。目前美國海軍尚未證實何時會有新航艦補上西太平洋的空缺，WHEC引述消息稱這段空窗「可能只是短暫的」，若海軍在未來數月內完成部署調整，情況有機會逆轉。
 
-這起事件也呼應了東盟與四方安全對話（Quad）近期在[南海與台海局勢](/articles/quad-asean-south-china-sea-explained/)上的多方角力：區域國家一邊觀察美軍實際兵力部署，一邊評估要不要更靠攏美方陣營，航艦空窗期無疑會被納入這場地緣政治計算。
+這起事件也呼應了東協與四方安全對話（Quad）近期在[南海與台海局勢](/articles/quad-asean-south-china-sea-explained/)上的多方角力：區域國家一邊觀察美軍實際兵力部署，一邊評估要不要更靠攏美方陣營，航艦空窗期無疑會被納入這場地緣政治計算。
 
 ## 常見問題
 

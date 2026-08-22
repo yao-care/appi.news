@@ -1,8 +1,9 @@
 ---
 title: "南韓股市為何7月重挫？從散戶爆倉看槓桿投資風險"
 slug: "south-korea-margin-call-crash"
-description: "南韓股市2026年7月重挫逾兩成七，逾30萬個信用交易帳戶遭券商強制斷頭，估計累計損失達56.3兆韓元。整理融資保證金追繳的骨牌機制、政府五大救市措施，並轉化為台灣投資人可自行檢查的5項槓桿部位風險指標。"
+description: "南韓股市2026年7月重挫逾兩成七，逾30萬個散戶信用交易帳戶遭券商強制斷頭，估計累計損失達56.3兆韓元。整理槓桿融資保證金追繳的骨牌機制、政府五大救市措施，並轉化為台灣投資人可自行檢查的5項槓桿部位風險指標。"
 publishDate: "2026-08-15T03:06:15.585Z"
+updatedDate: 2026-08-22
 category: "finance"
 subcategory: "investing-literacy"
 author: "appi-editorial"

@@ -51,7 +51,7 @@ coverImageCredit: "Photo by Dan Meyers on Unsplash"
 
 南太平洋的外交版圖正在改寫。澳洲總理艾班尼斯（Anthony Albanese）與斐濟總理拉布卡（Sitiveni Rabuka）7月6日在斐濟首都蘇瓦簽下兩份重量級條約，其中《海洋和平聯盟》（Ocean of Peace Alliance）是相互防禦條約，承諾一方遭受武裝攻擊時互相援助，這是斐濟史上第一份對外正式結盟，也是澳洲第四份防禦條約。同一時間，澳洲外交貿易部在原住民盛會加瑪節（Garma Festival）上,把原住民文化定調為太平洋外交政策的核心資產,兩條看似不相干的新聞線,其實是同一套太平洋戰略的兩面。
 
-延伸閱讀：[四方安全對話（Quad）是什麼？東盟首度同台表態，馬尼拉峰會牽動南海台海局勢](/articles/quad-asean-south-china-sea-explained/)
+延伸閱讀：[四方安全對話（Quad）是什麼？東協首度同台表態，馬尼拉峰會牽動南海台海局勢](/articles/quad-asean-south-china-sea-explained/)
 
 ## 史上第一次：斐濟為何選擇與澳洲結盟
 

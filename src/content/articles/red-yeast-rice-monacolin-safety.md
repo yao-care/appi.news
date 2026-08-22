@@ -1,8 +1,9 @@
 ---
-title: "紅麴是天然的降血脂食品，比較安全嗎？它的活性成分其實就是一種 statin"
+title: "紅麴降血脂比較安全？其實它就是一種 statin"
 slug: "red-yeast-rice-monacolin-safety"
 description: "紅麴常被當成『天然無害的降血脂藥替代品』，但它的活性成分 monacolin K 就是史達汀藥物 lovastatin，同機制、同風險。這篇講清楚台灣三條法規紅線、2024 小林製藥事件的真正元兇，以及誰絕對不能碰。"
 publishDate: 2026-07-26T20:00:00+08:00
+updatedDate: 2026-08-22
 category: health
 subcategory: supplement-regulation
 tags:

@@ -4,7 +4,7 @@ slug: "seattle-festival-shooting-bullet-mismatch"
 description: "西雅圖美食節7月26日發生槍擊案，警方延遲近5小時才對外說明；市長威爾森一度誤稱已逮捕2名嫌犯、隨後撤回，警察局長巴恩斯7月30日在市長要求下辭職，副局長沙爾斯代理局長。彈道鑑定顯示致命子彈並非來自遭逮捕15歲少年的槍，案情出現逆轉。"
 excerpt: "西雅圖警察局長巴恩斯在市長威爾森要求下7月30日辭職，起因是美食節槍擊案通報延遲近5小時、市長一度誤報逮捕人數；威爾森任命副局長沙爾斯代理局長，案件彈道鑑定先前已出現逆轉。"
 publishDate: "2026-07-30T16:58:48.148Z"
-updatedDate: 2026-08-16
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "americas"
 tags:
@@ -55,7 +55,7 @@ originalContribution: "本文整合 PBS NewsHour、Yahoo新聞對西雅圖警察
 topics: ["police-good-deeds"]
 ---
 
-西雅圖美食節槍擊案，如今演變成一場政治風暴。西雅圖警察局長巴恩斯（Shon Barnes）在市長威爾森（Katie Wilson）要求下，7月30日（週四）宣布辭職，起因是上週日（7月26日）美食節（Bite of Seattle）槍擊案發生後，警方延遲近5小時才對外說明案情，市長一度誤稱已逮捕2名嫌犯、隨後緊急撤回，讓外界質疑警局的危機處理能力。這起人事地震，發生在警方才剛於本週三（7月29日）提交法庭文件、指出案情出現彈道鑑定逆轉之後。（[PBS NewsHour](https://www.pbs.org/newshour/nation/seattle-mayor-says-police-chief-has-resigned-after-criticism-of-festival-shooting-response)）
+西雅圖槍擊案發生在7月26日晚間美食節（Bite of Seattle）尾聲，造成3人死亡、至少4人受傷，警方當場逮捕一名15歲少年，如今案件已演變成一場政治風暴。西雅圖警察局長巴恩斯（Shon Barnes）在市長威爾森（Katie Wilson）要求下，7月30日（週四）宣布辭職，起因是警方延遲近5小時才對外說明案情，市長一度誤稱已逮捕2名嫌犯、隨後緊急撤回，讓外界質疑警局的危機處理能力。這起人事地震，發生在警方才剛於本週三（7月29日）提交法庭文件、指出案情出現彈道鑑定逆轉之後。（[PBS NewsHour](https://www.pbs.org/newshour/nation/seattle-mayor-says-police-chief-has-resigned-after-criticism-of-festival-shooting-response)）
 
 ## 局長請辭：通報延遲近5小時、誤報逮捕人數
 

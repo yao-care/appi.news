@@ -43,7 +43,7 @@ originalContribution: "本文整合AP通訊社（經ABC News刊出）、半島�
 
 緬甸外交部8月15日發布聲明，證實已核對孟加拉提供的82.8萬人難民名單，其中42.6萬人身分驗證完成，30.9萬人確認是若開邦原居民。[根據AP通訊社報導](https://abcnews.com/International/wireStory/myanmar-300000-rohingya-refugees-verified-repatriation-exodus-enters-135667075)，緬甸表示會持續與孟加拉合作，等「若開邦安全局勢改善」才接返這批驗證者，但沒有給出具體時間表。
 
-延伸閱讀：[四方安全對話（Quad）是什麼？東盟首度同台表態，馬尼拉峰會牽動南海台海局勢](/articles/quad-asean-south-china-sea-explained/)
+延伸閱讀：[四方安全對話（Quad）是什麼？東協首度同台表態，馬尼拉峰會牽動南海台海局勢](/articles/quad-asean-south-china-sea-explained/)
 
 ## 驗證數字怎麼算出來的
 

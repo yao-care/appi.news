@@ -1,9 +1,10 @@
 ---
-title: "美國核准首個「病人對話 LLM」醫材：靠「介面不是決策者」的法律設計過關"
+title: "美國核准首個病人對話LLM醫材：介面不是決策者"
 slug: "updoc-fda-clearance-llm-interface"
 description: "UpDoc 拿到美國史上第一張病人對話 LLM 醫材許可證，靠的不是模型多聰明，是把 LLM 死死限制在資料蒐集層、決策權留給醫師預設的規則引擎。拆解 510(k) K253281 怎麼套用既有 d-Nav 前例過關，對照台灣衛福部指引與健保署 AI 診斷工具給付評估，這道分界線值得借鏡。"
 excerpt: "UpDoc 靠「LLM 只負責蒐集資料、醫師預設規則才做決策」的架構，拿到美國首張病人對話 LLM 醫材許可證。這套「守門不決策」的設計邏輯，正是台灣評估 AI 診斷工具給付時最該借鏡的先例。"
 publishDate: "2026-08-02T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "ai"
 tags:

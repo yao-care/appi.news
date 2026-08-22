@@ -95,7 +95,7 @@ Baseball／NBA 每天有 LIVE、炸裂、今日某某、戰績、花邊。加上
 | Dcard | 403 Cloudflare（與 2026-08-06 相同，沒解封） | ❌ |
 | Mobile01／巴哈姆特 | 403 | ❌ |
 | r.jina.ai／allorigins／corsproxy／codetabs | 422／408／403／521 | ❌ 代理也繞不過去 |
-| Google Trends TW RSS | 200，10 則帶流量估計與時間 | ⚠️ 是搜尋熱度不是論壇，內容偏藝人人名 |
+| Google Trends TW RSS | 200，帶搜尋詞、約略流量級距與時間 | ⚠️ 是搜尋熱度不是論壇；現在由獨立的 [`docs/search-trend-sop.md`](../search-trend-sop.md)／`scripts/search-trends.mjs` 處理，仍不把熱搜直接當成可上線事實 |
 
 其他掛 PTT 名號的網域（ptt.tw、ptthito、pttcc.net…）已被賣成 ETF 工具或賭博站，不要照名字挑。
 

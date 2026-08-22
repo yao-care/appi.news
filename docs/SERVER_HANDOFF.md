@@ -155,6 +155,7 @@ grep -n "notify(\|notifyBlocks(\|devReply(" scripts/slack-actions-server.mjs
 | 任務 | cron 腳本 | 來源 | 上線方式 | 發 Slack？ |
 |---|---|---|---|---|
 | 科技選題雷達 | tech-radar.sh | WebSearch | 候選→人點按鈕→寫→自動上線 | ✅（2026-07-07 停用、2026-07-20 重新啟用）|
+| 外部搜尋趨勢雷達 | search-trends.sh | Google Trends 台灣 RSS（可用 `--feed` 擴充） | 純資料候選→Codex／作者依 [`docs/search-trend-sop.md`](./search-trend-sop.md) 查證與寫作；**不因熱搜直接上線** | ✅有候選發作者群；無候選靜默；來源失敗發 dev 告警 |
 | **論壇選題雷達** | forum-radar.sh | **PTT 白名單看板**（清單＝forum-signals.mjs 的 `BOARDS`，數量與分類查該檔）| **全自動上架**（站長 2026-08-06 裁示，不設每日上限）| ✅有上架才回報：內容發對應分類台、篇數摘要發 dev 台；**無新題完全靜默** |
 | 焦點/ESG | focus-esg.sh | 6 議題群權威來源（focus-esg.mjs）| **全自動上架** | ⚠️**僅失敗哨兵**（成功不發）|
 | 連假優惠 | lifestyle-deals.sh | data.gov.tw #14718 假日曆（tw-holidays.mjs）+ 雙鐵 | 事實稿→**待審草稿+發佈鈕** | ✅有連假時發**生活**台/失敗哨兵（2026-07-20 站長指定調整過時段，見下方排程攤開註）|

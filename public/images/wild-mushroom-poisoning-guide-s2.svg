@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="誤食綠褶菇後約一至三小時可能出現腸胃症狀，以及停止食用、保留檢體、儘速就醫的處置流程">
+  <title id="title">誤食綠褶菇後的時間與處理</title>
+  <desc id="desc">誤食不明菇類後，綠褶菇約一至三小時可能出現腸胃症狀，應停止食用、不要自行催吐、保留檢體並儘速就醫。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#6e7276"/>
+    </marker>
+  </defs>
+  <rect width="960" height="600" fill="#ffffff"/>
+  <rect x="48" y="50" width="4" height="28" rx="2" fill="#a87515"/>
+  <text x="72" y="73" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="26" font-weight="700">誤食綠褶菇後的時間與處理</text>
+  <text x="72" y="108" fill="#6e7276" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="15">約 1 至 3 小時可能出現腸胃症狀，發作後要把檢體帶進醫療流程</text>
+
+  <line x1="72" y1="145" x2="888" y2="145" stroke="#e8e9ed" stroke-width="1"/>
+
+  <rect x="72" y="190" width="220" height="180" rx="12" fill="#eaf0f8"/>
+  <rect x="72" y="190" width="220" height="6" rx="3" fill="#a87515"/>
+  <circle cx="112" cy="242" r="28" fill="#1f3a5f"/>
+  <text x="112" y="250" text-anchor="middle" fill="#ffffff" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="22" font-weight="700">1</text>
+  <text x="152" y="248" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="20" font-weight="700">誤食不明菇類</text>
+  <text x="104" y="296" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="15">立即停止食用</text>
+  <text x="104" y="324" fill="#a12a2a" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="15" font-weight="700">不要自行催吐</text>
+  <text x="104" y="352" fill="#6e7276" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="14">保留剩餘食物與菇體</text>
+
+  <line x1="310" y1="280" x2="370" y2="280" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="390" y="190" width="220" height="180" rx="12" fill="#ffffff" stroke="#e8e9ed"/>
+  <circle cx="430" cy="242" r="28" fill="#a87515"/>
+  <text x="430" y="250" text-anchor="middle" fill="#ffffff" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="22" font-weight="700">2</text>
+  <text x="470" y="248" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="20" font-weight="700">約 1 至 3 小時</text>
+  <text x="422" y="296" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="15">噁心、嘔吐、腹痛</text>
+  <text x="422" y="324" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="15">腹瀉、血便、脫水</text>
+  <text x="422" y="352" fill="#6e7276" font-family="Noto Sans TC,PingFang TC,Microsoft Jheng Hei,sans-serif" font-size="14">症狀程度因人與攝食量而異</text>
+
+  <line x1="628" y1="280" x2="688" y2="280" stroke="#6e7276" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="708" y="190" width="180" height="180" rx="12" fill="#ffffff" stroke="#e8e9ed"/>
+  <circle cx="748" cy="242" r="28" fill="#a12a2a"/>
+  <text x="748" y="250" text-anchor="middle" fill="#ffffff" font-family="Noto Sans TC,PingFang TC,Microsoft Jheng Hei,sans-serif" font-size="22" font-weight="700">3</text>
+  <text x="788" y="248" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="20" font-weight="700">出現不適</text>
+  <text x="732" y="296" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="15">儘速就醫</text>
+  <text x="732" y="324" fill="#1e2030" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="15">攜帶檢體或照片</text>
+  <text x="732" y="352" fill="#a12a2a" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="14" font-weight="700">嚴重症狀打 119</text>
+
+  <line x1="72" y1="470" x2="888" y2="470" stroke="#e8e9ed" stroke-width="1"/>
+  <text x="72" y="510" fill="#6e7276" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="13">製圖：APPI News</text>
+  <text x="888" y="510" text-anchor="end" fill="#6e7276" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif" font-size="13">資料來源：食藥署、衛福部、臺北榮總</text>
+</svg>

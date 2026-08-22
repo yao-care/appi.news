@@ -1,9 +1,10 @@
 ---
-title: "美國「共謀欺詐政府罪」怎麼判？佛奇前顧問認罪藏COVID文件換名酒，最重囚5年"
+title: "佛奇前顧問認罪隱匿COVID文件，換名酒最重囚5年"
 slug: "fauci-adviser-morens-covid-records-guilty-plea"
 description: "美國聯邦法院8月18日，前NIAID資深顧問莫倫斯（David Morens）認罪一項「共謀欺詐美國政府罪」，坦承2020至2023年間用私人Gmail規避《資訊自由法》，隱匿COVID起源與已終止的武漢病毒研究所補助文件，並收受紅酒與米其林餐廳邀約作為回報；共謀者疑似生態健康聯盟前主席達薩克但未被起訴，佛奇未列名被告，莫倫斯最重判5年、11月12日宣判。"
 excerpt: "前NIAID資深顧問莫倫斯認罪隱匿COVID起源相關政府文件，坦承用私人信箱規避資訊自由法、收受紅酒與米其林餐廳邀約，共謀者疑為生態健康聯盟前主席達薩克，最重可判5年徒刑。"
 publishDate: "2026-08-20T15:37:00.382Z"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "americas"
 tags:

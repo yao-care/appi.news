@@ -1,9 +1,10 @@
 ---
-title: "42 州檢長聯手傳票 OpenAI：廣告、健康資料、未成年，IPO 前最硬的一道法規關卡"
+title: "42州檢長傳票OpenAI：查廣告、健康資料與未成年保護"
 slug: "openai-42-ags-ipo-probe"
 description: "42 個州的檢察長在 OpenAI 機密遞件 IPO 後幾天同步發出傳票，要的不是廣告用詞，而是對話式 AI 怎麼蒐集健康資料、怎麼對待未成年與長者。這道關卡逼 OpenAI 第一次把法規風險寫進招股書，也給台灣一個對照組。"
 excerpt: "為什麼是 42 個州同時出手，而且挑在 IPO 遞件後？因為上市那一刻，法規風險第一次要被定價。"
 publishDate: "2026-07-23T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "tech-policy"
 tags:

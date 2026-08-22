@@ -1,8 +1,9 @@
 ---
-title: "台日簽署抗高溫MOU：從跨部會兵推到國際合作，涼適地圖整合逾9600處降溫據點"
+title: "台日簽署抗高溫MOU：涼適地圖整合逾9600處據點"
 slug: "taiwan-japan-extreme-heat-mou"
 description: "環境部7月4日在高雄科工館促成台灣防災產業協會與日本能率協會、靜岡縣防災用品普及促進協議會簽署三方合作備忘錄，就高溫調適、城市韌性與產業技術交流建立長期合作機制；環境部同時公開全台9,641處涼適據點的開放資料。"
 publishDate: "2026-07-07T01:35:27.120Z"
+updatedDate: "2026-08-22"
 category: "focus"
 subcategory: "policy-watch"
 tags:

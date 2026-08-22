@@ -1,9 +1,10 @@
 ---
-title: "政府與企業「資料統一層」變吸金題：Peregrine 募 2.5 億美元、估值 15 個月衝到 68 億"
+title: "Peregrine募2.5億美元　估值15個月衝上68億美元"
 slug: "peregrine-data-unification-layer-funding"
 description: "Peregrine 完成 2.5 億美元 D 輪、估值從 2025 年 3 月的 25 億跳到 68 億美元，15 個月翻近三倍。這輪的錢往『把資料整理乾淨、打通孤島』搬，而不是往更炫的模型搬，因為 agent 要先有乾淨統一的資料才動得了。"
 excerpt: "Peregrine 募 2.5 億美元、估值 68 億，投資人賭的是把企業髒資料清乾淨、打通孤島的營運軟體。台灣企業導入 agent 前，資料前置工程該怎麼排序，這篇給一條判讀線。"
 publishDate: "2026-07-13T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "startup"
 tags:
@@ -47,7 +48,7 @@ references:
 topics: ["startups-and-vc"]
 ---
 
-把分散在各系統的營運資料先統一、讓組織能即時調度，正在變成 AI 真正落地前的基礎建設題。資料分析公司 Peregrine 六月底[完成 2.5 億美元 D 輪募資](https://www.prnewswire.com/news-releases/peregrine-technologies-raises-250-million-series-d-at-6-8-billion-valuation-302808115.html)，估值從 [2025 年 3 月的 25 億美元](https://news.crunchbase.com/venture/law-enforcement-startup-peregrine-unicorn-sequoia/)跳到 68 億美元，15 個月翻了將近三倍。這輪的錢說明一件事：資本開始往「把資料整理乾淨、打通孤島」搬，而不是往更炫的模型搬。
+把分散在各系統的營運資料先統一、讓組織能即時調度，正在變成 AI 真正落地前的基礎建設題。資料分析公司 Peregrine 六月底[完成 2.5 億美元 D 輪募資](https://www.prnewswire.com/news-releases/peregrine-technologies-raises-250-million-series-d-at-6-8-billion-valuation-302808115.html)，估值從 [2025 年 3 月的 25 億美元](https://news.crunchbase.com/venture/law-enforcement-startup-peregrine-unicorn-sequoia/)跳到 68 億美元，15 個月翻了將近三倍。這輪的錢說明一件事：資本開始往「把資料整理乾淨、打通孤島」搬，而不是往更炫的模型搬，這跟先前[Supabase一輪募5億美元、估值衝上105億](/articles/supabase-500m-ai-infrastructure-layer/)的方向一致，錢正從模型移向讓AI真正落地的基建層。
 
 <img src="/images/peregrine-data-unification-layer-funding-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="互相串連的資料節點與儀表板，象徵把分散資料統一後能即時調度">
 
@@ -69,7 +70,7 @@ Peregrine 這輪 D 輪由 Fifth Down Capital、紅杉（Sequoia）、OG Venture 
 
 我十分認同這條判讀線。原因很簡單：agent 要先有乾淨、統一、權限分明的資料才動得了，沒有這層底，再強的模型在企業裡也只是空轉。這跟我先前看 Databricks 把 agent 講成「同事」時的觀察是同一件事，當時 [Databricks 執行長那句「AI 說不出毛利為何變動，不是 AI 問題，是脈絡問題」](/articles/databricks-genie-one-agent-governance/)，講的就是資料脈絡缺位。脈絡從哪來？從把分散資料統一、補上權限與來源的那一層來。
 
-放在更大的資金流裡看也對得上。先前 [Supabase 一輪募 5 億美元、估值衝上 105 億](/articles/supabase-500m-ai-infrastructure-layer/)，錢就已經從模型移到讓人快速做 AI 應用的基建層。Peregrine 這輪是同一個方向再往源頭走一步：基建層之下，是資料本身整不整得乾淨。我長期的立場沒變，可信度靠落地流程，不靠模型聰明；現在資本用真金白銀把這句話標了價。
+放在更大的資金流裡看也對得上。先前 Supabase 那輪，錢就已經從模型移到讓人快速做 AI 應用的基建層。Peregrine 這輪是同一個方向再往源頭走一步：基建層之下，是資料本身整不整得乾淨。我長期的立場沒變，可信度靠落地流程，不靠模型聰明；現在資本用真金白銀把這句話標了價。
 
 <img src="/images/peregrine-data-unification-layer-funding-s4.webp" width="960" height="539" loading="lazy" decoding="async" alt="排列整齊的伺服器機房，象徵 agent 動起來前需要的乾淨統一資料底層">
 

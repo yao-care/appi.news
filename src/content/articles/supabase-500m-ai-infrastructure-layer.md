@@ -1,9 +1,10 @@
 ---
-title: "Supabase 一輪募 5 億美元、估值衝 105 億：AI 應用的『基建層』正在吸走熱錢"
+title: "Supabase估值破105億美元　AI基建層吸熱錢"
 slug: "supabase-500m-ai-infrastructure-layer"
 description: "Supabase 完成 5 億美元 Series F、GIC 領投、估值站上 105 億美元，七個月內翻倍。熱錢開始從模型移到讓人快速做 AI 應用的開源基建層，但放大的不只是『會建構』的能力，連維運與資料治理的成本也一起被放大。"
 excerpt: "Supabase 募 5 億美元、估值 105 億，熱錢從模型移到 AI 應用的基建層。估值翻倍反映 vibe coding 下的真實需求，但維運與資料治理的成本也被一起放大。"
 publishDate: "2026-06-22T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "startup"
 tags:
@@ -61,7 +62,7 @@ topics: ["startups-and-vc"]
 
 <h2>錢不再只追模型</h2>
 
-<p>同一週的募資名單可以對照著看。<a href="https://news.crunchbase.com/venture/biggest-funding-rounds-june-5-2026/" target="_blank" rel="noopener">那一週光是上看數億美元的輪次就有十幾筆</a>：<a href="https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/" target="_blank" rel="noopener">Ramp 一口氣募 7.5 億美元、估值衝到 440 億</a>，<a href="https://variety.com/2026/digital/news/ai-music-suno-funding-round-400-million-5-4-billion-valuation-1236765727/" target="_blank" rel="noopener">AI 音樂的 Suno 募 4 億美元、估值 54 億</a>，再加上太空、核融合各自的大額輪。Supabase 的 5 億夾在裡面，定位卻很特別：Ramp 是應用，Suno 是應用，Supabase 是這些應用底下的資料庫與部署層。</p>
+<p>同一週的募資名單可以對照著看。<a href="https://news.crunchbase.com/venture/biggest-funding-rounds-june-5-2026/" target="_blank" rel="noopener">那一週光是上看數億美元的輪次就有十幾筆</a>：<a href="https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/" target="_blank" rel="noopener">Ramp 一口氣募 7.5 億美元、估值衝到 440 億</a>，<a href="https://variety.com/2026/digital/news/ai-music-suno-funding-round-400-million-5-4-billion-valuation-1236765727/" target="_blank" rel="noopener">AI 音樂的 Suno 募 4 億美元、估值 54 億</a>，再加上太空、核融合各自的大額輪。Supabase 的 5 億夾在裡面，定位卻很特別：Ramp 是應用，Suno 是應用，Supabase 是這些應用底下的資料庫與部署層。<a href="/articles/coralogix-observability-agent-funding/">同一波熱錢也灌進可觀測性新創 Coralogix，同樣是 AI 應用底下、大家都得踩著走的基建層</a>。</p>
 
 <p>會這樣，是因為 AI agent 已經是現在成長最快的軟體類別。<a href="https://techfundingnews.com/top-10-us-ai-agents-2026-fastest-scaling-category-52b-by-2030/" target="_blank" rel="noopener">這個市場從 2024 年的 52.5 億美元成長到 2025 年估計的 78.4 億美元，預估 2030 年衝上 526 億美元</a>。當大家都在搶著做 agent 應用，真正穩定吃到需求的，反而是這些應用都得踩著走的地基。</p>
 

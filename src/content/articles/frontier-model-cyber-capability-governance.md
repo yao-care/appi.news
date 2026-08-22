@@ -4,7 +4,7 @@ slug: "frontier-model-cyber-capability-governance"
 description: "前沿模型已具備能自主找漏洞的網路攻防能力，讓美國政府、資安社群與企業各有說法卻談不攏。文章拆解治理缺口其實出在授權門檻而非能力本身，並整理企業因應人工智慧基本法與ISO 42001，該收緊的三格：存取門檻、責任歸屬、動態降階。"
 excerpt: "前沿模型攻防同源、能力是真的，技術上擋不掉；缺的是制度。真正的治理缺口不是能力是授權，企業該用風險分類加 ISO/IEC 42001 在能力升級時同步收緊。"
 publishDate: "2026-06-30T08:00:00+08:00"
-updatedDate: 2026-08-07
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "tech-policy"
 tags:
@@ -65,7 +65,7 @@ topics: ["ai-agent-governance"]
 
 <img src="/images/frontier-model-cyber-capability-governance-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="前沿模型網路攻防能力引發資安警訊，數位門鎖象徵存取門檻">
 
-先把「危言聳聽」這個選項排掉。Anthropic 在 [Project Glasswing](https://www.anthropic.com/glasswing) 講得很清楚：Mythos Preview 這顆還沒正式發表的前沿模型，已經找出上千個高風險漏洞，涵蓋每一個主要作業系統與瀏覽器，包括一個在 OpenBSD 躺了 27 年的洞、FFmpeg 裡 16 年的洞，還有好幾個 Linux 核心漏洞被串起來做權限提升。官方那句話最關鍵：讓 AI 在壞人手裡危險的那組能力，正是讓它在找漏洞、補漏洞時無可取代的同一組能力。這就是麻煩所在。攻和防共用同一身本事，你不可能只把「防」發出去、把「攻」鎖在抽屜裡，因為它們是同一個模型的同一種能力。能力曲線是真的拉起來了，這不是行銷話術。
+先把「危言聳聽」這個選項排掉。Anthropic 在 [Project Glasswing](https://www.anthropic.com/glasswing) 講得很清楚：Mythos Preview 這顆還沒正式發表的前沿模型，已經找出上千個高風險漏洞，涵蓋每一個主要作業系統與瀏覽器，包括一個在 OpenBSD 躺了 27 年的洞、FFmpeg 裡 16 年的洞，還有好幾個 Linux 核心漏洞被串起來做權限提升。官方那句話最關鍵：讓 AI 在壞人手裡危險的那組能力，正是讓它在找漏洞、補漏洞時無可取代的同一組能力。這就是麻煩所在。攻和防共用同一身本事，你不可能只把「防」發出去、把「攻」鎖在抽屜裡，因為它們是同一個模型的同一種能力。能力曲線是真的拉起來了，這不是行銷話術。想替這類高風險能力定規則的不只美國，[歐盟 AI 法對通用型 AI 的執行時程同樣是先立框架、再分階段補罰則](/articles/eu-ai-act-gpai-enforcement-taiwan-alignment/)，可以拿來對照後面談到的美國做法。
 
 <img src="/images/frontier-model-cyber-capability-governance-s2.webp" width="960" height="640" loading="lazy" decoding="async" alt="AI 模型自動掃描程式碼找出軟體漏洞的能力概念圖">
 

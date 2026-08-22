@@ -1,8 +1,9 @@
 ---
-title: "Anthropic 一口氣拿下 NAVER、三星、LG：開首爾辦公室、用「在地資料控管」整套端走韓國企業市場"
+title: "Anthropic首爾辦公室拿下NAVER三星LG"
 slug: "anthropic-korea-in-region-data-playbook"
 description: "Anthropic 6/17 開首爾辦公室，一口氣拿下 NAVER、三星 SDS、LG CNS、Nexon、Hanwha。拿下一個國家的企業市場靠的不是模型強，而是在地辦公室、資料主權、國家安全合作、in-region data 整套打包。台廠導入前沿 AI，in-region 資料控管會是談判與選型的關鍵籌碼。"
 publishDate: "2026-07-08T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "industry-tech"
 tags:
@@ -61,7 +62,7 @@ topics: ["ai-agent-governance"]
 
 我會先問一個問題：為什麼韓國企業敢把核心開發流程交給 Claude？答案不在模型多強，在 Anthropic 把四件事一起打包，分別是在地辦公室、資料主權、國家級安全合作、in-region data。少任何一件，採購單位都簽不下去。
 
-工程組織導入 coding agent，等於把程式碼、系統架構、商業邏輯餵給一個外部模型。沒有在地落地、沒有資料留在境內的保證、沒有政府背書的安全機制，法務和資安那一關過不了。模型再聰明，也只能停在 PoC 階段廢在那裡。
+工程組織導入 coding agent，等於把程式碼、系統架構、商業邏輯餵給一個外部模型。沒有在地落地、沒有資料留在境內的保證、沒有政府背書的安全機制，法務和資安那一關過不了。模型再聰明，也只能停在 PoC 階段廢在那裡。<a href="/articles/kpmg-agent-365-workforce-governance/">KPMG 把 AI agent 推給全員之後，真正的考題也是治理跟不跟得上</a>，道理跟這次韓國案例一樣：規模一放大，法務與資安的關卡不會自動變鬆。
 
 <img src="/images/anthropic-korea-in-region-data-playbook-s2.webp" width="960" height="539" loading="lazy" decoding="async" alt="資料中心的伺服器機房">
 

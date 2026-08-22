@@ -1,9 +1,10 @@
 ---
-title: "施凱爾前幕僚長蘇·格雷示警「我為斯托蒙特擔憂」　倡貝爾法斯特、德里設都會市長下放權力"
+title: "蘇·格雷示警「我為斯托蒙特擔憂」　倡都會市長下放權力"
 slug: "sue-gray-fears-stormont-metro-mayor"
 description: "工黨上議院議員、英相施凱爾前幕僚長蘇·格雷6月25日在貝爾法斯特一場社會民主工黨（SDLP）活動上說「我為斯托蒙特擔憂」，批評倫敦中央與地方自治政府協作不足，並主張在北愛爾蘭的貝爾法斯特與德里推行「都會市長」制下放決策權。她也力挺伯納姆若接任首相、將部分唐寧街運作遷往曼徹斯特的構想。"
 excerpt: "工黨上議院議員、英相施凱爾前幕僚長蘇·格雷6月25日在貝爾法斯特一場社會民主工黨（SDLP）活動上說「我為斯托蒙特擔憂」，批評倫敦中央與地方自治政府協作不足，並主張在北愛爾蘭的貝爾法斯特與德里推行「都會市長」制下放決策權。"
 publishDate: "2026-06-26T02:41:33.700Z"
+updatedDate: "2026-08-22"
 category: "international"
 subcategory: "europe"
 tags:
@@ -46,7 +47,7 @@ coverAlt: "北愛爾蘭斯托蒙特議會大樓外觀"
 coverImageCredit: "William Murphy — CC BY-SA 2.0，引用自 Wikimedia Commons"
 ---
 
-英國工黨上議院議員、首相施凱爾（Keir Starmer）前幕僚長蘇·格雷（Sue Gray）6月25日在北愛爾蘭貝爾法斯特出席一場由社會民主工黨（SDLP）舉辦的活動時直言，她「為斯托蒙特擔憂」。這場活動探討愛爾蘭島與英國的關係，以及未來可能的憲政變動，格雷在會中對北愛自治政府的運作與英國整體的權力下放架構提出多項看法（[East Lothian Courier](https://www.eastlothiancourier.com/news/national/26229116.baroness-sue-gray-says-fears-stormont/)）。
+英國工黨上議院議員、首相施凱爾（Keir Starmer）前幕僚長蘇·格雷（Sue Gray）6月25日在北愛爾蘭貝爾法斯特出席一場由社會民主工黨（SDLP）舉辦的活動時直言，她「為斯托蒙特擔憂」，並主張在貝爾法斯特與德里設置「都會市長」，把決策權下放給城市當局。這場活動探討愛爾蘭島與英國的關係，以及未來可能的憲政變動，格雷在會中對北愛自治政府的運作與英國整體的權力下放架構提出多項看法（[East Lothian Courier](https://www.eastlothiancourier.com/news/national/26229116.baroness-sue-gray-says-fears-stormont/)）。
 
 「我為斯托蒙特擔憂，我也認為這裡的民眾應該得到行動與決策，而這是許多人的共同責任，」格雷說（[Border Telegraph](https://www.bordertelegraph.com/news/national/26229116.baroness-sue-gray-says-fears-stormont/)）。斯托蒙特（Stormont）是北愛爾蘭議會與行政部門所在地，其運作近年屢因政黨僵局而中斷，自治政府能否穩定運轉一直是當地政治的核心議題。
 

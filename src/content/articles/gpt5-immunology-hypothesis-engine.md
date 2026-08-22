@@ -1,6 +1,7 @@
 ---
-title: "GPT-5 Pro 解開卡三年的 T 細胞之謎，還預測了一場沒看過的實驗：該讀懂的不是 AI 會做科學了"
+title: "GPT-5如何解開T細胞三年謎題？假說引擎不是神諭"
 slug: "gpt5-immunology-hypothesis-engine"
+updatedDate: "2026-08-22"
 description: "免疫學家 Derya Unutmaz 把卡三年的 T 細胞資料集丟給 GPT-5 Pro，模型提出一套機制假說，還準確預測了一場未公開的殺傷實驗結果。真正該讀懂的是它在哪裡、為什麼有效：它是假說引擎，不是真相神諭。台灣有臨床資料，該想清楚稀缺的是什麼。"
 excerpt: "GPT-5 Pro 幫免疫學家解開卡三年的 T 細胞謎題，還預測了沒公開過的實驗結果。但把這件事讀成『AI 會做科學了』，就解錯題了。"
 publishDate: "2026-07-18T08:00:00+08:00"
@@ -55,7 +56,7 @@ topics: ["medical-ai-frontline"]
 
 GPT-5 Pro 幫一位免疫學家解開了卡三年的 T 細胞謎題，還準確預測了一場沒被公開過的實驗結果。這件事是真的，也確實漂亮。但真正該讀懂的不是「AI 會做科學了」，而是它在哪裡、為什麼有效：它是一台假說引擎，不是一座真相神諭。把它讀成後者，就對不上這件事的份量，也會在自己的研究現場解錯題。
 
-先講事件本身。主角是美國 Jackson Laboratory 基因體醫學研究所的免疫學家 Derya Unutmaz。他的實驗室從 [2022 年開始](https://cryptobriefing.com/gpt5-pro-t-cell-immunology-discovery/)累積一份 T 細胞資料，一直解釋不了：把人類 CD4+ T 細胞用 2-去氧葡萄糖（2-DG，一種擋住糖代謝的化合物）處理，之後洗掉、再用 IL-2 活化，這批細胞會持續偏向一種促發炎的 Th17 樣態。現象量得到，機制講不出來，卡了三年。他把這份資料集丟給 [GPT-5 Pro](https://aiweekly.co/alerts/gpt-5-pro-helps-derya-unutmaz-crack-a-three-year-t-cell-mystery)。
+先講事件本身。主角是美國 Jackson Laboratory 基因體醫學研究所的免疫學家 Derya Unutmaz。他的實驗室從 [2022 年開始](https://cryptobriefing.com/gpt5-pro-t-cell-immunology-discovery/)累積一份 T 細胞資料，一直解釋不了：把人類 CD4+ T 細胞用 2-去氧葡萄糖（2-DG，一種擋住糖代謝的化合物）處理，之後洗掉、再用 IL-2 活化，這批細胞會持續偏向一種促發炎的 Th17 樣態。現象量得到，機制講不出來，卡了三年。他把這份資料集丟給 [GPT-5 Pro](https://aiweekly.co/alerts/gpt-5-pro-helps-derya-unutmaz-crack-a-three-year-t-cell-mystery)。這不是 AI 第一次踩進實驗室現場，[GPT-5.4 也曾被拿去跑化學反應解偶聯難題](/articles/ai-chemist-wet-lab-coupling/)，同樣是從答題走向真實驗證。
 
 <img src="/images/gpt5-immunology-hypothesis-engine-s1.webp" width="867" height="1300" loading="lazy" decoding="async" alt="研究人員分析卡三年的 T 細胞流式細胞資料集示意">
 

@@ -1,9 +1,10 @@
 ---
-title: "美國一紙出口管制令讓 Claude Fable 5、Mythos 5 全球下線：把關鍵流程綁單一雲模型的風險浮上檯面"
+title: "美國出口令讓Claude Fable 5全球下線，單一模型風險現形"
 slug: "single-vendor-ai-continuity-risk"
 description: "Fable 5、Mythos 5 上線三天就被美國商務部一紙出口管制令要求停用、Anthropic 全球下線。前沿模型可能因出口管制被供應商一夕停用，企業的營運連續性風險不只在價格與 API，還在地緣政治。"
 excerpt: "把模型關掉的不是 Anthropic 的商業決定，是它頭上的政府；理由跟你買它做什麼、付多少、合約怎麼簽都無關。這才是單一供應商風險真正抖的地方。"
 publishDate: "2026-07-06T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "tech-policy"
 tags:

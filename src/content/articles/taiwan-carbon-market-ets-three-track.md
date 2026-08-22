@@ -1,8 +1,9 @@
 ---
-title: "台灣碳市場定調「三軌並進」：碳費、總量管制ETS、國際合作，2028年啟動交易"
+title: "台灣碳市場定調三軌並進　2028啟動交易"
 slug: "taiwan-carbon-market-ets-three-track"
 description: "環境部長彭啓明6月19日出席碳定價國際研討會，揭示台灣以「多元碳定價組合」三軌並進：碳費、總量管制排放交易（ETS）與國際合作。環境部規劃2026年下半年提出ETS試行計畫、年底前建置試行交易平台、2028年正式啟動交易，是碳定價制度從碳費單軌邁向完整碳市場的關鍵路線圖。"
 publishDate: "2026-06-23T11:53:18.541Z"
+updatedDate: 2026-08-22
 category: "focus"
 subcategory: "policy-watch"
 tags:

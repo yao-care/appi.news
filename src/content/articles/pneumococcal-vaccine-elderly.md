@@ -1,8 +1,9 @@
 ---
-title: "長輩打肺炎鏈球菌疫苗，13 價還是 23 價？公費新制其實一劑就搞定"
+title: "肺炎鏈球菌疫苗13價23價？公費一劑搞定"
 slug: "pneumococcal-vaccine-elderly"
 description: "長輩打肺炎鏈球菌疫苗，以前最糾結 13 價還是 23 價。13 價免疫反應強、保護久，23 價涵蓋血清型廣但效力較弱，過去常建議兩種都打。但 2026 年公費新制已簡化成一劑 PCV20（8 月起也有 PCV21）就搞定。這篇教你看懂差別與新制。"
 publishDate: 2026-08-20T20:00:00+08:00
+updatedDate: 2026-08-22
 category: health
 subcategory: preventive
 tags:

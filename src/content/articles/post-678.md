@@ -1,9 +1,10 @@
 ---
-title: "台灣 TFDA 已核准逾 160 款 AI 醫材，監管走向演算法生命週期管理"
+title: "台灣TFDA核准逾160款AI醫材　監管轉型"
 slug: "tfda-160-ai-medical-devices-approved"
 description: "Chambers Healthcare AI 2025台灣章節指出，台灣TFDA自2021年發布AI/ML醫療軟體審查指引後，截至2024年底已核准約50款本土及116款進口AI醫療設備，並持續對應國際動態調整監管框架，從靜態一次性審查走向演算法生命週期管理的監管典範轉移。"
 excerpt: "Chambers Healthcare AI 2025台灣章節指出，台灣TFDA自2021年發布AI/ML醫療軟體審查指引後，截至2024年底已核准約50款本土及116款進口AI醫療設備，並持續對應國際動態調整監管框架，從靜態一次性審查走向演算法生命週期管理的監管典範轉移。"
 publishDate: "2025-07-01T00:00:00+08:00"
+updatedDate: 2026-08-22
 category: "health"
 subcategory: "health-policy"
 tags:

@@ -1,9 +1,10 @@
 ---
-title: "ServiceNow 八個月內第三次認證漏洞：SaaS API 設定錯誤正在變成主流外洩管道"
+title: "ServiceNow認證漏洞第三起：SaaS API設定錯誤成外洩管道"
 slug: "servicenow-saas-api-auth-misconfiguration-breach"
 description: "ServiceNow 6/9 揭露一個 Scripted REST 端點因預設不需驗證，讓未授權請求直接查到客戶資料表，且是修補前就被觸及的首例。事件揭示 SaaS API 認證設定錯誤已成 2026 企業外洩的代表類型，企業該主動盤點自家與 agent 串接的 API 認證邊界。"
 excerpt: "ServiceNow 6/9 揭露一個 Scripted REST 端點因預設不需驗證，讓未授權請求直接查到客戶資料表。SaaS API 認證設定錯誤正在從零星事故，變成 2026 企業外洩的主流管道。"
 publishDate: "2026-06-18T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "security"
 tags:
@@ -55,7 +56,7 @@ references:
 topics: ["ai-agent-governance"]
 ---
 
-<p>ServiceNow 在 6 月 9 日揭露一起資安事件：平台上一個 Scripted REST API 端點因為預設不需要驗證，未授權的請求可以直接查到客戶執行個體裡的資料表。比這個技術細節更該記住的，是它代表的類型。2026 年的企業資料外洩，越來越多不是有人攻破了防火牆，而是某個 SaaS 服務的 API 認證設定本來就沒鎖好。問題換了，企業要顧的東西也得跟著換。不是「我家防線夠不夠硬」，而是「我串出去、和被串進來的每一個 API，認證邊界到底誰在顧」。</p>
+<p>ServiceNow 在 6 月 9 日揭露一起資安事件：平台上一個 Scripted REST API 端點因為預設不需要驗證，未授權的請求可以直接查到客戶執行個體裡的資料表。比這個技術細節更該記住的，是它代表的類型。2026 年的企業資料外洩，起因往往是某個 SaaS 服務的 API 認證設定本來就沒鎖好，而非有人正面攻破防火牆，<a href="/articles/lastpass-klue-oauth-token-breach/">LastPass 客戶資料因第三方情報平台 Klue 的 OAuth token 被竊而外洩</a>就是同一種破口的另一個版本。問題換了，企業要顧的東西也得跟著換。重點已經不在「我家防線夠不夠硬」，而在「我串出去、和被串進來的每一個 API，認證邊界到底誰在顧」。</p>
 
 <h2>這次 ServiceNow 到底出了什麼事</h2>
 

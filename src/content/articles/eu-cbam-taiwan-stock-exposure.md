@@ -1,8 +1,9 @@
 ---
 title: "歐盟碳關稅完整指南：CBAM成本與台股配置健檢"
 slug: "eu-cbam-taiwan-stock-exposure"
-description: "CBAM已進入正式期。從納管產業、憑證價格、臺灣出口曝險到持股健檢，盤點歐洲營收、碳排強度、轉型支出與成本轉嫁能力。"
+description: "CBAM已進入正式期，可能影響臺灣出口商的毛利、接單與估值。本文從納管產業、憑證價格、臺灣出口曝險到持股健檢，盤點歐洲營收、碳排強度、轉型支出與成本轉嫁能力，幫投資人建立判斷架構。"
 publishDate: 2026-08-21
+updatedDate: 2026-08-22
 category: finance
 subcategory: investing-literacy
 tags: ["歐盟", "貿易政策", "供應鏈", "碳市場", "碳盤查", "淨零轉型", "投資理財", "製造業"]

@@ -1,9 +1,10 @@
 ---
-title: "DeepSeek 傳募 74 億美元、估值上看 590 億，騰訊與 CATL 入列：中國 AI 資本這盤棋，台廠供應鏈該怎麼讀"
+title: "DeepSeek傳募74億美元：騰訊、CATL入列，台廠供應鏈怎麼讀"
 slug: "deepseek-capital-taiwan-supply-chain"
 description: "DeepSeek 這輪募資的訊號不在金額，而在投資人名單。騰訊、寧德時代這種戰略型資金進場，代表中國把 AI 模型當成跨產業的國家級基建在養；台灣讀這條新聞的重點是供應鏈與市場連動，不是模型跑分。"
 excerpt: "大部分人看到 74 億美元。我看到的是投資人結構變了：騰訊、寧德時代進場，代表 AI 不再只是網路產業，而開始變成能源、製造、平台共同投資的基礎設施。"
 publishDate: "2026-06-28T08:00:00+08:00"
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "startup"
 tags:
@@ -48,9 +49,9 @@ references:
 topics: ["startups-and-vc"]
 ---
 
-大部分人看到這條新聞，記住的是一個數字：74 億美元。
+DeepSeek 傳出洽談第一輪外部募資，規模約 74 億美元、投後估值上看 590 億美元，騰訊與寧德時代（CATL）評估入股。多數人看到的是這個金額，我看到的是另一件事：投資人結構變了。
 
-我看到的是另一件事：投資人結構變了。
+延伸閱讀：[算力與信賴產業這盤棋，AI 基礎建設投資潮怎麼看](/articles/ai-new-infrastructure-compute-trusted-industries/)
 
 <img src="/images/deepseek-capital-taiwan-supply-chain-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="募資輪投資人結構示意，戰略型資金進場">
 

@@ -1,8 +1,9 @@
 ---
-title: "Apple 新 Siri 借 Gemini 的腦、卻在歐盟和中國缺席：把核心助理外包給對手模型的取捨"
+title: "新Siri為何用Gemini？Apple外包核心助理的供應商風險"
 slug: "apple-siri-gemini-vendor-lock-in"
 description: "WWDC 2026 上 Apple 把新 Siri 建在 Google Gemini 之上，還因法規在歐盟、中國缺席。該讀的不是功能多炫，而是單一供應商依賴，加上落地範圍被治理與合規綁住。"
 publishDate: "2026-07-09T08:00:00+08:00"
+updatedDate: "2026-08-22"
 category: "tech"
 subcategory: "software-products"
 tags:
@@ -45,7 +46,7 @@ references:
     publisher: "MacRumors"
 ---
 
-WWDC 2026 上 Apple 端出新一代 Siri，底層換成 Google 的 [Gemini](https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/)。發表會把鎂光燈打在它變得多會聊天、多懂你螢幕上在做什麼。但真正該讀的不是這些功能，是兩件被功能蓋過去的事：Apple 連自家最貼身的助理都得借對手的模型，以及同一套功能因為法規，在歐盟和中國上不了。
+新 Siri 為何用 Gemini？答案很現實：WWDC 2026 上 Apple 端出新一代 Siri，底層直接換成 Google 的 [Gemini](https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/)。這不是 Apple 第一次借別人的模型，在中國市場，[Apple Intelligence 用的則是阿里巴巴的模型](/articles/apple-alibaba-china-ai-approval/)。發表會把鎂光燈打在它變得多會聊天、多懂你螢幕上在做什麼。但真正該讀的不是這些功能，是兩件被功能蓋過去的事：Apple 連自家最貼身的助理都得借對手的模型，以及同一套功能因為法規，在歐盟和中國上不了。
 
 今年 WWDC 最值得看的，不是 Siri 變得多聰明，而是 Apple 選擇把最貼身的 AI 助理建立在競爭對手的模型能力之上。這代表一件很現實的事：在生成式 AI 時代，即使擁有全球最強的硬體、生態系與數十億裝置，依然不一定能在每個層面都自己做。
 

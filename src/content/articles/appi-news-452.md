@@ -1,9 +1,9 @@
 ---
-title: "代表台灣出戰達卡青年奧運：桌球選拔賽結果揭曉，林晉霆、陳忞昕正取入選"
+title: "達卡青奧桌球選拔：林晉霆、陳忞昕入選"
 slug: "appi-news-452"
 description: "中華民國桌球協會公布2026年達卡青年奧運選拔賽成績，第一銀行林晉霆與臺南桌委陳忞昕分獲男女組第一名，直接取得代表資格，備取名單同步出爐。"
 publishDate: 2026-07-28
-updatedDate: 2026-08-06
+updatedDate: 2026-08-22
 category: sports
 subcategory: events
 tags: ["桌球"]

@@ -1,8 +1,9 @@
 ---
-title: "Passkey 是什麼、怎麼設定：簡訊 OTP 為什麼要退場，台灣哪些服務已經能用"
+title: "Passkey 是什麼、怎麼設定？簡訊 OTP 退場台灣現況"
 slug: "passkey-taiwan-sms-otp-replacement"
 description: "簡訊一次性密碼擋不住即時釣魚與門號竊取，台灣的銀行與網購結帳正陸續改用 Passkey 刷臉或指紋登入。整理原因、台灣現有服務清單、逐步設定教學與換手機的備援作法。"
 publishDate: "2026-08-06T05:55:28.112Z"
+updatedDate: "2026-08-22T00:00:00.000Z"
 status: "published"
 category: "tech"
 subcategory: "security"

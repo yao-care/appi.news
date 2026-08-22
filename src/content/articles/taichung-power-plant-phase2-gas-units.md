@@ -1,8 +1,9 @@
 ---
-title: "中火二期3223億採購案開跑：4部燃氣機組2031年上線，台電拚2034年台中電廠脫煤"
+title: "中火二期3223億採購開跑：4部燃氣機組2031年上線"
 slug: "taichung-power-plant-phase2-gas-units"
 description: "台電8月3日啟動台中電廠二期燃氣機組採購案，主設備預算3223億元創全國廉政平台最高紀錄。4部燃氣複循環機組總裝置容量550萬瓩，預計2031年起陸續商轉，目標2034年底前完成台中電廠無煤供電。"
 publishDate: "2026-08-04T02:33:28.101Z"
+updatedDate: "2026-08-22T00:00:00.000Z"
 category: "focus"
 subcategory: "trend-watch"
 tags:

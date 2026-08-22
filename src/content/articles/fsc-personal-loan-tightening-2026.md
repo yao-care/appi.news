@@ -1,9 +1,10 @@
 ---
-title: "理財周轉金貸款被盯上：金管會加碼要求銀行什麼，一般人借錢會變難嗎"
+title: "理財周轉金貸款被盯上：金管會加碼要求銀行申報"
 slug: "fsc-personal-loan-tightening-2026"
 description: "金管會要求本國銀行10月起按月申報個人理財周轉金貸款，鎖定流向股市與投資商品的資金。整理新規申報範圍、銀行實際查核方式，以及一般人申貸該準備什麼才不會被卡。"
 excerpt: "金管會新規要銀行申報理財周轉金貸款流向，一般消費性貸款核准標準不受影響，變嚴的是用途說明與文件準備。"
 publishDate: "2026-08-06T05:55:28.112Z"
+updatedDate: "2026-08-22T00:00:00.000Z"
 category: "finance"
 subcategory: "consumer-finance"
 tags:

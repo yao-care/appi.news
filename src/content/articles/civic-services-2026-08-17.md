@@ -1,8 +1,9 @@
 ---
-title: "罰單免跑一趟！新北交通裁決線上辦，各地便民措施整理（2026-08-17）"
+title: "8/17便民措施整理：新北交通裁決線上辦"
 slug: "civic-services-2026-08-17"
 description: "整理今日台北市、新北市、嘉義市便民市政措施，涵蓋新北交通違規裁決全線上申辦、垃圾清除處理費補助入帳、地政AI智慧櫃檯、幸福喵樂宅啟用，以及台北捷運三鶯線疏運與嘉義停車費調整，附各縣市政府原文出處。"
 publishDate: "2026-08-17T10:03:30.108Z"
+updatedDate: "2026-08-22T00:00:00.000Z"
 category: "lifestyle"
 subcategory: "life"
 coverImage: "covers/civic-services-2026-08-17-cover.webp"

@@ -1,8 +1,9 @@
 ---
-title: "台中潭雅神自行車橋為何倒塌？三年奪命意外與橋梁安檢機制一次看懂"
+title: "潭雅神自行車橋為何倒塌？橋梁安檢一次看"
 slug: "taichung-bike-bridge-safety-inspection"
 description: "台中潭雅神自行車道陸橋8月5日發生施工鋼板塌陷意外，83歲老翁墜落6公尺身亡。整理事故經過、家屬指控、台灣橋梁定期檢測制度與民眾如何反映疑慮路段。"
 publishDate: "2026-08-14T03:06:05.000Z"
+updatedDate: "2026-08-22T00:00:00.000Z"
 category: "lifestyle"
 subcategory: "life"
 coverImage: "covers/taichung-bike-bridge-safety-inspection.webp"

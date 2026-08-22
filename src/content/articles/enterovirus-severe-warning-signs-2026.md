@@ -1,9 +1,9 @@
 ---
-title: "開學腸病毒防疫：8大重症前兆與漂白水消毒比例"
+title: "腸病毒消毒比例與8大重症前兆：開學防疫怎麼做"
 slug: "enterovirus-severe-warning-signs-2026"
-description: "開學防腸病毒要用肥皂洗手，環境以500ppm漂白水消毒，分泌物污染處用1,000ppm；本文也整理孩子8大重症前兆，任一項出現應立即送大醫院。"
+description: "腸病毒消毒比例怎麼抓？開學防腸病毒要用肥皂洗手，環境以500ppm漂白水消毒，分泌物污染處用1,000ppm；本文也整理孩子8大重症前兆，任一項出現應立即送大醫院。"
 publishDate: "2026-07-30T09:01:59.408Z"
-updatedDate: 2026-08-09
+updatedDate: 2026-08-22
 category: "health"
 subcategory: "medical"
 tags:
@@ -50,7 +50,7 @@ references:
     publisher: "ETtoday健康雲"
 ---
 
-開學防腸病毒，最重要的是用肥皂正確洗手，並以500ppm漂白水清潔一般環境；碰到病童分泌物、嘔吐物或排泄物污染則用1,000ppm。孩子若出現嗜睡、意識不清、肌抽躍、持續嘔吐等8大重症前兆任一項，應立即送往大醫院。家長也可搭配[8月31日開學收心與新生準備清單](/articles/back-to-school-syndrome-child-vision-checklist/)、[小一文具餐具與指定文件清單](/articles/first-grade-school-supplies-2026/)、[孩子感冒時的居家照護與返校判斷](/articles/back-to-school-child-cold-care-guide/)及[校園與居家登革熱巡倒清刷清單](/articles/appi-news-376/)，一次完成開學前的用品和健康檢查。本文疫情數字沿用疾管署7月資料，並在下文標明統計期間，不代表即時疫情。
+腸病毒消毒比例怎麼抓？開學防腸病毒，最重要的是用肥皂正確洗手，並以500ppm漂白水清潔一般環境；碰到病童分泌物、嘔吐物或排泄物污染則用1,000ppm。孩子若出現嗜睡、意識不清、肌抽躍、持續嘔吐等8大重症前兆任一項，應立即送往大醫院。家長也可搭配[8月31日開學收心與新生準備清單](/articles/back-to-school-syndrome-child-vision-checklist/)、[小一文具餐具與指定文件清單](/articles/first-grade-school-supplies-2026/)、[孩子感冒時的居家照護與返校判斷](/articles/back-to-school-child-cold-care-guide/)及[校園與居家登革熱巡倒清刷清單](/articles/appi-news-376/)，一次完成開學前的用品和健康檢查。本文疫情數字沿用疾管署7月資料，並在下文標明統計期間，不代表即時疫情。
 
 ## 目前疫情：第28週就診7,534人次，社區以克沙奇A6型為主
 

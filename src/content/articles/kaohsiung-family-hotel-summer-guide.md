@@ -1,9 +1,10 @@
 ---
 title: "高雄親子飯店怎麼選？三大飯店暑假主題房與門票優惠整理"
 slug: "kaohsiung-family-hotel-summer-guide"
-description: "暑假將至，高雄漢來、承億、福華三家五星飯店推出親子主題房、泳池升級與展覽門票優惠，整理各家房型、價格與活動期間。"
+description: "暑假將至，高雄親子飯店怎麼選？漢來、承億、福華三家五星飯店推出親子主題房、泳池升級與展覽門票優惠，整理各家房型、價格（4,599元起）與活動期間，方便家長比較行程。"
 excerpt: "高雄漢來、承億、福華三家五星飯店暑假各自端出親子主題房與門票優惠，整理房型、價格與活動內容。"
 publishDate: "2026-08-01T19:30:30.579Z"
+updatedDate: 2026-08-22
 category: "lifestyle"
 subcategory: "life"
 tags:
@@ -52,7 +53,7 @@ references:
     publisher: "WalkerLand窩客島"
 ---
 
-暑假進入下半場，高雄三家五星飯店不約而同把親子客群當主力，各自端出主題遊戲室、聯名房型與展覽門票組合搶客。這篇整理漢來、承億、福華三家飯店目前檔期內的活動內容、房型與價格，給有意安排親子小旅行的家庭做比較。
+高雄親子飯店怎麼選？暑假進入下半場，漢來、承億、福華三家五星飯店不約而同把親子客群當主力，各自端出主題遊戲室、聯名房型與展覽門票組合搶客。這篇整理三家飯店目前檔期內的活動內容、房型與價格，給有意安排親子小旅行的家庭做比較。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=fjyZVb360w4" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：暑假商機！飯店推主題遊戲室 孩童化身小船長">

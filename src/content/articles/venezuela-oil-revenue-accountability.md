@@ -1,9 +1,10 @@
 ---
-title: "美國賣委內瑞拉石油賺進逾130億美元，錢都去哪了？川普稱『戰利品』惹國會兩黨追問"
+title: "美委內瑞拉石油賣逾130億美元，川普稱戰利品惹國會追問"
 slug: "venezuela-oil-revenue-accountability"
-description: "美國總統川普8月5日在拉斯維加斯的造勢場合公開宣稱，美國已從委內瑞拉「拿走數十億桶石油」，並以「勝利者理應得到戰利品」形容這筆收入。美方自今年1月突襲逮捕委內瑞拉總統馬杜羅、接管其石油出口後，累計石油銷售額已超過130億美元；但根據《金融時報》分析，這筆錢至今近半去向不明，國會民主黨與共和黨議員近月已多次要求政府公開帳目，質疑委內瑞拉人民並未實際受益。"
+description: "美國總統川普8月5日在造勢場合宣稱，美國已從委內瑞拉「拿走數十億桶石油」，並稱「勝利者理應得到戰利品」。美方1月逮捕委內瑞拉總統馬杜羅、接管其石油出口後，銷售額已逾130億美元；但《金融時報》分析指出，這筆錢近半去向不明，國會兩黨議員已多次要求政府公開帳目。"
 excerpt: "川普稱委內瑞拉石油是「戰利品」，美方接管馬杜羅倒台後的石油出口已賣出逾130億美元；國會兩黨議員質疑近半資金去向不明，要求政府公開帳目。"
 publishDate: "2026-08-06T17:03:21.286Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "americas"
 tags:
@@ -33,7 +34,7 @@ risksAndLimits:
 
 ## 從突襲逮捕到接管石油出口
 
-美軍今年1月3日以毒品恐怖主義相關罪名，在一場特種部隊突襲行動中逮捕委內瑞拉總統馬杜羅（Nicolás Maduro），美方隨後接管委內瑞拉的石油銷售，收入被導入由美方監管的帳戶。國務卿盧比奧（Marco Rubio）此後被外界形容為委內瑞拉的「事實上總督」。（[Mediaite，經 Yahoo News 轉載](https://www.yahoo.com/news/politics/articles/trump-brags-taking-billions-barrels-224207425.html)）
+美軍今年1月3日以毒品恐怖主義相關罪名，在一場特種部隊突襲行動中逮捕委內瑞拉總統馬杜羅（Nicolás Maduro），美方隨後接管委內瑞拉的石油銷售，收入被導入由美方監管的帳戶。國務卿盧比奧（Marco Rubio）此後被外界形容為委內瑞拉的「事實上總督」。這場接管也讓委內瑞拉對古巴的石油供應同步中斷，[加劇了古巴今年多次全國性電網崩潰的能源危機](/articles/cuba-havana-blackout-electricity-crisis/)。（[Mediaite，經 Yahoo News 轉載](https://www.yahoo.com/news/politics/articles/trump-brags-taking-billions-barrels-224207425.html)）
 
 延伸閱讀：[古巴制裁是什麼？美國加碼9企業、3官員](/articles/cuba-sanctions-returning-americans/)
 

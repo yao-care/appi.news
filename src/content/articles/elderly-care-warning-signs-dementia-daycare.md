@@ -1,6 +1,6 @@
 ---
-title: "長輩照顧警訊有哪些？失智溝通與日照中心整理一次看懂"
-description: "長輩出現食慾下降、體重減輕、反覆跌倒或個性改變，是就醫評估的重要警訊。整理失智症十大警訊、與失智長者溝通的具體技巧，以及日照中心的申請資格、流程與費用補助。"
+title: "長輩照顧警訊有哪些？失智十大警訊與日照中心整理"
+description: "長輩照顧警訊有哪些？食慾下降、體重減輕、反覆跌倒或個性改變，都是就醫評估的重要警訊。整理失智症十大警訊、與失智長者溝通的具體技巧，以及日照中心的申請資格、流程與費用補助。"
 category: "lifestyle"
 subcategory: "life"
 author: "appi-editorial"
@@ -8,6 +8,7 @@ contentType: "news"
 sourceType: "wire"
 status: "published"
 publishDate: "2026-08-15T18:51:38.859Z"
+updatedDate: 2026-08-22
 coverImage: "/covers/elderly-care-warning-signs-dementia-daycare-cover.webp"
 coverImageCredit: "Photo by Jsme MILA on Pexels"
 tags: ["長照", "失智症", "高齡健康"]
@@ -18,7 +19,7 @@ risksAndLimits:
   - "本文所列申請流程與工作天數為現行規定，長照制度與補助標準可能隨政策調整而變動。"
 ---
 
-台灣長輩若出現食慾下降、體重明顯減輕、反覆跌倒、記憶力快速退化或個性突然改變，這些都是需要盡快就醫評估的警訊，不是正常老化。面對已確診失智的長輩，溝通時放慢速度、一次只說一件事，是醫療院所衛教一致建議的做法。近日 TVBS NEWS 一支照顧長輩的整理報導，把警訊辨識、失智溝通與日照中心資源放在一起講，以下用公開資料逐項查證，整理成讀者可以實際照著做的版本。
+長輩照顧警訊有哪些？食慾下降、體重明顯減輕、反覆跌倒、記憶力快速退化或個性突然改變，都是需要盡快就醫評估的警訊，不是正常老化。面對已確診失智的長輩，溝通時放慢速度、一次只說一件事，是醫療院所衛教一致建議的做法。近日 TVBS NEWS 一支照顧長輩的整理報導，把警訊辨識、失智溝通與日照中心資源放在一起講，以下用公開資料逐項查證，整理成讀者可以實際照著做的版本。
 
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=9wGWHNDdQc8" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：如何照顧長輩? 失智溝通.日照中心到營養照護一次看">
@@ -29,7 +30,7 @@ risksAndLimits:
 
 ## 長輩出現這些警訊，該安排就醫評估
 
-食慾下降是失智症常被忽略的早期訊號之一，多位醫師指出用餐時的異狀，例如吃到一半忘記自己在吃飯、咀嚼吞嚥變慢，都可能比記憶力減退更早出現（[ETtoday健康雲](https://health.ettoday.net/news/3172389)）。老年人體重明顯減輕，也會連帶造成肌肉萎縮、體力衰退與免疫力降低，增加跌倒與骨折風險（[Uho優活健康網](https://www.uho.com.tw/article-31878.html)），這也是為什麼反覆跌倒常與營養不良一起被提出來討論。
+食慾下降是失智症常被忽略的早期訊號之一，多位醫師指出用餐時的異狀，例如吃到一半忘記自己在吃飯、咀嚼吞嚥變慢，都可能比記憶力減退更早出現（[ETtoday健康雲](https://health.ettoday.net/news/3172389)）。老年人體重明顯減輕，也會連帶造成肌肉萎縮、體力衰退與免疫力降低，增加跌倒與骨折風險（[Uho優活健康網](https://www.uho.com.tw/article-31878.html)），這也是為什麼反覆跌倒常與營養不良一起被提出來討論，跌倒風險可搭配[高齡者怎麼預防肌少症](/articles/sarcopenia-prevention-evidence-elderly/)一併留意。
 
 臺北市政府失智症服務網整理的「十大警訊」，具體項目包括記憶力減退到影響生活、計畫或解決問題有困難、無法勝任原本熟悉的工作、對時間地點感到混淆、言語表達出現困難、東西擺放錯亂、判斷力減退、逐漸退出社交活動，以及情緒和個性改變（[臺北市政府失智症服務網](https://dementia.gov.taipei/cp.aspx?n=D18B9673E9D90EA4)）。若長輩符合其中多項，建議先聯繫住家所在縣市的失智症共同照護中心，或透過 [長照人力缺口怎麼補](/articles/long-term-care-workforce-shortage-plan/) 一文提到的照顧管理專員評估管道安排診斷，而不是自行判斷是「老化」就拖延。
 

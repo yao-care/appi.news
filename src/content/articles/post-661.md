@@ -1,9 +1,10 @@
 ---
-title: "台灣藥品供應韌性從短缺管理走向戰略備援成國際合作標竿"
+title: "台灣缺藥怎麼因應？藥品供應韌性成國際標竿"
 slug: "taiwan-drug-supply-strategic-reserve"
-description: "台灣食藥署署長江振鍵主席DIA 2026年會台灣專場，聚焦從被動缺藥應急走向主動供應韌性治理。政府同步啟動4年240億元的藥品備援計畫，吸引歐美日監管機構與藥廠共同研討跨國協調路徑。"
+description: "台灣缺藥問題怎麼解？食藥署署長江振鍵主席DIA 2026年會台灣專場，聚焦從被動缺藥應急走向主動供應韌性治理。政府同步啟動4年240億元的藥品備援計畫，吸引歐美日監管機構與藥廠共同研討跨國協調路徑。"
 excerpt: "台灣食藥署署長江振鍵主席DIA 2026年會台灣專場，聚焦從被動缺藥應急走向主動供應韌性治理。政府同步啟動4年240億元的藥品備援計畫，吸引歐美日監管機構與藥廠共同研討跨國協調路徑。"
 publishDate: "2026-06-01T09:00:00+08:00"
+updatedDate: 2026-08-22
 category: "health"
 subcategory: "health-policy"
 tags:
@@ -41,7 +42,7 @@ coverAlt: "各色泡殼藥片與膠囊整齊排列的近距離特寫"
 coverImageCredit: "Photo by Polina Tankilevitch on Pexels"
 ---
 
-台灣在全球藥品供應議題上的角色，正從受害者轉為規則制定者。2026年6月16日，台灣食藥署署長江振鍵主持[DIA 2026全球年會](https://www.diaglobal.org/en/conference-listing/meetings/2026/06/dia-2026-global-annual-meeting/agenda/16/taiwan-town-hall-strategies-to-promote-medicine-supply-resilience)費城場次的台灣專場，匯集來自歐盟、日本、美國的監管機構代表與醫療系統專業人士，共同研討如何從缺藥應急思維轉向系統性供應韌性治理。這場專場是DIA年會史上首次以台灣為主場的政策交流，標誌著台灣從藥品短缺的接受端躍升為提供解方的主動參與者。
+台灣缺藥問題過去幾年多次成為社會焦點，如今政府正把因應腳步從被動應急推向主動的供應韌性治理，台灣在全球藥品供應議題上的角色也正從受害者轉為規則制定者。2026年6月16日，台灣食藥署署長江振鍵主持[DIA 2026全球年會](https://www.diaglobal.org/en/conference-listing/meetings/2026/06/dia-2026-global-annual-meeting/agenda/16/taiwan-town-hall-strategies-to-promote-medicine-supply-resilience)費城場次的台灣專場，匯集來自歐盟、日本、美國的監管機構代表與醫療系統專業人士，共同研討如何從缺藥應急思維轉向系統性供應韌性治理。這場專場是DIA年會史上首次以台灣為主場的政策交流，標誌著台灣從藥品短缺的接受端躍升為提供解方的主動參與者。
 
 延伸閱讀：[科進製藥首取台灣TFDA癌症藥許可多發性骨髓瘤注射劑本土上市](/articles/tfda-first-bortezomib-myeloma-injection/)
 

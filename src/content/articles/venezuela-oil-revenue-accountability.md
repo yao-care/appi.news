@@ -35,6 +35,8 @@ risksAndLimits:
 
 美軍今年1月3日以毒品恐怖主義相關罪名，在一場特種部隊突襲行動中逮捕委內瑞拉總統馬杜羅（Nicolás Maduro），美方隨後接管委內瑞拉的石油銷售，收入被導入由美方監管的帳戶。國務卿盧比奧（Marco Rubio）此後被外界形容為委內瑞拉的「事實上總督」。（[Mediaite，經 Yahoo News 轉載](https://www.yahoo.com/news/politics/articles/trump-brags-taking-billions-barrels-224207425.html)）
 
+延伸閱讀：[古巴制裁是什麼？美國加碼9企業、3官員](/articles/cuba-sanctions-returning-americans/)
+
 <img src="/images/venezuela-oil-revenue-accountability-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="原油桶與石油工業設施（示意圖）">
 
 累計金額方面，川普稍早在7月底已對外表示，自馬杜羅遭逮捕以來，委內瑞拉石油銷售已產生超過130億美元收入。（[OilPrice.com](https://oilprice.com/Energy/Crude-Oil/US-Sale-Of-Venezuelas-Oil-Hits-13-Billion-Since-Trumps-Takeover.html)）根據《金融時報》的分析報導，這筆資金最初曾轉入卡達一處離岸銀行帳戶以規避債權人扣押，現況則由美國財政部監管的花旗銀行帳戶持有。（[OilPrice.com](https://oilprice.com/Energy/Crude-Oil/US-Sale-Of-Venezuelas-Oil-Hits-13-Billion-Since-Trumps-Takeover.html)、[Yahoo News](https://www.yahoo.com/news/politics/articles/did-trump-billions-collected-venezuelan-141740893.html)）

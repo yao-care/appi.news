@@ -40,6 +40,8 @@ topics: ["personal-finance-basics", "taiwan-macro-economy"]
 
 若要先把固定支出、年度大額支出與緊急預備金分開，可先看[退休資產壓力測試怎麼做](/articles/retirement-asset-stress-test-rebalancing/)，再把下面的物價試算放進自己的現金流表。
 
+延伸閱讀：[CPI怎麼算？「2%通膨警戒線」代表什麼一次看懂](/articles/cpi-2-percent-warning-line-guide/)
+
 <figure class="video-embed">
   <a href="https://www.youtube.com/watch?v=M-NL0uJ3HS8" target="_blank" rel="noopener nofollow" aria-label="在 YouTube 觀看：100元越來越不耐花! 退休族荷包縮水 「靠這招」抗通膨守住退休金｜十點不一樣20260821 @TVBSNEWS01">
     <img src="/images/retirement-money-inflation-cost-gap-video.webp" width="960" height="540" loading="lazy" decoding="async" alt="100元越來越不耐花! 退休族荷包縮水 「靠這招」抗通膨守住退休金｜十點不一樣20260821 @TVBSNEWS01">

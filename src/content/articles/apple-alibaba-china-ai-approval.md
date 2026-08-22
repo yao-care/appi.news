@@ -1,9 +1,9 @@
 ---
 title: "蘋果找阿里巴巴做AI？中國Apple Intelligence方案內幕"
 slug: "apple-alibaba-china-ai-approval"
-description: "中國網信辦2026年7月核准蘋果的Apple Intelligence上線，條件是與阿里巴巴、百度整合本地AI模型。這篇整理核准經過、中國生成式AI監理要求，以及兩家中國業者各自負責的功能分工。"
+description: "蘋果AI找上阿里巴巴：中國網信辦2026年7月核准Apple Intelligence上線，條件是整合阿里巴巴通義千問與百度的本地AI模型，這篇整理核准經過與兩家業者各自負責的功能分工。"
 publishDate: "2026-08-09T06:05:40.077Z"
-updatedDate: 2026-08-17
+updatedDate: 2026-08-22
 category: "tech"
 subcategory: "ai"
 tags:
@@ -54,7 +54,7 @@ coverAlt: "民眾在城市街頭使用智慧型手機示意畫面（示意圖）
 coverImageCredit: "Photo by Michael Burrows on Pexels"
 ---
 
-蘋果的AI服務Apple Intelligence，2026年7月15日拿到中國網際空間管理局（CAC）核准上線，條件是整合阿里巴巴通義千問與百度的AI模型。蘋果無法把海外版AI服務原封不動搬進中國，只能在中國市場准入的現實條件下做出技術妥協，找本地夥伴補上被法規擋住的那塊。PTT Stock板上一篇談這則消息的討論串就湧入近50推，網友熱議的正是這套「找中國本地夥伴才能上線」的技術布局。
+蘋果找阿里巴巴合作做AI：2026年7月15日，蘋果的AI服務Apple Intelligence拿到中國網際空間管理局（CAC）核准上線，條件是整合阿里巴巴通義千問與百度的AI模型。蘋果無法把海外版AI服務原封不動搬進中國，只能在中國市場准入的現實條件下做出技術妥協，找本地夥伴補上被法規擋住的那塊。PTT Stock板上一篇談這則消息的討論串就湧入近50推，網友熱議的正是這套「找中國本地夥伴才能上線」的技術布局。
 
 <figure>
 <img src="/images/apple-siri-gemini-vendor-lock-in-s1.webp" width="960" height="640" loading="lazy" decoding="async" alt="示意圖：iPhone上的Siri語音助理畫面">

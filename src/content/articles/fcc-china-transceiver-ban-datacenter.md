@@ -1,8 +1,8 @@
 ---
-title: "光收發器是什麼？FCC擬禁中國製零件進AI資料中心"
+title: "FCC為何禁中國光收發器？AI資料中心關鍵零件解析"
 slug: "fcc-china-transceiver-ban-datacenter"
-description: "光收發器是什麼？FCC為何要禁中國製光收發器？光收發器是AI資料中心內部透過光纖高速傳輸資料的關鍵零件，中國企業掌握全球供應量約三分之二。本文整理路透社披露的FCC禁令草案內容、官員盼年內生效的時程、首當其衝的中際旭創與恐轉單Coherent、Lumentum的美國雲端業者，以及中國駐美使館「必要時反制」的回應。"
-updatedDate: "2026-08-21"
+description: "FCC為何要禁中國製光收發器？路透社報導，川普政府正透過FCC草擬禁令，防範中國硬體植入AI資料中心引發資安風險。光收發器是資料中心內部透過光纖高速傳輸資料的關鍵零件，中國企業掌握全球供應量約三分之二，首當其衝的是中際旭創、恐轉單的是美國雲端業者。"
+updatedDate: "2026-08-22"
 excerpt: "路透社報導，川普政府正透過FCC草擬禁令，擬禁止中國光收發器進口以保護AI資料中心。中際旭創等中國供應商首當其衝，美國雲端業者恐轉單推升成本；中國駐美使館警告將視情況反制。"
 publishDate: "2026-08-06T17:03:21.286Z"
 category: "international"
@@ -59,7 +59,7 @@ coverImageCredit: "攝影：Taylor Vick，Unsplash"
 originalContribution: "本文以路透社（經 Asia Bulletin 轉載）獨家報導為主軸，交叉查證 Tom's Hardware、Network World、The Next Web、Stratfor Worldview 與 Tech Times 對同一事件的報導，補上光收發器的技術脈絡、中國供應商市佔數字、中國商務部同日反制清單，供台灣讀者理解這起美中AI供應鏈角力事件的完整脈絡。"
 ---
 
-光收發器是AI資料中心內部負責透過光纖高速傳輸資料的核心零件，中國企業掌握全球供應量約三分之二，如今美國政府正醞釀對它下手。[路透社報導](http://www.asiabulletin.com/news/279222505/us-weighs-ban-on-chinese-data-center-equipment-imports)引述4名知情人士指出，川普政府正透過聯邦通訊委員會（FCC）草擬禁令，擬禁止進口新型中國製光收發器。官員希望今年內公布並生效，理由是防範中國企業藉此竊取資料、植入惡意軟體或癱瘓訓練與運行AI模型的美國資料中心服務。這項提案尚未定案，消息人士也強調FCC仍可能修改或擱置整項措施。
+FCC為何要禁中國製光收發器？[路透社報導](http://www.asiabulletin.com/news/279222505/us-weighs-ban-on-chinese-data-center-equipment-imports)引述4名知情人士指出，川普政府正透過聯邦通訊委員會（FCC）草擬禁令，擬禁止進口新型中國製光收發器，理由是防範中國企業藉此竊取資料、植入惡意軟體或癱瘓訓練與運行AI模型的美國資料中心服務，官員希望今年內公布並生效。光收發器是AI資料中心內部負責透過光纖高速傳輸資料的核心零件，中國企業掌握全球供應量約三分之二，如今美國政府正醞釀對它下手。這項提案尚未定案，消息人士也強調FCC仍可能修改或擱置整項措施。
 
 ## 光收發器是什麼？為什麼AI資料中心離不開它
 

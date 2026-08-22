@@ -1,8 +1,9 @@
 ---
-title: "糖化血色素 5.7% 是分水嶺：健檢紅字前，你可能正站在能逆轉的糖尿病前期"
+title: "糖化血色素5.7%是分水嶺：糖尿病前期能逆轉嗎"
 slug: "hba1c-prediabetes"
 description: "糖化血色素 HbA1c 反映近 2-3 個月平均血糖。5.7% 到 6.4% 是糖尿病前期，也是逆轉黃金期。教你看懂這個百分比、為何空腹血糖正常還可能有問題，以及什麼時候數字會騙人。"
 publishDate: 2026-07-17T20:00:00+08:00
+updatedDate: "2026-08-22"
 category: health
 subcategory: preventive
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "Databricks 把 AI agent 變「同事」：當 vibe coding 進公司，資料權限邊界誰來守"
+title: "Databricks把agent變同事：vibe coding資料權限誰來守"
 slug: "databricks-genie-one-agent-governance"
 description: "Databricks 6/16 發表 Genie One，把 agent 講成能跑重複工作流的「同事」，還給業務開了 vibe coding 環境 Genie App Builder。真正的門檻不是好不好用，而是 agent 動到的資料與權限要靠 Unity Catalog 這層治理收住。"
 excerpt: "Databricks 6/16 發表 Genie One，把 agent 講成能跑重複工作流的「同事」，還給業務開了 vibe coding 環境。當全員自助生成應用，真正的門檻不在介面，在 agent 動得到哪些資料、用誰的權限。"
@@ -48,7 +48,7 @@ references:
 topics: ["ai-agent-governance"]
 ---
 
-<p>Databricks 在 6 月 16 日的 Data + AI Summit 上發表 Genie One，<a href="https://siliconangle.com/2026/06/16/databricks-new-agentic-coworker-genie-one-brings-ai-automation-every-part-business/" target="_blank" rel="noopener">把它定位成一個能跨結構化與非結構化資料、替每個團隊自動跑工作的「agentic coworker」</a>。同一天還開了給業務用的 vibe coding 環境 Genie App Builder。話術很性感，但我關心的不是它好不好用。一個能自己動作、還能讓業務自己生出應用的 agent 進到公司，真正的門檻從來不在介面，在它動得到哪些資料、用誰的權限。這一關，Databricks 把答案押在 Unity Catalog 這層治理上。</p>
+<p>Databricks 在 6 月 16 日的 Data + AI Summit 上發表 Genie One，<a href="https://siliconangle.com/2026/06/16/databricks-new-agentic-coworker-genie-one-brings-ai-automation-every-part-business/" target="_blank" rel="noopener">把它定位成一個能跨結構化與非結構化資料、替每個團隊自動跑工作的「agentic coworker」</a>。同一天還開了給業務用的 vibe coding 環境 Genie App Builder。話術很性感，但我關心的不是它好不好用。一個能自己動作、還能讓業務自己生出應用的 agent 進到公司，真正的門檻從來不在介面，在它動得到哪些資料、用誰的權限。這一關，Databricks 把答案押在 Unity Catalog 這層治理上，也呼應我先前談<a href="/articles/mcp-de-facto-standard-agent-governance/">MCP 成為事實標準</a>時的立場：agent 接出去的每個介面，都該被當成獨立的權限治理對象來盤。</p>
 
 <h2>Genie One 到底發了什麼</h2>
 
@@ -70,7 +70,7 @@ topics: ["ai-agent-governance"]
 
 <p>這正是 Databricks 把整個故事押在 Unity Catalog 上的原因。<a href="https://www.databricks.com/company/newsroom/press-releases/databricks-launches-genie-one-all-new-agentic-coworker-every-team" target="_blank" rel="noopener">官方的承諾是，這些 app 從一開始就帶著 Unity Catalog 的權限與存取控制在跑</a>。更具體的設計在它談治理的技術文章裡：<a href="https://www.databricks.com/blog/enabling-governed-vibe-coding-enterprise-apps-databricks" target="_blank" rel="noopener">權限不是一個一個 app 各自設，而是在「App Space」這個層級由管理員統一定義資源與資料的存取、API 範圍、以及「代表使用者」呼叫的 on-behalf-of-user 權限，同一個 space 裡的每個 app 自動繼承這些設定</a>。換句話說，它想讓<a href="https://www.databricks.com/blog/enabling-governed-vibe-coding-enterprise-apps-databricks" target="_blank" rel="noopener">那些根本不是資安專家的開發者，也能安全地碰資料</a>，靠的是事先架好的護欄，而不是事後人工審查。</p>
 
-<p>方向我認同，但要說的是：這恰好證明了門檻在哪。當每個業務都能生出一個會自己動作、會去連資料的 agent，每一個 agent 其實都是一個新的權限治理對象。我先前在談 MCP 成為事實標準時就講過這條線，<a href="/articles/mcp-de-facto-standard-agent-governance/">agent 接出去的每一台 server，都該被當成一個獨立的權限治理對象來盤</a>。Genie App Builder 只是把這個問題搬進公司內部、而且規模放大：不是少數幾個 agent，是潛在每個員工都能造一個。治理層收不收得住，決定的不是好不好用，是會不會出事。可信度從來靠落地流程，不靠模型多聰明，這點我在<a href="/articles/llm-healthcare-promise-limits/">講 LLM 在醫療能不能落地時</a>就是同一個立場。</p>
+<p>方向我認同，但要說的是：這恰好證明了門檻在哪。當每個業務都能生出一個會自己動作、會去連資料的 agent，每一個 agent 其實都是一個新的權限治理對象。我先前在談 MCP 成為事實標準時就講過這條線，agent 接出去的每一台 server，都該被當成一個獨立的權限治理對象來盤。Genie App Builder 只是把這個問題搬進公司內部、而且規模放大：不是少數幾個 agent，是潛在每個員工都能造一個。治理層收不收得住，決定的不是好不好用，是會不會出事。可信度從來靠落地流程，不靠模型多聰明，這點我在<a href="/articles/llm-healthcare-promise-limits/">講 LLM 在醫療能不能落地時</a>就是同一個立場。</p>
 
 <img src="/images/databricks-genie-one-agent-governance-s3.webp" width="960" height="640" loading="lazy" decoding="async" alt="Unity Catalog 在 App Space 層級統一設定資料與權限存取，收住 agent 動得到的資料">
 

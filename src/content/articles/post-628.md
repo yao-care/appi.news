@@ -4,7 +4,7 @@ slug: "green-securities-certification-launch"
 description: "綠色證券認證是什麼？整理2026年一級、二級標章的綠色收入與化石燃料門檻、ESG與公司治理後20%淘汰條件，以及8月31日初評、12月公布名單的時程。"
 excerpt: "綠色證券認證是什麼？本文整理2026年一級、二級標章門檻、ESG與公司治理後20%淘汰條件，以及8月31日初評與12月公布名單的時程。"
 publishDate: "2026-06-14T21:37:20+08:00"
-updatedDate: 2026-08-17
+updatedDate: 2026-08-22
 category: "focus"
 subcategory: "trend-watch"
 tags:

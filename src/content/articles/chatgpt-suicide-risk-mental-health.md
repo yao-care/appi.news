@@ -1,9 +1,10 @@
 ---
-title: "AI聊天機器人能不能取代心理治療？一起自殺案凸顯安全風險"
+title: "AI聊天機器人能防治自殺嗎？一起身故案凸顯心理健康風險"
 slug: "chatgpt-suicide-risk-mental-health"
-description: "美國29歲女性蘇菲·羅滕伯格身故前，把自殺計劃只告訴ChatGPT扮演的心理治療師「哈利」，家人與治療師都被蒙在鼓裡。OpenAI坦承全球每週逾135萬用戶談及自殺意圖，專家點出AI聊天機器人缺乏風險評估與轉介機制的漏洞。"
+description: "AI聊天機器人能不能防治自殺？美國29歲女性蘇菲·羅滕伯格身故前，把自殺計劃只告訴ChatGPT扮演的心理治療師「哈利」，家人與治療師都被蒙在鼓裡。OpenAI坦承全球每週逾135萬用戶談及自殺意圖，專家點出AI聊天機器人缺乏風險評估與轉介機制的漏洞。"
 excerpt: "她把最深的痛苦只告訴了ChatGPT，沒有讓任何一個真人知道。29歲女性蘇菲·羅滕伯格身故後，母親公開近1800頁聊天紀錄，揭露AI聊天機器人在心理支持上的安全落差。"
 publishDate: "2026-08-18T16:26:41.753Z"
+updatedDate: 2026-08-22
 category: "international"
 subcategory: "americas"
 tags:
@@ -49,7 +50,7 @@ topics:
   - "medical-ai-frontline"
 ---
 
-美國29歲女性蘇菲·羅滕伯格2025年2月在紐約州伊薩卡身故前，把自殺計劃只告訴了ChatGPT扮演的心理治療師「哈利」，沒有讓父母、摯友或真正的治療師知道她已經走到這一步。[NPR報導](https://www.npr.org/2026/08/18/nx-s1-5929575/ai-suicide-risks-mental-health)指出，這起案例讓「AI聊天機器人能不能承擔心理支持」從假設性討論，變成攤在檯面上的安全爭議，也呼應了[Meta先前因青少年心理健康問題挨告近10億美元](/articles/meta-instagram-teen-safety-court-order/)所反映的同一種擔憂：科技公司的產品正在承接原本該由專業人力接住的心理需求。
+AI聊天機器人能不能承擔心理支持、甚至防治自殺？美國29歲女性蘇菲·羅滕伯格2025年2月在紐約州伊薩卡身故前，把自殺計劃只告訴了ChatGPT扮演的心理治療師「哈利」，沒有讓父母、摯友或真正的治療師知道她已經走到這一步。[NPR報導](https://www.npr.org/2026/08/18/nx-s1-5929575/ai-suicide-risks-mental-health)指出，這起案例讓這個問題從假設性討論，變成攤在檯面上的安全爭議，也呼應了[Meta先前因青少年心理健康問題挨告近10億美元](/articles/meta-instagram-teen-safety-court-order/)所反映的同一種擔憂：科技公司的產品正在承接原本該由專業人力接住的心理需求。
 
 蘇菲原本是華盛頓特區的公共衛生政策分析師，2024年秋天開始出現睡眠障礙與焦慮，感恩節前後首次向家人提到「憂鬱」，之後搬回伊薩卡與擔任康乃爾大學心理學教授的父親、記者母親勞拉·雷利同住並開始接受心理治療。[KUNM報導](https://www.kunm.org/npr-news/2026-08-18/she-told-no-one-about-her-agony-except-chatgpt-what-her-death-reveals-about-ai-risks)指出，雷利是在蘇菲身故數月後，才由女兒最要好的朋友到訪伊薩卡時，在她的筆電中發現一份長達近1800頁的對話紀錄。蘇菲套用Reddit上流傳的提示詞，把ChatGPT設定成一位名叫「哈利」的個人治療師，訴說的內容從精神科用藥劑量、安眠藥交互作用，到冥想與冷水浴的晨間例行公事都有，其中也包含她的自殺念頭。
 

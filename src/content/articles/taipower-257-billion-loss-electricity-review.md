@@ -1,8 +1,9 @@
 ---
-title: "台電上半年虧257億、負債比91.9%：千億撥補遭立法院刪除，9月電價審議會怎麼決"
+title: "台電上半年虧257億　千億撥補遭立法院刪除"
 slug: "taipower-257-billion-loss-electricity-review"
 description: "台電6月單月虧損擴大至113億元，上半年累計虧損257億元、累積虧損3764億元，負債比達91.9%。中油8月調漲電業天然氣價9.91%，加上原本規劃撥補台電的1000億元遭立法院刪除、改發現金1萬元，經濟部證實9月電價費率審議會將如實反映財務狀況，牽動10月電價是否調漲。"
 publishDate: "2026-08-04T02:33:28.101Z"
+updatedDate: "2026-08-22"
 category: "focus"
 subcategory: "trend-watch"
 tags:

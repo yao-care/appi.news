@@ -21,9 +21,21 @@ done_n=$(grep -oE "完成 [0-9]+/" <<<"$CRON_OUT" | grep -oE "[0-9]+" | head -1)
 if [ -n "${done_n:-}" ] && [ "$done_n" -gt 0 ]; then
   git add src/content/articles public/covers
   git commit -q -m "chore(covers): Discover 封面批次修復 ${done_n} 頁（夜間批次）" || true
-  git pull --rebase -q origin main && git push -q origin main
+  # cron worktree 是 detached HEAD：必須 push HEAD:main（push origin main 推的是落後的
+  # 本地 main ref，必被拒；2026-08-22 首夜實踩：push 失敗＋worktree 用完即刪＝整夜白做）。
+  pushed=0
+  for _ in 1 2 3; do
+    git fetch -q origin || true
+    git rebase -q origin/main 2>/dev/null || git rebase --abort 2>/dev/null || true
+    if git push -q origin HEAD:main; then pushed=1; break; fi
+    sleep 5
+  done
   remain=$(grep -oE "剩餘 [0-9]+ 頁" <<<"$CRON_OUT" | head -1)
-  cron_report "--dev" "🖼 封面批次：本夜修復 ${done_n} 頁（${remain:-}）"
+  if [ "$pushed" = 1 ]; then
+    cron_report "--dev" "🖼 封面批次：本夜修復 ${done_n} 頁已上線（${remain:-}）"
+  else
+    cron_report "--dev" "❌ 封面批次：修復 ${done_n} 頁但 push 失敗（本夜成果丟失、明晚冪等重做），請看 /var/log/appi-news/fix-covers.log"
+  fi
 else
   cron_report "--dev" "❌ 封面批次：本夜 0 頁成功，請看 /var/log/appi-news/fix-covers.log"
 fi
